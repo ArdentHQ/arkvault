@@ -299,7 +299,6 @@ export const AddRecipient = ({
 						)}
 
 						<SelectRecipient
-							showWalletAvatar={false}
 							network={network}
 							disabled={!isSenderFilled}
 							address={recipientAddress}

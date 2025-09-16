@@ -1,6 +1,6 @@
 export * from "./TransactionDetail";
 export * from "./TransactionFee";
-export * from "./TransactionRecipients";
+export * from "./TransactionGas";
 export * from "./TransactionType";
 export * from "./TransactionAddresses";
 export * from "./TransactionDetails";

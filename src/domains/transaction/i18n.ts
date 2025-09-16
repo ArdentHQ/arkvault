@@ -10,6 +10,7 @@ export const translations = {
 	AMOUNT: "Amount",
 	AUTHENTICATION_STEP: {
 		DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to authenticate the transaction.",
+		DESCRIPTION_LEDGER: "Check your Ledger device and sign the transaction.",
 		DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to authenticate the transaction.",
 		DESCRIPTION_PRIVATE_KEY: "Enter your private key to authenticate the transaction.",
 		DESCRIPTION_SECRET: "Enter your secret to authenticate the transaction.",
@@ -85,6 +86,12 @@ export const translations = {
 		FAST: "Fast",
 		SLOW: "Slow",
 	},
+	FORM_STEP: {
+		DESCRIPTION_SELECT_WALLET: "Select an address and sign.",
+	},
+	GAS_INFORMATION: "Gas Information",
+	GAS_LIMIT: "Gas Limit",
+	GAS_USAGE: "Usage by Txn",
 	HINT_AMOUNT: "Including {{amount}} {{currency}} sent to itself.",
 	HINT_AMOUNT_EXCLUDING: "Excluding {{amount}} {{currency}} sent to self.",
 	ID: "ID",
@@ -189,6 +196,7 @@ export const translations = {
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
+	MORE_DETAILS: "More details",
 	MULTIPLE: "Multiple",
 	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
@@ -283,7 +291,7 @@ export const translations = {
 	PAGE_VALIDATOR_RESIGNATION: {
 		FORM_STEP: {
 			DESCRIPTION: "This transaction type permanently retires a Validator address.",
-			TITLE: "Resign Validator",
+			TITLE: "Validator Resignation",
 			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
 		},
 	},
@@ -295,6 +303,7 @@ export const translations = {
 	},
 	PARTICIPANTS: "Participants",
 	PENDING: {
+		APPROVAL: "This transaction is pending approval on your Ledger device.",
 		DESCRIPTION:
 			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is the relevant information for your transaction:",
 		STATUS_TEXT: "This transaction is pending confirmation.",

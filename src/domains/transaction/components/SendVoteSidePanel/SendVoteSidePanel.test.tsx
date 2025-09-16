@@ -29,7 +29,7 @@ import { expect, vi } from "vitest";
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
-
+import * as ReactRouter from "react-router";
 const fixtureProfileId = getMainsailProfileId();
 
 const transactionMethodsFixture = {
@@ -40,6 +40,8 @@ const transactionMethodsFixture = {
 	explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e18,
 	from: () => transactionFixture.data.from,
+	gasLimit: () => transactionFixture.data.gasLimit,
+	gasUsed: () => transactionFixture.data.receipt.gasUsed,
 	hash: () => transactionFixture.data.hash,
 	isConfirmed: () => false,
 	isMultiPayment: () => false,
@@ -94,15 +96,18 @@ let wallet: Contracts.IReadWriteWallet;
 const votingMockImplementation = () => [
 	{
 		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: validatorData[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedvalidator: false,
-			isValidator: true,
-			publicKey: validatorData[1].publicKey,
-			username: validatorData[1].username,
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: validatorData[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedvalidator: false,
+				isValidator: true,
+				publicKey: validatorData[1].publicKey,
+				username: validatorData[1].username,
+			},
+			profile,
+		),
 	},
 ];
 
@@ -118,7 +123,8 @@ const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 const authenticationStepID = "AuthenticationStep";
 
-const ComponentWraper = ({
+let useSearchParamsMock;
+const ComponentWrapper = ({
 	votes,
 	unvotes,
 }: {
@@ -148,12 +154,15 @@ const Component = ({
 	unvotes?: VoteValidatorProperties[];
 }) => (
 	<VoteFormProvider profile={activeProfile} network={activeNetwork} wallet={activeWallet}>
-		<ComponentWraper votes={votes} unvotes={unvotes} />
+		<ComponentWrapper votes={votes} unvotes={unvotes} />
 	</VoteFormProvider>
 );
 
 describe("SendVote", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -189,7 +198,6 @@ describe("SendVote", () => {
 				"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
 				{ data: {} }, // Basic mock for block data
 			),
-			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
 		vi.useFakeTimers({
@@ -200,6 +208,10 @@ describe("SendVote", () => {
 
 	afterEach(() => {
 		vi.useRealTimers();
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should close the side panel and return to the select a validator page to unvote", async () => {
@@ -711,27 +723,33 @@ describe("SendVote", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => [
 			{
 				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: validatorData[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedvalidator: false,
-					isValidator: true,
-					publicKey: validatorData[0].publicKey,
-					username: validatorData[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: validatorData[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedvalidator: false,
+						isValidator: true,
+						publicKey: validatorData[0].publicKey,
+						username: validatorData[0].username,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: validatorData[1].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedvalidator: false,
-					isValidator: true,
-					publicKey: validatorData[1].publicKey,
-					username: validatorData[1].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: validatorData[1].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedvalidator: false,
+						isValidator: true,
+						publicKey: validatorData[1].publicKey,
+						username: validatorData[1].username,
+					},
+					profile,
+				),
 			},
 		]);
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
@@ -893,6 +911,60 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 
 		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+
+		signMock.mockRestore();
+	});
+
+	it("should navigate back to review step when clicking back button in error step", async () => {
+		vi.useRealTimers();
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const votes: VoteValidatorProperties[] = [
+			{
+				amount: 10,
+				validatorAddress: validatorData[0].address,
+			},
+		];
+
+		render(
+			<Component
+				activeProfile={profile}
+				activeNetwork={wallet.network()}
+				activeWallet={wallet}
+				votes={votes}
+				unvotes={[]}
+			/>,
+			{ route: `${voteURL}` },
+		);
+
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		// AuthenticationStep
+		await expect(screen.findByTestId(authenticationStepID)).resolves.toBeVisible();
+
+		const signMock = vi.spyOn(wallet.transaction(), "signVote").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		// Should return to review step
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+		expect(screen.queryByTestId("ErrorStep")).not.toBeInTheDocument();
 
 		signMock.mockRestore();
 	});

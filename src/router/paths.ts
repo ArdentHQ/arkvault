@@ -6,16 +6,15 @@ export enum ProfilePaths {
 	// Contacts
 	Contacts = "/profiles/:profileId/contacts",
 	// Messages
-	SignMessage = "/profiles/:profileId/dashboard",
+	SignMessage = "/profiles/:profileId/dashboard?method=sign",
 	VerifyMessage = "/profiles/:profileId/verify-message",
 	VerifyMessageWallet = "/profiles/:profileId/wallets/:walletId/verify-message",
 	// Transactions
 	SendRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType",
 	SendValidatorResignation = "/profiles/:profileId/wallets/:walletId/send-validator-resignation",
-	SendTransferWallet = "/profiles/:profileId/wallets/:walletId/send-transfer",
-	SendTransfer = "/profiles/:profileId/send-transfer",
-	SendVote = "/profiles/:profileId/send-vote",
-	SendVoteWallet = "/profiles/:profileId/wallets/:walletId/send-vote",
+	SendTransfer = "/profiles/:profileId/dashboard?method=transfer",
+	SendVote = "/profiles/:profileId/votes?method=vote",
+	SendVoteWallet = "/profiles/:profileId/wallets/:walletId/votes?method=vote",
 	SendMultiSignature = "/profiles/:profileId/wallets/:walletId/send-registration/multiSignature",
 	SendValidatorRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/validatorRegistration",
 	SendValidatorResignationProfile = "/profiles/:profileId/send-validator-resignation",

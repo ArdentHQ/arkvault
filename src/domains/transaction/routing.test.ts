@@ -11,10 +11,6 @@ describe("routing", () => {
 			expect.objectContaining({ path: ProfilePaths.SendValidatorResignationProfile }),
 			expect.objectContaining({ path: ProfilePaths.SendUsernameResignation }),
 			expect.objectContaining({ path: ProfilePaths.SendUsernameResignationProfile }),
-			expect.objectContaining({ path: ProfilePaths.SendTransferWallet }),
-			expect.objectContaining({ path: ProfilePaths.SendTransfer }),
-			expect.objectContaining({ path: ProfilePaths.SendVoteWallet }),
-			expect.objectContaining({ path: ProfilePaths.SendVote }),
 		]);
 	});
 

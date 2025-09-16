@@ -23,9 +23,10 @@ import { data as validatorData } from "@/tests/fixtures/coins/mainsail/devnet/va
 import { SendVoteSidePanel } from "./SendVoteSidePanel";
 import userEvent from "@testing-library/user-event";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
-import { expect, vi } from "vitest";
+import { afterAll, expect, vi } from "vitest";
 import { Networks } from "@/app/lib/networks";
 import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
+import * as ReactRouter from "react-router";
 
 const fixtureProfileId = getMainsailProfileId();
 
@@ -37,6 +38,8 @@ const transactionMethodsFixture = {
 	explorerLinkForBlock: () => `https://test.arkscan.io/block/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e18,
 	from: () => transactionFixture.data.from,
+	gasLimit: () => transactionFixture.data.gasLimit,
+	gasUsed: () => transactionFixture.data.receipt.gasUsed,
 	hash: () => transactionFixture.data.hash,
 	isConfirmed: () => false,
 	isMultiPayment: () => false,
@@ -88,19 +91,22 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-
+let useSearchParamsMock;
 const votingMockImplementation = () => [
 	{
 		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: validatorData[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedvalidator: false,
-			isValidator: true,
-			publicKey: validatorData[1].publicKey,
-			username: validatorData[1].username,
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: validatorData[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedvalidator: false,
+				isValidator: true,
+				publicKey: validatorData[1].publicKey,
+				username: validatorData[1].username,
+			},
+			profile,
+		),
 	},
 ];
 
@@ -151,6 +157,10 @@ const Component = ({
 
 describe("SendVoteSidePanel Combined", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -197,6 +207,10 @@ describe("SendVoteSidePanel Combined", () => {
 
 	afterEach(() => {
 		vi.useRealTimers();
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should send a unvote & vote transaction (split)", async () => {

@@ -5,7 +5,7 @@ import { env, act, getMainsailProfileId, Providers, LocationTracker } from "@/ut
 import { DropdownOption } from "@/app/components/Dropdown";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { vi } from "vitest";
+import { expect, vi } from "vitest";
 
 describe("useWalletActions", () => {
 	let profile: Contracts.IProfile;
@@ -57,13 +57,14 @@ describe("useWalletActions", () => {
 		let currentLocation = { pathname: "/" };
 
 		const mockHandleSendUsernameResignation = vi.fn();
-
+		const mockHandleSendValidatorResignation = vi.fn();
 		const {
 			result: { current },
 		} = renderHook(
 			() =>
 				useWalletActions({
 					handleSendUsernameResignation: mockHandleSendUsernameResignation,
+					handleSendValidatorResignation: mockHandleSendValidatorResignation,
 					wallets: [wallet, profile.wallets().last()],
 				}),
 			{
@@ -86,13 +87,13 @@ describe("useWalletActions", () => {
 			current.handleSend();
 		});
 
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
+		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
 		act(() => {
 			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 		});
 
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-validator-resignation`);
+		expect(mockHandleSendValidatorResignation).toHaveBeenCalledTimes(1);
 
 		act(() => {
 			current.handleSelectOption({ value: "username-resignation" } as DropdownOption);
@@ -162,48 +163,6 @@ describe("useWalletActions", () => {
 				current.handleSelectOption({ value: "username-registration" } as DropdownOption);
 			});
 		}).not.toThrow();
-	});
-
-	it("should call handleSendTransfer callback when provided", () => {
-		const mockHandleSendTransfer = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSendTransfer: mockHandleSendTransfer,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSend();
-		});
-
-		expect(mockHandleSendTransfer).toHaveBeenCalledTimes(1);
-	});
-
-	it("should call handleSignMessage callback when provided", () => {
-		const mockHandleSignMessage = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSignMessage: mockHandleSignMessage,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSelectOption({ value: "sign-message" } as DropdownOption);
-		});
-
-		expect(mockHandleSignMessage).toHaveBeenCalledTimes(1);
 	});
 
 	it("should call handleSendUsernameResignation callback when provided", () => {
@@ -240,51 +199,28 @@ describe("useWalletActions", () => {
 		}).not.toThrow();
 	});
 
-	it("should call handleSendRegistration callback for validator registration", () => {
-		const mockHandleSendRegistration = vi.fn();
+	it("should call handleSendValidatorResignation callback when provided", () => {
+		const mockHandleSendValidatorResignation = vi.fn();
 
 		const {
 			result: { current },
 		} = renderHook(
 			() =>
 				useWalletActions({
-					handleSendRegistration: mockHandleSendRegistration,
+					handleSendValidatorResignation: mockHandleSendValidatorResignation,
 					wallets: [wallet],
 				}),
 			{ wrapper },
 		);
 
 		act(() => {
-			current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
+			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 		});
 
-		expect(mockHandleSendRegistration).toHaveBeenCalledWith("validatorRegistration");
-		expect(mockHandleSendRegistration).toHaveBeenCalledTimes(1);
+		expect(mockHandleSendValidatorResignation).toHaveBeenCalledTimes(1);
 	});
 
-	it("should call handleSendRegistration callback for username registration", () => {
-		const mockHandleSendRegistration = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSendRegistration: mockHandleSendRegistration,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSelectOption({ value: "username-registration" } as DropdownOption);
-		});
-
-		expect(mockHandleSendRegistration).toHaveBeenCalledWith("usernameRegistration");
-		expect(mockHandleSendRegistration).toHaveBeenCalledTimes(1);
-	});
-
-	it("should not call handleSendRegistration callback when not provided", () => {
+	it("should not call handleSendValidatorResignation callback when not provided", () => {
 		const {
 			result: { current },
 		} = renderHook(() => useWalletActions({ wallets: [wallet] }), { wrapper });
@@ -292,56 +228,8 @@ describe("useWalletActions", () => {
 		// Should not throw error when callback is not provided
 		expect(() => {
 			act(() => {
-				current.handleSelectOption({ value: "validator-registration" } as DropdownOption);
+				current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 			});
 		}).not.toThrow();
-
-		expect(() => {
-			act(() => {
-				current.handleSelectOption({ value: "username-registration" } as DropdownOption);
-			});
-		}).not.toThrow();
-	});
-
-	it("should call handleSendTransfer callback when provided", () => {
-		const mockHandleSendTransfer = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSendTransfer: mockHandleSendTransfer,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSend();
-		});
-
-		expect(mockHandleSendTransfer).toHaveBeenCalledTimes(1);
-	});
-
-	it("should call handleSignMessage callback when provided", () => {
-		const mockHandleSignMessage = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSignMessage: mockHandleSignMessage,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSelectOption({ value: "sign-message" } as DropdownOption);
-		});
-
-		expect(mockHandleSignMessage).toHaveBeenCalledTimes(1);
 	});
 });

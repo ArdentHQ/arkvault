@@ -751,7 +751,7 @@ exports[`SendValidatorResignation > Validator Resignation > should change fee 1`
                     </div>
                   </div>
                   <div
-                    class="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4"
+                    class="space-y-3 sm:mx-0 sm:space-y-4 mt-6 sm:mt-4"
                   >
                     <div
                       data-testid="DetailWrapper"
@@ -2039,7 +2039,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
                               data-testid="header__title"
                             >
-                              Resign Validator
+                              Validator Resignation
                             </h1>
                           </div>
                           <div
@@ -2138,7 +2138,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 1st st
                         type="button"
                       >
                         <span
-                          class="absolute inset-y-0 flex items-center border border-transparent right-13 left-4"
+                          class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
                         >
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3143,7 +3143,7 @@ exports[`SendValidatorResignation > Validator Resignation > should render 2nd st
                     </div>
                   </div>
                   <div
-                    class="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4"
+                    class="space-y-3 sm:mx-0 sm:space-y-4 mt-6 sm:mt-4"
                   >
                     <div
                       data-testid="DetailWrapper"

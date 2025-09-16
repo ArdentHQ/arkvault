@@ -1,6 +1,7 @@
 import React from "react";
 import QRScanner from "qr-scanner";
 import * as browserAccess from "browser-fs-access";
+import * as ReactRouter from "react-router";
 import userEvent from "@testing-library/user-event";
 import { within, renderHook } from "@testing-library/react";
 import { Trans, useTranslation } from "react-i18next";
@@ -49,6 +50,8 @@ const openScanModal = async () => {
 
 describe("SendTransferSidePanel QRModal", () => {
 	beforeAll(async () => {
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		const profile = env.profiles().findById(fixtureProfileId);
 		await env.profiles().restore(profile);
 		await profile.sync();

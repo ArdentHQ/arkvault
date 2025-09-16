@@ -110,17 +110,20 @@ export class ValidatorService implements IValidatorService {
 				validator = this.findByAddress(wallet.networkId(), identifier);
 			}
 
-			return new ReadOnlyWallet({
-				address: validator.address(),
-				explorerLink: wallet.link().wallet(validator.address()),
-				governanceIdentifier: validator.governanceIdentifier(),
-				isLegacyValidator: validator.isLegacyValidator(),
-				isResignedValidator: validator.isResignedValidator(),
-				isValidator: validator.isValidator(),
-				publicKey: validator.publicKey(),
-				rank: validator.rank(),
-				username: validator.username(),
-			});
+			return new ReadOnlyWallet(
+				{
+					address: validator.address(),
+					explorerLink: wallet.link().wallet(validator.address()),
+					governanceIdentifier: validator.governanceIdentifier(),
+					isLegacyValidator: validator.isLegacyValidator(),
+					isResignedValidator: validator.isResignedValidator(),
+					isValidator: validator.isValidator(),
+					publicKey: validator.publicKey(),
+					rank: validator.rank(),
+					username: validator.username(),
+				},
+				this.#profile,
+			);
 		} catch {
 			return undefined;
 		}
@@ -137,17 +140,20 @@ export class ValidatorService implements IValidatorService {
 	}
 
 	#mapValidator(validator: Record<string, any>): IReadOnlyWallet {
-		return new ReadOnlyWallet({
-			address: validator.address,
-			explorerLink: validator.explorerLink,
-			governanceIdentifier: validator.governanceIdentifier,
-			isLegacyValidator: validator.isLegacyValidator,
-			isResignedValidator: validator.isResignedValidator,
-			isValidator: validator.isValidator,
-			publicKey: validator.publicKey,
-			rank: validator.rank as unknown as number,
-			username: validator.username,
-		});
+		return new ReadOnlyWallet(
+			{
+				address: validator.address,
+				explorerLink: validator.explorerLink,
+				governanceIdentifier: validator.governanceIdentifier,
+				isLegacyValidator: validator.isLegacyValidator,
+				isResignedValidator: validator.isResignedValidator,
+				isValidator: validator.isValidator,
+				publicKey: validator.publicKey,
+				rank: validator.rank as unknown as number,
+				username: validator.username,
+			},
+			this.#profile,
+		);
 	}
 
 	public async publicKeyExists(publicKey: string, network: Networks.Network): Promise<boolean> {

@@ -5,9 +5,9 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import { FormStep } from "@/domains/transaction/pages/SendVote/FormStep";
-import { VoteLedgerReview } from "@/domains/transaction/pages/SendVote/LedgerReview";
-import { ReviewStep } from "@/domains/transaction/pages/SendVote/ReviewStep";
+import { FormStep } from "@/domains/transaction/components/SendVoteSidePanel/FormStep";
+import { VoteLedgerReview } from "@/domains/transaction/components/SendVoteSidePanel/LedgerReview";
+import { ReviewStep } from "@/domains/transaction/components/SendVoteSidePanel/ReviewStep";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -17,7 +17,7 @@ import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
-import { handleBroadcastError } from "@/domains/transaction/utils";
+import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/transaction/utils";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
@@ -31,6 +31,7 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useVoteFormContext } from "@/domains/vote/contexts/VoteFormContext";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import classNames from "classnames";
+import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 
 enum Step {
 	FormStep = 1,
@@ -68,6 +69,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const { senderAddress } = form.watch();
 
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
@@ -78,6 +80,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
+
+	const { connectLedger } = useConnectLedger({
+		onReady: () => void handleSubmit(submitForm)(),
+		profile: activeProfile,
+	});
 
 	const activeWallet = useMemo(
 		() => activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id()),
@@ -234,16 +241,19 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 		assertWallet(senderWallet);
 
-		if (newIndex === Step.AuthenticationStep && senderWallet.isLedger()) {
-			if (!isLedgerTransportSupported()) {
-				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
-				setActiveTab(Step.ErrorStep);
-				return;
-			}
-			void handleSubmit(submitForm)();
+		const isLedgerTransaction = newIndex === Step.AuthenticationStep && senderWallet.isLedger();
+
+		if (isLedgerTransaction && !isLedgerTransportSupported()) {
+			setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
+			setActiveTab(Step.ErrorStep);
+			return;
 		}
 
 		setActiveTab(newIndex);
+
+		if (isLedgerTransaction) {
+			void connectLedger();
+		}
 	};
 
 	const confirmSendVote = (wallet: Contracts.IReadWriteWallet, type: "unvote" | "vote" | "combined") =>
@@ -494,7 +504,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		}
 
 		if (activeTab === Step.AuthenticationStep) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+			return getAuthenticationStepSubtitle({ t, wallet: activeWallet });
 		}
 
 		return;
@@ -652,8 +662,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 									/>
 								}
 								ledgerIsAwaitingDevice={!hasDeviceAvailable}
-								ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+								ledgerIsAwaitingApp={!isConnected}
 								noHeading
+								onDeviceNotAvailable={() => {
+									// do nothing, wait for ledger
+								}}
 							/>
 						)}
 					</TabPanel>

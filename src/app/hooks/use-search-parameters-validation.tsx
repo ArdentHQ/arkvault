@@ -190,14 +190,14 @@ export const useSearchParametersValidation = () => {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SignMessage, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`,
+				})}&${searchParameters.toString().replace("method=sign&", "")}`,
 			validate: validateSign,
 		},
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`,
+				})}&${searchParameters.toString().replace("method=transfer&", "")}`,
 			validate: validateTransfer,
 		},
 		verify: {
@@ -218,7 +218,7 @@ export const useSearchParametersValidation = () => {
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`;
+				})}&${searchParameters.toString().replace("method=vote&", "")}`;
 			},
 			validate: validateVote,
 		},

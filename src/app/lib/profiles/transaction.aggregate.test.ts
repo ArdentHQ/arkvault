@@ -184,7 +184,7 @@ describe("TransactionAggregate", () => {
 		await subject.all();
 
 		expect(allSpy).toHaveBeenCalledTimes(2);
-		expect(allSpy).toHaveBeenLastCalledWith({ cursor: 2, fullReceipt: true });
+		expect(allSpy).toHaveBeenLastCalledWith({ cursor: 2 });
 	});
 
 	it("should create a history key with types", async () => {

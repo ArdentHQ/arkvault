@@ -455,7 +455,6 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 							</div>
 						</FormLabel>
 						<SelectRecipient
-							showWalletAvatar={false}
 							network={recipientNetwork}
 							disabled={!getValues("toCurrency")}
 							showOptions={!!recipientNetwork}
@@ -489,7 +488,6 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 							<FormField name="refundWallet">
 								<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.REFUND_WALLET")} />
 								<SelectRecipient
-									showWalletAvatar={false}
 									network={senderNetwork}
 									disabled={!getValues("fromCurrency")}
 									showOptions={!!senderNetwork}
