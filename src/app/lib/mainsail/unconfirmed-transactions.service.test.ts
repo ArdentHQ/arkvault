@@ -134,7 +134,7 @@ describe("UnconfirmedTransactionsService", () => {
 			}),
 		);
 
-		const res = await service.listUnconfirmed({ page: 2, limit: 10, address: ["0x1111"] });
+		const res = await service.listUnconfirmed({ address: ["0x1111"], limit: 10, page: 2 });
 
 		expect(res.results.length).toEqual(4);
 	});
@@ -154,7 +154,7 @@ describe("UnconfirmedTransactionsService", () => {
 		);
 
 		const res = await service.listUnconfirmed({
-			address: ["0x1111", "0x2222"]
+			address: ["0x1111", "0x2222"],
 		});
 
 		expect(res.results.length).toEqual(4);
