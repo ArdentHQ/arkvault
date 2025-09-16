@@ -67,12 +67,11 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 	it("should show Select Account step when there are imported HD Wallets", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
-			levels: {account: 0},
+			levels: { account: 0 },
 			mnemonic,
 		});
 
 		profile.wallets().push(wallet);
-
 
 		const user = userEvent.setup();
 
