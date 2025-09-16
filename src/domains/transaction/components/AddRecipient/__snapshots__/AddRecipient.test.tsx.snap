@@ -16,39 +16,37 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
       <div
         class="flex items-center space-x-2"
       >
-        <span>
-          <div
-            class="flex items-center"
+        <div
+          class="flex items-center"
+        >
+          <button
+            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            type="button"
           >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-              type="button"
+            Single
+          </button>
+          <label
+            class="flex items-center cursor-pointer h-3"
+          >
+            <input
+              class="toggle-input sr-only"
+              type="checkbox"
+            />
+            <div
+              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
             >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
+              <span
+                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
               />
-              <div
-                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
-              type="button"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
+            </div>
+          </label>
+          <button
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            type="button"
+          >
+            Multiple
+          </button>
+        </div>
         <div
           class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
@@ -352,39 +350,37 @@ exports[`AddRecipient > should render 1`] = `
       <div
         class="flex items-center space-x-2"
       >
-        <span>
-          <div
-            class="flex items-center"
+        <div
+          class="flex items-center"
+        >
+          <button
+            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            type="button"
           >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-              type="button"
+            Single
+          </button>
+          <label
+            class="flex items-center cursor-pointer h-3"
+          >
+            <input
+              class="toggle-input sr-only"
+              type="checkbox"
+            />
+            <div
+              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
             >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
+              <span
+                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
               />
-              <div
-                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
-              type="button"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
+            </div>
+          </label>
+          <button
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            type="button"
+          >
+            Multiple
+          </button>
+        </div>
         <div
           class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
@@ -673,39 +669,37 @@ exports[`AddRecipient > should render with empty array of recipients as default 
       <div
         class="flex items-center space-x-2"
       >
-        <span>
-          <div
-            class="flex items-center"
+        <div
+          class="flex items-center"
+        >
+          <button
+            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            type="button"
           >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-              type="button"
+            Single
+          </button>
+          <label
+            class="flex items-center cursor-pointer h-3"
+          >
+            <input
+              class="toggle-input sr-only"
+              type="checkbox"
+            />
+            <div
+              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
             >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
+              <span
+                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
               />
-              <div
-                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
-              type="button"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
+            </div>
+          </label>
+          <button
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            type="button"
+          >
+            Multiple
+          </button>
+        </div>
         <div
           class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
@@ -994,39 +988,37 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
       <div
         class="flex items-center space-x-2"
       >
-        <span>
-          <div
-            class="flex items-center"
+        <div
+          class="flex items-center"
+        >
+          <button
+            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            type="button"
           >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-              type="button"
+            Single
+          </button>
+          <label
+            class="flex items-center cursor-pointer h-3"
+          >
+            <input
+              class="toggle-input sr-only"
+              type="checkbox"
+            />
+            <div
+              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
             >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
+              <span
+                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
               />
-              <div
-                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
-              type="button"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
+            </div>
+          </label>
+          <button
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            type="button"
+          >
+            Multiple
+          </button>
+        </div>
         <div
           class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
@@ -1315,39 +1307,37 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
       <div
         class="flex items-center space-x-2"
       >
-        <span>
-          <div
-            class="flex items-center"
+        <div
+          class="flex items-center"
+        >
+          <button
+            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            type="button"
           >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-              type="button"
+            Single
+          </button>
+          <label
+            class="flex items-center cursor-pointer h-3"
+          >
+            <input
+              class="toggle-input sr-only"
+              type="checkbox"
+            />
+            <div
+              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
             >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
+              <span
+                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
               />
-              <div
-                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
-              type="button"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
+            </div>
+          </label>
+          <button
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            type="button"
+          >
+            Multiple
+          </button>
+        </div>
         <div
           class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
@@ -1905,39 +1895,37 @@ exports[`AddRecipient > should set available amount 1`] = `
       <div
         class="flex items-center space-x-2"
       >
-        <span>
-          <div
-            class="flex items-center"
+        <div
+          class="flex items-center"
+        >
+          <button
+            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            type="button"
           >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-              type="button"
+            Single
+          </button>
+          <label
+            class="flex items-center cursor-pointer h-3"
+          >
+            <input
+              class="toggle-input sr-only"
+              type="checkbox"
+            />
+            <div
+              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
             >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
+              <span
+                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
               />
-              <div
-                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
-              type="button"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
+            </div>
+          </label>
+          <button
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            type="button"
+          >
+            Multiple
+          </button>
+        </div>
         <div
           class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
@@ -2226,39 +2214,37 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
       <div
         class="flex items-center space-x-2"
       >
-        <span>
-          <div
-            class="flex items-center"
+        <div
+          class="flex items-center"
+        >
+          <button
+            class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+            type="button"
           >
-            <button
-              class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
-              type="button"
+            Single
+          </button>
+          <label
+            class="flex items-center cursor-pointer h-3"
+          >
+            <input
+              class="toggle-input sr-only"
+              type="checkbox"
+            />
+            <div
+              class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
             >
-              Single
-            </button>
-            <label
-              class="flex items-center cursor-pointer h-3"
-            >
-              <input
-                class="toggle-input sr-only"
-                type="checkbox"
+              <span
+                class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
               />
-              <div
-                class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
-              >
-                <span
-                  class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
-                />
-              </div>
-            </label>
-            <button
-              class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
-              type="button"
-            >
-              Multiple
-            </button>
-          </div>
-        </span>
+            </div>
+          </label>
+          <button
+            class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+            type="button"
+          >
+            Multiple
+          </button>
+        </div>
         <div
           class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
         >
