@@ -1,5 +1,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
+import { WalletSetting } from "@/app/lib/profiles/wallet.enum";
 
 interface GetDefaultAliasInput {
 	profile: Contracts.IProfile;
@@ -13,7 +14,7 @@ const makeAlias = (count: number) => `Address #${count}`;
 const makeLedgerAlias = (count: number | string) => `Ledger #${count}`;
 
 const findByAlias = (alias: string, wallets: Contracts.IReadWriteWallet[]) =>
-	wallets.find((wallet) => wallet.alias() === alias);
+	wallets.find((wallet) => wallet.settings().get(WalletSetting.Alias) === alias);
 
 export const getDefaultAlias = ({ profile }: GetDefaultAliasInput): string => {
 	const wallets = profile

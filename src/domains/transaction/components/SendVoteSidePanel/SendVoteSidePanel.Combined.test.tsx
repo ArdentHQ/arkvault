@@ -95,15 +95,18 @@ let useSearchParamsMock;
 const votingMockImplementation = () => [
 	{
 		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: validatorData[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedvalidator: false,
-			isValidator: true,
-			publicKey: validatorData[1].publicKey,
-			username: validatorData[1].username,
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: validatorData[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedvalidator: false,
+				isValidator: true,
+				publicKey: validatorData[1].publicKey,
+				username: validatorData[1].username,
+			},
+			profile,
+		),
 	},
 ];
 

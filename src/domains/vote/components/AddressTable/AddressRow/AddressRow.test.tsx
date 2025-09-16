@@ -37,15 +37,18 @@ const AddressWrapper = ({ children }) => {
 const votingMockReturnValue = (validatorsIndex: number[]) =>
 	validatorsIndex.map((index) => ({
 		amount: 0,
-		wallet: new ReadOnlyWallet({
-			address: data[index].address,
-			explorerLink: `https://test.arkscan.io/wallets/${data[0].address}`,
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[index].publicKey,
-			username: data[index].attributes.username,
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: data[index].address,
+				explorerLink: `https://test.arkscan.io/wallets/${data[0].address}`,
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[index].publicKey,
+				username: data[index].attributes.username,
+			},
+			profile,
+		),
 	}));
 
 describe("AddressRow", () => {
@@ -194,16 +197,19 @@ describe("AddressRow", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[0].publicKey,
-					rank: 1,
-					username: data[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: data[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[0].publicKey,
+						rank: 1,
+						username: data[0].username,
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -229,16 +235,19 @@ describe("AddressRow", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[0].publicKey,
-					rank: 100,
-					username: data[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: data[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[0].publicKey,
+						rank: 100,
+						username: data[0].username,
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -264,16 +273,19 @@ describe("AddressRow", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: true,
-					isValidator: true,
-					publicKey: data[0].publicKey,
-					rank: undefined,
-					username: data[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: data[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: true,
+						isValidator: true,
+						publicKey: data[0].publicKey,
+						rank: undefined,
+						username: data[0].username,
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -381,16 +393,19 @@ describe("AddressRow", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[0].publicKey,
-					rank: 1,
-					username: undefined,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: data[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[0].publicKey,
+						rank: 1,
+						username: undefined,
+					},
+					profile,
+				),
 			},
 		]);
 

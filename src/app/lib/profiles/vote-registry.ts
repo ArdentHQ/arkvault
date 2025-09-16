@@ -1,14 +1,20 @@
-import { IReadWriteWallet, IReadWriteWalletAttributes, IVoteRegistry, WalletData } from "./contracts.js";
+import { IProfile, IReadWriteWallet, IReadWriteWalletAttributes, IVoteRegistry, WalletData } from "./contracts.js";
 import { AttributeBag } from "./helpers/attribute-bag.js";
 import { ReadOnlyWallet } from "./read-only-wallet.js";
 import { VoteRegistryItem } from "./vote-registry.contract.js";
 
 export class VoteRegistry implements IVoteRegistry {
 	readonly #wallet: IReadWriteWallet;
+	readonly #profile: IProfile;
 	readonly #attributes: AttributeBag<IReadWriteWalletAttributes>;
 
-	public constructor(wallet: IReadWriteWallet, attributes: AttributeBag<IReadWriteWalletAttributes>) {
+	public constructor(
+		wallet: IReadWriteWallet,
+		attributes: AttributeBag<IReadWriteWalletAttributes>,
+		profile: IProfile,
+	) {
 		this.#wallet = wallet;
+		this.#profile = profile;
 		this.#attributes = attributes;
 	}
 
@@ -40,14 +46,17 @@ export class VoteRegistry implements IVoteRegistry {
 			if (votingAddress) {
 				return {
 					amount: 0,
-					wallet: new ReadOnlyWallet({
-						address: votingAddress,
-						explorerLink: this.#wallet.explorerLink(),
-						governanceIdentifier: "address",
-						isLegacyValidator: false,
-						isResignedValidator: false,
-						isValidator: true,
-					}),
+					wallet: new ReadOnlyWallet(
+						{
+							address: votingAddress,
+							explorerLink: this.#wallet.explorerLink(),
+							governanceIdentifier: "address",
+							isLegacyValidator: false,
+							isResignedValidator: false,
+							isValidator: true,
+						},
+						this.#profile,
+					),
 				};
 			}
 
