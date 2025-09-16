@@ -197,7 +197,7 @@ export const HDWalletTabs = ({
 					<div data-testid="HDWalletTabs--child" className="h-full">
 						<div className="h-full">
 							<TabPanel tabId={HDWalletTabStep.SelectAccountStep}>
-								<SelectAccountStep network={activeNetwork} profile={activeProfile} />
+								// select or import new HD wallet
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EnterMnemonicStep}>
