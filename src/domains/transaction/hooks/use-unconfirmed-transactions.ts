@@ -12,7 +12,11 @@ interface UnconfirmedTransactions {
 interface UseUnconfirmedTransactionsReturn {
 	unconfirmedTransactions: UnconfirmedTransactions;
 	addUnconfirmedTransactionFromSigned: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	addUnconfirmedTransactionFromApi: (networkId: string, walletAddress: string, transaction: RawTransactionData) => void;
+	addUnconfirmedTransactionFromApi: (
+		networkId: string,
+		walletAddress: string,
+		transaction: RawTransactionData,
+	) => void;
 	removeUnconfirmedTransaction: (hash: string) => void;
 	cleanupUnconfirmedForAddresses: (walletAddresses: string[], remoteHashes: string[]) => void;
 }
@@ -43,7 +47,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 					}
 
 					updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
-						(tx) => tx.signedData.hash !== newHash
+						(tx) => tx.signedData.hash !== newHash,
 					);
 
 					updated[networkId][walletAddress].push(data);
@@ -74,7 +78,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 					}
 
 					updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
-						(tx) => tx.signedData.hash !== targetHash
+						(tx) => tx.signedData.hash !== targetHash,
 					);
 
 					updated[networkId][walletAddress].push({ signedData: transaction });
@@ -94,21 +98,21 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 			setUnconfirmedTransactions((prev) => {
 				const updated = { ...prev };
 
-				Object.keys(updated).forEach((networkId) => {
-					Object.keys(updated[networkId]).forEach((walletAddress) => {
+				for (const networkId of Object.keys(updated)) {
+					for (const walletAddress of Object.keys(updated[networkId])) {
 						updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
-							(tx) => tx.signedData.hash !== hash
+							(tx) => tx.signedData.hash !== hash,
 						);
 
 						if (updated[networkId][walletAddress].length === 0) {
 							delete updated[networkId][walletAddress];
 						}
-					});
+					}
 
 					if (Object.keys(updated[networkId]).length === 0) {
 						delete updated[networkId];
 					}
-				});
+				}
 
 				return updated;
 			});
@@ -124,23 +128,23 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 			setUnconfirmedTransactions((prev) => {
 				const updated = { ...prev };
 
-				Object.keys(updated).forEach((networkId) => {
-					Object.keys(updated[networkId]).forEach((walletAddress) => {
+				for (const networkId of Object.keys(updated)) {
+					for (const walletAddress of Object.keys(updated[networkId])) {
 						if (addressScope.has(walletAddress)) {
-							updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
-								(tx) => keepHashes.has(tx.signedData.hash)
+							updated[networkId][walletAddress] = updated[networkId][walletAddress].filter((tx) =>
+								keepHashes.has(tx.signedData.hash),
 							);
 
 							if (updated[networkId][walletAddress].length === 0) {
 								delete updated[networkId][walletAddress];
 							}
 						}
-					});
+					}
 
 					if (Object.keys(updated[networkId]).length === 0) {
 						delete updated[networkId];
 					}
-				});
+				}
 
 				return updated;
 			});

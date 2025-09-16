@@ -46,14 +46,16 @@ const createMockedTransactionData = (overrides: Partial<RawTransactionData> = {}
 });
 
 // Helper to create nested unconfirmed transactions structure
-const createNestedUnconfirmedTransactions = (transactions: Array<{
-	networkId: string;
-	walletAddress: string;
-	transaction: RawTransactionData;
-}>) => {
+const createNestedUnconfirmedTransactions = (
+	transactions: Array<{
+		networkId: string;
+		walletAddress: string;
+		transaction: RawTransactionData;
+	}>,
+) => {
 	const nested: any = {};
-	
-	transactions.forEach(({ networkId, walletAddress, transaction }) => {
+
+	for (const { networkId, walletAddress, transaction } of transactions) {
 		if (!nested[networkId]) {
 			nested[networkId] = {};
 		}
@@ -61,16 +63,18 @@ const createNestedUnconfirmedTransactions = (transactions: Array<{
 			nested[networkId][walletAddress] = [];
 		}
 		nested[networkId][walletAddress].push(transaction);
-	});
-	
+	}
+
 	return nested;
 };
 
-const mockUnconfirmedTransactionsHook = async (unconfirmedTransactions: Array<{
-	networkId: string;
-	walletAddress: string;
-	transaction: RawTransactionData;
-}> = []) => {
+const mockUnconfirmedTransactionsHook = async (
+	unconfirmedTransactions: Array<{
+		networkId: string;
+		walletAddress: string;
+		transaction: RawTransactionData;
+	}> = [],
+) => {
 	const removeUnconfirmedTransaction = vi.fn();
 	const addUnconfirmedTransactionFromApi = vi.fn();
 	const cleanupUnconfirmedForAddresses = vi.fn();
@@ -79,14 +83,19 @@ const mockUnconfirmedTransactionsHook = async (unconfirmedTransactions: Array<{
 	const nestedTransactions = createNestedUnconfirmedTransactions(unconfirmedTransactions);
 
 	const unconfirmedSpy = vi.spyOn(unconfirmedHook, "useUnconfirmedTransactions").mockReturnValue({
-		addUnconfirmedTransactionFromSigned: vi.fn(),
 		addUnconfirmedTransactionFromApi,
-		removeUnconfirmedTransaction,
+		addUnconfirmedTransactionFromSigned: vi.fn(),
 		cleanupUnconfirmedForAddresses,
+		removeUnconfirmedTransaction,
 		unconfirmedTransactions: nestedTransactions,
 	});
 
-	return { removeUnconfirmedTransaction, addUnconfirmedTransactionFromApi, cleanupUnconfirmedForAddresses, unconfirmedSpy };
+	return {
+		addUnconfirmedTransactionFromApi,
+		cleanupUnconfirmedForAddresses,
+		removeUnconfirmedTransaction,
+		unconfirmedSpy,
+	};
 };
 
 describe("useProfileTransactions", () => {
@@ -932,21 +941,21 @@ describe("useProfileTransactions", () => {
 						from: () => walletAddress.toUpperCase(),
 						gasLimit: "21000",
 						hash: "UNCONF_FROM",
-						raw: () => ({ hash: "UNCONF_FROM", gasLimit: "21000" }),
+						raw: () => ({ gasLimit: "21000", hash: "UNCONF_FROM" }),
 						to: () => "ADDRESS_TO",
 					},
 					{
 						from: () => "ADDRESS_FROM",
 						gasLimit: "99999",
 						hash: "UNCONF_TO",
-						raw: () => ({ hash: "UNCONF_TO", gasLimit: "99999" }),
+						raw: () => ({ gasLimit: "99999", hash: "UNCONF_TO" }),
 						to: () => walletAddress.toLowerCase(),
 					},
 					{
 						from: () => "ADDRESS_FROM",
 						gasLimit: "33333",
 						hash: "UNCONF_IGNORE",
-						raw: () => ({ hash: "UNCONF_IGNORE", gasLimit: "33333" }),
+						raw: () => ({ gasLimit: "33333", hash: "UNCONF_IGNORE" }),
 						to: () => "ADDRESS_TO",
 					},
 					{
@@ -975,11 +984,11 @@ describe("useProfileTransactions", () => {
 
 		expect(firstCall[0]).toBe(networkId); // networkId
 		expect(firstCall[1]).toBe(walletAddress); // walletAddress
-		expect(firstCall[2]).toEqual({ hash: "UNCONF_FROM", gasLimit: "21000" }); // transaction
+		expect(firstCall[2]).toEqual({ gasLimit: "21000", hash: "UNCONF_FROM" }); // transaction
 
 		expect(secondCall[0]).toBe(networkId);
 		expect(secondCall[1]).toBe(walletAddress);
-		expect(secondCall[2]).toEqual({ hash: "UNCONF_TO", gasLimit: "99999" });
+		expect(secondCall[2]).toEqual({ gasLimit: "99999", hash: "UNCONF_TO" });
 
 		expect(cleanupUnconfirmedForAddresses).toHaveBeenCalledWith(
 			[walletAddress],
@@ -1139,20 +1148,20 @@ describe("useProfileTransactions", () => {
 				throw new Error("Milestone error");
 			},
 		};
-	
+
 		const activeNetworkSpy = vi.spyOn(profile, "activeNetwork").mockReturnValue(mockNetwork as any);
 		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
-	
+
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [] }), { wrapper });
-	
+
 		act(() => {
 			result.current.updateFilters({ activeMode: "all" });
 		});
-	
+
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
-	
+
 		expect(consoleErrorSpy).toHaveBeenCalledWith("Failed to get block time:", expect.any(Error));
-	
+
 		activeNetworkSpy.mockRestore();
 		consoleErrorSpy.mockRestore();
 	});
