@@ -107,7 +107,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 						<Checkbox
 							checked={isSelected(wallet)}
 							onChange={() => toggleSelect(wallet)}
-							data-testid="LedgerScanStep__checkbox-row"
+							data-testid="SelectAddressStep__checkbox-row"
 						/>
 					</TableCell>
 

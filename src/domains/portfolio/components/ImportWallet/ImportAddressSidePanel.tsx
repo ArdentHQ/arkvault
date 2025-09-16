@@ -350,7 +350,6 @@ export const ImportAddressesSidePanel = ({
 									}}
 									onSubmit={handleFinish}
 									onBack={handleReturnToSelection}
-									activeIndex={HDWalletActiveTab}
 								/>
 							)}
 
