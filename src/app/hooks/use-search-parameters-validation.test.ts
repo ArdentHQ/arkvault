@@ -372,16 +372,19 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should fail if delegate is resigned", async () => {
-		const validatorWallet = new ReadOnlyWallet({
-			address: profile.wallets().first().address(),
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: profile.wallets().first().publicKey(),
-			rank: 52,
-			username: "testi",
-		});
+		const validatorWallet = new ReadOnlyWallet(
+			{
+				address: profile.wallets().first().address(),
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: profile.wallets().first().publicKey(),
+				rank: 52,
+				username: "testi",
+			},
+			profile,
+		);
 		const mockFindDelegateByPublicKey = vi
 			.spyOn(profile.validators(), "findByPublicKey")
 			.mockReturnValue(validatorWallet);

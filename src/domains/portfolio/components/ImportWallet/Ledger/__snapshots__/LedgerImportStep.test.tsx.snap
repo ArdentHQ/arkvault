@@ -94,7 +94,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
                   </span>
                   <button
                     class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -233,7 +233,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 dim:text-theme-dim-50 font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                   </span>
                   <button
                     class="ring-focus relative cursor-pointer focus:outline-hidden"
@@ -478,7 +478,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                             class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
                             data-testid="Address__address"
                           >
-                            DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                            0x659A76be283644AEc2003aa8ba26485047fd1BFB
                           </span>
                           <span>
                              
@@ -608,7 +608,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                             class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
                             data-testid="Address__address"
                           >
-                            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                            0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                           </span>
                           <span>
                              
@@ -760,7 +760,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                       class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
                       data-testid="Address__address"
                     >
-                      DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                      0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                     </span>
                     <span>
                        
@@ -960,7 +960,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                     class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                    0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
                   </span>
                   <button
                     class="ring-focus relative cursor-pointer focus:outline-hidden"

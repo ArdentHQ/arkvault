@@ -65,7 +65,7 @@ export const VoteTransactionType = ({
 
 							<Address
 								truncateOnTable
-								address={unvotes[0].wallet?.address()}
+								address={unvotes[0].wallet?.alias()}
 								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
@@ -76,7 +76,7 @@ export const VoteTransactionType = ({
 
 							<Address
 								truncateOnTable
-								address={votes[0].wallet?.address()}
+								address={votes[0].wallet?.alias()}
 								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
@@ -97,9 +97,7 @@ export const VoteTransactionType = ({
 
 						<Address
 							truncateOnTable
-							address={
-								voteCategory === "vote" ? votes[0]?.wallet?.address() : unvotes[0]?.wallet?.address()
-							}
+							address={voteCategory === "vote" ? votes[0]?.wallet?.alias() : unvotes[0]?.wallet?.alias()}
 							wrapperClass="justify-start"
 							addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 						/>
