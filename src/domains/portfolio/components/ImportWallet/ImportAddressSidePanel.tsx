@@ -21,6 +21,7 @@ import { MethodStep } from "@/domains/portfolio/components/ImportWallet/MethodSt
 import {
 	ImportActionToolbar,
 	ImportAddressStep,
+	useHDWalletStepHeaderConfig,
 	useLedgerStepHeaderConfig,
 	useStepHeaderConfig,
 } from "./ImportAddressSidePanel.blocks";
@@ -76,8 +77,15 @@ export const ImportAddressesSidePanel = ({
 
 	const stepConfig = useStepHeaderConfig(activeTab, importOption);
 	const ledgerConfig = useLedgerStepHeaderConfig(ledgerActiveTab, importOption);
+	const HDWalletConfig = useHDWalletStepHeaderConfig(HDWalletActiveTab, importOption);
 
-	const config = isLedgerImport && activeTab === ImportAddressStep.ImportDetailStep ? ledgerConfig : stepConfig;
+	const config = useMemo(() => {
+		if (isHDWalletImport) {
+			return HDWalletConfig;
+		}
+
+		return isLedgerImport && activeTab === ImportAddressStep.ImportDetailStep ? ledgerConfig : stepConfig;
+	}, [isLedgerImport, activeTab, stepConfig, ledgerConfig, isHDWalletImport, HDWalletConfig]);
 
 	useEffect(() => {
 		register({ name: "importOption", type: "custom" });
@@ -94,7 +102,13 @@ export const ImportAddressesSidePanel = ({
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
-		if (!isLedgerImport && !isHDWalletImport && !isButton && !isNextDisabled && activeTab <= ImportAddressStep.EncryptPasswordStep) {
+		if (
+			!isLedgerImport &&
+			!isHDWalletImport &&
+			!isButton &&
+			!isNextDisabled &&
+			activeTab <= ImportAddressStep.EncryptPasswordStep
+		) {
 			handleNext();
 		}
 	});
@@ -247,6 +261,18 @@ export const ImportAddressesSidePanel = ({
 	]);
 
 	const allSteps = useMemo(() => {
+		if (isHDWalletImport){
+			const steps = [1, 2];
+
+			if (useEncryption) {
+				steps.push(3)
+			}
+
+			steps.push(4, 5)
+
+			return steps;
+		}
+
 		const steps: string[] = [];
 
 		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE"));
@@ -258,7 +284,7 @@ export const ImportAddressesSidePanel = ({
 		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE"));
 
 		return steps;
-	}, [useEncryption, activeTab]);
+	}, [useEncryption, activeTab, isHDWalletImport, HDWalletActiveTab]);
 
 	const isMethodStep = activeTab === ImportAddressStep.MethodStep;
 

@@ -147,8 +147,8 @@ export const HDWalletTabs = ({
 		onStepChange?.(next);
 
 		return () => {
-			unregister(['mnemonic', 'password']);
-		}
+			unregister(["mnemonic", "password"]);
+		};
 	}, [activeTab, handleSubmit, importWallets, onStepChange]);
 
 	const handleBack = useCallback(() => {
