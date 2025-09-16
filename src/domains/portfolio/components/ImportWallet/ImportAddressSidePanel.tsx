@@ -289,6 +289,10 @@ export const ImportAddressesSidePanel = ({
 	const isMethodStep = activeTab === ImportAddressStep.MethodStep;
 
 	const getActiveStep = () => {
+		if (isHDWalletImport) {
+			return HDWalletActiveTab;
+		}
+
 		if (isLedgerImport) {
 			return ledgerActiveTab - 2;
 		}
