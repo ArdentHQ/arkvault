@@ -204,9 +204,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	};
 
 	/*
-	* Helper to convert nested unconfirmed transactions 
-	* to flat array for processing
-	*/
+	 * Helper to convert nested unconfirmed transactions
+	 * to flat array for processing
+	 */
 	const getFlatUnconfirmedTransactions = useCallback(() => {
 		const flatTransactions: Array<{
 			transaction: RawTransactionData;
@@ -214,17 +214,17 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			networkId: string;
 		}> = [];
 
-		Object.entries(unconfirmedTransactions).forEach(([networkId, wallets]) => {
-			Object.entries(wallets).forEach(([walletAddress, transactions]) => {
-				transactions.forEach((transaction) => {
+		for (const [networkId, wallets] of Object.entries(unconfirmedTransactions)) {
+			for (const [walletAddress, transactions] of Object.entries(wallets)) {
+				for (const transaction of transactions) {
 					flatTransactions.push({
 						networkId,
-						walletAddress,
 						transaction,
+						walletAddress,
 					});
-				});
-			});
-		});
+				}
+			}
+		}
 
 		return flatTransactions;
 	}, [unconfirmedTransactions]);
@@ -540,11 +540,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					continue;
 				}
 
-				addUnconfirmedTransactionFromApi(
-					matched.networkId(),
-					matched.address(),
-					transaction.raw()
-				);
+				addUnconfirmedTransactionFromApi(matched.networkId(), matched.address(), transaction.raw());
 			}
 		} catch (error) {
 			console.error("Failed to fetch unconfirmed transactions:", error);
