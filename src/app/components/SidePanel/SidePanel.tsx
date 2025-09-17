@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX } from "react";
+import React, { useEffect, useRef, JSX, useCallback, useState } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -36,6 +36,8 @@ interface SidePanelProps {
 	isLastStep?: boolean;
 	disableOutsidePress?: boolean;
 	disableEscapeKey?: boolean;
+	shakeWhenClosing?: boolean;
+	preventClosing?: boolean;
 }
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
@@ -67,10 +69,33 @@ export const SidePanel = ({
 	isLastStep,
 	disableOutsidePress = false,
 	disableEscapeKey = false,
+	shakeWhenClosing = false,
+	preventClosing = false,
 }: SidePanelProps): JSX.Element => {
 	const popStateHandlerRef = useRef<() => void>(() => {});
+
+	const [shake, setShake] = useState(false);
+
+	const toggleOpen = useCallback(
+		(open: boolean = false) => {
+			if (open === false) {
+				if (shakeWhenClosing) {
+					setShake(true);
+					setTimeout(() => setShake(false), 900);
+				}
+
+				if (preventClosing) {
+					return;
+				}
+			}
+
+			onOpenChange(open);
+		},
+		[onOpenChange, shakeWhenClosing, preventClosing],
+	);
+
 	const { refs, context } = useFloating({
-		onOpenChange,
+		onOpenChange: toggleOpen,
 		open,
 	});
 
@@ -116,10 +141,10 @@ export const SidePanel = ({
 			if (hasSteps && typeof onBack === "function" && !isLastStep) {
 				onBack();
 			} else {
-				onOpenChange(false);
+				toggleOpen();
 			}
 		};
-	}, [hasSteps, onBack, onOpenChange, isLastStep]);
+	}, [hasSteps, onBack, toggleOpen, isLastStep]);
 
 	useEffect(() => {
 		if (open && hasSteps) {
@@ -164,7 +189,9 @@ export const SidePanel = ({
 								>
 									<div
 										style={{ ...styles }}
-										className={cn("fixed top-0 right-0 w-full md:w-[608px]", className)}
+										className={cn("fixed top-0 right-0 w-full md:w-[608px]", className, {
+											"animate-shake": shake,
+										})}
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
@@ -202,7 +229,7 @@ export const SidePanel = ({
 																	data-testid="SidePanel__close-button"
 																	variant="transparent"
 																	size="md"
-																	onClick={() => onOpenChange(false)}
+																	onClick={() => toggleOpen()}
 																	className="h-6 w-6 p-0"
 																>
 																	<Icon name="Cross" />
