@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useLayoutEffect, useState } from "react"
 import { useForm } from "react-hook-form";
 
 import { useTranslation } from "react-i18next";
-import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { SendRegistrationForm } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
