@@ -3,10 +3,11 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useTranslation } from "react-i18next";
 
 export enum CreateStep {
-	WalletOverviewStep = 1,
-	ConfirmPassphraseStep = 2,
-	EncryptPasswordStep = 3,
-	SuccessStep = 4,
+	MethodStep = 1,
+	WalletOverviewStep,
+	ConfirmPassphraseStep,
+	EncryptPasswordStep,
+	SuccessStep,
 }
 
 interface StepHeaderConfig {
@@ -19,6 +20,13 @@ export const useCreateStepHeaderConfig = (step: CreateStep): StepHeaderConfig =>
 	const { t } = useTranslation();
 
 	switch (step) {
+		case CreateStep.MethodStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.SUBTITLE_WITH_HD"),
+				title: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.TITLE"),
+			};
+		}
+
 		case CreateStep.WalletOverviewStep: {
 			return {
 				title: t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE"),
