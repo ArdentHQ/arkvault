@@ -35,7 +35,10 @@ export const Portfolio = () => {
 			)}
 
 			<ResetWhenUnmounted>
-				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
+				<CreateAddressesSidePanel
+					open={showCreateAddressPanel}
+					onOpenChange={setShowCreateAddressPanel}
+					onImportAddress={() => setShowImportAddressPanel(true)} />
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>

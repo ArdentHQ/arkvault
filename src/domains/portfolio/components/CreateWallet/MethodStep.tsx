@@ -3,37 +3,30 @@ import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 
 import { ImportOption } from "@/domains/wallet/hooks/use-import-options";
-import { useFormContext } from "react-hook-form";
 import cn from "classnames";
-import { Icon } from "@/app/components/Icon";
-import { useTranslation } from "react-i18next";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Trans, useTranslation } from "react-i18next";
 import { OptionsValue } from "@/domains/wallet/hooks";
+import { Button } from "@/app/components/Button";
 
 export const MethodStep = ({
-	onSelect,
+	onSelectRegularAddress,
+	onSelectHdAddress,
+	onImportAddress,
 }: {
 	profile: Contracts.IProfile;
 	network: Networks.Network;
-	onSelect: () => Promise<void>;
+	onSelectRegularAddress?: () => void | Promise<void>;
+	onSelectHdAddress?: () => void | Promise<void>;
+	onImportAddress?: () => void
 }) => {
 	const { t } = useTranslation();
-	const form = useFormContext();
-	const { setValue, clearErrors } = form;
-
-	const onOptionSelect = (option: ImportOption) => {
-		setValue("importOption", option, { shouldDirty: true, shouldValidate: true });
-		setValue("value", undefined);
-		setValue("useEncryption", undefined);
-		clearErrors("value");
-
-		void onSelect();
-	};
 
 	return (
 		<section data-testid="ImportWallet__method-step">
 			<div className="space-y-2">
 				<Option
-					onSelect={onOptionSelect}
+					onClick={onSelectRegularAddress}
 					option={{
 						description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_DESCRIPTION"),
 						header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_TITLE"),
@@ -56,7 +49,7 @@ export const MethodStep = ({
 
 			<div className="space-y-2">
 				<Option
-					onSelect={onOptionSelect}
+					onClick={onSelectHdAddress}
 					option={{
 						description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_DESCRIPTION"),
 						header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_TITLE"),
@@ -65,14 +58,42 @@ export const MethodStep = ({
 						value: OptionsValue.BIP44,
 					}}
 				/>
+				<div className="py-3 px-4 flex items-center space-x-4 bg-theme-secondary-200 dim:bg-theme-dim-950 dark:bg-theme-dark-950 dark:text-theme-dark-200 text-theme-secondary-700 rounded-lg">
+					<ThemeIcon
+						dimensions={[40, 40]}
+						lightIcon="WalletMultipleLight"
+						darkIcon="WalletMultipleDark"
+						dimIcon="WalletMultipleDim"
+					/>
+
+					<div className="text-sm">
+						<div>{t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.USE_ADDITIONAL_ADDRESSES")}</div>
+						<Trans
+							i18nKey="WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.USE_IMPORT"
+							components={{
+								importLink: (
+									<Button
+										type="button"
+										variant="transparent"
+										className="text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
+										onClick={onImportAddress}
+									>
+										{t("COMMON.IMPORT")}
+									</Button>
+								)
+							}}
+						/>
+					</div>
+				</div>
 			</div>
 		</section>
 	);
 };
 
-const Option = ({ option, onSelect }: { option: ImportOption; onSelect: (option: ImportOption) => void }) => (
+const Option = ({ option, onClick }: { option: ImportOption; onClick?: () => void }) => (
 	<button
-		onClick={() => onSelect(option)}
+		type="button"
+		onClick={onClick}
 		className="group border-theme-primary-200 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700 hover:bg-theme-primary-200 focus:ring-theme-primary-400 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 flex w-full cursor-pointer flex-col items-start space-y-2 rounded-lg border p-4 focus:ring-2 focus:outline-hidden focus:ring-inset sm:p-6"
 	>
 		<div className="m-0 flex items-center space-x-3 sm:mb-2">

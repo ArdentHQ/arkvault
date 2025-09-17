@@ -26,7 +26,9 @@ export const CreateAddressesSidePanel = ({
 	open,
 	onOpenChange,
 	onMountChange,
+	onImportAddress,
 }: {
+	onImportAddress?: () => void,
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	onMountChange?: (mounted: boolean) => void;
@@ -126,12 +128,13 @@ export const CreateAddressesSidePanel = ({
 
 	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
 		let newIndex = activeTab + 1;
+		console.log({ firstStep, newIndex, parameters })
 
 		if (newIndex === CreateStep.EncryptPasswordStep && !useEncryption) {
 			newIndex = newIndex + 1;
 		}
 
-		if (newIndex === firstStep) {
+		if (activeTab === firstStep) {
 			void handleGenerateWallet();
 
 			return;
@@ -227,6 +230,8 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
+	const showFooter = !(usesHDWallets && activeTab === firstStep)
+
 	return (
 		<SidePanel
 			title={title}
@@ -240,7 +245,7 @@ export const CreateAddressesSidePanel = ({
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
 			onBack={handleBack}
-			footer={
+			footer={showFooter && (
 				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
 					{activeTab <= CreateStep.EncryptPasswordStep && (
 						<>
@@ -295,14 +300,26 @@ export const CreateAddressesSidePanel = ({
 						</Button>
 					)}
 				</SidePanelButtons>
-			}
+			)}
 			isLastStep={activeTab === CreateStep.SuccessStep}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
 				<Tabs activeId={activeTab}>
 					<div>
 						<TabPanel tabId={CreateStep.MethodStep}>
-							<MethodStep profile={activeProfile} network={activeNetwork} onSelect={handleNext} />
+							<MethodStep
+								profile={activeProfile}
+								network={activeNetwork}
+								onSelectHdAddress={async () => {
+									await handleGenerateWallet()
+									setActiveTab(CreateStep.WalletOverviewStep)
+								}}
+								onSelectRegularAddress={async () => {
+									await handleGenerateWallet()
+									setActiveTab(CreateStep.WalletOverviewStep)
+								}}
+								onImportAddress={onImportAddress}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={CreateStep.WalletOverviewStep}>

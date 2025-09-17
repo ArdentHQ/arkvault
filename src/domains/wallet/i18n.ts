@@ -96,6 +96,8 @@ export const translations = {
 			SUBTITLE: "Select a cryptoasset to create your new wallet address.",
 			SUBTITLE_WITH_HD: "Pick the address type to generate to new address",
 			TITLE: "Create New Address",
+			USE_ADDITIONAL_ADDRESSES: "Want to add additional addresses to your existing HD Wallet?",
+			USE_IMPORT: "Use “<importLink/>” instead."
 		},
 		NETWORK_STEP: {
 			GENERATION_ERROR:
