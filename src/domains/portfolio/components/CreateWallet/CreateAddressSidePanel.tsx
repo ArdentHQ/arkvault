@@ -118,7 +118,7 @@ export const CreateAddressesSidePanel = ({
 	};
 
 	const handleBack = () => {
-		if (activeTab === firstStep) {
+		if (!usesHDWallets && activeTab === CreateStep.WalletOverviewStep) {
 			onOpenChange(false);
 			return;
 		}
@@ -128,13 +128,12 @@ export const CreateAddressesSidePanel = ({
 
 	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
 		let newIndex = activeTab + 1;
-		console.log({ firstStep, newIndex, parameters });
 
 		if (newIndex === CreateStep.EncryptPasswordStep && !useEncryption) {
 			newIndex = newIndex + 1;
 		}
 
-		if (activeTab === firstStep) {
+		if (newIndex === CreateStep.WalletOverviewStep) {
 			void handleGenerateWallet();
 
 			return;
@@ -230,7 +229,7 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = !(usesHDWallets && activeTab === firstStep);
+	const showFooter = activeTab > CreateStep.MethodStep;
 
 	return (
 		<SidePanel
