@@ -18,7 +18,6 @@ export const translations = {
 			DESCRIPTION_SECRET: "Provide a message below and sign with your secret.",
 			DESCRIPTION_SELECT_WALLET: "Select an address and sign.",
 			JSON_STRING: "JSON String",
-			SELECT_ADDRESS_DESCRIPTION: "Find and select the address from your wallets.",
 			SELECT_ADDRESS_TITLE: "Select Address",
 			SIGNATURE_JSON: "Signature (JSON)",
 			TITLE: "Sign Message",
