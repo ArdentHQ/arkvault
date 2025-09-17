@@ -5,6 +5,7 @@ import { useModal } from "./hooks";
 import { ModalContainer, ModalContent } from "./Modal.blocks";
 import { Size } from "@/types";
 import { useNavigationContext } from "@/app/contexts";
+import { useSidePanel } from "../SidePanel/SidePanel";
 
 interface ModalProperties extends JSX.IntrinsicAttributes {
 	children: React.ReactNode;
@@ -49,14 +50,24 @@ const Modal = ({
 		onClose,
 	});
 
+	const sidePanelContext = useSidePanel();
+
 	useEffect(() => {
 		if (isOpen) {
 			setShowMobileNavigation(false);
+
+			sidePanelContext?.setHasModalOpened(true);
 		} else {
 			setShowMobileNavigation(true);
+
+			sidePanelContext?.setHasModalOpened(false);
 		}
 
-		return () => setShowMobileNavigation(true);
+		return () => {
+			setShowMobileNavigation(true);
+
+			sidePanelContext?.setHasModalOpened(false);
+		};
 	}, [isOpen]);
 
 	if (!isOpen) {
