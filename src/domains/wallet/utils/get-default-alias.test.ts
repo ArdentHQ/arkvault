@@ -75,4 +75,33 @@ describe("getDefaultAlias", () => {
 
 		expect(result2).toBe("Address #2");
 	});
+
+	it("should use addressIndex to generate alias", async () => {
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+
+		profile.wallets().push(wallet);
+
+		const result = getDefaultAlias({
+			addressIndex: 0,
+			profile,
+		});
+
+		wallet.mutator().alias("Address #1");
+		expect(result).toBe("Address #1");
+
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[1],
+		});
+
+		profile.wallets().push(wallet2);
+
+		const result2 = getDefaultAlias({
+			addressIndex: 1,
+			profile,
+		});
+
+		expect(result2).toBe("Address #2");
+	});
 });
