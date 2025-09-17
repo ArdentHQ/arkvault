@@ -10,7 +10,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX, useCallback, useState, useContext, useMemo } from "react";
+import React, { useEffect, useRef, JSX, useCallback, useState, useContext } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";

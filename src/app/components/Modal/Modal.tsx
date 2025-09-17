@@ -5,7 +5,7 @@ import { useModal } from "./hooks";
 import { ModalContainer, ModalContent } from "./Modal.blocks";
 import { Size } from "@/types";
 import { useNavigationContext } from "@/app/contexts";
-import { useSidePanel } from "../SidePanel/SidePanel";
+import { useSidePanel } from "@/app/components/SidePanel/SidePanel";
 
 interface ModalProperties extends JSX.IntrinsicAttributes {
 	children: React.ReactNode;
