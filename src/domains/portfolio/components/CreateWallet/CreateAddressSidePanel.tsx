@@ -28,7 +28,7 @@ export const CreateAddressesSidePanel = ({
 	onMountChange,
 	onImportAddress,
 }: {
-	onImportAddress?: () => void,
+	onImportAddress?: () => void;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	onMountChange?: (mounted: boolean) => void;
@@ -128,7 +128,7 @@ export const CreateAddressesSidePanel = ({
 
 	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
 		let newIndex = activeTab + 1;
-		console.log({ firstStep, newIndex, parameters })
+		console.log({ firstStep, newIndex, parameters });
 
 		if (newIndex === CreateStep.EncryptPasswordStep && !useEncryption) {
 			newIndex = newIndex + 1;
@@ -230,7 +230,7 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = !(usesHDWallets && activeTab === firstStep)
+	const showFooter = !(usesHDWallets && activeTab === firstStep);
 
 	return (
 		<SidePanel
@@ -245,62 +245,64 @@ export const CreateAddressesSidePanel = ({
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
 			onBack={handleBack}
-			footer={showFooter && (
-				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
-					{activeTab <= CreateStep.EncryptPasswordStep && (
-						<>
-							{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.MethodStep && (
-								<Button
-									data-testid="CreateWallet__back-button"
-									disabled={isGeneratingWallet}
-									variant="secondary"
-									onClick={handleBack}
-								>
-									{t("COMMON.BACK")}
-								</Button>
-							)}
+			footer={
+				showFooter && (
+					<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
+						{activeTab <= CreateStep.EncryptPasswordStep && (
+							<>
+								{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.MethodStep && (
+									<Button
+										data-testid="CreateWallet__back-button"
+										disabled={isGeneratingWallet}
+										variant="secondary"
+										onClick={handleBack}
+									>
+										{t("COMMON.BACK")}
+									</Button>
+								)}
 
-							{activeTab < CreateStep.EncryptPasswordStep && (
-								<Button
-									data-testid="CreateWallet__continue-button"
-									disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
-									isLoading={isGeneratingWallet}
-									onClick={() => handleNext()}
-								>
-									{t("COMMON.CONTINUE")}
-								</Button>
-							)}
+								{activeTab < CreateStep.EncryptPasswordStep && (
+									<Button
+										data-testid="CreateWallet__continue-button"
+										disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
+										isLoading={isGeneratingWallet}
+										onClick={() => handleNext()}
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								)}
 
-							{activeTab === CreateStep.EncryptPasswordStep && (
-								<Button
-									data-testid="CreateWallet__continue-encryption-button"
-									disabled={
-										!isValid ||
-										isGeneratingWallet ||
-										!encryptionPassword ||
-										!confirmEncryptionPassword
-									}
-									isLoading={isGeneratingWallet}
-									onClick={handlePasswordSubmit}
-								>
-									{t("COMMON.CONTINUE")}
-								</Button>
-							)}
-						</>
-					)}
+								{activeTab === CreateStep.EncryptPasswordStep && (
+									<Button
+										data-testid="CreateWallet__continue-encryption-button"
+										disabled={
+											!isValid ||
+											isGeneratingWallet ||
+											!encryptionPassword ||
+											!confirmEncryptionPassword
+										}
+										isLoading={isGeneratingWallet}
+										onClick={handlePasswordSubmit}
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								)}
+							</>
+						)}
 
-					{activeTab === CreateStep.SuccessStep && (
-						<Button
-							disabled={isSubmitting}
-							type="submit"
-							form="CreateWallet__form"
-							data-testid="CreateWallet__finish-button"
-						>
-							{t("COMMON.CLOSE")}
-						</Button>
-					)}
-				</SidePanelButtons>
-			)}
+						{activeTab === CreateStep.SuccessStep && (
+							<Button
+								disabled={isSubmitting}
+								type="submit"
+								form="CreateWallet__form"
+								data-testid="CreateWallet__finish-button"
+							>
+								{t("COMMON.CLOSE")}
+							</Button>
+						)}
+					</SidePanelButtons>
+				)
+			}
 			isLastStep={activeTab === CreateStep.SuccessStep}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
@@ -311,12 +313,12 @@ export const CreateAddressesSidePanel = ({
 								profile={activeProfile}
 								network={activeNetwork}
 								onSelectHdAddress={async () => {
-									await handleGenerateWallet()
-									setActiveTab(CreateStep.WalletOverviewStep)
+									await handleGenerateWallet();
+									setActiveTab(CreateStep.WalletOverviewStep);
 								}}
 								onSelectRegularAddress={async () => {
-									await handleGenerateWallet()
-									setActiveTab(CreateStep.WalletOverviewStep)
+									await handleGenerateWallet();
+									setActiveTab(CreateStep.WalletOverviewStep);
 								}}
 								onImportAddress={onImportAddress}
 							/>

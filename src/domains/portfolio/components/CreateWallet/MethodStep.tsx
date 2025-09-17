@@ -18,7 +18,7 @@ export const MethodStep = ({
 	network: Networks.Network;
 	onSelectRegularAddress?: () => void | Promise<void>;
 	onSelectHdAddress?: () => void | Promise<void>;
-	onImportAddress?: () => void
+	onImportAddress?: () => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -58,7 +58,7 @@ export const MethodStep = ({
 						value: OptionsValue.BIP44,
 					}}
 				/>
-				<div className="py-3 px-4 flex items-center space-x-4 bg-theme-secondary-200 dim:bg-theme-dim-950 dark:bg-theme-dark-950 dark:text-theme-dark-200 text-theme-secondary-700 rounded-lg">
+				<div className="bg-theme-secondary-200 dim:bg-theme-dim-950 dark:bg-theme-dark-950 dark:text-theme-dark-200 text-theme-secondary-700 flex items-center space-x-4 rounded-lg px-4 py-3">
 					<ThemeIcon
 						dimensions={[40, 40]}
 						lightIcon="WalletMultipleLight"
@@ -80,7 +80,7 @@ export const MethodStep = ({
 									>
 										{t("COMMON.IMPORT")}
 									</Button>
-								)
+								),
 							}}
 						/>
 					</div>
