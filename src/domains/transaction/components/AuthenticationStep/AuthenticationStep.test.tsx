@@ -31,7 +31,7 @@ vi.mock("@/utils/delay", () => ({
 
 describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) => {
 	let profile: Contracts.IProfile;
-	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
+	const mnemonicMismatchError = "This mnemonic does not correspond to your address";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
