@@ -258,7 +258,7 @@ export const SendUsernameResignationSidePanel = ({
 		);
 	};
 
-	const preventAccidentalClosing = useMemo(() => activeTab !== Step.FormStep, [activeTab]);
+	const preventAccidentalClosing = activeTab !== Step.FormStep;
 
 	return (
 		<SidePanel
