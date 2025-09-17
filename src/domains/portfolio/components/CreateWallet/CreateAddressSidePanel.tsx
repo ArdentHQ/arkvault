@@ -109,7 +109,7 @@ export const CreateAddressesSidePanel = ({
 
 			setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
 			setValue("mnemonic", mnemonic, { shouldDirty: true, shouldValidate: true });
-			setActiveTab(first);
+			setActiveTab(firstStep);
 		} catch {
 			setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
 		}
