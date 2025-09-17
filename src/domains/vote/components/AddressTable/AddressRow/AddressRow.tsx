@@ -49,7 +49,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"inline-block px-1 text-xs font-semibold text-center rounded bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text min-w-[58px] py-[3px] dark:border dark:bg-transparent",
 					className,
 				)}
 			>
@@ -63,7 +63,7 @@ export const WalletStatus = ({
 			<div
 				data-testid={dataTestId}
 				className={twMerge(
-					"bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+					"inline-block px-1 text-xs font-semibold text-center rounded bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text min-w-[58px] py-[3px] dark:border dark:bg-transparent",
 					className,
 				)}
 			>
@@ -76,7 +76,7 @@ export const WalletStatus = ({
 		<div
 			data-testid={dataTestId}
 			className={twMerge(
-				"bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent",
+				"inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent",
 				className,
 			)}
 		>
@@ -129,7 +129,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	const renderRestOfVotes = (restOfVotes: number) => {
 		const rest = (
-			<span className="text-theme-primary-700 dark:text-theme-secondary-500 text-sm font-semibold">
+			<span className="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500">
 				+{restOfVotes}
 			</span>
 		);
@@ -165,7 +165,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 		// @TODO handle multiple validators
 		return (
-			<div className="flex items-center space-x-3 overflow-hidden" data-testid="AddressRow__wallet-vote">
+			<div className="flex overflow-hidden items-center space-x-3" data-testid="AddressRow__wallet-vote">
 				{maxVotes > 1 && renderRestOfVotes(votes.length)}
 				<Link
 					to={votes[0].wallet?.explorerLink() as string}
@@ -196,14 +196,13 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	return (
 		<TableRow className="last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid">
-			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="cursor-pointer group space-x-3">
-				<div className="w-40 flex-1">
+			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="space-x-3">
+				<div className="flex-1 w-40">
 					<Address
 						address={wallet.address()}
 						walletName={alias}
 						showCopyButton
-						addressClass="text-sm"
-						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+						addressClass="text-sm text-theme-secondary-text"	
 					/>
 				</div>
 			</TableCell>
@@ -234,7 +233,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				</>
 			) : (
 				<TableCell innerClassName="text-sm justify-center">
-					<div className="text-theme-secondary-400 font-semibold">
+					<div className="font-semibold text-theme-secondary-400">
 						<span className="text-theme-secondary-text">{hasVotes ? votes.length : "0"}</span>
 						<span>/{maxVotes}</span>
 					</div>
@@ -248,7 +247,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							size="icon"
 							disabled={isButtonDisabled}
 							variant="transparent"
-							className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 -mr-3 text-sm hover:underline"
+							className="-mr-3 text-sm text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dim:disabled:text-theme-dim-500 dim-hover:disabled:text-theme-dim-500 hover:underline"
 							onClick={() => onSelect?.(wallet.address())}
 							data-testid={`AddressRow__select-${index}`}
 						>
