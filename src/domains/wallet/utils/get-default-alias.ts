@@ -22,11 +22,7 @@ export const getDefaultAlias = ({ profile, addressIndex }: GetDefaultAliasInput)
 		.values()
 		.filter((wallet) => !wallet.isLedger());
 
-	let counter = wallets.length;
-
-	if (addressIndex !== undefined && counter > 0) {
-		counter--;
-	}
+	let counter = addressIndex === undefined ? wallets.length : 1;
 
 	if (counter === 0) {
 		counter = 1;
