@@ -37,7 +37,7 @@ export const MethodStep = ({
 					option={{
 						description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_DESCRIPTION"),
 						header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_TITLE"),
-						icon: <Icon name="MnemonicImportMethod" size="lg" />,
+						icon: <Icon name="Wallet" size="lg" />,
 						label: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_TITLE"),
 						value: OptionsValue.BIP49,
 					}}

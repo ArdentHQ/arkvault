@@ -108,6 +108,7 @@ import ImportProfileDark from "./import-profile-dark.svg?react";
 import ImportProfileDim from "./import-profile-dim.svg?react";
 import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
+import Wallet from "./wallet.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionDim from "./wallet-encryption-dim.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
@@ -282,6 +283,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	VotesDark,
 	VotesDim,
 	VotesLight,
+	Wallet,
 	WalletEncryptionDark,
 	WalletEncryptionDim,
 	WalletEncryptionLight,
