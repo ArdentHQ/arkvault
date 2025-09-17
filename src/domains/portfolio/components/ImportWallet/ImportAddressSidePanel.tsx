@@ -54,7 +54,6 @@ export const ImportAddressesSidePanel = ({
 
 	const activeNetwork = activeProfile.activeNetwork();
 
-	const { t } = useTranslation();
 	const { importWallets } = useWalletImport({ profile: activeProfile });
 
 	const form = useForm<any>({
@@ -260,28 +259,22 @@ export const ImportAddressesSidePanel = ({
 		isValid,
 	]);
 
-	const allSteps = useMemo(() => {
+	const stepsCount = useMemo(() => {
 		if (isHDWalletImport) {
-			const steps = [1, 2];
+			let steps = 3;
 
 			if (useEncryption) {
-				steps.push(3);
+				steps++;
 			}
-
-			steps.push(4, 5);
 
 			return steps;
 		}
 
-		const steps: string[] = [];
-
-		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE"));
+		let steps = 2;
 
 		if (useEncryption) {
-			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE"));
+			steps++;
 		}
-
-		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE"));
 
 		return steps;
 	}, [useEncryption, activeTab, isHDWalletImport, HDWalletActiveTab]);
@@ -312,7 +305,7 @@ export const ImportAddressesSidePanel = ({
 			dataTestId="ImportAddressSidePanel"
 			onMountChange={onMountChange}
 			hasSteps={!isMethodStep}
-			totalSteps={allSteps.length}
+			totalSteps={stepsCount}
 			activeStep={getActiveStep()}
 			onBack={handleBack}
 			footer={
