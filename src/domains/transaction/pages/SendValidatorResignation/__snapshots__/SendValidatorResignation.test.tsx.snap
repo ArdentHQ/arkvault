@@ -5255,7 +5255,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                       <p
                         class="text-theme-secondary-text hidden md:block"
                       >
-                        An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
+                        An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the address.
                       </p>
                       <div
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -5303,7 +5303,7 @@ exports[`SendValidatorResignation > Validator Resignation > should show error st
                         <div
                           class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-danger-50"
                         >
-                          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
+                          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the address.
                         </div>
                       </div>
                       <div

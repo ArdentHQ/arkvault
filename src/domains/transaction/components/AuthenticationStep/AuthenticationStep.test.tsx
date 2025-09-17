@@ -160,7 +160,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
 
-		await waitFor(() => expect(screen.queryByTestId("header__title")).toHaveTextContent(/Ledger Wallet/));
+		await waitFor(() => expect(screen.queryByTestId("header__title")).toHaveTextContent(/Ledger Address/));
 
 		expect(asFragment()).toMatchSnapshot();
 
