@@ -418,6 +418,11 @@ export const SendTransferSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = useMemo(() => {
+		console.log("showQRModal", showQRModal);
+		return showQRModal || isConfirmModalOpen || showOverwriteModal;
+	}, [showQRModal, isConfirmModalOpen, showOverwriteModal]);
+
 	return (
 		<>
 			<SidePanel
@@ -434,7 +439,8 @@ export const SendTransferSidePanel = ({
 				onBack={handleBack}
 				isLastStep={activeTab === SendTransferStep.SummaryStep}
 				disableOutsidePress
-				disableEscapeKey={showQRModal || isConfirmModalOpen || showOverwriteModal}
+				disableEscapeKey={preventAccidentalClosing}
+				shakeWhenClosing={preventAccidentalClosing}
 				footer={
 					<SidePanelButtons>
 						{activeTab !== SendTransferStep.SummaryStep && (
@@ -579,6 +585,7 @@ export const SendTransferSidePanel = ({
 					/>
 				</Form>
 			</SidePanel>
+
 			<QRModal
 				isOpen={showQRModal}
 				onCancel={() => setShowQRModal(false)}
