@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX, useCallback, useState } from "react";
+import React, { useEffect, useRef, JSX, useCallback, useState, useContext } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -39,6 +39,14 @@ interface SidePanelProps {
 	shakeWhenClosing?: boolean;
 	preventClosing?: boolean;
 }
+
+interface SidePanelContextValue {
+	setHasModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SidePanelContext = React.createContext<SidePanelContextValue | undefined>(undefined);
+
+export const useSidePanel = (): SidePanelContextValue | undefined => useContext(SidePanelContext);
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
 	<div
@@ -75,6 +83,7 @@ export const SidePanel = ({
 	const popStateHandlerRef = useRef<() => void>(() => {});
 
 	const [shake, setShake] = useState(false);
+	const [hasModalOpened, setHasModalOpened] = useState(false);
 
 	const toggleOpen = useCallback(
 		(open: boolean = false) => {
@@ -102,6 +111,7 @@ export const SidePanel = ({
 	const click = useClick(context);
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
+		enabled: !hasModalOpened,
 		escapeKey: !disableEscapeKey,
 		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
 		outsidePressEvent: "pointerdown",
@@ -174,9 +184,9 @@ export const SidePanel = ({
 	}, [open, popStateHandlerRef]);
 
 	return (
-		<>
-			<FloatingPortal>
-				{isMounted && (
+		<FloatingPortal>
+			{isMounted && (
+				<SidePanelContext.Provider value={{ setHasModalOpened }}>
 					<>
 						<div className="dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
 						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
@@ -281,8 +291,8 @@ export const SidePanel = ({
 							</FloatingFocusManager>
 						</FloatingOverlay>
 					</>
-				)}
-			</FloatingPortal>
-		</>
+				</SidePanelContext.Provider>
+			)}
+		</FloatingPortal>
 	);
 };
