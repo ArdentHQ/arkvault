@@ -167,8 +167,8 @@ export const translations = {
 		LEDGER_SCAN_STEP: {
 			ACCOUNTS: "Accounts",
 			ADD_NEW_ADDRESS: "Add New Address",
-			LOADED_SINGLE_ADDRESS: "Loaded <strong>1</strong> Address",
 			LOADED_ADDRESSES: "Loaded <strong>{{count}}</strong> Addresses",
+			LOADED_SINGLE_ADDRESS: "Loaded <strong>1</strong> Address",
 			LOADING_ADDRESSES: "Loading <strong>{{count}}</strong> Addresses",
 			SHOW_ALL: "Show All ({{count}})",
 			SUBTITLE: "Select the addresses that you want to import.",
