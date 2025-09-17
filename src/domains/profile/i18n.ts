@@ -43,7 +43,7 @@ export const translations = {
 	},
 	MODAL_RESET_PROFILE: {
 		DESCRIPTION:
-			"By performing this action, all of your Profile settings will be restored to default. This won't delete your wallets. This action cannot be undone. Do you want to reset your settings?",
+			"By performing this action, all of your Profile settings will be restored to default. This won't delete your addresses. This action cannot be undone. Do you want to reset your settings?",
 		SUCCESS: "Your profile has been reset successfully.",
 		TITLE: "Reset Profile Settings",
 	},
@@ -72,17 +72,17 @@ export const translations = {
 		},
 		STEP_2: {
 			DESCRIPTION:
-				"Create or import existing wallets from a broad range of assets and secure them using industry-standard encryption.",
+				"Create or import existing addresses from a broad range of assets and secure them using industry-standard encryption.",
 			TITLE: "Manage Your Assets",
 		},
 		STEP_3: {
 			DESCRIPTION:
-				"Personalize the wallet according to your preference - change currencies, themes, colors and more.",
+				"Personalize the address according to your preference - change currencies, themes, colors and more.",
 			TITLE: "Fully Customizable",
 		},
 		STEP_4: {
 			DESCRIPTION:
-				"With ARK Vault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
+				"With ARK Vault, you’re in control. Swap assets effortlessly without ever leaving your address.",
 			TITLE: "Exchange Assets On The Fly",
 		},
 	},
