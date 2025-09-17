@@ -274,7 +274,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		});
 	});
 
-	it("should successfully import multiple selected addresses", async () => {
+	it("should successfully import multiple selected addresses in order", async () => {
 		const user = userEvent.setup();
 
 		render(<Component />, { route });
@@ -319,8 +319,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		const summaryFirstAddress = summaryAddressRows[0].textContent;
 		const summarySecondAddress = summaryAddressRows[1].textContent;
 
-		// Verify addresses are displayed in correct order (sorted by addressIndex)
-		// Extract the prefix before the ellipsis to compare
+		// eslint-disable-next-line unicorn/consistent-function-scoping
 		const getAddressPrefix = (address: string | null) => address?.split('...')[0] || '';
 
 		// The summary should show the first selected address first (lower addressIndex)
