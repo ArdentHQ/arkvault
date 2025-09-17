@@ -297,7 +297,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 			expect(screen.getAllByTestId("SelectAddressStep__checkbox-row").length).toBe(6);
 		});
 
-		const addressRows= screen.getAllByTestId("Address__address");
+		const addressRows = screen.getAllByTestId("Address__address");
 		const firstAddress = addressRows[0].textContent;
 		const secondAddress = addressRows[1].textContent;
 
@@ -315,12 +315,12 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 			expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument();
 		});
 
-		const summaryAddressRows= screen.getAllByTestId("Address__address");
+		const summaryAddressRows = screen.getAllByTestId("Address__address");
 		const summaryFirstAddress = summaryAddressRows[0].textContent;
 		const summarySecondAddress = summaryAddressRows[1].textContent;
 
 		// eslint-disable-next-line unicorn/consistent-function-scoping
-		const getAddressPrefix = (address: string | null) => address?.split('...')[0] || '';
+		const getAddressPrefix = (address: string | null) => address?.split("...")[0] || "";
 
 		// The summary should show the first selected address first (lower addressIndex)
 		// even though we clicked them in reverse order (1 then 0)
