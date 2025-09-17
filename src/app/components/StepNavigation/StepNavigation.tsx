@@ -51,7 +51,7 @@ export const StepNavigation = ({
 					variant="secondary"
 					onClick={onBackToWalletClick}
 				>
-					{t("COMMON.BACK_TO_WALLET")}
+					{t("COMMON.BACK_TO_ADDRESS")}
 				</Button>
 			)}
 
