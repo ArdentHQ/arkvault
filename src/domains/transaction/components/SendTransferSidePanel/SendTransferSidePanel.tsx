@@ -91,7 +91,7 @@ export const SendTransferSidePanel = ({
 		handleSubmit,
 		getValues,
 		lastEstimatedExpiration,
-		formState: { isDirty, isValid, isSubmitting },
+		formState: { isDirty, isValid, isSubmitting, dirtyFields },
 	} = useSendTransferForm(wallet);
 
 	useKeyup("Enter", () => {
@@ -419,10 +419,10 @@ export const SendTransferSidePanel = ({
 		);
 	};
 
-	const preventAccidentalClosing = useMemo(() => {
-		console.log("showQRModal", showQRModal);
-		return showQRModal || isConfirmModalOpen || showOverwriteModal;
-	}, [showQRModal, isConfirmModalOpen, showOverwriteModal]);
+	const preventAccidentalClosing = useMemo(
+		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,
+		[dirtyFields.amount, dirtyFields.recipientAddress, activeTab],
+	);
 
 	return (
 		<SidePanel
@@ -438,7 +438,7 @@ export const SendTransferSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === SendTransferStep.SummaryStep}
-			disableOutsidePress
+			disableOutsidePress={preventAccidentalClosing}
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={

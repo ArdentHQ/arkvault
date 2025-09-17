@@ -2,6 +2,7 @@ import {
 	FloatingFocusManager,
 	FloatingOverlay,
 	FloatingPortal,
+	OpenChangeReason,
 	useClick,
 	useDismiss,
 	useFloating,
@@ -9,7 +10,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX, useCallback, useState, useContext } from "react";
+import React, { useEffect, useRef, JSX, useCallback, useState, useContext, useMemo } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -85,22 +86,26 @@ export const SidePanel = ({
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
 
-	const toggleOpen = useCallback(
-		(open: boolean = false) => {
-			if (open === false) {
-				if (shakeWhenClosing) {
-					setShake(true);
-					setTimeout(() => setShake(false), 900);
-				}
+	const shouldPreventClosing = useCallback(
+		(reason?: OpenChangeReason) =>
+			preventClosing ||
+			(disableOutsidePress && reason === "outside-press") ||
+			(disableEscapeKey && reason === "escape-key"),
+		[preventClosing, shakeWhenClosing],
+	);
 
-				if (preventClosing) {
-					return;
-				}
+	const toggleOpen = useCallback(
+		(open: boolean = false, _?: Event, reason?: OpenChangeReason) => {
+			if (open === false && shakeWhenClosing && shouldPreventClosing(reason)) {
+				setShake(true);
+				setTimeout(() => setShake(false), 900);
+
+				return;
 			}
 
 			onOpenChange(open);
 		},
-		[onOpenChange, shakeWhenClosing, preventClosing],
+		[onOpenChange, shakeWhenClosing, shouldPreventClosing],
 	);
 
 	const { refs, context } = useFloating({
@@ -112,8 +117,12 @@ export const SidePanel = ({
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
 		enabled: !hasModalOpened,
-		escapeKey: !disableEscapeKey,
-		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
+		// when shakeWhenClosing is true, we want to allow the escape key to try to close the side panel so we can show
+		// the shake animation, we are going to prevent closing on the toggleOpen function
+		escapeKey: !disableEscapeKey || shakeWhenClosing,
+		outsidePress:
+			(disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify")) ||
+			shakeWhenClosing,
 		outsidePressEvent: "pointerdown",
 	});
 
