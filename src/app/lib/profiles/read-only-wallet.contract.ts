@@ -84,4 +84,12 @@ export interface IReadOnlyWallet {
 	 * @memberof IReadOnlyWallet
 	 */
 	governanceIdentifier(): string;
+
+	/**
+	 * Returns the alias of the wallet.
+	 *
+	 * @returns {string | undefined}
+	 * @memberof IReadOnlyWallet
+	 */
+	alias(): string | undefined;
 }

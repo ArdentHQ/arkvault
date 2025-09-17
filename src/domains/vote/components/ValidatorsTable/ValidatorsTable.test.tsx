@@ -29,15 +29,18 @@ describe("ValidatorsTable", () => {
 
 		validators = [0, 1, 2].map(
 			(index) =>
-				new ReadOnlyWallet({
-					address: data[index].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[index].publicKey,
-					username: data[index].attributes.username,
-				}),
+				new ReadOnlyWallet(
+					{
+						address: data[index].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[index].publicKey,
+						username: data[index].attributes.username,
+					},
+					profile,
+				),
 		);
 
 		votes = [

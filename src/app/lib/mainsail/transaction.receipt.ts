@@ -1,6 +1,4 @@
 import { BigNumber } from "@/app/lib/helpers";
-import { Hex, hexToString } from "viem";
-import { AbiDecoder, ContractAbiType } from "@arkecosystem/typescript-crypto";
 
 interface ReceiptData {
 	gasRefunded: number;
@@ -8,6 +6,7 @@ interface ReceiptData {
 	status: number;
 	gasLimit?: number;
 	output?: string;
+	decodedError?: string;
 }
 
 export class TransactionReceipt {
@@ -33,7 +32,13 @@ export class TransactionReceipt {
 			return false;
 		}
 
-		return !this.error();
+		const error = this.error();
+
+		if (error === "execution reverted") {
+			return true;
+		}
+
+		return !error;
 	}
 
 	public error(): string | undefined {
@@ -41,28 +46,28 @@ export class TransactionReceipt {
 			return undefined;
 		}
 
-		const output = this.#receipt.output;
+		return this.#receipt.decodedError;
+	}
 
-		if (!output || !hexToString(output as Hex)) {
+	public prettyError(): string | undefined {
+		const error = this.error();
+
+		if (!error) {
 			return undefined;
 		}
 
-		const contractAbiTypes = [
-			ContractAbiType.CUSTOM,
-			ContractAbiType.CONSENSUS,
-			ContractAbiType.MULTIPAYMENT,
-			ContractAbiType.USERNAMES,
-		];
-
-		for (const contractAbiType of contractAbiTypes) {
-			try {
-				return new AbiDecoder(contractAbiType).decodeError(output);
-			} catch {
-				// If the ABI type is not found, we will try the next one
-			}
+		// Special case: execution reverted with high gas usage likely indicates out of gas
+		if (error === "execution reverted" && this.hasInsufficientGasError()) {
+			return "Out of gas?";
 		}
 
-		return undefined;
+		// Handle errors with no spaces (TakenUsername) - split on caps
+		if (error.indexOf(" ") === -1) {
+			return error.replace(/([A-Z])/g, " $1").trim();
+		}
+
+		// Handle errors with spaces - capitalize the first letter
+		return error.replace(/^./, error[0].toUpperCase());
 	}
 
 	public hasInsufficientGasError(): boolean {

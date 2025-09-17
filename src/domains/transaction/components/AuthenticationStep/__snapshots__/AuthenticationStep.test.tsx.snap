@@ -599,7 +599,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -656,7 +656,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -713,7 +713,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1640,7 +1640,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1697,7 +1697,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1754,7 +1754,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>

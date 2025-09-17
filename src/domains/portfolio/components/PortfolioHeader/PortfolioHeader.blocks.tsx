@@ -4,7 +4,7 @@ import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection, AddressViewType } from "@/app/lib/profiles/wallet.enum";
 
 export const ViewingAddressInfo = ({
 	profile,

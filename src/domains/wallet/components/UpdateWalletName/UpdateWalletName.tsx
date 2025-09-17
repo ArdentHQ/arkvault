@@ -9,6 +9,7 @@ import { Input } from "@/app/components/Input";
 import { Modal } from "@/app/components/Modal";
 import { useEnvironmentContext } from "@/app/contexts";
 import { alias } from "@/domains/wallet/validations";
+import { WalletSetting } from "@/app/lib/profiles/wallet.enum";
 
 interface UpdateWalletNameProperties {
 	onAfterSave: () => void;
@@ -23,7 +24,7 @@ interface UpdateWalletNameState {
 
 export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: UpdateWalletNameProperties) => {
 	const getDefaultValues = (): UpdateWalletNameState => ({
-		name: wallet.alias() as string,
+		name: wallet.settings().get(WalletSetting.Alias) as string,
 	});
 
 	const form = useForm<UpdateWalletNameState>({
