@@ -32,13 +32,16 @@ export const MethodStep = ({
 	return (
 		<section data-testid="ImportWallet__method-step">
 			<div className="space-y-2">
-				<Option onSelect={onOptionSelect} option={{
-					description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_DESCRIPTION"),
-					header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_TITLE"),
-					icon: <Icon name="MnemonicImportMethod" size="lg" />,
-					label: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_TITLE"),
-					value: OptionsValue.BIP49,
-				}} />
+				<Option
+					onSelect={onOptionSelect}
+					option={{
+						description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_DESCRIPTION"),
+						header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_TITLE"),
+						icon: <Icon name="MnemonicImportMethod" size="lg" />,
+						label: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.REGULAR_ADDRESS_TITLE"),
+						value: OptionsValue.BIP49,
+					}}
+				/>
 			</div>
 
 			<div
@@ -48,19 +51,20 @@ export const MethodStep = ({
 					"after:border-theme-secondary-300 dark:after:border-theme-dark-700 dim:after:border-theme-dim-700 after:flex-1 after:border-t after:border-dashed",
 				)}
 			>
-				<span className="text-theme-secondary-500 px-3 text-sm leading-[17px] font-semibold">
-					Advanced
-				</span>
+				<span className="text-theme-secondary-500 px-3 text-sm leading-[17px] font-semibold">Advanced</span>
 			</div>
 
 			<div className="space-y-2">
-				<Option onSelect={onOptionSelect} option={{
-					description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_DESCRIPTION"),
-					header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_TITLE"),
-					icon: <Icon name="HDWalletImportMethod" size="lg" />,
-					label: t("COMMON.HD_WALLET"),
-					value: OptionsValue.BIP44,
-				}} />
+				<Option
+					onSelect={onOptionSelect}
+					option={{
+						description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_DESCRIPTION"),
+						header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_TITLE"),
+						icon: <Icon name="HDWalletImportMethod" size="lg" />,
+						label: t("COMMON.HD_WALLET"),
+						value: OptionsValue.BIP44,
+					}}
+				/>
 			</div>
 		</section>
 	);

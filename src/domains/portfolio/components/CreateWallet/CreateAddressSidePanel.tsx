@@ -34,8 +34,8 @@ export const CreateAddressesSidePanel = ({
 	const { persist } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const usesHDWallets = activeProfile.settings().get(ProfileSetting.UseHDWallets)
-	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep
+	const usesHDWallets = activeProfile.settings().get(ProfileSetting.UseHDWallets);
+	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep;
 
 	const [activeTab, setActiveTab] = useState<CreateStep>(firstStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
