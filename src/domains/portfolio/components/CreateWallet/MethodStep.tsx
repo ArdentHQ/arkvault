@@ -51,7 +51,7 @@ export const MethodStep = ({
 				<Option
 					onClick={onSelectHdAddress}
 					option={{
-						description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_DESCRIPTION"),
+						description: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_TITLE"),
 						header: t("WALLETS.PAGE_CREATE_WALLET.METHOD_STEP.HD_ADDRESS_TITLE"),
 						icon: <Icon name="HDWalletImportMethod" size="lg" />,
 						label: t("COMMON.HD_WALLET"),

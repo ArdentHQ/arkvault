@@ -89,7 +89,6 @@ export const translations = {
 
 	PAGE_CREATE_WALLET: {
 		METHOD_STEP: {
-			HD_ADDRESS_DESCRIPTION: "A single mnemonic to access one or more addresses",
 			HD_ADDRESS_TITLE: "A single mnemonic to access one or more addresses",
 			REGULAR_ADDRESS_DESCRIPTION: "A single mnemonic to access a single address",
 			REGULAR_ADDRESS_TITLE: "Regular Address",
