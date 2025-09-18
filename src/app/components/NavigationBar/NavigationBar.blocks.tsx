@@ -347,7 +347,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
-									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_WALLETS")}
+									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_ADDRESSES")}
 								>
 									<div>
 										<NavigationButtonWrapper>
@@ -368,7 +368,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
-									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_WALLETS")}
+									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_ADDRESSES")}
 								>
 									<div>
 										<NavigationButtonWrapper>

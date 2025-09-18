@@ -49,7 +49,7 @@ export const SuccessStep = ({
 					</div>
 				</DetailWrapper>
 
-				<DetailWrapper label={t("COMMON.WALLET_NAME")}>
+				<DetailWrapper label={t("COMMON.ADDRESS_NAME")}>
 					<div className="flex w-full items-center justify-between sm:justify-start">
 						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
 						<div className="flex w-full min-w-0 items-center justify-end pr-4 leading-[17px] font-semibold sm:justify-between sm:leading-5">

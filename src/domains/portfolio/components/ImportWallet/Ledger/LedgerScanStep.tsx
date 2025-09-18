@@ -180,7 +180,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				{isScanning && (
 					<LedgerLoaderOverlay className="rounded-xl">
 						<Trans
-							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
+							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_ADDRESSES"
 							values={{ count: length }}
 						/>
 					</LedgerLoaderOverlay>
@@ -258,12 +258,12 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) => {
 	if (wallets.length === 1) {
-		return <Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_WALLET" />;
+		return <Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_ADDRESS" />;
 	}
 
 	return (
 		<Trans
-			i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_WALLETS"
+			i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_ADDRESSES"
 			values={{ count: wallets.length }}
 		/>
 	);

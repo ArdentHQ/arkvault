@@ -455,7 +455,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		expect(screen.getByTestId("Input__error")).toHaveAttribute(
 			"data-errortext",
-			"This mnemonic does not correspond to your wallet",
+			"This mnemonic does not correspond to your address",
 		);
 
 		actsWithMnemonicMock.mockRestore();
