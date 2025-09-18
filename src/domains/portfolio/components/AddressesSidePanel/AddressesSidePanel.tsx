@@ -36,7 +36,6 @@ export const AddressesSidePanel = ({
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
 
-	const [isAnimating, setIsAnimating] = useState(false);
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [addressToDelete, setAddressToDelete] = useState<string | undefined>(undefined);
 	const [addressToEdit, setAddressToEdit] = useState<string | undefined>(undefined);
@@ -112,22 +111,11 @@ export const AddressesSidePanel = ({
 
 	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
 
-	const runErrorAnimation = () => {
-		setIsAnimating(true);
-		setTimeout(() => setIsAnimating(false), 900);
-	};
-
 	return (
 		<SidePanel
-			className={cn({ "animate-shake": isAnimating })}
 			title={t("WALLETS.ADDRESSES_SIDE_PANEL.TITLE")}
 			open={open}
 			onOpenChange={(open) => {
-				if (selectedAddresses.length === 0) {
-					runErrorAnimation();
-					return;
-				}
-
 				disableManageState();
 				onOpenChange(open);
 				setSearchQuery("");
@@ -136,6 +124,8 @@ export const AddressesSidePanel = ({
 					closeSidepanel(selectedAddresses);
 				}
 			}}
+			shakeWhenClosing={selectedAddresses.length === 0}
+			preventClosing={selectedAddresses.length === 0}
 			dataTestId="AddressesSidePanel"
 			onMountChange={onMountChange}
 		>

@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { FormStep } from "@/domains/transaction/pages/SendUsernameResignation/FormStep";
-import { ReviewStep } from "@/domains/transaction/pages/SendUsernameResignation/ReviewStep";
+import { FormStep } from "@/domains/transaction/components/SendUsernameResignationSidePanel/FormStep";
+import { ReviewStep } from "@/domains/transaction/components/SendUsernameResignationSidePanel/ReviewStep";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -258,6 +258,8 @@ export const SendUsernameResignationSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = activeTab !== Step.FormStep;
+
 	return (
 		<SidePanel
 			open={open}
@@ -271,8 +273,9 @@ export const SendUsernameResignationSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === Step.SummaryStep}
-			disableOutsidePress
-			disableEscapeKey={isSubmitting}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={isSubmitting || preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>
