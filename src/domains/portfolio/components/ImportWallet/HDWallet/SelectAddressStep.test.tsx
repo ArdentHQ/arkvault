@@ -57,7 +57,6 @@ describe("AddressesTable", () => {
 		wallets: mockAddresses,
 	};
 
-
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 		defaultProps.network = profile.activeNetwork();

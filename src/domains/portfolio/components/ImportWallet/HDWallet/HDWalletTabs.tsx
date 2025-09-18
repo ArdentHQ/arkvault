@@ -16,9 +16,9 @@ import { ImportDetailStep } from "@/domains/portfolio/components/ImportWallet/Im
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { SelectAddressStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAddressStep";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
-import { LedgerImportStep } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerImportStep";
 import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
 import { useEnvironmentContext } from "@/app/contexts";
+import { SummaryStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SummaryStep";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -227,7 +227,7 @@ export const HDWalletTabs = ({
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.SummaryStep}>
-								<LedgerImportStep
+								<SummaryStep
 									network={activeNetwork}
 									wallets={importedWallets}
 									profile={activeProfile}
