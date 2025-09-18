@@ -75,7 +75,7 @@ export const SignMessageSidePanel = ({
 	});
 
 	const { formState, getValues, handleSubmit, register, setValue, reset: resetForm } = form;
-	const { isValid } = formState;
+	const { isValid, dirtyFields } = formState;
 
 	const { signMessage } = useValidation();
 
@@ -241,6 +241,11 @@ export const SignMessageSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = useMemo(
+		() => dirtyFields.message || dirtyFields.mnemonic || activeTab !== Step.FormStep,
+		[dirtyFields.message, dirtyFields.mnemonic, activeTab],
+	);
+
 	return (
 		<SidePanel
 			title={getTitle()}
@@ -253,6 +258,9 @@ export const SignMessageSidePanel = ({
 			hasSteps
 			totalSteps={selectedWallet?.isLedger() ? 3 : 2}
 			activeStep={activeTab}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			footer={
 				<SidePanelButtons>
 					{activeTab === Step.FormStep && (

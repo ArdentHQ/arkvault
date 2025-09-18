@@ -2,8 +2,8 @@ import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { FormStep } from "@/domains/transaction/pages/SendValidatorResignation/FormStep";
-import { ReviewStep } from "@/domains/transaction/pages/SendValidatorResignation/ReviewStep";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
 import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -259,6 +259,8 @@ export const SendValidatorResignationSidePanel = ({
 		[resetForm],
 	);
 
+	const preventAccidentalClosing = activeTab !== Step.FormStep;
+
 	return (
 		<SidePanel
 			open={open}
@@ -272,8 +274,9 @@ export const SendValidatorResignationSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === Step.SummaryStep}
-			disableOutsidePress
-			disableEscapeKey={isSubmitting}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={isSubmitting || preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>
