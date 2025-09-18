@@ -123,7 +123,7 @@ export const ExchangeSidePanel = ({
 		watch,
 		reset: resetForm,
 	} = form;
-	const { isDirty, isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting, isValid, dirtyFields } = formState;
 
 	const { currencies, fromCurrency, toCurrency, minPayinAmount, minPayoutAmount, recipientWallet, refundWallet } =
 		watch();
@@ -408,7 +408,21 @@ export const ExchangeSidePanel = ({
 		setHasFixedFormButtons(showFormButtons);
 	}, [showFormButtons]);
 
-	const preventAccidentalClosing = useMemo(() => false, []);
+	const preventAccidentalClosing = useMemo<boolean>(
+		() =>
+			activeTab > Step.FormStep ||
+			dirtyFields.fromCurrency !== undefined ||
+			dirtyFields.toCurrency !== undefined ||
+			dirtyFields.payinAmount !== undefined ||
+			dirtyFields.payoutAmount !== undefined,
+		[
+			activeTab,
+			dirtyFields.fromCurrency,
+			dirtyFields.toCurrency,
+			dirtyFields.payinAmount,
+			dirtyFields.payoutAmount,
+		],
+	);
 
 	if (!exchangeService) {
 		return <></>;
