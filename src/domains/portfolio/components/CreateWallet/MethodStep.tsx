@@ -23,7 +23,7 @@ export const MethodStep = ({
 	const { t } = useTranslation();
 
 	return (
-		<section data-testid="ImportWallet__method-step">
+		<section data-testid="CreateWallet__method-step">
 			<div className="space-y-2">
 				<Option
 					onClick={onSelectRegularAddress}

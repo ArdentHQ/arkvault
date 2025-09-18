@@ -64,6 +64,25 @@ describe("CreateAddressSidePanel", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should render method step if profile has enabled hd wallets", async () => {
+		const hdWalletMock = vi.spyOn(profile.settings(), "get").mockReturnValue(true)
+		const onImportAddress = vi.fn()
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
+
+		render(<CreateAddressesSidePanel open={true} onOpenChange={vi.fn()} onImportAddress={onImportAddress} />, {
+			route: createURL,
+		});
+
+		const buttons = screen.getAllByRole("button")
+		expect(buttons).toHaveLength(4)
+
+		const regularAddressButton = buttons[1]
+		await userEvent.click(regularAddressButton)
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+		hdWalletMock.mockRestore()
+	});
+
 	it("should create a wallet", async () => {
 		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
 
