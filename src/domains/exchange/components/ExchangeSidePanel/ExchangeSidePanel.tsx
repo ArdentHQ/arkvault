@@ -90,143 +90,6 @@ export const ExchangeSidePanel = ({
 		}
 	}, [exchangeProvider]);
 
-	const renderSpinner = () => {
-		if (!exchangeProviders || (exchangeProvider !== undefined && !isReady)) {
-			return (
-				<div className="py-32">
-					<Spinner size="lg" />
-				</div>
-			);
-		}
-
-		return <></>;
-	};
-
-	const renderExchange = () => (
-		<>
-			<div className="mx-auto mb-2 w-24 sm:mb-8">
-				{logoUrl && (
-					<img
-						src={logoUrl}
-						alt={`${exchangeProvider?.name} Header Logo`}
-						className="h-full w-full object-cover"
-					/>
-				)}
-			</div>
-
-			{!!exchangeProvider && (
-				<>
-					<Form data-testid="ExchangeForm" context={form as any} onSubmit={submitForm}>
-						<Tabs activeId={activeTab}>
-							<StepIndicator steps={Array.from({ length: 4 })} activeIndex={activeTab} />
-
-							<div className="mt-6 mb-24 sm:mt-8 sm:mb-0">
-								<TabPanel tabId={1}>
-									<FormStep profile={activeProfile} />
-								</TabPanel>
-
-								<TabPanel tabId={2}>
-									<ReviewStep />
-								</TabPanel>
-
-								<TabPanel tabId={3}>
-									<StatusStep
-										exchangeTransaction={exchangeTransaction!}
-										onUpdate={handleStatusUpdate}
-										transferTransactionId={transferTransactionId}
-									/>
-								</TabPanel>
-
-								<TabPanel tabId={4}>
-									<ConfirmationStep exchangeTransaction={exchangeTransaction} />
-								</TabPanel>
-
-								{showFormButtons && (
-									<div
-										className={cn({
-											"flex items-center justify-between":
-												activeTab === Step.ReviewStep && withSignStep,
-										})}
-									>
-										{activeTab === Step.ReviewStep && withSignStep && (
-											<div className="manual-transfer-button fixed bottom-[calc(env(safe-area-inset-bottom)_+_8.5rem)] left-1/2 -translate-x-1/2 sm:static sm:mt-5 sm:translate-x-0">
-												<Button
-													variant="transparent"
-													data-testid="ExchangeForm__manual_transfer"
-													onClick={() => handleNext({ bypassSignStep: true })}
-													disabled={isSubmitting || !isValid}
-													className="text-theme-primary-600 text-sm leading-[17px] sm:pl-0"
-												>
-													{t("EXCHANGE.MANUAL_TRANSFER")}
-												</Button>
-											</div>
-										)}
-
-										<FormButtons>
-											{activeTab < Step.StatusStep && (
-												<>
-													<Button
-														data-testid="ExchangeForm__back-button"
-														disabled={isSubmitting}
-														variant="secondary"
-														onClick={handleBack}
-													>
-														{t("COMMON.BACK")}
-													</Button>
-
-													<Button
-														data-testid="ExchangeForm__continue-button"
-														disabled={isSubmitting || (isDirty ? !isValid : true)}
-														isLoading={isSubmitting}
-														onClick={() => handleNext()}
-													>
-														{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
-													</Button>
-												</>
-											)}
-
-											{activeTab === Step.ConfirmationStep && (
-												<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
-													<Button
-														data-testid="ExchangeForm__finish-button"
-														onClick={() =>
-															navigate(`/profiles/${activeProfile.id()}/dashboard`)
-														}
-													>
-														{t("COMMON.GO_TO_PORTFOLIO")}
-													</Button>
-													<Button
-														data-testid="ExchangeForm__new-exchange"
-														variant="secondary"
-														onClick={() => resetForm?.()}
-													>
-														{t("EXCHANGE.NEW_EXCHANGE")}
-													</Button>
-												</div>
-											)}
-										</FormButtons>
-									</div>
-								)}
-							</div>
-						</Tabs>
-					</Form>
-					{showTransferModal && exchangeTransaction && mainsailMainnetNetwork && (
-						<SendExchangeTransfer
-							profile={activeProfile}
-							network={mainsailMainnetNetwork}
-							exchangeTransaction={exchangeTransaction}
-							onSuccess={(txId: string) => {
-								setTransferTransactionId(txId);
-								setActiveTab(activeTab + 1);
-							}}
-							onClose={() => setShowTransferModal(false)}
-						/>
-					)}
-				</>
-			)}
-		</>
-	);
-
 	const totalSteps = 4;
 
 	const { t } = useTranslation();
@@ -630,21 +493,53 @@ export const ExchangeSidePanel = ({
 				</SidePanelButtons>
 			}
 		>
-			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center md:py-20">
-				<div className="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32">
-					<Image name="WorldMap" className="h-full w-full" />
-				</div>
+			<div>
+				{!exchangeProviders || (exchangeProvider !== undefined && !isReady) ? (
+					<div className="py-32">
+						<Spinner size="lg" />
+					</div>
+				) : (
+					<>
+						<Form data-testid="ExchangeForm" context={form as any} onSubmit={submitForm}>
+							<Tabs activeId={activeTab}>
+								<div>
+									<TabPanel tabId={Step.FormStep}>
+										<FormStep profile={activeProfile} />
+									</TabPanel>
 
-				{renderSpinner()}
+									<TabPanel tabId={Step.ReviewStep}>
+										<ReviewStep />
+									</TabPanel>
 
-				<div
-					className={cn(
-						"bg-theme-background sm:rounded-2.5xl relative w-full grow flex-col p-6 sm:max-w-xl sm:grow-0 sm:p-10 sm:shadow-2xl lg:max-w-2xl",
-						isReady ? "flex" : "hidden",
-					)}
-				>
-					{renderExchange()}
-				</div>
+									<TabPanel tabId={Step.StatusStep}>
+										<StatusStep
+											exchangeTransaction={exchangeTransaction!}
+											onUpdate={handleStatusUpdate}
+											transferTransactionId={transferTransactionId}
+										/>
+									</TabPanel>
+
+									<TabPanel tabId={Step.ConfirmationStep}>
+										<ConfirmationStep exchangeTransaction={exchangeTransaction} />
+									</TabPanel>
+								</div>
+							</Tabs>
+						</Form>
+
+						{showTransferModal && exchangeTransaction && mainsailMainnetNetwork && (
+							<SendExchangeTransfer
+								profile={activeProfile}
+								network={mainsailMainnetNetwork}
+								exchangeTransaction={exchangeTransaction}
+								onSuccess={(txId: string) => {
+									setTransferTransactionId(txId);
+									setActiveTab(activeTab + 1);
+								}}
+								onClose={() => setShowTransferModal(false)}
+							/>
+						)}
+					</>
+				)}
 			</div>
 		</SidePanel>
 	);
