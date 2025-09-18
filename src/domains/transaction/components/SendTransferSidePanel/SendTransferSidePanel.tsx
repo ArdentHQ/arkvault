@@ -7,7 +7,7 @@ import { TransferLedgerReview } from "@/domains/transaction/components/SendTrans
 import { ReviewStep } from "@/domains/transaction/components/SendTransferSidePanel/ReviewStep";
 import { SendTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { QRModal } from "@/app/components/QRModal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -64,7 +64,7 @@ export const SendTransferSidePanel = ({
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
@@ -187,7 +187,7 @@ export const SendTransferSidePanel = ({
 			try {
 				const transaction = await submitForm(abortReference);
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
@@ -196,7 +196,7 @@ export const SendTransferSidePanel = ({
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
 		},
-		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addPendingTransaction],
+		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addUnconfirmedTransactionFromSigned],
 	);
 
 	const handleBack = () => {
@@ -371,9 +371,9 @@ export const SendTransferSidePanel = ({
 		if (activeTab === SendTransferStep.SummaryStep) {
 			return (
 				<ThemeIcon
-					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
 					dimensions={[24, 24]}
 					className={cn({
 						"text-theme-primary-600": !isConfirmed,

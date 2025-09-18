@@ -1,26 +1,26 @@
+import { DetailLabel, DetailPadded, DetailsCondensed } from "@/app/components/DetailWrapper";
 import React, { useEffect, useState } from "react";
-import { TransactionDetailModalProperties } from "./TransactionDetailSidePanel.contracts";
-import { useTranslation } from "react-i18next";
-
 import {
 	TransactionAddresses,
-	TransactionType,
-	TransactionSummary,
-	TransactionDetails,
 	TransactionConfirmations,
+	TransactionDetails,
+	TransactionSummary,
+	TransactionType,
 	TransactionGas,
 } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 
-import { DetailLabel, DetailPadded, DetailsCondensed } from "@/app/components/DetailWrapper";
-import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
-import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
-import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
-import cn from "classnames";
 import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@/app/lib/mainsail";
-import { isContractDeployment } from "@/domains/transaction/utils";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { TransactionDetailModalProperties } from "./TransactionDetailSidePanel.contracts";
+import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
+import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
+import cn from "classnames";
+import { isContractDeployment } from "@/domains/transaction/utils";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
+import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
+import { useTranslation } from "react-i18next";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -136,6 +136,14 @@ export const TransactionDetailSidePanel = ({
 
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
 
+	const wallet = transactionItem.wallet();
+	const transactionId = transactionItem.hash();
+
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+		transactionId,
+		wallet,
+	});
+
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout | undefined;
 
@@ -148,9 +156,34 @@ export const TransactionDetailSidePanel = ({
 		return () => clearTimeout(timeoutId);
 	}, [isOpen]);
 
+	// If already confirmed, skip the hook entirely
+	if (transactionItem.isConfirmed()) {
+		return (
+			<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
+				<TransactionDetailContent
+					transactionItem={transactionItem}
+					profile={profile}
+					isConfirmed={transactionItem.isConfirmed()}
+					confirmations={transactionItem.confirmations().toNumber()}
+				/>
+			</SidePanel>
+		);
+	}
+
+	const transactionToShow = confirmedTransaction ?? transactionItem;
+	const confirmationsToShow = confirmedTransaction
+		? confirmedTransaction.confirmations().toNumber()
+		: transactionItem.confirmations().toNumber();
+	const isConfirmedToShow = isConfirmed;
+
 	return (
 		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
-			<TransactionDetailContent transactionItem={transactionItem} profile={profile} />
+			<TransactionDetailContent
+				transactionItem={transactionToShow}
+				profile={profile}
+				isConfirmed={isConfirmedToShow}
+				confirmations={confirmationsToShow}
+			/>
 		</SidePanel>
 	);
 };

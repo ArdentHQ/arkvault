@@ -1,5 +1,4 @@
 import { DTO, Services } from "@/app/lib/mainsail";
-
 import { Contracts } from "@/app/lib/profiles";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { TFunction } from "i18next";

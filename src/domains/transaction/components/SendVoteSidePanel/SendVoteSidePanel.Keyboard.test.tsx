@@ -273,7 +273,7 @@ describe("SendVoteSidePanel Keyboard", () => {
 			}
 		});
 
-		await expect(screen.findByTestId("icon-PendingTransaction")).resolves.toBeVisible();
+		await expect(screen.findByTestId("icon-UnconfirmedTransaction")).resolves.toBeVisible();
 
 		await act(() => vi.runOnlyPendingTimers());
 

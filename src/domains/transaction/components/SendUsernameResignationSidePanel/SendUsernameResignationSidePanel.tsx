@@ -6,7 +6,7 @@ import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { FormStep } from "@/domains/transaction/components/SendUsernameResignationSidePanel/FormStep";
 import { ReviewStep } from "@/domains/transaction/components/SendUsernameResignationSidePanel/ReviewStep";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -50,7 +50,7 @@ export const SendUsernameResignationSidePanel = ({
 
 	const { gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -138,7 +138,7 @@ export const SendUsernameResignationSidePanel = ({
 
 			const transactionData = activeWallet.transaction().transaction(signedTransactionId);
 
-			addPendingTransaction(transactionData);
+			addUnconfirmedTransactionFromSigned(transactionData);
 			setTransaction(transactionData);
 
 			handleNext();
