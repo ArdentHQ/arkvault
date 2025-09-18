@@ -25,7 +25,7 @@ exports[`SyncErrorMessage > should handle retry 1`] = `
       Lisk Devnet
     </strong>
   </span>
-   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+   while trying to retrieve your address information and as a result, your data could be out of sync or incorrect. Click 
   <span
     data-testid="SyncErrorMessage__retry"
   >
@@ -72,7 +72,7 @@ exports[`SyncErrorMessage > should render multiple failed networks 1`] = `
       Lisk Devnet
     </strong>
   </span>
-   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+   while trying to retrieve your address information and as a result, your data could be out of sync or incorrect. Click 
   <span
     data-testid="SyncErrorMessage__retry"
   >
@@ -102,7 +102,7 @@ exports[`SyncErrorMessage > should render one failed network 1`] = `
       ARK Devnet
     </strong>
   </span>
-   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+   while trying to retrieve your address information and as a result, your data could be out of sync or incorrect. Click 
   <span
     data-testid="SyncErrorMessage__retry"
   >
@@ -143,7 +143,7 @@ exports[`SyncErrorMessage > should render two failed networks 1`] = `
       ARK Mainnet
     </strong>
   </span>
-   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+   while trying to retrieve your address information and as a result, your data could be out of sync or incorrect. Click 
   <span
     data-testid="SyncErrorMessage__retry"
   >

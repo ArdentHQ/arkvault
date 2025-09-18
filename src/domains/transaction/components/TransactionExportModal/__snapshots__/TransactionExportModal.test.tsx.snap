@@ -73,7 +73,7 @@ exports[`TransactionExportModal > should render 1`] = `
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Export your wallet's transaction history.
+              Export your address' transaction history.
             </div>
             <form
               class="space-y-5 mt-4"
@@ -716,7 +716,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Export your wallet's transaction history.
+              Export your address' transaction history.
             </div>
             <form
               class="space-y-5 mt-4"
@@ -1359,7 +1359,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Export your wallet's transaction history.
+              Export your address' transaction history.
             </div>
             <form
               class="space-y-5 mt-4"
@@ -1653,7 +1653,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Export your wallet's transaction history.
+              Export your address' transaction history.
             </div>
             <form
               class="space-y-5 mt-4"
@@ -1947,7 +1947,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Export your wallet's transaction history.
+              Export your address' transaction history.
             </div>
             <form
               class="space-y-5 mt-4"
@@ -2590,7 +2590,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Export your wallet's transaction history.
+              Export your address' transaction history.
             </div>
             <form
               class="space-y-5 mt-4"
