@@ -419,7 +419,21 @@ export const ExchangeSidePanel = ({
 			open={exchangeId !== undefined}
 			onOpenChange={onOpenChange}
 			onMountChange={onMountChange}
-			title={exchangeProvider?.name || ""}
+			title={
+				<div className="flex items-center">
+					<span>{t("COMMON.EXCHANGE_VIA")}</span>
+					{logoUrl && (
+						<img
+							src={logoUrl}
+							alt={`${exchangeProvider?.name} Header Logo`}
+							className={cn("h-[21px] w-auto", {
+								"ml-0": exchangeId === "changenow",
+								"ml-3": exchangeId !== "changenow",
+							})}
+						/>
+					)}
+				</div>
+			}
 			subtitle={undefined}
 			titleIcon={undefined}
 			dataTestId="ExchangeSidePanel"
@@ -525,7 +539,6 @@ export const ExchangeSidePanel = ({
 								</div>
 							</Tabs>
 						</Form>
-
 						{showTransferModal && exchangeTransaction && mainsailMainnetNetwork && (
 							<SendExchangeTransfer
 								profile={activeProfile}

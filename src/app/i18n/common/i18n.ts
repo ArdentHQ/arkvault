@@ -134,6 +134,7 @@ export const translations = {
 		UNKNOWN: "Unknown Error",
 	},
 	EXCHANGE: "Exchange",
+	EXCHANGE_VIA: "Exchange via",
 	EXPIRATION: "Expiration",
 	EXPLORER: "Explorer",
 	EXPORT: "Export",
