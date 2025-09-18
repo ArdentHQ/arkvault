@@ -163,7 +163,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 
 		const alias = ledgerOptions?.path
 			? getLedgerDefaultAlias({ network, path: ledgerOptions.path, profile })
-			: getDefaultAlias({ network, profile });
+			: getDefaultAlias({ addressIndex: levels?.addressIndex, network, profile });
 
 		wallet.mutator().alias(alias);
 
