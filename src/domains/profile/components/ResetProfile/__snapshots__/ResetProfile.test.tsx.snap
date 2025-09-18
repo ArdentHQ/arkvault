@@ -158,7 +158,7 @@ exports[`ResetProfile > should render 1`] = `
               <div
                 class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
               >
-                By performing this action, all of your Profile settings will be restored to default. This won't delete your wallets. This action cannot be undone. Do you want to reset your settings?
+                By performing this action, all of your Profile settings will be restored to default. This won't delete your addresses. This action cannot be undone. Do you want to reset your settings?
               </div>
             </div>
             <div

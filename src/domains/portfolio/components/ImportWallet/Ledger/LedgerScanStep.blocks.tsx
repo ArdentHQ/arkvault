@@ -74,7 +74,7 @@ export const LedgerMobileItem = ({
 				{index === 0 && (
 					<LedgerLoaderOverlay>
 						<Trans
-							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
+							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_ADDRESSES"
 							values={{ count: 5 }}
 						/>
 					</LedgerLoaderOverlay>
