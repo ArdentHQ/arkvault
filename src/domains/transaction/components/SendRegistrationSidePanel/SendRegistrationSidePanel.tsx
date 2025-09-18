@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { useTranslation } from "react-i18next";
@@ -67,7 +67,7 @@ export const SendRegistrationSidePanel = ({
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, setValue, watch, getValues, trigger, reset: resetForm } = form;
-	const { isDirty, isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting, isValid, dirtyFields } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
 
@@ -365,6 +365,11 @@ export const SendRegistrationSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = useMemo(
+		() => dirtyFields.username || dirtyFields.validatorPublicKey || activeTab !== FORM_STEP,
+		[dirtyFields.username, dirtyFields.validatorPublicKey, activeTab],
+	);
+
 	return (
 		<SidePanel
 			open={open}
@@ -378,8 +383,9 @@ export const SendRegistrationSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === summaryStep}
-			disableOutsidePress
-			disableEscapeKey={isSubmitting}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={isSubmitting || preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>

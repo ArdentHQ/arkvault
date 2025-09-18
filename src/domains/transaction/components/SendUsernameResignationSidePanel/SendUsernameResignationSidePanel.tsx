@@ -258,6 +258,8 @@ export const SendUsernameResignationSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = activeTab !== Step.FormStep;
+
 	return (
 		<SidePanel
 			open={open}
@@ -271,8 +273,9 @@ export const SendUsernameResignationSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === Step.SummaryStep}
-			disableOutsidePress
-			disableEscapeKey={isSubmitting}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={isSubmitting || preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>

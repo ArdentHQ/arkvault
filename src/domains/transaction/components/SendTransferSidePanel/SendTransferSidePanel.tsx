@@ -39,6 +39,7 @@ import { useConfirmedTransaction } from "@/domains/transaction/components/Transa
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
+import { createPortal } from "react-dom";
 
 const MAX_TABS = 5;
 
@@ -90,7 +91,7 @@ export const SendTransferSidePanel = ({
 		handleSubmit,
 		getValues,
 		lastEstimatedExpiration,
-		formState: { isDirty, isValid, isSubmitting },
+		formState: { isDirty, isValid, isSubmitting, dirtyFields },
 	} = useSendTransferForm(wallet);
 
 	useKeyup("Enter", () => {
@@ -418,172 +419,180 @@ export const SendTransferSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = useMemo(
+		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,
+		[dirtyFields.amount, dirtyFields.recipientAddress, activeTab],
+	);
+
 	return (
-		<>
-			<SidePanel
-				open={open}
-				onOpenChange={onOpenChange}
-				onMountChange={onMountChange}
-				title={getTitle()}
-				subtitle={getSubtitle()}
-				titleIcon={getTitleIcon()}
-				dataTestId="SendTransferSidePanel"
-				hasSteps
-				totalSteps={MAX_TABS - 1}
-				activeStep={activeTab}
-				onBack={handleBack}
-				isLastStep={activeTab === SendTransferStep.SummaryStep}
-				disableOutsidePress
-				disableEscapeKey={showQRModal || isConfirmModalOpen || showOverwriteModal}
-				footer={
-					<SidePanelButtons>
-						{activeTab !== SendTransferStep.SummaryStep && (
-							<Button
-								data-testid="SendTransfer__back-button"
-								variant="secondary"
-								onClick={handleBack}
-								disabled={isSubmitting}
-							>
-								{t("COMMON.BACK")}
-							</Button>
-						)}
+		<SidePanel
+			open={open}
+			onOpenChange={onOpenChange}
+			onMountChange={onMountChange}
+			title={getTitle()}
+			subtitle={getSubtitle()}
+			titleIcon={getTitleIcon()}
+			dataTestId="SendTransferSidePanel"
+			hasSteps
+			totalSteps={MAX_TABS - 1}
+			activeStep={activeTab}
+			onBack={handleBack}
+			isLastStep={activeTab === SendTransferStep.SummaryStep}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
+			footer={
+				<SidePanelButtons>
+					{activeTab !== SendTransferStep.SummaryStep && (
+						<Button
+							data-testid="SendTransfer__back-button"
+							variant="secondary"
+							onClick={handleBack}
+							disabled={isSubmitting}
+						>
+							{t("COMMON.BACK")}
+						</Button>
+					)}
 
-						{activeTab < SendTransferStep.AuthenticationStep && (
-							<Button
-								data-testid="SendTransfer__continue-button"
-								onClick={handleNext}
-								disabled={isNextDisabled || isSubmitting}
-							>
-								{t("COMMON.CONTINUE")}
-							</Button>
-						)}
+					{activeTab < SendTransferStep.AuthenticationStep && (
+						<Button
+							data-testid="SendTransfer__continue-button"
+							onClick={handleNext}
+							disabled={isNextDisabled || isSubmitting}
+						>
+							{t("COMMON.CONTINUE")}
+						</Button>
+					)}
 
-						{activeTab === SendTransferStep.AuthenticationStep && (
-							<Button
-								data-testid="SendTransfer__send-button"
-								onClick={() => {
-									void handleSubmit(() => submit())();
+					{activeTab === SendTransferStep.AuthenticationStep && (
+						<Button
+							data-testid="SendTransfer__send-button"
+							onClick={() => {
+								void handleSubmit(() => submit())();
+							}}
+							disabled={isSubmitting}
+						>
+							{t("COMMON.SEND")}
+						</Button>
+					)}
+
+					{activeTab === SendTransferStep.SummaryStep && (
+						<Button data-testid="SendTransfer__close-button" onClick={() => onOpenChange(false)}>
+							{t("COMMON.CLOSE")}
+						</Button>
+					)}
+				</SidePanelButtons>
+			}
+		>
+			<Form context={form}>
+				<Tabs activeId={activeTab}>
+					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
+						<TabPanel tabId={SendTransferStep.FormStep}>
+							<FormStep
+								network={activeNetwork}
+								senderWallet={wallet}
+								profile={activeProfile}
+								deeplinkProps={deepLinkParameters}
+								onScan={() => setShowQRModal(true)}
+								onChange={({ sender }) => {
+									setWallet(sender);
 								}}
-								disabled={isSubmitting}
-							>
-								{t("COMMON.SEND")}
-							</Button>
-						)}
+								hideHeader
+							/>
+						</TabPanel>
 
-						{activeTab === SendTransferStep.SummaryStep && (
-							<Button data-testid="SendTransfer__close-button" onClick={() => onOpenChange(false)}>
-								{t("COMMON.CLOSE")}
-							</Button>
-						)}
-					</SidePanelButtons>
-				}
-			>
-				<Form context={form}>
-					<Tabs activeId={activeTab}>
-						<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
-							<TabPanel tabId={SendTransferStep.FormStep}>
-								<FormStep
-									network={activeNetwork}
-									senderWallet={wallet}
-									profile={activeProfile}
-									deeplinkProps={deepLinkParameters}
-									onScan={() => setShowQRModal(true)}
-									onChange={({ sender }) => {
-										setWallet(sender);
-									}}
-									hideHeader
-								/>
-							</TabPanel>
+						<TabPanel tabId={SendTransferStep.ReviewStep}>
+							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
+						</TabPanel>
 
-							<TabPanel tabId={SendTransferStep.ReviewStep}>
-								<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
-							</TabPanel>
-
-							<TabPanel tabId={SendTransferStep.AuthenticationStep}>
-								<AuthenticationStep
-									wallet={wallet!}
-									ledgerDetails={
-										<TransferLedgerReview
-											wallet={wallet!}
-											estimatedExpiration={lastEstimatedExpiration}
-											profile={activeProfile}
-										/>
-									}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={!isConnected}
-									onDeviceNotAvailable={() => {
-										// keep waiting when it is not available
-									}}
-									noHeading
-								/>
-							</TabPanel>
-
-							<TabPanel tabId={SendTransferStep.SummaryStep}>
-								<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
-							</TabPanel>
-
-							<TabPanel tabId={SendTransferStep.ErrorStep}>
-								<ErrorStep
-									onClose={() => {
-										assertWallet(wallet);
-										onOpenChange(false);
-									}}
-									isBackDisabled={isSubmitting}
-									onBack={() => {
-										setActiveTab(SendTransferStep.FormStep);
-									}}
-									errorMessage={errorMessage}
-									hideHeader
-								/>
-							</TabPanel>
-
-							{!hideStepNavigation && (
-								<div className="mt-2">
-									<button className="sr-only" type="submit" onClick={(e) => e.preventDefault()} />
-								</div>
-							)}
-						</StepsProvider>
-					</Tabs>
-
-					<TransferOverwriteModal
-						isOpen={showOverwriteModal}
-						onCancel={() => setShowOverwriteModal(false)}
-						onConfirm={(clearPrefilled: boolean) => {
-							if (clearPrefilled) {
-								for (const key of ["recipientAddress", "amount", "memo"]) {
-									form.setValue(key as any, undefined, { shouldDirty: true, shouldValidate: true });
+						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
+							<AuthenticationStep
+								wallet={wallet!}
+								ledgerDetails={
+									<TransferLedgerReview
+										wallet={wallet!}
+										estimatedExpiration={lastEstimatedExpiration}
+										profile={activeProfile}
+									/>
 								}
+								ledgerIsAwaitingDevice={!hasDeviceAvailable}
+								ledgerIsAwaitingApp={!isConnected}
+								onDeviceNotAvailable={() => {
+									// keep waiting when it is not available
+								}}
+								noHeading
+							/>
+						</TabPanel>
+
+						<TabPanel tabId={SendTransferStep.SummaryStep}>
+							<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
+						</TabPanel>
+
+						<TabPanel tabId={SendTransferStep.ErrorStep}>
+							<ErrorStep
+								onClose={() => {
+									assertWallet(wallet);
+									onOpenChange(false);
+								}}
+								isBackDisabled={isSubmitting}
+								onBack={() => {
+									setActiveTab(SendTransferStep.FormStep);
+								}}
+								errorMessage={errorMessage}
+								hideHeader
+							/>
+						</TabPanel>
+
+						{!hideStepNavigation && (
+							<div className="mt-2">
+								<button className="sr-only" type="submit" onClick={(e) => e.preventDefault()} />
+							</div>
+						)}
+					</StepsProvider>
+				</Tabs>
+
+				<TransferOverwriteModal
+					isOpen={showOverwriteModal}
+					onCancel={() => setShowOverwriteModal(false)}
+					onConfirm={(clearPrefilled: boolean) => {
+						if (clearPrefilled) {
+							for (const key of ["recipientAddress", "amount", "memo"]) {
+								form.setValue(key as any, undefined, { shouldDirty: true, shouldValidate: true });
 							}
+						}
 
-							for (const [key, value] of Object.entries(overwriteData)) {
-								form.setValue(key as any, value as any, { shouldDirty: true, shouldValidate: true });
-							}
+						for (const [key, value] of Object.entries(overwriteData)) {
+							form.setValue(key as any, value as any, { shouldDirty: true, shouldValidate: true });
+						}
 
-							setShowOverwriteModal(false);
-						}}
-						currentData={currentFormData}
-						newData={overwriteData}
-					/>
+						setShowOverwriteModal(false);
+					}}
+					currentData={currentFormData}
+					newData={overwriteData}
+				/>
 
-					<ConfirmSendTransaction
-						profile={activeProfile}
-						unconfirmedTransactions={unconfirmedTransactions}
-						isOpen={isConfirmModalOpen}
-						onConfirm={() => {
-							setIsConfirmModalOpen(false);
-							handleSubmit(() => submit(true))();
-						}}
-						onClose={() => {
-							setIsConfirmModalOpen(false);
-						}}
-					/>
-				</Form>
-			</SidePanel>
-			<QRModal
-				isOpen={showQRModal}
-				onCancel={() => setShowQRModal(false)}
-				onRead={(text: string) => handleQRCodeRead(text)}
-			/>
-		</>
+				<ConfirmSendTransaction
+					profile={activeProfile}
+					unconfirmedTransactions={unconfirmedTransactions}
+					isOpen={isConfirmModalOpen}
+					onConfirm={() => {
+						setIsConfirmModalOpen(false);
+						handleSubmit(() => submit(true))();
+					}}
+					onClose={() => {
+						setIsConfirmModalOpen(false);
+					}}
+				/>
+			</Form>
+
+			{createPortal(
+				<QRModal
+					isOpen={showQRModal}
+					onCancel={() => setShowQRModal(false)}
+					onRead={(text: string) => handleQRCodeRead(text)}
+				/>,
+				document.body,
+			)}
+		</SidePanel>
 	);
 };
