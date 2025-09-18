@@ -587,7 +587,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.actsWithMnemonicWithDerivationPath} */
 	public actsWithMnemonicWithDerivationPath(): boolean {
-		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.DERIVATION_PATH;
+		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.MNEMONIC;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.actsWithAddressWithDerivationPath} */

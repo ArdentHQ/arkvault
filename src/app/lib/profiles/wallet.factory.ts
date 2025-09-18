@@ -91,6 +91,7 @@ export class WalletFactory implements IWalletFactory {
 		mnemonic,
 		coin = BIP44CoinType.ARK,
 		levels,
+		password,
 	}: IMnemonicBIP44DerivativeOptions): Promise<IReadWriteWallet> {
 		const accountIndex = levels.account;
 		const changeIndex = levels.change ?? 0;
@@ -103,12 +104,18 @@ export class WalletFactory implements IWalletFactory {
 		const wallet: IReadWriteWallet = new Wallet(UUID.random(), {}, this.#profile);
 
 		wallet.data().set(WalletData.DerivationPath, derivationPath);
-		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.DERIVATION_PATH);
+		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.MNEMONIC);
 		wallet.data().set(WalletData.AddressIndex, addressIndex);
 		wallet.data().set(WalletData.PublicKey, account.publicKey);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
 		await wallet.mutator().address({ address: account.address });
+
+		if (password) {
+			wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
+
+			await wallet.signingKey().set(mnemonic, password);
+		}
 
 		return wallet;
 	}

@@ -102,6 +102,7 @@ export const useImportOptions = (
 
 		if (profile.settings().get(ProfileSetting.UseHDWallets)) {
 			advancedOptions.push({
+				canBeEncrypted: true,
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.HD_WALLET_DESCRIPTION"),
 				header: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.HD_WALLET_TITLE"),
 				icon: <Icon name="HDWalletImportMethod" size="lg" />,
