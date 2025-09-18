@@ -27,7 +27,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -153,7 +153,7 @@ exports[`AddressRowMobile > should emit action on select button 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -198,7 +198,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -324,7 +324,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -368,7 +368,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -494,7 +494,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -538,7 +538,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -665,7 +665,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -708,7 +708,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -835,7 +835,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -878,7 +878,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -1004,7 +1004,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -1144,7 +1144,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -1270,7 +1270,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -1518,7 +1518,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Active
@@ -1644,7 +1644,7 @@ exports[`AddressRowMobile > should render with active validator 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-success-100 text-theme-success-700 dark:border-theme-success-800 dark:text-theme-success-500 min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Active
@@ -1687,7 +1687,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Resigned
@@ -1813,7 +1813,7 @@ exports[`AddressRowMobile > should render with resigned validator 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Resigned
@@ -1856,7 +1856,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 class="flex items-center gap-3"
               >
                 <div
-                  class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent sm:hidden"
+                  class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text min-w-[58px] py-[3px] dark:border dark:bg-transparent sm:hidden"
                   data-testid="AddressRowMobile__wallet-status-0"
                 >
                   Standby
@@ -1982,7 +1982,7 @@ exports[`AddressRowMobile > should render with standby validator 1`] = `
                 </div>
                 <div>
                   <div
-                    class="bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent"
+                    class="inline-block px-1 text-xs font-semibold text-center rounded bg-theme-warning-100 text-theme-warning-900 dark:border-theme-danger-info-border dark:text-theme-danger-info-text min-w-[58px] py-[3px] dark:border dark:bg-transparent"
                     data-testid="AddressRow__wallet-status"
                   >
                     Standby
