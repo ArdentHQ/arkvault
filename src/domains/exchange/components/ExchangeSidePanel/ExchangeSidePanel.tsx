@@ -227,12 +227,6 @@ export const ExchangeSidePanel = ({
 		</>
 	);
 
-	const onMountChange = (mounted: boolean) => {
-		if (!mounted) {
-			reset();
-		}
-	};
-
 	const totalSteps = 4;
 
 	const { t } = useTranslation();
@@ -255,7 +249,17 @@ export const ExchangeSidePanel = ({
 
 	const form = useForm<ExchangeFormState>({ mode: "onChange" });
 
-	const { clearErrors, formState, getValues, handleSubmit, register, trigger, setValue, watch } = form;
+	const {
+		clearErrors,
+		formState,
+		getValues,
+		handleSubmit,
+		register,
+		trigger,
+		setValue,
+		watch,
+		reset: resetForm,
+	} = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { currencies, fromCurrency, toCurrency, minPayinAmount, minPayoutAmount, recipientWallet, refundWallet } =
@@ -294,6 +298,22 @@ export const ExchangeSidePanel = ({
 
 	const onReady = () => {
 		setIsReady(true);
+	};
+
+	const resetComponent = () => {
+		reset();
+
+		resetForm();
+
+		setActiveTab(Step.FormStep);
+
+		clearErrors();
+	};
+
+	const onMountChange = (mounted: boolean) => {
+		if (!mounted) {
+			resetComponent();
+		}
 	};
 
 	useEffect(() => {
@@ -447,7 +467,8 @@ export const ExchangeSidePanel = ({
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
-			navigate(`/profiles/${activeProfile.id()}/exchange`);
+			onOpenChange(false);
+			return;
 		}
 
 		setActiveTab((previous) => previous - 1);
