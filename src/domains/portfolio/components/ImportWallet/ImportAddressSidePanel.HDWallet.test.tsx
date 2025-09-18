@@ -273,4 +273,58 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
 		});
 	});
+
+	it("should successfully import multiple selected addresses in order", async () => {
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
+
+		await user.click(getContinueButton());
+
+		// Wait for address selection step
+		await waitFor(() => {
+			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
+		});
+
+		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("SelectAddressStep__checkbox-row").length).toBe(6);
+		});
+
+		const addressRows = screen.getAllByTestId("Address__address");
+		const firstAddress = addressRows[0].textContent;
+		const secondAddress = addressRows[1].textContent;
+
+		const addressCheckboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+		await user.click(addressCheckboxes[1]);
+		await user.click(addressCheckboxes[0]);
+
+		await waitFor(() => {
+			expect(getContinueButton()).toBeEnabled();
+		});
+
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument();
+		});
+
+		const summaryAddressRows = screen.getAllByTestId("Address__address");
+		const summaryFirstAddress = summaryAddressRows[0].textContent;
+		const summarySecondAddress = summaryAddressRows[1].textContent;
+
+		// eslint-disable-next-line unicorn/consistent-function-scoping
+		const getAddressPrefix = (address: string | null) => address?.split("...")[0] || "";
+
+		// The summary should show the first selected address first (lower addressIndex)
+		// even though we clicked them in reverse order (1 then 0)
+		expect(getAddressPrefix(summaryFirstAddress)).toBe(getAddressPrefix(firstAddress)); // Address from index 0
+		expect(getAddressPrefix(summarySecondAddress)).toBe(getAddressPrefix(secondAddress)); // Address from index 1
+	});
 });

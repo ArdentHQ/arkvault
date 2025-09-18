@@ -3,6 +3,9 @@ import { Contracts } from "@/app/lib/profiles";
 import { getDefaultAlias } from "./get-default-alias";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
+const address1 = "Address #1";
+const address2 = "Address #2";
+
 describe("getDefaultAlias", () => {
 	let profile: Contracts.IProfile;
 
@@ -28,7 +31,7 @@ describe("getDefaultAlias", () => {
 			profile,
 		});
 
-		expect(result).toBe("Address #1");
+		expect(result).toBe(address1);
 	});
 
 	it("should not return alias that already exist", async () => {
@@ -39,13 +42,13 @@ describe("getDefaultAlias", () => {
 
 		profile.wallets().push(wallet);
 
-		wallet.mutator().alias("Address #1");
+		wallet.mutator().alias(address1);
 
 		const result = getDefaultAlias({
 			profile,
 		});
 
-		expect(result).toBe("Address #2");
+		expect(result).toBe(address2);
 	});
 
 	it("should increase the alias number regardless of the network", async () => {
@@ -60,7 +63,7 @@ describe("getDefaultAlias", () => {
 			profile,
 		});
 
-		expect(result).toBe("Address #1");
+		expect(result).toBe(address1);
 
 		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[1],
@@ -73,6 +76,35 @@ describe("getDefaultAlias", () => {
 			profile,
 		});
 
-		expect(result2).toBe("Address #2");
+		expect(result2).toBe(address2);
+	});
+
+	it("should use addressIndex to generate alias", async () => {
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+
+		profile.wallets().push(wallet);
+
+		const result = getDefaultAlias({
+			addressIndex: 0,
+			profile,
+		});
+
+		wallet.mutator().alias(address1);
+		expect(result).toBe(address1);
+
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[1],
+		});
+
+		profile.wallets().push(wallet2);
+
+		const result2 = getDefaultAlias({
+			addressIndex: 1,
+			profile,
+		});
+
+		expect(result2).toBe(address2);
 	});
 });

@@ -66,7 +66,7 @@ export const HDWalletTabs = ({
 
 	const handleWalletImporting = useCallback(
 		async ({ selectedAddresses }: { selectedAddresses: AddressData[] }) => {
-			const addresses = selectedAddresses;
+			const addresses = selectedAddresses.toSorted((a, b) => a.levels.addressIndex! - b.levels.addressIndex!);
 
 			await Promise.all(
 				addresses.map(async ({ levels }, index) => {
