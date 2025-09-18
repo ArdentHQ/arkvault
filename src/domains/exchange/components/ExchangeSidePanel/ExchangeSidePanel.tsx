@@ -33,6 +33,7 @@ import { ConfirmationStep } from "@/domains/exchange/components/ExchangeForm/Con
 import { FormStep } from "@/domains/exchange/components/ExchangeForm/FormStep";
 import { ReviewStep } from "@/domains/exchange/components/ExchangeForm/ReviewStep";
 import { StatusStep } from "@/domains/exchange/components/ExchangeForm/StatusStep";
+import { createPortal } from "react-dom";
 
 enum Step {
 	FormStep = 1,
@@ -553,18 +554,22 @@ export const ExchangeSidePanel = ({
 								</div>
 							</Tabs>
 						</Form>
-						{showTransferModal && exchangeTransaction && mainsailMainnetNetwork && (
-							<SendExchangeTransfer
-								profile={activeProfile}
-								network={mainsailMainnetNetwork}
-								exchangeTransaction={exchangeTransaction}
-								onSuccess={(txId: string) => {
-									setTransferTransactionId(txId);
-									setActiveTab(activeTab + 1);
-								}}
-								onClose={() => setShowTransferModal(false)}
-							/>
-						)}
+						{showTransferModal &&
+							exchangeTransaction &&
+							mainsailMainnetNetwork &&
+							createPortal(
+								<SendExchangeTransfer
+									profile={activeProfile}
+									network={mainsailMainnetNetwork}
+									exchangeTransaction={exchangeTransaction}
+									onSuccess={(txId: string) => {
+										setTransferTransactionId(txId);
+										setActiveTab(activeTab + 1);
+									}}
+									onClose={() => setShowTransferModal(false)}
+								/>,
+								document.body,
+							)}
 					</>
 				)}
 			</div>
