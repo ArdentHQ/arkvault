@@ -348,7 +348,7 @@ export const CreateAddressesSidePanel = ({
 							{isHDWalletCreation && (
 								<HDWalletTabs
 									activeIndex={HDWalletTabStep.SelectAddressStep}
-									onClickEditWalletName={console.log}
+									onClickEditWalletName={() => setIsEditAliasModalOpen(true)}
 									onStepChange={setHDWalletActiveTab}
 									onCancel={() => {
 										onOpenChange(false);
