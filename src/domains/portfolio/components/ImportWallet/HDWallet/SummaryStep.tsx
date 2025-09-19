@@ -75,6 +75,7 @@ export const SummaryStep = ({
 							/>
 
 							<Button
+								data-testid="UpdateAccountName"
 								onClick={() => setShowAccountNameEdit(true)}
 								disabled={showAccountNameEdit}
 								variant="transparent"

@@ -21,20 +21,20 @@ describe("SummaryStep", () => {
 	let network: Networks.Network;
 	let walletData: AddressData[];
 
-	const createWallet = async (addressIndex: number) => {
-		return profile.walletFactory().fromMnemonicWithBIP44({
+	const testAccountName = "Test HD Account";
+
+	const createWallet = async (addressIndex: number) => profile.walletFactory().fromMnemonicWithBIP44({
 			coin: BIP44CoinType.ARK,
 			levels: { account: 0, addressIndex, change: 0 },
 			mnemonic: getDefaultMainsailWalletMnemonic(),
 		});
-	};
 
 	const setupWallets = async () => {
 		const wallet1 = await createWallet(0);
 		const wallet2 = await createWallet(1);
 
-		wallet1.mutator().accountName("Test HD Account");
-		wallet2.mutator().accountName("Test HD Account");
+		wallet1.mutator().accountName(testAccountName);
+		wallet2.mutator().accountName(testAccountName);
 
 		profile.wallets().push(wallet1);
 		profile.wallets().push(wallet2);
@@ -42,15 +42,15 @@ describe("SummaryStep", () => {
 		return [
 			{
 				address: wallet1.address(),
-				path: "m/44'/111'/0'/0/0",
-				levels: { account: 0, addressIndex: 0, change: 0 },
 				balance: 100,
+				levels: { account: 0, addressIndex: 0, change: 0 },
+				path: "m/44'/111'/0'/0/0",
 			},
 			{
 				address: wallet2.address(),
-				path: "m/44'/111'/0'/0/1",
-				levels: { account: 0, addressIndex: 1, change: 0 },
 				balance: 200,
+				levels: { account: 0, addressIndex: 1, change: 0 },
+				path: "m/44'/111'/0'/0/1",
 			},
 		];
 	};
@@ -69,28 +69,18 @@ describe("SummaryStep", () => {
 
 	it("should render summary step with account details", () => {
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
-		expect(screen.getByText("Test HD Account")).toBeInTheDocument();
+		expect(screen.getByText(testAccountName)).toBeInTheDocument();
 
 		unmount();
 	});
 
 	it("should show multiple import component when more than one wallet", () => {
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		// Verify MultipleImport specific elements are present
@@ -108,12 +98,7 @@ describe("SummaryStep", () => {
 		const singleWallet = [walletData[0]];
 
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={singleWallet}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={singleWallet} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		// Should show SingleImport component for single wallet
@@ -133,12 +118,7 @@ describe("SummaryStep", () => {
 		const user = userEvent.setup();
 
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		// Initially, edit form should not be visible
@@ -160,12 +140,7 @@ describe("SummaryStep", () => {
 		const user = userEvent.setup();
 
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		// Click edit button to show form
@@ -197,12 +172,7 @@ describe("SummaryStep", () => {
 		const user = userEvent.setup();
 
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		// Click edit button to show form
@@ -229,12 +199,7 @@ describe("SummaryStep", () => {
 		const user = userEvent.setup();
 
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		const editButton = screen.getByTestId("UpdateAccountName");
@@ -255,16 +220,11 @@ describe("SummaryStep", () => {
 
 	it("should display current account name from first wallet", () => {
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		// Should display account name from first imported wallet
-		expect(screen.getByText("Test HD Account")).toBeInTheDocument();
+		expect(screen.getByText(testAccountName)).toBeInTheDocument();
 
 		unmount();
 	});
@@ -273,16 +233,11 @@ describe("SummaryStep", () => {
 		const user = userEvent.setup();
 
 		const { unmount } = render(
-			<SummaryStep
-				network={network}
-				wallets={walletData}
-				profile={profile}
-				onClickEditWalletName={vi.fn()}
-			/>,
+			<SummaryStep network={network} wallets={walletData} profile={profile} onClickEditWalletName={vi.fn()} />,
 		);
 
 		// Initial account name
-		expect(screen.getByText("Test HD Account")).toBeInTheDocument();
+		expect(screen.getByText(testAccountName)).toBeInTheDocument();
 
 		// Click edit button
 		const editButton = screen.getByTestId("UpdateAccountName");
