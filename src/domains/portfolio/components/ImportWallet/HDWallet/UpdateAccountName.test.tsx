@@ -135,7 +135,7 @@ describe("UpdateAccountName", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeValid();
 		});
-		
+
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled();
 
 		unmount();
