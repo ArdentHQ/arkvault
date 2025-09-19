@@ -123,6 +123,14 @@ export interface IReadWriteWallet {
 	alias(): string | undefined;
 
 	/**
+	 * Get the account name
+	 *
+	 * @return {(string | undefined)}
+	 * @memberof IReadWriteWallet
+	 */
+	accountName(): string | undefined;
+
+	/**
 	 * Get the display name.
 	 *
 	 * @return {(string | undefined)}
