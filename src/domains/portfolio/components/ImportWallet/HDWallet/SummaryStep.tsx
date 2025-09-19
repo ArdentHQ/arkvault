@@ -58,18 +58,20 @@ export const SummaryStep = ({
 				<DetailLabel>{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SUMMARY_STEP.DETAILS_LABEL")}</DetailLabel>
 				<div
 					className={cn(
-						"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-0 overflow-hidden rounded sm:rounded-xl sm:mt-2 sm:border",
+						"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-0 overflow-hidden rounded sm:mt-2 sm:rounded-xl sm:border",
 					)}
 				>
 					<div className="flex w-full items-center justify-between gap-4 space-x-2 p-3 break-words sm:justify-start sm:gap-0 sm:space-x-0 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">
 						<DetailTitle className={cn("text-theme-secondary-700 w-auto")}>{t("COMMON.NAME")}</DetailTitle>
 
-						<div className="ml-6 flex w-full items-center justify-end sm:justify-between min-w-0">
-							<div className="truncate text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 font-semibold">{accountName}</div>
+						<div className="ml-6 flex w-full min-w-0 items-center justify-end sm:justify-between">
+							<div className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 truncate font-semibold">
+								{accountName}
+							</div>
 
 							<Divider
 								type="vertical"
-								className="sm:hidden border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-2"
+								className="border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-2 sm:hidden"
 							/>
 
 							<Button
@@ -85,8 +87,8 @@ export const SummaryStep = ({
 					</div>
 					<div
 						className={cn(
-							"transition-all duration-300 overflow-hidden px-3 sm:px-0",
-							showAccountNameEdit ? "max-h-52 opacity-100" : "max-h-0 opacity-0"
+							"overflow-hidden px-3 transition-all duration-300 sm:px-0",
+							showAccountNameEdit ? "max-h-52 opacity-100" : "max-h-0 opacity-0",
 						)}
 					>
 						{showAccountNameEdit && (
