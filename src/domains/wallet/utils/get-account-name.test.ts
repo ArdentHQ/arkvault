@@ -9,13 +9,12 @@ const mnemonic = getDefaultMainsailWalletMnemonic();
 describe("getAccountName", () => {
 	let profile: Contracts.IProfile;
 
-	const createWallet = async (addressIndex: number = 0) => {
-		return profile.walletFactory().fromMnemonicWithBIP44({
+	const createWallet = async (addressIndex: number = 0) =>
+		profile.walletFactory().fromMnemonicWithBIP44({
 			coin: BIP44CoinType.ARK,
 			levels: { account: 0, addressIndex, change: 0 },
 			mnemonic,
 		});
-	};
 
 	const addWalletWithAccountName = async (name: string, addressIndex: number = 0) => {
 		const wallet = await createWallet(addressIndex);
