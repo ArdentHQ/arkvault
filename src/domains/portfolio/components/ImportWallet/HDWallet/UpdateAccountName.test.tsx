@@ -28,12 +28,14 @@ describe("UpdateAccountName", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = render(
+		const { asFragment, unmount } = render(
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
 		expect(screen.getByTestId("FormLabel")).toHaveTextContent(commonTranslations.NAME);
 		expect(asFragment()).toMatchSnapshot();
+
+		unmount();
 	});
 
 	it("should update account name for wallets", async () => {
@@ -41,7 +43,7 @@ describe("UpdateAccountName", () => {
 		const accountNameSpy2 = vi.spyOn(wallet2.mutator(), "accountName");
 		const onAfterSave = vi.fn();
 
-		render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={onAfterSave} onCancel={vi.fn()} />);
+		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={onAfterSave} onCancel={vi.fn()} />);
 
 		const name = "Shared Account Name";
 		const user = userEvent.setup();
@@ -62,22 +64,26 @@ describe("UpdateAccountName", () => {
 		expect(accountNameSpy2).toHaveBeenCalledWith(name);
 
 		expect(onAfterSave).toHaveBeenCalledTimes(1);
+
+		unmount();
 	});
 
 	it("should cancel editing", async () => {
 		const onCancel = vi.fn();
 
-		render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={onCancel} />);
+		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={onCancel} />);
 
 		const user = userEvent.setup();
 
 		await user.click(screen.getByTestId("UpdateWalletName__cancel"));
 
 		expect(onCancel).toHaveBeenCalledTimes(1);
+
+		unmount();
 	});
 
 	it("should disable save button when input is invalid", async () => {
-		render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
 
 		const user = userEvent.setup();
 
@@ -87,25 +93,31 @@ describe("UpdateAccountName", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 		});
+
+		unmount();
 	});
 
 	it("should disable save button when name hasn't changed", async () => {
-		render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
 
 		// Submit button should be disabled initially when no changes are made
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
+
+		unmount();
 	});
 
 	it("should show current account name as default value", async () => {
 		const currentName = wallet1.accountName();
 
-		render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
 
 		expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(currentName);
+
+		unmount();
 	});
 
 	it("should validate account name", async () => {
-		render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
 
 		const user = userEvent.setup();
 
@@ -124,6 +136,8 @@ describe("UpdateAccountName", () => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeValid();
 			expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled();
 		});
+
+		unmount();
 	});
 
 	it("should focus input on mount", () => {
