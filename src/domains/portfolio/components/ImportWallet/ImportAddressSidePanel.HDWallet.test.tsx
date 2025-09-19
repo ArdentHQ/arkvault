@@ -174,7 +174,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		// Should proceed to summary step
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument();
+			expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
 		});
 
 		// remove imported HD Wallets
@@ -312,7 +312,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(getContinueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument();
+			expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
 		});
 
 		const summaryAddressRows = screen.getAllByTestId("Address__address");

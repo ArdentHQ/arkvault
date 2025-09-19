@@ -1,7 +1,10 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { JSX, useState } from "react";
 import { Networks } from "@/app/lib/mainsail";
-import { MultipleImport } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerImportStep.blocks";
+import {
+	MultipleImport,
+	SingleImport,
+} from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerImportStep.blocks";
 import { DetailLabel, DetailTitle } from "@/app/components/DetailWrapper";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
@@ -35,12 +38,21 @@ export const SummaryStep = ({
 	const { t } = useTranslation();
 	return (
 		<section data-testid="SummaryStep" className="space-y-4">
-			<MultipleImport
-				network={network}
-				onClickEditWalletName={onClickEditWalletName}
-				profile={profile}
-				wallets={wallets}
-			/>
+			{wallets.length > 1 ? (
+				<MultipleImport
+					wallets={wallets}
+					profile={profile}
+					network={network}
+					onClickEditWalletName={onClickEditWalletName}
+				/>
+			) : (
+				<SingleImport
+					wallets={wallets}
+					profile={profile}
+					network={network}
+					onClickEditWalletName={onClickEditWalletName}
+				/>
+			)}
 
 			<div data-testid="DetailWrapper">
 				<DetailLabel>{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SUMMARY_STEP.DETAILS_LABEL")}</DetailLabel>
