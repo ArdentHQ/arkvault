@@ -331,9 +331,7 @@ export const CreateAddressesSidePanel = ({
 									activeIndex={HDWalletTabStep.SelectAddressStep}
 									onClickEditWalletName={(wallet) => setEditingWallet(wallet)}
 									onStepChange={setHDWalletActiveTab}
-									onCancel={() => {
-										onOpenChange(false);
-									}}
+									onCancel={() => onOpenChange(false)}
 									onSubmit={handleFinish}
 									onBack={() => {
 										if (encryptionPassword) {
