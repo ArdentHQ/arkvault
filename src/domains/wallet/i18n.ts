@@ -325,6 +325,7 @@ export const translations = {
 	UPDATING_WALLET_DATA: "Updating Wallet Data",
 
 	VALIDATION: {
+		ACCOUNT_NAME_ASSIGNED: "The name '{{name}}' is already assigned.",
 		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet.",
 	},
 };
