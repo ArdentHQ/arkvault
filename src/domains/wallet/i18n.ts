@@ -88,6 +88,16 @@ export const translations = {
 	},
 
 	PAGE_CREATE_WALLET: {
+		METHOD_STEP: {
+			HD_ADDRESS_TITLE: "A single mnemonic to access one or more addresses",
+			REGULAR_ADDRESS_DESCRIPTION: "A single mnemonic to access a single address",
+			REGULAR_ADDRESS_TITLE: "Regular Address",
+			SUBTITLE: "Select a cryptoasset to create your new wallet address.",
+			SUBTITLE_WITH_HD: "Pick the address type to generate to new address",
+			TITLE: "Create New Address",
+			USE_ADDITIONAL_ADDRESSES: "Want to add additional addresses to your existing HD Wallet?",
+			USE_IMPORT: "Use “<importLink/>” instead.",
+		},
 		NETWORK_STEP: {
 			GENERATION_ERROR:
 				"An error occurred while creating your new address, please try again. If the error persists, kindly get in touch with our support team.",
