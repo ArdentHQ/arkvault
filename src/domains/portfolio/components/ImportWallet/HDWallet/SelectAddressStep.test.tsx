@@ -20,6 +20,8 @@ const route = `/profiles/${fixtureProfileId}/dashboard`;
 
 const mnemonic = getDefaultMainsailWalletMnemonic();
 
+const getAddressCheckboxes = () => screen.getAllByTestId("SelectAddressStep__checkbox-row");
+
 const addressIndex0 = "0xe37F40bC165c670Eb50367C43f5581cFDA897320";
 
 const mockAddresses: AddressData[] = [
@@ -75,7 +77,7 @@ describe("AddressesTable", () => {
 
 		render(<AddressesTable {...defaultProps} toggleSelect={toggleSelect} />);
 
-		const firstCheckbox = screen.getAllByTestId("SelectAddressStep__checkbox-row")[0];
+		const firstCheckbox = getAddressCheckboxes()[0];
 		await user.click(firstCheckbox);
 
 		expect(toggleSelect).toHaveBeenCalledWith(mockAddresses[0]);
@@ -98,7 +100,7 @@ describe("AddressesTable", () => {
 
 		render(<AddressesTable {...defaultProps} isSelected={isSelected} selectedWallets={[mockAddresses[0]]} />);
 
-		const checkboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+		const checkboxes = getAddressCheckboxes();
 		expect(checkboxes[0]).toBeChecked();
 		expect(checkboxes[1]).not.toBeChecked();
 	});
@@ -207,7 +209,7 @@ describe("SelectAddressStep", () => {
 		// Wait for addresses to be generated and displayed
 		expect(screen.getAllByText(addressIndex0).length).toBeTruthy();
 
-		const checkbox = screen.getAllByTestId("SelectAddressStep__checkbox-row")[0];
+		const checkbox = getAddressCheckboxes()[0];
 		await user.click(checkbox);
 
 		// Should update form with selected address
@@ -233,7 +235,7 @@ describe("SelectAddressStep", () => {
 		const selectAllButton = screen.getByTestId("SelectAddressStep__select-all");
 		await userEvent.click(selectAllButton);
 
-		const checkboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+		const checkboxes = getAddressCheckboxes();
 
 		// Should select all visible addresses
 		await waitFor(() => {
@@ -279,7 +281,7 @@ describe("SelectAddressStep", () => {
 		await waitFor(() => expect(screen.queryByText(/Loading Addresses/)).not.toBeInTheDocument());
 
 		// Component should handle empty addresses properly by showing at least the first one
-		const addressRows = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+		const addressRows = getAddressCheckboxes();
 		expect(addressRows.length).toBe(1);
 	});
 });

@@ -9,7 +9,6 @@ import { AddressData } from "@/domains/portfolio/components/ImportWallet/HDWalle
 import { Button } from "@/app/components/Button";
 import { UpdateAccountName } from "@/domains/portfolio/components/ImportWallet/HDWallet/UpdateAccountName";
 import { Divider } from "@/app/components/Divider";
-import { useActiveProfile } from "@/app/hooks";
 
 export const SummaryStep = ({
 	network,
