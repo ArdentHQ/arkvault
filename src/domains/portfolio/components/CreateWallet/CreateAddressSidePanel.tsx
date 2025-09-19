@@ -65,7 +65,7 @@ export const CreateAddressesSidePanel = ({
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
-	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
+	const [editingWallet, setEditingWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined)
 
 	const stepConfig = useCreateStepHeaderConfig(activeTab);
 	const HDWalletConfig = useHDWalletStepHeaderConfig(HDWalletActiveTab);
@@ -193,25 +193,6 @@ export const CreateAddressesSidePanel = ({
 		assertString(encryptionPassword);
 
 		void handleNext({ encryptionPassword });
-	};
-
-	const renderUpdateWalletNameModal = () => {
-		if (!isEditAliasModalOpen) {
-			return;
-		}
-
-		const wallet = getValues("wallet");
-
-		assertWallet(wallet);
-
-		return (
-			<UpdateWalletName
-				wallet={wallet}
-				profile={activeProfile}
-				onCancel={() => setIsEditAliasModalOpen(false)}
-				onAfterSave={() => setIsEditAliasModalOpen(false)}
-			/>
-		);
 	};
 
 	const allSteps = useMemo(() => {
@@ -348,7 +329,7 @@ export const CreateAddressesSidePanel = ({
 							{isHDWalletCreation && (
 								<HDWalletTabs
 									activeIndex={HDWalletTabStep.SelectAddressStep}
-									onClickEditWalletName={() => setIsEditAliasModalOpen(true)}
+									onClickEditWalletName={(wallet) => setEditingWallet(wallet)}
 									onStepChange={setHDWalletActiveTab}
 									onCancel={() => {
 										onOpenChange(false);
@@ -357,13 +338,20 @@ export const CreateAddressesSidePanel = ({
 									onBack={console.log}
 								/>
 							)}
-							{!isHDWalletCreation && <SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />}
+							{!isHDWalletCreation && <SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />}
 						</TabPanel>
 					</div>
 				</Tabs>
 			</Form>
 
-			{renderUpdateWalletNameModal()}
+			{editingWallet && (
+				<UpdateWalletName
+					wallet={editingWallet}
+					profile={activeProfile}
+					onCancel={() => setEditingWallet(undefined)}
+					onAfterSave={() => setEditingWallet(undefined)}
+				/>
+			)}
 		</SidePanel>
 	);
 };
