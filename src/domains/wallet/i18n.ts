@@ -156,6 +156,7 @@ export const translations = {
 		},
 
 		HD_WALLET_SUMMARY_STEP: {
+			DETAILS_LABEL: "HD Wallet Details",
 			SUBTITLE: "Your HD Wallet addresses were successfully imported.",
 			TITLE: "Import Completed",
 		},
