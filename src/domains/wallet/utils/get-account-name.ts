@@ -8,8 +8,9 @@ export const getAccountName = ({ profile }: { profile: Contracts.IProfile }): st
 	}
 
 	return makeAccountName(counter);
-}
+};
 
 const makeAccountName = (counter: number) => `HD ${counter}`;
 
-const findByAccountName = (wallets: Contracts.IReadWriteWallet[], name: string) => wallets.some(wallet => wallet.accountName() === name)
+const findByAccountName = (wallets: Contracts.IReadWriteWallet[], name: string) =>
+	wallets.some((wallet) => wallet.accountName() === name);
