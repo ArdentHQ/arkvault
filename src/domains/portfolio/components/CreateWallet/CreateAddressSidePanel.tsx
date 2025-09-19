@@ -21,9 +21,9 @@ import { Contracts } from "@/app/lib/profiles";
 import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
 import { MethodStep } from "./MethodStep";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
-import { HDWalletTabs } from "../ImportWallet/HDWallet/HDWalletTabs";
-import { HDWalletTabStep } from "../ImportWallet/HDWallet/HDWalletsTabs.contracts";
-import { useHDWalletStepHeaderConfig } from "../ImportWallet/ImportAddressSidePanel.blocks";
+import { HDWalletTabs } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
+import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
+import { useHDWalletStepHeaderConfig } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 
 export const CreateAddressesSidePanel = ({
 	open,
@@ -147,7 +147,7 @@ export const CreateAddressesSidePanel = ({
 			return;
 		}
 
-		if (newIndex === CreateStep.SuccessStep) {
+		if (newIndex === CreateStep.SuccessStep && !usesHDWallets) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
 
 			let wallet = getValues("wallet");
@@ -237,13 +237,7 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = () => {
-		if (usesHDWallets) {
-			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep
-		}
-
-		return activeTab > CreateStep.MethodStep
-	}
+	const showFooter = () => activeTab > CreateStep.MethodStep
 
 	return (
 		<SidePanel
@@ -298,6 +292,7 @@ export const CreateAddressesSidePanel = ({
 
 						{activeTab === CreateStep.SuccessStep && (
 							<Button
+								onClick={handleFinish}
 								disabled={isSubmitting}
 								type="submit"
 								form="CreateWallet__form"
@@ -347,6 +342,7 @@ export const CreateAddressesSidePanel = ({
 						<TabPanel tabId={CreateStep.SuccessStep}>
 							{isHDWalletCreation && (
 								<HDWalletTabs
+									showActionToolbar={false}
 									activeIndex={HDWalletTabStep.SelectAddressStep}
 									onClickEditWalletName={console.log}
 									onStepChange={setHDWalletActiveTab}

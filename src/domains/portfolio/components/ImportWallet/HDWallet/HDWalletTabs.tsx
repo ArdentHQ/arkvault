@@ -27,6 +27,7 @@ export const HDWalletTabs = ({
 	onSubmit,
 	onBack,
 	activeIndex,
+	showActionToolbar = true,
 }: HDWalletTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -242,20 +243,22 @@ export const HDWalletTabs = ({
 			</div>
 
 			{/* Normal toolbar footer (no error) */}
-			<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
+			{showActionToolbar && (
 				<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
-					<ImportActionToolbar
-						showButtons={activeTab < HDWalletTabStep.SummaryStep}
-						onBack={handleBack}
-						isContinueDisabled={isNextDisabled || isSubmitting}
-						isLoading={isSubmitting}
-						onContinue={handleNext}
-						isSubmitDisabled={isSubmitting}
-						showPortfoliobutton={activeTab === HDWalletTabStep.SummaryStep}
-						onSubmit={onSubmit}
-					/>
+					<div className="bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 absolute right-0 bottom-0 left-0 flex w-full flex-col border-t px-6 py-4">
+						<ImportActionToolbar
+							showButtons={activeTab < HDWalletTabStep.SummaryStep}
+							onBack={handleBack}
+							isContinueDisabled={isNextDisabled || isSubmitting}
+							isLoading={isSubmitting}
+							onContinue={handleNext}
+							isSubmitDisabled={isSubmitting}
+							showPortfoliobutton={activeTab === HDWalletTabStep.SummaryStep}
+							onSubmit={onSubmit}
+						/>
+					</div>
 				</div>
-			</div>
+			)}
 		</>
 	);
 };
