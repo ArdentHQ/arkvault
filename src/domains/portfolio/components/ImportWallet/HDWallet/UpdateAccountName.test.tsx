@@ -5,7 +5,6 @@ import React from "react";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
 	env,
-	getDefaultMainsailWalletId,
 	getMainsailProfileId,
 	render,
 	screen,
@@ -126,16 +125,18 @@ describe("UpdateAccountName", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeInvalid();
-			expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 		});
+
+		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 
 		// Test with valid name
 		await user.paste("Valid Account Name");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeValid();
-			expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled();
 		});
+		
+		expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled();
 
 		unmount();
 	});
