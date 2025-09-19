@@ -50,7 +50,7 @@ export const HDWalletTabs = ({
 	const hasExistingHDWallets = existingHDWallets.length > 0;
 
 	const { formState, handleSubmit, getValues, register, unregister } = useFormContext();
-	const { isValid, isSubmitting, isDirty, errors } = formState;
+	const { isValid, isSubmitting, isDirty } = formState;
 
 	const {
 		mnemonic,
