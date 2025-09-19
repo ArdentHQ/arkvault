@@ -63,13 +63,13 @@ export const HDWalletTabs = ({
 	} = getValues();
 
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
-	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SummaryStep);
+	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
 
 	const handleWalletImporting = useCallback(
 		async ({ selectedAddresses }: { selectedAddresses: AddressData[] }) => {
 			const addresses = selectedAddresses.toSorted((a, b) => a.levels.addressIndex! - b.levels.addressIndex!);
 
-			const accountName = getAccountName({profile: activeProfile});
+			const accountName = getAccountName({ profile: activeProfile });
 
 			await Promise.all(
 				addresses.map(async ({ levels }, index) => {
