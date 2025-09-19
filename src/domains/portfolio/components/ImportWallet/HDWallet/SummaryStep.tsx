@@ -8,6 +8,8 @@ import { useTranslation } from "react-i18next";
 import { AddressData } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
 import { Button } from "@/app/components/Button";
 import { UpdateAccountName } from "@/domains/portfolio/components/ImportWallet/HDWallet/UpdateAccountName";
+import { Divider } from "@/app/components/Divider";
+import { useActiveProfile } from "@/app/hooks";
 
 export const SummaryStep = ({
 	network,
@@ -51,8 +53,13 @@ export const SummaryStep = ({
 					<div className="flex w-full items-center justify-between gap-4 space-x-2 p-3 break-words sm:justify-start sm:gap-0 sm:space-x-0 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">
 						<DetailTitle className={cn("text-theme-secondary-700 w-auto")}>{t("COMMON.NAME")}</DetailTitle>
 
-						<div className="ml-6 flex w-full items-center justify-end sm:justify-between">
-							<div className="text-theme-secondary-900 font-semibold">{accountName}</div>
+						<div className="ml-6 flex w-full items-center justify-end sm:justify-between min-w-0">
+							<div className="truncate text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 font-semibold">{accountName}</div>
+
+							<Divider
+								type="vertical"
+								className="sm:hidden border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-2"
+							/>
 
 							<Button
 								onClick={() => setShowAccountNameEdit(true)}
