@@ -182,6 +182,11 @@ export const HDWalletTabs = ({
 		if (activeTab !== HDWalletTabStep.SelectAccountStep) {
 			let prev = activeTab - 1;
 
+			if (activeTab === activeIndex) {
+				onBack?.()
+				return
+			}
+
 			if (activeTab === HDWalletTabStep.SelectAddressStep && !useEncryption) {
 				prev--;
 			}

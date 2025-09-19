@@ -335,7 +335,14 @@ export const CreateAddressesSidePanel = ({
 										onOpenChange(false);
 									}}
 									onSubmit={handleFinish}
-									onBack={console.log}
+									onBack={() => {
+										if (encryptionPassword) {
+											setActiveTab(activeTab - 1);
+											return
+										}
+
+										setActiveTab(activeTab - 2);
+									}}
 								/>
 							)}
 							{!isHDWalletCreation && <SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />}
