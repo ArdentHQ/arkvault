@@ -23,7 +23,8 @@ describe("SummaryStep", () => {
 
 	const testAccountName = "Test HD Account";
 
-	const createWallet = async (addressIndex: number) => profile.walletFactory().fromMnemonicWithBIP44({
+	const createWallet = async (addressIndex: number) =>
+		profile.walletFactory().fromMnemonicWithBIP44({
 			coin: BIP44CoinType.ARK,
 			levels: { account: 0, addressIndex, change: 0 },
 			mnemonic: getDefaultMainsailWalletMnemonic(),
