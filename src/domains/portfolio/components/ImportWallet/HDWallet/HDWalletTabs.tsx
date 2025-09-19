@@ -63,7 +63,7 @@ export const HDWalletTabs = ({
 	} = getValues();
 
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
-	const firstStep = activeIndex ?? HDWalletTabStep.SelectAccountStep
+	const firstStep = activeIndex ?? HDWalletTabStep.SelectAccountStep;
 	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(firstStep);
 
 	const handleWalletImporting = useCallback(
@@ -93,7 +93,6 @@ export const HDWalletTabs = ({
 		},
 		[activeProfile, importWallets, mnemonic, password],
 	);
-
 
 	const isNextDisabled = useMemo(() => {
 		if (activeTab === HDWalletTabStep.EnterMnemonicStep && useEncryption) {
@@ -183,8 +182,8 @@ export const HDWalletTabs = ({
 			let prev = activeTab - 1;
 
 			if (activeTab === activeIndex) {
-				onBack?.()
-				return
+				onBack?.();
+				return;
 			}
 
 			if (activeTab === HDWalletTabStep.SelectAddressStep && !useEncryption) {

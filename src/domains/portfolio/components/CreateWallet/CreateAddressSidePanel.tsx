@@ -47,7 +47,7 @@ export const CreateAddressesSidePanel = ({
 	const [activeTab, setActiveTab] = useState<CreateStep>(firstStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallets } = useWalletImport({ profile: activeProfile });
-	const [isHDWalletCreation, setIsHDWalletCreation] = useState(false)
+	const [isHDWalletCreation, setIsHDWalletCreation] = useState(false);
 
 	const form = useForm<any>({
 		defaultValues: {
@@ -65,11 +65,11 @@ export const CreateAddressesSidePanel = ({
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
-	const [editingWallet, setEditingWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined)
+	const [editingWallet, setEditingWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 
 	const stepConfig = useCreateStepHeaderConfig(activeTab);
 	const HDWalletConfig = useHDWalletStepHeaderConfig(HDWalletActiveTab);
-	const config = isHDWalletCreation ? HDWalletConfig : stepConfig
+	const config = isHDWalletCreation ? HDWalletConfig : stepConfig;
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -218,7 +218,8 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = (): boolean => activeTab > CreateStep.MethodStep && (activeTab !== CreateStep.SuccessStep && !!usesHDWallets)
+	const showFooter = (): boolean =>
+		activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep && !!usesHDWallets;
 
 	return (
 		<SidePanel
@@ -233,62 +234,63 @@ export const CreateAddressesSidePanel = ({
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
 			onBack={handleBack}
-			footer={showFooter() && (
-				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
-					{activeTab <= CreateStep.EncryptPasswordStep && (
-						<>
-							{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.MethodStep && (
-								<Button
-									data-testid="CreateWallet__back-button"
-									disabled={isGeneratingWallet}
-									variant="secondary"
-									onClick={handleBack}
-								>
-									{t("COMMON.BACK")}
-								</Button>
-							)}
+			footer={
+				showFooter() && (
+					<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
+						{activeTab <= CreateStep.EncryptPasswordStep && (
+							<>
+								{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.MethodStep && (
+									<Button
+										data-testid="CreateWallet__back-button"
+										disabled={isGeneratingWallet}
+										variant="secondary"
+										onClick={handleBack}
+									>
+										{t("COMMON.BACK")}
+									</Button>
+								)}
 
-							{activeTab < CreateStep.EncryptPasswordStep && (
-								<Button
-									data-testid="CreateWallet__continue-button"
-									disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
-									isLoading={isGeneratingWallet}
-									onClick={() => handleNext()}
-								>
-									{t("COMMON.CONTINUE")}
-								</Button>
-							)}
+								{activeTab < CreateStep.EncryptPasswordStep && (
+									<Button
+										data-testid="CreateWallet__continue-button"
+										disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
+										isLoading={isGeneratingWallet}
+										onClick={() => handleNext()}
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								)}
 
-							{activeTab === CreateStep.EncryptPasswordStep && (
-								<Button
-									data-testid="CreateWallet__continue-encryption-button"
-									disabled={
-										!isValid ||
-										isGeneratingWallet ||
-										!encryptionPassword ||
-										!confirmEncryptionPassword
-									}
-									isLoading={isGeneratingWallet}
-									onClick={handlePasswordSubmit}
-								>
-									{t("COMMON.CONTINUE")}
-								</Button>
-							)}
-						</>
-					)}
+								{activeTab === CreateStep.EncryptPasswordStep && (
+									<Button
+										data-testid="CreateWallet__continue-encryption-button"
+										disabled={
+											!isValid ||
+											isGeneratingWallet ||
+											!encryptionPassword ||
+											!confirmEncryptionPassword
+										}
+										isLoading={isGeneratingWallet}
+										onClick={handlePasswordSubmit}
+									>
+										{t("COMMON.CONTINUE")}
+									</Button>
+								)}
+							</>
+						)}
 
-					{activeTab === CreateStep.SuccessStep && (
-						<Button
-							disabled={isSubmitting}
-							type="submit"
-							form="CreateWallet__form"
-							data-testid="CreateWallet__finish-button"
-						>
-							{t("COMMON.CLOSE")}
-						</Button>
-					)}
-				</SidePanelButtons>
-			)
+						{activeTab === CreateStep.SuccessStep && (
+							<Button
+								disabled={isSubmitting}
+								type="submit"
+								form="CreateWallet__form"
+								data-testid="CreateWallet__finish-button"
+							>
+								{t("COMMON.CLOSE")}
+							</Button>
+						)}
+					</SidePanelButtons>
+				)
 			}
 			isLastStep={activeTab === CreateStep.SuccessStep}
 		>
@@ -302,12 +304,12 @@ export const CreateAddressesSidePanel = ({
 								onSelectHdAddress={async () => {
 									await handleGenerateWallet();
 									setActiveTab(CreateStep.WalletOverviewStep);
-									setIsHDWalletCreation(true)
+									setIsHDWalletCreation(true);
 								}}
 								onSelectRegularAddress={async () => {
 									await handleGenerateWallet();
 									setActiveTab(CreateStep.WalletOverviewStep);
-									setIsHDWalletCreation(false)
+									setIsHDWalletCreation(false);
 								}}
 								onImportAddress={onImportAddress}
 							/>
@@ -336,14 +338,16 @@ export const CreateAddressesSidePanel = ({
 									onBack={() => {
 										if (encryptionPassword) {
 											setActiveTab(activeTab - 1);
-											return
+											return;
 										}
 
 										setActiveTab(activeTab - 2);
 									}}
 								/>
 							)}
-							{!isHDWalletCreation && <SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />}
+							{!isHDWalletCreation && (
+								<SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />
+							)}
 						</TabPanel>
 					</div>
 				</Tabs>

@@ -16,7 +16,7 @@ export interface HDWalletTabsProperties {
 	onCancel?: () => void;
 	onStepChange?: (step: HDWalletTabStep) => void;
 	activeIndex?: HDWalletTabStep;
-	showActionToolbar?: boolean,
+	showActionToolbar?: boolean;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 }
 

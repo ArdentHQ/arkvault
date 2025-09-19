@@ -10,7 +10,11 @@ import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { Contracts } from "@/app/lib/profiles";
 
-export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: (wallet: Contracts.IReadWriteWallet) => void }) => {
+export const SuccessStep = ({
+	onClickEditAlias,
+}: {
+	onClickEditAlias: (wallet: Contracts.IReadWriteWallet) => void;
+}) => {
 	const { t } = useTranslation();
 
 	const { getValues, watch } = useFormContext();
