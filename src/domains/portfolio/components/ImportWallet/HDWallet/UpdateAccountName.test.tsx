@@ -3,13 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { UpdateAccountName } from "./UpdateAccountName";
 
 describe("UpdateAccountName", () => {
@@ -23,7 +17,7 @@ describe("UpdateAccountName", () => {
 		wallet1 = profile.wallets().values()[0];
 		wallet2 = profile.wallets().values()[1];
 
-		wallets = [wallet1, wallet2]
+		wallets = [wallet1, wallet2];
 	});
 
 	it("should render", () => {
@@ -42,7 +36,9 @@ describe("UpdateAccountName", () => {
 		const accountNameSpy2 = vi.spyOn(wallet2.mutator(), "accountName");
 		const onAfterSave = vi.fn();
 
-		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={onAfterSave} onCancel={vi.fn()} />);
+		const { unmount } = render(
+			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={onAfterSave} onCancel={vi.fn()} />,
+		);
 
 		const name = "Shared Account Name";
 		const user = userEvent.setup();
@@ -70,7 +66,9 @@ describe("UpdateAccountName", () => {
 	it("should cancel editing", async () => {
 		const onCancel = vi.fn();
 
-		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={onCancel} />);
+		const { unmount } = render(
+			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={onCancel} />,
+		);
 
 		const user = userEvent.setup();
 
@@ -82,7 +80,9 @@ describe("UpdateAccountName", () => {
 	});
 
 	it("should disable save button when input is invalid", async () => {
-		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(
+			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
+		);
 
 		const user = userEvent.setup();
 
@@ -97,7 +97,9 @@ describe("UpdateAccountName", () => {
 	});
 
 	it("should disable save button when name hasn't changed", async () => {
-		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(
+			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
+		);
 
 		// Submit button should be disabled initially when no changes are made
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
@@ -108,7 +110,9 @@ describe("UpdateAccountName", () => {
 	it("should show current account name as default value", async () => {
 		const currentName = wallet1.accountName();
 
-		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(
+			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
+		);
 
 		expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(currentName);
 
@@ -116,7 +120,9 @@ describe("UpdateAccountName", () => {
 	});
 
 	it("should validate account name", async () => {
-		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(
+			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
+		);
 
 		const user = userEvent.setup();
 
@@ -142,7 +148,9 @@ describe("UpdateAccountName", () => {
 	});
 
 	it("should focus input on mount", () => {
-		const { unmount } = render(<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		const { unmount } = render(
+			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
+		);
 
 		expect(screen.getByTestId("UpdateWalletName__input")).toHaveFocus();
 
