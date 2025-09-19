@@ -51,7 +51,7 @@ export const HDWalletTabs = ({
 	const hasExistingHDWallets = existingHDWallets.length > 0;
 
 	const { formState, handleSubmit, getValues, register, unregister } = useFormContext();
-	const { isValid, isSubmitting, isDirty } = formState;
+	const { isValid, isSubmitting, isDirty, errors } = formState;
 
 	const {
 		mnemonic,
@@ -94,6 +94,7 @@ export const HDWalletTabs = ({
 		},
 		[activeProfile, importWallets, mnemonic, password],
 	);
+
 
 	const isNextDisabled = useMemo(() => {
 		if (activeTab === HDWalletTabStep.EnterMnemonicStep && useEncryption) {

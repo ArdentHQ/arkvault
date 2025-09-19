@@ -237,7 +237,7 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = () => activeTab > CreateStep.MethodStep
+	const showFooter = (): boolean => activeTab > CreateStep.MethodStep && (activeTab !== CreateStep.SuccessStep && usesHDWallets)
 
 	return (
 		<SidePanel
@@ -252,57 +252,62 @@ export const CreateAddressesSidePanel = ({
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
 			onBack={handleBack}
-			footer={
-				showFooter() && (
-					<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
-						{activeTab <= CreateStep.EncryptPasswordStep && (
-							<>
-								{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.MethodStep && (
-									<Button
-										data-testid="CreateWallet__back-button"
-										disabled={isGeneratingWallet}
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
-								)}
+			footer={showFooter() && (
+				<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
+					{activeTab <= CreateStep.EncryptPasswordStep && (
+						<>
+							{activeTab < CreateStep.SuccessStep && activeTab !== CreateStep.MethodStep && (
+								<Button
+									data-testid="CreateWallet__back-button"
+									disabled={isGeneratingWallet}
+									variant="secondary"
+									onClick={handleBack}
+								>
+									{t("COMMON.BACK")}
+								</Button>
+							)}
 
-								{activeTab < CreateStep.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-button"
-										isLoading={isGeneratingWallet}
-										onClick={() => handleNext()}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
+							{activeTab < CreateStep.EncryptPasswordStep && (
+								<Button
+									data-testid="CreateWallet__continue-button"
+									disabled={isDirty ? !isValid || isGeneratingWallet || isNextDisabled : true}
+									isLoading={isGeneratingWallet}
+									onClick={() => handleNext()}
+								>
+									{t("COMMON.CONTINUE")}
+								</Button>
+							)}
 
-								{activeTab === CreateStep.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-encryption-button"
-										isLoading={isGeneratingWallet}
-										onClick={handlePasswordSubmit}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
-							</>
-						)}
+							{activeTab === CreateStep.EncryptPasswordStep && (
+								<Button
+									data-testid="CreateWallet__continue-encryption-button"
+									disabled={
+										!isValid ||
+										isGeneratingWallet ||
+										!encryptionPassword ||
+										!confirmEncryptionPassword
+									}
+									isLoading={isGeneratingWallet}
+									onClick={handlePasswordSubmit}
+								>
+									{t("COMMON.CONTINUE")}
+								</Button>
+							)}
+						</>
+					)}
 
-						{activeTab === CreateStep.SuccessStep && (
-							<Button
-								onClick={handleFinish}
-								disabled={isSubmitting}
-								type="submit"
-								form="CreateWallet__form"
-								data-testid="CreateWallet__finish-button"
-							>
-								{t("COMMON.CLOSE")}
-							</Button>
-						)}
-					</SidePanelButtons>
-				)
+					{activeTab === CreateStep.SuccessStep && (
+						<Button
+							disabled={isSubmitting}
+							type="submit"
+							form="CreateWallet__form"
+							data-testid="CreateWallet__finish-button"
+						>
+							{t("COMMON.CLOSE")}
+						</Button>
+					)}
+				</SidePanelButtons>
+			)
 			}
 			isLastStep={activeTab === CreateStep.SuccessStep}
 		>
@@ -342,14 +347,13 @@ export const CreateAddressesSidePanel = ({
 						<TabPanel tabId={CreateStep.SuccessStep}>
 							{isHDWalletCreation && (
 								<HDWalletTabs
-									showActionToolbar={false}
 									activeIndex={HDWalletTabStep.SelectAddressStep}
 									onClickEditWalletName={console.log}
 									onStepChange={setHDWalletActiveTab}
 									onCancel={() => {
-										// handleOpenChange(false);
+										onOpenChange(false);
 									}}
-									onSubmit={console.log}
+									onSubmit={handleFinish}
 									onBack={console.log}
 								/>
 							)}
