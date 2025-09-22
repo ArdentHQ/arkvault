@@ -138,7 +138,6 @@ export const HDWalletTabs = ({
 		}
 	});
 
-
 	const handleNext = () =>
 		({
 			[HDWalletTabStep.SelectAccountStep]: async () => {
