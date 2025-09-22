@@ -16,9 +16,10 @@ import { ImportDetailStep } from "@/domains/portfolio/components/ImportWallet/Im
 import { ImportActionToolbar } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 import { SelectAddressStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAddressStep";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
-import { LedgerImportStep } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerImportStep";
 import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
 import { useEnvironmentContext } from "@/app/contexts";
+import { SummaryStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SummaryStep";
+import { getAccountName } from "@/domains/wallet/utils/get-account-name";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -68,6 +69,8 @@ export const HDWalletTabs = ({
 		async ({ selectedAddresses }: { selectedAddresses: AddressData[] }) => {
 			const addresses = selectedAddresses.toSorted((a, b) => a.levels.addressIndex! - b.levels.addressIndex!);
 
+			const accountName = getAccountName({ profile: activeProfile });
+
 			await Promise.all(
 				addresses.map(async ({ levels }, index) => {
 					const wallets = await importWallets({
@@ -78,6 +81,8 @@ export const HDWalletTabs = ({
 					});
 
 					const wallet = wallets[0];
+
+					wallet.mutator().accountName(accountName);
 
 					if (password) {
 						wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
@@ -227,7 +232,7 @@ export const HDWalletTabs = ({
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.SummaryStep}>
-								<LedgerImportStep
+								<SummaryStep
 									network={activeNetwork}
 									wallets={importedWallets}
 									profile={activeProfile}

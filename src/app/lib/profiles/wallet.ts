@@ -125,6 +125,11 @@ export class Wallet implements IReadWriteWallet {
 		return this.settings().get(WalletSetting.Alias);
 	}
 
+	/** {@inheritDoc IReadWriteWallet.accountName} */
+	public accountName(): string | undefined {
+		return this.settings().get(WalletSetting.AccountName);
+	}
+
 	/** {@inheritDoc IReadWriteWallet.displayName} */
 	public displayName(): string | undefined {
 		return this.alias() || this.username() || this.knownName();

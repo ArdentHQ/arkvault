@@ -18,7 +18,7 @@ import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { Button } from "@/app/components/Button";
 import cn from "classnames";
-import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
+import { AmountWrapper, AddressTableLoaderOverlay, AddressMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
@@ -178,12 +178,12 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				)}
 
 				{isScanning && (
-					<LedgerLoaderOverlay className="rounded-xl">
+					<AddressTableLoaderOverlay className="rounded-xl">
 						<Trans
 							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
 							values={{ count: length }}
 						/>
-					</LedgerLoaderOverlay>
+					</AddressTableLoaderOverlay>
 				)}
 			</div>
 
@@ -212,7 +212,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				<div className="flex flex-col gap-2 px-1">
 					{!showSkeleton &&
 						data.map((wallet) => (
-							<LedgerMobileItem
+							<AddressMobileItem
 								key={wallet.path}
 								isLoading={showSkeleton}
 								address={wallet.address}
@@ -225,7 +225,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 					{showSkeleton &&
 						Array.from({ length: 4 }).map((_, index) => (
-							<LedgerMobileItem
+							<AddressMobileItem
 								index={index}
 								key={index}
 								isLoading

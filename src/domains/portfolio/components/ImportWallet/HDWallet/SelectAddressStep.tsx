@@ -18,8 +18,8 @@ import {
 } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
 import {
 	AmountWrapper,
-	LedgerLoaderOverlay,
-	LedgerMobileItem,
+	AddressTableLoaderOverlay,
+	AddressMobileItem,
 } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep.blocks";
 import { BIP44CoinType } from "@/app/lib/profiles/wallet.factory.contract";
 import { WalletData } from "@/app/lib/profiles/wallet.enum";
@@ -156,9 +156,9 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 				)}
 
 				{isLoading && (
-					<LedgerLoaderOverlay className="rounded-xl">
+					<AddressTableLoaderOverlay className="rounded-xl">
 						<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.LOADING_ADDRESSES" />
-					</LedgerLoaderOverlay>
+					</AddressTableLoaderOverlay>
 				)}
 			</div>
 
@@ -186,7 +186,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 				<div className="flex flex-col gap-2 px-1">
 					{!showSkeleton &&
 						data.map((wallet) => (
-							<LedgerMobileItem
+							<AddressMobileItem
 								key={wallet.path}
 								isLoading={showSkeleton}
 								address={wallet.address}
@@ -199,7 +199,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 
 					{showSkeleton &&
 						Array.from({ length: 4 }).map((_, index) => (
-							<LedgerMobileItem
+							<AddressMobileItem
 								index={index}
 								key={index}
 								isLoading

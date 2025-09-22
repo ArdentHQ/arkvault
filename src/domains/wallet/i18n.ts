@@ -166,6 +166,7 @@ export const translations = {
 		},
 
 		HD_WALLET_SUMMARY_STEP: {
+			DETAILS_LABEL: "HD Wallet Details",
 			SUBTITLE: "Your HD Wallet addresses were successfully imported.",
 			TITLE: "Import Completed",
 		},
@@ -324,6 +325,7 @@ export const translations = {
 	UPDATING_WALLET_DATA: "Updating Wallet Data",
 
 	VALIDATION: {
+		ACCOUNT_NAME_ASSIGNED: "The name '{{name}}' is already assigned.",
 		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet.",
 	},
 };
