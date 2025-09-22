@@ -81,6 +81,8 @@ export const SidePanel = ({
 	shakeWhenClosing = false,
 	preventClosing = false,
 }: SidePanelProps): JSX.Element => {
+	const defaultButtonStyle =
+		"w-6 h-6 bg-transparent rounded transition-all duration-100 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white";
 	const popStateHandlerRef = useRef<() => void>(() => {});
 
 	const [shake, setShake] = useState(false);
@@ -243,16 +245,29 @@ export const SidePanel = ({
 																</h2>
 															</div>
 
-															<div className="text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white">
-																<Button
-																	data-testid="SidePanel__close-button"
-																	variant="transparent"
-																	size="md"
-																	onClick={() => toggleOpen()}
-																	className="h-6 w-6 p-0"
-																>
-																	<Icon name="Cross" />
-																</Button>
+															<div className="flex flex-row gap-3">
+																<div className={defaultButtonStyle}>
+																	<Button
+																		data-testid="SidePanel__minimize-button"
+																		variant="transparent"
+																		size="md"
+																		className="h-6 w-6 p-0"
+																	>
+																		<Icon name="Minimize" />
+																	</Button>
+																</div>
+
+																<div className={defaultButtonStyle}>
+																	<Button
+																		data-testid="SidePanel__close-button"
+																		variant="transparent"
+																		size="md"
+																		onClick={() => toggleOpen()}
+																		className="h-6 w-6 p-0"
+																	>
+																		<Icon name="Cross" />
+																	</Button>
+																</div>
 															</div>
 														</div>
 
