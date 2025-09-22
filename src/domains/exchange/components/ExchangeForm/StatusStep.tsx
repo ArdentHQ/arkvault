@@ -11,6 +11,7 @@ import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { delay } from "@/utils/delay";
+import { FormItem, FormItemRow } from "./ExchangeForm.blocks";
 
 interface StatusStepProperties {
 	transferTransactionId: string | undefined;
@@ -59,94 +60,82 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-xs font-semibold">
 					{exchangeProvider?.name} {t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
 				</span>
-				<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
+				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
 					<Clipboard variant="icon" data={exchangeTransaction.orderId()}>
 						<Icon name="Copy" />
 					</Clipboard>
 				</span>
 			</div>
 
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-3 flex flex-col rounded-xl border p-4 sm:p-6">
-				<div className="flex flex-col space-y-2">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
-					</span>
-					<Amount
-						value={exchangeTransaction.input().amount}
-						ticker={exchangeTransaction.input().ticker}
-						className="text-sm font-semibold sm:text-lg"
-					/>
-				</div>
-
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 flex flex-col space-y-2 border-t pt-4">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-						{t("EXCHANGE.TO_ADDRESS")}
-					</span>
-					<div className="flex items-center space-x-2 text-sm font-semibold whitespace-nowrap sm:text-lg">
-						<TruncateMiddleDynamic value={exchangeTransaction.input().address} className="no-ligatures" />
-						<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
-							<Clipboard variant="icon" data={exchangeTransaction.input().address}>
-								<Icon name="Copy" />
-							</Clipboard>
-						</span>
-					</div>
-				</div>
-
-				{transferTransactionId && (
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 flex flex-col space-y-2 border-t pt-4">
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-							{t("EXCHANGE.ARK_TRANSACTION_ID")}
-						</span>
-						<div className="flex items-center space-x-2 text-sm font-semibold whitespace-nowrap sm:text-lg">
-							<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures" />
-							<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
-								<Clipboard variant="icon" data={transferTransactionId}>
-									<Icon name="Copy" />
-								</Clipboard>
-							</span>
-						</div>
-					</div>
-				)}
+			<div className="mt-2 flex flex-col space-y-2">
+				<FormItem>
+					<>
+						<FormItemRow label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}>
+							<Amount
+								value={exchangeTransaction.input().amount}
+								ticker={exchangeTransaction.input().ticker}
+								className="font-semibold"
+							/>
+						</FormItemRow>
+						<FormItemRow label={t("EXCHANGE.TO_ADDRESS")}>
+							<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold">
+								<TruncateMiddleDynamic
+									value={exchangeTransaction.input().address}
+									className="no-ligatures"
+								/>
+								<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
+									<Clipboard variant="icon" data={exchangeTransaction.input().address}>
+										<Icon name="Copy" />
+									</Clipboard>
+								</span>
+							</div>
+						</FormItemRow>
+						{transferTransactionId && (
+							<FormItemRow label={t("EXCHANGE.ARK_TRANSACTION_ID")}>
+								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold">
+									<TruncateMiddleDynamic value={transferTransactionId} className="no-ligatures" />
+									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
+										<Clipboard variant="icon" data={transferTransactionId}>
+											<Icon name="Copy" />
+										</Clipboard>
+									</span>
+								</div>
+							</FormItemRow>
+						)}
+					</>
+				</FormItem>
 			</div>
 
 			<ExchangeStatus exchangeTransaction={exchangeTransaction} />
 
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 -mx-10 border-t border-dashed px-10 pt-6" />
-
-			<div className="flex flex-col space-y-4">
-				<div className="flex flex-col space-y-2">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
-					</span>
-					<span className="font-semibold">
+			<div className="flex flex-col space-y-2">
+				<FormItem>
+					<FormItemRow label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}>
 						≈
 						<Amount
 							value={exchangeTransaction.output().amount}
 							ticker={exchangeTransaction.output().ticker}
-							className="text-sm font-semibold sm:text-base"
+							className="font-semibold"
 						/>
-					</span>
-				</div>
+					</FormItemRow>
 
-				<div className="flex flex-col space-y-2">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-						{t("EXCHANGE.TO_ADDRESS")}
-					</span>
-					<div className="flex items-center space-x-2 font-semibold whitespace-nowrap">
-						<TruncateMiddleDynamic
-							value={exchangeTransaction.output().address}
-							className="no-ligatures text-sm sm:text-base"
-						/>
-						<span className="text-theme-primary-300 dark:text-theme-secondary-600 dim:text-theme-dim-navy-600 flex">
-							<Clipboard variant="icon" data={exchangeTransaction.output().address}>
-								<Icon name="Copy" />
-							</Clipboard>
-						</span>
-					</div>
-				</div>
+					<FormItemRow label={t("EXCHANGE.TO_ADDRESS")}>
+						<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold">
+							<TruncateMiddleDynamic
+								value={exchangeTransaction.output().address}
+								className="no-ligatures"
+							/>
+							<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
+								<Clipboard variant="icon" data={exchangeTransaction.output().address}>
+									<Icon name="Copy" />
+								</Clipboard>
+							</span>
+						</div>
+					</FormItemRow>
+				</FormItem>
 			</div>
 
-			<div className="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 mt-6 rounded-lg px-6 py-3 text-xs">
+			<div className="bg-theme-secondary-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:text-theme-dim-200 dark:text-theme-dark-200 mt-6 rounded-xl px-4 py-3 text-xs">
 				<Trans
 					i18nKey="EXCHANGE.EXCHANGE_FORM.SUPPORT_INFO"
 					values={{
