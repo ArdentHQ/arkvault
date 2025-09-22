@@ -35,16 +35,9 @@ interface FormDividerProperties {
 	exchangeRate: number;
 	fromCurrency: CurrencyData;
 	toCurrency: CurrencyData;
-	onSwapCurrencies: () => void;
 }
 
-const FormDivider = ({
-	isLoading,
-	exchangeRate,
-	fromCurrency,
-	toCurrency,
-	onSwapCurrencies,
-}: FormDividerProperties) => {
+const FormDivider = ({ isLoading, exchangeRate, fromCurrency, toCurrency }: FormDividerProperties) => {
 	const { t } = useTranslation();
 
 	const hasRate = useMemo(
@@ -74,29 +67,13 @@ const FormDivider = ({
 	};
 
 	return (
-		<div className="flex space-x-4 sm:ml-8 sm:space-x-8">
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative my-1 h-20 border-l">
-				<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border" />
-			</div>
-
-			<div className="flex flex-1 items-center">
-				<div className="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-y-0 sm:space-x-2">
-					<span className="border-theme-primary-600 text-theme-primary-600 dim:text-theme-dim-navy-600 dim:border-theme-dim-navy-600 mt-px mr-auto border-b border-dashed font-semibold">
-						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_RATE")}:
-					</span>
-					{renderExchangeRate()}
-				</div>
-
-				<Button
-					data-testid="ExchangeForm__swap-button"
-					className="ml-auto"
-					size="icon"
-					variant="secondary"
-					icon="ArrowDownUp"
-					disabled={!fromCurrency && !toCurrency}
-					onClick={onSwapCurrencies}
-				/>
-			</div>
+		<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 z-0 -mt-1 mb-4 rounded-b px-4 pt-4 pb-3 text-xs leading-[15px] font-semibold">
+			<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200">
+				{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_RATE")}:
+			</span>
+			<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 ml-2">
+				{renderExchangeRate()}
+			</span>
 		</div>
 	);
 };

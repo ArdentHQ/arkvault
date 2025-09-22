@@ -16,6 +16,7 @@ import { startCase } from "@/app/lib/helpers";
 import { useBreakpoint } from "@/app/hooks";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useFormContext } from "react-hook-form";
+import { Button } from "@/app/components/Button";
 
 interface FormStepProperties {
 	profile: Contracts.IProfile;
@@ -327,209 +328,230 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 	}, [showRefundInput]);
 
 	return (
-		<div data-testid="ExchangeForm__form-step" className="flex flex-col">
-			<div className="relative flex space-x-3">
-				<div className="w-2/5">
-					<FormField name="fromCurrency">
-						<FormLabel label={t("COMMON.CRYPTOASSET")} />
-						<Select
-							id="fromCurrency"
-							disabled={!hasCurrencies}
-							defaultValue={fromCurrency?.coin.toUpperCase()}
-							placeholder={t("COMMON.SELECT")}
-							wrapperClassName="static sm:relative"
-							addons={{
-								start: {
-									content: (
-										<div className="hidden sm:block">
-											<CurrencyIcon image={fromCurrency?.image} ticker={fromCurrency?.coin} />
-										</div>
-									),
-								},
-							}}
-							options={
-								toCurrency
-									? currencyOptions.filter(
-											(option: any) => option.value !== toCurrency.coin.toUpperCase(),
-										)
-									: currencyOptions
-							}
-							renderLabel={renderCurrencyLabel}
-							onChange={handleFromCurrencyChange}
-						/>
-					</FormField>
-				</div>
-
-				<div className="w-3/5">
-					<FormField name="payinAmount">
-						<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")} />
-						<InputCurrency
-							network={senderNetwork}
-							placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
-							value={payinAmount}
-							onChange={async (amount: string) => await handlePayinAmountChange(amount)}
-							addons={
-								isLoadingPayinAmount
-									? {
-											end: {
-												content: <Spinner size="sm" />,
-											},
-										}
-									: undefined
-							}
-						/>
-					</FormField>
-				</div>
-			</div>
-
-			<FormDivider
-				isLoading={isLoadingPayinAmount || isLoadingPayoutAmount}
-				exchangeRate={exchangeRate}
-				fromCurrency={fromCurrency}
-				toCurrency={toCurrency}
-				onSwapCurrencies={handleSwapCurrencies}
-			/>
-
-			<div className="space-y-6">
-				<div className="relative flex space-x-3">
-					<div className="w-2/5">
-						<FormField name="toCurrency">
-							<FormLabel label={t("COMMON.CRYPTOASSET")} />
-							<Select
-								id="toCurrency"
-								disabled={!hasCurrencies}
-								defaultValue={toCurrency?.coin.toUpperCase()}
-								placeholder={t("COMMON.SELECT")}
-								wrapperClassName="static sm:relative"
-								addons={{
-									start: {
-										content: (
-											<div className="hidden sm:block">
-												<CurrencyIcon image={toCurrency?.image} ticker={toCurrency?.coin} />
-											</div>
-										),
-									},
-								}}
-								options={
-									fromCurrency
-										? currencyOptions.filter(
-												(option: any) => option.value !== fromCurrency.coin.toUpperCase(),
-											)
-										: currencyOptions
-								}
-								renderLabel={renderCurrencyLabel}
-								onChange={handleToCurrencyChange}
-							/>
-						</FormField>
-					</div>
-
-					<div className="w-3/5">
-						<FormField name="payoutAmount">
-							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")} />
-							<InputCurrency
-								network={recipientNetwork}
-								placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
-								value={payoutAmount}
-								onChange={async (amount: string) => await handlePayoutAmountChange(amount)}
-								addons={
-									isLoadingPayoutAmount
-										? {
-												end: {
-													content: <Spinner size="sm" />,
-												},
-											}
-										: undefined
-								}
-							/>
-						</FormField>
-					</div>
-				</div>
-
-				<div data-testid="ExchangeForm__recipient-address">
-					<FormField name="recipientWallet">
-						<FormLabel>
-							<div className="flex w-full justify-between">
-								{t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_WALLET")}
-
-								{renderRefundToggle()}
-							</div>
-						</FormLabel>
-						<SelectRecipient
-							network={recipientNetwork}
-							disabled={!getValues("toCurrency")}
-							showOptions={!!recipientNetwork}
-							address={getValues("recipientWallet") || ""}
-							profile={profile}
-							placeholder={t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_PLACEHOLDER")}
-							onChange={handleRecipientWalletChange}
-						/>
-					</FormField>
-				</div>
-
-				{showExternalId && (
-					<div data-testid="ExchangeForm__external-id">
-						<FormField name="externalId">
-							<FormLabel label={startCase(`${toCurrency.externalIdName}`)} />
-							<InputDefault
-								onChange={(event: ChangeEvent<HTMLInputElement>) =>
-									setValue("externalId", event.target.value, {
-										shouldDirty: true,
-										shouldValidate: true,
-									})
-								}
-							/>
-						</FormField>
-					</div>
-				)}
-
-				{showRefundInput && (
-					<div className="space-y-6">
-						<div data-testid="ExchangeForm__refund-address">
-							<FormField name="refundWallet">
-								<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.REFUND_WALLET")} />
-								<SelectRecipient
-									network={senderNetwork}
-									disabled={!getValues("fromCurrency")}
-									showOptions={!!senderNetwork}
-									address={getValues("refundWallet") || ""}
-									profile={profile}
-									placeholder={t("EXCHANGE.EXCHANGE_FORM.REFUND_PLACEHOLDER")}
-									onChange={handleRefundWalletChange}
+		<div data-testid="ExchangeForm__form-step" className="flex flex-col space-y-6">
+			<div className="flex">
+				<div className="flex flex-1 flex-col">
+					<div className="relative z-1 flex">
+						<div className="max-w-[160px]">
+							<FormField name="fromCurrency">
+								<FormLabel label={t("COMMON.CRYPTOASSET")} />
+								<Select
+									id="fromCurrency"
+									disabled={!hasCurrencies}
+									defaultValue={fromCurrency?.coin.toUpperCase()}
+									placeholder={t("COMMON.SELECT")}
+									wrapperClassName="static sm:relative"
+									addons={{
+										start: {
+											content: (
+												<div className="hidden sm:block">
+													<CurrencyIcon
+														image={fromCurrency?.image}
+														ticker={fromCurrency?.coin}
+													/>
+												</div>
+											),
+										},
+									}}
+									options={
+										toCurrency
+											? currencyOptions.filter(
+													(option: any) => option.value !== toCurrency.coin.toUpperCase(),
+												)
+											: currencyOptions
+									}
+									renderLabel={renderCurrencyLabel}
+									onChange={handleFromCurrencyChange}
 								/>
 							</FormField>
 						</div>
 
-						{showRefundExternalId && (
-							<div data-testid="ExchangeForm__refund-external-id">
-								<FormField name="refundExternalId">
-									<FormLabel label={startCase(`Refund ${toCurrency.externalIdName}`)} />
-									<InputDefault
-										onChange={(event: ChangeEvent<HTMLInputElement>) =>
-											setValue("refundExternalId", event.target.value, {
-												shouldDirty: true,
-												shouldValidate: true,
-											})
+						<div className="flex-1">
+							<FormField name="payinAmount">
+								<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")} />
+								<InputCurrency
+									network={senderNetwork}
+									placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
+									value={payinAmount}
+									onChange={async (amount: string) => await handlePayinAmountChange(amount)}
+									addons={
+										isLoadingPayinAmount
+											? {
+													end: {
+														content: <Spinner size="sm" />,
+													},
+												}
+											: undefined
+									}
+								/>
+							</FormField>
+						</div>
+					</div>
+
+					<FormDivider
+						isLoading={isLoadingPayinAmount || isLoadingPayoutAmount}
+						exchangeRate={exchangeRate}
+						fromCurrency={fromCurrency}
+						toCurrency={toCurrency}
+					/>
+
+					<div className="space-y-6">
+						<div className="relative flex">
+							<div className="max-w-[160px]">
+								<FormField name="toCurrency">
+									<FormLabel label={t("COMMON.CRYPTOASSET")} />
+									<Select
+										id="toCurrency"
+										disabled={!hasCurrencies}
+										defaultValue={toCurrency?.coin.toUpperCase()}
+										placeholder={t("COMMON.SELECT")}
+										wrapperClassName="static sm:relative"
+										addons={{
+											start: {
+												content: (
+													<div className="hidden sm:block">
+														<CurrencyIcon
+															image={toCurrency?.image}
+															ticker={toCurrency?.coin}
+														/>
+													</div>
+												),
+											},
+										}}
+										options={
+											fromCurrency
+												? currencyOptions.filter(
+														(option: any) =>
+															option.value !== fromCurrency.coin.toUpperCase(),
+													)
+												: currencyOptions
+										}
+										renderLabel={renderCurrencyLabel}
+										onChange={handleToCurrencyChange}
+									/>
+								</FormField>
+							</div>
+
+							<div className="flex-1">
+								<FormField name="payoutAmount">
+									<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")} />
+									<InputCurrency
+										network={recipientNetwork}
+										placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
+										value={payoutAmount}
+										onChange={async (amount: string) => await handlePayoutAmountChange(amount)}
+										addons={
+											isLoadingPayoutAmount
+												? {
+														end: {
+															content: <Spinner size="sm" />,
+														},
+													}
+												: undefined
 										}
 									/>
 								</FormField>
 							</div>
-						)}
+						</div>
 					</div>
-				)}
-
-				{errors.pair && (
-					<Alert variant="danger">
-						<Trans
-							i18nKey="EXCHANGE.VALIDATION.PAIR_NOT_AVAILABLE"
-							values={{
-								from: fromCurrency?.coin.toUpperCase(),
-								to: toCurrency?.coin.toUpperCase(),
-							}}
-							components={{ bold: <strong /> }}
-						/>
-					</Alert>
-				)}
+				</div>
+				<div className="flex flex-col">
+					<Button
+						data-testid="ExchangeForm__swap-button"
+						className="ml-auto"
+						size="icon"
+						variant="secondary"
+						icon="ArrowDownUp"
+						disabled={!fromCurrency && !toCurrency}
+						onClick={handleFromCurrencyChange}
+					/>
+				</div>
 			</div>
+
+			<div data-testid="ExchangeForm__recipient-address">
+				<FormField name="recipientWallet">
+					<FormLabel>
+						<div className="flex w-full justify-between">
+							{t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_WALLET")}
+
+							{renderRefundToggle()}
+						</div>
+					</FormLabel>
+					<SelectRecipient
+						network={recipientNetwork}
+						disabled={!getValues("toCurrency")}
+						showOptions={!!recipientNetwork}
+						address={getValues("recipientWallet") || ""}
+						profile={profile}
+						placeholder={t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_PLACEHOLDER")}
+						onChange={handleRecipientWalletChange}
+					/>
+				</FormField>
+			</div>
+
+			{showExternalId && (
+				<div data-testid="ExchangeForm__external-id">
+					<FormField name="externalId">
+						<FormLabel label={startCase(`${toCurrency.externalIdName}`)} />
+						<InputDefault
+							onChange={(event: ChangeEvent<HTMLInputElement>) =>
+								setValue("externalId", event.target.value, {
+									shouldDirty: true,
+									shouldValidate: true,
+								})
+							}
+						/>
+					</FormField>
+				</div>
+			)}
+
+			{showRefundInput && (
+				<div className="space-y-6">
+					<div data-testid="ExchangeForm__refund-address">
+						<FormField name="refundWallet">
+							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.REFUND_WALLET")} />
+							<SelectRecipient
+								network={senderNetwork}
+								disabled={!getValues("fromCurrency")}
+								showOptions={!!senderNetwork}
+								address={getValues("refundWallet") || ""}
+								profile={profile}
+								placeholder={t("EXCHANGE.EXCHANGE_FORM.REFUND_PLACEHOLDER")}
+								onChange={handleRefundWalletChange}
+							/>
+						</FormField>
+					</div>
+
+					{showRefundExternalId && (
+						<div data-testid="ExchangeForm__refund-external-id">
+							<FormField name="refundExternalId">
+								<FormLabel label={startCase(`Refund ${toCurrency.externalIdName}`)} />
+								<InputDefault
+									onChange={(event: ChangeEvent<HTMLInputElement>) =>
+										setValue("refundExternalId", event.target.value, {
+											shouldDirty: true,
+											shouldValidate: true,
+										})
+									}
+								/>
+							</FormField>
+						</div>
+					)}
+				</div>
+			)}
+
+			{errors.pair && (
+				<Alert variant="danger">
+					<Trans
+						i18nKey="EXCHANGE.VALIDATION.PAIR_NOT_AVAILABLE"
+						values={{
+							from: fromCurrency?.coin.toUpperCase(),
+							to: toCurrency?.coin.toUpperCase(),
+						}}
+						components={{ bold: <strong /> }}
+					/>
+				</Alert>
+			)}
 		</div>
 	);
 };
