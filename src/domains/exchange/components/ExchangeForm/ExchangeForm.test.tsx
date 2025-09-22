@@ -1748,7 +1748,7 @@ describe("ReviewStep", () => {
 			<ExchangeProvider>
 				<Wrapper>
 					<FormProvider {...form.current}>
-						<ReviewStep />
+						<ReviewStep withSignStep={false} onManualTransfer={vi.fn()} />
 					</FormProvider>
 				</Wrapper>
 			</ExchangeProvider>,

@@ -461,25 +461,7 @@ export const ExchangeSidePanel = ({
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
-				<SidePanelButtons
-					className={cn({
-						"flex items-center justify-between": activeTab === Step.ReviewStep && withSignStep,
-					})}
-				>
-					{activeTab === Step.ReviewStep && withSignStep && (
-						<div className="manual-transfer-button fixed bottom-[calc(env(safe-area-inset-bottom)_+_8.5rem)] left-1/2 -translate-x-1/2 sm:static sm:mt-5 sm:translate-x-0">
-							<Button
-								variant="transparent"
-								data-testid="ExchangeForm__manual_transfer"
-								onClick={() => handleNext({ bypassSignStep: true })}
-								disabled={isSubmitting || !isValid}
-								className="text-theme-primary-600 text-sm leading-[17px] sm:pl-0"
-							>
-								{t("EXCHANGE.MANUAL_TRANSFER")}
-							</Button>
-						</div>
-					)}
-
+				<SidePanelButtons>
 					{activeTab < Step.StatusStep && (
 						<>
 							<Button
@@ -537,7 +519,10 @@ export const ExchangeSidePanel = ({
 									</TabPanel>
 
 									<TabPanel tabId={Step.ReviewStep}>
-										<ReviewStep />
+										<ReviewStep
+											withSignStep={withSignStep ?? false}
+											onManualTransfer={() => handleNext({ bypassSignStep: true })}
+										/>
 									</TabPanel>
 
 									<TabPanel tabId={Step.StatusStep}>

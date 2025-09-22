@@ -97,7 +97,7 @@ const ExchangeForm = ({
 		};
 
 		fetchCurrencies();
-	}, [provider]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [provider]);
 
 	useEffect(() => {
 		const initExchangeTransaction = async () => {
@@ -331,7 +331,10 @@ const ExchangeForm = ({
 						</TabPanel>
 
 						<TabPanel tabId={2}>
-							<ReviewStep />
+							<ReviewStep
+								withSignStep={withSignStep ?? false}
+								onManualTransfer={() => handleNext({ bypassSignStep: true })}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={3}>

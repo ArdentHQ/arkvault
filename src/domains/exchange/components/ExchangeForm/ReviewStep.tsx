@@ -34,12 +34,22 @@ const ReviewDivider = () => (
 	<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-px w-full border-t border-dashed" />
 );
 
-export const ReviewStep = () => {
+export const ReviewStep = ({
+	withSignStep,
+	onManualTransfer,
+}: {
+	withSignStep: boolean;
+	onManualTransfer: () => void;
+}) => {
 	const { t } = useTranslation();
 
 	const { provider: exchangeProvider } = useExchangeContext();
 
-	const { register, watch } = useFormContext();
+	const {
+		register,
+		watch,
+		formState: { isSubmitting, isValid },
+	} = useFormContext();
 	const { exchangeRate, estimatedTime, payinAmount, payoutAmount, fromCurrency, toCurrency, recipientWallet } =
 		watch();
 
@@ -104,6 +114,24 @@ export const ReviewStep = () => {
 					</label>
 				</FormField>
 			</div>
+
+			{withSignStep && (
+				<>
+					<ReviewDivider />
+
+					<div className="text-right">
+						<button
+							data-testid="ExchangeForm__manual_transfer"
+							type="button"
+							className="link text-theme-navy-600! dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
+							onClick={onManualTransfer}
+							disabled={isSubmitting || !isValid}
+						>
+							{t("EXCHANGE.MANUAL_TRANSFER")}
+						</button>
+					</div>
+				</>
+			)}
 		</div>
 	);
 };
