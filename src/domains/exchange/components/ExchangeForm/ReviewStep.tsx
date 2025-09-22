@@ -30,6 +30,10 @@ const ReviewStepItem = ({ children }: { children: React.ReactNode }) => (
 	</div>
 );
 
+const ReviewDivider = () => (
+	<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-px w-full border-t border-dashed" />
+);
+
 export const ReviewStep = () => {
 	const { t } = useTranslation();
 
@@ -40,7 +44,7 @@ export const ReviewStep = () => {
 		watch();
 
 	return (
-		<div data-testid="ExchangeForm__review-step" className="space-y-4">
+		<div data-testid="ExchangeForm__review-step" className="space-y-6">
 			<div className="flex flex-col space-y-2">
 				<ReviewStepItem>
 					<ReviewStepItemRow label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}>
@@ -74,6 +78,8 @@ export const ReviewStep = () => {
 					)}
 				</ReviewStepItem>
 			</div>
+
+			<ReviewDivider />
 
 			<div>
 				<FormField name="hasAgreedToTerms" className="sm:pt-2">
