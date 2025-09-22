@@ -2,7 +2,6 @@ import {
 	FloatingFocusManager,
 	FloatingOverlay,
 	FloatingPortal,
-	OpenChangeReason,
 	useClick,
 	useDismiss,
 	useFloating,
@@ -89,7 +88,7 @@ export const SidePanel = ({
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
 	const toggleOpen = useCallback(
-		(open: boolean = false, _?: Event) => {
+		(open: boolean = false) => {
 			if (open === false && shakeWhenClosing && shouldPreventClosing()) {
 				setShake(true);
 				setTimeout(() => setShake(false), 900);
