@@ -228,8 +228,15 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = (): boolean =>
-		activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep && !!usesHDWallets;
+	const showFooter = (): boolean => {
+		if (usesHDWallets) {
+			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep
+		}
+
+		return activeTab > CreateStep.MethodStep
+	}
+
+	console.log({ showFooter: showFooter() })
 
 	return (
 		<SidePanel
