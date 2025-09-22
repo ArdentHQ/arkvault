@@ -5,10 +5,30 @@ import { Trans, useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { FormField } from "@/app/components/Form";
-import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+
+const ReviewStepItemFooter = ({ children }: { children: React.ReactNode }) => (
+	<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 -mx-6 -mb-6 px-6 py-3 text-xs font-semibold">
+		{children}
+	</div>
+);
+
+const ReviewStepItemRow = ({ label, children }: { label: string; children: React.ReactNode }) => (
+	<div className="flex gap-1">
+		<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 min-w-[112px] font-semibold">
+			{label}
+		</span>
+		{children}
+	</div>
+);
+
+const ReviewStepItem = ({ children }: { children: React.ReactNode }) => (
+	<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex flex-col space-y-3 overflow-hidden rounded-xl border px-6 py-5 font-semibold">
+		{children}
+	</div>
+);
 
 export const ReviewStep = () => {
 	const { t } = useTranslation();
@@ -21,44 +41,39 @@ export const ReviewStep = () => {
 
 	return (
 		<div data-testid="ExchangeForm__review-step" className="space-y-4">
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex flex-col rounded-xl border">
-				<div className="flex flex-col gap-2 px-6 py-5">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-						{t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}
-					</span>
-					<Amount value={payinAmount} ticker={fromCurrency?.coin} className="text-lg font-semibold" />
-					<span className="pt-1 text-xs font-semibold">
+			<div className="flex flex-col space-y-2">
+				<ReviewStepItem>
+					<ReviewStepItemRow label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}>
+						<Amount value={payinAmount} ticker={fromCurrency?.coin} className="font-semibold" />
+					</ReviewStepItemRow>
+
+					<ReviewStepItemFooter>
 						1 {fromCurrency?.coin.toUpperCase()} ≈ <Amount value={exchangeRate} ticker={toCurrency?.coin} />
-					</span>
-				</div>
+					</ReviewStepItemFooter>
+				</ReviewStepItem>
 
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 relative border-t">
-					<div className="border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute top-1/2 right-6 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border">
-						<Icon name="DoubleArrowDashed" className="text-theme-secondary-900 dark:text-white" size="lg" />
-					</div>
-				</div>
+				<ReviewStepItem>
+					<ReviewStepItemRow label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}>
+						<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold">
+							≈ <Amount value={payoutAmount} ticker={toCurrency?.coin} className="font-semibold" />
+						</span>
+					</ReviewStepItemRow>
 
-				<div className="flex flex-col gap-2 px-6 py-5">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-						{t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}
-					</span>
-					<span className="pb-1 text-lg font-semibold">
-						≈ <Amount value={payoutAmount} ticker={toCurrency?.coin} className="text-lg font-semibold" />
-					</span>
-					<TruncateMiddleDynamic value={recipientWallet} className="no-ligatures text-xs font-semibold" />
-				</div>
+					<ReviewStepItemRow label={t("COMMON.ADDRESS")}>
+						<TruncateMiddleDynamic
+							value={recipientWallet}
+							className="no-ligatures text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+						/>
+					</ReviewStepItemRow>
+
+					{estimatedTime && (
+						<ReviewStepItemFooter>
+							{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_ARRIVAL")}{" "}
+							{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_TIME", { estimatedTime })}
+						</ReviewStepItemFooter>
+					)}
+				</ReviewStepItem>
 			</div>
-
-			{estimatedTime && (
-				<div className="flex flex-col">
-					<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold">
-						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_ARRIVAL")}
-					</span>
-					<span className="text-lg font-semibold">
-						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_TIME", { estimatedTime })}
-					</span>
-				</div>
-			)}
 
 			<div>
 				<FormField name="hasAgreedToTerms" className="sm:pt-2">
