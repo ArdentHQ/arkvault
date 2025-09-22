@@ -19,7 +19,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 			return (
 				<div
 					data-testid="StatusIcon__check-mark"
-					className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 flex h-6 w-6 items-center justify-center rounded-full"
+					className="text-theme-success-700 dark:text-theme-success-500 dim:text-theme-success-500 h-5 w-5"
 				>
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
@@ -29,7 +29,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		if (isLoading) {
 			return (
 				<span data-testid="StatusIcon__spinner">
-					<Spinner className="h-6! w-6! border-[3px]!" />
+					<Spinner className="h-5! w-5! border-[3px]!" color="warning" />
 				</span>
 			);
 		}
@@ -37,40 +37,27 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		return (
 			<div
 				data-testid="StatusIcon__empty"
-				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-6 w-6 rounded-full border-2"
+				className="bg-theme-secondary-200 dark:bg-theme-dark-800 dim:bg-theme-dim-800 h-5 w-5 rounded-full"
 			/>
 		);
 	};
 
 	return (
-		<div className="flex w-6 flex-col items-center space-y-2">
-			{renderIcon()}
+		<div className="relative -mt-[22px] flex items-center overflow-hidden pt-[22px] pl-[38px]">
+			<span className="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 absolute top-0 left-0 h-[35px] w-[26px] rounded-bl-xl border-b-2 border-l-2" />
+			<span>{renderIcon()}</span>
 			<span
-				className={cn(
-					"text-xs font-semibold whitespace-nowrap sm:text-sm",
-					isDone
-						? "text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
-						: "text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200",
-				)}
+				className={cn("ml-3 font-semibold whitespace-nowrap", {
+					"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500": !isDone && !isLoading,
+					"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200": isLoading,
+					"text-theme-success-700 dark:text-theme-success-500 dim:text-theme-success-500": isDone,
+				})}
 			>
 				{label}
 			</span>
 		</div>
 	);
 };
-
-const StatusSpacer = ({ isActive }: { isActive: boolean }) => (
-	<div className="flex h-6 flex-1 items-center px-2">
-		<div
-			className={cn(
-				"h-0.5 w-full rounded-l rounded-r",
-				isActive
-					? "bg-theme-primary-600"
-					: "bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700",
-			)}
-		/>
-	</div>
-);
 
 const ExchangeStatus = ({ exchangeTransaction }: { exchangeTransaction: Contracts.IExchangeTransaction }) => {
 	const { t } = useTranslation();
@@ -111,7 +98,7 @@ const ExchangeStatus = ({ exchangeTransaction }: { exchangeTransaction: Contract
 	const status = exchangeTransaction.status();
 
 	return (
-		<div className="items-top my-6 flex justify-center px-10 sm:px-20">
+		<div className="items-top mt-2 mb-6 flex flex-col justify-center space-y-4 overflow-hidden px-6 pt-1.5">
 			<StatusIcon
 				label={t("EXCHANGE.TRANSACTION_STATUS.AWAITING_DEPOSIT")}
 				isDone={status > Contracts.ExchangeTransactionStatus.Confirming}
@@ -120,9 +107,6 @@ const ExchangeStatus = ({ exchangeTransaction }: { exchangeTransaction: Contract
 					status <= Contracts.ExchangeTransactionStatus.Confirming
 				}
 			/>
-
-			<StatusSpacer isActive={status >= Contracts.ExchangeTransactionStatus.Exchanging} />
-
 			<StatusIcon
 				label={t("EXCHANGE.TRANSACTION_STATUS.EXCHANGING")}
 				isDone={status > Contracts.ExchangeTransactionStatus.Exchanging}
@@ -131,8 +115,6 @@ const ExchangeStatus = ({ exchangeTransaction }: { exchangeTransaction: Contract
 					status <= Contracts.ExchangeTransactionStatus.Sending
 				}
 			/>
-
-			<StatusSpacer isActive={status >= Contracts.ExchangeTransactionStatus.Sending} />
 
 			<StatusIcon
 				label={t("EXCHANGE.TRANSACTION_STATUS.SENDING")}
