@@ -14,7 +14,7 @@ export const FormItemRow = ({ label, children }: { label: string; children: Reac
 );
 
 export const FormItem = ({ children }: { children: React.ReactNode }) => (
-	<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex flex-col space-y-3 overflow-hidden rounded border-b border-dashed pb-4 font-semibold last:border-b-0 last:pb-0 sm:rounded-xl sm:border sm:border-solid sm:px-6 sm:py-5 sm:last:border-b">
+	<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex flex-col space-y-3 overflow-hidden rounded border-b border-dashed pb-4 font-semibold last:border-b-0 last:pb-0 sm:rounded-xl sm:border sm:border-solid sm:px-6 sm:py-5 sm:last:border-b sm:last:pb-5">
 		{children}
 	</div>
 );
