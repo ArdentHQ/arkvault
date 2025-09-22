@@ -84,15 +84,14 @@ export const CreateAddressesSidePanel = ({
 		if (encryptionPassword) {
 			register({ name: "password", type: "string", value: encryptionPassword });
 		}
-	}, [encryptionPassword])
-
+	}, [encryptionPassword]);
 
 	useEffect(() => {
 		if (open) {
 			return void handleGenerateWallet();
 		}
 
-		setActiveTab(CreateStep.MethodStep)
+		setActiveTab(CreateStep.MethodStep);
 		reset();
 	}, [open]);
 
@@ -234,7 +233,7 @@ export const CreateAddressesSidePanel = ({
 		}
 
 		return activeTab > CreateStep.MethodStep;
-	}
+	};
 
 	return (
 		<SidePanel
