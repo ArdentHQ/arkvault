@@ -362,6 +362,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 									}
 									renderLabel={renderCurrencyLabel}
 									onChange={handleFromCurrencyChange}
+									className="-mr-px rounded-r-none border-r-0"
 								/>
 							</FormField>
 						</div>
@@ -383,6 +384,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 												}
 											: undefined
 									}
+									className="rounded-l-none"
 								/>
 							</FormField>
 						</div>
@@ -428,6 +430,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 										}
 										renderLabel={renderCurrencyLabel}
 										onChange={handleToCurrencyChange}
+										className="-mr-px rounded-r-none border-r-0"
 									/>
 								</FormField>
 							</div>
@@ -440,6 +443,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 										placeholder={isXs ? t("COMMON.AMOUNT") : t("COMMON.AMOUNT_PLACEHOLDER")}
 										value={payoutAmount}
 										onChange={async (amount: string) => await handlePayoutAmountChange(amount)}
+										className="rounded-l-none"
 										addons={
 											isLoadingPayoutAmount
 												? {
