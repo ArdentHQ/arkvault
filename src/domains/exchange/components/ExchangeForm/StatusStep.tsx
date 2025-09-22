@@ -57,7 +57,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 	return (
 		<div data-testid="ExchangeForm__status-step" className="flex flex-col">
 			<div className="flex items-center space-x-1">
-				<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-xs font-semibold">
+				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-xs font-semibold">
 					{exchangeProvider?.name} {t("EXCHANGE.TRANSACTION_ID")}: {exchangeTransaction.orderId()}
 				</span>
 				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex">
@@ -135,7 +135,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate, transferTransactionI
 				</FormItem>
 			</div>
 
-			<div className="bg-theme-secondary-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:text-theme-dim-200 dark:text-theme-dark-200 mt-6 rounded-xl px-4 py-3 text-xs">
+			<div className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-950 dim:bg-theme-dim-950 dim:text-theme-dim-200 dark:text-theme-dark-200 mt-2 rounded-xl px-4 py-3 text-xs font-semibold">
 				<Trans
 					i18nKey="EXCHANGE.EXCHANGE_FORM.SUPPORT_INFO"
 					values={{

@@ -30,7 +30,7 @@ export const ReviewStep = ({
 		watch();
 
 	return (
-		<div data-testid="ExchangeForm__review-step" className="space-y-6">
+		<div data-testid="ExchangeForm__review-step" className="space-y-4 sm:space-y-6">
 			<div className="flex flex-col space-y-2">
 				<FormItem>
 					<FormItemRow label={t("EXCHANGE.EXCHANGE_FORM.YOU_SEND")}>
