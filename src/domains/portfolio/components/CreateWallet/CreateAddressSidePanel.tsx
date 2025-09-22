@@ -57,7 +57,7 @@ export const CreateAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, setValue, watch } = form;
+	const { getValues, formState, register, setValue, watch, reset } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic, acceptResponsibility } =
@@ -81,9 +81,19 @@ export const CreateAddressesSidePanel = ({
 	}, [register, open]);
 
 	useEffect(() => {
-		if (open) {
-			void handleGenerateWallet();
+		if (encryptionPassword) {
+			register({ name: "password", type: "string", value: encryptionPassword });
 		}
+	}, [encryptionPassword])
+
+
+	useEffect(() => {
+		if (open) {
+			return void handleGenerateWallet();
+		}
+
+		setActiveTab(CreateStep.MethodStep)
+		reset();
 	}, [open]);
 
 	useEffect(() => {

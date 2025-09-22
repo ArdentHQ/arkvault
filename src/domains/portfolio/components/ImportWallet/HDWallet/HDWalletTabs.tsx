@@ -121,7 +121,7 @@ export const HDWalletTabs = ({
 		}
 
 		return () => {
-			unregister(["mnemonic", "password"]);
+			unregister(["password"]);
 		};
 	}, [hasExistingHDWallets]);
 
@@ -137,6 +137,7 @@ export const HDWalletTabs = ({
 			}
 		}
 	});
+
 
 	const handleNext = () =>
 		({
