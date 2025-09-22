@@ -25,8 +25,8 @@ export const translations = {
 		PAYOUT_AMOUNT: "Payout Amount",
 		RECIPIENT_PLACEHOLDER: "Enter the payout address",
 		RECIPIENT_WALLET: "Recipient Wallet",
+		REFUND_ADDRESS: "Refund Address",
 		REFUND_PLACEHOLDER: "Enter the refund address",
-		REFUND_WALLET: "Refund Wallet",
 		SUPPORT_INFO:
 			"If you have any question about your exchange, please contact {{exchange}} support team via email at <linkEmail>{{email}}</linkEmail>",
 		TERMS: "I've read and agree to the {{exchange}} <linkTerms>{{terms}}</linkTerms> and <linkPrivacyPolicy>{{privacy}}</linkPrivacyPolicy>",
@@ -66,9 +66,9 @@ export const translations = {
 		TITLE: "Exchange",
 	},
 
-	REFUND_WALLET: {
-		ADD: "Add Refund Wallet",
-		REMOVE: "Remove Refund Wallet",
+	REFUND_ADDRESS: {
+		ADD: "Add Refund Address",
+		REMOVE: "Remove Refund Address",
 	},
 
 	SELECT_EXCHANGE_MESSAGE: "Select one of the exchanges you have installed.",

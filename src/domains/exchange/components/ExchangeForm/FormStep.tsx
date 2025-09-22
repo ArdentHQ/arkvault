@@ -304,7 +304,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 					className="link text-sm font-semibold"
 					onClick={() => setShowRefundInput(false)}
 				>
-					{t("EXCHANGE.REFUND_WALLET.REMOVE")}
+					{t("EXCHANGE.REFUND_ADDRESS.REMOVE")}
 				</button>
 			);
 		}
@@ -316,7 +316,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				className="link dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
 				onClick={() => setShowRefundInput(true)}
 			>
-				+{t("EXCHANGE.REFUND_WALLET.ADD")}
+				+{t("EXCHANGE.REFUND_ADDRESS.ADD")}
 			</button>
 		);
 	};
@@ -463,7 +463,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 					<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block h-[53px] w-[26px] rounded-tr-xl border-t-2 border-r-2" />
 					<Button
 						data-testid="ExchangeForm__swap-button"
-						className="ml-auto h-11 w-11 shrink-0"
+						className="shrink-0g ml-auto h-11 w-11"
 						size="icon"
 						iconSize="sm"
 						variant="secondary"
@@ -516,7 +516,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				<div className="space-y-6">
 					<div data-testid="ExchangeForm__refund-address">
 						<FormField name="refundWallet">
-							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.REFUND_WALLET")} />
+							<FormLabel label={t("EXCHANGE.EXCHANGE_FORM.REFUND_ADDRESS")} />
 							<SelectRecipient
 								network={senderNetwork}
 								disabled={!getValues("fromCurrency")}
