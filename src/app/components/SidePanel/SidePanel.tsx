@@ -2,7 +2,6 @@ import {
 	FloatingFocusManager,
 	FloatingOverlay,
 	FloatingPortal,
-	OpenChangeReason,
 	useClick,
 	useDismiss,
 	useFloating,
@@ -88,17 +87,11 @@ export const SidePanel = ({
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
 
-	const shouldPreventClosing = useCallback(
-		(reason?: OpenChangeReason) =>
-			preventClosing ||
-			(disableOutsidePress && reason === "outside-press") ||
-			(disableEscapeKey && reason === "escape-key"),
-		[preventClosing, shakeWhenClosing],
-	);
+	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
 	const toggleOpen = useCallback(
-		(open: boolean = false, _?: Event, reason?: OpenChangeReason) => {
-			if (open === false && shakeWhenClosing && shouldPreventClosing(reason)) {
+		(open: boolean = false) => {
+			if (open === false && shakeWhenClosing && shouldPreventClosing()) {
 				setShake(true);
 				setTimeout(() => setShake(false), 900);
 
@@ -119,12 +112,9 @@ export const SidePanel = ({
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
 		enabled: !hasModalOpened,
-		// when shakeWhenClosing is true, we want to allow the escape key to try to close the side panel so we can show
-		// the shake animation, we are going to prevent closing on the toggleOpen function
-		escapeKey: !disableEscapeKey || shakeWhenClosing,
-		outsidePress:
-			(disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify")) ||
-			shakeWhenClosing,
+		// Allow escape attempts when we need to show shake due to preventClosing
+		escapeKey: !disableEscapeKey || (shakeWhenClosing && preventClosing),
+		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
 		outsidePressEvent: "pointerdown",
 	});
 
@@ -273,7 +263,7 @@ export const SidePanel = ({
 
 														{hasSteps && (
 															<ul className="flex w-full flex-row">
-																{Array.from({ length: totalSteps }).map((_, index) => (
+																{[...Array(totalSteps).keys()].map((index) => (
 																	<SidePanelStyledStep
 																		key={index}
 																		isActive={index < activeStep}
