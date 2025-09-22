@@ -48,9 +48,9 @@ const FormDivider = ({ isLoading, exchangeRate, fromCurrency, toCurrency }: Form
 	const renderExchangeRate = () => {
 		if (isLoading) {
 			return (
-				<div className="flex h-5 items-center">
-					<Skeleton width={200} height={14} />
-				</div>
+				<span className="inline-flex h-[13px] items-center">
+					<Skeleton width={200} height={13} />
+				</span>
 			);
 		}
 
