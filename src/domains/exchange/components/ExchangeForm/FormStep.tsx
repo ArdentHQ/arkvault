@@ -459,16 +459,19 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						</div>
 					</div>
 				</div>
-				<div className="flex flex-col">
+				<div className="relative mt-[47px] ml-1.5 flex h-[142px] flex-col space-y-[7px]">
+					<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block h-[53px] w-[26px] rounded-tr-xl border-t-2 border-r-2" />
 					<Button
 						data-testid="ExchangeForm__swap-button"
-						className="ml-auto"
+						className="ml-auto h-11 w-11 shrink-0"
 						size="icon"
+						iconSize="sm"
 						variant="secondary"
 						icon="ArrowDownUp"
 						disabled={!fromCurrency && !toCurrency}
 						onClick={handleFromCurrencyChange}
 					/>
+					<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block h-[53px] w-[26px] rounded-br-xl border-r-2 border-b-2" />
 				</div>
 			</div>
 
