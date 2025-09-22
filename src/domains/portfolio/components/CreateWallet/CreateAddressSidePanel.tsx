@@ -230,13 +230,11 @@ export const CreateAddressesSidePanel = ({
 
 	const showFooter = (): boolean => {
 		if (usesHDWallets) {
-			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep
+			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep;
 		}
 
-		return activeTab > CreateStep.MethodStep
+		return activeTab > CreateStep.MethodStep;
 	}
-
-	console.log({ showFooter: showFooter() })
 
 	return (
 		<SidePanel
