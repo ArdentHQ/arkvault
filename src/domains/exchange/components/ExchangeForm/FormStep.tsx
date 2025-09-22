@@ -301,7 +301,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				<button
 					data-testid="ExchangeForm__remove-refund-address"
 					type="button"
-					className="link text-sm font-semibold"
+					className="link text-theme-navy-600! dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
 					onClick={() => setShowRefundInput(false)}
 				>
 					{t("EXCHANGE.REFUND_ADDRESS.REMOVE")}
@@ -313,7 +313,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			<button
 				data-testid="ExchangeForm__add-refund-address"
 				type="button"
-				className="link dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
+				className="link text-theme-navy-600! dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
 				onClick={() => setShowRefundInput(true)}
 			>
 				+{t("EXCHANGE.REFUND_ADDRESS.ADD")}
@@ -332,7 +332,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			<div className="flex">
 				<div className="flex flex-1 flex-col">
 					<div className="relative z-1 flex">
-						<div className="max-w-[160px]">
+						<div className="max-w-[120px] sm:max-w-[160px]">
 							<FormField name="fromCurrency">
 								<FormLabel label={t("COMMON.CRYPTOASSET")} />
 								<Select
@@ -397,9 +397,24 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						toCurrency={toCurrency}
 					/>
 
+					<div className="relative mb-4 flex items-center space-x-3 sm:hidden">
+						<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block flex-1 border-t-2" />
+						<Button
+							data-testid="ExchangeForm__swap-button-mobile"
+							className="ml-auto h-11 w-11 shrink-0"
+							size="icon"
+							iconSize="sm"
+							variant="secondary"
+							icon="ArrowDownUp"
+							disabled={!fromCurrency && !toCurrency}
+							onClick={handleFromCurrencyChange}
+						/>
+						<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block flex-1 border-t-2" />
+					</div>
+
 					<div className="space-y-6">
 						<div className="relative flex">
-							<div className="max-w-[160px]">
+							<div className="max-w-[120px] sm:max-w-[160px]">
 								<FormField name="toCurrency">
 									<FormLabel label={t("COMMON.CRYPTOASSET")} />
 									<Select
@@ -459,11 +474,11 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						</div>
 					</div>
 				</div>
-				<div className="relative mt-[47px] ml-1.5 flex h-[142px] flex-col space-y-[7px]">
+				<div className="relative mt-[47px] ml-1.5 hidden h-[142px] flex-col space-y-[7px] sm:flex">
 					<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block h-[53px] w-[26px] rounded-tr-xl border-t-2 border-r-2" />
 					<Button
 						data-testid="ExchangeForm__swap-button"
-						className="shrink-0g ml-auto h-11 w-11"
+						className="ml-auto h-11 w-11 shrink-0"
 						size="icon"
 						iconSize="sm"
 						variant="secondary"
