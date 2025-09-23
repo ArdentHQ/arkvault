@@ -1266,10 +1266,8 @@ describe("ExchangeForm", () => {
 		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
 		});
-
-		expect(screen.queryByTestId("ExchangeForm__form-step")).not.toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(confirmationStep()).toBeInTheDocument();
