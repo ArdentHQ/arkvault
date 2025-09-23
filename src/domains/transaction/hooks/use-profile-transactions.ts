@@ -186,7 +186,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return new UnconfirmedTransactionsService({
 				config: profile.activeNetwork().config(),
 				profile,
-				ttl: blockTime / 1000 // in seconds
+				ttl: blockTime / 1000, // in seconds
 			});
 		} catch (error) {
 			/* istanbul ignore next -- @preserve */
@@ -196,7 +196,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			}
 		}
 	}, [profile, wallets?.length > 0]);
-
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
 		if (itemsLength < itemsLimit) {
@@ -506,7 +505,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}));
 	}, [wallets, activeMode, activeTransactionType, selectedTransactionTypes, fetchTransactions, transactions]);
 
-	const isFetchingUnconfirmed = useRef(false)
+	const isFetchingUnconfirmed = useRef(false);
 	const fetchUnconfirmedTransactions = useCallback(async () => {
 		/* istanbul ignore next -- @preserve */
 		if (!unconfirmedTransactionsService || wallets.length === 0) {
@@ -514,11 +513,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 
 		if (isFetchingUnconfirmed.current) {
-			return
+			return;
 		}
 
 		try {
-			isFetchingUnconfirmed.current = true
+			isFetchingUnconfirmed.current = true;
 			const selectedAddresses = wallets.map((w) => w.address());
 			const response = await unconfirmedTransactionsService.listUnconfirmed({
 				address: selectedAddresses,
@@ -554,7 +553,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			console.error("Failed to fetch unconfirmed transactions:", error);
 		}
 
-		isFetchingUnconfirmed.current = false
+		isFetchingUnconfirmed.current = false;
 	}, [
 		unconfirmedTransactionsService,
 		wallets,
