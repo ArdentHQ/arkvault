@@ -1,3 +1,5 @@
+import cn from "classnames";
+
 export const FormItemFooter = ({ children }: { children: React.ReactNode }) => (
 	<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-4 py-2 text-sm font-semibold sm:-mx-6 sm:-mb-6 sm:px-6 sm:py-3">
 		{children}
@@ -19,6 +21,11 @@ export const FormItem = ({ children }: { children: React.ReactNode }) => (
 	</div>
 );
 
-export const FormDivider = () => (
-	<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-px w-full border-t border-dashed" />
+export const FormDivider = ({ className }: { className?: string }) => (
+	<div
+		className={cn(
+			"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-px w-full border-t border-dashed",
+			className,
+		)}
+	/>
 );

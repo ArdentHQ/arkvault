@@ -1,49 +1,22 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { Amount } from "@/app/components/Amount";
-import { Clipboard } from "@/app/components/Clipboard";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
-import { Image } from "@/app/components/Image";
-import { Label } from "@/app/components/Label";
-import { Link } from "@/app/components/Link";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-
+import { AmountLabel } from "@/app/components/Amount";
+import { DetailLabelText, DetailPadded, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
+import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
+import { ExtendedTransactionData } from "@/domains/transaction/hooks/use-transaction-total";
+import { Address } from "@/app/components/Address";
+import { FormDivider } from "./ExchangeForm.blocks";
 interface ConfirmationStepProperties {
 	exchangeTransaction?: Contracts.IExchangeTransaction;
-}
-
-interface ExplorerLinkProperties {
-	value: string;
-	explorerMask?: string;
+	exchangeName?: string;
+	profile: Contracts.IProfile;
 }
 
 const explorerUrl = (value: string, explorerMask: string) => explorerMask.replace("{}", value);
 
-const ExplorerLink = ({ value, explorerMask }: ExplorerLinkProperties) => {
-	const reference = useRef(null);
-
-	if (explorerMask) {
-		return (
-			<span data-testid="ExplorerLink" ref={reference} className="w-full overflow-hidden">
-				<Link to={explorerUrl(value, explorerMask)} isExternal>
-					<TruncateMiddleDynamic
-						value={value}
-						offset={24}
-						parentRef={reference}
-						className="text-sm sm:text-base"
-					/>
-				</Link>
-			</span>
-		);
-	}
-
-	return <TruncateMiddleDynamic value={value} className="text-sm sm:text-base" />;
-};
-
-export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProperties) => {
+export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }: ConfirmationStepProperties) => {
 	const { t } = useTranslation();
 
 	const { watch } = useFormContext();
@@ -53,163 +26,156 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 		return <></>;
 	}
 
-	const renderAddress = (address: string, explorerMask?: string) => (
-		<div className="flex items-center space-x-2 text-lg font-semibold whitespace-nowrap">
-			<ExplorerLink value={address} explorerMask={explorerMask} />
+	const exampleHashToDelete = "f5c35d081cc958f0999cf0f7a5e5e9f465f18c346640626555f1129f02f5ce60";
 
-			<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
-				<Clipboard variant="icon" data={address}>
-					<Icon name="Copy" />
-				</Clipboard>
-			</span>
-		</div>
-	);
+	const inputTransaction = exchangeTransaction.input();
+	const inputTransactionData: Pick<ExtendedTransactionData, "explorerLink" | "hash" | "isConfirmed"> = {
+		explorerLink: () =>
+			explorerUrl(
+				inputTransaction.hash ?? "f5c35d081cc958f0999cf0f7a5e5e9f465f18c346640626555f1129f02f5ce60",
+				fromCurrency?.transactionExplorerMask ?? "https://blockchair.com/bitcoin/transaction/{}",
+			),
+		hash: () => inputTransaction.hash ?? exampleHashToDelete,
+		isConfirmed: () => true,
+	};
 
-	const renderHash = (hash?: string, explorerMask?: string) => {
-		if (!hash) {
-			return <span className="text-sm font-semibold sm:text-base">{t("COMMON.NOT_AVAILABLE")}</span>;
-		}
-
-		return (
-			<div className="flex items-center space-x-2 text-lg font-semibold whitespace-nowrap">
-				<ExplorerLink value={hash} explorerMask={explorerMask} />
-
-				<span className="text-theme-primary-300 dark:text-theme-secondary-600 flex">
-					<Clipboard variant="icon" data={hash}>
-						<Icon name="Copy" />
-					</Clipboard>
-				</span>
-			</div>
-		);
+	const outputTransaction = exchangeTransaction.output();
+	const outputTransactionData: Pick<ExtendedTransactionData, "explorerLink" | "hash" | "isConfirmed"> = {
+		explorerLink: () =>
+			explorerUrl(
+				outputTransaction.hash ?? "f5c35d081cc958f0999cf0f7a5e5e9f465f18c346640626555f1129f02f5ce60",
+				toCurrency?.transactionExplorerMask ?? "https://blockchair.com/bitcoin/transaction/{}",
+			),
+		hash: () => outputTransaction.hash ?? exampleHashToDelete,
+		isConfirmed: () => true,
 	};
 
 	return (
-		<div data-testid="ExchangeForm__confirmation-step" className="flex flex-col">
-			<div className="mx-auto mb-8 hidden items-center space-x-3 sm:flex">
-				<ThemeIcon
-					lightIcon="CircleCompletedLight"
-					darkIcon="CircleCompletedDark"
-					dimIcon="CircleCompletedDim"
-					dimensions={[32, 32]}
+		<div data-testid="ExchangeForm__confirmation-step" className="flex flex-col space-y-4 sm:space-y-6">
+			<DetailsCondensed>
+				<TransactionId
+					transaction={inputTransactionData}
+					isConfirmed={true}
+					label={t("EXCHANGE.EXCHANGE_FORM.CURRENCY_TRANSACTION_ID", {
+						currency: fromCurrency?.coin.toUpperCase(),
+					})}
 				/>
 
-				<h2 className="m-0 text-2xl leading-[29px] font-bold">
-					{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_COMPLETED")}
-				</h2>
-			</div>
+				<div className="mt-6 space-y-3 sm:space-y-4">
+					<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
+						<DetailWrapper label={t("COMMON.TRANSACTION_INFORMATION")}>
+							<div className="space-y-3">
+								<div className="space-y-3 sm:space-y-0">
+									<div className="flex w-full justify-between gap-2 sm:justify-start">
+										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
+											<span className="hidden sm:inline">
+												{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_ADDRESS", {
+													currency: fromCurrency?.coin.toUpperCase(),
+													exchangeName,
+												})}
+											</span>
 
-			<div className="space-y-6 sm:space-y-8">
-				<div className="flex flex-col space-y-4 sm:space-y-5">
-					<div className="flex items-center space-x-3">
-						<span className="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold">
-							1
-						</span>
-						<h3 className="m-0 text-lg font-bold">
-							{t("EXCHANGE.EXCHANGE_FORM.CURRENCY_INPUT", {
-								currency: fromCurrency?.coin.toUpperCase(),
-							})}
-						</h3>
-					</div>
+											<span className="sm:hidden">
+												{t("EXCHANGE.EXCHANGE_FORM.CURRENCY_ADDRESS", {
+													currency: fromCurrency?.coin.toUpperCase(),
+												})}
+											</span>
+										</DetailLabelText>
 
-					<div className="flex sm:space-x-6">
-						<div className="bg-theme-secondary-200 hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl sm:flex dark:bg-black">
-							<Image name="Wallet" domain="exchange" className="w-12" />
-						</div>
+										<Address
+											truncateOnTable
+											address={inputTransaction.address}
+											showCopyButton
+											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+											wrapperClass="justify-end sm:justify-start"
+											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+										/>
+									</div>
+								</div>
 
-						<div className="flex flex-1 flex-col space-y-4 overflow-hidden">
-							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
-									{t("EXCHANGE.EXCHANGE_FORM.INPUT_TRANSACTION_ID")}
-								</span>
+								<div className="space-y-3 sm:space-y-0">
+									<div className="flex w-full justify-between gap-2 sm:justify-start">
+										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
+											{t("COMMON.AMOUNT")}
+										</DetailLabelText>
 
-								{renderHash(exchangeTransaction.input().hash, fromCurrency?.transactionExplorerMask)}
+										<AmountLabel
+											value={inputTransaction.amount}
+											ticker={inputTransaction.ticker}
+											isNegative
+											hideSign={false}
+											profile={profile}
+										/>
+									</div>
+								</div>
 							</div>
-
-							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
-									{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_ADDRESS", {
-										currency: toCurrency?.coin.toUpperCase(),
-									})}
-								</span>
-
-								{renderAddress(exchangeTransaction.input().address, fromCurrency?.addressExplorerMask)}
-							</div>
-
-							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
-									{t("EXCHANGE.EXCHANGE_FORM.AMOUNT_SENT")}
-								</span>
-
-								<Label color="danger" className="mr-auto whitespace-nowrap">
-									<Amount
-										className="leading-5 font-semibold"
-										value={exchangeTransaction.input().amount}
-										ticker={exchangeTransaction.input().ticker}
-										isNegative
-										showSign
-									/>
-								</Label>
-							</div>
-						</div>
-					</div>
+						</DetailWrapper>
+					</DetailPadded>
 				</div>
 
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-10 border-t border-dashed px-10" />
+				<FormDivider className="sm:hidden" />
+			</DetailsCondensed>
 
-				<div className="flex flex-col space-y-4 sm:space-y-5">
-					<div className="flex items-center space-x-3">
-						<span className="bg-theme-navy-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 flex h-6 w-6 items-center justify-center rounded text-sm leading-[17px] font-semibold">
-							2
-						</span>
-						<h3 className="m-0 text-lg font-bold">
-							{t("EXCHANGE.EXCHANGE_FORM.CURRENCY_OUTPUT", {
-								currency: toCurrency?.coin.toUpperCase(),
-							})}
-						</h3>
-					</div>
+			<DetailsCondensed>
+				<TransactionId
+					transaction={outputTransactionData}
+					isConfirmed={true}
+					label={t("EXCHANGE.EXCHANGE_FORM.CURRENCY_TRANSACTION_ID", {
+						currency: toCurrency?.coin.toUpperCase(),
+					})}
+				/>
 
-					<div className="flex sm:space-x-6">
-						<div className="bg-theme-secondary-200 hidden h-24 w-24 shrink-0 items-center justify-center rounded-xl sm:flex dark:bg-black">
-							<Image name="Exchange" domain="exchange" className="w-12" />
-						</div>
+				<div className="mt-6 space-y-3 sm:space-y-4">
+					<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
+						<DetailWrapper label={t("COMMON.TRANSACTION_INFORMATION")}>
+							<div className="space-y-3">
+								<div className="space-y-3 sm:space-y-0">
+									<div className="flex w-full justify-between gap-2 sm:justify-start">
+										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
+											<span className="hidden sm:inline">
+												{t("EXCHANGE.EXCHANGE_FORM.YOUR_ADDRESS", {
+													currency: toCurrency?.coin.toUpperCase(),
+												})}
+											</span>
 
-						<div className="flex flex-1 flex-col space-y-4 overflow-hidden">
-							<div className="flex w-full flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
-									{t("EXCHANGE.EXCHANGE_FORM.OUTPUT_TRANSACTION_ID")}
-								</span>
+											<span className="sm:hidden">
+												{t("EXCHANGE.EXCHANGE_FORM.CURRENCY_ADDRESS", {
+													currency: toCurrency?.coin.toUpperCase(),
+												})}
+											</span>
+										</DetailLabelText>
 
-								{renderHash(exchangeTransaction.output().hash, toCurrency?.transactionExplorerMask)}
+										<Address
+											truncateOnTable
+											address={outputTransaction.address}
+											showCopyButton
+											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+											wrapperClass="justify-end sm:justify-start"
+											addressClass="text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+										/>
+									</div>
+								</div>
+
+								<div className="space-y-3 sm:space-y-0">
+									<div className="flex w-full justify-between gap-2 sm:justify-start">
+										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
+											{t("COMMON.AMOUNT")}
+										</DetailLabelText>
+
+										<AmountLabel
+											value={outputTransaction.amount}
+											ticker={outputTransaction.ticker}
+											isNegative={false}
+											hideSign={false}
+											profile={profile}
+										/>
+									</div>
+								</div>
 							</div>
-
-							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
-									{t("EXCHANGE.EXCHANGE_FORM.YOUR_ADDRESS", {
-										currency: toCurrency?.coin.toUpperCase(),
-									})}
-								</span>
-
-								{renderAddress(exchangeTransaction.output().address, toCurrency?.addressExplorerMask)}
-							</div>
-
-							<div className="flex flex-col space-y-2">
-								<span className="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold">
-									{t("EXCHANGE.EXCHANGE_FORM.AMOUNT_RECEIVED")}
-								</span>
-
-								<Label color="success" className="mr-auto whitespace-nowrap">
-									<Amount
-										className="leading-5 font-semibold"
-										value={exchangeTransaction.output().amount}
-										ticker={exchangeTransaction.output().ticker}
-										showSign
-									/>
-								</Label>
-							</div>
-						</div>
-					</div>
+						</DetailWrapper>
+					</DetailPadded>
 				</div>
-			</div>
+			</DetailsCondensed>
 		</div>
 	);
 };

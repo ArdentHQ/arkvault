@@ -11,7 +11,6 @@ import { toasts } from "@/app/services";
 import { Contracts } from "@/app/lib/profiles";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import type { Exchange } from "@/domains/exchange/exchange.contracts";
 import type { CurrencyData, ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
@@ -99,7 +98,6 @@ export const ExchangeSidePanel = ({
 	const { persist } = useEnvironmentContext();
 	const { exchangeService, provider } = useExchangeContext();
 	const { exchangeOrder } = useValidation();
-	const navigate = useNavigate();
 
 	const [exchangeTransaction, setExchangeTransaction] = useState<Contracts.IExchangeTransaction | undefined>();
 	const [transferTransactionId, setTransferTransactionId] = useState<string | undefined>();
@@ -243,7 +241,8 @@ export const ExchangeSidePanel = ({
 				assertExchangeTransaction(transaction);
 
 				setExchangeTransaction(transaction);
-				setActiveTab(transaction.isFinished() ? Step.ConfirmationStep : Step.StatusStep);
+				// setActiveTab(transaction.isFinished() ? Step.ConfirmationStep : Step.StatusStep);
+				setActiveTab(Step.ConfirmationStep);
 
 				let extendedCurrency: any;
 
@@ -343,7 +342,11 @@ export const ExchangeSidePanel = ({
 					if (withSignStep && !bypassSignStep) {
 						setShowTransferModal(true);
 					} else {
-						setActiveTab(newIndex);
+						if (newIndex === Step.StatusStep) {
+							setActiveTab(Step.ConfirmationStep);
+						} else {
+							setActiveTab(newIndex);
+						}
 					}
 				} catch (error) {
 					if (isInvalidAddressError(error)) {
@@ -528,7 +531,11 @@ export const ExchangeSidePanel = ({
 									</TabPanel>
 
 									<TabPanel tabId={Step.ConfirmationStep}>
-										<ConfirmationStep exchangeTransaction={exchangeTransaction} />
+										<ConfirmationStep
+											exchangeName={exchangeProvider?.name}
+											exchangeTransaction={exchangeTransaction}
+											profile={activeProfile}
+										/>
 									</TabPanel>
 								</div>
 							</Tabs>
