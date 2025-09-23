@@ -27,6 +27,7 @@ export const HDWalletTabs = ({
 	onCancel,
 	onSubmit,
 	onBack,
+	activeIndex,
 }: HDWalletTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -63,7 +64,8 @@ export const HDWalletTabs = ({
 	} = getValues();
 
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
-	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
+	const firstStep = activeIndex ?? HDWalletTabStep.SelectAccountStep;
+	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(firstStep);
 
 	const handleWalletImporting = useCallback(
 		async ({ selectedAddresses }: { selectedAddresses: AddressData[] }) => {
@@ -119,12 +121,12 @@ export const HDWalletTabs = ({
 	]);
 
 	useEffect(() => {
-		if (!hasExistingHDWallets) {
+		if (!hasExistingHDWallets && !activeIndex) {
 			setActiveTab(HDWalletTabStep.EnterMnemonicStep);
 		}
 
 		return () => {
-			unregister(["mnemonic", "password"]);
+			unregister(["password"]);
 		};
 	}, [hasExistingHDWallets]);
 
@@ -183,6 +185,11 @@ export const HDWalletTabs = ({
 	const handleBack = useCallback(() => {
 		if (activeTab !== HDWalletTabStep.SelectAccountStep) {
 			let prev = activeTab - 1;
+
+			if (activeTab === activeIndex) {
+				onBack?.();
+				return;
+			}
 
 			if (activeTab === HDWalletTabStep.SelectAddressStep && !useEncryption) {
 				prev--;
