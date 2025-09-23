@@ -1206,7 +1206,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/dashboard`);
+			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange`);
 		});
 	});
 
