@@ -4,8 +4,6 @@ import { ExchangeSidePanel } from "./ExchangeSidePanel";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import * as themeUtils from "@/utils/theme";
-import * as ExchangeForm from "@/domains/exchange/components/ExchangeForm";
-import userEvent from "@testing-library/user-event";
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
