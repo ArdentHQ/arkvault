@@ -48,11 +48,30 @@ export const ExchangeSidePanel = ({
 
 	const [logoUrl, setLogoUrl] = useState<string>();
 	const [isReady, setIsReady] = useState<boolean>(false);
+	const [resetKey, setResetKey] = useState<number>(0);
 
 	const { provider: exchangeProvider, exchangeProviders, setProvider, fetchProviders } = useExchangeContext();
 
 	const queryOrderId = queryParameters.get("orderId");
-	const [orderId, setOrderId] = useState<string | undefined>(queryOrderId ?? undefined);
+
+	// use `orderId` from query string on the very first render
+	const orderId = queryOrderId && resetKey === 0 ? queryOrderId : undefined;
+
+	const reset = () => {
+		setResetKey(resetKey + 1);
+	};
+
+	useEffect(() => {
+		if (resetKey === 0) {
+			return;
+		}
+
+		resetForm();
+
+		setActiveTab(Step.FormStep);
+
+		clearErrors();
+	}, [resetKey]);
 
 	useEffect(() => {
 		if (!exchangeProviders) {
@@ -149,19 +168,9 @@ export const ExchangeSidePanel = ({
 		setIsReady(true);
 	};
 
-	const resetComponent = () => {
-		setOrderId(undefined);
-
-		resetForm();
-
-		clearErrors();
-
-		setActiveTab(Step.FormStep);
-	};
-
 	const onMountChange = (mounted: boolean) => {
 		if (!mounted) {
-			resetComponent();
+			reset();
 		}
 	};
 
@@ -479,7 +488,7 @@ export const ExchangeSidePanel = ({
 								<Button
 									data-testid="ExchangeForm__new-exchange"
 									variant="secondary"
-									onClick={() => resetComponent()}
+									onClick={() => reset()}
 								>
 									{t("EXCHANGE.NEW_EXCHANGE")}
 								</Button>
