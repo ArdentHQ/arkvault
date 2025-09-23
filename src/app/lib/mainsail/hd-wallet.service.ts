@@ -3,7 +3,7 @@ import { Account, HDKey, hdKeyToAccount } from "viem/accounts";
 import { parseTransaction } from "viem";
 import { ConfigRepository } from "@/app/lib/mainsail/config.repository";
 
-export class MnemonicWithDerivationPathService {
+export class HDWalletService {
 	#config: ConfigRepository;
 
 	constructor({ config }: { config: ConfigRepository }) {
@@ -11,19 +11,19 @@ export class MnemonicWithDerivationPathService {
 	}
 
 	public getPublicKey(mnemonic: string, path: string): string {
-		const account = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
+		const account = HDWalletService.getAccount(mnemonic, path);
 		return account.publicKey as string;
 	}
 
 	public getAddress(mnemonic: string, path: string): string {
-		const account = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
+		const account = HDWalletService.getAccount(mnemonic, path);
 		return account.address;
 	}
 
 	public async sign(mnemonic: string, path: string, data: Record<string, any>): Promise<object> {
 		const chainId = this.#config.get("crypto.network.chainId") as number;
 
-		const account = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
+		const account = HDWalletService.getAccount(mnemonic, path);
 
 		if (!account.signTransaction) {
 			throw new Error("Failed to create account!");

@@ -9,7 +9,7 @@ let wallet: Contracts.IReadWriteWallet;
 let walletWithPassword: Contracts.IReadWriteWallet;
 
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { MnemonicWithDerivationPathService } from "@/app/lib/mainsail/mnemonic-with-derivation-path.service";
+import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise: Promise<any>) => promise,
@@ -55,7 +55,7 @@ describe("Authentication", () => {
 		const hdWalletMock = vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
 
 		const fromMnemonicMock = vi
-			.spyOn(MnemonicWithDerivationPathService, "getAccount")
+			.spyOn(HDWalletService, "getAccount")
 			.mockReturnValue({ address: wallet.address() });
 
 		const mnemonic = authentication(translationMock).mnemonic(wallet);

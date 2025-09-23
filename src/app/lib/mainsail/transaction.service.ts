@@ -20,7 +20,7 @@ import { ConfigRepository } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { Services } from "@/app/lib/mainsail";
 import { SignedTransactionData } from "./signed-transaction.dto";
-import { MnemonicWithDerivationPathService } from "@/app/lib/mainsail/mnemonic-with-derivation-path.service";
+import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -35,7 +35,7 @@ type TransactionsInputs =
 
 export class TransactionService {
 	readonly #ledgerService!: Services.LedgerService;
-	readonly #mnemonicWithDerivationService!: MnemonicWithDerivationPathService;
+	readonly #mnemonicWithDerivationService!: HDWalletService;
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
 
@@ -43,7 +43,7 @@ export class TransactionService {
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
-		this.#mnemonicWithDerivationService = new MnemonicWithDerivationPathService({ config });
+		this.#mnemonicWithDerivationService = new HDWalletService({ config });
 	}
 
 	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {
