@@ -1,16 +1,19 @@
 import { ClientService } from "./client.service.js";
 import type { ConfigRepository } from "@/app/lib/mainsail";
 import type { IProfile } from "@/app/lib/profiles/profile.contract";
+import { Cache } from "@/app/lib/mainsail/cache";
 
 export class UnconfirmedTransactionsService {
 	#config: ConfigRepository;
 	#profile: IProfile;
 	#client: ClientService;
+	#cache: Cache;
 
-	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
+	constructor({ config, profile, ttl = 8 }: { config: ConfigRepository; profile: IProfile, ttl?: number }) {
 		this.#config = config;
 		this.#profile = profile;
 		this.#client = new ClientService({ config: this.#config, profile: this.#profile });
+		this.#cache = new Cache(ttl)
 	}
 
 	async listUnconfirmed(parameters?: { page?: number; limit?: number; address?: string[] }) {
@@ -26,10 +29,11 @@ export class UnconfirmedTransactionsService {
 
 		const limit = parameters?.limit;
 
-		const response = await this.#client.unconfirmedTransactions({
+		const cacheKey = `${requestParams.address}`
+		const response = await this.#cache.remember(cacheKey, async () => await this.#client.unconfirmedTransactions({
 			limit,
 			...requestParams,
-		});
+		}));
 
 		const results = response.items() ?? [];
 		return { results };
