@@ -977,7 +977,7 @@ describe("useProfileTransactions", () => {
 
 		expect(listSpy).toHaveBeenCalledWith({ address: [walletAddress], limit: 100 });
 
-		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(6);
+		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(3);
 
 		const firstCall = addUnconfirmedTransactionFromApi.mock.calls[0];
 		const secondCall = addUnconfirmedTransactionFromApi.mock.calls[1];
