@@ -305,7 +305,7 @@ describe("ExchangeForm", () => {
 			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, undefined, { status: 500 }),
 		);
 
-		const { container } = renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -317,7 +317,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(container).toHaveTextContent("The pair BTC / ETH is not available");
+			expect(screen.getByTestId("ExchangeForm__pair-not-available")).toBeInTheDocument();
 		});
 
 		// remove to currency
@@ -328,7 +328,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(container).not.toHaveTextContent("The pair BTC / ETH is not available");
+			expect(screen.queryByTestId("ExchangeForm__pair-not-available")).not.toBeInTheDocument();
 		});
 	});
 

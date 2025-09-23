@@ -563,7 +563,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			)}
 
 			{errors.pair && (
-				<Alert variant="danger">
+				<Alert variant="danger" data-testid="ExchangeForm__pair-not-available">
 					<Trans
 						i18nKey="EXCHANGE.VALIDATION.PAIR_NOT_AVAILABLE"
 						values={{
