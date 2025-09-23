@@ -9,11 +9,11 @@ export class UnconfirmedTransactionsService {
 	#client: ClientService;
 	#cache: Cache;
 
-	constructor({ config, profile, ttl = 8 }: { config: ConfigRepository; profile: IProfile, ttl?: number }) {
+	constructor({ config, profile, ttl = 8 }: { config: ConfigRepository; profile: IProfile; ttl?: number }) {
 		this.#config = config;
 		this.#profile = profile;
 		this.#client = new ClientService({ config: this.#config, profile: this.#profile });
-		this.#cache = new Cache(ttl)
+		this.#cache = new Cache(ttl);
 	}
 
 	async listUnconfirmed(parameters?: { page?: number; limit?: number; address?: string[] }) {
@@ -29,11 +29,15 @@ export class UnconfirmedTransactionsService {
 
 		const limit = parameters?.limit;
 
-		const cacheKey = `${requestParams.address}`
-		const response = await this.#cache.remember(cacheKey, async () => await this.#client.unconfirmedTransactions({
-			limit,
-			...requestParams,
-		}));
+		const cacheKey = `${requestParams.address}`;
+		const response = await this.#cache.remember(
+			cacheKey,
+			async () =>
+				await this.#client.unconfirmedTransactions({
+					limit,
+					...requestParams,
+				}),
+		);
 
 		const results = response.items() ?? [];
 		return { results };
