@@ -70,7 +70,7 @@ describe("Authentication", () => {
 		const bip44Wallet = await profile.walletFactory().fromMnemonicWithBIP44({
 			levels: { account: 0 },
 			mnemonic: MNEMONICS[1],
-			password: "password"
+			password: "password",
 		});
 
 		const mnemonic = authentication(translationMock).encryptionPassword(bip44Wallet);
