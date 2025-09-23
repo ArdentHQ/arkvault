@@ -152,7 +152,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 		}
 	};
 
-	const handleFromCurrencyChange = async (fromCurrency: any) => {
+	const handleFromCurrencyChange = async (fromCurrency: OptionProperties) => {
 		const currency = fromCurrency
 			? currencies.find(({ coin }: any) => coin === fromCurrency?.label.toLowerCase())
 			: undefined;
@@ -256,7 +256,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 		}
 	};
 
-	const handleSwapCurrencies = () => {
+	const onSwapCurrencies = () => {
 		const { fromCurrency, toCurrency, payinAmount, payoutAmount } = getValues();
 
 		let temporary = fromCurrency;
@@ -407,7 +407,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 							variant="secondary"
 							icon="ArrowDownUp"
 							disabled={!fromCurrency && !toCurrency}
-							onClick={handleFromCurrencyChange}
+							onClick={onSwapCurrencies}
 						/>
 						<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block flex-1 border-t-2" />
 					</div>
@@ -484,7 +484,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 						variant="secondary"
 						icon="ArrowDownUp"
 						disabled={!fromCurrency && !toCurrency}
-						onClick={handleFromCurrencyChange}
+						onClick={onSwapCurrencies}
 					/>
 					<span className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 block h-[53px] w-[26px] rounded-br-xl border-r-2 border-b-2" />
 				</div>
