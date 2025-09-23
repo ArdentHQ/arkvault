@@ -36,7 +36,7 @@ export class SignatoryService {
 		);
 	}
 
-	public async mnemonicWithDerivationPath(mnemonic: string, path: string): Promise<Signatory> {
+	public async bip44Mnemonic(mnemonic: string, path: string): Promise<Signatory> {
 		return new Signatory(
 			new HDWalletSignatory({
 				signingKey: mnemonic,

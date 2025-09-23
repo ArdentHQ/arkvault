@@ -30,7 +30,7 @@ export class SignatoryFactory implements ISignatoryFactory {
 				throw new TypeError("[derivationPath] must be string.");
 			}
 
-			return this.#wallet.signatory().mnemonicWithDerivationPath(mnemonic, derivationPath);
+			return this.#wallet.signatory().bip44Mnemonic(mnemonic, derivationPath);
 		}
 
 		if (mnemonic) {

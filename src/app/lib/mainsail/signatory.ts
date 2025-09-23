@@ -97,7 +97,7 @@ export class Signatory {
 		return this.#signatory instanceof MnemonicSignatory;
 	}
 
-	public actsWithMnemonicWithDerivationPath(): boolean {
+	public actsWithBip44Mnemonic(): boolean {
 		return this.#signatory instanceof HDWalletSignatory;
 	}
 

@@ -35,7 +35,7 @@ type TransactionsInputs =
 
 export class TransactionService {
 	readonly #ledgerService!: Services.LedgerService;
-	readonly #mnemonicWithDerivationService!: HDWalletService;
+	readonly hdWalletService!: HDWalletService;
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
 
@@ -43,7 +43,7 @@ export class TransactionService {
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
-		this.#mnemonicWithDerivationService = new HDWalletService({ config });
+		this.hdWalletService = new HDWalletService({ config });
 	}
 
 	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {
@@ -285,8 +285,8 @@ export class TransactionService {
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
 
-		if (input.signatory.actsWithMnemonicWithDerivationPath()) {
-			address = this.#mnemonicWithDerivationService.getAddress(
+		if (input.signatory.actsWithBip44Mnemonic()) {
+			address = this.hdWalletService.getAddress(
 				input.signatory.signingKey(),
 				input.signatory.path(),
 			);
@@ -324,8 +324,8 @@ export class TransactionService {
 		const { address } = await this.#signerData(input);
 		builder.transaction.data.from = address;
 
-		if (input.signatory.actsWithMnemonicWithDerivationPath()) {
-			return this.#signMnemonicWithDerivationPath(input, builder.transaction);
+		if (input.signatory.actsWithBip44Mnemonic()) {
+			return this.#signWithHDWallet(input, builder.transaction);
 		}
 
 		if (input.signatory.actsWithLedger()) {
@@ -353,8 +353,8 @@ export class TransactionService {
 		transaction.data.hash = transaction.hash();
 	}
 
-	async #signMnemonicWithDerivationPath(input: Services.TransferInput, transaction: any): Promise<void> {
-		const signature = await this.#mnemonicWithDerivationService.sign(
+	async #signWithHDWallet(input: Services.TransferInput, transaction: any): Promise<void> {
+		const signature = await this.hdWalletService.sign(
 			input.signatory.signingKey(),
 			input.signatory.path(),
 			transaction.data,
