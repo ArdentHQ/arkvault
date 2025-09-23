@@ -14,10 +14,7 @@ const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, 
 		const wif = await wallet.signingKey().get(password);
 
 		if (wallet.isHDWallet()) {
-			const account = HDWalletService.getAccount(
-				wif,
-				wallet.data().get(WalletData.DerivationPath) as string,
-			);
+			const account = HDWalletService.getAccount(wif, wallet.data().get(WalletData.DerivationPath) as string);
 
 			return account.address;
 		}

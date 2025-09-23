@@ -223,7 +223,10 @@ export const AuthenticationStep = ({
 		wallet.actsWithPublicKey() ||
 		wallet.actsWithBip44Mnemonic();
 
-	const requireEncryptionPassword = wallet.actsWithMnemonicWithEncryption() || wallet.actsWithSecretWithEncryption() || wallet.actsWithBip44MnemonicWithEncryption();
+	const requireEncryptionPassword =
+		wallet.actsWithMnemonicWithEncryption() ||
+		wallet.actsWithSecretWithEncryption() ||
+		wallet.actsWithBip44MnemonicWithEncryption();
 
 	const isTransaction = subject === "transaction";
 
