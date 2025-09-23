@@ -1277,7 +1277,9 @@ describe("ExchangeForm", () => {
 
 		await userEvent.click(screen.getByTestId("ExchangeForm__new-exchange"));
 
-		expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
+		});
 
 		exchangeTransactionUpdateMock.mockRestore();
 
