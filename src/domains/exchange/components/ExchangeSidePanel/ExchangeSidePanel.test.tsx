@@ -1,4 +1,3 @@
-/* eslint-disable testing-library/no-node-access */
 import React, { useEffect } from "react";
 import "jest-styled-components";
 import { ExchangeSidePanel } from "./ExchangeSidePanel";
@@ -24,20 +23,18 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
 describe("ExchangeSidePanel", () => {
 	it("should render", async () => {
-		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange`;
 
 		render(
 			<ExchangeProvider>
 				<Wrapper>
-					<ExchangeSidePanel />
+					<ExchangeSidePanel onOpenChange={() => {}} exchangeId="changenow" />
 				</Wrapper>
 			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
 		);
-
-		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -61,20 +58,18 @@ describe("ExchangeSidePanel", () => {
 	it.each(["light", "dark"])("should render %s theme", async (theme) => {
 		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
 
-		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange`;
 
 		render(
 			<ExchangeProvider>
 				<Wrapper>
-					<ExchangeSidePanel />
+					<ExchangeSidePanel onOpenChange={() => {}} exchangeId="changenow" />
 				</Wrapper>
 			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
 		);
-
-		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();
@@ -87,15 +82,13 @@ describe("ExchangeSidePanel", () => {
 		render(
 			<ExchangeProvider>
 				<Wrapper>
-					<ExchangeSidePanel />
+					<ExchangeSidePanel onOpenChange={() => {}} exchangeId="changenow" />
 				</Wrapper>
 			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
 		);
-
-		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("ExchangeForm")).not.toBeInTheDocument();
@@ -103,97 +96,19 @@ describe("ExchangeSidePanel", () => {
 	});
 
 	it("should fetch providers if not loaded yet", async () => {
-		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
+		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange`;
 
 		render(
 			<ExchangeProvider>
-				<ExchangeSidePanel />
+				<ExchangeSidePanel onOpenChange={() => {}} exchangeId="changenow" />
 			</ExchangeProvider>,
 			{
 				route: exchangeURL,
 			},
 		);
-
-		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();
 		});
-	});
-
-	it("should re-render exchange form when `reset()` called ", async () => {
-		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow`;
-
-		let renderCount = 0;
-
-		const exchangeFormMock = vi.spyOn(ExchangeForm, "ExchangeForm").mockImplementation(({ resetForm }) => {
-			useEffect(() => {
-				renderCount++;
-			}, []);
-
-			return (
-				<div>
-					Exchange Form rendered
-					<button data-testid="Reset" onClick={resetForm}>
-						reset
-					</button>
-				</div>
-			);
-		});
-
-		render(
-			<ExchangeProvider>
-				<Wrapper>
-					<ExchangeSidePanel />
-				</Wrapper>
-			</ExchangeProvider>,
-			{
-				route: exchangeURL,
-			},
-		);
-
-		await expect(screen.findByTestId("Reset")).resolves.toBeVisible();
-		await userEvent.click(screen.getByTestId("Reset"));
-
-		expect(renderCount).toBe(2);
-
-		exchangeFormMock.mockRestore();
-	});
-
-	it("should not pass down `orderId` when reset clicked", async () => {
-		const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view?exchangeId=changenow&orderId=testOrderId`;
-
-		const exchangeFormMock = vi.spyOn(ExchangeForm, "ExchangeForm").mockImplementation(({ resetForm, orderId }) => (
-			<div>
-				Exchange Form rendered
-				<p>{orderId}</p>
-				<button data-testid="Reset" onClick={resetForm}>
-					reset
-				</button>
-			</div>
-		));
-
-		render(
-			<ExchangeProvider>
-				<Wrapper>
-					<ExchangeSidePanel />
-				</Wrapper>
-			</ExchangeProvider>,
-			{
-				route: exchangeURL,
-			},
-		);
-
-		await expect(screen.findByTestId("Reset")).resolves.toBeVisible();
-
-		// order ID should be used
-		await expect(screen.findByText("testOrderId")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("Reset"));
-
-		// order ID should not be there
-		await waitFor(() => expect(screen.queryByText("testOrderId")).not.toBeInTheDocument());
-
-		exchangeFormMock.mockRestore();
 	});
 });
