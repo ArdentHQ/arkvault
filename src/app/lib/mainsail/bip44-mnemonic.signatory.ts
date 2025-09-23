@@ -1,4 +1,4 @@
-export class HDWalletSignatory {
+export class Bip44MnemonicSignatory {
 	readonly #signingKey: string;
 	readonly #path: string;
 
