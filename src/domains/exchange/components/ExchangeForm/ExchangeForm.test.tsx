@@ -222,6 +222,10 @@ describe("ExchangeForm", () => {
 	it("should render exchange form with id of pending order", async () => {
 		profile.exchangeTransactions().flush();
 
+		const queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => "order-id",
+		}));
+
 		const exchangeTransactionUpdateMock = vi
 			.spyOn(profile.exchangeTransactions(), "update")
 			.mockReturnValue(undefined);
@@ -233,7 +237,7 @@ describe("ExchangeForm", () => {
 				hash: "payinHash",
 				ticker: "btc",
 			},
-			orderId: "changenow",
+			orderId: "order-id",
 			output: {
 				address: "payoutAddress",
 				amount: 100,
@@ -259,6 +263,7 @@ describe("ExchangeForm", () => {
 
 		expect(container).toMatchSnapshot();
 		exchangeTransactionUpdateMock.mockRestore();
+		queryParametersMock.mockRestore();
 	});
 
 	it("should go back to exchange page", async () => {
