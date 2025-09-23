@@ -29,7 +29,7 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 		if (isLoading) {
 			return (
 				<span data-testid="StatusIcon__spinner">
-					<Spinner className="h-4! w-4! border-[2px]! sm:h-5! sm:w-5! sm:border-[3px]!" color="warning" />
+					<Spinner className="border-theme-warning-200 dark:border-theme-dark-700 dim:border-theme-dim-700 dark:border-l-theme-warning-900 dim:border-l-theme-warning-900 border-l-theme-warning-900 h-4! w-4! border-[2px]! sm:h-5! sm:w-5! sm:border-[3px]!" />
 				</span>
 			);
 		}
@@ -45,13 +45,13 @@ const StatusIcon = ({ label, isDone, isLoading }: StatusIconProperties) => {
 	return (
 		<div
 			className={cn(
-				"relative flex items-center overflow-hidden rounded-lg border px-3 py-2 sm:-mt-[22px] sm:rounded-none sm:border-none sm:pt-[22px] sm:pr-0 sm:pb-0 sm:pl-[38px]",
+				"relative flex items-center overflow-hidden rounded-lg border px-3 py-2 sm:-mt-[22px] sm:rounded-none sm:border-none sm:bg-transparent! sm:pt-[22px] sm:pr-0 sm:pb-0 sm:pl-[38px]",
 				{
 					"bg-theme-secondary-100 border-theme-secondary-300 dark:border-theme-secondary-700 dim:bg-transparent dim:border-theme-secondary-700 dark:bg-transparent":
 						!isDone && !isLoading,
-					"bg-theme-success-100 border-theme-success-200 dark:border-theme-success-700 dim:bg-transparent dim:border-theme-success-700 dark:bg-transparent":
+					"bg-theme-success-100 border-theme-success-200 dark:border-theme-success-500 dim:bg-theme-success-900 dim:border-theme-success-500 dark:bg-theme-success-900":
 						isDone,
-					"bg-theme-warning-50 border-theme-warning-200 dark:border-theme-warning-700 dim:bg-transparent dim:border-theme-warning-700 dark:bg-transparent":
+					"bg-theme-warning-50 border-theme-warning-200 dark:border-theme-warning-600 dim:bg-transparent dim:border-theme-warning-600 dark:bg-transparent":
 						isLoading,
 				},
 			)}

@@ -1,12 +1,9 @@
 import cn from "classnames";
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { Image } from "@/app/components/Image";
 import { Spinner } from "@/app/components/Spinner";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
-import { FormButtons } from "@/app/components/Form/FormButtons";
-import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useActiveProfile, useQueryParameters, useValidation } from "@/app/hooks";
@@ -20,7 +17,6 @@ import type { Exchange } from "@/domains/exchange/exchange.contracts";
 import type { CurrencyData, ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
 import {
 	assertCurrency,
-	assertExchangeService,
 	assertExchangeTransaction,
 	isInvalidAddressError,
 	isInvalidRefundAddressError,
@@ -104,8 +100,6 @@ export const ExchangeSidePanel = ({
 	const { exchangeService, provider } = useExchangeContext();
 	const { exchangeOrder } = useValidation();
 	const navigate = useNavigate();
-
-	// assertExchangeService(exchangeService);
 
 	const [exchangeTransaction, setExchangeTransaction] = useState<Contracts.IExchangeTransaction | undefined>();
 	const [transferTransactionId, setTransferTransactionId] = useState<string | undefined>();
@@ -461,47 +455,47 @@ export const ExchangeSidePanel = ({
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
-				<SidePanelButtons>
-					{activeTab < Step.StatusStep && (
-						<>
-							<Button
-								data-testid="ExchangeForm__back-button"
-								disabled={isSubmitting}
-								variant="secondary"
-								onClick={handleBack}
-							>
-								{t("COMMON.BACK")}
-							</Button>
+				activeTab !== Step.StatusStep && (
+					<SidePanelButtons>
+						{activeTab < Step.StatusStep && (
+							<>
+								<Button
+									data-testid="ExchangeForm__back-button"
+									disabled={isSubmitting}
+									variant="secondary"
+									onClick={handleBack}
+								>
+									{t("COMMON.BACK")}
+								</Button>
 
-							<Button
-								data-testid="ExchangeForm__continue-button"
-								disabled={isSubmitting || (isDirty ? !isValid : true)}
-								isLoading={isSubmitting}
-								onClick={() => handleNext()}
-							>
-								{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
-							</Button>
-						</>
-					)}
+								<Button
+									data-testid="ExchangeForm__continue-button"
+									disabled={isSubmitting || (isDirty ? !isValid : true)}
+									isLoading={isSubmitting}
+									onClick={() => handleNext()}
+								>
+									{showSignButtons ? t("COMMON.SIGN") : t("COMMON.CONTINUE")}
+								</Button>
+							</>
+						)}
 
-					{activeTab === Step.ConfirmationStep && (
-						<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
-							<Button
-								data-testid="ExchangeForm__finish-button"
-								onClick={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
-							>
-								{t("COMMON.GO_TO_PORTFOLIO")}
-							</Button>
-							<Button
-								data-testid="ExchangeForm__new-exchange"
-								variant="secondary"
-								onClick={() => reset?.()}
-							>
-								{t("EXCHANGE.NEW_EXCHANGE")}
-							</Button>
-						</div>
-					)}
-				</SidePanelButtons>
+						{activeTab === Step.ConfirmationStep && (
+							<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
+								<Button data-testid="ExchangeForm__finish-button" onClick={() => onOpenChange(false)}>
+									{t("COMMON.CLOSE")}
+								</Button>
+
+								<Button
+									data-testid="ExchangeForm__new-exchange"
+									variant="secondary"
+									onClick={() => resetComponent()}
+								>
+									{t("EXCHANGE.NEW_EXCHANGE")}
+								</Button>
+							</div>
+						)}
+					</SidePanelButtons>
+				)
 			}
 		>
 			<div>
