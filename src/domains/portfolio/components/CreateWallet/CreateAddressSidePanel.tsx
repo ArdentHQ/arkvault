@@ -21,6 +21,9 @@ import { Contracts } from "@/app/lib/profiles";
 import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
 import { MethodStep } from "./MethodStep";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
+import { HDWalletTabs } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
+import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
+import { useHDWalletStepHeaderConfig } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
 
 export const CreateAddressesSidePanel = ({
 	open,
@@ -36,12 +39,15 @@ export const CreateAddressesSidePanel = ({
 	const { persist } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
+
 	const usesHDWallets = activeProfile.settings().get(ProfileSetting.UseHDWallets);
 	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep;
+	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
 
 	const [activeTab, setActiveTab] = useState<CreateStep>(firstStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 	const { importWallets } = useWalletImport({ profile: activeProfile });
+	const [isHDWalletCreation, setIsHDWalletCreation] = useState(false);
 
 	const form = useForm<any>({
 		defaultValues: {
@@ -51,7 +57,7 @@ export const CreateAddressesSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, setValue, watch } = form;
+	const { getValues, formState, register, setValue, watch, reset } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic, acceptResponsibility } =
@@ -59,9 +65,11 @@ export const CreateAddressesSidePanel = ({
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
-	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
+	const [editingWallet, setEditingWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 
-	const { title, subtitle, titleIcon } = useCreateStepHeaderConfig(activeTab);
+	const stepConfig = useCreateStepHeaderConfig(activeTab);
+	const HDWalletConfig = useHDWalletStepHeaderConfig(HDWalletActiveTab);
+	const config = isHDWalletCreation ? HDWalletConfig : stepConfig;
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -73,9 +81,18 @@ export const CreateAddressesSidePanel = ({
 	}, [register, open]);
 
 	useEffect(() => {
-		if (open) {
-			void handleGenerateWallet();
+		if (encryptionPassword) {
+			register({ name: "password", type: "string", value: encryptionPassword });
 		}
+	}, [encryptionPassword]);
+
+	useEffect(() => {
+		if (open) {
+			return void handleGenerateWallet();
+		}
+
+		setActiveTab(CreateStep.MethodStep);
+		reset();
 	}, [open]);
 
 	useEffect(() => {
@@ -139,7 +156,7 @@ export const CreateAddressesSidePanel = ({
 			return;
 		}
 
-		if (newIndex === CreateStep.SuccessStep) {
+		if (newIndex === CreateStep.SuccessStep && !usesHDWallets) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
 
 			let wallet = getValues("wallet");
@@ -187,25 +204,6 @@ export const CreateAddressesSidePanel = ({
 		void handleNext({ encryptionPassword });
 	};
 
-	const renderUpdateWalletNameModal = () => {
-		if (!isEditAliasModalOpen) {
-			return;
-		}
-
-		const wallet = getValues("wallet");
-
-		assertWallet(wallet);
-
-		return (
-			<UpdateWalletName
-				wallet={wallet}
-				profile={activeProfile}
-				onCancel={() => setIsEditAliasModalOpen(false)}
-				onAfterSave={() => setIsEditAliasModalOpen(false)}
-			/>
-		);
-	};
-
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
@@ -229,13 +227,19 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = activeTab > CreateStep.MethodStep;
+	const showFooter = (): boolean => {
+		if (usesHDWallets) {
+			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep;
+		}
+
+		return activeTab > CreateStep.MethodStep;
+	};
 
 	return (
 		<SidePanel
-			title={title}
-			subtitle={subtitle}
-			titleIcon={titleIcon}
+			title={config.title}
+			subtitle={config.subtitle}
+			titleIcon={config.titleIcon}
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
@@ -245,7 +249,7 @@ export const CreateAddressesSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			footer={
-				showFooter && (
+				showFooter() && (
 					<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
 						{activeTab <= CreateStep.EncryptPasswordStep && (
 							<>
@@ -314,10 +318,12 @@ export const CreateAddressesSidePanel = ({
 								onSelectHdAddress={async () => {
 									await handleGenerateWallet();
 									setActiveTab(CreateStep.WalletOverviewStep);
+									setIsHDWalletCreation(true);
 								}}
 								onSelectRegularAddress={async () => {
 									await handleGenerateWallet();
 									setActiveTab(CreateStep.WalletOverviewStep);
+									setIsHDWalletCreation(false);
 								}}
 								onImportAddress={onImportAddress}
 							/>
@@ -336,13 +342,39 @@ export const CreateAddressesSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={CreateStep.SuccessStep}>
-							<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
+							{isHDWalletCreation && (
+								<HDWalletTabs
+									activeIndex={HDWalletTabStep.SelectAddressStep}
+									onClickEditWalletName={(wallet) => setEditingWallet(wallet)}
+									onStepChange={setHDWalletActiveTab}
+									onCancel={() => onOpenChange(false)}
+									onSubmit={handleFinish}
+									onBack={() => {
+										if (encryptionPassword) {
+											setActiveTab(activeTab - 1);
+											return;
+										}
+
+										setActiveTab(activeTab - 2);
+									}}
+								/>
+							)}
+							{!isHDWalletCreation && (
+								<SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />
+							)}
 						</TabPanel>
 					</div>
 				</Tabs>
 			</Form>
 
-			{renderUpdateWalletNameModal()}
+			{editingWallet && (
+				<UpdateWalletName
+					wallet={editingWallet}
+					profile={activeProfile}
+					onCancel={() => setEditingWallet(undefined)}
+					onAfterSave={() => setEditingWallet(undefined)}
+				/>
+			)}
 		</SidePanel>
 	);
 };

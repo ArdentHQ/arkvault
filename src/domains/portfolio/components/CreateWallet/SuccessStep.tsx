@@ -8,8 +8,13 @@ import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
+import { Contracts } from "@/app/lib/profiles";
 
-export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void }) => {
+export const SuccessStep = ({
+	onClickEditAlias,
+}: {
+	onClickEditAlias: (wallet: Contracts.IReadWriteWallet) => void;
+}) => {
 	const { t } = useTranslation();
 
 	const { getValues, watch } = useFormContext();
@@ -58,7 +63,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 								type="button"
 								variant="transparent"
 								className="text-theme-navy-600 space-x-0 px-0 py-0"
-								onClick={onClickEditAlias}
+								onClick={() => onClickEditAlias?.(wallet)}
 							>
 								<Icon name="Pencil" />
 								<span className="text-sm leading-[17px] sm:text-base sm:leading-5">
