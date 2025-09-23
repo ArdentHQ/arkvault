@@ -141,9 +141,8 @@ const confirmationStep = () => screen.getByTestId("ExchangeForm__confirmation-st
 const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
 
-describe.only("ExchangeForm", () => {
+describe("ExchangeForm", () => {
 	let findExchangeTransactionMock;
-	let queryParametersMock;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
@@ -1208,7 +1207,7 @@ describe.only("ExchangeForm", () => {
 		profile.exchangeTransactions().flush();
 		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
 
-		queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+		const queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
 			get: () => exchangeTransaction.orderId(),
 		}));
 
@@ -1235,6 +1234,8 @@ describe.only("ExchangeForm", () => {
 		expect(container).toMatchSnapshot();
 
 		exchangeTransactionUpdateMock.mockRestore();
+
+		queryParametersMock.mockRestore();
 	});
 
 	it("should call resetForm when `New Exchange` button is clicked", async () => {
@@ -1251,7 +1252,7 @@ describe.only("ExchangeForm", () => {
 
 		vi.spyOn(profile.exchangeTransactions(), "findById").mockReturnValue(exchangeTransaction);
 
-		queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+		const queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
 			get: () => exchangeTransaction.orderId(),
 		}));
 
@@ -1272,6 +1273,8 @@ describe.only("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
 
 		exchangeTransactionUpdateMock.mockRestore();
+
+		queryParametersMock.mockRestore();
 	});
 
 	const goToReviewStep = async () => {
@@ -1503,16 +1506,10 @@ describe.only("ExchangeForm", () => {
 	});
 
 	it.each(["xs", "lg"])("should render with changelly in (%s)", async (breakpoint) => {
-		queryParametersMock.mockRestore();
-
-		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
-			get: () => "changelly",
-		}));
-
 		renderResponsiveWithRoute(
 			<ExchangeProvider>
 				<Wrapper>
-					<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />
+					<ExchangeSidePanel exchangeId="changelly" onOpenChange={vi.fn()} />
 				</Wrapper>
 			</ExchangeProvider>,
 			breakpoint,
