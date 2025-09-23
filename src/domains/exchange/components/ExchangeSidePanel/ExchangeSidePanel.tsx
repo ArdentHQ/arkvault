@@ -48,18 +48,11 @@ export const ExchangeSidePanel = ({
 
 	const [logoUrl, setLogoUrl] = useState<string>();
 	const [isReady, setIsReady] = useState<boolean>(false);
-	const [resetKey, setResetKey] = useState<number>(0);
 
 	const { provider: exchangeProvider, exchangeProviders, setProvider, fetchProviders } = useExchangeContext();
 
 	const queryOrderId = queryParameters.get("orderId");
-
-	// use `orderId` from query string on the very first render
-	const orderId = queryOrderId && resetKey === 0 ? queryOrderId : undefined;
-
-	const reset = () => {
-		setResetKey(resetKey + 1);
-	};
+	const [orderId, setOrderId] = useState<string | undefined>(queryOrderId ?? undefined);
 
 	useEffect(() => {
 		if (!exchangeProviders) {
@@ -157,7 +150,7 @@ export const ExchangeSidePanel = ({
 	};
 
 	const resetComponent = () => {
-		reset();
+		setOrderId(undefined);
 
 		resetForm();
 
