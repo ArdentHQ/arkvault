@@ -673,12 +673,12 @@ export interface IReadWriteWallet {
 	actsWithPublicKey(): boolean;
 
 	/**
-	 * Determines if the wallet has been imported with a mnemonic with a derivation path.
+	 * Determines if the wallet has been imported with a BIP44 mnemonic
 	 *
 	 * @return {*}  {boolean}
 	 * @memberof IReadWriteWallet
 	 */
-	actsWithMnemonicWithDerivationPath(): boolean;
+	actsWithBip44Mnemonic(): boolean;
 
 	/**
 	 * Determines if the wallet has been imported with an address with a derivation path.

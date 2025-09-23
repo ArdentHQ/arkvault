@@ -23,7 +23,7 @@ export class SignatoryFactory implements ISignatoryFactory {
 			return this.#wallet.signatory().confirmationMnemonic(mnemonic, secondMnemonic);
 		}
 
-		if (mnemonic && this.#wallet.actsWithMnemonicWithDerivationPath()) {
+		if (mnemonic && this.#wallet.actsWithBip44Mnemonic()) {
 			const derivationPath = this.#wallet.data().get(WalletData.DerivationPath);
 
 			if (typeof derivationPath !== "string") {
