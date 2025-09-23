@@ -26,27 +26,17 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 		return <></>;
 	}
 
-	const exampleHashToDelete = "f5c35d081cc958f0999cf0f7a5e5e9f465f18c346640626555f1129f02f5ce60";
-
 	const inputTransaction = exchangeTransaction.input();
 	const inputTransactionData: Pick<ExtendedTransactionData, "explorerLink" | "hash" | "isConfirmed"> = {
-		explorerLink: () =>
-			explorerUrl(
-				inputTransaction.hash ?? "f5c35d081cc958f0999cf0f7a5e5e9f465f18c346640626555f1129f02f5ce60",
-				fromCurrency?.transactionExplorerMask ?? "https://blockchair.com/bitcoin/transaction/{}",
-			),
-		hash: () => inputTransaction.hash ?? exampleHashToDelete,
+		explorerLink: () => explorerUrl(inputTransaction.hash ?? "", fromCurrency?.transactionExplorerMask ?? ""),
+		hash: () => inputTransaction.hash ?? "",
 		isConfirmed: () => true,
 	};
 
 	const outputTransaction = exchangeTransaction.output();
 	const outputTransactionData: Pick<ExtendedTransactionData, "explorerLink" | "hash" | "isConfirmed"> = {
-		explorerLink: () =>
-			explorerUrl(
-				outputTransaction.hash ?? "f5c35d081cc958f0999cf0f7a5e5e9f465f18c346640626555f1129f02f5ce60",
-				toCurrency?.transactionExplorerMask ?? "https://blockchair.com/bitcoin/transaction/{}",
-			),
-		hash: () => outputTransaction.hash ?? exampleHashToDelete,
+		explorerLink: () => explorerUrl(outputTransaction.hash ?? "", toCurrency?.transactionExplorerMask ?? ""),
+		hash: () => outputTransaction.hash ?? "",
 		isConfirmed: () => true,
 	};
 

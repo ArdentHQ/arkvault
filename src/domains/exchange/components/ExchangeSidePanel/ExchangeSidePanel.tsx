@@ -241,8 +241,7 @@ export const ExchangeSidePanel = ({
 				assertExchangeTransaction(transaction);
 
 				setExchangeTransaction(transaction);
-				// setActiveTab(transaction.isFinished() ? Step.ConfirmationStep : Step.StatusStep);
-				setActiveTab(Step.ConfirmationStep);
+				setActiveTab(transaction.isFinished() ? Step.ConfirmationStep : Step.StatusStep);
 
 				let extendedCurrency: any;
 
@@ -342,11 +341,7 @@ export const ExchangeSidePanel = ({
 					if (withSignStep && !bypassSignStep) {
 						setShowTransferModal(true);
 					} else {
-						if (newIndex === Step.StatusStep) {
-							setActiveTab(Step.ConfirmationStep);
-						} else {
-							setActiveTab(newIndex);
-						}
+						setActiveTab(newIndex);
 					}
 				} catch (error) {
 					if (isInvalidAddressError(error)) {
