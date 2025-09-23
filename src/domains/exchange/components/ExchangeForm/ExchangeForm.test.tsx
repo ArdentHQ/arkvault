@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import * as SendExchangeTransfer from "@/domains/exchange/components/SendExchangeTransfer";
 import * as useQueryParameters from "@/app/hooks/use-query-parameters";
 
