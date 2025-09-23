@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { MnemonicWithDerivationPathService } from "./mnemonic-with-derivation-path.service";
+import { HDWalletService } from "./hd-wallet.service";
 import { ConfigRepository } from "./config.repository";
 import { getDefaultMainsailWalletMnemonic } from "@/utils/testing-library";
 
@@ -7,7 +7,7 @@ const path = "m/44'/111'/0'/0/0";
 const mnemonic = getDefaultMainsailWalletMnemonic();
 
 describe("MnemonicWithDerivationPathService", () => {
-	let service: MnemonicWithDerivationPathService;
+	let service: HDWalletService;
 	let mockConfig: ConfigRepository;
 
 	beforeEach(() => {
@@ -15,11 +15,11 @@ describe("MnemonicWithDerivationPathService", () => {
 			get: vi.fn().mockReturnValue(11812),
 		} as any;
 
-		service = new MnemonicWithDerivationPathService({ config: mockConfig });
+		service = new HDWalletService({ config: mockConfig });
 	});
 
 	it("should create instance", () => {
-		expect(service).toBeInstanceOf(MnemonicWithDerivationPathService);
+		expect(service).toBeInstanceOf(HDWalletService);
 	});
 
 	it("should return public key for given mnemonic and path", () => {
@@ -91,8 +91,8 @@ describe("MnemonicWithDerivationPathService", () => {
 	});
 
 	it("should return consistent results for same inputs", () => {
-		const account1 = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
-		const account2 = MnemonicWithDerivationPathService.getAccount(mnemonic, path);
+		const account1 = HDWalletService.getAccount(mnemonic, path);
+		const account2 = HDWalletService.getAccount(mnemonic, path);
 
 		expect(account1.address).toBe(account2.address);
 		expect(account1.publicKey).toBe(account2.publicKey);

@@ -14,7 +14,7 @@ import {
 
 import { AddressService } from "./address.service";
 import { PublicKeyService } from "./public-key.service";
-import { MnemonicWithDerivationPathSignatory } from "@/app/lib/mainsail/mnemonic-with-derivation-path.signatory";
+import { Bip44MnemonicSignatory } from "@/app/lib/mainsail/bip44-mnemonic.signatory";
 
 export class SignatoryService {
 	readonly #addressService: AddressService;
@@ -36,9 +36,9 @@ export class SignatoryService {
 		);
 	}
 
-	public async mnemonicWithDerivationPath(mnemonic: string, path: string): Promise<Signatory> {
+	public async bip44Mnemonic(mnemonic: string, path: string): Promise<Signatory> {
 		return new Signatory(
-			new MnemonicWithDerivationPathSignatory({
+			new Bip44MnemonicSignatory({
 				signingKey: mnemonic,
 				path,
 			}),
