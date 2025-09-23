@@ -54,9 +54,7 @@ describe("Authentication", () => {
 	it("should validate mnemonic with derivation path", async () => {
 		const hdWalletMock = vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
 
-		const fromMnemonicMock = vi
-			.spyOn(HDWalletService, "getAccount")
-			.mockReturnValue({ address: wallet.address() });
+		const fromMnemonicMock = vi.spyOn(HDWalletService, "getAccount").mockReturnValue({ address: wallet.address() });
 
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 

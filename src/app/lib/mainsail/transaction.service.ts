@@ -286,10 +286,7 @@ export class TransactionService {
 		let address: string | undefined;
 
 		if (input.signatory.actsWithBip44Mnemonic()) {
-			address = this.hdWalletService.getAddress(
-				input.signatory.signingKey(),
-				input.signatory.path(),
-			);
+			address = this.hdWalletService.getAddress(input.signatory.signingKey(), input.signatory.path());
 		}
 
 		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
