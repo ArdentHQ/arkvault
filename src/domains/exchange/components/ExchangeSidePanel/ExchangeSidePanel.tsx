@@ -161,9 +161,9 @@ export const ExchangeSidePanel = ({
 
 		resetForm();
 
-		setActiveTab(Step.FormStep);
-
 		clearErrors();
+
+		setActiveTab(Step.FormStep);
 	};
 
 	const onMountChange = (mounted: boolean) => {
