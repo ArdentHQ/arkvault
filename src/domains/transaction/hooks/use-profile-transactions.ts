@@ -554,13 +554,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 
 		isFetchingUnconfirmed.current = false;
-	}, [
-		unconfirmedTransactionsService,
-		wallets,
-		addUnconfirmedTransactionFromApi,
-		cleanupUnconfirmedForAddresses,
-		getFlatUnconfirmedTransactions,
-	]);
+	}, [wallets]);
 
 	useEffect(() => {
 		if (!unconfirmedTransactionsService || wallets.length === 0) {
