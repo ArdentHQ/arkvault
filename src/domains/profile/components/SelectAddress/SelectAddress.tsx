@@ -83,7 +83,7 @@ export const SelectAddress = ({
 		if (showUserIcon) {
 			addons.end = {
 				content: (
-					<div className="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 dark:hover:text-white">
+					<div className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white">
 						<Icon name="User" size="lg" />
 					</div>
 				),
@@ -99,9 +99,9 @@ export const SelectAddress = ({
 				<button
 					data-testid="SelectAddress__wrapper"
 					className={cn(
-						"relative w-full rounded focus:ring-theme-primary-400 focus:ring-2 focus:outline-hidden",
-						{ 
-							"cursor-default": disabled
+						"focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden",
+						{
+							"cursor-default": disabled,
 						},
 					)}
 					type="button"
@@ -144,8 +144,8 @@ export const SelectAddress = ({
 				<button
 					data-testid="SelectAddress__wrapper_modern"
 					className={cn(
-						"relative w-full text-left rounded focus:ring-theme-primary-400 focus:ring-2 focus:outline-hidden",
-						{ 
+						"focus:ring-theme-primary-400 relative w-full rounded text-left focus:ring-2 focus:outline-hidden",
+						{
 							"cursor-default": disabled,
 							"cursor-pointer": !disabled,
 						},
@@ -154,10 +154,12 @@ export const SelectAddress = ({
 					onClick={() => setSearchWalletIsOpen(true)}
 					disabled={disabled}
 				>
-					<DetailWrapper label={t("COMMON.ADDRESSING")} >
+					<DetailWrapper label={t("COMMON.ADDRESSING")}>
 						<div className="space-y-3 sm:space-y-0">
-							<div className="flex gap-4 justify-between items-start w-full sm:justify-start">
-								<DetailTitle className="w-auto sm:min-w-[162px] text-left">{t("COMMON.FROM")}</DetailTitle>
+							<div className="flex w-full items-start justify-between gap-4 sm:justify-start">
+								<DetailTitle className="w-auto text-left sm:min-w-[162px]">
+									{t("COMMON.FROM")}
+								</DetailTitle>
 								<Address
 									address={selectedWallet?.address}
 									walletName={showWalletName ? alias : undefined}
@@ -169,8 +171,6 @@ export const SelectAddress = ({
 					</DetailWrapper>
 				</button>
 			)}
-
-
 
 			<SearchWallet
 				isOpen={searchWalletIsOpen}

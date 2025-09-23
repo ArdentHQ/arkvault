@@ -226,7 +226,7 @@ describe("SelectAddress", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		});
-		
+
 		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => {
