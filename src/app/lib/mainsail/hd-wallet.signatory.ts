@@ -1,4 +1,4 @@
-export class MnemonicWithDerivationPathSignatory {
+export class HDWalletSignatory {
 	readonly #signingKey: string;
 	readonly #path: string;
 

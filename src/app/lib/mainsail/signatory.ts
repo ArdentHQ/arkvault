@@ -9,7 +9,7 @@ import { LedgerSignatory } from "./ledger.signatory";
 import { MnemonicSignatory } from "./mnemonic.signatory";
 import { SecretSignatory } from "./secret.signatory";
 import { IdentityOptions } from "./services";
-import { MnemonicWithDerivationPathSignatory } from "@/app/lib/mainsail/mnemonic-with-derivation-path.signatory";
+import { HDWalletSignatory } from "@/app/lib/mainsail/hd-wallet.signatory";
 
 type SignatoryType =
 	| ConfirmationMnemonicSignatory
@@ -17,7 +17,7 @@ type SignatoryType =
 	| LedgerSignatory
 	| MnemonicSignatory
 	| SecretSignatory
-	| MnemonicWithDerivationPathSignatory;
+	| HDWalletSignatory;
 
 export class Signatory {
 	readonly #signatory: SignatoryType;
@@ -74,7 +74,7 @@ export class Signatory {
 			return this.#signatory.signingKey();
 		}
 
-		if (this.#signatory instanceof MnemonicWithDerivationPathSignatory) {
+		if (this.#signatory instanceof HDWalletSignatory) {
 			return this.#signatory.path();
 		}
 
@@ -98,7 +98,7 @@ export class Signatory {
 	}
 
 	public actsWithMnemonicWithDerivationPath(): boolean {
-		return this.#signatory instanceof MnemonicWithDerivationPathSignatory;
+		return this.#signatory instanceof HDWalletSignatory;
 	}
 
 	public actsWithConfirmationMnemonic(): boolean {
