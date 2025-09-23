@@ -13,6 +13,15 @@ const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, 
 	try {
 		const wif = await wallet.signingKey().get(password);
 
+		if (wallet.isHDWallet()) {
+			const account = HDWalletService.getAccount(
+				wif,
+				wallet.data().get(WalletData.DerivationPath) as string,
+			);
+
+			return account.address;
+		}
+
 		if (BIP39.validate(wif)) {
 			const { address } = new AddressService().fromMnemonic(wif);
 
