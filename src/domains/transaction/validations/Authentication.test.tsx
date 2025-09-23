@@ -53,7 +53,7 @@ describe("Authentication", () => {
 		fromMnemonicMock.mockRestore();
 	});
 
-	it("should validate HD mnemonic", async () => {
+	it("should validate BIP44 mnemonic", async () => {
 		const hdWalletMock = vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
 
 		const fromMnemonicMock = vi.spyOn(HDWalletService, "getAccount").mockReturnValue({ address: wallet.address() });
@@ -66,7 +66,7 @@ describe("Authentication", () => {
 		hdWalletMock.mockRestore();
 	});
 
-	it("should validate HD mnemonic with encryption", async () => {
+	it("should validate BIP44 mnemonic with encryption", async () => {
 		const bip44Wallet = await profile.walletFactory().fromMnemonicWithBIP44({
 			levels: { account: 0 },
 			mnemonic: MNEMONICS[1],
