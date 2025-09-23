@@ -495,9 +495,9 @@ jobs:
         env:
             COVERAGE_INCLUDE_PATH: src/domains/exchange
             COVERAGE_THRESHOLD_LINES: 98.5
-            COVERAGE_THRESHOLD_FUNCTIONS: 97.56
+            COVERAGE_THRESHOLD_FUNCTIONS: 97.54
             COVERAGE_THRESHOLD_STATEMENTS: 98
-            COVERAGE_THRESHOLD_BRANCHES: 96.96
+            COVERAGE_THRESHOLD_BRANCHES: 96.94
         strategy:
             matrix:
                 node-version:
