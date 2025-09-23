@@ -14,7 +14,7 @@ import {
 
 import { AddressService } from "./address.service";
 import { PublicKeyService } from "./public-key.service";
-import { HDWalletSignatory } from "@/app/lib/mainsail/hd-wallet.signatory";
+import { Bip44MnemonicSignatory } from "@/app/lib/mainsail/bip44-mnemonic.signatory";
 
 export class SignatoryService {
 	readonly #addressService: AddressService;
@@ -38,7 +38,7 @@ export class SignatoryService {
 
 	public async bip44Mnemonic(mnemonic: string, path: string): Promise<Signatory> {
 		return new Signatory(
-			new HDWalletSignatory({
+			new Bip44MnemonicSignatory({
 				signingKey: mnemonic,
 				path,
 			}),
