@@ -7,6 +7,7 @@ import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { DEFAULT_TRANSITION_DELAY_MS } from "@/app/components/SidePanel/SidePanel";
 
 export const Portfolio = () => {
 	const profile = useActiveProfile();
@@ -38,7 +39,12 @@ export const Portfolio = () => {
 				<CreateAddressesSidePanel
 					open={showCreateAddressPanel}
 					onOpenChange={setShowCreateAddressPanel}
-					onImportAddress={() => setShowImportAddressPanel(true)}
+					onImportAddress={() => {
+						setShowCreateAddressPanel(false)
+						setTimeout(() => {
+							setShowImportAddressPanel(true)
+						}, DEFAULT_TRANSITION_DELAY_MS)
+					}}
 				/>
 			</ResetWhenUnmounted>
 
