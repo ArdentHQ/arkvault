@@ -100,19 +100,6 @@ const getOrderByStr = ({ column, desc }: SortBy): string => {
 	return columnMap[column] + ":" + (desc ? "desc" : "asc");
 };
 
-const removeConfirmedUnconfirmedTransactions = (
-	confirmedTransactions: DTO.ExtendedConfirmedTransactionData[],
-	removeUnconfirmedTransaction: (hash: string) => void,
-) => {
-	const confirmedHashes = new Set(confirmedTransactions.map((tx) => tx.hash()));
-
-	return (unconfirmedHash: string) => {
-		if (confirmedHashes.has(unconfirmedHash)) {
-			removeUnconfirmedTransaction(unconfirmedHash);
-		}
-	};
-};
-
 const getBlockTime = (network: Network): number => {
 	const DEFAULT_BLOCK_TIME = 8_000; // Close to expected ARK block time
 
@@ -233,61 +220,63 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const allTransactions = useMemo(() => {
 		const walletAddresses = wallets.map((w) => w.address());
 		const walletNetworkIds = wallets.map((w) => w.networkId());
-
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
+
+		const confirmedByHash = new Map<string, DTO.ExtendedConfirmedTransactionData>();
+		transactions.forEach((tx) => confirmedByHash.set(tx.hash(), tx));
 
 		const flatUnconfirmed = getFlatUnconfirmedTransactions();
 
-		const signedTransactions = flatUnconfirmed
+		const pendingByHash = new Map<string, ExtendedSignedTransactionData>();
+		flatUnconfirmed
 			.filter(
 				(unconfirmedTransaction) =>
 					walletAddresses.includes(unconfirmedTransaction.walletAddress) &&
 					walletNetworkIds.includes(unconfirmedTransaction.networkId),
 			)
-			.map((tx): [SignedTransactionData, string] => [
-				new SignedTransactionData().configure(tx.transaction.signedData, tx.transaction.serialized),
-				tx.walletAddress,
-			])
-			.map(([transactionData, walletAddress]) => {
+			.forEach((tx) => {
+				const [transactionData, walletAddress] = [
+					new SignedTransactionData().configure(tx.transaction.signedData, tx.transaction.serialized),
+					tx.walletAddress,
+				] as const;
 				const wallet = wallets.find((wallet) => wallet.address() === walletAddress) as IReadWriteWallet;
-				return new ExtendedSignedTransactionData(transactionData, wallet);
-			})
-			.filter((transaction) => (hasAllSelected ? true : selectedTransactionTypes.includes(transaction.type())))
-			.filter((transaction) => {
-				if (activeMode === "sent") {
-					return walletAddresses.includes(transaction.from());
-				}
+				const pending = new ExtendedSignedTransactionData(transactionData, wallet);
 
-				if (activeMode === "received") {
-					return walletAddresses.includes(transaction.to());
-				}
+				const passesTypeFilter = hasAllSelected || selectedTransactionTypes.includes(pending.type());
+				const passesModeFilter =
+					activeMode === "all" ||
+					(activeMode === "sent" && walletAddresses.includes(pending.from())) ||
+					(activeMode === "received" && walletAddresses.includes(pending.to()));
 
-				return true;
+				if (passesTypeFilter && passesModeFilter) {
+					pendingByHash.set(pending.hash(), pending);
+				}
 			});
 
-		const combined: ExtendedTransactionDTO[] = [...signedTransactions, ...transactions];
+		const combined: ExtendedTransactionDTO[] = [];
+		const seenHashes = new Set<string>();
 
-		return combined.sort((a, b) => {
-			const aTimestamp = a.timestamp()!.toUNIX();
-			const bTimestamp = b.timestamp()!.toUNIX();
+		for (const [hash, pending] of pendingByHash) {
+			const confirmed = confirmedByHash.get(hash);
+			combined.push(confirmed || pending);
+			seenHashes.add(hash);
+		}
 
-			if (sortBy.column === "date") {
-				return sortBy.desc ? bTimestamp - aTimestamp : aTimestamp - bTimestamp;
-			}
-			if (sortBy.desc) {
-				const aIsSignedTransaction = a instanceof ExtendedSignedTransactionData;
-				const bIsSignedTransaction = b instanceof ExtendedSignedTransactionData;
-				/* istanbul ignore next -- @preserve */
-				if (aIsSignedTransaction && !bIsSignedTransaction) {
-					return -1;
+		for (const confirmed of transactions) {
+			if (!seenHashes.has(confirmed.hash())) {
+				const passesTypeFilter = hasAllSelected || selectedTransactionTypes.includes(confirmed.type());
+				const passesModeFilter =
+					activeMode === "all" ||
+					(activeMode === "sent" && walletAddresses.includes(confirmed.from())) ||
+					(activeMode === "received" && walletAddresses.includes(confirmed.to()));
+
+				if (passesTypeFilter && passesModeFilter) {
+					combined.push(confirmed);
 				}
-				if (!aIsSignedTransaction && bIsSignedTransaction) {
-					return 1;
-				}
 			}
+		}
 
-			return 0;
-		});
+		return combined;
 	}, [
 		transactions,
 		getFlatUnconfirmedTransactions,
@@ -358,13 +347,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return;
 		}
 
-		const checkForConfirmedTransactions = removeConfirmedUnconfirmedTransactions(
-			transactions,
-			removeUnconfirmedTransaction,
-		);
+		const confirmedHashes = new Set(transactions.map((tx) => tx.hash()));
 
 		for (const unconfirmedTx of flatUnconfirmed) {
-			checkForConfirmedTransactions(unconfirmedTx.transaction.signedData.hash);
+			if (confirmedHashes.has(unconfirmedTx.transaction.signedData.hash)) {
+				removeUnconfirmedTransaction(unconfirmedTx.transaction.signedData.hash);
+			}
 		}
 	}, [transactions, getFlatUnconfirmedTransactions, removeUnconfirmedTransaction]);
 
@@ -505,19 +493,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}));
 	}, [wallets, activeMode, activeTransactionType, selectedTransactionTypes, fetchTransactions, transactions]);
 
-	const isFetchingUnconfirmed = useRef(false);
 	const fetchUnconfirmedTransactions = useCallback(async () => {
 		/* istanbul ignore next -- @preserve */
 		if (!unconfirmedTransactionsService || wallets.length === 0) {
 			return;
 		}
 
-		if (isFetchingUnconfirmed.current) {
-			return;
-		}
-
 		try {
-			isFetchingUnconfirmed.current = true;
 			const selectedAddresses = wallets.map((w) => w.address());
 			const response = await unconfirmedTransactionsService.listUnconfirmed({
 				address: selectedAddresses,
@@ -552,9 +534,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		} catch (error) {
 			console.error("Failed to fetch unconfirmed transactions:", error);
 		}
-
-		isFetchingUnconfirmed.current = false;
-	}, [wallets]);
+	}, [
+		unconfirmedTransactionsService,
+		wallets,
+		addUnconfirmedTransactionFromApi,
+		cleanupUnconfirmedForAddresses,
+		getFlatUnconfirmedTransactions,
+	]);
 
 	useEffect(() => {
 		if (!unconfirmedTransactionsService || wallets.length === 0) {
