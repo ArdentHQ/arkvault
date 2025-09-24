@@ -33,6 +33,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                data-testid="DetailTitle"
               >
                  Address 
               </div>
@@ -114,6 +115,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                data-testid="DetailTitle"
               >
                  Name
               </div>
@@ -214,6 +216,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                data-testid="DetailTitle"
               >
                  Address 
               </div>
@@ -295,6 +298,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
             >
               <div
                 class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                data-testid="DetailTitle"
               >
                  Name
               </div>
