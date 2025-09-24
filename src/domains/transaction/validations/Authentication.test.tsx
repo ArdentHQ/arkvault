@@ -1,5 +1,5 @@
 import { BIP39 } from "@ardenthq/arkvault-crypto";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { authentication } from "./Authentication";
 import { env, MNEMONICS } from "@/utils/testing-library";
@@ -16,10 +16,12 @@ vi.mock("@/utils/debounce", () => ({
 }));
 
 describe("Authentication", () => {
+	let profile: Contracts.IProfile;
+
 	beforeAll(async () => {
 		translationMock = vi.fn((index18nString: string) => index18nString);
 
-		const profile = env.profiles().first();
+		profile = env.profiles().first();
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -51,7 +53,7 @@ describe("Authentication", () => {
 		fromMnemonicMock.mockRestore();
 	});
 
-	it("should validate mnemonic with derivation path", async () => {
+	it("should validate BIP44 mnemonic", async () => {
 		const hdWalletMock = vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
 
 		const fromMnemonicMock = vi.spyOn(HDWalletService, "getAccount").mockReturnValue({ address: wallet.address() });
@@ -62,6 +64,19 @@ describe("Authentication", () => {
 
 		fromMnemonicMock.mockRestore();
 		hdWalletMock.mockRestore();
+	});
+
+	it("should validate BIP44 mnemonic with encryption", async () => {
+		const bip44Wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic: MNEMONICS[1],
+			password: "password",
+		});
+
+		const mnemonic = authentication(translationMock).encryptionPassword(bip44Wallet);
+
+		const result = await mnemonic.validate("password");
+		expect(result).toBe(true);
 	});
 
 	it("should fail mnemonic validation", async () => {
