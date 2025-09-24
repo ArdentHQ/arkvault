@@ -3,9 +3,10 @@ import { Services } from "@/app/lib/mainsail";
 import { IProfile, IReadWriteWallet, ITransactionAggregate } from "./contracts.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 type HistoryMethod = string;
-type HistoryWallet = ExtendedConfirmedTransactionDataCollection;
+type HistoryWallet = ExtendedConfirmedTransactionDataCollection|UnconfirmedTransactionDataCollection;
 
 export class TransactionAggregate implements ITransactionAggregate {
 	readonly #profile: IProfile;
@@ -28,6 +29,63 @@ export class TransactionAggregate implements ITransactionAggregate {
 	/** {@inheritDoc ITransactionAggregate.received} */
 	public async received(query: AggregateQuery = {}): Promise<ExtendedConfirmedTransactionDataCollection> {
 		return this.#aggregate("received", query);
+	}
+
+	public async unconfirmed(query: AggregateQuery): Promise<UnconfirmedTransactionDataCollection> {
+		const syncedWallets: IReadWriteWallet[] = this.#getWallets(query);
+
+		if (syncedWallets.length === 0) {
+			return new UnconfirmedTransactionDataCollection([], {
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			});
+		}
+
+		const method = "unconfirmed";
+
+		const historyRecords = this.#history[method] ?? {};
+
+		const historyKeys: string[] = [];
+
+		for (const syncedWallet of syncedWallets) {
+			historyKeys.push(syncedWallet.address());
+		}
+
+		// to sort wallet addresses
+		historyKeys.sort((a, b) => a.localeCompare(b));
+
+		query.orderBy && historyKeys.push(query.orderBy);
+		query.limit && historyKeys.push(query.limit.toString());
+
+		if (query.types && query.types.length > 0) {
+			historyKeys.push(query.types.join(":"));
+		}
+
+		const historyKey = historyKeys.join("-");
+
+		const historyRecord = historyRecords[historyKey];
+
+		if (historyRecord && historyRecord.nextPage()) {
+			query = { ...query, cursor: historyRecord.nextPage() };
+		}
+
+		let response: UnconfirmedTransactionDataCollection;
+
+		try {
+			response = await syncedWallets[0].transactionIndex()[method](query);
+		} catch {
+			return new UnconfirmedTransactionDataCollection([], {
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			});
+		}
+
+		historyRecords[historyKey] = response;
+		return response;
 	}
 
 	/** {@inheritDoc ITransactionAggregate.hasMore} */
