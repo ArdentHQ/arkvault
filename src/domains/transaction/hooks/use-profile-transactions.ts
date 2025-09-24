@@ -182,19 +182,21 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return hasMorePages;
 	};
 
-	const unconfirmedTransactions = useMemo(() => {
-		return wallets
-			.map((wallet) =>
-				(allUnconfirmedTransactions[wallet.networkId()]?.[wallet.address()] ?? []).map(
-					(tx) =>
-						new ExtendedSignedTransactionData(
-							new SignedTransactionData().configure(tx.signedData, tx.serialized),
-							wallet,
-						),
-				),
-			)
-			.flat();
-	}, [allUnconfirmedTransactions, wallets]);
+	const unconfirmedTransactions = useMemo(
+		() =>
+			wallets
+				.map((wallet) =>
+					(allUnconfirmedTransactions[wallet.networkId()]?.[wallet.address()] ?? []).map(
+						(tx) =>
+							new ExtendedSignedTransactionData(
+								new SignedTransactionData().configure(tx.signedData, tx.serialized),
+								wallet,
+							),
+					),
+				)
+				.flat(),
+		[allUnconfirmedTransactions, wallets],
+	);
 
 	const allTransactions = useMemo(() => {
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
