@@ -106,7 +106,9 @@ describe("SummaryStep", () => {
 		expect(singleWallet.length).toBe(1);
 
 		// Verify only one wallet address is shown
-		expect(screen.getByText(singleWallet[0].address)).toBeInTheDocument();
+		expect(screen.getAllByText(singleWallet[0].address)).toHaveLength(2);
+
+		expect(screen.getByTestId("SingleImport__container")).toBeInTheDocument();
 
 		// Should show only one address element
 		const addressElements = screen.getAllByTestId("Address__address");

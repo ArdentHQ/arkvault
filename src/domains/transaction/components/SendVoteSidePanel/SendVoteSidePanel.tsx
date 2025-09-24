@@ -5,10 +5,10 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import { FormStep } from "@/domains/transaction/pages/SendVote/FormStep";
-import { VoteLedgerReview } from "@/domains/transaction/pages/SendVote/LedgerReview";
-import { ReviewStep } from "@/domains/transaction/pages/SendVote/ReviewStep";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { FormStep } from "@/domains/transaction/components/SendVoteSidePanel/FormStep";
+import { VoteLedgerReview } from "@/domains/transaction/components/SendVoteSidePanel/LedgerReview";
+import { ReviewStep } from "@/domains/transaction/components/SendVoteSidePanel/ReviewStep";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
@@ -17,7 +17,7 @@ import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
-import { handleBroadcastError } from "@/domains/transaction/utils";
+import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/transaction/utils";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { toasts } from "@/app/services";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
@@ -56,7 +56,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const { votes, unvotes, setUnvotes, isLoading, selectedWallet } = useVoteFormContext();
 
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const walletFromUrl = useActiveWalletWhenNeeded(false);
 	const initialStep = useMemo(() => (walletFromUrl ? Step.ReviewStep : Step.FormStep), [walletFromUrl]);
@@ -356,7 +356,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					await persist();
 
-					addPendingTransaction(transaction);
+					addUnconfirmedTransactionFromSigned(transaction);
 
 					setTransaction(transaction);
 
@@ -410,7 +410,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					await persist();
 
-					addPendingTransaction(voteResult.transaction);
+					addUnconfirmedTransactionFromSigned(voteResult.transaction);
 
 					setTransaction(voteResult.transaction);
 
@@ -448,7 +448,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 				await persist();
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 
@@ -504,7 +504,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		}
 
 		if (activeTab === Step.AuthenticationStep) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+			return getAuthenticationStepSubtitle({ t, wallet: activeWallet });
 		}
 
 		return;
@@ -514,9 +514,9 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		if (activeTab === Step.SummaryStep) {
 			return (
 				<ThemeIcon
-					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
 					dimensions={[24, 24]}
 					className={classNames({
 						"text-theme-primary-600": !isConfirmed,
@@ -564,6 +564,8 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		void handleSubmit(submitForm)();
 	};
 
+	const preventAccidentalClosing = activeTab !== Step.FormStep;
+
 	return (
 		<SidePanel
 			open={open}
@@ -577,8 +579,9 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			activeStep={activeIndex}
 			onBack={handleBack}
 			isLastStep={activeTab === Step.SummaryStep}
-			disableOutsidePress
-			disableEscapeKey={isSubmitting}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={isSubmitting || preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>

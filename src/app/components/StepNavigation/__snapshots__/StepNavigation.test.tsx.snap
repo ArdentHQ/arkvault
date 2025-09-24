@@ -87,7 +87,7 @@ exports[`StepNavigation > should not render back button if on last step 1`] = `
       <div
         class="flex items-center gap-2"
       >
-        Back to Wallet
+        Back to Address
       </div>
     </button>
   </div>
@@ -335,7 +335,7 @@ exports[`StepNavigation > should render back to wallet button if on last step 1`
       <div
         class="flex items-center gap-2"
       >
-        Back to Wallet
+        Back to Address
       </div>
     </button>
   </div>

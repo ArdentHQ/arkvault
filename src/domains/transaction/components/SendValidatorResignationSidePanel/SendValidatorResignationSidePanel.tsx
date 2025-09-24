@@ -2,9 +2,9 @@ import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { FormStep } from "@/domains/transaction/pages/SendValidatorResignation/FormStep";
-import { ReviewStep } from "@/domains/transaction/pages/SendValidatorResignation/ReviewStep";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -12,7 +12,7 @@ import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { handleBroadcastError } from "@/domains/transaction/utils";
+import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
@@ -48,7 +48,7 @@ export const SendValidatorResignationSidePanel = ({
 
 	const { gasLimit, gasPrice } = watch();
 	const { common } = useValidation();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -137,7 +137,7 @@ export const SendValidatorResignationSidePanel = ({
 
 			const transactionData = activeWallet.transaction().transaction(signedTransactionId);
 
-			addPendingTransaction(transactionData);
+			addUnconfirmedTransactionFromSigned(transactionData);
 			setTransaction(transactionData);
 
 			handleNext();
@@ -177,8 +177,8 @@ export const SendValidatorResignationSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (activeTab === Step.AuthenticationStep && !activeWallet?.isLedger()) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		if (activeTab === Step.AuthenticationStep) {
+			return getAuthenticationStepSubtitle({ t, wallet: activeWallet });
 		}
 
 		if (activeTab === Step.FormStep) {
@@ -259,6 +259,8 @@ export const SendValidatorResignationSidePanel = ({
 		[resetForm],
 	);
 
+	const preventAccidentalClosing = activeTab !== Step.FormStep;
+
 	return (
 		<SidePanel
 			open={open}
@@ -272,8 +274,9 @@ export const SendValidatorResignationSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === Step.SummaryStep}
-			disableOutsidePress
-			disableEscapeKey={isSubmitting}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={isSubmitting || preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>

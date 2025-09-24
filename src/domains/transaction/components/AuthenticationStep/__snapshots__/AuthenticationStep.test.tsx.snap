@@ -29,7 +29,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your mnemonic passphrase to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
             class="pr-3"
           >
             <span
-              data-errortext="This mnemonic does not correspond to your wallet"
+              data-errortext="This mnemonic does not correspond to your address"
               data-testid="Input__error"
             >
               <div
@@ -190,7 +190,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your mnemonic passphrase to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC
         </div>
       </div>
     </div>
@@ -301,7 +301,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your secret to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET
         </div>
       </div>
     </div>
@@ -338,7 +338,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
             class="pr-3"
           >
             <span
-              data-errortext="This secret does not correspond to your wallet"
+              data-errortext="This secret does not correspond to your address"
               data-testid="Input__error"
             >
               <div
@@ -459,7 +459,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -517,7 +517,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -599,7 +599,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -656,7 +656,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -713,7 +713,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -747,7 +747,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -903,7 +903,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
             class="pr-3"
           >
             <span
-              data-errortext="This mnemonic does not correspond to your wallet"
+              data-errortext="This mnemonic does not correspond to your address"
               data-testid="Input__error"
             >
               <div
@@ -1175,7 +1175,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
             class="pr-3"
           >
             <span
-              data-errortext="This secret does not correspond to your wallet"
+              data-errortext="This secret does not correspond to your address"
               data-testid="Input__error"
             >
               <div
@@ -1296,7 +1296,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -1456,7 +1456,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -1640,7 +1640,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1697,7 +1697,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1754,7 +1754,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1788,7 +1788,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div

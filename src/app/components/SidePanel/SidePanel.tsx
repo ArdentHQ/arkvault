@@ -2,6 +2,7 @@ import {
 	FloatingFocusManager,
 	FloatingOverlay,
 	FloatingPortal,
+	OpenChangeReason,
 	useClick,
 	useDismiss,
 	useFloating,
@@ -9,7 +10,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX } from "react";
+import React, { useEffect, useRef, JSX, useCallback, useState, useContext } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -36,7 +37,17 @@ interface SidePanelProps {
 	isLastStep?: boolean;
 	disableOutsidePress?: boolean;
 	disableEscapeKey?: boolean;
+	shakeWhenClosing?: boolean;
+	preventClosing?: boolean;
 }
+
+interface SidePanelContextValue {
+	setHasModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SidePanelContext = React.createContext<SidePanelContextValue | undefined>(undefined);
+
+export const useSidePanel = (): SidePanelContextValue | undefined => useContext(SidePanelContext);
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
 	<div
@@ -67,18 +78,51 @@ export const SidePanel = ({
 	isLastStep,
 	disableOutsidePress = false,
 	disableEscapeKey = false,
+	shakeWhenClosing = false,
+	preventClosing = false,
 }: SidePanelProps): JSX.Element => {
 	const popStateHandlerRef = useRef<() => void>(() => {});
+
+	const [shake, setShake] = useState(false);
+	const [hasModalOpened, setHasModalOpened] = useState(false);
+
+	const shouldPreventClosing = useCallback(
+		(reason?: OpenChangeReason) =>
+			preventClosing ||
+			(disableOutsidePress && reason === "outside-press") ||
+			(disableEscapeKey && reason === "escape-key"),
+		[preventClosing, shakeWhenClosing],
+	);
+
+	const toggleOpen = useCallback(
+		(open: boolean = false, _?: Event, reason?: OpenChangeReason) => {
+			if (open === false && shakeWhenClosing && shouldPreventClosing(reason)) {
+				setShake(true);
+				setTimeout(() => setShake(false), 900);
+
+				return;
+			}
+
+			onOpenChange(open);
+		},
+		[onOpenChange, shakeWhenClosing, shouldPreventClosing],
+	);
+
 	const { refs, context } = useFloating({
-		onOpenChange,
+		onOpenChange: toggleOpen,
 		open,
 	});
 
 	const click = useClick(context);
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
-		escapeKey: !disableEscapeKey,
-		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
+		enabled: !hasModalOpened,
+		// when shakeWhenClosing is true, we want to allow the escape key to try to close the side panel so we can show
+		// the shake animation, we are going to prevent closing on the toggleOpen function
+		escapeKey: !disableEscapeKey || shakeWhenClosing,
+		outsidePress:
+			(disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify")) ||
+			shakeWhenClosing,
 		outsidePressEvent: "pointerdown",
 	});
 
@@ -116,10 +160,10 @@ export const SidePanel = ({
 			if (hasSteps && typeof onBack === "function" && !isLastStep) {
 				onBack();
 			} else {
-				onOpenChange(false);
+				toggleOpen();
 			}
 		};
-	}, [hasSteps, onBack, onOpenChange, isLastStep]);
+	}, [hasSteps, onBack, toggleOpen, isLastStep]);
 
 	useEffect(() => {
 		if (open && hasSteps) {
@@ -149,9 +193,9 @@ export const SidePanel = ({
 	}, [open, popStateHandlerRef]);
 
 	return (
-		<>
-			<FloatingPortal>
-				{isMounted && (
+		<FloatingPortal>
+			{isMounted && (
+				<SidePanelContext.Provider value={{ setHasModalOpened }}>
 					<>
 						<div className="dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
 						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
@@ -164,7 +208,9 @@ export const SidePanel = ({
 								>
 									<div
 										style={{ ...styles }}
-										className={cn("fixed top-0 right-0 w-full md:w-[608px]", className)}
+										className={cn("fixed top-0 right-0 w-full md:w-[608px]", className, {
+											"animate-shake": shake,
+										})}
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
@@ -202,7 +248,7 @@ export const SidePanel = ({
 																	data-testid="SidePanel__close-button"
 																	variant="transparent"
 																	size="md"
-																	onClick={() => onOpenChange(false)}
+																	onClick={() => toggleOpen()}
 																	className="h-6 w-6 p-0"
 																>
 																	<Icon name="Cross" />
@@ -254,8 +300,8 @@ export const SidePanel = ({
 							</FloatingFocusManager>
 						</FloatingOverlay>
 					</>
-				)}
-			</FloatingPortal>
-		</>
+				</SidePanelContext.Provider>
+			)}
+		</FloatingPortal>
 	);
 };

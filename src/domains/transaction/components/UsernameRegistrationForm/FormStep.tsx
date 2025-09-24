@@ -2,7 +2,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
 
 import { Alert } from "@/app/components/Alert";
-import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useFormContext } from "react-hook-form";
@@ -97,7 +97,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="senderAddress">
 					<SelectAddress
-						showWalletAvatar={false}
 						wallet={
 							wallet
 								? {

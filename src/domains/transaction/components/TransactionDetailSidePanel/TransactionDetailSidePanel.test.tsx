@@ -137,10 +137,13 @@ describe("TransactionDetailModal", () => {
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore
-					new ReadOnlyWallet({
-						address: vote,
-						username: `validator-${index}`,
-					}),
+					new ReadOnlyWallet(
+						{
+							address: vote,
+							username: `validator-${index}`,
+						},
+						profile,
+					),
 			),
 		);
 
@@ -196,10 +199,13 @@ describe("TransactionDetailModal", () => {
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore
-					new ReadOnlyWallet({
-						address: vote,
-						username: `validator-${index}`,
-					}),
+					new ReadOnlyWallet(
+						{
+							address: vote,
+							username: `validator-${index}`,
+						},
+						profile,
+					),
 			),
 		);
 

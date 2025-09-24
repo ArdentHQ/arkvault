@@ -83,7 +83,7 @@ describe("Authentication", () => {
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 
 		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[1])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 	});
 
@@ -95,7 +95,7 @@ describe("Authentication", () => {
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 
 		await expect(mnemonic.validate.matchSenderAddress("invalid mnemonic")).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 
 		fromMnemonicMock.mockRestore();
@@ -116,13 +116,13 @@ describe("Authentication", () => {
 	it("should fail secret validation if the secret belongs to another address", async () => {
 		const secret = authentication(translationMock).secret(wallet);
 
-		await expect(secret.validate("secret1")).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+		await expect(secret.validate("secret1")).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 	});
 
 	it("should fail secret validation if a mnemonic is used", async () => {
 		const secret = authentication(translationMock).secret(wallet);
 
-		await expect(secret.validate(MNEMONICS[0])).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+		await expect(secret.validate(MNEMONICS[0])).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 	});
 
 	it("should validate encryption password with BIP39", async () => {
@@ -172,7 +172,7 @@ describe("Authentication", () => {
 		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
 
 		await expect(authPrivateKey.validate(privateKey)).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_ADDRESS",
 		);
 	});
 
@@ -180,11 +180,11 @@ describe("Authentication", () => {
 		const encryptionPassword = authentication(translationMock).encryptionPassword(walletWithPassword);
 
 		await expect(encryptionPassword.validate(walletWithPassword.address())).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_ADDRESS",
 		);
 
 		await expect(encryptionPassword.validate("wrong password")).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_ADDRESS",
 		);
 	});
 
@@ -204,7 +204,7 @@ describe("Authentication", () => {
 		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet);
 
 		expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 
 		secondMnemonicMock.mockRestore();
@@ -217,7 +217,7 @@ describe("Authentication", () => {
 		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet);
 
 		expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 
 		secondMnemonicMock.mockRestore();
@@ -239,7 +239,7 @@ describe("Authentication", () => {
 		const secondSecret = authentication(translationMock).secondSecret(wallet);
 
 		expect(secondSecret.validate.matchSenderPublicKey("secret")).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS",
 		);
 
 		secondSecretMock.mockRestore();
@@ -252,7 +252,7 @@ describe("Authentication", () => {
 		const secondSecret = authentication(translationMock).secondSecret(wallet);
 
 		expect(secondSecret.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS",
 		);
 
 		secondSecretMock.mockRestore();

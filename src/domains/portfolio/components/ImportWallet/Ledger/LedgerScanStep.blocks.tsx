@@ -74,7 +74,7 @@ export const AddressMobileItem = ({
 				{index === 0 && (
 					<AddressTableLoaderOverlay>
 						<Trans
-							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
+							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_ADDRESSES"
 							values={{ count: 5 }}
 						/>
 					</AddressTableLoaderOverlay>

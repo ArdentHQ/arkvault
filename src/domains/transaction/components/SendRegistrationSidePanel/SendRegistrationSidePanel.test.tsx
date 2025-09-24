@@ -26,10 +26,12 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { LedgerTransportFactory } from "@/app/contexts";
-import { vi } from "vitest";
+import { afterAll, vi } from "vitest";
+import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
+let useSearchParamsMock;
 const passphrase = getDefaultMainsailWalletMnemonic();
 
 vi.mock("@/utils/delay", () => ({
@@ -71,6 +73,8 @@ const signedTransactionMock = {
 		`https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.hash}`,
 	fee: () => BigNumber.make(107),
 	from: () => ValidatorRegistrationFixture.data.from,
+	gasLimit: () => ValidatorRegistrationFixture.data.gasLimit,
+	gasUsed: () => ValidatorRegistrationFixture.data.gas,
 	hash: () => ValidatorRegistrationFixture.data.hash,
 	isConfirmed: () => false,
 	isMultiPayment: () => false,
@@ -156,6 +160,10 @@ const withKeyboard = "with keyboard";
 
 describe("SendRegistrationSidePanel", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		await env.profiles().restore(profile);
@@ -210,6 +218,10 @@ describe("SendRegistrationSidePanel", () => {
 				ValidatorRegistrationFixture,
 			),
 		);
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should handle registrationType param (%s)", async () => {
@@ -443,7 +455,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		expect(screen.getByTestId("Input__error")).toHaveAttribute(
 			"data-errortext",
-			"This mnemonic does not correspond to your wallet",
+			"This mnemonic does not correspond to your address",
 		);
 
 		actsWithMnemonicMock.mockRestore();

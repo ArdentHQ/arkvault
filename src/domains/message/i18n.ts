@@ -4,12 +4,6 @@ export const translations = {
 	},
 
 	PAGE_SIGN_MESSAGE: {
-		AUTHENTICATION_STEP: {
-			DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to sign the message.",
-			DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to sign the message.",
-			DESCRIPTION_SECRET: "Enter your secret to sign the message.",
-		},
-
 		COPY_JSON: "Copy JSON",
 
 		ERROR_STEP: {
@@ -24,7 +18,6 @@ export const translations = {
 			DESCRIPTION_SECRET: "Provide a message below and sign with your secret.",
 			DESCRIPTION_SELECT_WALLET: "Select an address and sign.",
 			JSON_STRING: "JSON String",
-			SELECT_ADDRESS_DESCRIPTION: "Find and select the address from your wallets.",
 			SELECT_ADDRESS_TITLE: "Select Address",
 			SIGNATURE_JSON: "Signature (JSON)",
 			TITLE: "Sign Message",

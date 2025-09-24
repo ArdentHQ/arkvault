@@ -38,9 +38,13 @@ export const Dashboard = ({
 	>(undefined);
 	const [showSendUsernameResignationPanel, setShowSendUsernameResignationPanel] = useState(false);
 	const [showSendValidatorResignationPanel, setShowSendValidatorResignationPanel] = useState(false);
+
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
 			setShowSignMessagePanel(true);
+		},
+		onTransfer: () => {
+			setShowSendTransferPanel(true);
 		},
 	});
 
@@ -128,8 +132,6 @@ export const Dashboard = ({
 						onUpdate={setIsUpdatingWallet}
 						onCreateAddress={onCreateAddress}
 						onImportAddress={onImportAddress}
-						onSignMessage={setShowSignMessagePanel}
-						onSendTransfer={setShowSendTransferPanel}
 						onSendRegistration={setShowSendRegistrationPanel}
 						onSendUsernameResignation={setShowSendUsernameResignationPanel}
 						onSendValidatorResignation={setShowSendValidatorResignationPanel}

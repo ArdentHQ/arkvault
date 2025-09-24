@@ -122,7 +122,7 @@ describe("AddressesTable", () => {
 	it("should show loading state", () => {
 		render(<AddressesTable {...defaultProps} isLoading={true} />);
 
-		expect(screen.getByText(/Loading Addresses/)).toBeInTheDocument();
+		expect(screen.getAllByText(/Loading Addresses/)).toHaveLength(2);
 	});
 
 	it("should show select all as checked when all addresses are selected", () => {

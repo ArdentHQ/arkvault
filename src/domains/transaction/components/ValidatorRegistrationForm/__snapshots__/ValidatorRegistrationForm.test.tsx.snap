@@ -54,7 +54,7 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-y-0 flex items-center border border-transparent right-13 left-4"
+              class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
             >
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
