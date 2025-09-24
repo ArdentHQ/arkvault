@@ -27,16 +27,20 @@ const getNextUpdateDelay = (isoDate: string): number | null => {
 	const hour = 60 * minute;
 	const day = 24 * hour;
 
+	// If less than 1 minute old: wait until exactly 1 minute has passed
+	// e.g., if 2 seconds old, wait 58 more seconds to show "1 minute ago"
 	if (elapsed < minute) {
 		return minute - elapsed;
 	}
+	// If less than 1 hour old: update at the next minute boundary
 	if (elapsed < hour) {
 		return minute - (elapsed % minute);
 	}
+	// If less than 1 day old: update at the next hour boundary
 	if (elapsed < day) {
 		return hour - (elapsed % hour);
 	}
-
+	// After 1 day: stop updating (shows "1 day ago", "2 days ago", etc.)
 	return null;
 };
 
