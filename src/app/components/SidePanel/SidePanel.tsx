@@ -18,7 +18,7 @@ import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
 
-export const DEFAULT_TRANSITION_DELAY_MS = 350
+export const DEFAULT_TRANSITION_DELAY_MS = 350;
 
 interface SidePanelProps {
 	children: React.ReactNode;

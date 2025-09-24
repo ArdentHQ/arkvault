@@ -40,10 +40,10 @@ export const Portfolio = () => {
 					open={showCreateAddressPanel}
 					onOpenChange={setShowCreateAddressPanel}
 					onImportAddress={() => {
-						setShowCreateAddressPanel(false)
+						setShowCreateAddressPanel(false);
 						setTimeout(() => {
-							setShowImportAddressPanel(true)
-						}, DEFAULT_TRANSITION_DELAY_MS)
+							setShowImportAddressPanel(true);
+						}, DEFAULT_TRANSITION_DELAY_MS);
 					}}
 				/>
 			</ResetWhenUnmounted>
