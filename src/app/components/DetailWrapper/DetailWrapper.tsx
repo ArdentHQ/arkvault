@@ -67,6 +67,7 @@ export const DetailTitle = ({ children, className }: { children: ReactNode; clas
 			"no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5",
 			className,
 		)}
+		data-testid="DetailTitle"
 	>
 		{children}
 	</div>
