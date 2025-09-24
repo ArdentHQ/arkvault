@@ -24,6 +24,7 @@ type SelectAddressProperties = {
 	showWalletName?: boolean;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	inputClassName?: string;
+	labelClassName?: string;
 	onChange?: (address: string) => void;
 	ref?: React.Ref<HTMLInputElement>;
 	variant?: "default" | "modern";
@@ -38,6 +39,7 @@ export const SelectAddress = ({
 	showUserIcon = true,
 	showWalletName = true,
 	inputClassName,
+	labelClassName,
 	onChange,
 	title,
 	description,
@@ -157,7 +159,7 @@ export const SelectAddress = ({
 					<DetailWrapper label={t("COMMON.ADDRESSING")}>
 						<div className="space-y-3 sm:space-y-0">
 							<div className="flex w-full items-start justify-between gap-4 sm:justify-start">
-								<DetailTitle className="w-auto text-left sm:min-w-[162px]">
+								<DetailTitle className={cn("w-auto text-left sm:min-w-[162px]", labelClassName)}>
 									{t("COMMON.FROM")}
 								</DetailTitle>
 								<Address
