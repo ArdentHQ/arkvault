@@ -239,4 +239,19 @@ describe("SelectAddress", () => {
 
 		expect(screen.queryByTestId("Address__alias")).not.toBeInTheDocument();
 	});
+
+	it("should render modern variant with label class name", () => {
+		render(
+			<SelectAddress
+				variant="modern"
+				wallets={wallets}
+				profile={profile}
+				labelClassName="w-auto sm:min-w-[162px]"
+			/>,
+		);
+
+		expect(screen.getByTestId("SelectAddress__wrapper_modern")).toBeInTheDocument();
+
+		expect(screen.getByTestId("DetailTitle")).toHaveClass("w-auto sm:min-w-[162px]");
+	});
 });
