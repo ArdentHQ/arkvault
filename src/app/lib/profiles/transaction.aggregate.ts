@@ -74,6 +74,7 @@ export class TransactionAggregate implements ITransactionAggregate {
 		let response: UnconfirmedTransactionDataCollection;
 
 		try {
+			// @ts-expect-error ignore type error
 			response = await syncedWallets[0].transactionIndex()[method](query);
 		} catch {
 			return new UnconfirmedTransactionDataCollection([], {
