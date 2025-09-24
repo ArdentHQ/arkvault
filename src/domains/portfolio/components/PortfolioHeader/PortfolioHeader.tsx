@@ -207,7 +207,7 @@ export const PortfolioHeader = ({
 											variant="outline"
 											className="border py-0.5 uppercase"
 										>
-											{t("COMMON.BUSINESS")}
+											{wallet.accountName()}
 										</Label>
 									)}
 									{allWallets.length > 1 && (

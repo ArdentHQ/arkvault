@@ -175,7 +175,7 @@ export const AddressRow = ({
 									className="border py-0.5 uppercase"
 									data-testid="hd-wallet-label"
 								>
-									{t("COMMON.BUSINESS")}
+									{wallet.accountName()}
 								</Label>
 							)}
 						</div>
