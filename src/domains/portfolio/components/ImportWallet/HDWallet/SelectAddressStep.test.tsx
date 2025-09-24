@@ -1,47 +1,49 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import React from "react";
+import { ADDRESSES_PER_BATCH, AddressesTable, SelectAddressStep } from "./SelectAddressStep";
 import { FormProvider, useForm } from "react-hook-form";
-import userEvent from "@testing-library/user-event";
-import { SelectAddressStep, AddressesTable, ADDRESSES_PER_BATCH } from "./SelectAddressStep";
-import { AddressData } from "./HDWalletsTabs.contracts";
-import { Networks } from "@/app/lib/mainsail";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import {
 	env,
+	getDefaultMainsailWalletMnemonic,
+	getMainsailProfileId,
 	render,
 	screen,
 	waitFor,
-	getMainsailProfileId,
-	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
+
+import { AddressData } from "./HDWalletsTabs.contracts";
 import { Contracts } from "@/app/lib/profiles";
+import { Networks } from "@/app/lib/mainsail";
+import React from "react";
+import userEvent from "@testing-library/user-event";
 
 const fixtureProfileId = getMainsailProfileId();
 const route = `/profiles/${fixtureProfileId}/dashboard`;
 
 const mnemonic = getDefaultMainsailWalletMnemonic();
+const baseDerivationPath = "m/44'/1'/0'/0"; // todo: 86dxuqw2q
 
 const getAddressCheckboxes = () => screen.getAllByTestId("SelectAddressStep__checkbox-row");
 
-const addressIndex0 = "0xe37F40bC165c670Eb50367C43f5581cFDA897320";
+const addressIndex0 = "0x715Ab07Cf7EbA2F069d10d368c3dB4158DC9CFfe"; // "0xe37F40bC165c670Eb50367C43f5581cFDA897320"; todo: 86dxuqw2q
 
 const mockAddresses: AddressData[] = [
 	{
 		address: addressIndex0,
 		balance: 100,
 		levels: { account: 0, addressIndex: 0, change: 0 },
-		path: "m/44'/111'/0'/0/0",
+		path: `${baseDerivationPath}/0`,
 	},
 	{
-		address: "0x27bFB53D7D43Fb438B4C6fF4965A2532a6403CCc",
+		address: "0xC2803C4B88d67a394322233B13483dD0f0838090", // "0x27bFB53D7D43Fb438B4C6fF4965A2532a6403CCc", todo: 86dxuqw2q
 		balance: 250,
 		levels: { account: 0, addressIndex: 1, change: 0 },
-		path: "m/44'/111'/0'/0/1",
+		path: `${baseDerivationPath}/1`,
 	},
 	{
-		address: "0x8C400C31e1b256c90C9DA1068AbaF775E6aEe6A6",
+		address: "0xaDa1bD8aBdaC28158AFE3A142466e5b9e5152c68", // "0x8C400C31e1b256c90C9DA1068AbaF775E6aEe6A6", todo: 86dxuqw2q
 		balance: 0,
 		levels: { account: 0, addressIndex: 2, change: 0 },
-		path: "m/44'/111'/0'/0/2",
+		path: `${baseDerivationPath}/2`,
 	},
 ];
 
@@ -96,7 +98,7 @@ describe("AddressesTable", () => {
 	});
 
 	it("should show selected state correctly", () => {
-		const isSelected = vi.fn().mockImplementation((address) => address.path === "m/44'/111'/0'/0/0");
+		const isSelected = vi.fn().mockImplementation((address) => address.path === `${baseDerivationPath}/0`);
 
 		render(<AddressesTable {...defaultProps} isSelected={isSelected} selectedWallets={[mockAddresses[0]]} />);
 
