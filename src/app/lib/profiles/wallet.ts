@@ -125,6 +125,11 @@ export class Wallet implements IReadWriteWallet {
 		return this.settings().get(WalletSetting.Alias);
 	}
 
+	/** {@inheritDoc IReadWriteWallet.accountName} */
+	public accountName(): string | undefined {
+		return this.settings().get(WalletSetting.AccountName);
+	}
+
 	/** {@inheritDoc IReadWriteWallet.displayName} */
 	public displayName(): string | undefined {
 		return this.alias() || this.username() || this.knownName();
@@ -585,9 +590,9 @@ export class Wallet implements IReadWriteWallet {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PublicKey;
 	}
 
-	/** {@inheritDoc IReadWriteWallet.actsWithMnemonicWithDerivationPath} */
-	public actsWithMnemonicWithDerivationPath(): boolean {
-		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.DERIVATION_PATH;
+	/** {@inheritDoc IReadWriteWallet.actsWithBip44Mnemonic} */
+	public actsWithBip44Mnemonic(): boolean {
+		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.MNEMONIC;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.actsWithAddressWithDerivationPath} */

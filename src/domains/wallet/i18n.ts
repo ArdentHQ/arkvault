@@ -88,6 +88,16 @@ export const translations = {
 	},
 
 	PAGE_CREATE_WALLET: {
+		METHOD_STEP: {
+			HD_ADDRESS_TITLE: "A single mnemonic to access one or more addresses",
+			REGULAR_ADDRESS_DESCRIPTION: "A single mnemonic to access a single address",
+			REGULAR_ADDRESS_TITLE: "Regular Address",
+			SUBTITLE: "Select a cryptoasset to create your new wallet address.",
+			SUBTITLE_WITH_HD: "Pick the address type to generate to new address",
+			TITLE: "Create New Address",
+			USE_ADDITIONAL_ADDRESSES: "Want to add additional addresses to your existing HD Wallet?",
+			USE_IMPORT: "Use “<importLink/>” instead.",
+		},
 		NETWORK_STEP: {
 			GENERATION_ERROR:
 				"An error occurred while creating your new address, please try again. If the error persists, kindly get in touch with our support team.",
@@ -136,6 +146,29 @@ export const translations = {
 			TITLE: "Encryption Password",
 			WARNING:
 				"This password does not replace your mnemonic passphrase. You must ensure that your passphrase is properly recorded and backed up so that you do not lose access to your funds. You cannot use your encryption password to restore your profile, so it is vital that you have your mnemonic passphrase readily available should you run into any issues (such as losing access to your local profile or clearing your browser's cache).",
+		},
+
+		HD_WALLET_ENTER_MNEMONIC_STEP: {
+			SUBTITLE: "Import and add new addresses using your HD Wallet mnemonic.",
+			TITLE: "Enter Mnemonic",
+		},
+
+		HD_WALLET_SELECT_ACCOUNT_STEP: {
+			SUBTITLE: "Import addresses by choosing an existing HD wallet or adding a new one.",
+			TITLE: "Select or Import New HD Wallet",
+		},
+
+		HD_WALLET_SELECT_ADDRESS_STEP: {
+			LOADING_ADDRESSES: "Loading Addresses",
+			LOAD_MORE_ADDRESSES: "Load More Addresses",
+			SUBTITLE: "Select the addresses that you want to import.",
+			TITLE: "HD Addresses",
+		},
+
+		HD_WALLET_SUMMARY_STEP: {
+			DETAILS_LABEL: "HD Wallet Details",
+			SUBTITLE: "Your HD Wallet addresses were successfully imported.",
+			TITLE: "Import Completed",
 		},
 
 		IMPORT_DETAIL_STEP: {
@@ -292,6 +325,7 @@ export const translations = {
 	UPDATING_WALLET_DATA: "Updating Wallet Data",
 
 	VALIDATION: {
+		ACCOUNT_NAME_ASSIGNED: "The name '{{name}}' is already assigned.",
 		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet.",
 	},
 };

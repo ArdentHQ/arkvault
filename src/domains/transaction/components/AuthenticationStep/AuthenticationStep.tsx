@@ -221,7 +221,7 @@ export const AuthenticationStep = ({
 		wallet.actsWithMnemonic() ||
 		wallet.actsWithAddress() ||
 		wallet.actsWithPublicKey() ||
-		wallet.actsWithMnemonicWithDerivationPath();
+		wallet.actsWithBip44Mnemonic();
 	const requireEncryptionPassword = wallet.actsWithMnemonicWithEncryption() || wallet.actsWithSecretWithEncryption();
 
 	const isTransaction = subject === "transaction";

@@ -64,6 +64,7 @@ export enum WalletLedgerModel {
  * @enum {number}
  */
 export enum WalletSetting {
+	AccountName = "ACCOUNT_NAME",
 	Alias = "ALIAS",
 	Avatar = "AVATAR",
 	Peer = "PEER",
