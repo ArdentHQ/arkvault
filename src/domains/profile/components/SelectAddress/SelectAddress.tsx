@@ -10,6 +10,7 @@ import { Input } from "@/app/components/Input";
 import { useWalletAlias } from "@/app/hooks";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 type SelectAddressProperties = {
 	wallet?: SelectedWallet;
@@ -23,8 +24,10 @@ type SelectAddressProperties = {
 	showWalletName?: boolean;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	inputClassName?: string;
+	labelClassName?: string;
 	onChange?: (address: string) => void;
 	ref?: React.Ref<HTMLInputElement>;
+	variant?: "default" | "modern";
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
 export const SelectAddress = ({
@@ -36,11 +39,13 @@ export const SelectAddress = ({
 	showUserIcon = true,
 	showWalletName = true,
 	inputClassName,
+	labelClassName,
 	onChange,
 	title,
 	description,
 	ref,
 	disableAction = (wallet: Contracts.IReadWriteWallet) => !wallet.balance(),
+	variant = "default",
 }: SelectAddressProperties) => {
 	const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
 	const [selectedWallet, setSelectedWallet] = useState(wallet);
@@ -92,46 +97,82 @@ export const SelectAddress = ({
 
 	return (
 		<>
-			<button
-				data-testid="SelectAddress__wrapper"
-				className={cn(
-					"focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden",
-					{ "cursor-default": disabled },
-				)}
-				type="button"
-				onClick={() => setSearchWalletIsOpen(true)}
-				disabled={disabled}
-			>
-				<span
+			{variant === "default" && (
+				<button
+					data-testid="SelectAddress__wrapper"
 					className={cn(
-						"absolute inset-y-0 left-4 flex items-center border border-transparent",
-						showUserIcon ? "right-13" : "right-4",
+						"focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden",
 						{
-							"right-13": !showUserIcon && isInvalidField,
-							"right-24": showUserIcon && isInvalidField,
+							"cursor-default": disabled,
 						},
 					)}
-				>
-					<Address
-						address={selectedWallet?.address}
-						walletName={showWalletName ? alias : undefined}
-						addressClass="text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-						walletNameClass="text-sm sm:text-base"
-					/>
-				</span>
-
-				<Input
-					className={inputClassName}
-					data-testid="SelectAddress__input"
-					ref={ref}
-					value={selectedWallet?.address || ""}
-					hideInputValue={true}
-					readOnly
+					type="button"
+					onClick={() => setSearchWalletIsOpen(true)}
 					disabled={disabled}
-					isInvalid={isInvalidField}
-					addons={inputAddons()}
-				/>
-			</button>
+				>
+					<span
+						className={cn(
+							"absolute inset-y-0 left-4 flex items-center border border-transparent",
+							showUserIcon ? "right-13" : "right-4",
+							{
+								"right-13": !showUserIcon && isInvalidField,
+								"right-24": showUserIcon && isInvalidField,
+							},
+						)}
+					>
+						<Address
+							address={selectedWallet?.address}
+							walletName={showWalletName ? alias : undefined}
+							addressClass="text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+							walletNameClass="text-sm sm:text-base"
+						/>
+					</span>
+
+					<Input
+						className={inputClassName}
+						data-testid="SelectAddress__input"
+						ref={ref}
+						value={selectedWallet?.address || ""}
+						hideInputValue={true}
+						readOnly
+						disabled={disabled}
+						isInvalid={isInvalidField}
+						addons={inputAddons()}
+					/>
+				</button>
+			)}
+
+			{variant === "modern" && (
+				<button
+					data-testid="SelectAddress__wrapper_modern"
+					className={cn(
+						"focus:ring-theme-primary-400 relative w-full rounded text-left focus:ring-2 focus:outline-hidden",
+						{
+							"cursor-default": disabled,
+							"cursor-pointer": !disabled,
+						},
+					)}
+					type="button"
+					onClick={() => setSearchWalletIsOpen(true)}
+					disabled={disabled}
+				>
+					<DetailWrapper label={t("COMMON.ADDRESSING")}>
+						<div className="space-y-3 sm:space-y-0">
+							<div className="flex w-full items-start justify-between gap-4 sm:justify-start">
+								<DetailTitle className={cn("w-auto text-left sm:min-w-[162px]", labelClassName)}>
+									{t("COMMON.FROM")}
+								</DetailTitle>
+								<Address
+									address={selectedWallet?.address}
+									walletName={showWalletName ? alias : undefined}
+									addressClass="text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+									walletNameClass="text-sm sm:text-base"
+								/>
+							</div>
+						</div>
+					</DetailWrapper>
+				</button>
+			)}
 
 			<SearchWallet
 				isOpen={searchWalletIsOpen}

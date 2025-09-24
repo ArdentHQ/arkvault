@@ -292,7 +292,7 @@ export const translations = {
 		FORM_STEP: {
 			DESCRIPTION: "This transaction type permanently retires a Validator address.",
 			TITLE: "Validator Resignation",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
+			WARNING: "Once performed, this action cannot be undone and is stored on the network.",
 		},
 	},
 	PAGE_VOTE: {
