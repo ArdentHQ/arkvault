@@ -3,7 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { TimeAgo } from "./TimeAgo";
-import { render, screen } from "@/utils/testing-library";
+import { act, render, screen } from "@/utils/testing-library";
 
 describe("TimeAgo", () => {
 	it("should render", () => {
@@ -38,5 +38,42 @@ describe("TimeAgo", () => {
 		render(<TimeAgo date={date} />);
 
 		expect(screen.getByTestId("TimeAgo")).toHaveTextContent(t("COMMON.DATETIME.FEW_SECONDS_AGO"));
+	});
+
+	it("re-renders on tick and reschedules the next update (vitest)", () => {
+		vi.useFakeTimers();
+		const initialNow = new Date("2020-07-01T00:00:10.000Z");
+		vi.setSystemTime(initialNow);
+
+		const date = new Date(initialNow.getTime() - 10_000).toISOString();
+		const setTimeoutSpy = vi.spyOn(globalThis, "setTimeout");
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		render(<TimeAgo date={date} />);
+
+		expect(screen.getByTestId("TimeAgo")).toHaveTextContent(t("COMMON.DATETIME.FEW_SECONDS_AGO"));
+
+		act(() => {
+			vi.setSystemTime(new Date(initialNow.getTime() + 50_000));
+			vi.advanceTimersByTime(50_000);
+		});
+
+		expect(screen.getByTestId("TimeAgo")).toHaveTextContent(t("COMMON.DATETIME.MINUTES_AGO", { count: 1 }));
+
+		expect(setTimeoutSpy.mock.calls.length).toBeGreaterThanOrEqual(2);
+
+		act(() => {
+			vi.setSystemTime(new Date(initialNow.getTime() + 110_000));
+			vi.advanceTimersByTime(60_000);
+		});
+
+		expect(screen.getByTestId("TimeAgo")).toHaveTextContent(t("COMMON.DATETIME.MINUTES_AGO", { count: 3 }));
+
+		expect(setTimeoutSpy.mock.calls.length).toBeGreaterThanOrEqual(3);
+
+		setTimeoutSpy.mockRestore();
+		vi.useRealTimers();
 	});
 });
