@@ -14,6 +14,7 @@ import { delay } from "@/utils/delay";
 import { get } from "@/app/lib/helpers";
 import { useTransactionTypes } from "./use-transaction-types";
 import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
+import { UnconfirmedTransactionData } from "@/app/lib/mainsail/unconfirmed-transaction.dto";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -176,26 +177,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	});
 
 	const blockTime = useMemo(() => getBlockTime(profile.activeNetwork()), [profile.activeNetwork()]);
-
-	const unconfirmedTransactionsService = useMemo(() => {
-		if (!wallets?.length || !profile) {
-			return null;
-		}
-
-		try {
-			return new UnconfirmedTransactionsService({
-				config: profile.activeNetwork().config(),
-				profile,
-				ttl: blockTime / 1000, // in seconds
-			});
-		} catch (error) {
-			/* istanbul ignore next -- @preserve */
-			{
-				console.error("Failed to initialize UnconfirmedTransactionsService:", error);
-				return null;
-			}
-		}
-	}, [profile, wallets?.length > 0]);
 
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
 		if (itemsLength < itemsLimit) {
@@ -381,11 +362,17 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				queryParameters.types = transactionTypes;
 			}
 
-			if (mode === "all" || mode === "unconfirmed") {
+			const isUnconfirmedMode = mode === "unconfirmed";
+
+			if (mode === "all" || isUnconfirmedMode) {
 				queryParameters.identifiers = wallets.map((wallet) => ({
 					type: "address",
 					value: wallet.address(),
 				}));
+			}
+
+			if (isUnconfirmedMode) {
+				delete queryParameters.orderBy;
 			}
 
 			if (mode === "sent") {
@@ -467,6 +454,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const isFetchingUnconfirmed = useRef(false);
 
+	const walletAddresses = wallets.map((wallet) => wallet.address());
+	const walletAddressesStr = walletAddresses.join("-");
+
 	const fetchUnconfirmedTransactions = useCallback(async () => {
 		console.log("Fetching unconfirmed transactions");
 		/* istanbul ignore next -- @preserve */
@@ -485,64 +475,52 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				wallets,
 			});
 
-			console.log(response)
+			const results: UnconfirmedTransactionData[] = response.items() ?? [];
+			const remoteHashes = results.map((t) => t.hash()).filter(Boolean);
 
+			cleanupUnconfirmedForAddresses(walletAddresses, remoteHashes);
 
+			/* istanbul ignore next -- @preserve */
+			if (remoteHashes.length !== unconfirmedTransactions.length) {
+				setState((s) => ({ ...s, timestamp: Date.now() }));
+			}
 
-			// const selectedAddresses = wallets.map((w) => w.address());
-			// const response = await unconfirmedTransactionsService.listUnconfirmed({
-			// 	address: selectedAddresses,
-			// 	limit: 100,
-			// });
-			//
-			// const results = response?.results ?? [];
-			// const remoteHashes = results.map((t: any) => t.hash).filter(Boolean);
-			// cleanupUnconfirmedForAddresses(selectedAddresses, remoteHashes);
-			//
-			// /* istanbul ignore next -- @preserve */
-			// if (remoteHashes.length !== unconfirmedTransactions.length) {
-			// 	setState((s) => ({ ...s, timestamp: Date.now() }));
-			// }
-			//
-			// for (const transaction of results) {
-			// 	const matched = wallets.find((wallet) => {
-			// 		const walletAddr = wallet.address().toLowerCase();
-			// 		const txFrom = transaction.from().toLowerCase();
-			// 		const txTo = transaction.to().toLowerCase();
-			// 		return walletAddr === txFrom || walletAddr === txTo;
-			// 	});
-			//
-			// 	if (!matched) {
-			// 		console.warn("No matching wallet found for transaction:", transaction);
-			// 		continue;
-			// 	}
-			//
-			// 	addUnconfirmedTransactionFromApi(matched.networkId(), matched.address(), transaction.raw());
-			// }
+			for (const transaction of results) {
+				const matched = wallets.find((wallet) => {
+					const walletAddress = wallet.address().toLowerCase();
+					return (
+						walletAddress === transaction.from().toLowerCase() ||
+						walletAddress === transaction.to().toLowerCase()
+					);
+				});
+
+				if (!matched) {
+					console.warn("No matching wallet found for transaction:", transaction);
+					continue;
+				}
+
+				addUnconfirmedTransactionFromApi(matched.networkId(), matched.address(), transaction.raw());
+			}
 		} catch (error) {
 			console.error("Failed to fetch unconfirmed transactions:", error);
 		}
 
-		// isFetchingUnconfirmed.current = false;
-	}, [wallets]);
+		isFetchingUnconfirmed.current = false;
+	}, [walletAddressesStr]);
 
 	useEffect(() => {
-		if (!unconfirmedTransactionsService || wallets.length === 0) {
-			return;
-		}
-
-		fetchUnconfirmedTransactions();
-
-		// const intervalId = setInterval(fetchUnconfirmedTransactions, blockTime);
-
-		// return () => clearInterval(intervalId);
-	}, [unconfirmedTransactionsService, wallets.length, blockTime, fetchUnconfirmedTransactions]);
+		void fetchUnconfirmedTransactions();
+	}, [fetchUnconfirmedTransactions]);
 
 	const jobs = useMemo(
 		() => [
 			{
 				callback: checkNewTransactions,
 				interval: 15_000,
+			},
+			{
+				callback: fetchUnconfirmedTransactions,
+				interval: blockTime,
 			},
 		],
 		[checkNewTransactions],
