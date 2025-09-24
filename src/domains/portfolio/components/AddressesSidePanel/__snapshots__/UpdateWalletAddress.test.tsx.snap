@@ -113,7 +113,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 1`]
               class=""
             >
               <span
-                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another address."
                 data-testid="Input__error"
               >
                 <div
@@ -238,7 +238,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 2`]
               class=""
             >
               <span
-                data-errortext="The name 'mainsail wallet 2' is already assigned to another wallet."
+                data-errortext="The name 'mainsail wallet 2' is already assigned to another address."
                 data-testid="Input__error"
               >
                 <div
@@ -363,7 +363,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 3`]
               class=""
             >
               <span
-                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another address."
                 data-testid="Input__error"
               >
                 <div
@@ -488,7 +488,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 4`]
               class=""
             >
               <span
-                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another address."
                 data-testid="Input__error"
               >
                 <div

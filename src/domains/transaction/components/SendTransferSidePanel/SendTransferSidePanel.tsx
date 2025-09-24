@@ -2,12 +2,12 @@ import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useTranslation } from "react-i18next";
 import { URLBuilder } from "@ardenthq/arkvault-url";
-import { FormStep } from "@/domains/transaction/pages/SendTransfer/FormStep";
-import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
-import { ReviewStep } from "@/domains/transaction/pages/SendTransfer/ReviewStep";
-import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
+import { FormStep } from "@/domains/transaction/components/SendTransferSidePanel/FormStep";
+import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
+import { ReviewStep } from "@/domains/transaction/components/SendTransferSidePanel/ReviewStep";
+import { SendTransferStep } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.contracts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { QRModal } from "@/app/components/QRModal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -28,7 +28,7 @@ import cn from "classnames";
 import {
 	TransferFormData,
 	TransferOverwriteModal,
-} from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
+} from "@/domains/transaction/components/SendTransferSidePanel/TransferOverwriteModal";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
@@ -37,6 +37,9 @@ import { ConfirmSendTransaction } from "@/domains/transaction/components/Confirm
 import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
+import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
+import { useNavigate } from "react-router-dom";
+import { createPortal } from "react-dom";
 
 const MAX_TABS = 5;
 
@@ -61,7 +64,7 @@ export const SendTransferSidePanel = ({
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasReset: shouldResetForm, queryParameters: deepLinkParameters } = useTransactionQueryParameters();
 
@@ -88,7 +91,7 @@ export const SendTransferSidePanel = ({
 		handleSubmit,
 		getValues,
 		lastEstimatedExpiration,
-		formState: { isDirty, isValid, isSubmitting },
+		formState: { isDirty, isValid, isSubmitting, dirtyFields },
 	} = useSendTransferForm(wallet);
 
 	useKeyup("Enter", () => {
@@ -136,15 +139,16 @@ export const SendTransferSidePanel = ({
 		});
 	}, [resetForm, firstTabIndex]);
 
+	const navigate = useNavigate();
+
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
 			setMounted(mounted);
 			if (!mounted) {
 				resetState();
-				return;
 			}
 		},
-		[resetState],
+		[resetState, navigate],
 	);
 
 	useEffect(() => {
@@ -183,7 +187,7 @@ export const SendTransferSidePanel = ({
 			try {
 				const transaction = await submitForm(abortReference);
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
@@ -192,7 +196,7 @@ export const SendTransferSidePanel = ({
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
 		},
-		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addPendingTransaction],
+		[fetchWalletUnconfirmedTransactions, submitForm, wallet, addUnconfirmedTransactionFromSigned],
 	);
 
 	const handleBack = () => {
@@ -352,8 +356,8 @@ export const SendTransferSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (activeTab === SendTransferStep.AuthenticationStep && !wallet?.isLedger()) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+		if (activeTab === SendTransferStep.AuthenticationStep) {
+			return getAuthenticationStepSubtitle({ t, wallet });
 		}
 
 		if (activeTab === SendTransferStep.FormStep) {
@@ -367,9 +371,9 @@ export const SendTransferSidePanel = ({
 		if (activeTab === SendTransferStep.SummaryStep) {
 			return (
 				<ThemeIcon
-					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
+					lightIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					darkIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+					dimIcon={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
 					dimensions={[24, 24]}
 					className={cn({
 						"text-theme-primary-600": !isConfirmed,
@@ -415,172 +419,180 @@ export const SendTransferSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = useMemo(
+		() => dirtyFields.amount || dirtyFields.recipientAddress || activeTab !== SendTransferStep.FormStep,
+		[dirtyFields.amount, dirtyFields.recipientAddress, activeTab],
+	);
+
 	return (
-		<>
-			<SidePanel
-				open={open}
-				onOpenChange={onOpenChange}
-				onMountChange={onMountChange}
-				title={getTitle()}
-				subtitle={getSubtitle()}
-				titleIcon={getTitleIcon()}
-				dataTestId="SendTransferSidePanel"
-				hasSteps
-				totalSteps={MAX_TABS - 1}
-				activeStep={activeTab}
-				onBack={handleBack}
-				isLastStep={activeTab === SendTransferStep.SummaryStep}
-				disableOutsidePress
-				disableEscapeKey={showQRModal || isConfirmModalOpen || showOverwriteModal}
-				footer={
-					<SidePanelButtons>
-						{activeTab !== SendTransferStep.SummaryStep && (
-							<Button
-								data-testid="SendTransfer__back-button"
-								variant="secondary"
-								onClick={handleBack}
-								disabled={isSubmitting}
-							>
-								{t("COMMON.BACK")}
-							</Button>
-						)}
+		<SidePanel
+			open={open}
+			onOpenChange={onOpenChange}
+			onMountChange={onMountChange}
+			title={getTitle()}
+			subtitle={getSubtitle()}
+			titleIcon={getTitleIcon()}
+			dataTestId="SendTransferSidePanel"
+			hasSteps
+			totalSteps={MAX_TABS - 1}
+			activeStep={activeTab}
+			onBack={handleBack}
+			isLastStep={activeTab === SendTransferStep.SummaryStep}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
+			footer={
+				<SidePanelButtons>
+					{activeTab !== SendTransferStep.SummaryStep && (
+						<Button
+							data-testid="SendTransfer__back-button"
+							variant="secondary"
+							onClick={handleBack}
+							disabled={isSubmitting}
+						>
+							{t("COMMON.BACK")}
+						</Button>
+					)}
 
-						{activeTab < SendTransferStep.AuthenticationStep && (
-							<Button
-								data-testid="SendTransfer__continue-button"
-								onClick={handleNext}
-								disabled={isNextDisabled || isSubmitting}
-							>
-								{t("COMMON.CONTINUE")}
-							</Button>
-						)}
+					{activeTab < SendTransferStep.AuthenticationStep && (
+						<Button
+							data-testid="SendTransfer__continue-button"
+							onClick={handleNext}
+							disabled={isNextDisabled || isSubmitting}
+						>
+							{t("COMMON.CONTINUE")}
+						</Button>
+					)}
 
-						{activeTab === SendTransferStep.AuthenticationStep && (
-							<Button
-								data-testid="SendTransfer__send-button"
-								onClick={() => {
-									void handleSubmit(() => submit())();
+					{activeTab === SendTransferStep.AuthenticationStep && (
+						<Button
+							data-testid="SendTransfer__send-button"
+							onClick={() => {
+								void handleSubmit(() => submit())();
+							}}
+							disabled={isSubmitting}
+						>
+							{t("COMMON.SEND")}
+						</Button>
+					)}
+
+					{activeTab === SendTransferStep.SummaryStep && (
+						<Button data-testid="SendTransfer__close-button" onClick={() => onOpenChange(false)}>
+							{t("COMMON.CLOSE")}
+						</Button>
+					)}
+				</SidePanelButtons>
+			}
+		>
+			<Form context={form}>
+				<Tabs activeId={activeTab}>
+					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
+						<TabPanel tabId={SendTransferStep.FormStep}>
+							<FormStep
+								network={activeNetwork}
+								senderWallet={wallet}
+								profile={activeProfile}
+								deeplinkProps={deepLinkParameters}
+								onScan={() => setShowQRModal(true)}
+								onChange={({ sender }) => {
+									setWallet(sender);
 								}}
-								disabled={isSubmitting}
-							>
-								{t("COMMON.SEND")}
-							</Button>
-						)}
+								hideHeader
+							/>
+						</TabPanel>
 
-						{activeTab === SendTransferStep.SummaryStep && (
-							<Button data-testid="SendTransfer__close-button" onClick={() => onOpenChange(false)}>
-								{t("COMMON.CLOSE")}
-							</Button>
-						)}
-					</SidePanelButtons>
-				}
-			>
-				<Form context={form}>
-					<Tabs activeId={activeTab}>
-						<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
-							<TabPanel tabId={SendTransferStep.FormStep}>
-								<FormStep
-									network={activeNetwork}
-									senderWallet={wallet}
-									profile={activeProfile}
-									deeplinkProps={deepLinkParameters}
-									onScan={() => setShowQRModal(true)}
-									onChange={({ sender }) => {
-										setWallet(sender);
-									}}
-									hideHeader
-								/>
-							</TabPanel>
+						<TabPanel tabId={SendTransferStep.ReviewStep}>
+							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
+						</TabPanel>
 
-							<TabPanel tabId={SendTransferStep.ReviewStep}>
-								<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
-							</TabPanel>
-
-							<TabPanel tabId={SendTransferStep.AuthenticationStep}>
-								<AuthenticationStep
-									wallet={wallet!}
-									ledgerDetails={
-										<TransferLedgerReview
-											wallet={wallet!}
-											estimatedExpiration={lastEstimatedExpiration}
-											profile={activeProfile}
-										/>
-									}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={!isConnected}
-									onDeviceNotAvailable={() => {
-										// keep waiting when it is not available
-									}}
-									noHeading
-								/>
-							</TabPanel>
-
-							<TabPanel tabId={SendTransferStep.SummaryStep}>
-								<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
-							</TabPanel>
-
-							<TabPanel tabId={SendTransferStep.ErrorStep}>
-								<ErrorStep
-									onClose={() => {
-										assertWallet(wallet);
-										onOpenChange(false);
-									}}
-									isBackDisabled={isSubmitting}
-									onBack={() => {
-										setActiveTab(SendTransferStep.FormStep);
-									}}
-									errorMessage={errorMessage}
-									hideHeader
-								/>
-							</TabPanel>
-
-							{!hideStepNavigation && (
-								<div className="mt-2">
-									<button className="sr-only" type="submit" onClick={(e) => e.preventDefault()} />
-								</div>
-							)}
-						</StepsProvider>
-					</Tabs>
-
-					<TransferOverwriteModal
-						isOpen={showOverwriteModal}
-						onCancel={() => setShowOverwriteModal(false)}
-						onConfirm={(clearPrefilled: boolean) => {
-							if (clearPrefilled) {
-								for (const key of ["recipientAddress", "amount", "memo"]) {
-									form.setValue(key as any, undefined, { shouldDirty: true, shouldValidate: true });
+						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
+							<AuthenticationStep
+								wallet={wallet!}
+								ledgerDetails={
+									<TransferLedgerReview
+										wallet={wallet!}
+										estimatedExpiration={lastEstimatedExpiration}
+										profile={activeProfile}
+									/>
 								}
+								ledgerIsAwaitingDevice={!hasDeviceAvailable}
+								ledgerIsAwaitingApp={!isConnected}
+								onDeviceNotAvailable={() => {
+									// keep waiting when it is not available
+								}}
+								noHeading
+							/>
+						</TabPanel>
+
+						<TabPanel tabId={SendTransferStep.SummaryStep}>
+							<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
+						</TabPanel>
+
+						<TabPanel tabId={SendTransferStep.ErrorStep}>
+							<ErrorStep
+								onClose={() => {
+									assertWallet(wallet);
+									onOpenChange(false);
+								}}
+								isBackDisabled={isSubmitting}
+								onBack={() => {
+									setActiveTab(SendTransferStep.FormStep);
+								}}
+								errorMessage={errorMessage}
+								hideHeader
+							/>
+						</TabPanel>
+
+						{!hideStepNavigation && (
+							<div className="mt-2">
+								<button className="sr-only" type="submit" onClick={(e) => e.preventDefault()} />
+							</div>
+						)}
+					</StepsProvider>
+				</Tabs>
+
+				<TransferOverwriteModal
+					isOpen={showOverwriteModal}
+					onCancel={() => setShowOverwriteModal(false)}
+					onConfirm={(clearPrefilled: boolean) => {
+						if (clearPrefilled) {
+							for (const key of ["recipientAddress", "amount", "memo"]) {
+								form.setValue(key as any, undefined, { shouldDirty: true, shouldValidate: true });
 							}
+						}
 
-							for (const [key, value] of Object.entries(overwriteData)) {
-								form.setValue(key as any, value as any, { shouldDirty: true, shouldValidate: true });
-							}
+						for (const [key, value] of Object.entries(overwriteData)) {
+							form.setValue(key as any, value as any, { shouldDirty: true, shouldValidate: true });
+						}
 
-							setShowOverwriteModal(false);
-						}}
-						currentData={currentFormData}
-						newData={overwriteData}
-					/>
+						setShowOverwriteModal(false);
+					}}
+					currentData={currentFormData}
+					newData={overwriteData}
+				/>
 
-					<ConfirmSendTransaction
-						profile={activeProfile}
-						unconfirmedTransactions={unconfirmedTransactions}
-						isOpen={isConfirmModalOpen}
-						onConfirm={() => {
-							setIsConfirmModalOpen(false);
-							handleSubmit(() => submit(true))();
-						}}
-						onClose={() => {
-							setIsConfirmModalOpen(false);
-						}}
-					/>
-				</Form>
-			</SidePanel>
-			<QRModal
-				isOpen={showQRModal}
-				onCancel={() => setShowQRModal(false)}
-				onRead={(text: string) => handleQRCodeRead(text)}
-			/>
-		</>
+				<ConfirmSendTransaction
+					profile={activeProfile}
+					unconfirmedTransactions={unconfirmedTransactions}
+					isOpen={isConfirmModalOpen}
+					onConfirm={() => {
+						setIsConfirmModalOpen(false);
+						handleSubmit(() => submit(true))();
+					}}
+					onClose={() => {
+						setIsConfirmModalOpen(false);
+					}}
+				/>
+			</Form>
+
+			{createPortal(
+				<QRModal
+					isOpen={showQRModal}
+					onCancel={() => setShowQRModal(false)}
+					onRead={(text: string) => handleQRCodeRead(text)}
+				/>,
+				document.body,
+			)}
+		</SidePanel>
 	);
 };

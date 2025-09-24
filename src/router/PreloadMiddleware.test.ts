@@ -22,10 +22,6 @@ vi.mock("@/domains/vote/routing", () => ({
 	VoteRoutes: [{ component: { preload: vi.fn() } }],
 }));
 
-vi.mock("@/domains/transaction/routing", () => ({
-	TransactionRoutes: [{ component: { preload: vi.fn() } }],
-}));
-
 vi.mock("@/domains/message/routing", () => ({
 	MessageRoutes: [{ component: { preload: vi.fn() } }],
 }));
@@ -38,7 +34,6 @@ import { ContactRoutes } from "@/domains/contact/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
 import { MessageRoutes } from "@/domains/message/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
-import { TransactionRoutes } from "@/domains/transaction/routing";
 
 describe("PreloadMiddleware", () => {
 	let subject: PreloadMiddleware;
@@ -68,9 +63,7 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
-			vi.spyOn(route.component as any, "preload"),
-		);
+		const commonSpies = [...MessageRoutes].map((route) => vi.spyOn(route.component as any, "preload"));
 
 		const canActivate = subject.handler({ location: { pathname: "/" } } as any);
 
@@ -98,9 +91,7 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
-			vi.spyOn(route.component as any, "preload"),
-		);
+		const commonSpies = [...MessageRoutes].map((route) => vi.spyOn(route.component as any, "preload"));
 
 		const canActivate = subject.handler({ location: { pathname: "/profiles" } } as any);
 

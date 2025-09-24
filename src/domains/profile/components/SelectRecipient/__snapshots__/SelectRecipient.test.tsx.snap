@@ -46,13 +46,6 @@ exports[`SelectRecipient > should render disabled 1`] = `
                 class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
-                >
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
-                  />
-                </div>
-                <div
                   class="relative flex h-full flex-1"
                 >
                   <input
@@ -175,13 +168,6 @@ exports[`SelectRecipient > should render empty 1`] = `
               <div
                 class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
-                <div
-                  class="flex items-center"
-                >
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
-                  />
-                </div>
                 <div
                   class="relative flex h-full flex-1"
                 >
@@ -359,13 +345,6 @@ exports[`SelectRecipient > should render invalid 1`] = `
                 class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
-                >
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
-                  />
-                </div>
-                <div
                   class="relative flex h-full flex-1"
                 >
                   <input
@@ -536,13 +515,6 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
               <div
                 class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
-                <div
-                  class="flex items-center"
-                >
-                  <div
-                    class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-8 w-8 px-2 py-1 text-sm ring-0 border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100"
-                  />
-                </div>
                 <div
                   class="relative flex h-full flex-1"
                 >

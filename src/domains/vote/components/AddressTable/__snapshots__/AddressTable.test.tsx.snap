@@ -209,7 +209,7 @@ exports[`AddressTable > should render 1`] = `
               data-testid="AddressRow__wallet"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
               >
                 <div
                   class="w-40 flex-1"
@@ -218,7 +218,7 @@ exports[`AddressTable > should render 1`] = `
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                      class="font-semibold text-base text-sm"
                       data-testid="Address__alias"
                     >
                       <span
@@ -229,7 +229,7 @@ exports[`AddressTable > should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -601,7 +601,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               data-testid="AddressRow__wallet"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
               >
                 <div
                   class="w-40 flex-1"
@@ -610,7 +610,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                      class="font-semibold text-base text-sm"
                       data-testid="Address__alias"
                     >
                       <span
@@ -621,7 +621,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       </span>
                     </span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1226,7 +1226,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
               data-testid="AddressRow__wallet"
             >
               <div
-                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+                class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
               >
                 <div
                   class="w-40 flex-1"
@@ -1235,7 +1235,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                      class="font-semibold text-base text-sm"
                       data-testid="Address__alias"
                     >
                       <span
@@ -1246,7 +1246,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                       </span>
                     </span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6

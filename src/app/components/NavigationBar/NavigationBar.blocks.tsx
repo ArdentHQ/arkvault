@@ -299,12 +299,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const handleCloseReceiveFunds = useCallback(() => setSelectedWallet(undefined), [setSelectedWallet]);
 
 	const sendButtonClickHandler = useCallback(() => {
-		const sendTransferPath = `/profiles/${profile.id()}/send-transfer`;
+		const sendTransferPath = generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() });
 
-		// add query param reset = 1 if already on send transfer page
-		/* istanbul ignore next: tested in e2e -- @preserve */
-		const reset = location.pathname === sendTransferPath ? 1 : 0;
-		navigate(`${sendTransferPath}?reset=${reset}`);
+		return navigate(sendTransferPath);
 	}, [location]);
 
 	const receiveButtonClickHandler = useCallback(() => {
@@ -350,7 +347,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
-									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_WALLETS")}
+									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_ADDRESSES")}
 								>
 									<div>
 										<NavigationButtonWrapper>
@@ -371,7 +368,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
-									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_WALLETS")}
+									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_ADDRESSES")}
 								>
 									<div>
 										<NavigationButtonWrapper>

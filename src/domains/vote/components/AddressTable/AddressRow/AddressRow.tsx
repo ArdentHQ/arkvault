@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Circle } from "@/app/components/Circle";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -83,20 +82,6 @@ export const WalletStatus = ({
 		>
 			{t("WALLETS.STATUS.ACTIVE")}
 		</div>
-	);
-};
-
-export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet }) => {
-	if (!wallet) {
-		return null;
-	}
-
-	return (
-		<Tooltip content={wallet.username()}>
-			<Link to={wallet.explorerLink()} isExternal className="flex">
-				<Avatar className="ring-theme-background ring-2" size="xs" address={wallet.address()} noShadow={true} />
-			</Link>
-		</Tooltip>
 	);
 };
 
@@ -211,14 +196,14 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	return (
 		<TableRow className="last:border-theme-secondary-200 dark:last:border-theme-secondary-800 relative last:border-b-4! last:border-solid">
-			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="cursor-pointer group space-x-3">
+			<TableCell data-testid="AddressRow__wallet" variant="start" innerClassName="space-x-3">
 				<div className="w-40 flex-1">
 					<Address
 						address={wallet.address()}
 						walletName={alias}
 						showCopyButton
-						addressClass="text-sm"
-						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+						addressClass="text-sm text-theme-secondary-text"
+						walletNameClass="text-sm"
 					/>
 				</div>
 			</TableCell>

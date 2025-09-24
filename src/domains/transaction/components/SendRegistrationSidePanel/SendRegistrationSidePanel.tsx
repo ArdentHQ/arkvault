@@ -1,10 +1,10 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { useTranslation } from "react-i18next";
-import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
-import { usePendingTransactions } from "@/domains/transaction/hooks/use-pending-transactions";
+import { SendRegistrationForm } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
+import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
@@ -30,6 +30,7 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
+import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -54,7 +55,7 @@ export const SendRegistrationSidePanel = ({
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const { common, validatorRegistration } = useValidation();
-	const { addPendingTransaction } = usePendingTransactions();
+	const { addUnconfirmedTransactionFromSigned } = useUnconfirmedTransactions();
 
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
 
@@ -66,7 +67,7 @@ export const SendRegistrationSidePanel = ({
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, setValue, watch, getValues, trigger, reset: resetForm } = form;
-	const { isDirty, isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting, isValid, dirtyFields } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
 
@@ -180,7 +181,7 @@ export const SendRegistrationSidePanel = ({
 					signatory,
 				});
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}
@@ -193,7 +194,7 @@ export const SendRegistrationSidePanel = ({
 					signatory,
 				});
 
-				addPendingTransaction(transaction);
+				addUnconfirmedTransactionFromSigned(transaction);
 				setTransaction(transaction);
 				handleNext();
 			}
@@ -292,7 +293,7 @@ export const SendRegistrationSidePanel = ({
 		}
 
 		if (activeTab === authenticationStep) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET");
+			return getAuthenticationStepSubtitle({ t, wallet: activeWallet });
 		}
 
 		if (activeTab === REVIEW_STEP) {
@@ -364,6 +365,11 @@ export const SendRegistrationSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = useMemo(
+		() => dirtyFields.username || dirtyFields.validatorPublicKey || activeTab !== FORM_STEP,
+		[dirtyFields.username, dirtyFields.validatorPublicKey, activeTab],
+	);
+
 	return (
 		<SidePanel
 			open={open}
@@ -377,8 +383,9 @@ export const SendRegistrationSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			isLastStep={activeTab === summaryStep}
-			disableOutsidePress
-			disableEscapeKey={isSubmitting}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={isSubmitting || preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons>

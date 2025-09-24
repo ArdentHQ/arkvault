@@ -10,6 +10,7 @@ export const translations = {
 	AMOUNT: "Amount",
 	AUTHENTICATION_STEP: {
 		DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to authenticate the transaction.",
+		DESCRIPTION_LEDGER: "Check your Ledger device and sign the transaction.",
 		DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to authenticate the transaction.",
 		DESCRIPTION_PRIVATE_KEY: "Enter your private key to authenticate the transaction.",
 		DESCRIPTION_SECRET: "Enter your secret to authenticate the transaction.",
@@ -21,7 +22,7 @@ export const translations = {
 	CONFIRMATIONS_COUNT: "{{count}} Confirmations",
 	CONFIRMED: "Confirmed",
 	CONTACT_SEACH: {
-		DESCRIPTION: "Find and select preferred address from your saved wallets.",
+		DESCRIPTION: "Find and select preferred address from your saved contacts.",
 		TITLE: "My addresses",
 	},
 	CORE: "CORE",
@@ -31,7 +32,7 @@ export const translations = {
 	ENCRYPTION_PASSWORD: "Encryption Password",
 	ERROR: {
 		DESCRIPTION:
-			"An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
+			"An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the address.",
 		TITLE: "Transaction Error",
 	},
 	EXPIRATION: {
@@ -39,7 +40,7 @@ export const translations = {
 		TIMESTAMP: "Timestamp Expiration",
 	},
 	EXPORT: {
-		DESCRIPTION: "Export your wallet's transaction history.",
+		DESCRIPTION: "Export your address' transaction history.",
 		EMPTY: {
 			DESCRIPTION: "No transactions could be found for the selected period.",
 		},
@@ -85,6 +86,12 @@ export const translations = {
 		FAST: "Fast",
 		SLOW: "Slow",
 	},
+	FORM_STEP: {
+		DESCRIPTION_SELECT_WALLET: "Select an address and sign.",
+	},
+	GAS_INFORMATION: "Gas Information",
+	GAS_LIMIT: "Gas Limit",
+	GAS_USAGE: "Usage by Txn",
 	HINT_AMOUNT: "Including {{amount}} {{currency}} sent to itself.",
 	HINT_AMOUNT_EXCLUDING: "Excluding {{amount}} {{currency}} sent to self.",
 	ID: "ID",
@@ -189,6 +196,7 @@ export const translations = {
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
+	MORE_DETAILS: "More details",
 	MULTIPLE: "Multiple",
 	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
@@ -220,7 +228,7 @@ export const translations = {
 		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",
 		REMOVE_NOT_ALLOWED: "Your own address cannot be removed.",
-		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and wallets.",
+		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and addresses.",
 		SELECT_PARTICIPANT_TITLE: "Select Participant",
 	},
 	NAME: "Name",
@@ -240,7 +248,7 @@ export const translations = {
 		FORM_STEP: {
 			DESCRIPTION: "Enter details below to send your transaction.",
 			FEE_UPDATE: "The selected fee has been changed.",
-			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger wallets.",
+			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger addresses.",
 			SCAN: "Scan",
 			SCAN_FULL: "Scan QR-Code",
 			TITLE: "Send",
@@ -295,6 +303,7 @@ export const translations = {
 	},
 	PARTICIPANTS: "Participants",
 	PENDING: {
+		APPROVAL: "This transaction is pending approval on your Ledger device.",
 		DESCRIPTION:
 			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is the relevant information for your transaction:",
 		STATUS_TEXT: "This transaction is pending confirmation.",
@@ -314,7 +323,7 @@ export const translations = {
 	REGISTRATION_TYPE: "Registration Type",
 	REJECTED_ERROR: {
 		DESCRIPTION:
-			"You rejected the transaction on your Ledger device. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
+			"You rejected the transaction on your Ledger device. Please go 'Back' and try again, or click 'Close' to return to the address.",
 		TITLE: "Transaction Rejected",
 	},
 	REPOSITORIES: {
@@ -434,7 +443,7 @@ export const translations = {
 		NETWORK_MISMATCH: "data belongs to another network.",
 		NETWORK_NOT_ENABLED: "network <strong>{{network}}</strong> is not enabled.",
 		NETWORK_NO_WALLETS:
-			"the current profile has no wallets available for the <strong>{{network}}</strong> network.",
+			"the current profile has no addresses available for the <strong>{{network}}</strong> network.",
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 		SIGNATORY_MISSING: "signatory is missing.",
 		SIGNATURE_MISSING: "signature is missing.",

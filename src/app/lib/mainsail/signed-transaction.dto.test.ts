@@ -588,4 +588,18 @@ describe("SignedTransactionData", () => {
 			expect(transaction.type()).toBe("updateValidator");
 		});
 	});
+
+	describe("gasLimit", () => {
+		it("should return gas limit", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			expect(transaction.gasLimit()).toBe("21000");
+		});
+	});
+
+	describe("gasUsed", () => {
+		it("should return gas used", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			expect(transaction.gasUsed()).toBe(20);
+		});
+	});
 });

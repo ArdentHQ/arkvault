@@ -29,8 +29,8 @@ export const translations = {
 
 	MODAL_DELETE_WALLET: {
 		DESCRIPTION:
-			"Are you sure you wish to delete the selected wallet? Before deleting, make sure the mnemonic passphrase is secured safely.",
-		TITLE: "Delete Wallet",
+			"Are you sure you wish to delete the selected address? Before deleting, make sure the mnemonic passphrase is secured safely.",
+		TITLE: "Delete Address",
 	},
 
 	// @TODO: Remove this once the new wallet ledger create flow is complete
@@ -50,7 +50,7 @@ export const translations = {
 		LEDGER_NANO_X: "Ledger Nano X",
 		NO_DEVICE_FOUND: "Ledger device has not been found in time.",
 		OPEN_APP: "Open the {{coin}} app on your device ...",
-		TITLE: "Ledger Wallet",
+		TITLE: "Ledger Address",
 		UPDATE_ERROR: "The {{coin}} app version is {{version}}. Please update the {{coin}} app via Ledger Live.",
 		WAITING_DEVICE: "Waiting for Ledger ...",
 	},
@@ -77,14 +77,8 @@ export const translations = {
 
 	MODAL_WALLET_ENCRYPTION: {
 		DESCRIPTION:
-			"You are about to register a second passphrase while having your current {{importType}} encrypted with a custom password. Continuing with the second signature registration will automatically remove the encryption once the transaction is sent. Ensure your {{importType}} is backed up before proceeding. You will have to re-import your wallet if you want to use an encryption password again.",
-		TITLE: "Wallet Encryption Removal",
-	},
-
-	MODAL_WALLET_UPDATE: {
-		DESCRIPTION_1: "A new update has been released for your wallet. You can download or postpone the update.",
-		DESCRIPTION_2: "The update has been successfully downloaded and is ready to be installed.",
-		TITLE: "Wallet Update {{version}}",
+			"You are about to register a second passphrase while having your current {{importType}} encrypted with a custom password. Continuing with the second signature registration will automatically remove the encryption once the transaction is sent. Ensure your {{importType}} is backed up before proceeding. You will have to re-import your address if you want to use an encryption password again.",
+		TITLE: "Address Encryption Removal",
 	},
 
 	PAGE_CREATE_WALLET: {
@@ -101,7 +95,7 @@ export const translations = {
 		NETWORK_STEP: {
 			GENERATION_ERROR:
 				"An error occurred while creating your new address, please try again. If the error persists, kindly get in touch with our support team.",
-			SUBTITLE: "Select a cryptoasset to create your new wallet address.",
+			SUBTITLE: "Select a cryptoasset to create your new address.",
 			TITLE: "Select a Cryptoasset",
 		},
 
@@ -120,7 +114,7 @@ export const translations = {
 			ENCRYPTION: {
 				DESCRIPTION:
 					"Set an encryption password to use in place of your mnemonic passphrase. Note that you must still record and keep your mnemonic passphrase safe as losing this will result in you losing all access to your funds.",
-				TITLE: "Use Wallet Encryption",
+				TITLE: "Use Address Encryption",
 			},
 			TITLE: "Your Passphrase",
 			WARNING:
@@ -128,11 +122,11 @@ export const translations = {
 		},
 
 		PROCESS_COMPLETED_STEP: {
-			SUBTITLE: "The wallet address has been successfully created.",
+			SUBTITLE: "The address has been successfully created.",
 			TITLE: "Completed",
 		},
 
-		TITLE: "Create Wallet",
+		TITLE: "Create Address",
 	},
 
 	PAGE_IMPORT_WALLET: {
@@ -177,7 +171,7 @@ export const translations = {
 				DESCRIPTION:
 					"Set an encryption password to replace your mnemonic passphrase when signing transactions and messages.",
 				NOT_AVAILABLE: "Encryption not available for this import type.",
-				TITLE: "Use Wallet Encryption",
+				TITLE: "Use Address Encryption",
 				WARNING:
 					"You must still securely store your mnemonic passphrase. Losing it will result in permanent loss of access to your funds!",
 			},
@@ -206,9 +200,9 @@ export const translations = {
 		LEDGER_SCAN_STEP: {
 			ACCOUNTS: "Accounts",
 			ADD_NEW_ADDRESS: "Add New Address",
-			LOADED_SINGLE_WALLET: "Loaded <strong>1</strong> Wallet",
-			LOADED_WALLETS: "Loaded <strong>{{count}}</strong> Wallets",
-			LOADING_WALLETS: "Loading <strong>{{count}}</strong> Wallets",
+			LOADED_ADDRESSES: "Loaded <strong>{{count}}</strong> Addresses",
+			LOADED_SINGLE_ADDRESS: "Loaded <strong>1</strong> Address",
+			LOADING_ADDRESSES: "Loading <strong>{{count}}</strong> Addresses",
 			SHOW_ALL: "Show All ({{count}})",
 			SUBTITLE: "Select the addresses that you want to import.",
 			TITLE: "Ledger Addresses",
@@ -239,7 +233,7 @@ export const translations = {
 			TITLE: "Import Completed",
 		},
 
-		TITLE: "Import Wallet",
+		TITLE: "Import Address",
 
 		VALIDATION: {
 			DECRYPT_WIF_ASSERTION: "Failed to decrypt WIF. Please check your password.",
@@ -305,8 +299,6 @@ export const translations = {
 			VALIDATOR_STATUS: "Validator Status",
 			VOTING_FOR: "Voting for",
 		},
-
-		YOUR_WALLETS: "Your Wallets",
 	},
 
 	SIGNATURE: "Signature",
@@ -320,9 +312,9 @@ export const translations = {
 		STANDBY: "Standby",
 	},
 
-	UPDATE_WALLET_DATA: "Update Wallet Data",
+	UPDATE_ADDRESS_DATA: "Update Address Data",
 
-	UPDATING_WALLET_DATA: "Updating Wallet Data",
+	UPDATING_ADDRESS_DATA: "Updating Address Data",
 
 	VALIDATION: {
 		ACCOUNT_NAME_ASSIGNED: "The name '{{name}}' is already assigned.",
