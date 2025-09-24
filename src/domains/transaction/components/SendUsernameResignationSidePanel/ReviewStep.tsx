@@ -50,7 +50,7 @@ export const ReviewStep = ({
 				})}
 			>
 				<TransactionAddresses
-					labelClassName="w-auto sm:min-w-[102px]"
+					labelClassName="w-auto sm:min-w-[87px]"
 					senderAddress={senderWallet.address()}
 					network={senderWallet.network()}
 					recipients={[]}

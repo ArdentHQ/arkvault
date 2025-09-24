@@ -70,6 +70,7 @@ export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = f
 						onChange={handleSelectSender}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendUsernameResignation()}
 						variant="modern"
+						labelClassName="w-auto sm:min-w-[87px]"
 					/>
 				</FormField>
 
