@@ -1,6 +1,5 @@
-import { Services } from "@/app/lib/mainsail";
-
 import { IReadWriteWallet } from "./contracts.js";
+import { Services } from "@/app/lib/mainsail";
 
 /**
  * Defines the options needed to generate a wallet.
@@ -35,7 +34,7 @@ export interface IMnemonicOptions {
 }
 
 export enum BIP44CoinType {
-	ARK = "111'",
+	ARK = "1'", // 111 for mainnet, 1 for devnet (core), todo: https://app.clickup.com/t/86dxuqw2q
 	ETH = "60'",
 }
 
