@@ -3,7 +3,7 @@
 exports[`SelectAddress > should render disabled 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-theme-primary-400 focus:ring-2 focus:outline-hidden cursor-default"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden cursor-default"
     data-testid="SelectAddress__wrapper"
     disabled=""
     type="button"
@@ -39,7 +39,7 @@ exports[`SelectAddress > should render disabled 1`] = `
           class=""
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 dark:hover:text-white"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div
@@ -84,7 +84,7 @@ exports[`SelectAddress > should render disabled 1`] = `
 exports[`SelectAddress > should render empty 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-theme-primary-400 focus:ring-2 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
@@ -118,7 +118,7 @@ exports[`SelectAddress > should render empty 1`] = `
           class=""
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 dark:hover:text-white"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div
@@ -163,7 +163,7 @@ exports[`SelectAddress > should render empty 1`] = `
 exports[`SelectAddress > should render invalid 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-theme-primary-400 focus:ring-2 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
@@ -246,7 +246,7 @@ exports[`SelectAddress > should render invalid 1`] = `
           class="pl-3"
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 dark:hover:text-white"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div
@@ -291,7 +291,7 @@ exports[`SelectAddress > should render invalid 1`] = `
 exports[`SelectAddress > should render with preselected address 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-theme-primary-400 focus:ring-2 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
@@ -332,7 +332,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
           class=""
         >
           <div
-            class="flex items-center p-1 space-x-3 bg-transparent rounded transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 dark:hover:text-white"
+            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
           >
             <div>
               <div
@@ -377,7 +377,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
 exports[`SelectAddress > should render without user icon 1`] = `
 <div>
   <button
-    class="relative w-full rounded focus:ring-theme-primary-400 focus:ring-2 focus:outline-hidden"
+    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
