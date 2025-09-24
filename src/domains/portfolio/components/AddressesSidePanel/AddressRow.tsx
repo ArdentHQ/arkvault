@@ -13,6 +13,7 @@ import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { useTranslation } from "react-i18next";
 import { useLink } from "@/app/hooks/use-link";
 import { TFunction } from "i18next";
+import { Label } from "@/app/components/Label";
 
 export const getMenuOptions = (t: TFunction): DropdownOption[] => [
 	{
@@ -158,7 +159,7 @@ export const AddressRow = ({
 				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
 					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
 						<div
-							className={cn("leading-5", {
+							className={cn("flex gap-2 leading-5", {
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
 									!isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
@@ -166,6 +167,17 @@ export const AddressRow = ({
 							})}
 						>
 							{alias}
+							{wallet.isHDWallet() && (
+								<Label
+									color={isSelected ? "primary" : "neutral"}
+									size="xs"
+									variant="outline"
+									className="border py-0.5 uppercase"
+									data-testid="hd-wallet-label"
+								>
+									{wallet.accountName()}
+								</Label>
+							)}
 						</div>
 						<Address
 							address={wallet.address()}

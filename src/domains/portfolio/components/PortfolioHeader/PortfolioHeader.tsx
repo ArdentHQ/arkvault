@@ -27,6 +27,7 @@ import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounte
 import { AddressViewType, resetViewPreferences } from "@/domains/portfolio/hooks/use-address-panel";
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { Label } from "@/app/components/Label";
 
 export const PortfolioHeader = ({
 	profile,
@@ -199,6 +200,16 @@ export const PortfolioHeader = ({
 										profile={profile}
 										mode={profile.walletSelectionMode()}
 									/>
+									{wallet.isHDWallet() && selectedWallets.length === 1 && (
+										<Label
+											color="primary"
+											size="xs"
+											variant="outline"
+											className="border py-0.5 uppercase"
+										>
+											{wallet.accountName()}
+										</Label>
+									)}
 									{allWallets.length > 1 && (
 										<Button variant="primary-transparent" size="icon" className="h-6 w-6">
 											<Icon name="DoubleChevron" width={26} height={26} />
