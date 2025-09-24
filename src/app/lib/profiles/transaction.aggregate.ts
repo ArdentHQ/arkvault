@@ -6,7 +6,7 @@ import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collec
 import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 type HistoryMethod = string;
-type HistoryWallet = ExtendedConfirmedTransactionDataCollection|UnconfirmedTransactionDataCollection;
+type HistoryWallet = ExtendedConfirmedTransactionDataCollection | UnconfirmedTransactionDataCollection;
 
 export class TransactionAggregate implements ITransactionAggregate {
 	readonly #profile: IProfile;

@@ -4,12 +4,9 @@ import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
-import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 import { Network } from "@/app/lib/mainsail/network";
-import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { SortBy } from "@/app/components/Table";
-import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
 import { delay } from "@/utils/delay";
 import { get } from "@/app/lib/helpers";
 import { useTransactionTypes } from "./use-transaction-types";
