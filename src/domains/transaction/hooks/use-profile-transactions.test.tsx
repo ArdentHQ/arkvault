@@ -926,15 +926,17 @@ describe("useProfileTransactions", () => {
 
 		// Wait for the fetchUnconfirmedTransactions to be called
 		await waitFor(() => expect(unconfirmedMock).toHaveBeenCalled());
-		await waitFor(() => expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledWith(
-			networkId,
-			walletAddress,
-			expect.objectContaining({
-				signedData: expect.objectContaining({
-					hash: "NEW_UNCONFIRMED_TX"
-				})
-			})
-		));
+		await waitFor(() =>
+			expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledWith(
+				networkId,
+				walletAddress,
+				expect.objectContaining({
+					signedData: expect.objectContaining({
+						hash: "NEW_UNCONFIRMED_TX",
+					}),
+				}),
+			),
+		);
 
 		unconfirmedMock.mockRestore();
 	});
