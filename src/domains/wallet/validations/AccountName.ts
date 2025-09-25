@@ -10,7 +10,7 @@ export const accountName = ({
 	currentAccountName: string;
 	profile: Contracts.IProfile;
 }) => {
-	const maxLength = 42;
+	const maxLength = 15;
 
 	return {
 		maxLength: {
