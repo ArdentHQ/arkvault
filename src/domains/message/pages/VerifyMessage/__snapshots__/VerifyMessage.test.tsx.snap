@@ -99,7 +99,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
@@ -111,7 +111,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
@@ -123,7 +123,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
@@ -135,7 +135,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
@@ -1015,7 +1015,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard"
                   title="Portfolio"
@@ -1027,7 +1027,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/exchange"
                   title="Exchange"
@@ -1039,7 +1039,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/contacts"
                   title="Contacts"
@@ -1051,7 +1051,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                 class="flex"
               >
                 <a
-                  class="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
                   data-discover="true"
                   href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/votes"
                   title="Votes"
