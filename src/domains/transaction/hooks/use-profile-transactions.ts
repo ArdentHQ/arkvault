@@ -11,7 +11,7 @@ import { delay } from "@/utils/delay";
 import { get } from "@/app/lib/helpers";
 import { useTransactionTypes } from "./use-transaction-types";
 import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
-import { UnconfirmedTransactionData } from "@/app/lib/mainsail/unconfirmed-transaction.dto";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -253,8 +253,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					wallets,
 				});
 
+				/* istanbul ignore next -- @preserve */
 				if (!isMounted.current) {
-					/* istanbul ignore next -- @preserve */
 					return;
 				}
 
@@ -472,9 +472,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				mode: "unconfirmed",
 				transactionTypes: allTransactionTypes,
 				wallets,
-			});
+			}) as UnconfirmedTransactionDataCollection;
 
-			const results: UnconfirmedTransactionData[] = response.items() ?? [];
+			const results = response.items();
 			const remoteHashes = results.map((t) => t.hash()).filter(Boolean);
 
 			cleanupUnconfirmedForAddresses(walletAddresses, remoteHashes);
