@@ -16,6 +16,9 @@ import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
+import { useLocalStorage } from "usehooks-ts";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useTranslation } from "react-i18next";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -80,11 +83,15 @@ export const SidePanel = ({
 	shakeWhenClosing = false,
 	preventClosing = false,
 }: SidePanelProps): JSX.Element => {
+	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
 
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
 	const [isMinimized, setIsMinimized] = useState(false);
+	const [finishedMinimizing, setFinishedMinimizing] = useState(false);
+	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
+
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
 	const toggleOpen = useCallback(
@@ -104,6 +111,14 @@ export const SidePanel = ({
 		},
 		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
 	);
+
+	useEffect(() => {
+		if (isMinimized) {
+			setTimeout(() => setFinishedMinimizing(true), 350);
+		} else {
+			setFinishedMinimizing(false);
+		}
+	}, [isMinimized]);
 
 	const { refs, context } = useFloating({
 		onOpenChange: toggleOpen,
@@ -262,13 +277,15 @@ export const SidePanel = ({
 												<div className="bg-theme-background">
 													<div className="relative flex flex-col">
 														<div
+															onClick={isMinimized ? () => toggleMinimize() : undefined}
 															className={cn(
 																"flex justify-between transition-all duration-150",
 																{
 																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
 																	// THe padding on the right is to compensate for the header content width
-																	"items-center py-3.5 pr-[162px] pl-6": isMinimized,
+																	"cursor-pointer items-center py-3.5 pr-[162px] pl-6":
+																		isMinimized,
 																	"items-start px-6 py-4": !isMinimized,
 																},
 															)}
@@ -310,18 +327,51 @@ export const SidePanel = ({
 																		},
 																	)}
 																>
-																	<Button
-																		data-testid="SidePanel__minimize-button"
-																		variant="transparent"
-																		size="md"
-																		className={cn("p-0", {
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
-																		})}
-																		onClick={() => toggleMinimize()}
+																	<Tooltip
+																		visible={
+																			finishedMinimizing && !minimizedHintHasShown
+																		}
+																		appendTo={() => document.body}
+																		interactive={true}
+																		offset={[0, 30]}
+																		content={
+																			<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
+																				<span className="font-semibold text-white">
+																					{t(
+																						"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
+																					)}
+																				</span>
+																				<Button
+																					size="xs"
+																					variant="transparent"
+																					data-testid="SidePanel__minimize-button-hint"
+																					className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
+																					onClick={() => {
+																						persistMinimizedHint(true);
+																					}}
+																				>
+																					{t("COMMON.GOT_IT")}
+																				</Button>
+																			</div>
+																		}
+																		placement="top"
 																	>
-																		<Icon name="Minimize" />
-																	</Button>
+																		<Button
+																			data-testid="SidePanel__minimize-button"
+																			variant="transparent"
+																			size="md"
+																			className={cn("p-0", {
+																				"h-5 w-5": isMinimized,
+																				"h-6 w-6": !isMinimized,
+																			})}
+																			onClick={(e) => {
+																				e.stopPropagation();
+																				toggleMinimize();
+																			}}
+																		>
+																			<Icon name="Minimize" />
+																		</Button>
+																	</Tooltip>
 																</div>
 
 																<div
@@ -337,7 +387,10 @@ export const SidePanel = ({
 																		data-testid="SidePanel__close-button"
 																		variant="transparent"
 																		size="md"
-																		onClick={() => toggleOpen()}
+																		onClick={(e) => {
+																			e.stopPropagation();
+																			toggleOpen();
+																		}}
 																		className={cn("p-0", {
 																			"h-5 w-5": isMinimized,
 																			"h-6 w-6": !isMinimized,
