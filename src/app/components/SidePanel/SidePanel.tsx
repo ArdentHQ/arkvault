@@ -367,6 +367,7 @@ export const SidePanel = ({
 												ref={scrollContainerRef}
 												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
 												data-testid="SidePanel__content"
+												inert={isMinimized}
 											>
 												{subtitle && (
 													<div className="text-theme-secondary-text text-sm leading-7 font-normal md:text-base">
