@@ -466,13 +466,13 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		try {
 			isFetchingUnconfirmed.current = true;
 
-			const response = await fetchTransactions({
+			const response = (await fetchTransactions({
 				cursor: 1,
 				flush: true,
 				mode: "unconfirmed",
 				transactionTypes: allTransactionTypes,
 				wallets,
-			}) as UnconfirmedTransactionDataCollection;
+			})) as UnconfirmedTransactionDataCollection;
 
 			const results = response.items();
 			const remoteHashes = results.map((t) => t.hash()).filter(Boolean);
