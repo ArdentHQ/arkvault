@@ -168,17 +168,23 @@ describe("WalletVote", () => {
 		const votes = [
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					rank: 1,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						rank: 1,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					rank: 2,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						rank: 2,
+					},
+					profile,
+				),
 			},
 		];
 
@@ -203,17 +209,23 @@ describe("WalletVote", () => {
 		const votes = [
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					rank: 1,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						rank: 1,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					rank: 2,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						rank: 2,
+					},
+					profile,
+				),
 			},
 		];
 
@@ -264,10 +276,13 @@ describe("WalletVote", () => {
 		it("should render a vote for an active validator", async () => {
 			const validator = {
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					rank: 10,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						rank: 10,
+					},
+					profile,
+				),
 			};
 
 			const { asFragment } = render(
@@ -295,10 +310,13 @@ describe("WalletVote", () => {
 
 			const validator = {
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					rank: 54,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						rank: 54,
+					},
+					profile,
+				),
 			};
 
 			const { asFragment } = render(
@@ -320,11 +338,14 @@ describe("WalletVote", () => {
 
 			const validator = {
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: false,
-					isValidator: true,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: false,
+						isValidator: true,
+					},
+					profile,
+				),
 			};
 
 			const { asFragment } = render(
@@ -381,19 +402,25 @@ describe("WalletVote", () => {
 		const votes = [
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: true,
-					isValidator: true,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: true,
+						isValidator: true,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: true,
-					isValidator: true,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: true,
+						isValidator: true,
+					},
+					profile,
+				),
 			},
 		];
 
@@ -459,11 +486,14 @@ describe("ValidatorStatus", () => {
 		const votes = [
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: true,
-					isValidator: true,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: true,
+						isValidator: true,
+					},
+					profile,
+				),
 			},
 		];
 
@@ -475,12 +505,15 @@ describe("ValidatorStatus", () => {
 		const votes = [
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: false,
-					isValidator: true,
-					rank: 1,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: false,
+						isValidator: true,
+						rank: 1,
+					},
+					profile,
+				),
 			},
 		];
 
@@ -492,29 +525,38 @@ describe("ValidatorStatus", () => {
 		const votes = [
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: false,
-					isValidator: true,
-					rank: 1,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: false,
+						isValidator: true,
+						rank: 1,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: false,
-					isValidator: true,
-					rank: 52,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: false,
+						isValidator: true,
+						rank: 52,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: true,
-					isValidator: true,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: true,
+						isValidator: true,
+					},
+					profile,
+				),
 			},
 		];
 
@@ -529,29 +571,38 @@ describe("ValidatorStatus", () => {
 		const votes = [
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: false,
-					isValidator: true,
-					rank: 1,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: false,
+						isValidator: true,
+						rank: 1,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: false,
-					isValidator: true,
-					rank: 52,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: false,
+						isValidator: true,
+						rank: 52,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: true,
-					isValidator: true,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: true,
+						isValidator: true,
+					},
+					profile,
+				),
 			},
 		];
 
@@ -564,20 +615,26 @@ describe("ValidatorStatus", () => {
 		const votes = [
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: false,
-					isValidator: true,
-					rank: 1,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: false,
+						isValidator: true,
+						rank: 1,
+					},
+					profile,
+				),
 			},
 			{
 				amount: 1,
-				wallet: new ReadOnlyWallet({
-					...defaultValidator,
-					isResignedValidator: true,
-					isValidator: true,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						...defaultValidator,
+						isResignedValidator: true,
+						isValidator: true,
+					},
+					profile,
+				),
 			},
 		];
 

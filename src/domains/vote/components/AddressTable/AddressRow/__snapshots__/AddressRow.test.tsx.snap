@@ -12,7 +12,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -21,7 +21,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -32,7 +32,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -210,7 +210,7 @@ exports[`AddressRow > should render 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -219,7 +219,7 @@ exports[`AddressRow > should render 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -230,7 +230,7 @@ exports[`AddressRow > should render 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -408,7 +408,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -417,7 +417,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -428,7 +428,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -607,7 +607,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -616,7 +616,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -627,7 +627,7 @@ exports[`AddressRow > should render when the maximum votes is greater than 1 1`]
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -755,7 +755,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -764,7 +764,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -775,7 +775,7 @@ exports[`AddressRow > should render when the wallet has exactly 4 votes 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -957,7 +957,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -966,7 +966,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -977,7 +977,7 @@ exports[`AddressRow > should render when the wallet has many votes 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1159,7 +1159,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1168,7 +1168,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1179,7 +1179,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1348,7 +1348,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1357,7 +1357,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0x659A76be283644AEc2003aa8ba26485047fd1BFB
@@ -1480,7 +1480,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1489,7 +1489,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1500,7 +1500,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1669,7 +1669,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1678,7 +1678,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0x7F9d7FdA68521c09Bd2749a36514e514abB0866F
@@ -1801,7 +1801,7 @@ exports[`AddressRow > should render with active validator 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1810,7 +1810,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -1821,7 +1821,7 @@ exports[`AddressRow > should render with active validator 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -1999,7 +1999,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2008,7 +2008,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2019,7 +2019,7 @@ exports[`AddressRow > should render with resigned validator 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -2199,7 +2199,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 cursor-pointer group space-x-3"
+            class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -2208,7 +2208,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight text-sm dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+                  class="font-semibold text-base text-sm"
                   data-testid="Address__alias"
                 >
                   <span
@@ -2219,7 +2219,7 @@ exports[`AddressRow > should render with standby validator 1`] = `
                   </span>
                 </span>
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm font-semibold text-base"
+                  class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
                   data-testid="Address__address"
                 >
                   0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6

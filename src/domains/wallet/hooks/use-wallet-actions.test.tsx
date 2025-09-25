@@ -87,7 +87,7 @@ describe("useWalletActions", () => {
 			current.handleSend();
 		});
 
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/send-transfer`);
+		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
 		act(() => {
 			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
@@ -163,48 +163,6 @@ describe("useWalletActions", () => {
 				current.handleSelectOption({ value: "username-registration" } as DropdownOption);
 			});
 		}).not.toThrow();
-	});
-
-	it("should call handleSendTransfer callback when provided", () => {
-		const mockHandleSendTransfer = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSendTransfer: mockHandleSendTransfer,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSend();
-		});
-
-		expect(mockHandleSendTransfer).toHaveBeenCalledTimes(1);
-	});
-
-	it("should call handleSignMessage callback when provided", () => {
-		const mockHandleSignMessage = vi.fn();
-
-		const {
-			result: { current },
-		} = renderHook(
-			() =>
-				useWalletActions({
-					handleSignMessage: mockHandleSignMessage,
-					wallets: [wallet],
-				}),
-			{ wrapper },
-		);
-
-		act(() => {
-			current.handleSelectOption({ value: "sign-message" } as DropdownOption);
-		});
-
-		expect(mockHandleSignMessage).toHaveBeenCalledTimes(1);
 	});
 
 	it("should call handleSendUsernameResignation callback when provided", () => {

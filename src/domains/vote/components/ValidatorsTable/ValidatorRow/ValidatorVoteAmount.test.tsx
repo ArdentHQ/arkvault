@@ -27,19 +27,24 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => (
 );
 
 describe("ValidatorVoteAmount", () => {
+	let profile: Contracts.IProfile;
+
 	beforeAll(() => {
-		const profile = env.profiles().findById(getMainsailProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 
-		validator = new ReadOnlyWallet({
-			address: data[0].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[0].publicKey,
-			username: data[0].username,
-		});
+		validator = new ReadOnlyWallet(
+			{
+				address: data[0].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[0].publicKey,
+				username: data[0].username,
+			},
+			profile,
+		);
 
 		walletBalanceMock = vi.spyOn(wallet, "balance").mockReturnValue(90);
 		votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);

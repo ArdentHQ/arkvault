@@ -105,3 +105,10 @@ export const WalletImportMethod = {
 	WIF: "WIF",
 	WIFWithEncryption: "WIF_WITH_ENCRYPTION",
 };
+
+export enum AddressViewSelection {
+	single = "single",
+	multiple = "multiple",
+}
+
+export type AddressViewType = "single" | "multiple";

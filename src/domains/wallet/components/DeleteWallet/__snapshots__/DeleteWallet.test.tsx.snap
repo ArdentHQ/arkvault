@@ -64,7 +64,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
             <h2
               class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
             >
-              Delete Wallet
+              Delete Address
             </h2>
           </div>
           <div
@@ -168,7 +168,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               <div
                 class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
               >
-                Are you sure you wish to delete the selected wallet? Before deleting, make sure the mnemonic passphrase is secured safely.
+                Are you sure you wish to delete the selected address? Before deleting, make sure the mnemonic passphrase is secured safely.
               </div>
             </div>
             <fieldset
@@ -179,7 +179,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                 data-testid="FormLabel"
                 for="wallet"
               >
-                Wallet
+                Address
               </label>
               <button
                 class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden cursor-default"
@@ -188,7 +188,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                 type="button"
               >
                 <span
-                  class="absolute inset-y-0 flex items-center border border-transparent right-4 left-4"
+                  class="absolute inset-y-0 left-4 flex items-center border border-transparent right-4"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

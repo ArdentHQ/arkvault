@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 
 import { sendVote } from "./SendVote";
@@ -11,25 +10,31 @@ let network: any;
 const votes = [
 	{
 		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: validatorData[0].address,
-			explorerLink: "",
-			publicKey: validatorData[0].publicKey,
-			rank: 1,
-			username: "arkx",
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: validatorData[0].address,
+				explorerLink: "",
+				publicKey: validatorData[0].publicKey,
+				rank: 1,
+				username: "arkx",
+			},
+			profile,
+		),
 	},
 ];
 
 const votesWithoutUsername = [
 	{
 		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: validatorData[0].address,
-			explorerLink: "",
-			publicKey: validatorData[0].publicKey,
-			rank: 1,
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: validatorData[0].address,
+				explorerLink: "",
+				publicKey: validatorData[0].publicKey,
+				rank: 1,
+			},
+			profile,
+		),
 	},
 ];
 

@@ -122,7 +122,7 @@ export const SingleImport = ({
 	}
 
 	return (
-		<div className="flex flex-col gap-4">
+		<div className="flex flex-col gap-4" data-testid="SingleImport__container">
 			<DesktopImportSection title={t("COMMON.IMPORTED")}>
 				<SectionBodyItem title={t("COMMON.ADDRESS")}>
 					<Address address={ledgerWallet.address} showCopyButton truncateOnTable />

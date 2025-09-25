@@ -22,7 +22,7 @@ import { SendUsernameResignationSidePanel } from "./SendUsernameResignationSideP
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { vi } from "vitest";
-
+import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const passphrase = getDefaultMainsailWalletMnemonic();
@@ -61,6 +61,8 @@ const signedTransactionMock = {
 		`https://mainsail-explorer.ihost.org/transactions/${UsernameResignationFixture.data.hash}`,
 	fee: () => BigNumber.make(107),
 	from: () => UsernameResignationFixture.data.from,
+	gasLimit: () => UsernameResignationFixture.data.gasLimit,
+	gasUsed: () => UsernameResignationFixture.data.gas,
 	hash: () => UsernameResignationFixture.data.hash,
 	isConfirmed: () => false,
 	isMultiPayment: () => false,
@@ -105,9 +107,13 @@ const formStep = () => screen.findByTestId("SendUsernameResignation__form-step")
 const sendButton = () => screen.getByTestId("SendUsernameResignation__send-button");
 
 const reviewStepID = "SendUsernameResignation__review-step";
-
+let useSearchParamsMock;
 describe("SendUsernameResignationSidePanel", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(getMainsailProfileId())!;
 
 		await env.profiles().restore(profile);
@@ -149,6 +155,10 @@ describe("SendUsernameResignationSidePanel", () => {
 				UsernameResignationFixture,
 			),
 		);
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should handle username resignation with keyboard navigation", async () => {
@@ -319,7 +329,7 @@ describe("SendUsernameResignationSidePanel", () => {
 
 		expect(screen.getByTestId("Input__error")).toHaveAttribute(
 			"data-errortext",
-			"This mnemonic does not correspond to your wallet",
+			"This mnemonic does not correspond to your address",
 		);
 
 		nanoXTransportMock.mockRestore();

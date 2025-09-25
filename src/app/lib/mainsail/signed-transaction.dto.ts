@@ -281,4 +281,12 @@ export class SignedTransactionData {
 
 		return this.methodHash();
 	}
+
+	public gasLimit(): number {
+		return this.signedData.gasLimit;
+	}
+
+	public gasUsed(): number {
+		return BigNumber.make(UnitConverter.formatUnits(this.signedData.gasPrice, "gwei")).toNumber();
+	}
 }

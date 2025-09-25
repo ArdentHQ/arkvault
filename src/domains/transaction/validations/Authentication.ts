@@ -48,7 +48,7 @@ export const authentication = (t: any) => {
 					return true;
 				}
 
-				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_WALLET");
+				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_ADDRESS");
 			},
 		}),
 		mnemonic: (wallet: Contracts.IReadWriteWallet) => ({
@@ -74,9 +74,9 @@ export const authentication = (t: any) => {
 							return true;
 						}
 
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
 					} catch {
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
 					}
 				},
 			},
@@ -92,7 +92,7 @@ export const authentication = (t: any) => {
 					return true;
 				}
 
-				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_WALLET");
+				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_ADDRESS");
 			},
 		}),
 		secondMnemonic: (wallet: Contracts.IReadWriteWallet) => ({
@@ -108,9 +108,9 @@ export const authentication = (t: any) => {
 							return true;
 						}
 
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
 					} catch {
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET");
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
 					}
 				},
 			},
@@ -128,9 +128,9 @@ export const authentication = (t: any) => {
 							return true;
 						}
 
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 					} catch {
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 					}
 				},
 			},
@@ -147,9 +147,9 @@ export const authentication = (t: any) => {
 						return true;
 					}
 
-					return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+					return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 				} catch {
-					return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+					return t("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 				}
 			},
 		}),
