@@ -4,7 +4,6 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Contracts } from "@/app/lib/profiles";
-import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 export enum OptionsValue {
 	ADDRESS = "address",
