@@ -100,7 +100,7 @@ export const useImportOptions = (
 
 		const advancedOptions: ImportOption[] = [];
 
-		if (profile.settings().get(ProfileSetting.UseHDWallets)) {
+		if (profile.usesHDWallets()) {
 			advancedOptions.push({
 				canBeEncrypted: true,
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.HD_WALLET_DESCRIPTION"),

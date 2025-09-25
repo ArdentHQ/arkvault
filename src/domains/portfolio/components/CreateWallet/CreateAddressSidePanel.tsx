@@ -40,7 +40,7 @@ export const CreateAddressesSidePanel = ({
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 
-	const usesHDWallets = activeProfile.settings().get(ProfileSetting.UseHDWallets);
+	const usesHDWallets = activeProfile.usesHDWallets();
 	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep;
 	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
 
