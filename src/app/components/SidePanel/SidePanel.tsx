@@ -84,7 +84,8 @@ export const SidePanel = ({
 
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
-
+	const [isMinimized, setIsMinimized] = useState(false);
+	const showMinimized = isMinimized && open;
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
 	const toggleOpen = useCallback(
@@ -96,9 +97,14 @@ export const SidePanel = ({
 				return;
 			}
 
+			if (open === false && isMinimized) {
+				// Reset the minimized state after the transition is complete
+				setTimeout(() => setIsMinimized(false), 350);
+			}
+
 			onOpenChange(open);
 		},
-		[onOpenChange, shakeWhenClosing, shouldPreventClosing],
+		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
 	);
 
 	const { refs, context } = useFloating({
@@ -124,7 +130,7 @@ export const SidePanel = ({
 
 	const { isMounted, styles } = useTransitionStyles(context, {
 		close: {
-			transform: "translateX(100%)",
+			transform: showMinimized ? "translateY(100%)" : "translateX(100%)",
 			transitionTimingFunction: "ease-in",
 		},
 		common: {
@@ -182,8 +188,6 @@ export const SidePanel = ({
 		};
 	}, [open, popStateHandlerRef]);
 
-	const [isMinimized, setIsMinimized] = useState(false);
-
 	const toggleMinimize = () => {
 		setIsMinimized(!isMinimized);
 	};
@@ -197,17 +201,17 @@ export const SidePanel = ({
 							className={cn(
 								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl transition-opacity duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
 								{
-									"opacity-0": isMinimized,
-									"opacity-100": !isMinimized,
+									"opacity-0": showMinimized,
+									"opacity-100": !showMinimized,
 								},
 							)}
 						/>
 						<FloatingOverlay
-							className={cn("z-50 transition-all duration-300")}
+							className="z-50 transition-all duration-300"
 							style={{
-								transform: isMinimized ? "translateY(calc(100dvh - 52px))" : undefined,
+								transform: showMinimized ? "translateY(calc(100dvh - 48px))" : undefined,
 							}}
-							lockScroll={!isMinimized}
+							lockScroll={!showMinimized}
 						>
 							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
@@ -219,12 +223,11 @@ export const SidePanel = ({
 									<div
 										style={{ ...styles }}
 										className={cn(
-											"fixed top-0 right-0 w-full translate-y-0 transition-all duration-300",
+											"fixed top-0 right-0 w-full translate-y-0 transition-all duration-300 md:max-w-[608px]",
 											className,
 											{
 												"animate-shake": shake,
-												"md:max-w-[460px]": isMinimized,
-												"md:max-w-[608px]": !isMinimized,
+												"translate-x-[148px]": showMinimized,
 											},
 										)}
 									>
@@ -234,8 +237,8 @@ export const SidePanel = ({
 												"navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
 												{
 													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-tl-xl border-t border-l":
-														isMinimized,
-													"border-transparent": !isMinimized,
+														showMinimized,
+													"border-transparent": !showMinimized,
 												},
 											)}
 											ref={scrollRef}
@@ -249,8 +252,8 @@ export const SidePanel = ({
 																{
 																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
-																	"items-center py-3.5": isMinimized,
-																	"items-start py-4": !isMinimized,
+																	"items-start py-4": !showMinimized,
+																	"max-w-[460px] items-center py-3.5": showMinimized,
 																},
 															)}
 														>
@@ -260,7 +263,7 @@ export const SidePanel = ({
 																		className={cn(
 																			"text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block [&_svg]:transition-all [&_svg]:duration-300",
 																			{
-																				"[&_:has(svg)]:h-5!": isMinimized,
+																				"[&_:has(svg)]:h-5!": showMinimized,
 																			},
 																		)}
 																	>
@@ -272,8 +275,9 @@ export const SidePanel = ({
 																	className={cn(
 																		"mb-0 font-semibold transition-all duration-300 md:pt-0",
 																		{
-																			"text-lg leading-[21px]": !isMinimized,
-																			"truncate text-base leading-5": isMinimized,
+																			"text-lg leading-[21px]": !showMinimized,
+																			"truncate text-base leading-5":
+																				showMinimized,
 																		},
 																	)}
 																>
@@ -286,8 +290,8 @@ export const SidePanel = ({
 																	className={cn(
 																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
 																		{
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
+																			"h-5 w-5": showMinimized,
+																			"h-6 w-6": !showMinimized,
 																		},
 																	)}
 																>
@@ -296,8 +300,8 @@ export const SidePanel = ({
 																		variant="transparent"
 																		size="md"
 																		className={cn("p-0", {
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
+																			"h-5 w-5": showMinimized,
+																			"h-6 w-6": !showMinimized,
 																		})}
 																		onClick={() => toggleMinimize()}
 																	>
@@ -309,8 +313,8 @@ export const SidePanel = ({
 																	className={cn(
 																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
 																		{
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
+																			"h-5 w-5": showMinimized,
+																			"h-6 w-6": !showMinimized,
 																		},
 																	)}
 																>
@@ -320,8 +324,8 @@ export const SidePanel = ({
 																		size="md"
 																		onClick={() => toggleOpen()}
 																		className={cn("p-0", {
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
+																			"h-5 w-5": showMinimized,
+																			"h-6 w-6": !showMinimized,
 																		})}
 																	>
 																		<Icon name="Cross" />
