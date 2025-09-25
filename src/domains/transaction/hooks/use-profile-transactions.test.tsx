@@ -1028,9 +1028,9 @@ describe("useProfileTransactions", () => {
 			wallet.address(),
 			expect.objectContaining({
 				signedData: expect.objectContaining({
-					hash: "MATCHING_TX"
-				})
-			})
+					hash: "MATCHING_TX",
+				}),
+			}),
 		);
 
 		unconfirmedMock.mockRestore();
