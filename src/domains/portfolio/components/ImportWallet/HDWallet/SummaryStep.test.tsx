@@ -157,7 +157,7 @@ describe("SummaryStep", () => {
 		// Enter a new name
 		const input = screen.getByTestId("UpdateWalletName__input");
 		await user.clear(input);
-		await user.paste("New Account Name");
+		await user.paste("New Account");
 
 		// Click save
 		const saveButton = screen.getByTestId("UpdateWalletName__submit");
@@ -249,7 +249,7 @@ describe("SummaryStep", () => {
 		// Change account name
 		const input = screen.getByTestId("UpdateWalletName__input");
 		await user.clear(input);
-		await user.paste("Updated Account Name");
+		await user.paste("Updated Name");
 
 		// Save changes
 		const saveButton = screen.getByTestId("UpdateWalletName__submit");
@@ -257,7 +257,7 @@ describe("SummaryStep", () => {
 
 		// Updated name should be displayed
 		await waitFor(() => {
-			expect(screen.getByText("Updated Account Name")).toBeInTheDocument();
+			expect(screen.getByText("Updated Name")).toBeInTheDocument();
 		});
 
 		unmount();
