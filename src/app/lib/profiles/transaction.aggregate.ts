@@ -31,7 +31,7 @@ export class TransactionAggregate implements ITransactionAggregate {
 		return this.#aggregate("received", query);
 	}
 
-	public async unconfirmed(query: AggregateQuery): Promise<UnconfirmedTransactionDataCollection> {
+	public async unconfirmed(query: AggregateQuery = {}): Promise<UnconfirmedTransactionDataCollection> {
 		const syncedWallets: IReadWriteWallet[] = this.#getWallets(query);
 
 		if (syncedWallets.length === 0) {
