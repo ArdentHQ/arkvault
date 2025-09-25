@@ -80,8 +80,6 @@ export const SidePanel = ({
 	shakeWhenClosing = false,
 	preventClosing = false,
 }: SidePanelProps): JSX.Element => {
-	const defaultButtonStyle =
-		"w-6 h-6 bg-transparent rounded transition-all duration-100 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white";
 	const popStateHandlerRef = useRef<() => void>(() => {});
 
 	const [shake, setShake] = useState(false);
@@ -184,13 +182,33 @@ export const SidePanel = ({
 		};
 	}, [open, popStateHandlerRef]);
 
+	const [isMinimized, setIsMinimized] = useState(false);
+
+	const toggleMinimize = () => {
+		setIsMinimized(!isMinimized);
+	};
+
 	return (
 		<FloatingPortal>
 			{isMounted && (
 				<SidePanelContext.Provider value={{ setHasModalOpened }}>
 					<>
-						<div className="dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
-						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
+						<div
+							className={cn(
+								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl transition-opacity duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
+								{
+									"opacity-0": isMinimized,
+									"opacity-100": !isMinimized,
+								},
+							)}
+						/>
+						<FloatingOverlay
+							className={cn("z-50 transition-all duration-300")}
+							style={{
+								transform: isMinimized ? "translateY(calc(100dvh - 52px))" : undefined,
+							}}
+							lockScroll={!isMinimized}
+						>
 							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
 									data-testid={dataTestId}
@@ -200,13 +218,26 @@ export const SidePanel = ({
 								>
 									<div
 										style={{ ...styles }}
-										className={cn("fixed top-0 right-0 w-full md:w-[608px]", className, {
-											"animate-shake": shake,
-										})}
+										className={cn(
+											"fixed top-0 right-0 w-full translate-y-0 transition-all duration-300",
+											className,
+											{
+												"animate-shake": shake,
+												"md:max-w-[460px]": isMinimized,
+												"md:max-w-[608px]": !isMinimized,
+											},
+										)}
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
-											className="navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
+											className={cn(
+												"navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
+												{
+													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-tl-xl border-t border-l":
+														isMinimized,
+													"border-transparent": !isMinimized,
+												},
+											)}
 											ref={scrollRef}
 										>
 											<div className="relative">
@@ -214,46 +245,84 @@ export const SidePanel = ({
 													<div className="relative flex flex-col">
 														<div
 															className={cn(
-																"flex items-start justify-between px-6 py-4",
+																"flex justify-between px-6 transition-all duration-300",
 																{
 																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
+																	"items-center py-3.5": isMinimized,
+																	"items-start py-4": !isMinimized,
 																},
 															)}
 														>
 															<div className="flex items-center gap-2">
 																{titleIcon && (
-																	<div className="text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block">
+																	<div
+																		className={cn(
+																			"text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block [&_svg]:transition-all [&_svg]:duration-300",
+																			{
+																				"[&_:has(svg)]:h-5!": isMinimized,
+																			},
+																		)}
+																	>
 																		{titleIcon}
 																	</div>
 																)}
 																<h2
 																	data-testid="SidePanel__title"
-																	className="mb-0 text-lg leading-[21px] font-semibold md:pt-0"
+																	className={cn(
+																		"mb-0 font-semibold transition-all duration-300 md:pt-0",
+																		{
+																			"text-lg leading-[21px]": !isMinimized,
+																			"truncate text-base leading-5": isMinimized,
+																		},
+																	)}
 																>
 																	{title}
 																</h2>
 															</div>
 
-															<div className="flex flex-row gap-3">
-																<div className={defaultButtonStyle}>
+															<div className="flex flex-row items-center gap-3">
+																<div
+																	className={cn(
+																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																		{
+																			"h-5 w-5": isMinimized,
+																			"h-6 w-6": !isMinimized,
+																		},
+																	)}
+																>
 																	<Button
 																		data-testid="SidePanel__minimize-button"
 																		variant="transparent"
 																		size="md"
-																		className="h-6 w-6 p-0"
+																		className={cn("p-0", {
+																			"h-5 w-5": isMinimized,
+																			"h-6 w-6": !isMinimized,
+																		})}
+																		onClick={() => toggleMinimize()}
 																	>
 																		<Icon name="Minimize" />
 																	</Button>
 																</div>
 
-																<div className={defaultButtonStyle}>
+																<div
+																	className={cn(
+																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																		{
+																			"h-5 w-5": isMinimized,
+																			"h-6 w-6": !isMinimized,
+																		},
+																	)}
+																>
 																	<Button
 																		data-testid="SidePanel__close-button"
 																		variant="transparent"
 																		size="md"
 																		onClick={() => toggleOpen()}
-																		className="h-6 w-6 p-0"
+																		className={cn("p-0", {
+																			"h-5 w-5": isMinimized,
+																			"h-6 w-6": !isMinimized,
+																		})}
 																	>
 																		<Icon name="Cross" />
 																	</Button>
