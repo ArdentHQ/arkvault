@@ -286,8 +286,6 @@ export const SelectAddressStep = ({
 		const promises = Array.from({ length: ADDRESSES_PER_BATCH }, (_, index) => generateWallet(index + startIndex));
 		const results = await Promise.all(promises);
 
-		setLastAddressIndex((prevAddressIndex) => prevAddressIndex + ADDRESSES_PER_BATCH);
-
 		let newAddresses: AddressData[] = results.map(({ wallet, levels }) => ({
 			address: wallet.address(),
 			balance: wallet.balance(),
@@ -302,6 +300,8 @@ export const SelectAddressStep = ({
 				newAddresses = newAddresses.slice(0, 1);
 			}
 		}
+
+		setLastAddressIndex((prevAddressIndex) => prevAddressIndex + newAddresses.length);
 
 		setIsLoading(false);
 		setAddresses((previousAddresses) => [...previousAddresses, ...newAddresses]);
