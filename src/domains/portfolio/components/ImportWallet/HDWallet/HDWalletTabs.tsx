@@ -74,25 +74,21 @@ export const HDWalletTabs = ({
 
 			const accountName = getAccountName({ profile: activeProfile });
 
-			await Promise.all(
-				addresses.map(async ({ levels }, index) => {
-					const wallets = await importWallets({
-						disableAddressSelection: index !== 0, // set the very first address to be selected
-						levels,
-						type: OptionsValue.BIP44,
-						value: mnemonic as string,
-					});
+			for (const [index, { levels }] of addresses.entries()) {
+				const [wallet] = await importWallets({
+					disableAddressSelection: index !== 0, // set the very first address to be selected
+					levels,
+					type: OptionsValue.BIP44,
+					value: mnemonic as string,
+				});
 
-					const wallet = wallets[0];
+				wallet.mutator().accountName(accountName);
 
-					wallet.mutator().accountName(accountName);
-
-					if (password) {
-						wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
-						await wallet.signingKey().set(mnemonic, password);
-					}
-				}),
-			);
+				if (password) {
+					wallet.data().set(WalletData.ImportMethod, WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
+					await wallet.signingKey().set(mnemonic, password);
+				}
+			}
 
 			await persist();
 			setImportedWallets(addresses);
