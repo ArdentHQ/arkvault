@@ -35,7 +35,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 	isLoading,
 	isSelected,
 	loadMore,
-	addressesPerPage = ADDRESSES_PER_BATCH
+	addressesPerPage = ADDRESSES_PER_BATCH,
 }) => {
 	const { t } = useTranslation();
 
@@ -206,7 +206,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
@@ -232,9 +232,9 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 export const SelectAddressStep = ({
 	network,
 	profile,
-	addressesPerPage = ADDRESSES_PER_BATCH
+	addressesPerPage = ADDRESSES_PER_BATCH,
 }: {
-	addressesPerPage?: number
+	addressesPerPage?: number;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
 }) => {

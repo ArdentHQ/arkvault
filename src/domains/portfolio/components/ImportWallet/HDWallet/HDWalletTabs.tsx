@@ -236,7 +236,11 @@ export const HDWalletTabs = ({
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.SelectAddressStep}>
-								<SelectAddressStep network={activeNetwork} profile={activeProfile} addressesPerPage={addressesPerPage} />
+								<SelectAddressStep
+									network={activeNetwork}
+									profile={activeProfile}
+									addressesPerPage={addressesPerPage}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.SummaryStep}>
