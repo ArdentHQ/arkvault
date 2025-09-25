@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX, useCallback, useState, useContext } from "react";
+import React, { useEffect, useRef, JSX, useCallback, useState, useContext, useMemo } from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import cn from "classnames";
@@ -113,7 +113,7 @@ export const SidePanel = ({
 	const click = useClick(context);
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
-		enabled: !hasModalOpened,
+		enabled: !hasModalOpened && !isMinimized,
 		// Allow escape attempts when we need to show shake due to preventClosing
 		escapeKey: !disableEscapeKey || (shakeWhenClosing && preventClosing),
 		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
@@ -190,6 +190,20 @@ export const SidePanel = ({
 		setIsMinimized(!isMinimized);
 	};
 
+	const headerTransform = useMemo(() => {
+		if (isMinimized && !open) {
+			return "translateY(100%)";
+		}
+
+		// Since I was unable to animate the panel width when minimized im translating the header to the right
+		// and resizing the header content to emulate the shrinked header animation
+		if (open && isMinimized) {
+			return "translateX(148px)";
+		}
+
+		return styles.transform;
+	}, [isMinimized, open, styles.transform]);
+
 	return (
 		<FloatingPortal>
 			{isMounted && (
@@ -199,14 +213,15 @@ export const SidePanel = ({
 							className={cn(
 								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl transition-opacity duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
 								{
-									"opacity-0": isMinimized,
 									"opacity-100": !isMinimized,
+									"pointer-events-none opacity-0": isMinimized,
 								},
 							)}
 						/>
 						<FloatingOverlay
 							className="z-50 transition-all duration-300"
 							style={{
+								overflow: isMinimized ? "hidden" : undefined,
 								transform: isMinimized ? "translateY(calc(100dvh - 48px))" : undefined,
 							}}
 							lockScroll={!isMinimized}
@@ -221,14 +236,13 @@ export const SidePanel = ({
 									<div
 										style={{
 											...styles,
-											transform: isMinimized && !open ? "translateY(100%)" : styles.transform,
+											transform: headerTransform,
 										}}
 										className={cn(
 											"fixed top-0 right-0 w-full transition-all duration-300 md:max-w-[608px]",
 											className,
 											{
 												"animate-shake": shake,
-												"translate-x-[148px]": isMinimized,
 											},
 										)}
 									>
@@ -249,12 +263,13 @@ export const SidePanel = ({
 													<div className="relative flex flex-col">
 														<div
 															className={cn(
-																"flex justify-between px-6 transition-all duration-300",
+																"flex justify-between transition-all duration-150",
 																{
 																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
-																	"items-start py-4": !isMinimized,
-																	"max-w-[460px] items-center py-3.5": isMinimized,
+																	// THe padding on the right is to compensate for the header content width
+																	"items-center py-3.5 pr-[162px] pl-6": isMinimized,
+																	"items-start px-6 py-4": !isMinimized,
 																},
 															)}
 														>
