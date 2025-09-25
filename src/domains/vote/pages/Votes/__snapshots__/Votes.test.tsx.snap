@@ -217,7 +217,7 @@ exports[`Votes > should emit action on continue button 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -8536,7 +8536,7 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -16539,7 +16539,7 @@ exports[`Votes > should filter current validators 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -17935,7 +17935,7 @@ exports[`Votes > should open the create wallet side panel 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -18793,7 +18793,7 @@ exports[`Votes > should open the import wallet side panel 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -19653,7 +19653,7 @@ exports[`Votes > should render 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -27656,7 +27656,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -35659,7 +35659,7 @@ exports[`Votes > should select a validator 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -43921,7 +43921,7 @@ exports[`Votes > should select an address and validator 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -51923,7 +51923,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li

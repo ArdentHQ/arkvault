@@ -212,7 +212,7 @@ exports[`Exchange > should render empty 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -1099,7 +1099,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li

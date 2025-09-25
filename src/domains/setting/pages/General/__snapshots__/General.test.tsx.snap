@@ -93,7 +93,7 @@ exports[`General Settings > should disable submit button when profile is not res
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -2572,7 +2572,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -5095,7 +5095,7 @@ exports[`General Settings > should render 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -7574,7 +7574,7 @@ exports[`General Settings > should update profile 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -10053,7 +10053,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -12531,7 +12531,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li

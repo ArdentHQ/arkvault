@@ -212,7 +212,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -1923,7 +1923,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -3337,7 +3337,7 @@ exports[`Contacts > should render with contacts 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -5041,7 +5041,7 @@ exports[`Contacts > should render without contacts in lg 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -6210,7 +6210,7 @@ exports[`Contacts > should render without contacts in md 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -7379,7 +7379,7 @@ exports[`Contacts > should render without contacts in sm 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -8341,7 +8341,7 @@ exports[`Contacts > should render without contacts in xl 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -9510,7 +9510,7 @@ exports[`Contacts > should render without contacts in xs 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li

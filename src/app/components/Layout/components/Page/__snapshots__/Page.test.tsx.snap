@@ -216,7 +216,7 @@ exports[`Page > should render with navigation context 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -932,7 +932,7 @@ exports[`Page > should render with navigation context 2`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -1655,7 +1655,7 @@ exports[`Page > should render with navigation context 3`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -2378,7 +2378,7 @@ exports[`Page > should render with sidebar = false 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
@@ -3090,7 +3090,7 @@ exports[`Page > should render with sidebar = true 1`] = `
               </div>
             </div>
             <ul
-              class="hidden h-12 items-center xl:flex"
+              class="hidden h-12 items-center gap-0.5 xl:flex"
               data-testid="NavigationBar__menu"
             >
               <li
