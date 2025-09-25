@@ -979,4 +979,58 @@ describe("useProfileTransactions", () => {
 		activeNetworkSpy.mockRestore();
 		consoleErrorSpy.mockRestore();
 	});
+
+	it("should skip unconfirmed transactions with no matching wallet", async () => {
+		const wallet = profile.wallets().first();
+
+		// Create unconfirmed transaction that doesn't match any wallet addresses
+		const nonMatchingUnconfirmedTx = {
+			...unconfirmedFixture[0],
+			from: () => "0xNonMatchingFromAddress",
+			hash: () => "NON_MATCHING_TX",
+			raw: () => createMockedTransactionData({ hash: "NON_MATCHING_TX" }),
+			to: () => "0xNonMatchingToAddress",
+		};
+
+		// Create matching unconfirmed transaction
+		const matchingUnconfirmedTx = {
+			...unconfirmedFixture[0],
+			from: () => wallet.address(),
+			hash: () => "MATCHING_TX",
+			raw: () => createMockedTransactionData({ hash: "MATCHING_TX" }),
+			to: () => "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+		};
+
+		// Mock the transactionAggregate.unconfirmed method to return both transactions
+		const unconfirmedMock = vi.spyOn(profile.transactionAggregate(), "unconfirmed").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [nonMatchingUnconfirmedTx as any, matchingUnconfirmedTx as any],
+		});
+
+		const { addUnconfirmedTransactionFromApi } = await mockUnconfirmedTransactionsHook([]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [wallet] }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		await waitFor(() => expect(unconfirmedMock).toHaveBeenCalled());
+
+		// Should only add the matching transaction, not the non-matching one
+		await waitFor(() => expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(1));
+		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledWith(
+			wallet.networkId(),
+			wallet.address(),
+			expect.objectContaining({
+				signedData: expect.objectContaining({
+					hash: "MATCHING_TX"
+				})
+			})
+		);
+
+		unconfirmedMock.mockRestore();
+	});
 });

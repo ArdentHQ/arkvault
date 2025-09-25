@@ -457,7 +457,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const walletAddressesStr = walletAddresses.join("-");
 
 	const fetchUnconfirmedTransactions = useCallback(async () => {
-		console.log("Fetching unconfirmed transactions");
 		/* istanbul ignore next -- @preserve */
 		if (wallets.length === 0 || isFetchingUnconfirmed.current) {
 			return;
@@ -494,7 +493,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				});
 
 				if (!matched) {
-					console.warn("No matching wallet found for transaction:", transaction);
 					continue;
 				}
 
