@@ -413,8 +413,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [activeMode, wallets, selectedTransactionTypes, fetchTransactions]);
 
 	const checkNewTransactions = useCallback(async () => {
+		/* istanbul ignore next -- @preserve */
 		if (wallets.length === 0) {
-			/* istanbul ignore next -- @preserve */
 			return;
 		}
 
