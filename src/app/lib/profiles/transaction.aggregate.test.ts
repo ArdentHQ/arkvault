@@ -19,8 +19,7 @@ const createTransactionMock = (wallet: IReadWriteWallet) =>
 		wallet: () => wallet,
 	} as any);
 
-const createUnconfirmedTransactionMock = () => new UnconfirmedTransactionData().configure(TransactionFixture)
-
+const createUnconfirmedTransactionMock = () => new UnconfirmedTransactionData().configure(TransactionFixture);
 
 describe("TransactionAggregate", () => {
 	beforeEach(async () => {
