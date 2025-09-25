@@ -254,6 +254,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				});
 
 				if (!isMounted.current) {
+					/* istanbul ignore next -- @preserve */
 					return;
 				}
 
