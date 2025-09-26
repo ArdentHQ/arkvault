@@ -128,6 +128,7 @@ export const AddressesSidePanel = ({
 			preventClosing={selectedAddresses.length === 0}
 			dataTestId="AddressesSidePanel"
 			onMountChange={onMountChange}
+			minimizeable={false}
 		>
 			<Tabs
 				className={cn("mb-3", { hidden: profile.wallets().count() === 1 })}

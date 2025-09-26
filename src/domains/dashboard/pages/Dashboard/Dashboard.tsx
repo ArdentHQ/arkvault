@@ -12,19 +12,10 @@ import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
-import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
-import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
-import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
 
 export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
-	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState<
-		"validatorRegistration" | "usernameRegistration" | undefined
-	>(undefined);
-	const [showSendUsernameResignationPanel, setShowSendUsernameResignationPanel] = useState(false);
-	const [showSendValidatorResignationPanel, setShowSendValidatorResignationPanel] = useState(false);
 
 	const navigate = useNavigate();
 	const { t } = useTranslation();
@@ -108,9 +99,6 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 						isLoadingVotes={isLoadingVotes}
 						isUpdatingTransactions={isUpdatingTransactions}
 						onUpdate={setIsUpdatingWallet}
-						onSendRegistration={setShowSendRegistrationPanel}
-						onSendUsernameResignation={setShowSendUsernameResignationPanel}
-						onSendValidatorResignation={setShowSendValidatorResignationPanel}
 					/>
 				)}
 			</Section>
@@ -166,33 +154,6 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 					/>
 				</div>
 			</Section>
-
-			<ResetWhenUnmounted>
-				<SendRegistrationSidePanel
-					open={showSendRegistrationPanel !== undefined}
-					registrationType={showSendRegistrationPanel}
-					onOpenChange={(open) => {
-						if (!open) {
-							setShowSendRegistrationPanel(undefined);
-							return;
-						}
-					}}
-				/>
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendUsernameResignationSidePanel
-					open={showSendUsernameResignationPanel}
-					onOpenChange={setShowSendUsernameResignationPanel}
-				/>
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendValidatorResignationSidePanel
-					open={showSendValidatorResignationPanel}
-					onOpenChange={setShowSendValidatorResignationPanel}
-				/>
-			</ResetWhenUnmounted>
 		</Page>
 	);
 };

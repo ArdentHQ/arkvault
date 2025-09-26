@@ -82,6 +82,7 @@ export const SidePanel = ({
 	disableEscapeKey = false,
 	shakeWhenClosing = false,
 	preventClosing = false,
+	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
@@ -300,61 +301,64 @@ export const SidePanel = ({
 															</div>
 
 															<div className="flex flex-row items-center gap-3">
-																<div
-																	className={cn(
-																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
-																		{
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
-																		},
-																	)}
-																>
-																	<Tooltip
-																		visible={
-																			finishedMinimizing && !minimizedHintHasShown
-																		}
-																		appendTo={() => document.body}
-																		interactive={true}
-																		offset={[0, 30]}
-																		content={
-																			<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
-																				<span className="font-semibold text-white">
-																					{t(
-																						"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
-																					)}
-																				</span>
-																				<Button
-																					size="xs"
-																					variant="transparent"
-																					data-testid="SidePanel__minimize-button-hint"
-																					className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
-																					onClick={() => {
-																						persistMinimizedHint(true);
-																					}}
-																				>
-																					{t("COMMON.GOT_IT")}
-																				</Button>
-																			</div>
-																		}
-																		placement="top"
-																	>
-																		<Button
-																			data-testid="SidePanel__minimize-button"
-																			variant="transparent"
-																			size="md"
-																			className={cn("p-0", {
+																{minimizeable && (
+																	<div
+																		className={cn(
+																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																			{
 																				"h-5 w-5": isMinimized,
 																				"h-6 w-6": !isMinimized,
-																			})}
-																			onClick={(e) => {
-																				e.stopPropagation();
-																				toggleMinimize();
-																			}}
+																			},
+																		)}
+																	>
+																		<Tooltip
+																			visible={
+																				finishedMinimizing &&
+																				!minimizedHintHasShown
+																			}
+																			appendTo={() => document.body}
+																			interactive={true}
+																			offset={[0, 30]}
+																			content={
+																				<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
+																					<span className="font-semibold text-white">
+																						{t(
+																							"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
+																						)}
+																					</span>
+																					<Button
+																						size="xs"
+																						variant="transparent"
+																						data-testid="SidePanel__minimize-button-hint"
+																						className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
+																						onClick={() => {
+																							persistMinimizedHint(true);
+																						}}
+																					>
+																						{t("COMMON.GOT_IT")}
+																					</Button>
+																				</div>
+																			}
+																			placement="top"
 																		>
-																			<Icon name="Minimize" />
-																		</Button>
-																	</Tooltip>
-																</div>
+																			<Button
+																				data-testid="SidePanel__minimize-button"
+																				variant="transparent"
+																				size="md"
+																				className={cn("p-0", {
+																					"h-5 w-5": isMinimized,
+																					"h-6 w-6": !isMinimized,
+																				})}
+																				onClick={(e) => {
+																					e.stopPropagation();
+																					toggleMinimize();
+																				}}
+																			>
+																				<Icon name="Minimize" />
+																			</Button>
+																		</Tooltip>
+																	</div>
+																)}
 
 																<div
 																	className={cn(

@@ -26,6 +26,9 @@ import { Alert } from "./components/Alert";
 import { FormButtons } from "./components/Form";
 import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
+import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
+import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
+import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -205,6 +208,40 @@ const AppPanels = () => {
 
 			<ResetWhenUnmounted>
 				<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendUsernameResignationSidePanel
+					open={currentOpenedPanel === Panel.SendUsernameResignation}
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendValidatorResignationSidePanel
+					open={currentOpenedPanel === Panel.SendValidatorResignation}
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendRegistrationSidePanel
+					open={
+						currentOpenedPanel === Panel.SendValidatorRegistration ||
+						currentOpenedPanel === Panel.SendUsernameRegistration
+					}
+					registrationType={
+						currentOpenedPanel === Panel.SendValidatorRegistration
+							? "validatorRegistration"
+							: "usernameRegistration"
+					}
+					onOpenChange={(open) => {
+						if (!open) {
+							closePanel();
+							return;
+						}
+					}}
+				/>
 			</ResetWhenUnmounted>
 
 			<DiscardPanelConfirmationModal />

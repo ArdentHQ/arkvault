@@ -33,9 +33,6 @@ export const PortfolioHeader = ({
 	isUpdatingTransactions,
 	handleVotesButtonClick,
 	onUpdate,
-	onSendRegistration,
-	onSendUsernameResignation,
-	onSendValidatorResignation,
 	hasFocus,
 }: {
 	profile: Contracts.IProfile;
@@ -44,9 +41,6 @@ export const PortfolioHeader = ({
 	isUpdatingTransactions: boolean;
 	handleVotesButtonClick: () => void;
 	onUpdate?: (status: boolean) => void;
-	onSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
-	onSendUsernameResignation?: (open: boolean) => void;
-	onSendValidatorResignation?: (open: boolean) => void;
 	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
@@ -62,15 +56,19 @@ export const PortfolioHeader = ({
 	const isRestored = wallet.hasBeenFullyRestored();
 
 	const handleSendRegistration = (registrationType?: "validatorRegistration" | "usernameRegistration") => {
-		onSendRegistration?.(registrationType);
+		if (registrationType === "validatorRegistration") {
+			openPanel(Panel.SendValidatorRegistration);
+		} else {
+			openPanel(Panel.SendUsernameRegistration);
+		}
 	};
 
 	const handleSendUsernameResignation = () => {
-		onSendUsernameResignation?.(true);
+		openPanel(Panel.SendUsernameResignation);
 	};
 
 	const handleSendValidatorResignation = () => {
-		onSendValidatorResignation?.(true);
+		openPanel(Panel.SendValidatorResignation);
 	};
 
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({

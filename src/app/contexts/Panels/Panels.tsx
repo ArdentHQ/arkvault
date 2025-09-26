@@ -9,7 +9,10 @@ export enum Panel {
 	SendTransfer = "SEND_TRANSFER",
 	SendVote = "SEND_VOTE",
 	SignMessage = "SIGN_MESSAGE",
-	// ... etc
+	SendUsernameResignation = "SEND_USERNAME_RESIGNATION",
+	SendValidatorResignation = "SEND_VALIDATOR_RESIGNATION",
+	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
+	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
 }
 
 interface PanelsContextValue {
