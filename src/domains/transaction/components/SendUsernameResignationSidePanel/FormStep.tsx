@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { FormField } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
@@ -70,11 +69,13 @@ export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = f
 						disabled={profile.wallets().count() === 0}
 						onChange={handleSelectSender}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendUsernameResignation()}
+						variant="modern"
+						labelClassName="w-auto sm:min-w-[87px]"
 					/>
 				</FormField>
 
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-					<div className="space-y-3 sm:space-y-0">
+					<div className="flex flex-col gap-3">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-[87px]">{t("COMMON.METHOD")}</DetailTitle>
 							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent">
@@ -82,13 +83,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = f
 									{t("TRANSACTION.TRANSACTION_TYPES.RESIGN_USERNAME")}
 								</span>
 							</div>
-						</div>
-
-						<div className="hidden sm:block">
-							<Divider
-								dashed
-								className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-px"
-							/>
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
