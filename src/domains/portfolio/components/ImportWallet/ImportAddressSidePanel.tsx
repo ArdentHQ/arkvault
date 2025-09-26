@@ -132,6 +132,7 @@ export const ImportAddressesSidePanel = ({
 		}
 
 		if (!open) {
+			form.reset();
 			setActiveTab(ImportAddressStep.MethodStep);
 		}
 
