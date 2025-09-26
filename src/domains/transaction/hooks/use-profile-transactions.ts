@@ -521,7 +521,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				interval: blockTime,
 			},
 		],
-		[checkNewTransactions],
+		[walletAddressesStr, activeMode, activeTransactionType, transactions],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
