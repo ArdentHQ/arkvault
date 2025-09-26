@@ -8,6 +8,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 
 export const useWalletActions = ({
 	handleSendRegistration,
@@ -26,6 +27,8 @@ export const useWalletActions = ({
 	const { openExternal } = useLink();
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
+
+	const { openPanel } = usePanels();
 
 	const wallet = wallets[0] as Contracts.IReadWriteWallet | undefined;
 
@@ -54,7 +57,7 @@ export const useWalletActions = ({
 
 			stopEventBubbling(event);
 
-			navigate(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
+			openPanel(Panel.SendTransfer);
 		},
 		[stopEventBubbling, hasMultipleWallets, navigate, profile, wallet],
 	);
@@ -100,7 +103,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "sign-message") {
-				navigate(generatePath(ProfilePaths.SignMessage, { profileId: profile.id() }));
+				openPanel(Panel.SignMessage);
 			}
 
 			if (option.value === "verify-message") {
