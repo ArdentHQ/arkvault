@@ -1,5 +1,5 @@
 import { Page, Section } from "@/app/components/Layout";
-import React, { FC, useCallback, useEffectg } from "react";
+import React, { FC, useCallback, useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
 
