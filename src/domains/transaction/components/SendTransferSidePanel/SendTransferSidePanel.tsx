@@ -203,6 +203,11 @@ export const SendTransferSidePanel = ({
 		// Abort any existing listener
 		abortReference.current.abort();
 
+		if (activeTab === SendTransferStep.ErrorStep) {
+			setActiveTab(SendTransferStep.FormStep)
+			return
+		}
+
 		if (activeTab === firstTabIndex) {
 			onOpenChange(false);
 			return;
