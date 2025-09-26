@@ -568,6 +568,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	return (
 		<SidePanel
+			minimizeable={false}
 			open={open}
 			onOpenChange={handleOpenChange}
 			title={getTitle()}
