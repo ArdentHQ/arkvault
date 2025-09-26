@@ -28,6 +28,7 @@ export const HDWalletTabs = ({
 	onSubmit,
 	onBack,
 	activeIndex,
+	addressesPerPage,
 }: HDWalletTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -231,7 +232,11 @@ export const HDWalletTabs = ({
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.SelectAddressStep}>
-								<SelectAddressStep network={activeNetwork} profile={activeProfile} />
+								<SelectAddressStep
+									network={activeNetwork}
+									profile={activeProfile}
+									addressesPerPage={addressesPerPage}
+								/>
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.SummaryStep}>

@@ -17,6 +17,7 @@ export interface HDWalletTabsProperties {
 	onStepChange?: (step: HDWalletTabStep) => void;
 	activeIndex?: HDWalletTabStep;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
+	addressesPerPage?: number;
 }
 
 export interface AddressTableProperties {
@@ -28,6 +29,7 @@ export interface AddressTableProperties {
 	isLoading: boolean;
 	isSelected: (address: AddressData) => boolean;
 	loadMore: () => void;
+	addressesPerPage?: number;
 }
 
 export interface AddressData {

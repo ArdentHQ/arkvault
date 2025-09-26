@@ -344,6 +344,7 @@ export const CreateAddressesSidePanel = ({
 						<TabPanel tabId={CreateStep.SuccessStep}>
 							{isHDWalletCreation && (
 								<HDWalletTabs
+									addressesPerPage={1}
 									activeIndex={HDWalletTabStep.SelectAddressStep}
 									onClickEditWalletName={(wallet) => setEditingWallet(wallet)}
 									onStepChange={setHDWalletActiveTab}
