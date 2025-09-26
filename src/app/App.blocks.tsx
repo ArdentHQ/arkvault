@@ -19,6 +19,12 @@ import { ResetWhenUnmounted } from "./components/SidePanel/ResetWhenUnmounted";
 import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 import { Panel, usePanels } from "./contexts/Panels";
 import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
+import { Modal } from "./components/Modal";
+import { Button } from "./components/Button";
+import { Image } from "./components/Image";
+import { Alert } from "./components/Alert";
+import { FormButtons } from "./components/Form";
+import { Icon } from "./components/Icon";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -138,6 +144,46 @@ const AppRouter = () => (
 	</React.Suspense>
 );
 
+export const DiscardPanelConfirmationModal = () => {
+	const { t } = useTranslation();
+	const { showConfirmationModal, setShowConfirmationModal, handleConfirmation } = usePanels();
+
+	const closeModal = () => {
+		setShowConfirmationModal(false);
+	};
+
+	return (
+		<Modal
+			title={t("COMMON.PENDING_ACTION_IN_PROGRESS")}
+			image={<Image name="Warning" className="m-auto my-8 max-w-52" />}
+			size="lg"
+			isOpen={showConfirmationModal}
+			onClose={closeModal}
+		>
+			<Alert>
+				{t("COMMON.PENDING_ACTION_IN_PROGRESS_DESCRIPTION", {
+					action: "Send Transfer",
+				})}
+			</Alert>
+
+			<FormButtons>
+				<Button variant="secondary" onClick={closeModal} data-testid="ResetProfile__cancel-button">
+					{t("COMMON.CANCEL")}
+				</Button>
+
+				<Button
+					type="submit"
+					onClick={handleConfirmation}
+					data-testid="ResetProfile__submit-button"
+					variant="danger"
+				>
+					<span>{t("COMMON.CONTINUE")}</span>
+				</Button>
+			</FormButtons>
+		</Modal>
+	);
+};
+
 const AppPanels = () => {
 	const { currentOpenedPanel, closePanel } = usePanels();
 
@@ -150,6 +196,8 @@ const AppPanels = () => {
 			<ResetWhenUnmounted>
 				<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
+
+			<DiscardPanelConfirmationModal />
 		</>
 	);
 };
