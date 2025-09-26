@@ -19,6 +19,7 @@ import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTranslation } from "react-i18next";
+import { usePanels } from "@/app/contexts/Panels";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -85,12 +86,10 @@ export const SidePanel = ({
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
-
+	const { isMinimized, setIsMinimized, finishedMinimizing, minimizedHintHasShown, persistMinimizedHint } =
+		usePanels();
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
-	const [isMinimized, setIsMinimized] = useState(false);
-	const [finishedMinimizing, setFinishedMinimizing] = useState(false);
-	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
@@ -111,14 +110,6 @@ export const SidePanel = ({
 		},
 		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
 	);
-
-	useEffect(() => {
-		if (isMinimized) {
-			setTimeout(() => setFinishedMinimizing(true), 350);
-		} else {
-			setFinishedMinimizing(false);
-		}
-	}, [isMinimized]);
 
 	const { refs, context } = useFloating({
 		onOpenChange: toggleOpen,
