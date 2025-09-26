@@ -13,22 +13,11 @@ import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/SignMessageSidePanel";
-import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
-import { useDeeplinkActionHandler } from "@/app/hooks";
 import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
 import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
 
-export const Dashboard = ({
-	onCreateAddress,
-	onImportAddress,
-	hasFocus,
-}: {
-	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
-	hasFocus?: boolean;
-}) => {
+export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
 	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState<
@@ -119,8 +108,6 @@ export const Dashboard = ({
 						isLoadingVotes={isLoadingVotes}
 						isUpdatingTransactions={isUpdatingTransactions}
 						onUpdate={setIsUpdatingWallet}
-						onCreateAddress={onCreateAddress}
-						onImportAddress={onImportAddress}
 						onSendRegistration={setShowSendRegistrationPanel}
 						onSendUsernameResignation={setShowSendUsernameResignationPanel}
 						onSendValidatorResignation={setShowSendValidatorResignationPanel}

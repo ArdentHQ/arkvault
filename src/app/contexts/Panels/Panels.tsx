@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "usehooks-ts";
 
 export enum Panel {
+	CreateAddress = "CREATE_ADDRESS",
+	ImportAddress = "IMPORT_ADDRESS",
 	SendTransfer = "SEND_TRANSFER",
 	SendVote = "SEND_VOTE",
 	SignMessage = "SIGN_MESSAGE",

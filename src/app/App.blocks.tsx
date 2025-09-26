@@ -5,7 +5,7 @@ import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 
 import { useConfiguration, useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useActiveProfile, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
@@ -24,6 +24,8 @@ import { Button } from "./components/Button";
 import { Image } from "./components/Image";
 import { Alert } from "./components/Alert";
 import { FormButtons } from "./components/Form";
+import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
+import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -177,6 +179,16 @@ export const DiscardPanelConfirmationModal = () => {
 const AppPanels = () => {
 	const { currentOpenedPanel, closePanel } = usePanels();
 
+	const location = useLocation();
+
+	if (
+		!location.pathname.startsWith("/profiles") ||
+		location.pathname.startsWith("/profiles/create") ||
+		location.pathname.startsWith("/profiles/import")
+	) {
+		return;
+	}
+
 	return (
 		<>
 			<ResetWhenUnmounted>
@@ -185,6 +197,14 @@ const AppPanels = () => {
 
 			<ResetWhenUnmounted>
 				<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<CreateAddressesSidePanel open={currentOpenedPanel === Panel.CreateAddress} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
 
 			<DiscardPanelConfirmationModal />

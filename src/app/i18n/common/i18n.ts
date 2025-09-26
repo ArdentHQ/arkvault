@@ -294,6 +294,8 @@ export const translations = {
 		ENTER_NUMBER: "Enter the page number",
 	},
 	PANELS: {
+		CREATE_ADDRESS: "Create Address",
+		IMPORT_ADDRESS: "Import Address",
 		SEND_TRANSFER: "Send Transfer",
 		SEND_VOTE: "Send Vote",
 		SIGN_MESSAGE: "Sign Message",
