@@ -86,7 +86,7 @@ export const SidePanel = ({
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
-	const { isMinimized, setIsMinimized, finishedMinimizing, minimizedHintHasShown, persistMinimizedHint } =
+	const { isMinimized, finishedMinimizing, minimizedHintHasShown, persistMinimizedHint, toggleMinimize } =
 		usePanels();
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
@@ -100,10 +100,6 @@ export const SidePanel = ({
 				setTimeout(() => setShake(false), 900);
 
 				return;
-			}
-			if (open === false && isMinimized) {
-				// Reset the minimized state after the transition is complete
-				setTimeout(() => setIsMinimized(false), 350);
 			}
 
 			onOpenChange(open);
@@ -191,10 +187,6 @@ export const SidePanel = ({
 			}
 		};
 	}, [open, popStateHandlerRef]);
-
-	const toggleMinimize = () => {
-		setIsMinimized(!isMinimized);
-	};
 
 	const headerTransform = useMemo(() => {
 		if (isMinimized && !open) {

@@ -146,11 +146,7 @@ const AppRouter = () => (
 
 export const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
-	const { showConfirmationModal, setShowConfirmationModal, handleConfirmation } = usePanels();
-
-	const closeModal = () => {
-		setShowConfirmationModal(false);
-	};
+	const { showConfirmationModal, confirmOpen, cancelOpen } = usePanels();
 
 	return (
 		<Modal
@@ -158,7 +154,7 @@ export const DiscardPanelConfirmationModal = () => {
 			image={<Image name="Warning" className="m-auto my-8 max-w-52" />}
 			size="lg"
 			isOpen={showConfirmationModal}
-			onClose={closeModal}
+			onClose={cancelOpen}
 		>
 			<Alert>
 				{t("COMMON.PENDING_ACTION_IN_PROGRESS_DESCRIPTION", {
@@ -167,16 +163,11 @@ export const DiscardPanelConfirmationModal = () => {
 			</Alert>
 
 			<FormButtons>
-				<Button variant="secondary" onClick={closeModal} data-testid="ResetProfile__cancel-button">
+				<Button variant="secondary" onClick={cancelOpen} data-testid="ResetProfile__cancel-button">
 					{t("COMMON.CANCEL")}
 				</Button>
 
-				<Button
-					type="submit"
-					onClick={handleConfirmation}
-					data-testid="ResetProfile__submit-button"
-					variant="danger"
-				>
+				<Button type="submit" onClick={confirmOpen} data-testid="ResetProfile__submit-button" variant="danger">
 					<span>{t("COMMON.CONTINUE")}</span>
 				</Button>
 			</FormButtons>
