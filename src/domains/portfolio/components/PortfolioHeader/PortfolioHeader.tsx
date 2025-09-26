@@ -116,7 +116,7 @@ export const PortfolioHeader = ({
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
 			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
-				<div className="z-30 flex w-full flex-row items-center justify-between px-4 salam">
+				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
 						interactive={true}
@@ -143,7 +143,7 @@ export const PortfolioHeader = ({
 						placement="bottom-end"
 					>
 						<div
-							className={cn("flex h-fit flex-row items-center gap-1 max-w-[calc(100%_-_73px)]", {
+							className={cn("flex h-fit flex-row items-center gap-1 max-w-[calc(100%_-_73px)] md:max-w-full", {
 								"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
 									showHint,
 							})}
