@@ -204,8 +204,8 @@ export const SendTransferSidePanel = ({
 		abortReference.current.abort();
 
 		if (activeTab === SendTransferStep.ErrorStep) {
-			setActiveTab(SendTransferStep.FormStep)
-			return
+			setActiveTab(SendTransferStep.FormStep);
+			return;
 		}
 
 		if (activeTab === firstTabIndex) {
