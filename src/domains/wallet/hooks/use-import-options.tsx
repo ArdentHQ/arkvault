@@ -4,7 +4,6 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Contracts } from "@/app/lib/profiles";
-import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 export enum OptionsValue {
 	ADDRESS = "address",
@@ -100,7 +99,7 @@ export const useImportOptions = (
 
 		const advancedOptions: ImportOption[] = [];
 
-		if (profile.settings().get(ProfileSetting.UseHDWallets)) {
+		if (profile.usesHDWallets()) {
 			advancedOptions.push({
 				canBeEncrypted: true,
 				description: t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.HD_WALLET_DESCRIPTION"),
