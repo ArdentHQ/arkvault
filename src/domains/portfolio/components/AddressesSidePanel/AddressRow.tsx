@@ -172,7 +172,7 @@ export const AddressRow = ({
 									color={isSelected ? "primary" : "neutral"}
 									size="xs"
 									variant="outline"
-									className="border py-0.5 uppercase"
+									className="truncate border py-0.5 uppercase"
 									data-testid="hd-wallet-label"
 								>
 									{wallet.accountName()}

@@ -40,7 +40,7 @@ describe("UpdateAccountName", () => {
 			<UpdateAccountName profile={profile} wallets={wallets} onAfterSave={onAfterSave} onCancel={vi.fn()} />,
 		);
 
-		const name = "Shared Account Name";
+		const name = "Account Name";
 		const user = userEvent.setup();
 
 		await user.clear(screen.getByTestId("UpdateWalletName__input"));
@@ -136,7 +136,7 @@ describe("UpdateAccountName", () => {
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 
 		// Test with valid name
-		await user.paste("Valid Account Name");
+		await user.paste("Valid Name");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeValid();
