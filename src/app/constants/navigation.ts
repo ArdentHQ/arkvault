@@ -5,21 +5,25 @@ import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem } from "@/app/components/NavigationBar";
 import { ProfilePaths } from "@/router/paths";
 
-export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => {
+export const getNavigationMenu = (t: TFunction, pathname: string): NavigationBarMenuItem[] => {
 	const menuItems: NavigationBarMenuItem[] = [
 		{
+			isActive: pathname.includes("/dashboard"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Dashboard, { profileId }),
 			title: t("COMMON.PORTFOLIO"),
 		},
 		{
+			isActive: pathname.includes("/exchange"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 			title: t("COMMON.EXCHANGE"),
 		},
 		{
+			isActive: pathname.includes("/contacts"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
 			title: t("COMMON.CONTACTS"),
 		},
 		{
+			isActive: pathname.includes("/votes"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
 			title: t("COMMON.VOTES"),
 		},

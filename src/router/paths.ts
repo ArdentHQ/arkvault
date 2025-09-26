@@ -18,8 +18,6 @@ export enum ProfilePaths {
 	SendUsernameRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/usernameRegistration",
 	SendUsernameResignation = "/profiles/:profileId/wallets/:walletId/send-username-resignation",
 	SendUsernameResignationProfile = "/profiles/:profileId/send-username-resignation",
-	// Exchange
-	ExchangeView = "/profiles/:profileId/exchange/view",
 	// Profile
 	CreateProfile = "/profiles/create",
 	ImportProfile = "/profiles/import",

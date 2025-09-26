@@ -162,8 +162,8 @@ describe("Exchange", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should navigate to exchange", async () => {
-		const { router } = render(
+	it("should open exchange form", async () => {
+		render(
 			<ExchangeProvider>
 				<Exchange />
 			</ExchangeProvider>,
@@ -185,7 +185,7 @@ describe("Exchange", () => {
 		await userEvent.click(screen.getByText("ChangeNOW"));
 
 		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange/view`);
+			expect(screen.getByTestId("ExchangeSidePanel")).toBeInTheDocument();
 		});
 	});
 
