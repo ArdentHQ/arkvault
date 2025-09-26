@@ -20,7 +20,6 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
 import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
 import { MethodStep } from "./MethodStep";
-import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 import { HDWalletTabs } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
 import { useHDWalletStepHeaderConfig } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
@@ -40,7 +39,7 @@ export const CreateAddressesSidePanel = ({
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 
-	const usesHDWallets = activeProfile.settings().get(ProfileSetting.UseHDWallets);
+	const usesHDWallets = activeProfile.usesHDWallets();
 	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep;
 	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
 
@@ -344,6 +343,7 @@ export const CreateAddressesSidePanel = ({
 						<TabPanel tabId={CreateStep.SuccessStep}>
 							{isHDWalletCreation && (
 								<HDWalletTabs
+									addressesPerPage={1}
 									activeIndex={HDWalletTabStep.SelectAddressStep}
 									onClickEditWalletName={(wallet) => setEditingWallet(wallet)}
 									onStepChange={setHDWalletActiveTab}

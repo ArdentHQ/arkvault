@@ -35,6 +35,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 	isLoading,
 	isSelected,
 	loadMore,
+	addressesPerPage = ADDRESSES_PER_BATCH,
 }) => {
 	const { t } = useTranslation();
 
@@ -76,7 +77,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 	const showSkeleton = isLoading;
 
 	const data = useMemo(() => {
-		const skeletonRows = Array.from<AddressData>({ length: ADDRESSES_PER_BATCH }).fill({} as AddressData);
+		const skeletonRows = Array.from<AddressData>({ length: addressesPerPage }).fill({} as AddressData);
 		return showSkeleton ? skeletonRows : wallets;
 	}, [wallets, showSkeleton]);
 
@@ -231,7 +232,9 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 export const SelectAddressStep = ({
 	network,
 	profile,
+	addressesPerPage = ADDRESSES_PER_BATCH,
 }: {
+	addressesPerPage?: number;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
 }) => {
@@ -283,10 +286,8 @@ export const SelectAddressStep = ({
 	const load = async (startIndex: number = 0, skipEmptyAddresses: boolean = false) => {
 		setIsLoading(true);
 
-		const promises = Array.from({ length: ADDRESSES_PER_BATCH }, (_, index) => generateWallet(index + startIndex));
+		const promises = Array.from({ length: addressesPerPage }, (_, index) => generateWallet(index + startIndex));
 		const results = await Promise.all(promises);
-
-		setLastAddressIndex((prevAddressIndex) => prevAddressIndex + ADDRESSES_PER_BATCH);
 
 		let newAddresses: AddressData[] = results.map(({ wallet, levels }) => ({
 			address: wallet.address(),
@@ -303,6 +304,8 @@ export const SelectAddressStep = ({
 			}
 		}
 
+		setLastAddressIndex((prevAddressIndex) => prevAddressIndex + newAddresses.length);
+
 		setIsLoading(false);
 		setAddresses((previousAddresses) => [...previousAddresses, ...newAddresses]);
 
@@ -317,6 +320,7 @@ export const SelectAddressStep = ({
 
 		return () => {
 			unregister("selectedAddresses");
+			unregister("mnemonic");
 		};
 	}, [register, unregister]);
 
@@ -331,6 +335,7 @@ export const SelectAddressStep = ({
 	return (
 		<section data-testid="SelectAddressStep" className="space-y-4">
 			<AddressesTable
+				addressesPerPage={addressesPerPage}
 				network={network}
 				wallets={addresses}
 				isSelected={isSelected}
