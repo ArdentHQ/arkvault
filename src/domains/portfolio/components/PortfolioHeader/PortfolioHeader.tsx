@@ -143,10 +143,13 @@ export const PortfolioHeader = ({
 						placement="bottom-end"
 					>
 						<div
-							className={cn("flex h-fit flex-row items-center gap-1 max-w-[calc(100%_-_73px)] md:max-w-full", {
-								"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
-									showHint,
-							})}
+							className={cn(
+								"flex h-fit max-w-[calc(100%_-_73px)] flex-row items-center gap-1 md:max-w-full",
+								{
+									"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
+										showHint,
+								},
+							)}
 						>
 							<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
 								{t("COMMON.VIEWING")}:
@@ -155,7 +158,7 @@ export const PortfolioHeader = ({
 								onClick={handleViewAddress}
 								tabIndex={0}
 								onKeyPress={handleViewAddress}
-								className={cn("rounded-r max-w-full", {
+								className={cn("max-w-full rounded-r", {
 									"cursor-pointer": allWallets.length > 1,
 								})}
 								data-testid="ShowAddressesPanel"
@@ -172,7 +175,7 @@ export const PortfolioHeader = ({
 											color="primary"
 											size="xs"
 											variant="outline"
-											className="border py-0.5 uppercase truncate"
+											className="truncate border py-0.5 uppercase"
 										>
 											{wallet.accountName()}
 										</Label>
