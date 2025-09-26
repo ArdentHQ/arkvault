@@ -317,6 +317,7 @@ export const SelectAddressStep = ({
 
 		return () => {
 			unregister("selectedAddresses");
+			unregister("mnemonic");
 		};
 	}, [register, unregister]);
 
