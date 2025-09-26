@@ -1,5 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`SendVote > should show error if wrong mnemonic 1`] = `<div />`;
-
-exports[`SendVote > should show error step and go back 1`] = `<div />`;
