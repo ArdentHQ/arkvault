@@ -16,7 +16,6 @@ import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
-import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTranslation } from "react-i18next";
 import { usePanels } from "@/app/contexts/Panels";

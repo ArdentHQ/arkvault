@@ -24,7 +24,6 @@ import { Button } from "./components/Button";
 import { Image } from "./components/Image";
 import { Alert } from "./components/Alert";
 import { FormButtons } from "./components/Form";
-import { Icon } from "./components/Icon";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
