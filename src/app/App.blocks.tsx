@@ -5,7 +5,7 @@ import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 
 import { useConfiguration, useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
