@@ -11,7 +11,6 @@ import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { AppRouter } from "@/app/App.blocks";
 import { initializeEnvironment } from "@/utils/environment";
 import { ApplicationError } from "@/domains/error/pages";
-import { ActionsProvider } from "./contexts/Actions";
 
 export const App = () => {
 	/**
@@ -27,13 +26,11 @@ export const App = () => {
 					<ConfigurationProvider defaultConfiguration={{ profileIsSyncingExchangeRates: true }}>
 						<NavigationProvider>
 							<ExchangeProvider>
-								<ActionsProvider>
-									<ErrorBoundary FallbackComponent={ApplicationError}>
-										<LedgerProvider>
-											<AppRouter />
-										</LedgerProvider>
-									</ErrorBoundary>
-								</ActionsProvider>
+								<ErrorBoundary FallbackComponent={ApplicationError}>
+									<LedgerProvider>
+										<AppRouter />
+									</LedgerProvider>
+								</ErrorBoundary>
 							</ExchangeProvider>
 						</NavigationProvider>
 					</ConfigurationProvider>

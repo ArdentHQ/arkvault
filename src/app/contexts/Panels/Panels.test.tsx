@@ -1,17 +1,17 @@
 import React from "react";
 
-import { ActionsProvider } from "./Actions";
+import { ActionsProvider } from "./Panels";
 import { render, screen } from "@/utils/testing-library";
 
-describe("Actions Context Provider", () => {
+describe("Panels Context Provider", () => {
 	it("should render provider", () => {
 		const { container } = render(
 			<ActionsProvider>
-				<span data-testid="ActionsProvider">Content</span>
+				<span data-testid="PanelsProvider">Content</span>
 			</ActionsProvider>,
 		);
 
-		expect(screen.getByTestId("ActionsProvider")).toBeInTheDocument();
+		expect(screen.getByTestId("PanelsProvider")).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 	});

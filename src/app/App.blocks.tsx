@@ -15,6 +15,9 @@ import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 import { useProfileBackgroundJobsRunner } from "./hooks/use-profile-background-jobs";
+import { ResetWhenUnmounted } from "./components/SidePanel/ResetWhenUnmounted";
+import SignMessageSidePanel from "@/domains/message/components/SignMessage";
+import { Panel, usePanels } from "./contexts/Panels";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -134,4 +137,16 @@ const AppRouter = () => (
 	</React.Suspense>
 );
 
-export { AppRouter, Main };
+const AppPanels = () => {
+	const { currentOpenedPanel, closePanel } = usePanels();
+
+	return (
+		<>
+			<ResetWhenUnmounted>
+				<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
+		</>
+	);
+};
+
+export { AppRouter, Main, AppPanels };
