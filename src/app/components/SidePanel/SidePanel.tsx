@@ -41,6 +41,7 @@ interface SidePanelProps {
 	disableEscapeKey?: boolean;
 	shakeWhenClosing?: boolean;
 	preventClosing?: boolean;
+	minimizeable?: boolean;
 }
 
 interface SidePanelContextValue {
