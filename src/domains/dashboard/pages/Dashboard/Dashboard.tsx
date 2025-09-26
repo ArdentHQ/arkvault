@@ -31,22 +31,11 @@ export const Dashboard = ({
 }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
-	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
-	const [showSendTransferPanel, setShowSendTransferPanel] = useState(false);
 	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState<
 		"validatorRegistration" | "usernameRegistration" | undefined
 	>(undefined);
 	const [showSendUsernameResignationPanel, setShowSendUsernameResignationPanel] = useState(false);
 	const [showSendValidatorResignationPanel, setShowSendValidatorResignationPanel] = useState(false);
-
-	useDeeplinkActionHandler({
-		onSignMessage: () => {
-			setShowSignMessagePanel(true);
-		},
-		onTransfer: () => {
-			setShowSendTransferPanel(true);
-		},
-	});
 
 	const navigate = useNavigate();
 	const { t } = useTranslation();
@@ -190,14 +179,6 @@ export const Dashboard = ({
 					/>
 				</div>
 			</Section>
-
-			<ResetWhenUnmounted>
-				<SignMessageSidePanel open={showSignMessagePanel} onOpenChange={setShowSignMessagePanel} />
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendTransferSidePanel open={showSendTransferPanel} onOpenChange={setShowSendTransferPanel} />
-			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
 				<SendRegistrationSidePanel

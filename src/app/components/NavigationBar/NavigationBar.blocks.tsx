@@ -29,6 +29,7 @@ import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 
 const NavWrapper = ({
 	variant = "default",
@@ -298,11 +299,11 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const handleCloseReceiveFunds = useCallback(() => setSelectedWallet(undefined), [setSelectedWallet]);
 
-	const sendButtonClickHandler = useCallback(() => {
-		const sendTransferPath = generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() });
+	const { openPanel } = usePanels();
 
-		return navigate(sendTransferPath);
-	}, [location]);
+	const sendButtonClickHandler = () => {
+		openPanel(Panel.SendTransfer);
+	};
 
 	const receiveButtonClickHandler = useCallback(() => {
 		setSearchWalletIsOpen(true);

@@ -1,3 +1,4 @@
+import { useDeeplinkActionHandler } from "@/app/hooks";
 import React, { useState } from "react";
 
 export enum Panel {
@@ -25,6 +26,15 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const openPanel = (panel: Panel) => {
 		setCurrentOpenedPanel(panel);
 	};
+
+	useDeeplinkActionHandler({
+		onSignMessage: () => {
+			openPanel(Panel.SignMessage);
+		},
+		onTransfer: () => {
+			openPanel(Panel.SendTransfer);
+		},
+	});
 
 	return (
 		<PanelsContext.Provider

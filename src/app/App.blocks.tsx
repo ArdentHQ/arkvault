@@ -18,6 +18,7 @@ import { useProfileBackgroundJobsRunner } from "./hooks/use-profile-background-j
 import { ResetWhenUnmounted } from "./components/SidePanel/ResetWhenUnmounted";
 import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 import { Panel, usePanels } from "./contexts/Panels";
+import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 
 const Main = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
@@ -144,6 +145,10 @@ const AppPanels = () => {
 		<>
 			<ResetWhenUnmounted>
 				<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
 		</>
 	);
