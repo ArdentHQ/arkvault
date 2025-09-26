@@ -145,19 +145,19 @@ const AppRouter = () => (
 
 export const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
-	const { showConfirmationModal, confirmOpen, cancelOpen } = usePanels();
+	const { showConfirmationModal, confirmOpen, cancelOpen, currentOpenedPanelName } = usePanels();
 
 	return (
 		<Modal
 			title={t("COMMON.PENDING_ACTION_IN_PROGRESS")}
 			image={<Image name="Warning" className="m-auto my-8 max-w-52" />}
-			size="lg"
+			size="xl"
 			isOpen={showConfirmationModal}
 			onClose={cancelOpen}
 		>
 			<Alert>
 				{t("COMMON.PENDING_ACTION_IN_PROGRESS_DESCRIPTION", {
-					action: "Send Transfer",
+					action: currentOpenedPanelName,
 				})}
 			</Alert>
 

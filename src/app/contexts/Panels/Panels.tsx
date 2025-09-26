@@ -1,11 +1,12 @@
 import { useDeeplinkActionHandler } from "@/app/hooks";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "usehooks-ts";
 
 export enum Panel {
-	SendTransfer = "sendTransfer",
-	SendVote = "sendVote",
-	SignMessage = "signMessage",
+	SendTransfer = "SEND_TRANSFER",
+	SendVote = "SEND_VOTE",
+	SignMessage = "SIGN_MESSAGE",
 	// ... etc
 }
 
@@ -23,11 +24,13 @@ interface PanelsContextValue {
 	confirmOpen: () => void;
 	cancelOpen: () => void;
 	toggleMinimize: () => void;
+	currentOpenedPanelName: string | undefined;
 }
 
 const PanelsContext = React.createContext<PanelsContextValue | undefined>(undefined);
 
 export const PanelsProvider = ({ children }: { children: React.ReactNode | React.ReactNode[] }) => {
+	const { t } = useTranslation();
 	const [currentOpenedPanel, setCurrentOpenedPanel] = useState<Panel | undefined>(undefined);
 	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
@@ -35,12 +38,21 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
+	const currentOpenedPanelName = useMemo(
+		() => (currentOpenedPanel ? t(`COMMON.PANELS.${currentOpenedPanel}`) : undefined),
+		[currentOpenedPanel, t],
+	);
+
 	const confirmOpen = () => {
 		setShowConfirmationModal(false);
 
-		setCurrentOpenedPanel(panelToOpen);
+		setCurrentOpenedPanel(undefined);
 
-		setIsMinimized(false);
+		// Wait for the previous panel to be removed
+		setTimeout(() => {
+			setIsMinimized(false);
+			setCurrentOpenedPanel(panelToOpen);
+		}, 350);
 	};
 
 	const cancelOpen = () => {
@@ -48,12 +60,6 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 
 		setPanelToOpen(undefined);
 	};
-
-	// useEffect(() => {
-	// 	if (currentOpenedPanel === undefined && panelToOpen) {
-	// 		setCurrentOpenedPanel(panelToOpen);
-	// 	}
-	// }, [currentOpenedPanel, panelToOpen]);
 
 	useEffect(() => {
 		if (!showConfirmationModal) {
@@ -115,6 +121,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				closePanel,
 				confirmOpen,
 				currentOpenedPanel,
+				currentOpenedPanelName,
 				finishedMinimizing,
 				isMinimized,
 				minimizedHintHasShown,
