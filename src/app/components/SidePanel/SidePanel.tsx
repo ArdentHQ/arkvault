@@ -22,7 +22,7 @@ interface SidePanelProps {
 	children: React.ReactNode;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	title: string;
+	title: string | React.ReactNode;
 	titleIcon?: React.ReactNode;
 	subtitle?: string;
 	dataTestId?: string;
