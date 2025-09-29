@@ -12,10 +12,21 @@ import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
+import { Panel, usePanels } from "@/app/contexts/Panels";
+import { useDeeplinkActionHandler } from "@/app/hooks/use-deeplink";
 
 export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
+	const { openPanel } = usePanels();
+	useDeeplinkActionHandler({
+		onSignMessage: () => {
+			openPanel(Panel.SignMessage);
+		},
+		onTransfer: () => {
+			openPanel(Panel.SendTransfer);
+		},
+	});
 
 	const navigate = useNavigate();
 	const { t } = useTranslation();

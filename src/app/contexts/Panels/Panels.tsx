@@ -1,4 +1,3 @@
-import { useDeeplinkActionHandler } from "@/app/hooks";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "usehooks-ts";
@@ -105,15 +104,6 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 
 		setCurrentOpenedPanel(panel);
 	};
-
-	useDeeplinkActionHandler({
-		onSignMessage: () => {
-			openPanel(Panel.SignMessage);
-		},
-		onTransfer: () => {
-			openPanel(Panel.SendTransfer);
-		},
-	});
 
 	const toggleMinimize = () => {
 		setIsMinimized(!isMinimized);

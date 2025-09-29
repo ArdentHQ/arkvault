@@ -26,6 +26,7 @@ import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transacti
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 import { test as baseTest } from "vitest";
 import { bootEnvironmentWithProfileFixtures } from "./test-helpers";
+import { PanelsProvider } from "@/app/contexts/Panels";
 
 export {
 	mockNanoSTransport,
@@ -54,7 +55,9 @@ export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 		<EnvironmentProvider env={env}>
 			<LedgerProvider>
 				<ConfigurationProvider>
-					<NavigationProvider>{children}</NavigationProvider>
+					<NavigationProvider>
+						<PanelsProvider>{children}</PanelsProvider>
+					</NavigationProvider>
 				</ConfigurationProvider>
 			</LedgerProvider>
 		</EnvironmentProvider>
