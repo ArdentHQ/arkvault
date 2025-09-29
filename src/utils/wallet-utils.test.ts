@@ -71,6 +71,15 @@ describe("wallet-utils", () => {
 		expect(result).toEqual([a, b]);
 	});
 
+	it("sortWallets treats null alias as empty on left", () => {
+		const left = createWallet({ alias: null as any, coinName: "ARK", id: "left", isStarred: false, isTest: false });
+		const right = createWallet({ alias: "Alpha", coinName: "ARK", id: "right", isStarred: false, isTest: false });
+
+		const result = sortWallets([right, left]);
+		// left alias null => treated as "" and should come before "Alpha"
+		expect(result.map((w: any) => w.id())).toEqual(["left", "right"]);
+	});
+
 	it("isLedgerWalletCompatible returns true for non-ledger wallets", () => {
 		const wallet = createWallet({ coinName: "ARK", id: "x", isLedger: false });
 		expect(isLedgerWalletCompatible(wallet)).toBe(true);
