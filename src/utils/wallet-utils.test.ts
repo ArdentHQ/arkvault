@@ -62,6 +62,15 @@ describe("wallet-utils", () => {
 		expect(result.map((w: any) => w.id())).toEqual(["a1", "a2"]);
 	});
 
+	it("sortWallets handles undefined aliases by comparing as empty strings", () => {
+		const a = createWallet({ coinName: "ARK", id: "a", isStarred: false, isTest: false });
+		const b = createWallet({ coinName: "ARK", id: "b", isStarred: false, isTest: false });
+
+		const result = sortWallets([a, b]);
+		// Both aliases are undefined => compared as "" vs ""; stable sort keeps order
+		expect(result).toEqual([a, b]);
+	});
+
 	it("isLedgerWalletCompatible returns true for non-ledger wallets", () => {
 		const wallet = createWallet({ coinName: "ARK", id: "x", isLedger: false });
 		expect(isLedgerWalletCompatible(wallet)).toBe(true);
