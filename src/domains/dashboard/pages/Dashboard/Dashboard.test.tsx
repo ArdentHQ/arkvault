@@ -205,8 +205,9 @@ describe("Dashboard", () => {
 
 		beforeEach(() => {
 			openPanelSpy = vi.fn();
+
 			usePanelsMock = vi.spyOn(PanelsContext, "usePanels").mockReturnValue({
-				openPanel: vi.fn(),
+				openPanel: openPanelSpy,
 				panels: [],
 			});
 		});
