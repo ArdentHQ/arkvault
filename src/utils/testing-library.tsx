@@ -55,9 +55,7 @@ export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 		<EnvironmentProvider env={env}>
 			<LedgerProvider>
 				<ConfigurationProvider>
-					<NavigationProvider>
-						<PanelsProvider>{children}</PanelsProvider>
-					</NavigationProvider>
+					<NavigationProvider>{children}</NavigationProvider>
 				</ConfigurationProvider>
 			</LedgerProvider>
 		</EnvironmentProvider>
@@ -194,11 +192,19 @@ const renderWithRouter = (
 	const Wrapper = ({ children }: { children: React.ReactNode }) => {
 		const content = (
 			<RouterProvider router={router}>
-				<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
+				<PanelsProvider>
+					<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
+				</PanelsProvider>
 			</RouterProvider>
 		);
 
-		return withProviders ? <WithProviders>{content}</WithProviders> : content;
+		return withProviders ? (
+			<WithProviders>
+				<PanelsProvider>{content}</PanelsProvider>
+			</WithProviders>
+		) : (
+			content
+		);
 	};
 
 	const view = render(<Wrapper>{component}</Wrapper>);
