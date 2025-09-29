@@ -5,8 +5,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { RouteItem, Middleware } from "@/router/router.types";
 import { RouteSuspense } from "@/router/RouteSuspense";
 import { PreloadableComponent } from "@/utils/preload-lazy";
-import { PanelsProvider } from "@/app/contexts/Panels";
-import { AppPanels } from "@/app/App.blocks";
+import { AppPanels, PanelsProvider } from "@/app/contexts/Panels";
 
 interface Properties {
 	routes: RouteItem[];
