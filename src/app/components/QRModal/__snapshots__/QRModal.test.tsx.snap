@@ -80,7 +80,19 @@ exports[`QRModal > should render 1`] = `
             >
               <div
                 class="absolute inset-0 z-10"
-              />
+              >
+                <section
+                  class="h-full w-full"
+                >
+                  <div
+                    style="width: 100%; padding-top: 0px; overflow: hidden; position: relative; height: 100%;"
+                  >
+                    <video
+                      style="top: 0px; left: 0px; width: 100%; height: 100%; display: block; overflow: hidden; position: absolute; object-fit: cover;"
+                    />
+                  </div>
+                </section>
+              </div>
               <div
                 class="flex h-full flex-col items-center justify-center py-8"
               >
