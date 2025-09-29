@@ -56,7 +56,7 @@ export const TransactionDetailContent = ({
 		"min-w-32": transaction.isVoteCombination() && !isValidatorRegistrationOrResignation,
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
-	console.log({ transaction });
+
 	return (
 		<DetailsCondensed>
 			<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
