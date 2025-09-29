@@ -17,6 +17,7 @@ import React from "react";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import userEvent from "@testing-library/user-event";
 import * as ReactRouter from "react-router";
+import * as PanelsContext from "@/app/contexts/Panels";
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
@@ -198,33 +199,38 @@ describe("Dashboard", () => {
 		selectedWalletsMock.mockRestore();
 	});
 
-	it("should render and handle sign message deeplink", async () => {
-		render(<Dashboard />, {
-			route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
-			withProfileSynchronizer: true,
+	describe("deeplink handling", () => {
+		let usePanelsMock;
+		let openPanelSpy;
+
+		beforeEach(() => {
+			openPanelSpy = vi.fn();
+			usePanelsMock = vi.spyOn(PanelsContext, "usePanels").mockReturnValue({
+				openPanel: vi.fn(),
+				panels: [],
+			});
 		});
 
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("SignMessageSidePanel")).toBeVisible();
-		});
-	});
-
-	it("should render and handle send transfer deeplink", async () => {
-		render(<Dashboard />, {
-			route: `/profiles/${fixtureProfileId}/dashboard?method=transfer`,
-			withProfileSynchronizer: true,
+		afterEach(() => {
+			usePanelsMock.mockRestore();
 		});
 
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
-		);
+		it("should render and handle sign message deeplink", async () => {
+			render(<Dashboard />, {
+				route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
+				withProfileSynchronizer: true,
+			});
 
-		await waitFor(() => {
-			expect(screen.getByTestId("SendTransferSidePanel")).toBeVisible();
+			await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SignMessage));
+		});
+
+		it("should render and handle send transfer deeplink", async () => {
+			render(<Dashboard />, {
+				route: `/profiles/${fixtureProfileId}/dashboard?method=transfer`,
+				withProfileSynchronizer: true,
+			});
+
+			await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SendTransfer));
 		});
 	});
 });
