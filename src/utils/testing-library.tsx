@@ -192,19 +192,11 @@ const renderWithRouter = (
 	const Wrapper = ({ children }: { children: React.ReactNode }) => {
 		const content = (
 			<RouterProvider router={router}>
-				<PanelsProvider>
-					<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
-				</PanelsProvider>
+				<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
 			</RouterProvider>
 		);
 
-		return withProviders ? (
-			<WithProviders>
-				<PanelsProvider>{content}</PanelsProvider>
-			</WithProviders>
-		) : (
-			content
-		);
+		return withProviders ? <WithProviders>{content}</WithProviders> : content;
 	};
 
 	const view = render(<Wrapper>{component}</Wrapper>);

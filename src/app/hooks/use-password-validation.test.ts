@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { pwned } from "@faustbrian/node-haveibeenpwned";
 import { renderHook, act } from "@testing-library/react";
 import { usePasswordValidation, defaultState } from "./use-password-validation";
