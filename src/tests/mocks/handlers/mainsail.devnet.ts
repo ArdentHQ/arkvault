@@ -30,6 +30,10 @@ export const mainsailDevnetHandlers = [
 			return HttpResponse.json(endpoint.data);
 		}),
 	),
+	// Special handler for unconfirmed transactions with query parameters
+	http.get("https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed", () => {
+		return HttpResponse.json({ data: [] });
+	}),
 	http.get("https://dwallets-evm.mainsailhq.com/", () => {
 		return HttpResponse.json({ data: "Hello World!" });
 	}),

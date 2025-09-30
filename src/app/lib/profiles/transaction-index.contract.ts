@@ -2,6 +2,7 @@ import { Services } from "@/app/lib/mainsail";
 
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 export interface ITransactionIndex {
 	/**
@@ -30,6 +31,15 @@ export interface ITransactionIndex {
 	 * @memberof IReadWriteWallet
 	 */
 	received(query?: Services.ClientTransactionsInput): Promise<ExtendedConfirmedTransactionDataCollection>;
+
+	/**
+	 * Get a list of received transactions.
+	 *
+	 * @param {Services.ClientTransactionsInput} [query]
+	 * @return {Promise<UnconfirmedTransactionDataCollection>}
+	 * @memberof IReadWriteWallet
+	 */
+	unconfirmed(query?: Services.ClientTransactionsInput): Promise<UnconfirmedTransactionDataCollection>;
 
 	/**
 	 * Find a transaction by the given ID.
