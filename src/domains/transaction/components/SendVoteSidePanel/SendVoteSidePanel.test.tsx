@@ -981,6 +981,10 @@ describe("SendVote", () => {
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
+		const isEthBasedAppSpy = vi
+			.spyOn(wallet.ledger(), "isEthBasedApp")
+			.mockResolvedValue(true);
+
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
@@ -1063,6 +1067,7 @@ describe("SendVote", () => {
 		voteTransactionMock.mockRestore();
 		mockWalletData.mockRestore();
 		nanoXMock.mockRestore();
+		isEthBasedAppSpy.mockRestore();
 	});
 
 	it("should error if ledger is not supported", async () => {
@@ -1077,6 +1082,10 @@ describe("SendVote", () => {
 		const signTransactionSpy = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const isEthBasedAppSpy = vi
+			.spyOn(wallet.ledger(), "isEthBasedApp")
+			.mockResolvedValue(true);
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
@@ -1121,5 +1130,6 @@ describe("SendVote", () => {
 		broadcastMock.mockRestore();
 		voteTransactionMock.mockRestore();
 		nanoXMock.mockRestore();
+		isEthBasedAppSpy.mockRestore();
 	});
 });
