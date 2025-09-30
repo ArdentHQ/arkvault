@@ -1,6 +1,7 @@
 import { Services } from "@/app/lib/mainsail";
 
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 export type AggregateQuery = {
 	identifiers?: Services.WalletIdentifier[];
@@ -43,6 +44,15 @@ export interface ITransactionAggregate {
 	 * @memberof ITransactionAggregate
 	 */
 	received(query: AggregateQuery): Promise<ExtendedConfirmedTransactionDataCollection>;
+
+	/**
+	 * Unconfirmed transactions using the given query.
+	 *
+	 * @param {AggregateQuery} query
+	 * @return {Promise<UnconfirmedTransactionDataCollection>}
+	 * @memberof ITransactionAggregate
+	 */
+	unconfirmed(query: AggregateQuery): Promise<UnconfirmedTransactionDataCollection>;
 
 	/**
 	 * Determines if there are more transactions for the given method.
