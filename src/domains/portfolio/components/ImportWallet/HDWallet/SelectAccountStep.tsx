@@ -4,33 +4,113 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { RadioButton } from "@/app/components/RadioButton";
-import { Amount } from "@/app/components/Amount";
 import { WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
+import { useBreakpoint } from "@/app/hooks";
+import { InfoDetail, MultiEntryItem } from "@/app/components/MultiEntryItem/MultiEntryItem";
+
+interface AccountRowProperties {
+	isSelected: boolean;
+	onClick: () => void;
+	addressesCount: number;
+	accountName: string;
+	importMethod: "mnemonic" | "encryptedPassword";
+}
+
+export const MobileAccountRow = ({
+	addressesCount,
+	accountName,
+	isSelected,
+	onClick,
+	importMethod,
+}: AccountRowProperties): JSX.Element => {
+	const { t } = useTranslation();
+
+	return (
+		<div className="space-y-2">
+			<MultiEntryItem
+				dataTestId="MobileAccountRow"
+				titleSlot={
+					<div
+						data-testid="MobileAccountRowHeader"
+						onClick={onClick}
+						tabIndex={0}
+						className="flex h-5 w-full items-center gap-3"
+					>
+						<RadioButton
+							name="single"
+							data-testid="AccountRow--radio"
+							color="info"
+							className="m-0.5 h-5 w-5"
+							checked={isSelected}
+							onChange={onClick}
+						/>
+
+						<div
+							className={cn("truncate text-sm leading-[17px] font-semibold", {
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50":
+									!isSelected,
+								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": isSelected,
+							})}
+						>
+							{accountName}
+						</div>
+					</div>
+				}
+			>
+				<div className={cn("sm:w-full sm:p-0")}>
+					<div className="space-y-4 px-4 pt-3 pb-4 sm:hidden">
+						<InfoDetail
+							label={t("COMMON.TYPE")}
+							body={
+								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
+									{importMethod === "mnemonic"
+										? t("COMMON.MNEMONIC")
+										: t("COMMON.ENCRYPTED_PASSWORD")}
+								</div>
+							}
+						/>
+						<InfoDetail
+							label="Value"
+							body={
+								<div className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
+									{t("COMMON.ADDRESS_WITH_COUNT", { count: addressesCount })}
+								</div>
+							}
+						/>
+					</div>
+				</div>
+			</MultiEntryItem>
+		</div>
+	);
+};
 
 export const AccountRow = ({
 	addressesCount,
 	accountName,
-	balance,
 	isSelected,
 	onClick,
 	importMethod,
-	wallet,
-}: {
-	isSelected: boolean;
-	onClick: (accountName: string) => void;
-	addressesCount: number;
-	balance: number;
-	accountName: string;
-	importMethod: "mnemonic" | "encryptedPassword";
-	wallet: Contracts.IReadWriteWallet;
-}): JSX.Element => {
+}: AccountRowProperties): JSX.Element => {
 	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
+
+	if (isXs) {
+		return (
+			<MobileAccountRow
+				isSelected={isSelected}
+				onClick={onClick}
+				addressesCount={addressesCount}
+				accountName={accountName}
+				importMethod={importMethod}
+			/>
+		);
+	}
 
 	return (
 		<div
 			data-testid="AccountRow"
-			onClick={() => onClick(accountName)}
-			onKeyPress={() => onClick(accountName)}
+			onClick={onClick}
+			onKeyPress={onClick}
 			tabIndex={0}
 			className={cn(
 				"group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all",
@@ -46,7 +126,7 @@ export const AccountRow = ({
 					color="info"
 					className="m-0.5 h-5 w-5"
 					checked={isSelected}
-					onChange={() => onClick(accountName)}
+					onChange={onClick}
 				/>
 
 				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
@@ -74,8 +154,6 @@ export const AccountRow = ({
 						>
 							{t("COMMON.ADDRESS_WITH_COUNT", { count: addressesCount })}
 						</div>
-
-						<Amount ticker={wallet.exchangeCurrency()} value={balance} className="text-sm leading-[17px]" />
 					</div>
 				</div>
 			</div>
@@ -129,7 +207,6 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 		<section data-testid="SelectAccountStep" className="space-y-1">
 			{groupedWallets.map((walletsGroup) => {
 				const firstWallet = walletsGroup[0];
-				const totalBalance = walletsGroup.reduce((total, wallet) => wallet.convertedBalance() + total, 0);
 
 				return (
 					<AccountRow
@@ -139,9 +216,7 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 							setValue("selectedAccount", firstWallet.accountName());
 						}}
 						addressesCount={walletsGroup.length}
-						balance={totalBalance}
 						accountName={firstWallet.accountName() as string}
-						wallet={firstWallet}
 						importMethod={
 							firstWallet.importMethod() === WalletImportMethod.BIP44.MNEMONIC
 								? "mnemonic"
@@ -185,17 +260,15 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 					/>
 
 					<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
-						<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
-							<div
-								className={cn("flex gap-2 leading-5", {
-									"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
-										!isImportNewSelected,
-									"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-										isImportNewSelected,
-								})}
-							>
-								{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.IMPORT_NEW_HD_WALLET")}
-							</div>
+						<div
+							className={cn("flex gap-2 leading-5", {
+								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+									!isImportNewSelected,
+								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+									isImportNewSelected,
+							})}
+						>
+							{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.IMPORT_NEW_HD_WALLET")}
 						</div>
 					</div>
 				</div>
