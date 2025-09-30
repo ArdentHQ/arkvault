@@ -118,9 +118,9 @@ export class LedgerService {
 		try {
 			const path = `m/44'/60'/0'/0/0`;
 			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(path);
-			return !!extendedPublicKey || !!publicKey
-		} catch (error) {
-			return false
+			return !!extendedPublicKey || !!publicKey;
+		} catch {
+			return false;
 		}
 	}
 

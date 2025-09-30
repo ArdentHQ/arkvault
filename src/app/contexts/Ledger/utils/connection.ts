@@ -26,7 +26,7 @@ const accessLedgerApp = async ({ ledgerService }: { ledgerService: LedgerService
 	await accessLedgerDevice(ledgerService);
 
 	// Allows only eth based ledger apps and rejects others, including the old ark ledger app.
-	const isEthApp = await ledgerService.isEthBasedApp()
+	const isEthApp = await ledgerService.isEthBasedApp();
 	if (!isEthApp) {
 		throw new Error("INCOMPATIBLE_APP");
 	}
