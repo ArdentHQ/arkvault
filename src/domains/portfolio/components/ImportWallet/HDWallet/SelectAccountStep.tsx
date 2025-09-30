@@ -26,7 +26,7 @@ export const MobileAccountRow = ({
 	const { t } = useTranslation();
 
 	return (
-		<div className="space-y-2">
+		<div className="space-y-0">
 			<MultiEntryItem
 				dataTestId="MobileAccountRow"
 				titleSlot={
@@ -46,7 +46,7 @@ export const MobileAccountRow = ({
 						/>
 
 						<div
-							className={cn("truncate text-sm leading-[17px] font-semibold", {
+							className={cn("truncate text-sm leading-[17px] font-semibold uppercase", {
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50":
 									!isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": isSelected,
@@ -70,7 +70,7 @@ export const MobileAccountRow = ({
 							}
 						/>
 						<InfoDetail
-							label="Value"
+							label={t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.IMPORTED")}
 							body={
 								<div className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
 									{t("COMMON.ADDRESS_WITH_COUNT", { count: addressesCount })}
@@ -129,10 +129,19 @@ export const AccountRow = ({
 					onChange={onClick}
 				/>
 
-				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
+				<div
+					className={cn(
+						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold",
+						{
+							"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500":
+								!isSelected,
+							"border-theme-success-200 dark:border-theme-dark-600 dim:border-theme-dim-600": isSelected,
+						},
+					)}
+				>
 					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
 						<div
-							className={cn("flex gap-2 leading-5", {
+							className={cn("flex gap-2 leading-5 uppercase", {
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
 									!isSelected,
 								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50": isSelected,
@@ -204,7 +213,7 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 	const isImportNewSelected = selectedAccountName === undefined;
 
 	return (
-		<section data-testid="SelectAccountStep" className="space-y-1">
+		<section data-testid="SelectAccountStep" className="space-y-2 sm:space-y-1">
 			{groupedWallets.map((walletsGroup) => {
 				const firstWallet = walletsGroup[0];
 
@@ -243,32 +252,48 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 				onKeyPress={() => setAccountName()}
 				tabIndex={0}
 				className={cn(
-					"group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all",
+					"group cursor-pointer items-center rounded border transition-all sm:rounded-lg",
+					"bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700",
+					"sm:border-theme-primary-200 sm:dark:border-theme-dark-700 sm:dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700",
 					{
-						"bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950": isImportNewSelected,
+						"sm:bg-theme-secondary-200 sm:dark:bg-theme-dark-950 sm:dim:bg-theme-dim-950":
+							isImportNewSelected,
+						"sm:dim:bg-transparent sm:bg-transparent sm:dark:bg-transparent": !isImportNewSelected,
 					},
 				)}
 			>
-				<div className="flex items-center px-4 py-3 duration-150">
-					<RadioButton
-						name="single"
-						data-testid="AccountRow--radio"
-						color="info"
-						className="m-0.5 h-5 w-5"
-						checked={isImportNewSelected}
-						onChange={() => setAccountName()}
-					/>
+				<div className="px-4 py-3 duration-150">
+					<div className="flex h-5 items-center sm:h-auto">
+						<RadioButton
+							name="single"
+							data-testid="AccountRow--radio"
+							color="info"
+							className="m-0.5 h-5 w-5"
+							checked={isImportNewSelected}
+							onChange={() => setAccountName()}
+						/>
 
-					<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
 						<div
-							className={cn("flex gap-2 leading-5", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
-									!isImportNewSelected,
-								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-									isImportNewSelected,
-							})}
+							className={cn(
+								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 ml-3 flex w-full min-w-0 items-center justify-between font-semibold sm:ml-4 sm:border-l sm:pl-4",
+								{
+									"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500":
+										!isImportNewSelected,
+									"border-theme-success-200 dark:border-theme-dark-600 dim:border-theme-dim-600":
+										isImportNewSelected,
+								},
+							)}
 						>
-							{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.IMPORT_NEW_HD_WALLET")}
+							<div
+								className={cn("flex gap-2 text-sm leading-[17px] sm:text-base sm:leading-5", {
+									"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+										!isImportNewSelected,
+									"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+										isImportNewSelected,
+								})}
+							>
+								{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.IMPORT_NEW_HD_WALLET")}
+							</div>
 						</div>
 					</div>
 				</div>
