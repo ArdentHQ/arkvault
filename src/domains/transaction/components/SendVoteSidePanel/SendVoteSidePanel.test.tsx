@@ -981,9 +981,7 @@ describe("SendVote", () => {
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
-		const isEthBasedAppSpy = vi
-			.spyOn(wallet.ledger(), "isEthBasedApp")
-			.mockResolvedValue(true);
+		const isEthBasedAppSpy = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockResolvedValue(true);
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
@@ -1083,9 +1081,7 @@ describe("SendVote", () => {
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
-		const isEthBasedAppSpy = vi
-			.spyOn(wallet.ledger(), "isEthBasedApp")
-			.mockResolvedValue(true);
+		const isEthBasedAppSpy = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockResolvedValue(true);
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
