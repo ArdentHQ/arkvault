@@ -3,8 +3,10 @@ import { beforeEach, describe, expect, it, vi, afterEach } from "vitest";
 import {
 	env,
 	getDefaultMainsailWalletMnemonic,
-	getMainsailProfileId, MAINSAIL_MNEMONICS,
-	render, renderResponsiveWithRoute,
+	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
+	render,
+	renderResponsiveWithRoute,
 	screen,
 } from "@/utils/testing-library";
 
@@ -38,7 +40,7 @@ describe("SelectAccountStep", () => {
 
 	const createHDWallet = async (accountName: string, addressIndex: number, mnemonic: string, password?: string) => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
-			levels: {account: 0, addressIndex},
+			levels: { account: 0, addressIndex },
 			mnemonic,
 			password,
 		});
@@ -116,7 +118,7 @@ describe("SelectAccountStep", () => {
 			{ route },
 		);
 
-		const firstAccountRadio = addressRowRadioElements()[0]
+		const firstAccountRadio = addressRowRadioElements()[0];
 		expect(firstAccountRadio).toBeChecked();
 
 		unmount();
@@ -265,10 +267,7 @@ describe("AccountRow", () => {
 	});
 
 	it("should display encrypted password import method", () => {
-		const { unmount } = render(
-			<AccountRow {...defaultProps} importMethod="encryptedPassword" />,
-			{ route }
-		);
+		const { unmount } = render(<AccountRow {...defaultProps} importMethod="encryptedPassword" />, { route });
 
 		expect(screen.getByText("Encrypted Password")).toBeInTheDocument();
 
@@ -313,10 +312,7 @@ describe("MobileAccountRow", () => {
 	});
 
 	it("should display encrypted password import method", () => {
-		const { unmount } = render(
-			<MobileAccountRow {...defaultProps} importMethod="encryptedPassword" />,
-			{ route }
-		);
+		const { unmount } = render(<MobileAccountRow {...defaultProps} importMethod="encryptedPassword" />, { route });
 
 		expect(screen.getByText("Encrypted Password")).toBeInTheDocument();
 
