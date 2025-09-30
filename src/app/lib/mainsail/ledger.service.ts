@@ -114,6 +114,16 @@ export class LedgerService {
 		return [`0x`, r, s, v.toString(16)].join("");
 	}
 
+	public async isEthBasedApp() {
+		try {
+			const path = `m/44'/60'/0'/0/0`;
+			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(path);
+			return !!extendedPublicKey || !!publicKey
+		} catch (error) {
+			return false
+		}
+	}
+
 	public async scan(options?: {
 		useLegacy: boolean;
 		startPath?: string;
