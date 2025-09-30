@@ -66,6 +66,11 @@ export const persistLedgerConnection = async ({
 				throw new AbortError("VERSION_ERROR");
 			}
 
+			// Abort on version error or continue retrying access.
+			if (error.message === "INCOMPATIBLE_APP") {
+				throw new AbortError("INCOMPATIBLE_APP");
+			}
+
 			throw error;
 		}
 	};
