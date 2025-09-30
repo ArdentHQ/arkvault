@@ -37,6 +37,7 @@ describe("TransactionIndex", () => {
 		vi.spyOn(wallet, "client").mockReturnValue({
 			transaction: transactionSpy,
 			transactions: transactionsSpy,
+			unconfirmedTransactions: transactionsSpy,
 		} as any);
 
 		vi.spyOn(TransactionMapper, "transformConfirmedTransactionDataCollection").mockResolvedValue({} as any);
@@ -79,6 +80,12 @@ describe("TransactionIndex", () => {
 				to: wallet.address(),
 			}),
 		);
+	});
+
+	it("should fetch unconfirmed transactions", async () => {
+		await subject.unconfirmed();
+
+		expect(transactionsSpy).toHaveBeenCalledOnce();
 	});
 
 	it("should find a transaction by its ID", async () => {
