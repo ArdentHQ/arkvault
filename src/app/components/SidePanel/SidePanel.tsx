@@ -19,7 +19,7 @@ import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTranslation } from "react-i18next";
 import { usePanels } from "@/app/contexts/Panels";
-
+import { useLocalStorage } from "usehooks-ts";
 interface SidePanelProps {
 	children: React.ReactNode;
 	open: boolean;
@@ -87,8 +87,9 @@ export const SidePanel = ({
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
-	const { isMinimized, finishedMinimizing, minimizedHintHasShown, persistMinimizedHint, toggleMinimize } =
-		usePanels();
+	const { isMinimized, finishedMinimizing, toggleMinimize } = usePanels();
+
+	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
 

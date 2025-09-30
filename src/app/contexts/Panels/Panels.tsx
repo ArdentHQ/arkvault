@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocalStorage } from "usehooks-ts";
 
 export enum Panel {
 	CreateAddress = "CREATE_ADDRESS",
@@ -20,8 +19,6 @@ interface PanelsContextValue {
 	openPanel: (panel: Panel) => void;
 	isMinimized: boolean;
 	finishedMinimizing: boolean;
-	minimizedHintHasShown: boolean;
-	persistMinimizedHint: (minimizedHintHasShown: boolean) => void;
 	setIsMinimized: (isMinimized: boolean) => void;
 	showConfirmationModal: boolean;
 	setShowConfirmationModal: (showConfirmationModal: boolean) => void;
@@ -39,7 +36,6 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
 	const [finishedMinimizing, setFinishedMinimizing] = useState(false);
-	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
 	const currentOpenedPanelName = useMemo(
@@ -119,9 +115,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				currentOpenedPanelName,
 				finishedMinimizing,
 				isMinimized,
-				minimizedHintHasShown,
 				openPanel,
-				persistMinimizedHint,
 				setIsMinimized,
 				setShowConfirmationModal,
 				showConfirmationModal,
