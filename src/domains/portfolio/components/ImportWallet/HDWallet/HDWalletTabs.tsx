@@ -144,10 +144,11 @@ export const HDWalletTabs = ({
 	const handleNext = () =>
 		({
 			[HDWalletTabStep.SelectAccountStep]: async () => {
-				// select enter mnemonic step when Import new HD wallet option selected
-				// or there are no existing HD wallets
-				setActiveTab(HDWalletTabStep.EnterMnemonicStep);
-				onStepChange?.(HDWalletTabStep.EnterMnemonicStep);
+				const { selectedAccount } = getValues();
+				if (!selectedAccount) {
+					setActiveTab(HDWalletTabStep.EnterMnemonicStep);
+					onStepChange?.(HDWalletTabStep.EnterMnemonicStep);
+				}
 			},
 			[HDWalletTabStep.EnterMnemonicStep]: async () => {
 				const { value } = getValues();
