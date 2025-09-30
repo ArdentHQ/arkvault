@@ -20,6 +20,7 @@ import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
 import { useEnvironmentContext } from "@/app/contexts";
 import { SummaryStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SummaryStep";
 import { getAccountName } from "@/domains/wallet/utils/get-account-name";
+import { SelectAccountStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAccountStep";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -216,7 +217,7 @@ export const HDWalletTabs = ({
 					<div data-testid="HDWalletTabs--child" className="h-full">
 						<div className="h-full">
 							<TabPanel tabId={HDWalletTabStep.SelectAccountStep}>
-								// select or import new HD wallet
+								<SelectAccountStep profile={activeProfile} />
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EnterMnemonicStep}>
