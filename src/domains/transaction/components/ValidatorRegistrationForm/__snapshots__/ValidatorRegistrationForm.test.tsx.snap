@@ -303,6 +303,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                 >
                   <div
                     class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                    data-testid="DetailTitle"
                   >
                     From
                   </div>
@@ -405,6 +406,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                   >
                     <div
                       class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                      data-testid="DetailTitle"
                     >
                       Method
                     </div>
@@ -430,6 +432,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                   >
                     <div
                       class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                      data-testid="DetailTitle"
                     >
                       Validator Public Key
                     </div>
@@ -475,6 +478,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                       >
                         <div
                           class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                          data-testid="DetailTitle"
                         >
                           Locked Amount
                         </div>

@@ -4,6 +4,7 @@ import { DropdownOption } from "@/app/components/Dropdown";
 import { NavbarVariant } from "@/types";
 
 export interface NavigationBarMenuItem {
+	isActive: boolean;
 	title: string;
 	mountPath: ((profileId: string) => string) | (() => string);
 }

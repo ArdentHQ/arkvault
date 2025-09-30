@@ -31,6 +31,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Amount
             </div>
@@ -50,6 +51,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Fee
             </div>
@@ -69,6 +71,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Total
             </div>
@@ -93,6 +96,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
         >
           <div
             class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+            data-testid="DetailTitle"
           >
             Confirmation Time
           </div>
@@ -139,6 +143,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Amount
             </div>
@@ -158,6 +163,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Fee
             </div>
@@ -177,6 +183,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Total
             </div>
@@ -201,6 +208,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
         >
           <div
             class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+            data-testid="DetailTitle"
           >
             Confirmation Time
           </div>
@@ -247,6 +255,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Amount
             </div>
@@ -266,6 +275,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Fee
             </div>
@@ -285,6 +295,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Total
             </div>
@@ -309,6 +320,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
         >
           <div
             class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+            data-testid="DetailTitle"
           >
             Confirmation Time
           </div>
@@ -355,6 +367,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Amount
             </div>
@@ -374,6 +387,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Fee
             </div>
@@ -393,6 +407,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+              data-testid="DetailTitle"
             >
               Total
             </div>
@@ -417,6 +432,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
         >
           <div
             class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold w-auto leading-4! sm:min-w-36 sm:text-sm"
+            data-testid="DetailTitle"
           >
             Confirmation Time
           </div>
