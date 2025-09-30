@@ -240,7 +240,7 @@ export const SelectAddressStep = ({
 	profile: ProfilesContracts.IProfile;
 	mnemonic: string
 }) => {
-	const { getValues, setValue, register, unregister } = useFormContext();
+	const { setValue, register, unregister } = useFormContext();
 
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [addresses, setAddresses] = useState<AddressData[]>([]);
