@@ -18,7 +18,7 @@ export interface HDWalletTabsProperties {
 	activeIndex?: HDWalletTabStep;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 	addressesPerPage?: number;
-	mnemonic: string
+	mnemonic: string;
 }
 
 export interface AddressTableProperties {

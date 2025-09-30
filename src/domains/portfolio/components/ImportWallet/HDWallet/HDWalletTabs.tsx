@@ -64,7 +64,6 @@ export const HDWalletTabs = ({
 		password,
 	} = getValues();
 
-
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
 	const firstStep = activeIndex ?? HDWalletTabStep.SelectAccountStep;
 	const [activeTab, setActiveTab] = useState<HDWalletTabStep>(firstStep);

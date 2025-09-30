@@ -8,7 +8,13 @@ import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 
-export const WalletOverviewStep = ({ isGeneratingWallet, mnemonic }: { isGeneratingWallet: boolean, mnemonic?: string }) => {
+export const WalletOverviewStep = ({
+	isGeneratingWallet,
+	mnemonic,
+}: {
+	isGeneratingWallet: boolean;
+	mnemonic?: string;
+}) => {
 	const { unregister, watch } = useFormContext();
 
 	const { wallet } = watch();

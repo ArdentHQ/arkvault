@@ -206,7 +206,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
@@ -238,7 +238,7 @@ export const SelectAddressStep = ({
 	addressesPerPage?: number;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
-	mnemonic: string
+	mnemonic: string;
 }) => {
 	const { setValue, register, unregister } = useFormContext();
 

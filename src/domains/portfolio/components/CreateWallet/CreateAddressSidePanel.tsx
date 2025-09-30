@@ -42,7 +42,7 @@ export const CreateAddressesSidePanel = ({
 	const usesHDWallets = activeProfile.usesHDWallets();
 	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep;
 	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
-	const [mnemonic, setMnemonic] = useState<string | undefined>()
+	const [mnemonic, setMnemonic] = useState<string | undefined>();
 
 	const [activeTab, setActiveTab] = useState<CreateStep>(firstStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -60,8 +60,7 @@ export const CreateAddressesSidePanel = ({
 	const { getValues, formState, register, setValue, watch, reset } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, acceptResponsibility } =
-		watch();
+	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, acceptResponsibility } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
@@ -92,7 +91,7 @@ export const CreateAddressesSidePanel = ({
 		}
 
 		setActiveTab(CreateStep.MethodStep);
-		setMnemonic(undefined)
+		setMnemonic(undefined);
 		reset();
 	}, [open]);
 
@@ -129,7 +128,7 @@ export const CreateAddressesSidePanel = ({
 
 			setValue("wallet", response.wallet, { shouldDirty: true, shouldValidate: true });
 			setValue("mnemonic", response.mnemonic, { shouldDirty: true, shouldValidate: true });
-			setMnemonic(response.mnemonic)
+			setMnemonic(response.mnemonic);
 			setActiveTab(firstStep);
 		} catch {
 			setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
