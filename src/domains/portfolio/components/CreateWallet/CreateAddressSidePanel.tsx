@@ -151,16 +151,22 @@ export const CreateAddressesSidePanel = ({
 			});
 
 			if (useEncryption && parameters.encryptionPassword) {
-				const importedWallet = importedWallets[0];
-				if (importedWallet) {
-					await importedWallet.signingKey().set(mnemonic, parameters.encryptionPassword);
-					importedWallet
-						.data()
-						.set(
-							Contracts.WalletData.ImportMethod,
-							Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
-						);
-					wallet = importedWallet;
+				try {
+					const importedWallet = importedWallets[0];
+					if (importedWallet) {
+						await importedWallet.signingKey().set(mnemonic, parameters.encryptionPassword);
+						importedWallet
+							.data()
+							.set(
+								Contracts.WalletData.ImportMethod,
+								Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
+							);
+						wallet = importedWallet;
+					}
+				} catch {
+					setIsGeneratingWallet(false);
+					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
+					return;
 				}
 			}
 
