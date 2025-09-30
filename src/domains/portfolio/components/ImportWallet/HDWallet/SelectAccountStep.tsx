@@ -37,7 +37,8 @@ export const MobileAccountRow = ({
 						className="flex h-5 w-full items-center gap-3"
 					>
 						<RadioButton
-							name="single"
+							role="radio"
+							name="AccountRow"
 							data-testid="AccountRow--radio"
 							color="info"
 							className="m-0.5 h-5 w-5"
@@ -121,7 +122,8 @@ export const AccountRow = ({
 		>
 			<div className="flex items-center px-4 py-3 duration-150">
 				<RadioButton
-					name="single"
+					name="AccountRow"
+					role="radio"
 					data-testid="AccountRow--radio"
 					color="info"
 					className="m-0.5 h-5 w-5"
@@ -193,7 +195,7 @@ const getAccounts = (profile: Contracts.IProfile) => {
 export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IProfile }): JSX.Element => {
 	const { t } = useTranslation();
 
-	const { getValues, setValue, register } = useFormContext();
+	const { setValue, register, watch } = useFormContext();
 
 	const groupedWallets = Object.values(getAccounts(profile));
 
@@ -209,7 +211,7 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 		}
 	}, [register]);
 
-	const selectedAccountName = getValues("selectedAccount") as string | undefined;
+	const selectedAccountName = watch("selectedAccount") as string | undefined;
 	const isImportNewSelected = selectedAccountName === undefined;
 
 	return (
@@ -222,7 +224,7 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 						key={firstWallet.accountName()}
 						isSelected={firstWallet.accountName() === selectedAccountName}
 						onClick={() => {
-							setValue("selectedAccount", firstWallet.accountName());
+							setAccountName(firstWallet.accountName());
 						}}
 						addressesCount={walletsGroup.length}
 						accountName={firstWallet.accountName() as string}
@@ -247,7 +249,7 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 			</div>
 
 			<div
-				data-testid="AccountRow"
+				data-testid="NewAccountRow"
 				onClick={() => setAccountName()}
 				onKeyPress={() => setAccountName()}
 				tabIndex={0}
@@ -265,8 +267,9 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 				<div className="px-4 py-3 duration-150">
 					<div className="flex h-5 items-center sm:h-auto">
 						<RadioButton
-							name="single"
-							data-testid="AccountRow--radio"
+							name="AccountRow"
+							role="radio"
+							data-testid="NewAccountRow--radio"
 							color="info"
 							className="m-0.5 h-5 w-5"
 							checked={isImportNewSelected}
