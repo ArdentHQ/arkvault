@@ -3,7 +3,7 @@ import { MemoryRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { renderWithoutRouter as render, screen } from "@/utils/testing-library";
 import { RouterView } from "./RouterView";
 import { Middleware } from "./router.types";
-import * as PanelsMock from "@/app/contexts/Panels";
+import * as PanelsMock from "@/app/Panels.blocks";
 import { afterAll, beforeAll, vi } from "vitest";
 
 let appPanelsMock;

@@ -6,7 +6,7 @@ import { translations as errorTranslations } from "@/domains/error/i18n";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import * as themeUtils from "@/utils/theme";
 import { env, render, renderWithoutRouter, screen, waitFor } from "@/utils/testing-library";
-import * as PanelsMock from "@/app/contexts/Panels";
+import * as PanelsMock from "@/app/Panels.blocks";
 
 vi.mock("@/domains/dashboard/routing", async () => {
 	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
