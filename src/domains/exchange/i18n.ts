@@ -11,12 +11,14 @@ export const translations = {
 	EXCHANGE_FORM: {
 		AMOUNT_RECEIVED: "Amount Received",
 		AMOUNT_SENT: "Amount Sent",
+		CURRENCY_ADDRESS: "{{ currency }} Address",
 		CURRENCY_INPUT: "{{currency}} Input",
 		CURRENCY_OUTPUT: "{{currency}} Output",
+		CURRENCY_TRANSACTION_ID: "{{currency}} Transaction ID",
 		ESTIMATED_ARRIVAL: "Estimated Arrival",
 		ESTIMATED_RATE: "Estimated Rate",
 		ESTIMATED_TIME: "≈ {{estimatedTime}} minutes",
-		EXCHANGE_ADDRESS: "Exchange {{currency}} Address",
+		EXCHANGE_ADDRESS: "{{ exchangeName }} {{currency}} Address",
 		EXCHANGE_COMPLETED: "Exchange Completed!",
 		FROM_CURRENCY: "From Currency",
 		INPUT_TRANSACTION_ID: "Input Transaction ID",
@@ -25,8 +27,8 @@ export const translations = {
 		PAYOUT_AMOUNT: "Payout Amount",
 		RECIPIENT_PLACEHOLDER: "Enter the payout address",
 		RECIPIENT_WALLET: "Recipient Wallet",
+		REFUND_ADDRESS: "Refund Address",
 		REFUND_PLACEHOLDER: "Enter the refund address",
-		REFUND_WALLET: "Refund Wallet",
 		SUPPORT_INFO:
 			"If you have any question about your exchange, please contact {{exchange}} support team via email at <linkEmail>{{email}}</linkEmail>",
 		TERMS: "I've read and agree to the {{exchange}} <linkTerms>{{terms}}</linkTerms> and <linkPrivacyPolicy>{{privacy}}</linkPrivacyPolicy>",
@@ -66,9 +68,9 @@ export const translations = {
 		TITLE: "Exchange",
 	},
 
-	REFUND_WALLET: {
-		ADD: "Add Refund Wallet",
-		REMOVE: "Remove Refund Wallet",
+	REFUND_ADDRESS: {
+		ADD: "Add Refund Address",
+		REMOVE: "Remove Refund Address",
 	},
 
 	SELECT_EXCHANGE_MESSAGE: "Select one of the exchanges you have installed.",
