@@ -206,7 +206,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => {}}
+								handleClick={() => { }}
 								isSelected={false}
 							/>
 						))}
@@ -233,14 +233,14 @@ export const SelectAddressStep = ({
 	network,
 	profile,
 	addressesPerPage = ADDRESSES_PER_BATCH,
+	mnemonic,
 }: {
 	addressesPerPage?: number;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
+	mnemonic: string
 }) => {
 	const { getValues, setValue, register, unregister } = useFormContext();
-
-	const mnemonic = getValues("mnemonic") as string;
 
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [addresses, setAddresses] = useState<AddressData[]>([]);
