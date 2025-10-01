@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { Modal } from "@/app/components/Modal";
@@ -11,7 +11,6 @@ import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateW
 import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
 import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
-import { useLocation } from "react-router";
 import { Panel, usePanels } from "./contexts";
 import { useTranslation } from "react-i18next";
 import { useHasProfile } from "./hooks";
