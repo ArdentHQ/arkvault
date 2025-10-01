@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { Modal } from "@/app/components/Modal";
@@ -14,6 +14,7 @@ import { SendRegistrationSidePanel } from "@/domains/transaction/components/Send
 import { useLocation } from "react-router";
 import { Panel, usePanels } from "./contexts";
 import { useTranslation } from "react-i18next";
+import { useHasProfile } from "./hooks";
 
 const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
@@ -49,13 +50,9 @@ const DiscardPanelConfirmationModal = () => {
 export const AppPanels = () => {
 	const { currentOpenedPanel, closePanel } = usePanels();
 
-	const location = useLocation();
+	const hasProfile = useHasProfile();
 
-	if (
-		!location.pathname.startsWith("/profiles") ||
-		location.pathname.startsWith("/profiles/create") ||
-		location.pathname.startsWith("/profiles/import")
-	) {
+	if (!hasProfile) {
 		return;
 	}
 
