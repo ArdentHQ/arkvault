@@ -18,7 +18,7 @@ import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useTranslation } from "react-i18next";
-import { usePanels } from "@/app/contexts/Panels";
+import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 import { useLocalStorage } from "usehooks-ts";
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -62,7 +62,7 @@ export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttribu
 	/>
 );
 
-export const SidePanel = ({
+const SidePanelContent = ({
 	children,
 	open,
 	onOpenChange,
@@ -140,7 +140,7 @@ export const SidePanel = ({
 				transformOrigin: "right",
 				transitionProperty: "transform",
 			},
-			duration: isMinimized ? 150 : 350,
+			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
 			initial: {
 				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
 			},
@@ -425,5 +425,15 @@ export const SidePanel = ({
 				</SidePanelContext.Provider>
 			)}
 		</FloatingPortal>
+	);
+};
+
+export const SidePanel = (props: SidePanelProps): JSX.Element => {
+	const { resetKey } = usePanels();
+
+	return (
+		<div key={resetKey} className="display-contents">
+			<SidePanelContent {...props} />
+		</div>
 	);
 };

@@ -25,9 +25,12 @@ interface PanelsContextValue {
 	cancelOpen: () => void;
 	toggleMinimize: () => void;
 	currentOpenedPanelName: string | undefined;
+	resetKey: number;
 }
 
 const PanelsContext = React.createContext<PanelsContextValue | undefined>(undefined);
+
+export const SIDE_PANEL_TRANSITION_DURATION = 350;
 
 export const PanelsProvider = ({ children }: { children: React.ReactNode | React.ReactNode[] }) => {
 	const { t } = useTranslation();
@@ -35,6 +38,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+	const [resetKey, setResetKey] = useState(0);
 
 	const currentOpenedPanelName = useMemo(
 		() => (currentOpenedPanel ? t(`COMMON.PANELS.${currentOpenedPanel}`) : undefined),
@@ -48,10 +52,12 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 
 		// Wait for the previous panel to be removed
 		setTimeout(() => {
+			setResetKey((previousKey) => previousKey + 1);
+
 			setIsMinimized(false);
 
 			setCurrentOpenedPanel(panelToOpen);
-		}, 350);
+		}, SIDE_PANEL_TRANSITION_DURATION);
 	};
 
 	const cancelOpen = () => {
@@ -71,7 +77,11 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 
 		if (isMinimized) {
 			// Reset the minimized state after the transition is complete
-			setTimeout(() => setIsMinimized(false), 350);
+			setTimeout(() => {
+				setIsMinimized(false);
+
+				setResetKey((previousKey) => previousKey + 1);
+			}, SIDE_PANEL_TRANSITION_DURATION);
 		}
 	};
 
@@ -106,6 +116,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				currentOpenedPanelName,
 				isMinimized,
 				openPanel,
+				resetKey,
 				setIsMinimized,
 				setShowConfirmationModal,
 				showConfirmationModal,

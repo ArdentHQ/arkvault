@@ -1,5 +1,4 @@
 import React from "react";
-import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { Modal } from "@/app/components/Modal";
@@ -62,55 +61,37 @@ export const AppPanels = () => {
 
 	return (
 		<>
-			<ResetWhenUnmounted>
-				<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
-			</ResetWhenUnmounted>
+			<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
 
-			<ResetWhenUnmounted>
-				<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
-			</ResetWhenUnmounted>
+			<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
+			<CreateAddressesSidePanel open={currentOpenedPanel === Panel.CreateAddress} onOpenChange={closePanel} />
+			<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
+			<SendUsernameResignationSidePanel
+				open={currentOpenedPanel === Panel.SendUsernameResignation}
+				onOpenChange={closePanel}
+			/>
+			<SendValidatorResignationSidePanel
+				open={currentOpenedPanel === Panel.SendValidatorResignation}
+				onOpenChange={closePanel}
+			/>
 
-			<ResetWhenUnmounted>
-				<CreateAddressesSidePanel open={currentOpenedPanel === Panel.CreateAddress} onOpenChange={closePanel} />
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendUsernameResignationSidePanel
-					open={currentOpenedPanel === Panel.SendUsernameResignation}
-					onOpenChange={closePanel}
-				/>
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendValidatorResignationSidePanel
-					open={currentOpenedPanel === Panel.SendValidatorResignation}
-					onOpenChange={closePanel}
-				/>
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendRegistrationSidePanel
-					open={
-						currentOpenedPanel === Panel.SendValidatorRegistration ||
-						currentOpenedPanel === Panel.SendUsernameRegistration
+			<SendRegistrationSidePanel
+				open={
+					currentOpenedPanel === Panel.SendValidatorRegistration ||
+					currentOpenedPanel === Panel.SendUsernameRegistration
+				}
+				registrationType={
+					currentOpenedPanel === Panel.SendValidatorRegistration
+						? "validatorRegistration"
+						: "usernameRegistration"
+				}
+				onOpenChange={(open) => {
+					if (!open) {
+						closePanel();
+						return;
 					}
-					registrationType={
-						currentOpenedPanel === Panel.SendValidatorRegistration
-							? "validatorRegistration"
-							: "usernameRegistration"
-					}
-					onOpenChange={(open) => {
-						if (!open) {
-							closePanel();
-							return;
-						}
-					}}
-				/>
-			</ResetWhenUnmounted>
+				}}
+			/>
 
 			<DiscardPanelConfirmationModal />
 		</>
