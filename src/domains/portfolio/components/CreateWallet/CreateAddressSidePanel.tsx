@@ -141,30 +141,34 @@ export const CreateAddressesSidePanel = ({
 			assertString(mnemonic);
 			assertWallet(wallet);
 
-			if (useEncryption && parameters.encryptionPassword) {
-				setIsGeneratingWallet(true);
+			setIsGeneratingWallet(false);
+			assertWallet(wallet);
+			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
+			const importedWallets = await importWallets({
+				type: "bip39",
+				value: mnemonic,
+			});
+
+			if (useEncryption && parameters.encryptionPassword) {
 				try {
-					wallet = await activeProfile.walletFactory().fromMnemonicWithBIP39({
-						mnemonic,
-						password: parameters.encryptionPassword,
-					});
+					const importedWallet = importedWallets[0];
+					if (importedWallet) {
+						await importedWallet.signingKey().set(mnemonic, parameters.encryptionPassword);
+						importedWallet
+							.data()
+							.set(
+								Contracts.WalletData.ImportMethod,
+								Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
+							);
+						wallet = importedWallet;
+					}
 				} catch {
 					setIsGeneratingWallet(false);
 					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
 					return;
 				}
 			}
-
-			setIsGeneratingWallet(false);
-
-			assertWallet(wallet);
-			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
-
-			await importWallets({
-				type: "bip39",
-				value: mnemonic,
-			});
 
 			setValue("wallet", wallet);
 
