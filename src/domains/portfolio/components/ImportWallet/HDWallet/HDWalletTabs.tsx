@@ -20,6 +20,7 @@ import { WalletData, WalletImportMethod } from "@/app/lib/profiles/wallet.enum";
 import { useEnvironmentContext } from "@/app/contexts";
 import { SummaryStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SummaryStep";
 import { getAccountName } from "@/domains/wallet/utils/get-account-name";
+import { SelectAccountStep } from "./SelectAccountStep";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -143,8 +144,7 @@ export const HDWalletTabs = ({
 	const handleNext = () =>
 		({
 			[HDWalletTabStep.SelectAccountStep]: async () => {
-				// select enter mnemonic step when Import new HD wallet option selected
-				// or there are no existing HD wallets
+				// TODO: Handle wallet decryption and redirect to the appropriate step
 				setActiveTab(HDWalletTabStep.EnterMnemonicStep);
 				onStepChange?.(HDWalletTabStep.EnterMnemonicStep);
 			},
@@ -216,7 +216,7 @@ export const HDWalletTabs = ({
 					<div data-testid="HDWalletTabs--child" className="h-full">
 						<div className="h-full">
 							<TabPanel tabId={HDWalletTabStep.SelectAccountStep}>
-								// select or import new HD wallet
+								<SelectAccountStep profile={activeProfile} />
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EnterMnemonicStep}>
