@@ -117,7 +117,7 @@ export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: Im
 	}
 }
 
-export function useHDWalletStepHeaderConfig(step: HDWalletTabStep): StepHeaderConfig {
+export function useHDWalletStepHeaderConfig(step: HDWalletTabStep, importMethod?: string): StepHeaderConfig {
 	const { t } = useTranslation();
 
 	switch (step) {
@@ -125,6 +125,22 @@ export function useHDWalletStepHeaderConfig(step: HDWalletTabStep): StepHeaderCo
 			return {
 				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.SUBTITLE"),
 				title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.TITLE"),
+				titleIcon: <Icon name="HDWalletImportMethod" className="hidden md:block" />,
+			};
+		}
+
+		case HDWalletTabStep.EnterImportValueStep: {
+			if (importMethod === "mnemonic") {
+				return {
+					subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_MNEMONIC_STEP.SUBTITLE"),
+					title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_MNEMONIC_STEP.TITLE"),
+					titleIcon: <Icon name="MnemonicImportMethod" className="hidden md:block" />,
+				};
+			}
+
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_ENCRYPTED_PASSWORD_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_ENCRYPTED_PASSWORD_STEP.TITLE"),
 				titleIcon: <Icon name="HDWalletImportMethod" className="hidden md:block" />,
 			};
 		}

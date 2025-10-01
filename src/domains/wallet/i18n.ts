@@ -142,6 +142,11 @@ export const translations = {
 				"This password does not replace your mnemonic passphrase. You must ensure that your passphrase is properly recorded and backed up so that you do not lose access to your funds. You cannot use your encryption password to restore your profile, so it is vital that you have your mnemonic passphrase readily available should you run into any issues (such as losing access to your local profile or clearing your browser's cache).",
 		},
 
+		HD_WALLET_ENTER_ENCRYPTED_PASSWORD_STEP: {
+			SUBTITLE: "Import and add new addresses using your HD Wallet's encrypted password.",
+			TITLE: "Encrypted Password",
+		},
+
 		HD_WALLET_ENTER_MNEMONIC_STEP: {
 			SUBTITLE: "Import and add new addresses using your HD Wallet mnemonic.",
 			TITLE: "Enter Mnemonic",

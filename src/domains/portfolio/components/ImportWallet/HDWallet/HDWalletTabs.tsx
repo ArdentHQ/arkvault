@@ -21,6 +21,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { SummaryStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SummaryStep";
 import { getAccountName } from "@/domains/wallet/utils/get-account-name";
 import { SelectAccountStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAccountStep";
+import { EnterImportValueStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/EnterImportValueStep";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -145,10 +146,17 @@ export const HDWalletTabs = ({
 		({
 			[HDWalletTabStep.SelectAccountStep]: async () => {
 				const { selectedAccount } = getValues();
-				if (!selectedAccount) {
+				if (selectedAccount) {
+					setActiveTab(HDWalletTabStep.EnterImportValueStep);
+					onStepChange?.(HDWalletTabStep.EnterImportValueStep);
+				} else {
 					setActiveTab(HDWalletTabStep.EnterMnemonicStep);
 					onStepChange?.(HDWalletTabStep.EnterMnemonicStep);
 				}
+			},
+			[HDWalletTabStep.EnterImportValueStep]: async () => {
+				const { selectedAccount, value } = getValues();
+				console.log(selectedAccount, value)
 			},
 			[HDWalletTabStep.EnterMnemonicStep]: async () => {
 				const { value } = getValues();
@@ -227,6 +235,10 @@ export const HDWalletTabs = ({
 									network={activeNetwork}
 									importOption={importOption}
 								/>
+							</TabPanel>
+
+							<TabPanel tabId={HDWalletTabStep.EnterImportValueStep}>
+								<EnterImportValueStep profile={activeProfile}/>
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EncryptPasswordStep}>
