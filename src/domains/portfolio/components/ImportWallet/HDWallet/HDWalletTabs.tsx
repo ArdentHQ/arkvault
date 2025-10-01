@@ -158,12 +158,15 @@ export const HDWalletTabs = ({
 			[HDWalletTabStep.EnterImportValueStep]: async () => {
 				const { selectedAccount, mnemonicValue, encryptedPassword } = getValues();
 
-				let mnemonic = mnemonicValue as string|undefined;
+				let mnemonic = mnemonicValue as string | undefined;
 
 				if (encryptedPassword) {
 					register({ name: "password", type: "string", value: encryptionPassword });
 
-					const accountWallet = activeProfile.wallets().values().find((w) => w.accountName() === selectedAccount) as Contracts.IReadWriteWallet;
+					const accountWallet = activeProfile
+						.wallets()
+						.values()
+						.find((w) => w.accountName() === selectedAccount) as Contracts.IReadWriteWallet;
 
 					mnemonic = await accountWallet.signingKey().get(encryptedPassword as string);
 				}
