@@ -475,7 +475,8 @@ export const SendTransferSidePanel = ({
 							onClick={() => {
 								void handleSubmit(() => submit())();
 							}}
-							disabled={isSubmitting}
+							disabled={isSubmitting || !isValid}
+							isLoading={isSubmitting}
 						>
 							{t("COMMON.SEND")}
 						</Button>

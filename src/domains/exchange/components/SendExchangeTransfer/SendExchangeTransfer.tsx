@@ -287,7 +287,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 					<Button
 						type="submit"
 						data-testid="ExchangeTransfer__send-button"
-						disabled={isSubmitting || !isValid || !!errorMessage || isAwaitingConnection}
+						disabled={isSubmitting || !isValid || !!errorMessage || isAwaitingConnection || !senderWallet}
 						isLoading={isSubmitting}
 						icon="DoubleArrowRight"
 						iconPosition="right"

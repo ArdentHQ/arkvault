@@ -254,4 +254,16 @@ describe("SendExchangeTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 	});
+
+	it("should disable send button if the encryption password is not provided", async () => {
+		renderComponent();
+
+		await selectSender();
+
+		await waitFor(() => expect(sendButton()).toBeDisabled());
+
+		await fillMnemonic();
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+	});
 });
