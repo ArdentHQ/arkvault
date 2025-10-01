@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { Contracts } from "@/app/lib/profiles";
 import { useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
@@ -155,8 +156,22 @@ export const HDWalletTabs = ({
 				}
 			},
 			[HDWalletTabStep.EnterImportValueStep]: async () => {
-				const { selectedAccount, value } = getValues();
-				console.log(selectedAccount, value)
+				const { selectedAccount, mnemonicValue, encryptedPassword } = getValues();
+
+				let mnemonic = mnemonicValue as string|undefined;
+
+				if (encryptedPassword) {
+					register({ name: "password", type: "string", value: encryptionPassword });
+
+					const accountWallet = activeProfile.wallets().values().find((w) => w.accountName() === selectedAccount) as Contracts.IReadWriteWallet;
+
+					mnemonic = await accountWallet.signingKey().get(encryptedPassword as string);
+				}
+
+				register({ name: "mnemonic", type: "string", value: mnemonic });
+
+				console.log(selectedAccount, mnemonic, encryptedPassword);
+				setActiveTab(HDWalletTabStep.SelectAddressStep);
 			},
 			[HDWalletTabStep.EnterMnemonicStep]: async () => {
 				const { value } = getValues();
@@ -238,7 +253,7 @@ export const HDWalletTabs = ({
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EnterImportValueStep}>
-								<EnterImportValueStep profile={activeProfile}/>
+								<EnterImportValueStep profile={activeProfile} />
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EncryptPasswordStep}>

@@ -69,7 +69,7 @@ export const ImportAddressesSidePanel = ({
 		secondInput,
 		useEncryption,
 		acceptResponsibility,
-		selectedAccount
+		selectedAccount,
 	} = watch();
 	const isLedgerImport = !!importOption && importOption.value === OptionsValue.LEDGER;
 	const isHDWalletImport = !!importOption && importOption.value === OptionsValue.BIP44;
@@ -79,9 +79,12 @@ export const ImportAddressesSidePanel = ({
 
 	const selectedHDWallet = useMemo(() => {
 		if (selectedAccount) {
-			return activeProfile.wallets().values().find((wallet) => wallet.accountName() === selectedAccount);
+			return activeProfile
+				.wallets()
+				.values()
+				.find((wallet) => wallet.accountName() === selectedAccount);
 		}
-	}, [selectedAccount])
+	}, [selectedAccount]);
 	const HDWalletConfig = useHDWalletStepHeaderConfig(HDWalletActiveTab, selectedHDWallet?.importMethod());
 
 	const config = useMemo(() => {
