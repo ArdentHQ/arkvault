@@ -353,8 +353,8 @@ export const CreateAddressesSidePanel = ({
 									onCancel={() => onOpenChange(false)}
 									onSubmit={handleFinish}
 									onBack={async () => {
-										await handleGenerateWallet()
-										setActiveTab(CreateStep.WalletOverviewStep)
+										await handleGenerateWallet();
+										setActiveTab(CreateStep.WalletOverviewStep);
 									}}
 								/>
 							)}
