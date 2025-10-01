@@ -65,6 +65,7 @@ export const HDWalletTabs = ({
 		encryptionPassword,
 		confirmEncryptionPassword,
 		password,
+		selectedAccount
 	} = getValues();
 
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
@@ -75,9 +76,13 @@ export const HDWalletTabs = ({
 		async ({ selectedAddresses }: { selectedAddresses: AddressData[] }) => {
 			const addresses = selectedAddresses.toSorted((a, b) => a.levels.addressIndex! - b.levels.addressIndex!);
 
-			const accountName = getAccountName({ profile: activeProfile });
+			const accountName = (selectedAccount ?? getAccountName({ profile: activeProfile })) as string;
 
-			for (const [index, { levels }] of addresses.entries()) {
+			for (const [index, { levels, isImported }] of addresses.entries()) {
+				if (isImported) {
+					continue;
+				}
+
 				const [wallet] = await importWallets({
 					disableAddressSelection: index !== 0, // set the very first address to be selected
 					levels,
@@ -173,7 +178,6 @@ export const HDWalletTabs = ({
 
 				register({ name: "mnemonic", type: "string", value: mnemonic });
 
-				console.log(selectedAccount, mnemonic, encryptedPassword);
 				setActiveTab(HDWalletTabStep.SelectAddressStep);
 			},
 			[HDWalletTabStep.EnterMnemonicStep]: async () => {
