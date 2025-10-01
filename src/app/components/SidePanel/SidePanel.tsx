@@ -87,7 +87,7 @@ export const SidePanel = ({
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
-	const { isMinimized, finishedMinimizing, toggleMinimize } = usePanels();
+	const { isMinimized, toggleMinimize } = usePanels();
 
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
@@ -130,24 +130,29 @@ export const SidePanel = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const { isMounted, styles } = useTransitionStyles(context, {
-		close: {
-			transform: "translateX(100%)",
-			transitionTimingFunction: "ease-in",
-		},
-		common: {
-			transformOrigin: "right",
-			transitionProperty: "transform",
-		},
-		duration: 350,
-		initial: {
-			transform: "translateX(100%)",
-		},
-		open: {
-			transform: "translateX(0%)",
-			transitionTimingFunction: "ease-out",
-		},
-	});
+	const stylesConfiguration = useMemo(
+		() => ({
+			close: {
+				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
+				transitionTimingFunction: "ease-in",
+			},
+			common: {
+				transformOrigin: "right",
+				transitionProperty: "transform",
+			},
+			duration: isMinimized ? 150 : 350,
+			initial: {
+				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+			},
+			open: {
+				transform: isMinimized ? "translate(148px, calc(100dvh - 48px))" : "translateX(0%)",
+				transitionTimingFunction: "ease-out",
+			},
+		}),
+		[isMinimized],
+	);
+
+	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
 
 	useEffect(() => {
 		onMountChange?.(isMounted);
@@ -156,9 +161,9 @@ export const SidePanel = ({
 	useEffect(() => {
 		popStateHandlerRef.current = () => {
 			if (hasSteps && typeof onBack === "function" && !isLastStep) {
-				onBack();
+				// onBack();
 			} else {
-				toggleOpen();
+				// toggleOpen();
 			}
 		};
 	}, [hasSteps, onBack, toggleOpen, isLastStep]);
@@ -190,20 +195,6 @@ export const SidePanel = ({
 		};
 	}, [open, popStateHandlerRef]);
 
-	const headerTransform = useMemo(() => {
-		if (isMinimized && !open) {
-			return "translateY(100%)";
-		}
-
-		// Since I was unable to animate the panel width when minimized im translating the header to the right
-		// and resizing the header content to emulate the shrinked header animation
-		if (open && isMinimized) {
-			return "translateX(148px)";
-		}
-
-		return styles.transform;
-	}, [isMinimized, open, styles.transform]);
-
 	return (
 		<FloatingPortal>
 			{isMounted && (
@@ -219,25 +210,22 @@ export const SidePanel = ({
 							)}
 						/>
 						<FloatingOverlay
-							className="z-50 transition-all duration-300"
-							style={{
-								overflow: isMinimized ? "hidden" : undefined,
-								transform: isMinimized ? "translateY(calc(100dvh - 48px))" : undefined,
-							}}
+							className={cn("z-50 transition-all duration-300", {
+								"pointer-events-none": isMinimized,
+							})}
 							lockScroll={!isMinimized}
 						>
 							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
 									data-testid={dataTestId}
-									className="Dialog"
+									className={cn("Dialog", {
+										"pointer-events-auto": isMinimized,
+									})}
 									ref={refs.setFloating}
 									{...getFloatingProps()}
 								>
 									<div
-										style={{
-											...styles,
-											transform: headerTransform,
-										}}
+										style={styles}
 										className={cn(
 											"fixed top-0 right-0 w-full transition-all duration-300 md:max-w-[608px]",
 											className,
@@ -315,8 +303,7 @@ export const SidePanel = ({
 																	>
 																		<Tooltip
 																			visible={
-																				finishedMinimizing &&
-																				!minimizedHintHasShown
+																				isMinimized && !minimizedHintHasShown
 																			}
 																			appendTo={() => document.body}
 																			interactive={true}

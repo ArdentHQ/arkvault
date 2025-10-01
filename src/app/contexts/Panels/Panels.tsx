@@ -18,7 +18,6 @@ interface PanelsContextValue {
 	closePanel: () => void;
 	openPanel: (panel: Panel) => void;
 	isMinimized: boolean;
-	finishedMinimizing: boolean;
 	setIsMinimized: (isMinimized: boolean) => void;
 	showConfirmationModal: boolean;
 	setShowConfirmationModal: (showConfirmationModal: boolean) => void;
@@ -35,7 +34,6 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [currentOpenedPanel, setCurrentOpenedPanel] = useState<Panel | undefined>(undefined);
 	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
-	const [finishedMinimizing, setFinishedMinimizing] = useState(false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
 	const currentOpenedPanelName = useMemo(
@@ -51,6 +49,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		// Wait for the previous panel to be removed
 		setTimeout(() => {
 			setIsMinimized(false);
+
 			setCurrentOpenedPanel(panelToOpen);
 		}, 350);
 	};
@@ -67,14 +66,6 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		}
 	}, [showConfirmationModal]);
 
-	useEffect(() => {
-		if (isMinimized) {
-			setTimeout(() => setFinishedMinimizing(true), 350);
-		} else {
-			setFinishedMinimizing(false);
-		}
-	}, [isMinimized]);
-
 	const closePanel = () => {
 		setCurrentOpenedPanel(undefined);
 
@@ -85,17 +76,17 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	};
 
 	const openPanel = (panel: Panel) => {
-		if (isMinimized && currentOpenedPanel !== undefined) {
+		// If the panel was minimized previously, ensure we clear minimized state
+		// before opening so the entry transition comes from the right side.
+		if (isMinimized) {
 			if (currentOpenedPanel === panel) {
 				setIsMinimized(false);
 				return;
+			} else {
+				setShowConfirmationModal(true);
+				setPanelToOpen(panel);
+				return;
 			}
-
-			setShowConfirmationModal(true);
-
-			setPanelToOpen(panel);
-
-			return;
 		}
 
 		setCurrentOpenedPanel(panel);
@@ -113,7 +104,6 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				confirmOpen,
 				currentOpenedPanel,
 				currentOpenedPanelName,
-				finishedMinimizing,
 				isMinimized,
 				openPanel,
 				setIsMinimized,
