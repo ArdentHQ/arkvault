@@ -59,7 +59,7 @@ export const useWalletActions = ({
 
 			openPanel(Panel.SendTransfer);
 		},
-		[stopEventBubbling, hasMultipleWallets, navigate, profile, wallet],
+		[stopEventBubbling, openPanel, wallet],
 	);
 
 	const handleToggleStar = useCallback(
