@@ -161,9 +161,9 @@ const SidePanelContent = ({
 	useEffect(() => {
 		popStateHandlerRef.current = () => {
 			if (hasSteps && typeof onBack === "function" && !isLastStep) {
-				// onBack();
+				onBack();
 			} else {
-				// toggleOpen();
+				toggleOpen();
 			}
 		};
 	}, [hasSteps, onBack, toggleOpen, isLastStep]);
