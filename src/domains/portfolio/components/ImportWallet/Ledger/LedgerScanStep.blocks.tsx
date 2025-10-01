@@ -27,6 +27,7 @@ export const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; chi
 };
 
 export const AddressMobileItem = ({
+	isDisabled,
 	isLoading,
 	address,
 	balance,
@@ -35,6 +36,7 @@ export const AddressMobileItem = ({
 	handleClick,
 	index = 0,
 }: {
+	isDisabled?: boolean;
 	isLoading: boolean;
 	address: string;
 	balance?: number;
@@ -86,7 +88,7 @@ export const AddressMobileItem = ({
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
 			<div className="bg-theme-secondary-100 dim:bg-transparent h-11 w-full pt-3 pl-4 dark:bg-black">
-				<Checkbox checked={isSelected} onChange={handleClick} data-testid="LedgerMobileItem__checkbox" />
+				<Checkbox checked={isSelected || isDisabled} disabled={isDisabled} onChange={handleClick} data-testid="LedgerMobileItem__checkbox" />
 			</div>
 
 			<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">

@@ -37,6 +37,6 @@ export interface AddressData {
 	address: string;
 	path: string;
 	balance?: number;
-	isNew?: boolean;
+	isImported?: boolean;
 	levels: Services.IdentityLevels;
 }
