@@ -19,7 +19,7 @@ const Mnemonic = (): JSX.Element => {
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t(`COMMON.MNEMONIC_TYPE.BIP44`),
 					}).toString(),
-					validate: (value) => {}
+					validate: (value) => {return false}
 				})}
 			/>
 		</FormField>
@@ -39,7 +39,7 @@ const EncryptedPassword= () => {
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t(`COMMON.ENCRYPTED_PASSWORD`),
 					}).toString(),
-					validate: (value) => {}
+					validate: (value) => {return false}
 				})}
 			/>
 		</FormField>
