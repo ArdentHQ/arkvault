@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts, DTO, Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer, useWalletAlias } from "@/app/hooks";
