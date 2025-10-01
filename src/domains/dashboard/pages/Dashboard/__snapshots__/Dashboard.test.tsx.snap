@@ -1388,7 +1388,11 @@ exports[`Dashboard > should render 1`] = `
             </div>
             <div
               style="display: contents;"
-            />
+            >
+              <div
+                class="display-contents"
+              />
+            </div>
           </header>
         </div>
       </div>

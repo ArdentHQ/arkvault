@@ -8306,7 +8306,11 @@ exports[`Votes > should emit action on continue button 1`] = `
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
    
@@ -16303,7 +16307,11 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
    
@@ -17695,7 +17703,11 @@ exports[`Votes > should filter current validators 1`] = `
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
    
@@ -25692,7 +25704,11 @@ exports[`Votes > should render 1`] = `
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
    
@@ -33689,7 +33705,11 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
    
@@ -41945,7 +41965,11 @@ exports[`Votes > should select a validator 1`] = `
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
    
@@ -49942,7 +49966,11 @@ exports[`Votes > should select an address and validator 1`] = `
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
    
@@ -58254,7 +58282,11 @@ exports[`Votes > should trigger network connection warning 1`] = `
       </div>
       <div
         style="display: contents;"
-      />
+      >
+        <div
+          class="display-contents"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
