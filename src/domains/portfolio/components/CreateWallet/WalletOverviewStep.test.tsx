@@ -26,6 +26,8 @@ const renderForm = () =>
 	);
 
 describe("WalletOverviewStep", () => {
+	const mnemonic = MAINSAIL_MNEMONICS[0]
+
 	beforeEach(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
@@ -45,7 +47,7 @@ describe("WalletOverviewStep", () => {
 
 			render(
 				<FormProvider {...form.current}>
-					<WalletOverviewStep />
+					<WalletOverviewStep mnemonic={mnemonic}/>
 				</FormProvider>,
 			);
 
@@ -78,7 +80,7 @@ describe("WalletOverviewStep", () => {
 
 			render(
 				<FormProvider {...form.current}>
-					<WalletOverviewStep />
+					<WalletOverviewStep mnemonic={mnemonic}/>
 				</FormProvider>,
 			);
 
@@ -108,7 +110,7 @@ describe("WalletOverviewStep", () => {
 
 			render(
 				<FormProvider {...form.current}>
-					<WalletOverviewStep />
+					<WalletOverviewStep mnemonic={mnemonic}/>
 				</FormProvider>,
 			);
 
@@ -135,7 +137,7 @@ describe("WalletOverviewStep", () => {
 
 			render(
 				<FormProvider {...form.current}>
-					<WalletOverviewStep />
+					<WalletOverviewStep mnemonic={mnemonic}/>
 				</FormProvider>,
 			);
 
@@ -156,7 +158,7 @@ describe("WalletOverviewStep", () => {
 
 			render(
 				<FormProvider {...form.current}>
-					<WalletOverviewStep />
+					<WalletOverviewStep mnemonic={mnemonic}/>
 				</FormProvider>,
 			);
 
