@@ -353,19 +353,8 @@ export const CreateAddressesSidePanel = ({
 									onCancel={() => onOpenChange(false)}
 									onSubmit={handleFinish}
 									onBack={async () => {
-										if (activeTab >= CreateStep.ConfirmPassphraseStep) {
-											console.log("alla")
-											await handleGenerateWallet()
-											setActiveTab(CreateStep.WalletOverviewStep)
-											return;
-										}
-
-										if (encryptionPassword) {
-											setActiveTab(activeTab - 1);
-											return;
-										}
-
-										setActiveTab(activeTab - 2);
+										await handleGenerateWallet()
+										setActiveTab(CreateStep.WalletOverviewStep)
 									}}
 								/>
 							)}
