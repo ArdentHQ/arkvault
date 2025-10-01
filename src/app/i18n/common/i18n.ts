@@ -286,6 +286,7 @@ export const translations = {
 	OPEN: "Open",
 	OPEN_IN_EXPLORER: "Open in Explorer",
 	OPTIONAL: "optional",
+	OR: "Or",
 	OTHER: "Other",
 	OTHERS: "Others",
 	PAGE: "Page",

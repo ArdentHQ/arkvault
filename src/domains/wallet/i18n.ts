@@ -148,6 +148,10 @@ export const translations = {
 		},
 
 		HD_WALLET_SELECT_ACCOUNT_STEP: {
+			ADDRESS_COUNT_one: "{{count}} Address",
+			ADDRESS_COUNT_other: "{{count}} Addresses",
+			ENCRYPTED_PASSWORD: "Encrypted Password",
+			IMPORT_NEW: "Import New HD Wallet",
 			SUBTITLE: "Import addresses by choosing an existing HD wallet or adding a new one.",
 			TITLE: "Select or Import New HD Wallet",
 		},
