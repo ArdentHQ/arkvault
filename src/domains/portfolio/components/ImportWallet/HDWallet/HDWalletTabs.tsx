@@ -220,7 +220,15 @@ export const HDWalletTabs = ({
 				return;
 			}
 
-			if (activeTab === HDWalletTabStep.SelectAddressStep && !useEncryption) {
+			if (activeTab === HDWalletTabStep.SelectAddressStep) {
+				if (selectedAccount) {
+					prev = prev - 2;
+				} else if (!useEncryption) {
+					prev--;
+				}
+			}
+
+			if (activeTab === HDWalletTabStep.EnterMnemonicStep) {
 				prev--;
 			}
 
