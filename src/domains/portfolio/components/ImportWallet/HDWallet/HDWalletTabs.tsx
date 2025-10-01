@@ -65,7 +65,7 @@ export const HDWalletTabs = ({
 		encryptionPassword,
 		confirmEncryptionPassword,
 		password,
-		selectedAccount
+		selectedAccount,
 	} = getValues();
 
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
