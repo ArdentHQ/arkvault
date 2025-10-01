@@ -99,7 +99,7 @@ export const HDWalletTabs = ({
 			}
 
 			await persist();
-			setImportedWallets(addresses);
+			setImportedWallets(addresses.filter(address => !address.isImported));
 		},
 		[activeProfile, importWallets, mnemonic, password],
 	);
