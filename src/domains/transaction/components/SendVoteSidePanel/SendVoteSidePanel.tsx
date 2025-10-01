@@ -462,9 +462,9 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		}
 	};
 
+	const { isValid } = formState;
 	const hasErrors = Object.values(errors).length > 0;
 	const isNextDisabled = isDirty ? hasErrors : true;
-
 	const skipFormStep = initialStep === Step.ReviewStep;
 	const stepsCount = skipFormStep ? 3 : 4;
 	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
@@ -610,7 +610,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 						<Button
 							data-testid="SendVote__send-button"
 							onClick={() => void handleSubmit(onSubmit)()}
-							disabled={isNextDisabled || isSubmitting}
+							disabled={isNextDisabled || isSubmitting || !isValid}
 						>
 							{t("COMMON.SEND")}
 						</Button>
