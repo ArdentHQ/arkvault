@@ -232,7 +232,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 					{!isLedger && (
 						<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-							<div className="flex gap-4 justify-between items-center space-x-2 w-full sm:justify-start sm:space-x-0">
+							<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-16">{t("COMMON.TO")}</DetailTitle>
 								<Address
 									address={exchangeInput.address}

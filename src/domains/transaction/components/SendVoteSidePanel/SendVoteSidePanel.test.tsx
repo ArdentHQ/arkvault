@@ -1161,7 +1161,6 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
 
-
 		await waitFor(() => expect(sendButton()).toBeDisabled());
 
 		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
