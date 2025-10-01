@@ -285,7 +285,10 @@ export const SelectAddressStep = ({
 		return { levels, wallet };
 	};
 
-	const profileWalletAddresses = profile.wallets().values().map((wallet) => wallet.address().toLowerCase());
+	const profileWalletAddresses = profile
+		.wallets()
+		.values()
+		.map((wallet) => wallet.address().toLowerCase());
 
 	const load = async (startIndex: number = 0, skipEmptyAddresses: boolean = false) => {
 		setIsLoading(true);
