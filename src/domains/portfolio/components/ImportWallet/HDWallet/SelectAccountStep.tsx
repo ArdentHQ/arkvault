@@ -41,25 +41,25 @@ const AccountCard = ({
 		className={cn(
 			"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700",
 			"hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700",
-			"px-4 py-3 w-full text-left rounded-lg border transition-all duration-300 cursor-pointer",
+			"w-full cursor-pointer rounded-lg border px-4 py-3 text-left transition-all duration-300",
 			{
 				"bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950": isSelected,
 				"bg-transparent": !isSelected,
 			},
 		)}
 	>
-		<div className="flex flex-row gap-4 items-center">
+		<div className="flex flex-row items-center gap-4">
 			<RadioButton
 				checked={isSelected}
 				color="info"
-				className="m-0 w-5 h-5 border-2 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 checked:border-transparent"
+				className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 m-0 h-5 w-5 border-2 checked:border-transparent"
 				data-testid={radioTestId}
 			/>
 
 			<Divider
 				size={dividerSize}
 				type="vertical"
-				className="m-0 text-theme-primary-200 dark:text-theme-dark-700 dim:text-theme-dim-700"
+				className="text-theme-primary-200 dark:text-theme-dark-700 dim:text-theme-dim-700 m-0"
 			/>
 
 			{children}
@@ -146,8 +146,8 @@ export const SelectAccountStep = ({ profile }: SelectAccountStepProperties) => {
 								testId={`SelectAccountStep__option-${option.accountName}`}
 								radioTestId="SelectAccountStep__option-radio"
 							>
-								<div className="flex flex-col flex-1 gap-2 min-w-0">
-									<div className="text-base font-semibold leading-5 text-theme-secondary-900 dark:text-theme-dark-50">
+								<div className="flex min-w-0 flex-1 flex-col gap-2">
+									<div className="text-theme-secondary-900 dark:text-theme-dark-50 text-base leading-5 font-semibold">
 										{option.accountName}
 									</div>
 									<div className="text-theme-secondary-700 dark:text-theme-dark-200 text-sm leading-[17px] font-semibold">
@@ -159,7 +159,7 @@ export const SelectAccountStep = ({ profile }: SelectAccountStepProperties) => {
 									</div>
 								</div>
 
-								<div className="text-base font-semibold leading-5 text-right text-theme-secondary-900 dark:text-theme-dark-50">
+								<div className="text-theme-secondary-900 dark:text-theme-dark-50 text-right text-base leading-5 font-semibold">
 									{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.ADDRESS_COUNT", {
 										count: option.addressCount,
 									})}
@@ -172,7 +172,7 @@ export const SelectAccountStep = ({ profile }: SelectAccountStepProperties) => {
 				{hdWallets.length > 0 && (
 					<div
 						className={cn(
-							"flex items-center my-2",
+							"my-2 flex items-center",
 							"before:border-theme-secondary-300 dark:before:border-theme-dark-700 dim:before:border-theme-dim-700 before:flex-1 before:border-t before:border-dashed",
 							"after:border-theme-secondary-300 dark:after:border-theme-dark-700 dim:after:border-theme-dim-700 after:flex-1 after:border-t after:border-dashed",
 						)}
@@ -190,7 +190,7 @@ export const SelectAccountStep = ({ profile }: SelectAccountStepProperties) => {
 					radioTestId="SelectAccountStep__import-new-radio"
 					dividerSize="md"
 				>
-					<div className="text-base font-semibold text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-base font-semibold">
 						{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.IMPORT_NEW")}
 					</div>
 				</AccountCard>
