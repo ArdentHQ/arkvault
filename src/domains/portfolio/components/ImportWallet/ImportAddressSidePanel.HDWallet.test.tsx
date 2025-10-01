@@ -79,7 +79,9 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		await user.click(screen.getByText("HD Wallet"));
 
-		expect(screen.getByText(/select or import new HD wallet/)).toBeInTheDocument();
+		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
+
+		expect(screen.getAllByTestId("AccountRow--radio").length).toBeGreaterThan(0);
 
 		profile.wallets().forget(wallet.id());
 	});
