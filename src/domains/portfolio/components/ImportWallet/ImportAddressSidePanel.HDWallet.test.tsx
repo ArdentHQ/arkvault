@@ -292,7 +292,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
 				"data-errortext",
-				"This value is already imported."
+				"This value is already imported.",
 			);
 		});
 
