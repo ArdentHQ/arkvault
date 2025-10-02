@@ -246,6 +246,7 @@ export const translations = {
 
 		VALIDATION: {
 			DECRYPT_WIF_ASSERTION: "Failed to decrypt WIF. Please check your password.",
+			EXISTING_MNEMONIC: "This value is already imported.",
 			INVALID_MNEMONIC: "The given value is not BIP39 compliant.",
 			INVALID_PRIVATE_KEY: "Invalid Private Key.",
 			INVALID_PUBLIC_KEY: "Invalid Public Key.",

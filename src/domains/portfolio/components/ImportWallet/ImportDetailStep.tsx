@@ -169,13 +169,26 @@ const ImportInputField = ({
 
 	if (type.startsWith("bip")) {
 		const findAddress = async (mnemonic: string) => {
-			try {
-				// disable address checking for BIP44 import option
-				if (type === OptionsValue.BIP44) {
-					BIP39.toSeed(mnemonic); // to validate mnemonic
-					return "";
+			if (type === OptionsValue.BIP44) {
+				const profileWalletAddresses = profile.wallets().values().map(w => w.address().toLowerCase());
+
+				for (let index = 0; index < 5; index++) {
+					const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+						levels: {
+							account: 0, addressIndex: index
+						},
+						mnemonic
+					});
+
+					if (profileWalletAddresses.includes(wallet.address().toLowerCase())) {
+						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.EXISTING_MNEMONIC"));
+					}
 				}
 
+				return "";
+			}
+
+			try {
 				const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic });
 				const isValid = new AddressService().validate(wallet.address());
 
