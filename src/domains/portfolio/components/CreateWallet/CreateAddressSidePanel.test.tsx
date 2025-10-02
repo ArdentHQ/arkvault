@@ -74,9 +74,9 @@ describe("CreateAddressSidePanel", () => {
 		});
 
 		const buttons = screen.getAllByRole("button");
-		expect(buttons).toHaveLength(4);
+		expect(buttons).toHaveLength(5);
 
-		const regularAddressButton = buttons[1];
+		const regularAddressButton = screen.getByText("Regular Address");
 		await userEvent.click(regularAddressButton);
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
