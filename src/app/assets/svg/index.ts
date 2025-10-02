@@ -71,6 +71,7 @@ import MagnifyingGlassAlt from "./magnifying-glass-alt.svg?react";
 import MagnifyingGlassId from "./magnifying-glass-id.svg?react";
 import Menu from "./menu.svg?react";
 import MenuOpen from "./menu-open.svg?react";
+import Minimize from "./minimize.svg?react";
 import MoneyCoinSwap from "./money-coin-swap.svg?react";
 import NoteCheck from "./note-check.svg?react";
 import Pencil from "./pencil.svg?react";
@@ -246,6 +247,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MarkedTrash,
 	Menu,
 	MenuOpen,
+	Minimize,
 	MnemonicImportMethod,
 	MoneyCoinSwap,
 	NoteCheck,
