@@ -12,6 +12,7 @@ import { truncate } from "@/app/lib/helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 const validateAddress = async ({
 	findAddress,
@@ -169,6 +170,12 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (mnemonic: string) => {
 			try {
+				// disable address checking for BIP44 import option
+				if (type === OptionsValue.BIP44) {
+					BIP39.toSeed(mnemonic); // to validate mnemonic
+					return "";
+				}
+
 				const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic });
 				const isValid = new AddressService().validate(wallet.address());
 

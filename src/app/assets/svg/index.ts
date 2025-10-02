@@ -109,6 +109,7 @@ import ImportProfileDark from "./import-profile-dark.svg?react";
 import ImportProfileDim from "./import-profile-dim.svg?react";
 import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
+import Wallet from "./wallet.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionDim from "./wallet-encryption-dim.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
@@ -118,6 +119,9 @@ import VotesLight from "./votes-light.svg?react";
 import ExchangesDark from "./exchanges-dark.svg?react";
 import ExchangesDim from "./exchanges-dim.svg?react";
 import ExchangesLight from "./exchanges-light.svg?react";
+import WalletMultipleLight from "./wallet-multiple-light.svg?react";
+import WalletMultipleDark from "./wallet-multiple-dark.svg?react";
+import WalletMultipleDim from "./wallet-multiple-dim.svg?react";
 import ContactsDark from "./contacts-dark.svg?react";
 import ContactsDim from "./contacts-dim.svg?react";
 import ContactsLight from "./contacts-light.svg?react";
@@ -132,6 +136,7 @@ import PersonDim from "./person-dim.svg?react";
 import CircleMinus from "./circle-minus.svg?react";
 import LedgerImportMethod from "./ledger-import-method.svg?react";
 import MnemonicImportMethod from "./mnemonic-import-method.svg?react";
+import HDWalletImportMethod from "./hd-wallet-import-option.svg?react";
 import MarkedTrash from "./marked-trash.svg?react";
 import SecretImportMethod from "./secret-import-method.svg?react";
 import AddressImportMethod from "./address-import-method.svg?react";
@@ -217,6 +222,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Globe,
 	GlobePointer,
 	Grid,
+	HDWalletImportMethod,
 	HintSmall,
 	Hourglass,
 	ImportProfileDark,
@@ -282,9 +288,13 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	VotesDark,
 	VotesDim,
 	VotesLight,
+	Wallet,
 	WalletEncryptionDark,
 	WalletEncryptionDim,
 	WalletEncryptionLight,
+	WalletMultipleDark,
+	WalletMultipleDim,
+	WalletMultipleLight,
 	YourPassphraseDark,
 	YourPassphraseDim,
 	YourPassphraseLight,

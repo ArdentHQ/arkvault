@@ -4,6 +4,7 @@ interface ListDividedItemProperties {
 	isFloatingLabel?: boolean;
 	label?: string;
 	labelClass?: string;
+	labelHeaderClass?: string;
 	labelWrapperClass?: string;
 	labelDescription?: string;
 	labelDescriptionClass?: string;

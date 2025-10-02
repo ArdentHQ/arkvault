@@ -114,6 +114,20 @@ export class LedgerService {
 		return [`0x`, r, s, v.toString(16)].join("");
 	}
 
+	// As the mainsail app is a clone of the ethereum mainsail app,
+	// and due to lack of getting a reliable ledger app identifier
+	// this check confirms that the opened Ledger app can generate eth addresses,
+	// in order to proceed with mainsail public key derivation, and reject other ledger apps including old ark ledger app.
+	public async isEthBasedApp() {
+		try {
+			const path = `m/44'/60'/0'/0/0`;
+			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(path);
+			return !!extendedPublicKey || !!publicKey;
+		} catch {
+			return false;
+		}
+	}
+
 	public async scan(options?: {
 		useLegacy: boolean;
 		startPath?: string;

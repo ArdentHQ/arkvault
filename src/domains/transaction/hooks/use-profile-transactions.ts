@@ -5,16 +5,14 @@ import { useSynchronizer, useWalletAlias } from "@/app/hooks";
 
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
-import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 import { Network } from "@/app/lib/mainsail/network";
-import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto";
 import { SortBy } from "@/app/components/Table";
-import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
 import { delay } from "@/utils/delay";
 import { get } from "@/app/lib/helpers";
 import { useTransactionTypes } from "./use-transaction-types";
 import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -140,7 +138,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	const { syncOnChainUsernames } = useWalletAlias();
 
 	const {
-		unconfirmedTransactions,
+		unconfirmedTransactions: allUnconfirmedTransactions,
 		removeUnconfirmedTransaction,
 		addUnconfirmedTransactionFromApi,
 		cleanupUnconfirmedForAddresses,
@@ -178,26 +176,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const blockTime = useMemo(() => getBlockTime(profile.activeNetwork()), [profile.activeNetwork()]);
 
-	const unconfirmedTransactionsService = useMemo(() => {
-		if (!wallets?.length || !profile) {
-			return null;
-		}
-
-		try {
-			return new UnconfirmedTransactionsService({
-				config: profile.activeNetwork().config(),
-				profile,
-				ttl: blockTime / 1000, // in seconds
-			});
-		} catch (error) {
-			/* istanbul ignore next -- @preserve */
-			{
-				console.error("Failed to initialize UnconfirmedTransactionsService:", error);
-				return null;
-			}
-		}
-	}, [profile, wallets?.length > 0]);
-
 	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
 		if (itemsLength < itemsLimit) {
 			return false;
@@ -205,62 +183,34 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return hasMorePages;
 	};
 
-	/*
-	 * Helper to convert nested unconfirmed transactions
-	 * to flat array for processing
-	 */
-	const getFlatUnconfirmedTransactions = useCallback(() => {
-		const flatTransactions: Array<{
-			transaction: RawTransactionData;
-			walletAddress: string;
-			networkId: string;
-		}> = [];
-
-		for (const [networkId, wallets] of Object.entries(unconfirmedTransactions)) {
-			for (const [walletAddress, transactions] of Object.entries(wallets)) {
-				for (const transaction of transactions) {
-					flatTransactions.push({
-						networkId,
-						transaction,
-						walletAddress,
-					});
-				}
-			}
-		}
-
-		return flatTransactions;
-	}, [unconfirmedTransactions]);
+	const unconfirmedTransactions = useMemo(
+		() =>
+			wallets
+				.map((wallet) =>
+					(allUnconfirmedTransactions[wallet.networkId()]?.[wallet.address()] ?? []).map(
+						(tx) =>
+							new ExtendedSignedTransactionData(
+								new SignedTransactionData().configure(tx.signedData, tx.serialized),
+								wallet,
+							),
+					),
+				)
+				.flat(),
+		[allUnconfirmedTransactions, wallets],
+	);
 
 	const allTransactions = useMemo(() => {
-		const walletAddresses = wallets.map((w) => w.address());
-		const walletNetworkIds = wallets.map((w) => w.networkId());
-
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
 
-		const flatUnconfirmed = getFlatUnconfirmedTransactions();
-
-		const signedTransactions = flatUnconfirmed
-			.filter(
-				(unconfirmedTransaction) =>
-					walletAddresses.includes(unconfirmedTransaction.walletAddress) &&
-					walletNetworkIds.includes(unconfirmedTransaction.networkId),
-			)
-			.map((tx): [SignedTransactionData, string] => [
-				new SignedTransactionData().configure(tx.transaction.signedData, tx.transaction.serialized),
-				tx.walletAddress,
-			])
-			.map(([transactionData, walletAddress]) => {
-				const wallet = wallets.find((wallet) => wallet.address() === walletAddress) as IReadWriteWallet;
-				return new ExtendedSignedTransactionData(transactionData, wallet);
-			})
+		const signedTransactions = unconfirmedTransactions
 			.filter((transaction) => (hasAllSelected ? true : selectedTransactionTypes.includes(transaction.type())))
 			.filter((transaction) => {
 				if (activeMode === "sent") {
-					return walletAddresses.includes(transaction.from());
+					return transaction.wallet().address() === transaction.from();
 				}
 
 				if (activeMode === "received") {
-					return walletAddresses.includes(transaction.to());
+					return transaction.wallet().address() === transaction.to();
 				}
 
 				return true;
@@ -289,15 +239,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			return 0;
 		});
-	}, [
-		transactions,
-		getFlatUnconfirmedTransactions,
-		wallets,
-		selectedTransactionTypes,
-		activeMode,
-		sortBy,
-		allTransactionTypes,
-	]);
+	}, [transactions, unconfirmedTransactions, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
@@ -312,6 +254,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 					wallets,
 				});
 
+				/* istanbul ignore next -- @preserve */
 				if (!isMounted.current) {
 					return;
 				}
@@ -353,9 +296,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
 
 	useEffect(() => {
-		const flatUnconfirmed = getFlatUnconfirmedTransactions();
-
-		if (transactions.length === 0 || flatUnconfirmed.length === 0) {
+		if (transactions.length === 0 || unconfirmedTransactions.length === 0) {
 			return;
 		}
 
@@ -364,10 +305,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			removeUnconfirmedTransaction,
 		);
 
-		for (const unconfirmedTx of flatUnconfirmed) {
-			checkForConfirmedTransactions(unconfirmedTx.transaction.signedData.hash);
+		for (const unconfirmedTx of unconfirmedTransactions) {
+			checkForConfirmedTransactions(unconfirmedTx.hash());
 		}
-	}, [transactions, getFlatUnconfirmedTransactions, removeUnconfirmedTransaction]);
+	}, [transactions, unconfirmedTransactions, removeUnconfirmedTransaction]);
 
 	const updateFilters = useCallback(
 		({
@@ -422,11 +363,17 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				queryParameters.types = transactionTypes;
 			}
 
-			if (mode === "all") {
+			const isUnconfirmedMode = mode === "unconfirmed";
+
+			if (mode === "all" || isUnconfirmedMode) {
 				queryParameters.identifiers = wallets.map((wallet) => ({
 					type: "address",
 					value: wallet.address(),
 				}));
+			}
+
+			if (isUnconfirmedMode) {
+				delete queryParameters.orderBy;
 			}
 
 			if (mode === "sent") {
@@ -467,8 +414,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [activeMode, wallets, selectedTransactionTypes, fetchTransactions]);
 
 	const checkNewTransactions = useCallback(async () => {
+		/* istanbul ignore next -- @preserve */
 		if (wallets.length === 0) {
-			/* istanbul ignore next -- @preserve */
 			return;
 		}
 
@@ -507,44 +454,47 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 	}, [wallets, activeMode, activeTransactionType, selectedTransactionTypes, fetchTransactions, transactions]);
 
 	const isFetchingUnconfirmed = useRef(false);
+
+	const walletAddresses = wallets.map((wallet) => wallet.address());
+	const walletAddressesStr = walletAddresses.join("-");
+
 	const fetchUnconfirmedTransactions = useCallback(async () => {
 		/* istanbul ignore next -- @preserve */
-		if (!unconfirmedTransactionsService || wallets.length === 0) {
-			return;
-		}
-
-		if (isFetchingUnconfirmed.current) {
+		if (wallets.length === 0 || isFetchingUnconfirmed.current) {
 			return;
 		}
 
 		try {
 			isFetchingUnconfirmed.current = true;
-			const selectedAddresses = wallets.map((w) => w.address());
-			const response = await unconfirmedTransactionsService.listUnconfirmed({
-				address: selectedAddresses,
-				limit: 100,
-			});
 
-			const results = response?.results ?? [];
-			const remoteHashes = results.map((t: any) => t.hash).filter(Boolean);
-			cleanupUnconfirmedForAddresses(selectedAddresses, remoteHashes);
+			const response = (await fetchTransactions({
+				cursor: 1,
+				flush: true,
+				mode: "unconfirmed",
+				transactionTypes: allTransactionTypes,
+				wallets,
+			})) as UnconfirmedTransactionDataCollection;
 
-			const flatUnconfirmedTransactions = getFlatUnconfirmedTransactions();
+			const results = response.items();
+			const remoteHashes = results.map((t) => t.hash()).filter(Boolean);
+
+			cleanupUnconfirmedForAddresses(walletAddresses, remoteHashes);
+
 			/* istanbul ignore next -- @preserve */
-			if (remoteHashes.length !== flatUnconfirmedTransactions.length) {
+			if (remoteHashes.length !== unconfirmedTransactions.length) {
 				setState((s) => ({ ...s, timestamp: Date.now() }));
 			}
 
 			for (const transaction of results) {
 				const matched = wallets.find((wallet) => {
-					const walletAddr = wallet.address().toLowerCase();
-					const txFrom = transaction.from().toLowerCase();
-					const txTo = transaction.to().toLowerCase();
-					return walletAddr === txFrom || walletAddr === txTo;
+					const walletAddress = wallet.address().toLowerCase();
+					return (
+						walletAddress === transaction.from().toLowerCase() ||
+						walletAddress === transaction.to().toLowerCase()
+					);
 				});
 
 				if (!matched) {
-					console.warn("No matching wallet found for transaction:", transaction);
 					continue;
 				}
 
@@ -555,19 +505,11 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		}
 
 		isFetchingUnconfirmed.current = false;
-	}, [wallets]);
+	}, [walletAddressesStr]);
 
 	useEffect(() => {
-		if (!unconfirmedTransactionsService || wallets.length === 0) {
-			return;
-		}
-
-		fetchUnconfirmedTransactions();
-
-		const intervalId = setInterval(fetchUnconfirmedTransactions, blockTime);
-
-		return () => clearInterval(intervalId);
-	}, [unconfirmedTransactionsService, wallets.length, blockTime, fetchUnconfirmedTransactions]);
+		void fetchUnconfirmedTransactions();
+	}, [fetchUnconfirmedTransactions]);
 
 	const jobs = useMemo(
 		() => [
@@ -575,8 +517,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				callback: checkNewTransactions,
 				interval: 15_000,
 			},
+			{
+				callback: fetchUnconfirmedTransactions,
+				interval: blockTime,
+			},
 		],
-		[checkNewTransactions],
+		[walletAddressesStr, activeMode, activeTransactionType, transactions],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);

@@ -32,6 +32,7 @@ import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transacti
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 import { test as baseTest } from "vitest";
 import { bootEnvironmentWithProfileFixtures } from "./test-helpers";
+import { BIP44CoinType } from "@/app/lib/profiles/wallet.factory.contract";
 
 export {
 	mockNanoSTransport,
@@ -286,6 +287,13 @@ export const MAINSAIL_MNEMONICS = [
 	// 0xB64b3619cEF2642E36B6093da95BA2D14Fa9b52f.json - cold wallet
 	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
 ];
+
+export const createBIP44Path = (
+	coinType: BIP44CoinType,
+	account: number = 0,
+	change: number = 0,
+	addressIndex: number = 0,
+): string => `m/44'/${coinType}/${account}'/${change}/${addressIndex}`;
 
 export const breakpoints: {
 	[key in LayoutBreakpoint | "xs"]: number;

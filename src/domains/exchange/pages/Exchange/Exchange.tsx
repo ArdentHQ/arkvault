@@ -19,6 +19,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useNavigate } from "react-router-dom";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
+import { ExchangeSidePanel } from "@/domains/exchange/components/ExchangeSidePanel/ExchangeSidePanel";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",
@@ -32,7 +33,7 @@ export const Exchange = () => {
 	const navigate = useNavigate();
 
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
-
+	const [selectedExchange, setSelectedExchange] = useState<string>();
 	const [selectedExchangeTransaction, setSelectedExchangeTransaction] = useState<Contracts.IExchangeTransaction>();
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
 	const { checkOrderStatus, prepareParameters } = useOrderStatus();
@@ -82,7 +83,7 @@ export const Exchange = () => {
 	}, [exchangeProviders, fetchProviders]);
 
 	const handleLaunchExchange = (exchangeId: string) => {
-		navigate(`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${exchangeId}`);
+		setSelectedExchange(exchangeId);
 	};
 
 	const handleViewChange = (view?: string | number) => {
@@ -108,11 +109,22 @@ export const Exchange = () => {
 	const renderContent = () => {
 		if (currentView === ExchangeView.Exchanges) {
 			return (
-				<ExchangeGrid
-					exchanges={exchangeProviders || []}
-					isLoading={!exchangeProviders}
-					onClick={handleLaunchExchange}
-				/>
+				<>
+					<ExchangeGrid
+						exchanges={exchangeProviders || []}
+						isLoading={!exchangeProviders}
+						onClick={handleLaunchExchange}
+					/>
+
+					<ExchangeSidePanel
+						exchangeId={selectedExchange}
+						onOpenChange={(open) => {
+							if (!open) {
+								setSelectedExchange(undefined);
+							}
+						}}
+					/>
+				</>
 			);
 		}
 

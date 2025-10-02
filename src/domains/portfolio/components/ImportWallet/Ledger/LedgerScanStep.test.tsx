@@ -82,7 +82,7 @@ vi.mock("./LedgerScanStep", () => {
 							}}
 						/>
 						<div
-							data-testid="LedgerMobileItem__skeleton"
+							data-testid="AddressMobileItem__skeleton"
 							onClick={() => {
 								if (toggleSelect) {
 									toggleSelect(wallets[0]);
@@ -109,8 +109,8 @@ vi.mock("./LedgerScanStep", () => {
 				</div>
 				<div>
 					<input type="checkbox" data-testid="LedgerMobileItem__checkbox" role="checkbox" />
-					<div data-testid="LedgerMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
-					<div data-testid="LedgerMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
+					<div data-testid="AddressMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
+					<div data-testid="AddressMobileItem__skeleton">D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD</div>
 					<input type="checkbox" data-testid="LedgerScanStep__checkbox-row" role="checkbox" />
 				</div>
 				<table>
@@ -360,7 +360,7 @@ describe("LedgerScanStep", () => {
 	it("should handle click on mobile item", async () => {
 		render(<Component />);
 
-		await userEvent.click(screen.getAllByTestId("LedgerMobileItem__skeleton")[1]);
+		await userEvent.click(screen.getAllByTestId("AddressMobileItem__skeleton")[1]);
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("LedgerScanStep__checkbox-row", { checked: false })).toHaveLength(1);

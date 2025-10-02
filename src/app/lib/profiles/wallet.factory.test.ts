@@ -1,7 +1,7 @@
-import { describe, vi, expect, beforeEach, it, afterEach } from "vitest";
-import { IProfile, IWalletFactory, WalletData, WalletFlag, WalletImportMethod } from "./contracts.js";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { BIP44CoinType, IProfile, IWalletFactory, WalletData, WalletFlag, WalletImportMethod } from "./contracts.js";
 import { Wallet } from "./wallet.js";
-import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { createBIP44Path, env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { Enums } from "@/app/lib/mainsail";
 
 let profile: IProfile;
@@ -90,59 +90,166 @@ describe("WalletFactory", () => {
 		});
 	});
 
-	describe("fromMnemonicWithBIP44", () => {
-		it("should create a wallet from a mnemonic", async () => {
-			const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
-				allows: () => true,
-			} as any);
+	describe("generateHD", () => {
+		it("should generate an HD wallet with default coin type (ARK)", async () => {
+			const { mnemonic, wallet } = await subject.generateHD({
+				levels: { account: 0 },
+				locale: "english",
+				wordCount: 12,
+			});
 
-			const wallet = await subject.fromMnemonicWithBIP44({ levels: { account: 0 }, mnemonic });
+			expect(mnemonic).toBeTruthy();
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.address()).toBeTruthy();
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.MNEMONIC);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK));
+			expect(wallet.data().get(WalletData.AddressIndex)).toBe(0);
+		});
+
+		it("should generate an HD wallet with ETH coin type", async () => {
+			const { mnemonic, wallet } = await subject.generateHD({
+				coin: BIP44CoinType.ETH,
+				levels: { account: 0 },
+				locale: "english",
+				wordCount: 12,
+			});
+
+			expect(mnemonic.split(" ")).toHaveLength(12);
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.address()).toBeTruthy();
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ETH));
+		});
+
+		it("should generate an HD wallet with custom account index", async () => {
+			const { wallet } = await subject.generateHD({
+				levels: { account: 5 },
+				locale: "english",
+				wordCount: 12,
+			});
+
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 5));
+			expect(wallet.data().get(WalletData.AddressIndex)).toBe(0);
+		});
+
+		it("should generate an HD wallet with custom change and address indices", async () => {
+			const { wallet } = await subject.generateHD({
+				levels: { account: 2, addressIndex: 3, change: 1 },
+				locale: "english",
+				wordCount: 12,
+			});
+
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 2, 1, 3));
+			expect(wallet.data().get(WalletData.AddressIndex)).toBe(3);
+		});
+
+		it("should generate an HD wallet with 24-word mnemonic", async () => {
+			const { mnemonic, wallet } = await subject.generateHD({
+				levels: { account: 0 },
+				locale: "english",
+				wordCount: 24,
+			});
+
+			expect(mnemonic.split(" ")).toHaveLength(24);
+			expect(wallet).toBeInstanceOf(Wallet);
+		});
+	});
+
+	describe("fromMnemonicWithBIP44", () => {
+		it("should create a wallet from a mnemonic with default coin type", async () => {
+			const wallet = await subject.fromMnemonicWithBIP44({
+				levels: { account: 0 },
+				mnemonic,
+			});
 
 			expect(wallet).toBeInstanceOf(Wallet);
 			expect(wallet.address()).toBeTruthy();
-			// @TODO: relevant code is currently commented out in the wallet factory
-			// expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.MNEMONIC);
-			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
-			gateSpy.mockRestore();
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.MNEMONIC);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK));
+			expect(wallet.data().get(WalletData.AddressIndex)).toBe(0);
+			expect(wallet.data().get(WalletData.PublicKey)).toBeTruthy();
 		});
 
-		it("should throw if the network does not support BIP44", async () => {
-			const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
-				allows: (feature: string) => feature !== Enums.FeatureFlag.AddressMnemonicBip44,
-			} as any);
-
-			await expect(subject.fromMnemonicWithBIP44({ levels: { account: 0 }, mnemonic })).rejects.toThrow(
-				"The configured network does not support BIP44.",
-			);
-
-			gateSpy.mockRestore();
-		});
-
-		it("should take the extended public key path when the network is configured for it", async () => {
-			// @TODO: This is a temporary test.
-			// The code for this path is commented out in the factory.
-			// This test ensures we enter the correct branch and don't call the `identity` mutator from the `else` branch.
-			const gateSpy = vi.spyOn(Wallet.prototype, "gate").mockReturnValue({
-				allows: () => true,
-			} as any);
-
-			const networkSpy = vi.spyOn(Wallet.prototype, "network").mockReturnValue({
-				usesExtendedPublicKey: () => true,
-			} as any);
-
-			const identityMock = vi.fn();
-			const mutatorSpy = vi.spyOn(Wallet.prototype, "mutator").mockReturnValue({
-				identity: identityMock,
-			} as any);
-
-			const wallet = await subject.fromMnemonicWithBIP44({ levels: { account: 0 }, mnemonic });
+		it("should create a wallet from a mnemonic with ETH coin type", async () => {
+			const wallet = await subject.fromMnemonicWithBIP44({
+				coin: BIP44CoinType.ETH,
+				levels: { account: 0 },
+				mnemonic,
+			});
 
 			expect(wallet).toBeInstanceOf(Wallet);
-			expect(identityMock).not.toHaveBeenCalled();
+			expect(wallet.address()).toBeTruthy();
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ETH));
+		});
 
-			gateSpy.mockRestore();
-			networkSpy.mockRestore();
-			mutatorSpy.mockRestore();
+		it("should create a wallet with custom derivation levels", async () => {
+			const wallet = await subject.fromMnemonicWithBIP44({
+				levels: { account: 1, addressIndex: 5, change: 1 },
+				mnemonic,
+			});
+
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.address()).toBeTruthy();
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 1, 1, 5));
+			expect(wallet.data().get(WalletData.AddressIndex)).toBe(5);
+		});
+
+		it("should use default change and address index when not provided", async () => {
+			const wallet = await subject.fromMnemonicWithBIP44({
+				levels: { account: 2 },
+				mnemonic,
+			});
+
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 2));
+			expect(wallet.data().get(WalletData.AddressIndex)).toBe(0);
+		});
+
+		it("should generate different addresses for different derivation paths", async () => {
+			const wallet1 = await subject.fromMnemonicWithBIP44({
+				levels: { account: 0 },
+				mnemonic,
+			});
+
+			const wallet2 = await subject.fromMnemonicWithBIP44({
+				levels: { account: 1 },
+				mnemonic,
+			});
+
+			expect(wallet1.address()).not.toBe(wallet2.address());
+			expect(wallet1.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 0));
+			expect(wallet2.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 1));
+		});
+
+		it("should generate different addresses for same mnemonic with different address indices", async () => {
+			const wallet1 = await subject.fromMnemonicWithBIP44({
+				levels: { account: 0, addressIndex: 0 },
+				mnemonic,
+			});
+
+			const wallet2 = await subject.fromMnemonicWithBIP44({
+				levels: { account: 0, addressIndex: 1 },
+				mnemonic,
+			});
+
+			expect(wallet1.address()).not.toBe(wallet2.address());
+			expect(wallet1.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 0, 0, 0));
+			expect(wallet2.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 0, 0, 1));
+		});
+
+		it("should generate same address for same mnemonic and derivation path", async () => {
+			const wallet1 = await subject.fromMnemonicWithBIP44({
+				levels: { account: 1, addressIndex: 2, change: 0 },
+				mnemonic,
+			});
+
+			const wallet2 = await subject.fromMnemonicWithBIP44({
+				levels: { account: 1, addressIndex: 2, change: 0 },
+				mnemonic,
+			});
+
+			expect(wallet1.address()).toBe(wallet2.address());
+			expect(wallet1.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 1, 0, 2));
+			expect(wallet2.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 1, 0, 2));
 		});
 	});
 

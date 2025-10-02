@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import * as SendExchangeTransfer from "@/domains/exchange/components/SendExchangeTransfer";
 import * as useQueryParameters from "@/app/hooks/use-query-parameters";
 
@@ -20,7 +22,6 @@ import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 
 import { ConfirmationStep } from "./ConfirmationStep";
 import { Contracts } from "@/app/lib/profiles";
-import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { StatusStep } from "./StatusStep";
@@ -30,11 +31,12 @@ import order from "@/tests/fixtures/exchange/changenow/order.json";
 import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 import userEvent from "@testing-library/user-event";
+import { ExchangeSidePanel } from "@/domains/exchange/components/ExchangeSidePanel/ExchangeSidePanel";
 
 let profile: Contracts.IProfile;
 
 const exchangeBaseURL = "https://exchanges.arkvault.io";
-const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange/view`;
+const exchangeURL = `/profiles/${getMainsailProfileId()}/exchange`;
 const exchangeETHURL = "/api/changenow/currencies/eth";
 
 const transactionStub = {
@@ -44,7 +46,7 @@ const transactionStub = {
 		hash: "payinHash",
 		ticker: "btc",
 	},
-	orderId: "id",
+	orderId: "changenow",
 	output: {
 		address: "payoutAddress",
 		amount: 100,
@@ -143,15 +145,10 @@ const payoutValue = "37042.3588384";
 
 describe("ExchangeForm", () => {
 	let findExchangeTransactionMock;
-	let queryParametersMock;
 
 	beforeAll(() => {
 		process.env.MOCK_AVAILABLE_NETWORKS = "false";
 		profile = env.profiles().findById(getMainsailProfileId());
-
-		queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
-			get: () => "changenow",
-		}));
 	});
 
 	beforeEach(() => {
@@ -181,12 +178,10 @@ describe("ExchangeForm", () => {
 		);
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
-		const onReady = vi.fn();
-
 		renderResponsiveWithRoute(
 			<ExchangeProvider>
 				<Wrapper>
-					<ExchangeForm onReady={onReady} />
+					<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />
 				</Wrapper>
 			</ExchangeProvider>,
 			breakpoint,
@@ -196,22 +191,12 @@ describe("ExchangeForm", () => {
 		);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
-
-		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
 		});
 	});
 
 	it("should render exchange form", async () => {
-		const onReady = vi.fn();
-
-		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		const { container } = renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -237,11 +222,13 @@ describe("ExchangeForm", () => {
 	it("should render exchange form with id of pending order", async () => {
 		profile.exchangeTransactions().flush();
 
+		const queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => "order-id",
+		}));
+
 		const exchangeTransactionUpdateMock = vi
 			.spyOn(profile.exchangeTransactions(), "update")
 			.mockReturnValue(undefined);
-
-		const onReady = vi.fn();
 
 		const exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
@@ -250,7 +237,7 @@ describe("ExchangeForm", () => {
 				hash: "payinHash",
 				ticker: "btc",
 			},
-			orderId: "id",
+			orderId: "order-id",
 			output: {
 				address: "payoutAddress",
 				amount: 100,
@@ -263,15 +250,11 @@ describe("ExchangeForm", () => {
 		server.use(mockOrderStatus(exchangeTransaction.orderId(), "new"));
 
 		const { container } = renderComponent(
-			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} />,
+			<ExchangeSidePanel orderId={exchangeTransaction.orderId()} exchangeId="changenow" onOpenChange={vi.fn()} />,
 		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
-		});
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -280,16 +263,11 @@ describe("ExchangeForm", () => {
 
 		expect(container).toMatchSnapshot();
 		exchangeTransactionUpdateMock.mockRestore();
+		queryParametersMock.mockRestore();
 	});
 
 	it("should go back to exchange page", async () => {
-		const onReady = vi.fn();
-
-		const { router } = renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		const { router } = renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -327,13 +305,7 @@ describe("ExchangeForm", () => {
 			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, undefined, { status: 500 }),
 		);
 
-		const onReady = vi.fn();
-
-		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -345,7 +317,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(container).toHaveTextContent("The pair BTC / ETH is not available");
+			expect(screen.getByTestId("ExchangeForm__pair-not-available")).toBeInTheDocument();
 		});
 
 		// remove to currency
@@ -356,18 +328,12 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(container).not.toHaveTextContent("The pair BTC / ETH is not available");
+			expect(screen.queryByTestId("ExchangeForm__pair-not-available")).not.toBeInTheDocument();
 		});
 	});
 
 	it("should show and hide refund address input", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -413,13 +379,7 @@ describe("ExchangeForm", () => {
 
 		server.use(requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currency));
 
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -456,13 +416,7 @@ describe("ExchangeForm", () => {
 			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currency),
 		);
 
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -500,13 +454,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should swap currencies", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -533,15 +481,9 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should calculate amounts", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		const user = userEvent.setup();
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -593,13 +535,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove amount if removing currency", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -637,13 +573,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove payout amount if removing payin amount", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -678,13 +608,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove payin amount if removing payout amount", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -719,13 +643,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should not update payin amount when there is no from currency", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -759,13 +677,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should not update payout amount when there is no to currency", async () => {
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -803,13 +715,7 @@ describe("ExchangeForm", () => {
 			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, { data: false }),
 		);
 
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -853,13 +759,7 @@ describe("ExchangeForm", () => {
 			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, { data: false }),
 		);
 
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -906,13 +806,7 @@ describe("ExchangeForm", () => {
 			requestMock(`${exchangeBaseURL}/api/changenow/orders`, "Server Error", { method: "post", status: 500 }),
 		);
 
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -1008,13 +902,7 @@ describe("ExchangeForm", () => {
 			),
 		);
 
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -1093,13 +981,7 @@ describe("ExchangeForm", () => {
 			),
 		);
 
-		const onReady = vi.fn();
-
-		renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -1210,13 +1092,7 @@ describe("ExchangeForm", () => {
 			}),
 		);
 
-		const onReady = vi.fn();
-
-		const { router } = renderComponent(<ExchangeForm onReady={onReady} />);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
+		const { router } = renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -1330,15 +1206,17 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/dashboard`);
+			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange`);
 		});
 	});
 
 	it("should render exchange form with id of finished order", async () => {
-		const onReady = vi.fn();
-
 		profile.exchangeTransactions().flush();
 		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		const queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => exchangeTransaction.orderId(),
+		}));
 
 		profile
 			.exchangeTransactions()
@@ -1350,16 +1228,10 @@ describe("ExchangeForm", () => {
 
 		vi.spyOn(profile.exchangeTransactions(), "findById").mockReturnValue(exchangeTransaction);
 
-		const { container } = renderComponent(
-			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} />,
-		);
+		const { container } = renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
-		});
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
 		});
 
 		await waitFor(() => {
@@ -1369,11 +1241,11 @@ describe("ExchangeForm", () => {
 		expect(container).toMatchSnapshot();
 
 		exchangeTransactionUpdateMock.mockRestore();
+
+		queryParametersMock.mockRestore();
 	});
 
 	it("should call resetForm when `New Exchange` button is clicked", async () => {
-		const onReady = vi.fn();
-
 		profile.exchangeTransactions().flush();
 		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
 
@@ -1387,18 +1259,14 @@ describe("ExchangeForm", () => {
 
 		vi.spyOn(profile.exchangeTransactions(), "findById").mockReturnValue(exchangeTransaction);
 
-		const resetForm = vi.fn();
+		const queryParametersMock = vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
+			get: () => exchangeTransaction.orderId(),
+		}));
 
-		renderComponent(
-			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} resetForm={resetForm} />,
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
-		});
+		renderComponent(<ExchangeSidePanel exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
+			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
@@ -1407,15 +1275,19 @@ describe("ExchangeForm", () => {
 
 		await userEvent.click(screen.getByTestId("ExchangeForm__new-exchange"));
 
-		expect(resetForm).toHaveBeenCalledOnce();
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
+		});
 
 		exchangeTransactionUpdateMock.mockRestore();
+
+		queryParametersMock.mockRestore();
 	});
 
 	const goToReviewStep = async () => {
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		renderComponent(<ExchangeForm onReady={vi.fn()} />);
+		renderComponent(<ExchangeSidePanel onReady={vi.fn()} exchangeId="changenow" onOpenChange={vi.fn()} />);
 
 		await expect(screen.findByTestId("ExchangeForm")).resolves.toBeVisible();
 
@@ -1641,17 +1513,10 @@ describe("ExchangeForm", () => {
 	});
 
 	it.each(["xs", "lg"])("should render with changelly in (%s)", async (breakpoint) => {
-		const onReady = vi.fn();
-		queryParametersMock.mockRestore();
-
-		vi.spyOn(useQueryParameters, "useQueryParameters").mockImplementation(() => ({
-			get: () => "changelly",
-		}));
-
 		renderResponsiveWithRoute(
 			<ExchangeProvider>
 				<Wrapper>
-					<ExchangeForm onReady={onReady} />
+					<ExchangeSidePanel exchangeId="changelly" onOpenChange={vi.fn()} />
 				</Wrapper>
 			</ExchangeProvider>,
 			breakpoint,
@@ -1659,10 +1524,6 @@ describe("ExchangeForm", () => {
 				route: exchangeURL,
 			},
 		);
-
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -1748,7 +1609,7 @@ describe("ReviewStep", () => {
 			<ExchangeProvider>
 				<Wrapper>
 					<FormProvider {...form.current}>
-						<ReviewStep />
+						<ReviewStep withSignStep={false} onManualTransfer={vi.fn()} />
 					</FormProvider>
 				</Wrapper>
 			</ExchangeProvider>,
@@ -1794,7 +1655,11 @@ describe("StatusStep", () => {
 		const { container } = render(
 			<ExchangeProvider>
 				<Wrapper>
-					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={vi.fn()} />
+					<StatusStep
+						exchangeTransaction={exchangeTransaction}
+						onUpdate={vi.fn()}
+						transferTransactionId="transferTransactionId"
+					/>
 				</Wrapper>
 			</ExchangeProvider>,
 		);
@@ -1835,7 +1700,11 @@ describe("StatusStep", () => {
 		render(
 			<ExchangeProvider>
 				<Wrapper>
-					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={onUpdate} />
+					<StatusStep
+						exchangeTransaction={exchangeTransaction}
+						onUpdate={onUpdate}
+						transferTransactionId="transferTransactionId"
+					/>
 				</Wrapper>
 			</ExchangeProvider>,
 		);
@@ -1893,7 +1762,7 @@ describe("ConfirmationStep", () => {
 				hash: "payinHash",
 				ticker: "btc",
 			},
-			orderId: "id",
+			orderId: "changenow",
 			output: {
 				address: "payoutAddress",
 				amount: 100,
@@ -1908,7 +1777,7 @@ describe("ConfirmationStep", () => {
 			<ExchangeProvider>
 				<Wrapper>
 					<FormProvider {...form.current}>
-						<ConfirmationStep exchangeTransaction={exchangeTransaction} />
+						<ConfirmationStep exchangeTransaction={exchangeTransaction} profile={profile} />
 					</FormProvider>
 				</Wrapper>
 			</ExchangeProvider>,
@@ -1919,7 +1788,7 @@ describe("ConfirmationStep", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("ExplorerLink")).toHaveLength(2);
+			expect(screen.getAllByTestId("explorer-link")).toHaveLength(2);
 		});
 
 		expect(container).toMatchSnapshot();
@@ -1930,7 +1799,7 @@ describe("ConfirmationStep", () => {
 
 		const { container } = render(
 			<FormProvider {...form.current}>
-				<ConfirmationStep exchangeTransaction={undefined} />
+				<ConfirmationStep exchangeTransaction={undefined} profile={profile} />
 			</FormProvider>,
 		);
 

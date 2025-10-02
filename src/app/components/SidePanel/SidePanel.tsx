@@ -9,22 +9,24 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX, useCallback, useState, useContext, useMemo } from "react";
+import React, { JSX, useCallback, useContext, useEffect, useRef, useState } from "react";
+
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
+import { SidePanelStyledStep } from "./SidePanelStyledStep";
+import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
-import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
-import { Tooltip } from "@/app/components/Tooltip";
-import { useTranslation } from "react-i18next";
 import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 import { useLocalStorage } from "usehooks-ts";
+import { useTranslation } from "react-i18next";
+
 interface SidePanelProps {
 	children: React.ReactNode;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	title: string;
+	title: string | React.ReactNode;
 	titleIcon?: React.ReactNode;
 	subtitle?: string;
 	dataTestId?: string;
@@ -130,29 +132,24 @@ const SidePanelContent = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const stylesConfiguration = useMemo(
-		() => ({
-			close: {
-				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
-				transitionTimingFunction: "ease-in",
-			},
-			common: {
-				transformOrigin: "right",
-				transitionProperty: "transform",
-			},
-			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
-			initial: {
-				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
-			},
-			open: {
-				transform: isMinimized ? "translate(148px, calc(100dvh - 48px))" : "translateX(0%)",
-				transitionTimingFunction: "ease-out",
-			},
-		}),
-		[isMinimized],
-	);
-
-	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
+	const { isMounted, styles } = useTransitionStyles(context, {
+		close: {
+			transform: "translateX(100%)",
+			transitionTimingFunction: "ease-in",
+		},
+		common: {
+			transformOrigin: "right",
+			transitionProperty: "transform",
+		},
+		duration: SIDE_PANEL_TRANSITION_DURATION,
+		initial: {
+			transform: "translateX(100%)",
+		},
+		open: {
+			transform: "translateX(0%)",
+			transitionTimingFunction: "ease-out",
+		},
+	});
 
 	useEffect(() => {
 		onMountChange?.(isMounted);

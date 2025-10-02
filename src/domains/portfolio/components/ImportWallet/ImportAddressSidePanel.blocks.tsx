@@ -2,10 +2,10 @@ import React from "react";
 import { Button } from "@/app/components/Button";
 import { useTranslation } from "react-i18next";
 import { ImportOption } from "@/domains/wallet/hooks";
-import { Icon } from "@/app/components/Icon";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
+import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
 
 export enum ImportAddressStep {
 	MethodStep = 1,
@@ -101,6 +101,71 @@ export function useLedgerStepHeaderConfig(step: LedgerTabStep, importOption?: Im
 			return {
 				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE", { count: 2 }),
 				title: t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE"),
+				titleIcon: (
+					<Icon
+						name="DoubleCheckedCircle"
+						className="text-theme-success-100 dark:text-theme-success-900 hidden md:block"
+						dimensions={[22, 22]}
+					/>
+				),
+			};
+		}
+
+		default: {
+			return { title: "" };
+		}
+	}
+}
+
+export function useHDWalletStepHeaderConfig(step: HDWalletTabStep): StepHeaderConfig {
+	const { t } = useTranslation();
+
+	switch (step) {
+		case HDWalletTabStep.SelectAccountStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ACCOUNT_STEP.TITLE"),
+				titleIcon: <Icon name="HDWalletImportMethod" className="hidden md:block" />,
+			};
+		}
+
+		case HDWalletTabStep.EnterMnemonicStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_MNEMONIC_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_MNEMONIC_STEP.TITLE"),
+				titleIcon: <Icon name="MnemonicImportMethod" className="hidden md:block" />,
+			};
+		}
+
+		case HDWalletTabStep.EncryptPasswordStep: {
+			return {
+				title: t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE"),
+				titleIcon: (
+					<ThemeIcon
+						lightIcon="WalletEncryptionLight"
+						darkIcon="WalletEncryptionDark"
+						dimIcon="WalletEncryptionDim"
+						className="hidden md:block"
+						dimensions={[24, 24]}
+					/>
+				),
+			};
+		}
+
+		case HDWalletTabStep.SelectAddressStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SELECT_ADDRESS_STEP.TITLE"),
+				titleIcon: (
+					<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600 hidden md:block" />
+				),
+			};
+		}
+
+		case HDWalletTabStep.SummaryStep: {
+			return {
+				subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SUMMARY_STEP.SUBTITLE"),
+				title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SUMMARY_STEP.TITLE"),
 				titleIcon: (
 					<Icon
 						name="DoubleCheckedCircle"

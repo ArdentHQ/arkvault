@@ -12,11 +12,15 @@ import { twMerge } from "tailwind-merge";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 interface Properties {
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
+	transaction: Pick<
+		DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
+		"hash" | "isConfirmed" | "explorerLink"
+	>;
 	isConfirmed?: boolean;
+	label?: string;
 }
 
-export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactElement => {
+export const TransactionId = ({ transaction, isConfirmed, label }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
@@ -37,7 +41,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 			className="sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 sm:dim:border-theme-dim-700 flex-row items-center sm:flex sm:rounded-lg sm:border"
 		>
 			<div className="text-theme-secondary-700 sm:bg-theme-secondary-200 dark:text-theme-secondary-500 sm:dim:bg-theme-dim-950 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold whitespace-nowrap sm:mb-0 sm:h-full sm:rounded-l-lg sm:px-4 sm:py-3 sm:text-base sm:leading-5 sm:dark:bg-black">
-				{t("TRANSACTION.TRANSACTION_ID")}
+				{label ?? t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
 			<div ref={reference} className="flex-1 overflow-hidden font-semibold sm:mx-4">

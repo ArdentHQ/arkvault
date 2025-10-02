@@ -313,6 +313,45 @@ describe("Profile", () => {
 		expect(spy).not.toHaveBeenCalled();
 	});
 
+	it("should return true for usesHDWallets when in development mode", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "development";
+
+		expect(profile.usesHDWallets()).toBe(true);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
+	it("should return true for usesHDWallets when setting is enabled", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "production";
+		profile.settings().set(ProfileSetting.UseHDWallets, true);
+
+		expect(profile.usesHDWallets()).toBe(true);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
+	it("should return false for usesHDWallets when setting is disabled", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "production";
+		profile.settings().set(ProfileSetting.UseHDWallets, false);
+
+		expect(profile.usesHDWallets()).toBe(false);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
+	it("should return false for usesHDWallets when setting is missing and not in development", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "production";
+		profile.settings().forget(ProfileSetting.UseHDWallets);
+
+		expect(profile.usesHDWallets()).toBe(false);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
 	it("should find a test network as a fallback", async () => {
 		const spyInit = vi
 			.spyOn(ProfileInitialiserModule, "ProfileInitialiser")

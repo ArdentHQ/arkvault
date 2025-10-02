@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@/app/lib/profiles";
 import { act, renderHook } from "@testing-library/react";
 import React from "react";
@@ -19,17 +18,11 @@ describe("ConfirmPassphraseStep", () => {
 	});
 
 	it("should render 3rd step", () => {
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					mnemonic: MAINSAIL_MNEMONICS[0],
-				},
-			}),
-		);
+		const { result: form } = renderHook(() => useForm());
 
 		render(
 			<FormProvider {...form.current}>
-				<ConfirmPassphraseStep />
+				<ConfirmPassphraseStep mnemonic={MAINSAIL_MNEMONICS[0]} />
 			</FormProvider>,
 		);
 

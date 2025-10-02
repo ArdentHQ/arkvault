@@ -203,6 +203,11 @@ export const SendTransferSidePanel = ({
 		// Abort any existing listener
 		abortReference.current.abort();
 
+		if (activeTab === SendTransferStep.ErrorStep) {
+			setActiveTab(SendTransferStep.FormStep);
+			return;
+		}
+
 		if (activeTab === firstTabIndex) {
 			onOpenChange(false);
 			return;
@@ -470,7 +475,8 @@ export const SendTransferSidePanel = ({
 							onClick={() => {
 								void handleSubmit(() => submit())();
 							}}
-							disabled={isSubmitting}
+							disabled={isSubmitting || !isValid}
+							isLoading={isSubmitting}
 						>
 							{t("COMMON.SEND")}
 						</Button>
