@@ -169,14 +169,18 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (mnemonic: string) => {
 			if (type === OptionsValue.BIP44) {
-				const profileWalletAddresses = profile.wallets().values().map(w => w.address().toLowerCase());
+				const profileWalletAddresses = profile
+					.wallets()
+					.values()
+					.map((w) => w.address().toLowerCase());
 
 				for (let index = 0; index < 5; index++) {
 					const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
 						levels: {
-							account: 0, addressIndex: index
+							account: 0,
+							addressIndex: index,
 						},
-						mnemonic
+						mnemonic,
 					});
 
 					if (profileWalletAddresses.includes(wallet.address().toLowerCase())) {
