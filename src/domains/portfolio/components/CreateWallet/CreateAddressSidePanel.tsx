@@ -23,6 +23,7 @@ import { MethodStep } from "./MethodStep";
 import { HDWalletTabs } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
 import { useHDWalletStepHeaderConfig } from "@/domains/portfolio/components/ImportWallet/ImportAddressSidePanel.blocks";
+import { profile } from "@/domains/profile/images";
 
 export const CreateAddressesSidePanel = ({
 	open,
@@ -168,6 +169,8 @@ export const CreateAddressesSidePanel = ({
 
 			setIsGeneratingWallet(false);
 			assertWallet(wallet);
+
+			activeProfile.wallets().forget(wallet.id());
 
 			const importedWallets = await importWallets({
 				type: "bip39",
