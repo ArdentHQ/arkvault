@@ -15,13 +15,13 @@ export enum Panel {
 
 interface PanelsContextValue {
 	currentOpenedPanel: Panel | undefined;
-	closePanel: () => void;
+	closePanel: () => Promise<void>;
 	openPanel: (panel: Panel) => void;
 	isMinimized: boolean;
 	setIsMinimized: (isMinimized: boolean) => void;
 	showConfirmationModal: boolean;
 	setShowConfirmationModal: (showConfirmationModal: boolean) => void;
-	confirmOpen: () => void;
+	confirmOpen: () => Promise<void>;
 	cancelOpen: () => void;
 	toggleMinimize: () => void;
 	currentOpenedPanelName: string | undefined;
@@ -39,26 +39,26 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [isMinimized, setIsMinimized] = useState(false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 	const [resetKey, setResetKey] = useState(0);
+	const [componentResetedPromiseResolver, setComponentResetedPromiseResolver] = useState<
+		((value: void | PromiseLike<void>) => void) | undefined
+	>(undefined);
 
 	const currentOpenedPanelName = useMemo(
 		() => (currentOpenedPanel ? t(`COMMON.PANELS.${currentOpenedPanel}`) : undefined),
 		[currentOpenedPanel, t],
 	);
 
-	const confirmOpen = () => {
+	const confirmOpen = async () => {
 		setShowConfirmationModal(false);
 
-		setCurrentOpenedPanel(undefined);
+		await closePanel();
 
-		// Wait for the previous panel to be removed
-		setTimeout(() => {
-			setResetKey((previousKey) => previousKey + 1);
-
-			setIsMinimized(false);
-
-			setCurrentOpenedPanel(panelToOpen);
-		}, SIDE_PANEL_TRANSITION_DURATION);
+		setCurrentOpenedPanel(panelToOpen);
 	};
+
+	useEffect(() => {
+		console.log("panelToOpen", panelToOpen);
+	}, [resetKey, panelToOpen]);
 
 	const cancelOpen = () => {
 		setShowConfirmationModal(false);
@@ -72,31 +72,37 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		}
 	}, [showConfirmationModal]);
 
-	const closePanel = () => {
-		setCurrentOpenedPanel(undefined);
+	const closePanel = (): Promise<void> =>
+		new Promise((resolve) => {
+			setCurrentOpenedPanel(undefined);
 
-		if (isMinimized) {
-			// Reset the minimized state after the transition is complete
-			setTimeout(() => {
-				setIsMinimized(false);
+			if (isMinimized) {
+				// Reset the minimized state after the transition is complete
+				setTimeout(() => {
+					setIsMinimized(false);
 
-				setResetKey((previousKey) => previousKey + 1);
-			}, SIDE_PANEL_TRANSITION_DURATION);
+					setResetKey((previousKey) => previousKey + 1);
+
+					setComponentResetedPromiseResolver(resolve);
+				}, SIDE_PANEL_TRANSITION_DURATION);
+			}
+		});
+
+	// When a panel is closed, we update the reset key. However, if we try to open another panel
+	// immediately, the previous panel may not have been completely reset yet. We need to wait
+	// for the panel to be fully removed from the DOM before considering it as closed.
+	useEffect(() => {
+		if (componentResetedPromiseResolver) {
+			componentResetedPromiseResolver();
+			setComponentResetedPromiseResolver(undefined);
 		}
-	};
+	}, [componentResetedPromiseResolver]);
 
 	const openPanel = (panel: Panel) => {
-		// If the panel was minimized previously, ensure we clear minimized state
-		// before opening so the entry transition comes from the right side.
 		if (isMinimized) {
-			if (currentOpenedPanel === panel) {
-				setIsMinimized(false);
-				return;
-			} else {
-				setShowConfirmationModal(true);
-				setPanelToOpen(panel);
-				return;
-			}
+			setShowConfirmationModal(true);
+			setPanelToOpen(panel);
+			return;
 		}
 
 		setCurrentOpenedPanel(panel);
