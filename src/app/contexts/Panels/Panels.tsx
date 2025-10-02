@@ -56,10 +56,6 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		setCurrentOpenedPanel(panelToOpen);
 	};
 
-	useEffect(() => {
-		console.log("panelToOpen", panelToOpen);
-	}, [resetKey, panelToOpen]);
-
 	const cancelOpen = () => {
 		setShowConfirmationModal(false);
 
