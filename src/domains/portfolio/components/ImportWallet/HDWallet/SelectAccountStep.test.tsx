@@ -128,7 +128,7 @@ describe("SelectAccountStep", () => {
 
 	it("should keep the selected account if any selected", async () => {
 		const { unmount } = render(
-			<FormWrapper defaultValues={{selectedAccount: "Test Account 2"}}>
+			<FormWrapper defaultValues={{ selectedAccount: "Test Account 2" }}>
 				<SelectAccountStep profile={profile} />
 			</FormWrapper>,
 			{ route },
