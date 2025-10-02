@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { JSX, useCallback, useContext, useEffect, useRef, useState } from "react";
+import React, { JSX, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -132,24 +132,29 @@ const SidePanelContent = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const { isMounted, styles } = useTransitionStyles(context, {
-		close: {
-			transform: "translateX(100%)",
-			transitionTimingFunction: "ease-in",
-		},
-		common: {
-			transformOrigin: "right",
-			transitionProperty: "transform",
-		},
-		duration: SIDE_PANEL_TRANSITION_DURATION,
-		initial: {
-			transform: "translateX(100%)",
-		},
-		open: {
-			transform: "translateX(0%)",
-			transitionTimingFunction: "ease-out",
-		},
-	});
+	const stylesConfiguration = useMemo(
+		() => ({
+			close: {
+				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
+				transitionTimingFunction: "ease-in",
+			},
+			common: {
+				transformOrigin: "right",
+				transitionProperty: "transform",
+			},
+			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
+			initial: {
+				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+			},
+			open: {
+				transform: isMinimized ? "translate(148px, calc(100dvh - 48px))" : "translateX(0%)",
+				transitionTimingFunction: "ease-out",
+			},
+		}),
+		[isMinimized],
+	);
+
+	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
 
 	useEffect(() => {
 		onMountChange?.(isMounted);
