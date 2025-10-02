@@ -12,7 +12,6 @@ import { truncate } from "@/app/lib/helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { AddressService } from "@/app/lib/mainsail/address.service";
-import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 const validateAddress = async ({
 	findAddress,
