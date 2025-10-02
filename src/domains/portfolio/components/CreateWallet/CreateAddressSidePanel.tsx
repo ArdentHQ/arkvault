@@ -168,26 +168,25 @@ export const CreateAddressesSidePanel = ({
 
 			setIsGeneratingWallet(false);
 			assertWallet(wallet);
-			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
 			const importedWallets = await importWallets({
 				type: "bip39",
 				value: mnemonic,
 			});
 
+			wallet = importedWallets[0];
+
+			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
+
 			if (useEncryption && parameters.encryptionPassword) {
 				try {
-					const importedWallet = importedWallets[0];
-					if (importedWallet) {
-						await importedWallet.signingKey().set(mnemonic, parameters.encryptionPassword);
-						importedWallet
-							.data()
-							.set(
-								Contracts.WalletData.ImportMethod,
-								Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
-							);
-						wallet = importedWallet;
-					}
+					await wallet.signingKey().set(mnemonic, parameters.encryptionPassword);
+					wallet
+						.data()
+						.set(
+							Contracts.WalletData.ImportMethod,
+							Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
+						);
 				} catch {
 					setIsGeneratingWallet(false);
 					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
@@ -233,7 +232,7 @@ export const CreateAddressesSidePanel = ({
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
 	const showFooter = (): boolean => {
-		if (usesHDWallets) {
+		if (isHDWalletCreation) {
 			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep;
 		}
 
