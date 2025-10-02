@@ -423,8 +423,11 @@ export const ExchangeSidePanel = ({
 		return <></>;
 	}
 
+	const isLastStep = activeTab === Step.ConfirmationStep;
+
 	return (
 		<SidePanel
+			minimizeable={!isLastStep}
 			open={exchangeId !== undefined}
 			onOpenChange={onOpenChange}
 			onMountChange={onMountChange}
@@ -450,12 +453,12 @@ export const ExchangeSidePanel = ({
 			totalSteps={totalSteps}
 			activeStep={activeTab}
 			onBack={handleBack}
-			isLastStep={activeTab === Step.ConfirmationStep}
+			isLastStep={isLastStep}
 			disableOutsidePress={preventAccidentalClosing}
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
-				activeTab !== Step.StatusStep && (
+				!isLastStep && (
 					<SidePanelButtons>
 						{activeTab < Step.StatusStep && (
 							<>
@@ -479,7 +482,7 @@ export const ExchangeSidePanel = ({
 							</>
 						)}
 
-						{activeTab === Step.ConfirmationStep && (
+						{isLastStep && (
 							<div className="flex w-full flex-col gap-3 sm:flex-row-reverse">
 								<Button data-testid="ExchangeForm__finish-button" onClick={() => onOpenChange(false)}>
 									{t("COMMON.CLOSE")}

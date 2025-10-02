@@ -295,8 +295,11 @@ export const ImportAddressesSidePanel = ({
 		return 1;
 	};
 
+	const isLastStep = activeTab === ImportAddressStep.SummaryStep;
+
 	return (
 		<SidePanel
+			minimizeable={!isLastStep}
 			title={config.title}
 			subtitle={config.subtitle}
 			titleIcon={config.titleIcon}
@@ -324,7 +327,7 @@ export const ImportAddressesSidePanel = ({
 					/>
 				)
 			}
-			isLastStep={activeTab === ImportAddressStep.SummaryStep}
+			isLastStep={isLastStep}
 		>
 			<Form context={form} data-testid="ImportWallet__form">
 				<Tabs activeId={activeTab}>
