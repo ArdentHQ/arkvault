@@ -484,7 +484,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
 
 		await waitFor(() => {
-			expect(getAddressCheckboxes()).toBe(6);
+			expect(getAddressCheckboxes().length).toBe(6);
 		});
 
 		const addressRows = screen.getAllByTestId("Address__address");
