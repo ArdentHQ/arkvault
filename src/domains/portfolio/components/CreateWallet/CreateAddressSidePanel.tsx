@@ -157,7 +157,7 @@ export const CreateAddressesSidePanel = ({
 			return;
 		}
 
-		if (newIndex === CreateStep.SuccessStep && !usesHDWallets) {
+		if (newIndex === CreateStep.SuccessStep && !isHDWalletCreation) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
 
 			let wallet = getValues("wallet");
