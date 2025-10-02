@@ -227,7 +227,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			.filter((wallet) => wallet.network().id() === activeNetwork.id());
 	}, [profile, isProfileRestored, activeNetwork]);
 
-	const navigationMenu = useMemo(() => getNavigationMenu(t), [t]);
+	const navigationMenu = useMemo(() => getNavigationMenu(t, location.pathname), [t, location.pathname]);
 	const handleSelectMenuItem = useCallback(
 		({ value }: DropdownOption) => {
 			navigate(String(value));
@@ -242,13 +242,21 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="hidden h-12 items-center xl:flex" data-testid="NavigationBar__menu">
+			<ul className="hidden h-12 items-center gap-0.5 xl:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => (
 					<li key={index} className="flex">
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
+							className={cn(
+								"ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden",
+								{
+									"text-theme-primary-600 border-theme-primary-200 bg-theme-secondary-200 dim:text-theme-dim-50 dim:bg-theme-dim-950 dim:border-theme-dim-700 dark:text-theme-dark-50 dark:bg-theme-dark-950 dark:border-theme-dark-700":
+										menuItem.isActive,
+									"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent":
+										!menuItem.isActive,
+								},
+							)}
 						>
 							{menuItem.title}
 						</NavLink>

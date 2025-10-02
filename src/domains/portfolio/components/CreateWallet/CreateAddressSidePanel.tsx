@@ -42,6 +42,7 @@ export const CreateAddressesSidePanel = ({
 	const usesHDWallets = activeProfile.usesHDWallets();
 	const firstStep = usesHDWallets ? CreateStep.MethodStep : CreateStep.WalletOverviewStep;
 	const [HDWalletActiveTab, setHDWalletActiveTab] = useState<HDWalletTabStep>(HDWalletTabStep.SelectAccountStep);
+	const [mnemonic, setMnemonic] = useState<string | undefined>();
 
 	const [activeTab, setActiveTab] = useState<CreateStep>(firstStep);
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -59,8 +60,7 @@ export const CreateAddressesSidePanel = ({
 	const { getValues, formState, register, setValue, watch, reset } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic, acceptResponsibility } =
-		watch();
+	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, acceptResponsibility } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
 	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
@@ -91,6 +91,7 @@ export const CreateAddressesSidePanel = ({
 		}
 
 		setActiveTab(CreateStep.MethodStep);
+		setMnemonic(undefined);
 		reset();
 	}, [open]);
 
@@ -122,11 +123,12 @@ export const CreateAddressesSidePanel = ({
 		setIsGeneratingWallet(true);
 
 		try {
-			const { mnemonic, wallet } = await generateWallet();
-			wallet.mutator().isSelected(true);
+			const response = await generateWallet();
+			response.wallet.mutator().isSelected(true);
 
-			setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
-			setValue("mnemonic", mnemonic, { shouldDirty: true, shouldValidate: true });
+			setValue("wallet", response.wallet, { shouldDirty: true, shouldValidate: true });
+			setValue("mnemonic", response.mnemonic, { shouldDirty: true, shouldValidate: true });
+			setMnemonic(response.mnemonic);
 			setActiveTab(firstStep);
 		} catch {
 			setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
@@ -164,30 +166,34 @@ export const CreateAddressesSidePanel = ({
 			assertString(mnemonic);
 			assertWallet(wallet);
 
-			if (useEncryption && parameters.encryptionPassword) {
-				setIsGeneratingWallet(true);
+			setIsGeneratingWallet(false);
+			assertWallet(wallet);
+			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
+			const importedWallets = await importWallets({
+				type: "bip39",
+				value: mnemonic,
+			});
+
+			if (useEncryption && parameters.encryptionPassword) {
 				try {
-					wallet = await activeProfile.walletFactory().fromMnemonicWithBIP39({
-						mnemonic,
-						password: parameters.encryptionPassword,
-					});
+					const importedWallet = importedWallets[0];
+					if (importedWallet) {
+						await importedWallet.signingKey().set(mnemonic, parameters.encryptionPassword);
+						importedWallet
+							.data()
+							.set(
+								Contracts.WalletData.ImportMethod,
+								Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
+							);
+						wallet = importedWallet;
+					}
 				} catch {
 					setIsGeneratingWallet(false);
 					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
 					return;
 				}
 			}
-
-			setIsGeneratingWallet(false);
-
-			assertWallet(wallet);
-			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
-
-			await importWallets({
-				type: "bip39",
-				value: mnemonic,
-			});
 
 			setValue("wallet", wallet);
 
@@ -329,11 +335,11 @@ export const CreateAddressesSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={CreateStep.WalletOverviewStep}>
-							<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
+							<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} mnemonic={mnemonic} />
 						</TabPanel>
 
 						<TabPanel tabId={CreateStep.ConfirmPassphraseStep}>
-							<ConfirmPassphraseStep />
+							{mnemonic && <ConfirmPassphraseStep mnemonic={mnemonic} />}
 						</TabPanel>
 
 						<TabPanel tabId={CreateStep.EncryptPasswordStep}>
@@ -341,21 +347,18 @@ export const CreateAddressesSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={CreateStep.SuccessStep}>
-							{isHDWalletCreation && (
+							{isHDWalletCreation && mnemonic && (
 								<HDWalletTabs
+									mnemonic={mnemonic}
 									addressesPerPage={1}
 									activeIndex={HDWalletTabStep.SelectAddressStep}
 									onClickEditWalletName={(wallet) => setEditingWallet(wallet)}
 									onStepChange={setHDWalletActiveTab}
 									onCancel={() => onOpenChange(false)}
 									onSubmit={handleFinish}
-									onBack={() => {
-										if (encryptionPassword) {
-											setActiveTab(activeTab - 1);
-											return;
-										}
-
-										setActiveTab(activeTab - 2);
+									onBack={async () => {
+										await handleGenerateWallet();
+										setActiveTab(CreateStep.WalletOverviewStep);
 									}}
 								/>
 							)}

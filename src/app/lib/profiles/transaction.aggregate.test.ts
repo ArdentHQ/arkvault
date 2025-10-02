@@ -5,6 +5,8 @@ import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
+import { UnconfirmedTransactionData } from "@/app/lib/mainsail/unconfirmed-transaction.dto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -16,6 +18,8 @@ const createTransactionMock = (wallet: IReadWriteWallet) =>
 		...TransactionFixture,
 		wallet: () => wallet,
 	} as any);
+
+const createUnconfirmedTransactionMock = () => new UnconfirmedTransactionData().configure(TransactionFixture);
 
 describe("TransactionAggregate", () => {
 	beforeEach(async () => {
@@ -79,6 +83,18 @@ describe("TransactionAggregate", () => {
 			);
 
 		const result = await subject.received();
+		expect(receivedSpy).toHaveBeenCalled();
+		expect(result.items()).toHaveLength(1);
+	});
+
+	it("should aggregate unconfirmed transactions", async () => {
+		const receivedSpy = vi
+			.spyOn(wallet.transactionIndex(), "unconfirmed")
+			.mockResolvedValue(
+				new UnconfirmedTransactionDataCollection([createUnconfirmedTransactionMock()], pagination),
+			);
+
+		const result = await subject.unconfirmed();
 		expect(receivedSpy).toHaveBeenCalled();
 		expect(result.items()).toHaveLength(1);
 	});

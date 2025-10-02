@@ -45,6 +45,8 @@ export const translations = {
 			"A <bold>{{connectedModel}}</bold> is connected, but this operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
 		GENERIC_CONNECTION_ERROR:
 			"Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.",
+		INCOMPATIBLE_APP_ERROR:
+			"Incompatible Ledger App. Make sure to open the ARK ledger app and have it updated to the latest version. Click retry to try again.",
 		LEDGER_NANO_S: "Ledger Nano S",
 		LEDGER_NANO_S_PLUS: "Ledger Nano S Plus",
 		LEDGER_NANO_X: "Ledger Nano X",

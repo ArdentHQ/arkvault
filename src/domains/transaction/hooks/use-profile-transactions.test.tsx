@@ -8,8 +8,6 @@ import * as hooksMock from "@/app/hooks";
 import { expect, vi } from "vitest";
 import { RawTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-import * as unconfirmedTransactionsMock from "./use-unconfirmed-transactions";
-import * as unconfirmedTransactionsServiceMock from "@/app/lib/mainsail/unconfirmed-transactions.service";
 import unconfirmedFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/unconfirmed.json";
 
 const wrapper = ({ children }: any) => (
@@ -100,20 +98,9 @@ const mockUnconfirmedTransactionsHook = async (
 
 describe("useProfileTransactions", () => {
 	let profile: IProfile;
-	let allUnconfirmedMock: any;
-
-	vi.mock("@arkecosystem/typescript-client", () => ({
-		ArkClient: vi.fn().mockImplementation(() => ({
-			transactions: () => ({ allUnconfirmed: allUnconfirmedMock }),
-		})),
-	}));
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
-	});
-
-	beforeEach(() => {
-		allUnconfirmedMock = vi.fn().mockResolvedValue(unconfirmedFixture);
 	});
 
 	afterEach(() => {
@@ -360,7 +347,7 @@ describe("useProfileTransactions", () => {
 		transactionAggregateSpy.mockRestore();
 	});
 
-	it("checks for new transactions", async () => {
+	it("checks for new confirmed transactions", async () => {
 		const useSynchronizerSpy = vi.spyOn(hooksMock, "useSynchronizer").mockImplementation((jobs) => {
 			const start = async () => {
 				await jobs[0].callback();
@@ -907,119 +894,29 @@ describe("useProfileTransactions", () => {
 		unconfirmedSpy.mockRestore();
 	});
 
-	it("should poll unconfirmed transactions", async () => {
-		const realSetInterval = global.setInterval;
-		const intervalMock = vi
-			.spyOn(global, "setInterval")
-			.mockImplementation((callback: (...arguments_: any[]) => void, _ms?: number, ...arguments_: any[]) => {
-				if (typeof callback === "function") {
-					callback(...arguments_);
-				}
-				return {} as unknown as NodeJS.Timeout;
-			});
+	it("should check for unconfirmed transactions after initial render", async () => {
+		const wallet = profile.wallets().first();
+		const networkId = wallet.networkId();
+		const walletAddress = wallet.address();
 
-		const wallets = [profile.wallets().first()];
-		const walletAddress = wallets[0].address();
-		const networkId = wallets[0].networkId();
+		// Create mock unconfirmed transaction data
+		const unconfirmedTx = {
+			...unconfirmedFixture[0],
+			from: () => walletAddress,
+			hash: () => "NEW_UNCONFIRMED_TX",
+			raw: () => createMockedTransactionData({ hash: "NEW_UNCONFIRMED_TX" }),
+			to: () => "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+		};
 
-		const addUnconfirmedTransactionFromApi = vi.fn();
-		const cleanupUnconfirmedForAddresses = vi.fn();
-
-		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransactionFromApi,
-			addUnconfirmedTransactionFromSigned: vi.fn(),
-			cleanupUnconfirmedForAddresses,
-			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: {},
-		} as any);
-
-		const listSpy = vi
-			.spyOn(unconfirmedTransactionsServiceMock.UnconfirmedTransactionsService.prototype, "listUnconfirmed")
-			.mockResolvedValue({
-				results: [
-					{
-						from: () => walletAddress.toUpperCase(),
-						gasLimit: "21000",
-						hash: "UNCONF_FROM",
-						raw: () => ({ gasLimit: "21000", hash: "UNCONF_FROM" }),
-						to: () => "ADDRESS_TO",
-					},
-					{
-						from: () => "ADDRESS_FROM",
-						gasLimit: "99999",
-						hash: "UNCONF_TO",
-						raw: () => ({ gasLimit: "99999", hash: "UNCONF_TO" }),
-						to: () => walletAddress.toLowerCase(),
-					},
-					{
-						from: () => "ADDRESS_FROM",
-						gasLimit: "33333",
-						hash: "UNCONF_IGNORE",
-						raw: () => ({ gasLimit: "33333", hash: "UNCONF_IGNORE" }),
-						to: () => "ADDRESS_TO",
-					},
-					{
-						from: () => walletAddress.toLowerCase(),
-						gasLimit: undefined,
-						hash: "UNCONF_NO_GAS_LIMIT",
-						raw: () => ({ hash: "UNCONF_NO_GAS_LIMIT" }),
-						to: () => "ADDRESS_TO",
-					},
-				],
-			} as any);
-
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
-
-		act(() => {
-			result.current.updateFilters({ activeMode: "all" });
+		// Mock the transactionAggregate.unconfirmed method to return the mock transaction
+		const unconfirmedMock = vi.spyOn(profile.transactionAggregate(), "unconfirmed").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [unconfirmedTx as any],
 		});
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
 
-		expect(listSpy).toHaveBeenCalledWith({ address: [walletAddress], limit: 100 });
+		const { addUnconfirmedTransactionFromApi } = await mockUnconfirmedTransactionsHook([]);
 
-		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(3);
-
-		const firstCall = addUnconfirmedTransactionFromApi.mock.calls[0];
-		const secondCall = addUnconfirmedTransactionFromApi.mock.calls[1];
-
-		expect(firstCall[0]).toBe(networkId); // networkId
-		expect(firstCall[1]).toBe(walletAddress); // walletAddress
-		expect(firstCall[2]).toEqual({ gasLimit: "21000", hash: "UNCONF_FROM" }); // transaction
-
-		expect(secondCall[0]).toBe(networkId);
-		expect(secondCall[1]).toBe(walletAddress);
-		expect(secondCall[2]).toEqual({ gasLimit: "99999", hash: "UNCONF_TO" });
-
-		expect(cleanupUnconfirmedForAddresses).toHaveBeenCalledWith(
-			[walletAddress],
-			["UNCONF_FROM", "UNCONF_TO", "UNCONF_IGNORE", "UNCONF_NO_GAS_LIMIT"],
-		);
-
-		intervalMock.mockRestore();
-		global.setInterval = realSetInterval;
-	});
-
-	it("should return early when service is not ready", async () => {
-		const intervalMock = vi
-			.spyOn(global, "setInterval")
-			.mockImplementation((callback: (...arguments_: any[]) => void, _ms?: number, ...arguments_: any[]) => {
-				if (typeof callback === "function") {
-					callback(...arguments_);
-				}
-				return {} as unknown as NodeJS.Timeout;
-			});
-
-		const addUnconfirmedTransactionFromApi = vi.fn();
-
-		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransactionFromApi,
-			addUnconfirmedTransactionFromSigned: vi.fn(),
-			cleanupUnconfirmedForAddresses: vi.fn(),
-			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: {},
-		} as any);
-
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [] }), { wrapper });
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [wallet] }), { wrapper });
 
 		act(() => {
 			result.current.updateFilters({ activeMode: "all" });
@@ -1027,12 +924,24 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
 
-		expect(addUnconfirmedTransactionFromApi).not.toHaveBeenCalled();
+		// Wait for the fetchUnconfirmedTransactions to be called
+		await waitFor(() => expect(unconfirmedMock).toHaveBeenCalled());
+		await waitFor(() =>
+			expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledWith(
+				networkId,
+				walletAddress,
+				expect.objectContaining({
+					signedData: expect.objectContaining({
+						hash: "NEW_UNCONFIRMED_TX",
+					}),
+				}),
+			),
+		);
 
-		intervalMock.mockRestore();
+		unconfirmedMock.mockRestore();
 	});
 
-	it("should short-circuit fetchTransactions when wallets.length === 0", async () => {
+	it("should short-circuit fetchTransactions when there are no wallets", async () => {
 		const allSpy = vi.spyOn(profile.transactionAggregate(), "all");
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [] }), { wrapper });
@@ -1047,99 +956,6 @@ describe("useProfileTransactions", () => {
 		expect(allSpy).not.toHaveBeenCalled();
 
 		allSpy.mockRestore();
-	});
-
-	it("should handle polling with empty wallets array", async () => {
-		let pollingCallback: (() => Promise<void>) | null = null;
-		const intervalMock = vi
-			.spyOn(global, "setInterval")
-			.mockImplementation((callback: (...arguments_: any[]) => void, _ms?: number, ...arguments_: any[]) => {
-				if (typeof callback === "function") {
-					callback(...arguments_);
-				}
-				return {} as unknown as NodeJS.Timeout;
-			});
-
-		const addUnconfirmedTransactionFromApi = vi.fn();
-
-		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransactionFromApi,
-			addUnconfirmedTransactionFromSigned: vi.fn(),
-			cleanupUnconfirmedForAddresses: vi.fn(),
-			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: {},
-		} as any);
-
-		const listUnconfirmedSpy = vi.fn().mockResolvedValue({ results: [] });
-
-		vi.spyOn(
-			unconfirmedTransactionsServiceMock.UnconfirmedTransactionsService.prototype,
-			"listUnconfirmed",
-		).mockImplementation(listUnconfirmedSpy);
-
-		const wallet = profile.wallets().first();
-		const { result, rerender } = renderHook(({ wallets }) => useProfileTransactions({ profile, wallets }), {
-			initialProps: { wallets: [wallet] },
-			wrapper,
-		});
-
-		act(() => {
-			result.current.updateFilters({ activeMode: "all" });
-		});
-
-		await waitFor(() => expect(pollingCallback).toBeNull());
-
-		rerender({ wallets: [] });
-
-		if (pollingCallback) {
-			await act(async () => {
-				await pollingCallback();
-			});
-		}
-
-		expect(listUnconfirmedSpy).toHaveBeenCalled();
-		expect(addUnconfirmedTransactionFromApi).not.toHaveBeenCalled();
-
-		intervalMock.mockRestore();
-	});
-
-	it("should handle polling when response.results is undefined", async () => {
-		const intervalMock = vi
-			.spyOn(global, "setInterval")
-			.mockImplementation((callback: (...arguments_: any[]) => void, _ms?: number, ...arguments_: any[]) => {
-				if (typeof callback === "function") {
-					callback(...arguments_);
-				}
-				return {} as unknown as NodeJS.Timeout;
-			});
-
-		const wallets = [profile.wallets().first()];
-		const addUnconfirmedTransactionFromApi = vi.fn();
-
-		vi.spyOn(unconfirmedTransactionsMock, "useUnconfirmedTransactions").mockReturnValue({
-			addUnconfirmedTransactionFromApi,
-			addUnconfirmedTransactionFromSigned: vi.fn(),
-			cleanupUnconfirmedForAddresses: vi.fn(),
-			removeUnconfirmedTransaction: vi.fn(),
-			unconfirmedTransactions: {},
-		} as any);
-
-		const listSpy = vi
-			.spyOn(unconfirmedTransactionsServiceMock.UnconfirmedTransactionsService.prototype, "listUnconfirmed")
-			.mockResolvedValue({} as any);
-
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), { wrapper });
-
-		act(() => {
-			result.current.updateFilters({ activeMode: "all" });
-		});
-
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
-
-		expect(listSpy).toHaveBeenCalled();
-		expect(addUnconfirmedTransactionFromApi).not.toHaveBeenCalled();
-
-		intervalMock.mockRestore();
 	});
 
 	it("should return default block time when milestone throws an error", async () => {
@@ -1164,5 +980,59 @@ describe("useProfileTransactions", () => {
 
 		activeNetworkSpy.mockRestore();
 		consoleErrorSpy.mockRestore();
+	});
+
+	it("should skip unconfirmed transactions with no matching wallet", async () => {
+		const wallet = profile.wallets().first();
+
+		// Create unconfirmed transaction that doesn't match any wallet addresses
+		const nonMatchingUnconfirmedTx = {
+			...unconfirmedFixture[0],
+			from: () => "0xNonMatchingFromAddress",
+			hash: () => "NON_MATCHING_TX",
+			raw: () => createMockedTransactionData({ hash: "NON_MATCHING_TX" }),
+			to: () => "0xNonMatchingToAddress",
+		};
+
+		// Create matching unconfirmed transaction
+		const matchingUnconfirmedTx = {
+			...unconfirmedFixture[0],
+			from: () => wallet.address(),
+			hash: () => "MATCHING_TX",
+			raw: () => createMockedTransactionData({ hash: "MATCHING_TX" }),
+			to: () => "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+		};
+
+		// Mock the transactionAggregate.unconfirmed method to return both transactions
+		const unconfirmedMock = vi.spyOn(profile.transactionAggregate(), "unconfirmed").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [nonMatchingUnconfirmedTx as any, matchingUnconfirmedTx as any],
+		});
+
+		const { addUnconfirmedTransactionFromApi } = await mockUnconfirmedTransactionsHook([]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [wallet] }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		await waitFor(() => expect(unconfirmedMock).toHaveBeenCalled());
+
+		// Should only add the matching transaction, not the non-matching one
+		await waitFor(() => expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledTimes(1));
+		expect(addUnconfirmedTransactionFromApi).toHaveBeenCalledWith(
+			wallet.networkId(),
+			wallet.address(),
+			expect.objectContaining({
+				signedData: expect.objectContaining({
+					hash: "MATCHING_TX",
+				}),
+			}),
+		);
+
+		unconfirmedMock.mockRestore();
 	});
 });

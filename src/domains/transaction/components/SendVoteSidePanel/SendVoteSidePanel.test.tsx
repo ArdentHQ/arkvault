@@ -981,6 +981,8 @@ describe("SendVote", () => {
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
 
+		const isEthBasedAppSpy = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockResolvedValue(true);
+
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
@@ -1063,6 +1065,7 @@ describe("SendVote", () => {
 		voteTransactionMock.mockRestore();
 		mockWalletData.mockRestore();
 		nanoXMock.mockRestore();
+		isEthBasedAppSpy.mockRestore();
 	});
 
 	it("should error if ledger is not supported", async () => {
@@ -1077,6 +1080,8 @@ describe("SendVote", () => {
 		const signTransactionSpy = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+
+		const isEthBasedAppSpy = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockResolvedValue(true);
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
@@ -1121,5 +1126,46 @@ describe("SendVote", () => {
 		broadcastMock.mockRestore();
 		voteTransactionMock.mockRestore();
 		nanoXMock.mockRestore();
+		isEthBasedAppSpy.mockRestore();
+	});
+
+	it("should disable send button if the encryption password is not provided", async () => {
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([]);
+		await wallet.synchroniser().votes();
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const votes: VoteValidatorProperties[] = [
+			{
+				amount: 10,
+				validatorAddress: validatorData[0].address,
+			},
+		];
+
+		render(
+			<Component activeProfile={profile} activeNetwork={wallet.network()} activeWallet={wallet} votes={votes} />,
+			{
+				route: `${voteURL}`,
+			},
+		);
+
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(reviewStepID)).toHaveTextContent(validatorData[0].address));
+
+		expect(screen.getAllByRole("radio")[1]).toBeChecked();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		// AuthenticationStep
+		expect(screen.getByTestId(authenticationStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(sendButton()).toBeDisabled());
+
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		votesMock.mockRestore();
 	});
 });
