@@ -170,7 +170,7 @@ describe("SelectAddressStep", () => {
 	it("should render select address step", async () => {
 		const { unmount } = render(
 			<FormWrapper>
-				<SelectAddressStep network={network} profile={profile} />
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
 			</FormWrapper>,
 			{ route },
 		);
@@ -183,7 +183,7 @@ describe("SelectAddressStep", () => {
 	it("should load addresses on mount", async () => {
 		const { unmount } = render(
 			<FormWrapper>
-				<SelectAddressStep network={network} profile={profile} />
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
 			</FormWrapper>,
 			{ route },
 		);
@@ -201,7 +201,7 @@ describe("SelectAddressStep", () => {
 
 		const { unmount } = render(
 			<FormWrapper>
-				<SelectAddressStep network={network} profile={profile} />
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
 			</FormWrapper>,
 			{ route },
 		);
@@ -225,7 +225,7 @@ describe("SelectAddressStep", () => {
 	it("should handle select all functionality", async () => {
 		const { unmount } = render(
 			<FormWrapper>
-				<SelectAddressStep network={network} profile={profile} />
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
 			</FormWrapper>,
 			{ route },
 		);
@@ -252,7 +252,7 @@ describe("SelectAddressStep", () => {
 	it("should load more addresses", async () => {
 		const { unmount } = render(
 			<FormWrapper>
-				<SelectAddressStep network={network} profile={profile} />
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
 			</FormWrapper>,
 			{ route },
 		);
@@ -275,7 +275,7 @@ describe("SelectAddressStep", () => {
 	it("should handle empty addresses by showing only first address", async () => {
 		render(
 			<FormWrapper>
-				<SelectAddressStep network={network} profile={profile} />
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
 			</FormWrapper>,
 			{ route },
 		);

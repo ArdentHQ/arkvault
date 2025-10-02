@@ -336,6 +336,7 @@ export const ImportAddressesSidePanel = ({
 						<TabPanel tabId={ImportAddressStep.ImportDetailStep}>
 							{isHDWalletImport && (
 								<HDWalletTabs
+									mnemonic={getValues("mnemonic")}
 									onClickEditWalletName={handleEditLedgerAlias}
 									onStepChange={setHDWalletActiveTab}
 									onCancel={() => {

@@ -30,6 +30,7 @@ export const HDWalletTabs = ({
 	onBack,
 	activeIndex,
 	addressesPerPage,
+	mnemonic,
 }: HDWalletTabsProperties) => {
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -56,7 +57,6 @@ export const HDWalletTabs = ({
 	const { isValid, isSubmitting, isDirty } = formState;
 
 	const {
-		mnemonic,
 		importOption,
 		acceptResponsibility,
 		useEncryption,
@@ -235,6 +235,7 @@ export const HDWalletTabs = ({
 
 							<TabPanel tabId={HDWalletTabStep.SelectAddressStep}>
 								<SelectAddressStep
+									mnemonic={mnemonic}
 									network={activeNetwork}
 									profile={activeProfile}
 									addressesPerPage={addressesPerPage}
