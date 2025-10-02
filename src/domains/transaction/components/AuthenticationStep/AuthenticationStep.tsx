@@ -217,8 +217,16 @@ export const AuthenticationStep = ({
 
 	const title = t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 
-	const requireMnemonic = wallet.actsWithMnemonic() || wallet.actsWithAddress() || wallet.actsWithPublicKey();
-	const requireEncryptionPassword = wallet.actsWithMnemonicWithEncryption() || wallet.actsWithSecretWithEncryption();
+	const requireMnemonic =
+		wallet.actsWithMnemonic() ||
+		wallet.actsWithAddress() ||
+		wallet.actsWithPublicKey() ||
+		wallet.actsWithBip44Mnemonic();
+
+	const requireEncryptionPassword =
+		wallet.actsWithMnemonicWithEncryption() ||
+		wallet.actsWithSecretWithEncryption() ||
+		wallet.actsWithBip44MnemonicWithEncryption();
 
 	const isTransaction = subject === "transaction";
 

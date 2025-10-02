@@ -3,6 +3,8 @@ import { Contracts } from "@/app/lib/profiles";
 
 import { debounceAsync } from "@/utils/debounce";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
+import { WalletData } from "@/app/lib/profiles/wallet.enum";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 
@@ -10,6 +12,12 @@ const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, password: string) => {
 	try {
 		const wif = await wallet.signingKey().get(password);
+
+		if (wallet.isHDWallet()) {
+			const account = HDWalletService.getAccount(wif, wallet.data().get(WalletData.DerivationPath) as string);
+
+			return account.address;
+		}
 
 		if (BIP39.validate(wif)) {
 			const { address } = new AddressService().fromMnemonic(wif);
@@ -50,7 +58,17 @@ export const authentication = (t: any) => {
 			validate: {
 				matchSenderAddress: (mnemonic: string) => {
 					try {
-						const { address } = new AddressService().fromMnemonic(mnemonic);
+						let address: string;
+
+						if (wallet.isHDWallet()) {
+							const account = HDWalletService.getAccount(
+								mnemonic,
+								wallet.data().get(WalletData.DerivationPath) as string,
+							);
+							address = account.address;
+						} else {
+							address = new AddressService().fromMnemonic(mnemonic).address;
+						}
 
 						if (address === wallet.address()) {
 							return true;

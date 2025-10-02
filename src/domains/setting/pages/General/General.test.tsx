@@ -22,6 +22,8 @@ import {
 } from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { renderHook } from "@testing-library/react";
+import { expect } from "vitest";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 const translations = buildTranslations();
 
@@ -514,6 +516,22 @@ describe("General Settings", () => {
 		expect(theme).toBe("light");
 
 		toastSpy.mockRestore();
+	});
+
+	it("should use HD wallets when enabled", async () => {
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await expect(screen.findByTestId("AdvancedToggle__toggle-useHDWallets")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("AdvancedToggle__toggle-useHDWallets"));
+
+		expect(submitButton()).toBeEnabled();
+
+		await userEvent.click(submitButton());
+
+		expect(profile.settings().get(ProfileSetting.UseHDWallets)).toBe(true);
 	});
 
 	it("should default to USD if market provider does not support the selected currency", async () => {

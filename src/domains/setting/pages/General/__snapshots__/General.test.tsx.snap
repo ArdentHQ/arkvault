@@ -2309,7 +2309,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
                       >
-                        Other
+                        Advanced
                       </h2>
                     </div>
                     <div
@@ -2369,6 +2369,136 @@ exports[`General Settings > should disable submit button when profile is not res
                             </div>
                           </div>
                         </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
+                                class="flex items-center justify-start space-x-0"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  HD Wallets
+                                </span>
+                                <span>
+                                  <span>
+                                    <div
+                                      class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+                                    />
+                                    <a
+                                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-base"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://docs.mainsailhq.com/"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <span
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                                      >
+                                        <span
+                                          class="flex flex-row items-center gap-2"
+                                        >
+                                          <span>
+                                            Learn more
+                                          </span>
+                                          <div
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+                                            data-testid="Link__external"
+                                          >
+                                            <div
+                                              style="height: 12px; width: 12px;"
+                                            >
+                                              <svg
+                                                id="arrow-external"
+                                                style="height: 100%; width: 100%;"
+                                                viewBox="0 0 20 20"
+                                                x="0"
+                                                xml:space="preserve"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                y="0"
+                                              >
+                                                <path
+                                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                />
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Allows creation and import of Hierarchical Deterministic (HD) Wallets
+                              </span>
+                            </div>
+                            <div
+                              class="mt-1"
+                            >
+                              <span
+                                data-testid="list-divided-item__value"
+                              >
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AdvancedToggle__toggle-useHDWallets"
+                                    name="useHDWallets"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex flex-col"
+                  >
+                    <div
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                    >
+                      <h2
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
+                      >
+                        Other
+                      </h2>
+                    </div>
+                    <div
+                      class="pt-4 pb-6 sm:px-6"
+                    >
+                      <ul
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        data-testid="list-divided__items"
+                      >
                         <li
                           class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
@@ -4833,7 +4963,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
                       >
-                        Other
+                        Advanced
                       </h2>
                     </div>
                     <div
@@ -4893,6 +5023,136 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             </div>
                           </div>
                         </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
+                                class="flex items-center justify-start space-x-0"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  HD Wallets
+                                </span>
+                                <span>
+                                  <span>
+                                    <div
+                                      class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+                                    />
+                                    <a
+                                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-base"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://docs.mainsailhq.com/"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <span
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                                      >
+                                        <span
+                                          class="flex flex-row items-center gap-2"
+                                        >
+                                          <span>
+                                            Learn more
+                                          </span>
+                                          <div
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+                                            data-testid="Link__external"
+                                          >
+                                            <div
+                                              style="height: 12px; width: 12px;"
+                                            >
+                                              <svg
+                                                id="arrow-external"
+                                                style="height: 100%; width: 100%;"
+                                                viewBox="0 0 20 20"
+                                                x="0"
+                                                xml:space="preserve"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                y="0"
+                                              >
+                                                <path
+                                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                />
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Allows creation and import of Hierarchical Deterministic (HD) Wallets
+                              </span>
+                            </div>
+                            <div
+                              class="mt-1"
+                            >
+                              <span
+                                data-testid="list-divided-item__value"
+                              >
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AdvancedToggle__toggle-useHDWallets"
+                                    name="useHDWallets"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex flex-col"
+                  >
+                    <div
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                    >
+                      <h2
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
+                      >
+                        Other
+                      </h2>
+                    </div>
+                    <div
+                      class="pt-4 pb-6 sm:px-6"
+                    >
+                      <ul
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        data-testid="list-divided__items"
+                      >
                         <li
                           class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
@@ -7311,7 +7571,7 @@ exports[`General Settings > should render 1`] = `
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
                       >
-                        Other
+                        Advanced
                       </h2>
                     </div>
                     <div
@@ -7371,6 +7631,136 @@ exports[`General Settings > should render 1`] = `
                             </div>
                           </div>
                         </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
+                                class="flex items-center justify-start space-x-0"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  HD Wallets
+                                </span>
+                                <span>
+                                  <span>
+                                    <div
+                                      class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+                                    />
+                                    <a
+                                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-base"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://docs.mainsailhq.com/"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <span
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                                      >
+                                        <span
+                                          class="flex flex-row items-center gap-2"
+                                        >
+                                          <span>
+                                            Learn more
+                                          </span>
+                                          <div
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+                                            data-testid="Link__external"
+                                          >
+                                            <div
+                                              style="height: 12px; width: 12px;"
+                                            >
+                                              <svg
+                                                id="arrow-external"
+                                                style="height: 100%; width: 100%;"
+                                                viewBox="0 0 20 20"
+                                                x="0"
+                                                xml:space="preserve"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                y="0"
+                                              >
+                                                <path
+                                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                />
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Allows creation and import of Hierarchical Deterministic (HD) Wallets
+                              </span>
+                            </div>
+                            <div
+                              class="mt-1"
+                            >
+                              <span
+                                data-testid="list-divided-item__value"
+                              >
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AdvancedToggle__toggle-useHDWallets"
+                                    name="useHDWallets"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex flex-col"
+                  >
+                    <div
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                    >
+                      <h2
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
+                      >
+                        Other
+                      </h2>
+                    </div>
+                    <div
+                      class="pt-4 pb-6 sm:px-6"
+                    >
+                      <ul
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        data-testid="list-divided__items"
+                      >
                         <li
                           class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
@@ -9790,7 +10180,7 @@ exports[`General Settings > should update profile 1`] = `
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
                       >
-                        Other
+                        Advanced
                       </h2>
                     </div>
                     <div
@@ -9850,6 +10240,136 @@ exports[`General Settings > should update profile 1`] = `
                             </div>
                           </div>
                         </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
+                                class="flex items-center justify-start space-x-0"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  HD Wallets
+                                </span>
+                                <span>
+                                  <span>
+                                    <div
+                                      class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+                                    />
+                                    <a
+                                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-base"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://docs.mainsailhq.com/"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <span
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                                      >
+                                        <span
+                                          class="flex flex-row items-center gap-2"
+                                        >
+                                          <span>
+                                            Learn more
+                                          </span>
+                                          <div
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+                                            data-testid="Link__external"
+                                          >
+                                            <div
+                                              style="height: 12px; width: 12px;"
+                                            >
+                                              <svg
+                                                id="arrow-external"
+                                                style="height: 100%; width: 100%;"
+                                                viewBox="0 0 20 20"
+                                                x="0"
+                                                xml:space="preserve"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                y="0"
+                                              >
+                                                <path
+                                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                />
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Allows creation and import of Hierarchical Deterministic (HD) Wallets
+                              </span>
+                            </div>
+                            <div
+                              class="mt-1"
+                            >
+                              <span
+                                data-testid="list-divided-item__value"
+                              >
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AdvancedToggle__toggle-useHDWallets"
+                                    name="useHDWallets"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex flex-col"
+                  >
+                    <div
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                    >
+                      <h2
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
+                      >
+                        Other
+                      </h2>
+                    </div>
+                    <div
+                      class="pt-4 pb-6 sm:px-6"
+                    >
+                      <ul
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        data-testid="list-divided__items"
+                      >
                         <li
                           class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
@@ -12269,7 +12789,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
                       >
-                        Other
+                        Advanced
                       </h2>
                     </div>
                     <div
@@ -12329,6 +12849,136 @@ exports[`General Settings > should update the avatar when removing focus from na
                             </div>
                           </div>
                         </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
+                                class="flex items-center justify-start space-x-0"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  HD Wallets
+                                </span>
+                                <span>
+                                  <span>
+                                    <div
+                                      class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+                                    />
+                                    <a
+                                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-base"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://docs.mainsailhq.com/"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <span
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                                      >
+                                        <span
+                                          class="flex flex-row items-center gap-2"
+                                        >
+                                          <span>
+                                            Learn more
+                                          </span>
+                                          <div
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+                                            data-testid="Link__external"
+                                          >
+                                            <div
+                                              style="height: 12px; width: 12px;"
+                                            >
+                                              <svg
+                                                id="arrow-external"
+                                                style="height: 100%; width: 100%;"
+                                                viewBox="0 0 20 20"
+                                                x="0"
+                                                xml:space="preserve"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                y="0"
+                                              >
+                                                <path
+                                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                />
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Allows creation and import of Hierarchical Deterministic (HD) Wallets
+                              </span>
+                            </div>
+                            <div
+                              class="mt-1"
+                            >
+                              <span
+                                data-testid="list-divided-item__value"
+                              >
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AdvancedToggle__toggle-useHDWallets"
+                                    name="useHDWallets"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex flex-col"
+                  >
+                    <div
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                    >
+                      <h2
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
+                      >
+                        Other
+                      </h2>
+                    </div>
+                    <div
+                      class="pt-4 pb-6 sm:px-6"
+                    >
+                      <ul
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        data-testid="list-divided__items"
+                      >
                         <li
                           class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"
@@ -14846,7 +15496,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
                       >
-                        Other
+                        Advanced
                       </h2>
                     </div>
                     <div
@@ -14906,6 +15556,136 @@ exports[`General Settings > should update the avatar when removing focus from na
                             </div>
                           </div>
                         </li>
+                        <li
+                          class="flex w-full flex-col"
+                          data-testid="list-divided-item__wrapper"
+                        >
+                          <div
+                            class="flex items-start"
+                            data-testid="list-divided-item__inner-wrapper"
+                          >
+                            <div
+                              class="flex w-full flex-col space-y-2"
+                            >
+                              <div
+                                class="flex items-center justify-start space-x-0"
+                              >
+                                <span
+                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+                                  data-testid="list-divided-item__label"
+                                >
+                                  HD Wallets
+                                </span>
+                                <span>
+                                  <span>
+                                    <div
+                                      class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+                                    />
+                                    <a
+                                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block text-base"
+                                      data-ring-focus-margin="-m-1"
+                                      data-testid="Link"
+                                      href="https://docs.mainsailhq.com/"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <span
+                                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+                                      >
+                                        <span
+                                          class="flex flex-row items-center gap-2"
+                                        >
+                                          <span>
+                                            Learn more
+                                          </span>
+                                          <div
+                                            class="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+                                            data-testid="Link__external"
+                                          >
+                                            <div
+                                              style="height: 12px; width: 12px;"
+                                            >
+                                              <svg
+                                                id="arrow-external"
+                                                style="height: 100%; width: 100%;"
+                                                viewBox="0 0 20 20"
+                                                x="0"
+                                                xml:space="preserve"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                y="0"
+                                              >
+                                                <path
+                                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                                  fill="none"
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                />
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </span>
+                                    </a>
+                                  </span>
+                                </span>
+                              </div>
+                              <span
+                                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+                                data-testid="list-divided-item__label--description"
+                              >
+                                Allows creation and import of Hierarchical Deterministic (HD) Wallets
+                              </span>
+                            </div>
+                            <div
+                              class="mt-1"
+                            >
+                              <span
+                                data-testid="list-divided-item__value"
+                              >
+                                <label
+                                  class="flex items-center cursor-pointer h-4"
+                                >
+                                  <input
+                                    class="toggle-input sr-only"
+                                    data-testid="AdvancedToggle__toggle-useHDWallets"
+                                    name="useHDWallets"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
+                                  >
+                                    <span
+                                      class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex flex-col"
+                  >
+                    <div
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                    >
+                      <h2
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
+                      >
+                        Other
+                      </h2>
+                    </div>
+                    <div
+                      class="pt-4 pb-6 sm:px-6"
+                    >
+                      <ul
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        data-testid="list-divided__items"
+                      >
                         <li
                           class="flex w-full flex-col"
                           data-testid="list-divided-item__wrapper"

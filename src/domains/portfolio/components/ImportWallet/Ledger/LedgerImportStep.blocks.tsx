@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
@@ -12,6 +12,9 @@ import { useBreakpoint } from "@/app/hooks";
 import { AmountWrapper } from "./LedgerScanStep.blocks";
 import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
+import { Column } from "react-table";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 export const SectionHeaderMobile = ({ title }: { title: string }) => (
 	<div
@@ -119,7 +122,7 @@ export const SingleImport = ({
 	}
 
 	return (
-		<div className="flex flex-col gap-4">
+		<div className="flex flex-col gap-4" data-testid="SingleImport__container">
 			<DesktopImportSection title={t("COMMON.IMPORTED")}>
 				<SectionBodyItem title={t("COMMON.ADDRESS")}>
 					<Address address={ledgerWallet.address} showCopyButton truncateOnTable />
@@ -185,5 +188,114 @@ export const ImportedLedgerMobileItem = ({
 				</MobileSection>
 			</div>
 		</MobileCard>
+	);
+};
+
+export const MultipleImport = ({
+	network,
+	onClickEditWalletName,
+	profile,
+	wallets,
+}: {
+	network: Networks.Network;
+	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
+	profile: Contracts.IProfile;
+	wallets: LedgerData[];
+}) => {
+	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
+
+	const columns = useMemo<Column<LedgerData>[]>(
+		() => [
+			{
+				Header: t("COMMON.ADDRESS"),
+				accessor: "address",
+				headerClassName: "no-border",
+			},
+			{
+				Header: t("COMMON.EDIT_item", { item: t("COMMON.NAME") }),
+				accessor: "balance",
+				className: "justify-end",
+				headerClassName: "no-border",
+			},
+		],
+		[t],
+	);
+
+	const data = useMemo(() => wallets, [wallets]);
+
+	const renderTableRow = useCallback(
+		(wallet: LedgerData) => {
+			const importedWallet = profile.wallets().findByAddressWithNetwork(wallet.address, network.id());
+			assertWallet(importedWallet);
+
+			return (
+				<TableRow className="relative">
+					<TableCell variant="start" innerClassName="justify-center">
+						<div className="flex flex-1 flex-col py-2">
+							<Address
+								walletName={importedWallet.alias()}
+								address={wallet.address}
+								showCopyButton
+								truncateOnTable
+							/>
+							<AmountWrapper isLoading={false}>
+								<Amount
+									value={wallet.balance ?? 0}
+									ticker={network.ticker()}
+									className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
+								/>
+							</AmountWrapper>
+						</div>
+					</TableCell>
+
+					<TableCell variant="end" innerClassName="justify-end font-semibold">
+						<Button
+							variant="secondary"
+							onClick={() => onClickEditWalletName(importedWallet)}
+							data-testid="LedgerImportStep__edit-alias"
+							className="my-2.5 p-4"
+						>
+							<Icon name="Pencil" dimensions={[14, 14]} />
+						</Button>
+					</TableCell>
+				</TableRow>
+			);
+		},
+		[network],
+	);
+
+	return (
+		<div>
+			<div className="mb-3 sm:hidden">
+				<SectionHeaderMobile title={t("COMMON.ADDRESSES")} />
+			</div>
+
+			{isXs ? (
+				<div className="flex flex-col gap-2">
+					{wallets.map((wallet) => {
+						const importedWallet = profile.wallets().findByAddressWithNetwork(wallet.address, network.id());
+						assertWallet(importedWallet);
+
+						return (
+							<ImportedLedgerMobileItem
+								key={wallet.address}
+								name={importedWallet.alias() ?? ""}
+								address={wallet.address}
+								balance={wallet.balance}
+								coin={network.ticker()}
+								onClick={() => onClickEditWalletName(importedWallet)}
+							/>
+						);
+					})}
+				</div>
+			) : (
+				<TableWrapper className="md:border-b-0">
+					<Table columns={columns} data={data} className="with-x-padding">
+						{renderTableRow}
+					</Table>
+				</TableWrapper>
+			)}
+		</div>
 	);
 };

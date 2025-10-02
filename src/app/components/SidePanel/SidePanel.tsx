@@ -17,6 +17,9 @@ import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
+import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
+
+export const DEFAULT_TRANSITION_DELAY_MS = 350;
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -141,7 +144,7 @@ export const SidePanel = ({
 			transformOrigin: "right",
 			transitionProperty: "transform",
 		},
-		duration: 350,
+		duration: DEFAULT_TRANSITION_DELAY_MS,
 		initial: {
 			transform: "translateX(100%)",
 		},

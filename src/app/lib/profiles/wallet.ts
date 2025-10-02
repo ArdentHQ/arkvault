@@ -129,6 +129,11 @@ export class Wallet implements IReadWriteWallet {
 		);
 	}
 
+	/** {@inheritDoc IReadWriteWallet.accountName} */
+	public accountName(): string | undefined {
+		return this.settings().get(WalletSetting.AccountName);
+	}
+
 	/** {@inheritDoc IReadWriteWallet.displayName} */
 	public displayName(): string | undefined {
 		return this.settings().get(WalletSetting.Alias) || this.username() || this.knownName();
@@ -344,8 +349,16 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedger} */
+	public isHDWallet(): boolean {
+		return (
+			this.data().get(WalletData.DerivationPath) !== undefined &&
+			this.data().get(WalletData.AddressIndex) !== undefined
+		);
+	}
+
+	/** {@inheritDoc IReadWriteWallet.isLedger} */
 	public isLedger(): boolean {
-		return this.data().get(WalletData.DerivationPath) !== undefined;
+		return this.data().get(WalletData.DerivationPath) !== undefined && !this.isHDWallet();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedgerNanoX} */
@@ -579,6 +592,16 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.actsWithPublicKey} */
 	public actsWithPublicKey(): boolean {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PublicKey;
+	}
+
+	/** {@inheritDoc IReadWriteWallet.actsWithBip44Mnemonic} */
+	public actsWithBip44Mnemonic(): boolean {
+		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.MNEMONIC;
+	}
+
+	/** {@inheritDoc IReadWriteWallet.actsWithBip44Mnemonic} */
+	public actsWithBip44MnemonicWithEncryption(): boolean {
+		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.actsWithAddressWithDerivationPath} */

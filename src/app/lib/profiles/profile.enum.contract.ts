@@ -19,6 +19,7 @@ export enum ProfileSetting {
 	Locale = "LOCALE",
 	Theme = "THEME",
 	TimeFormat = "TIME_FORMAT",
+	UseHDWallets = "USE_HD_WALLETS",
 	UseNetworkWalletNames = "USE_NETWORK_WALLET_NAMES",
 	UseTestNetworks = "USE_TEST_NETWORKS",
 	LastVisitedPage = "LAST_VISITED_PAGE",
