@@ -160,25 +160,17 @@ export const CreateAddressesSidePanel = ({
 		if (newIndex === CreateStep.SuccessStep && !isHDWalletCreation) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
 
-			let wallet = getValues("wallet");
-
 			assertNetwork(network);
 			assertString(mnemonic);
-			assertWallet(wallet);
 
 			setIsGeneratingWallet(false);
-			assertWallet(wallet);
-
-			activeProfile.wallets().forget(wallet.id());
 
 			const importedWallets = await importWallets({
 				type: "bip39",
 				value: mnemonic,
 			});
 
-			wallet = importedWallets[0];
-
-			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
+			const wallet = importedWallets[0];
 
 			if (useEncryption && parameters.encryptionPassword) {
 				try {
