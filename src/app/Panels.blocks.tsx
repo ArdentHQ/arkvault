@@ -11,7 +11,7 @@ import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateW
 import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
 import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
-import { Panel, usePanels } from "./contexts";
+import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "./contexts";
 import { useTranslation } from "react-i18next";
 import { useHasProfile } from "./hooks";
 
@@ -47,7 +47,7 @@ const DiscardPanelConfirmationModal = () => {
 };
 
 export const AppPanels = () => {
-	const { currentOpenedPanel, closePanel } = usePanels();
+	const { currentOpenedPanel, closePanel, openPanel } = usePanels();
 
 	const hasProfile = useHasProfile();
 
@@ -60,7 +60,16 @@ export const AppPanels = () => {
 			<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
 
 			<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
-			<CreateAddressesSidePanel open={currentOpenedPanel === Panel.CreateAddress} onOpenChange={closePanel} />
+			<CreateAddressesSidePanel
+				open={currentOpenedPanel === Panel.CreateAddress}
+				onOpenChange={closePanel}
+				onImportAddress={() => {
+					closePanel();
+					setTimeout(() => {
+						openPanel(Panel.ImportAddress);
+					}, SIDE_PANEL_TRANSITION_DURATION);
+				}}
+			/>
 			<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
 			<SendUsernameResignationSidePanel
 				open={currentOpenedPanel === Panel.SendUsernameResignation}
