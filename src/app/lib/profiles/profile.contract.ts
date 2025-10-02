@@ -117,6 +117,14 @@ export interface IProfile {
 	avatar(): string;
 
 	/**
+	 * Get useHDWallets value.
+	 *
+	 * @return {boolean}
+	 * @memberof IProfile
+	 */
+	usesHDWallets(): boolean;
+
+	/**
 	 * Get the appearance service instance.
 	 *
 	 * @return {IAppearanceService}

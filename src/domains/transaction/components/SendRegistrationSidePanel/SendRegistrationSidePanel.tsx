@@ -414,7 +414,8 @@ export const SendRegistrationSidePanel = ({
 						<Button
 							data-testid="SendRegistration__send-button"
 							onClick={() => void handleSubmit()}
-							disabled={isNextDisabled || isSubmitting}
+							disabled={isNextDisabled || isSubmitting || !isValid}
+							isLoading={isSubmitting}
 						>
 							{t("COMMON.SEND")}
 						</Button>

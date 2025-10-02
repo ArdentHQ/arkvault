@@ -9,22 +9,25 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX, useCallback, useState, useContext, useMemo } from "react";
+import React, { JSX, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
+import { SidePanelStyledStep } from "./SidePanelStyledStep";
+import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
-import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 import { useLocalStorage } from "usehooks-ts";
-import { Tooltip } from "@/app/components/Tooltip";
 import { useTranslation } from "react-i18next";
+
+export const DEFAULT_TRANSITION_DELAY_MS = 350;
 
 interface SidePanelProps {
 	children: React.ReactNode;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	title: string;
+	title: string | React.ReactNode;
 	titleIcon?: React.ReactNode;
 	subtitle?: string;
 	dataTestId?: string;
@@ -150,7 +153,7 @@ export const SidePanel = ({
 			transformOrigin: "right",
 			transitionProperty: "transform",
 		},
-		duration: 350,
+		duration: DEFAULT_TRANSITION_DELAY_MS,
 		initial: {
 			transform: "translateX(100%)",
 		},

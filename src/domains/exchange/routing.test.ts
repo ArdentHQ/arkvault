@@ -4,10 +4,7 @@ import { ProfilePaths } from "@/router/paths";
 
 describe("routing", () => {
 	it("should have exchange routes", () => {
-		expect(ExchangeRoutes).toStrictEqual([
-			expect.objectContaining({ path: ProfilePaths.ExchangeView }),
-			expect.objectContaining({ path: ProfilePaths.Exchange }),
-		]);
+		expect(ExchangeRoutes).toStrictEqual([expect.objectContaining({ path: ProfilePaths.Exchange })]);
 	});
 
 	it.each(ExchangeRoutes)("should use lazy loading with preload", (route) => {

@@ -123,6 +123,14 @@ export interface IReadWriteWallet {
 	alias(): string | undefined;
 
 	/**
+	 * Get the account name
+	 *
+	 * @return {(string | undefined)}
+	 * @memberof IReadWriteWallet
+	 */
+	accountName(): string | undefined;
+
+	/**
 	 * Get the display name.
 	 *
 	 * @return {(string | undefined)}
@@ -331,6 +339,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isOwnedByTeam(): boolean;
+
+	/**
+	 * Determine if Hierarchical Deterministic (HD) wallet
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isHDWallet(): boolean;
 
 	/**
 	 * Determine if the wallet belongs to a ledger.
@@ -655,6 +671,22 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	actsWithPublicKey(): boolean;
+
+	/**
+	 * Determines if the wallet has been imported with a BIP44 mnemonic
+	 *
+	 * @return {*}  {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	actsWithBip44Mnemonic(): boolean;
+
+	/**
+	 * Determines if the wallet has been imported with a BIP44 mnemonic with encryption
+	 *
+	 * @return {*}  {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	actsWithBip44MnemonicWithEncryption(): boolean;
 
 	/**
 	 * Determines if the wallet has been imported with an address with a derivation path.

@@ -24,6 +24,7 @@ const baseSettings = {
 	NAME: profileName,
 	THEME: "light",
 	TIME_FORMAT: "h:mm A",
+	USE_HD_WALLETS: false,
 	USE_NETWORK_WALLET_NAMES: false,
 	USE_TEST_NETWORKS: false,
 	WALLET_SELECTION_MODE: "single",

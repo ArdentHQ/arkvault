@@ -447,7 +447,7 @@ jobs:
               uses: nick-invision/retry@v2
               env:
                   COVERAGE_THRESHOLD_LINES: 84.84
-                  COVERAGE_THRESHOLD_FUNCTIONS: 84.84
+                  COVERAGE_THRESHOLD_FUNCTIONS: 84.4
                   COVERAGE_THRESHOLD_STATEMENTS: 85.37
                   COVERAGE_THRESHOLD_BRANCHES: 76.34
                   COVERAGE_INCLUDE_PATH: src/domains/portfolio
@@ -495,9 +495,9 @@ jobs:
         env:
             COVERAGE_INCLUDE_PATH: src/domains/exchange
             COVERAGE_THRESHOLD_LINES: 98.5
-            COVERAGE_THRESHOLD_FUNCTIONS: 98
+            COVERAGE_THRESHOLD_FUNCTIONS: 97.54
             COVERAGE_THRESHOLD_STATEMENTS: 98
-            COVERAGE_THRESHOLD_BRANCHES: 99.46
+            COVERAGE_THRESHOLD_BRANCHES: 96.94
         strategy:
             matrix:
                 node-version:

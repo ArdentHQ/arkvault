@@ -2,7 +2,7 @@ import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 import { AddressRow } from "./AddressRow";
-import { expect } from "vitest";
+import { expect, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
 
 describe("AddressRow", () => {
@@ -266,5 +266,59 @@ describe("AddressRow", () => {
 
 		windowOpen.mockRestore();
 		explorerLinkSpy.mockRestore();
+	});
+
+	it("should render HD wallet label", () => {
+		vi.spyOn(wallet, "isHDWallet").mockImplementation(() => true);
+
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				onEdit={vi.fn()}
+			/>,
+		);
+
+		expect(screen.getByTestId("hd-wallet-label")).toBeInTheDocument();
+	});
+
+	it("should render HD wallet label with primary variant when selected", () => {
+		vi.spyOn(wallet, "isHDWallet").mockImplementation(() => true);
+
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={true}
+				onEdit={vi.fn()}
+			/>,
+		);
+
+		expect(screen.getByTestId("hd-wallet-label")).toHaveClass("text-theme-primary-600");
+	});
+
+	it("should render HD wallet label with neutral variant when not selected", () => {
+		vi.spyOn(wallet, "isHDWallet").mockImplementation(() => true);
+
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				onEdit={vi.fn()}
+			/>,
+		);
+
+		expect(screen.getByTestId("hd-wallet-label")).toHaveClass("text-theme-secondary-700");
 	});
 });

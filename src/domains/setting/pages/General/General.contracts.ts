@@ -12,6 +12,7 @@ interface GeneralSettingsState {
 	useNetworkWalletNames: boolean;
 	viewingMode: ViewingModeType;
 	showDevelopmentNetwork: boolean;
+	useHDWallets: boolean;
 }
 
 interface SettingsOption {

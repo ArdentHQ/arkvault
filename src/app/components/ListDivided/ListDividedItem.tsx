@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import { ListDividedItemProperties } from "./ListDivided.contracts";
+import { twMerge } from "tailwind-merge";
 
 export const ListDividedItem = ({
 	isFloatingLabel,
@@ -10,6 +11,7 @@ export const ListDividedItem = ({
 	labelDescription,
 	labelDescriptionClass,
 	labelAddon,
+	labelHeaderClass,
 	value,
 	itemValueClass,
 	content,
@@ -28,7 +30,7 @@ export const ListDividedItem = ({
 				data-testid="list-divided-item__inner-wrapper"
 			>
 				<div className="flex w-full flex-col space-y-2">
-					<div className="flex items-center justify-between space-x-5">
+					<div className={twMerge("flex items-center justify-between space-x-5", labelHeaderClass)}>
 						<span
 							className={
 								labelClass ||

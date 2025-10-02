@@ -66,9 +66,9 @@ export class ClientService {
 	}
 
 	public async unconfirmedTransactions(
-		query?: Services.ClientTransactionsInput,
+		query: Services.ClientTransactionsInput = {},
 	): Promise<Collections.UnconfirmedTransactionDataCollection> {
-		const { searchParams } = this.#createSearchParams(query ?? {});
+		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
 		const response = await this.#client.transactions().allUnconfirmed(page, limit, parameters);
