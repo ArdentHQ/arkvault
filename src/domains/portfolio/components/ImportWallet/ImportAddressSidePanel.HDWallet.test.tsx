@@ -255,6 +255,193 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		});
 	});
 
+	it("should prevent already imported mnemonic when importing a new HD wallet", async () => {
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic,
+		});
+
+		profile.wallets().push(wallet);
+
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		// Navigate to HD wallet import
+		await user.click(screen.getByText("HD Wallet"));
+
+		// Select account step should be visible
+		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
+
+		const radios = screen.getAllByTestId("AccountRow--radio");
+		expect(radios.length).toBeGreaterThan(0);
+
+		// Select import new HD wallet
+		await user.click(radios[1]);
+
+		await user.click(getContinueButton());
+
+		// Enter already imported mnemonic
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
+
+		// Continue button should be disabled
+		expect(getContinueButton()).toBeDisabled();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				"This value is already imported."
+			);
+		});
+
+		profile.wallets().forget(wallet.id());
+	});
+
+	it("should import addresses for existing HD Wallet - mnemonic", async () => {
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic,
+		});
+
+		wallet.mutator().accountName("Test Account");
+
+		profile.wallets().push(wallet);
+
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		// Navigate to HD wallet import
+		await user.click(screen.getByText("HD Wallet"));
+
+		// Select account step should be visible
+		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
+
+		const radios = screen.getAllByTestId("AccountRow--radio");
+		expect(radios.length).toBeGreaterThan(0);
+
+		// Select import existing wallet
+		await user.click(radios[0]);
+
+		await user.click(getContinueButton());
+
+		await expect(screen.findByTestId("EnterImportValueStep")).resolves.toBeVisible();
+
+		// Enter already imported mnemonic
+		await user.clear(screen.getByTestId("InputPassword"));
+		await user.paste(mnemonic);
+
+		// Continue button should be enabled
+		await waitFor(() => {
+			expect(getContinueButton()).toBeEnabled();
+		});
+
+		await user.click(getContinueButton());
+
+		await expect(screen.findByTestId("SelectAddressStep")).resolves.toBeVisible();
+
+		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+
+		const addressCheckboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+
+		// First address checkbox should be disabled as it is already imported
+		expect(addressCheckboxes[0]).toBeDisabled();
+
+		await user.click(addressCheckboxes[1]);
+
+		await waitFor(() => {
+			expect(getContinueButton()).toBeEnabled();
+		});
+
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
+		});
+
+		for (const wallet of profile.wallets().values()) {
+			if (wallet.isHDWallet()) {
+				profile.wallets().forget(wallet.id());
+			}
+		}
+	});
+
+	it("should import addresses for existing HD Wallet - encrypted password", async () => {
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic,
+			password: "password",
+		});
+
+		wallet.mutator().accountName("Encrypted Account");
+
+		profile.wallets().push(wallet);
+
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		// Navigate to HD wallet import
+		await user.click(screen.getByText("HD Wallet"));
+
+		// Select account step should be visible
+		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
+
+		const account = screen.getByText("Encrypted Account");
+
+		// Select import existing wallet
+		await user.click(account);
+
+		await user.click(getContinueButton());
+
+		await expect(screen.findByTestId("EnterImportValueStep")).resolves.toBeVisible();
+
+		// Enter already imported mnemonic
+		await user.clear(screen.getByTestId("InputPassword"));
+		await user.paste("password");
+
+		// Continue button should be enabled
+		await waitFor(() => {
+			expect(getContinueButton()).toBeEnabled();
+		});
+
+		await user.click(getContinueButton());
+
+		await expect(screen.findByTestId("SelectAddressStep")).resolves.toBeVisible();
+
+		await expect(screen.findByTestId("SelectAddressStep__load-more")).resolves.toBeVisible();
+
+		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+
+		const addressCheckboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+
+		await waitFor(() => {
+			expect(addressCheckboxes.length).toBe(6);
+		});
+
+		// First address checkbox should be disabled as it is already imported
+		expect(addressCheckboxes[0]).toBeDisabled();
+
+		await user.click(addressCheckboxes[1]);
+
+		await waitFor(() => {
+			expect(getContinueButton()).toBeEnabled();
+		});
+
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
+		});
+
+		for (const wallet of profile.wallets().values()) {
+			if (wallet.isHDWallet()) {
+				profile.wallets().forget(wallet.id());
+			}
+		}
+	});
+
 	it("should handle keyboard navigation in HD wallet flow", async () => {
 		const user = userEvent.setup();
 
