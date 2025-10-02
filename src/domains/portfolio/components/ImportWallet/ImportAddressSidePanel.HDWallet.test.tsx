@@ -22,6 +22,7 @@ const mnemonic = getDefaultMainsailWalletMnemonic();
 const getMnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
 const getContinueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const getBackButton = () => screen.getByTestId("ImportWallet__back-button");
+const getAddressCheckboxes = () => screen.getAllByTestId("SelectAddressStep__checkbox-row");
 
 describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 	let profile: Contracts.IProfile;
@@ -167,7 +168,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		});
 
 		// Select an address
-		const addressCheckbox = screen.getAllByTestId("SelectAddressStep__checkbox-row")[0];
+		const addressCheckbox = getAddressCheckboxes()[0];
 		await user.click(addressCheckbox);
 
 		const continueButton = getContinueButton();
@@ -343,7 +344,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
 
-		const addressCheckboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+		const addressCheckboxes = getAddressCheckboxes();
 
 		// First address checkbox should be disabled as it is already imported
 		expect(addressCheckboxes[0]).toBeDisabled();
@@ -414,7 +415,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 
 		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
 
-		const addressCheckboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+		const addressCheckboxes = getAddressCheckboxes();
 
 		await waitFor(() => {
 			expect(addressCheckboxes.length).toBe(6);
@@ -483,14 +484,14 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("SelectAddressStep__checkbox-row").length).toBe(6);
+			expect(getAddressCheckboxes()).toBe(6);
 		});
 
 		const addressRows = screen.getAllByTestId("Address__address");
 		const firstAddress = addressRows[0].textContent;
 		const secondAddress = addressRows[1].textContent;
 
-		const addressCheckboxes = screen.getAllByTestId("SelectAddressStep__checkbox-row");
+		const addressCheckboxes = getAddressCheckboxes();
 		await user.click(addressCheckboxes[1]);
 		await user.click(addressCheckboxes[0]);
 
