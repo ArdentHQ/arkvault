@@ -14,7 +14,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useWalletImport } from "@/domains/wallet/hooks";
 import { useForm } from "react-hook-form";
-import { assertNetwork, assertString, } from "@/utils/assertions";
+import { assertNetwork, assertString } from "@/utils/assertions";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
 import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
