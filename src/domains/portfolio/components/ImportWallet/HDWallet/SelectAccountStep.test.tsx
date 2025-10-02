@@ -27,6 +27,8 @@ const FormWrapper = ({ children, defaultValues = {} }: { children: React.ReactNo
 		mode: "onChange",
 	});
 
+	form.register("selectedAccount");
+
 	return <FormProvider {...form}>{children}</FormProvider>;
 };
 
@@ -120,6 +122,22 @@ describe("SelectAccountStep", () => {
 
 		const firstAccountRadio = addressRowRadioElements()[0];
 		expect(firstAccountRadio).toBeChecked();
+
+		unmount();
+	});
+
+	it("should keep the selected account if any selected", async () => {
+		const { unmount } = render(
+			<FormWrapper defaultValues={{selectedAccount: "Test Account 2"}}>
+				<SelectAccountStep profile={profile} />
+			</FormWrapper>,
+			{ route },
+		);
+
+		const radioElements = addressRowRadioElements();
+
+		expect(radioElements[0]).not.toBeChecked();
+		expect(radioElements[1]).toBeChecked();
 
 		unmount();
 	});

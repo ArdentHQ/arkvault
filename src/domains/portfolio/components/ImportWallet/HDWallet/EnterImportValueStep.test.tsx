@@ -12,7 +12,6 @@ import {
 import { EnterImportValueStep } from "./EnterImportValueStep";
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
-import userEvent from "@testing-library/user-event";
 
 const fixtureProfileId = getMainsailProfileId();
 const route = `/profiles/${fixtureProfileId}/dashboard`;
