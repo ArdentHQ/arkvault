@@ -88,9 +88,9 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 			}
 		});
 
-	// When a panel is closed, we update the reset key. However, if we try to open another panel
-	// immediately, the previous panel may not have been completely reset yet. We need to wait
-	// for the panel to be fully removed from the DOM before considering it as closed.
+	// We need to wait for the component to be fully reset before considering the panel closed.
+	// The resetKey destroys the old component and creates a new one, but if we try to open
+	// another panel immediately, the old component may not have been completely destroyed yet.
 	useEffect(() => {
 		if (componentResetedPromiseResolver) {
 			componentResetedPromiseResolver();
