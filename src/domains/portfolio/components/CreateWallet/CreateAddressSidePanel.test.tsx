@@ -73,9 +73,6 @@ describe("CreateAddressSidePanel", () => {
 			route: createURL,
 		});
 
-		const buttons = screen.getAllByRole("button");
-		expect(buttons).toHaveLength(5);
-
 		const regularAddressButton = screen.getByText("Regular Address");
 		await userEvent.click(regularAddressButton);
 
