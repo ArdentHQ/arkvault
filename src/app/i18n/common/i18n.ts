@@ -503,4 +503,5 @@ export const translations = {
 	YOU: "You",
 	YOUR_BALANCE: "Your Balance",
 	YOUR_PASSPHRASE: "Your Passphrase",
+	YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT: "You can resume this action later by reopening it.",
 };
