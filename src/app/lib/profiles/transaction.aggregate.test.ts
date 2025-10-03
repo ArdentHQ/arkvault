@@ -277,5 +277,5 @@ describe("TransactionAggregate", () => {
 			expect(result).toBeInstanceOf(Object);
 			expect(result.items()).toHaveLength(0);
 		});
-	})
+	});
 });
