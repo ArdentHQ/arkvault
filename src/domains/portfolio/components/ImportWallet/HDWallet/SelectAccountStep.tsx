@@ -203,16 +203,16 @@ export const SelectAccountStep = ({ profile }: { profile: ProfilesContracts.IPro
 		setValue("selectedAccount", accountName);
 	};
 
+	const selectedAccountName = watch("selectedAccount") as string | undefined;
+	const isImportNewSelected = selectedAccountName === undefined;
+
 	useEffect(() => {
 		register("selectedAccount");
 
-		if (groupedWallets.length > 0) {
+		if (groupedWallets.length > 0 && !selectedAccountName) {
 			setAccountName(groupedWallets[0][0].accountName());
 		}
 	}, [register]);
-
-	const selectedAccountName = watch("selectedAccount") as string | undefined;
-	const isImportNewSelected = selectedAccountName === undefined;
 
 	return (
 		<section data-testid="SelectAccountStep" className="space-y-2 sm:space-y-1">

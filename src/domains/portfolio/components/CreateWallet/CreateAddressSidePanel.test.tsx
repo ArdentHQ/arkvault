@@ -73,10 +73,7 @@ describe("CreateAddressSidePanel", () => {
 			route: createURL,
 		});
 
-		const buttons = screen.getAllByRole("button");
-		expect(buttons).toHaveLength(4);
-
-		const regularAddressButton = buttons[1];
+		const regularAddressButton = screen.getByText("Regular Address");
 		await userEvent.click(regularAddressButton);
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();

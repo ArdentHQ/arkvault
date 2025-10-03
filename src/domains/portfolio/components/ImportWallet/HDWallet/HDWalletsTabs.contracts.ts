@@ -4,6 +4,7 @@ import { Services } from "@/app/lib/mainsail";
 
 export enum HDWalletTabStep {
 	SelectAccountStep = 1,
+	EnterImportValueStep = 2,
 	EnterMnemonicStep,
 	EncryptPasswordStep,
 	SelectAddressStep,
@@ -37,6 +38,6 @@ export interface AddressData {
 	address: string;
 	path: string;
 	balance?: number;
-	isNew?: boolean;
+	isImported?: boolean;
 	levels: Services.IdentityLevels;
 }

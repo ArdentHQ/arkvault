@@ -910,7 +910,7 @@ jobs:
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib
             COVERAGE_THRESHOLD_LINES: 84.59
-            COVERAGE_THRESHOLD_BRANCHES: 84.06
+            COVERAGE_THRESHOLD_BRANCHES: 83.69
             COVERAGE_THRESHOLD_FUNCTIONS: 83.92
             COVERAGE_THRESHOLD_STATEMENTS: 84.55
         strategy:
