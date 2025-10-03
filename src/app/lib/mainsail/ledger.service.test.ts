@@ -279,7 +279,7 @@ describe("LedgerService", () => {
 
 			const HDKeyModule = await import("@ardenthq/arkvault-crypto");
 			const hdKeySpy = vi.spyOn(HDKeyModule.HDKey, "fromCompressedPublicKey").mockReturnValue({
-				derive: () => ({publicKey: ""})
+				derive: () => ({ publicKey: "" }),
 			});
 
 			await ledgerService.connect();
