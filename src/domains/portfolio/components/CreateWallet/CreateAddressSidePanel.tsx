@@ -14,8 +14,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useWalletImport } from "@/domains/wallet/hooks";
 import { useForm } from "react-hook-form";
-import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
-import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { assertNetwork, assertString } from "@/utils/assertions";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
 import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
@@ -157,37 +156,30 @@ export const CreateAddressesSidePanel = ({
 			return;
 		}
 
-		if (newIndex === CreateStep.SuccessStep && !usesHDWallets) {
+		if (newIndex === CreateStep.SuccessStep && !isHDWalletCreation) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
-
-			let wallet = getValues("wallet");
 
 			assertNetwork(network);
 			assertString(mnemonic);
-			assertWallet(wallet);
 
 			setIsGeneratingWallet(false);
-			assertWallet(wallet);
-			wallet.mutator().alias(getDefaultAlias({ profile: activeProfile }));
 
 			const importedWallets = await importWallets({
 				type: "bip39",
 				value: mnemonic,
 			});
 
+			const wallet = importedWallets[0];
+
 			if (useEncryption && parameters.encryptionPassword) {
 				try {
-					const importedWallet = importedWallets[0];
-					if (importedWallet) {
-						await importedWallet.signingKey().set(mnemonic, parameters.encryptionPassword);
-						importedWallet
-							.data()
-							.set(
-								Contracts.WalletData.ImportMethod,
-								Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
-							);
-						wallet = importedWallet;
-					}
+					await wallet.signingKey().set(mnemonic, parameters.encryptionPassword);
+					wallet
+						.data()
+						.set(
+							Contracts.WalletData.ImportMethod,
+							Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION,
+						);
 				} catch {
 					setIsGeneratingWallet(false);
 					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
@@ -233,7 +225,7 @@ export const CreateAddressesSidePanel = ({
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
 	const showFooter = (): boolean => {
-		if (usesHDWallets) {
+		if (isHDWalletCreation) {
 			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep;
 		}
 

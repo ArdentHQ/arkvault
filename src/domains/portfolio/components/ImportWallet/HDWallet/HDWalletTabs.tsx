@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { Contracts } from "@/app/lib/profiles";
 import { useFormContext } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
@@ -21,6 +22,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { SummaryStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SummaryStep";
 import { getAccountName } from "@/domains/wallet/utils/get-account-name";
 import { SelectAccountStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/SelectAccountStep";
+import { EnterImportValueStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/EnterImportValueStep";
 
 export const HDWalletTabs = ({
 	onClickEditWalletName,
@@ -63,6 +65,7 @@ export const HDWalletTabs = ({
 		encryptionPassword,
 		confirmEncryptionPassword,
 		password,
+		selectedAccount,
 	} = getValues();
 
 	const [importedWallets, setImportedWallets] = useState<AddressData[]>([]);
@@ -73,9 +76,13 @@ export const HDWalletTabs = ({
 		async ({ selectedAddresses }: { selectedAddresses: AddressData[] }) => {
 			const addresses = selectedAddresses.toSorted((a, b) => a.levels.addressIndex! - b.levels.addressIndex!);
 
-			const accountName = getAccountName({ profile: activeProfile });
+			const accountName = (selectedAccount ?? getAccountName({ profile: activeProfile })) as string;
 
-			for (const [index, { levels }] of addresses.entries()) {
+			for (const [index, { levels, isImported }] of addresses.entries()) {
+				if (isImported) {
+					continue;
+				}
+
 				const [wallet] = await importWallets({
 					disableAddressSelection: index !== 0, // set the very first address to be selected
 					levels,
@@ -92,7 +99,7 @@ export const HDWalletTabs = ({
 			}
 
 			await persist();
-			setImportedWallets(addresses);
+			setImportedWallets(addresses.filter((address) => !address.isImported));
 		},
 		[activeProfile, importWallets, mnemonic, password],
 	);
@@ -145,10 +152,33 @@ export const HDWalletTabs = ({
 		({
 			[HDWalletTabStep.SelectAccountStep]: async () => {
 				const { selectedAccount } = getValues();
-				if (!selectedAccount) {
+				if (selectedAccount) {
+					setActiveTab(HDWalletTabStep.EnterImportValueStep);
+					onStepChange?.(HDWalletTabStep.EnterImportValueStep);
+				} else {
 					setActiveTab(HDWalletTabStep.EnterMnemonicStep);
 					onStepChange?.(HDWalletTabStep.EnterMnemonicStep);
 				}
+			},
+			[HDWalletTabStep.EnterImportValueStep]: async () => {
+				const { selectedAccount, mnemonicValue, encryptedPassword } = getValues();
+
+				let mnemonic = mnemonicValue as string | undefined;
+
+				if (encryptedPassword) {
+					register({ name: "password", type: "string", value: encryptionPassword });
+
+					const accountWallet = activeProfile
+						.wallets()
+						.values()
+						.find((w) => w.accountName() === selectedAccount) as Contracts.IReadWriteWallet;
+
+					mnemonic = await accountWallet.signingKey().get(encryptedPassword as string);
+				}
+
+				register({ name: "mnemonic", type: "string", value: mnemonic });
+
+				setActiveTab(HDWalletTabStep.SelectAddressStep);
 			},
 			[HDWalletTabStep.EnterMnemonicStep]: async () => {
 				const { value } = getValues();
@@ -190,7 +220,15 @@ export const HDWalletTabs = ({
 				return;
 			}
 
-			if (activeTab === HDWalletTabStep.SelectAddressStep && !useEncryption) {
+			if (activeTab === HDWalletTabStep.SelectAddressStep) {
+				if (selectedAccount) {
+					prev = prev - 2;
+				} else if (!useEncryption) {
+					prev--;
+				}
+			}
+
+			if (activeTab === HDWalletTabStep.EnterMnemonicStep) {
 				prev--;
 			}
 
@@ -227,6 +265,10 @@ export const HDWalletTabs = ({
 									network={activeNetwork}
 									importOption={importOption}
 								/>
+							</TabPanel>
+
+							<TabPanel tabId={HDWalletTabStep.EnterImportValueStep}>
+								<EnterImportValueStep profile={activeProfile} />
 							</TabPanel>
 
 							<TabPanel tabId={HDWalletTabStep.EncryptPasswordStep}>
