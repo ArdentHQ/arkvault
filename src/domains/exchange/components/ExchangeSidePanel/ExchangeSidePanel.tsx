@@ -458,7 +458,7 @@ export const ExchangeSidePanel = ({
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
-				!isLastStep && (
+				activeTab !== Step.StatusStep && (
 					<SidePanelButtons>
 						{activeTab < Step.StatusStep && (
 							<>
