@@ -277,5 +277,28 @@ describe("TransactionAggregate", () => {
 			expect(result).toBeInstanceOf(Object);
 			expect(result.items()).toHaveLength(0);
 		});
+
+		it("should use history for subsequent calls", async () => {
+			const collectionWithMore = new UnconfirmedTransactionDataCollection([createUnconfirmedTransactionMock()], {
+				next: 2,
+			});
+
+			const collectionWithoutMore = new UnconfirmedTransactionDataCollection(
+				[createUnconfirmedTransactionMock()],
+				{},
+			);
+
+			const unconfirmedSpy= vi
+				.spyOn(wallet.transactionIndex(), "unconfirmed")
+				.mockResolvedValueOnce(collectionWithMore)
+				.mockResolvedValueOnce(collectionWithoutMore);
+
+			subject.flush("unconfirmed");
+			await subject.unconfirmed();
+			await subject.unconfirmed();
+
+			expect(unconfirmedSpy).toHaveBeenCalledTimes(2);
+			expect(unconfirmedSpy).toHaveBeenLastCalledWith({ cursor: 2 });
+		});
 	});
 });
