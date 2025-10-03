@@ -288,7 +288,7 @@ describe("TransactionAggregate", () => {
 				{},
 			);
 
-			const unconfirmedSpy= vi
+			const unconfirmedSpy = vi
 				.spyOn(wallet.transactionIndex(), "unconfirmed")
 				.mockResolvedValueOnce(collectionWithMore)
 				.mockResolvedValueOnce(collectionWithoutMore);
