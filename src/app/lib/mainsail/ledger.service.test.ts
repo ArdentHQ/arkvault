@@ -277,12 +277,18 @@ describe("LedgerService", () => {
 				publicKey: "",
 			});
 
+			const HDKeyModule = await import("@ardenthq/arkvault-crypto");
+			const hdKeySpy = vi.spyOn(HDKeyModule.HDKey, "fromCompressedPublicKey").mockReturnValue({
+				derive: () => ({publicKey: ""})
+			});
+
 			await ledgerService.connect();
 			const result = await ledgerService.isEthBasedApp();
 
 			expect(result).toBe(false);
 
 			spy.mockRestore();
+			hdKeySpy.mockRestore();
 		});
 	});
 });
