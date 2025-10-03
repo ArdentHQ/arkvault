@@ -28,7 +28,7 @@ export const useWalletActions = ({
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
-	const { openPanel } = usePanels();
+	const { openPanel, closePanel } = usePanels();
 
 	const wallet = wallets[0] as Contracts.IReadWriteWallet | undefined;
 
@@ -88,6 +88,8 @@ export const useWalletActions = ({
 					profile.notifications().transactions().forgetByRecipient(wallet.address());
 				}
 			}
+
+			closePanel();
 
 			await persist();
 

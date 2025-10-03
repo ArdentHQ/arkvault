@@ -11,6 +11,7 @@ export enum Panel {
 	SendValidatorResignation = "SEND_VALIDATOR_RESIGNATION",
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
+	Addresses = "ADDRESSES",
 }
 
 interface PanelsContextValue {

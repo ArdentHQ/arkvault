@@ -14,6 +14,7 @@ import { SendRegistrationSidePanel } from "@/domains/transaction/components/Send
 import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "./contexts";
 import { useTranslation } from "react-i18next";
 import { useHasProfile } from "./hooks";
+import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 
 const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
@@ -97,6 +98,8 @@ export const AppPanels = () => {
 					}
 				}}
 			/>
+
+			<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
 
 			<DiscardPanelConfirmationModal />
 		</>
