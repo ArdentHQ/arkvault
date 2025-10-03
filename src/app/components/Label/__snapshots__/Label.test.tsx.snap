@@ -24,6 +24,22 @@ exports[`Label > should render a small one 1`] = `
 </div>
 `;
 
+exports[`Label > should render as outline and neutral 1`] = `
+<div>
+  <div
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-secondary-700 border-theme-secondary-300 bg-transparent dark:border-theme-secondary-700 dark:text-theme-secondary-500 dim:border-theme-dim-700 dim:text-theme-dim-200 text-base"
+  />
+</div>
+`;
+
+exports[`Label > should render as outline and primary 1`] = `
+<div>
+  <div
+    class="inline-block font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-primary-600 border-theme-primary-200 bg-transparent dark:text-theme-secondary-200 dim:text-theme-dim-100 dark:border-theme-dark-700 dim:border-theme-dim-700 text-base"
+  />
+</div>
+`;
+
 exports[`Label > should render as solid 1`] = `
 <div>
   <div

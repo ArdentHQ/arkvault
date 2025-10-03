@@ -26,6 +26,8 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Image } from "@/app/components/Image";
 import { SettingsUnsavedChangesConfirmation } from "@/domains/setting/components/SettingsUnsavedChangesConfirmation";
 import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
+import { Link } from "@/app/components/Link";
+import { Divider } from "@/app/components/Divider";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -62,6 +64,7 @@ export const GeneralSettings: React.FC = () => {
 			name,
 			showDevelopmentNetwork: settings.get(Contracts.ProfileSetting.UseTestNetworks),
 			timeFormat: settings.get(Contracts.ProfileSetting.TimeFormat),
+			useHDWallets: settings.get(Contracts.ProfileSetting.UseHDWallets),
 			useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
 			viewingMode: profile.appearance().get("theme") as ViewingModeType,
 		};
@@ -84,6 +87,7 @@ export const GeneralSettings: React.FC = () => {
 		viewingMode,
 		useNetworkWalletNames,
 		showDevelopmentNetwork,
+		useHDWallets,
 	} = watch();
 
 	const currencyOptions = useCurrencyOptions(marketProvider);
@@ -96,7 +100,6 @@ export const GeneralSettings: React.FC = () => {
 		};
 
 		initializeForm();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isProfileRestored]);
 
 	useEffect(() => {
@@ -104,6 +107,7 @@ export const GeneralSettings: React.FC = () => {
 		register("viewingMode");
 		register("useNetworkWalletNames");
 		register("showDevelopmentNetwork");
+		register("useHDWallets");
 	}, [register]);
 
 	const formattedName = name.trim();
@@ -205,7 +209,7 @@ export const GeneralSettings: React.FC = () => {
 		},
 	];
 
-	const otherItems = [
+	const advancedItems = [
 		{
 			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
 			labelAddon: (
@@ -223,6 +227,49 @@ export const GeneralSettings: React.FC = () => {
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
 		},
+		{
+			itemValueClass: "mt-1",
+			label: `${t("SETTINGS.GENERAL.OTHER.HD_WALLETS.TITLE")}`,
+			labelAddon: (
+				<span>
+					<Divider
+						type="vertical"
+						className="text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+					/>
+					<Link isExternal to="https://docs.mainsailhq.com/" showExternalIcon={false} className="text-base">
+						<span className="flex flex-row items-center gap-2">
+							<span>{t("COMMON.LEARN_MORE")}</span>
+
+							<Icon
+								data-testid="Link__external"
+								name="ArrowExternal"
+								dimensions={[12, 12]}
+								className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+							/>
+						</span>
+					</Link>
+				</span>
+			),
+			labelDescription: `${t("SETTINGS.GENERAL.OTHER.HD_WALLETS.DESCRIPTION")}`,
+			labelHeaderClass: "justify-start space-x-0",
+			labelWrapperClass: "flex items-start",
+			value: (
+				<Toggle
+					name="useHDWallets"
+					defaultChecked={useHDWallets}
+					data-testid="AdvancedToggle__toggle-useHDWallets"
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+						setValue("useHDWallets", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						})
+					}
+				/>
+			),
+		},
+	];
+
+	const otherItems = [
 		{
 			itemValueClass: "w-full sm:w-auto",
 			label: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.TITLE"),
@@ -253,6 +300,7 @@ export const GeneralSettings: React.FC = () => {
 		viewingMode,
 		useNetworkWalletNames,
 		showDevelopmentNetwork,
+		useHDWallets,
 	}: GeneralSettingsState) => {
 		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, automaticSignOutPeriod);
 		profile.settings().set(Contracts.ProfileSetting.Bip39Locale, bip39Locale);
@@ -265,6 +313,7 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.Theme, viewingMode);
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, useNetworkWalletNames);
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, showDevelopmentNetwork);
+		profile.settings().set(Contracts.ProfileSetting.UseHDWallets, useHDWallets);
 
 		const isChatOpen = isSupportChatOpen();
 
@@ -505,6 +554,10 @@ export const GeneralSettings: React.FC = () => {
 
 				<SettingsGroup title={t("SETTINGS.GENERAL.APPEARANCE.TITLE")}>
 					<ListDivided items={appearenceItems} />
+				</SettingsGroup>
+
+				<SettingsGroup title={t("SETTINGS.GENERAL.ADVANCED.TITLE")}>
+					<ListDivided items={advancedItems} />
 				</SettingsGroup>
 
 				<SettingsGroup title={t("SETTINGS.GENERAL.OTHER.TITLE")}>

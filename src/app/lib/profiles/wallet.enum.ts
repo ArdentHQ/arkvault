@@ -30,6 +30,7 @@ export enum WalletData {
 	LedgerModel = "LEDGER_MODEL",
 	Status = "STATUS",
 	IsPrimary = "IS_PRIMARY",
+	AddressIndex = "ADDRESS_INDEX",
 }
 
 /**
@@ -63,6 +64,7 @@ export enum WalletLedgerModel {
  * @enum {number}
  */
 export enum WalletSetting {
+	AccountName = "ACCOUNT_NAME",
 	Alias = "ALIAS",
 	Avatar = "AVATAR",
 	Peer = "PEER",

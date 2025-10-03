@@ -52,6 +52,7 @@ import { KnownWalletService } from "./known-wallet.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { BigNumber } from "@/app/lib/helpers/bignumber.js";
 import { WalletAliasProvider } from "./profile.wallet.alias.js";
+import { isPreview } from "@/utils/test-helpers";
 
 export class Profile implements IProfile {
 	/**
@@ -299,6 +300,15 @@ export class Profile implements IProfile {
 		}
 
 		return Avatar.make(this.name());
+	}
+
+	/** {@inheritDoc IProfile.avatar} */
+	public usesHDWallets(): boolean {
+		if (isPreview()) {
+			return true;
+		}
+
+		return !!this.settings().get(ProfileSetting.UseHDWallets);
 	}
 
 	/** {@inheritDoc IProfile.appearance} */

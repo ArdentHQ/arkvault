@@ -1,5 +1,5 @@
 import React from "react";
-import { LedgerMobileItem } from "./LedgerScanStep.blocks";
+import { AddressMobileItem } from "./LedgerScanStep.blocks";
 import { render, screen } from "@/utils/testing-library";
 import { vi } from "vitest";
 import userEvent from "@testing-library/user-event";
@@ -11,7 +11,7 @@ const sampleCoin = "ARK";
 describe("LedgerMobileItem", () => {
 	it("should render", () => {
 		render(
-			<LedgerMobileItem
+			<AddressMobileItem
 				isLoading={false}
 				address={sampleAddress}
 				balance={sampleBalance}
@@ -26,7 +26,7 @@ describe("LedgerMobileItem", () => {
 
 	it("should render skeleton", () => {
 		render(
-			<LedgerMobileItem
+			<AddressMobileItem
 				isLoading={true}
 				address={sampleAddress}
 				balance={sampleBalance}
@@ -36,12 +36,12 @@ describe("LedgerMobileItem", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("LedgerMobileItem__skeleton")).toBeInTheDocument();
+		expect(screen.getByTestId("AddressMobileItem__skeleton")).toBeInTheDocument();
 	});
 
 	it("should render selected", () => {
 		render(
-			<LedgerMobileItem
+			<AddressMobileItem
 				isLoading={false}
 				address={sampleAddress}
 				balance={sampleBalance}
@@ -54,11 +54,27 @@ describe("LedgerMobileItem", () => {
 		expect(screen.getByTestId("LedgerMobileItem__checkbox")).toHaveAttribute("checked");
 	});
 
+	it("should render disabled", () => {
+		render(
+			<AddressMobileItem
+				isDisabled={true}
+				isLoading={false}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={true}
+				handleClick={() => {}}
+			/>,
+		);
+
+		expect(screen.getByTestId("LedgerMobileItem__checkbox")).toBeDisabled();
+	});
+
 	it("should call handleClick", async () => {
 		const handleClick = vi.fn();
 
 		render(
-			<LedgerMobileItem
+			<AddressMobileItem
 				isLoading={false}
 				address={sampleAddress}
 				balance={sampleBalance}

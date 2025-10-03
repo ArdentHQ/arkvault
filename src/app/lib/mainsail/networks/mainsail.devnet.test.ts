@@ -93,6 +93,11 @@ describe("Mainsail Devnet Network Configuration", () => {
 				default: true,
 				permissions: ["read", "write"],
 			},
+			bip44: {
+				canBeEncrypted: true,
+				default: false,
+				permissions: ["read", "write"],
+			},
 			publicKey: {
 				default: false,
 				permissions: ["read"],

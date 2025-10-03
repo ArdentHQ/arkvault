@@ -612,6 +612,31 @@ describe("SendRegistrationSidePanel", () => {
 		nanoXTransportMock.mockRestore();
 		selectedWalletSpy.mockRestore();
 	});
+
+	it("should disable send button if the encryption password is not provided", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await inputValidatorPublicKey();
+
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await waitFor(() => expect(sendButton()).toBeDisabled());
+
+		nanoXTransportMock.mockRestore();
+	});
 });
 
 const inputValidatorPublicKey = async (key: string = "validator-public-key") => {

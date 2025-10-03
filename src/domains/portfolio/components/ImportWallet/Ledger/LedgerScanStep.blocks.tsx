@@ -26,7 +26,8 @@ export const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; chi
 	return <div>{children}</div>;
 };
 
-export const LedgerMobileItem = ({
+export const AddressMobileItem = ({
+	isDisabled,
 	isLoading,
 	address,
 	balance,
@@ -35,6 +36,7 @@ export const LedgerMobileItem = ({
 	handleClick,
 	index = 0,
 }: {
+	isDisabled?: boolean;
 	isLoading: boolean;
 	address: string;
 	balance?: number;
@@ -51,7 +53,7 @@ export const LedgerMobileItem = ({
 			<div className="relative">
 				<div
 					className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dim:border-theme-dim-700 dim:bg-theme-dim-900 w-full overflow-hidden rounded border bg-white"
-					data-testid="LedgerMobileItem__skeleton"
+					data-testid="AddressMobileItem__skeleton"
 				>
 					<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 h-11 w-full pt-3 pl-4 dark:bg-black">
 						<Skeleton width={20} height={20} />
@@ -69,15 +71,15 @@ export const LedgerMobileItem = ({
 					</div>
 				</div>
 
-				{index > 0 && <LedgerLoaderOverlay />}
+				{index > 0 && <AddressTableLoaderOverlay />}
 
 				{index === 0 && (
-					<LedgerLoaderOverlay>
+					<AddressTableLoaderOverlay>
 						<Trans
 							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_ADDRESSES"
 							values={{ count: 5 }}
 						/>
-					</LedgerLoaderOverlay>
+					</AddressTableLoaderOverlay>
 				)}
 			</div>
 		);
@@ -86,7 +88,12 @@ export const LedgerMobileItem = ({
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
 			<div className="bg-theme-secondary-100 dim:bg-transparent h-11 w-full pt-3 pl-4 dark:bg-black">
-				<Checkbox checked={isSelected} onChange={handleClick} data-testid="LedgerMobileItem__checkbox" />
+				<Checkbox
+					checked={isSelected || isDisabled}
+					disabled={isDisabled}
+					onChange={handleClick}
+					data-testid="LedgerMobileItem__checkbox"
+				/>
 			</div>
 
 			<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
@@ -107,7 +114,7 @@ export const LedgerMobileItem = ({
 	);
 };
 
-export const LedgerLoaderOverlay = ({ children, className }: { className?: string; children?: ReactNode }) => (
+export const AddressTableLoaderOverlay = ({ children, className }: { className?: string; children?: ReactNode }) => (
 	<div>
 		<div
 			className={twMerge(
