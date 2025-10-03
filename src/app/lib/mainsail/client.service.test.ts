@@ -112,7 +112,7 @@ describe("ClientService", () => {
 				return HttpResponse.json({ data: [], meta: {} });
 			}),
 		);
-		const txs = await clientService.unconfirmedTransactions({ page: 1 });
+		const txs = await clientService.unconfirmedTransactions();
 		expect(txs).toBeDefined();
 		expect(txs.items()).toHaveLength(1);
 	});
