@@ -103,10 +103,11 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 			}
 
 			return (
-				<TableRow isSelected={isSelected(wallet)} className="relative">
+				<TableRow isSelected={isSelected(wallet) || wallet.isImported} className="relative">
 					<TableCell variant="start" innerClassName="justify-center">
 						<Checkbox
-							checked={isSelected(wallet)}
+							disabled={wallet.isImported}
+							checked={isSelected(wallet) || wallet.isImported}
 							onChange={() => toggleSelect(wallet)}
 							data-testid="SelectAddressStep__checkbox-row"
 						/>
@@ -189,6 +190,7 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 						data.map((wallet) => (
 							<AddressMobileItem
 								key={wallet.path}
+								isDisabled={wallet.isImported}
 								isLoading={showSkeleton}
 								address={wallet.address}
 								balance={wallet.balance}
@@ -283,6 +285,11 @@ export const SelectAddressStep = ({
 		return { levels, wallet };
 	};
 
+	const profileWalletAddresses = profile
+		.wallets()
+		.values()
+		.map((wallet) => wallet.address().toLowerCase());
+
 	const load = async (startIndex: number = 0, skipEmptyAddresses: boolean = false) => {
 		setIsLoading(true);
 
@@ -292,6 +299,7 @@ export const SelectAddressStep = ({
 		let newAddresses: AddressData[] = results.map(({ wallet, levels }) => ({
 			address: wallet.address(),
 			balance: wallet.balance(),
+			isImported: profileWalletAddresses.includes(wallet.address().toLowerCase()),
 			levels,
 			path: wallet.data().get(WalletData.DerivationPath) as string,
 		}));

@@ -54,6 +54,22 @@ describe("LedgerMobileItem", () => {
 		expect(screen.getByTestId("LedgerMobileItem__checkbox")).toHaveAttribute("checked");
 	});
 
+	it("should render disabled", () => {
+		render(
+			<AddressMobileItem
+				isDisabled={true}
+				isLoading={false}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={true}
+				handleClick={() => {}}
+			/>,
+		);
+
+		expect(screen.getByTestId("LedgerMobileItem__checkbox")).toBeDisabled();
+	});
+
 	it("should call handleClick", async () => {
 		const handleClick = vi.fn();
 
