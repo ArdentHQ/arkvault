@@ -269,5 +269,20 @@ describe("LedgerService", () => {
 
 			spy.mockRestore();
 		});
+
+		it("should return false when both keys are empty in isEthBasedApp", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockResolvedValue({
+				address: "",
+				chainCode: undefined,
+				publicKey: "",
+			});
+
+			await ledgerService.connect();
+			const result = await ledgerService.isEthBasedApp();
+
+			expect(result).toBe(false);
+
+			spy.mockRestore();
+		});
 	});
 });
