@@ -257,10 +257,6 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
 		});
 
-		await waitFor(() => {
-			statusStep();
-		});
-
 		expect(container).toMatchSnapshot();
 		exchangeTransactionUpdateMock.mockRestore();
 		queryParametersMock.mockRestore();
@@ -1173,7 +1169,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(continueButton());
 
 		await waitFor(() => {
-			statusStep();
+			expect(statusStep()).toBeInTheDocument();
 		});
 
 		// status: awaiting confirmation
@@ -1371,7 +1367,7 @@ describe("ExchangeForm", () => {
 		await userEvent.click(screen.getByText(t("EXCHANGE.MANUAL_TRANSFER")));
 
 		await waitFor(() => {
-			statusStep();
+			expect(statusStep()).toBeInTheDocument();
 		});
 
 		resetProfileNetworksMock();
@@ -1665,7 +1661,7 @@ describe("StatusStep", () => {
 		);
 
 		await waitFor(() => {
-			statusStep();
+			expect(statusStep()).toBeInTheDocument();
 		});
 
 		expect(container).toMatchSnapshot();
