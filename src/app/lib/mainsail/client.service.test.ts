@@ -81,6 +81,24 @@ describe("ClientService", () => {
 		expect(txs.items()).toHaveLength(1);
 	});
 
+	it("should fetch unconfirmed transactions", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/transactions\/unconfirmed.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "1" && url.searchParams.get("limit") === "10") {
+					return HttpResponse.json({
+						data: [transactionMockData],
+						meta: { last: "page=1", next: null, previous: null, self: "page=1" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const txs = await clientService.unconfirmedTransactions({ page: 1 });
+		expect(txs).toBeDefined();
+		expect(txs.items()).toHaveLength(1);
+	});
+
 	it("should fetch transactions with custom limit and page", async () => {
 		server.use(
 			http.get(/http:\/\/localhost\/transactions.*/, ({ request }) => {
