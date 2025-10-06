@@ -1,13 +1,11 @@
 import { Page, Section } from "@/app/components/Layout";
-import React, { FC, useCallback, useEffect, useState } from "react";
+import React, { FC, useCallback, useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
 
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@/app/lib/profiles";
-import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
-import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { ValidatorsTable } from "@/domains/vote/components/ValidatorsTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
@@ -30,9 +28,6 @@ export const VotesPage: FC<{
 	network: Networks.Network;
 }> = ({ profile: activeProfile, network: activeNetwork }) => {
 	const { t } = useTranslation();
-
-	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
-	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
 
 	const { showSendVotePanel, setShowSendVotePanel, openSendVotePanel, selectedWallet, setSelectedWallet } =
 		useVoteFormContext();
@@ -145,10 +140,7 @@ export const VotesPage: FC<{
 
 			{!hasWallets && (
 				<Section className="pt-0">
-					<VotesEmpty
-						onCreateWallet={() => setShowCreateAddressPanel(true)}
-						onImportWallet={() => setShowImportAddressPanel(true)}
-					/>
+					<VotesEmpty />
 				</Section>
 			)}
 
@@ -206,14 +198,6 @@ export const VotesPage: FC<{
 					}
 				/>
 			)}
-
-			<ResetWhenUnmounted>
-				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
-			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
 				<SendVoteSidePanel open={showSendVotePanel} onOpenChange={setShowSendVotePanel} />

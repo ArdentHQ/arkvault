@@ -5,7 +5,11 @@ import { env, act, getMainsailProfileId, Providers, LocationTracker } from "@/ut
 import { DropdownOption } from "@/app/components/Dropdown";
 import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { expect, vi } from "vitest";
+import { afterEach, expect, vi } from "vitest";
+import * as PanelsMock from "@/app/contexts/Panels";
+
+let usePanelsMock;
+let openPanelSpy;
 
 describe("useWalletActions", () => {
 	let profile: Contracts.IProfile;
@@ -18,6 +22,18 @@ describe("useWalletActions", () => {
 		wallet = profile.wallets().first();
 
 		vi.spyOn(useActiveProfileModule, "useActiveProfile").mockReturnValue(profile);
+	});
+
+	beforeEach(() => {
+		openPanelSpy = vi.fn();
+		usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+	});
+
+	afterEach(() => {
+		usePanelsMock.mockRestore();
 	});
 
 	it("should return undefined if there is no wallet", async () => {
@@ -53,7 +69,7 @@ describe("useWalletActions", () => {
 		expect(current.handleSend()).toBeUndefined();
 	});
 
-	it("should push right url to history if there are multiple wallets", () => {
+	it("should open the panel if there are multiple wallets", () => {
 		let currentLocation = { pathname: "/" };
 
 		const mockHandleSendUsernameResignation = vi.fn();
@@ -87,7 +103,7 @@ describe("useWalletActions", () => {
 			current.handleSend();
 		});
 
-		expect(currentLocation.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer);
 
 		act(() => {
 			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);

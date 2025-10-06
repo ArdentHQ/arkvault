@@ -24,6 +24,7 @@ import cn from "classnames";
 import { Trans } from "react-i18next";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 import { Label } from "@/app/components/Label";
 
 export const PortfolioHeader = ({
@@ -33,11 +34,6 @@ export const PortfolioHeader = ({
 	isUpdatingTransactions,
 	handleVotesButtonClick,
 	onUpdate,
-	onCreateAddress,
-	onImportAddress,
-	onSendRegistration,
-	onSendUsernameResignation,
-	onSendValidatorResignation,
 	hasFocus,
 }: {
 	profile: Contracts.IProfile;
@@ -46,14 +42,11 @@ export const PortfolioHeader = ({
 	isUpdatingTransactions: boolean;
 	handleVotesButtonClick: () => void;
 	onUpdate?: (status: boolean) => void;
-	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
-	onSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
-	onSendUsernameResignation?: (open: boolean) => void;
-	onSendValidatorResignation?: (open: boolean) => void;
 	hasFocus?: boolean;
 }) => {
 	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
+
+	const { openPanel } = usePanels();
 
 	const allWallets = profile.wallets().values();
 
@@ -64,15 +57,19 @@ export const PortfolioHeader = ({
 	const isRestored = wallet.hasBeenFullyRestored();
 
 	const handleSendRegistration = (registrationType?: "validatorRegistration" | "usernameRegistration") => {
-		onSendRegistration?.(registrationType);
+		if (registrationType === "validatorRegistration") {
+			openPanel(Panel.SendValidatorRegistration);
+		} else {
+			openPanel(Panel.SendUsernameRegistration);
+		}
 	};
 
 	const handleSendUsernameResignation = () => {
-		onSendUsernameResignation?.(true);
+		openPanel(Panel.SendUsernameResignation);
 	};
 
 	const handleSendValidatorResignation = () => {
-		onSendValidatorResignation?.(true);
+		openPanel(Panel.SendValidatorResignation);
 	};
 
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
@@ -193,7 +190,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
-							onClick={() => onImportAddress?.(true)}
+							onClick={() => openPanel(Panel.ImportAddress)}
 						>
 							<Icon name="ArrowTurnDownBracket" size="md" />
 							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
@@ -207,7 +204,7 @@ export const PortfolioHeader = ({
 						<Button
 							variant="secondary"
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
-							onClick={() => onCreateAddress?.(true)}
+							onClick={() => openPanel(Panel.CreateAddress)}
 						>
 							<Icon name="Plus" size="md" />
 							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">

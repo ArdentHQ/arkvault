@@ -38451,6 +38451,9 @@ exports[`Transactions > should open detail side panel on transaction row click 1
         </table>
       </div>
     </div>
+    <div
+      class="display-contents"
+    />
   </div>
 </DocumentFragment>
 `;

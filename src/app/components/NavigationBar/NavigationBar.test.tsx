@@ -15,6 +15,8 @@ import {
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import * as PanelsMock from "@/app/contexts/Panels";
+import { expect, vi } from "vitest";
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const webWidgetSelector = "#webWidget";
@@ -264,29 +266,39 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle click to send button", async () => {
-		const mockProfile = environmentHooks.useActiveProfile();
-		const { router } = render(<NavigationBar />);
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
+		render(<NavigationBar />);
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons--send");
 
 		await userEvent.click(sendButton);
 
-		expect(router.state.location.pathname + router.state.location.search).toBe(
-			`/profiles/${mockProfile.id()}/dashboard?method=transfer`,
-		);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer);
+
+		usePanelsMock.mockRestore();
 	});
 
 	it("should handle click to send button from mobile menu", async () => {
-		const mockProfile = environmentHooks.useActiveProfile();
-		const { router } = renderResponsiveWithRoute(<NavigationBar />, "xs");
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
+		renderResponsiveWithRoute(<NavigationBar />, "xs");
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons__mobile--send");
 
 		await userEvent.click(sendButton);
 
-		expect(router.state.location.pathname + router.state.location.search).toBe(
-			`/profiles/${mockProfile.id()}/dashboard?method=transfer`,
-		);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer);
+
+		usePanelsMock.mockRestore();
 	});
 
 	it("should handle receive funds", async () => {
