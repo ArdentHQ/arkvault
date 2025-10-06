@@ -44,6 +44,8 @@ export const PortfolioHeader = ({
 }) => {
 	const { openPanel } = usePanels();
 
+	const { openPanel } = usePanels();
+
 	const allWallets = profile.wallets().values();
 
 	const selectedWallets = profile.wallets().selected();
