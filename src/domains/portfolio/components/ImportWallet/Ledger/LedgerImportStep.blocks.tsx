@@ -110,7 +110,7 @@ export const SingleImport = ({
 					<div className="flex flex-col gap-3 px-3 pt-3">
 						<SectionBodyItem title={t("COMMON.NAME")}>
 							<div className="flex flex-row items-center gap-2">
-								<div className="truncate max-w-28 xs:max-w-44 sm:max-w-auto"> {wallet.alias()} </div>
+								<div className="xs:max-w-44 sm:max-w-auto max-w-28 truncate"> {wallet.alias()} </div>
 								<hr className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 h-5 w-px border-transparent" />
 								<EditButton onClick={() => onClickEditWalletName(wallet)} />
 							</div>
