@@ -19,7 +19,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { ExchangeSidePanel } from "@/domains/exchange/components/ExchangeSidePanel/ExchangeSidePanel";
-import { useSearchParams } from "react-router";
+import { useSearchParams } from "react-router-dom";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",

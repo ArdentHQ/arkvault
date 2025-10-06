@@ -214,7 +214,7 @@ describe("Exchange", () => {
 		expect(screen.getByTestId("ExchangeTransactionsTable__empty-message")).toBeInTheDocument();
 	});
 
-	it("should navigate to exchange transaction", async () => {
+	it("should open up transaction detail side panel", async () => {
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 		profile
 			.exchangeTransactions()
@@ -244,9 +244,7 @@ describe("Exchange", () => {
 
 		await userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
-		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange/view`);
-		});
+		await expect(screen.findByTestId("ExchangeSidePanel")).resolves.toBeVisible();
 	});
 
 	it("should delete exchange transaction", async () => {
