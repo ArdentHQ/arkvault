@@ -220,7 +220,7 @@ describe("Exchange", () => {
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		const { router } = render(
+		render(
 			<ExchangeProvider>
 				<Wrapper>
 					<Exchange />
