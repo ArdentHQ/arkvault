@@ -240,7 +240,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return 0;
 		});
 
-		const totalPages = Math.ceil(transactions.length / LIMIT);
+		const baseLength = Math.max(transactions.length, LIMIT);
+		const totalPages = Math.ceil(baseLength / LIMIT);
 		const maxDisplayItems = LIMIT * totalPages;
 
 		return sorted.slice(0, maxDisplayItems);
