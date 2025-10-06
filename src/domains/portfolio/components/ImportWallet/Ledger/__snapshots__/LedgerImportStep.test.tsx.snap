@@ -1058,7 +1058,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                 class="flex flex-row items-center gap-2"
               >
                 <div
-                  class="truncate max-w-28 xs:max-w-44 sm:max-w-auto"
+                  class="xs:max-w-44 sm:max-w-auto max-w-28 truncate"
                 >
                    
                   Address #1
