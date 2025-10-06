@@ -1,6 +1,12 @@
 /* eslint-disable no-empty-pattern */
 /* eslint-disable testing-library/no-node-access */
-import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
+import {
+	ConfigurationProvider,
+	EnvironmentProvider,
+	LedgerProvider,
+	NavigationProvider,
+	PanelsProvider,
+} from "@/app/contexts";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
 import { RenderResult, render, renderHook } from "@testing-library/react";
@@ -55,7 +61,9 @@ export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 		<EnvironmentProvider env={env}>
 			<LedgerProvider>
 				<ConfigurationProvider>
-					<NavigationProvider>{children}</NavigationProvider>
+					<NavigationProvider>
+						<PanelsProvider>{children}</PanelsProvider>
+					</NavigationProvider>
 				</ConfigurationProvider>
 			</LedgerProvider>
 		</EnvironmentProvider>

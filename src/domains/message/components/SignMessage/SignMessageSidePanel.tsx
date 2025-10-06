@@ -246,8 +246,11 @@ export const SignMessageSidePanel = ({
 		[dirtyFields.message, dirtyFields.mnemonic, activeTab],
 	);
 
+	const isLastStep = activeTab === Step.SuccessStep;
+
 	return (
 		<SidePanel
+			minimizeable={!isLastStep}
 			title={getTitle()}
 			subtitle={getSubtitle()}
 			titleIcon={getTitleIcon()}
@@ -280,7 +283,7 @@ export const SignMessageSidePanel = ({
 						</div>
 					)}
 
-					{activeTab === Step.SuccessStep && (
+					{isLastStep && (
 						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
 							<Button
 								data-testid="SignMessage__back-button"

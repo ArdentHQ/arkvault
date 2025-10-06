@@ -6,6 +6,7 @@ import { translations as errorTranslations } from "@/domains/error/i18n";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import * as themeUtils from "@/utils/theme";
 import { env, render, renderWithoutRouter, screen, waitFor } from "@/utils/testing-library";
+import * as PanelsMock from "@/app/Panels.blocks";
 
 vi.mock("@/domains/dashboard/routing", async () => {
 	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
@@ -39,6 +40,8 @@ vi.mock("@/domains/profile/routing", async () => {
 
 describe("App", () => {
 	beforeAll(async () => {
+		vi.spyOn(PanelsMock, "AppPanels").mockImplementation(() => <></>);
+
 		vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
 		// Mock synchronizer to avoid running any jobs in these tests.

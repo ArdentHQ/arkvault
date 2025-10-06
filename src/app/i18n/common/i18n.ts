@@ -299,10 +299,24 @@ export const translations = {
 	PAGINATION: {
 		ENTER_NUMBER: "Enter the page number",
 	},
+	PANELS: {
+		CREATE_ADDRESS: "Create Address",
+		IMPORT_ADDRESS: "Import Address",
+		SEND_TRANSFER: "Send Transfer",
+		SEND_USERNAME_REGISTRATION: "Username Registration",
+		SEND_USERNAME_RESIGNATION: "Username Resignation",
+		SEND_VALIDATOR_REGISTRATION: "Validator Registration",
+		SEND_VALIDATOR_RESIGNATION: "Validator Resignation",
+		SEND_VOTE: "Send Vote",
+		SIGN_MESSAGE: "Sign Message",
+	},
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",
 	PASSWORDS: "Passwords",
 	PEER: "Peer",
+	PENDING_ACTION_IN_PROGRESS: "Pending Action in Progress",
+	PENDING_ACTION_IN_PROGRESS_DESCRIPTION:
+		"You already have a pending action: [{{action}}]. Starting a new one will discard it. Do you want to continue?",
 	PERIOD: "Period",
 	PERIODS: {
 		DAILY: "Daily",

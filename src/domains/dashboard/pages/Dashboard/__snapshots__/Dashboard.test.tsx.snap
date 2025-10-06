@@ -1388,7 +1388,11 @@ exports[`Dashboard > should render 1`] = `
             </div>
             <div
               style="display: contents;"
-            />
+            >
+              <div
+                class="display-contents"
+              />
+            </div>
           </header>
         </div>
       </div>
@@ -6840,21 +6844,6 @@ exports[`Dashboard > should render 1`] = `
           </div>
         </div>
       </div>
-      <div
-        style="display: contents;"
-      />
-      <div
-        style="display: contents;"
-      />
-      <div
-        style="display: contents;"
-      />
-      <div
-        style="display: contents;"
-      />
-      <div
-        style="display: contents;"
-      />
     </div>
   </div>
 </DocumentFragment>

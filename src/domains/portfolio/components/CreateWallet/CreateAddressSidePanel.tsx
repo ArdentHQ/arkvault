@@ -232,8 +232,11 @@ export const CreateAddressesSidePanel = ({
 		return activeTab > CreateStep.MethodStep;
 	};
 
+	const isLastStep = activeTab === CreateStep.SuccessStep;
+
 	return (
 		<SidePanel
+			minimizeable={!isLastStep}
 			title={config.title}
 			subtitle={config.subtitle}
 			titleIcon={config.titleIcon}
@@ -303,7 +306,7 @@ export const CreateAddressesSidePanel = ({
 					</SidePanelButtons>
 				)
 			}
-			isLastStep={activeTab === CreateStep.SuccessStep}
+			isLastStep={isLastStep}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
 				<Tabs activeId={activeTab}>

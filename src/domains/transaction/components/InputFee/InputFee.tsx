@@ -26,6 +26,8 @@ export const calculateGasFee = (gasPrice?: BigNumber, gasLimit?: BigNumber): num
 	return UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei");
 };
 
+const FEE_DISPLAY_VALUE_DECIMALS = 8;
+
 export const getFeeMinMax = (network: Network) => {
 	const milestone = network.milestone();
 
@@ -75,19 +77,25 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const options: InputFeeOptions = {
 			[InputFeeOption.Slow]: {
-				displayValue: calculateGasFee(min, gasLimit),
+				displayValue: BigNumber.make(calculateGasFee(min, gasLimit))
+					.decimalPlaces(FEE_DISPLAY_VALUE_DECIMALS)
+					.toNumber(),
 				displayValueConverted: convert(calculateGasFee(min, gasLimit)),
 				gasPrice: min,
 				label: t("TRANSACTION.FEES.SLOW"),
 			},
 			[InputFeeOption.Average]: {
-				displayValue: calculateGasFee(avg, gasLimit),
+				displayValue: BigNumber.make(calculateGasFee(avg, gasLimit))
+					.decimalPlaces(FEE_DISPLAY_VALUE_DECIMALS)
+					.toNumber(),
 				displayValueConverted: convert(calculateGasFee(avg, gasLimit)),
 				gasPrice: avg,
 				label: t("TRANSACTION.FEES.AVERAGE"),
 			},
 			[InputFeeOption.Fast]: {
-				displayValue: calculateGasFee(max, gasLimit),
+				displayValue: BigNumber.make(calculateGasFee(max, gasLimit))
+					.decimalPlaces(FEE_DISPLAY_VALUE_DECIMALS)
+					.toNumber(),
 				displayValueConverted: convert(calculateGasFee(max, gasLimit)),
 				gasPrice: max,
 				label: t("TRANSACTION.FEES.FAST"),
