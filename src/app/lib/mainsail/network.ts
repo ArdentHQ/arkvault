@@ -399,6 +399,16 @@ export class Network {
 	}
 
 	/**
+	 * Determines if the network is synced.
+	 *
+	 * @returns {boolean}
+	 * @memberof Network
+	 */
+	public isSynced(): boolean {
+		return this.config().has("height") && this.config().has("crypto");
+	}
+
+	/**
 	 * Determines wether the url belongs to the network.
 	 *
 	 * @returns {Promise<boolean>}

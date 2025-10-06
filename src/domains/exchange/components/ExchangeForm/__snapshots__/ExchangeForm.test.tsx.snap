@@ -541,11 +541,29 @@ exports[`ConfirmationStep > should render 1`] = `
 </div>
 `;
 
-exports[`ExchangeForm > should render exchange form 1`] = `<div />`;
+exports[`ExchangeForm > should render exchange form 1`] = `
+<div>
+  <div
+    class="display-contents"
+  />
+</div>
+`;
 
-exports[`ExchangeForm > should render exchange form with id of finished order 1`] = `<div />`;
+exports[`ExchangeForm > should render exchange form with id of finished order 1`] = `
+<div>
+  <div
+    class="display-contents"
+  />
+</div>
+`;
 
-exports[`ExchangeForm > should render exchange form with id of pending order 1`] = `<div />`;
+exports[`ExchangeForm > should render exchange form with id of pending order 1`] = `
+<div>
+  <div
+    class="display-contents"
+  />
+</div>
+`;
 
 exports[`FormStep > should render 1`] = `
 <div>

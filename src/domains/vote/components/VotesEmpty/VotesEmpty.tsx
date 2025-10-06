@@ -4,13 +4,12 @@ import { Trans, useTranslation } from "react-i18next";
 import { Icon } from "@/app/components//Icon";
 import { Button } from "@/app/components/Button";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 
-interface VotesEmptyProperties {
-	onCreateWallet?: () => void;
-	onImportWallet?: () => void;
-}
-export const VotesEmpty = ({ onCreateWallet, onImportWallet }: VotesEmptyProperties) => {
+export const VotesEmpty = () => {
 	const { t } = useTranslation();
+
+	const { openPanel } = usePanels();
 
 	return (
 		<EmptyBlock>
@@ -27,14 +26,22 @@ export const VotesEmpty = ({ onCreateWallet, onImportWallet }: VotesEmptyPropert
 				</span>
 
 				<div className="-m-3 flex w-full items-center space-x-3 sm:w-auto">
-					<Button onClick={onImportWallet} variant="secondary" className="w-full sm:w-auto">
+					<Button
+						onClick={() => openPanel(Panel.ImportAddress)}
+						variant="secondary"
+						className="w-full sm:w-auto"
+					>
 						<div className="flex items-center space-x-2">
 							<Icon name="ArrowTurnDownBracket" />
 							<span>{t("DASHBOARD.WALLET_CONTROLS.IMPORT")}</span>
 						</div>
 					</Button>
 
-					<Button onClick={onCreateWallet} variant="primary" className="w-full sm:w-auto">
+					<Button
+						onClick={() => openPanel(Panel.CreateAddress)}
+						variant="primary"
+						className="w-full sm:w-auto"
+					>
 						<div className="flex items-center space-x-2">
 							<Icon name="Plus" />
 							<span>{t("DASHBOARD.WALLET_CONTROLS.CREATE")}</span>
