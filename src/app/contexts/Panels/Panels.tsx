@@ -82,6 +82,10 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 
 					setComponentResetedPromiseResolver(resolve);
 				}, SIDE_PANEL_TRANSITION_DURATION);
+			} else {
+				setResetKey((previousKey) => previousKey + 1);
+
+				setComponentResetedPromiseResolver(resolve);
 			}
 		});
 

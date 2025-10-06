@@ -82,6 +82,8 @@ export const useWalletActions = ({
 
 			stopEventBubbling(event);
 
+			await closePanel();
+
 			for (const profileWallet of profile.wallets().values()) {
 				if (profileWallet.address() === wallet.address()) {
 					profile.wallets().forget(profileWallet.id());
@@ -89,13 +91,11 @@ export const useWalletActions = ({
 				}
 			}
 
-			closePanel();
-
 			await persist();
 
 			return true;
 		},
-		[profile, navigate, wallet, persist, stopEventBubbling],
+		[profile, navigate, wallet, persist, stopEventBubbling, closePanel],
 	);
 
 	const handleSelectOption = useCallback(
