@@ -261,9 +261,12 @@ export const SendValidatorResignationSidePanel = ({
 
 	const preventAccidentalClosing = activeTab !== Step.FormStep;
 
+	const isLastStep = activeTab === Step.SummaryStep;
+
 	return (
 		<SidePanel
 			open={open}
+			minimizeable={!isLastStep}
 			onOpenChange={onOpenChange}
 			title={getTitle()}
 			subtitle={getSubtitle()}
@@ -273,7 +276,7 @@ export const SendValidatorResignationSidePanel = ({
 			totalSteps={stepCount}
 			activeStep={activeTab}
 			onBack={handleBack}
-			isLastStep={activeTab === Step.SummaryStep}
+			isLastStep={isLastStep}
 			disableOutsidePress={preventAccidentalClosing}
 			disableEscapeKey={isSubmitting || preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}

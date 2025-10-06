@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Main } from "./App.blocks";
@@ -7,6 +6,9 @@ import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 import { ApplicationError } from "@/domains/error/pages";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
+import * as PanelsMock from "./Panels.blocks";
+
+let appPanelsMock;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -56,6 +58,10 @@ const renderComponent = (path = "/", options = {}) =>
 	);
 
 describe("App Main", () => {
+	beforeAll(() => {
+		appPanelsMock = vi.spyOn(PanelsMock, "AppPanels").mockImplementation(() => <></>);
+	});
+
 	beforeEach(() => {
 		// Mock synchronizer to avoid running any jobs in these tests.
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
@@ -63,6 +69,7 @@ describe("App Main", () => {
 
 	afterAll(() => {
 		process.env.MOCK_SYNCHRONIZER = undefined;
+		appPanelsMock.mockRestore();
 	});
 
 	it("should render", async () => {

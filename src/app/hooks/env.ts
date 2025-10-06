@@ -21,6 +21,26 @@ export const useActiveProfile = (): Contracts.IProfile => {
 	}, [context.env, location.pathname, profileId]);
 };
 
+export const useHasProfile = (): boolean => {
+	const location = useLocation();
+
+	const context = useEnvironmentContext();
+
+	return useMemo(() => {
+		const isProfileRoute =
+			location.pathname.startsWith("/profiles/") &&
+			!["/profiles/create", "/profiles/import"].some((path) => location.pathname.startsWith(path));
+
+		if (!isProfileRoute) {
+			return false;
+		}
+
+		const profileId = getUrlParameter(location.pathname, 1);
+
+		return profileId !== undefined && context.env.profiles().has(profileId);
+	}, [location.pathname]);
+};
+
 export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	const location = useLocation();
 	const profile = useActiveProfile();

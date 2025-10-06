@@ -370,8 +370,11 @@ export const SendRegistrationSidePanel = ({
 		[dirtyFields.username, dirtyFields.validatorPublicKey, activeTab],
 	);
 
+	const isLastStep = activeTab === summaryStep;
+
 	return (
 		<SidePanel
+			minimizeable={!isLastStep}
 			open={open}
 			onOpenChange={onOpenChange}
 			title={getTitle()}
@@ -382,7 +385,7 @@ export const SendRegistrationSidePanel = ({
 			totalSteps={stepCount}
 			activeStep={activeTab}
 			onBack={handleBack}
-			isLastStep={activeTab === summaryStep}
+			isLastStep={isLastStep}
 			disableOutsidePress={preventAccidentalClosing}
 			disableEscapeKey={isSubmitting || preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}

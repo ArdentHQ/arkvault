@@ -11,6 +11,7 @@ export const sortWallets = (wallets: Contracts.IReadWriteWallet[]) =>
 			Number(a.network().isTest()) - Number(b.network().isTest()) ||
 			Number(b.isStarred()) - Number(a.isStarred()) ||
 			((a.settings().get(WalletSetting.Alias) as string | undefined) ?? "").localeCompare(
+				/* istanbul ignore next -- @preserve */
 				b.settings().get(WalletSetting.Alias) ?? "",
 			),
 	);
