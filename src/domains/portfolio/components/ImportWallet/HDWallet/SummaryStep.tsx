@@ -61,11 +61,11 @@ export const SummaryStep = ({
 						"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-0 overflow-hidden rounded sm:mt-2 sm:rounded-xl sm:border",
 					)}
 				>
-					<div className="flex w-full items-center justify-between gap-4 space-x-2 p-3 break-words sm:justify-start sm:gap-0 sm:space-x-0 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">
-						<DetailTitle className={cn("text-theme-secondary-700 w-auto")}>{t("COMMON.NAME")}</DetailTitle>
+					<div className="flex w-full items-center justify-between gap-4 space-x-2 p-3 break-words sm:justify-start sm:gap-3 sm:space-x-0 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">
+						<DetailTitle className="w-auto sm:w-[78px] text-theme-secondary-700">{t("COMMON.NAME")}</DetailTitle>
 
-						<div className="ml-6 flex w-full min-w-0 items-center justify-end sm:justify-between">
-							<div className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 truncate font-semibold">
+						<div className="flex w-full min-w-0 items-center justify-end sm:justify-between">
+							<div className="uppercase text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 truncate font-semibold">
 								{accountName}
 							</div>
 
