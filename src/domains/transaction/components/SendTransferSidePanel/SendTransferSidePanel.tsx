@@ -429,9 +429,12 @@ export const SendTransferSidePanel = ({
 		[dirtyFields.amount, dirtyFields.recipientAddress, activeTab],
 	);
 
+	const isLastStep = activeTab === SendTransferStep.SummaryStep;
+
 	return (
 		<SidePanel
 			open={open}
+			minimizeable={!isLastStep}
 			onOpenChange={onOpenChange}
 			onMountChange={onMountChange}
 			title={getTitle()}
@@ -442,13 +445,13 @@ export const SendTransferSidePanel = ({
 			totalSteps={MAX_TABS - 1}
 			activeStep={activeTab}
 			onBack={handleBack}
-			isLastStep={activeTab === SendTransferStep.SummaryStep}
+			isLastStep={isLastStep}
 			disableOutsidePress={preventAccidentalClosing}
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
 				<SidePanelButtons>
-					{activeTab !== SendTransferStep.SummaryStep && (
+					{!isLastStep && (
 						<Button
 							data-testid="SendTransfer__back-button"
 							variant="secondary"

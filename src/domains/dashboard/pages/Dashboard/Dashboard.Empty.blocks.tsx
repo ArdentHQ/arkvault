@@ -3,6 +3,7 @@ import { Button } from "@/app/components/Button";
 import { useTranslation } from "react-i18next";
 import { Image } from "@/app/components/Image";
 import cn from "classnames";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 
 export const Header = () => {
 	const { t } = useTranslation();
@@ -35,23 +36,19 @@ export const HeaderMobile = () => {
 	);
 };
 
-export const AddressActionsMenuMobile = ({
-	onCreateAddress,
-	onImportAddress,
-}: {
-	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
-}) => {
+export const AddressActionsMenuMobile = () => {
 	const { t } = useTranslation();
+
+	const { openPanel } = usePanels();
 
 	return (
 		<>
 			<div className="shadow-footer-smooth dark:shadow-footer-smooth-dark fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black">
 				<div className="flex items-center justify-center space-x-3 px-6 py-3">
-					<Button variant="secondary" className="w-full" onClick={() => onImportAddress?.(true)}>
+					<Button variant="secondary" className="w-full" onClick={() => openPanel(Panel.ImportAddress)}>
 						{t("COMMON.IMPORT")}
 					</Button>
-					<Button variant="primary" className="w-full" onClick={() => onCreateAddress?.(true)}>
+					<Button variant="primary" className="w-full" onClick={() => openPanel(Panel.CreateAddress)}>
 						{t("COMMON.CREATE")}
 					</Button>
 				</div>
@@ -99,14 +96,10 @@ export const DashboardSetupAddressCard = ({
 	</button>
 );
 
-export const DashboardSetupAddressCards = ({
-	onCreateAddress,
-	onImportAddress,
-}: {
-	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
-}) => {
+export const DashboardSetupAddressCards = () => {
 	const { t } = useTranslation();
+
+	const { openPanel } = usePanels();
 
 	return (
 		<>
@@ -121,14 +114,14 @@ export const DashboardSetupAddressCards = ({
 						title={t("COMMON.CREATE_ADDRESS")}
 						description={t("DASHBOARD.WALLET_CONTROLS.CREATE_ADDRESS_DESCRIPTION")}
 						buttonText={t("COMMON.CREATE")}
-						onClick={() => onCreateAddress?.(true)}
+						onClick={() => openPanel(Panel.CreateAddress)}
 					/>
 					<DashboardSetupAddressCard
 						image="ImportAddress"
 						title={t("COMMON.IMPORT_ADDRESS")}
 						description={t("DASHBOARD.WALLET_CONTROLS.IMPORT_ADDRESS_DESCRIPTION")}
 						buttonText={t("COMMON.IMPORT")}
-						onClick={() => onImportAddress?.(true)}
+						onClick={() => openPanel(Panel.ImportAddress)}
 					/>
 				</div>
 			</div>

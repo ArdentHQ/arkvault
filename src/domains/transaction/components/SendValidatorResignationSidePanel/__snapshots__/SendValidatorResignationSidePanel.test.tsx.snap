@@ -1,11 +1,41 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SendValidatorResignationSidePanel > should change fee settings 1`] = `<DocumentFragment />`;
+exports[`SendValidatorResignationSidePanel > should change fee settings 1`] = `
+<DocumentFragment>
+  <div
+    class="display-contents"
+  />
+</DocumentFragment>
+`;
 
-exports[`SendValidatorResignationSidePanel > should render authentication step 1`] = `<DocumentFragment />`;
+exports[`SendValidatorResignationSidePanel > should render authentication step 1`] = `
+<DocumentFragment>
+  <div
+    class="display-contents"
+  />
+</DocumentFragment>
+`;
 
-exports[`SendValidatorResignationSidePanel > should render form step 1`] = `<DocumentFragment />`;
+exports[`SendValidatorResignationSidePanel > should render form step 1`] = `
+<DocumentFragment>
+  <div
+    class="display-contents"
+  />
+</DocumentFragment>
+`;
 
-exports[`SendValidatorResignationSidePanel > should render review step 1`] = `<DocumentFragment />`;
+exports[`SendValidatorResignationSidePanel > should render review step 1`] = `
+<DocumentFragment>
+  <div
+    class="display-contents"
+  />
+</DocumentFragment>
+`;
 
-exports[`SendValidatorResignationSidePanel > should show error step and go back 1`] = `<DocumentFragment />`;
+exports[`SendValidatorResignationSidePanel > should show error step and go back 1`] = `
+<DocumentFragment>
+  <div
+    class="display-contents"
+  />
+</DocumentFragment>
+`;

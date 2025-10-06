@@ -19,7 +19,11 @@ export const useValidatorRegistrationLockedFee = ({
 
 	const validatorRegistrationFee = BigNumber.make(
 		UnitConverter.formatUnits(
-			BigNumber.make(profile.activeNetwork().milestone()["validatorRegistrationFee"] ?? 0).toString(),
+			BigNumber.make(
+				profile.activeNetwork().isSynced()
+					? (profile.activeNetwork().milestone()["validatorRegistrationFee"] ?? 0)
+					: 0,
+			).toString(),
 			"ARK",
 		),
 	).toNumber();
