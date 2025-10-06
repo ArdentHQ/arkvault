@@ -15,8 +15,9 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
-import { expect } from "vitest";
+import { expect, vi } from "vitest";
 import * as ReactRouter from "react-router";
+import * as PanelsMock from "@/app/contexts/Panels";
 
 let emptyProfile: Contracts.IProfile;
 let profile: Contracts.IProfile;
@@ -151,28 +152,41 @@ describe("Votes", () => {
 	});
 
 	it("should open the create wallet side panel", async () => {
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route);
+		renderPage(route);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByRole("button", { name: /Create/ }));
 
-		expect(screen.getByTestId("CreateAddressSidePanel")).toBeInTheDocument();
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.CreateAddress);
 
-		expect(asFragment()).toMatchSnapshot();
+		usePanelsMock.mockRestore();
 	});
 
 	it("should open the import wallet side panel", async () => {
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route);
+		renderPage(route);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
 		await userEvent.click(screen.getByRole("button", { name: /Import/ }));
 
-		expect(screen.getByTestId("ImportAddressSidePanel")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.ImportAddress);
+
+		usePanelsMock.mockRestore();
 	});
 
 	it("should select an address and validator", async () => {

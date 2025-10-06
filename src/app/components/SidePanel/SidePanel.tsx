@@ -18,10 +18,9 @@ import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
+import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 import { useLocalStorage } from "usehooks-ts";
 import { useTranslation } from "react-i18next";
-
-export const DEFAULT_TRANSITION_DELAY_MS = 350;
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -44,6 +43,7 @@ interface SidePanelProps {
 	disableEscapeKey?: boolean;
 	shakeWhenClosing?: boolean;
 	preventClosing?: boolean;
+	minimizeable?: boolean;
 }
 
 interface SidePanelContextValue {
@@ -64,7 +64,7 @@ export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttribu
 	/>
 );
 
-export const SidePanel = ({
+const SidePanelContent = ({
 	children,
 	open,
 	onOpenChange,
@@ -85,15 +85,15 @@ export const SidePanel = ({
 	disableEscapeKey = false,
 	shakeWhenClosing = false,
 	preventClosing = false,
+	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
+	const { isMinimized, toggleMinimize } = usePanels();
 
+	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
-	const [isMinimized, setIsMinimized] = useState(false);
-	const [finishedMinimizing, setFinishedMinimizing] = useState(false);
-	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
@@ -105,23 +105,11 @@ export const SidePanel = ({
 
 				return;
 			}
-			if (open === false && isMinimized) {
-				// Reset the minimized state after the transition is complete
-				setTimeout(() => setIsMinimized(false), 350);
-			}
 
 			onOpenChange(open);
 		},
 		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
 	);
-
-	useEffect(() => {
-		if (isMinimized) {
-			setTimeout(() => setFinishedMinimizing(true), 350);
-		} else {
-			setFinishedMinimizing(false);
-		}
-	}, [isMinimized]);
 
 	const { refs, context } = useFloating({
 		onOpenChange: toggleOpen,
@@ -144,24 +132,29 @@ export const SidePanel = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const { isMounted, styles } = useTransitionStyles(context, {
-		close: {
-			transform: "translateX(100%)",
-			transitionTimingFunction: "ease-in",
-		},
-		common: {
-			transformOrigin: "right",
-			transitionProperty: "transform",
-		},
-		duration: DEFAULT_TRANSITION_DELAY_MS,
-		initial: {
-			transform: "translateX(100%)",
-		},
-		open: {
-			transform: "translateX(0%)",
-			transitionTimingFunction: "ease-out",
-		},
-	});
+	const stylesConfiguration = useMemo(
+		() => ({
+			close: {
+				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
+				transitionTimingFunction: "ease-in",
+			},
+			common: {
+				transformOrigin: "right",
+				transitionProperty: "transform",
+			},
+			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
+			initial: {
+				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+			},
+			open: {
+				transform: isMinimized ? "translate(148px, calc(100dvh - 48px))" : "translateX(0%)",
+				transitionTimingFunction: "ease-out",
+			},
+		}),
+		[isMinimized],
+	);
+
+	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
 
 	useEffect(() => {
 		onMountChange?.(isMounted);
@@ -204,24 +197,6 @@ export const SidePanel = ({
 		};
 	}, [open, popStateHandlerRef]);
 
-	const toggleMinimize = () => {
-		setIsMinimized(!isMinimized);
-	};
-
-	const headerTransform = useMemo(() => {
-		if (isMinimized && !open) {
-			return "translateY(100%)";
-		}
-
-		// Since I was unable to animate the panel width when minimized im translating the header to the right
-		// and resizing the header content to emulate the shrinked header animation
-		if (open && isMinimized) {
-			return "translateX(148px)";
-		}
-
-		return styles.transform;
-	}, [isMinimized, open, styles.transform]);
-
 	return (
 		<FloatingPortal>
 			{isMounted && (
@@ -237,25 +212,22 @@ export const SidePanel = ({
 							)}
 						/>
 						<FloatingOverlay
-							className="z-50 transition-all duration-300"
-							style={{
-								overflow: isMinimized ? "hidden" : undefined,
-								transform: isMinimized ? "translateY(calc(100dvh - 48px))" : undefined,
-							}}
+							className={cn("z-50 transition-all duration-300", {
+								"pointer-events-none": isMinimized,
+							})}
 							lockScroll={!isMinimized}
 						>
 							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
 									data-testid={dataTestId}
-									className="Dialog"
+									className={cn("Dialog", {
+										"pointer-events-auto": isMinimized,
+									})}
 									ref={refs.setFloating}
 									{...getFloatingProps()}
 								>
 									<div
-										style={{
-											...styles,
-											transform: headerTransform,
-										}}
+										style={styles}
 										className={cn(
 											"fixed top-0 right-0 w-full transition-all duration-300 md:max-w-[608px]",
 											className,
@@ -321,61 +293,63 @@ export const SidePanel = ({
 															</div>
 
 															<div className="flex flex-row items-center gap-3">
-																<div
-																	className={cn(
-																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
-																		{
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
-																		},
-																	)}
-																>
-																	<Tooltip
-																		visible={
-																			finishedMinimizing && !minimizedHintHasShown
-																		}
-																		appendTo={() => document.body}
-																		interactive={true}
-																		offset={[0, 30]}
-																		content={
-																			<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
-																				<span className="font-semibold text-white">
-																					{t(
-																						"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
-																					)}
-																				</span>
-																				<Button
-																					size="xs"
-																					variant="transparent"
-																					data-testid="SidePanel__minimize-button-hint"
-																					className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
-																					onClick={() => {
-																						persistMinimizedHint(true);
-																					}}
-																				>
-																					{t("COMMON.GOT_IT")}
-																				</Button>
-																			</div>
-																		}
-																		placement="top"
-																	>
-																		<Button
-																			data-testid="SidePanel__minimize-button"
-																			variant="transparent"
-																			size="md"
-																			className={cn("p-0", {
+																{minimizeable && (
+																	<div
+																		className={cn(
+																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																			{
 																				"h-5 w-5": isMinimized,
 																				"h-6 w-6": !isMinimized,
-																			})}
-																			onClick={(e) => {
-																				e.stopPropagation();
-																				toggleMinimize();
-																			}}
+																			},
+																		)}
+																	>
+																		<Tooltip
+																			visible={
+																				isMinimized && !minimizedHintHasShown
+																			}
+																			appendTo={() => document.body}
+																			interactive={true}
+																			offset={[0, 30]}
+																			content={
+																				<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
+																					<span className="font-semibold text-white">
+																						{t(
+																							"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
+																						)}
+																					</span>
+																					<Button
+																						size="xs"
+																						variant="transparent"
+																						data-testid="SidePanel__minimize-button-hint"
+																						className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
+																						onClick={() => {
+																							persistMinimizedHint(true);
+																						}}
+																					>
+																						{t("COMMON.GOT_IT")}
+																					</Button>
+																				</div>
+																			}
+																			placement="top"
 																		>
-																			<Icon name="Minimize" />
-																		</Button>
-																	</Tooltip>
-																</div>
+																			<Button
+																				data-testid="SidePanel__minimize-button"
+																				variant="transparent"
+																				size="md"
+																				className={cn("p-0", {
+																					"h-5 w-5": isMinimized,
+																					"h-6 w-6": !isMinimized,
+																				})}
+																				onClick={(e) => {
+																					e.stopPropagation();
+																					toggleMinimize();
+																				}}
+																			>
+																				<Icon name="Minimize" />
+																			</Button>
+																		</Tooltip>
+																	</div>
+																)}
 
 																<div
 																	className={cn(
@@ -453,5 +427,15 @@ export const SidePanel = ({
 				</SidePanelContext.Provider>
 			)}
 		</FloatingPortal>
+	);
+};
+
+export const SidePanel = (props: SidePanelProps): JSX.Element => {
+	const { resetKey } = usePanels();
+
+	return (
+		<div key={resetKey} className="display-contents">
+			<SidePanelContent {...props} />
+		</div>
 	);
 };

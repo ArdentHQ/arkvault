@@ -12,39 +12,19 @@ import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
-import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { SignMessageSidePanel } from "@/domains/message/components/SignMessage/SignMessageSidePanel";
-import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
-import { useDeeplinkActionHandler } from "@/app/hooks";
-import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
-import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
-import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
+import { Panel, usePanels } from "@/app/contexts/Panels";
+import { useDeeplinkActionHandler } from "@/app/hooks/use-deeplink";
 
-export const Dashboard = ({
-	onCreateAddress,
-	onImportAddress,
-	hasFocus,
-}: {
-	onCreateAddress?: (open: boolean) => void;
-	onImportAddress?: (open: boolean) => void;
-	hasFocus?: boolean;
-}) => {
+export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
-	const [showSignMessagePanel, setShowSignMessagePanel] = useState(false);
-	const [showSendTransferPanel, setShowSendTransferPanel] = useState(false);
-	const [showSendRegistrationPanel, setShowSendRegistrationPanel] = useState<
-		"validatorRegistration" | "usernameRegistration" | undefined
-	>(undefined);
-	const [showSendUsernameResignationPanel, setShowSendUsernameResignationPanel] = useState(false);
-	const [showSendValidatorResignationPanel, setShowSendValidatorResignationPanel] = useState(false);
-
+	const { openPanel } = usePanels();
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
-			setShowSignMessagePanel(true);
+			openPanel(Panel.SignMessage);
 		},
 		onTransfer: () => {
-			setShowSendTransferPanel(true);
+			openPanel(Panel.SendTransfer);
 		},
 	});
 
@@ -130,11 +110,6 @@ export const Dashboard = ({
 						isLoadingVotes={isLoadingVotes}
 						isUpdatingTransactions={isUpdatingTransactions}
 						onUpdate={setIsUpdatingWallet}
-						onCreateAddress={onCreateAddress}
-						onImportAddress={onImportAddress}
-						onSendRegistration={setShowSendRegistrationPanel}
-						onSendUsernameResignation={setShowSendUsernameResignationPanel}
-						onSendValidatorResignation={setShowSendValidatorResignationPanel}
 					/>
 				)}
 			</Section>
@@ -190,41 +165,6 @@ export const Dashboard = ({
 					/>
 				</div>
 			</Section>
-
-			<ResetWhenUnmounted>
-				<SignMessageSidePanel open={showSignMessagePanel} onOpenChange={setShowSignMessagePanel} />
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendTransferSidePanel open={showSendTransferPanel} onOpenChange={setShowSendTransferPanel} />
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendRegistrationSidePanel
-					open={showSendRegistrationPanel !== undefined}
-					registrationType={showSendRegistrationPanel}
-					onOpenChange={(open) => {
-						if (!open) {
-							setShowSendRegistrationPanel(undefined);
-							return;
-						}
-					}}
-				/>
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendUsernameResignationSidePanel
-					open={showSendUsernameResignationPanel}
-					onOpenChange={setShowSendUsernameResignationPanel}
-				/>
-			</ResetWhenUnmounted>
-
-			<ResetWhenUnmounted>
-				<SendValidatorResignationSidePanel
-					open={showSendValidatorResignationPanel}
-					onOpenChange={setShowSendValidatorResignationPanel}
-				/>
-			</ResetWhenUnmounted>
 		</Page>
 	);
 };

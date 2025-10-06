@@ -1,8 +1,9 @@
 import React from "react";
 import { SidePanel } from "./SidePanel";
 import userEvent from "@testing-library/user-event";
-import { render, screen, act } from "@testing-library/react";
+import { screen, act } from "@testing-library/react";
 import { Icon } from "@/app/components/Icon";
+import { render } from "@/utils/testing-library";
 
 describe("SidePanel", () => {
 	it("should render title", () => {
