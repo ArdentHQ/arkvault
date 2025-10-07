@@ -11,6 +11,7 @@ export enum Panel {
 	SendValidatorResignation = "SEND_VALIDATOR_RESIGNATION",
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
+	Addresses = "ADDRESSES",
 }
 
 interface PanelsContextValue {
@@ -81,6 +82,10 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 
 					setComponentResetedPromiseResolver(resolve);
 				}, SIDE_PANEL_TRANSITION_DURATION);
+			} else {
+				setResetKey((previousKey) => previousKey + 1);
+
+				setComponentResetedPromiseResolver(resolve);
 			}
 		});
 
