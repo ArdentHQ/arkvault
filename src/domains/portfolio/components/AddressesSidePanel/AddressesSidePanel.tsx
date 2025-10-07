@@ -1,11 +1,10 @@
 import React, { ChangeEvent, useEffect, useState, JSX } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
-import { useBreakpoint, useWalletAlias } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Contracts } from "@/app/lib/profiles";
 import { DeleteAddressMessage } from "@/domains/portfolio/components/AddressesSidePanel/DeleteAddressMessage";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
@@ -21,13 +20,11 @@ import { useWalletSelection } from "@/domains/portfolio/hooks/use-wallet-selecti
 import { AddressViewSelection, AddressViewType } from "@/app/lib/profiles/wallet.enum";
 
 export const AddressesSidePanel = ({
-	profile,
 	open,
 	onClose,
 	onOpenChange,
 	onMountChange,
 }: {
-	profile: Contracts.IProfile;
 	open: boolean;
 	onClose?: () => void;
 	onOpenChange: (open: boolean) => void;
@@ -35,6 +32,8 @@ export const AddressesSidePanel = ({
 }): JSX.Element => {
 	/* istanbul ignore next -- @preserve */
 	const { isXs } = useBreakpoint();
+
+	const profile = useActiveProfile();
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [addressToDelete, setAddressToDelete] = useState<string | undefined>(undefined);

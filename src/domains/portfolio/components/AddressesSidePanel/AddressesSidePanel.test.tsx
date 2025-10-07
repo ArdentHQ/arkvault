@@ -8,6 +8,8 @@ import { waitFor, screen } from "@testing-library/react";
 
 const getSearchInput = () => screen.getByTestId("AddressesPanel--SearchInput");
 
+const fixtureProfileId = getMainsailProfileId();
+
 describe("AddressesSidePanel", () => {
 	let profile: Contracts.IProfile;
 	let wallets: Contracts.IWalletRepository;
@@ -15,7 +17,7 @@ describe("AddressesSidePanel", () => {
 	const sidePanelCloseButton = "SidePanel__close-button";
 
 	beforeAll(async () => {
-		profile = env.profiles().findById(getMainsailProfileId());
+		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
 
@@ -25,7 +27,9 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should render", () => {
-		render(<AddressesSidePanel profile={profile} open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		expect(screen.getByTestId("AddressesSidePanel")).toBeInTheDocument();
 		expect(screen.getAllByTestId("AddressRow").length).toBe(wallets.count());
@@ -34,7 +38,9 @@ describe("AddressesSidePanel", () => {
 	it("should select an address when AddressRow is clicked", async () => {
 		const onClose = vi.fn();
 
-		render(<AddressesSidePanel profile={profile} open={true} onClose={onClose} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
@@ -45,7 +51,9 @@ describe("AddressesSidePanel", () => {
 	it("should select all displayed addresses when `select all` clicked", async () => {
 		const onClose = vi.fn();
 
-		render(<AddressesSidePanel profile={profile} open={true} onClose={onClose} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
@@ -54,7 +62,9 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should switch to delete mode when `manage` clicked", async () => {
-		render(<AddressesSidePanel profile={profile} open={true} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
 
@@ -62,7 +72,9 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should disable `select all` when delete mode enabled", async () => {
-		render(<AddressesSidePanel profile={profile} open={true} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
 
@@ -70,7 +82,9 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should reset delete state when `cancel` clicked", async () => {
-		render(<AddressesSidePanel profile={profile} open={true} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		// go into delete mode
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
@@ -85,7 +99,9 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should filter wallets by address", async () => {
-		render(<AddressesSidePanel profile={profile} open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await userEvent.type(getSearchInput(), wallets.first().address());
 
@@ -93,7 +109,9 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should filter wallets by displayName", async () => {
-		render(<AddressesSidePanel profile={profile} open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await userEvent.type(getSearchInput(), "Mainsail Wallet 1");
 
@@ -109,7 +127,9 @@ describe("AddressesSidePanel", () => {
 	it("should show a hint for `manage` button", async () => {
 		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(undefined);
 
-		render(<AddressesSidePanel profile={profile} open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
 
@@ -119,7 +139,9 @@ describe("AddressesSidePanel", () => {
 	it("should not show a hint for `manage` button if already shown", async () => {
 		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue("1");
 
-		render(<AddressesSidePanel profile={profile} open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await waitFor(() => {
 			expect(screen.queryByText(/You can manage and remove your addresses here./)).not.toBeInTheDocument();
@@ -131,7 +153,9 @@ describe("AddressesSidePanel", () => {
 	it("should persist state for shown `manage` button hint", async () => {
 		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(undefined);
 
-		render(<AddressesSidePanel profile={profile} open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
 
@@ -148,7 +172,9 @@ describe("AddressesSidePanel", () => {
 	it("should deselect an address when AddressRow is clicked", async () => {
 		const onClose = vi.fn();
 
-		render(<AddressesSidePanel profile={profile} open={true} onClose={onClose} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
 		await userEvent.click(screen.getByTestId(sidePanelCloseButton));
@@ -157,7 +183,9 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should toggle between single and multiple view", async () => {
-		render(<AddressesSidePanel profile={profile} open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		expect(screen.getByTestId("tabs__tab-button-single")).toBeInTheDocument();
 		await userEvent.click(screen.getByTestId("tabs__tab-button-single"));
@@ -168,7 +196,9 @@ describe("AddressesSidePanel", () => {
 
 	it("should select only one address when in single view", async () => {
 		const onClose = vi.fn();
-		render(<AddressesSidePanel profile={profile} open={true} onClose={onClose} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		const singleTabButton = screen.getByTestId("tabs__tab-button-single");
 		await userEvent.click(singleTabButton);
@@ -185,7 +215,9 @@ describe("AddressesSidePanel", () => {
 	it("should mark an address for deletion", async () => {
 		const onClose = vi.fn();
 
-		render(<AddressesSidePanel profile={profile} open={true} onClose={onClose} onOpenChange={vi.fn()} />);
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
 
 		// go into delete mode
 		await userEvent.click(screen.getByTestId("ManageAddresses"));
