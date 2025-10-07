@@ -3,17 +3,13 @@
 exports[`Exchange > should render empty 1`] = `
 <div>
   <div
-    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
-      <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
-        data-testid="NavigationBar__buttons-separator"
-      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -894,17 +890,13 @@ exports[`Exchange > should render empty 1`] = `
 exports[`Exchange > should render with exchanges 1`] = `
 <div>
   <div
-    class="relative flex flex-col sm:min-h-screen pb-32 sm:pb-0"
+    class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
       data-testid="NavigationBarMobile"
     >
-      <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-900 dim:border-theme-dim-950 border-t"
-        data-testid="NavigationBar__buttons-separator"
-      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >

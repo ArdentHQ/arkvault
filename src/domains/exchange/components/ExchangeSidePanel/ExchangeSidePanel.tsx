@@ -164,9 +164,9 @@ export const ExchangeSidePanel = ({
 		fetchCurrencies();
 	}, [provider, exchangeService, exchangeId]);
 
-	const onReady = () => {
+	const onReady = useCallback(() => {
 		setIsReady(true);
-	};
+	}, [setIsReady]);
 
 	const onMountChange = (mounted: boolean) => {
 		if (!mounted) {
@@ -266,7 +266,7 @@ export const ExchangeSidePanel = ({
 		};
 
 		if (orderId) {
-			initExchangeTransaction();
+			void initExchangeTransaction();
 		} else {
 			onReady();
 		}
