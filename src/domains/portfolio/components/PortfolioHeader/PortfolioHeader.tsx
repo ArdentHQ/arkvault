@@ -31,44 +31,43 @@ import { Dot } from "@/app/components/Dot";
 const useMigrationStatus = (profile: Contracts.IProfile) => {
 	const keys = {
 		IsIgnored: `${profile.id()}:MigrationIsIgnored`,
-		IsMigratingLater: `${profile.id()}:MigrationIsMigratingLater`
-	}
+		IsMigratingLater: `${profile.id()}:MigrationIsMigratingLater`,
+	};
 
-	const storage = new LocalStorage("localstorage")
-	const [isIgnored, setIsIgnored] = useState(false)
-	const [isMigratingLater, setIsMigratingLater] = useState(false)
-	const [isLoading, setIsLoading] = useState(false)
+	const storage = new LocalStorage("localstorage");
+	const [isIgnored, setIsIgnored] = useState(false);
+	const [isMigratingLater, setIsMigratingLater] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
 		const loadStatus = async () => {
-			setIsLoading(true)
-			const isIgnored = await storage.get<boolean>(keys.IsIgnored)
-			const isMigratingLater = await storage.get<boolean>(keys.IsMigratingLater)
+			setIsLoading(true);
+			const isIgnored = await storage.get<boolean>(keys.IsIgnored);
+			const isMigratingLater = await storage.get<boolean>(keys.IsMigratingLater);
 
-			setIsIgnored(isIgnored ?? false)
-			setIsMigratingLater(isMigratingLater ?? false)
+			setIsIgnored(isIgnored ?? false);
+			setIsMigratingLater(isMigratingLater ?? false);
 
-			setIsLoading(false)
-		}
+			setIsLoading(false);
+		};
 
-		loadStatus()
-	}, [])
-
+		loadStatus();
+	}, []);
 
 	return {
 		ignore: async () => {
-			setIsIgnored(true)
-			await storage.set(keys.IsIgnored, true)
+			setIsIgnored(true);
+			await storage.set(keys.IsIgnored, true);
 		},
 		isIgnored,
 		isLoading,
 		isMigratingLater,
 		migrateLater: async () => {
-			setIsMigratingLater(true)
-			await storage.set(keys.IsMigratingLater, true)
-		}
-	}
-}
+			setIsMigratingLater(true);
+			await storage.set(keys.IsMigratingLater, true);
+		},
+	};
+};
 
 export const PortfolioHeader = ({
 	profile,
@@ -105,14 +104,6 @@ export const PortfolioHeader = ({
 		}
 	};
 
-	const handleLedgerMigration = (registrationType?: "validatorRegistration" | "usernameRegistration") => {
-		if (registrationType === "validatorRegistration") {
-			openPanel(Panel.SendValidatorRegistration);
-		} else {
-			openPanel(Panel.SendUsernameRegistration);
-		}
-	};
-
 	const handleSendUsernameResignation = () => {
 		openPanel(Panel.SendUsernameResignation);
 	};
@@ -121,12 +112,7 @@ export const PortfolioHeader = ({
 		openPanel(Panel.SendValidatorResignation);
 	};
 
-	const {
-		activeModal,
-		setActiveModal,
-		handleSelectOption,
-		handleSend
-	} = useWalletActions({
+	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
 		handleSendRegistration,
 		handleSendUsernameResignation,
 		handleSendValidatorResignation,
@@ -138,7 +124,7 @@ export const PortfolioHeader = ({
 
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
-	const { isIgnored, ignore, isLoading, isMigratingLater, migrateLater } = useMigrationStatus(profile)
+	const { isIgnored, ignore, isLoading, isMigratingLater, migrateLater } = useMigrationStatus(profile);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
@@ -458,13 +444,20 @@ export const PortfolioHeader = ({
 												registrationOptions,
 												{
 													key: additionalOptions.key,
-													options: [...additionalOptions.options, {
-														element: <div className="relative">{t("COMMON.LEDGER_MIGRATION.ADDRESS_MIGRATION")}<Dot className="top-2 -right-4" /></div>,
-														label: "",
-														value: "ledger-migration",
-													}],
+													options: [
+														...additionalOptions.options,
+														{
+															element: (
+																<div className="relative">
+																	{t("COMMON.LEDGER_MIGRATION.ADDRESS_MIGRATION")}
+																	<Dot className="top-2 -right-4" />
+																</div>
+															),
+															label: "",
+															value: "ledger-migration",
+														},
+													],
 													title: additionalOptions.title,
-
 												},
 												secondaryOptions,
 											]}
@@ -484,7 +477,7 @@ export const PortfolioHeader = ({
 																className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 h-8 w-full px-4 py-1.5 sm:w-auto"
 																onClick={(event) => {
 																	event.stopPropagation();
-																	migrateLater()
+																	migrateLater();
 																}}
 															>
 																{t("COMMON.GOT_IT")}
@@ -533,6 +526,6 @@ export const PortfolioHeader = ({
 					onUpdate?.(true);
 				}}
 			/>
-		</header >
+		</header>
 	);
 };
