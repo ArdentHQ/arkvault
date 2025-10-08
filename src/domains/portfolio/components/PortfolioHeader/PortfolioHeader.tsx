@@ -17,12 +17,10 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
 import { assertWallet } from "@/utils/assertions";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
-import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { Trans } from "react-i18next";
-import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { Label } from "@/app/components/Label";
@@ -44,8 +42,6 @@ export const PortfolioHeader = ({
 	onUpdate?: (status: boolean) => void;
 	hasFocus?: boolean;
 }) => {
-	const [showAddressesPanel, setShowAddressesPanel] = useState(false);
-
 	const { openPanel } = usePanels();
 
 	const allWallets = profile.wallets().values();
@@ -106,7 +102,7 @@ export const PortfolioHeader = ({
 
 	const handleViewAddress = () => {
 		if (allWallets.length > 1) {
-			setShowAddressesPanel(true);
+			openPanel(Panel.Addresses);
 		}
 	};
 
@@ -429,10 +425,6 @@ export const PortfolioHeader = ({
 					</div>
 				</div>
 			</div>
-
-			<ResetWhenUnmounted>
-				<AddressesSidePanel profile={profile} open={showAddressesPanel} onOpenChange={setShowAddressesPanel} />
-			</ResetWhenUnmounted>
 
 			<WalletActionsModals
 				wallets={selectedWallets}
