@@ -902,50 +902,6 @@ exports[`Dashboard > should render 1`] = `
                   class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
                 >
                   <div
-                    class="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-warning-50 rounded-t-lg p-4 md:py-2"
-                  >
-                    <div
-                      class="flex flex-col md:flex-row md:items-center md:justify-between"
-                    >
-                      <span
-                        class="text-sm"
-                      >
-                        Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?
-                      </span>
-                      <div
-                        class="mt-3 flex items-center md:mt-0"
-                      >
-                        <button
-                          class="text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto space-x-2 px-2 py-[3px]"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            <span>
-                              Cancel
-                            </span>
-                          </div>
-                        </button>
-                        <div
-                          class="relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mx-3 h-5 p-0"
-                        />
-                        <button
-                          class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center gap-2"
-                          >
-                            <span>
-                              Start Migration
-                            </span>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div
                     class="flex w-full flex-col gap-3 p-4"
                   >
                     <div
