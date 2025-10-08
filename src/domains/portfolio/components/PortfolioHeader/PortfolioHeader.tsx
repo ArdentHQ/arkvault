@@ -24,7 +24,6 @@ import { Trans } from "react-i18next";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { Label } from "@/app/components/Label";
-import { Alert } from "@/app/components/Alert";
 import { LedgerMigrationAlert } from "@/domains/wallet/components/LedgerMigrationAlert/LedgerMigrationAlert";
 
 export const PortfolioHeader = ({
@@ -439,6 +438,6 @@ export const PortfolioHeader = ({
 					onUpdate?.(true);
 				}}
 			/>
-		</header >
+		</header>
 	);
 };

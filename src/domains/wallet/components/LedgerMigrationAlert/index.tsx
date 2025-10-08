@@ -1,1 +1,1 @@
-export * from "./LedgerMigrationAlert"
+export * from "./LedgerMigrationAlert";

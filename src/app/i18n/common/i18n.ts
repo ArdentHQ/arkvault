@@ -231,7 +231,8 @@ export const translations = {
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
 	LEDGER_MIGRATION: {
 		START_MIGRATION: "Start Migration",
-		UPDATE_TO_ETH_DERIVATION_PATH: "Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?"
+		UPDATE_TO_ETH_DERIVATION_PATH:
+			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
 	},
 	LEDGER_NETWORK_NOT_SUPPORTED: "Ledger is not yet supported on this network.",
 	LINK: "Link",
