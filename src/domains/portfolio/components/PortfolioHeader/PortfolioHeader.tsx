@@ -25,6 +25,50 @@ import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { Label } from "@/app/components/Label";
 import { LedgerMigrationAlert } from "@/domains/wallet/components/LedgerMigrationAlert/LedgerMigrationAlert";
+import { LocalStorage } from "@/app/lib/profiles/local.storage";
+import { Dot } from "@/app/components/Dot";
+
+const useMigrationStatus = (profile: Contracts.IProfile) => {
+	const keys = {
+		IsIgnored: `${profile.id()}:MigrationIsIgnored`,
+		IsMigratingLater: `${profile.id()}:MigrationIsMigratingLater`
+	}
+
+	const storage = new LocalStorage("localstorage")
+	const [isIgnored, setIsIgnored] = useState(false)
+	const [isMigratingLater, setIsMigratingLater] = useState(false)
+	const [isLoading, setIsLoading] = useState(false)
+
+	useEffect(() => {
+		const loadStatus = async () => {
+			setIsLoading(true)
+			const isIgnored = await storage.get<boolean>(keys.IsIgnored)
+			const isMigratingLater = await storage.get<boolean>(keys.IsMigratingLater)
+
+			setIsIgnored(isIgnored ?? false)
+			setIsMigratingLater(isMigratingLater ?? false)
+
+			setIsLoading(false)
+		}
+
+		loadStatus()
+	}, [])
+
+
+	return {
+		ignore: async () => {
+			setIsIgnored(true)
+			await storage.set(keys.IsIgnored, true)
+		},
+		isIgnored,
+		isLoading,
+		isMigratingLater,
+		migrateLater: async () => {
+			setIsMigratingLater(true)
+			await storage.set(keys.IsMigratingLater, true)
+		}
+	}
+}
 
 export const PortfolioHeader = ({
 	profile,
@@ -61,6 +105,14 @@ export const PortfolioHeader = ({
 		}
 	};
 
+	const handleLedgerMigration = (registrationType?: "validatorRegistration" | "usernameRegistration") => {
+		if (registrationType === "validatorRegistration") {
+			openPanel(Panel.SendValidatorRegistration);
+		} else {
+			openPanel(Panel.SendUsernameRegistration);
+		}
+	};
+
 	const handleSendUsernameResignation = () => {
 		openPanel(Panel.SendUsernameResignation);
 	};
@@ -69,7 +121,12 @@ export const PortfolioHeader = ({
 		openPanel(Panel.SendValidatorResignation);
 	};
 
-	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
+	const {
+		activeModal,
+		setActiveModal,
+		handleSelectOption,
+		handleSend
+	} = useWalletActions({
 		handleSendRegistration,
 		handleSendUsernameResignation,
 		handleSendValidatorResignation,
@@ -81,6 +138,7 @@ export const PortfolioHeader = ({
 
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
+	const { isIgnored, ignore, isLoading, isMigratingLater, migrateLater } = useMigrationStatus(profile)
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
@@ -213,7 +271,7 @@ export const PortfolioHeader = ({
 
 				<div className="flex flex-col gap-0.5">
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm">
-						<LedgerMigrationAlert />
+						{!isLoading && !isIgnored && <LedgerMigrationAlert onCancel={ignore} />}
 						<div className="flex w-full flex-col gap-3 p-4">
 							<div className="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto">
 								{selectedWallets.length === 1 && (
@@ -358,7 +416,7 @@ export const PortfolioHeader = ({
 										>
 											<div className="my-auto flex flex-1">
 												<Button
-													data-testid="WalletHeader__send-button"
+													data-testid="WalletHeader__s!isLoading&& end-button"
 													className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
 													disabled={
 														wallet.balance() === 0 ||
@@ -398,17 +456,54 @@ export const PortfolioHeader = ({
 											options={[
 												primaryOptions,
 												registrationOptions,
-												additionalOptions,
+												{
+													key: additionalOptions.key,
+													options: [...additionalOptions.options, {
+														element: <div className="relative">{t("COMMON.LEDGER_MIGRATION.ADDRESS_MIGRATION")}<Dot className="top-2 -right-4" /></div>,
+														label: "",
+														value: "ledger-migration",
+													}],
+													title: additionalOptions.title,
+
+												},
 												secondaryOptions,
 											]}
 											toggleContent={
-												<Button
-													variant="secondary"
-													size="icon"
-													className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+												<Tooltip
+													visible={!isLoading && !isMigratingLater && isIgnored}
+													interactive={true}
+													content={
+														<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
+															<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+																<Trans i18nKey="COMMON.LEDGER_MIGRATION.MIGRATE_LATER" />
+															</div>
+															<Button
+																size="xs"
+																variant="transparent"
+																data-testid="HideManageHint"
+																className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 h-8 w-full px-4 py-1.5 sm:w-auto"
+																onClick={(event) => {
+																	event.stopPropagation();
+																	migrateLater()
+																}}
+															>
+																{t("COMMON.GOT_IT")}
+															</Button>
+														</div>
+													}
+													placement="bottom"
 												>
-													<Icon name="EllipsisVerticalFilled" size="lg" />
-												</Button>
+													<div className="relative">
+														<Button
+															variant="secondary"
+															size="icon"
+															className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+														>
+															<Icon name="EllipsisVerticalFilled" size="lg" />
+														</Button>
+														{isIgnored && <Dot className="-top-[2px] -right-[2px]" />}
+													</div>
+												</Tooltip>
 											}
 											onSelect={handleSelectOption}
 										/>
@@ -438,6 +533,6 @@ export const PortfolioHeader = ({
 					onUpdate?.(true);
 				}}
 			/>
-		</header>
+		</header >
 	);
 };

@@ -230,6 +230,8 @@ export const translations = {
 	LEDGER_CONNECTED: "{{device}} connected",
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
 	LEDGER_MIGRATION: {
+		ADDRESS_MIGRATION: "Address Migration",
+		MIGRATE_LATER: "Want to migrate later? You’ll find the option in the drop-down menu.",
 		START_MIGRATION: "Start Migration",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
