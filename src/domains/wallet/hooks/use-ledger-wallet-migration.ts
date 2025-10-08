@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { LocalStorage } from "@/app/lib/profiles/local.storage";
 import { Contracts } from "@/app/lib/profiles";
 import { WalletData } from "@/app/lib/profiles/wallet.enum";
