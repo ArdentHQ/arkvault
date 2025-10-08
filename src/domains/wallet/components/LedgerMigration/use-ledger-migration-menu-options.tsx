@@ -1,8 +1,8 @@
-import { Dot } from "@/app/components/Dot"
-import { useTranslation } from "react-i18next"
+import { Dot } from "@/app/components/Dot";
+import { useTranslation } from "react-i18next";
 
 export const useLedgerMigrationMenuOptions = () => {
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 
 	return [
 		{
@@ -15,5 +15,5 @@ export const useLedgerMigrationMenuOptions = () => {
 			label: "",
 			value: "ledger-migration",
 		},
-	]
-}
+	];
+};

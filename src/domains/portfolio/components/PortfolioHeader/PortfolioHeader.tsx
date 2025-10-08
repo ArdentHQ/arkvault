@@ -81,19 +81,13 @@ export const PortfolioHeader = ({
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
-	const ledgerMigrationOptions = useLedgerMigrationMenuOptions()
+	const ledgerMigrationOptions = useLedgerMigrationMenuOptions();
 
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
-	const {
-		isIgnored,
-		ignore,
-		isLoading,
-		isMigratingLater,
-		migrateLater,
-		hasWalletsToMigrate
-	} = useLedgerMigrationStatus(profile);
+	const { isIgnored, ignore, isLoading, isMigratingLater, migrateLater, hasWalletsToMigrate } =
+		useLedgerMigrationStatus(profile);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
@@ -119,7 +113,6 @@ export const PortfolioHeader = ({
 			openPanel(Panel.Addresses);
 		}
 	};
-
 
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
@@ -414,20 +407,21 @@ export const PortfolioHeader = ({
 												registrationOptions,
 												{
 													key: additionalOptions.key,
-													options: hasWalletsToMigrate ?
-														[
-															...additionalOptions.options,
-															...ledgerMigrationOptions,
-														]
-														: additionalOptions.options
-													,
+													options: hasWalletsToMigrate
+														? [...additionalOptions.options, ...ledgerMigrationOptions]
+														: additionalOptions.options,
 													title: additionalOptions.title,
 												},
 												secondaryOptions,
 											]}
 											toggleContent={
 												<Tooltip
-													visible={hasWalletsToMigrate && !isLoading && !isMigratingLater && isIgnored}
+													visible={
+														hasWalletsToMigrate &&
+														!isLoading &&
+														!isMigratingLater &&
+														isIgnored
+													}
 													interactive={true}
 													content={
 														<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
@@ -458,7 +452,9 @@ export const PortfolioHeader = ({
 														>
 															<Icon name="EllipsisVerticalFilled" size="lg" />
 														</Button>
-														{hasWalletsToMigrate && isIgnored && <Dot className="-top-[2px] -right-[2px]" />}
+														{hasWalletsToMigrate && isIgnored && (
+															<Dot className="-top-[2px] -right-[2px]" />
+														)}
 													</div>
 												</Tooltip>
 											}

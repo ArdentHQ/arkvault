@@ -14,14 +14,21 @@ export const useLedgerMigrationStatus = (profile: Contracts.IProfile) => {
 	const [isMigratingLater, setIsMigratingLater] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 
-	const hasWalletsToMigrate = useMemo(() => profile.wallets().values().some(wallet => {
-		if (wallet.isLedger()) {
-			const meta = profile.activeNetwork().meta()
-			return wallet.data().get<string>(WalletData.DerivationPath)?.includes?.(meta["ark_slip44"])
-		}
+	const hasWalletsToMigrate = useMemo(
+		() =>
+			profile
+				.wallets()
+				.values()
+				.some((wallet) => {
+					if (wallet.isLedger()) {
+						const meta = profile.activeNetwork().meta();
+						return wallet.data().get<string>(WalletData.DerivationPath)?.includes?.(meta["ark_slip44"]);
+					}
 
-		return false
-	}), [profile])
+					return false;
+				}),
+		[profile],
+	);
 
 	useEffect(() => {
 		const loadStatus = async () => {
