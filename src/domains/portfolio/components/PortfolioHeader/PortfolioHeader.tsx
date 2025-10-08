@@ -24,50 +24,9 @@ import { Trans } from "react-i18next";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { Label } from "@/app/components/Label";
-import { LedgerMigrationAlert } from "@/domains/wallet/components/LedgerMigrationAlert/LedgerMigrationAlert";
-import { LocalStorage } from "@/app/lib/profiles/local.storage";
 import { Dot } from "@/app/components/Dot";
-
-const useMigrationStatus = (profile: Contracts.IProfile) => {
-	const keys = {
-		IsIgnored: `${profile.id()}:MigrationIsIgnored`,
-		IsMigratingLater: `${profile.id()}:MigrationIsMigratingLater`,
-	};
-
-	const storage = new LocalStorage("localstorage");
-	const [isIgnored, setIsIgnored] = useState(false);
-	const [isMigratingLater, setIsMigratingLater] = useState(false);
-	const [isLoading, setIsLoading] = useState(false);
-
-	useEffect(() => {
-		const loadStatus = async () => {
-			setIsLoading(true);
-			const isIgnored = await storage.get<boolean>(keys.IsIgnored);
-			const isMigratingLater = await storage.get<boolean>(keys.IsMigratingLater);
-
-			setIsIgnored(isIgnored ?? false);
-			setIsMigratingLater(isMigratingLater ?? false);
-
-			setIsLoading(false);
-		};
-
-		loadStatus();
-	}, []);
-
-	return {
-		ignore: async () => {
-			setIsIgnored(true);
-			await storage.set(keys.IsIgnored, true);
-		},
-		isIgnored,
-		isLoading,
-		isMigratingLater,
-		migrateLater: async () => {
-			setIsMigratingLater(true);
-			await storage.set(keys.IsMigratingLater, true);
-		},
-	};
-};
+import { LedgerMigrationBanner, useLedgerMigrationMenuOptions } from "@/domains/wallet/components/LedgerMigration";
+import { useLedgerMigrationStatus } from "@/domains/wallet/hooks/use-ledger-wallet-migration";
 
 export const PortfolioHeader = ({
 	profile,
@@ -122,9 +81,19 @@ export const PortfolioHeader = ({
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
+	const ledgerMigrationOptions = useLedgerMigrationMenuOptions()
+
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
-	const { isIgnored, ignore, isLoading, isMigratingLater, migrateLater } = useMigrationStatus(profile);
+
+	const {
+		isIgnored,
+		ignore,
+		isLoading,
+		isMigratingLater,
+		migrateLater,
+		hasWalletsToMigrate
+	} = useLedgerMigrationStatus(profile);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
@@ -151,6 +120,7 @@ export const PortfolioHeader = ({
 		}
 	};
 
+
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
 			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
@@ -174,7 +144,7 @@ export const PortfolioHeader = ({
 										setShowHint(false);
 									}}
 								>
-									{t("COMMON.GOT_IT")}
+									{t("COMMON.GOT_IT")},
 								</Button>
 							</div>
 						}
@@ -257,7 +227,7 @@ export const PortfolioHeader = ({
 
 				<div className="flex flex-col gap-0.5">
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm">
-						{!isLoading && !isIgnored && <LedgerMigrationAlert onCancel={ignore} />}
+						{hasWalletsToMigrate && !isLoading && !isIgnored && <LedgerMigrationBanner onCancel={ignore} />}
 						<div className="flex w-full flex-col gap-3 p-4">
 							<div className="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto">
 								{selectedWallets.length === 1 && (
@@ -444,26 +414,20 @@ export const PortfolioHeader = ({
 												registrationOptions,
 												{
 													key: additionalOptions.key,
-													options: [
-														...additionalOptions.options,
-														{
-															element: (
-																<div className="relative">
-																	{t("COMMON.LEDGER_MIGRATION.ADDRESS_MIGRATION")}
-																	<Dot className="top-2 -right-4" />
-																</div>
-															),
-															label: "",
-															value: "ledger-migration",
-														},
-													],
+													options: hasWalletsToMigrate ?
+														[
+															...additionalOptions.options,
+															...ledgerMigrationOptions,
+														]
+														: additionalOptions.options
+													,
 													title: additionalOptions.title,
 												},
 												secondaryOptions,
 											]}
 											toggleContent={
 												<Tooltip
-													visible={!isLoading && !isMigratingLater && isIgnored}
+													visible={hasWalletsToMigrate && !isLoading && !isMigratingLater && isIgnored}
 													interactive={true}
 													content={
 														<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
@@ -494,7 +458,7 @@ export const PortfolioHeader = ({
 														>
 															<Icon name="EllipsisVerticalFilled" size="lg" />
 														</Button>
-														{isIgnored && <Dot className="-top-[2px] -right-[2px]" />}
+														{hasWalletsToMigrate && isIgnored && <Dot className="-top-[2px] -right-[2px]" />}
 													</div>
 												</Tooltip>
 											}

@@ -2,7 +2,7 @@ import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { useTranslation } from "react-i18next";
 
-export const LedgerMigrationAlert = ({ onCancel, onStart }: { onStart?: () => void; onCancel?: () => void }) => {
+export const LedgerMigrationBanner = ({ onCancel, onStart }: { onStart?: () => void; onCancel?: () => void }) => {
 	const { t } = useTranslation();
 	return (
 		<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-warning-50 rounded-t-lg p-4 md:py-2">
