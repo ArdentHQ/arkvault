@@ -4,7 +4,6 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Divider } from "@/app/components/Divider";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormField, FormLabel } from "@/app/components/Form";

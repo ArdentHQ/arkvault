@@ -1,7 +1,6 @@
 import cn from "classnames";
 import React, { ReactElement, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
-import { Divider } from "@/app/components/Divider";
 
 export const DetailLabelText = ({ children, className }: { children: ReactNode; className?: string }) => (
 	<div
