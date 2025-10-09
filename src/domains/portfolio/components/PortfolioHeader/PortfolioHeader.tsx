@@ -24,6 +24,9 @@ import { Trans } from "react-i18next";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { Label } from "@/app/components/Label";
+import { Dot } from "@/app/components/Dot";
+import { LedgerMigrationBanner, useLedgerMigrationMenuOptions } from "@/domains/wallet/components/LedgerMigration";
+import { useLedgerMigrationStatus } from "@/domains/wallet/hooks/use-ledger-wallet-migration";
 
 export const PortfolioHeader = ({
 	profile,
@@ -78,8 +81,13 @@ export const PortfolioHeader = ({
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
 		useWalletOptions(selectedWallets);
 
+	const ledgerMigrationOptions = useLedgerMigrationMenuOptions();
+
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
+
+	const { isIgnored, ignore, isLoading, isMigratingLater, migrateLater, hasWalletsToMigrate } =
+		useLedgerMigrationStatus(profile);
 
 	useEffect(() => {
 		let id: NodeJS.Timeout;
@@ -129,7 +137,7 @@ export const PortfolioHeader = ({
 										setShowHint(false);
 									}}
 								>
-									{t("COMMON.GOT_IT")}
+									{t("COMMON.GOT_IT")},
 								</Button>
 							</div>
 						}
@@ -211,204 +219,248 @@ export const PortfolioHeader = ({
 				</div>
 
 				<div className="flex flex-col gap-0.5">
-					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 flex w-full flex-col gap-3 rounded bg-white p-4 md:rounded-t-lg md:rounded-b-sm">
-						<div className="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto">
-							{selectedWallets.length === 1 && (
-								<div className="flex w-full flex-1 flex-row items-center gap-3">
-									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
-										{t("COMMON.ADDRESS")}
-									</p>
-
-									<div className="flex h-[17px] items-center md:h-5">
-										<span className="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5">
-											<span className="lg:hidden">
-												<TruncateMiddle text={wallet.address()} maxChars={16} />
-											</span>
-											<span className="hidden min-w-[26.375rem] lg:block">
-												<Address address={wallet.address()} />
-											</span>
-										</span>
-									</div>
-
-									<WalletIcons
-										wallet={wallet}
-										exclude={["isKnown", "isStarred", "isTestNetwork"]}
-										iconColor="text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
-										iconSize="md"
-									/>
-								</div>
-							)}
-
-							{selectedWallets.length > 1 && (
-								<div className="flex flex-row items-center gap-1.5">
-									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
-										{wallet.currency()} {t("COMMON.BALANCE")}
-									</p>
-									<div>
-										<Amount
-											value={profile.totalBalance().toNumber()}
-											ticker={wallet.currency()}
-											className="text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
-											allowHideBalance
-											profile={profile}
-										/>
-									</div>
-								</div>
-							)}
-
-							<div className="flex flex-row items-center gap-3">
+					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm">
+						{hasWalletsToMigrate && !isLoading && !isIgnored && <LedgerMigrationBanner onCancel={ignore} />}
+						<div className="flex w-full flex-col gap-3 p-4">
+							<div className="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto">
 								{selectedWallets.length === 1 && (
-									<>
-										<div className="flex items-center gap-2">
-											<Copy
-												copyData={wallet.address()}
-												tooltip={t("COMMON.COPY_ADDRESS")}
-												icon={(isCopied) =>
-													isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
-												}
-											/>
+									<div className="flex w-full flex-1 flex-row items-center gap-3">
+										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
+											{t("COMMON.ADDRESS")}
+										</p>
 
-											{!!wallet.publicKey() && (
-												<Copy
-													copyData={wallet.publicKey() as string}
-													tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
-													icon={() => <Icon name="CopyKey" />}
-												/>
-											)}
+										<div className="flex h-[17px] items-center md:h-5">
+											<span className="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5">
+												<span className="lg:hidden">
+													<TruncateMiddle text={wallet.address()} maxChars={16} />
+												</span>
+												<span className="hidden min-w-[26.375rem] lg:block">
+													<Address address={wallet.address()} />
+												</span>
+											</span>
 										</div>
 
-										<Divider
-											type="vertical"
-											className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mx-0 hidden h-[17px] p-0 sm:block"
+										<WalletIcons
+											wallet={wallet}
+											exclude={["isKnown", "isStarred", "isTestNetwork"]}
+											iconColor="text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
+											iconSize="md"
 										/>
-									</>
-								)}
-
-								<div className="hidden sm:flex">
-									<WalletActions
-										profile={profile}
-										wallet={wallet}
-										onUpdate={onUpdate}
-										isUpdatingTransactions={isUpdatingTransactions}
-									/>
-								</div>
-							</div>
-						</div>
-						<Divider
-							type="horizontal"
-							className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
-						/>
-						<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
-							<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
-								<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
-									{t("COMMON.TOTAL_BALANCE")}
-								</p>
-
-								<div className="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
-									{isRestored && selectedWallets.length === 1 && (
-										<Amount
-											value={wallet.balance()}
-											ticker={wallet.currency()}
-											className="dark:text-theme-dark-50 dim:text-theme-dim-50"
-											allowHideBalance
-											profile={profile}
-										/>
-									)}
-									{!isRestored && (
-										<Skeleton width={67} className="h-[21px] md:h-[1.813rem] md:w-[4.188rem]" />
-									)}
-									{selectedWallets.length === 1 && (
-										<Divider
-											type="vertical"
-											className="border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
-										/>
-									)}
-									{isRestored && (
-										<Amount
-											value={profile.totalBalanceConverted().toNumber()}
-											ticker={wallet.exchangeCurrency()}
-											className={cn({
-												"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-													selectedWallets.length !== 1,
-												"text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden":
-													selectedWallets.length === 1,
-											})}
-											allowHideBalance
-											profile={profile}
-										/>
-									)}
-									{!isRestored && <Skeleton width={67} className="h-[21px] md:h-[1.813rem]" />}
-								</div>
-							</div>
-
-							<div className="flex flex-row items-center gap-3">
-								{selectedWallets.length === 1 && (
-									<Tooltip
-										content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
-										disabled={
-											!(
-												wallet.balance() === 0 ||
-												!wallet.hasBeenFullyRestored() ||
-												!wallet.hasSyncedWithNetwork()
-											)
-										}
-									>
-										<div className="my-auto flex flex-1">
-											<Button
-												data-testid="WalletHeader__send-button"
-												className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
-												disabled={
-													wallet.balance() === 0 ||
-													!wallet.hasBeenFullyRestored() ||
-													!wallet.hasSyncedWithNetwork()
-												}
-												variant="primary"
-												onClick={handleSend}
-											>
-												{t("COMMON.SEND")}
-											</Button>
-										</div>
-									</Tooltip>
+									</div>
 								)}
 
 								{selectedWallets.length > 1 && (
-									<Tooltip
-										content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
-										disabled={!profile.totalBalance().isZero()}
-									>
-										<div className="my-auto flex flex-1">
-											<Button
-												data-testid="WalletHeader__send-button"
-												className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
-												disabled={profile.totalBalance().isZero()}
-												variant="primary"
-												onClick={handleSend}
-											>
-												{t("COMMON.SEND")}
-											</Button>
+									<div className="flex flex-row items-center gap-1.5">
+										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden text-sm leading-[17px] font-semibold sm:block md:text-base md:leading-5">
+											{wallet.currency()} {t("COMMON.BALANCE")}
+										</p>
+										<div>
+											<Amount
+												value={profile.totalBalance().toNumber()}
+												ticker={wallet.currency()}
+												className="text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
+												allowHideBalance
+												profile={profile}
+											/>
 										</div>
-									</Tooltip>
+									</div>
 								)}
 
-								<div data-testid="WalletHeaderMobile__more-button" className="my-auto">
-									<Dropdown
-										options={[
-											primaryOptions,
-											registrationOptions,
-											additionalOptions,
-											secondaryOptions,
-										]}
-										toggleContent={
-											<Button
-												variant="secondary"
-												size="icon"
-												className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
-											>
-												<Icon name="EllipsisVerticalFilled" size="lg" />
-											</Button>
-										}
-										onSelect={handleSelectOption}
-									/>
+								<div className="flex flex-row items-center gap-3">
+									{selectedWallets.length === 1 && (
+										<>
+											<div className="flex items-center gap-2">
+												<Copy
+													copyData={wallet.address()}
+													tooltip={t("COMMON.COPY_ADDRESS")}
+													icon={(isCopied) =>
+														isCopied ? <Icon name="CopySuccess" /> : <Icon name="Copy" />
+													}
+												/>
+
+												{!!wallet.publicKey() && (
+													<Copy
+														copyData={wallet.publicKey() as string}
+														tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
+														icon={() => <Icon name="CopyKey" />}
+													/>
+												)}
+											</div>
+
+											<Divider
+												type="vertical"
+												className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mx-0 hidden h-[17px] p-0 sm:block"
+											/>
+										</>
+									)}
+
+									<div className="hidden sm:flex">
+										<WalletActions
+											profile={profile}
+											wallet={wallet}
+											onUpdate={onUpdate}
+											isUpdatingTransactions={isUpdatingTransactions}
+										/>
+									</div>
+								</div>
+							</div>
+							<Divider
+								type="horizontal"
+								className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
+							/>
+							<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
+								<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
+									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
+										{t("COMMON.TOTAL_BALANCE")}
+									</p>
+
+									<div className="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
+										{isRestored && selectedWallets.length === 1 && (
+											<Amount
+												value={wallet.balance()}
+												ticker={wallet.currency()}
+												className="dark:text-theme-dark-50 dim:text-theme-dim-50"
+												allowHideBalance
+												profile={profile}
+											/>
+										)}
+										{!isRestored && (
+											<Skeleton width={67} className="h-[21px] md:h-[1.813rem] md:w-[4.188rem]" />
+										)}
+										{selectedWallets.length === 1 && (
+											<Divider
+												type="vertical"
+												className="border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
+											/>
+										)}
+										{isRestored && (
+											<Amount
+												value={profile.totalBalanceConverted().toNumber()}
+												ticker={wallet.exchangeCurrency()}
+												className={cn({
+													"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+														selectedWallets.length !== 1,
+													"text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden":
+														selectedWallets.length === 1,
+												})}
+												allowHideBalance
+												profile={profile}
+											/>
+										)}
+										{!isRestored && <Skeleton width={67} className="h-[21px] md:h-[1.813rem]" />}
+									</div>
+								</div>
+
+								<div className="flex flex-row items-center gap-3">
+									{selectedWallets.length === 1 && (
+										<Tooltip
+											content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
+											disabled={
+												!(
+													wallet.balance() === 0 ||
+													!wallet.hasBeenFullyRestored() ||
+													!wallet.hasSyncedWithNetwork()
+												)
+											}
+										>
+											<div className="my-auto flex flex-1">
+												<Button
+													data-testid="WalletHeader__s!isLoading&& end-button"
+													className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+													disabled={
+														wallet.balance() === 0 ||
+														!wallet.hasBeenFullyRestored() ||
+														!wallet.hasSyncedWithNetwork()
+													}
+													variant="primary"
+													onClick={handleSend}
+												>
+													{t("COMMON.SEND")}
+												</Button>
+											</div>
+										</Tooltip>
+									)}
+
+									{selectedWallets.length > 1 && (
+										<Tooltip
+											content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
+											disabled={!profile.totalBalance().isZero()}
+										>
+											<div className="my-auto flex flex-1">
+												<Button
+													data-testid="WalletHeader__send-button"
+													className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+													disabled={profile.totalBalance().isZero()}
+													variant="primary"
+													onClick={handleSend}
+												>
+													{t("COMMON.SEND")}
+												</Button>
+											</div>
+										</Tooltip>
+									)}
+
+									<div data-testid="WalletHeaderMobile__more-button" className="my-auto">
+										<Dropdown
+											options={[
+												primaryOptions,
+												registrationOptions,
+												{
+													key: additionalOptions.key,
+													options: hasWalletsToMigrate
+														? [...additionalOptions.options, ...ledgerMigrationOptions]
+														: additionalOptions.options,
+													title: additionalOptions.title,
+												},
+												secondaryOptions,
+											]}
+											toggleContent={
+												<Tooltip
+													visible={
+														hasWalletsToMigrate &&
+														!isLoading &&
+														!isMigratingLater &&
+														isIgnored
+													}
+													interactive={true}
+													content={
+														<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
+															<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+																<Trans i18nKey="COMMON.LEDGER_MIGRATION.MIGRATE_LATER" />
+															</div>
+															<Button
+																size="xs"
+																variant="transparent"
+																data-testid="HideManageHint"
+																className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 h-8 w-full px-4 py-1.5 sm:w-auto"
+																onClick={(event) => {
+																	event.stopPropagation();
+																	migrateLater();
+																}}
+															>
+																{t("COMMON.GOT_IT")}
+															</Button>
+														</div>
+													}
+													placement="bottom"
+												>
+													<div className="relative">
+														<Button
+															variant="secondary"
+															size="icon"
+															className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+														>
+															<Icon name="EllipsisVerticalFilled" size="lg" />
+														</Button>
+														{hasWalletsToMigrate && isIgnored && (
+															<Dot className="-top-[2px] -right-[2px]" />
+														)}
+													</div>
+												</Tooltip>
+											}
+											onSelect={handleSelectOption}
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
