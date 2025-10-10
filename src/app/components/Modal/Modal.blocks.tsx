@@ -59,7 +59,7 @@ const ModalContent = ({
 }: ModalContentProperties) => (
 	<div
 		className={twMerge(
-			"bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl",
+			"bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border",
 			noButtons && "pb-24 sm:pb-0",
 			className,
 		)}
