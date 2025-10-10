@@ -345,7 +345,7 @@ const SidePanelContent = ({
 																					toggleMinimize();
 																				}}
 																			>
-																				<Icon name="Minimize" />
+																				{isMinimized ? <Icon name="Maximize"/> : <Icon name="Minimize" />}
 																			</Button>
 																		</Tooltip>
 																	</div>
