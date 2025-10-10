@@ -399,7 +399,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                 class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
               >
                 <div
-                  class="space-y-3 sm:space-y-0"
+                  class="space-y-3"
                 >
                   <div
                     class="flex w-full items-center justify-between gap-4 sm:justify-start"
@@ -419,13 +419,6 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
                         Registration
                       </span>
                     </div>
-                  </div>
-                  <div
-                    class="hidden sm:block"
-                  >
-                    <div
-                      class="border-t border-dashed [background:none] clear-both my-4 flex w-full min-w-full border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-px"
-                    />
                   </div>
                   <div
                     class="flex w-full items-center justify-between gap-4 sm:justify-start"

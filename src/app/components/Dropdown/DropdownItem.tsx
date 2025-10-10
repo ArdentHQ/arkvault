@@ -19,7 +19,7 @@ export const DropdownItem = ({
 				"my-0.5 justify-between rounded-lg px-5 py-[14px]": variant === "options",
 				"rounded-lg": !isActive && variant !== "navbar",
 				"sm:rounded-lg": !isActive && variant === "navbar",
-				"text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-secondary-900 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 cursor-pointer":
+				"text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 cursor-pointer":
 					!isActive,
 			}),
 			props.className,
