@@ -5,7 +5,7 @@ import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { LedgerScanStep } from "../ImportWallet/Ledger/LedgerScanStep";
-import { LedgerConnectionStep } from "../ImportWallet/Ledger/LedgerConnectionStep";
+import { LedgerConnectionStep } from "./LedgerConnection";
 
 export enum MigrateLedger {
 	ListenLedgerStep = 1,
@@ -53,7 +53,8 @@ export const LedgerMigrationSidepanel = ({
 
 					<TabPanel tabId={MigrateLedger.ConnectionStep}>
 						<LedgerConnectionStep
-							cancelling={false}
+							isCancelling={false}
+							profile={profile}
 							onConnect={() => {
 								setActiveTab(MigrateLedger.ScanStep)
 							}}
