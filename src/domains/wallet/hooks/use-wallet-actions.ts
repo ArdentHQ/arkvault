@@ -28,7 +28,7 @@ export const useWalletActions = ({
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
 
-	const { openPanel } = usePanels();
+	const { openPanel, closePanel } = usePanels();
 
 	const wallet = wallets[0] as Contracts.IReadWriteWallet | undefined;
 
@@ -82,6 +82,8 @@ export const useWalletActions = ({
 
 			stopEventBubbling(event);
 
+			await closePanel();
+
 			for (const profileWallet of profile.wallets().values()) {
 				if (profileWallet.address() === wallet.address()) {
 					profile.wallets().forget(profileWallet.id());
@@ -93,7 +95,7 @@ export const useWalletActions = ({
 
 			return true;
 		},
-		[profile, navigate, wallet, persist, stopEventBubbling],
+		[profile, navigate, wallet, persist, stopEventBubbling, closePanel],
 	);
 
 	const handleSelectOption = useCallback(
