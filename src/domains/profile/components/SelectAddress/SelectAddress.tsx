@@ -157,7 +157,7 @@ export const SelectAddress = ({
 					disabled={disabled}
 				>
 					<DetailWrapper label={t("COMMON.ADDRESSING")}>
-						<div className="space-y-3 sm:space-y-0">
+						<div className="space-y-3">
 							<div className="flex w-full items-start justify-between gap-4 sm:justify-start">
 								<DetailTitle className={cn("w-auto text-left sm:min-w-[162px]", labelClassName)}>
 									{t("COMMON.FROM")}
