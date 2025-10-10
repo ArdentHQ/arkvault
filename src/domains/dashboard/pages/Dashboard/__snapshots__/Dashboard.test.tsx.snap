@@ -2032,7 +2032,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -2060,7 +2060,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -2543,7 +2543,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -2571,7 +2571,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -3033,7 +3033,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -3061,7 +3061,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -3523,7 +3523,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -3551,7 +3551,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -4013,7 +4013,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4041,7 +4041,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -4503,7 +4503,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -4531,7 +4531,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -4993,7 +4993,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -5021,7 +5021,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -5483,7 +5483,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -5511,7 +5511,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -5994,7 +5994,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -6022,7 +6022,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
@@ -6346,7 +6346,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                                   >
                                     <span
-                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
+                                      class="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent"
                                     >
                                       <span
                                         class="no-ligatures text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
@@ -6374,7 +6374,7 @@ exports[`Dashboard > should render 1`] = `
                                               stroke="currentColor"
                                               stroke-linecap="round"
                                               stroke-linejoin="round"
-                                              stroke-width="2"
+                                              stroke-width="1.6"
                                             >
                                               <path
                                                 d="M1 9l8-8M9 9L1 1"
