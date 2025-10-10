@@ -32,7 +32,10 @@ export const VotesEmpty = () => {
 						className="w-full sm:w-auto"
 					>
 						<div className="flex items-center space-x-2">
-							<Icon name="ArrowTurnDownBracket" />
+							<Icon
+								name="ArrowTurnDownBracket"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+							/>
 							<span>{t("DASHBOARD.WALLET_CONTROLS.IMPORT")}</span>
 						</div>
 					</Button>
@@ -43,7 +46,10 @@ export const VotesEmpty = () => {
 						className="w-full sm:w-auto"
 					>
 						<div className="flex items-center space-x-2">
-							<Icon name="Plus" />
+							<Icon
+								name="Plus"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+							/>
 							<span>{t("DASHBOARD.WALLET_CONTROLS.CREATE")}</span>
 						</div>
 					</Button>
