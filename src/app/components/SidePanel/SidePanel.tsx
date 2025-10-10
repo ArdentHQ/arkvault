@@ -400,7 +400,7 @@ const SidePanelContent = ({
 												inert={isMinimized}
 											>
 												{subtitle && (
-													<div className="text-theme-secondary-text text-sm leading-[21px] md:leading-7 font-normal md:text-base">
+													<div className="text-theme-secondary-text text-sm leading-[21px] font-normal md:text-base md:leading-7">
 														{subtitle}
 													</div>
 												)}
