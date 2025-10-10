@@ -1883,7 +1883,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -2055,7 +2055,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -2316,7 +2316,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -2496,7 +2496,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -4537,7 +4537,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -4709,7 +4709,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -4970,7 +4970,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -5150,7 +5150,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -7145,7 +7145,7 @@ exports[`General Settings > should render 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -7317,7 +7317,7 @@ exports[`General Settings > should render 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -7578,7 +7578,7 @@ exports[`General Settings > should render 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -7758,7 +7758,7 @@ exports[`General Settings > should render 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -9754,7 +9754,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -9926,7 +9926,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -10187,7 +10187,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -10367,7 +10367,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -12363,7 +12363,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -12535,7 +12535,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -12796,7 +12796,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -12976,7 +12976,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -15070,7 +15070,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -15242,7 +15242,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -15503,7 +15503,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -15683,7 +15683,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
