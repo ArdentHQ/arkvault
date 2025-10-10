@@ -3,7 +3,7 @@
 exports[`TransactionExportModal > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -11,7 +11,7 @@ exports[`TransactionExportModal > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -646,7 +646,7 @@ exports[`TransactionExportModal > should render 1`] = `
 exports[`TransactionExportModal > should render error status 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -654,7 +654,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -1289,7 +1289,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
 exports[`TransactionExportModal > should render success and download file 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1297,7 +1297,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -1583,7 +1583,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
 exports[`TransactionExportModal > should render success and stay open if download fails 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1591,7 +1591,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -1877,7 +1877,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
 exports[`TransactionExportModal > should render success status 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1885,7 +1885,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -2520,7 +2520,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
 exports[`TransactionExportModal > should render with fiat column 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2528,7 +2528,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
