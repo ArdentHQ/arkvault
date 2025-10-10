@@ -56,7 +56,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
     </div>
   </div>
   <div
-    class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
+    class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
   >
     <div
       class="flex-1"
@@ -28381,7 +28381,7 @@ exports[`Transactions > should hide view more button when there are no next page
     </div>
   </div>
   <div
-    class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
+    class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
   >
     <div
       class="flex-1"
@@ -33446,7 +33446,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
     </div>
   </div>
   <div
-    class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
+    class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
   >
     <div
       class="flex-1"
