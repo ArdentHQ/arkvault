@@ -15,6 +15,7 @@ import { Panel, usePanels } from "./contexts";
 import { useTranslation } from "react-i18next";
 import { useHasProfile } from "./hooks";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
+import { LedgerMigrationSidepanel } from "@/domains/portfolio/components/LedgerMigration";
 
 const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
@@ -99,6 +100,9 @@ export const AppPanels = () => {
 			/>
 
 			<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
+
+
+			<LedgerMigrationSidepanel open={currentOpenedPanel === Panel.LedgerMigration} onOpenChange={closePanel} />
 
 			<DiscardPanelConfirmationModal />
 		</>
