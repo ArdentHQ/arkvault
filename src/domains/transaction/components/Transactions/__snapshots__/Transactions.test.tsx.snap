@@ -23521,7 +23521,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -23552,7 +23552,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -23581,7 +23581,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -23855,7 +23855,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -23886,7 +23886,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -23915,7 +23915,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -24189,7 +24189,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -24220,7 +24220,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -24249,7 +24249,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -24523,7 +24523,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -24554,7 +24554,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -24583,7 +24583,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -24857,7 +24857,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -24888,7 +24888,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -24917,7 +24917,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -25191,7 +25191,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -25222,7 +25222,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -25251,7 +25251,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -32756,7 +32756,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -32787,7 +32787,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -32816,7 +32816,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -37821,7 +37821,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           To
                         </div>
                         <span
-                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                          class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                         >
                           Multiple 
                           <span
@@ -37852,7 +37852,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
@@ -37881,7 +37881,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       To
                     </div>
                     <span
-                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex gap-2 text-sm font-semibold"
+                      class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold"
                     >
                       Multiple 
                       <span
