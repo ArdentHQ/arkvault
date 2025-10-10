@@ -40,6 +40,7 @@ import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-sel
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
+import { Image } from "@/app/components/Image";
 
 const MAX_TABS = 5;
 
@@ -373,6 +374,10 @@ export const SendTransferSidePanel = ({
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === SendTransferStep.ErrorStep) {
+			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
+		}
+
 		if (activeTab === SendTransferStep.SummaryStep) {
 			return (
 				<ThemeIcon
