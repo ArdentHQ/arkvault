@@ -186,7 +186,7 @@ export const Transactions = memo(function Transactions({
 						</TabList>
 					</Tabs>
 
-					<div className="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden">
+					<div className="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden">
 						<div className="flex-1">
 							<Dropdown
 								data-testid="Transactions--filter-dropdown"
