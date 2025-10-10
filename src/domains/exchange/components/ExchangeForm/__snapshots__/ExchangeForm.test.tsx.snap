@@ -157,7 +157,7 @@ exports[`ConfirmationStep > should render 1`] = `
                     class="space-y-3"
                   >
                     <div
-                      class="space-y-3 sm:space-y-0"
+                      class="space-y-3"
                     >
                       <div
                         class="flex w-full justify-between gap-2 sm:justify-start"
@@ -236,7 +236,7 @@ exports[`ConfirmationStep > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="space-y-3 sm:space-y-0"
+                      class="space-y-3"
                     >
                       <div
                         class="flex w-full justify-between gap-2 sm:justify-start"
@@ -422,7 +422,7 @@ exports[`ConfirmationStep > should render 1`] = `
                     class="space-y-3"
                   >
                     <div
-                      class="space-y-3 sm:space-y-0"
+                      class="space-y-3"
                     >
                       <div
                         class="flex w-full justify-between gap-2 sm:justify-start"
@@ -501,7 +501,7 @@ exports[`ConfirmationStep > should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="space-y-3 sm:space-y-0"
+                      class="space-y-3"
                     >
                       <div
                         class="flex w-full justify-between gap-2 sm:justify-start"

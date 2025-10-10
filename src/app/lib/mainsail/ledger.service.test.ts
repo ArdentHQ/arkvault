@@ -243,5 +243,52 @@ describe("LedgerService", () => {
 
 			spyBIP44.mockRestore();
 		});
+
+		it("should return true when isEthBasedApp can derive eth public keys", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockResolvedValue({
+				address: "0x123",
+				chainCode: undefined,
+				publicKey: "0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041",
+			});
+
+			await ledgerService.connect();
+			const result = await ledgerService.isEthBasedApp();
+
+			expect(result).toBe(true);
+
+			spy.mockRestore();
+		});
+
+		it("should return false when isEthBasedApp fails to derive eth public keys", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockRejectedValue(new Error("Not eth based app"));
+
+			await ledgerService.connect();
+			const result = await ledgerService.isEthBasedApp();
+
+			expect(result).toBe(false);
+
+			spy.mockRestore();
+		});
+
+		it("should return false when both keys are empty in isEthBasedApp", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockResolvedValue({
+				address: "",
+				chainCode: undefined,
+				publicKey: "",
+			});
+
+			const HDKeyModule = await import("@ardenthq/arkvault-crypto");
+			const hdKeySpy = vi.spyOn(HDKeyModule.HDKey, "fromCompressedPublicKey").mockReturnValue({
+				derive: () => ({ publicKey: "" }),
+			});
+
+			await ledgerService.connect();
+			const result = await ledgerService.isEthBasedApp();
+
+			expect(result).toBe(false);
+
+			spy.mockRestore();
+			hdKeySpy.mockRestore();
+		});
 	});
 });
