@@ -165,6 +165,7 @@ export const TransactionDetailSidePanel = ({
 					profile={profile}
 					isConfirmed={transactionItem.isConfirmed()}
 					confirmations={transactionItem.confirmations().toNumber()}
+					containerClassname="-mx-3 sm:mx-0"
 				/>
 			</SidePanel>
 		);
@@ -183,6 +184,7 @@ export const TransactionDetailSidePanel = ({
 				profile={profile}
 				isConfirmed={isConfirmedToShow}
 				confirmations={confirmationsToShow}
+				containerClassname="-mx-3 sm:mx-0"
 			/>
 		</SidePanel>
 	);
