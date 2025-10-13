@@ -113,7 +113,7 @@ export const TransactionDetailContent = ({
 				</DetailPadded>
 			</div>
 
-			<div className="mt-6 -mx-3 sm:mx-0">
+			<div className="-mx-3 mt-6 sm:mx-0">
 				<DetailLabel className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50">
 					{t("TRANSACTION.MORE_DETAILS")}
 				</DetailLabel>
