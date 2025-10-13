@@ -1,4 +1,4 @@
-import React, { JSX, useEffect, useMemo, useState } from "react";
+import React, { JSX, useEffect, useState } from "react";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useActiveProfile } from "@/app/hooks/env";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
@@ -6,30 +6,8 @@ import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { LedgerConnectionStep } from "./LedgerConnection";
 import { LedgerScanStep } from "./LedgerScanStep";
-import { Icon } from "@/app/components/Icon";
-
-export enum MigrateLedger {
-	ListenLedgerStep = 1,
-	ConnectionStep,
-	ScanStep,
-}
-
-const useLedgerMigrationHeader = (activeTab: MigrateLedger) =>
-	useMemo(() => {
-		if ([MigrateLedger.ListenLedgerStep, MigrateLedger.ConnectionStep].includes(activeTab)) {
-			return {
-				subtitle: undefined,
-				title: "Address Migration",
-				titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
-			};
-		}
-
-		return {
-			subtitle: "Select the address(es) you wish to migrate.",
-			title: "Address Migration",
-			titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
-		};
-	}, [activeTab]);
+import { MigrateLedgerStep } from "./LedgerMigration.contracts";
+import { useLedgerMigrationHeader } from "./hooks/use-ledger-migration-header";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -41,16 +19,15 @@ export const LedgerMigrationSidepanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const profile = useActiveProfile();
-	const [activeTab, setActiveTab] = useState(MigrateLedger.ListenLedgerStep);
+	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
+	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
 	// Reset step on close.
 	useEffect(() => {
 		if (!open) {
-			setActiveTab(MigrateLedger.ListenLedgerStep);
+			setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 		}
 	}, [open]);
-
-	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
 	return (
 		<SidePanel
@@ -68,12 +45,11 @@ export const LedgerMigrationSidepanel = ({
 		>
 			<Tabs activeId={activeTab}>
 				<div>
-					<TabPanel tabId={MigrateLedger.ListenLedgerStep}>
+					<TabPanel tabId={MigrateLedgerStep.ListenLedgerStep}>
 						<ListenLedger
 							noHeading
 							onDeviceAvailable={() => {
-								console.log("onDeviceAvailable");
-								setActiveTab(MigrateLedger.ConnectionStep);
+								setActiveTab(MigrateLedgerStep.ConnectionStep);
 							}}
 							onDeviceNotAvailable={() => {
 								console.log("not available");
@@ -81,23 +57,21 @@ export const LedgerMigrationSidepanel = ({
 						/>
 					</TabPanel>
 
-					<TabPanel tabId={MigrateLedger.ConnectionStep}>
+					<TabPanel tabId={MigrateLedgerStep.ConnectionStep}>
 						<LedgerConnectionStep
-							isCancelling={false}
 							profile={profile}
 							onConnect={() => {
-								setActiveTab(MigrateLedger.ScanStep);
+								setActiveTab(MigrateLedgerStep.ScanStep);
 							}}
 							onFailed={() => {
-								setActiveTab(MigrateLedger.ListenLedgerStep);
+								setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 							}}
 							network={profile.activeNetwork()}
 						/>
 					</TabPanel>
 
-					<TabPanel tabId={MigrateLedger.ScanStep}>
+					<TabPanel tabId={MigrateLedgerStep.ScanStep}>
 						<LedgerScanStep
-							cancelling={false}
 							profile={profile}
 							network={profile.activeNetwork()}
 							onContinue={console.log}

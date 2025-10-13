@@ -278,12 +278,12 @@ export const LedgerScanStep = ({
 	network,
 	setRetryFn,
 	profile,
-	cancelling,
+	isCancelling,
 	onContinue,
 }: {
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
-	cancelling: boolean;
+	isCancelling?: boolean;
 	setRetryFn?: (function_?: () => void) => void;
 	onContinue?: (selectedWallets: LedgerData[]) => void;
 }) => {
@@ -325,7 +325,7 @@ export const LedgerScanStep = ({
 	}, [profile]);
 
 	useEffect(() => {
-		if (cancelling) {
+		if (isCancelling) {
 			return;
 		}
 
@@ -344,12 +344,12 @@ export const LedgerScanStep = ({
 	}, [loadedWallets]);
 
 	useEffect(() => {
-		if (!isScanning || cancelling) {
+		if (!isScanning || isCancelling) {
 			toasts.dismiss("wallet-loading");
 		}
-	}, [isScanning, cancelling]);
+	}, [isScanning, isCancelling]);
 
-	if (cancelling) {
+	if (isCancelling) {
 		return <LedgerCancelling />;
 	}
 

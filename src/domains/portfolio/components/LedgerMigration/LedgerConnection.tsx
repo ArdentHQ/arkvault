@@ -14,7 +14,7 @@ export const LedgerConnectionStep = ({
 }: {
 	profile: Contracts.IProfile;
 	network: Networks.Network;
-	isCancelling: boolean;
+	isCancelling?: boolean;
 	onConnect?: () => void;
 	onFailed?: (error: Error) => void;
 }) => {
