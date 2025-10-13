@@ -101,7 +101,7 @@ const NavigationBarMobileWrapper = ({
 	<div
 		{...props}
 		className={twMerge(
-			"dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
+			"dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
 			cn({
 				"shadow-footer-smooth dark:shadow-footer-smooth-dark": !hasFixedFormButtons,
 			}),
