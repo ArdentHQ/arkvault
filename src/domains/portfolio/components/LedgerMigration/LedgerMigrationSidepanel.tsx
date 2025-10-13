@@ -71,7 +71,11 @@ export const LedgerMigrationSidepanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={MigrateLedgerStep.ScanStep}>
-						<LedgerScanStep profile={profile} network={profile.activeNetwork()} onContinue={console.log} />
+						<LedgerScanStep
+							profile={profile}
+							network={profile.activeNetwork()}
+							onContinue={console.log}
+						/>
 					</TabPanel>
 				</div>
 			</Tabs>

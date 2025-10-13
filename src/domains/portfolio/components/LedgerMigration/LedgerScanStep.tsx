@@ -236,7 +236,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => {}}
+								handleClick={() => { }}
 								isSelected={false}
 							/>
 						))}
@@ -363,6 +363,16 @@ export const LedgerScanStep = ({
 				) : (
 					<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
 				)}
+
+				<div className="mt-4">
+					<Alert
+						collapsible
+						title={t("COMMON.LEDGER_MIGRATION.HELP_TITLE")}
+						variant="info"
+					>
+						TBD
+					</Alert>
+				</div>
 
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons>
