@@ -821,7 +821,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -833,7 +833,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -1049,7 +1049,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -2400,7 +2400,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -2412,7 +2412,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -2597,7 +2597,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -3781,7 +3781,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -3793,7 +3793,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -3978,7 +3978,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -5302,7 +5302,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -5314,7 +5314,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -5530,7 +5530,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -6810,7 +6810,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -6822,7 +6822,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -7038,7 +7038,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -8458,7 +8458,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -8470,7 +8470,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -8683,7 +8683,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -9960,7 +9960,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -9972,7 +9972,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -10185,7 +10185,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -11595,7 +11595,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
@@ -11607,7 +11607,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                       class="pt-4 pb-6 sm:px-6"
                     >
                       <ul
-                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                        class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                         data-testid="list-divided__items"
                       >
                         <li
@@ -11793,7 +11793,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                     class="relative flex flex-col"
                   >
                     <div
-                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
+                      class="border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6"
                     >
                       <h2
                         class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mb-0 text-base font-semibold"
