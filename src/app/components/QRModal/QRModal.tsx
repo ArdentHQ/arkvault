@@ -125,6 +125,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 	return (
 		<Modal
 			isOpen={isOpen}
+			titleClass="text-theme-text"
 			title={t("TRANSACTION.MODAL_QR_CODE.TITLE")}
 			description={t("TRANSACTION.MODAL_QR_CODE.DESCRIPTION")}
 			size="3xl"
