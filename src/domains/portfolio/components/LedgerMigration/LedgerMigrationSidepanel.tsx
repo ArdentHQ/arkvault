@@ -5,7 +5,6 @@ import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { LedgerConnectionStep } from "./LedgerConnection";
-import { LedgerScanStep } from "./LedgerScanStep";
 import { MigrateLedgerStep } from "./LedgerMigration.contracts";
 import { useLedgerMigrationHeader } from "./hooks/use-ledger-migration-header";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
