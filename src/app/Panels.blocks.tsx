@@ -81,21 +81,15 @@ export const AppPanels = () => {
 			/>
 
 			<SendRegistrationSidePanel
-				open={
-					currentOpenedPanel === Panel.SendValidatorRegistration ||
-					currentOpenedPanel === Panel.SendUsernameRegistration
-				}
-				registrationType={
-					currentOpenedPanel === Panel.SendValidatorRegistration
-						? "validatorRegistration"
-						: "usernameRegistration"
-				}
-				onOpenChange={(open) => {
-					if (!open) {
-						closePanel();
-						return;
-					}
-				}}
+				open={currentOpenedPanel === Panel.SendUsernameRegistration}
+				registrationType="usernameRegistration"
+				onOpenChange={closePanel}
+			/>
+
+			<SendRegistrationSidePanel
+				open={currentOpenedPanel === Panel.SendValidatorRegistration}
+				registrationType="validatorRegistration"
+				onOpenChange={closePanel}
 			/>
 
 			<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />

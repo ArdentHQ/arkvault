@@ -1,9 +1,8 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { useTranslation } from "react-i18next";
-import { SendRegistrationForm } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unconfirmed-transactions";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
@@ -50,7 +49,8 @@ export const SendRegistrationSidePanel = ({
 
 	const [activeTab, setActiveTab] = useState(FORM_STEP);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
-	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
+	const registrationForm =
+		registrationType === "validatorRegistration" ? ValidatorRegistrationForm : UsernameRegistrationForm;
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const { env } = useEnvironmentContext();
@@ -67,7 +67,7 @@ export const SendRegistrationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, watch, getValues, trigger, reset: resetForm } = form;
+	const { formState, register, setValue, watch, getValues, trigger, unregister } = form;
 	const { isDirty, isSubmitting, isValid, dirtyFields } = formState;
 
 	const { fees, isLoading, senderAddress } = watch();
@@ -125,19 +125,6 @@ export const SendRegistrationSidePanel = ({
 
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
 	}, [validatorRegistrationFee, registrationType]);
-
-	useLayoutEffect(() => {
-		if (!registrationType) {
-			return;
-		}
-
-		const registrations = {
-			usernameRegistration: () => setRegistrationForm(UsernameRegistrationForm),
-			validatorRegistration: () => setRegistrationForm(ValidatorRegistrationForm),
-		};
-
-		return registrations[registrationType]();
-	}, [registrationType]);
 
 	// Reset ledger authentication steps after reconnecting supported ledger
 	useEffect(() => {
@@ -240,19 +227,22 @@ export const SendRegistrationSidePanel = ({
 		[onOpenChange],
 	);
 
-	const onMountChange = useCallback(
-		(mounted: boolean) => {
-			setMounted(mounted);
+	const onMountChange = useCallback((mounted: boolean) => {
+		setMounted(mounted);
 
-			if (!mounted) {
-				resetForm(() => {
-					setActiveTab(FORM_STEP);
-					setErrorMessage(undefined);
-				});
+		if (!mounted) {
+			setActiveTab(FORM_STEP);
+			setErrorMessage(undefined);
+
+			if (registrationType === "validatorRegistration") {
+				unregister("validatorPublicKey");
 			}
-		},
-		[resetForm],
-	);
+
+			if (registrationType === "usernameRegistration") {
+				unregister("username");
+			}
+		}
+	}, []);
 
 	const getTitle = () => {
 		if (!registrationType) {
@@ -437,56 +427,68 @@ export const SendRegistrationSidePanel = ({
 				</SidePanelButtons>
 			}
 		>
-			<Form data-testid="Registration__form" context={form} onSubmit={handleSubmit}>
-				<Tabs activeId={activeTab}>
-					<TabPanel tabId={ERROR_STEP}>
-						<ErrorStep
-							onClose={() => {
-								onOpenChange(false);
-							}}
-							isBackDisabled={isSubmitting}
-							onBack={() => {
-								setActiveTab(FORM_STEP);
-							}}
-							errorMessage={errorMessage}
-							hideHeader
-						/>
-					</TabPanel>
-
-					{registrationForm && (
-						<>
-							<registrationForm.component
-								activeTab={activeTab}
-								wallet={activeWallet}
-								profile={activeProfile}
+			{open && (
+				<Form data-testid="Registration__form" context={form} onSubmit={handleSubmit}>
+					<Tabs activeId={activeTab}>
+						<TabPanel tabId={ERROR_STEP}>
+							<ErrorStep
+								onClose={() => {
+									onOpenChange(false);
+								}}
+								isBackDisabled={isSubmitting}
+								onBack={() => {
+									setActiveTab(FORM_STEP);
+								}}
+								errorMessage={errorMessage}
 								hideHeader
 							/>
+						</TabPanel>
 
-							<TabPanel tabId={authenticationStep}>
-								<AuthenticationStep
-									wallet={activeWallet!}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={!isConnected}
-									ledgerSupportedModels={[
-										Contracts.WalletLedgerModel.NanoX,
-										Contracts.WalletLedgerModel.NanoSP,
-									]}
-									ledgerConnectedModel={ledgerDevice?.id}
-									noHeading
-								/>
-							</TabPanel>
+						{registrationForm && (
+							<>
+								{registrationType === "validatorRegistration" && open && (
+									<ValidatorRegistrationForm.component
+										activeTab={activeTab}
+										wallet={activeWallet}
+										profile={activeProfile}
+										hideHeader
+									/>
+								)}
+								{registrationType === "usernameRegistration" && open && (
+									<UsernameRegistrationForm.component
+										activeTab={activeTab}
+										wallet={activeWallet}
+										profile={activeProfile}
+										hideHeader
+									/>
+								)}
 
-							<TabPanel tabId={summaryStep}>
-								<TransactionSuccessful
-									transaction={transaction}
-									senderWallet={activeWallet!}
-									noHeading
-								/>
-							</TabPanel>
-						</>
-					)}
-				</Tabs>
-			</Form>
+								<TabPanel tabId={authenticationStep}>
+									<AuthenticationStep
+										wallet={activeWallet!}
+										ledgerIsAwaitingDevice={!hasDeviceAvailable}
+										ledgerIsAwaitingApp={!isConnected}
+										ledgerSupportedModels={[
+											Contracts.WalletLedgerModel.NanoX,
+											Contracts.WalletLedgerModel.NanoSP,
+										]}
+										ledgerConnectedModel={ledgerDevice?.id}
+										noHeading
+									/>
+								</TabPanel>
+
+								<TabPanel tabId={summaryStep}>
+									<TransactionSuccessful
+										transaction={transaction}
+										senderWallet={activeWallet!}
+										noHeading
+									/>
+								</TabPanel>
+							</>
+						)}
+					</Tabs>
+				</Form>
+			)}
 		</SidePanel>
 	);
 };
