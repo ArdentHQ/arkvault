@@ -127,7 +127,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 				/>
 			)}
 			<div
-				className={cn("space-y-3 -mx-3 sm:mx-0 sm:space-y-4", {
+				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
 					"mt-4": !hideHeader,
 				})}
 			>
@@ -189,7 +189,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 					</div>
 				</div>
 
-				<div className="px-3 sm:px-0 border-t border-theme-secondary-300 pt-6 sm:pt-0 sm:border-none">
+				<div className="border-theme-secondary-300 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
 					{showFeeInput && (
 						<FormField name="fee" disableStateHints>
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
