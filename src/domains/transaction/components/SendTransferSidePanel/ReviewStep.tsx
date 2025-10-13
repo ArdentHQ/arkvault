@@ -189,7 +189,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 					</div>
 				</div>
 
-				<div className="px-3 sm:px-0 border-t border-theme-secondary-300 pt-6 sm:pt-0 sm:border-none">
+				<div className="px-3 sm:px-0 border-t border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-6 sm:pt-0 sm:border-none">
 					{showFeeInput && (
 						<FormField name="fee" disableStateHints>
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />

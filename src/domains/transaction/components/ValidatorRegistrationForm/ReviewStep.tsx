@@ -73,7 +73,7 @@ export const ReviewStep = ({
 			{errors.lockedFee && <Alert className={cn({ "mt-4": !hideHeader })}>{errors.lockedFee.message}</Alert>}
 
 			<div
-				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+				className={cn("space-y-3 -mx-3 sm:mx-0 sm:space-y-4", {
 					"mt-6 sm:mt-4": !hideHeader,
 				})}
 			>
@@ -111,8 +111,7 @@ export const ReviewStep = ({
 
 				{!wallet?.isValidator() && (
 					<div className="space-y-3 sm:space-y-2">
-						<div className="mx-3 sm:mx-0">
-							<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
+						<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
 								<div className="flex flex-col gap-3">
 									<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
 										<DetailTitle className="w-auto sm:min-w-40">
@@ -146,11 +145,10 @@ export const ReviewStep = ({
 									</div>
 								</div>
 							</DetailWrapper>
-						</div>
 					</div>
 				)}
 				<div data-testid="DetailWrapper">
-					<div className="mt-0 p-3 sm:p-0">
+					<div className="px-3 sm:px-0 border-t border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-6 sm:pt-0 sm:border-none">
 						<FormField name="fee">
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 							<FeeField

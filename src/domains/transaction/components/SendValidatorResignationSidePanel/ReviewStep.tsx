@@ -132,7 +132,7 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<div className="px-3 sm:px-0 border-t border-theme-secondary-300 pt-6 sm:pt-0 sm:border-none">
+				<div className="px-3 sm:px-0 border-t border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-6 sm:pt-0 sm:border-none">
 					<FormField name="fee">
 						<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
 						<FeeField
