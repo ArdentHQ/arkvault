@@ -153,11 +153,20 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 									</DetailTitle>
 
 									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-										<Amount ticker={ticker} value={amount.toNumber()} className="font-semibold" />
+										<Amount
+											ticker={ticker}
+											value={amount.toNumber()}
+											className="text-sm font-semibold md:text-base"
+										/>
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
 											<div className="text-theme-secondary-700 font-semibold">
 												(~
-												<Amount ticker={exchangeTicker} value={convertedAmount} />)
+												<Amount
+													ticker={exchangeTicker}
+													value={convertedAmount}
+													className="text-sm md:text-base"
+												/>
+												)
 											</div>
 										)}
 									</div>
