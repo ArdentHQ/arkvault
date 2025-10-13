@@ -236,7 +236,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
@@ -287,7 +287,7 @@ export const LedgerScanStep = ({
 	setRetryFn?: (function_?: () => void) => void;
 	onContinue?: (selectedWallets: LedgerData[]) => void;
 }) => {
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
@@ -364,7 +364,7 @@ export const LedgerScanStep = ({
 					<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
 				)}
 
-				<SidepanelFooter className="fixed bottom-0 right-0">
+				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons>
 						<Button
 							data-testid="LedgerScanStep__continue-button"

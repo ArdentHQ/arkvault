@@ -14,21 +14,22 @@ export enum MigrateLedger {
 	ScanStep,
 }
 
-const useLedgerMigrationHeader = (activeTab: MigrateLedger) => useMemo(() => {
-	if ([MigrateLedger.ListenLedgerStep, MigrateLedger.ConnectionStep].includes(activeTab)) {
+const useLedgerMigrationHeader = (activeTab: MigrateLedger) =>
+	useMemo(() => {
+		if ([MigrateLedger.ListenLedgerStep, MigrateLedger.ConnectionStep].includes(activeTab)) {
+			return {
+				subtitle: undefined,
+				title: "Address Migration",
+				titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
+			};
+		}
+
 		return {
-			subtitle: undefined,
+			subtitle: "Select the address(es) you wish to migrate.",
 			title: "Address Migration",
 			titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
-		}
-	}
-
-	return {
-		subtitle: "Select the address(es) you wish to migrate.",
-		title: "Address Migration",
-		titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
-	}
-}, [activeTab])
+		};
+	}, [activeTab]);
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -49,8 +50,7 @@ export const LedgerMigrationSidepanel = ({
 		}
 	}, [open]);
 
-	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab)
-
+	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
 	return (
 		<SidePanel

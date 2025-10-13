@@ -74,12 +74,11 @@ export const SidepanelFooter = ({ className, isScrolled, ...properties }: Sidepa
 		className={cn(
 			"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
 			{ "shadow-footer-side-panel": isScrolled },
-			className
+			className,
 		)}
 		{...properties}
 	/>
-)
-
+);
 
 const SidePanelContent = ({
 	children,
@@ -105,7 +104,7 @@ const SidePanelContent = ({
 	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
-	const popStateHandlerRef = useRef<() => void>(() => { });
+	const popStateHandlerRef = useRef<() => void>(() => {});
 	const { isMinimized, toggleMinimize } = usePanels();
 
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
@@ -425,9 +424,7 @@ const SidePanelContent = ({
 											</div>
 
 											{footer && (
-												<SidepanelFooter isScrolled={isScrolled}>
-													{footer}
-												</SidepanelFooter>
+												<SidepanelFooter isScrolled={isScrolled}>{footer}</SidepanelFooter>
 											)}
 										</div>
 									</div>
