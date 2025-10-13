@@ -23,7 +23,7 @@ import {
 	AddressMobileItem,
 } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
-import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
+
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -279,15 +279,17 @@ export const LedgerScanStep = ({
 	setRetryFn,
 	profile,
 	isCancelling,
-	onContinue,
+	onSelect,
+	children,
 }: {
+	children: React.ReactElement;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
 	isCancelling?: boolean;
 	setRetryFn?: (function_?: () => void) => void;
 	onContinue?: (selectedWallets: LedgerData[]) => void;
+	onSelect?: (selectedWallets: LedgerData[]) => void;
 }) => {
-	const { t } = useTranslation();
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
@@ -306,6 +308,21 @@ export const LedgerScanStep = ({
 	const scanMore = useCallback(() => {
 		scan(profile, lastPath);
 	}, [scan, lastPath, profile]);
+
+	useEffect(() => {
+		if (!isScanning) {
+			onSelect?.(selectedWallets)
+		}
+	}, [selectedWallets]);
+
+	useEffect(() => {
+		if (canRetry) {
+			setRetryFn?.(() => scan(profile, lastPath));
+		} else {
+			setRetryFn?.(undefined);
+		}
+		return () => setRetryFn?.(undefined);
+	}, [setRetryFn, scan, canRetry, profile, lastPath]);
 
 	useEffect(() => {
 		if (canRetry) {
@@ -363,28 +380,7 @@ export const LedgerScanStep = ({
 				) : (
 					<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
 				)}
-
-				<div className="mt-4">
-					<Alert
-						collapsible
-						title={t("COMMON.LEDGER_MIGRATION.HELP_TITLE")}
-						variant="info"
-					>
-						TBD
-					</Alert>
-				</div>
-
-				<SidepanelFooter className="fixed right-0 bottom-0">
-					<SidePanelButtons>
-						<Button
-							data-testid="LedgerScanStep__continue-button"
-							disabled={selectedWallets.length === 0}
-							onClick={() => onContinue?.(selectedWallets)}
-						>
-							{t("COMMON.CONTINUE")}
-						</Button>
-					</SidePanelButtons>
-				</SidepanelFooter>
+				{children}
 			</div>
 		</section>
 	);

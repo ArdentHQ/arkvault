@@ -233,6 +233,9 @@ export const translations = {
 		ADDRESS_MIGRATION: "Address Migration",
 		HELP_TITLE: "Need help with migration?",
 		MIGRATE_LATER: "Want to migrate later? You’ll find the option in the drop-down menu.",
+		MIGRATE_TO_ONE_ADDRESS: "Migrate To One Address",
+		MIGRATE_TO_ONE_ADDRESS_DESCRIPTION: "By selecting this option, all selected addresses will be consolidated into a single new address. This means the balances from your old addresses will be transferred to one address. You will still need to confirm each transaction individually during the migration process.",
+		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
