@@ -1,4 +1,3 @@
-
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import React, { useState } from "react";
@@ -11,28 +10,22 @@ import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/Si
 import { Divider } from "@/app/components/Divider";
 import { LedgerScanStep } from "./LedgerScanStep";
 
-
-const MigrateToOneCheckbox = ({
-	onChange
-}: {
-	onChange?: (isChecked: boolean) => void
-}) => {
-	const { t } = useTranslation()
+const MigrateToOneCheckbox = ({ onChange }: { onChange?: (isChecked: boolean) => void }) => {
+	const { t } = useTranslation();
 	return (
-
 		<label className="flex cursor-pointer space-x-3">
 			<Checkbox name="MigrateToOne" onChange={(event) => onChange?.(event.target.checked)} />
 			<div className="text-sm">
-				<span className="text-sm font-semibold">
-					{t("COMMON.LEDGER_MIGRATION.MIGRATE_TO_ONE_ADDRESS")}
-				</span>
+				<span className="text-sm font-semibold">{t("COMMON.LEDGER_MIGRATION.MIGRATE_TO_ONE_ADDRESS")}</span>
 				<span className="text-theme-secondary-500 font-semibold"> {t("COMMON.OPTIONAL")}</span>
 
-				<p className="text-sm text-theme-secondary-700">{t("COMMON.LEDGER_MIGRATION.MIGRATE_TO_ONE_ADDRESS_DESCRIPTION")}</p>
+				<p className="text-theme-secondary-700 text-sm">
+					{t("COMMON.LEDGER_MIGRATION.MIGRATE_TO_ONE_ADDRESS_DESCRIPTION")}
+				</p>
 			</div>
 		</label>
-	)
-}
+	);
+};
 
 export const MigrationLedgerScanStep = ({
 	onContinue,
@@ -43,24 +36,23 @@ export const MigrationLedgerScanStep = ({
 	profile: ProfilesContracts.IProfile;
 	onContinue?: (selectedAddresses: LedgerData[], shouldMigrateToOne?: boolean) => void;
 }) => {
-	const [selectedAddresses, setSelectedAddresses] = useState<LedgerData[]>([])
-	const [shouldMigrateToOne, setShouldMigrateToOne] = useState(false)
+	const [selectedAddresses, setSelectedAddresses] = useState<LedgerData[]>([]);
+	const [shouldMigrateToOne, setShouldMigrateToOne] = useState(false);
 	const { t } = useTranslation();
 
 	return (
-		<LedgerScanStep
-			profile={profile}
-			network={network}
-			onSelect={setSelectedAddresses}
-		>
+		<LedgerScanStep profile={profile} network={network} onSelect={setSelectedAddresses}>
 			<>
 				<div className="mt-4">
-					<Alert collapsible title={t("COMMON.LEDGER_MIGRATION.HELP_TITLE")} variant="info" >
+					<Alert collapsible title={t("COMMON.LEDGER_MIGRATION.HELP_TITLE")} variant="info">
 						TBD
 					</Alert>
 				</div>
 
-				<Divider dashed className="my-6 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700" />
+				<Divider
+					dashed
+					className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 my-6"
+				/>
 
 				<MigrateToOneCheckbox onChange={setShouldMigrateToOne} />
 
@@ -77,6 +69,5 @@ export const MigrationLedgerScanStep = ({
 				</SidepanelFooter>
 			</>
 		</LedgerScanStep>
-	)
-
-}
+	);
+};

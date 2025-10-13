@@ -24,7 +24,6 @@ import {
 } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
 
-
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
 	wallets,
@@ -236,7 +235,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
@@ -311,7 +310,7 @@ export const LedgerScanStep = ({
 
 	useEffect(() => {
 		if (!isScanning) {
-			onSelect?.(selectedWallets)
+			onSelect?.(selectedWallets);
 		}
 	}, [selectedWallets]);
 

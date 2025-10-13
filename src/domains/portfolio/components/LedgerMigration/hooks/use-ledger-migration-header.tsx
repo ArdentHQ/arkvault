@@ -4,7 +4,7 @@ import { MigrateLedgerStep } from "@/domains/portfolio/components/LedgerMigratio
 import { useTranslation } from "react-i18next";
 
 export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 
 	return useMemo(() => {
 		if ([MigrateLedgerStep.ListenLedgerStep, MigrateLedgerStep.ConnectionStep].includes(activeTab)) {
@@ -21,4 +21,4 @@ export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
 			titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
 		};
 	}, [activeTab]);
-}
+};
