@@ -17,7 +17,11 @@ import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { Button } from "@/app/components/Button";
 import cn from "classnames";
 import { LedgerTableProperties } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerTabs.contracts";
-import { AmountWrapper, AddressTableLoaderOverlay, AddressMobileItem } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep.blocks";
+import {
+	AmountWrapper,
+	AddressTableLoaderOverlay,
+	AddressMobileItem,
+} from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
@@ -231,7 +235,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
@@ -280,7 +284,7 @@ export const LedgerScanStep = ({
 	profile: ProfilesContracts.IProfile;
 	cancelling: boolean;
 	setRetryFn?: (function_?: () => void) => void;
-	onFinish?: (selectedWallets: LedgerData[]) => void
+	onFinish?: (selectedWallets: LedgerData[]) => void;
 }) => {
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
@@ -303,7 +307,7 @@ export const LedgerScanStep = ({
 
 	useEffect(() => {
 		if (!isScanning) {
-			onFinish?.(selectedWallets)
+			onFinish?.(selectedWallets);
 		}
 	}, [isScanning, onFinish]);
 

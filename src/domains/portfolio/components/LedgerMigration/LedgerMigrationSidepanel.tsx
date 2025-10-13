@@ -23,14 +23,14 @@ export const LedgerMigrationSidepanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const profile = useActiveProfile();
-	const [activeTab, setActiveTab] = useState(MigrateLedger.ListenLedgerStep)
+	const [activeTab, setActiveTab] = useState(MigrateLedger.ListenLedgerStep);
 
 	// Reset step on close.
 	useEffect(() => {
 		if (!open) {
-			setActiveTab(MigrateLedger.ListenLedgerStep)
+			setActiveTab(MigrateLedger.ListenLedgerStep);
 		}
-	}, [open])
+	}, [open]);
 
 	return (
 		<SidePanel
@@ -47,11 +47,11 @@ export const LedgerMigrationSidepanel = ({
 						<ListenLedger
 							noHeading
 							onDeviceAvailable={() => {
-								console.log("onDeviceAvailable")
-								setActiveTab(MigrateLedger.ConnectionStep)
+								console.log("onDeviceAvailable");
+								setActiveTab(MigrateLedger.ConnectionStep);
 							}}
 							onDeviceNotAvailable={() => {
-								console.log("not available")
+								console.log("not available");
 							}}
 						/>
 					</TabPanel>
@@ -61,10 +61,10 @@ export const LedgerMigrationSidepanel = ({
 							isCancelling={false}
 							profile={profile}
 							onConnect={() => {
-								setActiveTab(MigrateLedger.ScanStep)
+								setActiveTab(MigrateLedger.ScanStep);
 							}}
 							onFailed={() => {
-								setActiveTab(MigrateLedger.ListenLedgerStep)
+								setActiveTab(MigrateLedger.ListenLedgerStep);
 							}}
 							network={profile.activeNetwork()}
 						/>

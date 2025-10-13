@@ -101,7 +101,6 @@ export const AppPanels = () => {
 
 			<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
 
-
 			<LedgerMigrationSidepanel open={currentOpenedPanel === Panel.LedgerMigration} onOpenChange={closePanel} />
 
 			<DiscardPanelConfirmationModal />

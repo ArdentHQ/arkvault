@@ -1,1 +1,1 @@
-export * from "./LedgerMigrationSidepanel"
+export * from "./LedgerMigrationSidepanel";
