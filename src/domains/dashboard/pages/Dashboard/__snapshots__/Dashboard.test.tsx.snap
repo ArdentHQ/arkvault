@@ -812,7 +812,9 @@ exports[`Dashboard > should render 1`] = `
                     <div
                       class="flex items-center gap-2"
                     >
-                      <div>
+                      <div
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                      >
                         <div
                           style="height: 16px; width: 16px;"
                         >
@@ -859,7 +861,9 @@ exports[`Dashboard > should render 1`] = `
                     <div
                       class="flex items-center gap-2"
                     >
-                      <div>
+                      <div
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                      >
                         <div
                           style="height: 16px; width: 16px;"
                         >
@@ -954,7 +958,7 @@ exports[`Dashboard > should render 1`] = `
                         >
                           <div>
                             <div
-                              style="height: 16px; width: 16px;"
+                              style="height: 20px; width: 20px;"
                             >
                               <svg
                                 fill="none"
