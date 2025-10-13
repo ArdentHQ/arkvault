@@ -1,11 +1,11 @@
-import React, { JSX, useState } from "react";
+import React, { JSX, useEffect, useState } from "react";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useActiveProfile } from "@/app/hooks/env";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
-import { LedgerScanStep } from "../ImportWallet/Ledger/LedgerScanStep";
 import { LedgerConnectionStep } from "./LedgerConnection";
+import { LedgerScanStep } from "./LedgerScanStep";
 
 export enum MigrateLedger {
 	ListenLedgerStep = 1,
@@ -24,8 +24,13 @@ export const LedgerMigrationSidepanel = ({
 }): JSX.Element => {
 	const profile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState(MigrateLedger.ListenLedgerStep)
-	console.log({ activeTab, profile })
 
+	// Reset step on close.
+	useEffect(() => {
+		if (!open) {
+			setActiveTab(MigrateLedger.ListenLedgerStep)
+		}
+	}, [open])
 
 	return (
 		<SidePanel
@@ -70,6 +75,7 @@ export const LedgerMigrationSidepanel = ({
 							cancelling={false}
 							profile={profile}
 							network={profile.activeNetwork()}
+							onFinish={console.log}
 						/>
 					</TabPanel>
 				</div>
