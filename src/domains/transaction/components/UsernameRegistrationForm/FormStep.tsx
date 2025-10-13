@@ -96,6 +96,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="senderAddress">
+					<FormLabel label={t("TRANSACTION.SENDER")} />
+
 					<SelectAddress
 						wallet={
 							wallet
