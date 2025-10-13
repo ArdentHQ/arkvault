@@ -43,7 +43,7 @@ export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransac
 			{!transaction.isSuccess() && transaction.blockHash() && (
 				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
 					<Tooltip content={transaction.hash()}>
-						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
+						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
 							<TruncateMiddle
 								className="text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
 								text={transaction.hash()}
