@@ -9,7 +9,7 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { JSX, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import React, { JSX, ReactElement, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -50,6 +50,10 @@ interface SidePanelContextValue {
 	setHasModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+interface SidepanelFooterProps extends React.HTMLAttributes<HTMLDivElement> {
+	isScrolled?: boolean;
+}
+
 const SidePanelContext = React.createContext<SidePanelContextValue | undefined>(undefined);
 
 export const useSidePanel = (): SidePanelContextValue | undefined => useContext(SidePanelContext);
@@ -63,6 +67,19 @@ export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttribu
 		{...properties}
 	/>
 );
+
+export const SidepanelFooter = ({ className, isScrolled, ...properties }: SidepanelFooterProps) => (
+	<div
+		data-testid="SidePanel__footer"
+		className={cn(
+			"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
+			{ "shadow-footer-side-panel": isScrolled },
+			className
+		)}
+		{...properties}
+	/>
+)
+
 
 const SidePanelContent = ({
 	children,
@@ -88,7 +105,7 @@ const SidePanelContent = ({
 	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
-	const popStateHandlerRef = useRef<() => void>(() => {});
+	const popStateHandlerRef = useRef<() => void>(() => { });
 	const { isMinimized, toggleMinimize } = usePanels();
 
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
@@ -408,15 +425,9 @@ const SidePanelContent = ({
 											</div>
 
 											{footer && (
-												<div
-													data-testid="SidePanel__footer"
-													className={cn(
-														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
-														{ "shadow-footer-side-panel": isScrolled },
-													)}
-												>
+												<SidepanelFooter isScrolled={isScrolled}>
 													{footer}
-												</div>
+												</SidepanelFooter>
 											)}
 										</div>
 									</div>

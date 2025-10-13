@@ -1,4 +1,4 @@
-import React, { JSX, useEffect, useState } from "react";
+import React, { JSX, useEffect, useMemo, useState } from "react";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useActiveProfile } from "@/app/hooks/env";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
@@ -6,12 +6,29 @@ import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { ListenLedger } from "@/domains/transaction/components/AuthenticationStep/Ledger/ListenLedger";
 import { LedgerConnectionStep } from "./LedgerConnection";
 import { LedgerScanStep } from "./LedgerScanStep";
+import { Icon } from "@/app/components/Icon";
 
 export enum MigrateLedger {
 	ListenLedgerStep = 1,
 	ConnectionStep,
 	ScanStep,
 }
+
+const useLedgerMigrationHeader = (activeTab: MigrateLedger) => useMemo(() => {
+	if ([MigrateLedger.ListenLedgerStep, MigrateLedger.ConnectionStep].includes(activeTab)) {
+		return {
+			subtitle: undefined,
+			title: "Address Migration",
+			titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
+		}
+	}
+
+	return {
+		subtitle: "Select the address(es) you wish to migrate.",
+		title: "Address Migration",
+		titleIcon: <Icon name="CheckedDocument" dimensions={[24, 24]} />,
+	}
+}, [activeTab])
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -32,14 +49,22 @@ export const LedgerMigrationSidepanel = ({
 		}
 	}, [open]);
 
+	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab)
+
+
 	return (
 		<SidePanel
-			title="test"
+			title={title}
 			minimizeable={false}
 			open={open}
 			onOpenChange={onOpenChange}
 			dataTestId="ImportAddressSidePanel"
 			onMountChange={onMountChange}
+			subtitle={subtitle}
+			titleIcon={titleIcon}
+			totalSteps={4}
+			hasSteps
+			activeStep={activeTab}
 		>
 			<Tabs activeId={activeTab}>
 				<div>
@@ -75,7 +100,7 @@ export const LedgerMigrationSidepanel = ({
 							cancelling={false}
 							profile={profile}
 							network={profile.activeNetwork()}
-							onFinish={console.log}
+							onContinue={console.log}
 						/>
 					</TabPanel>
 				</div>
