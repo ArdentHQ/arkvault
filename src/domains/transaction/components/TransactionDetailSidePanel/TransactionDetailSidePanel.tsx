@@ -118,7 +118,7 @@ export const TransactionDetailContent = ({
 					{t("TRANSACTION.MORE_DETAILS")}
 				</DetailLabel>
 
-				<DetailPadded className="mt-3 flex-1 sm:ml-0">
+				<DetailPadded className="sm:mt-3 flex-1 sm:ml-0">
 					<TransactionGas gasLimit={transaction.gasLimit()} gasUsed={transaction.gasUsed()} />
 				</DetailPadded>
 			</div>

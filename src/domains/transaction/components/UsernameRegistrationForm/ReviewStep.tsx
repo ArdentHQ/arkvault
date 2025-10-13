@@ -48,7 +48,7 @@ export const ReviewStep = ({
 			)}
 
 			<div
-				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+				className={cn("space-y-3 -mx-3 sm:mx-0 sm:space-y-4", {
 					"mt-6 sm:mt-4": !hideHeader,
 				})}
 			>
@@ -80,7 +80,7 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<div className="mt-2">
+				<div className="px-3 sm:px-0 border-t border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-6 sm:pt-0 sm:border-none">
 					<FormField name="fee">
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						<FeeField
