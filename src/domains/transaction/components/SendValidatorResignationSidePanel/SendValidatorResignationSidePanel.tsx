@@ -23,6 +23,7 @@ import { ThemeIcon } from "@/app/components/Icon";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
+import { Image } from "@/app/components/Image";
 
 enum Step {
 	FormStep = 1,
@@ -189,6 +190,10 @@ export const SendValidatorResignationSidePanel = ({
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === Step.ErrorStep) {
+			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
+		}
+
 		if (activeTab === Step.SummaryStep) {
 			return (
 				<ThemeIcon

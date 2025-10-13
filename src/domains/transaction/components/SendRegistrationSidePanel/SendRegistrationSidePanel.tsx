@@ -31,6 +31,7 @@ import { useConfirmedTransaction } from "@/domains/transaction/components/Transa
 import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
+import { Image } from "@/app/components/Image";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -314,6 +315,10 @@ export const SendRegistrationSidePanel = ({
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === ERROR_STEP) {
+			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
+		}
+
 		if (activeTab === summaryStep) {
 			return (
 				<ThemeIcon
