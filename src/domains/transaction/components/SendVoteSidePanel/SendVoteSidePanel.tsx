@@ -32,6 +32,7 @@ import { useVoteFormContext } from "@/domains/vote/contexts/VoteFormContext";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import classNames from "classnames";
 import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
+import { Image } from "@/app/components/Image";
 
 enum Step {
 	FormStep = 1,
@@ -511,6 +512,10 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === Step.ErrorStep) {
+			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
+		}
+
 		if (activeTab === Step.SummaryStep) {
 			return (
 				<ThemeIcon
