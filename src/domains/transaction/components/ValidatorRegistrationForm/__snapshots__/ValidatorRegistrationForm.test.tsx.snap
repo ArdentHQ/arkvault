@@ -271,7 +271,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
               class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
               data-testid="header__subtitle"
             >
-              Review the transaction details below.
+              Review details below to send your transaction.
             </div>
           </div>
         </div>
