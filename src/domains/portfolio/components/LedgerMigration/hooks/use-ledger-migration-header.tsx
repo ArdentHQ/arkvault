@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Icon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { MigrateLedgerStep } from "@/domains/portfolio/components/LedgerMigration";
 import { useTranslation } from "react-i18next";
 
@@ -7,6 +7,13 @@ export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
 	const { t } = useTranslation();
 
 	return useMemo(() => {
+		if (activeTab === MigrateLedgerStep.OverviewStep) {
+			return {
+				subtitle: t("COMMON.LEDGER_MIGRATION.OVERVIEW_SUBTITLE"),
+				title: t("TRANSACTION.REVIEW_STEP.TITLE"),
+				titleIcon: <ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimIcon="LedgerDim" dimensions={[24, 24]} />,
+			};
+		}
 		if ([MigrateLedgerStep.ListenLedgerStep, MigrateLedgerStep.ConnectionStep].includes(activeTab)) {
 			return {
 				subtitle: undefined,

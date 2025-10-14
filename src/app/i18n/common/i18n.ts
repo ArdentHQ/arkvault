@@ -246,6 +246,7 @@ export const translations = {
 		MIGRATE_TO_ONE_ADDRESS: "Migrate To One Address",
 		MIGRATE_TO_ONE_ADDRESS_DESCRIPTION:
 			"By selecting this option, all selected addresses will be consolidated into a single new address. This means the balances from your old addresses will be transferred to one address. You will still need to confirm each transaction individually during the migration process.",
+		OVERVIEW_SUBTITLE: "Review details below to send your transaction.",
 		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
 		UPDATE_TO_ETH_DERIVATION_PATH:
