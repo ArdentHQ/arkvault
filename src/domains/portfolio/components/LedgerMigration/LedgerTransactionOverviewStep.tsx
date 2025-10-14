@@ -67,7 +67,10 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 					</div>
 				</DetailWrapper>
 
-				<DetailWrapper label={t("TRANSACTION.SUMMARY")} footer={<ConfirmationTimeFooter confirmationTime={20} />}>
+				<DetailWrapper
+					label={t("TRANSACTION.SUMMARY")}
+					footer={<ConfirmationTimeFooter confirmationTime={20} />}
+				>
 					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
