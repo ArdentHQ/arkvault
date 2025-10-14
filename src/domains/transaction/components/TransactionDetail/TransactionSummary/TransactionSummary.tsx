@@ -14,12 +14,14 @@ interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
 	labelClassName?: string;
 	profile?: Contracts.IProfile;
+	allowHideBalance?: boolean;
 }
 export const TransactionSummary = ({
 	transaction,
 	senderWallet,
 	labelClassName,
 	profile,
+	allowHideBalance = false,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
@@ -42,20 +44,20 @@ export const TransactionSummary = ({
 				{showAmount && (
 					<div
 						data-testid="TransactionSummary__Amount"
-						className="flex w-full justify-between gap-2 sm:justify-start"
+						className="flex gap-2 justify-between w-full sm:justify-start"
 					>
 						<DetailLabelText className={labelClassName}>
 							{transaction.isValidatorRegistration() ? t("COMMON.LOCKED_AMOUNT") : t("COMMON.AMOUNT")}
 						</DetailLabelText>
 
-						<TransactionAmountLabel transaction={transaction} profile={profile} />
+						<TransactionAmountLabel transaction={transaction} profile={profile} allowHideBalance={allowHideBalance} />
 					</div>
 				)}
 
 				{transaction.isValidatorResignation() && (
 					<div
 						data-testid="TransactionSummary__ValidatorFee"
-						className="flex w-full justify-between gap-2 sm:justify-start"
+						className="flex gap-2 justify-between w-full sm:justify-start"
 					>
 						<DetailLabelText className={labelClassName}>{t("COMMON.UNLOCKED_AMOUNT")}</DetailLabelText>
 
@@ -66,7 +68,7 @@ export const TransactionSummary = ({
 							hideSign={false}
 							isCompact
 							className="h-[21px] rounded dark:border"
-							allowHideBalance
+							allowHideBalance={allowHideBalance}
 							profile={profile}
 						/>
 
@@ -74,7 +76,7 @@ export const TransactionSummary = ({
 							<Tooltip content={t("TRANSACTION.VALIDATOR_REGISTERED_WITHOUT_FEE")}>
 								<div
 									data-testid="TransactionSummary__ValidatorFee__Tooltip"
-									className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full"
+									className="flex justify-center items-center w-5 h-5 rounded-full bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600"
 								>
 									<Icon name="QuestionMarkSmall" size="sm" />
 								</div>
@@ -83,24 +85,24 @@ export const TransactionSummary = ({
 					</div>
 				)}
 
-				<div className="flex w-full justify-between gap-2 sm:justify-start">
+				<div className="flex gap-2 justify-between w-full sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.FEE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.currency()}
 						value={transaction.fee()}
 						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-						allowHideBalance
+						allowHideBalance={allowHideBalance}
 						profile={profile}
 					/>
 				</div>
 
-				<div className="flex w-full justify-between gap-2 sm:justify-start">
+				<div className="flex gap-2 justify-between w-full sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={transaction.convertedAmount()}
 						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-						allowHideBalance
+						allowHideBalance={allowHideBalance}
 						profile={profile}
 					/>
 				</div>

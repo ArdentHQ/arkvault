@@ -28,12 +28,14 @@ export const TransactionDetailContent = ({
 	isConfirmed,
 	confirmations,
 	containerClassname,
+	allowHideBalance = false,
 }: {
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 	isConfirmed?: boolean;
 	confirmations?: number;
 	containerClassname?: string;
+	allowHideBalance?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -62,7 +64,7 @@ export const TransactionDetailContent = ({
 			<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
 
 			<div className={cn("mt-6 space-y-3 sm:space-y-4", containerClassname)}>
-				<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
+				<DetailPadded className="flex-1 flex-1-mx-3 sm:ml-0">
 					<TransactionAddresses
 						explorerLink={transaction.explorerLink()}
 						profile={profile}
@@ -79,21 +81,22 @@ export const TransactionDetailContent = ({
 					/>
 				</DetailPadded>
 
-				<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
+				<DetailPadded className="flex-1 flex-1-mx-3 sm:ml-0">
 					{!isVoteTransaction && <TransactionType transaction={transaction} />}
 					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} showValidator />}
 				</DetailPadded>
 
-				<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
+				<DetailPadded className="flex-1 flex-1-mx-3 sm:ml-0">
 					<TransactionSummary
 						labelClassName={labelClassName}
 						transaction={transaction}
 						senderWallet={transaction.wallet()}
 						profile={profile}
+						allowHideBalance={allowHideBalance}
 					/>
 				</DetailPadded>
 
-				<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
+				<DetailPadded className="flex-1 flex-1-mx-3 sm:ml-0">
 					<TransactionDetails
 						isConfirmed={isConfirmed}
 						transaction={transaction}
@@ -101,9 +104,9 @@ export const TransactionDetailContent = ({
 					/>
 				</DetailPadded>
 
-				<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
+				<DetailPadded className="flex-1 flex-1-mx-3 sm:ml-0">
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
-					<div className="mt-2 px-3 sm:px-0">
+					<div className="px-3 mt-2 sm:px-0">
 						<TransactionConfirmations
 							isConfirmed={isConfirmed ?? transaction.isConfirmed()}
 							confirmations={confirmations ?? transaction.confirmations().toNumber()}
@@ -118,7 +121,7 @@ export const TransactionDetailContent = ({
 					{t("TRANSACTION.MORE_DETAILS")}
 				</DetailLabel>
 
-				<DetailPadded className="flex-1-mx-3 mt-3 flex-1 sm:ml-0">
+				<DetailPadded className="flex-1 mt-3 flex-1-mx-3 sm:ml-0">
 					<TransactionGas gasLimit={transaction.gasLimit()} gasUsed={transaction.gasUsed()} />
 				</DetailPadded>
 			</div>
@@ -165,6 +168,7 @@ export const TransactionDetailSidePanel = ({
 					profile={profile}
 					isConfirmed={transactionItem.isConfirmed()}
 					confirmations={transactionItem.confirmations().toNumber()}
+					allowHideBalance
 				/>
 			</SidePanel>
 		);
@@ -183,6 +187,7 @@ export const TransactionDetailSidePanel = ({
 				profile={profile}
 				isConfirmed={isConfirmedToShow}
 				confirmations={confirmationsToShow}
+				allowHideBalance
 			/>
 		</SidePanel>
 	);
