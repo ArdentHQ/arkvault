@@ -11,23 +11,16 @@ import cn from "classnames";
 import { Label } from "@/app/components/Label";
 import { Amount } from "@/app/components/Amount";
 
-
-export const OverviewStep = ({
-	onContinue
-}: {
-	onContinue?: () => void
-}) => {
+export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 	const { t } = useTranslation();
 	const profile = useActiveProfile();
-	const [acceptResponsibility, setAcceptResponsibility] = useState(false)
+	const [acceptResponsibility, setAcceptResponsibility] = useState(false);
 
 	// TODO: use migrating wallet.
-	const wallet = profile.wallets().first()
+	const wallet = profile.wallets().first();
 
 	return (
 		<div data-testid="LedgerMigration__Review-step">
-
-
 			<div className="space-y-4">
 				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 					<div className="space-y-3">
@@ -41,7 +34,8 @@ export const OverviewStep = ({
 								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 								wrapperClass="justify-end sm:justify-start"
 								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
-									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200": !!wallet.alias(),
+									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
+										!!wallet.alias(),
 								})}
 							/>
 						</div>
@@ -55,7 +49,8 @@ export const OverviewStep = ({
 								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 								wrapperClass="justify-end sm:justify-start"
 								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
-									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200": !!wallet.alias(),
+									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
+										!!wallet.alias(),
 								})}
 							/>
 						</div>
@@ -73,8 +68,8 @@ export const OverviewStep = ({
 
 				<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
 					<div className="space-y-3">
-						<div className="flex w-full justify-between gap-2 sm:justify-start items-center">
-							<DetailLabelText >{t("COMMON.AMOUNT")}</DetailLabelText>
+						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
+							<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
 							<Amount
 								ticker={"ARK"}
 								value={0.000126}
@@ -83,18 +78,20 @@ export const OverviewStep = ({
 								profile={profile}
 							/>
 							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-								(<Amount
+								(
+								<Amount
 									ticker={wallet.exchangeCurrency()}
 									value={0.000126}
 									className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 									allowHideBalance
 									profile={profile}
-								/>)
+								/>
+								)
 							</span>
 						</div>
 
-						<div className="flex w-full justify-between gap-2 sm:justify-start items-center">
-							<DetailLabelText >{t("COMMON.FEE")}</DetailLabelText>
+						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
+							<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
 							<Amount
 								ticker={wallet.exchangeCurrency()}
 								value={0.000126}
@@ -103,24 +100,31 @@ export const OverviewStep = ({
 								profile={profile}
 							/>
 							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-								(<Amount
+								(
+								<Amount
 									ticker={wallet.exchangeCurrency()}
 									value={0.000126}
 									className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 									allowHideBalance
 									profile={profile}
-								/>)
+								/>
+								)
 							</span>
 						</div>
 					</div>
 				</DetailWrapper>
 			</div>
 
-			<SidepanelFooter className="fixed right-0 bottom-0 ">
+			<SidepanelFooter className="fixed right-0 bottom-0">
 				<div className="flex items-center space-x-5">
-					<label className="flex cursor-pointer space-x-3 w-full">
-						<Checkbox name="VerifyResponsibility" onChange={(event) => setAcceptResponsibility(event.target.checked)} />
-						<span className="text-sm text-theme-secondary-700 dark:text-theme-secondary-500">{t("COMMON.LEDGER_MIGRATION.ACCEPT_RESPONSIBILITY")}</span>
+					<label className="flex w-full cursor-pointer space-x-3">
+						<Checkbox
+							name="VerifyResponsibility"
+							onChange={(event) => setAcceptResponsibility(event.target.checked)}
+						/>
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-sm">
+							{t("COMMON.LEDGER_MIGRATION.ACCEPT_RESPONSIBILITY")}
+						</span>
 					</label>
 
 					<Button

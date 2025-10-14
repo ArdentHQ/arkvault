@@ -11,7 +11,14 @@ export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
 			return {
 				subtitle: t("COMMON.LEDGER_MIGRATION.OVERVIEW_SUBTITLE"),
 				title: t("TRANSACTION.REVIEW_STEP.TITLE"),
-				titleIcon: <ThemeIcon lightIcon="LedgerLight" darkIcon="LedgerDark" dimIcon="LedgerDim" dimensions={[24, 24]} />,
+				titleIcon: (
+					<ThemeIcon
+						lightIcon="LedgerLight"
+						darkIcon="LedgerDark"
+						dimIcon="LedgerDim"
+						dimensions={[24, 24]}
+					/>
+				),
 			};
 		}
 		if ([MigrateLedgerStep.ListenLedgerStep, MigrateLedgerStep.ConnectionStep].includes(activeTab)) {

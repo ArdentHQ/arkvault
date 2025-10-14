@@ -76,7 +76,7 @@ export const LedgerMigrationSidepanel = ({
 							profile={profile}
 							network={profile.activeNetwork()}
 							onContinue={() => {
-								setActiveTab(MigrateLedgerStep.OverviewStep)
+								setActiveTab(MigrateLedgerStep.OverviewStep);
 							}}
 						/>
 					</TabPanel>
