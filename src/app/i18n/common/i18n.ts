@@ -231,6 +231,15 @@ export const translations = {
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
 	LEDGER_MIGRATION: {
 		ADDRESS_MIGRATION: "Address Migration",
+		HELP: {
+			GUIDELINE_1: "Make sure you are not being watched.",
+			GUIDELINE_2: "Check your wardrobe, bed, and windows for spies.",
+			GUIDELINE_3: "After completing the above steps, eat something.",
+			GUIDELINE_4:
+				"Find your device. Hide your little willy, we're talking about the Ledger  device now. So what if it's the same size as your willy, we need the  Ledger device.",
+			GUIDELINE_5: "Next, press the blue button at the bottom and read the text on the  following screens.",
+			TITLE: "When migrating your address to ARKVault, follow these recommendations:",
+		},
 		HELP_TITLE: "Need help with migration?",
 		MIGRATE_LATER: "Want to migrate later? You’ll find the option in the drop-down menu.",
 		MIGRATE_TO_ONE_ADDRESS: "Migrate To One Address",

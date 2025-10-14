@@ -45,7 +45,14 @@ export const MigrationLedgerScanStep = ({
 			<>
 				<div className="mt-4">
 					<Alert collapsible title={t("COMMON.LEDGER_MIGRATION.HELP_TITLE")} variant="info">
-						TBD
+						<p>{t("COMMON.LEDGER_MIGRATION.HELP.TITLE")}</p>
+						<ol className="list-disc pl-5">
+							<li>{t("COMMON.LEDGER_MIGRATION.HELP.GUIDELINE_1")}</li>
+							<li>{t("COMMON.LEDGER_MIGRATION.HELP.GUIDELINE_2")}</li>
+							<li>{t("COMMON.LEDGER_MIGRATION.HELP.GUIDELINE_3")}</li>
+							<li>{t("COMMON.LEDGER_MIGRATION.HELP.GUIDELINE_4")}</li>
+							<li>{t("COMMON.LEDGER_MIGRATION.HELP.GUIDELINE_5")}</li>
+						</ol>
 					</Alert>
 				</div>
 
