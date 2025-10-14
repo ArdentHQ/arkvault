@@ -102,11 +102,11 @@ export const ReviewStep = ({
 							<Amount
 								ticker={validatoResigationFeeTicker}
 								value={validatoResigationFee}
-								className="font-semibold"
+								className="text-sm font-semibold md:text-base"
 							/>
 
 							{validatoResigationFeeAsFiat !== null && (
-								<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 font-semibold">
+								<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold md:text-base">
 									(~
 									<Amount
 										ticker={validatoResigationFeeAsFiatTicker}
