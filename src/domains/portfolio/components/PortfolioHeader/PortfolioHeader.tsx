@@ -220,9 +220,14 @@ export const PortfolioHeader = ({
 
 				<div className="flex flex-col gap-0.5">
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm">
-						{hasWalletsToMigrate && !isLoading && !isIgnored && <LedgerMigrationBanner onCancel={ignore} onStart={() => {
-							openPanel(Panel.LedgerMigration);
-						}} />}
+						{hasWalletsToMigrate && !isLoading && !isIgnored && (
+							<LedgerMigrationBanner
+								onCancel={ignore}
+								onStart={() => {
+									openPanel(Panel.LedgerMigration);
+								}}
+							/>
+						)}
 						<div className="flex w-full flex-col gap-3 p-4">
 							<div className="flex w-full max-w-full flex-row items-center justify-between overflow-x-auto">
 								{selectedWallets.length === 1 && (
