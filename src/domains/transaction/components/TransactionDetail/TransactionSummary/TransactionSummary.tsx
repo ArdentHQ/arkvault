@@ -44,20 +44,24 @@ export const TransactionSummary = ({
 				{showAmount && (
 					<div
 						data-testid="TransactionSummary__Amount"
-						className="flex gap-2 justify-between w-full sm:justify-start"
+						className="flex w-full justify-between gap-2 sm:justify-start"
 					>
 						<DetailLabelText className={labelClassName}>
 							{transaction.isValidatorRegistration() ? t("COMMON.LOCKED_AMOUNT") : t("COMMON.AMOUNT")}
 						</DetailLabelText>
 
-						<TransactionAmountLabel transaction={transaction} profile={profile} allowHideBalance={allowHideBalance} />
+						<TransactionAmountLabel
+							transaction={transaction}
+							profile={profile}
+							allowHideBalance={allowHideBalance}
+						/>
 					</div>
 				)}
 
 				{transaction.isValidatorResignation() && (
 					<div
 						data-testid="TransactionSummary__ValidatorFee"
-						className="flex gap-2 justify-between w-full sm:justify-start"
+						className="flex w-full justify-between gap-2 sm:justify-start"
 					>
 						<DetailLabelText className={labelClassName}>{t("COMMON.UNLOCKED_AMOUNT")}</DetailLabelText>
 
@@ -76,7 +80,7 @@ export const TransactionSummary = ({
 							<Tooltip content={t("TRANSACTION.VALIDATOR_REGISTERED_WITHOUT_FEE")}>
 								<div
 									data-testid="TransactionSummary__ValidatorFee__Tooltip"
-									className="flex justify-center items-center w-5 h-5 rounded-full bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600"
+									className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full"
 								>
 									<Icon name="QuestionMarkSmall" size="sm" />
 								</div>
@@ -85,7 +89,7 @@ export const TransactionSummary = ({
 					</div>
 				)}
 
-				<div className="flex gap-2 justify-between w-full sm:justify-start">
+				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.FEE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.currency()}
@@ -96,7 +100,7 @@ export const TransactionSummary = ({
 					/>
 				</div>
 
-				<div className="flex gap-2 justify-between w-full sm:justify-start">
+				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
