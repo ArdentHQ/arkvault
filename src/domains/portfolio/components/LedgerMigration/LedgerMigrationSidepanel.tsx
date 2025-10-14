@@ -8,6 +8,7 @@ import { LedgerConnectionStep } from "./LedgerConnection";
 import { MigrateLedgerStep } from "./LedgerMigration.contracts";
 import { useLedgerMigrationHeader } from "./hooks/use-ledger-migration-header";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
+import { OverviewStep } from "./LedgerTransactionOverviewStep";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -74,8 +75,14 @@ export const LedgerMigrationSidepanel = ({
 						<MigrationLedgerScanStep
 							profile={profile}
 							network={profile.activeNetwork()}
-							onContinue={console.log}
+							onContinue={() => {
+								setActiveTab(MigrateLedgerStep.OverviewStep)
+							}}
 						/>
+					</TabPanel>
+
+					<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
+						<OverviewStep />
 					</TabPanel>
 				</div>
 			</Tabs>

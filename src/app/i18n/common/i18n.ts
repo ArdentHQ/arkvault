@@ -230,6 +230,7 @@ export const translations = {
 	LEDGER_CONNECTED: "{{device}} connected",
 	LEDGER_DISCONNECTED: "{{device}} disconnected",
 	LEDGER_MIGRATION: {
+		ACCEPT_RESPONSIBILITY: "I've verified the new address and assume full responsibility.",
 		ADDRESS_MIGRATION: "Address Migration",
 		HELP: {
 			GUIDELINE_1: "Make sure you are not being watched.",
