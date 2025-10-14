@@ -281,9 +281,10 @@ const SidePanelContent = ({
 																<h2
 																	data-testid="SidePanel__title"
 																	className={cn(
-																		"mb-0 font-semibold transition-all duration-300 md:pt-0",
+																		"mb-0 text-base font-semibold transition-all duration-300 md:pt-0",
 																		{
-																			"text-lg leading-[21px]": !isMinimized,
+																			"text-base leading-5 md:text-lg md:leading-[21px]":
+																				!isMinimized,
 																			"truncate text-base leading-5": isMinimized,
 																		},
 																	)}
