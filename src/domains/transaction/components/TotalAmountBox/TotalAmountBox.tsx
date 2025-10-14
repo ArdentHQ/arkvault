@@ -15,7 +15,7 @@ interface Properties {
 	hideAmount?: boolean;
 }
 
-const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: number }) => {
+export const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: number }) => {
 	const { t } = useTranslation();
 
 	return (

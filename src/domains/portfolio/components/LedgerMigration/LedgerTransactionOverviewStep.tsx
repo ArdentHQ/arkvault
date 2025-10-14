@@ -10,6 +10,7 @@ import { Address } from "@/app/components/Address";
 import cn from "classnames";
 import { Label } from "@/app/components/Label";
 import { Amount } from "@/app/components/Amount";
+import { ConfirmationTimeFooter } from "@/domains/transaction/components/TotalAmountBox";
 
 export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 	const { t } = useTranslation();
@@ -66,7 +67,7 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 					</div>
 				</DetailWrapper>
 
-				<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+				<DetailWrapper label={t("TRANSACTION.SUMMARY")} footer={<ConfirmationTimeFooter confirmationTime={20} />}>
 					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
