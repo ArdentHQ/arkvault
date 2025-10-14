@@ -92,6 +92,15 @@ export const TransactionSummary = ({
 				)}
 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
+					<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
+					<Amount
+						ticker={senderWallet.currency()}
+						value={transaction.fee()}
+						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+						allowHideBalance
+						profile={profile}
+					/>
+
 					<DetailLabelText className={labelClassName}>{t("COMMON.FEE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.currency()}
