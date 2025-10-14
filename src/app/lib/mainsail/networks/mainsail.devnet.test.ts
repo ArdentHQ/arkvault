@@ -33,7 +33,7 @@ describe("Mainsail Devnet Network Configuration", () => {
 	it("should have correct constants", () => {
 		expect(network.constants).toEqual({
 			epoch: "2023-12-21T00:00:00.000Z",
-			slip44: 111,
+			slip44: 60,
 		});
 	});
 
