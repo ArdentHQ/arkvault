@@ -249,6 +249,7 @@ export const translations = {
 		OVERVIEW_SUBTITLE: "Review details below to send your transaction.",
 		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
+		VERIFY_MESSAGE_HELP_TEXT: "Sign a message to verify your Ledger address matches the one displayed.",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
 	},
@@ -517,6 +518,7 @@ export const translations = {
 	VALIDATOR_STATUS: "Validator Status",
 	VALUE: "Value",
 	VERIFIED: "Verified Address: {{value}}",
+	VERIFY_ADDRESS: "Verify Address",
 	VERSION: "Version",
 	VIEW: "View",
 	VIEWING: "Viewing",

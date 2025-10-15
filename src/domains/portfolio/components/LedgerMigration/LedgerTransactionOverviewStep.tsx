@@ -11,6 +11,9 @@ import cn from "classnames";
 import { Label } from "@/app/components/Label";
 import { Amount } from "@/app/components/Amount";
 import { ConfirmationTimeFooter } from "@/domains/transaction/components/TotalAmountBox";
+import { Link } from "@/app/components/Link";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
 
 export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 	const { t } = useTranslation();
@@ -48,12 +51,27 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 								address={wallet.address()}
 								showCopyButton
 								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-								wrapperClass="justify-end sm:justify-start"
+								wrapperClass="justify-end sm:justify-start w-full"
 								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
 									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
 										!!wallet.alias(),
 								})}
 							/>
+						</div>
+
+						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+							<DetailTitle> </DetailTitle>
+							<Link to="">
+								<span className="flex items-center space-x-2">
+									<span>{t("COMMON.VERIFY_ADDRESS")}</span>
+									<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
+										<span>
+											<span className="block dark:hidden bg-theme-secondary-100 rounded-full w-5 h-5 flex items-center justify-center" ><Icon name="QuestionMarkSmall" dimensions={[10, 10]} /></span>
+											<span className="dark:block hidden"><Icon name="CircleQuestionMark" dimensions={[20, 20]} /></span>
+										</span>
+									</Tooltip>
+								</span>
+							</Link>
 						</div>
 					</div>
 				</DetailWrapper>
