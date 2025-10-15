@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { useActiveProfile } from "@/app/hooks";
 import { SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
@@ -14,14 +13,27 @@ import { ConfirmationTimeFooter } from "@/domains/transaction/components/TotalAm
 import { Link } from "@/app/components/Link";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { Networks } from "@/app/lib/mainsail";
+import { TransactionFee } from "./components/TransactionFee";
+import { Contracts } from "@/app/lib/profiles";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
-export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
+
+export const OverviewStep = ({
+	onContinue,
+	network,
+	senderWallet,
+	recipients,
+	profile,
+}: {
+	profile: Contracts.IProfile,
+	senderWallet: Contracts.IReadWriteWallet,
+	network: Networks.Network,
+	recipients: RecipientItem[],
+	onContinue?: () => void
+}) => {
 	const { t } = useTranslation();
-	const profile = useActiveProfile();
 	const [acceptResponsibility, setAcceptResponsibility] = useState(false);
-
-	// TODO: use migrating wallet.
-	const wallet = profile.wallets().first();
 
 	return (
 		<div data-testid="LedgerMigration__Review-step">
@@ -32,14 +44,14 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 							<DetailTitle>{t("COMMON.OLD")}</DetailTitle>
 							<Address
 								truncateOnTable
-								address={wallet.address()}
-								walletName={wallet.alias()}
+								address={senderWallet.address()}
+								walletName={senderWallet.alias()}
 								showCopyButton
 								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 								wrapperClass="justify-end sm:justify-start"
 								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
 									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
-										!!wallet.alias(),
+										!!senderWallet.alias(),
 								})}
 							/>
 						</div>
@@ -48,13 +60,13 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 							<DetailTitle>{t("COMMON.NEW")}</DetailTitle>
 							<Address
 								truncateOnTable
-								address={wallet.address()}
+								address={senderWallet.address()}
 								showCopyButton
 								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 								wrapperClass="justify-end sm:justify-start w-full"
 								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
 									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
-										!!wallet.alias(),
+										!!senderWallet.alias(),
 								})}
 							/>
 						</div>
@@ -91,26 +103,26 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 
 				<DetailWrapper
 					label={t("TRANSACTION.SUMMARY")}
-					footer={<ConfirmationTimeFooter confirmationTime={20} />}
+					footer={
+						<ConfirmationTimeFooter
+							confirmationTime={network.fees().confirmationTime("Average", network.blockTime())}
+						/>
+					}
 				>
 					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
 							<Amount
-								ticker={"ARK"}
-								value={0.000126}
+								ticker={network.ticker()}
+								value={senderWallet.balance()}
 								className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-								allowHideBalance
-								profile={profile}
 							/>
 							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 								(
 								<Amount
-									ticker={wallet.exchangeCurrency()}
-									value={0.000126}
+									ticker={senderWallet.exchangeCurrency()}
+									value={senderWallet.convertedBalance()}
 									className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-									allowHideBalance
-									profile={profile}
 								/>
 								)
 							</span>
@@ -118,24 +130,7 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
-							<Amount
-								ticker={wallet.exchangeCurrency()}
-								value={0.000126}
-								className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-								allowHideBalance
-								profile={profile}
-							/>
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
-								(
-								<Amount
-									ticker={wallet.exchangeCurrency()}
-									value={0.000126}
-									className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-									allowHideBalance
-									profile={profile}
-								/>
-								)
-							</span>
+							<TransactionFee profile={profile} network={network} senderWallet={senderWallet} recipients={recipients} />
 						</div>
 					</div>
 				</DetailWrapper>

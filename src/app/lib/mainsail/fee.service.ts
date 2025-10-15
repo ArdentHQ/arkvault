@@ -15,6 +15,10 @@ interface Fees {
 	max: string;
 }
 
+type ConfirmationFeeType = "Slow" | "Average" | "Fast";
+
+const defaultBlockTime = 8000;
+
 export class FeeService {
 	readonly #client: ArkClient;
 	#config: ConfigRepository;
@@ -67,5 +71,21 @@ export class FeeService {
 			max: BigNumber.make(UnitConverter.formatUnits(fees.max ?? "0", "gwei")),
 			min: BigNumber.make(UnitConverter.formatUnits(fees.min ?? "0", "gwei")),
 		};
+	}
+
+	confirmationTime(feeType: ConfirmationFeeType | undefined, blockTime?: number): number {
+		const blockTimeInSeconds = BigNumber.make(blockTime ?? defaultBlockTime).divide(1000);
+
+		const confirmationTimes: Record<ConfirmationFeeType, number> = {
+			Average: blockTimeInSeconds.toNumber(),
+			Fast: blockTimeInSeconds.toNumber(),
+			Slow: blockTimeInSeconds.times(2).toNumber(),
+		};
+
+		if (!feeType) {
+			return confirmationTimes["Average"];
+		}
+
+		return confirmationTimes[feeType] ?? confirmationTimes["Average"];
 	}
 }

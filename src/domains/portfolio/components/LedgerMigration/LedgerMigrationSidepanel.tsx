@@ -30,6 +30,13 @@ export const LedgerMigrationSidepanel = ({
 		}
 	}, [open]);
 
+	// TODO: Use migrating addresses
+	const senderWallet = profile.wallets().first()
+	const recipients = [{
+		address: senderWallet.address(),
+		amount: senderWallet.balance()
+	}]
+
 	return (
 		<SidePanel
 			title={title}
@@ -82,7 +89,11 @@ export const LedgerMigrationSidepanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
-						<OverviewStep />
+						<OverviewStep
+							senderWallet={senderWallet}
+							network={profile.activeNetwork()}
+							recipients={recipients}
+							profile={profile} />
 					</TabPanel>
 				</div>
 			</Tabs>
