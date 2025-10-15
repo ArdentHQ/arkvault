@@ -188,7 +188,11 @@ export const PortfolioHeader = ({
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => openPanel(Panel.ImportAddress)}
 						>
-							<Icon name="ArrowTurnDownBracket" size="md" />
+							<Icon
+								name="ArrowTurnDownBracket"
+								size="md"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+							/>
 							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
 								{t("COMMON.IMPORT")}
 							</p>
@@ -202,7 +206,11 @@ export const PortfolioHeader = ({
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => openPanel(Panel.CreateAddress)}
 						>
-							<Icon name="Plus" size="md" />
+							<Icon
+								name="Plus"
+								size="md"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+							/>
 							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
 								{t("COMMON.CREATE")}
 							</p>
@@ -234,7 +242,7 @@ export const PortfolioHeader = ({
 										wallet={wallet}
 										exclude={["isKnown", "isStarred", "isTestNetwork"]}
 										iconColor="text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
-										iconSize="md"
+										iconSize="lg"
 									/>
 								</div>
 							)}

@@ -281,9 +281,10 @@ const SidePanelContent = ({
 																<h2
 																	data-testid="SidePanel__title"
 																	className={cn(
-																		"mb-0 font-semibold transition-all duration-300 md:pt-0",
+																		"mb-0 text-base font-semibold transition-all duration-300 md:pt-0",
 																		{
-																			"text-lg leading-[21px]": !isMinimized,
+																			"text-base leading-5 md:text-lg md:leading-[21px]":
+																				!isMinimized,
 																			"truncate text-base leading-5": isMinimized,
 																		},
 																	)}
@@ -345,7 +346,11 @@ const SidePanelContent = ({
 																					toggleMinimize();
 																				}}
 																			>
-																				<Icon name="Minimize" />
+																				{isMinimized ? (
+																					<Icon name="Maximize" />
+																				) : (
+																					<Icon name="Minimize" />
+																				)}
 																			</Button>
 																		</Tooltip>
 																	</div>
@@ -400,7 +405,7 @@ const SidePanelContent = ({
 												inert={isMinimized}
 											>
 												{subtitle && (
-													<div className="text-theme-secondary-text text-sm leading-7 font-normal md:text-base">
+													<div className="text-theme-secondary-text text-sm leading-[21px] font-normal md:text-base md:leading-7">
 														{subtitle}
 													</div>
 												)}
