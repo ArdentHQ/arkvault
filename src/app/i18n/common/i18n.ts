@@ -249,9 +249,9 @@ export const translations = {
 		OVERVIEW_SUBTITLE: "Review details below to send your transaction.",
 		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
-		VERIFY_MESSAGE_HELP_TEXT: "Sign a message to verify your Ledger address matches the one displayed.",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
+		VERIFY_MESSAGE_HELP_TEXT: "Sign a message to verify your Ledger address matches the one displayed.",
 	},
 	LEDGER_NETWORK_NOT_SUPPORTED: "Ledger is not yet supported on this network.",
 	LINK: "Link",

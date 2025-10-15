@@ -66,8 +66,12 @@ export const OverviewStep = ({ onContinue }: { onContinue?: () => void }) => {
 									<span>{t("COMMON.VERIFY_ADDRESS")}</span>
 									<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
 										<span>
-											<span className="block dark:hidden bg-theme-secondary-100 rounded-full w-5 h-5 flex items-center justify-center" ><Icon name="QuestionMarkSmall" dimensions={[10, 10]} /></span>
-											<span className="dark:block hidden"><Icon name="CircleQuestionMark" dimensions={[20, 20]} /></span>
+											<span className="bg-theme-secondary-100 block flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
+												<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
+											</span>
+											<span className="hidden dark:block">
+												<Icon name="CircleQuestionMark" dimensions={[20, 20]} />
+											</span>
 										</span>
 									</Tooltip>
 								</span>
