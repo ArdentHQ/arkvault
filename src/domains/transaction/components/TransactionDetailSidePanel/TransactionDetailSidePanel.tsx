@@ -28,12 +28,14 @@ export const TransactionDetailContent = ({
 	isConfirmed,
 	confirmations,
 	containerClassname,
+	allowHideBalance = false,
 }: {
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
 	isConfirmed?: boolean;
 	confirmations?: number;
 	containerClassname?: string;
+	allowHideBalance?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -90,6 +92,7 @@ export const TransactionDetailContent = ({
 						transaction={transaction}
 						senderWallet={transaction.wallet()}
 						profile={profile}
+						allowHideBalance={allowHideBalance}
 					/>
 				</DetailPadded>
 
@@ -165,6 +168,7 @@ export const TransactionDetailSidePanel = ({
 					profile={profile}
 					isConfirmed={transactionItem.isConfirmed()}
 					confirmations={transactionItem.confirmations().toNumber()}
+					allowHideBalance
 					containerClassname="-mx-3 sm:mx-0"
 				/>
 			</SidePanel>
@@ -184,6 +188,7 @@ export const TransactionDetailSidePanel = ({
 				profile={profile}
 				isConfirmed={isConfirmedToShow}
 				confirmations={confirmationsToShow}
+				allowHideBalance
 				containerClassname="-mx-3 sm:mx-0"
 			/>
 		</SidePanel>

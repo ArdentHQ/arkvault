@@ -10,9 +10,11 @@ import { Label, LabelProperties } from "@/app/components/Label";
 export const TransactionAmountLabel = ({
 	transaction,
 	profile,
+	allowHideBalance,
 }: {
 	transaction: ExtendedTransactionData;
 	profile?: Contracts.IProfile;
+	allowHideBalance?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -33,7 +35,7 @@ export const TransactionAmountLabel = ({
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
-			allowHideBalance
+			allowHideBalance={allowHideBalance}
 			profile={profile}
 		/>
 	);
