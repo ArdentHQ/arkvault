@@ -3,4 +3,5 @@ export enum MigrateLedgerStep {
 	ConnectionStep,
 	ScanStep,
 	OverviewStep,
+	ApproveTransactionStep,
 }

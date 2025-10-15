@@ -24,7 +24,7 @@ export const LedgerTransactionOverview = ({
 	onVerifyAddress,
 }: {
 	onVerifyAddress?: () => void;
-	children: React.ReactElement;
+	children?: React.ReactElement;
 	profile: Contracts.IProfile;
 	senderWallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
@@ -68,24 +68,26 @@ export const LedgerTransactionOverview = ({
 							/>
 						</div>
 
-						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-							<DetailTitle> </DetailTitle>
-							<Link to="" onClick={onVerifyAddress}>
-								<span className="flex items-center space-x-2">
-									<span>{t("COMMON.VERIFY_ADDRESS")}</span>
-									<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
-										<span>
-											<span className="bg-theme-secondary-100 block flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
-												<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
+						{onVerifyAddress && (
+							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+								<DetailTitle> </DetailTitle>
+								<Link to="" onClick={onVerifyAddress}>
+									<span className="flex items-center space-x-2">
+										<span>{t("COMMON.VERIFY_ADDRESS")}</span>
+										<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
+											<span>
+												<span className="bg-theme-secondary-100 block flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
+													<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
+												</span>
+												<span className="hidden dark:block">
+													<Icon name="CircleQuestionMark" dimensions={[20, 20]} />
+												</span>
 											</span>
-											<span className="hidden dark:block">
-												<Icon name="CircleQuestionMark" dimensions={[20, 20]} />
-											</span>
-										</span>
-									</Tooltip>
-								</span>
-							</Link>
-						</div>
+										</Tooltip>
+									</span>
+								</Link>
+							</div>
+						)}
 					</div>
 				</DetailWrapper>
 

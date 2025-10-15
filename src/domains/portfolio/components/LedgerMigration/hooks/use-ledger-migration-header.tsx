@@ -7,6 +7,20 @@ export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
 	const { t } = useTranslation();
 
 	return useMemo(() => {
+		if (activeTab === MigrateLedgerStep.ApproveTransactionStep) {
+			return {
+				subtitle: t("COMMON.LEDGER_MIGRATION.VERIFY_DETAILS_ON_LEDGER"),
+				title: t("COMMON.LEDGER_MIGRATION.APPROVE_TRANSACTION_TITLE"),
+				titleIcon: (
+					<ThemeIcon
+						lightIcon="LedgerLight"
+						darkIcon="LedgerDark"
+						dimIcon="LedgerDim"
+						dimensions={[24, 24]}
+					/>
+				),
+			};
+		}
 		if (activeTab === MigrateLedgerStep.OverviewStep) {
 			return {
 				subtitle: t("COMMON.LEDGER_MIGRATION.OVERVIEW_SUBTITLE"),

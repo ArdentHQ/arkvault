@@ -232,6 +232,8 @@ export const translations = {
 	LEDGER_MIGRATION: {
 		ACCEPT_RESPONSIBILITY: "I've verified the new address and assume full responsibility.",
 		ADDRESS_MIGRATION: "Address Migration",
+		APPROVE_LEDGER_TRANSACTION: "Please approve the transaction on your Ledger device.",
+		APPROVE_TRANSACTION_TITLE: "Approve Your Transaction",
 		HELP: {
 			GUIDELINE_1: "Make sure you are not being watched.",
 			GUIDELINE_2: "Check your wardrobe, bed, and windows for spies.",
@@ -251,6 +253,7 @@ export const translations = {
 		START_MIGRATION: "Start Migration",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
+		VERIFY_DETAILS_ON_LEDGER: "Review and verify the details on your Ledger device. Select 'Accept' to approve the transaction.",
 		VERIFY_MESSAGE_HELP_TEXT: "Sign a message to verify your Ledger address matches the one displayed.",
 	},
 	LEDGER_NETWORK_NOT_SUPPORTED: "Ledger is not yet supported on this network.",

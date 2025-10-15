@@ -9,6 +9,7 @@ import { MigrateLedgerStep } from "./LedgerMigration.contracts";
 import { useLedgerMigrationHeader } from "./hooks/use-ledger-migration-header";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
 import { OverviewStep } from "./LedgerTransactionOverviewStep";
+import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -92,7 +93,18 @@ export const LedgerMigrationSidepanel = ({
 
 					<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
 						<OverviewStep
+							onContinue={() => {
+								setActiveTab(MigrateLedgerStep.ApproveTransactionStep)
+							}}
 							onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
+							senderWallet={senderWallet}
+							network={profile.activeNetwork()}
+							recipients={recipients}
+							profile={profile}
+						/>
+					</TabPanel>
+					<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
+						<LedgerTransactionApproveStep
 							senderWallet={senderWallet}
 							network={profile.activeNetwork()}
 							recipients={recipients}
