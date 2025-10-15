@@ -14,12 +14,14 @@ interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
 	labelClassName?: string;
 	profile?: Contracts.IProfile;
+	allowHideBalance?: boolean;
 }
 export const TransactionSummary = ({
 	transaction,
 	senderWallet,
 	labelClassName,
 	profile,
+	allowHideBalance = false,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
@@ -48,7 +50,11 @@ export const TransactionSummary = ({
 							{transaction.isValidatorRegistration() ? t("COMMON.LOCKED_AMOUNT") : t("COMMON.AMOUNT")}
 						</DetailLabelText>
 
-						<TransactionAmountLabel transaction={transaction} profile={profile} />
+						<TransactionAmountLabel
+							transaction={transaction}
+							profile={profile}
+							allowHideBalance={allowHideBalance}
+						/>
 					</div>
 				)}
 
@@ -66,7 +72,7 @@ export const TransactionSummary = ({
 							hideSign={false}
 							isCompact
 							className="h-[21px] rounded dark:border"
-							allowHideBalance
+							allowHideBalance={allowHideBalance}
 							profile={profile}
 						/>
 
@@ -89,7 +95,7 @@ export const TransactionSummary = ({
 						ticker={senderWallet.currency()}
 						value={transaction.fee()}
 						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-						allowHideBalance
+						allowHideBalance={allowHideBalance}
 						profile={profile}
 					/>
 				</div>
@@ -100,7 +106,7 @@ export const TransactionSummary = ({
 						ticker={senderWallet.exchangeCurrency()}
 						value={transaction.convertedAmount()}
 						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
-						allowHideBalance
+						allowHideBalance={allowHideBalance}
 						profile={profile}
 					/>
 				</div>
