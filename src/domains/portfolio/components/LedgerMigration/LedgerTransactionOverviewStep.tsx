@@ -18,7 +18,6 @@ import { TransactionFee } from "./components/TransactionFee";
 import { Contracts } from "@/app/lib/profiles";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
-
 export const OverviewStep = ({
 	onContinue,
 	network,
@@ -26,11 +25,11 @@ export const OverviewStep = ({
 	recipients,
 	profile,
 }: {
-	profile: Contracts.IProfile,
-	senderWallet: Contracts.IReadWriteWallet,
-	network: Networks.Network,
-	recipients: RecipientItem[],
-	onContinue?: () => void
+	profile: Contracts.IProfile;
+	senderWallet: Contracts.IReadWriteWallet;
+	network: Networks.Network;
+	recipients: RecipientItem[];
+	onContinue?: () => void;
 }) => {
 	const { t } = useTranslation();
 	const [acceptResponsibility, setAcceptResponsibility] = useState(false);
@@ -130,7 +129,12 @@ export const OverviewStep = ({
 
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
-							<TransactionFee profile={profile} network={network} senderWallet={senderWallet} recipients={recipients} />
+							<TransactionFee
+								profile={profile}
+								network={network}
+								senderWallet={senderWallet}
+								recipients={recipients}
+							/>
 						</div>
 					</div>
 				</DetailWrapper>

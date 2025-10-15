@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Amount } from "@/app/components/Amount";
 import { Networks } from "@/app/lib/mainsail";
@@ -10,7 +9,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { useFees } from "@/app/hooks";
 
-
 const FEE_DISPLAY_VALUE_DECIMALS = 8;
 
 export const TransactionFee = ({
@@ -19,14 +17,13 @@ export const TransactionFee = ({
 	recipients,
 	senderWallet,
 }: {
-	senderWallet: Contracts.IReadWriteWallet,
-	network: Networks.Network
-	profile: Contracts.IProfile
-	recipients: RecipientItem[]
+	senderWallet: Contracts.IReadWriteWallet;
+	network: Networks.Network;
+	profile: Contracts.IProfile;
+	recipients: RecipientItem[];
 }) => {
-
 	const { calculate } = useFees(profile);
-	const [fee, setFee] = useState<number>(0)
+	const [fee, setFee] = useState<number>(0);
 
 	useEffect(() => {
 		const calc = async () => {
@@ -43,12 +40,12 @@ export const TransactionFee = ({
 
 			const fee = BigNumber.make(calculateGasFee(transactionFees.avg, GasLimit["transfer"]))
 				.decimalPlaces(FEE_DISPLAY_VALUE_DECIMALS)
-				.toNumber()
+				.toNumber();
 
-			setFee(fee)
-		}
-		calc()
-	}, [])
+			setFee(fee);
+		};
+		calc();
+	}, []);
 
 	return (
 		<>
@@ -67,5 +64,5 @@ export const TransactionFee = ({
 				)
 			</span>
 		</>
-	)
-}
+	);
+};
