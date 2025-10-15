@@ -92,6 +92,7 @@ export const LedgerMigrationSidepanel = ({
 
 					<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
 						<OverviewStep
+							onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
 							senderWallet={senderWallet}
 							network={profile.activeNetwork()}
 							recipients={recipients}
