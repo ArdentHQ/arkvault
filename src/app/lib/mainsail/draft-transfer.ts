@@ -33,12 +33,12 @@ export class DraftTransfer {
 	}
 
 	public addRecipientWallet(wallet: Contracts.IReadWriteWallet): void {
-		this.#recipientWallets?.push(wallet)
+		this.#recipientWallets?.push(wallet);
 	}
 
 	public addRecipientWallets(wallets: Contracts.IReadWriteWallet[]): void {
 		for (const wallet of wallets) {
-			this.#recipientWallets?.push(wallet)
+			this.#recipientWallets?.push(wallet);
 		}
 	}
 
@@ -59,8 +59,8 @@ export class DraftTransfer {
 	}
 
 	public async calculateFees(): Promise<void> {
-		const firstRecipient = this.firstRecipientWallet()
-		assertWallet(firstRecipient)
+		const firstRecipient = this.firstRecipientWallet();
+		assertWallet(firstRecipient);
 
 		const feeService = new TransactionFeeService({
 			env: this.#env,
@@ -84,9 +84,9 @@ export class DraftTransfer {
 		secondKey?: string;
 		encryptionPassword?: string;
 	}): Promise<ExtendedSignedTransactionData> {
-		const firstRecipient = this.firstRecipientWallet()
+		const firstRecipient = this.firstRecipientWallet();
 
-		assertWallet(firstRecipient)
+		assertWallet(firstRecipient);
 		assertNumber(this.amount());
 
 		const signatory = await this.sender().signatoryFactory().fromSigningKeys(input);
@@ -105,7 +105,7 @@ export class DraftTransfer {
 			});
 
 		this.#signedTransaction = this.sender().transaction().transaction(hash);
-		return this.#signedTransaction
+		return this.#signedTransaction;
 	}
 
 	public async broadcast(transaction: ExtendedSignedTransactionData): Promise<ExtendedSignedTransactionData> {
@@ -157,11 +157,11 @@ export class DraftTransfer {
 	}
 
 	public firstRecipientWallet(): Contracts.IReadWriteWallet | undefined {
-		return this.recipientWallets().at(0)
+		return this.recipientWallets().at(0);
 	}
 
 	public recipientWallets(): Contracts.IReadWriteWallet[] {
-		return this.#recipientWallets
+		return this.#recipientWallets;
 	}
 
 	public amount(): number {
@@ -169,7 +169,7 @@ export class DraftTransfer {
 	}
 
 	public signedTransaction(): ExtendedSignedTransactionData | undefined {
-		return this.#signedTransaction
+		return this.#signedTransaction;
 	}
 
 	public reset(): void {

@@ -73,24 +73,28 @@ export const MigrationLedgerScanStep = ({
 							data-testid="LedgerScanStep__continue-button"
 							disabled={selectedAddresses.length === 0 || isImportingWallets}
 							onClick={async () => {
-								setIsImportingWallets(true)
+								setIsImportingWallets(true);
 
-								const wallets: Contracts.IReadWriteWallet[] = []
+								const wallets: Contracts.IReadWriteWallet[] = [];
 								for (const ledgerAddress of selectedAddresses) {
 									const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
 										address: ledgerAddress.address,
 										path: ledgerAddress.path,
-									})
+									});
 
-									const alias = getLedgerDefaultAlias({ network: wallet.network(), path: ledgerAddress.path, profile })
+									const alias = getLedgerDefaultAlias({
+										network: wallet.network(),
+										path: ledgerAddress.path,
+										profile,
+									});
 									// TODO: fix model.
 									wallet.data().set(Contracts.WalletData.LedgerModel, WalletLedgerModel.NanoSP);
 									wallet.mutator().alias(alias);
-									wallets.push(wallet)
+									wallets.push(wallet);
 								}
 
-								setIsImportingWallets(false)
-								onContinue?.(wallets, shouldMigrateToOne)
+								setIsImportingWallets(false);
+								onContinue?.(wallets, shouldMigrateToOne);
 							}}
 						>
 							{t("COMMON.CONTINUE")}

@@ -15,8 +15,8 @@ export const LedgerTransactionPendingConfirmation = ({
 	onGoToPortfolio,
 }: {
 	transfer: DraftTransfer;
-	onConfirmed?: () => void
-	onGoToPortfolio?: () => void
+	onConfirmed?: () => void;
+	onGoToPortfolio?: () => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -27,9 +27,9 @@ export const LedgerTransactionPendingConfirmation = ({
 
 	useEffect(() => {
 		if (isConfirmed) {
-			onConfirmed?.()
+			onConfirmed?.();
 		}
-	}, [isConfirmed])
+	}, [isConfirmed]);
 
 	return (
 		<div className="space-y-4">
@@ -44,12 +44,10 @@ export const LedgerTransactionPendingConfirmation = ({
 				</p>
 			</div>
 
-			<LedgerTransactionOverview transfer={transfer} >
+			<LedgerTransactionOverview transfer={transfer}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons className="flex items-center justify-end">
-						<Button onClick={onGoToPortfolio}>
-							{t("COMMON.GO_TO_PORTFOLIO")}
-						</Button>
+						<Button onClick={onGoToPortfolio}>{t("COMMON.GO_TO_PORTFOLIO")}</Button>
 					</SidePanelButtons>
 				</SidepanelFooter>
 			</LedgerTransactionOverview>

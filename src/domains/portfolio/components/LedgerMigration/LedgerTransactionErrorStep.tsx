@@ -38,19 +38,12 @@ export const LedgerTransactionErrorStep = ({
 
 			<LedgerTransactionOverview transfer={transfer}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
-					<div className="flex items-center space-x-5 justify-end">
-						<Button
-							variant="secondary"
-							data-testid="LedgerScanStep__continue-button"
-							onClick={onClose}
-						>
+					<div className="flex items-center justify-end space-x-5">
+						<Button variant="secondary" data-testid="LedgerScanStep__continue-button" onClick={onClose}>
 							{t("COMMON.CLOSE")}
 						</Button>
 
-						<Button
-							data-testid="LedgerScanStep__continue-button"
-							onClick={onTryAgain}
-						>
+						<Button data-testid="LedgerScanStep__continue-button" onClick={onTryAgain}>
 							{t("COMMON.TRY_AGAIN")}
 						</Button>
 					</div>

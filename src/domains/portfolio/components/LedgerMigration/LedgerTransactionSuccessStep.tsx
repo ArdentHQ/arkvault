@@ -11,18 +11,16 @@ export const LedgerTransactionSuccessStep = ({
 	onGoToPortfolio,
 }: {
 	transfer: DraftTransfer;
-	onGoToPortfolio?: () => void
+	onGoToPortfolio?: () => void;
 }) => {
 	const { t } = useTranslation();
 
 	return (
 		<div className="space-y-4">
-			<LedgerTransactionOverview transfer={transfer} >
+			<LedgerTransactionOverview transfer={transfer}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons className="flex items-center justify-end">
-						<Button onClick={onGoToPortfolio}>
-							{t("COMMON.GO_TO_PORTFOLIO")}
-						</Button>
+						<Button onClick={onGoToPortfolio}>{t("COMMON.GO_TO_PORTFOLIO")}</Button>
 					</SidePanelButtons>
 				</SidepanelFooter>
 			</LedgerTransactionOverview>
