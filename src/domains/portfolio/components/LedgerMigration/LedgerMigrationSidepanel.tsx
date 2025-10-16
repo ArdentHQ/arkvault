@@ -10,9 +10,9 @@ import { useLedgerMigrationHeader } from "./hooks/use-ledger-migration-header";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
 import { OverviewStep } from "./LedgerTransactionOverviewStep";
 import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
-import { StopMigrationConfirmationModal } from "@/domains/portfolio/components/LedgerMigration/components/StopMigrationConfirmationModal";
 import { LedgerTransactionErrorStep } from "./LedgerTransactionErrorStep";
 import { LedgerTransactionPendingConfirmation } from "./LedgerTransactionPendingConfirmation";
+import { StopMigrationConfirmationModal } from "@/domains/portfolio/components/LedgerMigration/components/StopMigrationConfirmationModal";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -44,22 +44,13 @@ export const LedgerMigrationSidepanel = ({
 		transfer.setAmount(1);
 	}, [open]);
 
-	const handleOpenChange = (open: boolean) => {
-		if (!open && activeTab === MigrateLedgerStep.ApproveTransactionStep) {
-			setShowConfirmationModal(true);
-			return;
-		}
-
-		onOpenChange(open);
-	};
-
 	return (
 		<>
 			<SidePanel
 				title={title}
 				minimizeable={false}
 				open={open}
-				onOpenChange={handleOpenChange}
+				onOpenChange={onOpenChange}
 				dataTestId="ImportAddressSidePanel"
 				onMountChange={onMountChange}
 				subtitle={subtitle}
@@ -100,7 +91,7 @@ export const LedgerMigrationSidepanel = ({
 								profile={profile}
 								network={profile.activeNetwork()}
 								onContinue={(wallets) => {
-								transfer.addRecipientWallets(wallets);
+									transfer.addRecipientWallets(wallets);
 									setActiveTab(MigrateLedgerStep.OverviewStep);
 								}}
 							/>
@@ -115,51 +106,54 @@ export const LedgerMigrationSidepanel = ({
 								onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
 							/>
 						</TabPanel>
+
 						<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
-							<LedgerTransactionApproveStep transfer={transfer}
-							onSuccess={() => {
-								setActiveTab(MigrateLedgerStep.PendingConfirmationStep);
-							}}
-							onError={() => {
-								setActiveTab(MigrateLedgerStep.ErrorStep);
-							}}
-						/>
-					</TabPanel>
+							<LedgerTransactionApproveStep
+								transfer={transfer}
+								onSuccess={() => {
+									setActiveTab(MigrateLedgerStep.PendingConfirmationStep);
+								}}
+								onError={() => {
+									setActiveTab(MigrateLedgerStep.ErrorStep);
+								}}
+							/>
+						</TabPanel>
 
-					<TabPanel tabId={MigrateLedgerStep.PendingConfirmationStep}>
-						<LedgerTransactionPendingConfirmation
-							transfer={transfer}
-							onGoToPortfolio={() => {
-								onOpenChange(false);
-								setActiveTab(MigrateLedgerStep.ListenLedgerStep);
-							}}
-							onConfirmed={() => {
-								setActiveTab(MigrateLedgerStep.ConfirmedStep);
-							}}
-						/>
-					</TabPanel>
+						<TabPanel tabId={MigrateLedgerStep.PendingConfirmationStep}>
+							<LedgerTransactionPendingConfirmation
+								transfer={transfer}
+								onGoToPortfolio={() => {
+									onOpenChange(false);
+									setActiveTab(MigrateLedgerStep.ListenLedgerStep);
+								}}
+								onConfirmed={() => {
+									setActiveTab(MigrateLedgerStep.ConfirmedStep);
+								}}
+							/>
+						</TabPanel>
 
-					<TabPanel tabId={MigrateLedgerStep.ConfirmedStep}>
-						<LedgerTransactionPendingConfirmation
-							transfer={transfer}
-							onGoToPortfolio={() => {
-								onOpenChange(false);
-								setActiveTab(MigrateLedgerStep.ListenLedgerStep);
-							}}
-							onConfirmed={() => {}}
-						/>
-					</TabPanel>
+						<TabPanel tabId={MigrateLedgerStep.ConfirmedStep}>
+							<LedgerTransactionPendingConfirmation
+								transfer={transfer}
+								onGoToPortfolio={() => {
+									onOpenChange(false);
+									setActiveTab(MigrateLedgerStep.ListenLedgerStep);
+								}}
+								onConfirmed={() => {}}
+							/>
+						</TabPanel>
 
-					<TabPanel tabId={MigrateLedgerStep.ErrorStep}>
-						<LedgerTransactionErrorStep
-							transfer={transfer}
-							onClose={() => {
-								onOpenChange(false);
-								setActiveTab(MigrateLedgerStep.ListenLedgerStep);
-							}}
-							onTryAgain={() => {
-								setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
-							}}/>
+						<TabPanel tabId={MigrateLedgerStep.ErrorStep}>
+							<LedgerTransactionErrorStep
+								transfer={transfer}
+								onClose={() => {
+									onOpenChange(false);
+									setActiveTab(MigrateLedgerStep.ListenLedgerStep);
+								}}
+								onTryAgain={() => {
+									setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
+								}}
+							/>
 						</TabPanel>
 					</div>
 				</Tabs>
