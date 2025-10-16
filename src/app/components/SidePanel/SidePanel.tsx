@@ -22,7 +22,6 @@ import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels
 import { useLocalStorage } from "usehooks-ts";
 import { useTranslation } from "react-i18next";
 import { useBreakpoint } from "@/app/hooks";
-import { useLocation } from "react-router";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -93,15 +92,8 @@ const SidePanelContent = ({
 	const popStateHandlerRef = useRef<() => void>(() => {});
 	const { isMinimized, toggleMinimize } = usePanels();
 	const { isSmAndAbove } = useBreakpoint();
-	const location = (() => {
-		try {
-			return useLocation();
-		} catch {
-			return null;
-		}
-	})();
 
-	const isSettingRoute = location?.pathname.includes("/settings") ?? false;
+	const isSettingRoute = window.location.pathname.includes("/settings");
 
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
@@ -233,7 +225,7 @@ const SidePanelContent = ({
 						/>
 						<FloatingOverlay
 							className={cn("transition-all duration-300", {
-								"z-40 pointer-events-none": isMinimized,
+								"pointer-events-none z-40": isMinimized,
 								"z-50": !isMinimized,
 							})}
 							lockScroll={!isMinimized}
@@ -275,7 +267,7 @@ const SidePanelContent = ({
 										>
 											<div className="relative">
 												<div className="bg-theme-background">
-													<div className="flex relative flex-col">
+													<div className="relative flex flex-col">
 														<div
 															onClick={isMinimized ? () => toggleMinimize() : undefined}
 															className={cn(
@@ -290,7 +282,7 @@ const SidePanelContent = ({
 																},
 															)}
 														>
-															<div className="flex gap-2 items-center">
+															<div className="flex items-center gap-2">
 																{titleIcon && (
 																	<div
 																		className={cn(
@@ -310,7 +302,7 @@ const SidePanelContent = ({
 																		{
 																			"text-base leading-5 md:text-lg md:leading-[21px]":
 																				!isMinimized,
-																			"text-base leading-5 truncate": isMinimized,
+																			"truncate text-base leading-5": isMinimized,
 																		},
 																	)}
 																>
@@ -318,14 +310,14 @@ const SidePanelContent = ({
 																</h2>
 															</div>
 
-															<div className="flex flex-row gap-3 items-center">
+															<div className="flex flex-row items-center gap-3">
 																{minimizeable && (
 																	<div
 																		className={cn(
-																			"bg-transparent rounded transition-all duration-100 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white",
+																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
 																			{
-																				"w-5 h-5": isMinimized,
-																				"w-6 h-6": !isMinimized,
+																				"h-5 w-5": isMinimized,
+																				"h-6 w-6": !isMinimized,
 																			},
 																		)}
 																	>
@@ -363,8 +355,8 @@ const SidePanelContent = ({
 																				variant="transparent"
 																				size="md"
 																				className={cn("p-0", {
-																					"w-5 h-5": isMinimized,
-																					"w-6 h-6": !isMinimized,
+																					"h-5 w-5": isMinimized,
+																					"h-6 w-6": !isMinimized,
 																				})}
 																				onClick={(e) => {
 																					e.stopPropagation();
@@ -383,10 +375,10 @@ const SidePanelContent = ({
 
 																<div
 																	className={cn(
-																		"bg-transparent rounded transition-all duration-100 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white",
+																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
 																		{
-																			"w-5 h-5": isMinimized,
-																			"w-6 h-6": !isMinimized,
+																			"h-5 w-5": isMinimized,
+																			"h-6 w-6": !isMinimized,
 																		},
 																	)}
 																>
@@ -399,8 +391,8 @@ const SidePanelContent = ({
 																			toggleOpen();
 																		}}
 																		className={cn("p-0", {
-																			"w-5 h-5": isMinimized,
-																			"w-6 h-6": !isMinimized,
+																			"h-5 w-5": isMinimized,
+																			"h-6 w-6": !isMinimized,
 																		})}
 																	>
 																		<Icon name="Cross" />
@@ -410,7 +402,7 @@ const SidePanelContent = ({
 														</div>
 
 														{hasSteps && (
-															<ul className="flex flex-row w-full">
+															<ul className="flex w-full flex-row">
 																{[...Array(totalSteps).keys()].map((index) => (
 																	<SidePanelStyledStep
 																		key={index}
@@ -425,7 +417,7 @@ const SidePanelContent = ({
 
 											<div
 												ref={scrollContainerRef}
-												className="flex overflow-y-auto flex-col flex-1 gap-4 px-6 py-4"
+												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
 												data-testid="SidePanel__content"
 												inert={isMinimized}
 											>
@@ -441,7 +433,7 @@ const SidePanelContent = ({
 												<div
 													data-testid="SidePanel__footer"
 													className={cn(
-														"flex flex-col px-6 py-4 w-full border-t bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700",
+														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
 														{ "shadow-footer-side-panel": isScrolled },
 													)}
 												>
