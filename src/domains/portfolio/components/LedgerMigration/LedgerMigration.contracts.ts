@@ -4,4 +4,7 @@ export enum MigrateLedgerStep {
 	ScanStep,
 	OverviewStep,
 	ApproveTransactionStep,
+	ErrorStep,
+	PendingConfirmationStep,
+	SuccessStep,
 }

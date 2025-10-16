@@ -249,13 +249,17 @@ export const translations = {
 			TITLE: "When migrating your address to ARKVault, follow these recommendations:",
 		},
 		HELP_TITLE: "Need help with migration?",
+		LEDGER_MIGRATION_FAILED_TITLE: "Address Migration Rejected",
+		LEDGER_REJECTED_TRANSACTION: "You have rejected the transaction on your Ledger device.",
 		MIGRATE_LATER: "Want to migrate later? You’ll find the option in the drop-down menu.",
 		MIGRATE_TO_ONE_ADDRESS: "Migrate To One Address",
 		MIGRATE_TO_ONE_ADDRESS_DESCRIPTION:
 			"By selecting this option, all selected addresses will be consolidated into a single new address. This means the balances from your old addresses will be transferred to one address. You will still need to confirm each transaction individually during the migration process.",
+		MIGRATION_COMPLETED: "Migration Completed",
 		OVERVIEW_SUBTITLE: "Review details below to send your transaction.",
 		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
+		SUCCESS_DESCRIPTION: "Your address was successfully migrated and imported.",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
 		VERIFY_DETAILS_ON_LEDGER:
@@ -468,6 +472,7 @@ export const translations = {
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSFER: "Transfer",
 	TRANSFERS: "Transfers",
+	TRY_AGAIN: "Try Again",
 	TX_ID: "Tx ID",
 	TYPE: "Type",
 	TYPES: "Types",
