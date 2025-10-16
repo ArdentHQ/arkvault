@@ -234,6 +234,11 @@ export const translations = {
 		ADDRESS_MIGRATION: "Address Migration",
 		APPROVE_LEDGER_TRANSACTION: "Please approve the transaction on your Ledger device.",
 		APPROVE_TRANSACTION_TITLE: "Approve Your Transaction",
+		EXIT_MODAL: {
+			BODY: "You have migrated {{count}} address(es) so far. If you stop the migration now, the remaining addresses will not be updated. You’ll have the option to continue later if you choose to stop now.",
+			STOP_MIGRATION: "Stop Migration",
+			TITLE: "Stop the Migration?",
+		},
 		HELP: {
 			GUIDELINE_1: "Make sure you are not being watched.",
 			GUIDELINE_2: "Check your wardrobe, bed, and windows for spies.",

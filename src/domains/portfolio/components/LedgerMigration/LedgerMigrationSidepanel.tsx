@@ -10,6 +10,7 @@ import { useLedgerMigrationHeader } from "./hooks/use-ledger-migration-header";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
 import { OverviewStep } from "./LedgerTransactionOverviewStep";
 import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
+import { StopMigrationConfirmationModal } from "@/domains/portfolio/components/LedgerMigration/components/StopMigrationConfirmationModal";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -23,6 +24,7 @@ export const LedgerMigrationSidepanel = ({
 	const profile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
+	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
 	const transfer = useRef(profile.draftTransactionFactory().transfer()).current;
 
@@ -40,12 +42,21 @@ export const LedgerMigrationSidepanel = ({
 		}
 	}, [open]);
 
+	const handleOpenChange = (open: boolean) => {
+		if (open && activeTab === MigrateLedgerStep.ApproveTransactionStep) {
+			setShowConfirmationModal(true);
+			return;
+		}
+
+		onOpenChange(open);
+	};
+
 	return (
 		<SidePanel
 			title={title}
 			minimizeable={false}
 			open={open}
-			onOpenChange={onOpenChange}
+			onOpenChange={handleOpenChange}
 			dataTestId="ImportAddressSidePanel"
 			onMountChange={onMountChange}
 			subtitle={subtitle}
@@ -102,6 +113,16 @@ export const LedgerMigrationSidepanel = ({
 					</TabPanel>
 					<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
 						<LedgerTransactionApproveStep transfer={transfer} />
+						<StopMigrationConfirmationModal
+							isOpen={showConfirmationModal}
+							onCancel={() => {
+								setShowConfirmationModal(false);
+							}}
+							onConfirm={() => {
+								setShowConfirmationModal(false);
+								onOpenChange(false);
+							}}
+						/>
 					</TabPanel>
 				</div>
 			</Tabs>
