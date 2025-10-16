@@ -80,16 +80,18 @@ export class DraftTransfer {
 
 		const signatory = await this.sender().signatoryFactory().fromSigningKeys(input);
 
-		const hash = await this.sender().transaction().signTransfer({
-			data: {
-				amount: firstRecipient.amount,
-				memo: this.memo(),
-				to: firstRecipient.address,
-			},
-			gasLimit: this.gasLimit(),
-			gasPrice: this.selectedFee(),
-			signatory,
-		});
+		const hash = await this.sender()
+			.transaction()
+			.signTransfer({
+				data: {
+					amount: firstRecipient.amount,
+					memo: this.memo(),
+					to: firstRecipient.address,
+				},
+				gasLimit: this.gasLimit(),
+				gasPrice: this.selectedFee(),
+				signatory,
+			});
 
 		return this.sender().transaction().transaction(hash);
 	}
@@ -122,7 +124,7 @@ export class DraftTransfer {
 	}
 
 	public sender(): Contracts.IReadWriteWallet {
-		assertWallet(this.#senderWallet)
+		assertWallet(this.#senderWallet);
 		return this.#senderWallet;
 	}
 
