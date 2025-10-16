@@ -136,7 +136,11 @@ export class LedgerService {
 	}): Promise<Services.LedgerWalletList> {
 		const pageSize = 5;
 		const page = 0;
-		const path = `m/44'/${this.slip44()}'/0'`;
+		let path = `m/44'/${this.slip44()}'/0'`;
+
+		if (options?.useLegacy) {
+			path = `m/44'/${this.slip44Legacy()}'/0'`;
+		}
 
 		let initialAddressIndex = 0;
 
@@ -171,5 +175,13 @@ export class LedgerService {
 
 	public slip44(): number {
 		return this.#config.get(ConfigKey.Slip44);
+	}
+
+	public slip44Legacy(): number {
+		return this.#config.get(ConfigKey.Slip44Legacy);
+	}
+
+	public slip44Eth(): number {
+		return this.#config.get(ConfigKey.Slip44Eth);
 	}
 }

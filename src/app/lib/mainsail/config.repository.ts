@@ -106,5 +106,7 @@ export enum ConfigKey {
 	NetworkId = "network.id",
 	NetworkType = "network.type",
 	Slip44 = "network.constants.slip44",
+	Slip44Legacy = "network.constants.slip44Legacy",
+	Slip44Eth = "network.constants.slip44Eth",
 	Wif = "network.meta.wif",
 }

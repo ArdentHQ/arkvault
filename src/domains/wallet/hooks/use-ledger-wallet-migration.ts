@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { LocalStorage } from "@/app/lib/profiles/local.storage";
 import { Contracts } from "@/app/lib/profiles";
 import { WalletData } from "@/app/lib/profiles/wallet.enum";
+import { ConfigKey } from "@/app/lib/mainsail";
+import { BIP44 } from "@ardenthq/arkvault-crypto";
 
 export const useLedgerMigrationStatus = (profile: Contracts.IProfile) => {
 	const keys = {
@@ -21,9 +23,11 @@ export const useLedgerMigrationStatus = (profile: Contracts.IProfile) => {
 				.values()
 				.some((wallet) => {
 					if (wallet.isLedger()) {
-						const meta = profile.activeNetwork().meta();
+						const slip44 = profile.activeNetwork().config().get(ConfigKey.Slip44);
+						const slip44Legacy = profile.activeNetwork().config().get(ConfigKey.Slip44Legacy);
+
 						const path = wallet.data().get<string>(WalletData.DerivationPath) ?? "";
-						return path.includes(meta["ark_slip44"]) || path.includes(meta["ark_slip44_old"]);
+						return [slip44, slip44Legacy].includes(BIP44.parse(path).coinType);
 					}
 
 					return false;
