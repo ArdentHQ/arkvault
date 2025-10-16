@@ -51,11 +51,9 @@ export class DraftTransfer {
 	}
 
 	public async calculateFees(): Promise<void> {
-		assertWallet(this.#senderWallet);
-
 		const feeService = new TransactionFeeService({
 			env: this.#env,
-			network: this.#senderWallet.network(),
+			network: this.sender().network(),
 			profile: this.#profile,
 		});
 
@@ -64,7 +62,7 @@ export class DraftTransfer {
 		this.#gasLimit = await feeService.gasLimit(
 			{
 				recipientAddress: this.#recipients.at(0)?.address,
-				senderAddress: this.#senderWallet.address(),
+				senderAddress: this.sender().address(),
 			},
 			"transfer",
 		);
@@ -77,13 +75,12 @@ export class DraftTransfer {
 	}): Promise<ExtendedSignedTransactionData> {
 		const firstRecipient = this.recipientsWithAmounts().at(0);
 
-		assertWallet(this.#senderWallet);
 		assertNumber(firstRecipient?.amount);
 		assertString(firstRecipient?.address);
 
-		const signatory = await this.#senderWallet.signatoryFactory().fromSigningKeys(input);
+		const signatory = await this.sender().signatoryFactory().fromSigningKeys(input);
 
-		const hash = await this.#senderWallet.transaction().signTransfer({
+		const hash = await this.sender().transaction().signTransfer({
 			data: {
 				amount: firstRecipient.amount,
 				memo: this.memo(),
@@ -94,7 +91,7 @@ export class DraftTransfer {
 			signatory,
 		});
 
-		return this.#senderWallet.transaction().transaction(hash);
+		return this.sender().transaction().transaction(hash);
 	}
 
 	public async broadcast(transaction: ExtendedSignedTransactionData): Promise<ExtendedSignedTransactionData> {
@@ -124,12 +121,13 @@ export class DraftTransfer {
 		return this.#memo;
 	}
 
-	public sender(): Contracts.IReadWriteWallet | undefined {
+	public sender(): Contracts.IReadWriteWallet {
+		assertWallet(this.#senderWallet)
 		return this.#senderWallet;
 	}
 
-	public network(): Networks.Network | undefined {
-		return this.#senderWallet?.network();
+	public network(): Networks.Network {
+		return this.sender().network();
 	}
 
 	public confirmationTime(type: keyof TransactionFee): number | undefined {
