@@ -236,7 +236,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => {}}
+								handleClick={() => { }}
 								isSelected={false}
 							/>
 						))}
@@ -290,8 +290,8 @@ export const LedgerScanStep = ({
 	onContinue?: (selectedWallets: LedgerData[]) => void;
 	onSelect?: (selectedWallets: LedgerData[]) => void;
 }) => {
-	const pageSize = 3;
-	const legacyPageSize = 2;
+	const pageSize = 0;
+	const legacyPageSize = 5;
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id(), { legacyPageSize, pageSize, useLegacy: true });
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
@@ -301,6 +301,8 @@ export const LedgerScanStep = ({
 			.map(({ path }) => path);
 		return ledgerPaths.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
 	};
+
+	// TODO: Uncomment if we also want to import 111 slip.
 	const lastPath = useMemo(() => walletsBySlip44(ConfigKey.Slip44), [profile, wallets]);
 	const lastLegacyPath = useMemo(() => walletsBySlip44(ConfigKey.Slip44Legacy), [profile, wallets]);
 

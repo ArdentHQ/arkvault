@@ -60,17 +60,16 @@ export const useLedgerScanner = (
 		});
 
 		// @ts-ignore
-		let ledgerWallets = await ledgerService.scan({ onProgress, pageSize: options?.pageSize, startPath });
 
-		if (options?.useLegacy) {
-			const legacyWallets = await ledgerService.scan({
+
+		const ledgerWallets = options?.useLegacy
+			? await ledgerService.scan({
 				onProgress,
 				pageSize: options.legacyPageSize,
 				startPath: legacyStartPath,
 				useLegacy: options?.useLegacy,
-			});
-			ledgerWallets = { ...ledgerWallets, ...legacyWallets };
-		}
+			})
+			: await ledgerService.scan({ onProgress, pageSize: options?.pageSize, startPath, useLegacy: false })
 
 		let ledgerData: LedgerData[] = [];
 
