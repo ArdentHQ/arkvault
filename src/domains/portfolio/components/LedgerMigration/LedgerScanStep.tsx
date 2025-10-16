@@ -236,7 +236,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
