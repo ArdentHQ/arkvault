@@ -2575,7 +2575,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6 fixed z-50"
                   >
                     <div
                       class="sm:-mt-6"
@@ -5229,7 +5229,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6 fixed z-50"
                   >
                     <div
                       class="sm:-mt-6"
@@ -7837,7 +7837,7 @@ exports[`General Settings > should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6 fixed z-50"
                   >
                     <div
                       class="sm:-mt-6"
@@ -10446,7 +10446,7 @@ exports[`General Settings > should update profile 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6 fixed z-50"
                   >
                     <div
                       class="sm:-mt-6"
@@ -13055,7 +13055,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6 fixed z-50"
                   >
                     <div
                       class="sm:-mt-6"
@@ -15762,7 +15762,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6"
+                    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:border-t sm:p-6 fixed z-50"
                   >
                     <div
                       class="sm:-mt-6"
