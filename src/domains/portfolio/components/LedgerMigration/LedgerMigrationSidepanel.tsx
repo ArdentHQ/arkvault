@@ -135,7 +135,7 @@ export const LedgerMigrationSidepanel = ({
 								onOpenChange(false);
 								setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 							}}
-							onConfirmed={() => { }}
+							onConfirmed={() => {}}
 						/>
 					</TabPanel>
 
