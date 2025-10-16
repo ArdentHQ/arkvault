@@ -43,7 +43,7 @@ export const LedgerMigrationSidepanel = ({
 	}, [open]);
 
 	const handleOpenChange = (open: boolean) => {
-		if (open && activeTab === MigrateLedgerStep.ApproveTransactionStep) {
+		if (!open && activeTab === MigrateLedgerStep.ApproveTransactionStep) {
 			setShowConfirmationModal(true);
 			return;
 		}
@@ -52,80 +52,82 @@ export const LedgerMigrationSidepanel = ({
 	};
 
 	return (
-		<SidePanel
-			title={title}
-			minimizeable={false}
-			open={open}
-			onOpenChange={handleOpenChange}
-			dataTestId="ImportAddressSidePanel"
-			onMountChange={onMountChange}
-			subtitle={subtitle}
-			titleIcon={titleIcon}
-			totalSteps={4}
-			hasSteps
-			activeStep={activeTab}
-		>
-			<Tabs activeId={activeTab}>
-				<div>
-					<TabPanel tabId={MigrateLedgerStep.ListenLedgerStep}>
-						<ListenLedger
-							noHeading
-							onDeviceAvailable={() => {
-								setActiveTab(MigrateLedgerStep.ConnectionStep);
-							}}
-							onDeviceNotAvailable={() => {
-								console.log("not available");
-							}}
-						/>
-					</TabPanel>
+		<>
+			<SidePanel
+				title={title}
+				minimizeable={false}
+				open={open}
+				onOpenChange={handleOpenChange}
+				dataTestId="ImportAddressSidePanel"
+				onMountChange={onMountChange}
+				subtitle={subtitle}
+				titleIcon={titleIcon}
+				totalSteps={4}
+				hasSteps
+				activeStep={activeTab}
+			>
+				<Tabs activeId={activeTab}>
+					<div>
+						<TabPanel tabId={MigrateLedgerStep.ListenLedgerStep}>
+							<ListenLedger
+								noHeading
+								onDeviceAvailable={() => {
+									setActiveTab(MigrateLedgerStep.ConnectionStep);
+								}}
+								onDeviceNotAvailable={() => {
+									console.log("not available");
+								}}
+							/>
+						</TabPanel>
 
-					<TabPanel tabId={MigrateLedgerStep.ConnectionStep}>
-						<LedgerConnectionStep
-							profile={profile}
-							onConnect={() => {
-								setActiveTab(MigrateLedgerStep.ScanStep);
-							}}
-							onFailed={() => {
-								setActiveTab(MigrateLedgerStep.ListenLedgerStep);
-							}}
-							network={profile.activeNetwork()}
-						/>
-					</TabPanel>
+						<TabPanel tabId={MigrateLedgerStep.ConnectionStep}>
+							<LedgerConnectionStep
+								profile={profile}
+								onConnect={() => {
+									setActiveTab(MigrateLedgerStep.ScanStep);
+								}}
+								onFailed={() => {
+									setActiveTab(MigrateLedgerStep.ListenLedgerStep);
+								}}
+								network={profile.activeNetwork()}
+							/>
+						</TabPanel>
 
-					<TabPanel tabId={MigrateLedgerStep.ScanStep}>
-						<MigrationLedgerScanStep
-							profile={profile}
-							network={profile.activeNetwork()}
-							onContinue={() => {
-								setActiveTab(MigrateLedgerStep.OverviewStep);
-							}}
-						/>
-					</TabPanel>
+						<TabPanel tabId={MigrateLedgerStep.ScanStep}>
+							<MigrationLedgerScanStep
+								profile={profile}
+								network={profile.activeNetwork()}
+								onContinue={() => {
+									setActiveTab(MigrateLedgerStep.OverviewStep);
+								}}
+							/>
+						</TabPanel>
 
-					<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
-						<OverviewStep
-							transfer={transfer}
-							onContinue={() => {
-								setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
-							}}
-							onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
-						/>
-					</TabPanel>
-					<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
-						<LedgerTransactionApproveStep transfer={transfer} />
-						<StopMigrationConfirmationModal
-							isOpen={showConfirmationModal}
-							onCancel={() => {
-								setShowConfirmationModal(false);
-							}}
-							onConfirm={() => {
-								setShowConfirmationModal(false);
-								onOpenChange(false);
-							}}
-						/>
-					</TabPanel>
-				</div>
-			</Tabs>
-		</SidePanel>
+						<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
+							<OverviewStep
+								transfer={transfer}
+								onContinue={() => {
+									setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
+								}}
+								onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
+							/>
+						</TabPanel>
+						<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
+							<LedgerTransactionApproveStep transfer={transfer} />
+						</TabPanel>
+					</div>
+				</Tabs>
+			</SidePanel>
+			<StopMigrationConfirmationModal
+				isOpen={showConfirmationModal}
+				onCancel={() => {
+					setShowConfirmationModal(false);
+				}}
+				onConfirm={() => {
+					setShowConfirmationModal(false);
+					onOpenChange(false);
+				}}
+			/>
+		</>
 	);
 };
