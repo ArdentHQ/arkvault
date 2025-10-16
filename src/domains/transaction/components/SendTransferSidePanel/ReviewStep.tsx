@@ -127,7 +127,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 				/>
 			)}
 			<div
-				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
 					"mt-4": !hideHeader,
 				})}
 			>
@@ -153,11 +153,20 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 									</DetailTitle>
 
 									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-										<Amount ticker={ticker} value={amount.toNumber()} className="font-semibold" />
+										<Amount
+											ticker={ticker}
+											value={amount.toNumber()}
+											className="text-sm font-semibold md:text-base"
+										/>
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
 											<div className="text-theme-secondary-700 font-semibold">
 												(~
-												<Amount ticker={exchangeTicker} value={convertedAmount} />)
+												<Amount
+													ticker={exchangeTicker}
+													value={convertedAmount}
+													className="text-sm md:text-base"
+												/>
+												)
 											</div>
 										)}
 									</div>
@@ -189,22 +198,24 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 					</div>
 				</div>
 
-				{showFeeInput && (
-					<FormField name="fee" disableStateHints>
-						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-						{!!network && (
-							<FeeField
-								type={getFeeType(recipients?.length)}
-								data={{
-									...feeTransactionData,
-									recipientsCount: recipients.length ?? 1,
-								}}
-								network={network}
-								profile={profile}
-							/>
-						)}
-					</FormField>
-				)}
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
+					{showFeeInput && (
+						<FormField name="fee" disableStateHints>
+							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
+							{!!network && (
+								<FeeField
+									type={getFeeType(recipients?.length)}
+									data={{
+										...feeTransactionData,
+										recipientsCount: recipients.length ?? 1,
+									}}
+									network={network}
+									profile={profile}
+								/>
+							)}
+						</FormField>
+					)}
+				</div>
 			</div>
 		</section>
 	);

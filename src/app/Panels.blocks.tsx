@@ -11,9 +11,10 @@ import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateW
 import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
 import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
-import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "./contexts";
+import { Panel, usePanels } from "./contexts";
 import { useTranslation } from "react-i18next";
 import { useHasProfile } from "./hooks";
+import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 
 const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
@@ -63,11 +64,10 @@ export const AppPanels = () => {
 			<CreateAddressesSidePanel
 				open={currentOpenedPanel === Panel.CreateAddress}
 				onOpenChange={closePanel}
-				onImportAddress={() => {
-					closePanel();
-					setTimeout(() => {
-						openPanel(Panel.ImportAddress);
-					}, SIDE_PANEL_TRANSITION_DURATION);
+				onImportAddress={async () => {
+					await closePanel();
+
+					openPanel(Panel.ImportAddress);
 				}}
 			/>
 			<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
@@ -81,22 +81,18 @@ export const AppPanels = () => {
 			/>
 
 			<SendRegistrationSidePanel
-				open={
-					currentOpenedPanel === Panel.SendValidatorRegistration ||
-					currentOpenedPanel === Panel.SendUsernameRegistration
-				}
-				registrationType={
-					currentOpenedPanel === Panel.SendValidatorRegistration
-						? "validatorRegistration"
-						: "usernameRegistration"
-				}
-				onOpenChange={(open) => {
-					if (!open) {
-						closePanel();
-						return;
-					}
-				}}
+				open={currentOpenedPanel === Panel.SendUsernameRegistration}
+				registrationType="usernameRegistration"
+				onOpenChange={closePanel}
 			/>
+
+			<SendRegistrationSidePanel
+				open={currentOpenedPanel === Panel.SendValidatorRegistration}
+				registrationType="validatorRegistration"
+				onOpenChange={closePanel}
+			/>
+
+			<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
 
 			<DiscardPanelConfirmationModal />
 		</>

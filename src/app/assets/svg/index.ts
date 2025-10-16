@@ -98,6 +98,7 @@ import Trash from "./trash.svg?react";
 import UnderlineMoon from "./underline-moon.svg?react";
 import UnderlineSun from "./underline-sun.svg?react";
 import User from "./user.svg?react";
+import Maximize from "./maximize.svg?react";
 import UserCheckMark from "./user-check-mark.svg?react";
 import UserCircledCheckMark from "./user-circled-check-mark.svg?react";
 import Dashboard from "./dashboard.svg?react";
@@ -245,6 +246,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MagnifyingGlassId,
 	Mainnet,
 	MarkedTrash,
+	Maximize,
 	Menu,
 	MenuOpen,
 	Minimize,

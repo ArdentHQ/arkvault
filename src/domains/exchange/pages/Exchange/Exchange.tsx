@@ -17,9 +17,9 @@ import { toasts } from "@/app/services";
 import { upperFirst } from "@/app/lib/helpers";
 import { useActiveProfile } from "@/app/hooks";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { useNavigate } from "react-router-dom";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { ExchangeSidePanel } from "@/domains/exchange/components/ExchangeSidePanel/ExchangeSidePanel";
+import { useSearchParams } from "react-router-dom";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",
@@ -30,7 +30,7 @@ export const Exchange = () => {
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
-	const navigate = useNavigate();
+	const [searchParams, setSearchParams] = useSearchParams();
 
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
 	const [selectedExchange, setSelectedExchange] = useState<string>();
@@ -109,22 +109,11 @@ export const Exchange = () => {
 	const renderContent = () => {
 		if (currentView === ExchangeView.Exchanges) {
 			return (
-				<>
-					<ExchangeGrid
-						exchanges={exchangeProviders || []}
-						isLoading={!exchangeProviders}
-						onClick={handleLaunchExchange}
-					/>
-
-					<ExchangeSidePanel
-						exchangeId={selectedExchange}
-						onOpenChange={(open) => {
-							if (!open) {
-								setSelectedExchange(undefined);
-							}
-						}}
-					/>
-				</>
+				<ExchangeGrid
+					exchanges={exchangeProviders || []}
+					isLoading={!exchangeProviders}
+					onClick={handleLaunchExchange}
+				/>
 			);
 		}
 
@@ -133,9 +122,8 @@ export const Exchange = () => {
 				<ExchangeTransactionsTable
 					exchangeTransactions={activeProfile.exchangeTransactions().values()}
 					onClick={(providerId: string, orderId: string) => {
-						navigate(
-							`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${providerId}&orderId=${orderId}`,
-						);
+						setSelectedExchange(providerId);
+						setSearchParams({ orderId });
 					}}
 					onRemove={(exchangeTransaction: Contracts.IExchangeTransaction) =>
 						setSelectedExchangeTransaction(exchangeTransaction)
@@ -174,7 +162,18 @@ export const Exchange = () => {
 
 				<Section className="pt-0" innerClassName="px-6 lg:px-10">
 					<ExchangeNavigationBar currentView={currentView} onChange={handleViewChange} />
-
+					{selectedExchange && (
+						<ExchangeSidePanel
+							exchangeId={selectedExchange}
+							onOpenChange={(open) => {
+								if (!open) {
+									setSelectedExchange(undefined);
+									searchParams.delete("orderId");
+									setSearchParams(searchParams);
+								}
+							}}
+						/>
+					)}
 					{renderContent()}
 				</Section>
 			</Page>

@@ -95,11 +95,10 @@ const SidePanelHeader = ({
 				"flex justify-between transition-all duration-200",
 				!hasSteps &&
 					"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b",
-				// The padding on the right is to compensate for the header content width
 				isMinimized ? "cursor-pointer items-center py-3.5 pr-[162px] pl-6" : "items-start px-6 py-4",
 			)}
 		>
-			<div className="flex items-center gap-2">
+			<div className="flex gap-2 items-center">
 				{titleIcon && (
 					<div
 						className={cn(
@@ -114,19 +113,19 @@ const SidePanelHeader = ({
 					data-testid="SidePanel__title"
 					className={cn(
 						"mb-0 font-semibold transition-all duration-200 md:pt-0",
-						isMinimized ? "truncate text-base leading-5" : "text-lg leading-[21px]",
+						isMinimized ? "text-base leading-5 truncate" : "text-lg leading-[21px]",
 					)}
 				>
 					{title}
 				</h2>
 			</div>
 
-			<div className="flex flex-row items-center gap-3">
+			<div className="flex flex-row gap-3 items-center">
 				{minimizeable && (
 					<div
 						className={cn(
-							"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-200 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
-							isMinimized ? "h-5 w-5" : "h-6 w-6",
+							"bg-transparent rounded transition-all duration-200 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white",
+							isMinimized ? "w-5 h-5" : "w-6 h-6",
 						)}
 					>
 						<Tooltip
@@ -156,13 +155,13 @@ const SidePanelHeader = ({
 								data-testid="SidePanel__minimize-button"
 								variant="transparent"
 								size="md"
-								className={cn("p-0", isMinimized ? "h-5 w-5" : "h-6 w-6")}
+								className={cn("p-0", isMinimized ? "w-5 h-5" : "w-6 h-6")}
 								onClick={(e) => {
 									e.stopPropagation();
 									onMinimizeClick();
 								}}
 							>
-								<Icon name="Minimize" />
+								<Icon name={isMinimized ? "Maximize" : "Minimize"} />
 							</Button>
 						</Tooltip>
 					</div>
@@ -170,8 +169,8 @@ const SidePanelHeader = ({
 
 				<div
 					className={cn(
-						"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-200 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
-						isMinimized ? "h-5 w-5" : "h-6 w-6",
+						"bg-transparent rounded transition-all duration-200 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white",
+						isMinimized ? "w-5 h-5" : "w-6 h-6",
 					)}
 				>
 					<Button
@@ -182,7 +181,7 @@ const SidePanelHeader = ({
 							e.stopPropagation();
 							onCloseClick();
 						}}
-						className={cn("p-0", isMinimized ? "h-5 w-5" : "h-6 w-6")}
+						className={cn("p-0", isMinimized ? "w-5 h-5" : "w-6 h-6")}
 					>
 						<Icon name="Cross" />
 					</Button>
@@ -245,7 +244,6 @@ const SidePanelContent = ({
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
 		enabled: !hasModalOpened && !isMinimized,
-		// Allow escape attempts when we need to show shake due to preventClosing
 		escapeKey: !disableEscapeKey || (shakeWhenClosing && preventClosing),
 		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
 		outsidePressEvent: "pointerdown",
@@ -366,7 +364,7 @@ const SidePanelContent = ({
 										>
 											<div className="relative">
 												<div className="bg-theme-background">
-													<div className="relative flex flex-col">
+													<div className="flex relative flex-col">
 														<SidePanelHeader
 															title={title}
 															titleIcon={titleIcon}
@@ -379,7 +377,7 @@ const SidePanelContent = ({
 														/>
 
 														{hasSteps && (
-															<ul className="flex w-full flex-row">
+															<ul className="flex flex-row w-full">
 																{[...Array(totalSteps).keys()].map((index) => (
 																	<SidePanelStyledStep
 																		key={index}
@@ -394,12 +392,12 @@ const SidePanelContent = ({
 
 											<div
 												ref={scrollContainerRef}
-												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
+												className="flex overflow-y-auto flex-col flex-1 gap-4 px-6 py-4"
 												data-testid="SidePanel__content"
 												inert={isMinimized}
 											>
 												{subtitle && (
-													<div className="text-theme-secondary-text text-sm leading-7 font-normal md:text-base">
+													<div className="text-theme-secondary-text text-sm leading-[21px] font-normal md:text-base md:leading-7">
 														{subtitle}
 													</div>
 												)}
@@ -410,7 +408,7 @@ const SidePanelContent = ({
 												<div
 													data-testid="SidePanel__footer"
 													className={cn(
-														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
+														"flex flex-col px-6 py-4 w-full border-t bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700",
 														{ "shadow-footer-side-panel": isScrolled },
 													)}
 												>

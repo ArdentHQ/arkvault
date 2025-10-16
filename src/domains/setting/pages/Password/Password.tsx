@@ -128,7 +128,7 @@ export const PasswordSettings = () => {
 			<SettingsWrapper profile={activeProfile} activeSettings="password">
 				<Form id="password-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
 					<SettingsGroup title={t("SETTINGS.PASSWORD.TITLE")}>
-						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mb-6 space-y-5 border-b border-dashed pb-6">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 mb-4 space-y-4 border-b border-dashed pb-6">
 							{usesPassword && (
 								<FormField name="currentPassword">
 									<FormLabel label={t("SETTINGS.PASSWORD.CURRENT")} />
