@@ -25,7 +25,6 @@ export const LedgerMigrationSidepanel = ({
 }): JSX.Element => {
 	const profile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
-	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
 	const transfer = useRef(profile.draftTransactionFactory().transfer()).current;
