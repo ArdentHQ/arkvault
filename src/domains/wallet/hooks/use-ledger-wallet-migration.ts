@@ -22,7 +22,8 @@ export const useLedgerMigrationStatus = (profile: Contracts.IProfile) => {
 				.some((wallet) => {
 					if (wallet.isLedger()) {
 						const meta = profile.activeNetwork().meta();
-						return wallet.data().get<string>(WalletData.DerivationPath)?.includes?.(meta["ark_slip44"]);
+						const path = wallet.data().get<string>(WalletData.DerivationPath) ?? ""
+						return path.includes(meta["ark_slip44"]) || path.includes(meta["ark_slip44_old"]);
 					}
 
 					return false;

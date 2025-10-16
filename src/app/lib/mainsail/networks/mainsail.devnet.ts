@@ -43,7 +43,9 @@ const network: Networks.NetworkManifest = {
 	knownWallets:
 		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainsail/devnet/known-wallets-extended.json",
 	meta: {
-		ark_slip44: 111, // Reference to old ark slip44 for migration.
+		// Reference to old ark slip44 for migration.
+		ark_slip44: 111,
+		ark_slip44_old: 44,
 		chainId: 11812,
 		nethash: "560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
 		slip44: 111,
