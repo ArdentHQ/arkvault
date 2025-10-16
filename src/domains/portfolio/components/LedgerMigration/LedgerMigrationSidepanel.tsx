@@ -44,13 +44,22 @@ export const LedgerMigrationSidepanel = ({
 		transfer.setAmount(1);
 	}, [open]);
 
+	const handleOpenChange = (open: boolean) => {
+		if (!open && activeTab === MigrateLedgerStep.ApproveTransactionStep) {
+			setShowConfirmationModal(true);
+			return;
+		}
+
+		onOpenChange(open);
+	};
+
 	return (
 		<>
 			<SidePanel
 				title={title}
 				minimizeable={false}
 				open={open}
-				onOpenChange={onOpenChange}
+				onOpenChange={handleOpenChange}
 				dataTestId="ImportAddressSidePanel"
 				onMountChange={onMountChange}
 				subtitle={subtitle}
