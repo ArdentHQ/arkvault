@@ -1,4 +1,4 @@
-import React, { JSX, useEffect, useState } from "react";
+import React, { JSX, useEffect, useRef, useState } from "react";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useActiveProfile } from "@/app/hooks/env";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
@@ -24,21 +24,21 @@ export const LedgerMigrationSidepanel = ({
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
+	const transfer = useRef(profile.draftTransactionFactory().transfer()).current;
+
+	useEffect(() => {
+		// TODO: Use migrating addresses
+		const senderWallet = profile.wallets().first();
+		transfer.setSender(senderWallet);
+		transfer.addRecipient(senderWallet.address(), 1);
+	}, []);
+
 	// Reset step on close.
 	useEffect(() => {
 		if (!open) {
 			setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 		}
 	}, [open]);
-
-	// TODO: Use migrating addresses
-	const senderWallet = profile.wallets().first();
-	const recipients = [
-		{
-			address: senderWallet.address(),
-			amount: senderWallet.balance(),
-		},
-	];
 
 	return (
 		<SidePanel
@@ -93,23 +93,15 @@ export const LedgerMigrationSidepanel = ({
 
 					<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
 						<OverviewStep
+							transfer={transfer}
 							onContinue={() => {
-								setActiveTab(MigrateLedgerStep.ApproveTransactionStep)
+								setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
 							}}
 							onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
-							senderWallet={senderWallet}
-							network={profile.activeNetwork()}
-							recipients={recipients}
-							profile={profile}
 						/>
 					</TabPanel>
 					<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
-						<LedgerTransactionApproveStep
-							senderWallet={senderWallet}
-							network={profile.activeNetwork()}
-							recipients={recipients}
-							profile={profile}
-						/>
+						<LedgerTransactionApproveStep transfer={transfer} />
 					</TabPanel>
 				</div>
 			</Tabs>

@@ -10,25 +10,17 @@ import { ConfirmationTimeFooter } from "@/domains/transaction/components/TotalAm
 import { Link } from "@/app/components/Link";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
-import { Networks } from "@/app/lib/mainsail";
 import { TransactionFee } from "./components/TransactionFee";
-import { Contracts } from "@/app/lib/profiles";
-import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 
 export const LedgerTransactionOverview = ({
-	network,
-	senderWallet,
-	recipients,
-	profile,
+	transfer,
 	children,
 	onVerifyAddress,
 }: {
+	transfer: DraftTransfer;
 	onVerifyAddress?: () => void;
 	children?: React.ReactElement;
-	profile: Contracts.IProfile;
-	senderWallet: Contracts.IReadWriteWallet;
-	network: Networks.Network;
-	recipients: RecipientItem[];
 }) => {
 	const { t } = useTranslation();
 
@@ -41,14 +33,14 @@ export const LedgerTransactionOverview = ({
 							<DetailTitle>{t("COMMON.OLD")}</DetailTitle>
 							<Address
 								truncateOnTable
-								address={senderWallet.address()}
-								walletName={senderWallet.alias()}
+								address={transfer.sender().address()}
+								walletName={transfer.sender().alias()}
 								showCopyButton
 								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 								wrapperClass="justify-end sm:justify-start"
 								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
 									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
-										!!senderWallet.alias(),
+										!!transfer.sender().alias(),
 								})}
 							/>
 						</div>
@@ -57,14 +49,10 @@ export const LedgerTransactionOverview = ({
 							<DetailTitle>{t("COMMON.NEW")}</DetailTitle>
 							<Address
 								truncateOnTable
-								address={senderWallet.address()}
+								address={transfer.recipientAddress()}
 								showCopyButton
 								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 								wrapperClass="justify-end sm:justify-start w-full"
-								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
-									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
-										!!senderWallet.alias(),
-								})}
 							/>
 						</div>
 
@@ -102,25 +90,21 @@ export const LedgerTransactionOverview = ({
 
 				<DetailWrapper
 					label={t("TRANSACTION.SUMMARY")}
-					footer={
-						<ConfirmationTimeFooter
-							confirmationTime={network.fees().confirmationTime("Average", network.blockTime())}
-						/>
-					}
+					footer={<ConfirmationTimeFooter confirmationTime={transfer.confirmationTime("avg")} />}
 				>
 					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
 							<Amount
-								ticker={network.ticker()}
-								value={senderWallet.balance()}
+								ticker={transfer.network().ticker()}
+								value={transfer.sender().balance()}
 								className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 							/>
 							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 								(
 								<Amount
-									ticker={senderWallet.exchangeCurrency()}
-									value={senderWallet.convertedBalance()}
+									ticker={transfer.sender().exchangeCurrency()}
+									value={transfer.sender().convertedBalance()}
 									className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 								/>
 								)
@@ -129,12 +113,7 @@ export const LedgerTransactionOverview = ({
 
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
-							<TransactionFee
-								profile={profile}
-								network={network}
-								senderWallet={senderWallet}
-								recipients={recipients}
-							/>
+							<TransactionFee transfer={transfer} />
 						</div>
 					</div>
 				</DetailWrapper>

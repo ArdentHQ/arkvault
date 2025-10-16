@@ -5,7 +5,7 @@ import { BigNumber } from "@/app/lib/helpers";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { EstimateGasPayload, TransactionFee } from "@/app/lib/mainsail/fee.contract";
 import { hexToBigInt } from "viem";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
@@ -73,7 +73,7 @@ export class FeeService {
 		};
 	}
 
-	confirmationTime(feeType: ConfirmationFeeType | undefined, blockTime?: number): number {
+	confirmationTime(feeType: keyof TransactionFee | undefined, blockTime?: number): number {
 		const blockTimeInSeconds = BigNumber.make(blockTime ?? defaultBlockTime).divide(1000);
 
 		const confirmationTimes: Record<ConfirmationFeeType, number> = {

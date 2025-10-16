@@ -253,7 +253,8 @@ export const translations = {
 		START_MIGRATION: "Start Migration",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
-		VERIFY_DETAILS_ON_LEDGER: "Review and verify the details on your Ledger device. Select 'Accept' to approve the transaction.",
+		VERIFY_DETAILS_ON_LEDGER:
+			"Review and verify the details on your Ledger device. Select 'Accept' to approve the transaction.",
 		VERIFY_MESSAGE_HELP_TEXT: "Sign a message to verify your Ledger address matches the one displayed.",
 	},
 	LEDGER_NETWORK_NOT_SUPPORTED: "Ledger is not yet supported on this network.",

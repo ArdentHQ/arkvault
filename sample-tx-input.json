@@ -1,0 +1,28 @@
+{
+	{
+	  transactioninput: {
+		data: {
+		  payments: {
+			"amount": 1,
+			"to": "0xBb3c068e3A61ffeAf206D424168dEE968E1bD321"
+		  }
+		},
+		gasLimit,
+		gasPrice,
+		signatory?
+	  }
+
+	},
+	{
+	  transactioninput: {
+		data: {
+		  "amount": 1,
+		  "to": "0xBb3c068e3A61ffeAf206D424168dEE968E1bD321"
+		},
+		gasLimit,
+		gasPrice,
+		signatory?
+	  }
+
+	}
+}

@@ -95,4 +95,24 @@ export class SignatoryFactory implements ISignatoryFactory {
 
 		throw new Error("No signing key provided.");
 	}
+
+	public async fromSigningKeys(input?: {
+		key?: string;
+		secondKey?: string;
+		encryptionPassword?: string;
+	}): Promise<Signatories.Signatory> {
+		const mnemonic = this.#wallet.actsWithMnemonic() ? input?.key : undefined;
+		const secret = this.#wallet.actsWithSecret() ? input?.key : undefined;
+
+		const secondMnemonic = this.#wallet.actsWithMnemonic() ? input?.secondKey : undefined;
+		const secondSecret = this.#wallet.actsWithSecret() ? input?.secondKey : undefined;
+
+		return this.make({
+			mnemonic,
+			secret,
+			secondMnemonic,
+			secondSecret,
+			encryptionPassword: input?.encryptionPassword,
+		});
+	}
 }
