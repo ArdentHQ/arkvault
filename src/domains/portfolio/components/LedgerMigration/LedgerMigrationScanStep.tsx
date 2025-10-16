@@ -9,7 +9,6 @@ import { Button } from "@/app/components/Button";
 import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
 import { Divider } from "@/app/components/Divider";
 import { LedgerScanStep } from "./LedgerScanStep";
-import { useWalletImport } from "@/domains/wallet/hooks";
 import { getLedgerDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { WalletLedgerModel } from "@/app/lib/profiles/wallet.enum";
 
