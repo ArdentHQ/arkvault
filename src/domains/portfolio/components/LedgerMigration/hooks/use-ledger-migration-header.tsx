@@ -7,6 +7,20 @@ export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
 	const { t } = useTranslation();
 
 	return useMemo(() => {
+		if (activeTab === MigrateLedgerStep.SuccessStep) {
+			return {
+				subtitle: t("COMMON.LEDGER_MIGRATION.SUCCESS_DESCRIPTION"),
+				title: t("COMMON.LEDGER_MIGRATION.MIGRATION_COMPLETED"),
+				titleIcon: (
+					<Icon
+						name="CircleCross"
+						dimensions={[24, 24]}
+						className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-400"
+					/>
+				),
+			};
+		}
+
 		if (activeTab === MigrateLedgerStep.ErrorStep) {
 			return {
 				title: t("COMMON.LEDGER_MIGRATION.LEDGER_MIGRATION_FAILED_TITLE"),
