@@ -33,7 +33,9 @@ describe("Mainsail Devnet Network Configuration", () => {
 	it("should have correct constants", () => {
 		expect(network.constants).toEqual({
 			epoch: "2023-12-21T00:00:00.000Z",
-			slip44: 60,
+			"slip44": 111,
+			"slip44Eth": 60,
+			"slip44Legacy": 1,
 		});
 	});
 
@@ -47,11 +49,8 @@ describe("Mainsail Devnet Network Configuration", () => {
 
 	it("should have correct meta information", () => {
 		expect(network.meta).toEqual({
-			ark_slip44: 111,
-			ark_slip44_old: 44,
 			chainId: 11812,
 			nethash: "560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
-			slip44: 111,
 			wif: 186,
 		});
 	});
