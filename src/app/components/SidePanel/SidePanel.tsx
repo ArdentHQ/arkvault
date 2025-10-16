@@ -98,7 +98,7 @@ const SidePanelHeader = ({
 				isMinimized ? "cursor-pointer items-center py-3.5 pr-[162px] pl-6" : "items-start px-6 py-4",
 			)}
 		>
-			<div className="flex gap-2 items-center">
+			<div className="flex items-center gap-2">
 				{titleIcon && (
 					<div
 						className={cn(
@@ -113,19 +113,19 @@ const SidePanelHeader = ({
 					data-testid="SidePanel__title"
 					className={cn(
 						"mb-0 font-semibold transition-all duration-200 md:pt-0",
-						isMinimized ? "text-base leading-5 truncate" : "text-lg leading-[21px]",
+						isMinimized ? "truncate text-base leading-5" : "text-lg leading-[21px]",
 					)}
 				>
 					{title}
 				</h2>
 			</div>
 
-			<div className="flex flex-row gap-3 items-center">
+			<div className="flex flex-row items-center gap-3">
 				{minimizeable && (
 					<div
 						className={cn(
-							"bg-transparent rounded transition-all duration-200 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white",
-							isMinimized ? "w-5 h-5" : "w-6 h-6",
+							"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-200 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+							isMinimized ? "h-5 w-5" : "h-6 w-6",
 						)}
 					>
 						<Tooltip
@@ -155,7 +155,7 @@ const SidePanelHeader = ({
 								data-testid="SidePanel__minimize-button"
 								variant="transparent"
 								size="md"
-								className={cn("p-0", isMinimized ? "w-5 h-5" : "w-6 h-6")}
+								className={cn("p-0", isMinimized ? "h-5 w-5" : "h-6 w-6")}
 								onClick={(e) => {
 									e.stopPropagation();
 									onMinimizeClick();
@@ -169,8 +169,8 @@ const SidePanelHeader = ({
 
 				<div
 					className={cn(
-						"bg-transparent rounded transition-all duration-200 ease-linear text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hover:text-white dark:bg-transparent dark:hover:text-white",
-						isMinimized ? "w-5 h-5" : "w-6 h-6",
+						"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-200 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+						isMinimized ? "h-5 w-5" : "h-6 w-6",
 					)}
 				>
 					<Button
@@ -181,7 +181,7 @@ const SidePanelHeader = ({
 							e.stopPropagation();
 							onCloseClick();
 						}}
-						className={cn("p-0", isMinimized ? "w-5 h-5" : "w-6 h-6")}
+						className={cn("p-0", isMinimized ? "h-5 w-5" : "h-6 w-6")}
 					>
 						<Icon name="Cross" />
 					</Button>
@@ -364,7 +364,7 @@ const SidePanelContent = ({
 										>
 											<div className="relative">
 												<div className="bg-theme-background">
-													<div className="flex relative flex-col">
+													<div className="relative flex flex-col">
 														<SidePanelHeader
 															title={title}
 															titleIcon={titleIcon}
@@ -377,7 +377,7 @@ const SidePanelContent = ({
 														/>
 
 														{hasSteps && (
-															<ul className="flex flex-row w-full">
+															<ul className="flex w-full flex-row">
 																{[...Array(totalSteps).keys()].map((index) => (
 																	<SidePanelStyledStep
 																		key={index}
@@ -392,7 +392,7 @@ const SidePanelContent = ({
 
 											<div
 												ref={scrollContainerRef}
-												className="flex overflow-y-auto flex-col flex-1 gap-4 px-6 py-4"
+												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
 												data-testid="SidePanel__content"
 												inert={isMinimized}
 											>
@@ -408,7 +408,7 @@ const SidePanelContent = ({
 												<div
 													data-testid="SidePanel__footer"
 													className={cn(
-														"flex flex-col px-6 py-4 w-full border-t bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700",
+														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
 														{ "shadow-footer-side-panel": isScrolled },
 													)}
 												>
