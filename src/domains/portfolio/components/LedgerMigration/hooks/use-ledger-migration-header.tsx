@@ -7,6 +7,13 @@ export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
 	const { t } = useTranslation();
 
 	return useMemo(() => {
+		if (activeTab === MigrateLedgerStep.ErrorStep) {
+			return {
+				title: t("COMMON.LEDGER_MIGRATION.LEDGER_MIGRATION_FAILED_TITLE"),
+				titleIcon: <Icon name="CircleCross" dimensions={[24, 24]} className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-400" />,
+			};
+		}
+
 		if (activeTab === MigrateLedgerStep.ApproveTransactionStep) {
 			return {
 				subtitle: t("COMMON.LEDGER_MIGRATION.VERIFY_DETAILS_ON_LEDGER"),

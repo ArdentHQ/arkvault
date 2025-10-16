@@ -244,6 +244,8 @@ export const translations = {
 			TITLE: "When migrating your address to ARKVault, follow these recommendations:",
 		},
 		HELP_TITLE: "Need help with migration?",
+		LEDGER_MIGRATION_FAILED_TITLE: "Address Migration Rejected",
+		LEDGER_REJECTED_TRANSACTION: "You have rejected the transaction on your Ledger device.",
 		MIGRATE_LATER: "Want to migrate later? You’ll find the option in the drop-down menu.",
 		MIGRATE_TO_ONE_ADDRESS: "Migrate To One Address",
 		MIGRATE_TO_ONE_ADDRESS_DESCRIPTION:
@@ -463,6 +465,7 @@ export const translations = {
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSFER: "Transfer",
 	TRANSFERS: "Transfers",
+	TRY_AGAIN: "Try Again",
 	TX_ID: "Tx ID",
 	TYPE: "Type",
 	TYPES: "Types",

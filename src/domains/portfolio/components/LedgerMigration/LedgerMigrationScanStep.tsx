@@ -1,5 +1,5 @@
 import { Networks } from "@/app/lib/mainsail";
-import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
+import { Contracts, Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
@@ -9,6 +9,9 @@ import { Button } from "@/app/components/Button";
 import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
 import { Divider } from "@/app/components/Divider";
 import { LedgerScanStep } from "./LedgerScanStep";
+import { useWalletImport } from "@/domains/wallet/hooks";
+import { getLedgerDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { WalletLedgerModel } from "@/app/lib/profiles/wallet.enum";
 
 const MigrateToOneCheckbox = ({ onChange }: { onChange?: (isChecked: boolean) => void }) => {
 	const { t } = useTranslation();
@@ -34,10 +37,11 @@ export const MigrationLedgerScanStep = ({
 }: {
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
-	onContinue?: (selectedAddresses: LedgerData[], shouldMigrateToOne?: boolean) => void;
+	onContinue?: (wallets: Contracts.IReadWriteWallet[], shouldMigrateToOne?: boolean) => void;
 }) => {
 	const [selectedAddresses, setSelectedAddresses] = useState<LedgerData[]>([]);
-	const [shouldMigrateToOne, setShouldMigrateToOne] = useState(false);
+	const [shouldMigrateToOne, setShouldMigrateToOne] = useState<boolean>(false);
+	const [isImportingWallets, setIsImportingWallets] = useState<boolean>(false);
 	const { t } = useTranslation();
 
 	return (
@@ -66,9 +70,29 @@ export const MigrationLedgerScanStep = ({
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons>
 						<Button
+							isLoading={isImportingWallets}
 							data-testid="LedgerScanStep__continue-button"
-							disabled={selectedAddresses.length === 0}
-							onClick={() => onContinue?.(selectedAddresses, shouldMigrateToOne)}
+							disabled={selectedAddresses.length === 0 || isImportingWallets}
+							onClick={async () => {
+								setIsImportingWallets(true)
+
+								const wallets: Contracts.IReadWriteWallet[] = []
+								for (const ledgerAddress of selectedAddresses) {
+									const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
+										address: ledgerAddress.address,
+										path: ledgerAddress.path,
+									})
+
+									const alias = getLedgerDefaultAlias({ network: wallet.network(), path: ledgerAddress.path, profile })
+									// TODO: fix model.
+									wallet.data().set(Contracts.WalletData.LedgerModel, WalletLedgerModel.NanoSP);
+									wallet.mutator().alias(alias);
+									wallets.push(wallet)
+								}
+
+								setIsImportingWallets(false)
+								onContinue?.(wallets, shouldMigrateToOne)
+							}}
 						>
 							{t("COMMON.CONTINUE")}
 						</Button>

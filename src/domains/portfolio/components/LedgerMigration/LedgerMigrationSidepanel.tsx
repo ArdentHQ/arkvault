@@ -10,6 +10,8 @@ import { useLedgerMigrationHeader } from "./hooks/use-ledger-migration-header";
 import { MigrationLedgerScanStep } from "./LedgerMigrationScanStep";
 import { OverviewStep } from "./LedgerTransactionOverviewStep";
 import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
+import { LedgerTransactionErrorStep } from "./LedgerTransactionErrorStep";
+import { LedgerTransactionPendingConfirmation } from "./LedgerTransactionPendingConfirmation";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -22,22 +24,21 @@ export const LedgerMigrationSidepanel = ({
 }): JSX.Element => {
 	const profile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
+	const transfer = useRef(profile.draftTransactionFactory().transfer()).current;
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
-	const transfer = useRef(profile.draftTransactionFactory().transfer()).current;
-
 	useEffect(() => {
+		// Reset state on close.
+		if (!open) {
+			transfer.reset()
+			setActiveTab(MigrateLedgerStep.ListenLedgerStep);
+			return
+		}
+
 		// TODO: Use migrating addresses
 		const senderWallet = profile.wallets().first();
 		transfer.setSender(senderWallet);
-		transfer.addRecipient(senderWallet.address(), 1);
-	}, []);
-
-	// Reset step on close.
-	useEffect(() => {
-		if (!open) {
-			setActiveTab(MigrateLedgerStep.ListenLedgerStep);
-		}
+		transfer.setAmount(1)
 	}, [open]);
 
 	return (
@@ -50,7 +51,7 @@ export const LedgerMigrationSidepanel = ({
 			onMountChange={onMountChange}
 			subtitle={subtitle}
 			titleIcon={titleIcon}
-			totalSteps={4}
+			totalSteps={7}
 			hasSteps
 			activeStep={activeTab}
 		>
@@ -85,7 +86,8 @@ export const LedgerMigrationSidepanel = ({
 						<MigrationLedgerScanStep
 							profile={profile}
 							network={profile.activeNetwork()}
-							onContinue={() => {
+							onContinue={(wallets) => {
+								transfer.addRecipientWallets(wallets)
 								setActiveTab(MigrateLedgerStep.OverviewStep);
 							}}
 						/>
@@ -100,8 +102,52 @@ export const LedgerMigrationSidepanel = ({
 							onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
 						/>
 					</TabPanel>
+
 					<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
-						<LedgerTransactionApproveStep transfer={transfer} />
+						<LedgerTransactionApproveStep
+							transfer={transfer}
+							onSuccess={() => {
+								setActiveTab(MigrateLedgerStep.PendingConfirmationStep);
+							}}
+							onError={() => {
+								setActiveTab(MigrateLedgerStep.ErrorStep);
+							}} />
+					</TabPanel>
+
+					<TabPanel tabId={MigrateLedgerStep.PendingConfirmationStep}>
+						<LedgerTransactionPendingConfirmation
+							transfer={transfer}
+							onGoToPortfolio={() => {
+								onOpenChange(false)
+								setActiveTab(MigrateLedgerStep.ListenLedgerStep)
+							}}
+							onConfirmed={() => {
+								setActiveTab(MigrateLedgerStep.ConfirmedStep)
+							}} />
+					</TabPanel>
+
+					<TabPanel tabId={MigrateLedgerStep.ConfirmedStep}>
+						<LedgerTransactionPendingConfirmation
+							transfer={transfer}
+							onGoToPortfolio={() => {
+								onOpenChange(false)
+								setActiveTab(MigrateLedgerStep.ListenLedgerStep)
+							}}
+							onConfirmed={() => {
+
+							}} />
+					</TabPanel>
+
+					<TabPanel tabId={MigrateLedgerStep.ErrorStep}>
+						<LedgerTransactionErrorStep
+							transfer={transfer}
+							onClose={() => {
+								onOpenChange(false)
+								setActiveTab(MigrateLedgerStep.ListenLedgerStep)
+							}}
+							onTryAgain={() => {
+								setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
+							}} />
 					</TabPanel>
 				</div>
 			</Tabs>

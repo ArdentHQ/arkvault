@@ -36,9 +36,9 @@ export const LedgerTransactionOverview = ({
 								address={transfer.sender().address()}
 								walletName={transfer.sender().alias()}
 								showCopyButton
-								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+								walletNameClass="text-theme-text text-sm sm:text-base"
 								wrapperClass="justify-end sm:justify-start"
-								addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
+								addressClass={cn("text-sm sm:text-base w-full w-3/4", {
 									"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
 										!!transfer.sender().alias(),
 								})}
@@ -49,9 +49,9 @@ export const LedgerTransactionOverview = ({
 							<DetailTitle>{t("COMMON.NEW")}</DetailTitle>
 							<Address
 								truncateOnTable
-								address={transfer.recipientAddress()}
+								address={transfer.firstRecipientWallet()?.address()}
 								showCopyButton
-								walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+								walletNameClass="text-theme-text text-sm sm:text-base"
 								wrapperClass="justify-end sm:justify-start w-full"
 							/>
 						</div>
@@ -97,7 +97,7 @@ export const LedgerTransactionOverview = ({
 							<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
 							<Amount
 								ticker={transfer.network().ticker()}
-								value={transfer.sender().balance()}
+								value={transfer.amount()}
 								className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 							/>
 							<span className="text-theme-secondary-700 dark:text-theme-secondary-500">

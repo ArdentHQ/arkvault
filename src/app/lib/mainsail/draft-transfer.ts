@@ -4,7 +4,7 @@ import { Contracts, Environment } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import { TransactionFeeService } from "./transaction-fee.service";
 import { TransactionFee } from "./fee.contract";
-import { assertNumber, assertString, assertWallet } from "@/utils/assertions";
+import { assertNumber, assertWallet } from "@/utils/assertions";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 
@@ -17,29 +17,37 @@ export class DraftTransfer {
 	readonly #env: Environment;
 	readonly #profile: Contracts.IProfile;
 
-	#recipients: RecipientItem[];
 	#senderWallet?: Contracts.IReadWriteWallet;
+	#recipientWallets: Contracts.IReadWriteWallet[] = [];
 	#memo?: string;
 	#gasLimit?: BigNumber;
+	#amount: number = 0;
 	#fees?: TransactionFee;
 	#selectedFee?: keyof TransactionFee;
+	#signedTransaction?: ExtendedSignedTransactionData;
 
 	public constructor({ profile, env }: { profile: IProfile; env: Environment }) {
 		this.#env = env;
 		this.#profile = profile;
-		this.#recipients = [];
 		this.reset();
 	}
 
-	public addRecipient(address: string, amount: number): void {
-		this.#recipients.push({
-			address,
-			amount,
-		});
+	public addRecipientWallet(wallet: Contracts.IReadWriteWallet): void {
+		this.#recipientWallets?.push(wallet)
+	}
+
+	public addRecipientWallets(wallets: Contracts.IReadWriteWallet[]): void {
+		for (const wallet of wallets) {
+			this.#recipientWallets?.push(wallet)
+		}
 	}
 
 	public setSender(wallet: Contracts.IReadWriteWallet): void {
 		this.#senderWallet = wallet;
+	}
+
+	public setAmount(amount: number): void {
+		this.#amount = amount;
 	}
 
 	public setMemo(memo: string): void {
@@ -51,6 +59,9 @@ export class DraftTransfer {
 	}
 
 	public async calculateFees(): Promise<void> {
+		const firstRecipient = this.firstRecipientWallet()
+		assertWallet(firstRecipient)
+
 		const feeService = new TransactionFeeService({
 			env: this.#env,
 			network: this.sender().network(),
@@ -61,7 +72,7 @@ export class DraftTransfer {
 
 		this.#gasLimit = await feeService.gasLimit(
 			{
-				recipientAddress: this.#recipients.at(0)?.address,
+				recipientAddress: firstRecipient.address(),
 				senderAddress: this.sender().address(),
 			},
 			"transfer",
@@ -73,10 +84,10 @@ export class DraftTransfer {
 		secondKey?: string;
 		encryptionPassword?: string;
 	}): Promise<ExtendedSignedTransactionData> {
-		const firstRecipient = this.recipientsWithAmounts().at(0);
+		const firstRecipient = this.firstRecipientWallet()
 
-		assertNumber(firstRecipient?.amount);
-		assertString(firstRecipient?.address);
+		assertWallet(firstRecipient)
+		assertNumber(this.amount());
 
 		const signatory = await this.sender().signatoryFactory().fromSigningKeys(input);
 
@@ -84,16 +95,17 @@ export class DraftTransfer {
 			.transaction()
 			.signTransfer({
 				data: {
-					amount: firstRecipient.amount,
+					amount: this.amount(),
 					memo: this.memo(),
-					to: firstRecipient.address,
+					to: firstRecipient.address(),
 				},
 				gasLimit: this.gasLimit(),
 				gasPrice: this.selectedFee(),
 				signatory,
 			});
 
-		return this.sender().transaction().transaction(hash);
+		this.#signedTransaction = this.sender().transaction().transaction(hash);
+		return this.#signedTransaction
 	}
 
 	public async broadcast(transaction: ExtendedSignedTransactionData): Promise<ExtendedSignedTransactionData> {
@@ -144,16 +156,24 @@ export class DraftTransfer {
 		return this.#fees[this.#selectedFee];
 	}
 
-	public recipientAddress(): string | undefined {
-		return this.#recipients.at(0)?.address;
+	public firstRecipientWallet(): Contracts.IReadWriteWallet | undefined {
+		return this.recipientWallets().at(0)
 	}
 
-	public recipientsWithAmounts(): RecipientItem[] {
-		return this.#recipients;
+	public recipientWallets(): Contracts.IReadWriteWallet[] {
+		return this.#recipientWallets
+	}
+
+	public amount(): number {
+		return this.#amount;
+	}
+
+	public signedTransaction(): ExtendedSignedTransactionData | undefined {
+		return this.#signedTransaction
 	}
 
 	public reset(): void {
-		this.#recipients = [];
+		this.#recipientWallets = [];
 		this.#senderWallet = undefined;
 		this.#memo = undefined;
 		this.#gasLimit = undefined;

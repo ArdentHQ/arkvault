@@ -5,22 +5,31 @@ import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 import { Divider } from "@/app/components/Divider";
 import { Spinner } from "@/app/components/Spinner";
 import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
-import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
+import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
+import { Button } from "@/app/components/Button";
 
-export const LedgerTransactionApproveStep = ({
-	onSuccess,
-	onError,
+export const LedgerTransactionPendingConfirmation = ({
 	transfer,
+	onConfirmed,
+	onGoToPortfolio,
 }: {
 	transfer: DraftTransfer;
-	onSuccess?: (transaction: ExtendedSignedTransactionData) => void;
-	onError?: (error: string) => void;
+	onConfirmed?: () => void
+	onGoToPortfolio?: () => void
 }) => {
 	const { t } = useTranslation();
 
+	const { isConfirmed } = useConfirmedTransaction({
+		transactionId: transfer.signedTransaction()?.hash(),
+		wallet: transfer.sender(),
+	});
+
 	useEffect(() => {
-		transfer.signAndBroadcast().then(onSuccess).catch(onError);
-	}, [transfer]);
+		if (isConfirmed) {
+			onConfirmed?.()
+		}
+	}, [isConfirmed])
 
 	return (
 		<div className="space-y-4">
@@ -31,11 +40,19 @@ export const LedgerTransactionApproveStep = ({
 					className="text-theme-warning-200 dark:text-theme-secondary-800 dim:text-theme-dim-700 h-5"
 				/>
 				<p className="text-theme-secondary-700 dark:text-theme-warning-600 dim:text-theme-dim-200 font-semibold">
-					{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}
+					{t("TRANSACTION.PENDING.STATUS_TEXT")}
 				</p>
 			</div>
 
-			<LedgerTransactionOverview transfer={transfer} />
+			<LedgerTransactionOverview transfer={transfer} >
+				<SidepanelFooter className="fixed right-0 bottom-0">
+					<SidePanelButtons className="flex items-center justify-end">
+						<Button onClick={onGoToPortfolio}>
+							{t("COMMON.GO_TO_PORTFOLIO")}
+						</Button>
+					</SidePanelButtons>
+				</SidepanelFooter>
+			</LedgerTransactionOverview>
 		</div>
 	);
 };
