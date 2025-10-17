@@ -1,5 +1,5 @@
 import { Networks } from "@/app/lib/mainsail";
-import { Contracts, Contracts as ProfilesContracts } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
@@ -35,7 +35,7 @@ export const MigrationLedgerScanStep = ({
 }: {
 	migrator: LedgerMigrator;
 	network: Networks.Network;
-	profile: ProfilesContracts.IProfile;
+	profile: Contracts.IProfile;
 	onContinue?: () => void;
 }) => {
 	const [_, setShouldMigrateToOne] = useState<boolean>(false);
@@ -50,13 +50,13 @@ export const MigrationLedgerScanStep = ({
 				setIsImportingWallets(true);
 
 				for (const { path, address } of ledgerAddresses) {
-					const transaction = await migrator.createMigrationTransaction(address, path)
-					migrator.addTransaction(transaction)
+					const transaction = await migrator.createMigrationTransaction(address, path);
+					migrator.addTransaction(transaction);
 				}
 
 				setIsImportingWallets(false);
-			}}>
-
+			}}
+		>
 			<>
 				<div className="mt-4">
 					<Alert collapsible title={t("COMMON.LEDGER_MIGRATION.HELP_TITLE")} variant="info">
@@ -84,7 +84,9 @@ export const MigrationLedgerScanStep = ({
 							isLoading={isImportingWallets}
 							data-testid="LedgerScanStep__continue-button"
 							disabled={migrator.transactions().length === 0 || isImportingWallets}
-							onClick={() => { onContinue?.(); }}
+							onClick={() => {
+								onContinue?.();
+							}}
 						>
 							{t("COMMON.CONTINUE")}
 						</Button>

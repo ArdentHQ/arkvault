@@ -699,6 +699,6 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	public generateAlias(): string {
-		return new WalletAliasProvider(this.#profile).generateAlias(this)
+		return new WalletAliasProvider(this.#profile).generateAlias(this);
 	}
 }

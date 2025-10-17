@@ -1,16 +1,18 @@
-
 import React, { ReactElement, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@/app/lib/profiles";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
-export const TransactionDetailId = ({ transaction }: { transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData }): ReactElement => {
+export const TransactionDetailId = ({
+	transaction,
+}: {
+	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
+}): ReactElement => {
 	const { t } = useTranslation();
 	const { isDarkMode } = useTheme();
 	const reference = useRef(null);
@@ -18,7 +20,7 @@ export const TransactionDetailId = ({ transaction }: { transaction: DTO.Extended
 	return (
 		<div data-testid="TransactionDetailId">
 			<div className="flex items-center justify-start">
-				<div ref={reference} className="flex-1 overflow-hidden font-semibold mr-2">
+				<div ref={reference} className="mr-2 flex-1 overflow-hidden font-semibold">
 					<TruncateMiddle text={transaction.hash()} maxChars={20} />
 				</div>
 

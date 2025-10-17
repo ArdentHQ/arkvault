@@ -61,9 +61,12 @@ export class WalletAliasProvider {
 	}
 	generateAlias(wallet: Contracts.IReadWriteWallet, path?: string): string {
 		if (wallet.isLedger()) {
-			return getLedgerDefaultAlias({ path: path ?? wallet.data().get(WalletData.DerivationPath)!, profile: this.#profile })
+			return getLedgerDefaultAlias({
+				path: path ?? wallet.data().get(WalletData.DerivationPath)!,
+				profile: this.#profile,
+			});
 		}
 
-		return getDefaultAlias({ profile: this.#profile })
+		return getDefaultAlias({ profile: this.#profile });
 	}
 }

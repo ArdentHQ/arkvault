@@ -268,6 +268,5 @@ export class WalletFactory implements IWalletFactory {
 
 	public generateAlias(wallet: Contracts.IReadWriteWallet, path?: string): string {
 		return new WalletAliasProvider(this.#profile).generateAlias(wallet, path);
-
 	}
 }

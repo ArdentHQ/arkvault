@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 import { Divider } from "@/app/components/Divider";
 import { Spinner } from "@/app/components/Spinner";
 import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
@@ -17,7 +16,7 @@ export const LedgerTransactionPendingConfirmation = ({
 	onGoToPortfolio,
 	profile,
 }: {
-	profile: Contracts.IProfile,
+	profile: Contracts.IProfile;
 	transfer: DraftTransfer;
 	onConfirmed?: () => void;
 	onGoToPortfolio?: () => void;

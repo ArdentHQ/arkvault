@@ -30,13 +30,13 @@ export const LedgerMigrationSidepanel = ({
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
-	const migrator = useRef(new LedgerMigrator({ env, profile })).current
-	const transfer = migrator.firstTransaction()
+	const migrator = useRef(new LedgerMigrator({ env, profile })).current;
+	const transfer = migrator.firstTransaction();
 
 	useEffect(() => {
 		// Reset state on close.
 		if (!open) {
-			migrator.reset()
+			migrator.reset();
 			setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 			return;
 		}

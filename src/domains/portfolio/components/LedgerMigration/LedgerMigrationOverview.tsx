@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,40 +11,18 @@ import { Button } from "@/app/components/Button";
 import { TransactionDetailId } from "./components/TransactionDetailId";
 import { Contracts } from "@/app/lib/profiles";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
-import { Form } from "@/app/components/Form";
-import { useForm } from "react-hook-form";
-
-interface UpdateWalletNameProperties {
-	onAfterSave: () => void;
-	onCancel: () => void;
-	profile: Contracts.IProfile;
-	wallet: Contracts.IReadWriteWallet;
-}
-
-const EditAddressNameForm = ({ wallet, profile, onCancel, onAfterSave }: UpdateWalletNameProperties) => {
-	const form = useForm();
-
-	return <Form context={form}>
-		<UpdateWalletName
-			wallet={wallet}
-			profile={profile}
-			onCancel={onCancel}
-			onAfterSave={onAfterSave}
-		/>
-	</Form>
-}
 
 export const LedgerMigrationOverview = ({
 	profile,
 	transfer,
 	children,
 }: {
-	profile: Contracts.IProfile,
+	profile: Contracts.IProfile;
 	transfer: DraftTransfer;
 	children?: React.ReactElement;
 }) => {
 	const { t } = useTranslation();
-	const [editingWallet, setEditingWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined)
+	const [editingWallet, setEditingWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 
 	return (
 		<div data-testid="LedgerMigration__Review-step">
@@ -77,9 +54,7 @@ export const LedgerMigrationOverview = ({
 					<div className="flex items-center justify-between">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle>{t("COMMON.NAME")}</DetailTitle>
-							<p className="font-semibold">
-								{transfer.recipient()?.displayName()}
-							</p>
+							<p className="font-semibold">{transfer.recipient()?.displayName()}</p>
 						</div>
 
 						<Button
@@ -90,19 +65,17 @@ export const LedgerMigrationOverview = ({
 							<Icon name="Pencil" />
 							<span>{t("COMMON.EDIT")}</span>
 						</Button>
-
 					</div>
 				</DetailWrapper>
 
 				<DetailWrapper
 					label={t("TRANSACTION.TRANSACTION_DETAILS")}
-					footer={(
+					footer={
 						<DetailTitle className="w-auto leading-4! sm:min-w-36 sm:text-sm">
 							{t("COMMON.LEDGER_MIGRATION.DETAILS_IN_ARKSCAN")}
 						</DetailTitle>
-					)}
+					}
 				>
-
 					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 							<DetailTitle>{t("COMMON.TX_ID")}</DetailTitle>
