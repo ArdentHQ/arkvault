@@ -751,4 +751,12 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isSelected(): boolean;
+
+	/**
+	 * Generates a new alias based on existing wallets.
+	 *
+	 * @return {string}
+	 * @memberof IReadWriteWallet
+	 */
+	generateAlias(): string;
 }

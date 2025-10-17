@@ -1,4 +1,6 @@
-import { Contracts as ProfileContracts } from "@/app/lib/profiles";
+import { Contracts, Contracts as ProfileContracts } from "@/app/lib/profiles";
+import { getDefaultAlias, getLedgerDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { WalletData } from "./wallet.enum";
 
 export class WalletAliasProvider {
 	#profile: ProfileContracts.IProfile;
@@ -56,5 +58,12 @@ export class WalletAliasProvider {
 		} catch {
 			return alias;
 		}
+	}
+	generateAlias(wallet: Contracts.IReadWriteWallet, path?: string): string {
+		if (wallet.isLedger()) {
+			return getLedgerDefaultAlias({ path: path ?? wallet.data().get(WalletData.DerivationPath)!, profile: this.#profile })
+		}
+
+		return getDefaultAlias({ profile: this.#profile })
 	}
 }

@@ -22,6 +22,8 @@ import { Wallet } from "./wallet.js";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
+import { Contracts } from "./index.js";
+import { WalletAliasProvider } from "./profile.wallet.alias.js";
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -262,5 +264,10 @@ export class WalletFactory implements IWalletFactory {
 		}
 
 		return wallet;
+	}
+
+	public generateAlias(wallet: Contracts.IReadWriteWallet, path?: string): string {
+		return new WalletAliasProvider(this.#profile).generateAlias(wallet, path);
+
 	}
 }

@@ -234,6 +234,7 @@ export const translations = {
 		ADDRESS_MIGRATION: "Address Migration",
 		APPROVE_LEDGER_TRANSACTION: "Please approve the transaction on your Ledger device.",
 		APPROVE_TRANSACTION_TITLE: "Approve Your Transaction",
+		DETAILS_IN_ARKSCAN:"More detailed information in ARKScan.",
 		HELP: {
 			GUIDELINE_1: "Make sure you are not being watched.",
 			GUIDELINE_2: "Check your wardrobe, bed, and windows for spies.",

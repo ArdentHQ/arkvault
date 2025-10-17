@@ -697,4 +697,8 @@ export class Wallet implements IReadWriteWallet {
 	public exchangeRates(): ExchangeRateService {
 		return this.#profile.exchangeRates();
 	}
+
+	public generateAlias(): string {
+		return new WalletAliasProvider(this.#profile).generateAlias(this)
+	}
 }
