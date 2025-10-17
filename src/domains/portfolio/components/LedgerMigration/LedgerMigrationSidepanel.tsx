@@ -52,6 +52,7 @@ export const LedgerMigrationSidepanel = ({
 			subtitle={subtitle}
 			titleIcon={titleIcon}
 			totalSteps={7}
+			totalSteps={4}
 			hasSteps
 			activeStep={activeTab}
 		>

@@ -96,6 +96,8 @@ export interface NetworkManifestImportMethods {
 export interface NetworkManifestConstants {
 	epoch?: string;
 	slip44: number;
+	slip44Legacy: number;
+	slip44Eth: number;
 	bech32?: string;
 	bip32?: {
 		private: number;
