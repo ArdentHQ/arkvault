@@ -149,6 +149,7 @@ import CompletedDim from "./transactions/completed-dim.svg?react";
 import LedgerDark from "./ledger-dark.svg?react";
 import LedgerDim from "./ledger-dim.svg?react";
 import LedgerLight from "./ledger-light.svg?react";
+import CheckedDocument from "./checked-document.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -160,6 +161,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Calendar,
 	Categories,
 	ChartActiveDot,
+	CheckedDocument,
 	Checkmark,
 	CheckmarkDouble,
 	CheckmarkDoubleCircle,

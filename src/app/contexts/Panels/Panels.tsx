@@ -12,6 +12,7 @@ export enum Panel {
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
 	Addresses = "ADDRESSES",
+	LedgerMigration = "LEDGER_MIGRATION",
 }
 
 interface PanelsContextValue {

@@ -50,6 +50,10 @@ interface SidePanelContextValue {
 	setHasModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+interface SidepanelFooterProps extends React.HTMLAttributes<HTMLDivElement> {
+	isScrolled?: boolean;
+}
+
 const SidePanelContext = React.createContext<SidePanelContextValue | undefined>(undefined);
 
 export const useSidePanel = (): SidePanelContextValue | undefined => useContext(SidePanelContext);
@@ -58,6 +62,18 @@ export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttribu
 	<div
 		className={cn(
 			"flex w-full items-center justify-end gap-3 [&>button]:flex-1 sm:[&>button]:flex-none",
+			className,
+		)}
+		{...properties}
+	/>
+);
+
+export const SidepanelFooter = ({ className, isScrolled, ...properties }: SidepanelFooterProps) => (
+	<div
+		data-testid="SidePanel__footer"
+		className={cn(
+			"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
+			{ "shadow-footer-side-panel": isScrolled },
 			className,
 		)}
 		{...properties}
@@ -408,15 +424,7 @@ const SidePanelContent = ({
 											</div>
 
 											{footer && (
-												<div
-													data-testid="SidePanel__footer"
-													className={cn(
-														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
-														{ "shadow-footer-side-panel": isScrolled },
-													)}
-												>
-													{footer}
-												</div>
+												<SidepanelFooter isScrolled={isScrolled}>{footer}</SidepanelFooter>
 											)}
 										</div>
 									</div>
