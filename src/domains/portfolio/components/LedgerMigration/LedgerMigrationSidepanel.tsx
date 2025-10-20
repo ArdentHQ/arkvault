@@ -12,7 +12,6 @@ import { OverviewStep } from "./LedgerTransactionOverviewStep";
 import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
 import { LedgerTransactionErrorStep } from "./LedgerTransactionErrorStep";
 import { LedgerTransactionPendingConfirmation } from "./LedgerTransactionPendingConfirmation";
-import { useEnvironmentContext } from "@/app/contexts";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { LedgerTransactionSuccessStep } from "./LedgerTransactionSuccessStep";
 
@@ -26,11 +25,10 @@ export const LedgerMigrationSidepanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const profile = useActiveProfile();
-	const { env } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
-	const migrator = useRef(new LedgerMigrator({ env, profile })).current;
+	const migrator = useRef(new LedgerMigrator({ profile })).current;
 	const transfer = migrator.firstTransaction();
 
 	useEffect(() => {

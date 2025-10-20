@@ -1,18 +1,16 @@
-import { Contracts, Environment } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { AddressService } from "./address.service";
-import { DraftTransfer } from "./draft-transfer";
+import { type DraftTransfer } from "./draft-transfer";
 import { DataRepository } from "@/app/lib/profiles/data.repository";
 
 export class LedgerMigrator {
 	#profile: Contracts.IProfile;
-	#env: Environment;
 	#transactions: DraftTransfer[];
 	#generatedAddresses: DataRepository;
 
-	constructor({ profile, env }: { profile: Contracts.IProfile; env: Environment }) {
+	constructor({ profile }: { profile: Contracts.IProfile }) {
 		this.#profile = profile;
-		this.#env = env;
 		this.#transactions = [];
 		this.#generatedAddresses = new DataRepository();
 	}
@@ -62,7 +60,7 @@ export class LedgerMigrator {
 
 		this.#generatedAddresses.set(newPath, recipient.address());
 
-		const transaction = new DraftTransfer({ env: this.#env, profile: this.#profile });
+		const transaction = this.#profile.draftTransactionFactory().transfer();
 
 		transaction.setSender(sender);
 		transaction.addRecipientWallet(recipient);
@@ -85,5 +83,6 @@ export class LedgerMigrator {
 
 	public reset(): void {
 		this.#transactions = [];
+		this.#generatedAddresses.flush()
 	}
 }
