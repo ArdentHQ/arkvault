@@ -1,13 +1,13 @@
-import { Networks, Contracts } from "@/app/lib/mainsail";
+import { Networks, Contracts, ConfigKey } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo } from "react";
 import { Trans } from "react-i18next";
 import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { toasts } from "@/app/services";
+import { Alert } from "@/app/components/Alert";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
 import { LedgerTable } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerScanStep";
-import { Alert } from "@/app/components/Alert";
 
 export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) => {
 	if (wallets.length === 1) {
@@ -38,24 +38,24 @@ export const LedgerScanStep = ({
 	onContinue?: (selectedWallets: LedgerData[]) => void;
 	onSelect?: (selectedWallets: LedgerData[]) => void;
 }) => {
-	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
+	const pageSize = 0;
+	const legacyPageSize = 5;
+	const ledgerScanner = useLedgerScanner(network.coin(), network.id(), { legacyPageSize, pageSize, useLegacy: true });
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
-	const lastPath = useMemo(() => {
-		const ledgerPaths = wallets.map(({ path }) => path);
-		const profileWalletsPaths = profile
-			.wallets()
-			.values()
-			.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath));
+	const walletsBySlip44 = (slip44: ConfigKey.Slip44Legacy | ConfigKey.Slip44) => {
+		const ledgerPaths = wallets
+			.filter(({ path }) => BIP44.parse(path).coinType === network.config().get(slip44))
+			.map(({ path }) => path);
+		return ledgerPaths.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
+	};
 
-		return [...profileWalletsPaths, ...ledgerPaths]
-			.filter(Boolean)
-			.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
-	}, [profile, wallets]);
+	const lastPath = useMemo(() => walletsBySlip44(ConfigKey.Slip44), [profile, wallets]);
+	const lastLegacyPath = useMemo(() => walletsBySlip44(ConfigKey.Slip44Legacy), [profile, wallets]);
 
 	const scanMore = useCallback(() => {
-		scan(profile, lastPath);
-	}, [scan, lastPath, profile]);
+		scan(profile, lastPath, lastLegacyPath);
+	}, [scan, lastPath, profile, lastLegacyPath]);
 
 	useEffect(() => {
 		if (!isScanning) {
@@ -65,24 +65,24 @@ export const LedgerScanStep = ({
 
 	useEffect(() => {
 		if (canRetry) {
-			setRetryFn?.(() => scan(profile, lastPath));
+			setRetryFn?.(() => scan(profile, lastPath, lastLegacyPath));
 		} else {
 			setRetryFn?.(undefined);
 		}
 		return () => setRetryFn?.(undefined);
-	}, [setRetryFn, scan, canRetry, profile, lastPath]);
+	}, [setRetryFn, scan, canRetry, profile, lastPath, lastLegacyPath]);
 
 	useEffect(() => {
 		if (canRetry) {
-			setRetryFn?.(() => scan(profile, lastPath));
+			setRetryFn?.(() => scan(profile, lastPath, lastLegacyPath));
 		} else {
 			setRetryFn?.(undefined);
 		}
 		return () => setRetryFn?.(undefined);
-	}, [setRetryFn, scan, canRetry, profile, lastPath]);
+	}, [setRetryFn, scan, canRetry, profile, lastPath, lastLegacyPath]);
 
 	useEffect(() => {
-		scan(profile, lastPath);
+		scan(profile, lastPath, lastLegacyPath);
 
 		return () => {
 			abortScanner();
@@ -126,7 +126,12 @@ export const LedgerScanStep = ({
 						<span data-testid="LedgerScanStep__error">{error}</span>
 					</Alert>
 				) : (
-					<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
+					<LedgerTable
+						network={network}
+						{...ledgerScanner}
+						scanMore={scanMore}
+						pageSize={pageSize + legacyPageSize}
+					/>
 				)}
 				{children}
 			</div>

@@ -1,19 +1,22 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 import { Divider } from "@/app/components/Divider";
 import { Spinner } from "@/app/components/Spinner";
 import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
+import { LedgerMigrationOverview } from "./LedgerMigrationOverview";
+import { Contracts } from "@/app/lib/profiles";
 
 export const LedgerTransactionPendingConfirmation = ({
 	transfer,
 	onConfirmed,
 	onGoToPortfolio,
+	profile,
 }: {
+	profile: Contracts.IProfile;
 	transfer: DraftTransfer;
 	onConfirmed?: () => void;
 	onGoToPortfolio?: () => void;
@@ -44,13 +47,13 @@ export const LedgerTransactionPendingConfirmation = ({
 				</p>
 			</div>
 
-			<LedgerTransactionOverview transfer={transfer}>
+			<LedgerMigrationOverview transfer={transfer} profile={profile}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons className="flex items-center justify-end">
 						<Button onClick={onGoToPortfolio}>{t("COMMON.GO_TO_PORTFOLIO")}</Button>
 					</SidePanelButtons>
 				</SidepanelFooter>
-			</LedgerTransactionOverview>
+			</LedgerMigrationOverview>
 		</div>
 	);
 };

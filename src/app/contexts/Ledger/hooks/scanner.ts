@@ -8,7 +8,11 @@ import { persistLedgerConnection } from "@/app/contexts/Ledger/utils/connection"
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
-export const useLedgerScanner = (coin: string, network: string) => {
+export const useLedgerScanner = (
+	coin: string,
+	network: string,
+	options?: { useLegacy?: boolean; pageSize?: number; legacyPageSize?: number },
+) => {
 	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
 
 	const [state, dispatch] = useReducer(scannerReducer, {
@@ -33,7 +37,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		setLoadedWallets(uniqBy([...loadedWallets, wallet], (wallet) => wallet.data.address));
 	};
 
-	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
+	const scanAddresses = async (profile: ProfilesContracts.IProfile, startPath?: string, legacyStartPath?: string) => {
 		const ledgerService = profile.ledger();
 
 		setIdle();
@@ -56,28 +60,29 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		});
 
 		// @ts-ignore
-		const ledgerWallets = await ledgerService.scan({ onProgress, startPath });
 
-		const legacyWallets = isLoadingMore ? {} : await ledgerService.scan({ onProgress, useLegacy: true });
-
-		const allWallets = { ...legacyWallets, ...ledgerWallets };
+		const ledgerWallets = options?.useLegacy
+			? await ledgerService.scan({
+					onProgress,
+					pageSize: options.legacyPageSize,
+					startPath: legacyStartPath,
+					useLegacy: options?.useLegacy,
+				})
+			: await ledgerService.scan({ onProgress, pageSize: options?.pageSize, startPath, useLegacy: false });
 
 		let ledgerData: LedgerData[] = [];
 
-		for (const [path, data] of Object.entries(allWallets)) {
+		for (const [path, data] of Object.entries(ledgerWallets)) {
 			const address = data.address();
 
 			const wallet = await profile.walletFactory().fromAddress({ address });
 			await wallet.synchroniser().identity();
 
-			/* istanbul ignore next -- @preserve */
-			if (!profile.wallets().findByAddressWithNetwork(address, network)) {
-				ledgerData.push({
-					address,
-					balance: wallet.balance(),
-					path,
-				});
-			}
+			ledgerData.push({
+				address,
+				balance: wallet.balance(),
+				path,
+			});
 		}
 
 		if (isLoadingMore) {
@@ -98,9 +103,9 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		setIsScanningMore(false);
 	};
 
-	const scan = async (profile: ProfilesContracts.IProfile, startPath?: string) => {
+	const scan = async (profile: ProfilesContracts.IProfile, startPath?: string, legacyStartPath?: string) => {
 		try {
-			await scanAddresses(profile, startPath);
+			await scanAddresses(profile, startPath, legacyStartPath);
 		} catch (error) {
 			if (error?.message?.includes?.("busy")) {
 				await new Promise((resolve) => setTimeout(resolve, 1000));

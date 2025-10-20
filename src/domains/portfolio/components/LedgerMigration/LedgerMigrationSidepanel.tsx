@@ -13,6 +13,9 @@ import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
 import { LedgerTransactionErrorStep } from "./LedgerTransactionErrorStep";
 import { LedgerTransactionPendingConfirmation } from "./LedgerTransactionPendingConfirmation";
 import { StopMigrationConfirmationModal } from "@/domains/portfolio/components/LedgerMigration/components/StopMigrationConfirmationModal";
+import { useEnvironmentContext } from "@/app/contexts";
+import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
+import { LedgerTransactionSuccessStep } from "./LedgerTransactionSuccessStep";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -24,24 +27,23 @@ export const LedgerMigrationSidepanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	const profile = useActiveProfile();
+	const { env } = useEnvironmentContext();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
 	const transfer = useRef(profile.draftTransactionFactory().transfer()).current;
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
+	const migrator = useRef(new LedgerMigrator({ env, profile })).current;
+	const transfer = migrator.firstTransaction();
+
 	useEffect(() => {
 		// Reset state on close.
 		if (!open) {
-			transfer.reset();
+			migrator.reset();
 			setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 			return;
 		}
-
-		// TODO: Use migrating addresses
-		const senderWallet = profile.wallets().first();
-		transfer.setSender(senderWallet);
-		transfer.setAmount(1);
 	}, [open]);
 
 	const handleOpenChange = (open: boolean) => {
@@ -64,7 +66,7 @@ export const LedgerMigrationSidepanel = ({
 				onMountChange={onMountChange}
 				subtitle={subtitle}
 				titleIcon={titleIcon}
-				totalSteps={7}
+				totalSteps={8}
 				hasSteps
 				activeStep={activeTab}
 			>
@@ -97,16 +99,17 @@ export const LedgerMigrationSidepanel = ({
 
 						<TabPanel tabId={MigrateLedgerStep.ScanStep}>
 							<MigrationLedgerScanStep
+								migrator={migrator}
 								profile={profile}
 								network={profile.activeNetwork()}
-								onContinue={(wallets) => {
-									transfer.addRecipientWallets(wallets);
+								onContinue={() => {
 									setActiveTab(MigrateLedgerStep.OverviewStep);
 								}}
 							/>
 						</TabPanel>
 
-						<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
+						{transfer && (
+						<><TabPanel tabId={MigrateLedgerStep.OverviewStep}>
 							<OverviewStep
 								transfer={transfer}
 								onContinue={() => {
@@ -130,25 +133,26 @@ export const LedgerMigrationSidepanel = ({
 
 						<TabPanel tabId={MigrateLedgerStep.PendingConfirmationStep}>
 							<LedgerTransactionPendingConfirmation
-								transfer={transfer}
+								profile={profile}transfer={transfer}
 								onGoToPortfolio={() => {
 									onOpenChange(false);
 									setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 								}}
 								onConfirmed={() => {
-									setActiveTab(MigrateLedgerStep.ConfirmedStep);
+									setActiveTab(MigrateLedgerStep.SuccessStep);
 								}}
 							/>
 						</TabPanel>
 
-						<TabPanel tabId={MigrateLedgerStep.ConfirmedStep}>
-							<LedgerTransactionPendingConfirmation
+						<TabPanel tabId={MigrateLedgerStep.SuccessStep}>
+								<LedgerTransactionSuccessStep
+							profile={profile}
 								transfer={transfer}
 								onGoToPortfolio={() => {
 									onOpenChange(false);
 									setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 								}}
-								onConfirmed={() => {}}
+
 							/>
 						</TabPanel>
 
@@ -164,7 +168,9 @@ export const LedgerMigrationSidepanel = ({
 								}}
 							/>
 						</TabPanel>
-					</div>
+					</>
+					)}
+				</div>
 				</Tabs>
 			</SidePanel>
 			<StopMigrationConfirmationModal

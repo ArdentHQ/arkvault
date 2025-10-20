@@ -59,7 +59,7 @@ export class DraftTransfer {
 	}
 
 	public async calculateFees(): Promise<void> {
-		const firstRecipient = this.firstRecipientWallet();
+		const firstRecipient = this.recipient();
 		assertWallet(firstRecipient);
 
 		const feeService = new TransactionFeeService({
@@ -84,7 +84,7 @@ export class DraftTransfer {
 		secondKey?: string;
 		encryptionPassword?: string;
 	}): Promise<ExtendedSignedTransactionData> {
-		const firstRecipient = this.firstRecipientWallet();
+		const firstRecipient = this.recipient();
 
 		assertWallet(firstRecipient);
 		assertNumber(this.amount());
@@ -156,7 +156,7 @@ export class DraftTransfer {
 		return this.#fees[this.#selectedFee];
 	}
 
-	public firstRecipientWallet(): Contracts.IReadWriteWallet | undefined {
+	public recipient(): Contracts.IReadWriteWallet | undefined {
 		return this.recipientWallets().at(0);
 	}
 

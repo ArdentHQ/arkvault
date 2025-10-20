@@ -22,4 +22,5 @@ export interface LedgerTabsProperties {
 export interface LedgerTableProperties extends ReturnType<typeof useLedgerScanner> {
 	network: Networks.Network;
 	scanMore: () => void;
+	pageSize?: number;
 }
