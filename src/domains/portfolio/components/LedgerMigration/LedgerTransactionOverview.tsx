@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
@@ -12,6 +12,7 @@ import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TransactionFee } from "./components/TransactionFee";
 import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
+import { Button } from "@/app/components/Button";
 
 export const LedgerTransactionOverview = ({
 	transfer,
@@ -23,11 +24,15 @@ export const LedgerTransactionOverview = ({
 	children?: React.ReactElement;
 }) => {
 	const { t } = useTranslation();
+	const [isVerifying, setIsVerifying] = useState(false);
 
 	return (
 		<div data-testid="LedgerMigration__Review-step">
 			<div className="space-y-4">
-				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
+				<DetailWrapper
+					label={t("TRANSACTION.ADDRESSING")}
+					className={cn({ "border-theme-warning-300": isVerifying })}
+				>
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle>{t("COMMON.OLD")}</DetailTitle>
@@ -54,24 +59,48 @@ export const LedgerTransactionOverview = ({
 							/>
 						</div>
 
-						{onVerifyAddress && (
+						{isVerifying && (
+							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-warning-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
+								<div className="border-theme-warning-300 mb-2 flex gap-1 border-b border-dashed pb-2 text-sm leading-[17px] font-semibold">
+									<p>{t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_LABEL")}:</p>
+									<span className="text-theme-warning-900">0R0123</span>
+								</div>
+								<p className="text-sm leading-5 font-normal">
+									{t("COMMON.LEDGER_MIGRATION.PENDING_VERIFICATION_MESSAGE")}
+								</p>
+								<div className="mt-4 flex justify-end">
+									<Button
+										variant="secondary-icon"
+										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+									>
+										<span>{t("COMMON.CANCEL")}</span>
+									</Button>
+								</div>
+							</div>
+						)}
+
+						{!isVerifying && (
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle> </DetailTitle>
-								<Link to="" onClick={onVerifyAddress}>
-									<span className="flex items-center space-x-2">
+								<div className="flex items-center space-x-2">
+									<Button
+										variant="secondary-icon"
+										onClick={() => setIsVerifying(true)}
+										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+									>
 										<span>{t("COMMON.VERIFY_ADDRESS")}</span>
-										<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
-											<span>
-												<span className="bg-theme-secondary-100 block flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
-													<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
-												</span>
-												<span className="hidden dark:block">
-													<Icon name="CircleQuestionMark" dimensions={[20, 20]} />
-												</span>
-											</span>
-										</Tooltip>
+									</Button>
+									<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
+									<span>
+										<span className="bg-theme-secondary-100 flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
+											<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
+										</span>
+										<span className="hidden dark:block">
+											<Icon name="CircleQuestionMark" dimensions={[20, 20]} />
+										</span>
 									</span>
-								</Link>
+									</Tooltip>
+								</div>
 							</div>
 						)}
 					</div>

@@ -253,6 +253,7 @@ export const translations = {
 			"By selecting this option, all selected addresses will be consolidated into a single new address. This means the balances from your old addresses will be transferred to one address. You will still need to confirm each transaction individually during the migration process.",
 		MIGRATION_COMPLETED: "Migration Completed",
 		OVERVIEW_SUBTITLE: "Review details below to send your transaction.",
+		PENDING_VERIFICATION_MESSAGE: "Check your Ledger device to confirm the message matches above. Approve it if everything looks correct.",
 		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
 		SUCCESS_DESCRIPTION: "Your address was successfully migrated and imported.",
@@ -261,6 +262,7 @@ export const translations = {
 		VERIFY_DETAILS_ON_LEDGER:
 			"Review and verify the details on your Ledger device. Select 'Accept' to approve the transaction.",
 		VERIFY_MESSAGE_HELP_TEXT: "Sign a message to verify your Ledger address matches the one displayed.",
+		VERIFY_MESSAGE_LABEL: "Ledger Verification Message",
 	},
 	LEDGER_NETWORK_NOT_SUPPORTED: "Ledger is not yet supported on this network.",
 	LINK: "Link",
