@@ -463,4 +463,14 @@ export class Network {
 	fees(): FeeService {
 		return this.#feeService;
 	}
+
+	/**
+	 * Returns the block time.
+	 *
+	 * @returns {number}
+	 * @memberof Network
+	 */
+	blockTime(): number {
+		return get(this.milestone(), "timeouts.blockTime");
+	}
 }

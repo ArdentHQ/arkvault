@@ -31,6 +31,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	isScanningMore,
 	isSelected,
 	scanMore,
+	pageSize,
 }) => {
 	const [showAll, setShowAll] = useState<boolean>(false);
 	const { t } = useTranslation();
@@ -74,7 +75,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	/* istanbul ignore next -- @preserve */
 	const showSkeleton = (isScanning || (isBusy && wallets.length === 0)) && !isScanningMore;
 
-	const length = 5;
+	const length = pageSize ?? 5;
 	const data = useMemo(() => {
 		const skeletonRows = Array.from<LedgerData>({ length }).fill({} as LedgerData);
 		return showSkeleton ? skeletonRows : wallets;

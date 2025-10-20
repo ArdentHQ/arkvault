@@ -53,6 +53,7 @@ import { ExchangeRateService } from "./exchange-rate.service.js";
 import { BigNumber } from "@/app/lib/helpers/bignumber.js";
 import { WalletAliasProvider } from "./profile.wallet.alias.js";
 import { isPreview } from "@/utils/test-helpers";
+import { DraftTransactionFactory } from "@/app/lib/mainsail/draft-transaction.factory.js";
 
 export class Profile implements IProfile {
 	/**
@@ -240,6 +241,14 @@ export class Profile implements IProfile {
 	readonly #ledgerService: LedgerService;
 
 	/**
+	 * Draft transaction factory.
+	 *
+	 * @type {DraftTransactionFactory}
+	 * @memberof Profile
+	 */
+	readonly #draftTransactionFactory: DraftTransactionFactory;
+
+	/**
 	 * The status service.
 	 *
 	 * @type {IProfileStatus}
@@ -271,6 +280,7 @@ export class Profile implements IProfile {
 		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
 		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
 		this.#ledgerService = new LedgerService({ config: this.activeNetwork().config() });
+		this.#draftTransactionFactory = new DraftTransactionFactory({ env, profile: this });
 	}
 
 	/** {@inheritDoc IProfile.id} */
@@ -573,5 +583,9 @@ export class Profile implements IProfile {
 
 	public findAliasByAddress(address: string, networkId?: string): string | undefined {
 		return new WalletAliasProvider(this).findAliasByAddress(address, networkId);
+	}
+
+	public draftTransactionFactory(): DraftTransactionFactory {
+		return this.#draftTransactionFactory;
 	}
 }
