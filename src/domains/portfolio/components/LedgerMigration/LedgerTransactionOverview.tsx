@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { DetailLabelText, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
@@ -7,12 +7,15 @@ import cn from "classnames";
 import { Label } from "@/app/components/Label";
 import { Amount } from "@/app/components/Amount";
 import { ConfirmationTimeFooter } from "@/domains/transaction/components/TotalAmountBox";
-import { Link } from "@/app/components/Link";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TransactionFee } from "./components/TransactionFee";
 import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { Button } from "@/app/components/Button";
+import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
+import { MessageService } from "@/app/lib/mainsail/message.service";
+
+const generateVerificationCode = (): string => Math.random().toString(36).slice(2, 8).toUpperCase();
 
 export const LedgerTransactionOverview = ({
 	transfer,
@@ -25,6 +28,58 @@ export const LedgerTransactionOverview = ({
 }) => {
 	const { t } = useTranslation();
 	const [isVerifying, setIsVerifying] = useState(false);
+	const [verificationCode, setVerificationCode] = useState<string | undefined>(undefined);
+	const [isVerified, setIsVerified] = useState(false);
+	const [verificationError, setVerificationError] = useState<string | undefined>(undefined);
+
+	const abortReference = useRef(new AbortController());
+
+	const { sign } = useMessageSigner();
+
+	const handleVerifyAddress = async () => {
+		abortReference.current = new AbortController();
+
+		const code = generateVerificationCode();
+		setVerificationCode(code);
+		setIsVerifying(true);
+		setVerificationError(undefined);
+		setIsVerified(false);
+
+		try {
+			// Request the user to sign the verification code message
+			const recipientWallet = transfer.recipient();
+			if (!recipientWallet) {
+				throw new Error("Recipient wallet not found");
+			}
+
+			const signedMessage = await sign(recipientWallet, code, undefined, undefined, undefined, {
+				abortSignal: abortReference.current.signal,
+			});
+
+			// Verify the signature matches the recipient address
+			const isValid = new MessageService().verify(signedMessage);
+
+			setIsVerifying(false);
+			setIsVerified(isValid);
+
+			if (!isValid) {
+				setVerificationError(t("COMMON.LEDGER_MIGRATION.VERIFICATION_FAILED_MESSAGE"));
+			}
+		} catch(e) {
+			console.log(e);
+			setIsVerifying(false);
+			setVerificationError(t("COMMON.LEDGER_MIGRATION.VERIFICATION_FAILED_MESSAGE"));
+		}
+	};
+
+	const handleCancelVerification = () => {
+		abortReference.current.abort();
+
+		setIsVerified(false);
+		setIsVerifying(false);
+		setVerificationCode(undefined);
+		setVerificationError(undefined);
+	};
 
 	return (
 		<div data-testid="LedgerMigration__Review-step">
@@ -63,14 +118,16 @@ export const LedgerTransactionOverview = ({
 							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-warning-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
 								<div className="border-theme-warning-300 mb-2 flex gap-1 border-b border-dashed pb-2 text-sm leading-[17px] font-semibold">
 									<p>{t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_LABEL")}:</p>
-									<span className="text-theme-warning-900">0R0123</span>
+									<span className="text-theme-warning-900">{verificationCode}</span>
 								</div>
 								<p className="text-sm leading-5 font-normal">
 									{t("COMMON.LEDGER_MIGRATION.PENDING_VERIFICATION_MESSAGE")}
 								</p>
+
 								<div className="mt-4 flex justify-end">
 									<Button
 										variant="secondary-icon"
+										onClick={handleCancelVerification}
 										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
 									>
 										<span>{t("COMMON.CANCEL")}</span>
@@ -79,26 +136,48 @@ export const LedgerTransactionOverview = ({
 							</div>
 						)}
 
-						{!isVerifying && (
+						{verificationError && (
+							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-success-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
+								<div className="flex items-center gap-2">
+									<Icon name="CircleCheckMarkFilled" className="text-theme-success-600" size="lg" />
+									<p className="text-sm leading-5 font-semibold">
+										{verificationError}
+									</p>
+								</div>
+							</div>
+						)}
+
+						{isVerified && (
+							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-success-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
+								<div className="flex items-center gap-2">
+									<Icon name="CircleCheckMarkFilled" className="text-theme-success-600" size="lg" />
+									<p className="text-sm leading-5 font-semibold">
+										{t("COMMON.LEDGER_MIGRATION.VERIFICATION_SUCCESS_MESSAGE")}
+									</p>
+								</div>
+							</div>
+						)}
+
+						{!isVerifying && !isVerified && !verificationError && (
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle> </DetailTitle>
 								<div className="flex items-center space-x-2">
 									<Button
 										variant="secondary-icon"
-										onClick={() => setIsVerifying(true)}
+										onClick={handleVerifyAddress}
 										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
 									>
 										<span>{t("COMMON.VERIFY_ADDRESS")}</span>
 									</Button>
 									<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
-									<span>
-										<span className="bg-theme-secondary-100 flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
-											<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
+										<span>
+											<span className="bg-theme-secondary-100 flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
+												<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
+											</span>
+											<span className="hidden dark:block">
+												<Icon name="CircleQuestionMark" dimensions={[20, 20]} />
+											</span>
 										</span>
-										<span className="hidden dark:block">
-											<Icon name="CircleQuestionMark" dimensions={[20, 20]} />
-										</span>
-									</span>
 									</Tooltip>
 								</div>
 							</div>
