@@ -30,7 +30,7 @@ export const LedgerTransactionOverview = ({
 	const [isVerifying, setIsVerifying] = useState(false);
 	const [verificationCode, setVerificationCode] = useState<string | undefined>(undefined);
 	const [isVerified, setIsVerified] = useState(false);
-	const [verificationError, setVerificationError] = useState<string | undefined>("error");
+	const [verificationError, setVerificationError] = useState<string | undefined>(undefined);
 
 	const abortReference = useRef(new AbortController());
 
@@ -80,7 +80,6 @@ export const LedgerTransactionOverview = ({
 		setVerificationError(undefined);
 	};
 
-	console.log({isVerified, isVerifying, verificationError})
 	return (
 		<div data-testid="LedgerMigration__Review-step">
 			<div className="space-y-4">
