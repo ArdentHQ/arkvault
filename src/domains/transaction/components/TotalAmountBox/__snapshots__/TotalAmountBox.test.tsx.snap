@@ -17,7 +17,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -129,7 +129,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -241,7 +241,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
@@ -353,7 +353,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
       </div>
     </div>
     <div
-      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border rounded-xl mt-0 sm:mt-2"
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border rounded-xl mt-0 sm:mt-2"
     >
       <div
         class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
