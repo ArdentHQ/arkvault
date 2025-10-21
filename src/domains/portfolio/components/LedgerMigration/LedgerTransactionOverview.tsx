@@ -14,6 +14,7 @@ import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { Button } from "@/app/components/Button";
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { MessageService } from "@/app/lib/mainsail/message.service";
+import { Divider } from "@/app/components/Divider";
 
 const generateVerificationCode = (): string => Math.random().toString(36).slice(2, 8).toUpperCase();
 
@@ -86,7 +87,11 @@ export const LedgerTransactionOverview = ({
 			<div className="space-y-4">
 				<DetailWrapper
 					label={t("TRANSACTION.ADDRESSING")}
-					className={cn({ "border-theme-warning-300": isVerifying })}
+					className={cn({
+						"border-theme-danger-400": verificationError,
+						"border-theme-success-300": isVerified,
+						"border-theme-warning-300": isVerifying && !isVerified && !!verificationError,
+					})}
 				>
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
@@ -137,21 +142,44 @@ export const LedgerTransactionOverview = ({
 						)}
 
 						{verificationError && (
-							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-success-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
-								<div className="flex items-center gap-2">
-									<Icon name="CircleCheckMarkFilled" className="text-theme-success-600" size="lg" />
-									<p className="text-sm leading-5 font-semibold">
+							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 bg-theme-danger-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
+								<div className="flex items-center gap-1">
+									<div className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-400 flex items-center space-x-2">
+										<Icon name="CircleCross" size="md" className="h-4" />
+										<p className="font-semibold text-sm leading-[17px]">{t("COMMON.ERROR")}</p>
+									</div>
+									<Divider type="vertical"/>
+									<p className="text-sm leading-[17px] font-normal">
 										{verificationError}
 									</p>
+								</div>
+								<div className="mt-4 flex justify-end items-center gap-1">
+									<Button
+										variant="secondary-icon"
+										onClick={handleCancelVerification}
+										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+									>
+										<span>{t("COMMON.CANCEL")}</span>
+									</Button>
+
+									<Divider type="vertical"/>
+
+									<Button
+										variant="secondary-icon"
+										onClick={handleVerifyAddress}
+										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+									>
+										<span>{t("COMMON.TRY_AGAIN")}</span>
+									</Button>
 								</div>
 							</div>
 						)}
 
 						{isVerified && (
-							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-success-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
-								<div className="flex items-center gap-2">
-									<Icon name="CircleCheckMarkFilled" className="text-theme-success-600" size="lg" />
-									<p className="text-sm leading-5 font-semibold">
+							<div className="dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 text-theme-secondary-900 bg-theme-success-100 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
+								<div className="flex items-center gap-2 text-theme-success-700">
+									<Icon name="CheckmarkDouble" size="md" className="h-4" />
+									<p className="text-xs leading-[15px] font-semibold">
 										{t("COMMON.LEDGER_MIGRATION.VERIFICATION_SUCCESS_MESSAGE")}
 									</p>
 								</div>
@@ -165,7 +193,7 @@ export const LedgerTransactionOverview = ({
 									<Button
 										variant="secondary-icon"
 										onClick={handleVerifyAddress}
-										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+										className="-ml-2 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
 									>
 										<span>{t("COMMON.VERIFY_ADDRESS")}</span>
 									</Button>
