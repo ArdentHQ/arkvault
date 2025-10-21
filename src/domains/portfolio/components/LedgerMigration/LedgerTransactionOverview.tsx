@@ -86,11 +86,11 @@ export const LedgerTransactionOverview = ({
 				<DetailWrapper
 					label={t("TRANSACTION.ADDRESSING")}
 					className={cn({
-						"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400":
+						"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400 -mx-1 mt-3 border sm:mx-0 sm:mt-2":
 							verificationError,
-						"border-theme-success-300 dark:border-theme-success-500 dim:border-theme-success-500":
+						"border-theme-success-300 dark:border-theme-success-500 dim:border-theme-success-500 -mx-1 mt-3 border sm:mx-0 sm:mt-2":
 							isVerified,
-						"border-theme-warning-300 dark:border-theme-warning-300 dim:border-theme-warning-300":
+						"border-theme-warning-300 dark:border-theme-warning-300 dim:border-theme-warning-300 -mx-1 mt-3 border sm:mx-0 sm:mt-2":
 							isVerifying && !isVerified && verificationError === undefined,
 					})}
 				>
@@ -121,7 +121,7 @@ export const LedgerTransactionOverview = ({
 						</div>
 
 						{isVerifying && (
-							<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-6 -mb-5 rounded-b-xl px-6 py-3">
+							<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
 								<div className="border-theme-warning-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-2 flex gap-1 border-b border-dashed pb-2 text-sm leading-[17px] font-semibold">
 									<p>{t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_LABEL")}:</p>
 									<span className="text-theme-warning-900">{verificationCode}</span>
@@ -143,7 +143,7 @@ export const LedgerTransactionOverview = ({
 						)}
 
 						{verificationError && (
-							<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-6 -mb-5 rounded-b-lg px-6 py-3">
+							<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
 								<div className="flex items-center gap-1">
 									<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 flex items-center space-x-2">
 										<Icon name="CircleCross" size="md" className="h-4" />
@@ -175,7 +175,7 @@ export const LedgerTransactionOverview = ({
 						)}
 
 						{isVerified && (
-							<div className="dark:bg-theme-success-900 dim:bg-theme-success-900 bg-theme-success-100 -mx-6 -mb-5 rounded-b-xl px-6 py-3">
+							<div className="dark:bg-theme-success-900 dim:bg-theme-success-900 bg-theme-success-100 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
 								<div className="dark:text-theme-success-500 dim:text-theme-success-500 text-theme-success-700 flex items-center gap-2">
 									<Icon name="CheckmarkDouble" size="md" className="h-4" />
 									<p className="text-xs leading-[15px] font-semibold">

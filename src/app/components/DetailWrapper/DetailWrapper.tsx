@@ -44,10 +44,10 @@ export const DetailWrapper = ({
 		<div
 			className={twMerge(
 				"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border",
-				className,
 				cn({
 					"mt-0 sm:mt-2": !!label,
 				}),
+				className,
 			)}
 		>
 			<div className="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">{children}</div>
