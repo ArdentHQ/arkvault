@@ -21,7 +21,6 @@ const generateVerificationCode = (): string => Math.random().toString(36).slice(
 export const LedgerTransactionOverview = ({
 	transfer,
 	children,
-	onVerifyAddress,
 }: {
 	transfer: DraftTransfer;
 	onVerifyAddress?: () => void;
@@ -66,8 +65,7 @@ export const LedgerTransactionOverview = ({
 			if (!isValid) {
 				setVerificationError(t("COMMON.LEDGER_MIGRATION.VERIFICATION_FAILED_MESSAGE"));
 			}
-		} catch(e) {
-			console.log(e);
+		} catch {
 			setIsVerifying(false);
 			setVerificationError(t("COMMON.LEDGER_MIGRATION.VERIFICATION_FAILED_MESSAGE"));
 		}
@@ -82,6 +80,7 @@ export const LedgerTransactionOverview = ({
 		setVerificationError(undefined);
 	};
 
+	console.log({isVerified, isVerifying, verificationError})
 	return (
 		<div data-testid="LedgerMigration__Review-step">
 			<div className="space-y-4">
@@ -90,7 +89,7 @@ export const LedgerTransactionOverview = ({
 					className={cn({
 						"border-theme-danger-400": verificationError,
 						"border-theme-success-300": isVerified,
-						"border-theme-warning-300": isVerifying && !isVerified && !!verificationError,
+						"border-theme-warning-300": isVerifying && !isVerified && verificationError === undefined,
 					})}
 				>
 					<div className="space-y-3">
