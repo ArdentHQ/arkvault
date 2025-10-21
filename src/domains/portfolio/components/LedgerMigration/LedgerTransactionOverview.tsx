@@ -80,16 +80,19 @@ export const LedgerTransactionOverview = ({
 		setVerificationError(undefined);
 	};
 
-	console.log({isVerified, isVerifying, verificationError})
+	console.log({ isVerified, isVerifying, verificationError });
 	return (
 		<div data-testid="LedgerMigration__Review-step">
 			<div className="space-y-4">
 				<DetailWrapper
 					label={t("TRANSACTION.ADDRESSING")}
 					className={cn({
-						"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400": verificationError,
-						"border-theme-success-300 dark:border-theme-success-500 dim:border-theme-success-500": isVerified,
-						"border-theme-warning-300 dark:border-theme-warning-300 dim:border-theme-warning-300": isVerifying && !isVerified && verificationError === undefined,
+						"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400":
+							verificationError,
+						"border-theme-success-300 dark:border-theme-success-500 dim:border-theme-success-500":
+							isVerified,
+						"border-theme-warning-300 dark:border-theme-warning-300 dim:border-theme-warning-300":
+							isVerifying && !isVerified && verificationError === undefined,
 					})}
 				>
 					<div className="space-y-3">
@@ -119,7 +122,7 @@ export const LedgerTransactionOverview = ({
 						</div>
 
 						{isVerifying && (
-							<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-6 -mb-5 px-6 py-3 rounded-b-xl">
+							<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-6 -mb-5 rounded-b-xl px-6 py-3">
 								<div className="border-theme-warning-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-2 flex gap-1 border-b border-dashed pb-2 text-sm leading-[17px] font-semibold">
 									<p>{t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_LABEL")}:</p>
 									<span className="text-theme-warning-900">{verificationCode}</span>
@@ -145,14 +148,12 @@ export const LedgerTransactionOverview = ({
 								<div className="flex items-center gap-1">
 									<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 flex items-center space-x-2">
 										<Icon name="CircleCross" size="md" className="h-4" />
-										<p className="font-semibold text-sm leading-[17px]">{t("COMMON.ERROR")}</p>
+										<p className="text-sm leading-[17px] font-semibold">{t("COMMON.ERROR")}</p>
 									</div>
-									<Divider type="vertical"/>
-									<p className="text-sm leading-[17px] font-normal">
-										{verificationError}
-									</p>
+									<Divider type="vertical" />
+									<p className="text-sm leading-[17px] font-normal">{verificationError}</p>
 								</div>
-								<div className="mt-4 flex justify-end items-center gap-1">
+								<div className="mt-4 flex items-center justify-end gap-1">
 									<Button
 										variant="secondary-icon"
 										onClick={handleCancelVerification}
@@ -161,7 +162,7 @@ export const LedgerTransactionOverview = ({
 										<span>{t("COMMON.CANCEL")}</span>
 									</Button>
 
-									<Divider type="vertical"/>
+									<Divider type="vertical" />
 
 									<Button
 										variant="secondary-icon"
@@ -175,8 +176,8 @@ export const LedgerTransactionOverview = ({
 						)}
 
 						{isVerified && (
-							<div className="dark:bg-theme-success-900 dim:bg-theme-success-900 bg-theme-success-100 -mx-6 -mb-5 px-6 py-3 rounded-b-xl">
-								<div className="flex items-center gap-2 dark:text-theme-success-500 dim:text-theme-success-500 text-theme-success-700">
+							<div className="dark:bg-theme-success-900 dim:bg-theme-success-900 bg-theme-success-100 -mx-6 -mb-5 rounded-b-xl px-6 py-3">
+								<div className="dark:text-theme-success-500 dim:text-theme-success-500 text-theme-success-700 flex items-center gap-2">
 									<Icon name="CheckmarkDouble" size="md" className="h-4" />
 									<p className="text-xs leading-[15px] font-semibold">
 										{t("COMMON.LEDGER_MIGRATION.VERIFICATION_SUCCESS_MESSAGE")}
@@ -192,7 +193,7 @@ export const LedgerTransactionOverview = ({
 									<Button
 										variant="secondary-icon"
 										onClick={handleVerifyAddress}
-										className="-ml-2 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent -ml-2 w-auto px-2 py-[3px] whitespace-nowrap"
 									>
 										<span>{t("COMMON.VERIFY_ADDRESS")}</span>
 									</Button>
