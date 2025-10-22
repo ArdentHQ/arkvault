@@ -6,7 +6,7 @@ import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import cn from "classnames";
 import { Divider } from "@/app/components/Divider";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
-import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
+import { TransactionTable } from "./TransactionTable";
 
 export const Transactions = ({ migrator }: { migrator: LedgerMigrator }) => {
 	const { t } = useTranslation();
