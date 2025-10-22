@@ -19,54 +19,50 @@ export const TransactionRowMobile = ({ transaction }: { transaction: DraftTransf
 	const { t } = useTranslation();
 
 	return (
-		<TableRow className="group border-b-0!">
-			<td>
-				<MobileCard className={cn("mb-3", labelBorderClasses({
-					isCompleted: transaction.isCompleted(),
-					isPending: transaction.isPending(),
-				}))}>
-					<div className={cn("flex h-10 w-full items-center justify-between px-4", labelBackgroundClasses({
-						isCompleted: transaction.isCompleted(),
-						isPending: transaction.isPending(),
-					}))}>
-						<div className="max-w-32">
-							<TruncateMiddle
-								className="font-semibold text-sm"
-								text={transaction.sender().address()}
-								maxChars={14}
-							/>
-						</div>
-						<div className="flex flex-row items-center">
-							<span className="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block">
-								<TransactionConfirmationStatusLabel
-									isCompleted={transaction.isCompleted()}
-									isPending={transaction.isPending()}
-									className="border-transparent"
-								/>
-							</span>
-						</div>
-					</div>
+		<MobileCard className={cn("mb-3", labelBorderClasses({
+			isCompleted: transaction.isCompleted(),
+			isPending: transaction.isPending(),
+		}))}>
+			<div className={cn("flex h-10 w-full items-center justify-between px-4", labelBackgroundClasses({
+				isCompleted: transaction.isCompleted(),
+				isPending: transaction.isPending(),
+			}))}>
+				<div className="max-w-32">
+					<TruncateMiddle
+						className="font-semibold text-sm"
+						text={transaction.sender().address()}
+						maxChars={14}
+					/>
+				</div>
+				<div className="flex flex-row items-center">
+					<span className="text-theme-secondary-700 dim:text-theme-dim-200 text-sm font-semibold sm:block">
+						<TransactionConfirmationStatusLabel
+							isCompleted={transaction.isCompleted()}
+							isPending={transaction.isPending()}
+							className="border-transparent"
+						/>
+					</span>
+				</div>
+			</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
-						<MobileSection
-							title={t("COMMON.NEW")}
-							className="w-full">
-							<TruncateMiddle
-								className="font-semibold text-sm"
-								text={transaction.recipient()?.address()!}
-								maxChars={14} />
-						</MobileSection>
+			<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
+				<MobileSection
+					title={t("COMMON.NEW")}
+					className="w-full">
+					<TruncateMiddle
+						className="font-semibold text-sm"
+						text={transaction.recipient()?.address()!}
+						maxChars={14} />
+				</MobileSection>
 
-						<MobileSection
-							title={t("COMMON.TX_ID")}
-							className="w-full">
-							<Link to={transaction.signedTransaction()?.explorerLink()!} isExternal>
-								{t("COMMON.VIEW")}
-							</Link>
-						</MobileSection>
-					</div>
-				</MobileCard>
-			</td>
-		</TableRow>
+				<MobileSection
+					title={t("COMMON.TX_ID")}
+					className="w-full">
+					<Link to={transaction.signedTransaction()?.explorerLink()!} isExternal>
+						{t("COMMON.VIEW")}
+					</Link>
+				</MobileSection>
+			</div>
+		</MobileCard>
 	);
 };

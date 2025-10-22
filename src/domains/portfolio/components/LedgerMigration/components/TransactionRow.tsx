@@ -11,12 +11,6 @@ import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 
 export const TransactionRow = ({ transaction, }: { transaction: DraftTransfer }): ReactElement => {
 	const { t } = useTranslation();
-	const { isXs, isSm } = useBreakpoint();
-
-	if (isXs || isSm) {
-		return <TransactionRowMobile transaction={transaction} />;
-	}
-
 	return (
 		<TableRow>
 			<TableCell variant="start" >
@@ -27,7 +21,7 @@ export const TransactionRow = ({ transaction, }: { transaction: DraftTransfer })
 				/>
 			</TableCell>
 
-			<TableCell variant="start">
+			<TableCell>
 				<TruncateMiddle
 					className="font-semibold text-sm"
 					text={transaction.recipient()?.address()!}
@@ -42,7 +36,7 @@ export const TransactionRow = ({ transaction, }: { transaction: DraftTransfer })
 				/>
 			</TableCell>
 			<TableCell variant="end">
-				<div className="flext justify-end w-full">
+				<div className="flext justify-end w-full text-right whitespace-nowrap">
 					<Link to={transaction.signedTransaction()?.explorerLink()!} isExternal>
 						{t("COMMON.VIEW")}
 					</Link>

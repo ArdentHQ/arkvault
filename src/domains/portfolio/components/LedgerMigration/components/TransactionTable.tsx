@@ -16,12 +16,13 @@ export const TransactionTable = ({ transactions }: { transactions: DraftTransfer
 	const columns: Column<DataTransfer>[] = [
 		{
 			Header: t("COMMON.OLD"),
-			cellWidth: "w-36 xl:w-48",
+			cellWidth: "w-36 xl:w-40",
 			headerClassName: "no-border whitespace-nowrap",
 			noRoundedBorders: true,
 		},
 		{
 			Header: t("COMMON.NEW"),
+			cellWidth: "w-36 xl:w-40",
 			headerClassName: "no-border",
 		},
 		{
@@ -31,7 +32,8 @@ export const TransactionTable = ({ transactions }: { transactions: DraftTransfer
 		},
 		{
 			Header: t("COMMON.TX_ID"),
-			cellWidth: "w-36 xl:w-48",
+			className: "justify-end",
+			disableSortBy: true,
 			headerClassName: "no-border whitespace-nowrap",
 			noRoundedBorders: true,
 		},
