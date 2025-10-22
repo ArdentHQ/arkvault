@@ -8,7 +8,6 @@ import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 
-
 export const TransactionTable = ({ transactions }: { transactions: DraftTransfer[] }): ReactElement => {
 	const { isMdAndAbove } = useBreakpoint();
 	const { t } = useTranslation();
@@ -41,12 +40,8 @@ export const TransactionTable = ({ transactions }: { transactions: DraftTransfer
 
 	return (
 		<div data-testid="TransactionTable" className="relative">
-			<Table
-				columns={columns}
-				data={transactions}
-				className={cn({ "with-x-padding": isMdAndAbove })}
-			>
-				{(transaction: DraftTransfer) => (<TransactionRow transaction={transaction} />)}
+			<Table columns={columns} data={transactions} className={cn({ "with-x-padding": isMdAndAbove })}>
+				{(transaction: DraftTransfer) => <TransactionRow transaction={transaction} />}
 			</Table>
 		</div>
 	);

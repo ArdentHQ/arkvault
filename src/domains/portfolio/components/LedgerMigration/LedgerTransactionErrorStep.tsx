@@ -16,15 +16,13 @@ export const LedgerTransactionErrorStep = ({
 	transfer: DraftTransfer;
 	onTryAgain?: () => void;
 	onClose?: () => void;
-	migrator,
+	migrator;
 }) => {
 	const { t } = useTranslation();
 
 	return (
 		<div className="space-y-4">
-			<Error title={t("COMMON.ALERT.FAILED")}>
-				{t("COMMON.LEDGER_MIGRATION.LEDGER_REJECTED_TRANSACTION")}
-			</Error>
+			<Error title={t("COMMON.ALERT.FAILED")}>{t("COMMON.LEDGER_MIGRATION.LEDGER_REJECTED_TRANSACTION")}</Error>
 
 			<LedgerTransactionOverview transfer={transfer} migrator={migrator}>
 				<SidepanelFooter className="fixed right-0 bottom-0">

@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Divider } from "@/app/components/Divider";
-import { Spinner } from "@/app/components/Spinner";
 import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
@@ -37,9 +35,7 @@ export const LedgerTransactionPendingConfirmation = ({
 
 	return (
 		<div className="space-y-4">
-			<Warning>
-				{t("TRANSACTION.PENDING.STATUS_TEXT")}
-			</Warning>
+			<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>
 
 			<LedgerMigrationOverview transfer={transfer} profile={profile}>
 				<SidepanelFooter className="fixed right-0 bottom-0">

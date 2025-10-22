@@ -26,9 +26,7 @@ export const LedgerTransactionApproveStep = ({
 
 	return (
 		<div className="space-y-4">
-			<Warning>
-				{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}
-			</Warning>
+			<Warning>{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}</Warning>
 
 			<LedgerTransactionOverview transfer={transfer} migrator={migrator} />
 		</div>

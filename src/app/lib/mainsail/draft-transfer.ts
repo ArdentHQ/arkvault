@@ -173,12 +173,12 @@ export class DraftTransfer {
 	}
 
 	public isCompleted(): boolean {
-		return false
+		return false;
 	}
 
 	// TODO: implement
 	public isPending(): boolean {
-		return false
+		return false;
 	}
 
 	public reset(): void {

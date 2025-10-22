@@ -1,29 +1,23 @@
 import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
-import { TransactionRowMobile } from "./TransactionRowMobile";
 import { TableCell, TableRow } from "@/app/components/Table";
-import { useBreakpoint } from "@/app/hooks";
 import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { TransactionConfirmationStatusLabel } from "./TransactionConfirmationStatusLabel";
 import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 
-export const TransactionRow = ({ transaction, }: { transaction: DraftTransfer }): ReactElement => {
+export const TransactionRow = ({ transaction }: { transaction: DraftTransfer }): ReactElement => {
 	const { t } = useTranslation();
 	return (
 		<TableRow>
-			<TableCell variant="start" >
-				<TruncateMiddle
-					className="font-semibold text-sm"
-					text={transaction.sender().address()}
-					maxChars={14}
-				/>
+			<TableCell variant="start">
+				<TruncateMiddle className="text-sm font-semibold" text={transaction.sender().address()} maxChars={14} />
 			</TableCell>
 
 			<TableCell>
 				<TruncateMiddle
-					className="font-semibold text-sm"
+					className="text-sm font-semibold"
 					text={transaction.recipient()?.address()!}
 					maxChars={14}
 				/>
@@ -36,7 +30,7 @@ export const TransactionRow = ({ transaction, }: { transaction: DraftTransfer })
 				/>
 			</TableCell>
 			<TableCell variant="end">
-				<div className="flext justify-end w-full text-right whitespace-nowrap">
+				<div className="flext w-full justify-end text-right whitespace-nowrap">
 					<Link to={transaction.signedTransaction()?.explorerLink()!} isExternal>
 						{t("COMMON.VIEW")}
 					</Link>
@@ -44,4 +38,4 @@ export const TransactionRow = ({ transaction, }: { transaction: DraftTransfer })
 			</TableCell>
 		</TableRow>
 	);
-}
+};

@@ -83,6 +83,6 @@ export class LedgerMigrator {
 
 	public reset(): void {
 		this.#transactions = [];
-		this.#generatedAddresses.flush()
+		this.#generatedAddresses.flush();
 	}
 }
