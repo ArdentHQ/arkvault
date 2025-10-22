@@ -96,6 +96,7 @@ export const LedgerMigrationSidepanel = ({
 						<>
 							<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
 								<OverviewStep
+									migrator={migrator}
 									transfer={transfer}
 									onContinue={() => {
 										setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
@@ -106,6 +107,7 @@ export const LedgerMigrationSidepanel = ({
 
 							<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
 								<LedgerTransactionApproveStep
+									migrator={migrator}
 									transfer={transfer}
 									onSuccess={() => {
 										setActiveTab(MigrateLedgerStep.PendingConfirmationStep);
@@ -143,6 +145,7 @@ export const LedgerMigrationSidepanel = ({
 
 							<TabPanel tabId={MigrateLedgerStep.ErrorStep}>
 								<LedgerTransactionErrorStep
+									migrator={migrator}
 									transfer={transfer}
 									onClose={() => {
 										onOpenChange(false);
