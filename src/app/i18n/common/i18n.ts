@@ -36,6 +36,7 @@ export const translations = {
 	AUTHOR: "Author",
 	AVAILABLE: "Available",
 	AVATAR: "Avatar",
+	AWAITING: "Awaiting",
 	AWAITING_SIGNATURE: "Awaiting Signature",
 	BACK: "Back",
 	BACKGROUND: "Background",
@@ -349,6 +350,7 @@ export const translations = {
 	PASSWORD: "Password",
 	PASSWORDS: "Passwords",
 	PEER: "Peer",
+	PENDING: "Pending",
 	PENDING_ACTION_IN_PROGRESS: "Pending Action in Progress",
 	PENDING_ACTION_IN_PROGRESS_DESCRIPTION:
 		"You already have a pending action: [{{action}}]. Starting a new one will discard it. Do you want to continue?",

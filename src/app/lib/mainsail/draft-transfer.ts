@@ -172,6 +172,15 @@ export class DraftTransfer {
 		return this.#signedTransaction;
 	}
 
+	public isCompleted(): boolean {
+		return false
+	}
+
+	// TODO: implement
+	public isPending(): boolean {
+		return false
+	}
+
 	public reset(): void {
 		this.#recipientWallets = [];
 		this.#senderWallet = undefined;
