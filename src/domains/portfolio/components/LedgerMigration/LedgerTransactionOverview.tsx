@@ -15,16 +15,20 @@ import { Button } from "@/app/components/Button";
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { MessageService } from "@/app/lib/mainsail/message.service";
 import { Divider } from "@/app/components/Divider";
+import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
+import { Transactions } from "./components/Transactions";
 
 const generateVerificationCode = (): string => Math.random().toString(36).slice(2, 8).toUpperCase();
 
 export const LedgerTransactionOverview = ({
+	migrator,
 	transfer,
 	children,
 }: {
 	transfer: DraftTransfer;
 	onVerifyAddress?: () => void;
 	children?: React.ReactElement;
+	migrator: LedgerMigrator;
 }) => {
 	const { t } = useTranslation();
 	const [isVerifying, setIsVerifying] = useState(false);
@@ -83,6 +87,9 @@ export const LedgerTransactionOverview = ({
 	return (
 		<div data-testid="LedgerMigration__Review-step">
 			<div className="space-y-4">
+				{migrator.transactions().length > 1 && (
+					<Transactions migrator={migrator} />
+				)}
 				<DetailWrapper
 					label={t("TRANSACTION.ADDRESSING")}
 					className={cn({

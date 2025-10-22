@@ -6,21 +6,24 @@ import { Button } from "@/app/components/Button";
 import { Checkbox } from "@/app/components/Checkbox";
 import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
+import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 
 export const OverviewStep = ({
 	transfer,
 	onContinue,
 	onVerifyAddress,
+	migrator,
 }: {
 	transfer: DraftTransfer;
 	onVerifyAddress?: () => void;
 	onContinue?: () => void;
+	migrator: LedgerMigrator;
 }) => {
 	const { t } = useTranslation();
 	const [acceptResponsibility, setAcceptResponsibility] = useState(false);
 
 	return (
-		<LedgerTransactionOverview transfer={transfer} onVerifyAddress={onVerifyAddress}>
+		<LedgerTransactionOverview transfer={transfer} onVerifyAddress={onVerifyAddress} migrator={migrator}>
 			<SidepanelFooter className="fixed right-0 bottom-0">
 				<div className="flex items-center space-x-5">
 					<label className="flex w-full cursor-pointer space-x-3">

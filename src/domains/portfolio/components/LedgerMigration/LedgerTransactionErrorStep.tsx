@@ -11,10 +11,12 @@ export const LedgerTransactionErrorStep = ({
 	onTryAgain,
 	onClose,
 	transfer,
+	migrator,
 }: {
 	transfer: DraftTransfer;
 	onTryAgain?: () => void;
 	onClose?: () => void;
+	migrator,
 }) => {
 	const { t } = useTranslation();
 
@@ -24,7 +26,7 @@ export const LedgerTransactionErrorStep = ({
 				{t("COMMON.LEDGER_MIGRATION.LEDGER_REJECTED_TRANSACTION")}
 			</Error>
 
-			<LedgerTransactionOverview transfer={transfer}>
+			<LedgerTransactionOverview transfer={transfer} migrator={migrator}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<div className="flex items-center justify-end space-x-5">
 						<Button variant="secondary" data-testid="LedgerScanStep__continue-button" onClick={onClose}>

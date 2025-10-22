@@ -5,15 +5,18 @@ import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { Warning } from "@/app/components/AlertBanner";
+import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 
 export const LedgerTransactionApproveStep = ({
 	onSuccess,
 	onError,
 	transfer,
+	migrator,
 }: {
 	transfer: DraftTransfer;
 	onSuccess?: (transaction: ExtendedSignedTransactionData) => void;
 	onError?: (error: string) => void;
+	migrator: LedgerMigrator;
 }) => {
 	const { t } = useTranslation();
 
@@ -27,7 +30,7 @@ export const LedgerTransactionApproveStep = ({
 				{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}
 			</Warning>
 
-			<LedgerTransactionOverview transfer={transfer} />
+			<LedgerTransactionOverview transfer={transfer} migrator={migrator} />
 		</div>
 	);
 };
