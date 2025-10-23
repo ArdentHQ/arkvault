@@ -18,10 +18,10 @@ export const TransactionRowMobile = ({ transaction }: { transaction: DraftTransf
 				cn({
 					"border-theme-warning-200 dim:border-theme-warning-700 dark:border-theme-warning-700 border":
 						transaction.isPending(),
-					"dim:border-theme-success-700 border-theme-success-300 dark:border-theme-success-700 border":
-						transaction.isCompleted(),
 					"dim:border-theme-dim-700 border-theme-secondary-300 dark:border-theme-dark-700 border":
 						!transaction.isCompleted() && !transaction.isPending(),
+					"dim:border-theme-success-700 border-theme-success-300 dark:border-theme-success-700 border":
+						transaction.isCompleted(),
 				}),
 			)}
 		>
