@@ -21,7 +21,7 @@ export const Error = ({ children, title }: { children?: ReactElement | string; t
 		<div className="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6">
 			<div className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-400 flex items-center space-x-2">
 				<Icon name="CircleCross" size="lg" className="h-5" />
-				{title}
+				<span>{title}</span>
 			</div>
 		</div>
 

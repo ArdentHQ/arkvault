@@ -8,6 +8,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { LedgerMigrationOverview } from "./LedgerMigrationOverview";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
+import { MigratedAddressesTable } from "./components/MigratedAddressesTable";
 
 export const LedgerTransactionSuccessStep = ({
 	profile,
@@ -16,7 +17,7 @@ export const LedgerTransactionSuccessStep = ({
 	onGoToNextTransaction,
 	migrator,
 }: {
-	migrator: LedgerMigrator,
+	migrator: LedgerMigrator;
 	profile: Contracts.IProfile;
 	transfer: DraftTransfer;
 	onGoToPortfolio?: () => void;
@@ -25,26 +26,26 @@ export const LedgerTransactionSuccessStep = ({
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		if (migrator.isCompleted()) {
-			return
+		if (migrator.isMigrationComplete()) {
+			return;
 		}
 
+		// Automatically navigate to the next transaction
+		// if in the middle of a multiple migration.
 		if (migrator.transactions().length > 1) {
 			setTimeout(() => {
-				onGoToNextTransaction?.()
-			}, 3000)
+				onGoToNextTransaction?.();
+			}, 2000);
 		}
-	}, [migrator])
+	}, [migrator]);
 
-
-	if (migrator.isCompleted()) {
+	if (migrator.isMigrationComplete() && migrator.transactions().length > 1) {
 		return (
 			<div className="space-y-4">
-				<div>Completed</div>
+				<MigratedAddressesTable transactions={migrator.transactions()} profile={profile} />
 			</div>
-		)
+		);
 	}
-
 
 	if (migrator.transactions().length > 1) {
 		return (

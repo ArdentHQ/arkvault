@@ -25,13 +25,13 @@ export const LedgerMigrationSidepanel = ({
 	onOpenChange: (open: boolean) => void;
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
-	const { env } = useEnvironmentContext()
+	const { env, persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
 	const migrator = useRef(new LedgerMigrator({ env, profile })).current;
-	const transfer = useRef<MigrationTransaction | undefined>(undefined)
+	const transfer = useRef<MigrationTransaction | undefined>(undefined);
 
 	useEffect(() => {
 		// Reset state on close.
@@ -89,8 +89,8 @@ export const LedgerMigrationSidepanel = ({
 							profile={profile}
 							network={profile.activeNetwork()}
 							onContinue={() => {
-								transfer.current = migrator.nextTransaction()
-								transfer.current?.setIsPending(true)
+								transfer.current = migrator.nextTransaction();
+								transfer.current?.setIsPending(true);
 								setActiveTab(MigrateLedgerStep.OverviewStep);
 							}}
 						/>
@@ -131,7 +131,10 @@ export const LedgerMigrationSidepanel = ({
 										onOpenChange(false);
 										setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 									}}
-									onConfirmed={() => {
+									onConfirmed={async () => {
+										await migrator.importMigratedWallets();
+										await persist();
+
 										setActiveTab(MigrateLedgerStep.SuccessStep);
 									}}
 								/>
@@ -147,8 +150,8 @@ export const LedgerMigrationSidepanel = ({
 										setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 									}}
 									onGoToNextTransaction={() => {
-										transfer.current = migrator.nextTransaction()
-										transfer.current?.setIsPending(true)
+										transfer.current = migrator.nextTransaction();
+										transfer.current?.setIsPending(true);
 										setActiveTab(MigrateLedgerStep.OverviewStep);
 									}}
 								/>

@@ -5,36 +5,35 @@ import { DraftTransfer } from "./draft-transfer";
 import { DataRepository } from "@/app/lib/profiles/data.repository";
 import { sortBy } from "@/app/lib/helpers";
 
-
 export class MigrationTransaction extends DraftTransfer {
 	#isPending: boolean = false;
 	#isCompleted: boolean = false;
 
 	public override isPending(): boolean {
 		if (this.isCompleted()) {
-			return false
+			return false;
 		}
-		return this.#isPending
+		return this.#isPending;
 	}
 
 	public isPendingConfirmation(): boolean {
 		if (this.isCompleted()) {
-			return false
+			return false;
 		}
 
-		return !!this.signedTransaction() && !this.signedTransaction()?.isConfirmed()
+		return !!this.signedTransaction() && !this.signedTransaction()?.isConfirmed();
 	}
 
 	public override isCompleted() {
-		return this.#isCompleted
+		return this.#isCompleted;
 	}
 
 	public setIsPending(isPending: boolean) {
-		this.#isPending = isPending
+		this.#isPending = isPending;
 	}
 
 	public setIsCompleted(isCompleted: boolean) {
-		this.#isCompleted = isCompleted
+		this.#isCompleted = isCompleted;
 	}
 }
 
@@ -45,12 +44,12 @@ export class LedgerMigrator {
 	#currentTransaction: MigrationTransaction | undefined;
 	#generatedAddresses: DataRepository;
 
-	constructor({ profile, env }: { profile: Contracts.IProfile, env }) {
+	constructor({ profile, env }: { profile: Contracts.IProfile; env }) {
 		this.#env = env;
 		this.#profile = profile;
 		this.#transactions = [];
 		this.#generatedAddresses = new DataRepository();
-		this.#currentTransaction = undefined
+		this.#currentTransaction = undefined;
 	}
 
 	public migratePath(path: string, slip44: number, newIndex: number): string {
@@ -87,11 +86,15 @@ export class LedgerMigrator {
 		return wallet;
 	}
 
-	#sortAddressesByIndexAsc(addresses: { address: string, path: string }[]) {
+	#sortAddressesByIndexAsc(addresses: { address: string; path: string }[]) {
 		return sortBy(addresses, ({ path }) => BIP44.parse(path).addressIndex);
 	}
 
-	public async createTransaction(senderAddress: string, senderPath: string, recipientPath: string): Promise<MigrationTransaction> {
+	public async createTransaction(
+		senderAddress: string,
+		senderPath: string,
+		recipientPath: string,
+	): Promise<MigrationTransaction> {
 		const senderWallet = await this.findOrCreate(senderAddress, senderPath);
 		const cachedRecipient = this.#generatedAddresses.get<string | undefined>(recipientPath);
 
@@ -101,7 +104,7 @@ export class LedgerMigrator {
 
 		this.#generatedAddresses.set(recipientPath, recipientWallet.address());
 
-		const transaction = new MigrationTransaction({ env: this.#env, profile: this.#profile })
+		const transaction = new MigrationTransaction({ env: this.#env, profile: this.#profile });
 
 		transaction.setSender(senderWallet);
 		transaction.addRecipientWallet(recipientWallet);
@@ -110,29 +113,32 @@ export class LedgerMigrator {
 		return transaction;
 	}
 
-	public async createTransactions(addresses: { address: string, path: string }[], migrateToOne?: boolean): Promise<void> {
-		const migratingAddresses = this.#sortAddressesByIndexAsc(addresses)
+	public async createTransactions(
+		addresses: { address: string; path: string }[],
+		migrateToOne?: boolean,
+	): Promise<void> {
+		const migratingAddresses = this.#sortAddressesByIndexAsc(addresses);
 
 		if (migratingAddresses.length === 0) {
-			return
+			return;
 		}
 
 		// Start with the min path of the given list,
 		// and incrementing by 1 for the migrated addresses not to have gaps.
-		let currentIndex = BIP44.parse(migratingAddresses[0].path).addressIndex
+		let currentIndex = BIP44.parse(migratingAddresses[0].path).addressIndex;
 
 		for (const { address, path } of migratingAddresses) {
 			const newPath = this.migratePath(path, this.#profile.ledger().slip44Eth(), currentIndex);
 
-			const transaction = await this.createTransaction(address, path, newPath)
-			this.addTransaction(transaction)
+			const transaction = await this.createTransaction(address, path, newPath);
+			this.addTransaction(transaction);
 
 			// Keep the same path as the recipient wallet.
 			if (migrateToOne) {
-				continue
+				continue;
 			}
 
-			currentIndex = currentIndex + 1
+			currentIndex = currentIndex + 1;
 		}
 	}
 
@@ -145,32 +151,49 @@ export class LedgerMigrator {
 	}
 
 	public currentTransaction(): MigrationTransaction | undefined {
-		return this.#currentTransaction
+		return this.#currentTransaction;
 	}
 
 	public currentTransactionIndex(): number {
 		return this.transactions().findIndex(
-			(transaction) => this.#currentTransaction?.sender().address() === transaction.sender().address()
-		)
-	}
-
-	public hasNextTransaction(): boolean {
-		const currentIndex = this.currentTransactionIndex()
-		return !!this.transactions().at(currentIndex + 1)
+			(transaction) => this.#currentTransaction?.sender().address() === transaction.sender().address(),
+		);
 	}
 
 	public nextTransaction(): MigrationTransaction | undefined {
 		if (!this.currentTransaction) {
-			this.#currentTransaction = this.transactions().at(0)
+			this.#currentTransaction = this.transactions().at(0);
 		}
 
-		const currentIndex = this.currentTransactionIndex()
-		this.#currentTransaction = this.transactions().at(currentIndex + 1)
-		return this.#currentTransaction
+		const currentIndex = this.currentTransactionIndex();
+		this.#currentTransaction = this.transactions().at(currentIndex + 1);
+		return this.#currentTransaction;
 	}
 
-	public hasCurrentTransaction(): this is { currentTransaction(): MigrationTransaction } {
-		return this.#currentTransaction as MigrationTransaction !== undefined;
+	public isMigrationComplete(): boolean {
+		return this.transactions().every((transaction) => transaction.isCompleted());
+	}
+
+	public async importMigratedWallets(): Promise<void> {
+		for (const transaction of this.transactions().filter((transaction) => transaction.isCompleted())) {
+			const wallet = transaction.recipient();
+
+			if (!wallet) {
+				continue;
+			}
+
+			if (
+				this.#profile
+					.wallets()
+					.values()
+					.some((profileWallet) => wallet.address() === profileWallet.address())
+			) {
+				continue;
+			}
+
+			wallet.mutator().alias(wallet.generateAlias());
+			this.#profile.wallets().push(wallet);
+		}
 	}
 
 	public flush(): void {
@@ -180,9 +203,5 @@ export class LedgerMigrator {
 
 	public flushTransactions(): void {
 		this.#transactions = [];
-	}
-
-	public isCompleted(): boolean {
-		return this.transactions().every(transaction => transaction.isCompleted())
 	}
 }

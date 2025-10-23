@@ -30,12 +30,17 @@ export const OverviewStep = ({
 	const { connect, isConnected } = useLedgerContext();
 	useEffect(() => {
 		if (!isConnected) {
-			connect(profile)
+			connect(profile);
 		}
-	}, [profile, connect, isConnected])
+	}, [profile, connect, isConnected]);
 
 	return (
-		<LedgerTransactionOverview transfer={transfer} onVerifyAddress={onVerifyAddress} migrator={migrator} showStatusBanner={false}>
+		<LedgerTransactionOverview
+			transfer={transfer}
+			onVerifyAddress={onVerifyAddress}
+			migrator={migrator}
+			showStatusBanner={false}
+		>
 			<SidepanelFooter className="fixed right-0 bottom-0">
 				<div className="flex items-center space-x-5">
 					<label className="flex w-full cursor-pointer space-x-3">

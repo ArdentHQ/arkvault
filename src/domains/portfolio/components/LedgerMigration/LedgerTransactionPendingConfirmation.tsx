@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
@@ -41,26 +40,23 @@ export const LedgerTransactionPendingConfirmation = ({
 
 	useEffect(() => {
 		setTimeout(() => {
-			transfer.setIsPending(false)
-			transfer.setIsCompleted(true)
+			transfer.setIsPending(false);
+			transfer.setIsCompleted(true);
 			onConfirmed?.();
-		}, 4000)
+		}, 4000);
 	}, [isConfirmed, transfer]);
 
 	if (migrator.transactions().length > 1) {
 		return (
 			<div className="space-y-4">
-				<LedgerTransactionOverview transfer={transfer} migrator={migrator} showStatusBanner/>
+				<LedgerTransactionOverview transfer={transfer} migrator={migrator} showStatusBanner />
 			</div>
 		);
 	}
 
 	return (
 		<div className="space-y-4">
-			{migrator.transactions().length === 1} {
-				<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>
-			}
-
+			{migrator.transactions().length === 1} {<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>}
 			<LedgerMigrationOverview transfer={transfer} profile={profile}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons className="flex items-center justify-end">

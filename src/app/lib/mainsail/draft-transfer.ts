@@ -173,7 +173,7 @@ export class DraftTransfer {
 	}
 
 	public isCompleted(): boolean {
-		return !!this.#signedTransaction && !this.#signedTransaction.isConfirmed();;
+		return !!this.#signedTransaction && !this.#signedTransaction.isConfirmed();
 	}
 
 	public isPending(): boolean {

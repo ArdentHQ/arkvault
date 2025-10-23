@@ -29,10 +29,12 @@ export const LedgerScanStep = ({
 	isCancelling,
 	onSelect,
 	children,
+	isLoading,
 }: {
 	children: React.ReactElement;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
+	isLoading?: boolean;
 	isCancelling?: boolean;
 	setRetryFn?: (function_?: () => void) => void;
 	onContinue?: (selectedWallets: LedgerData[]) => void;
@@ -131,6 +133,7 @@ export const LedgerScanStep = ({
 						{...ledgerScanner}
 						scanMore={scanMore}
 						pageSize={pageSize + legacyPageSize}
+						isScanning={isScanning || !!isLoading}
 					/>
 				)}
 				{children}

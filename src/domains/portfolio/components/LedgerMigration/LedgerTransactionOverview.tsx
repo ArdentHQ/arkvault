@@ -30,7 +30,7 @@ export const LedgerTransactionOverview = ({
 	onVerifyAddress?: () => void;
 	children?: React.ReactElement;
 	migrator: LedgerMigrator;
-	showStatusBanner?:boolean
+	showStatusBanner?: boolean;
 }) => {
 	const { t } = useTranslation();
 	const [isVerifying, setIsVerifying] = useState(false);
@@ -89,7 +89,9 @@ export const LedgerTransactionOverview = ({
 	return (
 		<div data-testid="LedgerMigration__Review-step">
 			<div className="space-y-4">
-				{migrator.transactions().length > 1 && <Transactions migrator={migrator} showStatusBanner={showStatusBanner}/>}
+				{migrator.transactions().length > 1 && (
+					<Transactions migrator={migrator} showStatusBanner={showStatusBanner} />
+				)}
 				<DetailWrapper
 					label={t("TRANSACTION.ADDRESSING")}
 					className={cn({
