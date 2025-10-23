@@ -24,14 +24,14 @@ export const TransactionConfirmationStatusLabel = ({
 	return <LabelAwaiting />;
 };
 
-export const labelBackgroundClasses = ({ isCompleted, isPending }: { isCompleted?: boolean; isPending?: boolean }) =>
+const labelBackgroundClasses = ({ isCompleted, isPending }: { isCompleted?: boolean; isPending?: boolean }) =>
 	cn({
 		"dim:bg-theme-success-900 bg-theme-success-100 dark:bg-theme-success-900": isCompleted,
 		"dim:bg-transparent bg-theme-secondary-200 dark:bg-transparent ": !isCompleted && !isPending,
 		"dim:bg-transparent bg-theme-warning-50 dark:bg-transparent": isPending,
 	});
 
-export const labelBorderClasses = ({ isCompleted, isPending }: { isCompleted?: boolean; isPending?: boolean }) =>
+const labelBorderClasses = ({ isCompleted, isPending }: { isCompleted?: boolean; isPending?: boolean }) =>
 	cn({
 		"border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700": isPending,
 		"border dim:border-theme-success-900 border-theme-success-100 dark:border-theme-success-900": isCompleted,

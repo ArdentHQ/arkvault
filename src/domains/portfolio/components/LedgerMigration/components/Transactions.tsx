@@ -39,8 +39,8 @@ export const Transactions = ({ migrator }: { migrator: LedgerMigrator }) => {
 
 				{isOpen && (
 					<div className="p-3">
-						{migrator.transactions().map((transaction) => (
-							<TransactionRowMobile transaction={transaction} />
+						{migrator.transactions().map((transaction, index) => (
+							<TransactionRowMobile transaction={transaction} key={index} />
 						))}
 					</div>
 				)}

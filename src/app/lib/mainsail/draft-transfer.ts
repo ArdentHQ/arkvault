@@ -178,7 +178,7 @@ export class DraftTransfer {
 
 	// TODO: implement
 	public isPending(): boolean {
-		return false;
+		return true;
 	}
 
 	public reset(): void {
