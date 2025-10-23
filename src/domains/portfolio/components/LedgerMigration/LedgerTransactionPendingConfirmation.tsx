@@ -8,15 +8,19 @@ import { Button } from "@/app/components/Button";
 import { LedgerMigrationOverview } from "./LedgerMigrationOverview";
 import { Contracts } from "@/app/lib/profiles";
 import { Warning } from "@/app/components/AlertBanner";
+import { LedgerMigrator, MigrationTransaction } from "@/app/lib/mainsail/ledger.migrator";
+import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 
 export const LedgerTransactionPendingConfirmation = ({
+	migrator,
 	transfer,
 	onConfirmed,
 	onGoToPortfolio,
 	profile,
 }: {
+	migrator: LedgerMigrator;
 	profile: Contracts.IProfile;
-	transfer: DraftTransfer;
+	transfer: MigrationTransaction;
 	onConfirmed?: () => void;
 	onGoToPortfolio?: () => void;
 }) => {
@@ -27,15 +31,35 @@ export const LedgerTransactionPendingConfirmation = ({
 		wallet: transfer.sender(),
 	});
 
+	// useEffect(() => {
+	// 	if (isConfirmed) {
+	// 		transfer.setIsPending(false)
+	// 		transfer.setIsCompleted(true)
+	// 		onConfirmed?.();
+	// 	}
+	// }, [isConfirmed, transfer]);
+
 	useEffect(() => {
-		if (isConfirmed) {
+		setTimeout(() => {
+			transfer.setIsPending(false)
+			transfer.setIsCompleted(true)
 			onConfirmed?.();
-		}
-	}, [isConfirmed]);
+		}, 4000)
+	}, [isConfirmed, transfer]);
+
+	if (migrator.transactions().length > 1) {
+		return (
+			<div className="space-y-4">
+				<LedgerTransactionOverview transfer={transfer} migrator={migrator} showStatusBanner/>
+			</div>
+		);
+	}
 
 	return (
 		<div className="space-y-4">
-			<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>
+			{migrator.transactions().length === 1} {
+				<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>
+			}
 
 			<LedgerMigrationOverview transfer={transfer} profile={profile}>
 				<SidepanelFooter className="fixed right-0 bottom-0">

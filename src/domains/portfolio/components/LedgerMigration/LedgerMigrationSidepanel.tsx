@@ -12,8 +12,9 @@ import { OverviewStep } from "./LedgerTransactionOverviewStep";
 import { LedgerTransactionApproveStep } from "./LedgerTransactionApproveStep";
 import { LedgerTransactionErrorStep } from "./LedgerTransactionErrorStep";
 import { LedgerTransactionPendingConfirmation } from "./LedgerTransactionPendingConfirmation";
-import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
+import { LedgerMigrator, MigrationTransaction } from "@/app/lib/mainsail/ledger.migrator";
 import { LedgerTransactionSuccessStep } from "./LedgerTransactionSuccessStep";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const LedgerMigrationSidepanel = ({
 	open,
@@ -24,17 +25,18 @@ export const LedgerMigrationSidepanel = ({
 	onOpenChange: (open: boolean) => void;
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
+	const { env } = useEnvironmentContext()
 	const profile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
-	const migrator = useRef(new LedgerMigrator({ profile })).current;
-	const transfer = migrator.firstTransaction();
+	const migrator = useRef(new LedgerMigrator({ env, profile })).current;
+	const transfer = useRef<MigrationTransaction | undefined>(undefined)
 
 	useEffect(() => {
 		// Reset state on close.
 		if (!open) {
-			migrator.reset();
+			migrator.flush();
 			setActiveTab(MigrateLedgerStep.ListenLedgerStep);
 			return;
 		}
@@ -87,28 +89,30 @@ export const LedgerMigrationSidepanel = ({
 							profile={profile}
 							network={profile.activeNetwork()}
 							onContinue={() => {
+								transfer.current = migrator.nextTransaction()
+								transfer.current?.setIsPending(true)
 								setActiveTab(MigrateLedgerStep.OverviewStep);
 							}}
 						/>
 					</TabPanel>
 
-					{transfer && (
+					{transfer.current && (
 						<>
 							<TabPanel tabId={MigrateLedgerStep.OverviewStep}>
 								<OverviewStep
+									profile={profile}
 									migrator={migrator}
-									transfer={transfer}
+									transfer={transfer.current}
 									onContinue={() => {
 										setActiveTab(MigrateLedgerStep.ApproveTransactionStep);
 									}}
-									onVerifyAddress={() => console.log("TODO: Implement verify address flow")}
 								/>
 							</TabPanel>
 
 							<TabPanel tabId={MigrateLedgerStep.ApproveTransactionStep}>
 								<LedgerTransactionApproveStep
 									migrator={migrator}
-									transfer={transfer}
+									transfer={transfer.current}
 									onSuccess={() => {
 										setActiveTab(MigrateLedgerStep.PendingConfirmationStep);
 									}}
@@ -120,8 +124,9 @@ export const LedgerMigrationSidepanel = ({
 
 							<TabPanel tabId={MigrateLedgerStep.PendingConfirmationStep}>
 								<LedgerTransactionPendingConfirmation
+									migrator={migrator}
 									profile={profile}
-									transfer={transfer}
+									transfer={transfer.current}
 									onGoToPortfolio={() => {
 										onOpenChange(false);
 										setActiveTab(MigrateLedgerStep.ListenLedgerStep);
@@ -134,11 +139,17 @@ export const LedgerMigrationSidepanel = ({
 
 							<TabPanel tabId={MigrateLedgerStep.SuccessStep}>
 								<LedgerTransactionSuccessStep
+									migrator={migrator}
 									profile={profile}
-									transfer={transfer}
+									transfer={transfer.current}
 									onGoToPortfolio={() => {
 										onOpenChange(false);
 										setActiveTab(MigrateLedgerStep.ListenLedgerStep);
+									}}
+									onGoToNextTransaction={() => {
+										transfer.current = migrator.nextTransaction()
+										transfer.current?.setIsPending(true)
+										setActiveTab(MigrateLedgerStep.OverviewStep);
 									}}
 								/>
 							</TabPanel>
@@ -146,7 +157,7 @@ export const LedgerMigrationSidepanel = ({
 							<TabPanel tabId={MigrateLedgerStep.ErrorStep}>
 								<LedgerTransactionErrorStep
 									migrator={migrator}
-									transfer={transfer}
+									transfer={transfer.current}
 									onClose={() => {
 										onOpenChange(false);
 										setActiveTab(MigrateLedgerStep.ListenLedgerStep);

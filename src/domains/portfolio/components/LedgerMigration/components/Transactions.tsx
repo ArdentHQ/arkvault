@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Icon } from "@/app/components/Icon";
@@ -9,10 +9,19 @@ import { TransactionTable } from "./TransactionTable";
 import { useBreakpoint } from "@/app/hooks";
 import { DetailLabel } from "@/app/components/DetailWrapper";
 import { TransactionRowMobile } from "./TransactionRowMobile";
+import { Warning, Success } from "@/app/components/AlertBanner";
 
-export const Transactions = ({ migrator }: { migrator: LedgerMigrator }) => {
+export const Transactions = ({
+	migrator,
+	children,
+	showStatusBanner
+}: {
+	showStatusBanner?: boolean;
+	migrator: LedgerMigrator;
+	children?: ReactElement
+}) => {
 	const { t } = useTranslation();
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(true);
 	const { isXs } = useBreakpoint();
 
 	if (isXs) {
@@ -23,7 +32,7 @@ export const Transactions = ({ migrator }: { migrator: LedgerMigrator }) => {
 						<span>{t("COMMON.ADDRESSES")}</span>
 						<div className="flex items-center">
 							<div className="mr-1">
-								<span className="font-semibold">1</span> out of 10
+								<span className="font-semibold">{migrator.currentTransactionIndex() + 1}</span> {t("COMMON.OUT_OF")}  {migrator.transactions().length}
 							</div>
 							<Divider type="vertical" />
 							<Icon
@@ -43,6 +52,23 @@ export const Transactions = ({ migrator }: { migrator: LedgerMigrator }) => {
 							<TransactionRowMobile transaction={transaction} key={index} />
 						))}
 					</div>
+				)}
+
+
+				{showStatusBanner && (
+					<>
+						{!migrator.currentTransaction()?.signedTransaction() && migrator.currentTransaction()?.isPending() && (
+							<div className="px-2"><Warning>{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}</Warning></div>
+						)}
+
+						{migrator.currentTransaction()?.isPendingConfirmation() && (
+							<div className="px-2"> <Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning> </div>
+						)}
+
+						{migrator.currentTransaction()?.isCompleted() && (
+							<div className="px-2"> <Success>{t("COMMON.LEDGER_MIGRATION.LEDGER_TRANSACTION_CONFIRMED")}</Success> </div>
+						)}
+					</>
 				)}
 			</div>
 		);
@@ -71,7 +97,7 @@ export const Transactions = ({ migrator }: { migrator: LedgerMigrator }) => {
 				</div>
 				<div className="flex items-center">
 					<div className="mr-1">
-						<span className="font-semibold">1</span> out of 10
+						<span className="font-semibold">{migrator.currentTransactionIndex() + 1}</span> {t("COMMON.OUT_OF")}  {migrator.transactions().length}
 					</div>
 					<Divider type="vertical" />
 					<Icon
@@ -85,6 +111,22 @@ export const Transactions = ({ migrator }: { migrator: LedgerMigrator }) => {
 			</div>
 
 			{isOpen && <TransactionTable transactions={migrator.transactions()} />}
+
+			{showStatusBanner && (
+				<>
+					{!migrator.currentTransaction()?.signedTransaction() && migrator.currentTransaction()?.isPending() && (
+						<div className="px-2"><Warning>{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}</Warning></div>
+					)}
+
+					{migrator.currentTransaction()?.isPendingConfirmation() && (
+						<div className="px-2"> <Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning> </div>
+					)}
+
+					{migrator.currentTransaction()?.isCompleted() && (
+						<div className="px-2"> <Success>{t("COMMON.LEDGER_MIGRATION.LEDGER_TRANSACTION_CONFIRMED")}</Success> </div>
+					)}
+				</>
+			)}
 		</div>
 	);
 };

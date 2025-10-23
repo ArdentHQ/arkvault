@@ -1,26 +1,64 @@
-import { Contracts } from "@/app/lib/profiles";
+import { Contracts, Environment } from "@/app/lib/profiles";
 import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { AddressService } from "./address.service";
-import { type DraftTransfer } from "./draft-transfer";
+import { DraftTransfer } from "./draft-transfer";
 import { DataRepository } from "@/app/lib/profiles/data.repository";
+import { sortBy } from "@/app/lib/helpers";
+
+
+export class MigrationTransaction extends DraftTransfer {
+	#isPending: boolean = false;
+	#isCompleted: boolean = false;
+
+	public override isPending(): boolean {
+		if (this.isCompleted()) {
+			return false
+		}
+		return this.#isPending
+	}
+
+	public isPendingConfirmation(): boolean {
+		if (this.isCompleted()) {
+			return false
+		}
+
+		return !!this.signedTransaction() && !this.signedTransaction()?.isConfirmed()
+	}
+
+	public override isCompleted() {
+		return this.#isCompleted
+	}
+
+	public setIsPending(isPending: boolean) {
+		this.#isPending = isPending
+	}
+
+	public setIsCompleted(isCompleted: boolean) {
+		this.#isCompleted = isCompleted
+	}
+}
 
 export class LedgerMigrator {
+	#env: Environment;
 	#profile: Contracts.IProfile;
-	#transactions: DraftTransfer[];
+	#transactions: MigrationTransaction[];
+	#currentTransaction: MigrationTransaction | undefined;
 	#generatedAddresses: DataRepository;
 
-	constructor({ profile }: { profile: Contracts.IProfile }) {
+	constructor({ profile, env }: { profile: Contracts.IProfile, env }) {
+		this.#env = env;
 		this.#profile = profile;
 		this.#transactions = [];
 		this.#generatedAddresses = new DataRepository();
+		this.#currentTransaction = undefined
 	}
 
-	public migratePath(path: string, slip44: number): string {
+	public migratePath(path: string, slip44: number, newIndex: number): string {
 		const existingPath = BIP44.parse(path);
 		return BIP44.stringify({
 			...existingPath,
 			coinType: slip44,
-			index: existingPath.addressIndex,
+			index: newIndex,
 		});
 	}
 
@@ -49,40 +87,102 @@ export class LedgerMigrator {
 		return wallet;
 	}
 
-	public async createMigrationTransaction(address: string, path: string): Promise<DraftTransfer> {
-		const sender = await this.findOrCreate(address, path);
-		const newPath = this.migratePath(path, this.#profile.ledger().slip44Eth());
-		const cachedAddress = this.#generatedAddresses.get<string | undefined>(newPath);
+	#sortAddressesByIndexAsc(addresses: { address: string, path: string }[]) {
+		return sortBy(addresses, ({ path }) => BIP44.parse(path).addressIndex);
+	}
 
-		const recipient = cachedAddress
-			? await this.createWallet(cachedAddress, newPath)
-			: await this.generateFromLedger(newPath);
+	public async createTransaction(senderAddress: string, senderPath: string, recipientPath: string): Promise<MigrationTransaction> {
+		const senderWallet = await this.findOrCreate(senderAddress, senderPath);
+		const cachedRecipient = this.#generatedAddresses.get<string | undefined>(recipientPath);
 
-		this.#generatedAddresses.set(newPath, recipient.address());
+		const recipientWallet = cachedRecipient
+			? await this.createWallet(cachedRecipient, recipientPath)
+			: await this.generateFromLedger(recipientPath);
 
-		const transaction = this.#profile.draftTransactionFactory().transfer();
+		this.#generatedAddresses.set(recipientPath, recipientWallet.address());
 
-		transaction.setSender(sender);
-		transaction.addRecipientWallet(recipient);
-		transaction.setAmount(1); // TODO: change to full sender's balance after testing.
+		const transaction = new MigrationTransaction({ env: this.#env, profile: this.#profile })
+
+		transaction.setSender(senderWallet);
+		transaction.addRecipientWallet(recipientWallet);
+		transaction.setAmount(1); // TODO: change to full senderWallet's balance after testing.
 
 		return transaction;
 	}
 
-	public addTransaction(transaction: DraftTransfer): void {
+	public async createTransactions(addresses: { address: string, path: string }[], migrateToOne?: boolean): Promise<void> {
+		const migratingAddresses = this.#sortAddressesByIndexAsc(addresses)
+
+		if (migratingAddresses.length === 0) {
+			return
+		}
+
+		// Start with the min path of the given list,
+		// and incrementing by 1 for the migrated addresses not to have gaps.
+		let currentIndex = BIP44.parse(migratingAddresses[0].path).addressIndex
+
+		for (const { address, path } of migratingAddresses) {
+			const newPath = this.migratePath(path, this.#profile.ledger().slip44Eth(), currentIndex);
+
+			const transaction = await this.createTransaction(address, path, newPath)
+			this.addTransaction(transaction)
+
+			// Keep the same path as the recipient wallet.
+			if (migrateToOne) {
+				continue
+			}
+
+			currentIndex = currentIndex + 1
+		}
+	}
+
+	public addTransaction(transaction: MigrationTransaction): void {
 		this.#transactions.push(transaction);
 	}
 
-	public transactions(): DraftTransfer[] {
+	public transactions(): MigrationTransaction[] {
 		return this.#transactions;
 	}
 
-	public firstTransaction(): DraftTransfer | undefined {
-		return this.#transactions.at(0);
+	public currentTransaction(): MigrationTransaction | undefined {
+		return this.#currentTransaction
 	}
 
-	public reset(): void {
+	public currentTransactionIndex(): number {
+		return this.transactions().findIndex(
+			(transaction) => this.#currentTransaction?.sender().address() === transaction.sender().address()
+		)
+	}
+
+	public hasNextTransaction(): boolean {
+		const currentIndex = this.currentTransactionIndex()
+		return !!this.transactions().at(currentIndex + 1)
+	}
+
+	public nextTransaction(): MigrationTransaction | undefined {
+		if (!this.currentTransaction) {
+			this.#currentTransaction = this.transactions().at(0)
+		}
+
+		const currentIndex = this.currentTransactionIndex()
+		this.#currentTransaction = this.transactions().at(currentIndex + 1)
+		return this.#currentTransaction
+	}
+
+	public hasCurrentTransaction(): this is { currentTransaction(): MigrationTransaction } {
+		return this.#currentTransaction as MigrationTransaction !== undefined;
+	}
+
+	public flush(): void {
 		this.#transactions = [];
 		this.#generatedAddresses.flush();
+	}
+
+	public flushTransactions(): void {
+		this.#transactions = [];
+	}
+
+	public isCompleted(): boolean {
+		return this.transactions().every(transaction => transaction.isCompleted())
 	}
 }

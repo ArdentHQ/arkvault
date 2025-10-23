@@ -1,6 +1,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
 import { Checkbox } from "@/app/components/Checkbox";
@@ -9,6 +9,7 @@ import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/Si
 import { Divider } from "@/app/components/Divider";
 import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
+import { useLedgerContext } from "@/app/contexts";
 
 const MigrateToOneCheckbox = ({ onChange }: { onChange?: (isChecked: boolean) => void }) => {
 	const { t } = useTranslation();
@@ -38,8 +39,8 @@ export const MigrationLedgerScanStep = ({
 	profile: Contracts.IProfile;
 	onContinue?: () => void;
 }) => {
-	const [_, setShouldMigrateToOne] = useState<boolean>(false);
-	const [isImportingWallets, setIsImportingWallets] = useState<boolean>(false);
+	const [shouldMigrateToOne, setShouldMigrateToOne] = useState<boolean>(false);
+	const [isImportingWallets, setIsImportingWallets] = useState<boolean>(true);
 	const { t } = useTranslation();
 
 	return (
@@ -49,10 +50,8 @@ export const MigrationLedgerScanStep = ({
 			onSelect={async (ledgerAddresses) => {
 				setIsImportingWallets(true);
 
-				for (const { path, address } of ledgerAddresses) {
-					const transaction = await migrator.createMigrationTransaction(address, path);
-					migrator.addTransaction(transaction);
-				}
+				migrator.flushTransactions() // Clear cache.
+				await migrator.createTransactions(ledgerAddresses, shouldMigrateToOne)
 
 				setIsImportingWallets(false);
 			}}

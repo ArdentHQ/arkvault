@@ -21,14 +21,16 @@ export const LedgerTransactionApproveStep = ({
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		transfer.signAndBroadcast().then(onSuccess).catch(onError);
+		transfer.sign().then(onSuccess).catch(onError);
 	}, [transfer]);
 
 	return (
 		<div className="space-y-4">
-			<Warning>{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}</Warning>
+			{migrator.transactions().length === 1 && (
+				<Warning>{t("COMMON.LEDGER_MIGRATION.APPROVE_LEDGER_TRANSACTION")}</Warning>
+			)}
 
-			<LedgerTransactionOverview transfer={transfer} migrator={migrator} />
+			<LedgerTransactionOverview transfer={transfer} migrator={migrator} showStatusBanner />
 		</div>
 	);
 };

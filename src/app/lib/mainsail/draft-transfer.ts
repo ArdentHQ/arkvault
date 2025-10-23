@@ -173,12 +173,11 @@ export class DraftTransfer {
 	}
 
 	public isCompleted(): boolean {
-		return false;
+		return !!this.#signedTransaction && !this.#signedTransaction.isConfirmed();;
 	}
 
-	// TODO: implement
 	public isPending(): boolean {
-		return true;
+		return !!this.#signedTransaction && !this.#signedTransaction.isConfirmed();
 	}
 
 	public reset(): void {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
@@ -7,13 +7,17 @@ import { Checkbox } from "@/app/components/Checkbox";
 import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
+import { useLedgerContext } from "@/app/contexts";
+import { Contracts } from "@/app/lib/profiles";
 
 export const OverviewStep = ({
+	profile,
 	transfer,
 	onContinue,
 	onVerifyAddress,
 	migrator,
 }: {
+	profile: Contracts.IProfile;
 	transfer: DraftTransfer;
 	onVerifyAddress?: () => void;
 	onContinue?: () => void;
@@ -22,8 +26,16 @@ export const OverviewStep = ({
 	const { t } = useTranslation();
 	const [acceptResponsibility, setAcceptResponsibility] = useState(false);
 
+	// Ensure ledger connection.
+	const { connect, isConnected } = useLedgerContext();
+	useEffect(() => {
+		if (!isConnected) {
+			connect(profile)
+		}
+	}, [profile, connect, isConnected])
+
 	return (
-		<LedgerTransactionOverview transfer={transfer} onVerifyAddress={onVerifyAddress} migrator={migrator}>
+		<LedgerTransactionOverview transfer={transfer} onVerifyAddress={onVerifyAddress} migrator={migrator} showStatusBanner={false}>
 			<SidepanelFooter className="fixed right-0 bottom-0">
 				<div className="flex items-center space-x-5">
 					<label className="flex w-full cursor-pointer space-x-3">
