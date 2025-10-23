@@ -30,20 +30,12 @@ export const LedgerTransactionPendingConfirmation = ({
 		wallet: transfer.sender(),
 	});
 
-	// useEffect(() => {
-	// 	if (isConfirmed) {
-	// 		transfer.setIsPending(false)
-	// 		transfer.setIsCompleted(true)
-	// 		onConfirmed?.();
-	// 	}
-	// }, [isConfirmed, transfer]);
-
 	useEffect(() => {
-		setTimeout(() => {
+		if (isConfirmed) {
 			transfer.setIsPending(false);
 			transfer.setIsCompleted(true);
 			onConfirmed?.();
-		}, 4000);
+		}
 	}, [isConfirmed, transfer]);
 
 	if (migrator.transactions().length > 1) {
