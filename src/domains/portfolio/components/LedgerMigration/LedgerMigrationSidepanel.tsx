@@ -34,7 +34,7 @@ export const LedgerMigrationSidepanel = ({
 
 	const { title, subtitle, titleIcon } = useLedgerMigrationHeader({
 		activeTab,
-		hasMultipleTransactions: migrator.transactions().length > 1
+		hasMultipleTransactions: migrator.transactions().length > 1,
 	});
 
 	useEffect(() => {

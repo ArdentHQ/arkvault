@@ -21,7 +21,7 @@ export const LedgerTransactionApproveStep = ({
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		transfer.sign().then(onSuccess).catch(onError);
+		transfer.signAndBroadcast().then(onSuccess).catch(onError);
 	}, [transfer]);
 
 	return (
