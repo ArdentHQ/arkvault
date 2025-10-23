@@ -28,10 +28,14 @@ export const LedgerMigrationSidepanel = ({
 	const { env, persist } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
-	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
 
 	const migrator = useRef(new LedgerMigrator({ env, profile })).current;
 	const transfer = useRef<MigrationTransaction | undefined>(undefined);
+
+	const { title, subtitle, titleIcon } = useLedgerMigrationHeader({
+		activeTab,
+		hasMultipleTransactions: migrator.transactions().length > 1
+	});
 
 	useEffect(() => {
 		// Reset state on close.

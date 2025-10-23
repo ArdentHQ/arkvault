@@ -249,7 +249,7 @@ export const translations = {
 		HELP_TITLE: "Need help with migration?",
 		LEDGER_MIGRATION_FAILED_TITLE: "Address Migration Rejected",
 		LEDGER_REJECTED_TRANSACTION: "You have rejected the transaction on your Ledger device.",
-		LEDGER_TRANSACTION_CONFIRMED: "Transaction confirmed on the network",
+		LEDGER_TRANSACTION_CONFIRMED: "Transaction confirmed on the network.",
 		MIGRATE_LATER: "Want to migrate later? You’ll find the option in the drop-down menu.",
 		MIGRATE_TO_ONE_ADDRESS: "Migrate To One Address",
 		MIGRATE_TO_ONE_ADDRESS_DESCRIPTION:
@@ -261,6 +261,7 @@ export const translations = {
 		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
 		SUCCESS_DESCRIPTION: "Your address was successfully migrated and imported.",
+		SUCCESS_DESCRIPTION_MULTIPLE: "Your Ledger addresses have been successfully migrated.",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
 		VERIFICATION_FAILED_MESSAGE: "Message could not be verified.",

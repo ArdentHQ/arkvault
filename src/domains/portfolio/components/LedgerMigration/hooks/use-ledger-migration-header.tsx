@@ -3,13 +3,13 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { MigrateLedgerStep } from "@/domains/portfolio/components/LedgerMigration";
 import { useTranslation } from "react-i18next";
 
-export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
+export const useLedgerMigrationHeader = ({ activeTab, hasMultipleTransactions }: { activeTab: MigrateLedgerStep, hasMultipleTransactions: boolean }) => {
 	const { t } = useTranslation();
 
 	switch (activeTab) {
 		case MigrateLedgerStep.SuccessStep: {
 			return {
-				subtitle: t("COMMON.LEDGER_MIGRATION.SUCCESS_DESCRIPTION"),
+				subtitle: hasMultipleTransactions ? t("COMMON.LEDGER_MIGRATION.SUCCESS_DESCRIPTION_MULTIPLE") : t("COMMON.LEDGER_MIGRATION.SUCCESS_DESCRIPTION"),
 				title: t("COMMON.LEDGER_MIGRATION.MIGRATION_COMPLETED"),
 				titleIcon: (
 					<ThemeIcon
@@ -25,6 +25,7 @@ export const useLedgerMigrationHeader = (activeTab: MigrateLedgerStep) => {
 
 		case MigrateLedgerStep.PendingConfirmationStep: {
 			return {
+				subtitle: hasMultipleTransactions ? t("COMMON.LEDGER_MIGRATION.VERIFY_DETAILS_ON_LEDGER") : undefined,
 				title: t("TRANSACTION.PENDING.TITLE"),
 				titleIcon: (
 					<ThemeIcon
