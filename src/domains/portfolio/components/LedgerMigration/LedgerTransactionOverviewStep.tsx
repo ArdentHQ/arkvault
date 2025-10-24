@@ -37,6 +37,7 @@ export const OverviewStep = ({
 	return (
 		<div className="pb-10">
 			<LedgerTransactionOverview
+				showVerification
 				transfer={transfer}
 				onVerifyAddress={onVerifyAddress}
 				migrator={migrator}
