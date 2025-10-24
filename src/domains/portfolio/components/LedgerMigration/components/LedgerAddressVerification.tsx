@@ -14,11 +14,7 @@ import { Divider } from "@/app/components/Divider";
 
 const generateVerificationCode = (): string => Math.random().toString(36).slice(2, 8).toUpperCase();
 
-export const LedgerAddressVerification = ({
-	transfer,
-}: {
-	transfer: DraftTransfer;
-}) => {
+export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfer }) => {
 	const { t } = useTranslation();
 	const [isVerifying, setIsVerifying] = useState(false);
 	const [verificationCode, setVerificationCode] = useState<string | undefined>(undefined);
@@ -95,8 +91,9 @@ export const LedgerAddressVerification = ({
 						walletNameClass="text-theme-text text-sm sm:text-base"
 						wrapperClass="justify-end sm:justify-start"
 						addressClass={cn("text-sm sm:text-base w-full w-3/4", {
-							"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
-								!!transfer.sender().displayName(),
+							"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200": !!transfer
+								.sender()
+								.displayName(),
 						})}
 					/>
 				</div>

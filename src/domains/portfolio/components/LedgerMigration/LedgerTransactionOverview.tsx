@@ -25,7 +25,7 @@ export const LedgerTransactionOverview = ({
 	children?: React.ReactElement;
 	migrator: LedgerMigrator;
 	showStatusBanner?: boolean;
-	showVerification?: boolean
+	showVerification?: boolean;
 }) => {
 	const { t } = useTranslation();
 	return (
@@ -37,7 +37,7 @@ export const LedgerTransactionOverview = ({
 
 				{showVerification && <LedgerAddressVerification transfer={transfer} />}
 				{!showVerification && (
-					<DetailWrapper label={t("TRANSACTION.ADDRESSING")} >
+					<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 						<div className="space-y-3">
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle>{t("COMMON.OLD")}</DetailTitle>
