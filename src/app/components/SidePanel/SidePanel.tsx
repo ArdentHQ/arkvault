@@ -22,6 +22,7 @@ import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels
 import { useLocalStorage } from "usehooks-ts";
 import { useTranslation } from "react-i18next";
 import { useBreakpoint } from "@/app/hooks";
+import { useNavigationContext } from "@/app/contexts";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -93,7 +94,7 @@ const SidePanelContent = ({
 	const { isMinimized, toggleMinimize } = usePanels();
 	const { isSmAndAbove } = useBreakpoint();
 
-	const isSettingRoute = window.location.pathname.includes("/settings");
+	const { hasFixedFormButtons } = useNavigationContext();
 
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
@@ -248,8 +249,8 @@ const SidePanelContent = ({
 												"animate-shake": shake,
 												"sm:top-0": isMinimized,
 												"top-0": !isMinimized,
-												"top-[-56px]": !isSettingRoute && isMinimized,
-												"top-[-68px]": isSettingRoute && isMinimized,
+												"top-[-56px]": !hasFixedFormButtons && isMinimized,
+												"top-[-68px]": hasFixedFormButtons && isMinimized,
 											},
 										)}
 									>
