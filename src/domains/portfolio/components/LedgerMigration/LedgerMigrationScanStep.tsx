@@ -1,6 +1,6 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
 import { Checkbox } from "@/app/components/Checkbox";

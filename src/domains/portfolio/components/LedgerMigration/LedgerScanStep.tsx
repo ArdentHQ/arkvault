@@ -1,6 +1,6 @@
 import { Networks, Contracts, ConfigKey } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useMemo } from "react";
+import React, { useCallback, useMemo, useEffect } from "react";
 import { Trans } from "react-i18next";
 import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { toasts } from "@/app/services";

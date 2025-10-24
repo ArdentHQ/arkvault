@@ -4,8 +4,7 @@ import { AddressService } from "./address.service";
 import { DraftTransfer } from "./draft-transfer";
 import { DataRepository } from "@/app/lib/profiles/data.repository";
 import { sortBy } from "@/app/lib/helpers";
-import { WalletData } from "../profiles/wallet.enum";
-import { networkDisplayName } from "@/utils/network-utils";
+import { WalletData } from "@/app/lib/profiles/wallet.enum";
 
 export class MigrationTransaction extends DraftTransfer {
 	#isPending: boolean = false;
