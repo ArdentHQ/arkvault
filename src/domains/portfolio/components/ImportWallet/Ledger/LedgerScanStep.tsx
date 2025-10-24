@@ -21,6 +21,7 @@ import cn from "classnames";
 import { AmountWrapper, AddressTableLoaderOverlay, AddressMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
 import { BigNumber } from "@/app/lib/helpers";
+import { Tooltip } from "@/app/components/Tooltip";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -115,12 +116,16 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			return (
 				<TableRow isSelected={isSelected(wallet.path)} className="relative">
 					<TableCell variant="start" innerClassName="justify-center">
-						<Checkbox
-							disabled={isDisabled(wallet)}
-							checked={isSelected(wallet.path) && !isDisabled(wallet)}
-							onChange={() => toggleSelect(wallet.path)}
-							data-testid="LedgerScanStep__checkbox-row"
-						/>
+						<Tooltip disabled={!isDisabled(wallet)} content={t("COMMON.LEDGER_MIGRATION.NO_BALANCE_TO_MIGRATE")}>
+							<span>
+								<Checkbox
+									disabled={isDisabled(wallet)}
+									checked={isSelected(wallet.path) && !isDisabled(wallet)}
+									onChange={() => toggleSelect(wallet.path)}
+									data-testid="LedgerScanStep__checkbox-row"
+								/>
+							</span>
+						</Tooltip>
 					</TableCell>
 
 					<TableCell className="w-2/5" innerClassName="space-x-4">
@@ -244,7 +249,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => {}}
+								handleClick={() => { }}
 								isSelected={false}
 							/>
 						))}
