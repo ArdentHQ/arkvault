@@ -33,7 +33,7 @@ export const LedgerScanStep = ({
 	isSelected,
 	disableColdWallets,
 }: {
-	disableColdWallets?: boolean
+	disableColdWallets?: boolean;
 	children: React.ReactElement;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;

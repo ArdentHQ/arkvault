@@ -33,7 +33,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	isSelected,
 	scanMore,
 	pageSize,
-	disableColdWallets = false
+	disableColdWallets = false,
 }) => {
 	const [showAll, setShowAll] = useState<boolean>(false);
 	const { t } = useTranslation();
@@ -85,11 +85,11 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	const isDisabled = (wallet: LedgerData): boolean => {
 		if (disableColdWallets) {
-			return BigNumber.make(wallet.balance ?? 0).isZero()
+			return BigNumber.make(wallet.balance ?? 0).isZero();
 		}
 
-		return false
-	}
+		return false;
+	};
 
 	const renderTableRow = useCallback(
 		(wallet: LedgerData) => {
@@ -244,7 +244,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
@@ -387,7 +387,12 @@ export const LedgerScanStep = ({
 					<span data-testid="LedgerScanStep__error">{error}</span>
 				</Alert>
 			) : (
-				<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} disableColdWallets={disableColdWallets} />
+				<LedgerTable
+					network={network}
+					{...ledgerScanner}
+					scanMore={scanMore}
+					disableColdWallets={disableColdWallets}
+				/>
 			)}
 		</section>
 	);

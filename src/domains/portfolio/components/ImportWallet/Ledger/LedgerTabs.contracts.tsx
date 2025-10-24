@@ -23,5 +23,5 @@ export interface LedgerTableProperties extends ReturnType<typeof useLedgerScanne
 	network: Networks.Network;
 	scanMore: () => void;
 	pageSize?: number;
-	disableColdWallets?: boolean
+	disableColdWallets?: boolean;
 }

@@ -12,11 +12,21 @@ import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { LedgerData } from "@/app/contexts";
 import { BigNumber } from "@/app/lib/helpers";
 
-const MigrateToOneCheckbox = ({ onChange, isDisabled }: { isDisabled?: boolean, onChange?: (isChecked: boolean) => void }) => {
+const MigrateToOneCheckbox = ({
+	onChange,
+	isDisabled,
+}: {
+	isDisabled?: boolean;
+	onChange?: (isChecked: boolean) => void;
+}) => {
 	const { t } = useTranslation();
 	return (
 		<label className="flex cursor-pointer space-x-3">
-			<Checkbox name="MigrateToOne" onChange={(event) => onChange?.(event.target.checked)} disabled={isDisabled} />
+			<Checkbox
+				name="MigrateToOne"
+				onChange={(event) => onChange?.(event.target.checked)}
+				disabled={isDisabled}
+			/>
 			<div className="text-sm">
 				<span className="text-sm font-semibold">{t("COMMON.LEDGER_MIGRATION.MIGRATE_TO_ONE_ADDRESS")}</span>
 				<span className="text-theme-secondary-500 font-semibold"> {t("COMMON.OPTIONAL")}</span>
@@ -55,7 +65,7 @@ export const MigrationLedgerScanStep = ({
 		}
 
 		setIsImportingWallets(false);
-	}
+	};
 
 	return (
 		<div className="pb-10">
@@ -65,9 +75,11 @@ export const MigrationLedgerScanStep = ({
 				profile={profile}
 				network={network}
 				onSelect={async (ledgerAddresses) => {
-					const withBalance = ledgerAddresses.filter(address => BigNumber.make(address.balance ?? 0).isGreaterThan(0))
-					setSelectedLedgerAddresses(withBalance)
-					handleSelectedAddresses(withBalance, shouldMigrateToOne)
+					const withBalance = ledgerAddresses.filter((address) =>
+						BigNumber.make(address.balance ?? 0).isGreaterThan(0),
+					);
+					setSelectedLedgerAddresses(withBalance);
+					handleSelectedAddresses(withBalance, shouldMigrateToOne);
 				}}
 			>
 				<>
@@ -92,8 +104,8 @@ export const MigrationLedgerScanStep = ({
 					<MigrateToOneCheckbox
 						isDisabled={selectedLedgerAddresses.length === 0 || isImportingWallets}
 						onChange={(migrateToOne) => {
-							handleSelectedAddresses(selectedLedgerAddresses, migrateToOne)
-							setShouldMigrateToOne(migrateToOne)
+							handleSelectedAddresses(selectedLedgerAddresses, migrateToOne);
+							setShouldMigrateToOne(migrateToOne);
 						}}
 					/>
 
