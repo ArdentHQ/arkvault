@@ -127,20 +127,19 @@ export class LedgerMigrator {
 		// Start with the min path of the given list,
 		// and incrementing by 1 for the migrated addresses not to have gaps.
 		let currentIndex = BIP44.parse(migratingAddresses[0].path).addressIndex;
-		let firstRecipient: Contracts.IReadWriteWallet | undefined = undefined
+		let firstRecipient: Contracts.IReadWriteWallet | undefined = undefined;
 
 		for (const { address, path } of migratingAddresses) {
-
-			const newPath = !!migrateToOne && !!firstRecipient
-				? firstRecipient?.data().get(WalletData.DerivationPath) as string
-				: this.migratePath(path, this.#profile.ledger().slip44Eth(), currentIndex)
-
+			const newPath =
+				!!migrateToOne && !!firstRecipient
+					? (firstRecipient?.data().get(WalletData.DerivationPath) as string)
+					: this.migratePath(path, this.#profile.ledger().slip44Eth(), currentIndex);
 
 			const transaction = await this.createTransaction(address, path, newPath);
 			this.addTransaction(transaction);
 
 			if (!firstRecipient) {
-				firstRecipient = transaction.recipient()
+				firstRecipient = transaction.recipient();
 			}
 
 			// Keep the same path as the recipient wallet.
@@ -157,7 +156,9 @@ export class LedgerMigrator {
 	}
 
 	public transactions(): MigrationTransaction[] {
-		return sortBy(this.#transactions, (transaction) => transaction.recipient()?.data().get(WalletData.DerivationPath))
+		return sortBy(this.#transactions, (transaction) =>
+			transaction.recipient()?.data().get(WalletData.DerivationPath),
+		);
 	}
 
 	public currentTransaction(): MigrationTransaction | undefined {
