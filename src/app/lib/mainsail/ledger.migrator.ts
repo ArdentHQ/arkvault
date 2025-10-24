@@ -87,8 +87,8 @@ export class LedgerMigrator {
 		return wallet;
 	}
 
-	#sortAddressesByIndexAsc(addresses: { address: string; path: string }[]) {
-		return sortBy(addresses, ({ path }) => BIP44.parse(path).addressIndex);
+	#sortAddressesByPath(addresses: { address: string; path: string }[]) {
+		return sortBy(addresses, ({ path }) => path);
 	}
 
 	public async createTransaction(
@@ -118,7 +118,7 @@ export class LedgerMigrator {
 		addresses: { address: string; path: string }[],
 		migrateToOne?: boolean,
 	): Promise<void> {
-		const migratingAddresses = this.#sortAddressesByIndexAsc(addresses);
+		const migratingAddresses = this.#sortAddressesByPath(addresses);
 
 		if (migratingAddresses.length === 0) {
 			return;
@@ -211,6 +211,7 @@ export class LedgerMigrator {
 	public flush(): void {
 		this.#transactions = [];
 		this.#generatedAddresses.flush();
+		this.#currentTransaction = undefined;
 	}
 
 	public flushTransactions(): void {

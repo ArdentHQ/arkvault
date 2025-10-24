@@ -255,7 +255,7 @@ export const translations = {
 		MIGRATE_TO_ONE_ADDRESS_DESCRIPTION:
 			"By selecting this option, all selected addresses will be consolidated into a single new address. This means the balances from your old addresses will be transferred to one address. You will still need to confirm each transaction individually during the migration process.",
 		MIGRATION_COMPLETED: "Migration Completed",
-		NO_BALANCE_TO_MIGRATE:"No balance to migrate.",
+		NO_BALANCE_TO_MIGRATE: "No balance to migrate.",
 		OVERVIEW_SUBTITLE: "Review details below to send your transaction.",
 		PENDING_VERIFICATION_MESSAGE:
 			"Check your Ledger device to confirm the message matches above. Approve it if everything looks correct.",
