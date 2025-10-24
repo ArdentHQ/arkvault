@@ -116,7 +116,10 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			return (
 				<TableRow isSelected={isSelected(wallet.path)} className="relative">
 					<TableCell variant="start" innerClassName="justify-center">
-						<Tooltip disabled={!isDisabled(wallet)} content={t("COMMON.LEDGER_MIGRATION.NO_BALANCE_TO_MIGRATE")}>
+						<Tooltip
+							disabled={!isDisabled(wallet)}
+							content={t("COMMON.LEDGER_MIGRATION.NO_BALANCE_TO_MIGRATE")}
+						>
 							<span>
 								<Checkbox
 									disabled={isDisabled(wallet)}
@@ -249,7 +252,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								isLoading
 								address=""
 								coin=""
-								handleClick={() => { }}
+								handleClick={() => {}}
 								isSelected={false}
 							/>
 						))}
