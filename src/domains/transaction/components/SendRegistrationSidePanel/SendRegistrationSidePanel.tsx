@@ -244,6 +244,8 @@ export const SendRegistrationSidePanel = ({
 		}
 	}, []);
 
+	const hasSynced = activeWallet && activeWallet.hasSyncedWithNetwork();
+
 	const getTitle = () => {
 		if (!registrationType) {
 			return "";
@@ -266,7 +268,7 @@ export const SendRegistrationSidePanel = ({
 		}
 
 		if (registrationType === "validatorRegistration") {
-			return activeWallet?.isValidator()
+			return hasSynced && activeWallet.isValidator()
 				? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
 				: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE");
 		} else {
@@ -292,10 +294,10 @@ export const SendRegistrationSidePanel = ({
 		}
 
 		if (registrationType === "validatorRegistration") {
-			if (activeWallet?.isLegacyValidator()) {
+			if (hasSynced && activeWallet.isLegacyValidator()) {
 				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
 			}
-			if (activeWallet?.isValidator()) {
+			if (hasSynced && activeWallet.isValidator()) {
 				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
 			}
 			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
