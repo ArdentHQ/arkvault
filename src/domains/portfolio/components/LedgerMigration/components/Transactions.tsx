@@ -85,9 +85,6 @@ export const Transactions = ({
 		<div
 			className={cn(
 				"outline-theme-secondary-300 dark:border-theme-secondary-800 dark:outline-theme-secondary-800 dim:border-theme-dim-700 dim:outline-theme-dim-700 rounded-xl outline outline-1",
-				{
-					"pb-2": isOpen,
-				},
 			)}
 		>
 			<div
@@ -121,7 +118,7 @@ export const Transactions = ({
 			{isOpen && <TransactionTable transactions={migrator.transactions()} />}
 
 			{showStatusBanner && (
-				<>
+				<div className={cn("pb-2", { "pt-2": isOpen })}>
 					{!migrator.currentTransaction()?.signedTransaction() &&
 						migrator.currentTransaction()?.isPending() && (
 							<div className="px-2">
@@ -142,7 +139,7 @@ export const Transactions = ({
 							<Success>{t("COMMON.LEDGER_MIGRATION.LEDGER_TRANSACTION_CONFIRMED")}</Success>{" "}
 						</div>
 					)}
-				</>
+				</div>
 			)}
 		</div>
 	);

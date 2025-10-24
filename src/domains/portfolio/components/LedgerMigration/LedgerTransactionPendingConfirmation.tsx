@@ -40,14 +40,14 @@ export const LedgerTransactionPendingConfirmation = ({
 
 	if (migrator.transactions().length > 1) {
 		return (
-			<div className="space-y-4">
+			<div className="space-y-4 pb-10">
 				<LedgerTransactionOverview transfer={transfer} migrator={migrator} showStatusBanner />
 			</div>
 		);
 	}
 
 	return (
-		<div className="space-y-4">
+		<div className="space-y-4 pb-10">
 			{migrator.transactions().length === 1} {<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>}
 			<LedgerMigrationOverview transfer={transfer} profile={profile}>
 				<SidepanelFooter className="fixed right-0 bottom-0">

@@ -4,6 +4,8 @@ import { AddressService } from "./address.service";
 import { DraftTransfer } from "./draft-transfer";
 import { DataRepository } from "@/app/lib/profiles/data.repository";
 import { sortBy } from "@/app/lib/helpers";
+import { WalletData } from "../profiles/wallet.enum";
+import { networkDisplayName } from "@/utils/network-utils";
 
 export class MigrationTransaction extends DraftTransfer {
 	#isPending: boolean = false;
@@ -126,12 +128,21 @@ export class LedgerMigrator {
 		// Start with the min path of the given list,
 		// and incrementing by 1 for the migrated addresses not to have gaps.
 		let currentIndex = BIP44.parse(migratingAddresses[0].path).addressIndex;
+		let firstRecipient: Contracts.IReadWriteWallet | undefined = undefined
 
 		for (const { address, path } of migratingAddresses) {
-			const newPath = this.migratePath(path, this.#profile.ledger().slip44Eth(), currentIndex);
+
+			const newPath = !!migrateToOne && !!firstRecipient
+				? firstRecipient?.data().get(WalletData.DerivationPath) as string
+				: this.migratePath(path, this.#profile.ledger().slip44Eth(), currentIndex)
+
 
 			const transaction = await this.createTransaction(address, path, newPath);
 			this.addTransaction(transaction);
+
+			if (!firstRecipient) {
+				firstRecipient = transaction.recipient()
+			}
 
 			// Keep the same path as the recipient wallet.
 			if (migrateToOne) {
@@ -147,7 +158,7 @@ export class LedgerMigrator {
 	}
 
 	public transactions(): MigrationTransaction[] {
-		return this.#transactions;
+		return sortBy(this.#transactions, (transaction) => transaction.recipient()?.data().get(WalletData.DerivationPath))
 	}
 
 	public currentTransaction(): MigrationTransaction | undefined {
@@ -161,12 +172,13 @@ export class LedgerMigrator {
 	}
 
 	public nextTransaction(): MigrationTransaction | undefined {
-		if (!this.currentTransaction) {
-			this.#currentTransaction = this.transactions().at(0);
+		if (this.transactions().length === 0) {
+			return undefined;
 		}
 
 		const currentIndex = this.currentTransactionIndex();
-		this.#currentTransaction = this.transactions().at(currentIndex + 1);
+		const nextIndex = (currentIndex + 1) % this.transactions().length;
+		this.#currentTransaction = this.transactions().at(nextIndex);
 		return this.#currentTransaction;
 	}
 

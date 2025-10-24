@@ -88,7 +88,7 @@ export const LedgerTransactionOverview = ({
 
 	return (
 		<div data-testid="LedgerMigration__Review-step">
-			<div className="space-y-4">
+			<div className="space-y-4 pb-10">
 				{migrator.transactions().length > 1 && (
 					<Transactions migrator={migrator} showStatusBanner={showStatusBanner} />
 				)}

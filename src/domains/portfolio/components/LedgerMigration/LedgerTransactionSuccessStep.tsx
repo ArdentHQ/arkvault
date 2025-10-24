@@ -41,7 +41,7 @@ export const LedgerTransactionSuccessStep = ({
 
 	if (migrator.isMigrationComplete() && migrator.transactions().length > 1) {
 		return (
-			<div className="space-y-4">
+			<div className="space-y-4 pb-10">
 				<MigratedAddressesTable transactions={migrator.transactions()} profile={profile} />
 			</div>
 		);
@@ -49,19 +49,21 @@ export const LedgerTransactionSuccessStep = ({
 
 	if (migrator.transactions().length > 1) {
 		return (
-			<div className="space-y-4">
+			<div className="space-y-4 pb-10">
 				<LedgerTransactionOverview transfer={transfer} migrator={migrator} showStatusBanner />
 			</div>
 		);
 	}
 
 	return (
-		<LedgerMigrationOverview transfer={transfer} profile={profile}>
-			<SidepanelFooter className="fixed right-0 bottom-0">
-				<SidePanelButtons className="flex items-center justify-end">
-					<Button onClick={onGoToPortfolio}>{t("COMMON.GO_TO_PORTFOLIO")}</Button>
-				</SidePanelButtons>
-			</SidepanelFooter>
-		</LedgerMigrationOverview>
+		<div className="pb-10">
+			<LedgerMigrationOverview transfer={transfer} profile={profile}>
+				<SidepanelFooter className="fixed right-0 bottom-0">
+					<SidePanelButtons className="flex items-center justify-end">
+						<Button onClick={onGoToPortfolio}>{t("COMMON.GO_TO_PORTFOLIO")}</Button>
+					</SidePanelButtons>
+				</SidepanelFooter>
+			</LedgerMigrationOverview>
+		</div>
 	);
 };
