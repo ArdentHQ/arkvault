@@ -11,7 +11,7 @@ import { alias } from "@/domains/wallet/validations";
 import { WalletSetting } from "@/app/lib/profiles/wallet.enum";
 import { twMerge } from "tailwind-merge";
 
-interface UpdateWalletNameProperties {
+export interface UpdateWalletNameProperties {
 	onAfterSave: () => void;
 	onCancel: () => void;
 	profile: Contracts.IProfile;
