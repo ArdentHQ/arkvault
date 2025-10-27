@@ -7,6 +7,7 @@ import { MigratedAddressRow } from "./MigratedAddressRow";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
 import { MigrationTransaction } from "@/app/lib/mainsail/ledger.migrator";
+import { MigratedAddressRowMobile } from "./MigratedAddressRowMobile";
 
 export const MigratedAddressesTable = ({
 	profile,
@@ -36,6 +37,11 @@ export const MigratedAddressesTable = ({
 
 	return (
 		<div className="relative">
+			<div className="block sm:hidden">
+				{transactions.map((transaction, index) => (
+					<MigratedAddressRowMobile transaction={transaction} key={index} profile={profile} />
+				))}
+			</div>
 			<div className="md:border-theme-secondary-300 dark:md:border-theme-secondary-800 dim:md:border-theme-dim-700 relative hidden overflow-hidden rounded-xl border border-transparent sm:block">
 				<Table columns={columns} data={transactions}>
 					{(transaction: MigrationTransaction) => (
