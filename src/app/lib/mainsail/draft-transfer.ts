@@ -181,6 +181,7 @@ export class DraftTransfer {
 	}
 
 	public reset(): void {
+		this.#amount = 0;
 		this.#recipientWallets = [];
 		this.#senderWallet = undefined;
 		this.#memo = undefined;
