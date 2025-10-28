@@ -4,12 +4,14 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
 import { ProfileData } from "@/app/lib/profiles/profile.enum.contract";
-import { useConfiguration } from "@/app/contexts";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { Button } from "@/app/components/Button";
 
 export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 	const [show, setShow] = useState<boolean>(false);
+
+	const { persist, env } = useEnvironmentContext();
 
 	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(profile.id());
 
@@ -32,6 +34,9 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 
 	const handleClose = async () => {
 		profile.data().set(ProfileData.MigrationResult, {});
+
+		await persist();
+		await env.persist();
 		setShow(false);
 	};
 
