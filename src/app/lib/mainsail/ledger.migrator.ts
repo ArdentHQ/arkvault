@@ -109,7 +109,6 @@ export class LedgerMigrator {
 
 		transaction.setSender(senderWallet);
 		transaction.addRecipientWallet(recipientWallet);
-		transaction.setAmount(1); // TODO: change to full senderWallet's balance after testing.
 
 		return transaction;
 	}
@@ -189,6 +188,7 @@ export class LedgerMigrator {
 	public async importMigratedWallets(): Promise<void> {
 		for (const transaction of this.transactions().filter((transaction) => transaction.isCompleted())) {
 			const wallet = transaction.recipient();
+			const oldWallet = transaction.sender();
 
 			if (!wallet) {
 				continue;
@@ -204,6 +204,10 @@ export class LedgerMigrator {
 			}
 
 			wallet.mutator().alias(wallet.generateAlias());
+
+			if (this.#profile.wallets().has(oldWallet.id())) {
+				this.#profile.wallets().forget(oldWallet.id());
+			}
 			this.#profile.wallets().push(wallet);
 		}
 	}

@@ -1,28 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Amount } from "@/app/components/Amount";
-import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
-import { BigNumber } from "@/app/lib/helpers";
 import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
-
-const FEE_DISPLAY_VALUE_DECIMALS = 8;
 
 export const TransactionFee = ({ transfer }: { transfer: DraftTransfer }) => {
 	const [fee, setFee] = useState<number>(0);
 
 	useEffect(() => {
-		const calc = async () => {
+		const updateFee = async () => {
+			await transfer.sender().synchroniser().identity();
 			await transfer.calculateFees();
+
 			transfer.selectFee("avg");
-
-			// To human
-			const fee = BigNumber.make(calculateGasFee(transfer.selectedFee(), transfer.gasLimit()))
-				.decimalPlaces(FEE_DISPLAY_VALUE_DECIMALS)
-				.toNumber();
-
-			setFee(fee);
+			transfer.setSenderMaxAmount();
+			setFee(transfer.fee());
 		};
 
-		calc();
+		updateFee();
 	}, []);
 
 	return (
