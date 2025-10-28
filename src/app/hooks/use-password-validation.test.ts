@@ -112,7 +112,7 @@ describe("usePasswordValidation", () => {
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
 
-			setPwnedMockResponse(1)
+			setPwnedMockResponse(1);
 
 			await act(async () => {
 				await result.current.validatePassword(validPassword);
@@ -120,7 +120,7 @@ describe("usePasswordValidation", () => {
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
 
-			setPwnedMockResponse(0)
+			setPwnedMockResponse(0);
 
 			await act(async () => {
 				await result.current.validatePassword(validPassword);
