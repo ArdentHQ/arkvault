@@ -1,23 +1,25 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Divider } from "@/app/components/Divider";
-import { Spinner } from "@/app/components/Spinner";
-import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { SidePanelButtons, SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { LedgerMigrationOverview } from "./LedgerMigrationOverview";
 import { Contracts } from "@/app/lib/profiles";
+import { Warning } from "@/app/components/AlertBanner";
+import { LedgerMigrator, MigrationTransaction } from "@/app/lib/mainsail/ledger.migrator";
+import { LedgerTransactionOverview } from "./LedgerTransactionOverview";
 
 export const LedgerTransactionPendingConfirmation = ({
+	migrator,
 	transfer,
 	onConfirmed,
 	onGoToPortfolio,
 	profile,
 }: {
+	migrator: LedgerMigrator;
 	profile: Contracts.IProfile;
-	transfer: DraftTransfer;
+	transfer: MigrationTransaction;
 	onConfirmed?: () => void;
 	onGoToPortfolio?: () => void;
 }) => {
@@ -30,23 +32,23 @@ export const LedgerTransactionPendingConfirmation = ({
 
 	useEffect(() => {
 		if (isConfirmed) {
+			transfer.setIsPending(false);
+			transfer.setIsCompleted(true);
 			onConfirmed?.();
 		}
-	}, [isConfirmed]);
+	}, [isConfirmed, transfer]);
+
+	if (migrator.transactions().length > 1) {
+		return (
+			<div className="space-y-4 pb-10">
+				<LedgerTransactionOverview transfer={transfer} migrator={migrator} showStatusBanner />
+			</div>
+		);
+	}
 
 	return (
-		<div className="space-y-4">
-			<div className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 dim:border-theme-warning-600 dim:bg-theme-dim-900 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent">
-				<Spinner color="warning-alt" size="sm" width={3} />
-				<Divider
-					type="vertical"
-					className="text-theme-warning-200 dark:text-theme-secondary-800 dim:text-theme-dim-700 h-5"
-				/>
-				<p className="text-theme-secondary-700 dark:text-theme-warning-600 dim:text-theme-dim-200 font-semibold">
-					{t("TRANSACTION.PENDING.STATUS_TEXT")}
-				</p>
-			</div>
-
+		<div className="space-y-4 pb-10">
+			{migrator.transactions().length === 1} {<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>}
 			<LedgerMigrationOverview transfer={transfer} profile={profile}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons className="flex items-center justify-end">

@@ -1,6 +1,6 @@
 import { Networks, Contracts, ConfigKey } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import React, { useCallback, useEffect, useMemo } from "react";
+import React, { useCallback, useMemo, useEffect } from "react";
 import { Trans } from "react-i18next";
 import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { toasts } from "@/app/services";
@@ -29,17 +29,24 @@ export const LedgerScanStep = ({
 	isCancelling,
 	onSelect,
 	children,
+	isLoading,
+	isSelected,
+	disableColdWallets,
 }: {
+	disableColdWallets?: boolean;
 	children: React.ReactElement;
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
+	isLoading?: boolean;
 	isCancelling?: boolean;
+	isSelected?: (path: string) => boolean;
 	setRetryFn?: (function_?: () => void) => void;
 	onContinue?: (selectedWallets: LedgerData[]) => void;
 	onSelect?: (selectedWallets: LedgerData[]) => void;
 }) => {
 	const pageSize = 0;
 	const legacyPageSize = 5;
+
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id(), { legacyPageSize, pageSize, useLegacy: true });
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
@@ -131,6 +138,9 @@ export const LedgerScanStep = ({
 						{...ledgerScanner}
 						scanMore={scanMore}
 						pageSize={pageSize + legacyPageSize}
+						isScanning={isScanning || !!isLoading}
+						isSelected={isSelected ?? ledgerScanner.isSelected}
+						disableColdWallets={disableColdWallets}
 					/>
 				)}
 				{children}
