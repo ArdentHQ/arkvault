@@ -33,6 +33,7 @@ const getSize = (size?: Size) => {
 		default: () => `w-8 h-8 border-[4px]`,
 		lg: () => `w-12 h-12 border-[5px]`,
 		sm: () => `w-5 h-5 border-[3px]`,
+		xs: () => `w-4 h-4 border-[3px]`,
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition

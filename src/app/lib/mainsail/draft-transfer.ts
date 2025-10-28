@@ -172,7 +172,16 @@ export class DraftTransfer {
 		return this.#signedTransaction;
 	}
 
+	public isCompleted(): boolean {
+		return !!this.#signedTransaction && !this.#signedTransaction.isConfirmed();
+	}
+
+	public isPending(): boolean {
+		return !!this.#signedTransaction && !this.#signedTransaction.isConfirmed();
+	}
+
 	public reset(): void {
+		this.#amount = 0;
 		this.#recipientWallets = [];
 		this.#senderWallet = undefined;
 		this.#memo = undefined;

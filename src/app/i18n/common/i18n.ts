@@ -36,6 +36,7 @@ export const translations = {
 	AUTHOR: "Author",
 	AVAILABLE: "Available",
 	AVATAR: "Avatar",
+	AWAITING: "Awaiting",
 	AWAITING_SIGNATURE: "Awaiting Signature",
 	BACK: "Back",
 	BACKGROUND: "Background",
@@ -119,6 +120,7 @@ export const translations = {
 	DOWNLOADING: "Downloading",
 	DO_NOT_SHOW_AGAIN: "Do not show this message again.",
 	EDIT: "Edit",
+	EDIT_NAME: "Edit Name",
 	EDIT_item: "Edit {{item}}",
 	EMPTY_RESULTS: {
 		SUBTITLE: "No results found. Refine your search and try again.",
@@ -252,17 +254,20 @@ export const translations = {
 		HELP_TITLE: "Need help with migration?",
 		LEDGER_MIGRATION_FAILED_TITLE: "Address Migration Rejected",
 		LEDGER_REJECTED_TRANSACTION: "You have rejected the transaction on your Ledger device.",
+		LEDGER_TRANSACTION_CONFIRMED: "Transaction confirmed on the network.",
 		MIGRATE_LATER: "Want to migrate later? You’ll find the option in the drop-down menu.",
 		MIGRATE_TO_ONE_ADDRESS: "Migrate To One Address",
 		MIGRATE_TO_ONE_ADDRESS_DESCRIPTION:
 			"By selecting this option, all selected addresses will be consolidated into a single new address. This means the balances from your old addresses will be transferred to one address. You will still need to confirm each transaction individually during the migration process.",
 		MIGRATION_COMPLETED: "Migration Completed",
+		NO_BALANCE_TO_MIGRATE: "No balance to migrate.",
 		OVERVIEW_SUBTITLE: "Review details below to send your transaction.",
 		PENDING_VERIFICATION_MESSAGE:
 			"Check your Ledger device to confirm the message matches above. Approve it if everything looks correct.",
 		SELECT_MIGRATION_ADDRESSES: "Select the address(es) you wish to migrate.",
 		START_MIGRATION: "Start Migration",
 		SUCCESS_DESCRIPTION: "Your address was successfully migrated and imported.",
+		SUCCESS_DESCRIPTION_MULTIPLE: "Your Ledger addresses have been successfully migrated.",
 		UPDATE_TO_ETH_DERIVATION_PATH:
 			"Update your Ledger addresses to use an Ethereum-compatible derivation path. Start the migration?",
 		VERIFICATION_FAILED_MESSAGE: "Message could not be verified.",
@@ -338,6 +343,7 @@ export const translations = {
 	OR: "or",
 	OTHER: "Other",
 	OTHERS: "Others",
+	OUT_OF: "out of",
 	PAGE: "Page",
 	"PAGE_#": "Page {{page}}",
 	"PAGE_#_OF_#": "Page {{page}} of {{total}}",
@@ -359,6 +365,7 @@ export const translations = {
 	PASSWORD: "Password",
 	PASSWORDS: "Passwords",
 	PEER: "Peer",
+	PENDING: "Pending",
 	PENDING_ACTION_IN_PROGRESS: "Pending Action in Progress",
 	PENDING_ACTION_IN_PROGRESS_DESCRIPTION:
 		"You already have a pending action: [{{action}}]. Starting a new one will discard it. Do you want to continue?",

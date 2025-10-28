@@ -20,6 +20,8 @@ import { Button } from "@/app/components/Button";
 import cn from "classnames";
 import { AmountWrapper, AddressTableLoaderOverlay, AddressMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
+import { BigNumber } from "@/app/lib/helpers";
+import { Tooltip } from "@/app/components/Tooltip";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -32,6 +34,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	isSelected,
 	scanMore,
 	pageSize,
+	disableColdWallets = false,
 }) => {
 	const [showAll, setShowAll] = useState<boolean>(false);
 	const { t } = useTranslation();
@@ -81,6 +84,14 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		return showSkeleton ? skeletonRows : wallets;
 	}, [wallets, showSkeleton]);
 
+	const isDisabled = (wallet: LedgerData): boolean => {
+		if (disableColdWallets) {
+			return BigNumber.make(wallet.balance ?? 0).isZero();
+		}
+
+		return false;
+	};
+
 	const renderTableRow = useCallback(
 		(wallet: LedgerData) => {
 			if (showSkeleton) {
@@ -105,11 +116,19 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			return (
 				<TableRow isSelected={isSelected(wallet.path)} className="relative">
 					<TableCell variant="start" innerClassName="justify-center">
-						<Checkbox
-							checked={isSelected(wallet.path)}
-							onChange={() => toggleSelect(wallet.path)}
-							data-testid="LedgerScanStep__checkbox-row"
-						/>
+						<Tooltip
+							disabled={!isDisabled(wallet)}
+							content={t("COMMON.LEDGER_MIGRATION.NO_BALANCE_TO_MIGRATE")}
+						>
+							<span>
+								<Checkbox
+									disabled={isDisabled(wallet)}
+									checked={isSelected(wallet.path) && !isDisabled(wallet)}
+									onChange={() => toggleSelect(wallet.path)}
+									data-testid="LedgerScanStep__checkbox-row"
+								/>
+							</span>
+						</Tooltip>
 					</TableCell>
 
 					<TableCell className="w-2/5" innerClassName="space-x-4">
@@ -214,13 +233,14 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 					{!showSkeleton &&
 						data.map((wallet) => (
 							<AddressMobileItem
+								isDisabled={isDisabled(wallet)}
 								key={wallet.path}
 								isLoading={showSkeleton}
 								address={wallet.address}
 								balance={wallet.balance}
 								coin={network.ticker()}
 								handleClick={() => toggleSelect(wallet.path)}
-								isSelected={isSelected(wallet.path)}
+								isSelected={isSelected(wallet.path) && !isDisabled(wallet)}
 							/>
 						))}
 
@@ -275,10 +295,12 @@ export const LedgerScanStep = ({
 	setRetryFn,
 	profile,
 	cancelling,
+	disableColdWallets = false,
 }: {
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
 	cancelling: boolean;
+	disableColdWallets?: boolean;
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { register, unregister, setValue } = useFormContext();
@@ -373,7 +395,12 @@ export const LedgerScanStep = ({
 					<span data-testid="LedgerScanStep__error">{error}</span>
 				</Alert>
 			) : (
-				<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
+				<LedgerTable
+					network={network}
+					{...ledgerScanner}
+					scanMore={scanMore}
+					disableColdWallets={disableColdWallets}
+				/>
 			)}
 		</section>
 	);
