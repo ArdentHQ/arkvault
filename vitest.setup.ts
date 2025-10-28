@@ -13,11 +13,9 @@ import * as matchers from "jest-extended";
 
 expect.extend(matchers);
 
-
 vi.mock("@faustbrian/node-haveibeenpwned", () => ({
 	pwned: async () => pwnedMock(),
 }));
-
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
