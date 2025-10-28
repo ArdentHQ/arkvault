@@ -39,7 +39,16 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 			// If this public key has already been migrated, skip to avoid duplicates
 			if (publicKey !== undefined && seenPublicKeys.has(publicKey)) {
-				this.#migrationResult.duplicateAddresses.push(wallet.data);
+				const duplicateWallet = Object.values(wallets).find(
+					(d) => d.data["PUBLIC_KEY"] === publicKey && migratedWallets[d.id] !== undefined,
+				);
+				const newWallet = Object.values(migratedWallets).find((d) => d.data["PUBLIC_KEY"] === publicKey);
+
+				this.#migrationResult.duplicateAddresses.push({
+					...wallet.data,
+					duplicateAddress: duplicateWallet?.data.ADDRESS,
+					newAddress: newWallet?.data.ADDRESS,
+				});
 				continue;
 			}
 
@@ -110,13 +119,13 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	): Promise<Array<{ id: string; contact: any }> | null> {
 		const addressResults = await Promise.all(
 			contact.addresses.map(async (addr) => {
-				const newAddress = await this.#migrateContactAddress(profile, addr);
-				return newAddress ? { address: newAddress, id: addr.id } : null;
+				const newAddress = await this.#migrateContactAddress(profile, addr, contact.name);
+				return newAddress ? { address: newAddress, id: addr.id, oldAddress: addr.address } : null;
 			}),
 		);
 
 		const migratedAddresses = addressResults.filter(
-			(addr): addr is { id: string; address: string } => addr !== null,
+			(addr): addr is { id: string; address: string; oldAddress: string } => addr !== null,
 		);
 
 		if (migratedAddresses.length === 0) {
@@ -135,6 +144,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				addresses: [address],
 				id: contactId,
 				name: finalName,
+				oldName: originalName,
 			};
 
 			results.push({ contact: newContact, id: contactId });
@@ -148,6 +158,15 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const finalNameCounts = new Map<string, number>();
 		const seenAddresses = new Map<string, string>();
 
+		const normalizedResults = allResults
+			.filter((result) => result !== null)
+			.flat()
+			.map((result) => ({
+				...result.contact,
+				...result.contact.addresses[0],
+				contactId: result.id,
+			}));
+
 		for (const result of allResults) {
 			if (result === null) {
 				continue;
@@ -159,7 +178,20 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				const migratedAddress = contact.addresses?.[0]?.address;
 				if (typeof migratedAddress === "string") {
 					if (seenAddresses.has(migratedAddress)) {
-						this.#migrationResult.duplicateContacts.push(contact);
+						const duplicateContact = normalizedResults.find((result) => {
+							return result.address === migratedAddress && result.contactId !== id;
+						});
+
+						this.#migrationResult.duplicateContacts.push({
+							...contact,
+							duplicateContact: {
+								oldName: duplicateContact.oldName,
+								oldAddress: duplicateContact.oldAddress,
+								name: duplicateContact.name,
+								address: duplicateContact.address,
+							},
+							name: duplicateContact.name,
+						});
 						continue;
 					}
 					seenAddresses.set(migratedAddress, id);
@@ -182,6 +214,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	async #migrateContactAddress(
 		profile: IProfile,
 		addr: IProfileData["contacts"][string]["addresses"][number],
+		contactName: string,
 	): Promise<string | undefined> {
 		if (!["ark.mainnet", "ark.devnet"].includes(addr.network)) {
 			return undefined;
@@ -199,7 +232,10 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			const publicKey = body?.data?.publicKey;
 
 			if (!publicKey) {
-				this.#migrationResult.coldContacts.push(addr);
+				this.#migrationResult.coldContacts.push({
+					...addr,
+					name: contactName,
+				});
 				return undefined;
 			}
 
@@ -207,7 +243,10 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			return wallet.address();
 		} catch (error) {
 			if (error.message.includes("404")) {
-				this.#migrationResult.coldContacts.push(addr);
+				this.#migrationResult.coldContacts.push({
+					...addr,
+					name: contactName,
+				});
 				return undefined;
 			}
 			throw new Error(
