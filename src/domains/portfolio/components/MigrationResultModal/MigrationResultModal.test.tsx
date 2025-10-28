@@ -34,8 +34,8 @@ describe("MigrationResultModal", () => {
 		const migrationResult = {
 			coldAddresses: [{ ADDRESS: "0x123456789" }, { ADDRESS: "0xabcdefghi" }],
 			coldContacts: [],
-			duplicateAddresses: [],
-			duplicateContacts: [],
+			mergedAddresses: [],
+			mergedContacts: [],
 		};
 
 		profile.data().set(ProfileData.MigrationResult, migrationResult);
@@ -54,8 +54,8 @@ describe("MigrationResultModal", () => {
 				{ name: "Alice", address: "0xalice123" },
 				{ name: "Bob", address: "0xbob456" },
 			],
-			duplicateAddresses: [],
-			duplicateContacts: [],
+			mergedAddresses: [],
+			mergedContacts: [],
 		};
 
 		profile.data().set(ProfileData.MigrationResult, migrationResult);
@@ -73,14 +73,14 @@ describe("MigrationResultModal", () => {
 		const migrationResult = {
 			coldAddresses: [],
 			coldContacts: [],
-			duplicateAddresses: [
+			mergedAddresses: [
 				{
 					ADDRESS: "0xold1",
 					duplicateAddress: "0xold2",
 					newAddress: "0xnew1",
 				},
 			],
-			duplicateContacts: [],
+			mergedContacts: [],
 		};
 
 		profile.data().set(ProfileData.MigrationResult, migrationResult);
@@ -97,8 +97,8 @@ describe("MigrationResultModal", () => {
 		const migrationResult = {
 			coldAddresses: [],
 			coldContacts: [],
-			duplicateAddresses: [],
-			duplicateContacts: [
+			mergedAddresses: [],
+			mergedContacts: [
 				{
 					oldName: "Contact1",
 					name: "MergedContact",
@@ -130,8 +130,8 @@ describe("MigrationResultModal", () => {
 		const migrationResult = {
 			coldAddresses: [{ ADDRESS: "0x123456789" }],
 			coldContacts: [],
-			duplicateAddresses: [],
-			duplicateContacts: [],
+			mergedAddresses: [],
+			mergedContacts: [],
 		};
 
 		profile.data().set(ProfileData.MigrationResult, migrationResult);
@@ -149,8 +149,8 @@ describe("MigrationResultModal", () => {
 		const migrationResult = {
 			coldAddresses: [{ ADDRESS: "0x123456789" }],
 			coldContacts: [],
-			duplicateAddresses: [],
-			duplicateContacts: [],
+			mergedAddresses: [],
+			mergedContacts: [],
 		};
 
 		profile.data().set(ProfileData.MigrationResult, migrationResult);

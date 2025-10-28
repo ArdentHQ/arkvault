@@ -7,8 +7,8 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #migrationResult: Record<string, any[]> = {
 		coldAddresses: [],
 		coldContacts: [],
-		duplicateAddresses: [],
-		duplicateContacts: [],
+		mergedAddresses: [],
+		mergedContacts: [],
 	};
 
 	/**
@@ -44,7 +44,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				);
 				const newWallet = Object.values(migratedWallets).find((d) => d.data["PUBLIC_KEY"] === publicKey);
 
-				this.#migrationResult.duplicateAddresses.push({
+				this.#migrationResult.mergedAddresses.push({
 					...wallet.data,
 					duplicateAddress: duplicateWallet?.data.ADDRESS,
 					newAddress: newWallet?.data.ADDRESS,
@@ -182,7 +182,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 							(result) => result.address === migratedAddress && result.contactId !== id,
 						);
 
-						this.#migrationResult.duplicateContacts.push({
+						this.#migrationResult.mergedContacts.push({
 							...contact,
 							duplicateContact: {
 								address: duplicateContact.address,

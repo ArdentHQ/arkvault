@@ -23,7 +23,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 		[migrationResult],
 	);
 
-	const { coldAddresses, coldContacts, duplicateAddresses, duplicateContacts } = migrationResult;
+	const { coldAddresses, coldContacts, mergedAddresses, mergedContacts } = migrationResult;
 
 	useEffect(() => {
 		if (profileIsSyncing) {
@@ -70,16 +70,16 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 					</div>
 				)}
 
-				{(duplicateAddresses?.length > 0 || duplicateContacts?.length > 0) && (
+				{(mergedAddresses?.length > 0 || mergedContacts?.length > 0) && (
 					<div className="flex flex-col sm:space-y-1">
 						<h5 className="mb-1 font-semibold">
-							{t("COMMON.MIGRATION_RESULT.DUPLICATE_ADDRESSES_AND_CONTACTS")}
+							{t("COMMON.MIGRATION_RESULT.MERGED_ADDRESSES_AND_CONTACTS")}
 						</h5>
 						<ul className="list-inside list-disc space-y-1">
-							{duplicateAddresses.map((wallet, index) => (
+							{mergedAddresses.map((wallet, index) => (
 								<li key={wallet.ADDRESS + index}>
 									<Trans
-										i18nKey="COMMON.MIGRATION_RESULT.DUPLICATE_ADDRESS"
+										i18nKey="COMMON.MIGRATION_RESULT.MERGED_ADDRESS"
 										values={{
 											address: wallet.ADDRESS,
 											duplicateAddress: wallet.duplicateAddress,
@@ -89,10 +89,10 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 								</li>
 							))}
 
-							{duplicateContacts.map((contact, index) => (
+							{mergedContacts.map((contact, index) => (
 								<li key={index}>
 									<Trans
-										i18nKey="COMMON.MIGRATION_RESULT.DUPLICATE_CONTACT"
+										i18nKey="COMMON.MIGRATION_RESULT.MERGED_CONTACT"
 										values={{
 											duplicateOldAddress: contact.duplicateContact.oldAddress,
 											duplicateOldName: contact.duplicateContact.oldName,

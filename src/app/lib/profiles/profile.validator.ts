@@ -33,8 +33,8 @@ export class ProfileValidator implements IProfileValidator {
 				[ProfileData.MigrationResult]: Joi.object({
 					coldAddresses: Joi.array(),
 					coldContacts: Joi.array(),
-					duplicateAddresses: Joi.array(),
-					duplicateContacts: Joi.array(),
+					mergedAddresses: Joi.array(),
+					mergedContacts: Joi.array(),
 				}),
 				[ProfileData.HasCompletedIntroductoryTutorial]: Joi.boolean(),
 				[ProfileData.HasAcceptedManualInstallationDisclaimer]: Joi.boolean(),
