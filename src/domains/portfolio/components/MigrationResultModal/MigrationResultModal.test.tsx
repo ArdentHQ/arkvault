@@ -89,7 +89,7 @@ describe("MigrationResultModal", () => {
 
 		render(<Wrapper />);
 
-		expect(screen.getByText("Duplicate addresses & contacts")).toBeInTheDocument();
+		expect(screen.getByText("Merged addresses & contacts")).toBeInTheDocument();
 		expect(screen.getByText(/0xold1/)).toBeInTheDocument();
 		expect(screen.getByText(/0xold2/)).toBeInTheDocument();
 		expect(screen.getByText(/0xnew1/)).toBeInTheDocument();
@@ -117,7 +117,7 @@ describe("MigrationResultModal", () => {
 
 		render(<Wrapper />);
 
-		expect(screen.getByText("Duplicate addresses & contacts")).toBeInTheDocument();
+		expect(screen.getByText("Merged addresses & contacts")).toBeInTheDocument();
 		expect(screen.getByText(/Contact1/)).toBeInTheDocument();
 		expect(screen.getByText(/Contact2/)).toBeInTheDocument();
 		expect(screen.getByText(/MergedContact/)).toBeInTheDocument();
