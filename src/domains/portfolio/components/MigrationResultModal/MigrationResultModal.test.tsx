@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
-import { ConfigurationProvider } from "@/app/contexts";
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
 import { MigrationResultModal } from "./MigrationResultModal";
 import { ProfileData } from "@/app/lib/profiles/profile.enum.contract";
@@ -10,9 +10,11 @@ import userEvent from "@testing-library/user-event";
 let profile: Contracts.IProfile;
 
 const Wrapper = ({ profileIsSyncing = false }: { profileIsSyncing?: boolean }) => (
-	<ConfigurationProvider defaultConfiguration={{ profileIsSyncing }}>
-		<MigrationResultModal profile={profile} />
-	</ConfigurationProvider>
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider defaultConfiguration={{ profileIsSyncing }}>
+			<MigrationResultModal profile={profile} />
+		</ConfigurationProvider>
+	</EnvironmentProvider>
 );
 
 describe("MigrationResultModal", () => {
@@ -69,14 +71,14 @@ describe("MigrationResultModal", () => {
 		expect(screen.getByText(/0xbob456/)).toBeInTheDocument();
 	});
 
-	it("should render modal with duplicate addresses", () => {
+	it("should render modal with merged addresses", () => {
 		const migrationResult = {
 			coldAddresses: [],
 			coldContacts: [],
 			mergedAddresses: [
 				{
 					ADDRESS: "0xold1",
-					duplicateAddress: "0xold2",
+					mergedAddress: "0xold2",
 					newAddress: "0xnew1",
 				},
 			],
@@ -93,7 +95,7 @@ describe("MigrationResultModal", () => {
 		expect(screen.getByText(/0xnew1/)).toBeInTheDocument();
 	});
 
-	it("should render modal with duplicate contacts", () => {
+	it("should render modal with merged contacts", () => {
 		const migrationResult = {
 			coldAddresses: [],
 			coldContacts: [],
