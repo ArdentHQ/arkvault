@@ -93,12 +93,12 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 									<Trans
 										i18nKey="COMMON.MIGRATION_RESULT.MERGED_CONTACT"
 										values={{
-											oldAddress2: contact.mergedContact.oldAddress,
-											oldName2: contact.mergedContact.oldName,
 											name: contact.name,
 											newAddress: contact.addresses[0].address,
 											oldAddress1: contact.addresses[0].oldAddress,
+											oldAddress2: contact.mergedContact.oldAddress,
 											oldName1: contact.oldName,
+											oldName2: contact.mergedContact.oldName,
 										}}
 									/>
 								</li>
