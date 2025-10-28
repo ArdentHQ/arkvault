@@ -55,7 +55,6 @@ describe("TransactionDetails", () => {
 
 		expect(screen.getByText("N/A")).toBeInTheDocument();
 
-
 		await waitFor(() => {
 			expect(screen.queryByText("N/A")).not.toBeInTheDocument();
 		});
