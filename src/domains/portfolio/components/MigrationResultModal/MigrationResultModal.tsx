@@ -32,9 +32,9 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 	return (
 		<Modal title={"Migration Result"} isOpen={show} onClose={() => setShow(false)} size="4xl">
 			<div className="w-full space-y-4">
-				{coldAddresses.length > 0 && (
+				{(coldAddresses.length > 0 || coldContacts.length > 0) && (
 					<div className="flex flex-col sm:space-y-1">
-						<h5 className="mb-1 font-semibold">Cold addresses</h5>
+						<h5 className="mb-1 font-semibold">Cold addresses & contacts</h5>
 						<ul className="list-inside list-disc space-y-1">
 							{coldAddresses.map((wallet) => {
 								return (
@@ -44,14 +44,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 									</li>
 								);
 							})}
-						</ul>
-					</div>
-				)}
 
-				{coldContacts.length > 0 && (
-					<div className="flex flex-col sm:space-y-1">
-						<h5 className="mb-1 font-semibold">Cold contacts</h5>
-						<ul className="list-inside list-disc space-y-1">
 							{coldContacts.map((contact) => {
 								return (
 									<li>
@@ -67,9 +60,9 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 					</div>
 				)}
 
-				{duplicateAddresses.length > 0 && (
+				{(duplicateAddresses.length > 0 || duplicateContacts.length > 0) && (
 					<div className="flex flex-col sm:space-y-1">
-						<h5 className="mb-1 font-semibold">Duplicate addresses</h5>
+						<h5 className="mb-1 font-semibold">Duplicate addresses & contacts </h5>
 						<ul className="list-inside list-disc space-y-1">
 							{duplicateAddresses.map((wallet) => {
 								return (
@@ -80,14 +73,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 									</li>
 								);
 							})}
-						</ul>
-					</div>
-				)}
 
-				{duplicateContacts.length > 0 && (
-					<div className="flex flex-col sm:space-y-1">
-						<h5 className="mb-1 font-semibold">Duplicate Contacts </h5>
-						<ul className="list-inside list-disc space-y-1">
 							{duplicateContacts.map((contact) => {
 								return (
 									<li>
