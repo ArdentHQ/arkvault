@@ -11,7 +11,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 	const { t } = useTranslation();
 	const [show, setShow] = useState<boolean>(false);
 
-	const { persist, env } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 
 	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(profile.id());
 
