@@ -31,7 +31,12 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 	}, [profile, profileIsSyncing, hasMigrationResult]);
 
 	const handleClose = async () => {
-		profile.data().set(ProfileData.MigrationResult, {});
+		profile.data().set(ProfileData.MigrationResult, {
+			coldAddresses: [],
+			coldContacts: [],
+			duplicateAddresses: [],
+			duplicateContacts: [],
+		});
 		setShow(false);
 	};
 
@@ -42,24 +47,20 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 					<div className="flex flex-col sm:space-y-1">
 						<h5 className="mb-1 font-semibold">{t("COMMON.MIGRATION_RESULT.COLD_ADDRESSES_AND_CONTACTS")}</h5>
 						<ul className="list-inside list-disc space-y-1">
-							{coldAddresses.map((wallet, index) => {
-								return (
+							{coldAddresses.map((wallet, index) => (
 									<li key={wallet.ADDRESS + index}>
 										<Trans i18nKey="COMMON.MIGRATION_RESULT.COLD_ADDRESS" values={{ address: wallet.ADDRESS }} />
 									</li>
-								);
-							})}
+								))}
 
-							{coldContacts.map((contact, index) => {
-								return (
+							{coldContacts.map((contact, index) => (
 									<li key={index}>
 										<Trans
 											i18nKey="COMMON.MIGRATION_RESULT.COLD_CONTACT"
-											values={{ name: contact.name, address: contact.address }}
+											values={{ address: contact.address, name: contact.name }}
 										/>
 									</li>
-								);
-							})}
+								))}
 						</ul>
 					</div>
 				)}
@@ -68,8 +69,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 					<div className="flex flex-col sm:space-y-1">
 						<h5 className="mb-1 font-semibold">{t("COMMON.MIGRATION_RESULT.DUPLICATE_ADDRESSES_AND_CONTACTS")}</h5>
 						<ul className="list-inside list-disc space-y-1">
-							{duplicateAddresses.map((wallet, index) => {
-								return (
+							{duplicateAddresses.map((wallet, index) => (
 									<li key={wallet.ADDRESS + index}>
 										<Trans
 											i18nKey="COMMON.MIGRATION_RESULT.DUPLICATE_ADDRESS"
@@ -80,26 +80,23 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 											}}
 										/>
 									</li>
-								);
-							})}
+								))}
 
-							{duplicateContacts.map((contact, index) => {
-								return (
+							{duplicateContacts.map((contact, index) => (
 									<li key={index}>
 										<Trans
 											i18nKey="COMMON.MIGRATION_RESULT.DUPLICATE_CONTACT"
 											values={{
-												oldName: contact.oldName,
-												oldAddress: contact.addresses[0].oldAddress,
-												duplicateOldName: contact.duplicateContact.oldName,
 												duplicateOldAddress: contact.duplicateContact.oldAddress,
-												newAddress: contact.addresses[0].address,
+												duplicateOldName: contact.duplicateContact.oldName,
 												name: contact.name,
+												newAddress: contact.addresses[0].address,
+												oldAddress: contact.addresses[0].oldAddress,
+												oldName: contact.oldName,
 											}}
 										/>
 									</li>
-								);
-							})}
+								))}
 						</ul>
 					</div>
 				)}
