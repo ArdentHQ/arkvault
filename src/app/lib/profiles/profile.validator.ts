@@ -30,6 +30,12 @@ export class ProfileValidator implements IProfileValidator {
 			),
 			data: Joi.object({
 				[ProfileData.LatestMigration]: Joi.string(),
+				[ProfileData.MigrationResult]: Joi.object({
+					coldAddresses: Joi.array(),
+					coldContacts: Joi.array(),
+					duplicateAddresses: Joi.array(),
+					duplicateContacts: Joi.array(),
+				}),
 				[ProfileData.HasCompletedIntroductoryTutorial]: Joi.boolean(),
 				[ProfileData.HasAcceptedManualInstallationDisclaimer]: Joi.boolean(),
 			}).required(),

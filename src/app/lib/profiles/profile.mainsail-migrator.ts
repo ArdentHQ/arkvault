@@ -1,9 +1,15 @@
-import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
+import { IProfile, IProfileData, IProfileMainsailMigrator, ProfileData } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
 import { Avatar } from "./helpers/avatar.js";
 import { UUID } from "@ardenthq/arkvault-crypto";
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
+	readonly #migrationResult: Record<string, any[]> = {
+		coldAddresses: [],
+		coldContacts: [],
+		duplicateAddresses: [],
+		duplicateContacts: [],
+	};
 
 	/**
 	 * Migrates the profile data from Mainsail to ArkVault if needed.
@@ -17,6 +23,8 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
 			data.settings = await this.#migrateSettings(profile, data.settings, data.wallets);
+
+			profile.data().set(ProfileData.MigrationResult, this.#migrationResult);
 		}
 
 		return data;
@@ -31,6 +39,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 			// If this public key has already been migrated, skip to avoid duplicates
 			if (publicKey !== undefined && seenPublicKeys.has(publicKey)) {
+				this.#migrationResult.duplicateAddresses.push(wallet.data);
 				continue;
 			}
 
@@ -73,6 +82,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	): Promise<IProfileData["wallets"][string]["data"] | undefined> {
 		const publicKey = walletData["PUBLIC_KEY"];
 		if (publicKey === undefined) {
+			this.#migrationResult.coldAddresses.push(walletData);
 			return undefined;
 		}
 
@@ -149,6 +159,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				const migratedAddress = contact.addresses?.[0]?.address;
 				if (typeof migratedAddress === "string") {
 					if (seenAddresses.has(migratedAddress)) {
+						this.#migrationResult.duplicateContacts.push(contact);
 						continue;
 					}
 					seenAddresses.set(migratedAddress, id);
@@ -188,6 +199,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			const publicKey = body?.data?.publicKey;
 
 			if (!publicKey) {
+				this.#migrationResult.coldContacts.push(addr);
 				return undefined;
 			}
 
@@ -195,6 +207,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			return wallet.address();
 		} catch (error) {
 			if (error.message.includes("404")) {
+				this.#migrationResult.coldContacts.push(addr);
 				return undefined;
 			}
 			throw new Error(
