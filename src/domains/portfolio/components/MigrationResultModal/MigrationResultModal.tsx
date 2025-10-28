@@ -34,7 +34,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 			<div className="w-full space-y-4">
 				{(coldAddresses.length > 0 || coldContacts.length > 0) && (
 					<div className="flex flex-col sm:space-y-1">
-						<h5 className="mb-1 font-semibold">Cold addresses & contacts</h5>
+						<h5 className="mb-1 font-semibold">{t("COMMON.MIGRATION_RESULT.COLD_ADDRESSES_AND_CONTACTS")}</h5>
 						<ul className="list-inside list-disc space-y-1">
 							{coldAddresses.map((wallet, index) => {
 								return (
@@ -60,7 +60,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 
 				{(duplicateAddresses.length > 0 || duplicateContacts.length > 0) && (
 					<div className="flex flex-col sm:space-y-1">
-						<h5 className="mb-1 font-semibold">Duplicate addresses & contacts </h5>
+						<h5 className="mb-1 font-semibold">{t("COMMON.MIGRATION_RESULT.DUPLICATE_ADDRESSES_AND_CONTACTS")}</h5>
 						<ul className="list-inside list-disc space-y-1">
 							{duplicateAddresses.map((wallet, index) => {
 								return (
