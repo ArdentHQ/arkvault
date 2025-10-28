@@ -142,7 +142,7 @@ describe("MigrationResultModal", () => {
 
 		expect(screen.getByText("Migration Result")).toBeInTheDocument();
 
-		await user.click(screen.getByTestId("WelcomeModal-next"));
+		await user.click(screen.getByTestId("CloseMigrationResult"));
 
 		expect(profile.data().get(ProfileData.MigrationResult)).toEqual({});
 	});

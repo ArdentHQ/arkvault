@@ -33,7 +33,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 	}, [profile, profileIsSyncing, hasMigrationResult]);
 
 	const handleClose = async () => {
-		profile.setMigrationResult({})
+		profile.setMigrationResult({});
 
 		await persist();
 		setShow(false);
@@ -108,7 +108,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 				)}
 
 				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mx-6 flex justify-end border-t px-6 pt-3.5 pb-3.5 sm:pb-0">
-					<Button onClick={handleClose} data-testid="WelcomeModal-next">
+					<Button onClick={handleClose} data-testid="CloseMigrationResult">
 						{t("COMMON.CONTINUE")}
 					</Button>
 				</div>
