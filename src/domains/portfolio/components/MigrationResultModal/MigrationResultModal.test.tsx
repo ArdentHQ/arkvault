@@ -51,8 +51,8 @@ describe("MigrationResultModal", () => {
 		const migrationResult = {
 			coldAddresses: [],
 			coldContacts: [
-				{ name: "Alice", address: "0xalice123" },
-				{ name: "Bob", address: "0xbob456" },
+				{ address: "0xalice123", name: "Alice" },
+				{ address: "0xbob456", name: "Bob" },
 			],
 			duplicateAddresses: [],
 			duplicateContacts: [],
@@ -100,13 +100,13 @@ describe("MigrationResultModal", () => {
 			duplicateAddresses: [],
 			duplicateContacts: [
 				{
-					oldName: "Contact1",
-					name: "MergedContact",
-					addresses: [{ oldAddress: "0xcontact1old", address: "0xcontactnew" }],
+					addresses: [{ address: "0xcontactnew", oldAddress: "0xcontact1old" }],
 					duplicateContact: {
-						oldName: "Contact2",
 						oldAddress: "0xcontact2old",
+						oldName: "Contact2",
 					},
+					name: "MergedContact",
+					oldName: "Contact1",
 				},
 			],
 		};
