@@ -35,6 +35,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 
 	const handleClose = async () => {
 		profile.data().set(ProfileData.MigrationResult, {});
+		profile.status().markAsDirty();
 
 		await persist();
 		setShow(false);
@@ -82,7 +83,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 										i18nKey="COMMON.MIGRATION_RESULT.MERGED_ADDRESS"
 										values={{
 											address: wallet.ADDRESS,
-											duplicateAddress: wallet.duplicateAddress,
+											mergedAddress: wallet.mergedAddress,
 											newAddress: wallet.newAddress,
 										}}
 									/>
@@ -94,12 +95,12 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 									<Trans
 										i18nKey="COMMON.MIGRATION_RESULT.MERGED_CONTACT"
 										values={{
-											duplicateOldAddress: contact.duplicateContact.oldAddress,
-											duplicateOldName: contact.duplicateContact.oldName,
+											oldAddress2: contact.mergedContact.oldAddress,
+											oldName2: contact.mergedContact.oldName,
 											name: contact.name,
 											newAddress: contact.addresses[0].address,
-											oldAddress: contact.addresses[0].oldAddress,
-											oldName: contact.oldName,
+											oldAddress1: contact.addresses[0].oldAddress,
+											oldName1: contact.oldName,
 										}}
 									/>
 								</li>

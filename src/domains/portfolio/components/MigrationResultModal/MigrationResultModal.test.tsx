@@ -101,7 +101,7 @@ describe("MigrationResultModal", () => {
 			mergedContacts: [
 				{
 					addresses: [{ address: "0xcontactnew", oldAddress: "0xcontact1old" }],
-					duplicateContact: {
+					mergedContact: {
 						oldAddress: "0xcontact2old",
 						oldName: "Contact2",
 					},

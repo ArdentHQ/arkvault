@@ -39,14 +39,14 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 			// If this public key has already been migrated, skip to avoid duplicates
 			if (publicKey !== undefined && seenPublicKeys.has(publicKey)) {
-				const duplicateWallet = Object.values(wallets).find(
+				const mergedWallet = Object.values(wallets).find(
 					(d) => d.data["PUBLIC_KEY"] === publicKey && migratedWallets[d.id] !== undefined,
 				);
 				const newWallet = Object.values(migratedWallets).find((d) => d.data["PUBLIC_KEY"] === publicKey);
 
 				this.#migrationResult.mergedAddresses.push({
 					...wallet.data,
-					duplicateAddress: duplicateWallet?.data.ADDRESS,
+					mergedAddress: mergedWallet?.data.ADDRESS,
 					newAddress: newWallet?.data.ADDRESS,
 				});
 				continue;
@@ -178,19 +178,19 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				const migratedAddress = contact.addresses?.[0]?.address;
 				if (typeof migratedAddress === "string") {
 					if (seenAddresses.has(migratedAddress)) {
-						const duplicateContact = normalizedResults.find(
+						const mergedContact = normalizedResults.find(
 							(result) => result.address === migratedAddress && result.contactId !== id,
 						);
 
 						this.#migrationResult.mergedContacts.push({
 							...contact,
-							duplicateContact: {
-								address: duplicateContact.address,
-								name: duplicateContact.name,
-								oldAddress: duplicateContact.oldAddress,
-								oldName: duplicateContact.oldName,
+							mergedContact: {
+								address: mergedContact.address,
+								name: mergedContact.name,
+								oldAddress: mergedContact.oldAddress,
+								oldName: mergedContact.oldName,
 							},
-							name: duplicateContact.name,
+							name: mergedContact.name,
 						});
 						continue;
 					}

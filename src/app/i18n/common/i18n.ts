@@ -250,10 +250,10 @@ export const translations = {
 		COLD_CONTACT:
 			"We could not derive the new address of contact <strong>{{name}} ({{address}})</strong> as no outgoing transactions were made from this address.",
 		MERGED_ADDRESS:
-			"Address <strong class='truncate'>{{address}}</strong> and <strong>{{duplicateAddress}}</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one.",
+			"Address <strong>{{address}}</strong> and <strong>{{mergedAddress}}</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one.",
 		MERGED_ADDRESSES_AND_CONTACTS: "Duplicate addresses & contacts",
 		MERGED_CONTACT:
-			"Contact <strong>{{oldName}} ({{oldAddress}})</strong> and <strong>{{duplicateOldName}} ({{duplicateOldAddress}})</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one, using the name <strong>{{name}}</strong>.",
+			"Contact <strong>{{oldName1}} ({{oldAddress1}})</strong> and <strong>{{oldName2}} ({{oldAddress2}})</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one, using the name <strong>{{name}}</strong>.",
 		TITLE: "Migration Result",
 	},
 	MNEMONIC: "Mnemonic",
