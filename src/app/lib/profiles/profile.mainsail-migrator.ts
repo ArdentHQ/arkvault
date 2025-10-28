@@ -178,17 +178,17 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				const migratedAddress = contact.addresses?.[0]?.address;
 				if (typeof migratedAddress === "string") {
 					if (seenAddresses.has(migratedAddress)) {
-						const duplicateContact = normalizedResults.find((result) => {
-							return result.address === migratedAddress && result.contactId !== id;
-						});
+						const duplicateContact = normalizedResults.find(
+							(result) => result.address === migratedAddress && result.contactId !== id,
+						);
 
 						this.#migrationResult.duplicateContacts.push({
 							...contact,
 							duplicateContact: {
-								oldName: duplicateContact.oldName,
-								oldAddress: duplicateContact.oldAddress,
-								name: duplicateContact.name,
 								address: duplicateContact.address,
+								name: duplicateContact.name,
+								oldAddress: duplicateContact.oldAddress,
+								oldName: duplicateContact.oldName,
 							},
 							name: duplicateContact.name,
 						});
