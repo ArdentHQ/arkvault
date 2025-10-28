@@ -511,6 +511,13 @@ export class Profile implements IProfile {
 		}
 	}
 
+	/** {@inheritDoc IProfile.setMigrationResult} */
+	public setMigrationResult(result: Record<string, any[]>): void {
+		this.data().set(ProfileData.MigrationResult, result);
+
+		this.status().markAsDirty();
+	}
+
 	/** {@inheritDoc IProfile.markIntroductoryTutorialAsComplete} */
 	public markIntroductoryTutorialAsComplete(): void {
 		this.data().set(ProfileData.HasCompletedIntroductoryTutorial, true);

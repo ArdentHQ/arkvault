@@ -33,8 +33,7 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 	}, [profile, profileIsSyncing, hasMigrationResult]);
 
 	const handleClose = async () => {
-		profile.data().set(ProfileData.MigrationResult, {});
-		profile.status().markAsDirty();
+		profile.setMigrationResult({})
 
 		await persist();
 		setShow(false);

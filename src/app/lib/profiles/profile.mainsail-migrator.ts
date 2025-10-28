@@ -24,7 +24,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
 			data.settings = await this.#migrateSettings(profile, data.settings, data.wallets);
 
-			profile.data().set(ProfileData.MigrationResult, this.#migrationResult);
+			profile.setMigrationResult(this.#migrationResult);
 		}
 
 		return data;
