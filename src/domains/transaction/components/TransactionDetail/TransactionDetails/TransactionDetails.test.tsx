@@ -43,7 +43,7 @@ describe("TransactionDetails", () => {
 		expect(screen.queryByText(TransactionFixture.blockHash())).not.toBeInTheDocument();
 	});
 
-	it("should display block number after refreshing confirmed transaction", async () => {
+	it("should display block number after refreshing unconfirmed transaction", async () => {
 		const unconfirmedTransaction = {
 			...TransactionFixture,
 			blockHash: () => {},
