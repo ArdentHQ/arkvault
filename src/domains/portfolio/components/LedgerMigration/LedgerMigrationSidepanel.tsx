@@ -31,8 +31,6 @@ export const LedgerMigrationSidepanel = ({
 	const [activeTab, setActiveTab] = useState(MigrateLedgerStep.ListenLedgerStep);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
-	const { title, subtitle, titleIcon } = useLedgerMigrationHeader(activeTab);
-
 	const migrator = useRef(new LedgerMigrator({ env, profile })).current;
 	const transfer = useRef<MigrationTransaction | undefined>(undefined);
 
@@ -108,7 +106,7 @@ export const LedgerMigrationSidepanel = ({
 								network={profile.activeNetwork()}
 								onContinue={() => {
 									transfer.current = migrator.nextTransaction();
-								transfer.current?.setIsPending(true);setActiveTab(MigrateLedgerStep.OverviewStep);
+									transfer.current?.setIsPending(true);setActiveTab(MigrateLedgerStep.OverviewStep);
 								}}
 							/>
 						</TabPanel>
