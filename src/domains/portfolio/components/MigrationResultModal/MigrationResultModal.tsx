@@ -1,6 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
 import { ProfileData } from "@/app/lib/profiles/profile.enum.contract";
@@ -30,29 +30,27 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 	}, [profile, profileIsSyncing, hasMigrationResult]);
 
 	return (
-		<Modal title={"Migration Result"} isOpen={show} onClose={() => setShow(false)} size="4xl">
+		<Modal title={t("COMMON.MIGRATION_RESULT.TITLE")} isOpen={show} onClose={() => setShow(false)} size="4xl">
 			<div className="w-full space-y-4">
 				{(coldAddresses.length > 0 || coldContacts.length > 0) && (
 					<div className="flex flex-col sm:space-y-1">
 						<h5 className="mb-1 font-semibold">Cold addresses & contacts</h5>
 						<ul className="list-inside list-disc space-y-1">
-							{coldAddresses.map((wallet) => {
+							{coldAddresses.map((wallet, index) => {
 								return (
-									<li>
-										We could not derive the new address of <b>{wallet.ADDRESS}</b> as no outgoing
-										transactions were made from this address.
+									<li key={wallet.ADDRESS + index}>
+										<Trans i18nKey="COMMON.MIGRATION_RESULT.COLD_ADDRESS" values={{ address: wallet.ADDRESS }} />,
 									</li>
 								);
 							})}
 
-							{coldContacts.map((contact) => {
+							{coldContacts.map((contact, index) => {
 								return (
-									<li>
-										We could not derive the new address of contact{" "}
-										<b>
-											{contact.name} ({contact.address}){" "}
-										</b>{" "}
-										as no outgoing transactions were made from this address
+									<li key={index}>
+										<Trans
+											i18nKey="COMMON.MIGRATION_RESULT.COLD_CONTACT"
+											values={{ name: contact.name, address: contact.address }}
+										/>
 									</li>
 								);
 							})}
@@ -64,30 +62,35 @@ export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile 
 					<div className="flex flex-col sm:space-y-1">
 						<h5 className="mb-1 font-semibold">Duplicate addresses & contacts </h5>
 						<ul className="list-inside list-disc space-y-1">
-							{duplicateAddresses.map((wallet) => {
+							{duplicateAddresses.map((wallet, index) => {
 								return (
-									<li>
-										Address <b>{wallet.ADDRESS}</b> and <b>{wallet.duplicateAddress}</b> both
-										correspond to the new address <b>{wallet.newAddress}</b> and are therefore
-										combined into one
+									<li key={wallet.ADDRESS + index}>
+										<Trans
+											i18nKey="COMMON.MIGRATION_RESULT.DUPLICATE_ADDRESS"
+											values={{
+												address: wallet.ADDRESS,
+												duplicateAddress: wallet.duplicateAddress,
+												newAddress: wallet.newAddress,
+											}}
+										/>
 									</li>
 								);
 							})}
 
-							{duplicateContacts.map((contact) => {
+							{duplicateContacts.map((contact, index) => {
 								return (
-									<li>
-										Contact{" "}
-										<b>
-											{contact.oldName} ({contact.addresses[0].oldAddress}){" "}
-										</b>{" "}
-										and{" "}
-										<b>
-											{contact.duplicateContact.oldName} ({contact.duplicateContact.oldAddress}
-											){" "}
-										</b>{" "}
-										both correspond to the new address <b>{contact.addresses[0].address}</b> and are
-										therefore combined into one, using the name <b>{contact.name}</b>{" "}
+									<li key={index}>
+										<Trans
+											i18nKey="COMMON.MIGRATION_RESULT.DUPLICATE_CONTACT"
+											values={{
+												oldName: contact.oldName,
+												oldAddress: contact.addresses[0].oldAddress,
+												duplicateOldName: contact.duplicateContact.oldName,
+												duplicateOldAddress: contact.duplicateContact.oldAddress,
+												newAddress: contact.addresses[0].address,
+												name: contact.name,
+											}}
+										/>
 									</li>
 								);
 							})}
