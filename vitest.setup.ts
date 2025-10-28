@@ -7,10 +7,17 @@ import Tippy from "@tippyjs/react";
 import crypto from "crypto";
 import "jest-styled-components";
 import { server } from "./src/tests/mocks/server";
+import { pwnedMock } from "./src/tests/mocks/handlers/pwned";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
 
 expect.extend(matchers);
+
+
+vi.mock("@faustbrian/node-haveibeenpwned", () => ({
+	pwned: async () => pwnedMock(),
+}));
+
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
