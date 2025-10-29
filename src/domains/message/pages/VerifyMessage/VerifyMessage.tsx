@@ -172,7 +172,7 @@ export const VerifyMessage = () => {
 							</TabPanel>
 
 							{activeTab === Step.FormStep && (
-								<FormButtons>
+								<FormButtons className="border-none">
 									<Button
 										variant="secondary"
 										data-testid="VerifyMessage__back-button"
@@ -192,7 +192,7 @@ export const VerifyMessage = () => {
 							)}
 
 							{activeTab === Step.SuccessStep && (
-								<FormButtons>
+								<FormButtons className="border-none">
 									<Button
 										data-testid="VerifyMessage__back-to-wallet-button"
 										variant="secondary"
