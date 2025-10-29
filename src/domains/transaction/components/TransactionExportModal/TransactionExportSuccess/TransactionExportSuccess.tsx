@@ -38,6 +38,7 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 
 			<FilePreview file={file} variant="success" />
 
+			<div className="mt-4 modal-footer">
 			<FormButtons>
 				<Button variant="secondary" onClick={onBack} data-testid="TransactionExportSuccess__back-button">
 					{t("COMMON.BACK")}
@@ -59,6 +60,7 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 					{t("COMMON.DOWNLOAD")}
 				</Button>
 			</FormButtons>
+			</div>
 		</div>
 	);
 };

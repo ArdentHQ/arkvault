@@ -30,6 +30,7 @@ export const TransactionExportError = ({
 
 			<FilePreview file={file} variant="danger" />
 
+			<div className="mt-4 modal-footer">
 			<FormButtons>
 				<Button variant="secondary" onClick={onBack} data-testid="TransactionExportError__back-button">
 					{t("COMMON.BACK")}
@@ -55,6 +56,7 @@ export const TransactionExportError = ({
 					{t("COMMON.RETRY")}
 				</Button>
 			</FormButtons>
+			</div>
 		</div>
 	);
 };

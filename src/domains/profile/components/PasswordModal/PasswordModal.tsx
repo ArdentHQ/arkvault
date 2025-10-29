@@ -42,11 +42,14 @@ export const PasswordModal = ({ isOpen, title, description, onClose, onSubmit }:
 					/>
 				</FormField>
 
+
+				<div className="modal-footer">
 				<FormButtons>
 					<Button data-testid="PasswordModal__submit-button" type="submit" disabled={!form.formState.isValid}>
 						{t("COMMON.CONFIRM")}
 					</Button>
 				</FormButtons>
+				</div>
 			</Form>
 		</Modal>
 	);

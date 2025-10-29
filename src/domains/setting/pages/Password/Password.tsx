@@ -156,8 +156,8 @@ export const PasswordSettings = () => {
 						<ListDivided items={items} />
 					</SettingsGroup>
 
-					<SettingsButtonGroup className="modal-footer">
-						<FormButtons>
+					<SettingsButtonGroup>
+						<FormButtons className="border-none">
 							<Button
 								data-testid="Password-settings__submit-button"
 								disabled={isSubmitDisabled()}

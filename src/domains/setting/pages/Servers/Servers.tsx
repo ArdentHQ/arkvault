@@ -176,8 +176,8 @@ export const ServersSettings = () => {
 					/>
 				</SettingsGroup>
 
-				<SettingsButtonGroup className="modal-footer">
-					<FormButtons>
+				<SettingsButtonGroup>
+					<FormButtons className="border-none">
 						<Button
 							disabled={isSaveButtonDisabled}
 							data-testid="Server-settings__submit-button"

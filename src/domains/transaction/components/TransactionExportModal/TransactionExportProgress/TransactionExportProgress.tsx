@@ -35,6 +35,7 @@ export const TransactionExportProgress = ({ count, file, onCancel }: Transaction
 
 			<FilePreview file={file} variant="loading" />
 
+			<div className="mt-4 modal-footer">
 			<FormButtons>
 				<Button variant="secondary" onClick={onCancel} data-testid="TransactionExportProgress__cancel-button">
 					{t("COMMON.CANCEL")}
@@ -44,6 +45,7 @@ export const TransactionExportProgress = ({ count, file, onCancel }: Transaction
 					{t("COMMON.DOWNLOAD")}
 				</Button>
 			</FormButtons>
+			</div>
 		</div>
 	);
 };

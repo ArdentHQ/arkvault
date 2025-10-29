@@ -57,24 +57,27 @@ export const TransactionExportForm = ({ wallets, onCancel, profile }: Transactio
 
 			<ColumnSettings showFiatColumn={showFiatColumn} />
 
-			<FormButtons>
-				<Button
-					variant="secondary"
-					onClick={() => onCancel()}
-					data-testid="TransactionExportForm__cancel-button"
-				>
-					{t("COMMON.CANCEL")}
-				</Button>
 
-				<Button
-					type="submit"
-					disabled={isSubmitting || (isDirty ? !isValid : false)}
-					variant="primary"
-					data-testid="TransactionExport__submit-button"
-				>
-					{t("COMMON.EXPORT")}
-				</Button>
-			</FormButtons>
+			<div className="mt-4 modal-footer">
+				<FormButtons>
+					<Button
+						variant="secondary"
+						onClick={() => onCancel()}
+						data-testid="TransactionExportForm__cancel-button"
+					>
+						{t("COMMON.CANCEL")}
+					</Button>
+
+					<Button
+						type="submit"
+						disabled={isSubmitting || (isDirty ? !isValid : false)}
+						variant="primary"
+						data-testid="TransactionExport__submit-button"
+					>
+						{t("COMMON.EXPORT")}
+					</Button>
+				</FormButtons>
+			</div>
 		</div>
 	);
 };

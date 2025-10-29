@@ -72,7 +72,7 @@ export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: Upd
 					</div>
 				</FormField>
 
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 modal-footer -mx-6 px-6 sm:border-t">
+				<div className="modal-footer">
 					<FormButtons>
 						<Button data-testid="UpdateWalletName__cancel" variant="secondary" onClick={onCancel}>
 							{t("COMMON.CANCEL")}
