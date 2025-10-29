@@ -1,19 +1,11 @@
-import { pwned } from "@faustbrian/node-haveibeenpwned";
 import { renderHook, act } from "@testing-library/react";
 import { usePasswordValidation, defaultState } from "./use-password-validation";
 import { ValidationRule } from ".";
+import { setPwnedMockResponse } from "@/tests/mocks/handlers/pwned";
 
 const validPassword = "S3cUr3!Pas#w0rd";
 
-vi.mock("@faustbrian/node-haveibeenpwned", () => ({
-	pwned: vi.fn(),
-}));
-
 describe("usePasswordValidation", () => {
-	beforeEach(() => {
-		pwned.mockResolvedValue(0);
-	});
-
 	describe("#validationState", () => {
 		it("should return the password validation state", () => {
 			const { result } = renderHook(() => usePasswordValidation());
@@ -120,7 +112,7 @@ describe("usePasswordValidation", () => {
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
 
-			pwned.mockResolvedValue(1);
+			setPwnedMockResponse(1);
 
 			await act(async () => {
 				await result.current.validatePassword(validPassword);
@@ -128,9 +120,7 @@ describe("usePasswordValidation", () => {
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
 
-			pwned.mockImplementation(() => {
-				throw new Error("Error");
-			});
+			setPwnedMockResponse(0);
 
 			await act(async () => {
 				await result.current.validatePassword(validPassword);
