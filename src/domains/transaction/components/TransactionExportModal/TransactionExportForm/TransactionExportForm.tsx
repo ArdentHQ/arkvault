@@ -57,8 +57,7 @@ export const TransactionExportForm = ({ wallets, onCancel, profile }: Transactio
 
 			<ColumnSettings showFiatColumn={showFiatColumn} />
 
-
-			<div className="mt-4 modal-footer">
+			<div className="modal-footer mt-4">
 				<FormButtons>
 					<Button
 						variant="secondary"

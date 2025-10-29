@@ -38,28 +38,28 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 
 			<FilePreview file={file} variant="success" />
 
-			<div className="mt-4 modal-footer">
-			<FormButtons>
-				<Button variant="secondary" onClick={onBack} data-testid="TransactionExportSuccess__back-button">
-					{t("COMMON.BACK")}
-				</Button>
+			<div className="modal-footer mt-4">
+				<FormButtons>
+					<Button variant="secondary" onClick={onBack} data-testid="TransactionExportSuccess__back-button">
+						{t("COMMON.BACK")}
+					</Button>
 
-				<Button
-					disabled={count === 0}
-					type="button"
-					variant="primary"
-					data-testid="TransactionExportSuccess__download-button"
-					onClick={async () => {
-						const filename = await download(file);
+					<Button
+						disabled={count === 0}
+						type="button"
+						variant="primary"
+						data-testid="TransactionExportSuccess__download-button"
+						onClick={async () => {
+							const filename = await download(file);
 
-						if (filename) {
-							onDownload?.(filename);
-						}
-					}}
-				>
-					{t("COMMON.DOWNLOAD")}
-				</Button>
-			</FormButtons>
+							if (filename) {
+								onDownload?.(filename);
+							}
+						}}
+					>
+						{t("COMMON.DOWNLOAD")}
+					</Button>
+				</FormButtons>
 			</div>
 		</div>
 	);
