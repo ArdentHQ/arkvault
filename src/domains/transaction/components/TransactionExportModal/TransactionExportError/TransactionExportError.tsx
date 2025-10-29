@@ -30,32 +30,32 @@ export const TransactionExportError = ({
 
 			<FilePreview file={file} variant="danger" />
 
-			<div className="mt-4 modal-footer">
-			<FormButtons>
-				<Button variant="secondary" onClick={onBack} data-testid="TransactionExportError__back-button">
-					{t("COMMON.BACK")}
-				</Button>
-
-				{count > 0 && onDownload && (
-					<Button
-						variant="secondary"
-						data-testid="TransactionExportError__download"
-						onClick={async () => {
-							const filename = await download(file);
-
-							if (filename) {
-								onDownload?.(filename);
-							}
-						}}
-					>
-						{t("COMMON.DOWNLOAD")}
+			<div className="modal-footer mt-4">
+				<FormButtons>
+					<Button variant="secondary" onClick={onBack} data-testid="TransactionExportError__back-button">
+						{t("COMMON.BACK")}
 					</Button>
-				)}
 
-				<Button variant="primary" data-testid="TransactionExportError__retry-button" onClick={onRetry}>
-					{t("COMMON.RETRY")}
-				</Button>
-			</FormButtons>
+					{count > 0 && onDownload && (
+						<Button
+							variant="secondary"
+							data-testid="TransactionExportError__download"
+							onClick={async () => {
+								const filename = await download(file);
+
+								if (filename) {
+									onDownload?.(filename);
+								}
+							}}
+						>
+							{t("COMMON.DOWNLOAD")}
+						</Button>
+					)}
+
+					<Button variant="primary" data-testid="TransactionExportError__retry-button" onClick={onRetry}>
+						{t("COMMON.RETRY")}
+					</Button>
+				</FormButtons>
 			</div>
 		</div>
 	);

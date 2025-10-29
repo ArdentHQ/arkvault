@@ -117,14 +117,14 @@ export const ContactForm = ({
 			</FormField>
 
 			<div
-				className={`border-theme-secondary-300 dark:border-theme-secondary-800 flex w-full border-0 ${
+				className={`border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mx-6 flex px-6 sm:border-t ${
 					contact ? "justify-between" : "justify-end"
 				}`}
 			>
 				{contact && !isXs && (
 					<Button
 						data-testid="contact-form__delete-btn"
-						className="mt-0 h-min sm:mt-8"
+						className="mt-0 h-min sm:mt-6"
 						onClick={onDelete}
 						variant="danger"
 					>
@@ -133,15 +133,22 @@ export const ContactForm = ({
 					</Button>
 				)}
 
-				<FormButtons>
-					<Button data-testid="contact-form__cancel-btn" variant="secondary" onClick={onCancel}>
-						{t("COMMON.CANCEL")}
-					</Button>
+				<div>
+					<FormButtons className="border-none">
+						<Button data-testid="contact-form__cancel-btn" variant="secondary" onClick={onCancel}>
+							{t("COMMON.CANCEL")}
+						</Button>
 
-					<Button data-testid="contact-form__save-btn" type="submit" variant="primary" disabled={!isValid}>
-						{t("COMMON.SAVE")}
-					</Button>
-				</FormButtons>
+						<Button
+							data-testid="contact-form__save-btn"
+							type="submit"
+							variant="primary"
+							disabled={!isValid}
+						>
+							{t("COMMON.SAVE")}
+						</Button>
+					</FormButtons>
+				</div>
 			</div>
 		</Form>
 	);
