@@ -7,11 +7,14 @@ import { TransactionFee } from "./fee.contract";
 import { assertNumber, assertWallet } from "@/utils/assertions";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
 export interface RecipientItem {
 	address: string;
 	amount?: number;
 }
+
+const FEE_DISPLAY_VALUE_DECIMALS = 8;
 
 export class DraftTransfer {
 	readonly #env: Environment;
@@ -48,6 +51,23 @@ export class DraftTransfer {
 
 	public setAmount(amount: number): void {
 		this.#amount = amount;
+	}
+
+	// To human
+	public fee(): number {
+		return BigNumber.make(calculateGasFee(this.selectedFee(), this.gasLimit()))
+			.decimalPlaces(FEE_DISPLAY_VALUE_DECIMALS)
+			.toNumber();
+	}
+
+	public setSenderMaxAmount(): void {
+		const fee = this.fee();
+
+		assertWallet(this.sender());
+		assertNumber(fee);
+
+		const remainingAmount = BigNumber.make(this.sender().balance()).minus(fee);
+		this.setAmount(remainingAmount.toNumber());
 	}
 
 	public setMemo(memo: string): void {
