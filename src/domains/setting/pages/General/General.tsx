@@ -564,7 +564,7 @@ export const GeneralSettings: React.FC = () => {
 					<ListDivided items={otherItems} />
 				</SettingsGroup>
 
-				<SettingsButtonGroup>
+				<SettingsButtonGroup className="modal-footer">
 					<FormButtons>
 						<Button
 							disabled={isSaveButtonDisabled}

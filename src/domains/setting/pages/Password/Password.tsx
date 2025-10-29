@@ -156,7 +156,7 @@ export const PasswordSettings = () => {
 						<ListDivided items={items} />
 					</SettingsGroup>
 
-					<SettingsButtonGroup>
+					<SettingsButtonGroup className="modal-footer">
 						<FormButtons>
 							<Button
 								data-testid="Password-settings__submit-button"
