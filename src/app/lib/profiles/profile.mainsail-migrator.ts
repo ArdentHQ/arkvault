@@ -42,7 +42,9 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				const mergedWallet = Object.values(wallets).find(
 					(d) => d.data[WalletData.PublicKey] === publicKey && migratedWallets[d.id] !== undefined,
 				);
-				const newWallet = Object.values(migratedWallets).find((d) => d.data[WalletData.PublicKey] === publicKey);
+				const newWallet = Object.values(migratedWallets).find(
+					(d) => d.data[WalletData.PublicKey] === publicKey,
+				);
 
 				this.#migrationResult.mergedAddresses.push({
 					...wallet.data,
