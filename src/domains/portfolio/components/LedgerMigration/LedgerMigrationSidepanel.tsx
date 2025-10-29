@@ -49,7 +49,7 @@ export const LedgerMigrationSidepanel = ({
 	}, [open]);
 
 	const handleOpenChange = (open: boolean) => {
-		if (!open && activeTab === MigrateLedgerStep.ApproveTransactionStep) {
+		if (!open && migrator.completedTransactions().length > 0) {
 			setShowConfirmationModal(true);
 			return;
 		}
@@ -191,6 +191,7 @@ export const LedgerMigrationSidepanel = ({
 				</Tabs>
 			</SidePanel>
 			<StopMigrationConfirmationModal
+				migratedWalletsCount={migrator.completedTransactions().length}
 				isOpen={showConfirmationModal}
 				onCancel={() => {
 					setShowConfirmationModal(false);

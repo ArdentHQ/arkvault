@@ -11,9 +11,10 @@ interface Properties {
 	isOpen: boolean;
 	onCancel: () => void;
 	onConfirm: () => void;
+	migratedWalletsCount?: number;
 }
 
-export const StopMigrationConfirmationModal = ({ isOpen, onCancel, onConfirm }: Properties) => {
+export const StopMigrationConfirmationModal = ({ isOpen, onCancel, onConfirm, migratedWalletsCount }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -26,7 +27,7 @@ export const StopMigrationConfirmationModal = ({ isOpen, onCancel, onConfirm }: 
 			onClose={onCancel}
 		>
 			<Alert variant="warning" className="mb-6">
-				<Trans i18nKey="COMMON.LEDGER_MIGRATION.EXIT_MODAL.BODY" count={3} />
+				<Trans i18nKey="COMMON.LEDGER_MIGRATION.EXIT_MODAL.BODY" count={migratedWalletsCount} />
 			</Alert>
 
 			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 modal-footer -mx-6 px-6 sm:border-t">
