@@ -124,7 +124,7 @@ export const ContactForm = ({
 				{contact && !isXs && (
 					<Button
 						data-testid="contact-form__delete-btn"
-						className="mt-0 h-min sm:mt-6"
+						className="mt-0 h-min sm:mt-4"
 						onClick={onDelete}
 						variant="danger"
 					>
@@ -134,7 +134,7 @@ export const ContactForm = ({
 				)}
 
 				<div>
-					<FormButtons className="border-none">
+					<FormButtons className="border-none sm:mt-4">
 						<Button data-testid="contact-form__cancel-btn" variant="secondary" onClick={onCancel}>
 							{t("COMMON.CANCEL")}
 						</Button>
