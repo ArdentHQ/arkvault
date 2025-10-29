@@ -11,7 +11,7 @@ interface Properties {
 	isOpen: boolean;
 	onCancel: () => void;
 	onConfirm: () => void;
-	migratedWalletsCount?: number
+	migratedWalletsCount?: number;
 }
 
 export const StopMigrationConfirmationModal = ({ isOpen, onCancel, onConfirm, migratedWalletsCount }: Properties) => {

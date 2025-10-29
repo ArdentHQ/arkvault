@@ -161,7 +161,7 @@ export class LedgerMigrator {
 	}
 
 	public completedTransactions(): MigrationTransaction[] {
-		return this.transactions().filter(transaction => transaction.isCompleted())
+		return this.transactions().filter((transaction) => transaction.isCompleted());
 	}
 
 	public currentTransaction(): MigrationTransaction | undefined {
