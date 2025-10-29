@@ -1,4 +1,4 @@
-import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
+import { IProfile, IProfileData, IProfileMainsailMigrator, WalletData } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
 import { Avatar } from "./helpers/avatar.js";
 import { UUID } from "@ardenthq/arkvault-crypto";
@@ -40,9 +40,9 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			// If this public key has already been migrated, skip to avoid duplicates
 			if (publicKey !== undefined && seenPublicKeys.has(publicKey)) {
 				const mergedWallet = Object.values(wallets).find(
-					(d) => d.data["PUBLIC_KEY"] === publicKey && migratedWallets[d.id] !== undefined,
+					(d) => d.data[WalletData.PublicKey] === publicKey && migratedWallets[d.id] !== undefined,
 				);
-				const newWallet = Object.values(migratedWallets).find((d) => d.data["PUBLIC_KEY"] === publicKey);
+				const newWallet = Object.values(migratedWallets).find((d) => d.data[WalletData.PublicKey] === publicKey);
 
 				this.#migrationResult.mergedAddresses.push({
 					...wallet.data,
