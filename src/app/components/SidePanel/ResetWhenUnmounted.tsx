@@ -10,5 +10,6 @@ export function ResetWhenUnmounted({ children }: { children: ReactElement }) {
 		}
 	}, [mounted]);
 
+	// @ts-expect-error onMountChange exists on SidePanel
 	return <Fragment key={key}>{cloneElement(children, { onMountChange: setMounted })}</Fragment>;
 }
