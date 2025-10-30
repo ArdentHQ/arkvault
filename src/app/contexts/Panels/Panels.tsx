@@ -12,6 +12,7 @@ export enum Panel {
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
 	Addresses = "ADDRESSES",
+	TransactionDetails = "TRANSACTION_DETAILS",
 }
 
 interface PanelsContextValue {
@@ -39,7 +40,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
-	const [resetKey, setResetKey] = useState(0);
+	const [resetKey, _setResetKey] = useState(0);
 	const [componentResetedPromiseResolver, setComponentResetedPromiseResolver] = useState<
 		((value: void | PromiseLike<void>) => void) | undefined
 	>(undefined);
@@ -53,6 +54,8 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		setShowConfirmationModal(false);
 
 		await closePanel();
+
+		setIsMinimized(false);
 
 		setCurrentOpenedPanel(panelToOpen);
 	};
@@ -78,12 +81,12 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				setTimeout(() => {
 					setIsMinimized(false);
 
-					setResetKey((previousKey) => previousKey + 1);
+					// setResetKey((previousKey) => previousKey + 1);
 
 					setComponentResetedPromiseResolver(resolve);
 				}, SIDE_PANEL_TRANSITION_DURATION);
 			} else {
-				setResetKey((previousKey) => previousKey + 1);
+				// setResetKey((previousKey) => previousKey + 1);
 
 				setComponentResetedPromiseResolver(resolve);
 			}
@@ -106,6 +109,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 			return;
 		}
 
+		setIsMinimized(false);
 		setCurrentOpenedPanel(panel);
 	};
 

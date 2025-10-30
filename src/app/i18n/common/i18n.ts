@@ -322,6 +322,7 @@ export const translations = {
 		SEND_VALIDATOR_RESIGNATION: "Validator Resignation",
 		SEND_VOTE: "Send Vote",
 		SIGN_MESSAGE: "Sign Message",
+		TRANSACTION_DETAILS: "Transaction Details",
 	},
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",

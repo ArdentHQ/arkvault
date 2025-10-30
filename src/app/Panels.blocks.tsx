@@ -34,15 +34,17 @@ const DiscardPanelConfirmationModal = () => {
 				})}
 			</Alert>
 
-			<FormButtons>
-				<Button variant="secondary" onClick={cancelOpen} data-testid="ResetProfile__cancel-button">
-					{t("COMMON.CANCEL")}
-				</Button>
+			<div className="modal-footer">
+				<FormButtons>
+					<Button variant="secondary" onClick={cancelOpen} data-testid="ResetProfile__cancel-button">
+						{t("COMMON.CANCEL")}
+					</Button>
 
-				<Button type="submit" onClick={confirmOpen} data-testid="ResetProfile__submit-button" variant="danger">
-					<span>{t("COMMON.CONTINUE")}</span>
-				</Button>
-			</FormButtons>
+					<Button type="submit" onClick={confirmOpen} data-testid="ResetProfile__submit-button" variant="danger">
+						<span>{t("COMMON.CONTINUE")}</span>
+					</Button>
+				</FormButtons>
+			</div>
 		</Modal>
 	);
 };
