@@ -40,7 +40,12 @@ const DiscardPanelConfirmationModal = () => {
 						{t("COMMON.CANCEL")}
 					</Button>
 
-					<Button type="submit" onClick={confirmOpen} data-testid="ResetProfile__submit-button" variant="danger">
+					<Button
+						type="submit"
+						onClick={confirmOpen}
+						data-testid="ResetProfile__submit-button"
+						variant="danger"
+					>
 						<span>{t("COMMON.CONTINUE")}</span>
 					</Button>
 				</FormButtons>
