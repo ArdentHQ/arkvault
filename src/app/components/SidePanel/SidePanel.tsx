@@ -436,10 +436,8 @@ const SidePanelContent = ({
 	);
 };
 
-export const SidePanel = (props: SidePanelProps): JSX.Element => {
-	return (
-		<div className="display-contents">
-			<SidePanelContent {...props} />
-		</div>
-	);
-};
+export const SidePanel = (props: SidePanelProps): JSX.Element => (
+	<div className="display-contents">
+		<SidePanelContent {...props} />
+	</div>
+);
