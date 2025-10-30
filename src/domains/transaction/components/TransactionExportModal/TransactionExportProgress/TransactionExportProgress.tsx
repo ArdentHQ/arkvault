@@ -35,15 +35,21 @@ export const TransactionExportProgress = ({ count, file, onCancel }: Transaction
 
 			<FilePreview file={file} variant="loading" />
 
-			<FormButtons>
-				<Button variant="secondary" onClick={onCancel} data-testid="TransactionExportProgress__cancel-button">
-					{t("COMMON.CANCEL")}
-				</Button>
+			<div className="modal-footer mt-4">
+				<FormButtons>
+					<Button
+						variant="secondary"
+						onClick={onCancel}
+						data-testid="TransactionExportProgress__cancel-button"
+					>
+						{t("COMMON.CANCEL")}
+					</Button>
 
-				<Button variant="primary" disabled>
-					{t("COMMON.DOWNLOAD")}
-				</Button>
-			</FormButtons>
+					<Button variant="primary" disabled>
+						{t("COMMON.DOWNLOAD")}
+					</Button>
+				</FormButtons>
+			</div>
 		</div>
 	);
 };

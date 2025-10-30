@@ -127,15 +127,17 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 					/>
 				</FormField>
 
-				<FormButtons>
-					<Button data-testid="SignIn__cancel-button" variant="secondary" onClick={onCancel}>
-						{t("COMMON.CANCEL")}
-					</Button>
+				<div className="modal-footer">
+					<FormButtons>
+						<Button data-testid="SignIn__cancel-button" variant="secondary" onClick={onCancel}>
+							{t("COMMON.CANCEL")}
+						</Button>
 
-					<Button data-testid="SignIn__submit-button" type="submit" disabled={!formState.isValid}>
-						{t("COMMON.SIGN_IN")}
-					</Button>
-				</FormButtons>
+						<Button data-testid="SignIn__submit-button" type="submit" disabled={!formState.isValid}>
+							{t("COMMON.SIGN_IN")}
+						</Button>
+					</FormButtons>
+				</div>
 			</Form>
 		</Modal>
 	);

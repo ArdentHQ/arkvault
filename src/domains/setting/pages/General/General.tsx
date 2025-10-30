@@ -565,7 +565,7 @@ export const GeneralSettings: React.FC = () => {
 				</SettingsGroup>
 
 				<SettingsButtonGroup>
-					<FormButtons>
+					<FormButtons className="border-none">
 						<Button
 							disabled={isSaveButtonDisabled}
 							type="submit"
