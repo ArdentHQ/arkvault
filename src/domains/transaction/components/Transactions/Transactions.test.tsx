@@ -242,6 +242,40 @@ describe("Transactions", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should maximize and update side panel on transaction row click", async () => {
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		render(<Transactions profile={profile} wallets={profile.wallets().values()} />, {
+			route: dashboardURL,
+			withProviders: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
+		);
+
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+		});
+
+		expect(within(screen.getByTestId("TransactionId")).getByText(/2dc489ca6683b7c2bc380165204/)).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("SidePanel__minimize-button"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MinimizedSidePanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[1]);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MaximizedSidePanel")).toBeInTheDocument();
+		});
+	});
+
 	it("should fetch more transactions", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
