@@ -437,10 +437,8 @@ const SidePanelContent = ({
 };
 
 export const SidePanel = (props: SidePanelProps): JSX.Element => {
-	const { resetKey } = usePanels();
-
 	return (
-		<div key={resetKey} className="display-contents">
+		<div className="display-contents">
 			<SidePanelContent {...props} />
 		</div>
 	);
