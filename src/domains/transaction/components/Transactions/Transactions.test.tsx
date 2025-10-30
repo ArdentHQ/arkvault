@@ -261,7 +261,9 @@ describe("Transactions", () => {
 			expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
 		});
 
-		expect(within(screen.getByTestId("TransactionId")).getByText(/2dc489ca6683b7c2bc380165204/)).toBeInTheDocument();
+		expect(
+			within(screen.getByTestId("TransactionId")).getByText(/2dc489ca6683b7c2bc380165204/),
+		).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SidePanel__minimize-button"));
 
