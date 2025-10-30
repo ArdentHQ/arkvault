@@ -243,6 +243,19 @@ export const translations = {
 	MEMO_SMARTBRIDGE: "Memo (SmartBridge)",
 	MESSAGE: "Message",
 	METHOD: "Method",
+	MIGRATION_RESULT: {
+		COLD_ADDRESS:
+			"We could not derive the new address of <strong>{{address}}</strong> as no outgoing transactions were made from this address.",
+		COLD_ADDRESSES_AND_CONTACTS: "Cold addresses & contacts",
+		COLD_CONTACT:
+			"We could not derive the new address of contact <strong>{{name}} ({{address}})</strong> as no outgoing transactions were made from this address.",
+		MERGED_ADDRESS:
+			"Address <strong>{{address}}</strong> and <strong>{{mergedAddress}}</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one.",
+		MERGED_ADDRESSES_AND_CONTACTS: "Merged addresses & contacts",
+		MERGED_CONTACT:
+			"Contact <strong>{{oldName1}} ({{oldAddress1}})</strong> and <strong>{{oldName2}} ({{oldAddress2}})</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one, using the name <strong>{{name}}</strong>.",
+		TITLE: "Migration Result",
+	},
 	MNEMONIC: "Mnemonic",
 	MNEMONIC_TYPE: {
 		BIP39: "Mnemonic",

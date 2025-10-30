@@ -1,0 +1,118 @@
+import { Contracts } from "@/app/lib/profiles";
+import React, { useEffect, useMemo, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
+
+import { Modal } from "@/app/components/Modal";
+import { ProfileData } from "@/app/lib/profiles/profile.enum.contract";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { Button } from "@/app/components/Button";
+
+export const MigrationResultModal = ({ profile }: { profile: Contracts.IProfile }) => {
+	const { t } = useTranslation();
+	const [show, setShow] = useState<boolean>(false);
+
+	const { persist } = useEnvironmentContext();
+
+	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(profile.id());
+
+	const migrationResult = profile.data().get(ProfileData.MigrationResult, {}) as Record<string, any[]>;
+
+	const hasMigrationResult = useMemo(
+		() => Object.values(migrationResult).some((d) => d.length > 0),
+		[migrationResult],
+	);
+
+	const { coldAddresses, coldContacts, mergedAddresses, mergedContacts } = migrationResult;
+
+	useEffect(() => {
+		if (profileIsSyncing) {
+			return;
+		}
+
+		setShow(hasMigrationResult);
+	}, [profile, profileIsSyncing, hasMigrationResult]);
+
+	const handleClose = async () => {
+		profile.setMigrationResult({});
+
+		await persist();
+		setShow(false);
+	};
+
+	return (
+		<Modal title={t("COMMON.MIGRATION_RESULT.TITLE")} isOpen={show} onClose={handleClose} size="4xl">
+			<div className="w-full space-y-4 break-words">
+				{(coldAddresses?.length > 0 || coldContacts?.length > 0) && (
+					<div className="flex flex-col sm:space-y-1">
+						<h5 className="mb-1 font-semibold">
+							{t("COMMON.MIGRATION_RESULT.COLD_ADDRESSES_AND_CONTACTS")}
+						</h5>
+						<ul className="list-inside list-disc space-y-1">
+							{coldAddresses.map((wallet, index) => (
+								<li key={wallet.ADDRESS + index}>
+									<Trans
+										i18nKey="COMMON.MIGRATION_RESULT.COLD_ADDRESS"
+										values={{ address: wallet.ADDRESS }}
+									/>
+								</li>
+							))}
+
+							{coldContacts.map((contact, index) => (
+								<li key={index}>
+									<Trans
+										i18nKey="COMMON.MIGRATION_RESULT.COLD_CONTACT"
+										values={{ address: contact.address, name: contact.name }}
+									/>
+								</li>
+							))}
+						</ul>
+					</div>
+				)}
+
+				{(mergedAddresses?.length > 0 || mergedContacts?.length > 0) && (
+					<div className="flex flex-col sm:space-y-1">
+						<h5 className="mb-1 font-semibold">
+							{t("COMMON.MIGRATION_RESULT.MERGED_ADDRESSES_AND_CONTACTS")}
+						</h5>
+						<ul className="list-inside list-disc space-y-1">
+							{mergedAddresses.map((wallet, index) => (
+								<li key={wallet.ADDRESS + index}>
+									<Trans
+										i18nKey="COMMON.MIGRATION_RESULT.MERGED_ADDRESS"
+										values={{
+											address: wallet.ADDRESS,
+											mergedAddress: wallet.mergedAddress,
+											newAddress: wallet.newAddress,
+										}}
+									/>
+								</li>
+							))}
+
+							{mergedContacts.map((contact, index) => (
+								<li key={index}>
+									<Trans
+										i18nKey="COMMON.MIGRATION_RESULT.MERGED_CONTACT"
+										values={{
+											name: contact.name,
+											newAddress: contact.addresses[0].address,
+											oldAddress1: contact.addresses[0].oldAddress,
+											oldAddress2: contact.mergedContact.oldAddress,
+											oldName1: contact.oldName,
+											oldName2: contact.mergedContact.oldName,
+										}}
+									/>
+								</li>
+							))}
+						</ul>
+					</div>
+				)}
+
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mx-6 flex justify-end border-t px-6 pt-3.5 pb-3.5 sm:pb-0">
+					<Button onClick={handleClose} data-testid="CloseMigrationResult">
+						{t("COMMON.CONTINUE")}
+					</Button>
+				</div>
+			</div>
+		</Modal>
+	);
+};
