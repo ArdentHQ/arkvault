@@ -15,6 +15,7 @@ import { Panel, usePanels } from "./contexts";
 import { useTranslation } from "react-i18next";
 import { useHasProfile } from "./hooks";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
 
 const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
@@ -40,7 +41,12 @@ const DiscardPanelConfirmationModal = () => {
 						{t("COMMON.CANCEL")}
 					</Button>
 
-					<Button type="submit" onClick={confirmOpen} data-testid="ResetProfile__submit-button" variant="danger">
+					<Button
+						type="submit"
+						onClick={confirmOpen}
+						data-testid="ResetProfile__submit-button"
+						variant="danger"
+					>
 						<span>{t("COMMON.CONTINUE")}</span>
 					</Button>
 				</FormButtons>
@@ -60,41 +66,61 @@ export const AppPanels = () => {
 
 	return (
 		<>
-			<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
+			<ResetWhenUnmounted>
+				<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
 
-			<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
-			<CreateAddressesSidePanel
-				open={currentOpenedPanel === Panel.CreateAddress}
-				onOpenChange={closePanel}
-				onImportAddress={async () => {
-					await closePanel();
+			<ResetWhenUnmounted>
+				<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
 
-					openPanel(Panel.ImportAddress);
-				}}
-			/>
-			<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
-			<SendUsernameResignationSidePanel
-				open={currentOpenedPanel === Panel.SendUsernameResignation}
-				onOpenChange={closePanel}
-			/>
-			<SendValidatorResignationSidePanel
-				open={currentOpenedPanel === Panel.SendValidatorResignation}
-				onOpenChange={closePanel}
-			/>
+			<ResetWhenUnmounted>
+				<CreateAddressesSidePanel
+					open={currentOpenedPanel === Panel.CreateAddress}
+					onOpenChange={closePanel}
+					onImportAddress={async () => {
+						await closePanel();
 
-			<SendRegistrationSidePanel
-				open={currentOpenedPanel === Panel.SendUsernameRegistration}
-				registrationType="usernameRegistration"
-				onOpenChange={closePanel}
-			/>
+						openPanel(Panel.ImportAddress);
+					}}
+				/>
+			</ResetWhenUnmounted>
+			<ResetWhenUnmounted>
+				<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
 
-			<SendRegistrationSidePanel
-				open={currentOpenedPanel === Panel.SendValidatorRegistration}
-				registrationType="validatorRegistration"
-				onOpenChange={closePanel}
-			/>
+			<ResetWhenUnmounted>
+				<SendUsernameResignationSidePanel
+					open={currentOpenedPanel === Panel.SendUsernameResignation}
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+			<ResetWhenUnmounted>
+				<SendValidatorResignationSidePanel
+					open={currentOpenedPanel === Panel.SendValidatorResignation}
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
 
-			<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
+			<ResetWhenUnmounted>
+				<SendRegistrationSidePanel
+					open={currentOpenedPanel === Panel.SendUsernameRegistration}
+					registrationType="usernameRegistration"
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendRegistrationSidePanel
+					open={currentOpenedPanel === Panel.SendValidatorRegistration}
+					registrationType="validatorRegistration"
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
 
 			<DiscardPanelConfirmationModal />
 		</>
