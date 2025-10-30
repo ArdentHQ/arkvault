@@ -47,6 +47,7 @@ export const OverviewStep = ({
 					<div className="flex items-center space-x-5">
 						<label className="flex w-full cursor-pointer space-x-3">
 							<Checkbox
+								data-testid="Overview_accept-responsibility"
 								name="VerifyResponsibility"
 								onChange={(event) => setAcceptResponsibility(event.target.checked)}
 							/>
@@ -56,7 +57,7 @@ export const OverviewStep = ({
 						</label>
 
 						<Button
-							data-testid="LedgerScanStep__continue-button"
+							data-testid="OverviewStep__continue-button"
 							disabled={!acceptResponsibility}
 							onClick={onContinue}
 						>
