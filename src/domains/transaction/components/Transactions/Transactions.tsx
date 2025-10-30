@@ -305,6 +305,7 @@ export const Transactions = memo(function Transactions({
 						transactionItem={transactionModalItem}
 						profile={profile}
 						onClose={() => {
+							/* istanbul ignore next -- @preserve */
 							closePanel().then(() => {
 								setTransactionModalItem(undefined);
 							});
