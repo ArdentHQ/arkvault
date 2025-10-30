@@ -44,6 +44,8 @@ export const AddressesSidePanel = ({
 
 	const { getWalletAlias } = useWalletAlias();
 
+	const walletsCount = profile.wallets().count();
+
 	const {
 		handleDelete,
 		persistSelection,
@@ -123,8 +125,8 @@ export const AddressesSidePanel = ({
 					closeSidepanel(selectedAddresses);
 				}
 			}}
-			shakeWhenClosing={selectedAddresses.length === 0}
-			preventClosing={selectedAddresses.length === 0}
+			shakeWhenClosing={walletsCount > 0 && selectedAddresses.length === 0}
+			preventClosing={walletsCount > 0 && selectedAddresses.length === 0}
 			dataTestId="AddressesSidePanel"
 			onMountChange={onMountChange}
 			minimizeable={false}
