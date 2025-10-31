@@ -21,7 +21,6 @@ import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 import { useLocalStorage } from "usehooks-ts";
 import { useTranslation } from "react-i18next";
-import { useBreakpoint } from "@/app/hooks";
 import { useNavigationContext } from "@/app/contexts";
 
 interface SidePanelProps {
