@@ -261,11 +261,12 @@ const SidePanelContent = ({
 															className={cn(
 																"flex justify-between transition-all duration-150",
 																{
-																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
-																		!hasSteps,
 																	// THe padding on the right is to compensate for the header content width
 																	"cursor-pointer items-center py-3.5 pr-6 pl-6":
 																		isMinimized,
+
+																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
+																		!hasSteps,
 																	"items-start px-6 py-4": !isMinimized,
 																},
 															)}
