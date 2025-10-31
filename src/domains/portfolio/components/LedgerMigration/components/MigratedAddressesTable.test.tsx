@@ -11,7 +11,7 @@ import { expect, it, describe, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { MigratedAddressesTable } from "./MigratedAddressesTable";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
-import { createLedgerMocks } from "@/domains/portfolio/components/LedgerMigration/migrator-mocks";
+import { createLedgerMocks } from "@/tests/mocks/Ledger";
 import userEvent from "@testing-library/user-event";
 
 describe("MigratedAddressesTable", () => {

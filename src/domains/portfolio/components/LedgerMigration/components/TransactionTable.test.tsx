@@ -3,7 +3,7 @@ import { expect, it, describe, beforeEach } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { TransactionTable } from "./TransactionTable";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
-import { createLedgerMocks } from "@/domains/portfolio/components/LedgerMigration/migrator-mocks";
+import { createLedgerMocks } from "@/tests/mocks/Ledger";
 
 describe("TransactionTable", () => {
 	let profile: Contracts.IProfile;

@@ -2,7 +2,7 @@ import { env, getMainsailProfileId, screen, renderResponsiveWithRoute, waitFor }
 import { expect, it, describe } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
-import { createLedgerMocks } from "@/domains/portfolio/components/LedgerMigration/migrator-mocks";
+import { createLedgerMocks } from "@/tests/mocks/Ledger";
 import { Transactions } from "./Transactions";
 import userEvent from "@testing-library/user-event";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";

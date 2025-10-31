@@ -13,7 +13,7 @@ import userEvent from "@testing-library/user-event";
 import {
 	createLedgerMocks,
 	createTransactionMocks,
-} from "@/domains/portfolio/components/LedgerMigration/migrator-mocks";
+} from "@/tests/mocks/Ledger";
 
 vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction", () => ({
 	useConfirmedTransaction: vi.fn().mockReturnValue({
