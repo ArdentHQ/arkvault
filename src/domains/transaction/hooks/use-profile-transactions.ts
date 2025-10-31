@@ -218,7 +218,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 		const combined: ExtendedTransactionDTO[] = [...signedTransactions, ...transactions];
 
-		return combined.sort((a, b) => {
+		const sorted = combined.sort((a, b) => {
 			const aTimestamp = a.timestamp()!.toUNIX();
 			const bTimestamp = b.timestamp()!.toUNIX();
 
@@ -239,6 +239,12 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 			return 0;
 		});
+
+		const baseLength = Math.max(transactions.length, LIMIT);
+		const totalPages = Math.ceil(baseLength / LIMIT);
+		const maxDisplayItems = LIMIT * totalPages;
+
+		return sorted.slice(0, maxDisplayItems);
 	}, [transactions, unconfirmedTransactions, selectedTransactionTypes, activeMode, sortBy, allTransactionTypes]);
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
@@ -330,6 +336,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				// Don't set isLoading when there are no wallets
 				activeMode,
 				activeTransactionType,
+				hasMore: true,
 				isLoadingMore: false,
 				isLoadingTransactions: hasWallets,
 				selectedTransactionTypes: newTransactionTypes ?? selectedTransactionTypes,
