@@ -95,7 +95,7 @@ export const ExportSettings = () => {
 				</SettingsGroup>
 
 				<SettingsButtonGroup>
-					<FormButtons>
+					<FormButtons className="border-none">
 						<Button data-testid="Export-settings__submit-button" type="submit">
 							{t("COMMON.EXPORT")}
 						</Button>

@@ -5,6 +5,7 @@ import { useActiveProfile } from "@/app/hooks/env";
 import { useTranslation } from "react-i18next";
 import { Dashboard } from "@/domains/dashboard/pages/Dashboard/Dashboard";
 import { Panel, usePanels } from "@/app/contexts/Panels";
+import { MigrationResultModal } from "@/domains/portfolio/components/MigrationResultModal/MigrationResultModal";
 
 export const Portfolio = () => {
 	const profile = useActiveProfile();
@@ -25,6 +26,8 @@ export const Portfolio = () => {
 					<DashboardEmpty />
 				</Page>
 			)}
+
+			<MigrationResultModal profile={profile} />
 		</>
 	);
 };

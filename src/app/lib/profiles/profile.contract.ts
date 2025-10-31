@@ -334,6 +334,13 @@ export interface IProfile {
 	getAttributes(): AttributeBag<IProfileInput>;
 
 	/**
+	 * Set profile migration result
+	 *
+	 * @memberof IProfile
+	 */
+	setMigrationResult(result: Record<string, any[]>): void;
+
+	/**
 	 * Mark the introductory tutorial as completed.
 	 *
 	 * @memberof IProfile

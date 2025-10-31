@@ -177,7 +177,7 @@ export const ServersSettings = () => {
 				</SettingsGroup>
 
 				<SettingsButtonGroup>
-					<FormButtons>
+					<FormButtons className="border-none">
 						<Button
 							disabled={isSaveButtonDisabled}
 							data-testid="Server-settings__submit-button"

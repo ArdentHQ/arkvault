@@ -157,7 +157,7 @@ export const PasswordSettings = () => {
 					</SettingsGroup>
 
 					<SettingsButtonGroup>
-						<FormButtons>
+						<FormButtons className="border-none">
 							<Button
 								data-testid="Password-settings__submit-button"
 								disabled={isSubmitDisabled()}

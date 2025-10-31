@@ -14,6 +14,7 @@ import { ExtendedTransactionDTO, TransactionTable } from "@/domains/transaction/
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 import { Skeleton } from "@/app/components/Skeleton";
+import { Panel, usePanels } from "@/app/contexts";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -39,6 +40,8 @@ export const Transactions = memo(function Transactions({
 	selectedWallets,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
+
+	const { setIsMinimized, currentOpenedPanel, closePanel, openPanel } = usePanels();
 
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
@@ -255,7 +258,15 @@ export const Transactions = memo(function Transactions({
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					isLoading={isLoadingTransactions}
 					skeletonRowsLimit={8}
-					onRowClick={setTransactionModalItem}
+					onRowClick={(transaction) => {
+						if (currentOpenedPanel === Panel.TransactionDetails) {
+							setIsMinimized(false);
+						} else {
+							openPanel(Panel.TransactionDetails);
+						}
+
+						setTransactionModalItem(transaction);
+					}}
 					profile={profile}
 					hideSender={selectedWallets === 1}
 					sortBy={sortBy}
@@ -288,12 +299,17 @@ export const Transactions = memo(function Transactions({
 					</>
 				)}
 
-				{transactionModalItem && (
+				{transactionModalItem && currentOpenedPanel === Panel.TransactionDetails && (
 					<TransactionDetailSidePanel
 						isOpen={!!transactionModalItem}
 						transactionItem={transactionModalItem}
 						profile={profile}
-						onClose={() => setTransactionModalItem(undefined)}
+						onClose={() => {
+							/* istanbul ignore next -- @preserve */
+							closePanel().then(() => {
+								setTransactionModalItem(undefined);
+							});
+						}}
 					/>
 				)}
 			</TableWrapper>
