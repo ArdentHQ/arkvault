@@ -227,6 +227,7 @@ const SidePanelContent = ({
 									{...getFloatingProps()}
 								>
 									<div
+										data-testid={isMinimized ? "MinimizedSidePanel" : "MaximizedSidePanel"}
 										style={styles}
 										className={cn(
 											"fixed top-0 right-0 w-full transition-all duration-300 md:max-w-[608px]",
@@ -435,12 +436,8 @@ const SidePanelContent = ({
 	);
 };
 
-export const SidePanel = (props: SidePanelProps): JSX.Element => {
-	const { resetKey } = usePanels();
-
-	return (
-		<div key={resetKey} className="display-contents">
-			<SidePanelContent {...props} />
-		</div>
-	);
-};
+export const SidePanel = (props: SidePanelProps): JSX.Element => (
+	<div className="display-contents">
+		<SidePanelContent {...props} />
+	</div>
+);
