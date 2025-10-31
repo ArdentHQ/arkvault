@@ -26,7 +26,11 @@ export const Transactions = ({
 		return (
 			<div className="space-y-2">
 				<DetailLabel>
-					<div data-testid="TransactionTableToggleMobile" className="flex items-center justify-between" onClick={() => setIsOpen(!isOpen)}>
+					<div
+						data-testid="TransactionTableToggleMobile"
+						className="flex items-center justify-between"
+						onClick={() => setIsOpen(!isOpen)}
+					>
 						<span>{t("COMMON.ADDRESSES")}</span>
 						<div className="flex items-center">
 							<div className="mr-1">

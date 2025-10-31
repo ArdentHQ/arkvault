@@ -94,7 +94,6 @@ describe("LedgerMigrationSidepanel", () => {
 			{ timeout: 4000 },
 		);
 
-
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio")).toBeInTheDocument();
 		});
@@ -133,13 +132,11 @@ describe("LedgerMigrationSidepanel", () => {
 
 		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
 
-
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
 		});
 
-
-		vi.restoreAllMocks()
+		vi.restoreAllMocks();
 
 		await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
 		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));

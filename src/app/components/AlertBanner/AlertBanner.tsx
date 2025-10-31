@@ -4,7 +4,10 @@ import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 
 export const Warning = ({ children }: { children?: React.ReactElement | string }) => (
-	<div data-testid="AlertBanner_warning" className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 dim:border-theme-warning-600 dim:bg-theme-dim-900 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent">
+	<div
+		data-testid="AlertBanner_warning"
+		className="border-theme-warning-200 bg-theme-warning-50 dark:border-theme-warning-600 dim:border-theme-warning-600 dim:bg-theme-dim-900 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
+	>
 		<Spinner color="warning-alt" size="sm" width={3} />
 		<Divider
 			type="vertical"
@@ -17,7 +20,10 @@ export const Warning = ({ children }: { children?: React.ReactElement | string }
 );
 
 export const Error = ({ children, title }: { children?: ReactElement | string; title?: string | ReactElement }) => (
-	<div data-testid="AlertBanner_error" className="border-theme-danger-200 bg-theme-danger-50 dark:border-theme-danger-info-border dim:border-theme-danger-400 dim:bg-theme-dim-900 rounded-xl border py-2 max-sm:text-sm sm:py-4 sm:leading-5 dark:bg-transparent">
+	<div
+		data-testid="AlertBanner_error"
+		className="border-theme-danger-200 bg-theme-danger-50 dark:border-theme-danger-info-border dim:border-theme-danger-400 dim:bg-theme-dim-900 rounded-xl border py-2 max-sm:text-sm sm:py-4 sm:leading-5 dark:bg-transparent"
+	>
 		<div className="mb-2 flex items-center space-x-3 px-3 sm:mb-4 sm:px-6">
 			<div className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-400 flex items-center space-x-2">
 				<Icon name="CircleCross" size="lg" className="h-5" />
@@ -32,7 +38,10 @@ export const Error = ({ children, title }: { children?: ReactElement | string; t
 );
 
 export const Success = ({ children }: { children?: React.ReactElement | string }) => (
-	<div data-testid="AlertBanner_success" className="border-theme-success-200 bg-theme-success-50 dark:border-theme-success-600 dim:border-theme-success-500 dim:bg-theme-success-900 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent">
+	<div
+		data-testid="AlertBanner_success"
+		className="border-theme-success-200 bg-theme-success-50 dark:border-theme-success-600 dim:border-theme-success-500 dim:bg-theme-success-900 flex items-center space-x-3 rounded-xl border px-3 py-2 max-sm:text-sm sm:px-6 sm:py-4 sm:leading-5 dark:bg-transparent"
+	>
 		<div className="text-theme-success-700 dim:text-theme-success-500 flex items-center space-x-2">
 			<Icon name="CheckmarkDouble" size="lg" className="h-5" />
 		</div>

@@ -23,7 +23,6 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render", async () => {
-
 		const migrator = new LedgerMigrator({ env, profile });
 
 		await migrator.createTransactions([
@@ -37,10 +36,10 @@ describe("TransactionTable", () => {
 			},
 		]);
 
-		const completedMock = vi.spyOn(migrator.transactions().at(0), "isCompleted").mockReturnValue(true)
-		render(<TransactionTable transactions={migrator.transactions()} />)
+		const completedMock = vi.spyOn(migrator.transactions().at(0), "isCompleted").mockReturnValue(true);
+		render(<TransactionTable transactions={migrator.transactions()} />);
 
-		expect(screen.getAllByTestId("Link__external")).toHaveLength(1)
-		completedMock.mockRestore()
+		expect(screen.getAllByTestId("Link__external")).toHaveLength(1);
+		completedMock.mockRestore();
 	});
 });
