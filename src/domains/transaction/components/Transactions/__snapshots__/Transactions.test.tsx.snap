@@ -38516,7 +38516,7 @@ exports[`Transactions > should update wallet filters 1`] = `
     </div>
   </div>
   <div
-    class="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden"
+    class="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden"
   >
     <div
       class="flex-1"
