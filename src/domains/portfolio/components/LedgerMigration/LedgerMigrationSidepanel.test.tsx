@@ -1,20 +1,19 @@
-import React, { useEffect } from "react";
 import {
 	env,
-	render,
+	renderResponsiveWithRoute,
 	screen,
 	waitFor,
 	getMainsailProfileId,
 	mockNanoSTransport,
-	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { expect, it, describe, beforeEach, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerMigrationSidepanel } from "./LedgerMigrationSidepanel";
-import { minVersionList } from "@/app/contexts";
 import userEvent from "@testing-library/user-event";
-import { WalletData } from "@/app/lib/mainsail/wallet.dto";
-import { BigNumber } from "@/app/lib/helpers";
+import {
+	createLedgerMocks,
+	createTransactionMocks,
+} from "@/domains/portfolio/components/LedgerMigration/migrator-mocks";
 
 vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction", () => ({
 	useConfirmedTransaction: vi.fn().mockReturnValue({
@@ -22,61 +21,6 @@ vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirm
 		transaction: undefined,
 	}),
 }));
-
-// Mock setup helpers
-const createLedgerMocks = (wallet: Contracts.IReadWriteWallet, publicKeyPaths: Map<string, string>) => {
-	const isEthBasedAppSpy = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockResolvedValue(true);
-	const versionSpy = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
-	const publicKeySpy = vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(publicKeyPaths.values().next().value!);
-	const scanSpy = vi.spyOn(wallet.ledger(), "scan").mockResolvedValue({
-		"m/44'/1'/1'/0/0": new WalletData({ config: wallet.network().config() }).fill({
-			address: wallet.address(),
-			balance: 10,
-			publicKey: wallet.publicKey(),
-		})
-	});
-	const extendedPublicKeySpy = vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
-
-	return {
-		isEthBasedAppSpy,
-		versionSpy,
-		publicKeySpy,
-		scanSpy,
-		extendedPublicKeySpy,
-		restoreAll: () => {
-			isEthBasedAppSpy.mockRestore();
-			versionSpy.mockRestore();
-			publicKeySpy.mockRestore();
-			scanSpy.mockRestore();
-			extendedPublicKeySpy.mockRestore();
-		}
-	};
-};
-
-const createTransactionMocks = async (wallet: Contracts.IReadWriteWallet) => {
-	const signatory = await wallet.signatoryFactory().fromSigningKeys({ key: MAINSAIL_MNEMONICS[0] });
-	const hash = await wallet.transaction().signTransfer({
-		data: { amount: 1, to: wallet.profile().wallets().last().address() },
-		gasLimit: BigNumber.make(1),
-		gasPrice: BigNumber.make(1),
-		signatory,
-	});
-
-	const signatorySpy = vi.spyOn(wallet.signatoryFactory(), "fromSigningKeys").mockResolvedValue(signatory);
-	const signSpy = vi.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(hash);
-	const broadcastSpy = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({ accepted: [hash], errors: [] });
-
-	return {
-		signatorySpy,
-		signSpy,
-		broadcastSpy,
-		restoreAll: () => {
-			signatorySpy.mockRestore();
-			signSpy.mockRestore();
-			broadcastSpy.mockRestore();
-		}
-	};
-};
 
 describe("LedgerMigrationSidepanel", () => {
 	let profile: Contracts.IProfile;
@@ -100,7 +44,7 @@ describe("LedgerMigrationSidepanel", () => {
 		transactionMocks?.restoreAll();
 	});
 
-	it("should successfully migrate wallet", async () => {
+	it.each(["sm", "md", "lg", "xl"])("should successfully migrate wallet in %s", async (containerSize) => {
 		mockNanoSTransport();
 		const wallet = profile.wallets().first();
 
@@ -108,7 +52,7 @@ describe("LedgerMigrationSidepanel", () => {
 		ledgerMocks = createLedgerMocks(wallet, publicKeyPaths);
 		transactionMocks = await createTransactionMocks(wallet);
 
-		render(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, { route });
+		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, { route });
 
 		expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
 
@@ -143,8 +87,11 @@ describe("LedgerMigrationSidepanel", () => {
 			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
 		});
 
-		await waitFor(() => {
-			expect(screen.getByTestId("LedgerMigration_success")).toBeInTheDocument();
-		}, { timeout: 4000 });
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("LedgerMigration_success")).toBeInTheDocument();
+			},
+			{ timeout: 4000 },
+		);
 	});
 });
