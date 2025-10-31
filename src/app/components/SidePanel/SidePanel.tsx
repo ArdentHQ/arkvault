@@ -92,7 +92,6 @@ const SidePanelContent = ({
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
 	const { isMinimized, toggleMinimize } = usePanels();
-	const { isSmAndAbove } = useBreakpoint();
 
 	const { hasFixedFormButtons } = useNavigationContext();
 
@@ -137,26 +136,24 @@ const SidePanelContent = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const stylesConfiguration = useMemo(() => {
-		return {
-			close: {
-				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
-				transitionTimingFunction: "ease-in",
-			},
-			common: {
-				transformOrigin: "right",
-				transitionProperty: "transform",
-			},
-			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
-			initial: {
-				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
-			},
-			open: {
-				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
-				transitionTimingFunction: "ease-out",
-			},
-		};
-	}, [isMinimized, isSmAndAbove]);
+	const stylesConfiguration = useMemo(() => ({
+		close: {
+			transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
+			transitionTimingFunction: "ease-in",
+		},
+		common: {
+			transformOrigin: "right",
+			transitionProperty: "transform",
+		},
+		duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
+		initial: {
+			transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+		},
+		open: {
+			transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
+			transitionTimingFunction: "ease-out",
+		},
+	}), [isMinimized]);
 
 	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
 
