@@ -10,10 +10,7 @@ import { expect, it, describe, beforeEach, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { LedgerMigrationSidepanel } from "./LedgerMigrationSidepanel";
 import userEvent from "@testing-library/user-event";
-import {
-	createLedgerMocks,
-	createTransactionMocks,
-} from "@/tests/mocks/Ledger";
+import { createLedgerMocks, createTransactionMocks } from "@/tests/mocks/Ledger";
 
 vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction", () => ({
 	useConfirmedTransaction: vi.fn().mockReturnValue({
