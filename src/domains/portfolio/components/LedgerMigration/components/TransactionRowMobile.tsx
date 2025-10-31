@@ -13,6 +13,7 @@ export const TransactionRowMobile = ({ transaction }: { transaction: DraftTransf
 
 	return (
 		<MobileCard
+			data-testid="TransactionRowMobile"
 			className={cn(
 				"mb-3",
 				cn({

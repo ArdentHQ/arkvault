@@ -22,7 +22,7 @@ export const LedgerTransactionErrorStep = ({
 	const { t } = useTranslation();
 
 	return (
-		<div className="space-y-4 pb-10">
+		<div className="space-y-4 pb-10" data-testid="LedgerTransactionErrorStep">
 			<Error title={t("COMMON.ALERT.FAILED")}>{t("COMMON.LEDGER_MIGRATION.LEDGER_REJECTED_TRANSACTION")}</Error>
 
 			<LedgerTransactionOverview transfer={transfer} migrator={migrator}>

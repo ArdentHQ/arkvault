@@ -43,6 +43,7 @@ export const LabelCompleted = ({ className }: { className?: string }): React.Rea
 
 	return (
 		<div
+			data-testid="LabelCompleted"
 			className={cn(
 				"dim:text-theme-success-500 text-theme-success-700 dark:text-theme-success-500 flex space-x-2 rounded-sm px-1 py-[3px] text-xs",
 				labelBackgroundClasses({ isCompleted: true }),
@@ -61,6 +62,7 @@ export const LabelPending = ({ className }: { className?: string }): React.React
 
 	return (
 		<div
+			data-testid="LabelPending"
 			className={cn(
 				"text-theme-warning-900 dark:text-theme-dark-200 dim:text-theme-dim-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs",
 				className,
@@ -79,6 +81,7 @@ export const LabelAwaiting = ({ className }: { className?: string }): React.Reac
 
 	return (
 		<div
+			data-testid="LabelAwaiting"
 			className={cn(
 				"dim:text-theme-dim-200 text-theme-secondary-700 dark:text-theme-dark-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs",
 				labelBackgroundClasses({ isCompleted: false, isPending: false }),

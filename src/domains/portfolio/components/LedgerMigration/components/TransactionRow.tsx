@@ -10,7 +10,7 @@ import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 export const TransactionRow = ({ transaction }: { transaction: DraftTransfer }): ReactElement => {
 	const { t } = useTranslation();
 	return (
-		<TableRow>
+		<TableRow data-testid="TransactionRow">
 			<TableCell variant="start">
 				<TruncateMiddle className="text-sm font-semibold" text={transaction.sender().address()} maxChars={14} />
 			</TableCell>

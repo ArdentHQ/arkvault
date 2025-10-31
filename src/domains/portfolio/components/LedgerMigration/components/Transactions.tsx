@@ -26,7 +26,7 @@ export const Transactions = ({
 		return (
 			<div className="space-y-2">
 				<DetailLabel>
-					<div className="flex items-center justify-between" onClick={() => setIsOpen(!isOpen)}>
+					<div data-testid="TransactionTableToggleMobile" className="flex items-center justify-between" onClick={() => setIsOpen(!isOpen)}>
 						<span>{t("COMMON.ADDRESSES")}</span>
 						<div className="flex items-center">
 							<div className="mr-1">
@@ -88,6 +88,7 @@ export const Transactions = ({
 			)}
 		>
 			<div
+				data-testid="TransactionTableToggle"
 				className={cn(
 					"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 flex w-full cursor-pointer items-center justify-between gap-3 px-6 py-4 pt-3 pb-4",
 					{
