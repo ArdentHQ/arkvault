@@ -136,24 +136,27 @@ const SidePanelContent = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const stylesConfiguration = useMemo(() => ({
-		close: {
-			transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
-			transitionTimingFunction: "ease-in",
-		},
-		common: {
-			transformOrigin: "right",
-			transitionProperty: "transform",
-		},
-		duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
-		initial: {
-			transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
-		},
-		open: {
-			transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
-			transitionTimingFunction: "ease-out",
-		},
-	}), [isMinimized]);
+	const stylesConfiguration = useMemo(
+		() => ({
+			close: {
+				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
+				transitionTimingFunction: "ease-in",
+			},
+			common: {
+				transformOrigin: "right",
+				transitionProperty: "transform",
+			},
+			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
+			initial: {
+				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+			},
+			open: {
+				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
+				transitionTimingFunction: "ease-out",
+			},
+		}),
+		[isMinimized],
+	);
 
 	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
 
@@ -231,17 +234,13 @@ const SidePanelContent = ({
 									<div
 										data-testid={isMinimized ? "MinimizedSidePanel" : "MaximizedSidePanel"}
 										style={styles}
-										className={cn(
-											"fixed right-0 w-full transition-all duration-300 ",
-											className,
-											{
-												"animate-shake": shake,
-												"sm:top-0 sm:max-w-[425px]": isMinimized,
-												"top-0 sm:max-w-[608px]": !isMinimized,
-												"top-[-56px]": !hasFixedFormButtons && isMinimized,
-												"top-[-68px]": hasFixedFormButtons && isMinimized,
-											},
-										)}
+										className={cn("fixed right-0 w-full transition-all duration-300", className, {
+											"animate-shake": shake,
+											"sm:top-0 sm:max-w-[425px]": isMinimized,
+											"top-0 sm:max-w-[608px]": !isMinimized,
+											"top-[-56px]": !hasFixedFormButtons && isMinimized,
+											"top-[-68px]": hasFixedFormButtons && isMinimized,
+										})}
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
@@ -266,7 +265,7 @@ const SidePanelContent = ({
 																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
 																	// THe padding on the right is to compensate for the header content width
-																	"cursor-pointer items-center py-3.5 pr-6 pl-6 1sm:pr-[162px]":
+																	"1sm:pr-[162px] cursor-pointer items-center py-3.5 pr-6 pl-6":
 																		isMinimized,
 																	"items-start px-6 py-4": !isMinimized,
 																},
