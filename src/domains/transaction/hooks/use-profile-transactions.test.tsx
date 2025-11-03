@@ -1048,4 +1048,48 @@ describe("useProfileTransactions", () => {
 
 		unconfirmedMock.mockRestore();
 	});
+
+	it("should not remove unconfirmed transactions that do not match confirmed transactions", async () => {
+		const wallet = profile.wallets().first();
+		const transactionAggregate = await profile.transactionAggregate().all({});
+		const confirmed = transactionAggregate.items()[0];
+
+		const unconfirmedTransaction = createMockedTransactionData({
+			from: wallet.address(),
+			hash: "unconfirmed-hash",
+			to: confirmed.to() ?? wallet.address(),
+		});
+
+		const useSynchronizerSpy = vi.spyOn(hooksMock, "useSynchronizer").mockImplementation((jobs) => {
+			const start = async () => {
+				await jobs[2].callback();
+			};
+
+			return {
+				start: start,
+				stop: vi.fn(),
+			};
+		});
+
+		const { unconfirmedSpy, removeUnconfirmedTransaction } = await mockUnconfirmedTransactionsHook([
+			{
+				networkId: wallet.networkId(),
+				transaction: unconfirmedTransaction,
+				walletAddress: wallet.address(),
+			},
+		]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [wallet] }), { wrapper });
+
+		act(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
+		expect(removeUnconfirmedTransaction).not.toHaveBeenCalledWith("unconfirmed-hash");
+
+		unconfirmedSpy.mockRestore();
+		useSynchronizerSpy.mockRestore();
+	});
 });
