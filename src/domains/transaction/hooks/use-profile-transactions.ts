@@ -535,7 +535,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			},
 			{
 				callback: cleanUnconfirmedTransactions,
-				interval: 10_000,
+				interval: blockTime,
 			},
 		],
 		[walletAddressesStr, activeMode, activeTransactionType, transactions, unconfirmedTransactions.length],
