@@ -98,6 +98,69 @@ describe("LedgerMigrationSidepanel", () => {
 		await userEvent.click(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio"));
 	});
 
+	it.each(["sm", "md", "lg", "xl"])("should successfully migrate to one wallet in %s", async (containerSize) => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+
+		// Setup mocks
+		ledgerMocks = createLedgerMocks(wallet, publicKeyPaths);
+		transactionMocks = await createTransactionMocks(wallet);
+
+		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, { route });
+
+		expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
+
+		// Wait for and verify each step
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MigrateToOneCheckbox")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("MigrateToOneCheckbox"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerScanStep__continue-button")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
+		});
+
+		// Complete the migration flow
+		await userEvent.click(screen.getByTestId("Overview_accept-responsibility"));
+		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
+		});
+
+		await waitFor(
+			() => {
+				expect(screen.getByTestId("LedgerMigration_success")).toBeInTheDocument();
+			},
+			{ timeout: 4000 },
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("LedgerTransactionSuccessStep_goto-portfolio"));
+	});
+
 	it.each(["sm", "md", "lg", "xl"])("should fail to migrate and show error in %s", async (containerSize) => {
 		mockNanoSTransport();
 		const wallet = profile.wallets().first();
