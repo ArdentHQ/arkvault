@@ -201,7 +201,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const allTransactions = useMemo(() => {
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
-		const confirmedTransactionIds = new Set(transactions.map(tx => tx.hash()));
+		const confirmedTransactionIds = new Set(transactions.map((tx) => tx.hash()));
 
 		const signedTransactions = unconfirmedTransactions
 			.filter((transaction) => (hasAllSelected ? true : selectedTransactionTypes.includes(transaction.type())))
@@ -215,7 +215,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				}
 
 				return true;
-			}).filter((transaction) => !confirmedTransactionIds.has(transaction.hash()));
+			})
+			.filter((transaction) => !confirmedTransactionIds.has(transaction.hash()));
 
 		const combined: ExtendedTransactionDTO[] = [...signedTransactions, ...transactions];
 
