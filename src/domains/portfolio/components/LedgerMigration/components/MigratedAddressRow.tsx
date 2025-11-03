@@ -19,7 +19,7 @@ export const MigratedAddressRow = ({
 }): ReactElement => {
 	const { t } = useTranslation();
 	return (
-		<TableRow>
+		<TableRow data-testid="MigratedAddressRow">
 			<TableCell
 				variant="start"
 				innerClassName="h-full dim:group-hover:bg-transparent dark:group-hover:bg-transparent group-hover:bg-transparent"
@@ -30,6 +30,7 @@ export const MigratedAddressRow = ({
 							address={transaction.recipient()?.address()}
 							walletName={transaction.recipient()?.alias()}
 							showCopyButton
+							data-testid="MigratedAddressRow_address"
 							addressClass="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px]"
 						/>
 						<div className="mt-1 flex items-center">
@@ -53,6 +54,7 @@ export const MigratedAddressRow = ({
 			>
 				<div className="flex h-full items-start">
 					<Button
+						data-testid="MigratedAddressRow_edit-button"
 						variant="transparent"
 						onClick={onEdit}
 						className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 pr-3!"

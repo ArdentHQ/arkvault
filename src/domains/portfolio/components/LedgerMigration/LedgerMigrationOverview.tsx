@@ -26,7 +26,7 @@ export const LedgerMigrationOverview = ({
 
 	return (
 		<div data-testid="LedgerMigration__Review-step">
-			<div className="space-y-4 pb-10">
+			<div className="space-y-4">
 				<DetailWrapper label={t("COMMON.DETAILS")}>
 					<div className="space-y-3">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
@@ -58,6 +58,7 @@ export const LedgerMigrationOverview = ({
 						</div>
 
 						<Button
+							data-testid="LedgerMigration__Review-edit"
 							variant="transparent"
 							onClick={() => setEditingWallet(transfer.recipient()!)}
 							className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"

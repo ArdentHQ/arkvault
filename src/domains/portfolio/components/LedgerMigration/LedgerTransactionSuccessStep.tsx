@@ -56,11 +56,13 @@ export const LedgerTransactionSuccessStep = ({
 	}
 
 	return (
-		<div className="pb-10">
+		<div className="pb-10" data-testid="LedgerMigration_success">
 			<LedgerMigrationOverview transfer={transfer} profile={profile}>
 				<SidepanelFooter className="fixed right-0 bottom-0">
 					<SidePanelButtons className="flex items-center justify-end">
-						<Button onClick={onGoToPortfolio}>{t("COMMON.GO_TO_PORTFOLIO")}</Button>
+						<Button data-testid="LedgerTransactionSuccessStep_goto-portfolio" onClick={onGoToPortfolio}>
+							{t("COMMON.GO_TO_PORTFOLIO")}
+						</Button>
 					</SidePanelButtons>
 				</SidepanelFooter>
 			</LedgerMigrationOverview>

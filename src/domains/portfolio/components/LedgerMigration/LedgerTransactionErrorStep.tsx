@@ -6,6 +6,7 @@ import { type DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { SidepanelFooter } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { Error } from "@/app/components/AlertBanner";
+import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 
 export const LedgerTransactionErrorStep = ({
 	onTryAgain,
@@ -16,12 +17,12 @@ export const LedgerTransactionErrorStep = ({
 	transfer: DraftTransfer;
 	onTryAgain?: () => void;
 	onClose?: () => void;
-	migrator;
+	migrator: LedgerMigrator;
 }) => {
 	const { t } = useTranslation();
 
 	return (
-		<div className="space-y-4 pb-10">
+		<div className="space-y-4 pb-10" data-testid="LedgerTransactionErrorStep">
 			<Error title={t("COMMON.ALERT.FAILED")}>{t("COMMON.LEDGER_MIGRATION.LEDGER_REJECTED_TRANSACTION")}</Error>
 
 			<LedgerTransactionOverview transfer={transfer} migrator={migrator}>

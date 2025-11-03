@@ -23,6 +23,7 @@ const MigrateToOneCheckbox = ({
 	return (
 		<label className="flex cursor-pointer space-x-3">
 			<Checkbox
+				data-testid="MigrateToOneCheckbox"
 				name="MigrateToOne"
 				onChange={(event) => onChange?.(event.target.checked)}
 				disabled={isDisabled}

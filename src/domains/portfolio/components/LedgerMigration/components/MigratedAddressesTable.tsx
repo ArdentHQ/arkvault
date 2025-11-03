@@ -13,7 +13,7 @@ export const MigratedAddressesTable = ({
 	profile,
 	transactions,
 }: {
-	profile;
+	profile: Contracts.IProfile;
 	transactions: MigrationTransaction[];
 }): ReactElement => {
 	const { t } = useTranslation();
@@ -36,7 +36,7 @@ export const MigratedAddressesTable = ({
 	];
 
 	return (
-		<div className="relative">
+		<div className="relative" data-testid="MigratedAddressesTable">
 			<div className="block sm:hidden">
 				{transactions.map((transaction, index) => (
 					<MigratedAddressRowMobile transaction={transaction} key={index} profile={profile} />

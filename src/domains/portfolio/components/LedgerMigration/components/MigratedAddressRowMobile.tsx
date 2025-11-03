@@ -22,7 +22,7 @@ export const MigratedAddressRowMobile = ({
 	const { t } = useTranslation();
 
 	return (
-		<MobileCard className="mb-3">
+		<MobileCard className="mb-3" data-testid="MigratedAddressRowMobile">
 			<div className="dim:bg-theme-dim-950 dark:bg-theme-dark-950 flex h-10 w-full items-center justify-between px-4">
 				<div className="max-w-32">
 					<div className="text-sm font-semibold">{transaction.recipient()?.alias()}</div>
