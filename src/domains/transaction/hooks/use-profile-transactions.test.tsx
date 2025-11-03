@@ -434,6 +434,17 @@ describe("useProfileTransactions", () => {
 			to: confirmed.to() ?? wallet.address(),
 		});
 
+		const useSynchronizerSpy = vi.spyOn(hooksMock, "useSynchronizer").mockImplementation((jobs) => {
+			const start = async () => {
+				await jobs[2].callback();
+			};
+
+			return {
+				start: start,
+				stop: vi.fn(),
+			};
+		});
+
 		const { unconfirmedSpy, removeUnconfirmedTransaction } = await mockUnconfirmedTransactionsHook([
 			{
 				networkId: wallet.networkId(),
@@ -449,9 +460,11 @@ describe("useProfileTransactions", () => {
 		});
 
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
+
 		await waitFor(() => expect(removeUnconfirmedTransaction).toHaveBeenCalledWith(confirmedHash));
 
 		unconfirmedSpy.mockRestore();
+		useSynchronizerSpy.mockRestore();
 	});
 
 	it("should filter unconfirmed by selectedTransactionTypes", async () => {
