@@ -537,7 +537,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				interval: 10_000,
 			},
 		],
-		[walletAddressesStr, activeMode, activeTransactionType, transactions],
+		[walletAddressesStr, activeMode, activeTransactionType, transactions, unconfirmedTransactions.length],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
