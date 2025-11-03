@@ -107,7 +107,6 @@ const removeConfirmedUnconfirmedTransactions = (
 
 	return (unconfirmedHash: string) => {
 		if (confirmedHashes.has(unconfirmedHash)) {
-			console.log("remove unconfirmed transaction", unconfirmedHash);
 			removeUnconfirmedTransaction(unconfirmedHash);
 		}
 	};
@@ -303,10 +302,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		};
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
 
-	console.log("unc length", unconfirmedTransactions.length);
-
 	const cleanUnconfirmedTransactions = useCallback(async () => {
-		console.log("check called", transactions.length, unconfirmedTransactions.length);
 		if (transactions.length === 0 || unconfirmedTransactions.length === 0) {
 			return;
 		}
