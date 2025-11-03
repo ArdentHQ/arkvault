@@ -303,7 +303,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		};
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
 
-	const cleanUnconfirmedTransactions = useCallback(() => {
+	const cleanUnconfirmedTransactions = useCallback(async () => {
 		console.log("check called", transactions.length, unconfirmedTransactions.length);
 		if (transactions.length === 0 || unconfirmedTransactions.length === 0) {
 			return;
