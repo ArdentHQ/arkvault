@@ -11,7 +11,7 @@ const FormButtonsWrapper = ({
 	<div
 		{...props}
 		className={twMerge(
-			"bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none",
+			"bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none",
 			"[.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4",
 			cn({
 				"mb-14 sm:mb-0": showMobileNavigation,
