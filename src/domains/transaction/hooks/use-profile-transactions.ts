@@ -142,7 +142,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		unconfirmedTransactions: allUnconfirmedTransactions,
 		removeUnconfirmedTransaction,
 		addUnconfirmedTransactionFromApi,
-		cleanupUnconfirmedForAddresses,
 	} = useUnconfirmedTransactions();
 
 	const allTransactionTypes = [...types.core];
@@ -302,6 +301,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			isMounted.current = false;
 		};
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
+
+	console.log("unc length", unconfirmedTransactions.length);
 
 	const cleanUnconfirmedTransactions = useCallback(async () => {
 		console.log("check called", transactions.length, unconfirmedTransactions.length);
