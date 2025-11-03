@@ -8,7 +8,7 @@ exports[`Votes > should emit action on continue button 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -8321,7 +8321,7 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -16318,7 +16318,7 @@ exports[`Votes > should filter current validators 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17710,7 +17710,7 @@ exports[`Votes > should render 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -25707,7 +25707,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -33704,7 +33704,7 @@ exports[`Votes > should select a validator 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -41960,7 +41960,7 @@ exports[`Votes > should select an address and validator 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -49956,7 +49956,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
     style="min-height: -webkit-fill-available;"
   >
     <div
-      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
+      class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black"
       data-testid="NavigationBarMobile"
     >
       <div
