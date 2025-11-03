@@ -107,6 +107,7 @@ const removeConfirmedUnconfirmedTransactions = (
 
 	return (unconfirmedHash: string) => {
 		if (confirmedHashes.has(unconfirmedHash)) {
+			console.log("remove unconfirmed transaction", unconfirmedHash);
 			removeUnconfirmedTransaction(unconfirmedHash);
 		}
 	};
@@ -201,6 +202,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 
 	const allTransactions = useMemo(() => {
 		const hasAllSelected = selectedTransactionTypes.length === allTransactionTypes.length;
+		const confirmedTransactionIds = new Set(transactions.map(tx => tx.hash()));
 
 		const signedTransactions = unconfirmedTransactions
 			.filter((transaction) => (hasAllSelected ? true : selectedTransactionTypes.includes(transaction.type())))
@@ -214,7 +216,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				}
 
 				return true;
-			});
+			}).filter((transaction) => !confirmedTransactionIds.has(transaction.hash()));
 
 		const combined: ExtendedTransactionDTO[] = [...signedTransactions, ...transactions];
 
@@ -301,7 +303,8 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		};
 	}, [selectedWalletAddresses, activeMode, activeTransactionType, timestamp, selectedTransactionTypes, orderBy]);
 
-	useEffect(() => {
+	const cleanUnconfirmedTransactions = useCallback(() => {
+		console.log("check called", transactions.length, unconfirmedTransactions.length);
 		if (transactions.length === 0 || unconfirmedTransactions.length === 0) {
 			return;
 		}
@@ -314,7 +317,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		for (const unconfirmedTx of unconfirmedTransactions) {
 			checkForConfirmedTransactions(unconfirmedTx.hash());
 		}
-	}, [transactions, unconfirmedTransactions, removeUnconfirmedTransaction]);
+	}, [transactions, unconfirmedTransactions]);
 
 	const updateFilters = useCallback(
 		({
@@ -485,7 +488,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			const results = response.items();
 			const remoteHashes = results.map((t) => t.hash()).filter(Boolean);
 
-			cleanupUnconfirmedForAddresses(walletAddresses, remoteHashes);
+			// cleanupUnconfirmedForAddresses(walletAddresses, remoteHashes);
 
 			/* istanbul ignore next -- @preserve */
 			if (remoteHashes.length !== unconfirmedTransactions.length) {
@@ -527,6 +530,10 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			{
 				callback: fetchUnconfirmedTransactions,
 				interval: blockTime,
+			},
+			{
+				callback: cleanUnconfirmedTransactions,
+				interval: 10_000,
 			},
 		],
 		[walletAddressesStr, activeMode, activeTransactionType, transactions],
