@@ -8,7 +8,7 @@ import userEvent from "@testing-library/user-event";
 
 describe("LedgerMigrationOverview", () => {
 	let profile: Contracts.IProfile;
-	let transaction: DraftTransfer
+	let transaction: DraftTransfer;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -21,14 +21,14 @@ describe("LedgerMigrationOverview", () => {
 		vi.spyOn(transaction, "isCompleted").mockReturnValue(true);
 
 		vi.spyOn(transaction, "signedTransaction").mockReturnValue({
-			hash: () => "123",
 			explorerLink: () => "https://123.com",
-		} as ExtendedSignedTransactionData)
+			hash: () => "123",
+		} as ExtendedSignedTransactionData);
 	});
 
 	afterAll(() => {
-		vi.restoreAllMocks()
-	})
+		vi.restoreAllMocks();
+	});
 
 	it("should render", () => {
 		render(<LedgerMigrationOverview profile={profile} transfer={transaction} />);
@@ -40,10 +40,10 @@ describe("LedgerMigrationOverview", () => {
 		expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
 		expect(screen.getByTestId("LedgerMigration__Review-edit")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("LedgerMigration__Review-edit"))
+		await userEvent.click(screen.getByTestId("LedgerMigration__Review-edit"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
-		})
+		});
 	});
 });

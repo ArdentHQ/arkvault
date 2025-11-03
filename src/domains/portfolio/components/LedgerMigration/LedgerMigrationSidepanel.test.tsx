@@ -20,6 +20,9 @@ vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirm
 }));
 
 describe("LedgerMigrationSidepanel", () => {
+	const ledgerContinueButton = "LedgerScanStep__continue-button";
+	const ledgerReviewStepTestId = "LedgerMigration__Review-step";
+
 	let profile: Contracts.IProfile;
 	const route = `/profiles/${getMainsailProfileId()}/dashboard`;
 	let publicKeyPaths: Map<string, string>;
@@ -67,13 +70,13 @@ describe("LedgerMigrationSidepanel", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerScanStep__continue-button")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerContinueButton)).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+		await userEvent.click(screen.getByTestId(ledgerContinueButton));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 		});
 
 		// Complete the migration flow
@@ -81,7 +84,7 @@ describe("LedgerMigrationSidepanel", () => {
 		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 		});
 
 		await waitFor(
@@ -130,13 +133,13 @@ describe("LedgerMigrationSidepanel", () => {
 		await userEvent.click(screen.getByTestId("MigrateToOneCheckbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerScanStep__continue-button")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerContinueButton)).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+		await userEvent.click(screen.getByTestId(ledgerContinueButton));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 		});
 
 		// Complete the migration flow
@@ -144,7 +147,7 @@ describe("LedgerMigrationSidepanel", () => {
 		await userEvent.click(screen.getByTestId("OverviewStep__continue-button"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 		});
 
 		await waitFor(
@@ -187,13 +190,13 @@ describe("LedgerMigrationSidepanel", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerScanStep__continue-button")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerContinueButton)).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("LedgerScanStep__continue-button"));
+		await userEvent.click(screen.getByTestId(ledgerContinueButton));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("LedgerMigration__Review-step")).toBeInTheDocument();
+			expect(screen.getByTestId(ledgerReviewStepTestId)).toBeInTheDocument();
 		});
 
 		vi.restoreAllMocks();
