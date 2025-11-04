@@ -1,6 +1,5 @@
 import { Networks, Contracts } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import Tippy from "@tippyjs/react";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
@@ -9,6 +8,7 @@ import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
+import { Tooltip } from "@/app/components/Tooltip";
 import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
@@ -41,14 +41,14 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		() => [
 			{
 				Header: (
-					<Tippy content={isAllSelected ? t("COMMON.UNSELECT_ALL") : t("COMMON.SELECT_ALL")}>
+					<Tooltip content={isAllSelected ? t("COMMON.UNSELECT_ALL") : t("COMMON.SELECT_ALL")}>
 						<Checkbox
 							disabled={isScanning}
 							data-testid="LedgerScanStep__select-all"
 							onChange={() => toggleSelectAll()}
 							checked={isAllSelected}
 						/>
-					</Tippy>
+					</Tooltip>
 				),
 				className: "justify-center",
 				id: "select",

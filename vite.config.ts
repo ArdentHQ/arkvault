@@ -181,7 +181,6 @@ export default defineConfig(async () => {
 				"rollup-plugin-polyfill-node/polyfills/util",
 				"@faustbrian/node-haveibeenpwned",
 				"@ardenthq/arkvault-url",
-				"@tippyjs/react",
 				"assert",
 				"browser-fs-access",
 				"classnames",

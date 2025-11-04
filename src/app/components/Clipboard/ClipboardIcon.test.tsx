@@ -18,7 +18,7 @@ describe("ClipboardIcon", () => {
 
 	it("should render with tooltip in the dark mode", async () => {
 		render(
-			<Clipboard variant="icon" data="" tooltipDarkTheme>
+			<Clipboard variant="icon" data="">
 				<span>Hello!</span>
 			</Clipboard>,
 		);

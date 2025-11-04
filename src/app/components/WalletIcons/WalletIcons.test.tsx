@@ -17,7 +17,7 @@ describe("WalletIcons", () => {
 	it("should render with tooltip in the dark mode", async () => {
 		const walletSpy = vi.spyOn(wallet, "isKnown").mockReturnValue(true);
 
-		render(<WalletIcons wallet={wallet} tooltipDarkTheme />);
+		render(<WalletIcons wallet={wallet} />);
 
 		await userEvent.hover(screen.getByTestId("WalletIcon__Verified"));
 

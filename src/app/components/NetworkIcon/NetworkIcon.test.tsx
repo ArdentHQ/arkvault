@@ -27,7 +27,7 @@ describe("NetworkIcon", () => {
 	});
 
 	it("should render with tooltip in the dark mode", async () => {
-		render(<NetworkIcon network={network} size="lg" tooltipDarkTheme />, {});
+		render(<NetworkIcon network={network} size="lg" />, {});
 
 		await userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
 

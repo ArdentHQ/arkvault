@@ -4,10 +4,12 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import { OptionProperties, SelectDropdownProperties, SelectProperties } from "./SelectDropdown.contracts";
 import { getMainOptions, isMatch, matchOptions } from "./SelectDropdown.helpers";
-import { SelectDropdownDropdown } from "./SelectDropdownDropdown";
 import { Input } from "@/app/components/Input";
 import { Icon } from "@/app/components/Icon";
 import { useFormField } from "@/app/components/Form/useFormField";
+
+import { Tooltip } from "@/app/components/Tooltip";
+import { SelectDropdownRenderOptions as RenderOptions } from "./SelectDropdownRenderOptions";
 
 const itemToString = (item: OptionProperties | null) => item?.label || "";
 
@@ -28,7 +30,6 @@ const SelectDropdown = ({
 	renderLabel,
 	id,
 	readOnly,
-	allowOverflow,
 }: SelectDropdownProperties) => {
 	const [data, setData] = useState(options);
 	const [isTyping, setIsTyping] = useState(false);
@@ -207,42 +208,51 @@ const SelectDropdown = ({
 
 	return (
 		<>
-			{isVisible && (
-				<SelectDropdownDropdown
-					reference={dropdownReference}
-					data={data}
-					getItemProps={getItemProps}
-					highlightedIndex={highlightedIndex}
-					inputValue={inputValue}
-					onMouseDown={onMouseDown}
-					renderLabel={renderLabel}
-					allowOverflow={allowOverflow}
-				/>
-			)}
-
 			<div className="w-full">
 				<div {...getComboboxProps()}>
-					<div ref={dropdownReference}>
-						<label {...getLabelProps()} />
+					<Tooltip
+						offset={0}
+						visible={isVisible}
+						placement="bottom"
+						className="dim:bg-transparent bg-transparent dark:bg-transparent"
+						showFloatingArrow={false}
+						content={
+							<div>
+								<ul className="select-options-list">
+									<RenderOptions
+										data={data}
+										getItemProps={getItemProps}
+										highlightedIndex={highlightedIndex}
+										inputValue={inputValue}
+										onMouseDown={onMouseDown}
+										renderLabel={renderLabel}
+									/>
+								</ul>
+							</div>
+						}
+					>
+						<div ref={dropdownReference}>
+							<label {...getLabelProps()} />
 
-						<Input
-							data-testid="SelectDropdown__input"
-							suggestion={suggestion}
-							disabled={disabled}
-							isInvalid={isInvalid}
-							addons={addons}
-							readOnly={readOnly}
-							innerClassName={cn({ "cursor-default": !inputValue }, innerClassName)}
-							{...getInputProps({
-								className,
-								onBlur: handleBlur,
-								onFocus: openMenu,
-								onKeyDown: handleKeyDown,
-								placeholder,
-							})}
-						/>
-					</div>
-					<div {...getMenuProps()} />
+							<Input
+								data-testid="SelectDropdown__input"
+								suggestion={suggestion}
+								disabled={disabled}
+								isInvalid={isInvalid}
+								addons={addons}
+								readOnly={readOnly}
+								innerClassName={cn({ "cursor-default": !inputValue }, innerClassName)}
+								{...getInputProps({
+									className,
+									onBlur: handleBlur,
+									onFocus: openMenu,
+									onKeyDown: handleKeyDown,
+									placeholder,
+								})}
+							/>
+						</div>
+						<div {...getMenuProps()} />
+					</Tooltip>
 				</div>
 			</div>
 		</>
@@ -265,7 +275,6 @@ export const Select = ({
 	renderLabel,
 	id,
 	readOnly = false,
-	allowOverflow,
 	wrapperClassName = "relative w-full",
 	ref,
 }: SelectProperties) => {
@@ -315,7 +324,6 @@ export const Select = ({
 				}}
 				renderLabel={renderLabel}
 				readOnly={readOnly}
-				allowOverflow={allowOverflow}
 			/>
 		</div>
 	);

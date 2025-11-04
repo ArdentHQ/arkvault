@@ -112,10 +112,9 @@ export const PortfolioHeader = ({
 				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
-						interactive={true}
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
-								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+								<div className="mb-2 block max-w-96 whitespace-normal sm:mb-0 sm:inline">
 									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button

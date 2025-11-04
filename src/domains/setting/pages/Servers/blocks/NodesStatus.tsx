@@ -112,7 +112,7 @@ const NodeStatusNode = ({ network, hosts }: { network: Networks.Network; hosts: 
 		if (unresponsiveEndpointsCount === 2) {
 			return (
 				<Tooltip
-					maxWidth={350}
+					className="max-w[350px]"
 					content={<Trans i18nKey="SETTINGS.SERVERS.NODE_STATUS_TOOLTIPS.WITH_ISSUES_2" values={messages} />}
 				>
 					<div data-testid="NodeStatus--statuserror">

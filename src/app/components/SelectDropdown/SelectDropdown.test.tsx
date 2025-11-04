@@ -1,7 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
-import Tippy from "@tippyjs/react";
 import { Select } from "./SelectDropdown";
 import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
@@ -68,10 +67,6 @@ const selectInput = () => screen.getByTestId("select-list__input");
 const firstOptionID = "SelectDropdown__option--0";
 
 describe("SelectDropdown", () => {
-	beforeEach(() => {
-		vi.spyOn(Tippy as any, "render").mockRestore();
-	});
-
 	it.each([OptionType.base, OptionType.group])("should render option %s", (optType) => {
 		const { container } = render(<Select options={getOptions(optType)} />);
 
