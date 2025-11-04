@@ -10,7 +10,6 @@ interface UseSettingsPromptInput {
 export const useSettingsPrompt = ({ isDirty, dirtyFields }: UseSettingsPromptInput) => {
 	const shouldBlockNavigation = useCallback(
 		(path: string) => {
-
 			// Check if user is navigating to the settings page
 			const matchCurrent = matchPath(
 				{
