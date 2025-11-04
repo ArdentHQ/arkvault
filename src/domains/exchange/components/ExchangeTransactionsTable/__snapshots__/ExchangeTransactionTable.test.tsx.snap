@@ -327,28 +327,36 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          3
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  3
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -431,42 +439,46 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -522,28 +534,36 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          2
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  2
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -626,42 +646,46 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -717,28 +741,36 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          1
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  1
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -821,42 +853,46 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1239,28 +1275,36 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          3
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  3
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -1343,42 +1387,46 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1434,28 +1482,36 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          2
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  2
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -1538,42 +1594,46 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1629,28 +1689,36 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          1
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  1
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -1733,42 +1801,46 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2151,28 +2223,36 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          3
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  3
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -2255,42 +2335,46 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2346,28 +2430,36 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          2
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  2
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -2450,42 +2542,46 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2541,28 +2637,36 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          1
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  1
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -2645,42 +2749,46 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3063,28 +3171,36 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          3
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  3
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -3167,42 +3283,46 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3258,28 +3378,36 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          2
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  2
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -3362,42 +3490,46 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3453,28 +3585,36 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          1
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  1
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -3557,42 +3697,46 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3975,28 +4119,36 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          3
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  3
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -4079,42 +4231,46 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4170,28 +4326,36 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          2
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  2
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -4274,42 +4438,46 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4365,28 +4533,36 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 <div
                   class="flex px-3 transition-colors duration-100 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start my-0 flex-col gap-1 min-h-[66px] py-3 lg:my-1 lg:min-h-11 lg:py-0 xl:pt-3"
                 >
-                  <button
-                    class="h-5 w-20 cursor-pointer truncate"
-                    type="button"
-                  >
-                    <div
-                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                    >
-                      <div
-                        class="relative grow leading-[17px] sm:leading-5 text-left"
+                  <span>
+                    <span>
+                      <button
+                        class="h-5 w-20 cursor-pointer truncate"
+                        type="button"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                          data-testid="Address__address"
+                        <div
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          1
-                        </span>
-                        <span>
-                           
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                          <div
+                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                                  data-testid="Address__address"
+                                >
+                                  1
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="text-xs xl:hidden"
                   >
@@ -4469,42 +4645,46 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-center items-start xl:items-center my-0 py-3 min-h-[66px] lg:min-h-11"
                 >
                   <span>
-                    <div
-                      class="text-theme-warning-300"
-                    >
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="clock"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                    <span>
+                      <span>
+                        <div
+                          class="text-theme-warning-300"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-miterlimit="10"
-                            stroke-width="2"
-                            transform="translate(1.5 1.5)"
+                          <div
+                            style="height: 20px; width: 20px;"
                           >
-                            <circle
-                              cx="8.5"
-                              cy="8.5"
-                              r="9"
-                            />
-                            <path
-                              d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            <svg
+                              id="clock"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="10"
+                                stroke-width="2"
+                                transform="translate(1.5 1.5)"
+                              >
+                                <circle
+                                  cx="8.5"
+                                  cy="8.5"
+                                  r="9"
+                                />
+                                <path
+                                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4595,11 +4775,15 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                     <div
                       class="text-sm font-semibold"
                     >
-                      <span
-                        class="no-ligatures text-theme-primary-600"
-                        data-testid="TruncateMiddle"
-                      >
-                        3
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures text-theme-primary-600"
+                            data-testid="TruncateMiddle"
+                          >
+                            3
+                          </span>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -4782,43 +4966,47 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                           <div
                             class="flex h-full items-center space-x-1"
                           >
-                            <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                              data-testid="AmountLabel__hint"
-                            >
-                              <div
-                                class="dark:text-white"
-                              >
+                            <span>
+                              <span>
                                 <div
-                                  style="height: 10px; width: 10px;"
+                                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+                                  data-testid="AmountLabel__hint"
                                 >
-                                  <svg
-                                    id="hint-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    class="dark:text-white"
                                   >
-                                    <path
-                                      d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <circle
-                                      cx="4.5"
-                                      cy="1"
-                                      fill="currentColor"
-                                      r="1"
-                                    />
-                                  </svg>
+                                    <div
+                                      style="height: 10px; width: 10px;"
+                                    >
+                                      <svg
+                                        id="hint-small"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <circle
+                                          cx="4.5"
+                                          cy="1"
+                                          fill="currentColor"
+                                          r="1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
+                              </span>
+                            </span>
                             <span
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
@@ -4848,11 +5036,15 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                     <div
                       class="text-sm font-semibold"
                     >
-                      <span
-                        class="no-ligatures text-theme-primary-600"
-                        data-testid="TruncateMiddle"
-                      >
-                        2
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures text-theme-primary-600"
+                            data-testid="TruncateMiddle"
+                          >
+                            2
+                          </span>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -5035,43 +5227,47 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                           <div
                             class="flex h-full items-center space-x-1"
                           >
-                            <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                              data-testid="AmountLabel__hint"
-                            >
-                              <div
-                                class="dark:text-white"
-                              >
+                            <span>
+                              <span>
                                 <div
-                                  style="height: 10px; width: 10px;"
+                                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+                                  data-testid="AmountLabel__hint"
                                 >
-                                  <svg
-                                    id="hint-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    class="dark:text-white"
                                   >
-                                    <path
-                                      d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <circle
-                                      cx="4.5"
-                                      cy="1"
-                                      fill="currentColor"
-                                      r="1"
-                                    />
-                                  </svg>
+                                    <div
+                                      style="height: 10px; width: 10px;"
+                                    >
+                                      <svg
+                                        id="hint-small"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <circle
+                                          cx="4.5"
+                                          cy="1"
+                                          fill="currentColor"
+                                          r="1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
+                              </span>
+                            </span>
                             <span
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
@@ -5101,11 +5297,15 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                     <div
                       class="text-sm font-semibold"
                     >
-                      <span
-                        class="no-ligatures text-theme-primary-600"
-                        data-testid="TruncateMiddle"
-                      >
-                        1
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures text-theme-primary-600"
+                            data-testid="TruncateMiddle"
+                          >
+                            1
+                          </span>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -5288,43 +5488,47 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                           <div
                             class="flex h-full items-center space-x-1"
                           >
-                            <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                              data-testid="AmountLabel__hint"
-                            >
-                              <div
-                                class="dark:text-white"
-                              >
+                            <span>
+                              <span>
                                 <div
-                                  style="height: 10px; width: 10px;"
+                                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+                                  data-testid="AmountLabel__hint"
                                 >
-                                  <svg
-                                    id="hint-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    class="dark:text-white"
                                   >
-                                    <path
-                                      d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <circle
-                                      cx="4.5"
-                                      cy="1"
-                                      fill="currentColor"
-                                      r="1"
-                                    />
-                                  </svg>
+                                    <div
+                                      style="height: 10px; width: 10px;"
+                                    >
+                                      <svg
+                                        id="hint-small"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <circle
+                                          cx="4.5"
+                                          cy="1"
+                                          fill="currentColor"
+                                          r="1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
+                              </span>
+                            </span>
                             <span
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
@@ -5382,11 +5586,15 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                     <div
                       class="text-sm font-semibold"
                     >
-                      <span
-                        class="no-ligatures text-theme-primary-600"
-                        data-testid="TruncateMiddle"
-                      >
-                        3
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures text-theme-primary-600"
+                            data-testid="TruncateMiddle"
+                          >
+                            3
+                          </span>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -5569,43 +5777,47 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                           <div
                             class="flex h-full items-center space-x-1"
                           >
-                            <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                              data-testid="AmountLabel__hint"
-                            >
-                              <div
-                                class="dark:text-white"
-                              >
+                            <span>
+                              <span>
                                 <div
-                                  style="height: 10px; width: 10px;"
+                                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+                                  data-testid="AmountLabel__hint"
                                 >
-                                  <svg
-                                    id="hint-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    class="dark:text-white"
                                   >
-                                    <path
-                                      d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <circle
-                                      cx="4.5"
-                                      cy="1"
-                                      fill="currentColor"
-                                      r="1"
-                                    />
-                                  </svg>
+                                    <div
+                                      style="height: 10px; width: 10px;"
+                                    >
+                                      <svg
+                                        id="hint-small"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <circle
+                                          cx="4.5"
+                                          cy="1"
+                                          fill="currentColor"
+                                          r="1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
+                              </span>
+                            </span>
                             <span
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
@@ -5635,11 +5847,15 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                     <div
                       class="text-sm font-semibold"
                     >
-                      <span
-                        class="no-ligatures text-theme-primary-600"
-                        data-testid="TruncateMiddle"
-                      >
-                        2
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures text-theme-primary-600"
+                            data-testid="TruncateMiddle"
+                          >
+                            2
+                          </span>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -5822,43 +6038,47 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                           <div
                             class="flex h-full items-center space-x-1"
                           >
-                            <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                              data-testid="AmountLabel__hint"
-                            >
-                              <div
-                                class="dark:text-white"
-                              >
+                            <span>
+                              <span>
                                 <div
-                                  style="height: 10px; width: 10px;"
+                                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+                                  data-testid="AmountLabel__hint"
                                 >
-                                  <svg
-                                    id="hint-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    class="dark:text-white"
                                   >
-                                    <path
-                                      d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <circle
-                                      cx="4.5"
-                                      cy="1"
-                                      fill="currentColor"
-                                      r="1"
-                                    />
-                                  </svg>
+                                    <div
+                                      style="height: 10px; width: 10px;"
+                                    >
+                                      <svg
+                                        id="hint-small"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <circle
+                                          cx="4.5"
+                                          cy="1"
+                                          fill="currentColor"
+                                          r="1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
+                              </span>
+                            </span>
                             <span
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
@@ -5888,11 +6108,15 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                     <div
                       class="text-sm font-semibold"
                     >
-                      <span
-                        class="no-ligatures text-theme-primary-600"
-                        data-testid="TruncateMiddle"
-                      >
-                        1
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures text-theme-primary-600"
+                            data-testid="TruncateMiddle"
+                          >
+                            1
+                          </span>
+                        </span>
                       </span>
                     </div>
                     <div
@@ -6075,43 +6299,47 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                           <div
                             class="flex h-full items-center space-x-1"
                           >
-                            <div
-                              class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                              data-testid="AmountLabel__hint"
-                            >
-                              <div
-                                class="dark:text-white"
-                              >
+                            <span>
+                              <span>
                                 <div
-                                  style="height: 10px; width: 10px;"
+                                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+                                  data-testid="AmountLabel__hint"
                                 >
-                                  <svg
-                                    id="hint-small"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 10 10"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    class="dark:text-white"
                                   >
-                                    <path
-                                      d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <circle
-                                      cx="4.5"
-                                      cy="1"
-                                      fill="currentColor"
-                                      r="1"
-                                    />
-                                  </svg>
+                                    <div
+                                      style="height: 10px; width: 10px;"
+                                    >
+                                      <svg
+                                        id="hint-small"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                        <circle
+                                          cx="4.5"
+                                          cy="1"
+                                          fill="currentColor"
+                                          r="1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
+                              </span>
+                            </span>
                             <span
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
