@@ -29,6 +29,7 @@ interface TooltipProps {
 	visible?: boolean;
 	offset?: number;
 	showFloatingArrow?: boolean;
+	wrapperClass?: string
 }
 
 export const Tooltip = ({
@@ -41,6 +42,7 @@ export const Tooltip = ({
 	className,
 	offset = 12,
 	showFloatingArrow = true,
+	wrapperClass
 }: TooltipProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const arrowRef = useRef(null);
@@ -72,7 +74,7 @@ export const Tooltip = ({
 	});
 
 	return (
-		<span>
+		<span className={wrapperClass}>
 			<span ref={setReference} {...getReferenceProps()}>
 				{children}
 			</span>
