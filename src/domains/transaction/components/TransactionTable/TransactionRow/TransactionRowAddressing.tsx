@@ -48,7 +48,7 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 	const { t } = useTranslation();
 
 	return (
-		<div className="flex min-w-36 grow items-center justify-between space-x-4">
+		<div className="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36">
 			<Tooltip content={address}>
 				<div className="grow" data-testid="TransactionRowAddressing__address-container">
 					<Address

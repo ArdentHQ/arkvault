@@ -68,7 +68,7 @@ export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: bo
 				</div>
 			</TableCell>
 
-			<TableCell variant="end" className="hidden md:table-cell" innerClassName="justify-end">
+			<TableCell variant="end" className="hidden xl:table-cell" innerClassName="justify-end">
 				<div className="hidden lg:block">
 					<Skeleton width={currencyWidth} height={17} />
 				</div>
