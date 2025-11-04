@@ -3,7 +3,7 @@
 exports[`NavigationBar > should not render with title if variant is full 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -769,7 +769,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
 exports[`NavigationBar > should render full variant when profile restored is false 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -1450,7 +1450,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
 exports[`NavigationBar > should render full variant when profile restored is true 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2129,7 +2129,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
 exports[`NavigationBar > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2815,7 +2815,7 @@ exports[`NavigationBar > should render in lg 1`] = `
 exports[`NavigationBar > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -3501,7 +3501,7 @@ exports[`NavigationBar > should render in md 1`] = `
 exports[`NavigationBar > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -4187,7 +4187,7 @@ exports[`NavigationBar > should render in sm 1`] = `
 exports[`NavigationBar > should render in small screen variant 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -4873,7 +4873,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
 exports[`NavigationBar > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -5719,7 +5719,7 @@ exports[`NavigationBar > should render logo-only variant on xs screen 1`] = `
 exports[`NavigationBar > should render with custom menu 1`] = `
 <DocumentFragment>
   <div
-    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black shadow-footer-smooth dark:shadow-footer-smooth-dark"
     data-testid="NavigationBarMobile"
   >
     <div
