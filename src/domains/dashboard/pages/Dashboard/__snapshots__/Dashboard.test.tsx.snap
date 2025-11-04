@@ -2132,7 +2132,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -2209,7 +2209,7 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                    class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                   >
                                     <div
                                       class="grow"
@@ -2293,7 +2293,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                               >
                                 <div
                                   class="grow"
@@ -2375,7 +2375,7 @@ exports[`Dashboard > should render 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                               >
                                 <div
                                   class="grow"
@@ -2643,7 +2643,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -3133,7 +3133,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -3623,7 +3623,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -4113,7 +4113,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -4603,7 +4603,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -5093,7 +5093,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -5583,7 +5583,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -5660,7 +5660,7 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                    class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                   >
                                     <div
                                       class="grow"
@@ -5744,7 +5744,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                               >
                                 <div
                                   class="grow"
@@ -5826,7 +5826,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                               >
                                 <div
                                   class="grow"
@@ -6094,7 +6094,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -6446,7 +6446,7 @@ exports[`Dashboard > should render 1`] = `
                                   From
                                 </div>
                                 <div
-                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                  class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                 >
                                   <div
                                     class="grow"
@@ -6525,7 +6525,7 @@ exports[`Dashboard > should render 1`] = `
                                     To
                                   </div>
                                   <div
-                                    class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                    class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                                   >
                                     <div
                                       class="grow"
@@ -6609,7 +6609,7 @@ exports[`Dashboard > should render 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                               >
                                 <div
                                   class="grow"
@@ -6691,7 +6691,7 @@ exports[`Dashboard > should render 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex grow items-center justify-between space-x-4 xl:min-w-36"
+                                class="flex grow items-center justify-between space-x-4 xl:min-w-36 md-lg:px-4 xl:px-0"
                               >
                                 <div
                                   class="grow"
