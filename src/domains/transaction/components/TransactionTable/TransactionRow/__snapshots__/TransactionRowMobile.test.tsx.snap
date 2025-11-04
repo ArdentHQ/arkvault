@@ -91,7 +91,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"
@@ -165,7 +165,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"
@@ -369,7 +369,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"
@@ -443,7 +443,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"
@@ -647,7 +647,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"
@@ -723,7 +723,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"
@@ -927,7 +927,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"
@@ -1003,7 +1003,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
                         <div
                           class="grow"

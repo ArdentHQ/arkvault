@@ -47,24 +47,22 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 	const { t } = useTranslation();
 
 	return (
-		<div className="flex min-w-36 grow items-center justify-between space-x-4">
-			<div>
-				<Tooltip content={address}>
-					<div className="grow" data-testid="TransactionRowAddressing__address-container">
-						<Address
-							showTooltip={false}
-							walletName={alias}
-							address={alias ? "" : address}
-							truncateOnTable
-							addressClass={cn({
-								"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
-								"text-theme-text": !alias,
-							})}
-							size="sm"
-						/>
-					</div>
-				</Tooltip>
-			</div>
+		<div className="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36">
+			<Tooltip content={address}>
+				<div className="grow" data-testid="TransactionRowAddressing__address-container">
+					<Address
+						showTooltip={false}
+						walletName={alias}
+						address={alias ? "" : address}
+						truncateOnTable
+						addressClass={cn({
+							"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
+							"text-theme-text": !alias,
+						})}
+						size="sm"
+					/>
+				</div>
+			</Tooltip>
 
 			<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
 				<Icon

@@ -21,6 +21,7 @@ import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
 import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 import { useLocalStorage } from "usehooks-ts";
 import { useTranslation } from "react-i18next";
+import { useNavigationContext } from "@/app/contexts";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -88,8 +89,10 @@ const SidePanelContent = ({
 	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
-	const popStateHandlerRef = useRef<() => void>(() => {});
+	const popStateHandlerRef = useRef<() => void>(() => { });
 	const { isMinimized, toggleMinimize } = usePanels();
+
+	const { hasFixedFormButtons } = useNavigationContext();
 
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
@@ -147,7 +150,7 @@ const SidePanelContent = ({
 				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
 			},
 			open: {
-				transform: isMinimized ? "translate(148px, calc(100dvh - 48px))" : "translateX(0%)",
+				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
 				transitionTimingFunction: "ease-out",
 			},
 		}),
@@ -212,8 +215,9 @@ const SidePanelContent = ({
 							)}
 						/>
 						<FloatingOverlay
-							className={cn("z-50 transition-all duration-300", {
-								"pointer-events-none": isMinimized,
+							className={cn("transition-all duration-300", {
+								"pointer-events-none z-40": isMinimized,
+								"z-50": !isMinimized,
 							})}
 							lockScroll={!isMinimized}
 						>
@@ -229,20 +233,20 @@ const SidePanelContent = ({
 									<div
 										data-testid={isMinimized ? "MinimizedSidePanel" : "MaximizedSidePanel"}
 										style={styles}
-										className={cn(
-											"fixed top-0 right-0 w-full transition-all duration-300 md:max-w-[608px]",
-											className,
-											{
-												"animate-shake": shake,
-											},
-										)}
+										className={cn("fixed right-0 w-full transition-all duration-300", className, {
+											"animate-shake": shake,
+											"sm:top-0 sm:max-w-[425px]": isMinimized,
+											"top-0 sm:max-w-[608px]": !isMinimized,
+											"top-[-56px]": !hasFixedFormButtons && isMinimized,
+											"top-[-68px]": hasFixedFormButtons && isMinimized,
+										})}
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
 											className={cn(
 												"navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
 												{
-													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-tl-xl border-t border-l":
+													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-tl-sm rounded-tr-sm border-t border-r border-l sm:rounded-tl-xl sm:rounded-tr-none sm:border-r-0":
 														isMinimized,
 													"border-transparent": !isMinimized,
 												},
@@ -259,8 +263,7 @@ const SidePanelContent = ({
 																{
 																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
-																	// THe padding on the right is to compensate for the header content width
-																	"cursor-pointer items-center py-3.5 pr-[162px] pl-6":
+																	"cursor-pointer items-center py-3.5 pr-6 pl-6":
 																		isMinimized,
 																	"items-start px-6 py-4": !isMinimized,
 																},
