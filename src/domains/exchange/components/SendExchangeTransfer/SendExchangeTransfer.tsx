@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFees, useValidation } from "@/app/hooks";
@@ -12,7 +12,6 @@ import { Button } from "@/app/components/Button";
 import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import { Modal } from "@/app/components/Modal";
 import { Networks } from "@/app/lib/mainsail";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
 import { buildTransferData } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.helpers";
