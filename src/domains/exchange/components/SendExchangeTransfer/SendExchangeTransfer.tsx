@@ -212,7 +212,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			)}
 
 			<Form context={form} onSubmit={() => submit()}>
-				<div className="mt-4 space-y-4">
+				<div className="mt-4 space-y-4 text-theme-text">
 					{!errorMessage && (
 						<FormField name="senderAddress">
 							<FormLabel label={t("TRANSACTION.SENDER")} />
@@ -250,8 +250,8 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 						<>
 							{!isLedger && (
 								<div className="space-y-3 sm:space-y-2">
-									<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
 									<TotalAmountBox
+										detailWrapperClassName="sm:min-w-20"
 										amount={exchangeInput.amount}
 										fee={fee || 0}
 										ticker={senderWallet.currency()}
