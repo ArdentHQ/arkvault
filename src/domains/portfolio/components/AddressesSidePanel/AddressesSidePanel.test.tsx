@@ -131,9 +131,12 @@ describe("AddressesSidePanel", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await waitFor(() => {
-			expect(screen.getByText(/You can manage and remove your addresses here./)).toBeVisible();
-		}, { timeout: 4000 })
+		await waitFor(
+			() => {
+				expect(screen.getByText(/You can manage and remove your addresses here./)).toBeVisible();
+			},
+			{ timeout: 4000 },
+		);
 
 		getItemSpy.mockRestore();
 	});
@@ -159,9 +162,12 @@ describe("AddressesSidePanel", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await waitFor(() => {
-			expect(screen.getByText(/You can manage and remove your addresses here./)).toBeVisible();
-		}, { timeout: 4000 })
+		await waitFor(
+			() => {
+				expect(screen.getByText(/You can manage and remove your addresses here./)).toBeVisible();
+			},
+			{ timeout: 4000 },
+		);
 
 		const setItemSpy = vi.spyOn(Storage.prototype, "setItem");
 
