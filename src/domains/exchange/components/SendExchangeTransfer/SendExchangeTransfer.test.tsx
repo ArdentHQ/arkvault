@@ -28,11 +28,11 @@ let useActiveProfileSpy: MockInstance;
 const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 
 const selectSender = async () => {
-	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectDropdown__input"));
 
-	await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
+	await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
-	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+	const firstAddress = screen.getByTestId("SelectDropdown__option--0");
 
 	await userEvent.click(firstAddress);
 };
