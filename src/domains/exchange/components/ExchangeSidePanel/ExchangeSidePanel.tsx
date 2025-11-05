@@ -272,10 +272,9 @@ export const ExchangeSidePanel = ({
 		}
 	}, [activeProfile, currencies, exchangeService, exchangeTransaction, orderId, provider, setValue, onReady]);
 
-	// const mainsailMainnetNetwork = activeProfile
-	// 	.availableNetworks()
-	// 	.find((network) => network.id() === "mainsail.mainnet");
-	const mainsailMainnetNetwork = activeProfile.activeNetwork();
+	const mainsailMainnetNetwork = activeProfile
+		.availableNetworks()
+		.find((network) => network.id() === "mainsail.mainnet");
 	const withSignStep = mainsailMainnetNetwork && fromCurrency?.coin.toLowerCase() === "ark";
 
 	const submitForm = useCallback(async () => {
