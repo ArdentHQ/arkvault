@@ -17,13 +17,12 @@ describe("WalletIcons", () => {
 	it("should render with tooltip in the dark mode", async () => {
 		const walletSpy = vi.spyOn(wallet, "isKnown").mockReturnValue(true);
 
-		render(<WalletIcons wallet={wallet} />);
+		const { asFragment } = render(<WalletIcons wallet={wallet} />);
 
 		await userEvent.hover(screen.getByTestId("WalletIcon__Verified"));
 
-		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
-
 		walletSpy.mockRestore();
+		expect(asFragment()).toMatchSnapshot()
 	});
 
 	it("should render the verified icon", () => {

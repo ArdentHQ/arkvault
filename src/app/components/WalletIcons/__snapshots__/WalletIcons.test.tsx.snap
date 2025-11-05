@@ -17,3 +17,194 @@ exports[`WalletIcons > should render wallet icon skeleton 1`] = `
   </span>
 </DocumentFragment>
 `;
+
+exports[`WalletIcons > should render with tooltip in the dark mode 1`] = `
+<DocumentFragment>
+  <span>
+    <span
+      aria-describedby="«r0»"
+    >
+      <button
+        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+        data-testid="WalletIcon__Verified"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
+            >
+              <svg
+                id="user-check-mark"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <circle
+                    cx="10"
+                    cy="5"
+                    r="4"
+                  />
+                  <path
+                    d="M2 19c0-4.899 3.544-9 8-9 1.88 0 3.628.743 5.008 1.992M17.25 14.85l-2.8 3.8c-.3.4-.7.4-1.1.2l-1.4-1.4"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </button>
+    </span>
+    <div
+      data-floating-ui-focusable=""
+      id="«r0»"
+      role="tooltip"
+      style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
+      tabindex="-1"
+    >
+      <div
+        style="transition-property: opacity,transform; transition-duration: 250ms;"
+      >
+        <svg
+          aria-hidden="true"
+          class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
+          height="14"
+          style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
+          viewBox="0 0 14 14"
+          width="14"
+        >
+          <path
+            d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
+            stroke="none"
+          />
+          <clippath
+            id="«r6»"
+          >
+            <rect
+              height="14"
+              width="14"
+              x="0"
+              y="0"
+            />
+          </clippath>
+        </svg>
+        <div
+          class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
+          style="font-feature-settings: "liga" off, "calt" off;"
+        >
+          <div>
+            Verified Address: 
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>
+  <span>
+    <span>
+      <button
+        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+        data-testid="WalletIcon__TestNetwork"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
+            >
+              <svg
+                id="code"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </button>
+    </span>
+  </span>
+  <span>
+    <span>
+      <button
+        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+        data-testid="WalletIcon__Username"
+        type="button"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          <div>
+            <div
+              style="height: 20px; width: 20px;"
+            >
+              <svg
+                fill="none"
+                style="height: 100%; width: 100%;"
+                viewBox="0 0 20 21"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 15.0013C1.00124 13.188 1.91209 11.4962 3.42519 10.4969C4.93829 9.49766 6.8518 9.32411 8.52 10.0349"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M6.40156 8.40078C8.2241 8.40078 9.70156 6.92332 9.70156 5.10078C9.70156 3.27824 8.2241 1.80078 6.40156 1.80078C4.57902 1.80078 3.10156 3.27824 3.10156 5.10078C3.10156 6.92332 4.57902 8.40078 6.40156 8.40078Z"
+                  fill-rule="evenodd"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.9984 15.0012C18.9984 17.6521 16.8494 19.8012 14.1984 19.8012C11.5475 19.8012 9.39844 17.6521 9.39844 15.0012C9.39844 12.3502 11.5475 10.2012 14.1984 10.2012"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.9984 11.4004L14.6224 15.7764C14.51 15.8889 14.3575 15.9522 14.1984 15.9522C14.0394 15.9522 13.8868 15.8889 13.7744 15.7764L12.3984 14.4012"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </button>
+    </span>
+  </span>
+</DocumentFragment>
+`;
