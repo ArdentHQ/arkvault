@@ -1227,6 +1227,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-passphrase-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -1370,6 +1371,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-currency-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -1517,6 +1519,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -1660,6 +1663,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-market-provider-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -1803,6 +1807,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-time-format-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -1978,6 +1983,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
                                     aria-owns="select-auto-signout-menu"
+                                    class="w-full"
                                     role="combobox"
                                   >
                                     <span>
@@ -3933,6 +3939,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-passphrase-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -4076,6 +4083,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-currency-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -4223,6 +4231,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -4366,6 +4375,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-market-provider-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -4509,6 +4519,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-time-format-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -4684,6 +4695,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
                                     aria-owns="select-auto-signout-menu"
+                                    class="w-full"
                                     role="combobox"
                                   >
                                     <span>
@@ -6593,6 +6605,7 @@ exports[`General Settings > should render 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-passphrase-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -6736,6 +6749,7 @@ exports[`General Settings > should render 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-currency-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -6883,6 +6897,7 @@ exports[`General Settings > should render 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -7026,6 +7041,7 @@ exports[`General Settings > should render 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-market-provider-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -7169,6 +7185,7 @@ exports[`General Settings > should render 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-time-format-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -7344,6 +7361,7 @@ exports[`General Settings > should render 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
                                     aria-owns="select-auto-signout-menu"
+                                    class="w-full"
                                     role="combobox"
                                   >
                                     <span>
@@ -9254,6 +9272,7 @@ exports[`General Settings > should update profile 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-passphrase-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -9397,6 +9416,7 @@ exports[`General Settings > should update profile 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-currency-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -9544,6 +9564,7 @@ exports[`General Settings > should update profile 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -9687,6 +9708,7 @@ exports[`General Settings > should update profile 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-market-provider-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -9830,6 +9852,7 @@ exports[`General Settings > should update profile 1`] = `
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-time-format-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -10005,6 +10028,7 @@ exports[`General Settings > should update profile 1`] = `
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
                                     aria-owns="select-auto-signout-menu"
+                                    class="w-full"
                                     role="combobox"
                                   >
                                     <span>
@@ -11915,6 +11939,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-passphrase-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -12058,6 +12083,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-currency-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -12205,6 +12231,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -12348,6 +12375,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-market-provider-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -12491,6 +12519,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-time-format-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -12666,6 +12695,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
                                     aria-owns="select-auto-signout-menu"
+                                    class="w-full"
                                     role="combobox"
                                   >
                                     <span>
@@ -14678,6 +14708,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-passphrase-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -14821,6 +14852,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-currency-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -14968,6 +15000,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-language-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -15111,6 +15144,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-market-provider-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -15254,6 +15288,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
                                   aria-owns="select-time-format-menu"
+                                  class="w-full"
                                   role="combobox"
                                 >
                                   <span>
@@ -15429,6 +15464,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
                                     aria-owns="select-auto-signout-menu"
+                                    class="w-full"
                                     role="combobox"
                                   >
                                     <span>
