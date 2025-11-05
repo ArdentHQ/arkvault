@@ -112,50 +112,54 @@ exports[`UpdateAddressName > should show an error message for duplicate name 1`]
             <div
               class=""
             >
-              <span
-                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
-                data-testid="Input__error"
-              >
-                <div
-                  class="text-theme-danger-500"
-                >
-                  <div
-                    style="height: 20px; width: 20px;"
+              <span>
+                <span>
+                  <span
+                    data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                    data-testid="Input__error"
                   >
-                    <svg
-                      id="circle-exclamation-mark"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-danger-500"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 10.5v-5"
-                          stroke-linecap="round"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 14h0"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -237,50 +241,54 @@ exports[`UpdateAddressName > should show an error message for duplicate name 2`]
             <div
               class=""
             >
-              <span
-                data-errortext="The name 'mainsail wallet 2' is already assigned to another wallet."
-                data-testid="Input__error"
-              >
-                <div
-                  class="text-theme-danger-500"
-                >
-                  <div
-                    style="height: 20px; width: 20px;"
+              <span>
+                <span>
+                  <span
+                    data-errortext="The name 'mainsail wallet 2' is already assigned to another wallet."
+                    data-testid="Input__error"
                   >
-                    <svg
-                      id="circle-exclamation-mark"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-danger-500"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 10.5v-5"
-                          stroke-linecap="round"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 14h0"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -362,50 +370,54 @@ exports[`UpdateAddressName > should show an error message for duplicate name 3`]
             <div
               class=""
             >
-              <span
-                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
-                data-testid="Input__error"
-              >
-                <div
-                  class="text-theme-danger-500"
-                >
-                  <div
-                    style="height: 20px; width: 20px;"
+              <span>
+                <span>
+                  <span
+                    data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                    data-testid="Input__error"
                   >
-                    <svg
-                      id="circle-exclamation-mark"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-danger-500"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 10.5v-5"
-                          stroke-linecap="round"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 14h0"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -487,50 +499,54 @@ exports[`UpdateAddressName > should show an error message for duplicate name 4`]
             <div
               class=""
             >
-              <span
-                data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
-                data-testid="Input__error"
-              >
-                <div
-                  class="text-theme-danger-500"
-                >
-                  <div
-                    style="height: 20px; width: 20px;"
+              <span>
+                <span>
+                  <span
+                    data-errortext="The name 'Mainsail Wallet 2' is already assigned to another wallet."
+                    data-testid="Input__error"
                   >
-                    <svg
-                      id="circle-exclamation-mark"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-danger-500"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 10.5v-5"
-                          stroke-linecap="round"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 14h0"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -612,50 +628,54 @@ exports[`UpdateAddressName > should show error message when name consists only o
             <div
               class=""
             >
-              <span
-                data-errortext="WALLETS.VALIDATION.ALIAS_REQUIRED"
-                data-testid="Input__error"
-              >
-                <div
-                  class="text-theme-danger-500"
-                >
-                  <div
-                    style="height: 20px; width: 20px;"
+              <span>
+                <span>
+                  <span
+                    data-errortext="WALLETS.VALIDATION.ALIAS_REQUIRED"
+                    data-testid="Input__error"
                   >
-                    <svg
-                      id="circle-exclamation-mark"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-danger-500"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 10.5v-5"
-                          stroke-linecap="round"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 14h0"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -737,50 +757,54 @@ exports[`UpdateAddressName > should show error message when name exceeds 42 char
             <div
               class=""
             >
-              <span
-                data-errortext="Address Name should have at most 42 characters."
-                data-testid="Input__error"
-              >
-                <div
-                  class="text-theme-danger-500"
-                >
-                  <div
-                    style="height: 20px; width: 20px;"
+              <span>
+                <span>
+                  <span
+                    data-errortext="Address Name should have at most 42 characters."
+                    data-testid="Input__error"
                   >
-                    <svg
-                      id="circle-exclamation-mark"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-danger-500"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 10.5v-5"
-                          stroke-linecap="round"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 14h0"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
               </span>
             </div>
           </div>

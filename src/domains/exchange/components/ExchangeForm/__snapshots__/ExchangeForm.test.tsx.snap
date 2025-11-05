@@ -654,6 +654,7 @@ exports[`FormStep > should render 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="fromCurrency-menu"
+                    class="w-full"
                     role="combobox"
                   >
                     <span>
@@ -899,6 +900,7 @@ exports[`FormStep > should render 1`] = `
                       aria-expanded="false"
                       aria-haspopup="listbox"
                       aria-owns="toCurrency-menu"
+                      class="w-full"
                       role="combobox"
                     >
                       <span>
@@ -1142,6 +1144,7 @@ exports[`FormStep > should render 1`] = `
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-owns="SelectRecipient__dropdown-menu"
+                  class="w-full"
                   role="combobox"
                 >
                   <span>
