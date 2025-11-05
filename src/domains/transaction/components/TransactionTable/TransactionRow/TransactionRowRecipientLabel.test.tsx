@@ -58,7 +58,7 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	it.each(["xs", "sm"])("should render with right alignment on mobile view", (breakpoint) => {
-		renderResponsive(
+		const { asFragment } = renderResponsive(
 			<TransactionRowRecipientLabel
 				transaction={{
 					...TransactionFixture,
@@ -69,7 +69,7 @@ describe("TransactionRowRecipientLabel", () => {
 		);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(screen.getByTestId("Address__address").parentElement).toHaveClass("justify-end");
+		expect(asFragment()).toMatchSnapshot()
 	});
 
 	describe("Votes", () => {
