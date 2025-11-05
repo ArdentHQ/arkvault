@@ -159,7 +159,7 @@ describe("AddressesSidePanel", () => {
 
 		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
 
-		// const setItemSpy = vi.spyOn(Storage.prototype, "setItem");
+		const setItemSpy = vi.spyOn(Storage.prototype, "setItem");
 
 		await userEvent.click(screen.getByTestId("HideManageHint"));
 
