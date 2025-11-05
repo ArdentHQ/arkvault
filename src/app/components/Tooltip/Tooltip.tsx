@@ -44,7 +44,7 @@ export const Tooltip = ({
 	offset = 12,
 	showFloatingArrow = true,
 	wrapperClass,
-	floatingWrapperClass
+	floatingWrapperClass,
 }: TooltipProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const arrowRef = useRef(null);
@@ -82,7 +82,12 @@ export const Tooltip = ({
 			</span>
 
 			{isTooltipOpen && !isDisabled && (
-				<div ref={setFloating} style={{ ...floatingStyles, zIndex: 50 }} {...getFloatingProps()} className={floatingWrapperClass}>
+				<div
+					ref={setFloating}
+					style={{ ...floatingStyles, zIndex: 50 }}
+					{...getFloatingProps()}
+					className={floatingWrapperClass}
+				>
 					<div style={transitionStyles}>
 						{showFloatingArrow && (
 							<FloatingArrow
