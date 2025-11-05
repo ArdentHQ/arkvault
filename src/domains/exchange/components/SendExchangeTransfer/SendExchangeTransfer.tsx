@@ -211,7 +211,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			)}
 
 			<Form context={form} onSubmit={() => submit()}>
-				<div className="mt-4 space-y-4 text-theme-text">
+				<div className="text-theme-text mt-4 space-y-4">
 					{!errorMessage && (
 						<FormField name="senderAddress">
 							<FormLabel label={t("TRANSACTION.SENDER")} />
