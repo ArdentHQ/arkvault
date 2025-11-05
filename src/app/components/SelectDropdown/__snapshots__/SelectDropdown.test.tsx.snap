@@ -30,87 +30,92 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-50-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-50-input"
-            id="downshift-50-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-50-menu"
-                aria-labelledby="downshift-50-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
-                data-testid="SelectDropdown__input"
-                disabled=""
-                id="downshift-50-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-50-input"
+                id="downshift-50-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-50-menu"
+                    aria-labelledby="downshift-50-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
+                    data-testid="SelectDropdown__input"
+                    disabled=""
+                    id="downshift-50-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-50-label"
-          id="downshift-50-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-50-label"
+              id="downshift-50-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -147,87 +152,92 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-52-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-52-input"
-            id="downshift-52-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-52-menu"
-                aria-labelledby="downshift-52-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
-                data-testid="SelectDropdown__input"
-                disabled=""
-                id="downshift-52-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-52-input"
+                id="downshift-52-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-52-menu"
+                    aria-labelledby="downshift-52-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text cursor-default"
+                    data-testid="SelectDropdown__input"
+                    disabled=""
+                    id="downshift-52-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-52-label"
-          id="downshift-52-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-52-label"
+              id="downshift-52-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -264,49 +274,53 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
         <div
           class=""
         >
-          <span
-            data-testid="Input__error"
-          >
-            <div
-              class="text-theme-danger-500"
-            >
-              <div
-                style="height: 20px; width: 20px;"
+          <span>
+            <span>
+              <span
+                data-testid="Input__error"
               >
-                <svg
-                  id="circle-exclamation-mark"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="text-theme-danger-500"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M10 10.5v-5"
-                      stroke-linecap="round"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M10 14h0"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -318,135 +332,144 @@ exports[`SelectDropdown > should render invalid option base 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-46-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-46-input"
-            id="downshift-46-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-46-menu"
-                aria-invalid="true"
-                aria-labelledby="downshift-46-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-46-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-46-input"
+                id="downshift-46-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
-              data-testid="Input__addon-end"
-            >
               <div
-                class="pr-3"
-              >
-                <span
-                  data-testid="Input__error"
-                >
-                  <div
-                    class="text-theme-danger-500"
-                  >
-                    <div
-                      style="height: 20px; width: 20px;"
-                    >
-                      <svg
-                        id="circle-exclamation-mark"
-                        style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 10.5v-5"
-                            stroke-linecap="round"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 14h0"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </span>
-              </div>
-              <div
-                class="pl-3"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-46-menu"
+                    aria-invalid="true"
+                    aria-labelledby="downshift-46-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-46-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class="pr-3"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          data-testid="Input__error"
+                        >
+                          <div
+                            class="text-theme-danger-500"
+                          >
+                            <div
+                              style="height: 20px; width: 20px;"
+                            >
+                              <svg
+                                id="circle-exclamation-mark"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 10.5v-5"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 14h0"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="pl-3"
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-danger-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-danger-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-46-label"
-          id="downshift-46-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-46-label"
+              id="downshift-46-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -483,49 +506,53 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
         <div
           class=""
         >
-          <span
-            data-testid="Input__error"
-          >
-            <div
-              class="text-theme-danger-500"
-            >
-              <div
-                style="height: 20px; width: 20px;"
+          <span>
+            <span>
+              <span
+                data-testid="Input__error"
               >
-                <svg
-                  id="circle-exclamation-mark"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="text-theme-danger-500"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
                   >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M10 10.5v-5"
-                      stroke-linecap="round"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M10 14h0"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -537,135 +564,144 @@ exports[`SelectDropdown > should render invalid option group 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-48-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-48-input"
-            id="downshift-48-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-48-menu"
-                aria-invalid="true"
-                aria-labelledby="downshift-48-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-48-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-48-input"
+                id="downshift-48-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
-              data-testid="Input__addon-end"
-            >
               <div
-                class="pr-3"
-              >
-                <span
-                  data-testid="Input__error"
-                >
-                  <div
-                    class="text-theme-danger-500"
-                  >
-                    <div
-                      style="height: 20px; width: 20px;"
-                    >
-                      <svg
-                        id="circle-exclamation-mark"
-                        style="height: 100%; width: 100%;"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="9"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 10.5v-5"
-                            stroke-linecap="round"
-                            stroke-miterlimit="10"
-                          />
-                          <path
-                            d="M10 14h0"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </span>
-              </div>
-              <div
-                class="pl-3"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-48-menu"
+                    aria-invalid="true"
+                    aria-labelledby="downshift-48-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-48-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class="pr-3"
+                  >
+                    <span>
+                      <span>
+                        <span
+                          data-testid="Input__error"
+                        >
+                          <div
+                            class="text-theme-danger-500"
+                          >
+                            <div
+                              style="height: 20px; width: 20px;"
+                            >
+                              <svg
+                                id="circle-exclamation-mark"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="10"
+                                    r="9"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 10.5v-5"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                  />
+                                  <path
+                                    d="M10 14h0"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="pl-3"
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-danger-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-danger-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-48-label"
-          id="downshift-48-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-48-label"
+              id="downshift-48-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -702,86 +738,91 @@ exports[`SelectDropdown > should render option base 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-0-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-0-input"
-            id="downshift-0-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-0-menu"
-                aria-labelledby="downshift-0-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-0-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-0-input"
+                id="downshift-0-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-0-menu"
+                    aria-labelledby="downshift-0-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-0-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-0-label"
-          id="downshift-0-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-0-label"
+              id="downshift-0-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -818,166 +859,180 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
         aria-expanded="true"
         aria-haspopup="listbox"
         aria-owns="downshift-6-menu"
+        class="w-full"
         role="combobox"
       >
-        <div
-          aria-expanded="true"
-        >
-          <label
-            for="downshift-6-input"
-            id="downshift-6-label"
-          />
-          <div
-            class="invisible fixed w-auto whitespace-nowrap"
+        <span>
+          <span
+            aria-describedby="«r6»"
           >
-            Opt
-            …
-          </div>
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-6-menu"
-                aria-labelledby="downshift-6-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-6-input"
-                placeholder="Select option"
-                type="text"
-                value="Opt"
+            <div>
+              <label
+                for="downshift-6-input"
+                id="downshift-6-label"
               />
-              <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
-                data-testid="Input__suggestion"
-              >
-                <span
-                  class="truncate"
-                >
-                  Option 1
-                </span>
-              </span>
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                Opt
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-6-menu"
+                    aria-labelledby="downshift-6-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-6-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="Opt"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      Option 1
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500 rotate-180 transform"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-6-label"
-          id="downshift-6-menu"
-          role="listbox"
-        >
+            <div
+              aria-labelledby="downshift-6-label"
+              id="downshift-6-menu"
+              role="listbox"
+            />
+          </span>
           <div
-            data-tippy-root=""
-            id="tippy-1"
-            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%; max-width: 100%;"
+            class="w-full"
+            data-floating-ui-focusable=""
+            id="«r6»"
+            role="tooltip"
+            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, 0px);"
+            tabindex="-1"
           >
             <div
-              data-escaped=""
-              data-placement="bottom-start"
-              data-reference-hidden=""
+              style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
-              <ul
-                class="select-options-list"
+              <div
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent bg-transparent dark:bg-transparent w-full"
+                style="font-feature-settings: "liga" off, "calt" off;"
               >
-                <li
-                  aria-selected="false"
-                  class="select-list-option"
-                  data-testid="SelectDropdown__option--0"
-                  id="downshift-6-item-0"
-                  role="option"
-                >
-                  <div
-                    class="select-list-option__label"
-                  >
-                    <span>
-                      Label Option 1
-                    </span>
+                <div>
+                  <div>
+                    <ul
+                      class="select-options-list"
+                    >
+                      <li
+                        aria-selected="false"
+                        class="select-list-option"
+                        data-testid="SelectDropdown__option--0"
+                        id="downshift-6-item-0"
+                        role="option"
+                      >
+                        <div
+                          class="select-list-option__label"
+                        >
+                          <span>
+                            Label Option 1
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        aria-selected="false"
+                        class="select-list-option"
+                        data-testid="SelectDropdown__option--1"
+                        id="downshift-6-item-1"
+                        role="option"
+                      >
+                        <div
+                          class="select-list-option__label"
+                        >
+                          <span>
+                            Label Option 2
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        aria-selected="false"
+                        class="select-list-option"
+                        data-testid="SelectDropdown__option--2"
+                        id="downshift-6-item-2"
+                        role="option"
+                      >
+                        <div
+                          class="select-list-option__label"
+                        >
+                          <span>
+                            Label Option 3
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
-                </li>
-                <li
-                  aria-selected="false"
-                  class="select-list-option"
-                  data-testid="SelectDropdown__option--1"
-                  id="downshift-6-item-1"
-                  role="option"
-                >
-                  <div
-                    class="select-list-option__label"
-                  >
-                    <span>
-                      Label Option 2
-                    </span>
-                  </div>
-                </li>
-                <li
-                  aria-selected="false"
-                  class="select-list-option"
-                  data-testid="SelectDropdown__option--2"
-                  id="downshift-6-item-2"
-                  role="option"
-                >
-                  <div
-                    class="select-list-option__label"
-                  >
-                    <span>
-                      Label Option 3
-                    </span>
-                  </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -1014,166 +1069,180 @@ exports[`SelectDropdown > should render option base with custom label and allowe
         aria-expanded="true"
         aria-haspopup="listbox"
         aria-owns="downshift-26-menu"
+        class="w-full"
         role="combobox"
       >
-        <div
-          aria-expanded="true"
-        >
-          <label
-            for="downshift-26-input"
-            id="downshift-26-label"
-          />
-          <div
-            class="invisible fixed w-auto whitespace-nowrap"
+        <span>
+          <span
+            aria-describedby="«ra»"
           >
-            Opt
-            …
-          </div>
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-26-menu"
-                aria-labelledby="downshift-26-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-26-input"
-                placeholder="Select option"
-                type="text"
-                value="Opt"
+            <div>
+              <label
+                for="downshift-26-input"
+                id="downshift-26-label"
               />
-              <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
-                data-testid="Input__suggestion"
-              >
-                <span
-                  class="truncate"
-                >
-                  Option 1
-                </span>
-              </span>
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                Opt
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-26-menu"
+                    aria-labelledby="downshift-26-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-26-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="Opt"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      Option 1
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500 rotate-180 transform"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-26-label"
-          id="downshift-26-menu"
-          role="listbox"
-        >
+            <div
+              aria-labelledby="downshift-26-label"
+              id="downshift-26-menu"
+              role="listbox"
+            />
+          </span>
           <div
-            data-tippy-root=""
-            id="tippy-3"
-            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%;"
+            class="w-full"
+            data-floating-ui-focusable=""
+            id="«ra»"
+            role="tooltip"
+            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, 0px);"
+            tabindex="-1"
           >
             <div
-              data-escaped=""
-              data-placement="bottom-start"
-              data-reference-hidden=""
+              style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
-              <ul
-                class="select-options-list"
+              <div
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent bg-transparent dark:bg-transparent w-full"
+                style="font-feature-settings: "liga" off, "calt" off;"
               >
-                <li
-                  aria-selected="false"
-                  class="select-list-option"
-                  data-testid="SelectDropdown__option--0"
-                  id="downshift-26-item-0"
-                  role="option"
-                >
-                  <div
-                    class="select-list-option__label"
-                  >
-                    <span>
-                      Label Option 1
-                    </span>
+                <div>
+                  <div>
+                    <ul
+                      class="select-options-list"
+                    >
+                      <li
+                        aria-selected="false"
+                        class="select-list-option"
+                        data-testid="SelectDropdown__option--0"
+                        id="downshift-26-item-0"
+                        role="option"
+                      >
+                        <div
+                          class="select-list-option__label"
+                        >
+                          <span>
+                            Label Option 1
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        aria-selected="false"
+                        class="select-list-option"
+                        data-testid="SelectDropdown__option--1"
+                        id="downshift-26-item-1"
+                        role="option"
+                      >
+                        <div
+                          class="select-list-option__label"
+                        >
+                          <span>
+                            Label Option 2
+                          </span>
+                        </div>
+                      </li>
+                      <li
+                        aria-selected="false"
+                        class="select-list-option"
+                        data-testid="SelectDropdown__option--2"
+                        id="downshift-26-item-2"
+                        role="option"
+                      >
+                        <div
+                          class="select-list-option__label"
+                        >
+                          <span>
+                            Label Option 3
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
-                </li>
-                <li
-                  aria-selected="false"
-                  class="select-list-option"
-                  data-testid="SelectDropdown__option--1"
-                  id="downshift-26-item-1"
-                  role="option"
-                >
-                  <div
-                    class="select-list-option__label"
-                  >
-                    <span>
-                      Label Option 2
-                    </span>
-                  </div>
-                </li>
-                <li
-                  aria-selected="false"
-                  class="select-list-option"
-                  data-testid="SelectDropdown__option--2"
-                  id="downshift-26-item-2"
-                  role="option"
-                >
-                  <div
-                    class="select-list-option__label"
-                  >
-                    <span>
-                      Label Option 3
-                    </span>
-                  </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -1210,86 +1279,91 @@ exports[`SelectDropdown > should render option base with default value when free
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-589-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-589-input"
-            id="downshift-589-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-589-menu"
-                aria-labelledby="downshift-589-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-589-input"
-                placeholder="Select option"
-                type="text"
-                value="3"
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-589-input"
+                id="downshift-589-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-589-menu"
+                    aria-labelledby="downshift-589-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-589-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="3"
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-589-label"
-          id="downshift-589-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-589-label"
+              id="downshift-589-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -1326,102 +1400,107 @@ exports[`SelectDropdown > should render option base with initial default value 1
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-70-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-70-input"
-            id="downshift-70-label"
-          />
-          <div
-            class="invisible fixed w-auto whitespace-nowrap"
-          >
-            Option 3
-            …
-          </div>
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-70-menu"
-                aria-labelledby="downshift-70-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-70-input"
-                placeholder="Select option"
-                type="text"
-                value="Option 3"
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-70-input"
+                id="downshift-70-label"
               />
-              <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
-                data-testid="Input__suggestion"
-              >
-                <span
-                  class="truncate"
-                >
-                  Option 3
-                </span>
-              </span>
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                Option 3
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-70-menu"
+                    aria-labelledby="downshift-70-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-70-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="Option 3"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      Option 3
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-70-label"
-          id="downshift-70-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-70-label"
+              id="downshift-70-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -1458,86 +1537,91 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-76-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-76-input"
-            id="downshift-76-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-76-menu"
-                aria-labelledby="downshift-76-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-76-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-76-input"
+                id="downshift-76-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-76-menu"
+                    aria-labelledby="downshift-76-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-76-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-76-label"
-          id="downshift-76-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-76-label"
+              id="downshift-76-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -1574,39 +1658,44 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-54-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-54-input"
-            id="downshift-54-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-54-menu"
-                aria-labelledby="downshift-54-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-54-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-54-input"
+                id="downshift-54-label"
               />
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-54-menu"
+                    aria-labelledby="downshift-54-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-54-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-54-label"
-          id="downshift-54-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-54-label"
+              id="downshift-54-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -1643,86 +1732,91 @@ exports[`SelectDropdown > should render option group 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-2-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-2-input"
-            id="downshift-2-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-2-menu"
-                aria-labelledby="downshift-2-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-2-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-2-input"
+                id="downshift-2-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-2-menu"
+                    aria-labelledby="downshift-2-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-2-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-2-label"
-          id="downshift-2-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-2-label"
+              id="downshift-2-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -1759,165 +1853,179 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
         aria-expanded="true"
         aria-haspopup="listbox"
         aria-owns="downshift-16-menu"
+        class="w-full"
         role="combobox"
       >
-        <div
-          aria-expanded="true"
-        >
-          <label
-            for="downshift-16-input"
-            id="downshift-16-label"
-          />
-          <div
-            class="invisible fixed w-auto whitespace-nowrap"
+        <span>
+          <span
+            aria-describedby="«r8»"
           >
-            Opt
-            …
-          </div>
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-16-menu"
-                aria-labelledby="downshift-16-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-16-input"
-                placeholder="Select option"
-                type="text"
-                value="Opt"
+            <div>
+              <label
+                for="downshift-16-input"
+                id="downshift-16-label"
               />
-              <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
-                data-testid="Input__suggestion"
-              >
-                <span
-                  class="truncate"
-                >
-                  Option 1
-                </span>
-              </span>
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                Opt
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-16-menu"
+                    aria-labelledby="downshift-16-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-16-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="Opt"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      Option 1
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500 rotate-180 transform"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-16-label"
-          id="downshift-16-menu"
-          role="listbox"
-        >
+            <div
+              aria-labelledby="downshift-16-label"
+              id="downshift-16-menu"
+              role="listbox"
+            />
+          </span>
           <div
-            data-tippy-root=""
-            id="tippy-2"
-            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%; max-width: 100%;"
+            class="w-full"
+            data-floating-ui-focusable=""
+            id="«r8»"
+            role="tooltip"
+            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, 0px);"
+            tabindex="-1"
           >
             <div
-              data-escaped=""
-              data-placement="bottom-start"
-              data-reference-hidden=""
+              style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
-              <ul
-                class="select-options-list"
+              <div
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent bg-transparent dark:bg-transparent w-full"
+                style="font-feature-settings: "liga" off, "calt" off;"
               >
-                <ul
-                  class="select-list-option-group"
-                  data-testid="SelectDropdown__option-group--0"
-                >
-                  <li
-                    class="select-list-option-head"
-                  >
-                    <div
-                      class="select-list-option-head__label"
+                <div>
+                  <div>
+                    <ul
+                      class="select-options-list"
                     >
-                      Group1
-                    </div>
-                  </li>
-                  <li
-                    aria-selected="false"
-                    class="select-list-option"
-                    data-testid="SelectDropdown__option--0"
-                    id="downshift-16-item-0"
-                    role="option"
-                  >
-                    <div
-                      class="select-list-option__label"
-                    >
-                      <span>
-                        Label Option 1
-                      </span>
-                    </div>
-                  </li>
-                  <li
-                    aria-selected="false"
-                    class="select-list-option"
-                    data-testid="SelectDropdown__option--1"
-                    id="downshift-16-item-1"
-                    role="option"
-                  >
-                    <div
-                      class="select-list-option__label"
-                    >
-                      <span>
-                        Label Option 2
-                      </span>
-                    </div>
-                  </li>
-                </ul>
-              </ul>
+                      <ul
+                        class="select-list-option-group"
+                        data-testid="SelectDropdown__option-group--0"
+                      >
+                        <li
+                          class="select-list-option-head"
+                        >
+                          <div
+                            class="select-list-option-head__label"
+                          >
+                            Group1
+                          </div>
+                        </li>
+                        <li
+                          aria-selected="false"
+                          class="select-list-option"
+                          data-testid="SelectDropdown__option--0"
+                          id="downshift-16-item-0"
+                          role="option"
+                        >
+                          <div
+                            class="select-list-option__label"
+                          >
+                            <span>
+                              Label Option 1
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          aria-selected="false"
+                          class="select-list-option"
+                          data-testid="SelectDropdown__option--1"
+                          id="downshift-16-item-1"
+                          role="option"
+                        >
+                          <div
+                            class="select-list-option__label"
+                          >
+                            <span>
+                              Label Option 2
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -1954,165 +2062,179 @@ exports[`SelectDropdown > should render option group with custom label and allow
         aria-expanded="true"
         aria-haspopup="listbox"
         aria-owns="downshift-36-menu"
+        class="w-full"
         role="combobox"
       >
-        <div
-          aria-expanded="true"
-        >
-          <label
-            for="downshift-36-input"
-            id="downshift-36-label"
-          />
-          <div
-            class="invisible fixed w-auto whitespace-nowrap"
+        <span>
+          <span
+            aria-describedby="«rc»"
           >
-            Opt
-            …
-          </div>
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-36-menu"
-                aria-labelledby="downshift-36-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-36-input"
-                placeholder="Select option"
-                type="text"
-                value="Opt"
+            <div>
+              <label
+                for="downshift-36-input"
+                id="downshift-36-label"
               />
-              <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
-                data-testid="Input__suggestion"
-              >
-                <span
-                  class="truncate"
-                >
-                  Option 1
-                </span>
-              </span>
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                Opt
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-36-menu"
+                    aria-labelledby="downshift-36-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-36-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="Opt"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      Option 1
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500 rotate-180 transform"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500 rotate-180 transform"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-36-label"
-          id="downshift-36-menu"
-          role="listbox"
-        >
+            <div
+              aria-labelledby="downshift-36-label"
+              id="downshift-36-menu"
+              role="listbox"
+            />
+          </span>
           <div
-            data-tippy-root=""
-            id="tippy-4"
-            style="z-index: 9999; position: absolute; left: 0px; top: 0px; margin: 0px; right: auto; bottom: auto; transform: translate(0px, 5px); min-width: 100%;"
+            class="w-full"
+            data-floating-ui-focusable=""
+            id="«rc»"
+            role="tooltip"
+            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, 0px);"
+            tabindex="-1"
           >
             <div
-              data-escaped=""
-              data-placement="bottom-start"
-              data-reference-hidden=""
+              style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
-              <ul
-                class="select-options-list"
+              <div
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent bg-transparent dark:bg-transparent w-full"
+                style="font-feature-settings: "liga" off, "calt" off;"
               >
-                <ul
-                  class="select-list-option-group"
-                  data-testid="SelectDropdown__option-group--0"
-                >
-                  <li
-                    class="select-list-option-head"
-                  >
-                    <div
-                      class="select-list-option-head__label"
+                <div>
+                  <div>
+                    <ul
+                      class="select-options-list"
                     >
-                      Group1
-                    </div>
-                  </li>
-                  <li
-                    aria-selected="false"
-                    class="select-list-option"
-                    data-testid="SelectDropdown__option--0"
-                    id="downshift-36-item-0"
-                    role="option"
-                  >
-                    <div
-                      class="select-list-option__label"
-                    >
-                      <span>
-                        Label Option 1
-                      </span>
-                    </div>
-                  </li>
-                  <li
-                    aria-selected="false"
-                    class="select-list-option"
-                    data-testid="SelectDropdown__option--1"
-                    id="downshift-36-item-1"
-                    role="option"
-                  >
-                    <div
-                      class="select-list-option__label"
-                    >
-                      <span>
-                        Label Option 2
-                      </span>
-                    </div>
-                  </li>
-                </ul>
-              </ul>
+                      <ul
+                        class="select-list-option-group"
+                        data-testid="SelectDropdown__option-group--0"
+                      >
+                        <li
+                          class="select-list-option-head"
+                        >
+                          <div
+                            class="select-list-option-head__label"
+                          >
+                            Group1
+                          </div>
+                        </li>
+                        <li
+                          aria-selected="false"
+                          class="select-list-option"
+                          data-testid="SelectDropdown__option--0"
+                          id="downshift-36-item-0"
+                          role="option"
+                        >
+                          <div
+                            class="select-list-option__label"
+                          >
+                            <span>
+                              Label Option 1
+                            </span>
+                          </div>
+                        </li>
+                        <li
+                          aria-selected="false"
+                          class="select-list-option"
+                          data-testid="SelectDropdown__option--1"
+                          id="downshift-36-item-1"
+                          role="option"
+                        >
+                          <div
+                            class="select-list-option__label"
+                          >
+                            <span>
+                              Label Option 2
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -2149,86 +2271,91 @@ exports[`SelectDropdown > should render option group with default value when fre
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-592-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-592-input"
-            id="downshift-592-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-592-menu"
-                aria-labelledby="downshift-592-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-592-input"
-                placeholder="Select option"
-                type="text"
-                value="3"
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-592-input"
+                id="downshift-592-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-592-menu"
+                    aria-labelledby="downshift-592-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-592-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="3"
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-592-label"
-          id="downshift-592-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-592-label"
+              id="downshift-592-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -2265,102 +2392,107 @@ exports[`SelectDropdown > should render option group with initial default value 
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-73-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-73-input"
-            id="downshift-73-label"
-          />
-          <div
-            class="invisible fixed w-auto whitespace-nowrap"
-          >
-            Item 1
-            …
-          </div>
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-73-menu"
-                aria-labelledby="downshift-73-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                data-testid="SelectDropdown__input"
-                id="downshift-73-input"
-                placeholder="Select option"
-                type="text"
-                value="Item 1"
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-73-input"
+                id="downshift-73-label"
               />
-              <span
-                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
-                data-testid="Input__suggestion"
-              >
-                <span
-                  class="truncate"
-                >
-                  Item 1
-                </span>
-              </span>
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="invisible fixed w-auto whitespace-nowrap"
+              >
+                Item 1
+                …
+              </div>
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-73-menu"
+                    aria-labelledby="downshift-73-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-73-input"
+                    placeholder="Select option"
+                    type="text"
+                    value="Item 1"
+                  />
+                  <span
+                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base"
+                    data-testid="Input__suggestion"
+                  >
+                    <span
+                      class="truncate"
+                    >
+                      Item 1
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-73-label"
-          id="downshift-73-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-73-label"
+              id="downshift-73-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -2397,86 +2529,91 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-78-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-78-input"
-            id="downshift-78-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-78-menu"
-                aria-labelledby="downshift-78-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-78-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-78-input"
+                id="downshift-78-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-78-menu"
+                    aria-labelledby="downshift-78-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-78-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-78-label"
-          id="downshift-78-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-78-label"
+              id="downshift-78-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -2513,39 +2650,44 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-56-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-56-input"
-            id="downshift-56-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-56-menu"
-                aria-labelledby="downshift-56-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-56-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-56-input"
+                id="downshift-56-label"
               />
+              <div
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-56-menu"
+                    aria-labelledby="downshift-56-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-56-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-56-label"
-          id="downshift-56-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-56-label"
+              id="downshift-56-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -2582,86 +2724,91 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-84-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-84-input"
-            id="downshift-84-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-84-menu"
-                aria-labelledby="downshift-84-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-84-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-84-input"
+                id="downshift-84-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-84-menu"
+                    aria-labelledby="downshift-84-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-84-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-84-label"
-          id="downshift-84-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-84-label"
+              id="downshift-84-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -2698,86 +2845,91 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-4-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-4-input"
-            id="downshift-4-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-4-menu"
-                aria-labelledby="downshift-4-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-4-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-4-input"
+                id="downshift-4-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-4-menu"
+                    aria-labelledby="downshift-4-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-4-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-4-label"
-          id="downshift-4-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-4-label"
+              id="downshift-4-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -2814,86 +2966,91 @@ exports[`SelectDropdown > should render with empty options 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-80-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-80-input"
-            id="downshift-80-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-80-menu"
-                aria-labelledby="downshift-80-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-80-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-80-input"
+                id="downshift-80-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-80-menu"
+                    aria-labelledby="downshift-80-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-80-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-80-label"
-          id="downshift-80-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-80-label"
+              id="downshift-80-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -2930,86 +3087,91 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-owns="downshift-82-menu"
+        class="w-full"
         role="combobox"
       >
-        <div>
-          <label
-            for="downshift-82-input"
-            id="downshift-82-label"
-          />
-          <div
-            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-82-menu"
-                aria-labelledby="downshift-82-label"
-                autocomplete="off"
-                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
-                data-testid="SelectDropdown__input"
-                id="downshift-82-input"
-                placeholder="Select option"
-                type="text"
-                value=""
+        <span>
+          <span>
+            <div>
+              <label
+                for="downshift-82-input"
+                id="downshift-82-label"
               />
-            </div>
-            <div
-              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
               <div
-                class=""
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
               >
                 <div
-                  class="flex items-center"
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="downshift-82-menu"
+                    aria-labelledby="downshift-82-label"
+                    autocomplete="off"
+                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default"
+                    data-testid="SelectDropdown__input"
+                    id="downshift-82-input"
+                    placeholder="Select option"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                  data-testid="Input__addon-end"
                 >
                   <div
-                    class="flex items-center justify-center"
-                    data-testid="SelectDropdown__caret"
+                    class=""
                   >
                     <div
-                      class="absolute inset-0 block cursor-pointer md:hidden"
-                    />
-                    <div
-                      class="transition-transform text-theme-secondary-500"
+                      class="flex items-center"
                     >
                       <div
-                        style="height: 10px; width: 10px;"
+                        class="flex items-center justify-center"
+                        data-testid="SelectDropdown__caret"
                       >
-                        <svg
-                          id="chevron-down-small"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 10 10"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="absolute inset-0 block cursor-pointer md:hidden"
+                        />
+                        <div
+                          class="transition-transform text-theme-secondary-500"
                         >
-                          <path
-                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
+                          <div
+                            style="height: 10px; width: 10px;"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-82-label"
-          id="downshift-82-menu"
-          role="listbox"
-        />
+            <div
+              aria-labelledby="downshift-82-label"
+              id="downshift-82-menu"
+              role="listbox"
+            />
+          </span>
+        </span>
       </div>
     </div>
   </div>
