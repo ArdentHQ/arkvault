@@ -172,9 +172,9 @@ describe("SendExchangeTransfer", () => {
 
 		await selectSender();
 
-		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("Input__error")).resolves.toHaveLength(2);
 
-		expect(screen.getByTestId("Input__error")).toHaveAttribute(
+		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
 			"data-errortext",
 			t("TRANSACTION.VALIDATION.LOW_BALANCE"),
 		);
@@ -208,7 +208,7 @@ describe("SendExchangeTransfer", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(wallet.address());
 		});
 
 		profile.wallets().push(secondWallet);
