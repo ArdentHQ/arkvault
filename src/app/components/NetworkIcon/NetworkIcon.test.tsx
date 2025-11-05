@@ -31,7 +31,7 @@ describe("NetworkIcon", () => {
 
 		await userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
 
-		expect(asFragment()).toMatchSnapshot()
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with placeholder", () => {

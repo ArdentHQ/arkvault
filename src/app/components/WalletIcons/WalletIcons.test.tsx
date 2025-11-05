@@ -22,7 +22,7 @@ describe("WalletIcons", () => {
 		await userEvent.hover(screen.getByTestId("WalletIcon__Verified"));
 
 		walletSpy.mockRestore();
-		expect(asFragment()).toMatchSnapshot()
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the verified icon", () => {

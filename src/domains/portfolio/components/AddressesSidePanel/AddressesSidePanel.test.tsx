@@ -163,9 +163,12 @@ describe("AddressesSidePanel", () => {
 
 		await userEvent.click(screen.getByTestId("HideManageHint"));
 
-		await waitFor(() => {
-			expect(setItemSpy).toHaveBeenCalledWith("manage-hint", "true");
-		}, { timeout: 4000 })
+		await waitFor(
+			() => {
+				expect(setItemSpy).toHaveBeenCalledWith("manage-hint", "true");
+			},
+			{ timeout: 4000 },
+		);
 
 		setItemSpy.mockRestore();
 		getItemSpy.mockRestore();

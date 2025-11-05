@@ -24,7 +24,7 @@ describe("ClipboardIcon", () => {
 		);
 
 		await userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
-		expect(asFragment()).toMatchSnapshot()
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should change the tooltip content when clicked", async () => {

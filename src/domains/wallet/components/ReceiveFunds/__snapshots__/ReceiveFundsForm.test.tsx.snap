@@ -17,11 +17,15 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           for="amount"
         >
           Amount
-          <span
-            class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
-            data-testid="FormLabel__optional"
-          >
-            optional
+          <span>
+            <span>
+              <span
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
+                data-testid="FormLabel__optional"
+              >
+                optional
+              </span>
+            </span>
           </span>
         </label>
         <div
@@ -68,11 +72,15 @@ exports[`ReceiveFundsForm > should render 1`] = `
           for="amount"
         >
           Amount
-          <span
-            class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
-            data-testid="FormLabel__optional"
-          >
-            optional
+          <span>
+            <span>
+              <span
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1"
+                data-testid="FormLabel__optional"
+              >
+                optional
+              </span>
+            </span>
           </span>
         </label>
         <div

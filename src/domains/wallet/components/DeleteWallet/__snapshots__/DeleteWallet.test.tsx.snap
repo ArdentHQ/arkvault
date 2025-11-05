@@ -193,11 +193,15 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0x125b484e51Ad990b5b3140931f3BD8eAee85Db23
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </span>

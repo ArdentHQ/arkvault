@@ -69,7 +69,7 @@ describe("TransactionRowRecipientLabel", () => {
 		);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(asFragment()).toMatchSnapshot()
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	describe("Votes", () => {

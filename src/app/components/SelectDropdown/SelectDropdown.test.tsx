@@ -76,7 +76,7 @@ describe("SelectDropdown", () => {
 
 			await waitFor(() => {
 				expect(screen.getByTestId(firstOptionID)).toBeVisible();
-			})
+			});
 		},
 	);
 
@@ -93,7 +93,7 @@ describe("SelectDropdown", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId(firstOptionID)).toBeVisible();
-		})
+		});
 
 		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-selected");
 	});
@@ -139,7 +139,6 @@ describe("SelectDropdown", () => {
 
 		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 	});
-
 
 	it.each([OptionType.base, OptionType.group])("should render option %s", (optType) => {
 		const { container } = render(<Select options={getOptions(optType)} />);

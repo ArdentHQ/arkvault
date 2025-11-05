@@ -76,7 +76,7 @@ describe("VotesFilter", () => {
 
 		act(() => {
 			currentOption.focus();
-		})
+		});
 
 		await userEvent.keyboard("{enter}");
 

@@ -154,7 +154,7 @@ describe("SignMessageSidePanel", () => {
 
 			expect(screen.getByTestId("SignMessage__signature-json")).toBeInTheDocument();
 
-			const clipboardSpy = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue();
+			const clipboardSpy = vi.spyOn(navigator.clipboard, "writeText").mockResolvedValue();
 
 			await waitFor(() => {
 				expect(screen.getByTestId("SignMessage__copy-button")).toBeInTheDocument();

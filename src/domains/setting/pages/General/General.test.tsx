@@ -528,9 +528,8 @@ describe("General Settings", () => {
 		await userEvent.click(screen.getByTestId("AdvancedToggle__toggle-useHDWallets"));
 
 		await waitFor(() => {
-
 			expect(submitButton()).toBeEnabled();
-		})
+		});
 
 		await userEvent.click(submitButton());
 
