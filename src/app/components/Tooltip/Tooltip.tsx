@@ -30,6 +30,7 @@ interface TooltipProps {
 	offset?: number;
 	showFloatingArrow?: boolean;
 	wrapperClass?: string;
+	floatingWrapperClass?: string;
 }
 
 export const Tooltip = ({
@@ -43,6 +44,7 @@ export const Tooltip = ({
 	offset = 12,
 	showFloatingArrow = true,
 	wrapperClass,
+	floatingWrapperClass
 }: TooltipProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const arrowRef = useRef(null);
@@ -70,7 +72,7 @@ export const Tooltip = ({
 	const { getReferenceProps, getFloatingProps } = useInteractions([hover, focus, dismiss, role]);
 
 	const { styles: transitionStyles } = useTransitionStyles(context, {
-		initial: { opacity: 0, transform: "scale(0.8)" },
+		initial: { opacity: 0, transform: "scale(0.9)" },
 	});
 
 	return (
@@ -80,7 +82,7 @@ export const Tooltip = ({
 			</span>
 
 			{isTooltipOpen && !isDisabled && (
-				<div ref={setFloating} style={{ ...floatingStyles, zIndex: 50 }} {...getFloatingProps()}>
+				<div ref={setFloating} style={{ ...floatingStyles, zIndex: 50 }} {...getFloatingProps()} className={floatingWrapperClass}>
 					<div style={transitionStyles}>
 						{showFloatingArrow && (
 							<FloatingArrow

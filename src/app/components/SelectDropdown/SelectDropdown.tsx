@@ -209,13 +209,14 @@ const SelectDropdown = ({
 	return (
 		<>
 			<div className="w-full">
-				<div {...getComboboxProps()}>
+				<div {...getComboboxProps()} className="w-full">
 					<Tooltip
 						offset={0}
 						visible={isVisible}
 						placement="bottom"
-						className="dim:bg-transparent bg-transparent dark:bg-transparent"
+						className="dim:bg-transparent bg-transparent dark:bg-transparent w-full"
 						showFloatingArrow={false}
+						floatingWrapperClass="w-full"
 						content={
 							<div>
 								<ul className="select-options-list">
