@@ -157,7 +157,7 @@ export const ServersSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="servers">
-			<Form id="servers__form" context={form} onSubmit={saveSettings} className="space-y-0">
+			<Form id="servers__form" context={form} onSubmit={saveSettings} className="space-y-0 pb-16 sm:pb-0">
 				<SettingsGroup title={t("SETTINGS.SERVERS.TITLE")}>
 					<ListDivided items={serverOptions} />
 				</SettingsGroup>
