@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
 import { assertNumber } from "@/utils/assertions";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { twMerge } from "tailwind-merge";
 
 interface Properties {
 	amount: number | string;
@@ -13,6 +14,7 @@ interface Properties {
 	exchangeTicker?: string;
 	convertValues?: boolean;
 	hideAmount?: boolean;
+	detailWrapperClassName?: string;
 }
 
 const ConfirmationTimeFooter = ({ confirmationTime = 10 }: { confirmationTime?: number }) => {
@@ -40,6 +42,7 @@ export const TotalAmountBox = ({
 	exchangeTicker,
 	convertValues,
 	hideAmount,
+	detailWrapperClassName,
 	...properties
 }: Properties) => {
 	const { t } = useTranslation();
@@ -64,7 +67,9 @@ export const TotalAmountBox = ({
 						className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 						data-testid="AmountSection"
 					>
-						<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.AMOUNT")}</DetailTitle>
+						<DetailTitle className={twMerge("w-auto sm:min-w-36", detailWrapperClassName)}>
+							{t("COMMON.AMOUNT")}
+						</DetailTitle>
 
 						<div className="flex flex-row items-center gap-2">
 							<Amount ticker={ticker} value={amount} className="font-semibold" />
@@ -79,7 +84,9 @@ export const TotalAmountBox = ({
 				)}
 
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-					<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.FEE")}</DetailTitle>
+					<DetailTitle className={twMerge("w-auto sm:min-w-36", detailWrapperClassName)}>
+						{t("COMMON.FEE")}
+					</DetailTitle>
 
 					<div className="flex flex-row items-center gap-2">
 						<Amount ticker={ticker} value={fee} className="font-semibold" />
@@ -93,7 +100,9 @@ export const TotalAmountBox = ({
 				</div>
 
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-					<DetailTitle className="w-auto sm:min-w-36">{t("COMMON.TOTAL")}</DetailTitle>
+					<DetailTitle className={twMerge("w-auto sm:min-w-36", detailWrapperClassName)}>
+						{t("COMMON.TOTAL")}
+					</DetailTitle>
 
 					<div className="flex flex-row items-center gap-2">
 						<Amount ticker={ticker} value={total} className="font-semibold" />

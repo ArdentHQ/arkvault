@@ -564,8 +564,8 @@ export const GeneralSettings: React.FC = () => {
 					<ListDivided items={otherItems} />
 				</SettingsGroup>
 
-				<SettingsButtonGroup className="fixed z-50">
-					<FormButtons className="border-none">
+				<SettingsButtonGroup className="fixed z-50 sm:static">
+					<FormButtons className="border-none sm:z-0">
 						<Button
 							disabled={isSaveButtonDisabled}
 							type="submit"
