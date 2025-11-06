@@ -87,7 +87,6 @@ const validatorFromSearchParameters = ({ profile, network, searchParameters }: P
 			//
 		}
 	}
-
 };
 
 const validateVerify = ({ parameters }: ValidateParameters) => {
