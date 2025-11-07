@@ -837,7 +837,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -1552,7 +1552,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                                     colspan="5"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"
@@ -2476,7 +2476,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -3048,7 +3048,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                                     colspan="5"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"
@@ -3901,7 +3901,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -4538,7 +4538,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                                     colspan="5"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"
@@ -5462,7 +5462,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -6177,7 +6177,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                     colspan="5"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"
@@ -7030,7 +7030,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -7810,7 +7810,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                                     colspan="5"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"
@@ -8734,7 +8734,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -9443,7 +9443,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                     colspan="5"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"
@@ -10296,7 +10296,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -11070,7 +11070,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                                     colspan="5"
                                   >
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"
@@ -11987,7 +11987,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="Form"
                   id="servers__form"
                 >
@@ -12330,7 +12330,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                                       No custom network peers or multisignature servers added yet.
                                     </div>
                                     <div
-                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block"
+                                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6"
                                     >
                                       <button
                                         class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full space-x-2"

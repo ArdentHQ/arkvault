@@ -837,7 +837,7 @@ exports[`General Settings > should disable submit button when profile is not res
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -3504,7 +3504,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -6215,7 +6215,7 @@ exports[`General Settings > should render 1`] = `
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -8882,7 +8882,7 @@ exports[`General Settings > should update profile 1`] = `
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -11549,7 +11549,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="General-settings__form"
                 >
                   <div
@@ -14215,7 +14215,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 flex-1 sm:overflow-hidden sm:rounded-xl sm:border"
               >
                 <form
-                  class="space-y-0"
+                  class="space-y-0 pb-16 sm:pb-0"
                   data-testid="General-settings__form"
                 >
                   <div
