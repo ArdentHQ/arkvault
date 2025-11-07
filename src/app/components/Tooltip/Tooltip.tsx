@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { Size } from "@/types";
-import { ReactNode, useRef, useState } from "react";
+import { ReactElement, ReactNode, useRef, useState } from "react";
 import {
 	offset as tooltipOffset,
 	shift,
@@ -18,6 +18,7 @@ import {
 	Placement,
 } from "@floating-ui/react";
 import { twMerge } from "tailwind-merge";
+import { FloatingPortal } from "@floating-ui/react";
 
 interface TooltipProps {
 	content: ReactNode;
@@ -31,6 +32,7 @@ interface TooltipProps {
 	showFloatingArrow?: boolean;
 	wrapperClass?: string;
 	floatingWrapperClass?: string;
+	usePortal?: boolean;
 }
 
 export const Tooltip = ({
@@ -45,6 +47,7 @@ export const Tooltip = ({
 	showFloatingArrow = true,
 	wrapperClass,
 	floatingWrapperClass,
+	usePortal,
 }: TooltipProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const arrowRef = useRef(null);
@@ -82,39 +85,49 @@ export const Tooltip = ({
 			</span>
 
 			{isTooltipOpen && !isDisabled && (
-				<div
-					ref={setFloating}
-					style={{ ...floatingStyles, zIndex: 50 }}
-					{...getFloatingProps()}
-					className={floatingWrapperClass}
-				>
-					<div style={transitionStyles}>
-						{showFloatingArrow && (
-							<FloatingArrow
-								className="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
-								tipRadius={2}
-								height={8}
-								ref={arrowRef}
-								context={context}
-							/>
-						)}
-						<div
-							style={{ fontFeatureSettings: '"liga" off, "calt" off' }}
-							className={twMerge(
-								cn(
-									"overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white",
-									{
-										"text-xs font-medium": size === "sm",
-									},
-									className,
-								),
+				<FloatingPortalWrapper usePortal={usePortal}>
+					<div
+						ref={setFloating}
+						style={{ ...floatingStyles, zIndex: 50 }}
+						{...getFloatingProps()}
+						className={floatingWrapperClass}
+					>
+						<div style={transitionStyles}>
+							{showFloatingArrow && (
+								<FloatingArrow
+									className="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
+									tipRadius={2}
+									height={8}
+									ref={arrowRef}
+									context={context}
+								/>
 							)}
-						>
-							<div>{content}</div>
+							<div
+								style={{ fontFeatureSettings: '"liga" off, "calt" off' }}
+								className={twMerge(
+									cn(
+										"overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white",
+										{
+											"text-xs font-medium": size === "sm",
+										},
+										className,
+									),
+								)}
+							>
+								<div>{content}</div>
+							</div>
 						</div>
 					</div>
-				</div>
+				</FloatingPortalWrapper>
 			)}
 		</span>
 	);
+};
+
+const FloatingPortalWrapper = ({ usePortal = true, children }: { usePortal?: boolean; children?: ReactElement }) => {
+	if (usePortal) {
+		return <FloatingPortal>{children}</FloatingPortal>;
+	}
+
+	return <>{children}</>;
 };
