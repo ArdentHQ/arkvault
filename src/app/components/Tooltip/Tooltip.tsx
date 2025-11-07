@@ -124,7 +124,7 @@ export const Tooltip = ({
 	);
 };
 
-const FloatingPortalWrapper = ({ usePortal = true, children }: { usePortal?: boolean; children?: ReactElement }) => {
+const FloatingPortalWrapper = ({ usePortal = false, children }: { usePortal?: boolean; children?: ReactElement }) => {
 	if (usePortal) {
 		return <FloatingPortal>{children}</FloatingPortal>;
 	}

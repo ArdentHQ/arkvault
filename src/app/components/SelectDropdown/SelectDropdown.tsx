@@ -211,7 +211,6 @@ const SelectDropdown = ({
 			<div className="w-full">
 				<div {...getComboboxProps()} className="w-full">
 					<Tooltip
-						usePortal={false}
 						offset={0}
 						visible={isVisible}
 						placement="bottom"
