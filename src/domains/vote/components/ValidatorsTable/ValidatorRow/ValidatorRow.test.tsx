@@ -92,7 +92,7 @@ describe("ValidatorRow", () => {
 			},
 		];
 
-		const toggleVotesSelectedMock = vi.fn()
+		const toggleVotesSelectedMock = vi.fn();
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
@@ -114,11 +114,11 @@ describe("ValidatorRow", () => {
 		expect(container).toBeInTheDocument();
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
 
-		await userEvent.click(firstValidatorVoteButton())
+		await userEvent.click(firstValidatorVoteButton());
 
 		await waitFor(() => {
-			expect(toggleVotesSelectedMock).toHaveBeenCalled()
-		})
+			expect(toggleVotesSelectedMock).toHaveBeenCalled();
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -283,7 +283,7 @@ describe("ValidatorRow", () => {
 			wallet: validator,
 		};
 
-		const toggleVotesSelectedMock = vi.fn()
+		const toggleVotesSelectedMock = vi.fn();
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
