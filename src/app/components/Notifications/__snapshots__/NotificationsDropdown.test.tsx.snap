@@ -4,7 +4,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
 <div>
   <div>
     <div
-      aria-controls="«r1m»"
+      aria-controls="«r1p»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -14,7 +14,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
       >
         <span>
           <span
-            aria-describedby="«r1o»"
+            aria-describedby="«r1r»"
           >
             <button
               class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
@@ -56,49 +56,6 @@ exports[`Notifications > should render with transactions in lg 1`] = `
               </div>
             </button>
           </span>
-          <div
-            data-floating-ui-focusable=""
-            id="«r1o»"
-            role="tooltip"
-            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
-            tabindex="-1"
-          >
-            <div
-              style="transition-property: opacity,transform; transition-duration: 250ms;"
-            >
-              <svg
-                aria-hidden="true"
-                class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
-                height="14"
-                style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
-                viewBox="0 0 14 14"
-                width="14"
-              >
-                <path
-                  d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
-                  stroke="none"
-                />
-                <clippath
-                  id="«r1q»"
-                >
-                  <rect
-                    height="14"
-                    width="14"
-                    x="0"
-                    y="0"
-                  />
-                </clippath>
-              </svg>
-              <div
-                class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
-                style="font-feature-settings: "liga" off, "calt" off;"
-              >
-                <div>
-                  Notifications
-                </div>
-              </div>
-            </div>
-          </div>
         </span>
       </div>
     </div>
@@ -110,7 +67,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
 <div>
   <div>
     <div
-      aria-controls="«r14»"
+      aria-controls="«r16»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -120,7 +77,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
       >
         <span>
           <span
-            aria-describedby="«r16»"
+            aria-describedby="«r18»"
           >
             <button
               class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
@@ -162,49 +119,6 @@ exports[`Notifications > should render with transactions in md 1`] = `
               </div>
             </button>
           </span>
-          <div
-            data-floating-ui-focusable=""
-            id="«r16»"
-            role="tooltip"
-            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
-            tabindex="-1"
-          >
-            <div
-              style="transition-property: opacity,transform; transition-duration: 250ms;"
-            >
-              <svg
-                aria-hidden="true"
-                class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
-                height="14"
-                style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
-                viewBox="0 0 14 14"
-                width="14"
-              >
-                <path
-                  d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
-                  stroke="none"
-                />
-                <clippath
-                  id="«r18»"
-                >
-                  <rect
-                    height="14"
-                    width="14"
-                    x="0"
-                    y="0"
-                  />
-                </clippath>
-              </svg>
-              <div
-                class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
-                style="font-feature-settings: "liga" off, "calt" off;"
-              >
-                <div>
-                  Notifications
-                </div>
-              </div>
-            </div>
-          </div>
         </span>
       </div>
     </div>
@@ -216,7 +130,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
 <div>
   <div>
     <div
-      aria-controls="«ri»"
+      aria-controls="«rj»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -226,7 +140,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
       >
         <span>
           <span
-            aria-describedby="«rk»"
+            aria-describedby="«rl»"
           >
             <button
               class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
@@ -268,49 +182,6 @@ exports[`Notifications > should render with transactions in sm 1`] = `
               </div>
             </button>
           </span>
-          <div
-            data-floating-ui-focusable=""
-            id="«rk»"
-            role="tooltip"
-            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
-            tabindex="-1"
-          >
-            <div
-              style="transition-property: opacity,transform; transition-duration: 250ms;"
-            >
-              <svg
-                aria-hidden="true"
-                class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
-                height="14"
-                style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
-                viewBox="0 0 14 14"
-                width="14"
-              >
-                <path
-                  d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
-                  stroke="none"
-                />
-                <clippath
-                  id="«rm»"
-                >
-                  <rect
-                    height="14"
-                    width="14"
-                    x="0"
-                    y="0"
-                  />
-                </clippath>
-              </svg>
-              <div
-                class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
-                style="font-feature-settings: "liga" off, "calt" off;"
-              >
-                <div>
-                  Notifications
-                </div>
-              </div>
-            </div>
-          </div>
         </span>
       </div>
     </div>
@@ -322,7 +193,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
 <div>
   <div>
     <div
-      aria-controls="«r28»"
+      aria-controls="«r2c»"
       aria-expanded="true"
       aria-haspopup="dialog"
       data-testid="dropdown__toggle"
@@ -332,7 +203,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
       >
         <span>
           <span
-            aria-describedby="«r2a»"
+            aria-describedby="«r2e»"
           >
             <button
               class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
@@ -374,49 +245,6 @@ exports[`Notifications > should render with transactions in xl 1`] = `
               </div>
             </button>
           </span>
-          <div
-            data-floating-ui-focusable=""
-            id="«r2a»"
-            role="tooltip"
-            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
-            tabindex="-1"
-          >
-            <div
-              style="transition-property: opacity,transform; transition-duration: 250ms;"
-            >
-              <svg
-                aria-hidden="true"
-                class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
-                height="14"
-                style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
-                viewBox="0 0 14 14"
-                width="14"
-              >
-                <path
-                  d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
-                  stroke="none"
-                />
-                <clippath
-                  id="«r2c»"
-                >
-                  <rect
-                    height="14"
-                    width="14"
-                    x="0"
-                    y="0"
-                  />
-                </clippath>
-              </svg>
-              <div
-                class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
-                style="font-feature-settings: "liga" off, "calt" off;"
-              >
-                <div>
-                  Notifications
-                </div>
-              </div>
-            </div>
-          </div>
         </span>
       </div>
     </div>
@@ -487,49 +315,6 @@ exports[`Notifications > should render with transactions in xs 1`] = `
               </div>
             </button>
           </span>
-          <div
-            data-floating-ui-focusable=""
-            id="«r2»"
-            role="tooltip"
-            style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
-            tabindex="-1"
-          >
-            <div
-              style="transition-property: opacity,transform; transition-duration: 250ms;"
-            >
-              <svg
-                aria-hidden="true"
-                class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
-                height="14"
-                style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
-                viewBox="0 0 14 14"
-                width="14"
-              >
-                <path
-                  d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
-                  stroke="none"
-                />
-                <clippath
-                  id="«r4»"
-                >
-                  <rect
-                    height="14"
-                    width="14"
-                    x="0"
-                    y="0"
-                  />
-                </clippath>
-              </svg>
-              <div
-                class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
-                style="font-feature-settings: "liga" off, "calt" off;"
-              >
-                <div>
-                  Notifications
-                </div>
-              </div>
-            </div>
-          </div>
         </span>
       </div>
     </div>

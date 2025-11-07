@@ -212,49 +212,6 @@ exports[`Link > should render with tooltip 1`] = `
         </div>
       </a>
     </span>
-    <div
-      data-floating-ui-focusable=""
-      id="«re»"
-      role="tooltip"
-      style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
-      tabindex="-1"
-    >
-      <div
-        style="transition-property: opacity,transform; transition-duration: 250ms;"
-      >
-        <svg
-          aria-hidden="true"
-          class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
-          height="14"
-          style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
-          viewBox="0 0 14 14"
-          width="14"
-        >
-          <path
-            d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
-            stroke="none"
-          />
-          <clippath
-            id="«rg»"
-          >
-            <rect
-              height="14"
-              width="14"
-              x="0"
-              y="0"
-            />
-          </clippath>
-        </svg>
-        <div
-          class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
-          style="font-feature-settings: "liga" off, "calt" off;"
-        >
-          <div>
-            Custom Tooltip
-          </div>
-        </div>
-      </div>
-    </div>
   </span>
 </DocumentFragment>
 `;
