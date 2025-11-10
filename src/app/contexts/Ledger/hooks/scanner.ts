@@ -11,7 +11,7 @@ import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 export const useLedgerScanner = (
 	coin: string,
 	network: string,
-	options?: { useLegacy?: boolean; pageSize?: number; legacyPageSize?: number },
+	options?: { useLegacy?: boolean; pageSize?: number; legacyPageSize?: number; slip44?: number },
 ) => {
 	const { setBusy, setIdle, resetConnectionState, disconnect } = useLedgerContext();
 
@@ -68,7 +68,13 @@ export const useLedgerScanner = (
 					startPath: legacyStartPath,
 					useLegacy: options?.useLegacy,
 				})
-			: await ledgerService.scan({ onProgress, pageSize: options?.pageSize, startPath, useLegacy: false });
+			: await ledgerService.scan({
+					onProgress,
+					pageSize: options?.pageSize,
+					slip44: options?.slip44,
+					startPath,
+					useLegacy: false,
+				});
 
 		let ledgerData: LedgerData[] = [];
 

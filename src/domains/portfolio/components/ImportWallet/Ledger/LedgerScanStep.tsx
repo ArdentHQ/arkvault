@@ -304,7 +304,7 @@ export const LedgerScanStep = ({
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { register, unregister, setValue } = useFormContext();
-	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
+	const ledgerScanner = useLedgerScanner(network.coin(), network.id(), { slip44: profile.ledger().slip44Eth() });
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
 
