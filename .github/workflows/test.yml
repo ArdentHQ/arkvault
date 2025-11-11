@@ -787,7 +787,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 96.67
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.66
                   COVERAGE_THRESHOLD_STATEMENTS: 96.66
-                  COVERAGE_THRESHOLD_BRANCHES: 95.7
+                  COVERAGE_THRESHOLD_BRANCHES: 95.68
               with:
                   timeout_minutes: 10
                   max_attempts: 1

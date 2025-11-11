@@ -150,7 +150,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden" />
 							)}
 
-							<Tooltip content={tooltipContent()} placement="auto-end">
+							<Tooltip content={tooltipContent()}>
 								<div>
 									<Button
 										disabled={isButtonDisabled}

@@ -16,11 +16,15 @@ exports[`ContactListItem > should render 1`] = `
               class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
-              <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
-              >
-                Brian
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Brian
+                  </span>
+                </span>
               </span>
             </span>
           </div>
@@ -41,11 +45,15 @@ exports[`ContactListItem > should render 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -61,47 +69,51 @@ exports[`ContactListItem > should render 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -113,21 +125,25 @@ exports[`ContactListItem > should render 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0!"
               />
@@ -211,11 +227,15 @@ exports[`ContactListItem > should render as validator 1`] = `
               class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
-              <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
-              >
-                Caio
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Caio
+                  </span>
+                </span>
               </span>
             </span>
           </div>
@@ -236,11 +256,15 @@ exports[`ContactListItem > should render as validator 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -256,47 +280,51 @@ exports[`ContactListItem > should render as validator 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -308,21 +336,25 @@ exports[`ContactListItem > should render as validator 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0!"
               />
@@ -406,11 +438,15 @@ exports[`ContactListItem > should render options 1`] = `
               class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
-              <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
-              >
-                Brian
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Brian
+                  </span>
+                </span>
               </span>
             </span>
           </div>
@@ -431,11 +467,15 @@ exports[`ContactListItem > should render options 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -451,47 +491,51 @@ exports[`ContactListItem > should render options 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -503,21 +547,25 @@ exports[`ContactListItem > should render options 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0!"
               />
@@ -605,11 +653,15 @@ exports[`ContactListItem > should render options 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -625,47 +677,51 @@ exports[`ContactListItem > should render options 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -677,21 +733,25 @@ exports[`ContactListItem > should render options 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="invisible"
               >
@@ -776,11 +836,15 @@ exports[`ContactListItem > should render options 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -796,47 +860,51 @@ exports[`ContactListItem > should render options 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -848,21 +916,25 @@ exports[`ContactListItem > should render options 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="invisible"
               >
@@ -943,11 +1015,15 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               class="text-sm leading-[17px] font-semibold"
               data-testid="ContactListItem__name"
             >
-              <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
-              >
-                Brian
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Brian
+                  </span>
+                </span>
               </span>
             </span>
           </div>
@@ -968,11 +1044,15 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -988,47 +1068,51 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -1040,21 +1124,25 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle height-[17px] border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0!"
               />
@@ -1142,11 +1230,15 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -1162,47 +1254,51 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -1214,21 +1310,25 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="invisible"
               >
@@ -1313,11 +1413,15 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 <div
                   class="relative grow leading-[17px] sm:leading-5 text-left"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                    data-testid="Address__address"
-                  >
-                    DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                      </span>
+                    </span>
                   </span>
                   <span>
                      
@@ -1333,47 +1437,51 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           <div
             class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 space-x-4 justify-center"
           >
-            <button
-              class="ring-focus relative cursor-pointer focus:outline-hidden"
-              data-ring-focus-margin="-m-1"
-              data-testid="clipboard-icon__wrapper"
-              type="button"
-            >
-              <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-              >
-                <div>
+            <span>
+              <span>
+                <button
+                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
                   <div
-                    style="height: 16px; width: 16px;"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                    <div>
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </button>
+                </button>
+              </span>
+            </span>
           </div>
         </td>
         <td
@@ -1385,21 +1493,25 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
             <div
               class="-mr-3 flex items-center"
             >
-              <div
-                data-testid="ContactListItem__send-button-wrapper"
-              >
-                <button
-                  class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-                  data-testid="ContactListItem__send-button"
-                  type="button"
-                >
+              <span>
+                <span>
                   <div
-                    class="flex items-center gap-2"
+                    data-testid="ContactListItem__send-button-wrapper"
                   >
-                    Send
+                    <button
+                      class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+                      data-testid="ContactListItem__send-button"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        Send
+                      </div>
+                    </button>
                   </div>
-                </button>
-              </div>
+                </span>
+              </span>
               <div
                 class="invisible"
               >

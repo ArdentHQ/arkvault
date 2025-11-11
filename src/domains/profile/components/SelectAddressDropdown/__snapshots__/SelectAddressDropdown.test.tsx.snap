@@ -35,86 +35,91 @@ exports[`SelectAddressDropdown > should render disabled 1`] = `
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-owns="SelectAddressDropdown__dropdown-menu"
+            class="w-full"
             role="combobox"
           >
-            <div>
-              <label
-                for="SelectAddressDropdown__dropdown-input"
-                id="SelectAddressDropdown__dropdown-label"
-              />
-              <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-              >
-                <div
-                  class="relative flex h-full flex-1"
-                >
-                  <input
-                    aria-autocomplete="list"
-                    aria-controls="SelectAddressDropdown__dropdown-menu"
-                    aria-labelledby="SelectAddressDropdown__dropdown-label"
-                    autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                    data-testid="SelectDropdown__input"
-                    disabled=""
-                    id="SelectAddressDropdown__dropdown-input"
-                    placeholder="Address"
-                    type="text"
-                    value=""
+            <span>
+              <span>
+                <div>
+                  <label
+                    for="SelectAddressDropdown__dropdown-input"
+                    id="SelectAddressDropdown__dropdown-label"
                   />
-                </div>
-                <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                  data-testid="Input__addon-end"
-                >
                   <div
-                    class=""
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex items-center"
-                      data-testid="SelectRecipient__select-recipient"
+                      class="relative flex h-full flex-1"
                     >
-                      <div>
+                      <input
+                        aria-autocomplete="list"
+                        aria-controls="SelectAddressDropdown__dropdown-menu"
+                        aria-labelledby="SelectAddressDropdown__dropdown-label"
+                        autocomplete="off"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                        data-testid="SelectDropdown__input"
+                        disabled=""
+                        id="SelectAddressDropdown__dropdown-input"
+                        placeholder="Address"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                      data-testid="Input__addon-end"
+                    >
+                      <div
+                        class=""
+                      >
                         <div
-                          style="height: 20px; width: 20px;"
+                          class="flex items-center"
+                          data-testid="SelectRecipient__select-recipient"
                         >
-                          <svg
-                            id="user"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                          <div>
+                            <div
+                              style="height: 20px; width: 20px;"
                             >
-                              <circle
-                                cx="10"
-                                cy="5"
-                                r="4"
-                              />
-                              <path
-                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                              />
-                            </g>
-                          </svg>
+                              <svg
+                                id="user"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="5"
+                                    r="4"
+                                  />
+                                  <path
+                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              aria-labelledby="SelectAddressDropdown__dropdown-label"
-              id="SelectAddressDropdown__dropdown-menu"
-              role="listbox"
-            />
+                <div
+                  aria-labelledby="SelectAddressDropdown__dropdown-label"
+                  id="SelectAddressDropdown__dropdown-menu"
+                  role="listbox"
+                />
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -158,85 +163,90 @@ exports[`SelectAddressDropdown > should render empty 1`] = `
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-owns="SelectAddressDropdown__dropdown-menu"
+            class="w-full"
             role="combobox"
           >
-            <div>
-              <label
-                for="SelectAddressDropdown__dropdown-input"
-                id="SelectAddressDropdown__dropdown-label"
-              />
-              <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-              >
-                <div
-                  class="relative flex h-full flex-1"
-                >
-                  <input
-                    aria-autocomplete="list"
-                    aria-controls="SelectAddressDropdown__dropdown-menu"
-                    aria-labelledby="SelectAddressDropdown__dropdown-label"
-                    autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                    data-testid="SelectDropdown__input"
-                    id="SelectAddressDropdown__dropdown-input"
-                    placeholder="Address"
-                    type="text"
-                    value=""
+            <span>
+              <span>
+                <div>
+                  <label
+                    for="SelectAddressDropdown__dropdown-input"
+                    id="SelectAddressDropdown__dropdown-label"
                   />
-                </div>
-                <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                  data-testid="Input__addon-end"
-                >
                   <div
-                    class=""
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                      data-testid="SelectRecipient__select-recipient"
+                      class="relative flex h-full flex-1"
                     >
-                      <div>
+                      <input
+                        aria-autocomplete="list"
+                        aria-controls="SelectAddressDropdown__dropdown-menu"
+                        aria-labelledby="SelectAddressDropdown__dropdown-label"
+                        autocomplete="off"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                        data-testid="SelectDropdown__input"
+                        id="SelectAddressDropdown__dropdown-input"
+                        placeholder="Address"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                      data-testid="Input__addon-end"
+                    >
+                      <div
+                        class=""
+                      >
                         <div
-                          style="height: 20px; width: 20px;"
+                          class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                          data-testid="SelectRecipient__select-recipient"
                         >
-                          <svg
-                            id="user"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                          <div>
+                            <div
+                              style="height: 20px; width: 20px;"
                             >
-                              <circle
-                                cx="10"
-                                cy="5"
-                                r="4"
-                              />
-                              <path
-                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                              />
-                            </g>
-                          </svg>
+                              <svg
+                                id="user"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="5"
+                                    r="4"
+                                  />
+                                  <path
+                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              aria-labelledby="SelectAddressDropdown__dropdown-label"
-              id="SelectAddressDropdown__dropdown-menu"
-              role="listbox"
-            />
+                <div
+                  aria-labelledby="SelectAddressDropdown__dropdown-label"
+                  id="SelectAddressDropdown__dropdown-menu"
+                  role="listbox"
+                />
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -280,49 +290,53 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
             <div
               class=""
             >
-              <span
-                data-testid="Input__error"
-              >
-                <div
-                  class="text-theme-danger-500"
-                >
-                  <div
-                    style="height: 20px; width: 20px;"
+              <span>
+                <span>
+                  <span
+                    data-testid="Input__error"
                   >
-                    <svg
-                      id="circle-exclamation-mark"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-danger-500"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
+                      <div
+                        style="height: 20px; width: 20px;"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="9"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 10.5v-5"
-                          stroke-linecap="round"
-                          stroke-miterlimit="10"
-                        />
-                        <path
-                          d="M10 14h0"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
+                        <svg
+                          id="circle-exclamation-mark"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle
+                              cx="10"
+                              cy="10"
+                              r="9"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 10.5v-5"
+                              stroke-linecap="round"
+                              stroke-miterlimit="10"
+                            />
+                            <path
+                              d="M10 14h0"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -334,150 +348,159 @@ exports[`SelectAddressDropdown > should render invalid 1`] = `
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-owns="SelectAddressDropdown__dropdown-menu"
+            class="w-full"
             role="combobox"
           >
-            <div>
-              <label
-                for="SelectAddressDropdown__dropdown-input"
-                id="SelectAddressDropdown__dropdown-label"
-              />
-              <div
-                class="invisible fixed w-auto whitespace-nowrap"
-              >
-                0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                …
-              </div>
-              <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-              >
-                <div
-                  class="relative flex h-full flex-1"
-                >
-                  <input
-                    aria-autocomplete="list"
-                    aria-controls="SelectAddressDropdown__dropdown-menu"
-                    aria-invalid="true"
-                    aria-labelledby="SelectAddressDropdown__dropdown-label"
-                    autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                    data-testid="SelectDropdown__input"
-                    id="SelectAddressDropdown__dropdown-input"
-                    placeholder="Address"
-                    type="text"
-                    value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+            <span>
+              <span>
+                <div>
+                  <label
+                    for="SelectAddressDropdown__dropdown-input"
+                    id="SelectAddressDropdown__dropdown-label"
                   />
-                  <span
-                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                    data-testid="Input__suggestion"
-                  >
-                    <span
-                      class="truncate"
-                    >
-                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                    </span>
-                  </span>
-                </div>
-                <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
-                  data-testid="Input__addon-end"
-                >
                   <div
-                    class="pr-3"
+                    class="invisible fixed w-auto whitespace-nowrap"
                   >
-                    <span
-                      data-testid="Input__error"
-                    >
-                      <div
-                        class="text-theme-danger-500"
-                      >
-                        <div
-                          style="height: 20px; width: 20px;"
-                        >
-                          <svg
-                            id="circle-exclamation-mark"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="9"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </span>
+                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                    …
                   </div>
                   <div
-                    class="pl-3"
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                      data-testid="SelectRecipient__select-recipient"
+                      class="relative flex h-full flex-1"
                     >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
+                      <input
+                        aria-autocomplete="list"
+                        aria-controls="SelectAddressDropdown__dropdown-menu"
+                        aria-invalid="true"
+                        aria-labelledby="SelectAddressDropdown__dropdown-label"
+                        autocomplete="off"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                        data-testid="SelectDropdown__input"
+                        id="SelectAddressDropdown__dropdown-input"
+                        placeholder="Address"
+                        type="text"
+                        value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+                      />
+                      <span
+                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                        data-testid="Input__suggestion"
+                      >
+                        <span
+                          class="truncate"
                         >
-                          <svg
-                            id="user"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+                      data-testid="Input__addon-end"
+                    >
+                      <div
+                        class="pr-3"
+                      >
+                        <span>
+                          <span>
+                            <span
+                              data-testid="Input__error"
                             >
-                              <circle
-                                cx="10"
-                                cy="5"
-                                r="4"
-                              />
-                              <path
-                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                              />
-                            </g>
-                          </svg>
+                              <div
+                                class="text-theme-danger-500"
+                              >
+                                <div
+                                  style="height: 20px; width: 20px;"
+                                >
+                                  <svg
+                                    id="circle-exclamation-mark"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                    >
+                                      <circle
+                                        cx="10"
+                                        cy="10"
+                                        r="9"
+                                        stroke-miterlimit="10"
+                                      />
+                                      <path
+                                        d="M10 10.5v-5"
+                                        stroke-linecap="round"
+                                        stroke-miterlimit="10"
+                                      />
+                                      <path
+                                        d="M10 14h0"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                      <div
+                        class="pl-3"
+                      >
+                        <div
+                          class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                          data-testid="SelectRecipient__select-recipient"
+                        >
+                          <div>
+                            <div
+                              style="height: 20px; width: 20px;"
+                            >
+                              <svg
+                                id="user"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="5"
+                                    r="4"
+                                  />
+                                  <path
+                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              aria-labelledby="SelectAddressDropdown__dropdown-label"
-              id="SelectAddressDropdown__dropdown-menu"
-              role="listbox"
-            />
+                <div
+                  aria-labelledby="SelectAddressDropdown__dropdown-label"
+                  id="SelectAddressDropdown__dropdown-menu"
+                  role="listbox"
+                />
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -521,101 +544,106 @@ exports[`SelectAddressDropdown > should render with preselected address 1`] = `
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-owns="SelectAddressDropdown__dropdown-menu"
+            class="w-full"
             role="combobox"
           >
-            <div>
-              <label
-                for="SelectAddressDropdown__dropdown-input"
-                id="SelectAddressDropdown__dropdown-label"
-              />
-              <div
-                class="invisible fixed w-auto whitespace-nowrap"
-              >
-                0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                …
-              </div>
-              <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-              >
-                <div
-                  class="relative flex h-full flex-1"
-                >
-                  <input
-                    aria-autocomplete="list"
-                    aria-controls="SelectAddressDropdown__dropdown-menu"
-                    aria-labelledby="SelectAddressDropdown__dropdown-label"
-                    autocomplete="off"
-                    class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                    data-testid="SelectDropdown__input"
-                    id="SelectAddressDropdown__dropdown-input"
-                    placeholder="Address"
-                    type="text"
-                    value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+            <span>
+              <span>
+                <div>
+                  <label
+                    for="SelectAddressDropdown__dropdown-input"
+                    id="SelectAddressDropdown__dropdown-label"
                   />
-                  <span
-                    class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                    data-testid="Input__suggestion"
-                  >
-                    <span
-                      class="truncate"
-                    >
-                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
-                    </span>
-                  </span>
-                </div>
-                <div
-                  class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                  data-testid="Input__addon-end"
-                >
                   <div
-                    class=""
+                    class="invisible fixed w-auto whitespace-nowrap"
+                  >
+                    0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                    …
+                  </div>
+                  <div
+                    class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                   >
                     <div
-                      class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                      data-testid="SelectRecipient__select-recipient"
+                      class="relative flex h-full flex-1"
                     >
-                      <div>
-                        <div
-                          style="height: 20px; width: 20px;"
+                      <input
+                        aria-autocomplete="list"
+                        aria-controls="SelectAddressDropdown__dropdown-menu"
+                        aria-labelledby="SelectAddressDropdown__dropdown-label"
+                        autocomplete="off"
+                        class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                        data-testid="SelectDropdown__input"
+                        id="SelectAddressDropdown__dropdown-input"
+                        placeholder="Address"
+                        type="text"
+                        value="0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+                      />
+                      <span
+                        class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                        data-testid="Input__suggestion"
+                      >
+                        <span
+                          class="truncate"
                         >
-                          <svg
-                            id="user"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                      data-testid="Input__addon-end"
+                    >
+                      <div
+                        class=""
+                      >
+                        <div
+                          class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                          data-testid="SelectRecipient__select-recipient"
+                        >
+                          <div>
+                            <div
+                              style="height: 20px; width: 20px;"
                             >
-                              <circle
-                                cx="10"
-                                cy="5"
-                                r="4"
-                              />
-                              <path
-                                d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                              />
-                            </g>
-                          </svg>
+                              <svg
+                                id="user"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <circle
+                                    cx="10"
+                                    cy="5"
+                                    r="4"
+                                  />
+                                  <path
+                                    d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              aria-labelledby="SelectAddressDropdown__dropdown-label"
-              id="SelectAddressDropdown__dropdown-menu"
-              role="listbox"
-            />
+                <div
+                  aria-labelledby="SelectAddressDropdown__dropdown-label"
+                  id="SelectAddressDropdown__dropdown-menu"
+                  role="listbox"
+                />
+              </span>
+            </span>
           </div>
         </div>
       </div>

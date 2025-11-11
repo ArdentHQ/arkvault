@@ -122,7 +122,7 @@ export const ReviewStep = ({
 										? t("TRANSACTION.VALIDATOR_REGISTERED_WITHOUT_FEE")
 										: t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")
 								}
-								maxWidth={418}
+								className="max-w-[26.125rem]"
 							>
 								<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
 									<Icon name="QuestionMarkSmall" size="sm" />

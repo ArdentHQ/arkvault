@@ -112,10 +112,9 @@ export const PortfolioHeader = ({
 				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
-						interactive={true}
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
-								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+								<div className="mb-2 block max-w-96 whitespace-normal sm:mb-0 sm:inline">
 									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button
@@ -136,13 +135,10 @@ export const PortfolioHeader = ({
 						placement="bottom-end"
 					>
 						<div
-							className={cn(
-								"flex h-fit max-w-[calc(100%_-_73px)] flex-row items-center gap-1 md:max-w-full",
-								{
-									"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
-										showHint,
-								},
-							)}
+							className={cn("flex h-fit flex-row items-center gap-1", {
+								"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
+									showHint,
+							})}
 						>
 							<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
 								{t("COMMON.VIEWING")}:

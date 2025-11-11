@@ -49,44 +49,92 @@ exports[`AmountLabel > should render compact with hint 1`] = `
     <div
       class="flex h-full items-center space-x-1"
     >
-      <div
-        aria-describedby="tippy-2"
-        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-        data-testid="AmountLabel__hint"
-      >
-        <div
-          class="dark:text-white"
+      <span>
+        <span
+          aria-describedby="«r3»"
         >
           <div
-            style="height: 10px; width: 10px;"
+            class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+            data-testid="AmountLabel__hint"
+          >
+            <div
+              class="dark:text-white"
+            >
+              <div
+                style="height: 10px; width: 10px;"
+              >
+                <svg
+                  id="hint-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="4.5"
+                    cy="1"
+                    fill="currentColor"
+                    r="1"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </span>
+        <div
+          data-floating-ui-focusable=""
+          id="«r3»"
+          role="tooltip"
+          style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
+          tabindex="-1"
+        >
+          <div
+            style="transition-property: opacity,transform; transition-duration: 250ms;"
           >
             <svg
-              id="hint-small"
-              style="height: 100%; width: 100%;"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+              aria-hidden="true"
+              class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
+              height="14"
+              style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
+              viewBox="0 0 14 14"
+              width="14"
             >
               <path
-                d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
+                stroke="none"
               />
-              <circle
-                cx="4.5"
-                cy="1"
-                fill="currentColor"
-                r="1"
-              />
+              <clippath
+                id="«r5»"
+              >
+                <rect
+                  height="14"
+                  width="14"
+                  x="0"
+                  y="0"
+                />
+              </clippath>
             </svg>
+            <div
+              class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
+              style="font-feature-settings: "liga" off, "calt" off;"
+            >
+              <div>
+                I am an hint
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </span>
       <span
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
@@ -127,44 +175,92 @@ exports[`AmountLabel > should render with hint 1`] = `
     <div
       class="flex h-full items-center space-x-1"
     >
-      <div
-        aria-describedby="tippy-1"
-        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
-        data-testid="AmountLabel__hint"
-      >
-        <div
-          class="dark:text-white"
+      <span>
+        <span
+          aria-describedby="«r0»"
         >
           <div
-            style="height: 10px; width: 10px;"
+            class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
+            data-testid="AmountLabel__hint"
+          >
+            <div
+              class="dark:text-white"
+            >
+              <div
+                style="height: 10px; width: 10px;"
+              >
+                <svg
+                  id="hint-small"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="4.5"
+                    cy="1"
+                    fill="currentColor"
+                    r="1"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </span>
+        <div
+          data-floating-ui-focusable=""
+          id="«r0»"
+          role="tooltip"
+          style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
+          tabindex="-1"
+        >
+          <div
+            style="transition-property: opacity,transform; transition-duration: 250ms;"
           >
             <svg
-              id="hint-small"
-              style="height: 100%; width: 100%;"
-              viewBox="0 0 10 10"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
+              aria-hidden="true"
+              class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
+              height="14"
+              style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
+              viewBox="0 0 14 14"
+              width="14"
             >
               <path
-                d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                d="M0,0 H14 L8.75,6 Q7,8 5.25,6 Z"
+                stroke="none"
               />
-              <circle
-                cx="4.5"
-                cy="1"
-                fill="currentColor"
-                r="1"
-              />
+              <clippath
+                id="«r2»"
+              >
+                <rect
+                  height="14"
+                  width="14"
+                  x="0"
+                  y="0"
+                />
+              </clippath>
             </svg>
+            <div
+              class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
+              style="font-feature-settings: "liga" off, "calt" off;"
+            >
+              <div>
+                I am an hint
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </span>
       <span
         class="whitespace-nowrap text-sm"
         data-testid="Amount"

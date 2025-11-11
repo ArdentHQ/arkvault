@@ -36,7 +36,7 @@ export const ValidatorVoteButton = ({ index, disabled, compactClassName, onClick
 
 	if (disabled) {
 		return (
-			<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.MAX_VOTES")} className="-mr-3">
+			<Tooltip content={t("VOTE.VALIDATOR_TABLE.TOOLTIP.MAX_VOTES")} className="-mr-3" placement="top-end">
 				<span className="w-full sm:w-auto">
 					<CompactButton disabled index={index} compactClassName={cn("relative", compactClassName)}>
 						{children}

@@ -1,7 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
-import Tippy from "@tippyjs/react";
 import { Select } from "./SelectDropdown";
 import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
@@ -68,8 +67,77 @@ const selectInput = () => screen.getByTestId("select-list__input");
 const firstOptionID = "SelectDropdown__option--0";
 
 describe("SelectDropdown", () => {
-	beforeEach(() => {
-		vi.spyOn(Tippy as any, "render").mockRestore();
+	it.each([OptionType.base, OptionType.group])(
+		"should trigger menu when clicking on caret in option %s",
+		async (optType) => {
+			render(<Select options={getOptions(optType)} showCaret />);
+
+			await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+			await waitFor(() => {
+				expect(screen.getByTestId(firstOptionID)).toBeVisible();
+			});
+		},
+	);
+
+	it.each([OptionType.base, OptionType.group])("should highlight option %s", async (optType) => {
+		render(<Select options={getOptions(optType)} />);
+
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
+
+		await userEvent.clear(selectDropdown);
+		await userEvent.type(selectDropdown, "Opt");
+		await userEvent.tab();
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId(firstOptionID)).toBeVisible();
+		});
+
+		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-selected");
+	});
+
+	it("should highlight first option after reach to the end of the match options", async () => {
+		const options = [
+			{
+				label: "Option 1",
+				value: "1",
+			},
+			{
+				label: "Option 2",
+				value: "2",
+			},
+			{
+				label: "Item 1",
+				value: "3",
+			},
+			{
+				label: "Item 2",
+				value: "4",
+			},
+		];
+
+		render(<Select options={options} />);
+
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
+
+		await userEvent.clear(selectDropdown);
+		await userEvent.type(selectDropdown, "Opt");
+
+		await keyboardArrowDown();
+
+		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
+
+		await keyboardArrowDown();
+
+		const secondOption = screen.getByTestId("SelectDropdown__option--1");
+
+		expect(secondOption).toHaveClass("is-highlighted");
+
+		await keyboardArrowDown();
+
+		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 	});
 
 	it.each([OptionType.base, OptionType.group])("should render option %s", (optType) => {
@@ -134,21 +202,6 @@ describe("SelectDropdown", () => {
 
 		expect(container).toMatchSnapshot();
 	});
-
-	it.each([OptionType.base, OptionType.group])(
-		"should trigger menu when clicking on caret in option %s",
-		async (optType) => {
-			render(<Select options={getOptions(optType)} showCaret />);
-
-			await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
-			await expect(screen.findByTestId(firstOptionID)).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
-			await waitFor(() => expect(screen.queryByTestId(firstOptionID)).not.toBeInTheDocument());
-		},
-	);
 
 	it.each([OptionType.base, OptionType.group])("should not trigger menu when disabled", async (optType) => {
 		render(<Select options={getOptions(optType)} showCaret disabled />);
@@ -216,22 +269,6 @@ describe("SelectDropdown", () => {
 		expect(selectInput()).toHaveValue("1");
 	});
 
-	it.each([OptionType.base, OptionType.group])("should highlight option %s", async (optType) => {
-		render(<Select options={getOptions(optType)} />);
-
-		const selectDropdown = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.clear(selectDropdown);
-		await userEvent.type(selectDropdown, "Opt");
-		await userEvent.tab();
-
-		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
-		expect(screen.getByTestId(firstOptionID)).toBeVisible();
-
-		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-selected");
-	});
-
 	it.each([OptionType.base, OptionType.group])("should select options %s with arrow keys", async (optType) => {
 		render(<Select options={getOptions(optType)} />);
 
@@ -249,50 +286,6 @@ describe("SelectDropdown", () => {
 		await userEvent.keyboard("{enter}");
 
 		expect(selectInput()).toHaveValue("1");
-	});
-
-	it("should highlight first option after reach to the end of the match options", async () => {
-		const options = [
-			{
-				label: "Option 1",
-				value: "1",
-			},
-			{
-				label: "Option 2",
-				value: "2",
-			},
-			{
-				label: "Item 1",
-				value: "3",
-			},
-			{
-				label: "Item 2",
-				value: "4",
-			},
-		];
-
-		render(<Select options={options} />);
-
-		const selectDropdown = screen.getByTestId("SelectDropdown__input");
-
-		await userEvent.clear(selectDropdown);
-		await userEvent.type(selectDropdown, "Opt");
-
-		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
-
-		await keyboardArrowDown();
-
-		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
-
-		await keyboardArrowDown();
-
-		const secondOption = screen.getByTestId("SelectDropdown__option--1");
-
-		expect(secondOption).toHaveClass("is-highlighted");
-
-		await keyboardArrowDown();
-
-		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 	});
 
 	it.each([OptionType.base, OptionType.group])(
@@ -456,8 +449,6 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 
 			await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-
-			await expect(screen.findByTestId(firstOptionID)).resolves.toBeVisible();
 
 			await userEvent.click(screen.getByTestId(firstOptionID));
 

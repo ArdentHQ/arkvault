@@ -246,7 +246,7 @@ const SidePanelContent = ({
 											className={cn(
 												"navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
 												{
-													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-tl-sm rounded-tr-sm border-t border-r border-l sm:rounded-tl-xl sm:rounded-tr-none sm:border-r-0":
+													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-tl-sm rounded-tr-sm border-t border-r border-l sm:rounded-tl-xl sm:rounded-tr-none sm:border-r-0":
 														isMinimized,
 													"border-transparent": !isMinimized,
 												},
@@ -312,9 +312,6 @@ const SidePanelContent = ({
 																			visible={
 																				isMinimized && !minimizedHintHasShown
 																			}
-																			appendTo={() => document.body}
-																			interactive={true}
-																			offset={[0, 30]}
 																			content={
 																				<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
 																					<span className="font-semibold text-white">

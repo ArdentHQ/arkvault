@@ -3,12 +3,8 @@
 	"typescript": {
 		"config": ["tsconfig.json"]
 	},
-
 	"entry": ["src/main.tsx", "src/app/**/*.{ts,tsx}", "src/lib/index.ts", "!src/**/cucumber/**"],
-
 	"project": ["src/**/*.{ts,tsx}", "!src/**/cucumber/**"],
-
 	"ignore": ["src/generated/**", "**/cucumber/**", "**/e2e/**", "**/*.test.*", "dist/**"],
-
-	"ignoreDependencies": ["tippy.js", "slick-carousel", "assert"]
+	"ignoreDependencies": ["slick-carousel", "assert"]
 }

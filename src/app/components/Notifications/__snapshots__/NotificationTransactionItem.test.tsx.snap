@@ -30,18 +30,26 @@ exports[`Notifications > should render in xs 1`] = `
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
-                  <span
-                    class="no-ligatures transition-colors duration-200"
-                    data-testid="TruncateEnd"
-                  >
-                    Mainsail Wallet …
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>
@@ -107,18 +115,26 @@ exports[`Notifications > should render in xs 2`] = `
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
-                  <span
-                    class="no-ligatures transition-colors duration-200"
-                    data-testid="TruncateEnd"
-                  >
-                    Mainsail Wallet …
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      0x93485b57ff3DeD81430D08579142fAe8234c6A17
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>
@@ -185,18 +201,26 @@ exports[`Notifications > should render in xs 3`] = `
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
-                  <span
-                    class="no-ligatures transition-colors duration-200"
-                    data-testid="TruncateEnd"
-                  >
-                    Mainsail Wallet …
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>
@@ -278,18 +302,26 @@ exports[`Notifications > should render in xs 4`] = `
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
-                  <span
-                    class="no-ligatures transition-colors duration-200"
-                    data-testid="TruncateEnd"
-                  >
-                    Mainsail Wallet …
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>
@@ -371,18 +403,26 @@ exports[`Notifications > should render in xs 5`] = `
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
-                  <span
-                    class="no-ligatures transition-colors duration-200"
-                    data-testid="TruncateEnd"
-                  >
-                    Mainsail Wallet …
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>
@@ -464,18 +504,26 @@ exports[`Notifications > should render notification item 1`] = `
                   class="font-semibold text-base text-theme-text"
                   data-testid="Address__alias"
                 >
-                  <span
-                    class="no-ligatures transition-colors duration-200"
-                    data-testid="TruncateEnd"
-                  >
-                    Mainsail Wallet …
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>

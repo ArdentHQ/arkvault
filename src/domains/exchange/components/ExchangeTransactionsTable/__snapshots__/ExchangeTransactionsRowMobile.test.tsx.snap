@@ -19,11 +19,15 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               <div
                 class="text-sm font-semibold"
               >
-                <span
-                  class="no-ligatures text-theme-primary-600"
-                  data-testid="TruncateMiddle"
-                >
-                  id
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures text-theme-primary-600"
+                      data-testid="TruncateMiddle"
+                    >
+                      id
+                    </span>
+                  </span>
                 </span>
               </div>
               <div
@@ -252,11 +256,15 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               <div
                 class="text-sm font-semibold"
               >
-                <span
-                  class="no-ligatures text-theme-primary-600"
-                  data-testid="TruncateMiddle"
-                >
-                  id
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures text-theme-primary-600"
+                      data-testid="TruncateMiddle"
+                    >
+                      id
+                    </span>
+                  </span>
                 </span>
               </div>
               <div
@@ -476,11 +484,15 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               <div
                 class="text-sm font-semibold"
               >
-                <span
-                  class="no-ligatures text-theme-primary-600"
-                  data-testid="TruncateMiddle"
-                >
-                  id
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures text-theme-primary-600"
+                      data-testid="TruncateMiddle"
+                    >
+                      id
+                    </span>
+                  </span>
                 </span>
               </div>
               <div
@@ -700,11 +712,15 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               <div
                 class="text-sm font-semibold"
               >
-                <span
-                  class="no-ligatures text-theme-primary-600"
-                  data-testid="TruncateMiddle"
-                >
-                  id
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures text-theme-primary-600"
+                      data-testid="TruncateMiddle"
+                    >
+                      id
+                    </span>
+                  </span>
                 </span>
               </div>
               <div
@@ -887,43 +903,47 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                     <div
                       class="flex h-full items-center space-x-1"
                     >
-                      <div
-                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
-                        data-testid="AmountLabel__hint"
-                      >
-                        <div
-                          class="dark:text-white"
-                        >
+                      <span>
+                        <span>
                           <div
-                            style="height: 10px; width: 10px;"
+                            class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 w-5 self-stretch"
+                            data-testid="AmountLabel__hint"
                           >
-                            <svg
-                              id="hint-small"
-                              style="height: 100%; width: 100%;"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="dark:text-white"
                             >
-                              <path
-                                d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                              <circle
-                                cx="4.5"
-                                cy="1"
-                                fill="currentColor"
-                                r="1"
-                              />
-                            </svg>
+                              <div
+                                style="height: 10px; width: 10px;"
+                              >
+                                <svg
+                                  id="hint-small"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <circle
+                                    cx="4.5"
+                                    cy="1"
+                                    fill="currentColor"
+                                    r="1"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                        </span>
+                      </span>
                       <span
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
@@ -962,11 +982,15 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               <div
                 class="text-sm font-semibold"
               >
-                <span
-                  class="no-ligatures text-theme-primary-600"
-                  data-testid="TruncateMiddle"
-                >
-                  id
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures text-theme-primary-600"
+                      data-testid="TruncateMiddle"
+                    >
+                      id
+                    </span>
+                  </span>
                 </span>
               </div>
               <div
@@ -1191,11 +1215,15 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               <div
                 class="text-sm font-semibold"
               >
-                <span
-                  class="no-ligatures text-theme-primary-600"
-                  data-testid="TruncateMiddle"
-                >
-                  id
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures text-theme-primary-600"
+                      data-testid="TruncateMiddle"
+                    >
+                      id
+                    </span>
+                  </span>
                 </span>
               </div>
               <div
@@ -1637,11 +1665,15 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           <div
             class="text-sm font-semibold"
           >
-            <span
-              class="no-ligatures text-theme-primary-600"
-              data-testid="TruncateMiddle"
-            >
-              id
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-theme-primary-600"
+                  data-testid="TruncateMiddle"
+                >
+                  id
+                </span>
+              </span>
             </span>
           </div>
           <div
