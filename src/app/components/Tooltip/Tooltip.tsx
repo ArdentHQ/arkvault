@@ -53,7 +53,7 @@ export const Tooltip = ({
 	const arrowRef = useRef(null);
 
 	const isTooltipOpen = visible === undefined ? isOpen : visible;
-	const isDisabled = disabled || content?.toString().trim().length === 0;
+	const isDisabled = disabled || !content || content?.toString().trim().length === 0;
 
 	const {
 		refs: { setReference, setFloating },
