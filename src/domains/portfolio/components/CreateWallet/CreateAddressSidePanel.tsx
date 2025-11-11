@@ -236,7 +236,7 @@ export const CreateAddressesSidePanel = ({
 
 	return (
 		<SidePanel
-			minimizeable={!isLastStep}
+			minimizeable={false}
 			title={config.title}
 			subtitle={config.subtitle}
 			titleIcon={config.titleIcon}
