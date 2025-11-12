@@ -10,7 +10,6 @@ import { Form } from "@/app/components/Form";
 import { ThemeIcon } from "@/app/components/Icon";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider } from "@/app/contexts";
-import { useActiveWalletWhenNeeded } from "@/app/hooks";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Image } from "@/app/components/Image";

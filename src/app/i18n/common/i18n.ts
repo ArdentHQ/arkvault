@@ -506,6 +506,7 @@ export const translations = {
 	VALIDATOR_STATUS: "Validator Status",
 	VALUE: "Value",
 	VERIFIED: "Verified Address: {{value}}",
+	VERIFY: "Verify",
 	VERSION: "Version",
 	VIEW: "View",
 	VIEWING: "Viewing",

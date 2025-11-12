@@ -29,7 +29,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 
 	return (
 		<section>
-			<Alert className="mt-6 sm:mt-4" variant={isVerified ? "success" : "danger"}>
+			<Alert variant={isVerified ? "success" : "danger"}>
 				{getDescription()}
 			</Alert>
 
@@ -39,6 +39,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 					<TextArea
 						className="py-4"
 						wrap="hard"
+						rows={5}
 						defaultValue={JSON.stringify({
 							message: verificationResult?.message,
 							signatory: verificationResult?.signatory,

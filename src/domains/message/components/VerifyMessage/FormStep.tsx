@@ -26,6 +26,7 @@ const JsonForm = () => {
 					data-testid="VerifyMessage__json-jsonString"
 					className="py-4"
 					initialHeight={90}
+					rows={5}
 					placeholder={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_PLACEHOLDER")}
 					ref={register(verifyMessage.jsonString())}
 				/>
@@ -44,7 +45,7 @@ const ManualForm = () => {
 	useEffect(() => () => unregister(["signatory", "message", "signature"]), [unregister]);
 
 	return (
-		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-5">
+		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-4">
 			<FormField name="signatory">
 				<FormLabel label={t("COMMON.SIGNATORY")} />
 				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
@@ -73,8 +74,8 @@ export const FormStep = ({
 	const { t } = useTranslation();
 
 	return (
-		<section className="space-y-4">
-			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-6 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl">
+		<section>
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl">
 				<div className="flex flex-row justify-between p-4">
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden">
 						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}:
