@@ -90,28 +90,30 @@ export const ErrorStep = ({
 				</div>
 			</div>
 
-			{!hideFooter && <FormButtons>
-				{errorMessage && (
-					<div className="mr-auto">
-						<Clipboard variant="button" data={errorMessage}>
-							<Icon name="Copy" size="lg" />
-							<span className="hidden sm:block">{t("COMMON.COPY_ERROR")}</span>
-						</Clipboard>
-					</div>
-				)}
+			{!hideFooter && (
+				<FormButtons>
+					{errorMessage && (
+						<div className="mr-auto">
+							<Clipboard variant="button" data={errorMessage}>
+								<Icon name="Copy" size="lg" />
+								<span className="hidden sm:block">{t("COMMON.COPY_ERROR")}</span>
+							</Clipboard>
+						</div>
+					)}
 
-				{!!onClose && (
-					<Button onClick={() => onClose()} data-testid="ErrorStep__close-button" variant="secondary">
-						<div className="whitespace-nowrap">{t("COMMON.CLOSE")}</div>
-					</Button>
-				)}
+					{!!onClose && (
+						<Button onClick={() => onClose()} data-testid="ErrorStep__close-button" variant="secondary">
+							<div className="whitespace-nowrap">{t("COMMON.CLOSE")}</div>
+						</Button>
+					)}
 
-				{!!onBack && (
-					<Button data-testid="ErrorStep__back-button" disabled={isBackDisabled} onClick={() => onBack()}>
-						<div className="whitespace-nowrap">{t("COMMON.BACK")}</div>
-					</Button>
-				)}
-			</FormButtons>}
+					{!!onBack && (
+						<Button data-testid="ErrorStep__back-button" disabled={isBackDisabled} onClick={() => onBack()}>
+							<div className="whitespace-nowrap">{t("COMMON.BACK")}</div>
+						</Button>
+					)}
+				</FormButtons>
+			)}
 		</div>
 	);
 };
