@@ -14,6 +14,7 @@ import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Image } from "@/app/components/Image";
 import { MessageService } from "@/app/lib/mainsail/message.service";
+import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 
 enum Step {
 	FormStep = 1,
@@ -108,7 +109,9 @@ export const VerifyMessageSidePanel = ({
 		}
 	}, [message, signatory, signature]);
 
-	const handleBack = () => {};
+	const handleBack = () => {
+		setActiveTab(Step.FormStep);
+	};
 
 	const handleVerify = async () => {
 		try {
@@ -227,14 +230,29 @@ export const VerifyMessageSidePanel = ({
 					)}
 
 					{isLastStep && (
-						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
+						<div className="grid w-full grid-cols-1 justify-end gap-3 sm:flex">
+							<Button
+								data-testid="SignMessage__close-button"
+								variant="secondary"
+								className="text-base"
+								onClick={() => {
+									onOpenChange(false);
+								}}
+							>
+								{t("COMMON.CLOSE")}
+							</Button>
+						</div>
+					)}
+
+					{activeTab === Step.ErrorStep && (
+						<div className="grid w-full grid-cols-1 justify-end gap-3 sm:flex">
 							<Button
 								data-testid="SignMessage__back-button"
 								variant="secondary"
 								className="text-base"
 								onClick={handleBack}
 							>
-								{t("COMMON.CLOSE")}
+								{t("COMMON.BACK")}
 							</Button>
 						</div>
 					)}
@@ -257,18 +275,12 @@ export const VerifyMessageSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={Step.ErrorStep}>
-							<div>error</div>
-							{/*<ErrorStep*/}
-							{/*	description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}*/}
-							{/*	onClose={handleBack}*/}
-							{/*	errorMessage={errorMessage}*/}
-							{/*	hideHeader*/}
-							{/*	onBack={() => {*/}
-							{/*		setAuthenticateLedger(false);*/}
-
-							{/*		setActiveTab(Step.FormStep);*/}
-							{/*	}}*/}
-							{/*/>*/}
+							<ErrorStep
+								description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
+								errorMessage={errorMessage}
+								hideHeader
+								hideFooter
+							/>
 						</TabPanel>
 					</StepsProvider>
 				</Tabs>

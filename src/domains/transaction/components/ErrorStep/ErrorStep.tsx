@@ -18,6 +18,7 @@ interface Properties {
 	onBack?: () => void;
 	errorMessage?: string;
 	hideHeader?: boolean;
+	hideFooter?: boolean;
 }
 
 export const ErrorStep = ({
@@ -28,6 +29,7 @@ export const ErrorStep = ({
 	isBackDisabled = false,
 	errorMessage,
 	hideHeader = false,
+	hideFooter = false,
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef(null);
@@ -88,7 +90,7 @@ export const ErrorStep = ({
 				</div>
 			</div>
 
-			<FormButtons>
+			{!hideFooter && <FormButtons>
 				{errorMessage && (
 					<div className="mr-auto">
 						<Clipboard variant="button" data={errorMessage}>
@@ -109,7 +111,7 @@ export const ErrorStep = ({
 						<div className="whitespace-nowrap">{t("COMMON.BACK")}</div>
 					</Button>
 				)}
-			</FormButtons>
+			</FormButtons>}
 		</div>
 	);
 };
