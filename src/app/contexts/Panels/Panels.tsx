@@ -7,6 +7,7 @@ export enum Panel {
 	SendTransfer = "SEND_TRANSFER",
 	SendVote = "SEND_VOTE",
 	SignMessage = "SIGN_MESSAGE",
+	VerifyMessage = "VERIFY_MESSAGE",
 	SendUsernameResignation = "SEND_USERNAME_RESIGNATION",
 	SendValidatorResignation = "SEND_VALIDATOR_RESIGNATION",
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",

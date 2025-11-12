@@ -1,0 +1,53 @@
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Alert } from "@/app/components/Alert";
+import { TextArea } from "@/app/components/TextArea";
+import { VerificationResult } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
+import { useFormContext } from "react-hook-form";
+
+export const SuccessStep = ({ verificationResult }: { verificationResult?: VerificationResult }) => {
+	const { t } = useTranslation();
+
+	const isVerified = verificationResult?.verified;
+
+	const { setError } = useFormContext();
+
+	useEffect(() => {
+		if (!isVerified) {
+			setError("json-signature", { type: "manual" });
+		}
+	}, [isVerified, setError]);
+
+	const getDescription = () => {
+		if (isVerified) {
+			return t("MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.DESCRIPTION");
+		}
+
+		return t("MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.DESCRIPTION");
+	};
+
+	return (
+		<section>
+			<Alert className="mt-6 sm:mt-4" variant={isVerified ? "success" : "danger"}>
+				{getDescription()}
+			</Alert>
+
+			<div className="pt-6 sm:pt-4">
+				<FormField name="json-signature">
+					<FormLabel label={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.SIGNATURE_JSON")} />
+					<TextArea
+						className="py-4"
+						wrap="hard"
+						defaultValue={JSON.stringify({
+							message: verificationResult?.message,
+							signatory: verificationResult?.signatory,
+							signature: verificationResult?.signature,
+						})}
+						disabled
+					/>
+				</FormField>
+			</div>
+		</section>
+	);
+};
