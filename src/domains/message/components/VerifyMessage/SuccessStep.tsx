@@ -29,9 +29,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 
 	return (
 		<section>
-			<Alert variant={isVerified ? "success" : "danger"}>
-				{getDescription()}
-			</Alert>
+			<Alert variant={isVerified ? "success" : "danger"}>{getDescription()}</Alert>
 
 			<div className="pt-6 sm:pt-4">
 				<FormField name="json-signature">
