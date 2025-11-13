@@ -138,12 +138,13 @@ const SidePanelContent = ({
 	const stylesConfiguration = useMemo(
 		() => ({
 			close: {
-				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
-				transitionTimingFunction: "ease-in",
+				transform: isMinimized ? "translateY(100vh)" : "translateX(100%)",
+				transitionTimingFunction: "cubic-bezier(0.7, 0, 0.84, 0)",
 			},
 			common: {
 				transformOrigin: "right",
-				transitionProperty: "transform",
+				transitionProperty: "transform, opacity",
+				willChange: "transform, opacity",
 			},
 			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
 			initial: {
@@ -151,7 +152,7 @@ const SidePanelContent = ({
 			},
 			open: {
 				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
-				transitionTimingFunction: "ease-out",
+				transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
 			},
 		}),
 		[isMinimized],
