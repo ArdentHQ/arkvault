@@ -21,15 +21,9 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 
 	return (
 		<div
-			className="dark:bg-theme-dark-900 dim:bg-transparent w-full sm:w-[35rem]"
+			className="dark:bg-theme-dark-900 dim:bg-transparent"
 			data-testid="NotificationsWrapper"
 		>
-			<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black">
-				<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
-					Notification
-				</div>
-			</div>
-
 			{transactions.length === 0 && (
 				<div className="px-6 pt-4 pb-8">
 					<EmptyBlock className="py-4">
@@ -42,10 +36,7 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 			)}
 
 			{transactions.length > 0 && (
-				<div
-					className="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
-					data-testid="NotificationsWrapper"
-				>
+				<div>
 					{transactions.length > 0 && (
 						<NotificationTransactionsTable
 							profile={profile}
