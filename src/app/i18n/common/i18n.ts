@@ -323,6 +323,7 @@ export const translations = {
 		SEND_VOTE: "Send Vote",
 		SIGN_MESSAGE: "Sign Message",
 		TRANSACTION_DETAILS: "Transaction Details",
+		VERIFY_MESSAGE: "Verify Message",
 	},
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",
