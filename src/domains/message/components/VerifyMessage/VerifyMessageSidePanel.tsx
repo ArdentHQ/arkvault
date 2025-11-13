@@ -271,7 +271,7 @@ export const VerifyMessageSidePanel = ({
 									hideHeader
 									hideFooter
 								/>
-								<div className="flex justify-end mt-2">
+								<div className="mt-2 flex justify-end">
 									<Clipboard
 										variant="icon"
 										data={errorMessage!}
@@ -282,7 +282,6 @@ export const VerifyMessageSidePanel = ({
 									</Clipboard>
 								</div>
 							</div>
-
 						</TabPanel>
 					</StepsProvider>
 				</Tabs>
