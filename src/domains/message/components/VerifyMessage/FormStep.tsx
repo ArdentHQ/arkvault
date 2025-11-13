@@ -6,8 +6,8 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
 import { TextArea } from "@/app/components/TextArea";
-import { VerificationMethod } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
 import { Switch } from "@/app/components/Switch";
+import { VerificationMethod } from "@/domains/message/components/VerifyMessage/VerifyMessageSidePanel";
 
 const JsonForm = () => {
 	const { t } = useTranslation();
