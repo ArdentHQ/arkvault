@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Alert } from "@/app/components/Alert";
 import { TextArea } from "@/app/components/TextArea";
-import { VerificationResult } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
 import { useFormContext } from "react-hook-form";
+import { VerificationResult } from "@/domains/message/components/VerifyMessage/VerifyMessageSidePanel";
 
 export const SuccessStep = ({ verificationResult }: { verificationResult?: VerificationResult }) => {
 	const { t } = useTranslation();
