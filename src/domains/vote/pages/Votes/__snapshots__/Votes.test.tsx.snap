@@ -315,66 +315,60 @@ exports[`Votes > should emit action on continue button 1`] = `
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
@@ -9505,66 +9499,60 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
@@ -18173,66 +18161,60 @@ exports[`Votes > should filter current validators 1`] = `
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
@@ -18730,7 +18712,7 @@ exports[`Votes > should filter current validators 1`] = `
                     class="mr-6 hidden md:block"
                   >
                     <div
-                      aria-controls="«rmk»"
+                      aria-controls="«rme»"
                       aria-expanded="true"
                       aria-haspopup="dialog"
                       data-testid="dropdown__toggle-VotesFilter"
@@ -19613,66 +19595,60 @@ exports[`Votes > should render 1`] = `
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
@@ -28282,66 +28258,60 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
@@ -36951,66 +36921,60 @@ exports[`Votes > should select a validator 1`] = `
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
@@ -46088,66 +46052,60 @@ exports[`Votes > should select an address and validator 1`] = `
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
@@ -54755,66 +54713,60 @@ exports[`Votes > should trigger network connection warning 1`] = `
             class="flex flex-row items-center justify-center gap-3 sm:gap-5"
           >
             <div>
-              <div
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                data-testid="dropdown__toggle"
-              >
-                <div
-                  class="custom-button-nav-wrapper group"
-                >
-                  <span>
-                    <span>
-                      <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
-                        data-testid="NavigationBar__buttons--notifications"
-                        type="button"
+              <span>
+                <span>
+                  <button
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    data-testid="NavigationBar__buttons--notifications"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      <div
+                        class="relative"
                       >
                         <div
-                          class="flex items-center gap-2"
+                          class="m-0 p-1"
                         >
                           <div
-                            class="m-0 p-1"
+                            style="height: 20px; width: 20px;"
                           >
-                            <div
-                              style="height: 20px; width: 20px;"
+                            <svg
+                              id="bell"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
                             >
-                              <svg
-                                id="bell"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
-                          >
-                            <div
-                              class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
-                            />
+                                <path
+                                  d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                                />
+                              </g>
+                            </svg>
                           </div>
                         </div>
-                      </button>
-                    </span>
-                  </span>
-                </div>
-              </div>
+                        <div
+                          class="bg-theme-background group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800 absolute top-0 right-0 flex items-center justify-center rounded-full p-0.5 transition-all duration-100 ease-linear"
+                        >
+                          <div
+                            class="bg-theme-danger-500 h-1.5 w-1.5 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
             <div
               class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-6 border-r sm:h-12"
