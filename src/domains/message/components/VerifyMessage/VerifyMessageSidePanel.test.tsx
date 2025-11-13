@@ -14,6 +14,7 @@ import {
 	getDefaultMainsailWalletMnemonic,
 } from "@/utils/testing-library";
 import { VerifyMessageSidePanel } from "./VerifyMessageSidePanel";
+import { expect } from "vitest";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -177,7 +178,9 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should verify message", async () => {
-		render(<VerifyMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
+		const onOpenChangeMock = vi.fn();
+
+		render(<VerifyMessageSidePanel open={true} onOpenChange={onOpenChangeMock} />, {
 			route: dashboardRoute,
 		});
 
@@ -186,6 +189,10 @@ describe("VerifyMessage", () => {
 		await userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
+
+		await userEvent.click(screen.getByTestId("VerifyMessage__close-button"));
+
+		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 	});
 
 	it("should verify message using json", async () => {
