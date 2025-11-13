@@ -3,22 +3,10 @@
 exports[`Notifications > should emit transactionClick event 1`] = `
 <div>
   <div
-    class="dark:bg-theme-dark-900 dim:bg-transparent w-full sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 dim:bg-transparent"
     data-testid="NotificationsWrapper"
   >
-    <div
-      class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
-    >
-      <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
-      >
-        Notification
-      </div>
-    </div>
-    <div
-      class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
-      data-testid="NotificationsWrapper"
-    >
+    <div>
       <div
         class="relative h-full"
       >
@@ -300,18 +288,9 @@ exports[`Notifications > should emit transactionClick event 1`] = `
 exports[`Notifications > should render with empty notifications 1`] = `
 <div>
   <div
-    class="dark:bg-theme-dark-900 dim:bg-transparent w-full sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 dim:bg-transparent"
     data-testid="NotificationsWrapper"
   >
-    <div
-      class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
-    >
-      <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
-      >
-        Notification
-      </div>
-    </div>
     <div
       class="px-6 pt-4 pb-8"
     >
@@ -396,22 +375,10 @@ exports[`Notifications > should render with empty notifications 1`] = `
 exports[`Notifications > should render with transactions 1`] = `
 <div>
   <div
-    class="dark:bg-theme-dark-900 dim:bg-transparent w-full sm:w-[35rem]"
+    class="dark:bg-theme-dark-900 dim:bg-transparent"
     data-testid="NotificationsWrapper"
   >
-    <div
-      class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex items-center justify-between rounded-t-xl px-6 py-4 dark:bg-black"
-    >
-      <div
-        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
-      >
-        Notification
-      </div>
-    </div>
-    <div
-      class="max-h-[36rem] w-full overflow-y-hidden overscroll-y-none"
-      data-testid="NotificationsWrapper"
-    >
+    <div>
       <div
         class="relative h-full"
       >
