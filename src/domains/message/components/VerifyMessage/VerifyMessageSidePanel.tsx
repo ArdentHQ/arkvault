@@ -129,18 +129,6 @@ export const VerifyMessageSidePanel = ({
 		}
 	};
 
-	const isSubmitDisabled = () => {
-		if (isSubmitting) {
-			return true;
-		}
-
-		if (isDirty || Object.values(initialState).every(Boolean)) {
-			return Object.values(errors).length > 0;
-		}
-
-		return !isValid;
-	};
-
 	const getTitle = () => {
 		if (activeTab === Step.ErrorStep) {
 			return t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE");
@@ -221,7 +209,7 @@ export const VerifyMessageSidePanel = ({
 
 							<Button
 								type="submit"
-								disabled={isSubmitDisabled()}
+								disabled={isSubmitting || !isValid}
 								onClick={handleVerify}
 								data-testid="SignMessage__continue-button"
 							>
