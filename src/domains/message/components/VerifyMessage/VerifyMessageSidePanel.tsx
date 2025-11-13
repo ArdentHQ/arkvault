@@ -60,7 +60,7 @@ export const VerifyMessageSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { errors, formState, setValue, watch } = form;
+	const { formState, setValue, watch } = form;
 	const { isDirty, isSubmitting, dirtyFields, isValid } = formState;
 
 	const [verificationMethod, setVerificationMethod] = useState<VerificationMethod>(VerificationMethod.Manual);
