@@ -7,7 +7,7 @@ import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider } from "@/app/contexts";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
@@ -15,6 +15,7 @@ import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePane
 import { Image } from "@/app/components/Image";
 import { MessageService } from "@/app/lib/mainsail/message.service";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { Clipboard } from "@/app/components/Clipboard";
 
 enum Step {
 	FormStep = 1,
@@ -60,7 +61,7 @@ export const VerifyMessageSidePanel = ({
 	});
 
 	const { errors, formState, setValue, watch } = form;
-	const { isDirty, isSubmitting, dirtyFields } = formState;
+	const { isDirty, isSubmitting, dirtyFields, isValid } = formState;
 
 	const [verificationMethod, setVerificationMethod] = useState<VerificationMethod>(VerificationMethod.Manual);
 
@@ -137,7 +138,7 @@ export const VerifyMessageSidePanel = ({
 			return Object.values(errors).length > 0;
 		}
 
-		return true;
+		return !isValid;
 	};
 
 	const getTitle = () => {
@@ -275,12 +276,25 @@ export const VerifyMessageSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={Step.ErrorStep}>
-							<ErrorStep
-								description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
-								errorMessage={errorMessage}
-								hideHeader
-								hideFooter
-							/>
+							<div>
+								<ErrorStep
+									description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
+									errorMessage={errorMessage}
+									hideHeader
+									hideFooter
+								/>
+								<div className="flex justify-end mt-2">
+									<Clipboard
+										variant="icon"
+										data={errorMessage!}
+										iconButtonClassName="rounded px-2 py-[3px] flex items-center transition-colors-shadow duration-100 ease-linear cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 font-semibold gap-2"
+									>
+										<Icon name="Copy" size="md" />
+										<span className="leading-5">{t("COMMON.COPY_ERROR")}</span>
+									</Clipboard>
+								</div>
+							</div>
+
 						</TabPanel>
 					</StepsProvider>
 				</Tabs>
