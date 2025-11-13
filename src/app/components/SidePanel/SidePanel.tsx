@@ -267,7 +267,7 @@ const SidePanelContent = ({
 																		!hasSteps,
 																	"cursor-pointer items-center py-3.5 pr-6 pl-6":
 																		isMinimized,
-																	"items-start px-6 py-4": !isMinimized,
+																	"items-start px-6 py-3.5": !isMinimized,
 																},
 															)}
 														>
