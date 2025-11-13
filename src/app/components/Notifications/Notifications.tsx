@@ -20,10 +20,7 @@ export const Notifications = ({ profile, onTransactionClick, hideDropdown }: Not
 	}, []);
 
 	return (
-		<div
-			className="dark:bg-theme-dark-900 dim:bg-transparent"
-			data-testid="NotificationsWrapper"
-		>
+		<div className="dark:bg-theme-dark-900 dim:bg-transparent" data-testid="NotificationsWrapper">
 			{transactions.length === 0 && (
 				<div className="px-6 pt-4 pb-8">
 					<EmptyBlock className="py-4">
