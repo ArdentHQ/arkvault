@@ -211,7 +211,7 @@ export const VerifyMessageSidePanel = ({
 								type="submit"
 								disabled={isSubmitting || !isValid}
 								onClick={handleVerify}
-								data-testid="SignMessage__continue-button"
+								data-testid="VerifyMessage__verify-button"
 							>
 								{t("COMMON.VERIFY")}
 							</Button>
@@ -221,7 +221,7 @@ export const VerifyMessageSidePanel = ({
 					{isLastStep && (
 						<div className="grid w-full grid-cols-1 justify-end gap-3 sm:flex">
 							<Button
-								data-testid="SignMessage__close-button"
+								data-testid="VerifyMessage__close-button"
 								variant="secondary"
 								className="text-base"
 								onClick={() => {
@@ -236,7 +236,7 @@ export const VerifyMessageSidePanel = ({
 					{activeTab === Step.ErrorStep && (
 						<div className="grid w-full grid-cols-1 justify-end gap-3 sm:flex">
 							<Button
-								data-testid="SignMessage__back-button"
+								data-testid="VerifyMessage__back-button"
 								variant="secondary"
 								className="text-base"
 								onClick={handleBack}
