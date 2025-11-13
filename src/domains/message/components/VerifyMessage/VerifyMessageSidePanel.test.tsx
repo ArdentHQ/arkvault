@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { translations as messageTranslations } from "../../i18n";
+import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
 	getMainsailProfileId,
