@@ -256,7 +256,7 @@ const SidePanelContent = ({
 											ref={scrollRef}
 										>
 											<div className="relative">
-												<div className="bg-theme-background">
+												<div className="bg-theme-background rounded-tl-sm rounded-tr-sm sm:rounded-tl-xl sm:rounded-tr-none">
 													<div className="relative flex flex-col">
 														<div
 															onClick={isMinimized ? () => toggleMinimize() : undefined}
