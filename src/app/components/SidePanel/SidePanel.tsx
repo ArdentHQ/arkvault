@@ -137,26 +137,22 @@ const SidePanelContent = ({
 
 	const stylesConfiguration = useMemo(
 		() => ({
+			close: {
+				transform: isMinimized ? "translateY(100vh)" : "translateX(100%)",
+				transitionTimingFunction: "cubic-bezier(0.7, 0, 0.84, 0)",
+			},
+			common: {
+				transformOrigin: "right",
+				transitionProperty: "transform, opacity",
+				willChange: "transform, opacity",
+			},
 			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
 			initial: {
 				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
 			},
 			open: {
-				transform: isMinimized
-					? 'translate(0, calc(100dvh - 48px))'
-					: 'translateX(0%)',
-				transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
-			},
-			close: {
-				transform: isMinimized
-					? 'translateY(100vh)'
-					: 'translateX(100%)',
-				transitionTimingFunction: 'cubic-bezier(0.7, 0, 0.84, 0)',
-			},
-			common: {
-				transformOrigin: 'right',
-				transitionProperty: 'transform, opacity',
-				willChange: 'transform, opacity',
+				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
+				transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
 			},
 		}),
 		[isMinimized],
