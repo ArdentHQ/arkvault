@@ -64,7 +64,7 @@ const fillForm = async (
 	await waitFor(() => {
 		expect(signatureInput()).toHaveValue(signature);
 	});
-}
+};
 
 // Mock implementation of TextEncoder to always return Uint8Array.
 vi.stubGlobal(
@@ -112,9 +112,13 @@ describe("VerifyMessage", () => {
 	});
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
-		const { asFragment } = renderResponsiveWithRoute(<VerifyMessageSidePanel open={true} onOpenChange={vi.fn()} />, breakpoint, {
-			route: dashboardRoute,
-		});
+		const { asFragment } = renderResponsiveWithRoute(
+			<VerifyMessageSidePanel open={true} onOpenChange={vi.fn()} />,
+			breakpoint,
+			{
+				route: dashboardRoute,
+			},
+		);
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeDisabled();
@@ -259,7 +263,7 @@ describe("VerifyMessage", () => {
 		const signature =
 			"a2bc0c7de7e0615b752697f5789e5ecb1e6ff400fc1a55df4b620bc17721b7ea552898e0df75aa4fa7a4f301119e9a0315f4abc2e71f31b19e1c6e17bda5ab301b";
 
-		await fillForm(signature)
+		await fillForm(signature);
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
