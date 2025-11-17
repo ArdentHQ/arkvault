@@ -13,7 +13,7 @@ import {
 
 interface Context {
 	open: boolean;
-	setOpen: (value: boolean) => void;
+	setOpen: (value: boolean | ((value: boolean) => boolean)) => void;
 	refs: ReturnType<typeof useFloating>["refs"];
 	getReferenceProps: ReturnType<typeof useInteractions>["getReferenceProps"];
 	getFloatingProps: ReturnType<typeof useInteractions>["getFloatingProps"];
