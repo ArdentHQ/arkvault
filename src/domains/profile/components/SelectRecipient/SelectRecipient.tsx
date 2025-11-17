@@ -127,6 +127,7 @@ export const SelectRecipient = ({
 		},
 		[onChangeAddress, setIsRecipientSearchOpen],
 	);
+	console.log({ recipientOptions })
 
 	return (
 		<div>
@@ -151,28 +152,28 @@ export const SelectRecipient = ({
 					addons={{
 						end: showOptions
 							? {
-									content: (
-										<div
-											data-testid="SelectRecipient__select-recipient"
-											className={cn("flex items-center", {
-												"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
-													!disabled,
-											})}
-											onClick={openRecipients}
-										>
-											<Icon name="User" size="lg" />
-										</div>
-									),
-								}
+								content: (
+									<div
+										data-testid="SelectRecipient__select-recipient"
+										className={cn("flex items-center", {
+											"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
+												!disabled,
+										})}
+										onClick={openRecipients}
+									>
+										<Icon name="User" size="lg" />
+									</div>
+								),
+							}
 							: undefined,
 						start: selectedAddressAlias?.alias
 							? {
-									content: (
-										<div className="flex items-center">
-											<TruncateEnd text={selectedAddressAlias.alias} showTooltip />
-										</div>
-									),
-								}
+								content: (
+									<div className="flex items-center">
+										<TruncateEnd text={selectedAddressAlias.alias} showTooltip />
+									</div>
+								),
+							}
 							: undefined,
 					}}
 					renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}

@@ -107,6 +107,8 @@ export const Dropdown: FC<DropdownProperties> = ({
 		? cloneElement(children, { hideDropdown: () => setIsOpen(false) } as Partial<unknown> & Attributes)
 		: undefined;
 
+	console.log({ isOpen, options })
+
 	return (
 		<>
 			<div
@@ -114,6 +116,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 				ref={refs.setReference}
 				{...getReferenceProps({
 					onClick(event) {
+						console.log("on click")
 						event.stopPropagation();
 						event.preventDefault();
 					},
@@ -123,35 +126,33 @@ export const Dropdown: FC<DropdownProperties> = ({
 			</div>
 
 			{isOpen && (
-				<FloatingPortal>
-					<FloatingFocusManager context={context} disabled={isUnit()}>
-						<div
-							ref={refs.setFloating}
-							className={twMerge(
-								"z-40 w-full sm:w-auto",
-								classNames({
-									"min-w-52": variant === "options",
-									"px-5 sm:px-0": variant !== "navbar",
-									"rounded-none sm:mt-2": variant === "navbar",
-								}),
-								wrapperClass,
-							)}
-							style={floatingStyles}
-							{...getFloatingProps()}
-							data-testid={"dropdown__content" + testIdSuffix}
+				<FloatingFocusManager context={context} disabled={isUnit()}>
+					<div
+						ref={refs.setFloating}
+						className={twMerge(
+							"z-40 w-full sm:w-auto",
+							classNames({
+								"min-w-52": variant === "options",
+								"px-5 sm:px-0": variant !== "navbar",
+								"rounded-none sm:mt-2": variant === "navbar",
+							}),
+							wrapperClass,
+						)}
+						style={floatingStyles}
+						{...getFloatingProps()}
+						data-testid={"dropdown__content" + testIdSuffix}
+					>
+						<Wrapper
+							variant={options && variant === undefined ? "options" : variant}
+							className="dropdown-body dark:bg-theme-dark-900 dim:bg-theme-dim-900 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl border border-transparent bg-white shadow-xl outline-hidden"
 						>
-							<Wrapper
-								variant={options && variant === undefined ? "options" : variant}
-								className="dropdown-body dark:bg-theme-dark-900 dim:bg-theme-dim-900 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl border border-transparent bg-white shadow-xl outline-hidden"
-							>
-								{top}
-								{options?.length && renderOptions({ onSelect: onSelectOption, options, variant })}
-								{clonedElement && <div>{clonedElement}</div>}
-								{bottom}
-							</Wrapper>
-						</div>
-					</FloatingFocusManager>
-				</FloatingPortal>
+							{top}
+							{options?.length && renderOptions({ onSelect: onSelectOption, options, variant })}
+							{clonedElement && <div>{clonedElement}</div>}
+							{bottom}
+						</Wrapper>
+					</div>
+				</FloatingFocusManager>
 			)}
 		</>
 	);
