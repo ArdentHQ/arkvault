@@ -1,5 +1,4 @@
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Notifications } from "@/app/components/Notifications";
 import { useActiveProfile } from "@/app/hooks";
 import { WalletSelection } from "@/app/components/Notifications/WalletSelection/WalletSelection";
 

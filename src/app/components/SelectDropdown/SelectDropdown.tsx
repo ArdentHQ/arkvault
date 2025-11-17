@@ -205,7 +205,7 @@ const SelectDropdown = ({
 	const isVisible = useMemo(() => isOpen && showOptions, [isOpen, showOptions]);
 
 	const dropdownReference = useRef<HTMLDivElement>(null);
-	console.log({ data })
+	console.log({ data });
 
 	return (
 		<>

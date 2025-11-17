@@ -1,71 +1,78 @@
 import { Contracts } from "@/app/lib/profiles";
-import { Dropdown, DropdownOption } from "@/app/components//Dropdown";
 import { OptionLabel } from "@/domains/profile/components/SelectAddressDropdown";
 import { Icon } from "@/app/components/Icon";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { DropdownContent, DropdownRoot, DropdownToggle, DropdownListItem } from "@/app/components/SimpleDropdown";
 
-
-export function WalletSelection({ profile, onChange }: { profile: Contracts.IProfile, onChange?: (wallets: Contracts.IReadWriteWallet[]) => void }) {
-	const { t } = useTranslation()
-
-	const multipleOption = {
-		label: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
-		value: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
-	}
-	const [selected, setSelected] = useState<DropdownOption>(multipleOption)
-
-	const options = profile.wallets().values().map(wallet => {
-		return {
-			element:
-				<div className="w-xs">
-					<OptionLabel
-						network={profile.activeNetwork()}
-						profile={profile}
-						option={{ value: wallet.address(), isSelected: selected.value === wallet.alias() }}
-					/>
-				</div>,
-			label: "",
-			value: wallet.alias()!
-		}
-	})
+export function WalletSelection({
+	profile,
+	onChange,
+}: {
+	profile: Contracts.IProfile;
+	onChange?: (wallets: Contracts.IReadWriteWallet[]) => void;
+}) {
+	const { t } = useTranslation();
+	const [selectedAlias, setSelectedAlias] = useState<string>(t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"));
 
 	return (
-		<div className="inline-block w-auto relative">
-			<Dropdown
-				toggleContent={() =>
-					<div className="inline-block cursor-pointer px-3 py-2 border border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 text-sm font-semibold rounded-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
+		<div className="relative inline-block">
+			<DropdownRoot>
+				<DropdownToggle>
+					<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 inline-block cursor-pointer rounded-sm border px-3 py-2 text-sm font-semibold">
 						<div className="flex items-center space-x-2">
-							<span className="">{selected.value}</span>
+							<span className="">{selectedAlias}</span>
 							<Icon name="ChevronDownSmall" width={12} height={12} />
 						</div>
 					</div>
-				}
-				onSelect={(option) => {
-					setSelected(option)
+				</DropdownToggle>
+				<DropdownContent className="border-none p-1">
+					<ul>
+						{profile
+							.wallets()
+							.values()
+							.map((wallet) => (
+								<DropdownListItem
+									key={wallet.address()}
+									onClick={() => {
+										setSelectedAlias(wallet.alias()!);
+										onChange?.([wallet]);
+									}}
+								>
+									<div className="w-xs">
+										<OptionLabel
+											network={profile.activeNetwork()}
+											profile={profile}
+											option={{
+												isSelected: selectedAlias === wallet.alias(),
+												value: wallet.address(),
+											}}
+										/>
+									</div>
+								</DropdownListItem>
+							))}
 
-					if (option.value === multipleOption.value) {
-						onChange?.(profile.wallets().values())
-						return
-					}
-
-					const wallet = profile.wallets().findByAlias(option.value as string)
-					if (wallet) {
-						onChange?.([wallet])
-					}
-
-					setSelected(option)
-				}}
-				options={[...options, {
-					element: <OptionLabel
-						network={profile.activeNetwork()}
-						profile={profile}
-						option={{ value: multipleOption.value, isSelected: selected.value === multipleOption.value }}
-					/>,
-					label: "",
-					value: multipleOption.value
-				}]}
-			/>
+						<DropdownListItem
+							className="w-full"
+							key="multiple"
+							onClick={() => {
+								setSelectedAlias(t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"));
+								onChange?.(profile.wallets().values());
+							}}
+						>
+							<OptionLabel
+								network={profile.activeNetwork()}
+								profile={profile}
+								option={{
+									isSelected:
+										selectedAlias === t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
+									value: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
+								}}
+							/>
+						</DropdownListItem>
+					</ul>
+				</DropdownContent>
+			</DropdownRoot>
 		</div>
-	)
+	);
 }
