@@ -88,7 +88,9 @@ export const Notification = ({
 };
 
 export const NotificationLeftSide = ({ transaction }: { transaction: Transaction }): ReactNode => {
-	if (!transaction.isSuccess()) {
+	const a = Math.floor(Math.random() * 10);
+
+	if (a > 5 || !transaction.isSuccess()) {
 		return <FailedTransactionNotification transaction={transaction} />;
 	}
 
@@ -148,11 +150,11 @@ export const NotificationRightSide = ({
 				<div className="transition-all duration-200">
 					<span
 						className={cn(
-							"text-theme-secondary-700 flex items-center gap-2 text-sm leading-[21px] font-semibold sm:leading-7",
+							"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex items-center gap-2 text-sm leading-[17px] font-semibold sm:leading-7",
 							{
-								"after:bg-theme-navy-300 after:inline-flex after:h-2 after:w-2 after:rounded-full after:content-[''] sm:after:hidden":
+								"after:bg-theme-navy-300 dark:after:bg-theme-dark-navy-400 dim:after:bg-theme-dim-navy-600 after:inline-flex after:h-2 after:w-2 after:rounded-full after:content-[''] sm:after:hidden":
 									isRead,
-								"before:bg-theme-navy-300 before:hidden before:h-2 before:w-2 before:rounded-full before:content-[''] sm:before:inline-flex":
+								"before:bg-theme-navy-300 dark:before:bg-theme-dark-navy-400 dim:before:bg-theme-dim-navy-600 before:hidden before:h-2 before:w-2 before:rounded-full before:content-[''] sm:before:inline-flex":
 									isRead,
 							},
 						)}
@@ -186,20 +188,20 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 			<div className="flex sm:h-7 sm:items-end">
 				<Icon
 					name="DoubleArrowLeftDashed"
-					className="bg-theme-success-100 text-theme-success-700 rounded-lg p-1"
+					className="bg-theme-success-100 border-theme-success-100 border dark:bg-transparent dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg p-[3px]"
 				/>
 			</div>
-			<div className="text-theme-secondary-700 leading-[21px] sm:leading-7">
+			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
 				<Trans
 					i18nKey={`COMMON.NOTIFICATIONS.${translationKey}`}
 					components={{
 						Address: (
-							<span className="text-theme-secondary-900 font-semibold">
+							<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold">
 								{transaction.wallet().alias()}
 							</span>
 						),
 						Amount: (
-							<span className="text-theme-success-700 font-semibold">
+							<span className="text-theme-success-700 dark:text-theme-success-500 dim:text-theme-success-500 font-semibold">
 								{transaction.convertedAmount()}
 							</span>
 						),
@@ -213,15 +215,15 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 export const FailedTransactionNotification = ({ transaction }: { transaction: Transaction }) => (
 	<div className="flex items-start gap-3">
 		<div className="flex h-7 items-end">
-			<Icon name="CircleCross" className="bg-theme-danger-100 text-theme-danger-700 rounded-lg p-1" />
+			<Icon name="CircleCross" className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:bg-transparent border dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg p-[3px]" />
 		</div>
-		<div className="text-theme-success-700 leading-[21px] sm:leading-7">
+		<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
 			<Trans
 				i18nKey={`COMMON.NOTIFICATIONS.FAILED_TRANSACTION_NOTIFICATION`}
 				components={{
 					Error: <span>error message should go here</span>,
 					TransactionId: (
-						<TruncateMiddle className="text-theme-secondary-900 font-semibold" text={transaction.hash()} />
+						<TruncateMiddle className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold" text={transaction.hash()} />
 					),
 				}}
 			/>
