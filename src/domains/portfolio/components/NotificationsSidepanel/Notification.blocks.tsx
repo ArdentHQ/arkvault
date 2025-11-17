@@ -131,7 +131,7 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 			<Trans
 				i18nKey={`COMMON.NOTIFICATIONS.FAILED_TRANSACTION_NOTIFICATION`}
 				components={{
-					Error: <span>{transaction.explorerLink()}</span>,
+					Error: <span>error message should go here</span>,
 					TransactionId: (
 						<TruncateMiddle className="text-theme-secondary-900 font-semibold" text={transaction.hash()} />
 					),
