@@ -34,35 +34,35 @@ export const NotificationLeftSide = ({ transaction }: { transaction: Transaction
 };
 
 const NotificationActions = ({ className }: { className?: string }) => (
-		<div
-			className={cn(
-				"absolute -mx-4 -my-3 h-full items-center justify-end gap-1 self-center rounded-[12px] p-4 transition-all duration-200",
-				className,
-			)}
+	<div
+		className={cn(
+			"absolute -mx-4 -my-3 h-full items-center justify-end gap-1 self-center rounded-[12px] p-4 transition-all duration-200",
+			className,
+		)}
+	>
+		<Button
+			variant="primary-transparent"
+			onClick={() => {
+				alert("salam");
+			}}
+			className="px-2 py-[3px] sm:hidden"
 		>
-			<Button
-				variant="primary-transparent"
-				onClick={() => {
-					alert("salam");
-				}}
-				className="px-2 py-[3px] sm:hidden"
-			>
-				Details
-			</Button>
-			<Divider
-				type="vertical"
-				className="border-theme-secondary-400 dark:border-theme-secondary-800 dim:border-theme-dim-700 sm:hidden"
-			/>
-			<Button
-				data-testid={`Notification--delete-`}
-				size="icon"
-				className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
-				variant="transparent"
-			>
-				<Icon name="Trash" dimensions={[16, 16]} />
-			</Button>
-		</div>
-	);
+			Details
+		</Button>
+		<Divider
+			type="vertical"
+			className="border-theme-secondary-400 dark:border-theme-secondary-800 dim:border-theme-dim-700 sm:hidden"
+		/>
+		<Button
+			data-testid={`Notification--delete-`}
+			size="icon"
+			className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+			variant="transparent"
+		>
+			<Icon name="Trash" dimensions={[16, 16]} />
+		</Button>
+	</div>
+);
 
 export const NotificationRightSide = ({ transaction, isRead }: { transaction: Transaction; isRead: boolean }) => (
 	<>
