@@ -21,7 +21,7 @@ export function WalletSelection({
 				<DropdownToggle>
 					<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 inline-block cursor-pointer rounded-sm border px-3 py-2 text-sm font-semibold">
 						<div className="flex items-center space-x-2">
-							<span className="">{selectedAlias}</span>
+							<span>{selectedAlias}</span>
 							<Icon name="ChevronDownSmall" width={12} height={12} />
 						</div>
 					</div>
