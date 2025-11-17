@@ -32,9 +32,9 @@ export const NotificationsSidepanel = ({
 			dataTestId="NotificationsSidepanel"
 		>
 			<div className="space-y-1">
-				{transactions.map((transaction) => {
-					return <Notification transaction={transaction} isRead={isNotificationUnread(transaction)} />;
-				})}
+				{transactions.map((transaction) => (
+					<Notification transaction={transaction} isRead={isNotificationUnread(transaction)} />
+				))}
 			</div>
 		</SidePanel>
 	);
