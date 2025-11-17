@@ -127,7 +127,6 @@ export const SelectRecipient = ({
 		},
 		[onChangeAddress, setIsRecipientSearchOpen],
 	);
-	console.log({ recipientOptions });
 
 	return (
 		<div>
