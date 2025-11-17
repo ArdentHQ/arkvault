@@ -107,8 +107,6 @@ export const Dropdown: FC<DropdownProperties> = ({
 		? cloneElement(children, { hideDropdown: () => setIsOpen(false) } as Partial<unknown> & Attributes)
 		: undefined;
 
-	console.log({ isOpen, options })
-
 	return (
 		<>
 			<div
@@ -116,7 +114,6 @@ export const Dropdown: FC<DropdownProperties> = ({
 				ref={refs.setReference}
 				{...getReferenceProps({
 					onClick(event) {
-						console.log("on click")
 						event.stopPropagation();
 						event.preventDefault();
 					},
@@ -130,7 +127,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 					<div
 						ref={refs.setFloating}
 						className={twMerge(
-							"z-40 w-full sm:w-auto",
+							"z-50 w-full sm:w-auto",
 							classNames({
 								"min-w-52": variant === "options",
 								"px-5 sm:px-0": variant !== "navbar",

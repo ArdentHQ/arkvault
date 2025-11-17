@@ -21,7 +21,6 @@ export const NotificationsSidepanel = ({
 			dataTestId="NotificationsSidepanel"
 		>
 			<WalletSelection profile={activeProfile} />
-			<Notifications profile={activeProfile} />
 		</SidePanel>
 	);
 };
