@@ -12,7 +12,7 @@ type Transaction = DTO.ExtendedConfirmedTransactionData;
 
 export const Notification = ({ transaction, isRead }: { transaction: Transaction; isRead: boolean }) => (
 	<>
-		<div className="relative group hover:bg-theme-secondary-200 my-1 flex cursor-pointer flex-col rounded-[12px] py-3 sm:flex-row sm:justify-between sm:gap-14 sm:px-4">
+		<div className="group hover:bg-theme-secondary-200 relative my-1 flex cursor-pointer flex-col rounded-[12px] py-3 sm:flex-row sm:justify-between sm:gap-14 sm:px-4">
 			<NotificationLeftSide transaction={transaction} />
 			<NotificationRightSide transaction={transaction} isRead={isRead} />
 		</div>
@@ -33,27 +33,27 @@ export const NotificationLeftSide = ({ transaction }: { transaction: Transaction
 };
 
 export const NotificationRightSide = ({ transaction, isRead }: { transaction: Transaction; isRead: boolean }) => (
-	<div className="mt-[5px] ml-9 flex flex-shrink-0 items-start sm:justify-end sm:mt-0 sm:ml-0 min-w-24">
+	<div className="mt-[5px] ml-9 flex min-w-24 flex-shrink-0 items-start sm:mt-0 sm:ml-0 sm:justify-end">
 		<div className="transition-all duration-200">
 			<span
 				className={cn(
 					"text-theme-secondary-700 flex items-center gap-2 text-sm leading-[21px] font-semibold sm:leading-7",
 					{
 						"after:bg-theme-navy-300 after:inline-flex after:h-2 after:w-2 after:rounded-full after:content-[''] sm:after:hidden":
-						isRead,
+							isRead,
 						"before:bg-theme-navy-300 before:hidden before:h-2 before:w-2 before:rounded-full before:content-[''] sm:before:inline-flex":
-						isRead,
+							isRead,
 					},
 				)}
 			>
 				<TimeAgo date={DateTime.fromUnix(transaction.timestamp()?.toUNIX()).toISOString()} />
 			</span>
 		</div>
-		<div className="absolute h-full w-24 -mx-4 -my-3 p-4 justify-end rounded-[12px] hidden sm:group-hover:flex bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] items-center self-center gap-1 opacity-0 group-hover:opacity-100 transition-all duration-200">
+		<div className="absolute -mx-4 -my-3 hidden h-full w-24 items-center justify-end gap-1 self-center rounded-[12px] bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] p-4 opacity-0 transition-all duration-200 group-hover:opacity-100 sm:group-hover:flex">
 			<Button
 				data-testid={`Notification--delete-`}
 				size="icon"
-				className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 p-1 hover:bg-theme-danger-400 dim-hover:text-white hover:text-white dark:hover:text-white"
+				className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
 				variant="transparent"
 			>
 				<Icon name="Trash" dimensions={[16, 16]} />
