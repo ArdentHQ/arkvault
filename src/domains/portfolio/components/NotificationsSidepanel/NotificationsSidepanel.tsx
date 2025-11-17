@@ -1,7 +1,7 @@
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { useNotifications } from "@/app/components/Notifications";
 import { useActiveProfile } from "@/app/hooks";
-import { Notification } from "@/domains/portfolio/components/NotificationsSidepanel/NotificationRow";
+import { Notification } from "@/domains/portfolio/components/NotificationsSidepanel/Notification.blocks";
 
 export const NotificationsSidepanel = ({
 	open,
