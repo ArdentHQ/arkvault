@@ -130,7 +130,7 @@ const NotificationActions = ({
 					event.stopPropagation();
 					onDetailsClick?.();
 				}}
-				className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-400 px-2 py-[3px] sm:hidden"
+				className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 px-2 py-[3px] sm:hidden"
 			>
 				{t("COMMON.DETAILS")}
 			</Button>
