@@ -88,8 +88,6 @@ export const Notification = ({
 };
 
 export const NotificationLeftSide = ({ transaction }: { transaction: Transaction }): ReactNode => {
-	const a = Math.floor(Math.random() * 10);
-
 	if (!transaction.isSuccess()) {
 		return <FailedTransactionNotification transaction={transaction} />;
 	}
@@ -98,7 +96,7 @@ export const NotificationLeftSide = ({ transaction }: { transaction: Transaction
 		return <TransferNotification transaction={transaction} />;
 	}
 
-	return null;
+	return <></>;
 };
 
 const NotificationActions = ({ className, onDetailsClick }: { className?: string; onDetailsClick?: () => void }) => (
