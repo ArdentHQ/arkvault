@@ -143,40 +143,38 @@ export const NotificationRightSide = ({
 	isRead: boolean;
 	isExpanded: boolean;
 	onShowDetails: () => void;
-}) => {
-	return (
-		<>
-			<div className="mt-[5px] ml-9 flex min-w-24 flex-shrink-0 items-start sm:mt-0 sm:ml-0 sm:justify-end">
-				<div className="transition-all duration-200">
-					<span
-						className={cn(
-							"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex items-center gap-2 text-sm leading-[17px] font-semibold sm:leading-7",
-							{
-								"after:bg-theme-navy-300 dark:after:bg-theme-dark-navy-400 dim:after:bg-theme-dim-navy-600 after:inline-flex after:h-2 after:w-2 after:rounded-full after:content-[''] sm:after:hidden":
-									isRead,
-								"before:bg-theme-navy-300 dark:before:bg-theme-dark-navy-400 dim:before:bg-theme-dim-navy-600 before:hidden before:h-2 before:w-2 before:rounded-full before:content-[''] sm:before:inline-flex":
-									isRead,
-							},
-						)}
-					>
-						<TimeAgo date={DateTime.fromUnix(transaction.timestamp()?.toUNIX()).toISOString()} />
-					</span>
-				</div>
-				<NotificationActions className="hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex" />
+}) => (
+	<>
+		<div className="mt-[5px] ml-9 flex min-w-24 flex-shrink-0 items-start sm:mt-0 sm:ml-0 sm:justify-end">
+			<div className="transition-all duration-200">
+				<span
+					className={cn(
+						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex items-center gap-2 text-sm leading-[17px] font-semibold sm:leading-7",
+						{
+							"after:bg-theme-navy-300 dark:after:bg-theme-dark-navy-400 dim:after:bg-theme-dim-navy-600 after:inline-flex after:h-2 after:w-2 after:rounded-full after:content-[''] sm:after:hidden":
+								isRead,
+							"before:bg-theme-navy-300 dark:before:bg-theme-dark-navy-400 dim:before:bg-theme-dim-navy-600 before:hidden before:h-2 before:w-2 before:rounded-full before:content-[''] sm:before:inline-flex":
+								isRead,
+						},
+					)}
+				>
+					<TimeAgo date={DateTime.fromUnix(transaction.timestamp()?.toUNIX()).toISOString()} />
+				</span>
 			</div>
-			<NotificationActions
-				className={cn(
-					"right-0 w-8/12 min-w-8/12 bg-[linear-gradient(270deg,#EEF3F5_51.96%,rgba(238,243,245,0)_88.67%)]",
-					{
-						flex: isExpanded,
-						hidden: !isExpanded,
-					},
-				)}
-				onDetailsClick={onShowDetails}
-			/>
-		</>
-	);
-};
+			<NotificationActions className="hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex" />
+		</div>
+		<NotificationActions
+			className={cn(
+				"right-0 w-8/12 min-w-8/12 bg-[linear-gradient(270deg,#EEF3F5_51.96%,rgba(238,243,245,0)_88.67%)]",
+				{
+					flex: isExpanded,
+					hidden: !isExpanded,
+				},
+			)}
+			onDetailsClick={onShowDetails}
+		/>
+	</>
+);
 
 export const TransferNotification = ({ transaction }: { transaction: Transaction }) => {
 	const translationKey = transaction.isMultiPayment()
@@ -188,7 +186,7 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 			<div className="flex sm:h-7 sm:items-end">
 				<Icon
 					name="DoubleArrowLeftDashed"
-					className="bg-theme-success-100 border-theme-success-100 border dark:bg-transparent dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg p-[3px]"
+					className="bg-theme-success-100 border-theme-success-100 dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg border p-[3px] dark:bg-transparent"
 				/>
 			</div>
 			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
@@ -215,7 +213,10 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 export const FailedTransactionNotification = ({ transaction }: { transaction: Transaction }) => (
 	<div className="flex items-start gap-3">
 		<div className="flex h-7 items-end">
-			<Icon name="CircleCross" className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:bg-transparent border dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg p-[3px]" />
+			<Icon
+				name="CircleCross"
+				className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg border p-[3px] dark:bg-transparent"
+			/>
 		</div>
 		<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
 			<Trans
@@ -223,7 +224,10 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 				components={{
 					Error: <span>error message should go here</span>,
 					TransactionId: (
-						<TruncateMiddle className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold" text={transaction.hash()} />
+						<TruncateMiddle
+							className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+							text={transaction.hash()}
+						/>
 					),
 				}}
 			/>
