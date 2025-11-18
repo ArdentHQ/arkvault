@@ -68,9 +68,9 @@ export const Notification = ({
 				}}
 				onMouseEnter={() => onMarkAsRead(transaction.hash())}
 				className={cn(
-					"group hover:bg-theme-secondary-200 relative my-1 flex cursor-pointer flex-col rounded-[12px] py-3 sm:flex-row sm:justify-between sm:gap-14 sm:px-4",
+					"group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 dim:hover:bg-theme-dim-700 relative my-1 flex cursor-pointer flex-col rounded-[12px] px-2 py-3 sm:flex-row sm:justify-between sm:gap-14 sm:px-4",
 					{
-						"bg-theme-secondary-200": isExpanded,
+						"bg-theme-secondary-200 dark:bg-theme-dark-700 dim:bg-theme-dim-700": isExpanded,
 					},
 				)}
 			>
@@ -90,7 +90,7 @@ export const Notification = ({
 export const NotificationLeftSide = ({ transaction }: { transaction: Transaction }): ReactNode => {
 	const a = Math.floor(Math.random() * 10);
 
-	if (a > 5 || !transaction.isSuccess()) {
+	if (!transaction.isSuccess()) {
 		return <FailedTransactionNotification transaction={transaction} />;
 	}
 
@@ -104,7 +104,7 @@ export const NotificationLeftSide = ({ transaction }: { transaction: Transaction
 const NotificationActions = ({ className, onDetailsClick }: { className?: string; onDetailsClick?: () => void }) => (
 	<div
 		className={cn(
-			"absolute -my-3 h-full items-center justify-end gap-1 self-center rounded-[12px] px-4 py-3 transition-all duration-200 sm:-mx-4",
+			"absolute -my-3 h-full items-center justify-end gap-1 self-center rounded-[12px] px-2 py-3 transition-all duration-200 sm:-mx-4 sm:px-4",
 			className,
 		)}
 	>
@@ -159,7 +159,7 @@ export const NotificationRightSide = ({
 							},
 						)}
 					>
-						<TimeAgo date={DateTime.fromUnix(transaction.timestamp()?.toUNIX()).toISOString()} />
+						<TimeAgo date={DateTime.fromUnix(transaction.timestamp()!.toUNIX()).toISOString()} />
 					</span>
 				</div>
 				<NotificationActions className="hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex" />
@@ -188,7 +188,7 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 			<div className="flex sm:h-7 sm:items-end">
 				<Icon
 					name="DoubleArrowLeftDashed"
-					className="bg-theme-success-100 border-theme-success-100 border dark:bg-transparent dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg p-[3px]"
+					className="bg-theme-success-100 border-theme-success-100 dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg border p-[3px] dark:bg-transparent"
 				/>
 			</div>
 			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
@@ -215,7 +215,10 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 export const FailedTransactionNotification = ({ transaction }: { transaction: Transaction }) => (
 	<div className="flex items-start gap-3">
 		<div className="flex h-7 items-end">
-			<Icon name="CircleCross" className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:bg-transparent border dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg p-[3px]" />
+			<Icon
+				name="CircleCross"
+				className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg border p-[3px] dark:bg-transparent"
+			/>
 		</div>
 		<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
 			<Trans
@@ -223,7 +226,10 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 				components={{
 					Error: <span>error message should go here</span>,
 					TransactionId: (
-						<TruncateMiddle className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold" text={transaction.hash()} />
+						<TruncateMiddle
+							className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+							text={transaction.hash()}
+						/>
 					),
 				}}
 			/>
