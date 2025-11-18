@@ -5,13 +5,12 @@ export const NotificationsEmptyBlock = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div className="space-y-3 text-center flex flex-col items-center mt-11">
+		<div className="mt-11 flex flex-col items-center space-y-3 text-center">
 			<Image name="EmptyNotifications" />
-			<div className="text-center font-semibold leading-[28px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200">
+			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-center leading-[28px] font-semibold">
 				<p>{t("COMMON.ALL_CAUGHT_UP")}</p>
 				<p>{t("COMMON.NOTIFICATIONS.EMPTY")}</p>
 			</div>
 		</div>
-
 	);
 };
