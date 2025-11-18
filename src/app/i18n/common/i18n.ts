@@ -368,6 +368,7 @@ export const translations = {
 	REGISTRATIONS: "Registrations",
 	RELOAD: "Reload",
 	REMOVE: "Remove",
+	REMOVE_NOTIFICATION: "Remove Notification",
 	RENAME: "Rename",
 	REPEAT: "Repeat",
 	REPORT: "Report",
