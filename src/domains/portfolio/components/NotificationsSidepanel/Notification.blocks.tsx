@@ -114,13 +114,13 @@ const NotificationActions = ({ className, onDetailsClick }: { className?: string
 				event.stopPropagation();
 				onDetailsClick?.();
 			}}
-			className="text-theme-navy-600 px-2 py-[3px] sm:hidden"
+			className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-400 px-2 py-[3px] sm:hidden"
 		>
 			Details
 		</Button>
 		<Divider
 			type="vertical"
-			className="border-theme-secondary-400 dark:border-theme-secondary-800 dim:border-theme-dim-700 sm:hidden"
+			className="border-theme-secondary-400 dark:border-theme-dark-400 dim:border-theme-dim-400 sm:hidden"
 		/>
 		<Button
 			data-testid={`Notification--delete-`}
@@ -162,11 +162,11 @@ export const NotificationRightSide = ({
 						<TimeAgo date={DateTime.fromUnix(transaction.timestamp()!.toUNIX()).toISOString()} />
 					</span>
 				</div>
-				<NotificationActions className="hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex" />
+				<NotificationActions className="dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]" />
 			</div>
 			<NotificationActions
 				className={cn(
-					"right-0 w-8/12 min-w-8/12 bg-[linear-gradient(270deg,#EEF3F5_51.96%,rgba(238,243,245,0)_88.67%)]",
+					"dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] right-0 w-8/12 min-w-8/12 bg-[linear-gradient(270deg,#EEF3F5_51.96%,rgba(238,243,245,0)_88.67%)] dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]",
 					{
 						flex: isExpanded,
 						hidden: !isExpanded,
