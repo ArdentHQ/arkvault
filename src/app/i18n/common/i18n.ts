@@ -20,6 +20,7 @@ export const translations = {
 		WARNING: "Warning",
 	},
 	ALL: "All",
+	ALL_CAUGHT_UP: "All caught up!",
 	ALPHA: "ALPHA",
 	ALPHA_RELEASE: "This is an alpha release of ARK Vault",
 	AMOUNT: "Amount",
