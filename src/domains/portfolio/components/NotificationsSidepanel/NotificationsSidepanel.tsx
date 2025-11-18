@@ -1,6 +1,6 @@
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Notifications } from "@/app/components/Notifications";
 import { useActiveProfile } from "@/app/hooks";
+import { NotificationsEmptyBlock } from "@/app/components/Notifications/NotificationsEmptyBlock";
 
 export const NotificationsSidepanel = ({
 	open,
@@ -9,8 +9,6 @@ export const NotificationsSidepanel = ({
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 }) => {
-	const activeProfile = useActiveProfile();
-
 	return (
 		<SidePanel
 			minimizeable={false}
@@ -19,7 +17,7 @@ export const NotificationsSidepanel = ({
 			onOpenChange={onOpenChange}
 			dataTestId="NotificationsSidepanel"
 		>
-			<Notifications profile={activeProfile} />
+			<NotificationsEmptyBlock />
 		</SidePanel>
 	);
 };
