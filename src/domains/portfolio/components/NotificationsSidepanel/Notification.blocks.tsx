@@ -23,9 +23,10 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 			{transactions.map((transaction) => (
 				<Notification
 					transaction={transaction}
-					isRead={!isNotificationUnread(transaction)}
-					onShowDetails={(hash) => console.log("show transaction details", hash)}
-					onMarkAsRead={(hash) => console.log("notification hovered over", hash)}
+					isUnread={isNotificationUnread(transaction)}
+					onShowDetails={() => console.log("show transaction details")}
+					onMarkAsRead={() => console.log("notification hovered over")}
+					onRemove={() => console.log("on transaction removed", transaction.hash())}
 					isExpanded={expandedNotificationId === transaction.hash()}
 					toggleExpand={(id?: string) => setExpandedNotificationId(id)}
 				/>
@@ -34,21 +35,25 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	);
 };
 
+interface NotificationProperties {
+	transaction: Transaction;
+	isUnread: boolean;
+	onShowDetails: () => void;
+	onMarkAsRead: () => void;
+	onRemove: () => void;
+	isExpanded: boolean;
+	toggleExpand: (id?: string) => void;
+}
+
 export const Notification = ({
 	transaction,
-	isRead,
+	isUnread,
 	onShowDetails,
 	onMarkAsRead,
 	isExpanded,
 	toggleExpand,
-}: {
-	transaction: Transaction;
-	isRead: boolean;
-	onShowDetails: (hash: string) => void;
-	onMarkAsRead: (hash: string) => void;
-	isExpanded: boolean;
-	toggleExpand: (id?: string) => void;
-}): ReactNode => {
+	onRemove,
+}: NotificationProperties): ReactNode => {
 	const { isMdAndAbove } = useBreakpoint();
 
 	useEffect(() => {
@@ -62,12 +67,12 @@ export const Notification = ({
 			<div
 				onClick={() => {
 					if (isMdAndAbove) {
-						onShowDetails(transaction.hash());
+						onShowDetails();
 						return;
 					}
 					toggleExpand(isExpanded ? undefined : transaction.hash());
 				}}
-				onMouseEnter={() => onMarkAsRead(transaction.hash())}
+				onMouseEnter={onMarkAsRead}
 				className={cn(
 					"group hover:bg-theme-secondary-200 dark:hover:bg-theme-dark-700 dim:hover:bg-theme-dim-700 relative my-1 flex cursor-pointer flex-col rounded-[12px] px-2 py-3 sm:flex-row sm:justify-between sm:gap-14 sm:px-4",
 					{
@@ -78,9 +83,10 @@ export const Notification = ({
 				<NotificationLeftSide transaction={transaction} />
 				<NotificationRightSide
 					transaction={transaction}
-					isRead={isRead}
+					isUnread={isUnread}
 					isExpanded={isExpanded}
-					onShowDetails={() => onShowDetails(transaction.hash())}
+					onShowDetails={onShowDetails}
+					onRemove={onRemove}
 				/>
 			</div>
 			<div className="border-theme-secondary-300 divider dark:border-theme-dark-700 dim:border-theme-dim-700 h-px border-t border-dashed last:border-none" />
@@ -100,7 +106,15 @@ export const NotificationLeftSide = ({ transaction }: { transaction: Transaction
 	return <></>;
 };
 
-const NotificationActions = ({ className, onDetailsClick }: { className?: string; onDetailsClick?: () => void }) => {
+const NotificationActions = ({
+	className,
+	onRemove,
+	onDetailsClick,
+}: {
+	className?: string;
+	onDetailsClick?: () => void;
+	onRemove: () => void;
+}) => {
 	const { t } = useTranslation();
 
 	return (
@@ -126,6 +140,10 @@ const NotificationActions = ({ className, onDetailsClick }: { className?: string
 			/>
 			<Tooltip content={t("COMMON.REMOVE_NOTIFICATION")} placement="top-end">
 				<Button
+					onClick={(event) => {
+						event.stopPropagation();
+						onRemove();
+					}}
 					data-testid={`Notification--delete-`}
 					size="icon"
 					className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
@@ -140,14 +158,16 @@ const NotificationActions = ({ className, onDetailsClick }: { className?: string
 
 export const NotificationRightSide = ({
 	transaction,
-	isRead,
+	isUnread,
 	isExpanded,
 	onShowDetails,
+	onRemove,
 }: {
 	transaction: Transaction;
-	isRead: boolean;
+	isUnread: boolean;
 	isExpanded: boolean;
 	onShowDetails: () => void;
+	onRemove: () => void;
 }) => (
 	<>
 		<div className="mt-[5px] ml-9 flex min-w-24 flex-shrink-0 items-start sm:mt-0 sm:ml-0 sm:justify-end">
@@ -157,18 +177,23 @@ export const NotificationRightSide = ({
 						"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex items-center gap-2 text-sm leading-[17px] font-semibold sm:leading-7",
 						{
 							"after:bg-theme-navy-300 dark:after:bg-theme-dark-navy-400 dim:after:bg-theme-dim-navy-600 after:inline-flex after:h-2 after:w-2 after:rounded-full after:content-[''] sm:after:hidden":
-								isRead,
+								isUnread,
 							"before:bg-theme-navy-300 dark:before:bg-theme-dark-navy-400 dim:before:bg-theme-dim-navy-600 before:hidden before:h-2 before:w-2 before:rounded-full before:content-[''] sm:before:inline-flex":
-								isRead,
+								isUnread,
 						},
 					)}
 				>
 					<TimeAgo date={DateTime.fromUnix(transaction.timestamp()!.toUNIX()).toISOString()} />
 				</span>
 			</div>
-			<NotificationActions className="dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]" />
+			<NotificationActions
+				onRemove={onRemove}
+				className="dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] hidden w-24 bg-[linear-gradient(270deg,#E6EFF9_51.96%,rgba(230,239,249,0)_88.67%)] sm:group-hover:flex dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]"
+			/>
 		</div>
 		<NotificationActions
+			onRemove={onRemove}
+			onDetailsClick={onShowDetails}
 			className={cn(
 				"dim:bg-[linear-gradient(270deg,#283C64_51.96%,rgba(40,60,100,0)_88.67%)] right-0 w-8/12 min-w-8/12 bg-[linear-gradient(270deg,#EEF3F5_51.96%,rgba(238,243,245,0)_88.67%)] dark:bg-[linear-gradient(270deg,#3D444D_51.96%,rgba(61,68,77,0)_88.67%)]",
 				{
@@ -176,7 +201,6 @@ export const NotificationRightSide = ({
 					hidden: !isExpanded,
 				},
 			)}
-			onDetailsClick={onShowDetails}
 		/>
 	</>
 );
