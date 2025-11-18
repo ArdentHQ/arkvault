@@ -11,20 +11,12 @@ export const NotificationsSidepanel = ({
 }) => {
 	const activeProfile = useActiveProfile();
 
-	// const { persist } = useEnvironmentContext();
-
-	// useEffect(() => {
-	// 	markAllTransactionsAsRead(true);
-	// 	persist();
-	// }, []);
-
 	return (
 		<SidePanel
 			minimizeable={false}
 			title="Notifications"
 			open={open}
 			onOpenChange={onOpenChange}
-			// open={true}
 			dataTestId="NotificationsSidepanel"
 		>
 			<Notifications profile={activeProfile} />
