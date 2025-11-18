@@ -21,7 +21,7 @@ export function WalletSelection({
 				<DropdownToggle>
 					<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 inline-block cursor-pointer rounded-sm border px-3 py-2 text-sm font-semibold">
 						<div className="flex items-center space-x-2">
-							<span>{selectedAlias}</span>
+							<span className="max-w-[14rem] truncate">{selectedAlias}</span>
 							<Icon name="ChevronDownSmall" width={12} height={12} />
 						</div>
 					</div>
@@ -39,7 +39,7 @@ export function WalletSelection({
 										onChange?.([wallet]);
 									}}
 								>
-									<div className="w-xs">
+									<div className="w-3xs truncate sm:w-xs">
 										<OptionLabel
 											network={profile.activeNetwork()}
 											profile={profile}
@@ -60,15 +60,19 @@ export function WalletSelection({
 								onChange?.(profile.wallets().values());
 							}}
 						>
-							<OptionLabel
-								network={profile.activeNetwork()}
-								profile={profile}
-								option={{
-									isSelected:
-										selectedAlias === t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
-									value: t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"),
-								}}
-							/>
+							<div className="flex w-full items-center justify-between">
+								<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-full leading-[17px] font-semibold sm:leading-5">
+									{t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW")}
+								</span>
+
+								{selectedAlias === t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW") && (
+									<Icon
+										name="CheckmarkDouble"
+										size="md"
+										className="text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50"
+									/>
+								)}
+							</div>
 						</DropdownListItem>
 					</ul>
 				</DropdownContent>

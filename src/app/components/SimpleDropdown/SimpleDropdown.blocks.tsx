@@ -38,7 +38,7 @@ export const DropdownContent: FC<{ children: ReactNode; className?: string }> = 
 					style={floatingStyles}
 					{...getFloatingProps()}
 					className={cn(
-						"dark:bg-theme-dark-900 dark:border-theme-dark-700 dim:bg-theme-dim-900 dim:border-theme-dim-700 z-50 w-full rounded-xl border border-transparent bg-white shadow-xl! outline-hidden sm:w-auto",
+						"dark:bg-theme-dark-900 dark:border-theme-dark-700 dim:bg-theme-dim-900 dim:border-theme-dim-700 z-50 w-auto rounded-xl border border-transparent bg-white shadow-xl! outline-hidden",
 						className,
 					)}
 				>
