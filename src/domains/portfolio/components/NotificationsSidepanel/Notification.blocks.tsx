@@ -11,28 +11,51 @@ import { Divider } from "@/app/components/Divider";
 import { useBreakpoint } from "@/app/hooks";
 import { useNotifications } from "@/app/components/Notifications";
 import { Tooltip } from "@/app/components/Tooltip";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
+import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
+import { Panel, usePanels } from "@/app/contexts";
 
 type Transaction = DTO.ExtendedConfirmedTransactionData;
 
 export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { transactions, isNotificationUnread, markAsRemoved, markAsRead } = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
+	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
+	const { setIsMinimized, currentOpenedPanel, closePanel, openPanel } = usePanels();
 
 	return (
-		<div className="space-y-1">
-			{transactions.map((transaction) => (
-				<Notification
-					key={transaction.hash()}
-					transaction={transaction}
-					isUnread={isNotificationUnread(transaction)}
-					onShowDetails={() => console.log("show transaction details")}
-					onMarkAsRead={() => markAsRead(transaction.hash())}
-					onRemove={() => markAsRemoved(transaction.hash())}
-					isExpanded={expandedNotificationId === transaction.hash()}
-					toggleExpand={(id?: string) => setExpandedNotificationId(id)}
+		<>
+			<div className="space-y-1">
+				{transactions.map((transaction) => (
+					<Notification
+						key={transaction.hash()}
+						transaction={transaction}
+						isUnread={isNotificationUnread(transaction)}
+						onShowDetails={() => {
+							setTransactionModalItem(transaction)
+						}}
+						onMarkAsRead={() => markAsRead(transaction.hash())}
+						onRemove={() => markAsRemoved(transaction.hash())}
+						isExpanded={expandedNotificationId === transaction.hash()}
+						toggleExpand={(id?: string) => setExpandedNotificationId(id)}
+					/>
+				))}
+			</div>
+
+			{transactionModalItem && (
+				<TransactionDetailSidePanel
+					isOpen
+					transactionItem={transactionModalItem}
+					profile={profile}
+					onClose={() => {
+						setTransactionModalItem(undefined);
+						setTimeout(() => {
+							openPanel(Panel.Notifications)
+						}, 2)
+					}}
 				/>
-			))}
-		</div>
+			)}
+		</>
 	);
 };
 
