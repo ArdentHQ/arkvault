@@ -19,12 +19,18 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 
 		if (!hasLiveData && !isSyncing) {
 			try {
-				await profile.notifications().transactions().sync({
-					identifiers: profile.wallets().values().map((wallet) => ({
-						type: "address",
-						value: wallet.address(),
-					}))
-				});
+				await profile
+					.notifications()
+					.transactions()
+					.sync({
+						identifiers: profile
+							.wallets()
+							.values()
+							.map((wallet) => ({
+								type: "address",
+								value: wallet.address(),
+							})),
+					});
 			} catch (error) {
 				/* istanbul ignore next -- @preserve */
 				console.error("Failed to sync notifications on initialization:", error);
