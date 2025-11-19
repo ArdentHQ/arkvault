@@ -1,6 +1,6 @@
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { Notifications } from "@/app/components/Notifications";
 import { useActiveProfile } from "@/app/hooks";
+import { WalletSelection } from "@/app/components/Notifications/WalletSelection/WalletSelection";
 
 export const NotificationsSidepanel = ({
 	open,
@@ -19,7 +19,7 @@ export const NotificationsSidepanel = ({
 			onOpenChange={onOpenChange}
 			dataTestId="NotificationsSidepanel"
 		>
-			<Notifications profile={activeProfile} />
+			<WalletSelection profile={activeProfile} />
 		</SidePanel>
 	);
 };
