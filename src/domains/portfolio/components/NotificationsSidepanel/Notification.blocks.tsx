@@ -15,7 +15,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 type Transaction = DTO.ExtendedConfirmedTransactionData;
 
 export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { transactions, isNotificationUnread, markAsRemoved } = useNotifications({ profile });
+	const { transactions, isNotificationUnread, markAsRemoved, markAsRead } = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
 
 	return (
@@ -26,7 +26,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 					transaction={transaction}
 					isUnread={isNotificationUnread(transaction)}
 					onShowDetails={() => console.log("show transaction details")}
-					onMarkAsRead={() => console.log("notification hovered over")}
+					onMarkAsRead={() => markAsRead(transaction.hash())}
 					onRemove={() => markAsRemoved(transaction.hash())}
 					isExpanded={expandedNotificationId === transaction.hash()}
 					toggleExpand={(id?: string) => setExpandedNotificationId(id)}
