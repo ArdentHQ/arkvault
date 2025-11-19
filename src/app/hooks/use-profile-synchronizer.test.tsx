@@ -365,9 +365,7 @@ describe("useProfileSynchronizer", () => {
 
 		await userEvent.click(screen.getByTestId("SyncProfile"));
 
-		await waitFor(() =>
-			expect(profileNotificationsSyncSpy).toHaveBeenCalled(),
-		);
+		await waitFor(() => expect(profileNotificationsSyncSpy).toHaveBeenCalled());
 
 		resetProfileNetworksMock();
 
