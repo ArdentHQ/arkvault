@@ -14,7 +14,8 @@ export function WalletSelection({
 	onChange?: (wallets: Contracts.IReadWriteWallet[]) => void;
 }) {
 	const { t } = useTranslation();
-	const [selectedAlias, setSelectedAlias] = useState<string>(t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"));
+	const multipleViewText = t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW");
+	const [selectedAlias, setSelectedAlias] = useState<string>(multipleViewText);
 
 	return (
 		<div className="relative inline-block">
@@ -35,7 +36,8 @@ export function WalletSelection({
 							.map((wallet) => (
 								<DropdownListItem
 									className={cn({
-										"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50 ": selectedAlias === wallet.alias()
+										"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50":
+											selectedAlias === wallet.alias(),
 									})}
 									key={wallet.address()}
 									onClick={() => {
@@ -59,20 +61,21 @@ export function WalletSelection({
 
 						<DropdownListItem
 							className={cn("w-full", {
-								"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50 ": selectedAlias === t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW")
+								"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50":
+									selectedAlias === multipleViewText,
 							})}
 							key="multiple"
 							onClick={() => {
-								setSelectedAlias(t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"));
+								setSelectedAlias(multipleViewText);
 								onChange?.(profile.wallets().values());
 							}}
 						>
 							<div className="flex w-full items-center justify-between">
 								<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-full leading-[17px] font-semibold sm:leading-5">
-									{t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW")}
+									{multipleViewText}
 								</span>
 
-								{selectedAlias === t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW") && (
+								{selectedAlias === multipleViewText && (
 									<Icon
 										name="CheckmarkDouble"
 										size="md"
