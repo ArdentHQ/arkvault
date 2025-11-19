@@ -1,10 +1,12 @@
+import { useEnvironmentContext } from "@/app/contexts";
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { useEffect, useCallback, useState } from "react";
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
 	const transactions = profile.notifications().transactions().active();
-	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()));
+	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()))
+	const { env, persist } = useEnvironmentContext()
 
 	useEffect(() => {
 		void profile.notifications().transactions().hydrateFromCache();
@@ -33,20 +35,23 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			return notification.meta?.transactionId === transaction.hash() && isUnread;
 		});
 
-	const markAllAsRead = () => {
-		profile.notifications().transactions().markAllAsRead();
-		setLiveNotifications(Object.values(profile.notifications().all()));
-	};
+	const markAllAsRead = async () => {
+		profile.notifications().transactions().markAllAsRead()
+		setLiveNotifications(Object.values(profile.notifications().all()))
+		await persist()
+	}
 
-	const markAsRead = (transactionId: string) => {
-		profile.notifications().transactions().markAsRead(transactionId);
-		setLiveNotifications(Object.values(profile.notifications().all()));
-	};
+	const markAsRead = async (transactionId: string) => {
+		profile.notifications().transactions().markAsRead(transactionId)
+		setLiveNotifications(Object.values(profile.notifications().all()))
+		await persist()
+	}
 
-	const markAsRemoved = (transactionId: string) => {
-		profile.notifications().transactions().markAsRemoved(transactionId);
-		setLiveNotifications(Object.values(profile.notifications().all()));
-	};
+	const markAsRemoved = async (transactionId: string) => {
+		profile.notifications().transactions().markAsRemoved(transactionId)
+		setLiveNotifications(Object.values(profile.notifications().all()))
+		await persist()
+	}
 
 	return {
 		hasUnread: transactions.length > 0 && profile.notifications().hasUnread(),
@@ -54,7 +59,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		isSyncing,
 		markAllAsRead,
 		markAsRead,
-		markAsRemoved,
 		transactions,
+		markAsRemoved
 	};
 };

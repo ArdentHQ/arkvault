@@ -77,6 +77,7 @@ export class ProfileValidator implements IProfileValidator {
 						meta: Joi.object(),
 						name: Joi.string(),
 						read_at: Joi.number(),
+						isRemoved: Joi.boolean(),
 						type: Joi.string(),
 					}),
 				)
