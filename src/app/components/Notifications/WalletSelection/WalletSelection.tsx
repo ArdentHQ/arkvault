@@ -71,10 +71,14 @@ export function WalletSelection({
 							}}
 						>
 							<div className="flex w-full items-center justify-between">
-								<span className={cn("w-full leading-[17px] font-semibold sm:leading-5", {
-									"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200": selectedAlias !== multipleViewText,
-									"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50": selectedAlias === multipleViewText
-								})}>
+								<span
+									className={cn("w-full leading-[17px] font-semibold sm:leading-5", {
+										"text-theme-primary-600 dark:text-theme-secondary-50 dim:text-theme-dim-50":
+											selectedAlias === multipleViewText,
+										"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200":
+											selectedAlias !== multipleViewText,
+									})}
+								>
 									{multipleViewText}
 								</span>
 
