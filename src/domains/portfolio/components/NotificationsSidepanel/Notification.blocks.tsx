@@ -240,27 +240,31 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 	);
 };
 
-export const FailedTransactionNotification = ({ transaction }: { transaction: Transaction }) => (
-	<div className="flex items-start gap-3">
-		<div className="flex h-7 items-end">
-			<Icon
-				name="CircleCross"
-				className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg border p-[3px] dark:bg-transparent"
-			/>
+export const FailedTransactionNotification = ({ transaction }: { transaction: Transaction }) => {
+	const receipt = transaction.data().receipt();
+
+	return (
+		<div className="flex items-start gap-3">
+			<div className="flex h-7 items-end">
+				<Icon
+					name="CircleCross"
+					className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg border p-[3px] dark:bg-transparent"
+				/>
+			</div>
+			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
+				<Trans
+					i18nKey={receipt.hasUnknownError() ? `COMMON.NOTIFICATIONS.FAILED_TRANSACTION_GENERIC_NOTIFICATION` : `COMMON.NOTIFICATIONS.FAILED_TRANSACTION_NOTIFICATION`}
+					components={{
+						Error: <span>{receipt.prettyError()}</span>,
+						TransactionId: (
+							<TruncateMiddle
+								className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+								text={transaction.hash()}
+							/>
+						),
+					}}
+				/>
+			</div>
 		</div>
-		<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
-			<Trans
-				i18nKey={`COMMON.NOTIFICATIONS.FAILED_TRANSACTION_NOTIFICATION`}
-				components={{
-					Error: <span>error message should go here</span>,
-					TransactionId: (
-						<TruncateMiddle
-							className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
-							text={transaction.hash()}
-						/>
-					),
-				}}
-			/>
-		</div>
-	</div>
-);
+	);
+}

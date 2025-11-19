@@ -105,12 +105,19 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		try {
 			this.#profile.transactionAggregate().flush("received");
 
+			const query: AggregateQuery = {
+				cursor: 1,
+				limit: this.#defaultLimit,
+			};
+
+			if (!queryInput) {
+				query.to = this.#getToAddresses().join(",");
+			}
+
 			const transactions: ExtendedConfirmedTransactionDataCollection = await this.#profile
 				.transactionAggregate()
-				.received({
-					cursor: 1,
-					limit: this.#defaultLimit,
-					to: this.#getToAddresses().join(","),
+				.all({
+					...query,
 					...queryInput,
 				});
 
@@ -175,6 +182,11 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: ExtendedConfirmedTransactionData[] = [];
 
 		for (const transaction of transactions) {
+			if (!transaction.isSuccess() && transaction.confirmations().isGreaterThan(0)) {
+				result.push(transaction);
+				continue;
+			}
+
 			if (!this.#allowedTypes.includes(transaction.type())) {
 				continue;
 			}
