@@ -1,4 +1,5 @@
-import { DTO, Contracts } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
+import { DTO } from "@/app/lib/mainsail";
 import React, { ReactNode, useEffect, useState } from "react";
 import { Icon } from "@/app/components/Icon";
 import { Trans, useTranslation } from "react-i18next";
@@ -12,7 +13,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { useNotifications } from "@/app/components/Notifications";
 import { Tooltip } from "@/app/components/Tooltip";
 
-type Transaction = DTO.ExtendedConfirmedTransactionData;
+type Transaction = DTO.RawTransactionData;
 
 export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { transactions, isNotificationUnread } = useNotifications({ profile });
