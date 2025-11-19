@@ -105,19 +105,12 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		try {
 			this.#profile.transactionAggregate().flush("received");
 
-			const query: AggregateQuery = {
-				cursor: 1,
-				limit: this.#defaultLimit,
-			};
-
-			if (!queryInput) {
-				query.to = this.#getToAddresses().join(",");
-			}
-
 			const transactions: ExtendedConfirmedTransactionDataCollection = await this.#profile
 				.transactionAggregate()
 				.all({
-					...query,
+					cursor: 1,
+					identifiers: this.#getIdentifiers(),
+					limit: this.#defaultLimit,
 					...queryInput,
 				});
 
@@ -205,15 +198,13 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		return result;
 	}
 
-	#getToAddresses(): string[] {
-		const activeNetwork = this.#profile.activeNetwork();
+	#getIdentifiers(): AggregateQuery["identifiers"] {
+		const wallets = this.#profile.wallets().selected();
 
-		const availableWallets = this.#profile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.network().id() === activeNetwork.id());
-
-		return availableWallets.map((wallet) => wallet.address());
+		return wallets.map((wallet) => ({
+			type: "address",
+			value: wallet.address(),
+		}));
 	}
 
 	#storeTransactions(transactions: ExtendedConfirmedTransactionData[]): void {
