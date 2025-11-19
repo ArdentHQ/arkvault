@@ -4,7 +4,7 @@ import { useEffect, useCallback, useState } from "react";
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
 	const transactions = profile.notifications().transactions().active();
-	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()))
+	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()));
 
 	useEffect(() => {
 		void profile.notifications().transactions().hydrateFromCache();
@@ -34,19 +34,19 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		});
 
 	const markAllAsRead = () => {
-		profile.notifications().transactions().markAllAsRead()
-		setLiveNotifications(Object.values(profile.notifications().all()))
-	}
+		profile.notifications().transactions().markAllAsRead();
+		setLiveNotifications(Object.values(profile.notifications().all()));
+	};
 
 	const markAsRead = (transactionId: string) => {
-		profile.notifications().transactions().markAsRead(transactionId)
-		setLiveNotifications(Object.values(profile.notifications().all()))
-	}
+		profile.notifications().transactions().markAsRead(transactionId);
+		setLiveNotifications(Object.values(profile.notifications().all()));
+	};
 
 	const markAsRemoved = (transactionId: string) => {
-		profile.notifications().transactions().markAsRemoved(transactionId)
-		setLiveNotifications(Object.values(profile.notifications().all()))
-	}
+		profile.notifications().transactions().markAsRemoved(transactionId);
+		setLiveNotifications(Object.values(profile.notifications().all()));
+	};
 
 	return {
 		hasUnread: transactions.length > 0 && profile.notifications().hasUnread(),
@@ -54,7 +54,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		isSyncing,
 		markAllAsRead,
 		markAsRead,
+		markAsRemoved,
 		transactions,
-		markAsRemoved
 	};
 };

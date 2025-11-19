@@ -114,7 +114,7 @@ export class NotificationRepository implements INotificationRepository {
 
 	/** {@inheritDoc INotificationRepository.markAsRemoved} */
 	public markAsRemoved(key: string): void {
-		this.get(key).isRemoved = true
+		this.get(key).isRemoved = true;
 
 		this.#profile.status().markAsDirty();
 	}
