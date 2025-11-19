@@ -6,7 +6,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 	const isSyncing = profile.notifications().transactions().isSyncing();
 	const transactions = profile.notifications().transactions().active();
 	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()))
-	const { env, persist } = useEnvironmentContext()
+	const { persist } = useEnvironmentContext()
 
 	useEffect(() => {
 		void profile.notifications().transactions().hydrateFromCache();
