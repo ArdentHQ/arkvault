@@ -3,7 +3,7 @@ import { useMemo, useEffect, useCallback } from "react";
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
-	const liveTransactions = profile.notifications().transactions().transactions();
+	const liveTransactions = profile.notifications().transactions().active();
 	const liveNotifications = Object.values(profile.notifications().all());
 
 	const transactions = useMemo<DTO.ExtendedConfirmedTransactionData[]>(() => liveTransactions, [liveTransactions]);
@@ -55,6 +55,11 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		return { markAllTransactionsAsRead, markAsRead };
 	}, [profile]);
 
+	const markAsRemoved = (transactionId: string) => {
+		profile.notifications().transactions().markAsRemoved(transactionId)
+		console.log({ all: profile.notifications().all() })
+	}
+
 	return {
 		hasUnread: transactions.length > 0 && profile.notifications().hasUnread(),
 		isNotificationUnread,
@@ -62,5 +67,6 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		markAllTransactionsAsRead,
 		markAsRead,
 		transactions,
+		markAsRemoved
 	};
 };
