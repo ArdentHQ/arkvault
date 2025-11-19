@@ -254,7 +254,11 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 			</div>
 			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
 				<Trans
-					i18nKey={receipt.hasUnknownError() ? `COMMON.NOTIFICATIONS.FAILED_TRANSACTION_GENERIC_NOTIFICATION` : `COMMON.NOTIFICATIONS.FAILED_TRANSACTION_NOTIFICATION`}
+					i18nKey={
+						receipt.hasUnknownError()
+							? `COMMON.NOTIFICATIONS.FAILED_TRANSACTION_GENERIC_NOTIFICATION`
+							: `COMMON.NOTIFICATIONS.FAILED_TRANSACTION_NOTIFICATION`
+					}
 					components={{
 						Error: <span>{receipt.prettyError()}</span>,
 						TransactionId: (
@@ -268,4 +272,4 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 			</div>
 		</div>
 	);
-}
+};
