@@ -4,6 +4,7 @@ import { Icon } from "@/app/components/Icon";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DropdownContent, DropdownRoot, DropdownToggle, DropdownListItem } from "@/app/components/SimpleDropdown";
+import cn from "classnames";
 
 export function WalletSelection({
 	profile,
@@ -33,6 +34,9 @@ export function WalletSelection({
 							.values()
 							.map((wallet) => (
 								<DropdownListItem
+									className={cn({
+										"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50 ": selectedAlias === wallet.alias()
+									})}
 									key={wallet.address()}
 									onClick={() => {
 										setSelectedAlias(wallet.alias()!);
@@ -43,6 +47,7 @@ export function WalletSelection({
 										<OptionLabel
 											network={profile.activeNetwork()}
 											profile={profile}
+											showBalance
 											option={{
 												isSelected: selectedAlias === wallet.alias(),
 												value: wallet.address(),
@@ -53,7 +58,9 @@ export function WalletSelection({
 							))}
 
 						<DropdownListItem
-							className="w-full"
+							className={cn("w-full", {
+								"bg-theme-secondary-200 text-theme-secondary-900 dark:bg-theme-dark-700 dark:text-theme-dark-50 dim-bg-theme-dim-700 dim-text-theme-dim-50 ": selectedAlias === t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW")
+							})}
 							key="multiple"
 							onClick={() => {
 								setSelectedAlias(t("WALLETS.ADDRESSES_SIDE_PANEL.TOGGLE.MULTIPLE_VIEW"));
