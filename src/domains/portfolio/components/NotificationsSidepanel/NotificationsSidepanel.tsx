@@ -19,7 +19,7 @@ export const NotificationsSidepanel = ({
 			onOpenChange={onOpenChange}
 			dataTestId="NotificationsSidepanel"
 		>
-			<Notifications profile={activeProfile} />
+      <Notifications profile={activeProfile} />
 		</SidePanel>
 	);
 };
