@@ -220,7 +220,7 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 					className="bg-theme-success-100 border-theme-success-100 dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg border p-[3px] dark:bg-transparent"
 				/>
 			</div>
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
+			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[21px] sm:text-base sm:leading-7">
 				<Trans
 					i18nKey={`COMMON.NOTIFICATIONS.${translationKey}`}
 					components={{
