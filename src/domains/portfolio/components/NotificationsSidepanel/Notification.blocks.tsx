@@ -22,6 +22,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 		<div className="space-y-1">
 			{transactions.map((transaction) => (
 				<Notification
+					key={transaction.hash()}
 					transaction={transaction}
 					isUnread={isNotificationUnread(transaction)}
 					onShowDetails={() => console.log("show transaction details")}
