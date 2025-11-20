@@ -80,11 +80,30 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		this.#notifications.markAsRead(notification.id);
 	}
 
+	/** {@inheritDoc IProfileTransactionNotificationService.markAsRead} */
+	public markAsRemoved(transactionId: string) {
+		const notification: INotification | undefined = this.findByTransactionId(transactionId);
+
+		if (!notification) {
+			return;
+		}
+
+		this.#notifications.markAsRemoved(notification.id);
+	}
+
 	/** {@inheritDoc IProfileTransactionNotificationService.markAllAsRead} */
 	public markAllAsRead() {
 		for (const notification of this.#notifications.unread()) {
 			if (notification.type === INotificationTypes.Transaction) {
 				this.#notifications.markAsRead(notification.id);
+			}
+		}
+	}
+
+	public markAllAsRemoved() {
+		for (const notification of this.#notifications.values()) {
+			if (notification.type === INotificationTypes.Transaction) {
+				this.#notifications.markAsRemoved(notification.id);
 			}
 		}
 	}
@@ -145,6 +164,19 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		);
 	}
 
+	public active(limit?: number): ExtendedConfirmedTransactionData[] {
+		const transactions = this.transactions(limit);
+		return transactions.filter((transaction) => {
+			const notification = this.#notifications.findByTransactionId(transaction.hash());
+
+			if (notification) {
+				return !notification.isRemoved;
+			}
+
+			return true;
+		});
+	}
+
 	/** {@inheritDoc IProfileTransactionNotificationService.transaction} */
 	public transaction(transactionId: string): ExtendedConfirmedTransactionData | undefined {
 		return this.#transactions[transactionId];
@@ -175,6 +207,11 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: ExtendedConfirmedTransactionData[] = [];
 
 		for (const transaction of transactions) {
+			const existingNotification = this.#notifications.findByTransactionId(transaction.hash());
+			if (existingNotification && existingNotification.isRemoved) {
+				continue;
+			}
+
 			if (!transaction.isSuccess() && transaction.confirmations().isGreaterThan(0)) {
 				result.push(transaction);
 				continue;

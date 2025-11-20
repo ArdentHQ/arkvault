@@ -12,28 +12,84 @@ import { Divider } from "@/app/components/Divider";
 import { useBreakpoint } from "@/app/hooks";
 import { useNotifications } from "@/app/components/Notifications";
 import { Tooltip } from "@/app/components/Tooltip";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
+import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
+import { NotificationsEmptyBlock } from "@/app/components/Notifications/NotificationsEmptyBlock";
 
 type Transaction = DTO.RawTransactionData;
 
 export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { transactions, isNotificationUnread } = useNotifications({ profile });
+	const { t } = useTranslation();
+	const {
+		transactions,
+		isNotificationUnread,
+		markAsRemoved,
+		markAsRead,
+		markAllAsRemoved,
+		markAllAsRead,
+		hasUnread,
+	} = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
+	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	return (
-		<div className="space-y-1">
-			{transactions.map((transaction) => (
-				<Notification
-					key={transaction.hash()}
-					transaction={transaction}
-					isUnread={isNotificationUnread(transaction)}
-					onShowDetails={() => console.log("show transaction details")}
-					onMarkAsRead={() => console.log("notification hovered over")}
-					onRemove={() => console.log("on transaction removed", transaction.hash())}
-					isExpanded={expandedNotificationId === transaction.hash()}
-					toggleExpand={(id?: string) => setExpandedNotificationId(id)}
+		<>
+			<div className="mb-3 flex items-center justify-end">
+				<Button
+					data-testid="WalletVote__button"
+					disabled={!hasUnread}
+					variant="secondary-icon"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 w-auto space-x-2 px-2 py-[3px] disabled:bg-transparent dark:disabled:bg-transparent"
+					onClick={() => markAllAsRead()}
+				>
+					<Icon name="CheckmarkDouble" />
+					<span>{t("COMMON.NOTIFICATIONS.MARK_ALL_AS_READ")}</span>
+				</Button>
+				<Divider type="vertical" />
+				<Button
+					data-testid="WalletVote__button"
+					disabled={transactions.length === 0}
+					variant="secondary-icon"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 space-x-2 px-2 py-[3px] disabled:bg-transparent dark:disabled:bg-transparent"
+					onClick={() => markAllAsRemoved()}
+				>
+					<Icon name="Trash" />
+					<span className="hidden sm:block">{t("COMMON.REMOVE_ALL")}</span>
+				</Button>
+			</div>
+
+			{transactions.length > 0 && (
+				<div className="space-y-1">
+					{transactions.map((transaction) => (
+						<Notification
+							key={transaction.hash()}
+							transaction={transaction}
+							isUnread={isNotificationUnread(transaction)}
+							onShowDetails={() => {
+								setTransactionModalItem(transaction);
+							}}
+							onMarkAsRead={() => markAsRead(transaction.hash())}
+							onRemove={() => markAsRemoved(transaction.hash())}
+							isExpanded={expandedNotificationId === transaction.hash()}
+							toggleExpand={(id?: string) => setExpandedNotificationId(id)}
+						/>
+					))}
+				</div>
+			)}
+
+			{transactions.length === 0 && <NotificationsEmptyBlock />}
+
+			{transactionModalItem && (
+				<TransactionDetailSidePanel
+					isOpen
+					transactionItem={transactionModalItem}
+					profile={profile}
+					onClose={() => {
+						setTransactionModalItem(undefined);
+					}}
 				/>
-			))}
-		</div>
+			)}
+		</>
 	);
 };
 
