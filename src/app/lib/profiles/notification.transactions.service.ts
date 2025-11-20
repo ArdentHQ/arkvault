@@ -107,10 +107,10 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 
 			const transactions: ExtendedConfirmedTransactionDataCollection = await this.#profile
 				.transactionAggregate()
-				.received({
+				.all({
 					cursor: 1,
+					identifiers: this.#getIdentifiers(),
 					limit: this.#defaultLimit,
-					to: this.#getToAddresses().join(","),
 					...queryInput,
 				});
 
@@ -175,6 +175,11 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: ExtendedConfirmedTransactionData[] = [];
 
 		for (const transaction of transactions) {
+			if (!transaction.isSuccess() && transaction.confirmations().isGreaterThan(0)) {
+				result.push(transaction);
+				continue;
+			}
+
 			if (!this.#allowedTypes.includes(transaction.type())) {
 				continue;
 			}
@@ -193,15 +198,13 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		return result;
 	}
 
-	#getToAddresses(): string[] {
-		const activeNetwork = this.#profile.activeNetwork();
+	#getIdentifiers(): AggregateQuery["identifiers"] {
+		const wallets = this.#profile.wallets().selected();
 
-		const availableWallets = this.#profile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.network().id() === activeNetwork.id());
-
-		return availableWallets.map((wallet) => wallet.address());
+		return wallets.map((wallet) => ({
+			type: "address",
+			value: wallet.address(),
+		}));
 	}
 
 	#storeTransactions(transactions: ExtendedConfirmedTransactionData[]): void {

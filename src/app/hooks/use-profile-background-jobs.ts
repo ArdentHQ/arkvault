@@ -41,16 +41,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 					await profile.sync({ networkId: activeNetwork.id(), ttl: 15_000 });
 					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
 
-					const toAddresses: string[] = profile
-						.wallets()
-						.values()
-						.filter((wallet) => wallet.network().id() === activeNetwork.id())
-						.map((wallet) => wallet.address());
-
-					await profile
-						.notifications()
-						.transactions()
-						.sync({ to: toAddresses.join(",") });
+					await profile.notifications().transactions().sync();
 				} finally {
 					setConfiguration(profileId, { profileIsSyncingWallets: false });
 				}
