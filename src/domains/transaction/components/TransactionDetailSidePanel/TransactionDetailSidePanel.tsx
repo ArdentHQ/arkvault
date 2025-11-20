@@ -21,7 +21,6 @@ import { useConfirmedTransaction } from "@/domains/transaction/components/Transa
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { useTranslation } from "react-i18next";
-import { SidePanelStandaloneContent } from "@/app/components/SidePanel/SidepanelStandaloneContent";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -163,7 +162,7 @@ export const TransactionDetailSidePanel = ({
 	// If already confirmed, skip the hook entirely
 	if (transactionItem.isConfirmed()) {
 		return (
-			<SidePanelStandaloneContent title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
+			<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
 				<TransactionDetailContent
 					transactionItem={transactionItem}
 					profile={profile}
@@ -172,7 +171,7 @@ export const TransactionDetailSidePanel = ({
 					allowHideBalance
 					containerClassname="-mx-3 sm:mx-0"
 				/>
-			</SidePanelStandaloneContent>
+			</SidePanel>
 		);
 	}
 
@@ -183,7 +182,7 @@ export const TransactionDetailSidePanel = ({
 	const isConfirmedToShow = isConfirmed;
 
 	return (
-		<SidePanelStandaloneContent title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
+		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
 			<TransactionDetailContent
 				transactionItem={transactionToShow}
 				profile={profile}
@@ -192,6 +191,6 @@ export const TransactionDetailSidePanel = ({
 				allowHideBalance
 				containerClassname="-mx-3 sm:mx-0"
 			/>
-		</SidePanelStandaloneContent>
+		</SidePanel>
 	);
 };
