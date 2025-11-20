@@ -5,8 +5,8 @@ import { useEffect, useCallback, useState } from "react";
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
 	const transactions = profile.notifications().transactions().active();
-	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()))
-	const { persist } = useEnvironmentContext()
+	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()));
+	const { persist } = useEnvironmentContext();
 
 	useEffect(() => {
 		void profile.notifications().transactions().hydrateFromCache();
@@ -36,37 +36,37 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		});
 
 	const markAllAsRead = async () => {
-		profile.notifications().transactions().markAllAsRead()
-		setLiveNotifications(Object.values(profile.notifications().all()))
-		await persist()
-	}
+		profile.notifications().transactions().markAllAsRead();
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
 	const markAsRead = async (transactionId: string) => {
-		profile.notifications().transactions().markAsRead(transactionId)
-		setLiveNotifications(Object.values(profile.notifications().all()))
-		await persist()
-	}
+		profile.notifications().transactions().markAsRead(transactionId);
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
 	const markAsRemoved = async (transactionId: string) => {
-		profile.notifications().transactions().markAsRemoved(transactionId)
-		setLiveNotifications(Object.values(profile.notifications().all()))
-		await persist()
-	}
+		profile.notifications().transactions().markAsRemoved(transactionId);
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
 	const markAllAsRemoved = async () => {
-		profile.notifications().transactions().markAllAsRemoved()
-		setLiveNotifications(Object.values(profile.notifications().all()))
-		await persist()
-	}
+		profile.notifications().transactions().markAllAsRemoved();
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
 	return {
 		hasUnread: transactions.length > 0 && profile.notifications().hasUnread(),
 		isNotificationUnread,
 		isSyncing,
 		markAllAsRead,
-		markAsRead,
-		transactions,
-		markAsRemoved,
 		markAllAsRemoved,
+		markAsRead,
+		markAsRemoved,
+		transactions,
 	};
 };

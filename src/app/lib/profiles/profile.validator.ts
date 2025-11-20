@@ -74,10 +74,10 @@ export class ProfileValidator implements IProfileValidator {
 						body: Joi.string(),
 						icon: Joi.string(),
 						id: Joi.string().required(),
+						isRemoved: Joi.boolean(),
 						meta: Joi.object(),
 						name: Joi.string(),
 						read_at: Joi.number(),
-						isRemoved: Joi.boolean(),
 						type: Joi.string(),
 					}),
 				)

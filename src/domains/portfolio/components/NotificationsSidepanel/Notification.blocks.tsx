@@ -18,13 +18,21 @@ type Transaction = DTO.ExtendedConfirmedTransactionData;
 
 export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
-	const { transactions, isNotificationUnread, markAsRemoved, markAsRead, markAllAsRemoved, markAllAsRead, hasUnread } = useNotifications({ profile });
+	const {
+		transactions,
+		isNotificationUnread,
+		markAsRemoved,
+		markAsRead,
+		markAllAsRemoved,
+		markAllAsRead,
+		hasUnread,
+	} = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	return (
 		<>
-			<div className="flex items-center justify-end mb-3">
+			<div className="mb-3 flex items-center justify-end">
 				<Button
 					data-testid="WalletVote__button"
 					disabled={!hasUnread}
@@ -54,7 +62,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 						transaction={transaction}
 						isUnread={isNotificationUnread(transaction)}
 						onShowDetails={() => {
-							setTransactionModalItem(transaction)
+							setTransactionModalItem(transaction);
 						}}
 						onMarkAsRead={() => markAsRead(transaction.hash())}
 						onRemove={() => markAsRemoved(transaction.hash())}

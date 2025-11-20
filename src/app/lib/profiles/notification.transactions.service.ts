@@ -165,16 +165,16 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 	}
 
 	public active(limit?: number): ExtendedConfirmedTransactionData[] {
-		const transactions = this.transactions(limit)
-		return transactions.filter(transaction => {
-			const notification = this.#notifications.findByTransactionId(transaction.hash())
+		const transactions = this.transactions(limit);
+		return transactions.filter((transaction) => {
+			const notification = this.#notifications.findByTransactionId(transaction.hash());
 
 			if (notification) {
 				return !notification.isRemoved;
 			}
 
-			return true
-		})
+			return true;
+		});
 	}
 
 	/** {@inheritDoc IProfileTransactionNotificationService.transaction} */
@@ -207,7 +207,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: ExtendedConfirmedTransactionData[] = [];
 
 		for (const transaction of transactions) {
-			const existingNotification = this.#notifications.findByTransactionId(transaction.hash())
+			const existingNotification = this.#notifications.findByTransactionId(transaction.hash());
 			if (existingNotification && existingNotification.isRemoved) {
 				continue;
 			}
