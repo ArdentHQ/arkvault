@@ -38,7 +38,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 					data-testid="WalletVote__button"
 					disabled={!hasUnread}
 					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 space-x-2 disabled:bg-transparent w-auto px-2 py-[3px] dark:disabled:bg-transparent"
 					onClick={() => markAllAsRead()}
 				>
 					<Icon name="CheckmarkDouble" />
@@ -49,11 +49,11 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 					data-testid="WalletVote__button"
 					disabled={transactions.length === 0}
 					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600  space-x-2 disabled:bg-transparent px-2 py-[3px] dark:disabled:bg-transparent"
 					onClick={() => markAllAsRemoved()}
 				>
 					<Icon name="Trash" />
-					<span>{t("COMMON.REMOVE_ALL")}</span>
+					<span className="hidden sm:block">{t("COMMON.REMOVE_ALL")}</span>
 				</Button>
 			</div>
 			<div className="space-y-1">
