@@ -14,6 +14,7 @@ import { useNotifications } from "@/app/components/Notifications";
 import { Tooltip } from "@/app/components/Tooltip";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
+import { NotificationsEmptyBlock } from "@/app/components/Notifications/NotificationsEmptyBlock";
 
 type Transaction = DTO.RawTransactionData;
 
@@ -30,6 +31,8 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	} = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
+
+
 
 	return (
 		<>
@@ -56,22 +59,29 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 					<span className="hidden sm:block">{t("COMMON.REMOVE_ALL")}</span>
 				</Button>
 			</div>
-			<div className="space-y-1">
-				{transactions.map((transaction) => (
-					<Notification
-						key={transaction.hash()}
-						transaction={transaction}
-						isUnread={isNotificationUnread(transaction)}
-						onShowDetails={() => {
-							setTransactionModalItem(transaction);
-						}}
-						onMarkAsRead={() => markAsRead(transaction.hash())}
-						onRemove={() => markAsRemoved(transaction.hash())}
-						isExpanded={expandedNotificationId === transaction.hash()}
-						toggleExpand={(id?: string) => setExpandedNotificationId(id)}
-					/>
-				))}
-			</div>
+
+			{transactions.length > 0 && (
+				<div className="space-y-1">
+					{transactions.map((transaction) => (
+						<Notification
+							key={transaction.hash()}
+							transaction={transaction}
+							isUnread={isNotificationUnread(transaction)}
+							onShowDetails={() => {
+								setTransactionModalItem(transaction);
+							}}
+							onMarkAsRead={() => markAsRead(transaction.hash())}
+							onRemove={() => markAsRemoved(transaction.hash())}
+							isExpanded={expandedNotificationId === transaction.hash()}
+							toggleExpand={(id?: string) => setExpandedNotificationId(id)}
+						/>
+					))}
+				</div>
+			)}
+
+			{transactions.length === 0 && (
+				<NotificationsEmptyBlock />
+			)}
 
 			{transactionModalItem && (
 				<TransactionDetailSidePanel
