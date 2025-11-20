@@ -207,7 +207,6 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: ExtendedConfirmedTransactionData[] = [];
 
 		for (const transaction of transactions) {
-
 			const existingNotification = this.#notifications.findByTransactionId(transaction.hash());
 			if (existingNotification && existingNotification.isRemoved) {
 				continue;
