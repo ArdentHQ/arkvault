@@ -482,6 +482,7 @@ export const translations = {
 		MIN_RECIPIENTS: "At least one recipient is required.",
 		MULTIPLE_UNDERSCORES: "A username cannot contain two or more consecutive underscores.",
 		OPTIONAL: "This field is optional.",
+		PASSWORD_GENERIC_ERROR: "Please follow the hints below to strengthen your password.",
 		PASSWORD_LEAKED: "Please change your password, it has been found in a previous breach.",
 		PASSWORD_MISMATCH: "Passwords do not match.",
 		PASSWORD_RULES: {
