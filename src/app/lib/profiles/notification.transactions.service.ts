@@ -101,7 +101,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 	}
 
 	public markAllAsRemoved() {
-		for (const notification of this.#notifications.unread()) {
+		for (const notification of this.#notifications.values()) {
 			if (notification.type === INotificationTypes.Transaction) {
 				this.#notifications.markAsRemoved(notification.id);
 			}

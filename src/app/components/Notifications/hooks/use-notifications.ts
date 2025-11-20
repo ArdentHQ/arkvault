@@ -53,6 +53,12 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		await persist()
 	}
 
+	const markAllAsRemoved = async () => {
+		profile.notifications().transactions().markAllAsRemoved()
+		setLiveNotifications(Object.values(profile.notifications().all()))
+		await persist()
+	}
+
 	return {
 		hasUnread: transactions.length > 0 && profile.notifications().hasUnread(),
 		isNotificationUnread,
@@ -60,6 +66,7 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 		markAllAsRead,
 		markAsRead,
 		transactions,
-		markAsRemoved
+		markAsRemoved,
+		markAllAsRemoved,
 	};
 };

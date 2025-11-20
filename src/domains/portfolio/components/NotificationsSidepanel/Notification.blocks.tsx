@@ -13,18 +13,40 @@ import { useNotifications } from "@/app/components/Notifications";
 import { Tooltip } from "@/app/components/Tooltip";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
-import { Panel, usePanels } from "@/app/contexts";
 
 type Transaction = DTO.ExtendedConfirmedTransactionData;
 
 export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { transactions, isNotificationUnread, markAsRemoved, markAsRead } = useNotifications({ profile });
+	const { t } = useTranslation();
+	const { transactions, isNotificationUnread, markAsRemoved, markAsRead, markAllAsRemoved, markAllAsRead, hasUnread } = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
-	const { setIsMinimized, currentOpenedPanel, closePanel, openPanel } = usePanels();
 
 	return (
 		<>
+			<div className="flex items-center justify-end mb-3">
+				<Button
+					data-testid="WalletVote__button"
+					disabled={!hasUnread}
+					variant="secondary-icon"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+					onClick={() => markAllAsRead()}
+				>
+					<Icon name="CheckmarkDouble" />
+					<span>{t("COMMON.NOTIFICATIONS.MARK_ALL_AS_READ")}</span>
+				</Button>
+				<Divider type="vertical" />
+				<Button
+					data-testid="WalletVote__button"
+					disabled={transactions.length === 0}
+					variant="secondary-icon"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+					onClick={() => markAllAsRemoved()}
+				>
+					<Icon name="Trash" />
+					<span>{t("COMMON.REMOVE_ALL")}</span>
+				</Button>
+			</div>
 			<div className="space-y-1">
 				{transactions.map((transaction) => (
 					<Notification
@@ -49,9 +71,6 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 					profile={profile}
 					onClose={() => {
 						setTransactionModalItem(undefined);
-						setTimeout(() => {
-							openPanel(Panel.Notifications)
-						}, 2)
 					}}
 				/>
 			)}
