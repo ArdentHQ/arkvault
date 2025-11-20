@@ -1,5 +1,4 @@
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
-import { NotificationsEmptyBlock } from "@/app/components/Notifications/NotificationsEmptyBlock";
 import { Notifications } from "./Notification.blocks";
 import { useActiveProfile } from "@/app/hooks";
 
