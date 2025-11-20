@@ -11,70 +11,28 @@ import { Divider } from "@/app/components/Divider";
 import { useBreakpoint } from "@/app/hooks";
 import { useNotifications } from "@/app/components/Notifications";
 import { Tooltip } from "@/app/components/Tooltip";
-import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
-import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
 
 type Transaction = DTO.ExtendedConfirmedTransactionData;
 
 export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
-	const { t } = useTranslation();
-	const { transactions, isNotificationUnread, markAsRemoved, markAsRead, markAllAsRemoved, markAllAsRead, hasUnread } = useNotifications({ profile });
+	const { transactions, isNotificationUnread } = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
-	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	return (
-		<>
-			<div className="flex items-center justify-end mb-3">
-				<Button
-					data-testid="WalletVote__button"
-					disabled={!hasUnread}
-					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-					onClick={() => markAllAsRead()}
-				>
-					<Icon name="CheckmarkDouble" />
-					<span>{t("COMMON.NOTIFICATIONS.MARK_ALL_AS_READ")}</span>
-				</Button>
-				<Divider type="vertical" />
-				<Button
-					data-testid="WalletVote__button"
-					disabled={transactions.length === 0}
-					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-					onClick={() => markAllAsRemoved()}
-				>
-					<Icon name="Trash" />
-					<span>{t("COMMON.REMOVE_ALL")}</span>
-				</Button>
-			</div>
-			<div className="space-y-1">
-				{transactions.map((transaction) => (
-					<Notification
-						key={transaction.hash()}
-						transaction={transaction}
-						isUnread={isNotificationUnread(transaction)}
-						onShowDetails={() => {
-							setTransactionModalItem(transaction)
-						}}
-						onMarkAsRead={() => markAsRead(transaction.hash())}
-						onRemove={() => markAsRemoved(transaction.hash())}
-						isExpanded={expandedNotificationId === transaction.hash()}
-						toggleExpand={(id?: string) => setExpandedNotificationId(id)}
-					/>
-				))}
-			</div>
-
-			{transactionModalItem && (
-				<TransactionDetailSidePanel
-					isOpen
-					transactionItem={transactionModalItem}
-					profile={profile}
-					onClose={() => {
-						setTransactionModalItem(undefined);
-					}}
+		<div className="space-y-1">
+			{transactions.map((transaction) => (
+				<Notification
+					key={transaction.hash()}
+					transaction={transaction}
+					isUnread={isNotificationUnread(transaction)}
+					onShowDetails={() => console.log("show transaction details")}
+					onMarkAsRead={() => console.log("notification hovered over")}
+					onRemove={() => console.log("on transaction removed", transaction.hash())}
+					isExpanded={expandedNotificationId === transaction.hash()}
+					toggleExpand={(id?: string) => setExpandedNotificationId(id)}
 				/>
-			)}
-		</>
+			))}
+		</div>
 	);
 };
 
@@ -261,7 +219,7 @@ export const TransferNotification = ({ transaction }: { transaction: Transaction
 					className="bg-theme-success-100 border-theme-success-100 dark:border-theme-success-700 dark:text-theme-success-500 dim:bg-transparent dim:border-theme-success-700 dim:text-theme-success-500 text-theme-success-700 rounded-lg border p-[3px] dark:bg-transparent"
 				/>
 			</div>
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
+			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[21px] sm:text-base sm:leading-7">
 				<Trans
 					i18nKey={`COMMON.NOTIFICATIONS.${translationKey}`}
 					components={{
@@ -290,7 +248,7 @@ export const FailedTransactionNotification = ({ transaction }: { transaction: Tr
 				className="bg-theme-danger-100 text-theme-danger-700 border-theme-danger-100 dark:border-theme-danger-400 dark:text-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400 dim:text-theme-danger-400 rounded-lg border p-[3px] dark:bg-transparent"
 			/>
 		</div>
-		<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-[21px] sm:leading-7">
+		<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[21px] sm:text-base sm:leading-7">
 			<Trans
 				i18nKey={`COMMON.NOTIFICATIONS.FAILED_TRANSACTION_NOTIFICATION`}
 				components={{
