@@ -20,6 +20,7 @@ export const translations = {
 		WARNING: "Warning",
 	},
 	ALL: "All",
+	ALL_CAUGHT_UP: "All caught up!",
 	ALPHA: "ALPHA",
 	ALPHA_RELEASE: "This is an alpha release of ARK Vault",
 	AMOUNT: "Amount",
@@ -290,8 +291,10 @@ export const translations = {
 			UPDATE: "Update",
 		},
 		EMPTY: "You have no notifications at this time.",
+		FAILED_TRANSACTION_GENERIC_NOTIFICATION:
+			"Transaction failed: <TransactionId/>. <br/> Error encountered during contract execution.",
 		FAILED_TRANSACTION_NOTIFICATION:
-			"Transaction failed: <TransactionId/>. <br/> Failed to execute on-chain. Reason: <br/>  <Error/>",
+			"Transaction failed: <TransactionId/>. <br/> Error encountered during contract execution: <Error/>",
 		MARK_ALL_AS_READ: "Mark all as read",
 		PLUGINS_TITLE: "Plugins",
 		TITLE: "Notifications",
