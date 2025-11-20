@@ -9,7 +9,7 @@ export const NotificationsSidepanel = ({
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 }) => {
-	const activeProfile = useActiveProfile()
+	const activeProfile = useActiveProfile();
 
 	return (
 		<SidePanel
@@ -21,5 +21,5 @@ export const NotificationsSidepanel = ({
 		>
 			<Notifications profile={activeProfile} />
 		</SidePanel>
-	)
+	);
 };

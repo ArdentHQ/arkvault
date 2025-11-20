@@ -32,8 +32,6 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
-
-
 	return (
 		<>
 			<div className="mb-3 flex items-center justify-end">
@@ -41,7 +39,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 					data-testid="WalletVote__button"
 					disabled={!hasUnread}
 					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 space-x-2 disabled:bg-transparent w-auto px-2 py-[3px] dark:disabled:bg-transparent"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 w-auto space-x-2 px-2 py-[3px] disabled:bg-transparent dark:disabled:bg-transparent"
 					onClick={() => markAllAsRead()}
 				>
 					<Icon name="CheckmarkDouble" />
@@ -52,7 +50,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 					data-testid="WalletVote__button"
 					disabled={transactions.length === 0}
 					variant="secondary-icon"
-					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600  space-x-2 disabled:bg-transparent px-2 py-[3px] dark:disabled:bg-transparent"
+					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 space-x-2 px-2 py-[3px] disabled:bg-transparent dark:disabled:bg-transparent"
 					onClick={() => markAllAsRemoved()}
 				>
 					<Icon name="Trash" />
@@ -79,9 +77,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 				</div>
 			)}
 
-			{transactions.length === 0 && (
-				<NotificationsEmptyBlock />
-			)}
+			{transactions.length === 0 && <NotificationsEmptyBlock />}
 
 			{transactionModalItem && (
 				<TransactionDetailSidePanel
