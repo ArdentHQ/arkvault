@@ -6,6 +6,7 @@ import { Icon } from "@/app/components/Icon";
 type InputPasswordProperties = {
 	isInvalid?: boolean;
 	ref?: React.Ref<HTMLInputElement>;
+	errorMessage?: string;
 } & React.InputHTMLAttributes<any>;
 
 export const InputPassword = (properties: InputPasswordProperties) => {
@@ -17,6 +18,7 @@ export const InputPassword = (properties: InputPasswordProperties) => {
 			data-testid="InputPassword"
 			type={show ? "text" : "password"}
 			autoComplete="new-password"
+			errorMessage={properties.errorMessage}
 			addons={{
 				end: {
 					content: (

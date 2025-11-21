@@ -330,6 +330,7 @@ export const translations = {
 		SEND_VOTE: "Send Vote",
 		SIGN_MESSAGE: "Sign Message",
 		TRANSACTION_DETAILS: "Transaction Details",
+		VERIFY_MESSAGE: "Verify Message",
 	},
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",
@@ -490,6 +491,7 @@ export const translations = {
 		MIN_RECIPIENTS: "At least one recipient is required.",
 		MULTIPLE_UNDERSCORES: "A username cannot contain two or more consecutive underscores.",
 		OPTIONAL: "This field is optional.",
+		PASSWORD_GENERIC_ERROR: "Please follow the hints below to strengthen your password.",
 		PASSWORD_LEAKED: "Please change your password, it has been found in a previous breach.",
 		PASSWORD_MISMATCH: "Passwords do not match.",
 		PASSWORD_RULES: {
@@ -515,6 +517,7 @@ export const translations = {
 	VALIDATOR_STATUS: "Validator Status",
 	VALUE: "Value",
 	VERIFIED: "Verified Address: {{value}}",
+	VERIFY: "Verify",
 	VERSION: "Version",
 	VIEW: "View",
 	VIEWING: "Viewing",

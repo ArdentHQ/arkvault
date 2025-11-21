@@ -7,6 +7,7 @@ export enum Panel {
 	SendTransfer = "SEND_TRANSFER",
 	SendVote = "SEND_VOTE",
 	SignMessage = "SIGN_MESSAGE",
+	VerifyMessage = "VERIFY_MESSAGE",
 	SendUsernameResignation = "SEND_USERNAME_RESIGNATION",
 	SendValidatorResignation = "SEND_VALIDATOR_RESIGNATION",
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
@@ -21,12 +22,14 @@ interface PanelsContextValue {
 	closePanel: () => Promise<void>;
 	openPanel: (panel: Panel) => void;
 	isMinimized: boolean;
+	isExpanded: boolean;
 	setIsMinimized: (isMinimized: boolean) => void;
 	showConfirmationModal: boolean;
 	setShowConfirmationModal: (showConfirmationModal: boolean) => void;
 	confirmOpen: () => Promise<void>;
 	cancelOpen: () => void;
 	toggleMinimize: () => void;
+	toggleExpand: () => void;
 	currentOpenedPanelName: string | undefined;
 }
 
@@ -39,6 +42,7 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [currentOpenedPanel, setCurrentOpenedPanel] = useState<Panel | undefined>(undefined);
 	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
+	const [isExpanded, setIsExpanded] = useState(false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 	const [componentResetedPromiseResolver, setComponentResetedPromiseResolver] = useState<
 		((value: void | PromiseLike<void>) => void) | undefined
@@ -112,6 +116,10 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		setIsMinimized(!isMinimized);
 	};
 
+	const toggleExpand = () => {
+		setIsExpanded(!isExpanded);
+	};
+
 	return (
 		<PanelsContext.Provider
 			value={{
@@ -120,11 +128,13 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				confirmOpen,
 				currentOpenedPanel,
 				currentOpenedPanelName,
+				isExpanded,
 				isMinimized,
 				openPanel,
 				setIsMinimized,
 				setShowConfirmationModal,
 				showConfirmationModal,
+				toggleExpand,
 				toggleMinimize,
 			}}
 		>

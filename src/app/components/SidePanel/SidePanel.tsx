@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import {
 	FloatingFocusManager,
 	FloatingOverlay,
@@ -90,7 +91,7 @@ const SidePanelContent = ({
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
-	const { isMinimized, toggleMinimize } = usePanels();
+	const { isMinimized, toggleMinimize, toggleExpand, isExpanded } = usePanels();
 
 	const { hasFixedFormButtons } = useNavigationContext();
 
@@ -138,12 +139,13 @@ const SidePanelContent = ({
 	const stylesConfiguration = useMemo(
 		() => ({
 			close: {
-				transform: isMinimized ? "translate(148px, 100%)" : "translateX(100%)",
-				transitionTimingFunction: "ease-in",
+				transform: isMinimized ? "translateY(100vh)" : "translateX(100%)",
+				transitionTimingFunction: "cubic-bezier(0.7, 0, 0.84, 0)",
 			},
 			common: {
 				transformOrigin: "right",
-				transitionProperty: "transform",
+				transitionProperty: "transform, opacity",
+				willChange: "transform, opacity",
 			},
 			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
 			initial: {
@@ -151,7 +153,7 @@ const SidePanelContent = ({
 			},
 			open: {
 				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
-				transitionTimingFunction: "ease-out",
+				transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
 			},
 		}),
 		[isMinimized],
@@ -236,7 +238,7 @@ const SidePanelContent = ({
 										className={cn("fixed right-0 w-full transition-all duration-300", className, {
 											"animate-shake": shake,
 											"sm:top-0 sm:max-w-[425px]": isMinimized,
-											"top-0 sm:max-w-[608px]": !isMinimized,
+											"top-0 sm:max-w-[608px]": !isMinimized && !isExpanded,
 											"top-[-56px]": !hasFixedFormButtons && isMinimized,
 											"top-[-68px]": hasFixedFormButtons && isMinimized,
 										})}
@@ -254,7 +256,7 @@ const SidePanelContent = ({
 											ref={scrollRef}
 										>
 											<div className="relative">
-												<div className="bg-theme-background">
+												<div className="bg-theme-background rounded-tl-sm rounded-tr-sm sm:rounded-tl-xl sm:rounded-tr-none">
 													<div className="relative flex flex-col">
 														<div
 															onClick={isMinimized ? () => toggleMinimize() : undefined}
@@ -265,40 +267,129 @@ const SidePanelContent = ({
 																		!hasSteps,
 																	"cursor-pointer items-center py-3.5 pr-6 pl-6":
 																		isMinimized,
-																	"items-start px-6 py-4": !isMinimized,
+																	"items-start px-6 py-3.5": !isMinimized,
 																},
 															)}
 														>
-															<div className="flex items-center gap-2">
-																{titleIcon && (
-																	<div
+															<div
+																className={cn("flex w-full justify-between", {
+																	"mx-auto px-6 lg:w-4xl": isExpanded,
+																})}
+															>
+																<div className="flex items-center gap-2">
+																	{titleIcon && (
+																		<div
+																			className={cn(
+																				"text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block [&_svg]:transition-all [&_svg]:duration-300",
+																				{
+																					"[&_:has(svg)]:h-5!": isMinimized,
+																				},
+																			)}
+																		>
+																			{titleIcon}
+																		</div>
+																	)}
+																	<h2
+																		data-testid="SidePanel__title"
 																		className={cn(
-																			"text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block [&_svg]:transition-all [&_svg]:duration-300",
+																			"mb-0 text-base font-semibold transition-all duration-300 md:pt-0",
 																			{
-																				"[&_:has(svg)]:h-5!": isMinimized,
+																				"text-base leading-5 md:text-lg md:leading-[21px]":
+																					!isMinimized,
+																				"truncate text-base leading-5":
+																					isMinimized,
 																			},
 																		)}
 																	>
-																		{titleIcon}
-																	</div>
-																)}
-																<h2
-																	data-testid="SidePanel__title"
-																	className={cn(
-																		"mb-0 text-base font-semibold transition-all duration-300 md:pt-0",
-																		{
-																			"text-base leading-5 md:text-lg md:leading-[21px]":
-																				!isMinimized,
-																			"truncate text-base leading-5": isMinimized,
-																		},
-																	)}
-																>
-																	{title}
-																</h2>
-															</div>
+																		{title}
+																	</h2>
+																</div>
 
-															<div className="flex flex-row items-center gap-3">
-																{minimizeable && (
+																<div className="flex flex-row items-center gap-3">
+																	<div
+																		className={cn(
+																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																		)}
+																	>
+																		<Button
+																			data-testid="SidePanel__expand-button"
+																			variant="transparent"
+																			size="md"
+																			className="h-6 w-6 p-0"
+																			onClick={() => {
+																				toggleExpand();
+																			}}
+																		>
+																			{isExpanded ? (
+																				<Icon name="Shrink" />
+																			) : (
+																				<Icon name="Expand" />
+																			)}
+																		</Button>
+																	</div>
+
+																	{minimizeable && (
+																		<div
+																			className={cn(
+																				"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																				{
+																					"h-5 w-5": isMinimized,
+																					"h-6 w-6": !isMinimized,
+																				},
+																			)}
+																		>
+																			<Tooltip
+																				visible={
+																					isMinimized &&
+																					!minimizedHintHasShown
+																				}
+																				content={
+																					<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
+																						<span className="font-semibold text-white">
+																							{t(
+																								"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
+																							)}
+																						</span>
+																						<Button
+																							size="xs"
+																							variant="transparent"
+																							data-testid="SidePanel__minimize-button-hint"
+																							className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
+																							onClick={() => {
+																								persistMinimizedHint(
+																									true,
+																								);
+																							}}
+																						>
+																							{t("COMMON.GOT_IT")}
+																						</Button>
+																					</div>
+																				}
+																				placement="top"
+																			>
+																				<Button
+																					data-testid="SidePanel__minimize-button"
+																					variant="transparent"
+																					size="md"
+																					className={cn("p-0", {
+																						"h-5 w-5": isMinimized,
+																						"h-6 w-6": !isMinimized,
+																					})}
+																					onClick={(e) => {
+																						e.stopPropagation();
+																						toggleMinimize();
+																					}}
+																				>
+																					{isMinimized ? (
+																						<Icon name="Maximize" />
+																					) : (
+																						<Icon name="Minimize" />
+																					)}
+																				</Button>
+																			</Tooltip>
+																		</div>
+																	)}
+
 																	<div
 																		className={cn(
 																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
@@ -308,79 +399,22 @@ const SidePanelContent = ({
 																			},
 																		)}
 																	>
-																		<Tooltip
-																			visible={
-																				isMinimized && !minimizedHintHasShown
-																			}
-																			content={
-																				<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
-																					<span className="font-semibold text-white">
-																						{t(
-																							"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
-																						)}
-																					</span>
-																					<Button
-																						size="xs"
-																						variant="transparent"
-																						data-testid="SidePanel__minimize-button-hint"
-																						className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
-																						onClick={() => {
-																							persistMinimizedHint(true);
-																						}}
-																					>
-																						{t("COMMON.GOT_IT")}
-																					</Button>
-																				</div>
-																			}
-																			placement="top"
+																		<Button
+																			data-testid="SidePanel__close-button"
+																			variant="transparent"
+																			size="md"
+																			onClick={(e) => {
+																				e.stopPropagation();
+																				toggleOpen();
+																			}}
+																			className={cn("p-0", {
+																				"h-5 w-5": isMinimized,
+																				"h-6 w-6": !isMinimized,
+																			})}
 																		>
-																			<Button
-																				data-testid="SidePanel__minimize-button"
-																				variant="transparent"
-																				size="md"
-																				className={cn("p-0", {
-																					"h-5 w-5": isMinimized,
-																					"h-6 w-6": !isMinimized,
-																				})}
-																				onClick={(e) => {
-																					e.stopPropagation();
-																					toggleMinimize();
-																				}}
-																			>
-																				{isMinimized ? (
-																					<Icon name="Maximize" />
-																				) : (
-																					<Icon name="Minimize" />
-																				)}
-																			</Button>
-																		</Tooltip>
+																			<Icon name="Cross" />
+																		</Button>
 																	</div>
-																)}
-
-																<div
-																	className={cn(
-																		"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
-																		{
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
-																		},
-																	)}
-																>
-																	<Button
-																		data-testid="SidePanel__close-button"
-																		variant="transparent"
-																		size="md"
-																		onClick={(e) => {
-																			e.stopPropagation();
-																			toggleOpen();
-																		}}
-																		className={cn("p-0", {
-																			"h-5 w-5": isMinimized,
-																			"h-6 w-6": !isMinimized,
-																		})}
-																	>
-																		<Icon name="Cross" />
-																	</Button>
 																</div>
 															</div>
 														</div>
@@ -401,7 +435,9 @@ const SidePanelContent = ({
 
 											<div
 												ref={scrollContainerRef}
-												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
+												className={cn("flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4", {
+													"mx-auto w-full lg:w-4xl": isExpanded,
+												})}
 												data-testid="SidePanel__content"
 												inert={isMinimized}
 											>
@@ -421,7 +457,13 @@ const SidePanelContent = ({
 														{ "shadow-footer-side-panel": isScrolled },
 													)}
 												>
-													{footer}
+													<div
+														className={cn({
+															"mx-auto w-full px-6 lg:w-4xl": isExpanded,
+														})}
+													>
+														{footer}
+													</div>
 												</div>
 											)}
 										</div>
