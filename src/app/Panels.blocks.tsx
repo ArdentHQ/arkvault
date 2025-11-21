@@ -16,6 +16,7 @@ import { useTranslation } from "react-i18next";
 import { useHasProfile } from "./hooks";
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { NotificationsSidepanel } from "@/domains/portfolio/components/NotificationsSidepanel/NotificationsSidepanel";
 import VerifyMessageSidePanel from "@/domains/message/components/VerifyMessage";
 
 const DiscardPanelConfirmationModal = () => {
@@ -125,6 +126,10 @@ export const AppPanels = () => {
 
 			<ResetWhenUnmounted>
 				<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<NotificationsSidepanel open={currentOpenedPanel === Panel.Notifications} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
 
 			<DiscardPanelConfirmationModal />

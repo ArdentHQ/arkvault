@@ -14,6 +14,7 @@ export enum Panel {
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
 	Addresses = "ADDRESSES",
 	TransactionDetails = "TRANSACTION_DETAILS",
+	Notifications = "NOTIFICATIONS",
 }
 
 interface PanelsContextValue {

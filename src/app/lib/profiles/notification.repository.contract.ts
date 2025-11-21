@@ -28,6 +28,7 @@ export interface INotification {
 	type: string;
 	action: string;
 	read_at?: number;
+	isRemoved?: boolean;
 	meta: Record<string, any>;
 }
 
@@ -178,6 +179,14 @@ export interface INotificationRepository {
 	markAsRead(key: string): void;
 
 	/**
+	 * Mark the given notification as removed.
+	 *
+	 * @param {string} key
+	 * @memberof INotificationRepository
+	 */
+	markAsRemoved(key: string): void;
+
+	/**
 	 * Filter notifications by type
 	 *
 	 * @param {INotificationType} type
@@ -244,10 +253,18 @@ export interface IProfileTransactionNotificationService {
 	/**
 	 * Mark the given transaction notification as read.
 	 *
-	 * @param {string} transactionId
+	 * @param {string} key
 	 * @memberof IProfileTransactionNotificationService
 	 */
 	markAsRead(key: string): void;
+
+	/**
+	 * Mark the given transaction notification as removed.
+	 *
+	 * @param {string} key
+	 * @memberof IProfileTransactionNotificationService
+	 */
+	markAsRemoved(key: string): void;
 
 	/**
 	 * Get notification by transaction id
@@ -266,6 +283,14 @@ export interface IProfileTransactionNotificationService {
 	transactions(limit?: number): ExtendedConfirmedTransactionData[];
 
 	/**
+	 * Get stored transactions
+	 *
+	 * @param {string} limit
+	 * @memberof IProfileTransactionNotificationService
+	 */
+	active(limit?: number): ExtendedConfirmedTransactionData[];
+
+	/**
 	 * Get stored transaction by id
 	 *
 	 * @param {string} transactionId
@@ -279,6 +304,13 @@ export interface IProfileTransactionNotificationService {
 	 * @memberof IProfileTransactionNotificationService
 	 */
 	isSyncing(): boolean;
+
+	/**
+	 * Mark all notifications as removed.
+	 *
+	 * @memberof IProfileTransactionNotificationService
+	 */
+	markAllAsRemoved(): void;
 
 	/**
 	 * Mark all notifications as read
@@ -374,6 +406,14 @@ export interface IProfileNotificationService {
 	 * @memberof IProfileNotificationService
 	 */
 	markAsRead(id: string): void;
+
+	/**
+	 * Mark given notification as removed.
+	 *
+	 * @param {string} id
+	 * @memberof IProfileNotificationService
+	 */
+	markAsRemoved(id: string): void;
 
 	/**
 	 * Get a notification for the given key.

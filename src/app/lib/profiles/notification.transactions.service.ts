@@ -80,11 +80,30 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		this.#notifications.markAsRead(notification.id);
 	}
 
+	/** {@inheritDoc IProfileTransactionNotificationService.markAsRead} */
+	public markAsRemoved(transactionId: string) {
+		const notification: INotification | undefined = this.findByTransactionId(transactionId);
+
+		if (!notification) {
+			return;
+		}
+
+		this.#notifications.markAsRemoved(notification.id);
+	}
+
 	/** {@inheritDoc IProfileTransactionNotificationService.markAllAsRead} */
 	public markAllAsRead() {
 		for (const notification of this.#notifications.unread()) {
 			if (notification.type === INotificationTypes.Transaction) {
 				this.#notifications.markAsRead(notification.id);
+			}
+		}
+	}
+
+	public markAllAsRemoved() {
+		for (const notification of this.#notifications.values()) {
+			if (notification.type === INotificationTypes.Transaction) {
+				this.#notifications.markAsRemoved(notification.id);
 			}
 		}
 	}
@@ -107,10 +126,10 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 
 			const transactions: ExtendedConfirmedTransactionDataCollection = await this.#profile
 				.transactionAggregate()
-				.received({
+				.all({
 					cursor: 1,
+					identifiers: this.#getIdentifiers(),
 					limit: this.#defaultLimit,
-					to: this.#getToAddresses().join(","),
 					...queryInput,
 				});
 
@@ -145,6 +164,19 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		);
 	}
 
+	public active(limit?: number): ExtendedConfirmedTransactionData[] {
+		const transactions = this.transactions(limit);
+		return transactions.filter((transaction) => {
+			const notification = this.#notifications.findByTransactionId(transaction.hash());
+
+			if (notification) {
+				return !notification.isRemoved;
+			}
+
+			return true;
+		});
+	}
+
 	/** {@inheritDoc IProfileTransactionNotificationService.transaction} */
 	public transaction(transactionId: string): ExtendedConfirmedTransactionData | undefined {
 		return this.#transactions[transactionId];
@@ -175,6 +207,16 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: ExtendedConfirmedTransactionData[] = [];
 
 		for (const transaction of transactions) {
+			const existingNotification = this.#notifications.findByTransactionId(transaction.hash());
+			if (existingNotification && existingNotification.isRemoved) {
+				continue;
+			}
+
+			if (!transaction.isSuccess() && transaction.confirmations().isGreaterThan(0)) {
+				result.push(transaction);
+				continue;
+			}
+
 			if (!this.#allowedTypes.includes(transaction.type())) {
 				continue;
 			}
@@ -193,15 +235,13 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		return result;
 	}
 
-	#getToAddresses(): string[] {
-		const activeNetwork = this.#profile.activeNetwork();
+	#getIdentifiers(): AggregateQuery["identifiers"] {
+		const wallets = this.#profile.wallets().selected();
 
-		const availableWallets = this.#profile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.network().id() === activeNetwork.id());
-
-		return availableWallets.map((wallet) => wallet.address());
+		return wallets.map((wallet) => ({
+			type: "address",
+			value: wallet.address(),
+		}));
 	}
 
 	#storeTransactions(transactions: ExtendedConfirmedTransactionData[]): void {
