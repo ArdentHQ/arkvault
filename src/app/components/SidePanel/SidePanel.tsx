@@ -46,7 +46,6 @@ interface SidePanelProps {
 	shakeWhenClosing?: boolean;
 	preventClosing?: boolean;
 	minimizeable?: boolean;
-	useBackdrop?: boolean;
 }
 
 interface SidePanelContextValue {
@@ -89,7 +88,6 @@ const SidePanelContent = ({
 	shakeWhenClosing = false,
 	preventClosing = false,
 	minimizeable = true,
-	useBackdrop = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
 	const popStateHandlerRef = useRef<() => void>(() => {});
@@ -210,12 +208,13 @@ const SidePanelContent = ({
 				<SidePanelContext.Provider value={{ setHasModalOpened }}>
 					<>
 						<div
-							className={cn("fixed inset-0 z-40 transition-opacity duration-300", {
-								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none":
-									useBackdrop,
-								"opacity-100": !isMinimized,
-								"pointer-events-none opacity-0": isMinimized,
-							})}
+							className={cn(
+								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl transition-opacity duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
+								{
+									"opacity-100": !isMinimized,
+									"pointer-events-none opacity-0": isMinimized,
+								},
+							)}
 						/>
 						<FloatingOverlay
 							className={cn("transition-all duration-300", {

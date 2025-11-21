@@ -1,9 +1,12 @@
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { Notifications } from "./Notification.blocks";
 import { useActiveProfile } from "@/app/hooks";
-import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
+import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailSidePanel";
 import { useState } from "react";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/app/components/Button";
+import { SIDE_PANEL_TRANSITION_DURATION } from "@/app/contexts";
 
 export const NotificationsSidepanel = ({
 	open,
@@ -12,42 +15,61 @@ export const NotificationsSidepanel = ({
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 }) => {
+	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
+	const title = transactionModalItem
+		? t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")
+		: t("COMMON.NOTIFICATIONS.TITLE");
 
 	return (
 		<div>
 			<SidePanel
 				minimizeable={false}
-				title="Notifications"
+				title={title}
 				open={open}
 				onOpenChange={(isOpen) => {
-					if (transactionModalItem) {
-						return;
-					}
-
 					onOpenChange(isOpen);
+
+					if (open) {
+						setTimeout(() => {
+							setTransactionModalItem(undefined);
+						}, SIDE_PANEL_TRANSITION_DURATION);
+					}
 				}}
 				dataTestId="NotificationsSidepanel"
+				footer={
+					transactionModalItem ? (
+						<div className="flex items-center justify-end">
+							<Button
+								data-testid="ExchangeForm__back-button"
+								variant="secondary"
+								onClick={() => setTransactionModalItem(undefined)}
+							>
+								{t("COMMON.BACK")}
+							</Button>
+						</div>
+					) : undefined
+				}
 			>
-				<Notifications
-					profile={activeProfile}
-					onViewTransactionDetails={(transaction) => setTransactionModalItem(transaction)}
-				/>
-			</SidePanel>
+				{!transactionModalItem && (
+					<Notifications
+						profile={activeProfile}
+						onViewTransactionDetails={(transaction) => setTransactionModalItem(transaction)}
+					/>
+				)}
 
-			{transactionModalItem && (
-				<TransactionDetailSidePanel
-					useBackdrop={false}
-					minimizeable={false}
-					isOpen
-					transactionItem={transactionModalItem}
-					profile={activeProfile}
-					onClose={() => {
-						setTransactionModalItem(undefined);
-					}}
-				/>
-			)}
+				{transactionModalItem && (
+					<TransactionDetailContent
+						transactionItem={transactionModalItem}
+						profile={activeProfile}
+						isConfirmed={transactionModalItem.isConfirmed()}
+						confirmations={transactionModalItem.confirmations().toNumber()}
+						allowHideBalance
+						containerClassname="-mx-3 sm:mx-0"
+					/>
+				)}
+			</SidePanel>
 		</div>
 	);
 };
