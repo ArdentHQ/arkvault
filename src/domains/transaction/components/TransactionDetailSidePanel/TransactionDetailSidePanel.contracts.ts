@@ -14,6 +14,7 @@ export interface TransactionDetailModalProperties {
 	profile: Contracts.IProfile;
 	onClose?: () => void;
 	minimizeable?: boolean;
+	useBackdrop?: boolean;
 }
 
 export interface TransactionDetailProperties {

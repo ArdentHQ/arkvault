@@ -38,6 +38,7 @@ export const NotificationsSidepanel = ({
 
 			{transactionModalItem && (
 				<TransactionDetailSidePanel
+					useBackdrop={false}
 					minimizeable={false}
 					isOpen
 					transactionItem={transactionModalItem}

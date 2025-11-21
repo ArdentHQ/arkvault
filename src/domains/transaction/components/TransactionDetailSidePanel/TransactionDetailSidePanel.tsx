@@ -135,6 +135,7 @@ export const TransactionDetailSidePanel = ({
 	profile,
 	onClose,
 	minimizeable,
+	useBackdrop
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
 
@@ -165,7 +166,7 @@ export const TransactionDetailSidePanel = ({
 		return (
 			<SidePanel
 				minimizeable={minimizeable}
-				useBackdrop={false}
+				useBackdrop={useBackdrop}
 				title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")}
 				open={isOpen}
 				onOpenChange={setIsOpen}
@@ -191,7 +192,7 @@ export const TransactionDetailSidePanel = ({
 	return (
 		<SidePanel
 			minimizeable={minimizeable}
-			useBackdrop={false}
+			useBackdrop={useBackdrop}
 			title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")}
 			open={isOpen}
 			onOpenChange={setIsOpen}
