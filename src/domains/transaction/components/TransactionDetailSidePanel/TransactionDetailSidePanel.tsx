@@ -135,7 +135,7 @@ export const TransactionDetailSidePanel = ({
 	profile,
 	onClose,
 	minimizeable,
-	useBackdrop
+	useBackdrop,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
 
