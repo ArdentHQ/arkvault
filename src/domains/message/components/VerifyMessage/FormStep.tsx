@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { useFormContext } from "react-hook-form";
-import { StepHeader } from "@/app/components/StepHeader";
-import { VerificationMethod } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
+import { useTranslation } from "react-i18next";
+
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputDefault } from "@/app/components/Input";
-import { TextArea } from "@/app/components/TextArea";
 import { useValidation } from "@/app/hooks";
+import { TextArea } from "@/app/components/TextArea";
 import { Switch } from "@/app/components/Switch";
-import { ThemeIcon } from "@/app/components/Icon";
+import { VerificationMethod } from "@/domains/message/components/VerifyMessage/VerifyMessageSidePanel";
 
 const JsonForm = () => {
 	const { t } = useTranslation();
@@ -27,6 +26,7 @@ const JsonForm = () => {
 					data-testid="VerifyMessage__json-jsonString"
 					className="py-4"
 					initialHeight={90}
+					rows={5}
 					placeholder={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_PLACEHOLDER")}
 					ref={register(verifyMessage.jsonString())}
 				/>
@@ -45,7 +45,7 @@ const ManualForm = () => {
 	useEffect(() => () => unregister(["signatory", "message", "signature"]), [unregister]);
 
 	return (
-		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-5">
+		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-4">
 			<FormField name="signatory">
 				<FormLabel label={t("COMMON.SIGNATORY")} />
 				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
@@ -75,20 +75,7 @@ export const FormStep = ({
 
 	return (
 		<section>
-			<StepHeader
-				title={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE")}
-				subtitle={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.DESCRIPTION")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-			/>
-
-			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-6 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl">
+			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex flex-col overflow-hidden rounded-sm border sm:rounded-xl">
 				<div className="flex flex-row justify-between p-4">
 					<span className="text-theme-secondary-700 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm font-semibold sm:hidden">
 						{t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.VERIFICATION_METHOD.TITLE")}:

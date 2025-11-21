@@ -55,11 +55,11 @@ export const translations = {
 		SUCCESS_STEP: {
 			NOT_VERIFIED: {
 				DESCRIPTION: "Message could not be verified.",
-				TITLE: "Message Verification - Failed",
+				TITLE: "Message Verification Failed",
 			},
 			VERIFIED: {
 				DESCRIPTION: "Message was successfully verified.",
-				TITLE: "Message Verification - Success",
+				TITLE: "Message Verification Successful",
 			},
 		},
 

@@ -13,7 +13,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
         class="relative flex h-12 items-center"
       >
         <div
-          class="flex flex-1 justify-between px-6 sm:ml-7 sm:px-8"
+          class="flex flex-1 items-center justify-between px-6 sm:ml-7 sm:px-8"
         >
           <span>
             <span>

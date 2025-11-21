@@ -108,8 +108,9 @@ import ImportWalletDark from "./import-wallet-dark.svg?react";
 import ImportProfileLight from "./import-profile-light.svg?react";
 import ImportProfileDark from "./import-profile-dark.svg?react";
 import ImportProfileDim from "./import-profile-dim.svg?react";
-import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
+import SelectNetworkLight from "./select-network-light.svg?react";
+import Shrink from "./shrink.svg?react";
 import Wallet from "./wallet.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionDim from "./wallet-encryption-dim.svg?react";
@@ -120,6 +121,7 @@ import VotesLight from "./votes-light.svg?react";
 import ExchangesDark from "./exchanges-dark.svg?react";
 import ExchangesDim from "./exchanges-dim.svg?react";
 import ExchangesLight from "./exchanges-light.svg?react";
+import Expand from "./expand.svg?react";
 import WalletMultipleLight from "./wallet-multiple-light.svg?react";
 import WalletMultipleDark from "./wallet-multiple-dark.svg?react";
 import WalletMultipleDim from "./wallet-multiple-dim.svg?react";
@@ -206,6 +208,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ExchangesDark,
 	ExchangesDim,
 	ExchangesLight,
+	Expand,
 	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWweDark,
@@ -273,6 +276,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	SettingsDim,
 	SettingsLight,
 	ShieldCheckMark,
+	Shrink,
 	Sliders,
 	SlidersVertical,
 	Star,
