@@ -13,12 +13,17 @@ import { useBreakpoint } from "@/app/hooks";
 import { useNotifications } from "@/app/components/Notifications";
 import { Tooltip } from "@/app/components/Tooltip";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
-import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
 import { NotificationsEmptyBlock } from "@/app/components/Notifications/NotificationsEmptyBlock";
 
 type Transaction = DTO.RawTransactionData;
 
-export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
+export const Notifications = ({
+	profile,
+	onViewTransactionDetails,
+}: {
+	profile: Contracts.IProfile;
+	onViewTransactionDetails?: (transaction: ExtendedTransactionDTO) => void;
+}) => {
 	const { t } = useTranslation();
 	const {
 		transactions,
@@ -30,7 +35,6 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 		hasUnread,
 	} = useNotifications({ profile });
 	const [expandedNotificationId, setExpandedNotificationId] = useState<string | undefined>(undefined);
-	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	return (
 		<>
@@ -66,7 +70,7 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 							transaction={transaction}
 							isUnread={isNotificationUnread(transaction)}
 							onShowDetails={() => {
-								setTransactionModalItem(transaction);
+								onViewTransactionDetails?.(transaction);
 							}}
 							onMarkAsRead={() => markAsRead(transaction.hash())}
 							onRemove={() => markAsRemoved(transaction.hash())}
@@ -78,17 +82,6 @@ export const Notifications = ({ profile }: { profile: Contracts.IProfile }) => {
 			)}
 
 			{transactions.length === 0 && <NotificationsEmptyBlock />}
-
-			{transactionModalItem && (
-				<TransactionDetailSidePanel
-					isOpen
-					transactionItem={transactionModalItem}
-					profile={profile}
-					onClose={() => {
-						setTransactionModalItem(undefined);
-					}}
-				/>
-			)}
 		</>
 	);
 };

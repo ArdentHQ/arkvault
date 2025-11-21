@@ -12,13 +12,14 @@ export interface TransactionDetailModalProperties {
 	isOpen: boolean;
 	transactionItem: ExtendedTransactionDTO;
 	profile: Contracts.IProfile;
-	onClose?: any;
+	onClose?: () => void;
+	minimizeable?: boolean
 }
 
 export interface TransactionDetailProperties {
 	isOpen: boolean;
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	aliases?: TransactionAliases;
-	onClose?: any;
+	onClose?: () => void;
 	profile: Contracts.IProfile;
 }
