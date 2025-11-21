@@ -13,7 +13,7 @@ export interface TransactionDetailModalProperties {
 	transactionItem: ExtendedTransactionDTO;
 	profile: Contracts.IProfile;
 	onClose?: () => void;
-	minimizeable?: boolean
+	minimizeable?: boolean;
 }
 
 export interface TransactionDetailProperties {

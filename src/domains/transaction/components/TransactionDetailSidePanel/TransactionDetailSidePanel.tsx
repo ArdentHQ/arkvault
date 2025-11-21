@@ -134,7 +134,7 @@ export const TransactionDetailSidePanel = ({
 	transactionItem,
 	profile,
 	onClose,
-	minimizeable
+	minimizeable,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
 
@@ -163,7 +163,13 @@ export const TransactionDetailSidePanel = ({
 	// If already confirmed, skip the hook entirely
 	if (transactionItem.isConfirmed()) {
 		return (
-			<SidePanel minimizeable={minimizeable} useBackdrop={false} title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
+			<SidePanel
+				minimizeable={minimizeable}
+				useBackdrop={false}
+				title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")}
+				open={isOpen}
+				onOpenChange={setIsOpen}
+			>
 				<TransactionDetailContent
 					transactionItem={transactionItem}
 					profile={profile}
@@ -183,7 +189,13 @@ export const TransactionDetailSidePanel = ({
 	const isConfirmedToShow = isConfirmed;
 
 	return (
-		<SidePanel minimizeable={minimizeable} useBackdrop={false} title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
+		<SidePanel
+			minimizeable={minimizeable}
+			useBackdrop={false}
+			title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")}
+			open={isOpen}
+			onOpenChange={setIsOpen}
+		>
 			<TransactionDetailContent
 				transactionItem={transactionToShow}
 				profile={profile}
