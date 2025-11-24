@@ -752,7 +752,7 @@ exports[`Dashboard > should render 1`] = `
                 <span>
                   <span>
                     <div
-                      class="flex h-fit max-w-[calc(100%_-_73px)] flex-row items-center gap-1 md:max-w-full"
+                      class="flex h-fit flex-row items-center gap-1"
                     >
                       <p
                         class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"

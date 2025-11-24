@@ -11,6 +11,7 @@ import {
 	useTransitionStyles,
 } from "@floating-ui/react";
 import React, { JSX, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -19,10 +20,9 @@ import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
-import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 import { useLocalStorage } from "usehooks-ts";
-import { useTranslation } from "react-i18next";
 import { useNavigationContext } from "@/app/contexts";
+import { useTranslation } from "react-i18next";
 
 interface SidePanelProps {
 	children: React.ReactNode;
