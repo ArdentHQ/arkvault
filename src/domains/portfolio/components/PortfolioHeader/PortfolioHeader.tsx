@@ -79,7 +79,7 @@ export const PortfolioHeader = ({
 		wallets: selectedWallets,
 	});
 
-	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
+	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions, contractOptions } =
 		useWalletOptions(selectedWallets);
 
 	const ledgerMigrationOptions = useLedgerMigrationMenuOptions();
@@ -417,6 +417,7 @@ export const PortfolioHeader = ({
 											options={[
 												primaryOptions,
 												registrationOptions,
+												contractOptions,
 												{
 													key: additionalOptions.key,
 													options: hasWalletsToMigrate
