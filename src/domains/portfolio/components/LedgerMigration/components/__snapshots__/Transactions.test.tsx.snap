@@ -151,11 +151,15 @@ exports[`Transactions > should render in lg 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -163,11 +167,15 @@ exports[`Transactions > should render in lg 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -230,45 +238,49 @@ exports[`Transactions > should render in lg 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -281,11 +293,15 @@ exports[`Transactions > should render in lg 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -293,11 +309,15 @@ exports[`Transactions > should render in lg 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -486,11 +506,15 @@ exports[`Transactions > should render in lg with pending confirmation status ban
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -498,11 +522,15 @@ exports[`Transactions > should render in lg with pending confirmation status ban
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -540,11 +568,15 @@ exports[`Transactions > should render in lg with pending confirmation status ban
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -552,11 +584,15 @@ exports[`Transactions > should render in lg with pending confirmation status ban
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -771,11 +807,15 @@ exports[`Transactions > should render in lg with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -783,11 +823,15 @@ exports[`Transactions > should render in lg with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -828,11 +872,15 @@ exports[`Transactions > should render in lg with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -840,11 +888,15 @@ exports[`Transactions > should render in lg with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1057,11 +1109,15 @@ exports[`Transactions > should render in lg with pending status banner 2`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1069,11 +1125,15 @@ exports[`Transactions > should render in lg with pending status banner 2`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1114,11 +1174,15 @@ exports[`Transactions > should render in lg with pending status banner 2`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1126,11 +1190,15 @@ exports[`Transactions > should render in lg with pending status banner 2`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1343,11 +1411,15 @@ exports[`Transactions > should render in lg with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1355,11 +1427,15 @@ exports[`Transactions > should render in lg with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1422,45 +1498,49 @@ exports[`Transactions > should render in lg with status banner 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -1473,11 +1553,15 @@ exports[`Transactions > should render in lg with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1485,11 +1569,15 @@ exports[`Transactions > should render in lg with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1741,11 +1829,15 @@ exports[`Transactions > should render in md 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1753,11 +1845,15 @@ exports[`Transactions > should render in md 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1820,45 +1916,49 @@ exports[`Transactions > should render in md 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -1871,11 +1971,15 @@ exports[`Transactions > should render in md 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -1883,11 +1987,15 @@ exports[`Transactions > should render in md 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2076,11 +2184,15 @@ exports[`Transactions > should render in md with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2088,11 +2200,15 @@ exports[`Transactions > should render in md with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2133,11 +2249,15 @@ exports[`Transactions > should render in md with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2145,11 +2265,15 @@ exports[`Transactions > should render in md with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2362,11 +2486,15 @@ exports[`Transactions > should render in md with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2374,11 +2502,15 @@ exports[`Transactions > should render in md with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2441,45 +2573,49 @@ exports[`Transactions > should render in md with status banner 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -2492,11 +2628,15 @@ exports[`Transactions > should render in md with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2504,11 +2644,15 @@ exports[`Transactions > should render in md with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2760,11 +2904,15 @@ exports[`Transactions > should render in sm 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2772,11 +2920,15 @@ exports[`Transactions > should render in sm 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2839,45 +2991,49 @@ exports[`Transactions > should render in sm 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -2890,11 +3046,15 @@ exports[`Transactions > should render in sm 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -2902,11 +3062,15 @@ exports[`Transactions > should render in sm 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3095,11 +3259,15 @@ exports[`Transactions > should render in sm with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3107,11 +3275,15 @@ exports[`Transactions > should render in sm with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3152,11 +3324,15 @@ exports[`Transactions > should render in sm with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3164,11 +3340,15 @@ exports[`Transactions > should render in sm with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3381,11 +3561,15 @@ exports[`Transactions > should render in sm with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3393,11 +3577,15 @@ exports[`Transactions > should render in sm with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3460,45 +3648,49 @@ exports[`Transactions > should render in sm with status banner 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -3511,11 +3703,15 @@ exports[`Transactions > should render in sm with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3523,11 +3719,15 @@ exports[`Transactions > should render in sm with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3779,11 +3979,15 @@ exports[`Transactions > should render in xl 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3791,11 +3995,15 @@ exports[`Transactions > should render in xl 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3858,45 +4066,49 @@ exports[`Transactions > should render in xl 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -3909,11 +4121,15 @@ exports[`Transactions > should render in xl 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -3921,11 +4137,15 @@ exports[`Transactions > should render in xl 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4114,11 +4334,15 @@ exports[`Transactions > should render in xl with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4126,11 +4350,15 @@ exports[`Transactions > should render in xl with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4171,11 +4399,15 @@ exports[`Transactions > should render in xl with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4183,11 +4415,15 @@ exports[`Transactions > should render in xl with pending status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4400,11 +4636,15 @@ exports[`Transactions > should render in xl with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4412,11 +4652,15 @@ exports[`Transactions > should render in xl with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4479,45 +4723,49 @@ exports[`Transactions > should render in xl with status banner 1`] = `
                   <div
                     class="flext w-full justify-end text-right whitespace-nowrap"
                   >
-                    <a
-                      class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                      data-ring-focus-margin="-m-1"
-                      data-testid="Link"
-                      rel="noopener noreferrer"
-                    >
-                      <span
-                        class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                      >
-                        View
-                      </span>
-                      <div
-                        class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                        data-testid="Link__external"
-                      >
-                        <div
-                          style="height: 12px; width: 12px;"
+                    <span>
+                      <span>
+                        <a
+                          class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          rel="noopener noreferrer"
                         >
-                          <svg
-                            id="arrow-external"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <span
+                            class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                           >
-                            <path
-                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </a>
+                            View
+                          </span>
+                          <div
+                            class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                          >
+                            <div
+                              style="height: 12px; width: 12px;"
+                            >
+                              <svg
+                                id="arrow-external"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </a>
+                      </span>
+                    </span>
                   </div>
                 </div>
               </td>
@@ -4530,11 +4778,15 @@ exports[`Transactions > should render in xl with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pl-3 ml-3 rounded-l dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xA46…2Af54
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xA46…2Af54
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4542,11 +4794,15 @@ exports[`Transactions > should render in xl with status banner 1`] = `
                 <div
                   class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950"
                 >
-                  <span
-                    class="no-ligatures text-sm font-semibold"
-                    data-testid="TruncateMiddle"
-                  >
-                    0xcd1…58EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures text-sm font-semibold"
+                        data-testid="TruncateMiddle"
+                      >
+                        0xcd1…58EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </td>
@@ -4726,11 +4982,15 @@ exports[`Transactions > should render in xs 1`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xcd1…58EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xcd1…58EE6
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -4802,11 +5062,15 @@ exports[`Transactions > should render in xs 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -4821,45 +5085,49 @@ exports[`Transactions > should render in xs 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                >
-                  View
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
+              <span>
+                <span>
+                  <a
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    rel="noopener noreferrer"
                   >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </a>
+                      View
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                      data-testid="Link__external"
+                    >
+                      <div
+                        style="height: 12px; width: 12px;"
+                      >
+                        <svg
+                          id="arrow-external"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -4874,11 +5142,15 @@ exports[`Transactions > should render in xs 1`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xA46…2Af54
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xA46…2Af54
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -4914,11 +5186,15 @@ exports[`Transactions > should render in xs 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5008,11 +5284,15 @@ exports[`Transactions > should render in xs with pending confirmation status ban
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xcd1…58EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xcd1…58EE6
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5048,11 +5328,15 @@ exports[`Transactions > should render in xs with pending confirmation status ban
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5068,11 +5352,15 @@ exports[`Transactions > should render in xs with pending confirmation status ban
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xA46…2Af54
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xA46…2Af54
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5108,11 +5396,15 @@ exports[`Transactions > should render in xs with pending confirmation status ban
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5224,11 +5516,15 @@ exports[`Transactions > should render in xs with pending status banner 1`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xcd1…58EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xcd1…58EE6
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5267,11 +5563,15 @@ exports[`Transactions > should render in xs with pending status banner 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5287,11 +5587,15 @@ exports[`Transactions > should render in xs with pending status banner 1`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xA46…2Af54
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xA46…2Af54
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5327,11 +5631,15 @@ exports[`Transactions > should render in xs with pending status banner 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5441,11 +5749,15 @@ exports[`Transactions > should render in xs with pending status banner 2`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xcd1…58EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xcd1…58EE6
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5484,11 +5796,15 @@ exports[`Transactions > should render in xs with pending status banner 2`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5504,11 +5820,15 @@ exports[`Transactions > should render in xs with pending status banner 2`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xA46…2Af54
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xA46…2Af54
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5544,11 +5864,15 @@ exports[`Transactions > should render in xs with pending status banner 2`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5658,11 +5982,15 @@ exports[`Transactions > should render in xs with status banner 1`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xcd1…58EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xcd1…58EE6
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5734,11 +6062,15 @@ exports[`Transactions > should render in xs with status banner 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -5753,45 +6085,49 @@ exports[`Transactions > should render in xs with status banner 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                >
-                  View
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
+              <span>
+                <span>
+                  <a
+                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    rel="noopener noreferrer"
                   >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </a>
+                      View
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                      data-testid="Link__external"
+                    >
+                      <div
+                        style="height: 12px; width: 12px;"
+                      >
+                        <svg
+                          id="arrow-external"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -5806,11 +6142,15 @@ exports[`Transactions > should render in xs with status banner 1`] = `
           <div
             class="max-w-32"
           >
-            <span
-              class="no-ligatures text-sm font-semibold"
-              data-testid="TruncateMiddle"
-            >
-              0xA46…2Af54
+            <span>
+              <span>
+                <span
+                  class="no-ligatures text-sm font-semibold"
+                  data-testid="TruncateMiddle"
+                >
+                  0xA46…2Af54
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -5846,11 +6186,15 @@ exports[`Transactions > should render in xs with status banner 1`] = `
             <div
               class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
             >
-              <span
-                class="no-ligatures text-sm font-semibold"
-                data-testid="TruncateMiddle"
-              >
-                0xcd1…58EE6
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures text-sm font-semibold"
+                    data-testid="TruncateMiddle"
+                  >
+                    0xcd1…58EE6
+                  </span>
+                </span>
               </span>
             </div>
           </div>
