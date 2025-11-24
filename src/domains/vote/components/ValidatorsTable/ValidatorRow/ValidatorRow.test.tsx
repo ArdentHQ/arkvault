@@ -6,7 +6,7 @@ import { ValidatorRow } from "./ValidatorRow";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
@@ -84,7 +84,7 @@ describe("ValidatorRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render the selected validator", () => {
+	it("should render the selected validator", async () => {
 		const selected = [
 			{
 				amount: 0,
@@ -92,6 +92,7 @@ describe("ValidatorRow", () => {
 			},
 		];
 
+		const toggleVotesSelectedMock = vi.fn();
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
@@ -103,7 +104,7 @@ describe("ValidatorRow", () => {
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
+						toggleVotesSelected={toggleVotesSelectedMock}
 						selectedWallet={wallet}
 					/>
 				</tbody>
@@ -112,6 +113,13 @@ describe("ValidatorRow", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		await waitFor(() => {
+			expect(toggleVotesSelectedMock).toHaveBeenCalled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -275,6 +283,7 @@ describe("ValidatorRow", () => {
 			wallet: validator,
 		};
 
+		const toggleVotesSelectedMock = vi.fn();
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
@@ -287,7 +296,7 @@ describe("ValidatorRow", () => {
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
+						toggleVotesSelected={toggleVotesSelectedMock}
 						selectedWallet={wallet}
 					/>
 				</tbody>
@@ -296,7 +305,6 @@ describe("ValidatorRow", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
-
 		expect(asFragment()).toMatchSnapshot();
 
 		votesAmountMinimumMock.mockRestore();

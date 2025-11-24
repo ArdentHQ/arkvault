@@ -109,9 +109,7 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "verify-message") {
-				navigate(
-					generatePath(ProfilePaths.VerifyMessageWallet, { profileId: profile.id(), walletId: wallet.id() }),
-				);
+				openPanel(Panel.VerifyMessage);
 			}
 
 			if (option.value === "multi-signature") {

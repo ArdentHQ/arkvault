@@ -43,7 +43,7 @@ export const SelectFileStep = ({ onBack, onSelect, fileFormat }: SelectFileStepP
 
 			<SelectFile fileFormat={fileFormat} onSelect={onSelect} />
 
-			<FormButtons>
+			<FormButtons className="border-none">
 				<Button data-testid="SelectFileStep__back" variant="secondary" onClick={onBack}>
 					{t("COMMON.BACK")}
 				</Button>

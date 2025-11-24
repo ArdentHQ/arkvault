@@ -41,65 +41,77 @@ exports[`TransferLedgerReview > should render 1`] = `
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
-                <span
-                  class="no-ligatures transition-colors duration-200"
-                  data-testid="TruncateEnd"
-                >
-                  Mainsail Wallet …
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures transition-colors duration-200"
+                      data-testid="TruncateEnd"
+                    >
+                      Mainsail Wallet …
+                    </span>
+                  </span>
                 </span>
               </span>
               <div
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                      data-testid="Address__address"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
                 </span>
                 <span>
                    
                 </span>
               </div>
-              <button
-                class="ring-focus relative cursor-pointer focus:outline-hidden"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                >
-                  <div
-                    style="height: 16px; width: 16px;"
+              <span>
+                <span>
+                  <button
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </button>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -123,37 +135,41 @@ exports[`TransferLedgerReview > should render 1`] = `
             <span>
               Expiration
             </span>
-            <div
-              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-            >
-              <div>
+            <span>
+              <span>
                 <div
-                  style="height: 10px; width: 10px;"
+                  class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
                 >
-                  <svg
-                    id="question-mark-small"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                      />
-                    </g>
-                  </svg>
+                      <svg
+                        id="question-mark-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -323,65 +339,77 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
-                <span
-                  class="no-ligatures transition-colors duration-200"
-                  data-testid="TruncateEnd"
-                >
-                  Mainsail Wallet …
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures transition-colors duration-200"
+                      data-testid="TruncateEnd"
+                    >
+                      Mainsail Wallet …
+                    </span>
+                  </span>
                 </span>
               </span>
               <div
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                      data-testid="Address__address"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
                 </span>
                 <span>
                    
                 </span>
               </div>
-              <button
-                class="ring-focus relative cursor-pointer focus:outline-hidden"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                >
-                  <div
-                    style="height: 16px; width: 16px;"
+              <span>
+                <span>
+                  <button
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </button>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -405,37 +433,41 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             <span>
               Expiration
             </span>
-            <div
-              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-            >
-              <div>
+            <span>
+              <span>
                 <div
-                  style="height: 10px; width: 10px;"
+                  class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
                 >
-                  <svg
-                    id="question-mark-small"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                      />
-                    </g>
-                  </svg>
+                      <svg
+                        id="question-mark-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -622,65 +654,77 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
                 data-testid="Address__alias"
               >
-                <span
-                  class="no-ligatures transition-colors duration-200"
-                  data-testid="TruncateEnd"
-                >
-                  Mainsail Wallet …
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures transition-colors duration-200"
+                      data-testid="TruncateEnd"
+                    >
+                      Mainsail Wallet …
+                    </span>
+                  </span>
                 </span>
               </span>
               <div
                 class="relative grow leading-[17px] sm:leading-5 text-left"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
-                  data-testid="Address__address"
-                >
-                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                <span>
+                  <span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                      data-testid="Address__address"
+                    >
+                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    </span>
+                  </span>
                 </span>
                 <span>
                    
                 </span>
               </div>
-              <button
-                class="ring-focus relative cursor-pointer focus:outline-hidden"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                >
-                  <div
-                    style="height: 16px; width: 16px;"
+              <span>
+                <span>
+                  <button
+                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
                   >
-                    <svg
-                      id="copy"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                      <div
+                        style="height: 16px; width: 16px;"
                       >
-                        <path
-                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                        />
-                        <path
-                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </button>
+                        <svg
+                          id="copy"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -704,37 +748,41 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             <span>
               Expiration
             </span>
-            <div
-              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-            >
-              <div>
+            <span>
+              <span>
                 <div
-                  style="height: 10px; width: 10px;"
+                  class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
                 >
-                  <svg
-                    id="question-mark-small"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 10 10"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                  <div>
+                    <div
+                      style="height: 10px; width: 10px;"
                     >
-                      <path
-                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                      />
-                    </g>
-                  </svg>
+                      <svg
+                        id="question-mark-small"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </span>
+            </span>
           </div>
         </div>
       </div>

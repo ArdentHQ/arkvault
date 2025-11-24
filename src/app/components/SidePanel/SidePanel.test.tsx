@@ -119,6 +119,17 @@ describe("SidePanel", () => {
 		expect(screen.getByTestId("SidePanel__minimize-button")).toBeInTheDocument();
 	});
 
+	it("should display expand button", async () => {
+		render(
+			<SidePanel open={true} onOpenChange={vi.fn()} title="side panel header">
+				{" "}
+				panel body{" "}
+			</SidePanel>,
+		);
+
+		expect(screen.getByTestId("SidePanel__expand-button")).toBeInTheDocument();
+	});
+
 	it("should detect scrollable content and apply footer shadow", () => {
 		let resizeObserverCallback: ResizeObserverCallback;
 

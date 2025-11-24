@@ -321,7 +321,13 @@ export const AddRecipient = ({
 								<div className="flex flex-row items-center gap-1.5">
 									<span>{t("COMMON.AMOUNT")}</span>
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
-										(<Amount value={+remainingBalance} ticker={ticker} showTicker={false} />)
+										(
+										<Amount
+											value={BigNumber.make(remainingBalance).decimalPlaces(8).toNumber()}
+											ticker={ticker}
+											showTicker={false}
+										/>
+										)
 									</span>
 								</div>
 								<div className="flex flex-row items-center gap-2">

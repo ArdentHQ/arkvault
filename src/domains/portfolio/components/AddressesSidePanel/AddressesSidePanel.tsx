@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState, JSX } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
-import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
+import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 
 import { AddressRow } from "@/domains/portfolio/components/AddressesSidePanel/AddressRow";
 import { Button } from "@/app/components/Button";
@@ -31,7 +31,6 @@ export const AddressesSidePanel = ({
 	onMountChange?: (mounted: boolean) => void;
 }): JSX.Element => {
 	/* istanbul ignore next -- @preserve */
-	const { isXs } = useBreakpoint();
 
 	const profile = useActiveProfile();
 
@@ -43,6 +42,8 @@ export const AddressesSidePanel = ({
 	const [searchQuery, setSearchQuery] = useState<string>("");
 
 	const { getWalletAlias } = useWalletAlias();
+
+	const walletsCount = profile.wallets().count();
 
 	const {
 		handleDelete,
@@ -123,8 +124,8 @@ export const AddressesSidePanel = ({
 					closeSidepanel(selectedAddresses);
 				}
 			}}
-			shakeWhenClosing={selectedAddresses.length === 0}
-			preventClosing={selectedAddresses.length === 0}
+			shakeWhenClosing={walletsCount > 0 && selectedAddresses.length === 0}
+			preventClosing={walletsCount > 0 && selectedAddresses.length === 0}
 			dataTestId="AddressesSidePanel"
 			onMountChange={onMountChange}
 			minimizeable={false}
@@ -210,12 +211,10 @@ export const AddressesSidePanel = ({
 					{!isManageMode && (
 						<Tooltip
 							visible={showManageHint}
-							interactive={true}
-							/* istanbul ignore next -- @preserve */
-							maxWidth={isXs ? 264 : "none"}
+							className="w-3xs sm:w-auto"
 							content={
 								<div className="px-[3px] pb-1.5 text-sm leading-5 sm:space-x-4 sm:pt-px sm:pb-px">
-									<span className="mb-2 block sm:mb-0 sm:inline">
+									<span className="mb-2 block whitespace-normal sm:mb-0 sm:inline">
 										{t("WALLETS.ADDRESSES_SIDE_PANEL.MANAGE_HINT")}
 									</span>
 									<Button

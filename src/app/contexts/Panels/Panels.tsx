@@ -7,12 +7,15 @@ export enum Panel {
 	SendTransfer = "SEND_TRANSFER",
 	SendVote = "SEND_VOTE",
 	SignMessage = "SIGN_MESSAGE",
+	VerifyMessage = "VERIFY_MESSAGE",
 	SendUsernameResignation = "SEND_USERNAME_RESIGNATION",
 	SendValidatorResignation = "SEND_VALIDATOR_RESIGNATION",
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
 	Addresses = "ADDRESSES",
 	LedgerMigration = "LEDGER_MIGRATION",
+	TransactionDetails = "TRANSACTION_DETAILS",
+	Notifications = "NOTIFICATIONS",
 }
 
 interface PanelsContextValue {
@@ -20,14 +23,15 @@ interface PanelsContextValue {
 	closePanel: () => Promise<void>;
 	openPanel: (panel: Panel) => void;
 	isMinimized: boolean;
+	isExpanded: boolean;
 	setIsMinimized: (isMinimized: boolean) => void;
 	showConfirmationModal: boolean;
 	setShowConfirmationModal: (showConfirmationModal: boolean) => void;
 	confirmOpen: () => Promise<void>;
 	cancelOpen: () => void;
 	toggleMinimize: () => void;
+	toggleExpand: () => void;
 	currentOpenedPanelName: string | undefined;
-	resetKey: number;
 }
 
 const PanelsContext = React.createContext<PanelsContextValue | undefined>(undefined);
@@ -39,8 +43,8 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	const [currentOpenedPanel, setCurrentOpenedPanel] = useState<Panel | undefined>(undefined);
 	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
+	const [isExpanded, setIsExpanded] = useState(false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
-	const [resetKey, setResetKey] = useState(0);
 	const [componentResetedPromiseResolver, setComponentResetedPromiseResolver] = useState<
 		((value: void | PromiseLike<void>) => void) | undefined
 	>(undefined);
@@ -54,6 +58,8 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		setShowConfirmationModal(false);
 
 		await closePanel();
+
+		setIsMinimized(false);
 
 		setCurrentOpenedPanel(panelToOpen);
 	};
@@ -79,13 +85,9 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				setTimeout(() => {
 					setIsMinimized(false);
 
-					setResetKey((previousKey) => previousKey + 1);
-
 					setComponentResetedPromiseResolver(resolve);
 				}, SIDE_PANEL_TRANSITION_DURATION);
 			} else {
-				setResetKey((previousKey) => previousKey + 1);
-
 				setComponentResetedPromiseResolver(resolve);
 			}
 		});
@@ -107,11 +109,16 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 			return;
 		}
 
+		setIsMinimized(false);
 		setCurrentOpenedPanel(panel);
 	};
 
 	const toggleMinimize = () => {
 		setIsMinimized(!isMinimized);
+	};
+
+	const toggleExpand = () => {
+		setIsExpanded(!isExpanded);
 	};
 
 	return (
@@ -122,12 +129,13 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 				confirmOpen,
 				currentOpenedPanel,
 				currentOpenedPanelName,
+				isExpanded,
 				isMinimized,
 				openPanel,
-				resetKey,
 				setIsMinimized,
 				setShowConfirmationModal,
 				showConfirmationModal,
+				toggleExpand,
 				toggleMinimize,
 			}}
 		>

@@ -209,7 +209,7 @@ export const Input = ({
 					>
 						{isInvalidValue && (
 							<div className={cn({ "pr-3": addons?.end })}>
-								<Tooltip content={errorMessageValue} size="sm">
+								<Tooltip content={errorMessageValue}>
 									<span data-errortext={errorMessageValue} data-testid="Input__error">
 										<Icon
 											name="CircleExclamationMark"

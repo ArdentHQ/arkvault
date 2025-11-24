@@ -453,7 +453,7 @@ const CustomPeersTableFooter = ({
 						{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}
 					</div>
 				)}
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden border-t px-6 pt-3 pb-2 md:block">
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 pt-3 pb-2 sm:border-t sm:px-6">
 					<Button
 						data-testid="CustomPeers--addnew"
 						onClick={addNewServerHandler}

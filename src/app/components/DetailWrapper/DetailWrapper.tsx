@@ -1,7 +1,6 @@
 import cn from "classnames";
 import React, { ReactElement, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
-import { Divider } from "@/app/components/Divider";
 
 export const DetailLabelText = ({ children, className }: { children: ReactNode; className?: string }) => (
 	<div
@@ -73,22 +72,8 @@ export const DetailTitle = ({ children, className }: { children: ReactNode; clas
 	</div>
 );
 
-/**
- * Adds the `.condensed` class to the parent component, causing all
- * `DetailDivider` children to render in a condensed state (without dashed borders and with reduced spacing).
- *
- * @see DetailDivider
- */
 export const DetailsCondensed = ({ children }: { children: ReactNode }): ReactNode => (
 	<div className="condensed">{children}</div>
-);
-
-export const DetailDivider = (): ReactNode => (
-	<div className="hidden h-8 w-full items-center in-[.condensed]:h-3 in-[.condensed]:leading-3 sm:flex">
-		<div className="h-full w-full in-[.condensed]:hidden">
-			<Divider dashed />
-		</div>
-	</div>
 );
 
 export const DetailPadded = ({ children, className }: { children: React.ReactNode; className?: string }) => (

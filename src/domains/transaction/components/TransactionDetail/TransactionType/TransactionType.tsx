@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
 import { DTO } from "@/app/lib/profiles";
 import cn from "classnames";
@@ -36,7 +36,7 @@ export const TransactionType = ({
 	return (
 		<div data-testid="TransactionType">
 			<DetailWrapper label={t("COMMON.ACTION")}>
-				<div className="space-y-3 sm:space-y-0">
+				<div className="space-y-3">
 					<div className="flex w-full justify-between sm:justify-start">
 						<DetailLabelText className={labelClassName}>{t("COMMON.METHOD")}</DetailLabelText>
 						<Label color="neutral" size="xs">
@@ -45,31 +45,23 @@ export const TransactionType = ({
 					</div>
 
 					{transaction.isUsernameRegistration() && (
-						<>
-							<DetailDivider />
+						<div className="flex w-full justify-between sm:justify-start">
+							<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
 
-							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
-
-								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
-									{transaction.username()}
-								</div>
+							<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
+								{transaction.username()}
 							</div>
-						</>
+						</div>
 					)}
 
 					{(transaction.isValidatorRegistration() || transaction.isUpdateValidator()) && (
-						<>
-							<DetailDivider />
+						<div className="flex w-full justify-between sm:justify-start">
+							<DetailLabelText className={labelClassName}>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
-							<div className="flex w-full justify-between sm:justify-start">
-								<DetailLabelText className={labelClassName}>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
-
-								<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
-									{validatorPublickey(transaction)}
-								</div>
+							<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
+								{validatorPublickey(transaction)}
 							</div>
-						</>
+						</div>
 					)}
 				</div>
 			</DetailWrapper>

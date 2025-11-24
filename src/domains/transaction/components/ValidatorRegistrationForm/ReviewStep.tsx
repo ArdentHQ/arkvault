@@ -4,7 +4,6 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Divider } from "@/app/components/Divider";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -74,7 +73,7 @@ export const ReviewStep = ({
 			{errors.lockedFee && <Alert className={cn({ "mt-4": !hideHeader })}>{errors.lockedFee.message}</Alert>}
 
 			<div
-				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
 					"mt-6 sm:mt-4": !hideHeader,
 				})}
 			>
@@ -87,7 +86,7 @@ export const ReviewStep = ({
 				/>
 
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-					<div className="space-y-3 sm:space-y-0">
+					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.METHOD")}</DetailTitle>
 							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent">
@@ -97,13 +96,6 @@ export const ReviewStep = ({
 										: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_VALIDATOR")}
 								</span>
 							</div>
-						</div>
-
-						<div className="hidden sm:block">
-							<Divider
-								dashed
-								className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-px"
-							/>
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
@@ -119,46 +111,44 @@ export const ReviewStep = ({
 
 				{!wallet?.isValidator() && (
 					<div className="space-y-3 sm:space-y-2">
-						<div className="mx-3 sm:mx-0">
-							<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
-								<div className="flex flex-col gap-3">
-									<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
-										<DetailTitle className="w-auto sm:min-w-40">
-											{t("COMMON.LOCKED_AMOUNT")}
-										</DetailTitle>
+						<DetailWrapper label={t("COMMON.TRANSACTION_SUMMARY")} className="rounded-xl">
+							<div className="flex flex-col gap-3">
+								<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+									<DetailTitle className="w-auto sm:min-w-40">
+										{t("COMMON.LOCKED_AMOUNT")}
+									</DetailTitle>
 
-										<div className="flex flex-row items-center gap-2">
-											<Amount
-												ticker={validatorRegistrationFeeTicker}
-												value={validatorRegistrationFee}
-												className="font-semibold"
-											/>
+									<div className="flex flex-row items-center gap-2">
+										<Amount
+											ticker={validatorRegistrationFeeTicker}
+											value={validatorRegistrationFee}
+											className="font-semibold"
+										/>
 
-											{validatorRegistrationFeeAsFiat !== null && (
-												<div className="text-theme-secondary-700 font-semibold">
-													(~
-													<Amount
-														ticker={validatorRegistrationFeeAsFiatTicker}
-														value={validatorRegistrationFeeAsFiat}
-													/>
-													)
-												</div>
-											)}
+										{validatorRegistrationFeeAsFiat !== null && (
+											<div className="text-theme-secondary-700 font-semibold">
+												(~
+												<Amount
+													ticker={validatorRegistrationFeeAsFiatTicker}
+													value={validatorRegistrationFeeAsFiat}
+												/>
+												)
+											</div>
+										)}
 
-											<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
-												<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
-													<Icon name="QuestionMarkSmall" size="sm" />
-												</div>
-											</Tooltip>
-										</div>
+										<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
+											<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+												<Icon name="QuestionMarkSmall" size="sm" />
+											</div>
+										</Tooltip>
 									</div>
 								</div>
-							</DetailWrapper>
-						</div>
+							</div>
+						</DetailWrapper>
 					</div>
 				)}
 				<div data-testid="DetailWrapper">
-					<div className="mt-0 p-3 sm:p-0">
+					<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
 						<FormField name="fee">
 							<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 							<FeeField
