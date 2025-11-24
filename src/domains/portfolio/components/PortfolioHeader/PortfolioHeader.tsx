@@ -122,7 +122,7 @@ export const PortfolioHeader = ({
 						visible={showHint}
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
-								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+								<div className="mb-2 block max-w-96 whitespace-normal sm:mb-0 sm:inline">
 									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button
@@ -136,20 +136,17 @@ export const PortfolioHeader = ({
 										setShowHint(false);
 									}}
 								>
-									{t("COMMON.GOT_IT")},
+									{t("COMMON.GOT_IT")}
 								</Button>
 							</div>
 						}
 						placement="bottom-end"
 					>
 						<div
-							className={cn(
-								"flex h-fit max-w-[calc(100%_-_73px)] flex-row items-center gap-1 md:max-w-full",
-								{
-									"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
-										showHint,
-								},
-							)}
+							className={cn("flex h-fit flex-row items-center gap-1", {
+								"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
+									showHint,
+							})}
 						>
 							<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
 								{t("COMMON.VIEWING")}:
@@ -243,7 +240,6 @@ export const PortfolioHeader = ({
 											{t("COMMON.ADDRESS")}
 										</p>
 
-										<div className="flex h-[17px] items-center md:h-5">
 											<span className="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5">
 												<span className="lg:hidden">
 													<TruncateMiddle text={wallet.address()} maxChars={16} />
@@ -261,7 +257,6 @@ export const PortfolioHeader = ({
 											iconSize="md"
 										/>
 									</div>
-								)}
 
 								{selectedWallets.length > 1 && (
 									<div className="flex flex-row items-center gap-1.5">
@@ -499,6 +494,6 @@ export const PortfolioHeader = ({
 					onUpdate?.(true);
 				}}
 			/>
-		</header>
+		</header >
 	);
 };
