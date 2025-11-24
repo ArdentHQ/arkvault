@@ -372,7 +372,7 @@ describe("SearchWallet", () => {
 
 		await expect(screen.findByTestId("Modal__close-button")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => {
 			expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));

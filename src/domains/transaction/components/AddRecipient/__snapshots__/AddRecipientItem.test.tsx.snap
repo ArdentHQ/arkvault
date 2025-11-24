@@ -64,18 +64,26 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
               class="font-semibold text-base leading-5 text-theme-text"
               data-testid="Address__alias"
             >
-              <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
-              >
-                Mainsail Wallet …
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Mainsail Wallet …
+                  </span>
+                </span>
               </span>
             </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                </span>
+              </span>
             </span>
           </div>
         </div>
@@ -169,18 +177,26 @@ exports[`Add Recipient item > should render with size lg 1`] = `
               class="font-semibold text-base leading-5 text-theme-text"
               data-testid="Address__alias"
             >
-              <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
-              >
-                Mainsail Wallet …
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Mainsail Wallet …
+                  </span>
+                </span>
               </span>
             </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                </span>
+              </span>
             </span>
           </div>
         </div>
@@ -282,18 +298,26 @@ exports[`Add Recipient item > should render with size xs 1`] = `
                     class="font-semibold text-base leading-[17px] text-sm"
                     data-testid="Address__alias"
                   >
-                    <span
-                      class="no-ligatures transition-colors duration-200"
-                      data-testid="TruncateEnd"
-                    >
-                      Mainsail Wallet …
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures transition-colors duration-200"
+                          data-testid="TruncateEnd"
+                        >
+                          Mainsail Wallet …
+                        </span>
+                      </span>
                     </span>
                   </span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -410,18 +434,26 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
               class="font-semibold text-base leading-5 text-theme-text"
               data-testid="Address__alias"
             >
-              <span
-                class="no-ligatures transition-colors duration-200"
-                data-testid="TruncateEnd"
-              >
-                Mainsail Wallet …
+              <span>
+                <span>
+                  <span
+                    class="no-ligatures transition-colors duration-200"
+                    data-testid="TruncateEnd"
+                  >
+                    Mainsail Wallet …
+                  </span>
+                </span>
               </span>
             </span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+            <span>
+              <span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                </span>
+              </span>
             </span>
           </div>
         </div>

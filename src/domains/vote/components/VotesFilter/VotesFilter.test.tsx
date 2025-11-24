@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { VotesFilter } from "./VotesFilter";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor, act } from "@/utils/testing-library";
 import { within } from "@testing-library/react";
 
 const toggler = "dropdown__toggle-VotesFilter";
@@ -74,7 +74,10 @@ describe("VotesFilter", () => {
 
 		const currentOption = within(screen.getByTestId("VotesFilter__option--current")).getByRole("checkbox");
 
-		currentOption.focus();
+		act(() => {
+			currentOption.focus();
+		});
+
 		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));

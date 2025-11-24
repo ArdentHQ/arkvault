@@ -116,10 +116,13 @@ export const AddressRow = ({
 						data-testid={`AddressRow--delete-${wallet.address()}`}
 						disabled={isEditing}
 						size="icon"
-						className={cn("text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200", {
-							"hover:bg-theme-danger-400 dim-hover:text-white p-1 hover:text-white dark:hover:text-white":
-								!isEditing,
-						})}
+						className={cn(
+							"text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 p-1",
+							{
+								"hover:bg-theme-danger-400 dim-hover:text-white hover:text-white dark:hover:text-white":
+									!isEditing,
+							},
+						)}
 						variant="transparent"
 					>
 						<Icon name="Trash" dimensions={[16, 16]} />

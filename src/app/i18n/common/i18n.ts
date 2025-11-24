@@ -20,6 +20,7 @@ export const translations = {
 		WARNING: "Warning",
 	},
 	ALL: "All",
+	ALL_CAUGHT_UP: "All caught up!",
 	ALPHA: "ALPHA",
 	ALPHA_RELEASE: "This is an alpha release of ARK Vault",
 	AMOUNT: "Amount",
@@ -291,6 +292,19 @@ export const translations = {
 	MEMO_SMARTBRIDGE: "Memo (SmartBridge)",
 	MESSAGE: "Message",
 	METHOD: "Method",
+	MIGRATION_RESULT: {
+		COLD_ADDRESS:
+			"We could not derive the new address of <strong>{{address}}</strong> as no outgoing transactions were made from this address.",
+		COLD_ADDRESSES_AND_CONTACTS: "Cold addresses & contacts",
+		COLD_CONTACT:
+			"We could not derive the new address of contact <strong>{{name}} ({{address}})</strong> as no outgoing transactions were made from this address.",
+		MERGED_ADDRESS:
+			"Address <strong>{{address}}</strong> and <strong>{{mergedAddress}}</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one.",
+		MERGED_ADDRESSES_AND_CONTACTS: "Merged addresses & contacts",
+		MERGED_CONTACT:
+			"Contact <strong>{{oldName1}} ({{oldAddress1}})</strong> and <strong>{{oldName2}} ({{oldAddress2}})</strong> both correspond to the new address <strong>{{newAddress}}</strong> and are therefore combined into one, using the name <strong>{{name}}</strong>.",
+		TITLE: "Migration Result",
+	},
 	MNEMONIC: "Mnemonic",
 	MNEMONIC_TYPE: {
 		BIP39: "Mnemonic",
@@ -326,10 +340,16 @@ export const translations = {
 			UPDATE: "Update",
 		},
 		EMPTY: "You have no notifications at this time.",
+		FAILED_TRANSACTION_GENERIC_NOTIFICATION:
+			"Transaction failed: <TransactionId/>. <br/> Error encountered during contract execution.",
+		FAILED_TRANSACTION_NOTIFICATION:
+			"Transaction failed: <TransactionId/>. <br/> Error encountered during contract execution: <Error/>",
 		MARK_ALL_AS_READ: "Mark all as read",
 		PLUGINS_TITLE: "Plugins",
 		TITLE: "Notifications",
 		TRANSACTIONS_TITLE: "Transactions",
+		TRANSFER_MULTIPAYMENT_NOTIFICATION: 'Received <Amount/> (multipayment) on "<Address/>"',
+		TRANSFER_NOTIFICATION: 'Received <Amount/> on "<Address/>"',
 	},
 	NOT_AVAILABLE: "N/A",
 	NO_OPTIONS: "No options",
@@ -360,6 +380,8 @@ export const translations = {
 		SEND_VALIDATOR_RESIGNATION: "Validator Resignation",
 		SEND_VOTE: "Send Vote",
 		SIGN_MESSAGE: "Sign Message",
+		TRANSACTION_DETAILS: "Transaction Details",
+		VERIFY_MESSAGE: "Verify Message",
 	},
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",
@@ -402,6 +424,8 @@ export const translations = {
 	REGISTRATIONS: "Registrations",
 	RELOAD: "Reload",
 	REMOVE: "Remove",
+	REMOVE_ALL: "Remove All",
+	REMOVE_NOTIFICATION: "Remove Notification",
 	RENAME: "Rename",
 	REPEAT: "Repeat",
 	REPORT: "Report",
@@ -520,6 +544,7 @@ export const translations = {
 		MIN_RECIPIENTS: "At least one recipient is required.",
 		MULTIPLE_UNDERSCORES: "A username cannot contain two or more consecutive underscores.",
 		OPTIONAL: "This field is optional.",
+		PASSWORD_GENERIC_ERROR: "Please follow the hints below to strengthen your password.",
 		PASSWORD_LEAKED: "Please change your password, it has been found in a previous breach.",
 		PASSWORD_MISMATCH: "Passwords do not match.",
 		PASSWORD_RULES: {
@@ -545,6 +570,7 @@ export const translations = {
 	VALIDATOR_STATUS: "Validator Status",
 	VALUE: "Value",
 	VERIFIED: "Verified Address: {{value}}",
+	VERIFY: "Verify",
 	VERIFY_ADDRESS: "Verify Address",
 	VERSION: "Version",
 	VIEW: "View",

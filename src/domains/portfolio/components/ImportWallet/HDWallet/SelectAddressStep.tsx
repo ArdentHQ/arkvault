@@ -1,11 +1,11 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import Tippy from "@tippyjs/react";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { Address } from "@/app/components/Address";
+import { Tooltip } from "@/app/components/Tooltip";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
 import { Skeleton } from "@/app/components/Skeleton";
@@ -45,14 +45,14 @@ export const AddressesTable: FC<AddressTableProperties> = ({
 		() => [
 			{
 				Header: (
-					<Tippy content={isAllSelected ? t("COMMON.UNSELECT_ALL") : t("COMMON.SELECT_ALL")}>
+					<Tooltip content={isAllSelected ? t("COMMON.UNSELECT_ALL") : t("COMMON.SELECT_ALL")}>
 						<Checkbox
 							disabled={isLoading}
 							data-testid="SelectAddressStep__select-all"
 							onChange={() => toggleSelectAll()}
 							checked={isAllSelected}
 						/>
-					</Tippy>
+					</Tooltip>
 				),
 				className: "justify-center",
 				id: "select",

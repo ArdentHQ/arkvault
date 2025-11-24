@@ -3,7 +3,7 @@
 exports[`TransactionExportModal > should render 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -11,7 +11,7 @@ exports[`TransactionExportModal > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -89,7 +89,7 @@ exports[`TransactionExportModal > should render 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -124,48 +124,60 @@ exports[`TransactionExportModal > should render 1`] = `
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
-                                  <button
-                                    aria-checked="true"
-                                    aria-label="Incoming"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Incoming
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="Outgoing"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Outgoing
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="All"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      All
-                                    </div>
-                                  </button>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="true"
+                                        aria-label="Incoming"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Incoming
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="Outgoing"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Outgoing
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="All"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          All
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </span>
@@ -264,7 +276,7 @@ exports[`TransactionExportModal > should render 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -413,7 +425,7 @@ exports[`TransactionExportModal > should render 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -606,30 +618,34 @@ exports[`TransactionExportModal > should render 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="[.modal-footer_&]:mt-4 [.modal-footer_&]:px-6 [.modal-footer_&]:sm:px-0 bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
+                      class="modal-footer mt-4"
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
-                        data-testid="TransactionExportForm__cancel-button"
-                        type="button"
+                      <div
+                        class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
-                        <div
-                          class="flex items-center gap-2"
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          data-testid="TransactionExportForm__cancel-button"
+                          type="button"
                         >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
-                        data-testid="TransactionExport__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center gap-2"
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Cancel
+                          </div>
+                        </button>
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
+                          data-testid="TransactionExport__submit-button"
+                          type="submit"
                         >
-                          Export
-                        </div>
-                      </button>
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Export
+                          </div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -646,7 +662,7 @@ exports[`TransactionExportModal > should render 1`] = `
 exports[`TransactionExportModal > should render error status 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -654,7 +670,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -732,7 +748,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -767,48 +783,60 @@ exports[`TransactionExportModal > should render error status 1`] = `
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
-                                  <button
-                                    aria-checked="true"
-                                    aria-label="Incoming"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Incoming
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="Outgoing"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Outgoing
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="All"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      All
-                                    </div>
-                                  </button>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="true"
+                                        aria-label="Incoming"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Incoming
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="Outgoing"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Outgoing
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="All"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          All
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </span>
@@ -907,7 +935,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1056,7 +1084,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1249,30 +1277,34 @@ exports[`TransactionExportModal > should render error status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="[.modal-footer_&]:mt-4 [.modal-footer_&]:px-6 [.modal-footer_&]:sm:px-0 bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
+                      class="modal-footer mt-4"
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
-                        data-testid="TransactionExportForm__cancel-button"
-                        type="button"
+                      <div
+                        class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
-                        <div
-                          class="flex items-center gap-2"
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          data-testid="TransactionExportForm__cancel-button"
+                          type="button"
                         >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
-                        data-testid="TransactionExport__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center gap-2"
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Cancel
+                          </div>
+                        </button>
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
+                          data-testid="TransactionExport__submit-button"
+                          type="submit"
                         >
-                          Export
-                        </div>
-                      </button>
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Export
+                          </div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1289,7 +1321,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
 exports[`TransactionExportModal > should render success and download file 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1297,7 +1329,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -1543,30 +1575,34 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       </div>
                     </div>
                     <div
-                      class="[.modal-footer_&]:mt-4 [.modal-footer_&]:px-6 [.modal-footer_&]:sm:px-0 bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
+                      class="modal-footer mt-4"
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
-                        data-testid="TransactionExportSuccess__back-button"
-                        type="button"
+                      <div
+                        class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
-                        <div
-                          class="flex items-center gap-2"
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          data-testid="TransactionExportSuccess__back-button"
+                          type="button"
                         >
-                          Back
-                        </div>
-                      </button>
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
-                        data-testid="TransactionExportSuccess__download-button"
-                        type="button"
-                      >
-                        <div
-                          class="flex items-center gap-2"
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Back
+                          </div>
+                        </button>
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
+                          data-testid="TransactionExportSuccess__download-button"
+                          type="button"
                         >
-                          Download
-                        </div>
-                      </button>
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Download
+                          </div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1583,7 +1619,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
 exports[`TransactionExportModal > should render success and stay open if download fails 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1591,7 +1627,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -1837,30 +1873,34 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       </div>
                     </div>
                     <div
-                      class="[.modal-footer_&]:mt-4 [.modal-footer_&]:px-6 [.modal-footer_&]:sm:px-0 bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
+                      class="modal-footer mt-4"
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
-                        data-testid="TransactionExportSuccess__back-button"
-                        type="button"
+                      <div
+                        class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
-                        <div
-                          class="flex items-center gap-2"
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          data-testid="TransactionExportSuccess__back-button"
+                          type="button"
                         >
-                          Back
-                        </div>
-                      </button>
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
-                        data-testid="TransactionExportSuccess__download-button"
-                        type="button"
-                      >
-                        <div
-                          class="flex items-center gap-2"
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Back
+                          </div>
+                        </button>
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
+                          data-testid="TransactionExportSuccess__download-button"
+                          type="button"
                         >
-                          Download
-                        </div>
-                      </button>
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Download
+                          </div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1877,7 +1917,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
 exports[`TransactionExportModal > should render success status 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1885,7 +1925,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -1963,7 +2003,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1998,48 +2038,60 @@ exports[`TransactionExportModal > should render success status 1`] = `
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
-                                  <button
-                                    aria-checked="true"
-                                    aria-label="Incoming"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Incoming
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="Outgoing"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Outgoing
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="All"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      All
-                                    </div>
-                                  </button>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="true"
+                                        aria-label="Incoming"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Incoming
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="Outgoing"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Outgoing
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="All"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          All
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </span>
@@ -2138,7 +2190,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2287,7 +2339,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2480,30 +2532,34 @@ exports[`TransactionExportModal > should render success status 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="[.modal-footer_&]:mt-4 [.modal-footer_&]:px-6 [.modal-footer_&]:sm:px-0 bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
+                      class="modal-footer mt-4"
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
-                        data-testid="TransactionExportForm__cancel-button"
-                        type="button"
+                      <div
+                        class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
-                        <div
-                          class="flex items-center gap-2"
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          data-testid="TransactionExportForm__cancel-button"
+                          type="button"
                         >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
-                        data-testid="TransactionExport__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center gap-2"
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Cancel
+                          </div>
+                        </button>
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
+                          data-testid="TransactionExport__submit-button"
+                          type="submit"
                         >
-                          Export
-                        </div>
-                      </button>
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Export
+                          </div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2520,7 +2576,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
 exports[`TransactionExportModal > should render with fiat column 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2528,7 +2584,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
         data-testid="Modal__inner"
       >
         <div
@@ -2606,7 +2662,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                     data-testid="TransactionExportForm"
                   >
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2641,48 +2697,60 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                                   data-testid="ButtonGroup"
                                   role="radiogroup"
                                 >
-                                  <button
-                                    aria-checked="true"
-                                    aria-label="Incoming"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Incoming
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="Outgoing"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      Outgoing
-                                    </div>
-                                  </button>
-                                  <button
-                                    aria-checked="false"
-                                    aria-label="All"
-                                    class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
-                                    data-testid="ButtonGroupOption"
-                                    role="radio"
-                                    type="button"
-                                  >
-                                    <div
-                                      class="px-2"
-                                    >
-                                      All
-                                    </div>
-                                  </button>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="true"
+                                        aria-label="Incoming"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Incoming
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="Outgoing"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          Outgoing
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span>
+                                      <button
+                                        aria-checked="false"
+                                        aria-label="All"
+                                        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim:border-theme-dim-700 dim-hover:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:border-theme-navy-800 dim:aria-checked:text-theme-dim-50 flex w-full cursor-pointer items-center justify-center border-2 p-3 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default h-11 rounded"
+                                        data-testid="ButtonGroupOption"
+                                        role="radio"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="px-2"
+                                        >
+                                          All
+                                        </div>
+                                      </button>
+                                    </span>
+                                  </span>
                                 </div>
                               </div>
                             </span>
@@ -2781,7 +2849,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                       CSV Settings
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2930,7 +2998,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                       Columns
                     </div>
                     <ul
-                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-6 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-6 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
+                      class="[&>li]:border-theme-secondary-300 dark:[&>li]:border-theme-secondary-800 dim:[&>li]:border-theme-dim-700 [&>li]:mb-4 [&>li]:border-b [&>li]:border-dashed [&>li]:pb-4 [&>li:last-child]:mb-0 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -3170,30 +3238,34 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                       </li>
                     </ul>
                     <div
-                      class="[.modal-footer_&]:mt-4 [.modal-footer_&]:px-6 [.modal-footer_&]:sm:px-0 bg-theme-background shadow-footer-smooth dark:shadow-footer-smooth-dark fixed inset-x-0 bottom-0 flex gap-3 px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none dark:bg-black sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none pb-3 sm:pb-0"
+                      class="modal-footer mt-4"
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
-                        data-testid="TransactionExportForm__cancel-button"
-                        type="button"
+                      <div
+                        class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
-                        <div
-                          class="flex items-center gap-2"
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          data-testid="TransactionExportForm__cancel-button"
+                          type="button"
                         >
-                          Cancel
-                        </div>
-                      </button>
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
-                        data-testid="TransactionExport__submit-button"
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center gap-2"
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Cancel
+                          </div>
+                        </button>
+                        <button
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600"
+                          data-testid="TransactionExport__submit-button"
+                          type="submit"
                         >
-                          Export
-                        </div>
-                      </button>
+                          <div
+                            class="flex items-center gap-2"
+                          >
+                            Export
+                          </div>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

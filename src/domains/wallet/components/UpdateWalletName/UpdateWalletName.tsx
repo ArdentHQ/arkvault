@@ -1,7 +1,8 @@
+import { UpdateWalletNameForm, UpdateWalletNameProperties } from "./UpdateWalletNameForm";
+
+import { Modal } from "@/app/components/Modal";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Modal } from "@/app/components/Modal";
-import { UpdateWalletNameForm, UpdateWalletNameProperties } from "./UpdateWalletNameForm";
 
 export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: UpdateWalletNameProperties) => {
 	const { t } = useTranslation();

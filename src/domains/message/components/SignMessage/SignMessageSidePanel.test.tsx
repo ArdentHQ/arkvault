@@ -154,18 +154,14 @@ describe("SignMessageSidePanel", () => {
 
 			expect(screen.getByTestId("SignMessage__signature-json")).toBeInTheDocument();
 
-			const writeTextMock = vi.fn();
-			vi.stubGlobal("navigator", {
-				clipboard: { writeText: writeTextMock },
-			});
+			const clipboardSpy = vi.spyOn(navigator.clipboard, "writeText").mockResolvedValue();
 
 			await waitFor(() => {
 				expect(screen.getByTestId("SignMessage__copy-button")).toBeInTheDocument();
 			});
 
 			await userEvent.click(screen.getByTestId("SignMessage__copy-button"));
-
-			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
+			await waitFor(() => expect(clipboardSpy).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
 		});
 
 		it("should sign message with secret", async () => {

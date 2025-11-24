@@ -11,45 +11,49 @@ exports[`Server Status Indicator > should render as downgraded 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-warning-600"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-warning-600"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -67,45 +71,49 @@ exports[`Server Status Indicator > should render as healthy 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -123,45 +131,49 @@ exports[`Server Status Indicator > should render as unavailable 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-danger-500"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -179,45 +191,49 @@ exports[`Server Status Indicator > should render default 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-gray-100"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-gray-100"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -235,45 +251,49 @@ exports[`Server Status Indicator > should render in lg 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -291,45 +311,49 @@ exports[`Server Status Indicator > should render in md 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -347,45 +371,49 @@ exports[`Server Status Indicator > should render in sm 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -403,45 +431,49 @@ exports[`Server Status Indicator > should render in xl 1`] = `
       <div
         class="custom-button-nav-wrapper group"
       >
-        <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
-          data-testid="NavigationBar__buttons--server-status"
-          type="button"
-        >
-          <div
-            class="flex items-center gap-2"
-          >
-            <div
-              class="m-0 p-1"
+        <span>
+          <span>
+            <button
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+              data-testid="NavigationBar__buttons--server-status"
+              type="button"
             >
               <div
-                style="height: 20px; width: 20px;"
+                class="flex items-center gap-2"
               >
-                <svg
-                  fill="none"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 20 16"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="m-0 p-1"
                 >
-                  <path
-                    d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      fill="none"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.4055 7.25359C12.7875 3.8816 9.75152 1.59001 6.47283 2.0207C3.19415 2.45138 0.803089 5.45586 1.0128 8.88148C1.2225 12.3071 3.96068 14.9728 7.26548 14.9687H15.0878C16.6941 14.9714 18.1382 13.9523 18.7275 12.4002C19.3168 10.8481 18.9312 9.07955 17.7555 7.94265C16.5799 6.80574 14.8539 6.53236 13.4055 7.25359ZM13.4055 7.25359C13.5 7.96875 13.4 8.76875 13 9.96875"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
+                >
+                  <div
+                    class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
                   />
-                </svg>
+                </div>
               </div>
-            </div>
-            <div
-              class="absolute top-0 right-0 flex items-center justify-center rounded-full p-1 transition-all duration-100 ease-linear"
-            >
-              <div
-                class="h-1.5 w-1.5 rounded-full bg-theme-success-600 dark:bg-theme-success-500"
-              />
-            </div>
-          </div>
-        </button>
+            </button>
+          </span>
+        </span>
       </div>
     </div>
   </div>

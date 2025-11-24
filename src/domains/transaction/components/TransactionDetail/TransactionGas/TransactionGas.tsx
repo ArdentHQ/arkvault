@@ -1,4 +1,4 @@
-import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { Label } from "@/app/components/Label";
 import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
@@ -45,14 +45,12 @@ export const TransactionGas = ({ gasUsed, gasLimit }: { gasUsed: number | null; 
 					{t("TRANSACTION.GAS_INFORMATION")}
 				</Label>
 
-				<div className="mt-2 flex w-full justify-between gap-2 sm:justify-start">
+				<div className="mt-2 flex w-full justify-between gap-2 space-y-3 sm:justify-start">
 					<DetailLabelText className="min-w-36">{t("TRANSACTION.GAS_LIMIT")}</DetailLabelText>
 					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 						{formatNumber(gasLimit)}
 					</div>
 				</div>
-
-				<DetailDivider />
 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className="min-w-36">{t("TRANSACTION.GAS_USAGE")}</DetailLabelText>

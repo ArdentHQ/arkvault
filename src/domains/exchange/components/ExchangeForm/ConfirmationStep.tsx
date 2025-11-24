@@ -55,7 +55,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 					<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
 						<DetailWrapper label={t("COMMON.TRANSACTION_INFORMATION")}>
 							<div className="space-y-3">
-								<div className="space-y-3 sm:space-y-0">
+								<div className="space-y-3">
 									<div className="flex w-full justify-between gap-2 sm:justify-start">
 										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
 											<span className="hidden sm:inline">
@@ -83,7 +83,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 									</div>
 								</div>
 
-								<div className="space-y-3 sm:space-y-0">
+								<div className="space-y-3">
 									<div className="flex w-full justify-between gap-2 sm:justify-start">
 										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
 											{t("COMMON.AMOUNT")}
@@ -119,7 +119,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 					<DetailPadded className="flex-1-mx-3 flex-1 sm:ml-0">
 						<DetailWrapper label={t("COMMON.TRANSACTION_INFORMATION")}>
 							<div className="space-y-3">
-								<div className="space-y-3 sm:space-y-0">
+								<div className="space-y-3">
 									<div className="flex w-full justify-between gap-2 sm:justify-start">
 										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
 											<span className="hidden sm:inline">
@@ -146,7 +146,7 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 									</div>
 								</div>
 
-								<div className="space-y-3 sm:space-y-0">
+								<div className="space-y-3">
 									<div className="flex w-full justify-between gap-2 sm:justify-start">
 										<DetailLabelText className="min-w-[127px] sm:min-w-[207px]">
 											{t("COMMON.AMOUNT")}

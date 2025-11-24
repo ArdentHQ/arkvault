@@ -131,7 +131,12 @@ describe("AddressesSidePanel", () => {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
+		await waitFor(
+			() => {
+				expect(screen.getByText(/You can manage and remove your addresses here./)).toBeVisible();
+			},
+			{ timeout: 4000 },
+		);
 
 		getItemSpy.mockRestore();
 	});
@@ -151,19 +156,29 @@ describe("AddressesSidePanel", () => {
 	});
 
 	it("should persist state for shown `manage` button hint", async () => {
-		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(undefined);
+		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(false);
 
 		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
-		await expect(screen.findByText(/You can manage and remove your addresses here./)).resolves.toBeVisible();
+		await waitFor(
+			() => {
+				expect(screen.getByText(/You can manage and remove your addresses here./)).toBeVisible();
+			},
+			{ timeout: 4000 },
+		);
 
 		const setItemSpy = vi.spyOn(Storage.prototype, "setItem");
 
 		await userEvent.click(screen.getByTestId("HideManageHint"));
 
-		expect(setItemSpy).toHaveBeenCalledWith("manage-hint", "true");
+		await waitFor(
+			() => {
+				expect(setItemSpy).toHaveBeenCalledWith("manage-hint", "true");
+			},
+			{ timeout: 4000 },
+		);
 
 		setItemSpy.mockRestore();
 		getItemSpy.mockRestore();

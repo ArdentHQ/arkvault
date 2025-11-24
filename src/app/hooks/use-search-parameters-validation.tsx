@@ -63,12 +63,18 @@ const defaultNetworks = {
 };
 
 const validatorFromSearchParameters = ({ profile, network, searchParameters }: PathProperties) => {
-	const validatorName = searchParameters.get("validator") ?? searchParameters.get("delegate");
+	const validatorNameOrAddress = searchParameters.get("validator") ?? searchParameters.get("delegate");
 	const validatorPublicKey = searchParameters.get("publicKey");
 
-	if (validatorName) {
+	if (validatorNameOrAddress) {
 		try {
-			return profile.validators().findByUsername(network.id(), validatorName);
+			return profile.validators().findByUsername(network.id(), validatorNameOrAddress);
+		} catch {
+			//
+		}
+
+		try {
+			return profile.validators().findByAddress(network.id(), validatorNameOrAddress);
 		} catch {
 			//
 		}

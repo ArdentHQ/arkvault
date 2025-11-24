@@ -1,32 +1,33 @@
+import { LedgerMigrationBanner, useLedgerMigrationMenuOptions } from "@/domains/wallet/components/LedgerMigration";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 import React, { useEffect, useState } from "react";
+
 import { Address } from "@/app/components/Address";
-import { Button } from "@/app/components/Button";
-import { Divider } from "@/app/components/Divider";
-import { Icon } from "@/app/components/Icon";
-import { useWalletActions } from "@/domains/wallet/hooks";
-import { Contracts } from "@/app/lib/profiles";
-import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
-import { Dropdown } from "@/app/components/Dropdown";
-import { t } from "i18next";
 import { Amount } from "@/app/components/Amount";
-import { WalletIcons } from "@/app/components/WalletIcons";
+import { Button } from "@/app/components/Button";
+import { Contracts } from "@/app/lib/profiles";
 import { Copy } from "@/app/components/Copy";
-import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
-import { WalletActions } from "@/domains/portfolio/components/WalletHeader/WalletHeader.blocks";
+import { Divider } from "@/app/components/Divider";
+import { Dot } from "@/app/components/Dot";
+import { Dropdown } from "@/app/components/Dropdown";
+import { Icon } from "@/app/components/Icon";
+import { Label } from "@/app/components/Label";
 import { Skeleton } from "@/app/components/Skeleton";
-import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
-import { assertWallet } from "@/utils/assertions";
-import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
-import { useLocalStorage } from "usehooks-ts";
 import { Tooltip } from "@/app/components/Tooltip";
-import cn from "classnames";
 import { Trans } from "react-i18next";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { Panel, usePanels } from "@/app/contexts/Panels";
-import { Label } from "@/app/components/Label";
-import { Dot } from "@/app/components/Dot";
-import { LedgerMigrationBanner, useLedgerMigrationMenuOptions } from "@/domains/wallet/components/LedgerMigration";
+import { ViewingAddressInfo } from "./PortfolioHeader.blocks";
+import { WalletActions } from "@/domains/portfolio/components/WalletHeader/WalletHeader.blocks";
+import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { WalletIcons } from "@/app/components/WalletIcons";
+import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components/WalletVote/WalletVote";
+import { assertWallet } from "@/utils/assertions";
+import cn from "classnames";
+import { t } from "i18next";
 import { useLedgerMigrationStatus } from "@/domains/wallet/hooks/use-ledger-wallet-migration";
+import { useLocalStorage } from "usehooks-ts";
+import { useWalletActions } from "@/domains/wallet/hooks";
+import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 
 export const PortfolioHeader = ({
 	profile,
@@ -120,10 +121,9 @@ export const PortfolioHeader = ({
 				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
 					<Tooltip
 						visible={showHint}
-						interactive={true}
 						content={
 							<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
-								<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+								<div className="mb-2 block max-w-96 whitespace-normal sm:mb-0 sm:inline">
 									<Trans i18nKey="WALLETS.SINGLE_ADDRESS_HINT" />
 								</div>
 								<Button
@@ -144,13 +144,10 @@ export const PortfolioHeader = ({
 						placement="bottom-end"
 					>
 						<div
-							className={cn(
-								"flex h-fit max-w-[calc(100%_-_73px)] flex-row items-center gap-1 md:max-w-full",
-								{
-									"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
-										showHint,
-								},
-							)}
+							className={cn("flex h-fit flex-row items-center gap-1", {
+								"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
+									showHint,
+							})}
 						>
 							<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
 								{t("COMMON.VIEWING")}:
@@ -196,7 +193,11 @@ export const PortfolioHeader = ({
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => openPanel(Panel.ImportAddress)}
 						>
-							<Icon name="ArrowTurnDownBracket" size="md" />
+							<Icon
+								name="ArrowTurnDownBracket"
+								size="md"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+							/>
 							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
 								{t("COMMON.IMPORT")}
 							</p>
@@ -210,7 +211,11 @@ export const PortfolioHeader = ({
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => openPanel(Panel.CreateAddress)}
 						>
-							<Icon name="Plus" size="md" />
+							<Icon
+								name="Plus"
+								size="md"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+							/>
 							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
 								{t("COMMON.CREATE")}
 							</p>
@@ -429,10 +434,9 @@ export const PortfolioHeader = ({
 														!isMigratingLater &&
 														isIgnored
 													}
-													interactive={true}
 													content={
 														<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
-															<div className="mb-2 block max-w-96 sm:mb-0 sm:inline">
+															<div className="mb-2 block sm:mb-0 sm:inline">
 																<Trans i18nKey="COMMON.LEDGER_MIGRATION.MIGRATE_LATER" />
 															</div>
 															<Button

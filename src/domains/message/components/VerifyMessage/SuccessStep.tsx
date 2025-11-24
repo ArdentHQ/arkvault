@@ -1,14 +1,10 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
-import { useFormContext } from "react-hook-form";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { StepHeader } from "@/app/components/StepHeader";
-import { TextArea } from "@/app/components/TextArea";
 import { Alert } from "@/app/components/Alert";
-import { VerificationResult } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
-import { Icon } from "@/app/components/Icon";
-import { Image } from "@/app/components/Image";
+import { TextArea } from "@/app/components/TextArea";
+import { useFormContext } from "react-hook-form";
+import { VerificationResult } from "@/domains/message/components/VerifyMessage/VerifyMessageSidePanel";
 
 export const SuccessStep = ({ verificationResult }: { verificationResult?: VerificationResult }) => {
 	const { t } = useTranslation();
@@ -23,14 +19,6 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 		}
 	}, [isVerified, setError]);
 
-	const getTitle = () => {
-		if (isVerified) {
-			return t("MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE");
-		}
-
-		return t("MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE");
-	};
-
 	const getDescription = () => {
 		if (isVerified) {
 			return t("MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.DESCRIPTION");
@@ -39,28 +27,9 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 		return t("MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.DESCRIPTION");
 	};
 
-	const titleIcon = () => {
-		if (!isVerified) {
-			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[22px] w-[22px]" />;
-		}
-
-		return (
-			<Icon
-				className="text-theme-success-100 dark:text-theme-success-900"
-				dimensions={[24, 24]}
-				name="Completed"
-				data-testid="icon-Completed"
-			/>
-		);
-	};
-
 	return (
 		<section>
-			<StepHeader title={getTitle()} titleIcon={titleIcon()} />
-
-			<Alert className="mt-6 sm:mt-4" variant={isVerified ? "success" : "danger"}>
-				{getDescription()}
-			</Alert>
+			<Alert variant={isVerified ? "success" : "danger"}>{getDescription()}</Alert>
 
 			<div className="pt-6 sm:pt-4">
 				<FormField name="json-signature">
@@ -68,6 +37,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 					<TextArea
 						className="py-4"
 						wrap="hard"
+						rows={5}
 						defaultValue={JSON.stringify({
 							message: verificationResult?.message,
 							signatory: verificationResult?.signatory,

@@ -29,7 +29,7 @@ export const ConfirmationModal = ({ description, title, size = "lg", isOpen, onC
 			isOpen={isOpen}
 			onClose={onCancel}
 		>
-			<div data-testid="ConfirmationModal">
+			<div data-testid="ConfirmationModal" className="modal-footer">
 				<FormButtons>
 					<Button variant="secondary" onClick={onCancel} data-testid="ConfirmationModal__no-button">
 						{t("COMMON.NO")}

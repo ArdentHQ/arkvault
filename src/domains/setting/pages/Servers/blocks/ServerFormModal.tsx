@@ -252,11 +252,13 @@ const ServerFormModal = ({
 					)}
 				</FormField>
 
-				<FormButtons>
-					<Button data-testid="ServerFormModal--save" disabled={!formIsValid} type="submit">
-						{networkToUpdate ? t("COMMON.SAVE") : t("COMMON.ADD")}
-					</Button>
-				</FormButtons>
+				<div className="modal-footer">
+					<FormButtons>
+						<Button data-testid="ServerFormModal--save" disabled={!formIsValid} type="submit">
+							{networkToUpdate ? t("COMMON.SAVE") : t("COMMON.ADD")}
+						</Button>
+					</FormButtons>
+				</div>
 			</Form>
 		</Modal>
 	);
