@@ -64,6 +64,10 @@ export const PortfolioHeader = ({
 		}
 	};
 
+	const handleSendContractDeployment = () => {
+		openPanel(Panel.SendContractDeployment);
+	};
+
 	const handleSendUsernameResignation = () => {
 		openPanel(Panel.SendUsernameResignation);
 	};
@@ -73,6 +77,7 @@ export const PortfolioHeader = ({
 	};
 
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
+		handleSendContractDeployment,
 		handleSendRegistration,
 		handleSendUsernameResignation,
 		handleSendValidatorResignation,

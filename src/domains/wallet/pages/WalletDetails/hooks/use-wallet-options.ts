@@ -146,7 +146,7 @@ const getContractOptions = (_wallets: Contracts.IReadWriteWallet[], t: TFunction
 		options: [
 			{
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DEPLOY"),
-				value: "deploy",
+				value: "contract-deployment",
 			},
 		],
 		title: t("WALLETS.PAGE_WALLET_DETAILS.CONTRACTS"),

@@ -48,6 +48,7 @@ export const translations = {
 	BLOCK: "Block",
 	BRIDGECHAIN: "Bridgechain",
 	BUSINESS: "Business",
+	BYTECODE: "Bytecode",
 	CANCEL: "Cancel",
 	CHANGE: "Change",
 	CHANGED: "Changed",
