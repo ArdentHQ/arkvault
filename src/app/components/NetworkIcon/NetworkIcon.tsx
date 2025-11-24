@@ -17,7 +17,6 @@ interface NetworkIconProperties {
 	iconClassName?: string;
 	iconSize?: Size;
 	showTooltip?: boolean;
-	tooltipDarkTheme?: boolean;
 	noShadow?: boolean;
 	isCompact?: boolean;
 }
@@ -36,7 +35,6 @@ export const NetworkIcon = ({
 	className,
 	iconClassName,
 	showTooltip = true,
-	tooltipDarkTheme,
 	isCompact = false,
 	...properties
 }: NetworkIconProperties) => {
@@ -96,11 +94,7 @@ export const NetworkIcon = ({
 	};
 
 	return (
-		<Tooltip
-			content={networkDisplayName(network)}
-			disabled={!showTooltip}
-			theme={tooltipDarkTheme ? "dark" : undefined}
-		>
+		<Tooltip content={networkDisplayName(network)} disabled={!showTooltip}>
 			{renderIcon()}
 		</Tooltip>
 	);

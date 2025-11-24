@@ -14,11 +14,15 @@ exports[`VoteList > should render in lg 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -32,11 +36,15 @@ exports[`VoteList > should render in lg 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -50,11 +58,15 @@ exports[`VoteList > should render in lg 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -77,11 +89,15 @@ exports[`VoteList > should render in md 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -95,11 +111,15 @@ exports[`VoteList > should render in md 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -113,11 +133,15 @@ exports[`VoteList > should render in md 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -140,11 +164,15 @@ exports[`VoteList > should render in sm 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -158,11 +186,15 @@ exports[`VoteList > should render in sm 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -176,11 +208,15 @@ exports[`VoteList > should render in sm 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -203,11 +239,15 @@ exports[`VoteList > should render in xl 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -221,11 +261,15 @@ exports[`VoteList > should render in xl 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -239,11 +283,15 @@ exports[`VoteList > should render in xl 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -266,11 +314,15 @@ exports[`VoteList > should render in xs 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -284,11 +336,15 @@ exports[`VoteList > should render in xs 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -302,11 +358,15 @@ exports[`VoteList > should render in xs 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -329,11 +389,15 @@ exports[`VoteList > should render with amount in lg 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -357,11 +421,15 @@ exports[`VoteList > should render with amount in lg 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -385,11 +453,15 @@ exports[`VoteList > should render with amount in lg 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -422,11 +494,15 @@ exports[`VoteList > should render with amount in md 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -450,11 +526,15 @@ exports[`VoteList > should render with amount in md 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -478,11 +558,15 @@ exports[`VoteList > should render with amount in md 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -525,11 +609,15 @@ exports[`VoteList > should render with amount in sm 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -553,11 +641,15 @@ exports[`VoteList > should render with amount in sm 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -581,11 +673,15 @@ exports[`VoteList > should render with amount in sm 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -608,11 +704,15 @@ exports[`VoteList > should render with amount in xl 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -636,11 +736,15 @@ exports[`VoteList > should render with amount in xl 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -664,11 +768,15 @@ exports[`VoteList > should render with amount in xl 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -711,11 +819,15 @@ exports[`VoteList > should render with amount in xs 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0xB8Be76b31E402a2D89294Aa107056484Bef94362
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0xB8Be76b31E402a2D89294Aa107056484Bef94362
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -739,11 +851,15 @@ exports[`VoteList > should render with amount in xs 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x03BC306C369A55c0336EB003bB07F29E5c150F36
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x03BC306C369A55c0336EB003bB07F29E5c150F36
+              </span>
+            </span>
           </span>
         </div>
       </div>
@@ -767,11 +883,15 @@ exports[`VoteList > should render with amount in xs 1`] = `
         <div
           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
         >
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-            data-testid="Address__address"
-          >
-            0x56F925416Ef2725646442D5E0150088bd7202aCd
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x56F925416Ef2725646442D5E0150088bd7202aCd
+              </span>
+            </span>
           </span>
         </div>
       </div>

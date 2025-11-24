@@ -342,7 +342,12 @@ export const GeneralSettings: React.FC = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="general">
-			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
+			<Form
+				data-testid="General-settings__form"
+				context={form}
+				onSubmit={handleSubmit}
+				className="space-y-0 pb-16 sm:pb-0"
+			>
 				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
 					<div className="group space-y-2">
 						<span className="text-theme-secondary-text group-hover:text-theme-primary-600 cursor-default text-sm font-semibold transition-colors duration-100">
@@ -564,8 +569,8 @@ export const GeneralSettings: React.FC = () => {
 					<ListDivided items={otherItems} />
 				</SettingsGroup>
 
-				<SettingsButtonGroup>
-					<FormButtons>
+				<SettingsButtonGroup className="fixed z-50 sm:static">
+					<FormButtons className="border-none sm:z-0">
 						<Button
 							disabled={isSaveButtonDisabled}
 							type="submit"

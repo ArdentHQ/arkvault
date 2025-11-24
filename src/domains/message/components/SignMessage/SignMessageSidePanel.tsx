@@ -20,6 +20,7 @@ import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePane
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { AddressViewSelection } from "@/app/lib/profiles/wallet.enum";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
+import { Image } from "@/app/components/Image";
 
 enum Step {
 	FormStep = 1,
@@ -214,6 +215,10 @@ export const SignMessageSidePanel = ({
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === Step.ErrorStep) {
+			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
+		}
+
 		if (activeTab === Step.SuccessStep) {
 			return (
 				<ThemeIcon

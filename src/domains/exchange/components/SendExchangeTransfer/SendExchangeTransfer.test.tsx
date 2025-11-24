@@ -28,11 +28,11 @@ let useActiveProfileSpy: MockInstance;
 const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 
 const selectSender = async () => {
-	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectDropdown__input"));
 
-	await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
+	await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
-	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+	const firstAddress = screen.getByTestId("SelectDropdown__option--0");
 
 	await userEvent.click(firstAddress);
 };
@@ -172,9 +172,9 @@ describe("SendExchangeTransfer", () => {
 
 		await selectSender();
 
-		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("Input__error")).resolves.toHaveLength(2);
 
-		expect(screen.getByTestId("Input__error")).toHaveAttribute(
+		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
 			"data-errortext",
 			t("TRANSACTION.VALIDATION.LOW_BALANCE"),
 		);
@@ -208,7 +208,7 @@ describe("SendExchangeTransfer", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(wallet.address());
 		});
 
 		profile.wallets().push(secondWallet);

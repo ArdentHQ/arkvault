@@ -4,7 +4,6 @@ import { DTO } from "@/app/lib/profiles";
 import { useBreakpoint } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
-import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { getStyles } from "@/app/components/Button/Button.styles";
@@ -22,7 +21,6 @@ interface Properties {
 
 export const TransactionId = ({ transaction, isConfirmed, label }: Properties): ReactElement => {
 	const { t } = useTranslation();
-	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
 	const reference = useRef(null);
@@ -53,7 +51,6 @@ export const TransactionId = ({ transaction, isConfirmed, label }: Properties): 
 					variant={isSmAndAbove ? "icon" : "button"}
 					data={transaction.hash()}
 					tooltip={t("COMMON.COPY_ID")}
-					tooltipDarkTheme={isDarkMode}
 					iconButtonClassName={twMerge(
 						getStyles({ variant: "secondary" }),
 						"space-x-0 p-2 dim:border-theme-dim-600 dim:bg-theme-dim-700 dim:text-theme-dim-50",

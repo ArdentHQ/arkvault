@@ -1,7 +1,6 @@
 import React from "react";
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import Tippy from "@tippyjs/react";
 import userEvent from "@testing-library/user-event";
 import { SelectNetworkDropdown } from "./SelectNetworkDropdown";
 import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
@@ -23,8 +22,6 @@ describe("SelectNetworkDropdown", () => {
 	});
 
 	beforeEach(() => {
-		vi.spyOn(Tippy as any, "render").mockRestore();
-
 		profile = env.profiles().findById(fixtureProfileId);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);

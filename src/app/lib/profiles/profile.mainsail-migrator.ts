@@ -1,9 +1,15 @@
-import { IProfile, IProfileData, IProfileMainsailMigrator } from "./contracts.js";
+import { IProfile, IProfileData, IProfileMainsailMigrator, WalletData } from "./contracts.js";
 import { HttpClient } from "@/app/lib/mainsail/http-client.js";
 import { Avatar } from "./helpers/avatar.js";
 import { UUID } from "@ardenthq/arkvault-crypto";
 export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	readonly #http: HttpClient = new HttpClient(10_000);
+	readonly #migrationResult: Record<string, any[]> = {
+		coldAddresses: [],
+		coldContacts: [],
+		mergedAddresses: [],
+		mergedContacts: [],
+	};
 
 	/**
 	 * Migrates the profile data from Mainsail to ArkVault if needed.
@@ -17,6 +23,8 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			data.wallets = await this.#migrateWallets(profile, data.wallets);
 			data.contacts = await this.#migrateContacts(profile, data.contacts);
 			data.settings = await this.#migrateSettings(profile, data.settings, data.wallets);
+
+			profile.setMigrationResult(this.#migrationResult);
 		}
 
 		return data;
@@ -31,6 +39,18 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 
 			// If this public key has already been migrated, skip to avoid duplicates
 			if (publicKey !== undefined && seenPublicKeys.has(publicKey)) {
+				const mergedWallet = Object.values(wallets).find(
+					(d) => d.data[WalletData.PublicKey] === publicKey && migratedWallets[d.id] !== undefined,
+				);
+				const newWallet = Object.values(migratedWallets).find(
+					(d) => d.data[WalletData.PublicKey] === publicKey,
+				);
+
+				this.#migrationResult.mergedAddresses.push({
+					...wallet.data,
+					mergedAddress: mergedWallet?.data.ADDRESS,
+					newAddress: newWallet?.data.ADDRESS,
+				});
 				continue;
 			}
 
@@ -73,6 +93,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	): Promise<IProfileData["wallets"][string]["data"] | undefined> {
 		const publicKey = walletData["PUBLIC_KEY"];
 		if (publicKey === undefined) {
+			this.#migrationResult.coldAddresses.push(walletData);
 			return undefined;
 		}
 
@@ -100,13 +121,13 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	): Promise<Array<{ id: string; contact: any }> | null> {
 		const addressResults = await Promise.all(
 			contact.addresses.map(async (addr) => {
-				const newAddress = await this.#migrateContactAddress(profile, addr);
-				return newAddress ? { address: newAddress, id: addr.id } : null;
+				const newAddress = await this.#migrateContactAddress(profile, addr, contact.name);
+				return newAddress ? { address: newAddress, id: addr.id, oldAddress: addr.address } : null;
 			}),
 		);
 
 		const migratedAddresses = addressResults.filter(
-			(addr): addr is { id: string; address: string } => addr !== null,
+			(addr): addr is { id: string; address: string; oldAddress: string } => addr !== null,
 		);
 
 		if (migratedAddresses.length === 0) {
@@ -125,6 +146,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				addresses: [address],
 				id: contactId,
 				name: finalName,
+				oldName: originalName,
 			};
 
 			results.push({ contact: newContact, id: contactId });
@@ -138,6 +160,15 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 		const finalNameCounts = new Map<string, number>();
 		const seenAddresses = new Map<string, string>();
 
+		const normalizedResults = allResults
+			.filter((result) => result !== null)
+			.flat()
+			.map((result) => ({
+				...result.contact,
+				...result.contact.addresses[0],
+				contactId: result.id,
+			}));
+
 		for (const result of allResults) {
 			if (result === null) {
 				continue;
@@ -149,6 +180,20 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 				const migratedAddress = contact.addresses?.[0]?.address;
 				if (typeof migratedAddress === "string") {
 					if (seenAddresses.has(migratedAddress)) {
+						const mergedContact = normalizedResults.find(
+							(result) => result.address === migratedAddress && result.contactId !== id,
+						);
+
+						this.#migrationResult.mergedContacts.push({
+							...contact,
+							mergedContact: {
+								address: mergedContact.address,
+								name: mergedContact.name,
+								oldAddress: mergedContact.oldAddress,
+								oldName: mergedContact.oldName,
+							},
+							name: mergedContact.name,
+						});
 						continue;
 					}
 					seenAddresses.set(migratedAddress, id);
@@ -171,6 +216,7 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 	async #migrateContactAddress(
 		profile: IProfile,
 		addr: IProfileData["contacts"][string]["addresses"][number],
+		contactName: string,
 	): Promise<string | undefined> {
 		if (!["ark.mainnet", "ark.devnet"].includes(addr.network)) {
 			return undefined;
@@ -188,6 +234,10 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			const publicKey = body?.data?.publicKey;
 
 			if (!publicKey) {
+				this.#migrationResult.coldContacts.push({
+					...addr,
+					name: contactName,
+				});
 				return undefined;
 			}
 
@@ -195,6 +245,10 @@ export class ProfileMainsailMigrator implements IProfileMainsailMigrator {
 			return wallet.address();
 		} catch (error) {
 			if (error.message.includes("404")) {
+				this.#migrationResult.coldContacts.push({
+					...addr,
+					name: contactName,
+				});
 				return undefined;
 			}
 			throw new Error(

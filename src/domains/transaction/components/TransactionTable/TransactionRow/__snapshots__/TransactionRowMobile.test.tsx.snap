@@ -23,28 +23,36 @@ exports[`TransactionRowMobile > should render 1`] = `
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
-                  <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                    data-ring-focus-margin="-m-1"
-                    data-testid="Link"
-                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-                    rel="noopener noreferrer"
-                  >
-                    <span
-                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
-                    >
-                      <span
-                        class="text-sm"
+                  <span>
+                    <span>
+                      <a
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        rel="noopener noreferrer"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
-                          data-testid="TransactionRow__id"
+                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
-                          ea63…c79b
+                          <span
+                            class="text-sm"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  data-testid="TransactionRow__id"
+                                >
+                                  ea63…c79b
+                                </span>
+                              </span>
+                            </span>
+                          </span>
                         </span>
-                      </span>
+                      </a>
                     </span>
-                  </a>
+                  </span>
                 </div>
               </div>
               <div
@@ -91,67 +99,81 @@ exports[`TransactionRowMobile > should render 1`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
+                          <span>
                             <div
-                              style="height: 16px; width: 16px;"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <span
+                                  class="font-semibold text-sm text-theme-text"
+                                  data-testid="Address__alias"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures transition-colors duration-200"
+                                        data-testid="TruncateEnd"
+                                      >
+                                        Mainsail Wallet …
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -165,67 +187,81 @@ exports[`TransactionRowMobile > should render 1`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
+                          <span>
                             <div
-                              style="height: 16px; width: 16px;"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <span
+                                  class="font-semibold text-sm text-theme-text"
+                                  data-testid="Address__alias"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures transition-colors duration-200"
+                                        data-testid="TruncateEnd"
+                                      >
+                                        Mainsail Wallet …
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -301,28 +337,36 @@ exports[`TransactionRowMobile > should render 2`] = `
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
-                  <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                    data-ring-focus-margin="-m-1"
-                    data-testid="Link"
-                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-                    rel="noopener noreferrer"
-                  >
-                    <span
-                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
-                    >
-                      <span
-                        class="text-sm"
+                  <span>
+                    <span>
+                      <a
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        rel="noopener noreferrer"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
-                          data-testid="TransactionRow__id"
+                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
-                          ea63…c79b
+                          <span
+                            class="text-sm"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  data-testid="TransactionRow__id"
+                                >
+                                  ea63…c79b
+                                </span>
+                              </span>
+                            </span>
+                          </span>
                         </span>
-                      </span>
+                      </a>
                     </span>
-                  </a>
+                  </span>
                 </div>
               </div>
               <div
@@ -369,67 +413,81 @@ exports[`TransactionRowMobile > should render 2`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
+                          <span>
                             <div
-                              style="height: 16px; width: 16px;"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <span
+                                  class="font-semibold text-sm text-theme-text"
+                                  data-testid="Address__alias"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures transition-colors duration-200"
+                                        data-testid="TruncateEnd"
+                                      >
+                                        Mainsail Wallet …
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -443,67 +501,81 @@ exports[`TransactionRowMobile > should render 2`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
+                          <span>
                             <div
-                              style="height: 16px; width: 16px;"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <span
+                                  class="font-semibold text-sm text-theme-text"
+                                  data-testid="Address__alias"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures transition-colors duration-200"
+                                        data-testid="TruncateEnd"
+                                      >
+                                        Mainsail Wallet …
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -579,28 +651,36 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
-                  <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                    data-ring-focus-margin="-m-1"
-                    data-testid="Link"
-                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-                    rel="noopener noreferrer"
-                  >
-                    <span
-                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
-                    >
-                      <span
-                        class="text-sm"
+                  <span>
+                    <span>
+                      <a
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        rel="noopener noreferrer"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
-                          data-testid="TransactionRow__id"
+                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
-                          ea63…c79b
+                          <span
+                            class="text-sm"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  data-testid="TransactionRow__id"
+                                >
+                                  ea63…c79b
+                                </span>
+                              </span>
+                            </span>
+                          </span>
                         </span>
-                      </span>
+                      </a>
                     </span>
-                  </a>
+                  </span>
                 </div>
               </div>
               <div
@@ -647,69 +727,83 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
+                          <span>
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
-                            <div
-                              style="height: 16px; width: 16px;"
-                            >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <div
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -723,67 +817,81 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
+                          <span>
                             <div
-                              style="height: 16px; width: 16px;"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <span
+                                  class="font-semibold text-sm text-theme-text"
+                                  data-testid="Address__alias"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures transition-colors duration-200"
+                                        data-testid="TruncateEnd"
+                                      >
+                                        Mainsail Wallet …
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -859,28 +967,36 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
-                  <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                    data-ring-focus-margin="-m-1"
-                    data-testid="Link"
-                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-                    rel="noopener noreferrer"
-                  >
-                    <span
-                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
-                    >
-                      <span
-                        class="text-sm"
+                  <span>
+                    <span>
+                      <a
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        rel="noopener noreferrer"
                       >
                         <span
-                          class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
-                          data-testid="TransactionRow__id"
+                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
                         >
-                          ea63…c79b
+                          <span
+                            class="text-sm"
+                          >
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures text-theme-primary-600 dim:text-theme-dim-navy-600 cursor-pointer"
+                                  data-testid="TransactionRow__id"
+                                >
+                                  ea63…c79b
+                                </span>
+                              </span>
+                            </span>
+                          </span>
                         </span>
-                      </span>
+                      </a>
                     </span>
-                  </a>
+                  </span>
                 </div>
               </div>
               <div
@@ -927,69 +1043,83 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         From
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
+                          <span>
                             <div
-                              class="relative grow leading-[17px] sm:leading-5 text-left"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                data-testid="Address__address"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                              </span>
-                              <span>
-                                 
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
-                            <div
-                              style="height: 16px; width: 16px;"
-                            >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <div
+                                  class="relative grow leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                        data-testid="Address__address"
+                                      >
+                                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                      </span>
+                                    </span>
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                     <div
@@ -1003,67 +1133,81 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         To
                       </div>
                       <div
-                        class="flex min-w-36 grow items-center justify-between space-x-4"
+                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
                       >
-                        <div
+                        <span
                           class="grow"
-                          data-testid="TransactionRowAddressing__address-container"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="font-semibold text-sm text-theme-text"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures transition-colors duration-200"
-                                data-testid="TruncateEnd"
-                              >
-                                Mainsail Wallet …
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <button
-                          class="ring-focus relative cursor-pointer focus:outline-hidden"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
-                          >
+                          <span>
                             <div
-                              style="height: 16px; width: 16px;"
+                              class="grow"
+                              data-testid="TransactionRowAddressing__address-container"
                             >
-                              <svg
-                                id="copy"
-                                style="height: 100%; width: 100%;"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
+                                <span
+                                  class="font-semibold text-sm text-theme-text"
+                                  data-testid="Address__alias"
                                 >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="no-ligatures transition-colors duration-200"
+                                        data-testid="TruncateEnd"
+                                      >
+                                        Mainsail Wallet …
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </button>
+                          </span>
+                        </span>
+                        <span>
+                          <span>
+                            <button
+                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+                              >
+                                <div
+                                  style="height: 16px; width: 16px;"
+                                >
+                                  <svg
+                                    id="copy"
+                                    style="height: 100%; width: 100%;"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </span>
                       </div>
                     </div>
                   </div>

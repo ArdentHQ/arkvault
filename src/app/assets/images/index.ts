@@ -7,6 +7,7 @@ import ARKVaultLogoAlphaDim from "./arkvault-logo-alpha-dim.svg?react";
 import DeleteBannerDark from "./delete-banner-dark.svg?react";
 import DeleteBannerLight from "./delete-banner-light.svg?react";
 import EmptyNotificationsDark from "./empty-notifications-dark.svg?react";
+import EmptyNotificationsDim from "./empty-notifications-dim.svg?react";
 import EmptyNotificationsLight from "./empty-notifications-light.svg?react";
 import ErrorDark from "./error-dark.svg?react";
 import ErrorLight from "./error-light.svg?react";
@@ -63,6 +64,7 @@ export const images = {
 		DeleteBannerDark,
 		DeleteBannerLight,
 		EmptyNotificationsDark,
+		EmptyNotificationsDim,
 		EmptyNotificationsLight,
 		ErrorDark,
 		ErrorLight,

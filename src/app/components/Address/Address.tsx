@@ -8,7 +8,6 @@ import { Size } from "@/types";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
-import { useTheme } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 
 interface Properties {
@@ -79,7 +78,6 @@ export const Address = ({
 	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
 	const [aliasWidth, setAliasWidth] = useState(0);
-	const { isDarkMode } = useTheme();
 
 	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
 
@@ -150,12 +148,7 @@ export const Address = ({
 						/>
 					</AddressWrapper>
 					{showCopyButton && (
-						<Clipboard
-							variant="icon"
-							data={address}
-							tooltip={t("COMMON.COPY_ADDRESS")}
-							tooltipDarkTheme={isDarkMode}
-						>
+						<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
 							<Icon
 								name="Copy"
 								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"

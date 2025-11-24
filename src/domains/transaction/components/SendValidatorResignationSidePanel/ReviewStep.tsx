@@ -60,7 +60,7 @@ export const ReviewStep = ({
 			)}
 
 			<div
-				className={cn("space-y-3 sm:mx-0 sm:space-y-4", {
+				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
 					"mt-6 sm:mt-4": !hideHeader,
 				})}
 			>
@@ -102,11 +102,11 @@ export const ReviewStep = ({
 							<Amount
 								ticker={validatoResigationFeeTicker}
 								value={validatoResigationFee}
-								className="font-semibold"
+								className="text-sm font-semibold md:text-base"
 							/>
 
 							{validatoResigationFeeAsFiat !== null && (
-								<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 font-semibold">
+								<div className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold md:text-base">
 									(~
 									<Amount
 										ticker={validatoResigationFeeAsFiatTicker}
@@ -122,7 +122,7 @@ export const ReviewStep = ({
 										? t("TRANSACTION.VALIDATOR_REGISTERED_WITHOUT_FEE")
 										: t("TRANSACTION.REVIEW_STEP.AMOUNT_UNLOCKED_TOOLTIP")
 								}
-								maxWidth={418}
+								className="max-w-[26.125rem]"
 							>
 								<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
 									<Icon name="QuestionMarkSmall" size="sm" />
@@ -132,7 +132,7 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<div className="mx-3 mt-2 sm:mx-0">
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
 					<FormField name="fee">
 						<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
 						<FeeField

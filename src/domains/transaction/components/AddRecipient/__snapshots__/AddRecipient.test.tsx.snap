@@ -47,37 +47,41 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             Multiple
           </button>
         </div>
-        <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-        >
-          <div>
+        <span>
+          <span>
             <div
-              style="height: 10px; width: 10px;"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </span>
+        </span>
       </div>
     </div>
     <div
@@ -124,87 +128,92 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
                                 <div
-                                  style="height: 20px; width: 20px;"
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -381,37 +390,41 @@ exports[`AddRecipient > should render 1`] = `
             Multiple
           </button>
         </div>
-        <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-        >
-          <div>
+        <span>
+          <span>
             <div
-              style="height: 10px; width: 10px;"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </span>
+        </span>
       </div>
     </div>
     <div
@@ -458,87 +471,92 @@ exports[`AddRecipient > should render 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
                                 <div
-                                  style="height: 20px; width: 20px;"
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -570,7 +588,7 @@ exports[`AddRecipient > should render 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252325068
+                    95.27653252
                   </span>
                   )
                 </span>
@@ -700,37 +718,41 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             Multiple
           </button>
         </div>
-        <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-        >
-          <div>
+        <span>
+          <span>
             <div
-              style="height: 10px; width: 10px;"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </span>
+        </span>
       </div>
     </div>
     <div
@@ -777,87 +799,92 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
                                 <div
-                                  style="height: 20px; width: 20px;"
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -889,7 +916,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252325068
+                    95.27653252
                   </span>
                   )
                 </span>
@@ -1019,37 +1046,41 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             Multiple
           </button>
         </div>
-        <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-        >
-          <div>
+        <span>
+          <span>
             <div
-              style="height: 10px; width: 10px;"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </span>
+        </span>
       </div>
     </div>
     <div
@@ -1096,87 +1127,92 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
                                 <div
-                                  style="height: 20px; width: 20px;"
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1208,7 +1244,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252325068
+                    95.27653252
                   </span>
                   )
                 </span>
@@ -1338,37 +1374,41 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             Multiple
           </button>
         </div>
-        <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-        >
-          <div>
+        <span>
+          <span>
             <div
-              style="height: 10px; width: 10px;"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </span>
+        </span>
       </div>
     </div>
     <div
@@ -1415,103 +1455,108 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="invisible fixed w-auto whitespace-nowrap"
-                      >
-                        0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                        …
-                      </div>
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value="0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54"
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                          <span
-                            class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="Input__suggestion"
-                          >
-                            <span
-                              class="truncate"
-                            >
-                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                            </span>
-                          </span>
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="invisible fixed w-auto whitespace-nowrap"
+                          >
+                            0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                            …
+                          </div>
+                          <div
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
-                                <div
-                                  style="height: 20px; width: 20px;"
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value="0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54"
+                              />
+                              <span
+                                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="Input__suggestion"
+                              >
+                                <span
+                                  class="truncate"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                </span>
+                              </span>
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
+                                <div
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
+                                >
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1543,7 +1588,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252325068
+                    95.27653252
                   </span>
                   )
                 </span>
@@ -1684,87 +1729,92 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
                                 <div
-                                  style="height: 20px; width: 20px;"
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1796,7 +1846,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252325068
+                    95.27653252
                   </span>
                   )
                 </span>
@@ -1926,37 +1976,41 @@ exports[`AddRecipient > should set available amount 1`] = `
             Multiple
           </button>
         </div>
-        <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-        >
-          <div>
+        <span>
+          <span>
             <div
-              style="height: 10px; width: 10px;"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </span>
+        </span>
       </div>
     </div>
     <div
@@ -2003,87 +2057,92 @@ exports[`AddRecipient > should set available amount 1`] = `
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
                                 <div
-                                  style="height: 20px; width: 20px;"
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -2115,7 +2174,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27653252325068
+                    95.27653252
                   </span>
                   )
                 </span>
@@ -2245,37 +2304,41 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             Multiple
           </button>
         </div>
-        <div
-          class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
-        >
-          <div>
+        <span>
+          <span>
             <div
-              style="height: 10px; width: 10px;"
+              class="questionmark bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:bg-theme-primary-700 dim:bg-theme-dim-700 dim:text-theme-dim-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full hover:text-white"
             >
-              <svg
-                id="question-mark-small"
-                style="height: 100%; width: 100%;"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <div>
+                <div
+                  style="height: 10px; width: 10px;"
                 >
-                  <path
-                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="question-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </span>
+        </span>
       </div>
     </div>
     <div
@@ -2322,87 +2385,92 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-owns="SelectRecipient__dropdown-menu"
+                    class="w-full"
                     role="combobox"
                   >
-                    <div>
-                      <label
-                        for="SelectRecipient__dropdown-input"
-                        id="SelectRecipient__dropdown-label"
-                      />
-                      <div
-                        class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            aria-autocomplete="list"
-                            aria-controls="SelectRecipient__dropdown-menu"
-                            aria-invalid="false"
-                            aria-labelledby="SelectRecipient__dropdown-label"
-                            autocomplete="off"
-                            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
-                            data-testid="SelectDropdown__input"
-                            id="SelectRecipient__dropdown-input"
-                            name="recipientAddress"
-                            placeholder="Address"
-                            type="text"
-                            value=""
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectRecipient__dropdown-input"
+                            id="SelectRecipient__dropdown-label"
                           />
-                        </div>
-                        <div
-                          class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                          data-testid="Input__addon-end"
-                        >
                           <div
-                            class=""
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                           >
                             <div
-                              class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
-                              data-testid="SelectRecipient__select-recipient"
+                              class="relative flex h-full flex-1"
                             >
-                              <div>
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectRecipient__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectRecipient__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectRecipient__dropdown-input"
+                                name="recipientAddress"
+                                placeholder="Address"
+                                type="text"
+                                value=""
+                              />
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
                                 <div
-                                  style="height: 20px; width: 20px;"
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
                                 >
-                                  <svg
-                                    id="user"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="5"
-                                        r="4"
-                                      />
-                                      <path
-                                        d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div
-                      aria-labelledby="SelectRecipient__dropdown-label"
-                      id="SelectRecipient__dropdown-menu"
-                      role="listbox"
-                    />
+                        <div
+                          aria-labelledby="SelectRecipient__dropdown-label"
+                          id="SelectRecipient__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -2514,50 +2582,54 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     <div
                       class=""
                     >
-                      <span
-                        data-errortext="The balance is too low."
-                        data-testid="Input__error"
-                      >
-                        <div
-                          class="text-theme-danger-500"
-                        >
-                          <div
-                            style="height: 20px; width: 20px;"
+                      <span>
+                        <span>
+                          <span
+                            data-errortext="The balance is too low."
+                            data-testid="Input__error"
                           >
-                            <svg
-                              id="circle-exclamation-mark"
-                              style="height: 100%; width: 100%;"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                            <div
+                              class="text-theme-danger-500"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
+                              <div
+                                style="height: 20px; width: 20px;"
                               >
-                                <circle
-                                  cx="10"
-                                  cy="10"
-                                  r="9"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 10.5v-5"
-                                  stroke-linecap="round"
-                                  stroke-miterlimit="10"
-                                />
-                                <path
-                                  d="M10 14h0"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                              </g>
-                            </svg>
-                          </div>
-                        </div>
+                                <svg
+                                  id="circle-exclamation-mark"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                  >
+                                    <circle
+                                      cx="10"
+                                      cy="10"
+                                      r="9"
+                                      stroke-miterlimit="10"
+                                    />
+                                    <path
+                                      d="M10 10.5v-5"
+                                      stroke-linecap="round"
+                                      stroke-miterlimit="10"
+                                    />
+                                    <path
+                                      d="M10 14h0"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>

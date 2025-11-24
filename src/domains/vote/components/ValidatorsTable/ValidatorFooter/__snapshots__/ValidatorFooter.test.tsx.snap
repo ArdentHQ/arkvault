@@ -39,18 +39,26 @@ exports[`ValidatorFooter > should render 1`] = `
                       class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                       data-testid="Address__alias"
                     >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        Mainsail Wallet …
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -152,22 +160,26 @@ exports[`ValidatorFooter > should render 1`] = `
             <span
               class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 hidden h-5 w-px md:block"
             />
-            <span
-              class="sm:ml-auto sm:pl-6"
-              data-testid="ValidatorTable__continue--wrapper"
-            >
-              <button
-                class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 w-full sm:w-auto"
-                data-testid="ValidatorTable__continue-button"
-                disabled=""
-                type="button"
-              >
-                <div
-                  class="flex items-center gap-2"
+            <span>
+              <span>
+                <span
+                  class="sm:ml-auto sm:pl-6"
+                  data-testid="ValidatorTable__continue--wrapper"
                 >
-                  Continue
-                </div>
-              </button>
+                  <button
+                    class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600 w-full sm:w-auto"
+                    data-testid="ValidatorTable__continue-button"
+                    disabled=""
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Continue
+                    </div>
+                  </button>
+                </span>
+              </span>
             </span>
           </div>
         </div>

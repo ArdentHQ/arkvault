@@ -3,7 +3,7 @@
 exports[`SearchRecipient > should call onAction when no address is selected 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -11,7 +11,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -222,51 +222,59 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -322,51 +330,59 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -412,7 +428,7 @@ exports[`SearchRecipient > should not render if not open 1`] = `<DocumentFragmen
 exports[`SearchRecipient > should render a modal 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -420,7 +436,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -631,51 +647,59 @@ exports[`SearchRecipient > should render a modal 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -731,51 +755,59 @@ exports[`SearchRecipient > should render a modal 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -819,7 +851,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
 exports[`SearchRecipient > should render a modal with custom title and description 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -827,7 +859,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -1038,51 +1070,59 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -1138,51 +1178,59 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -1226,7 +1274,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
 exports[`SearchRecipient > should render with contact on desktop 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1234,7 +1282,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -1445,51 +1493,59 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -1533,7 +1589,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
 exports[`SearchRecipient > should render with contact on mobile 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1541,7 +1597,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -1790,55 +1846,63 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                               <div
                                 class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
                                 </span>
                                 <span>
                                    
                                 </span>
                               </div>
-                              <button
-                                class="ring-focus relative cursor-pointer focus:outline-hidden"
-                                data-ring-focus-margin="-m-1"
-                                data-testid="clipboard-icon__wrapper"
-                                type="button"
-                              >
-                                <div
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                                >
-                                  <div
-                                    style="height: 16px; width: 16px;"
+                              <span>
+                                <span>
+                                  <button
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    data-ring-focus-margin="-m-1"
+                                    data-testid="clipboard-icon__wrapper"
+                                    type="button"
                                   >
-                                    <svg
-                                      id="copy"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </button>
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </button>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1862,7 +1926,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
 exports[`SearchRecipient > should render with my address on desktop 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1870,7 +1934,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -2081,51 +2145,59 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -2169,7 +2241,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
 exports[`SearchRecipient > should render with my address on mobile 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2177,7 +2249,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -2426,55 +2498,63 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
                               <div
                                 class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
                                 </span>
                                 <span>
                                    
                                 </span>
                               </div>
-                              <button
-                                class="ring-focus relative cursor-pointer focus:outline-hidden"
-                                data-ring-focus-margin="-m-1"
-                                data-testid="clipboard-icon__wrapper"
-                                type="button"
-                              >
-                                <div
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                                >
-                                  <div
-                                    style="height: 16px; width: 16px;"
+                              <span>
+                                <span>
+                                  <button
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    data-ring-focus-margin="-m-1"
+                                    data-testid="clipboard-icon__wrapper"
+                                    type="button"
                                   >
-                                    <svg
-                                      id="copy"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </button>
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </button>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -2498,7 +2578,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
 exports[`SearchRecipient > should render with no alias if the recipient address is undefined 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2506,7 +2586,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -2717,51 +2797,59 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -2805,7 +2893,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
 exports[`SearchRecipient > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2813,7 +2901,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -3024,51 +3112,59 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -3124,51 +3220,59 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -3212,7 +3316,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
 exports[`SearchRecipient > should render with selected address on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3220,7 +3324,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -3431,51 +3535,59 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -3531,51 +3643,59 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                           <div
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-52 min-w-52 justify-between"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
-                            </span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                              >
-                                <div
-                                  style="height: 16px; width: 16px;"
+                            <span>
+                              <span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <svg
-                                    id="copy"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                </span>
+                              </span>
+                            </span>
+                            <span>
+                              <span>
+                                <button
+                                  class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                  data-ring-focus-margin="-m-1"
+                                  data-testid="clipboard-icon__wrapper"
+                                  type="button"
+                                >
+                                  <div
+                                    class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </div>
-                            </button>
+                                      <svg
+                                        id="copy"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </span>
                           </div>
                           <div
                             class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 group-hover:dark:border-theme-dark-500 group-hover:dim:border-theme-dim-500"
@@ -3619,7 +3739,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
 exports[`SearchRecipient > should render with selected address on mobile 1`] = `
 <DocumentFragment>
   <div
-    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20"
+    class="custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full overflow-y-hidden bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3627,7 +3747,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl pb-24 sm:pb-0"
+        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border pb-24 sm:pb-0"
         data-testid="Modal__inner"
       >
         <div
@@ -3876,55 +3996,63 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               <div
                                 class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                      data-testid="Address__address"
+                                    >
+                                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                    </span>
+                                  </span>
                                 </span>
                                 <span>
                                    
                                 </span>
                               </div>
-                              <button
-                                class="ring-focus relative cursor-pointer focus:outline-hidden"
-                                data-ring-focus-margin="-m-1"
-                                data-testid="clipboard-icon__wrapper"
-                                type="button"
-                              >
-                                <div
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                                >
-                                  <div
-                                    style="height: 16px; width: 16px;"
+                              <span>
+                                <span>
+                                  <button
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    data-ring-focus-margin="-m-1"
+                                    data-testid="clipboard-icon__wrapper"
+                                    type="button"
                                   >
-                                    <svg
-                                      id="copy"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </button>
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </button>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3998,55 +4126,63 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                               <div
                                 class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                <span>
+                                  <span>
+                                    <span
+                                      class="no-ligatures min-w-0 overflow-hidden leading-[17px] text-sm text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold text-base absolute w-full"
+                                      data-testid="Address__address"
+                                    >
+                                      0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54
+                                    </span>
+                                  </span>
                                 </span>
                                 <span>
                                    
                                 </span>
                               </div>
-                              <button
-                                class="ring-focus relative cursor-pointer focus:outline-hidden"
-                                data-ring-focus-margin="-m-1"
-                                data-testid="clipboard-icon__wrapper"
-                                type="button"
-                              >
-                                <div
-                                  class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-                                >
-                                  <div
-                                    style="height: 16px; width: 16px;"
+                              <span>
+                                <span>
+                                  <button
+                                    class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                    data-ring-focus-margin="-m-1"
+                                    data-testid="clipboard-icon__wrapper"
+                                    type="button"
                                   >
-                                    <svg
-                                      id="copy"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    <div
+                                      class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <div
+                                        style="height: 16px; width: 16px;"
                                       >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </button>
+                                        <svg
+                                          id="copy"
+                                          style="height: 100%; width: 100%;"
+                                          viewBox="0 0 20 20"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <g
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                          >
+                                            <path
+                                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                            />
+                                            <path
+                                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </button>
+                                </span>
+                              </span>
                             </div>
                           </div>
                         </div>

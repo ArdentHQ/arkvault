@@ -47,22 +47,24 @@ export const DeleteResource = ({
 
 			{children || <div className="mt-4">{children}</div>}
 
-			<FormButtons>
-				<Button variant="secondary" onClick={onCancel} data-testid="DeleteResource__cancel-button">
-					{t("COMMON.CANCEL")}
-				</Button>
+			<div className="modal-footer">
+				<FormButtons>
+					<Button variant="secondary" onClick={onCancel} data-testid="DeleteResource__cancel-button">
+						{t("COMMON.CANCEL")}
+					</Button>
 
-				<Button
-					disabled={disabled}
-					type="submit"
-					onClick={onDelete}
-					variant="danger"
-					data-testid="DeleteResource__submit-button"
-				>
-					<Icon name="Trash" />
-					<span>{deleteLabel ?? t("COMMON.DELETE")}</span>
-				</Button>
-			</FormButtons>
+					<Button
+						disabled={disabled}
+						type="submit"
+						onClick={onDelete}
+						variant="danger"
+						data-testid="DeleteResource__submit-button"
+					>
+						<Icon name="Trash" />
+						<span>{deleteLabel ?? t("COMMON.DELETE")}</span>
+					</Button>
+				</FormButtons>
+			</div>
 		</Modal>
 	);
 };

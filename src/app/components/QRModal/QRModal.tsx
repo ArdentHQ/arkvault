@@ -125,11 +125,12 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 	return (
 		<Modal
 			isOpen={isOpen}
+			titleClass="text-theme-text"
 			title={t("TRANSACTION.MODAL_QR_CODE.TITLE")}
 			description={t("TRANSACTION.MODAL_QR_CODE.DESCRIPTION")}
-			size="4xl"
+			size="3xl"
 			noButtons
-			contentClassName="px-4 pt-4 md:pt-8 md:px-8 sm:pb-12"
+			containerClassName="mt-[20%] md:mt-0"
 			onClose={() => onCancel()}
 		>
 			<div className="relative -mx-10 mt-4 -mb-10 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
