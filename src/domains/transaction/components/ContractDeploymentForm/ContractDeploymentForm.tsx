@@ -13,7 +13,6 @@ import {
 	REVIEW_STEP,
 } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
 
-
 const component = ({
 	activeTab,
 	wallet,

@@ -81,7 +81,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 					<FormLabel label={t("COMMON.BYTECODE")} />
 					<TextArea
 						data-testid="ContractDeployment_Bytecode"
-						className="py-4 resize-none salam"
+						className="salam resize-none py-4"
 						initialHeight={90}
 						rows={6}
 						placeholder={t("TRANSACTION.CONTRACT_DEPLOYMENT.BYTECODE_PLACEHOLDER")}

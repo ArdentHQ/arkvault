@@ -51,10 +51,10 @@ export const SendRegistrationSidePanel = ({
 	const [activeTab, setActiveTab] = useState(FORM_STEP);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const registrationForm = {
-		"contractDeployment": ContractDeploymentForm,
-		"usernameRegistration": UsernameRegistrationForm,
-		"validatorRegistration": ValidatorRegistrationForm,
-	}[registrationType as string]
+		contractDeployment: ContractDeploymentForm,
+		usernameRegistration: UsernameRegistrationForm,
+		validatorRegistration: ValidatorRegistrationForm,
+	}[registrationType as string];
 
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -243,7 +243,7 @@ export const SendRegistrationSidePanel = ({
 				contractDeployment: "bytecode",
 				usernameRegistration: "username",
 				validatorRegistration: "validatorPublicKey",
-			}
+			};
 
 			unregister(fieldKeyMap[registrationType as string]);
 		}
@@ -275,10 +275,11 @@ export const SendRegistrationSidePanel = ({
 		const titleMap = {
 			contractDeployment: () => t("TRANSACTION.CONTRACT_DEPLOYMENT.FORM_STEP.TITLE"),
 			usernameRegistration: () => t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE"),
-			validatorRegistration: () => hasSynced && activeWallet.isValidator()
+			validatorRegistration: () =>
+				hasSynced && activeWallet.isValidator()
 					? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
 					: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
-		}
+		};
 
 		return titleMap[registrationType as string]();
 	};
@@ -312,7 +313,7 @@ export const SendRegistrationSidePanel = ({
 				}
 				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
 			},
-		}
+		};
 
 		return subtitleMap[registrationType as string]();
 	};
