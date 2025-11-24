@@ -1,23 +1,25 @@
-import React from "react";
-import SignMessageSidePanel from "@/domains/message/components/SignMessage";
-import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
-import { Modal } from "@/app/components/Modal";
-import { Button } from "@/app/components/Button";
-import { Image } from "@/app/components/Image";
+import { Panel, usePanels } from "./contexts";
+
+import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 import { Alert } from "@/app/components/Alert";
-import { FormButtons } from "@/app/components/Form";
-import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
+import { Button } from "@/app/components/Button";
 import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
+import { FormButtons } from "@/app/components/Form";
+import { Image } from "@/app/components/Image";
+import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
+import { LedgerMigrationSidepanel } from "@/domains/portfolio/components/LedgerMigration";
+import { Modal } from "@/app/components/Modal";
+import { NotificationsSidepanel } from "@/domains/portfolio/components/NotificationsSidepanel/NotificationsSidepanel";
+import React from "react";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
+import { SendTransferSidePanel } from "@/domains/transaction/components/SendTransferSidePanel/SendTransferSidePanel";
 import { SendUsernameResignationSidePanel } from "@/domains/transaction/components/SendUsernameResignationSidePanel/SendUsernameResignationSidePanel";
 import { SendValidatorResignationSidePanel } from "@/domains/transaction/components/SendValidatorResignationSidePanel/SendValidatorResignationSidePanel";
-import { SendRegistrationSidePanel } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
-import { Panel, usePanels } from "./contexts";
-import { useTranslation } from "react-i18next";
-import { useHasProfile } from "./hooks";
-import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
-import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
-import { NotificationsSidepanel } from "@/domains/portfolio/components/NotificationsSidepanel/NotificationsSidepanel";
+import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 import VerifyMessageSidePanel from "@/domains/message/components/VerifyMessage";
+import { useHasProfile } from "./hooks";
+import { useTranslation } from "react-i18next";
 
 const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
@@ -131,6 +133,8 @@ export const AppPanels = () => {
 			<ResetWhenUnmounted>
 				<NotificationsSidepanel open={currentOpenedPanel === Panel.Notifications} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
+
+			<LedgerMigrationSidepanel open={currentOpenedPanel === Panel.LedgerMigration} onOpenChange={closePanel} />
 
 			<DiscardPanelConfirmationModal />
 		</>

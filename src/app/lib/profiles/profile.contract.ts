@@ -28,6 +28,7 @@ import { ValidatorService } from "./validator.service.js";
 import { KnownWalletService } from "./known-wallet.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { BigNumber } from "@/app/lib/helpers/bignumber.js";
+import { DraftTransactionFactory } from "@/app/lib/mainsail/draft-transaction.factory.js";
 
 /**
  *
@@ -448,4 +449,12 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	findAliasByAddress(address: string, networkId?: string): string | undefined;
+
+	/**
+	 * Returns the draft transaction factory.
+	 *
+	 * @returns {DraftTransactionFactory}
+	 * @memberof IProfile
+	 */
+	draftTransactionFactory(): DraftTransactionFactory;
 }

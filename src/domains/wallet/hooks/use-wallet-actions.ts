@@ -138,6 +138,10 @@ export const useWalletActions = ({
 				openExternal(wallet.explorerLink());
 			}
 
+			if (option.value === "ledger-migration") {
+				openPanel(Panel.LedgerMigration);
+			}
+
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
 		[

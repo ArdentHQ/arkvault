@@ -446,10 +446,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 84.84
-                  COVERAGE_THRESHOLD_FUNCTIONS: 82.43
-                  COVERAGE_THRESHOLD_STATEMENTS: 85.37
-                  COVERAGE_THRESHOLD_BRANCHES: 76.34
+                  COVERAGE_THRESHOLD_LINES: 85.7
+                  COVERAGE_THRESHOLD_FUNCTIONS: 83.61
+                  COVERAGE_THRESHOLD_STATEMENTS: 85.64
+                  COVERAGE_THRESHOLD_BRANCHES: 81.34
                   COVERAGE_INCLUDE_PATH: src/domains/portfolio
               with:
                   timeout_minutes: 10
@@ -909,10 +909,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib
-            COVERAGE_THRESHOLD_LINES: 84.59
-            COVERAGE_THRESHOLD_BRANCHES: 83.33
-            COVERAGE_THRESHOLD_FUNCTIONS: 83.92
-            COVERAGE_THRESHOLD_STATEMENTS: 84.55
+            COVERAGE_THRESHOLD_LINES: 85.54
+            COVERAGE_THRESHOLD_BRANCHES: 80.14
+            COVERAGE_THRESHOLD_FUNCTIONS: 85.67
+            COVERAGE_THRESHOLD_STATEMENTS: 85.52
         strategy:
             matrix:
                 node-version:

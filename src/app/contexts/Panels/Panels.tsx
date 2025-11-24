@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+
 import { useTranslation } from "react-i18next";
 
 export enum Panel {
@@ -13,6 +14,7 @@ export enum Panel {
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
 	Addresses = "ADDRESSES",
+	LedgerMigration = "LEDGER_MIGRATION",
 	TransactionDetails = "TRANSACTION_DETAILS",
 	Notifications = "NOTIFICATIONS",
 }

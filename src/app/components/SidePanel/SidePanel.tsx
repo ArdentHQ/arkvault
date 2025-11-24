@@ -11,6 +11,7 @@ import {
 	useTransitionStyles,
 } from "@floating-ui/react";
 import React, { JSX, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -19,10 +20,9 @@ import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
-import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
 import { useLocalStorage } from "usehooks-ts";
-import { useTranslation } from "react-i18next";
 import { useNavigationContext } from "@/app/contexts";
+import { useTranslation } from "react-i18next";
 
 interface SidePanelProps {
 	children: React.ReactNode;
@@ -52,6 +52,10 @@ interface SidePanelContextValue {
 	setHasModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+interface SidepanelFooterProps extends React.HTMLAttributes<HTMLDivElement> {
+	isScrolled?: boolean;
+}
+
 const SidePanelContext = React.createContext<SidePanelContextValue | undefined>(undefined);
 
 export const useSidePanel = (): SidePanelContextValue | undefined => useContext(SidePanelContext);
@@ -60,6 +64,18 @@ export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttribu
 	<div
 		className={cn(
 			"flex w-full items-center justify-end gap-3 [&>button]:flex-1 sm:[&>button]:flex-none",
+			className,
+		)}
+		{...properties}
+	/>
+);
+
+export const SidepanelFooter = ({ className, isScrolled, ...properties }: SidepanelFooterProps) => (
+	<div
+		data-testid="SidePanel__footer"
+		className={cn(
+			"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
+			{ "shadow-footer-side-panel": isScrolled },
 			className,
 		)}
 		{...properties}
@@ -450,21 +466,7 @@ const SidePanelContent = ({
 											</div>
 
 											{footer && (
-												<div
-													data-testid="SidePanel__footer"
-													className={cn(
-														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
-														{ "shadow-footer-side-panel": isScrolled },
-													)}
-												>
-													<div
-														className={cn({
-															"mx-auto w-full px-6 lg:w-4xl": isExpanded,
-														})}
-													>
-														{footer}
-													</div>
-												</div>
+												<SidepanelFooter isScrolled={isScrolled}>{footer}</SidepanelFooter>
 											)}
 										</div>
 									</div>
