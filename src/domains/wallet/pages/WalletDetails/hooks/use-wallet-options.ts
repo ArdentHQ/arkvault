@@ -143,15 +143,17 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 const getContractOptions = (_wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
 	const contractOptions: DropdownOptionGroup = {
 		key: "contract",
-		options: [{
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DEPLOY"),
-			value: "deploy",
-		}],
+		options: [
+			{
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DEPLOY"),
+				value: "deploy",
+			},
+		],
 		title: t("WALLETS.PAGE_WALLET_DETAILS.CONTRACTS"),
 	};
 
 	return contractOptions;
-}
+};
 
 const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
 	const additionalOptions: DropdownOptionGroup = {
