@@ -752,11 +752,7 @@ exports[`Dashboard > should render 1`] = `
                 <span>
                   <span>
                     <div
-<<<<<<< HEAD
                       class="flex h-fit max-w-[calc(100%_-_73px)] flex-row items-center gap-1 md:max-w-full"
-=======
-                      class="flex h-fit flex-row items-center gap-1"
->>>>>>> feat/mainsail
                     >
                       <p
                         class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
@@ -954,7 +950,6 @@ exports[`Dashboard > should render 1`] = `
                           <span
                             class="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5"
                           >
-<<<<<<< HEAD
                             <span
                               class="lg:hidden"
                             >
@@ -986,17 +981,6 @@ exports[`Dashboard > should render 1`] = `
                                   </span>
                                 </span>
                               </div>
-=======
-                            <span>
-                              <span>
-                                <span
-                                  class="no-ligatures"
-                                  data-testid="TruncateMiddle"
-                                >
-                                  0xcd15…158EE6
-                                </span>
-                              </span>
->>>>>>> feat/mainsail
                             </span>
                           </span>
                         </div>
@@ -1007,7 +991,6 @@ exports[`Dashboard > should render 1`] = `
                               data-testid="WalletIcon__Username"
                               type="button"
                             >
-<<<<<<< HEAD
                               <div
                                 class="flex items-center gap-2"
                               >
@@ -1146,237 +1129,6 @@ exports[`Dashboard > should render 1`] = `
                             </span>
                           </span>
                         </div>
-=======
-                              <span>
-                                <span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                                  </span>
-                                </span>
-                              </span>
-                            </div>
-                          </span>
-                        </span>
-                      </div>
-                      <span>
-                        <span>
-                          <button
-                            class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
-                            data-testid="WalletIcon__Username"
-                            type="button"
-                          >
-                            <div
-                              class="flex items-center gap-2"
-                            >
-                              <div>
-                                <div
-                                  style="height: 20px; width: 20px;"
-                                >
-                                  <svg
-                                    fill="none"
-                                    style="height: 100%; width: 100%;"
-                                    viewBox="0 0 20 21"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M1 15.0013C1.00124 13.188 1.91209 11.4962 3.42519 10.4969C4.93829 9.49766 6.8518 9.32411 8.52 10.0349"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      clip-rule="evenodd"
-                                      d="M6.40156 8.40078C8.2241 8.40078 9.70156 6.92332 9.70156 5.10078C9.70156 3.27824 8.2241 1.80078 6.40156 1.80078C4.57902 1.80078 3.10156 3.27824 3.10156 5.10078C3.10156 6.92332 4.57902 8.40078 6.40156 8.40078Z"
-                                      fill-rule="evenodd"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M18.9984 15.0012C18.9984 17.6521 16.8494 19.8012 14.1984 19.8012C11.5475 19.8012 9.39844 17.6521 9.39844 15.0012C9.39844 12.3502 11.5475 10.2012 14.1984 10.2012"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                    <path
-                                      d="M18.9984 11.4004L14.6224 15.7764C14.51 15.8889 14.3575 15.9522 14.1984 15.9522C14.0394 15.9522 13.8868 15.8889 13.7744 15.7764L12.3984 14.4012"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </button>
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      class="flex flex-row items-center gap-3"
-                    >
-                      <div
-                        class="flex items-center gap-2"
-                      >
-                        <span>
-                          <span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 p-1"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <span>
-                                <div>
-                                  <div
-                                    style="height: 16px; width: 16px;"
-                                  >
-                                    <svg
-                                      id="copy"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </span>
-                            </button>
-                          </span>
-                        </span>
-                        <span>
-                          <span>
-                            <button
-                              class="ring-focus relative cursor-pointer focus:outline-hidden space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 p-1"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <span>
-                                <div>
-                                  <div
-                                    style="height: 16px; width: 16px;"
-                                  >
-                                    <svg
-                                      id="copy-key"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <path
-                                        d="M6 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 7v10H3M6 13H4M17 12.45c0-.197 0-.394-.19-.59l-1.513-1.573a.992.992 0 0 0-.567-.196h-3.973 0a.782.782 0 0 0-.757.786v7.337c0 .393.315.786.757.786h5.612-.063c.379 0 .694-.328.694-.786v-5.765z"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </span>
-                            </button>
-                          </span>
-                        </span>
-                      </div>
-                      <div
-                        class="relative border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mx-0 hidden h-[17px] p-0 sm:block"
-                      />
-                      <div
-                        class="hidden sm:flex"
-                      >
-                        <span>
-                          <span>
-                            <button
-                              class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 p-1"
-                              data-testid="WalletHeader__refresh"
-                              type="button"
-                            >
-                              <div
-                                class="flex items-center gap-2"
-                              >
-                                <div
-                                  class=""
-                                  style="animation-direction: reverse;"
-                                >
-                                  <div
-                                    style="height: 16px; width: 16px;"
-                                  >
-                                    <svg
-                                      id="arrow-rotate-left"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <path
-                                        d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
-                                        fill="currentColor"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </button>
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="border-t clear-both flex w-full min-w-full border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
-                  />
-                  <div
-                    class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
-                  >
-                    <div
-                      class="flex flex-col gap-2"
-                      data-testid="WalletHeader__balance"
-                    >
-                      <p
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
-                      >
-                        Total Balance
-                      </p>
-                      <div
-                        class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
-                      >
-                        <span
-                          class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50"
-                          data-testid="Amount"
-                        >
-                          95.27653252325068 ARK
-                        </span>
->>>>>>> feat/mainsail
                         <div
                           class="relative border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mx-0 hidden h-[17px] p-0 sm:block"
                         />
@@ -1429,7 +1181,6 @@ exports[`Dashboard > should render 1`] = `
                     <div
                       class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
                     >
-<<<<<<< HEAD
                       <div
                         class="flex flex-col gap-2"
                         data-testid="WalletHeader__balance"
@@ -1459,27 +1210,6 @@ exports[`Dashboard > should render 1`] = `
                           </span>
                         </div>
                       </div>
-=======
-                      <span>
-                        <span>
-                          <div
-                            class="my-auto flex flex-1"
-                          >
-                            <button
-                              class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
-                              data-testid="WalletHeader__send-button"
-                              type="button"
-                            >
-                              <div
-                                class="flex items-center gap-2"
-                              >
-                                Send
-                              </div>
-                            </button>
-                          </div>
-                        </span>
-                      </span>
->>>>>>> feat/mainsail
                       <div
                         class="flex flex-row items-center gap-3"
                       >
