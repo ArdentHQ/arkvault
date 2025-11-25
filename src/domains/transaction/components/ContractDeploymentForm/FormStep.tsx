@@ -7,11 +7,12 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { ThemeIcon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useEnvironmentContext } from "@/app/contexts";
 import { TextArea } from "@/app/components/TextArea";
+import { Link } from "@/app/components/Link";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHeader = false }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -59,6 +60,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 
 			<div className="space-y-4">
 				<FormField name="senderAddress">
+
 					<FormLabel label={t("TRANSACTION.SENDER")} />
 					<SelectAddress
 						wallet={
@@ -78,16 +80,43 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 				</FormField>
 
 				<FormField name="bytecode">
-					<FormLabel label={t("COMMON.BYTECODE")} />
+					<div className="flex flex-1 flex-row justify-between leading-[17px]">
+						<FormLabel label={t("COMMON.BYTECODE")} textClassName="self-center text-sm" />
+						<Link
+							isExternal
+							to="https://docs.mainsailhq.com/mainsail/deployment/becoming-a-validator"
+							showExternalIcon={false}
+							className="text-sm mb-2 leading-[17px]"
+						>
+							<span className="flex flex-row items-center gap-2">
+								<span>
+									{t("TRANSACTION.CONTRACT_DEPLOYMENT.BYTECODE_INPUT_HINT")}
+								</span>
+								<Icon
+									data-testid="Link__external"
+									name="ArrowExternal"
+									dimensions={[12, 12]}
+									className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+								/>
+							</span>
+						</Link>
+					</div>
 					<TextArea
 						data-testid="ContractDeployment_Bytecode"
-						className="salam resize-none py-4"
+						className="resize-none py-4"
 						initialHeight={90}
 						rows={6}
+						hideResizeIcon={true}
 						placeholder={t("TRANSACTION.CONTRACT_DEPLOYMENT.BYTECODE_PLACEHOLDER")}
 						defaultValue={bytecode}
 						onChange={(event: ChangeEvent<HTMLInputElement>) => {
 							setValue("bytecode", event.target.value, { shouldDirty: true, shouldValidate: true });
+						}}
+						addons={{
+							end: {
+								content: <></>,
+								wrapperClassName: "bottom-0!",
+							}
 						}}
 					/>
 				</FormField>

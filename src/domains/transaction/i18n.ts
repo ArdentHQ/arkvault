@@ -26,11 +26,12 @@ export const translations = {
 		TITLE: "My addresses",
 	},
 	CONTRACT_DEPLOYMENT: {
+		BYTECODE_INPUT_HINT: "What is bytecode?",
 		BYTECODE_PLACEHOLDER: "Enter bytecode here",
 		FORM_STEP: {
 			DESCRIPTION: "Enter the required details for deploying the contract.",
 			TITLE: "Contract Deployment",
-		},
+		}
 	},
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",
