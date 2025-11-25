@@ -18,6 +18,9 @@ import { UpdateAddressName } from "@/domains/portfolio/components/AddressesSideP
 import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 import { useWalletSelection } from "@/domains/portfolio/hooks/use-wallet-selection";
 import { AddressViewSelection, AddressViewType } from "@/app/lib/profiles/wallet.enum";
+import { groupBy, sortBy } from "@/app/lib/helpers";
+import { AccountNameEditRow } from "./AccountNameEditRow";
+import { Contracts } from "@/app/lib/profiles";
 
 export const AddressesSidePanel = ({
 	open,
@@ -108,6 +111,10 @@ export const AddressesSidePanel = ({
 
 			return wallet.address().toLowerCase().startsWith(query) || (alias && alias.toLowerCase().includes(query));
 		});
+
+
+
+	const groupedByAccountName = sortBy(Object.entries(groupBy(addressesToShow, (wallet) => wallet.accountName() ?? "Regular Address")), ([key]) => key === 'Regular Address' ? 'zzz' : key)
 
 	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
 
@@ -287,60 +294,78 @@ export const AddressesSidePanel = ({
 				</div>
 			)}
 
-			<div className="space-y-1">
+			<div>
 				{addressesToShow.length === 0 ? (
 					<EmptyBlock size="sm">{t("WALLETS.ADDRESSES_SIDE_PANEL.NO_SEARCH_RESULTS")}</EmptyBlock>
 				) : (
-					addressesToShow.map((wallet, index) => (
-						<AddressRow
-							profile={profile}
-							errorMessage={
-								selectedAddresses.length === 0 && !isManageMode && index === 0
-									? "You need to have at least one address selected."
-									: undefined
-							}
-							isError={
-								(selectedAddresses.length === 0 && !isManageMode) ||
-								wallet.address() === addressToDelete
-							}
-							key={wallet.address()}
-							wallet={wallet}
-							toggleAddress={() => {
-								if (isManageMode) {
-									return;
-								}
+					groupedByAccountName.map(([accountName, wallets]) => {
+						return (
+							<div>
+								{isManageMode && (
+									<AccountNameEditRow accountName={accountName} wallets={wallets} profile={profile} />
+								)}
 
-								// Automatically close if single mode.
-								const newSelection = toggleSelection(wallet);
-								if (profile.walletSelectionMode() === "single") {
-									closeSidepanel(newSelection);
-								}
-							}}
-							isSelected={selectedAddresses.includes(wallet.address())}
-							isSingleView={activeMode === AddressViewSelection.single}
-							usesManageMode={isManageMode}
-							onDelete={(address: string) => setAddressToDelete(address)}
-							onEdit={(address?: string) => setAddressToEdit(address)}
-							editContent={
-								addressToEdit === wallet.address() ? (
-									<UpdateAddressName
-										onAfterSave={() => setAddressToEdit(undefined)}
-										onCancel={() => disableManageState()}
-										profile={profile}
-										wallet={wallet}
-									/>
-								) : undefined
-							}
-							deleteContent={
-								addressToDelete === wallet.address() ? (
-									<DeleteAddressMessage
-										onCancelDelete={disableManageState}
-										onConfirmDelete={() => void handleDelete(wallet)}
-									/>
-								) : undefined
-							}
-						/>
-					))
+								<div>
+									{
+										wallets.map((wallet: Contracts.IReadWriteWallet) => {
+											return (
+												<div className="mt-1">
+													<AddressRow
+														profile={profile}
+														errorMessage={
+															selectedAddresses.length === 0 && !isManageMode && index === 0
+																? "You need to have at least one address selected."
+																: undefined
+														}
+														isError={
+															(selectedAddresses.length === 0 && !isManageMode) ||
+															wallet.address() === addressToDelete
+														}
+														key={wallet.address()}
+														wallet={wallet}
+														toggleAddress={() => {
+															if (isManageMode) {
+																return;
+															}
+
+															// Automatically close if single mode.
+															const newSelection = toggleSelection(wallet);
+															if (profile.walletSelectionMode() === "single") {
+																closeSidepanel(newSelection);
+															}
+														}}
+														isSelected={selectedAddresses.includes(wallet.address())}
+														isSingleView={activeMode === AddressViewSelection.single}
+														usesManageMode={isManageMode}
+														onDelete={(address: string) => setAddressToDelete(address)}
+														onEdit={(address?: string) => setAddressToEdit(address)}
+														editContent={
+															addressToEdit === wallet.address() ? (
+																<UpdateAddressName
+																	onAfterSave={() => setAddressToEdit(undefined)}
+																	onCancel={() => disableManageState()}
+																	profile={profile}
+																	wallet={wallet}
+																/>
+															) : undefined
+														}
+														deleteContent={
+															addressToDelete === wallet.address() ? (
+																<DeleteAddressMessage
+																	onCancelDelete={disableManageState}
+																	onConfirmDelete={() => void handleDelete(wallet)}
+																/>
+															) : undefined
+														}
+													/>
+												</div>
+											)
+										})}
+								</div>
+							</div>
+						)
+
+					})
 				)}
 			</div>
 		</SidePanel>
