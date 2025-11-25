@@ -13,7 +13,7 @@ type TextareaProperties = {
 	addons?: InputProperties["addons"];
 } & React.TextareaHTMLAttributes<any>;
 
-export const TextArea = ({ ref, hideResizeIcon, initialHeight = 100, ...properties }: TextareaProperties) => {
+export const TextArea = ({ ref, hideResizeIcon = false, initialHeight = 100, ...properties }: TextareaProperties) => {
 	useEffect(() => {
 		const current = ref && "current" in ref ? ref.current : null;
 		if (current) {
