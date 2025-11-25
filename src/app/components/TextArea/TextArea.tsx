@@ -37,7 +37,8 @@ export const TextArea = ({ ref, hideResizeIcon = false, initialHeight = 100, ...
 				{...properties}
 				innerClassName={twMerge(
 					cn("resize-none min-h-[8rem] md:min-h-auto md:resize-y", {
-						"resize-none md:resize-none": properties.disabled || hideResizeIcon,
+						"resize-none": properties.disabled,
+						"resize-none md:resize-none": hideResizeIcon,
 					}),
 				)}
 			/>
