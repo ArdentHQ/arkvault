@@ -10,7 +10,7 @@ type TextareaProperties = {
 	initialHeight?: number;
 	hideResizeIcon?: boolean;
 	ref?: React.Ref<HTMLInputElement>;
-	addons?: InputProperties['addons'];
+	addons?: InputProperties["addons"];
 } & React.TextareaHTMLAttributes<any>;
 
 export const TextArea = ({ ref, hideResizeIcon, initialHeight = 100, ...properties }: TextareaProperties) => {
@@ -25,7 +25,9 @@ export const TextArea = ({ ref, hideResizeIcon, initialHeight = 100, ...properti
 
 	return (
 		<div className="relative">
-			{!hideResizeIcon && <div className="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 dim:border-t-theme-dim-500 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block" />}
+			{!hideResizeIcon && (
+				<div className="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 dim:border-t-theme-dim-500 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block" />
+			)}
 
 			<Input
 				data-testid="TextArea"
@@ -33,9 +35,11 @@ export const TextArea = ({ ref, hideResizeIcon, initialHeight = 100, ...properti
 				isTextArea
 				ref={ref}
 				{...properties}
-				innerClassName={twMerge(cn("resize-none min-h-[8rem] md:min-h-auto md:resize-y", {
-					"resize-none md:resize-none": properties.disabled || hideResizeIcon,
-				}))}
+				innerClassName={twMerge(
+					cn("resize-none min-h-[8rem] md:min-h-auto md:resize-y", {
+						"resize-none md:resize-none": properties.disabled || hideResizeIcon,
+					}),
+				)}
 			/>
 		</div>
 	);

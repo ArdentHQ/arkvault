@@ -31,7 +31,7 @@ export const translations = {
 		FORM_STEP: {
 			DESCRIPTION: "Enter the required details for deploying the contract.",
 			TITLE: "Contract Deployment",
-		}
+		},
 	},
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",

@@ -60,7 +60,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 
 			<div className="space-y-4">
 				<FormField name="senderAddress">
-
 					<FormLabel label={t("TRANSACTION.SENDER")} />
 					<SelectAddress
 						wallet={
@@ -86,12 +85,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 							isExternal
 							to="https://docs.mainsailhq.com/mainsail/deployment/becoming-a-validator"
 							showExternalIcon={false}
-							className="text-sm mb-2 leading-[17px]"
+							className="mb-2 text-sm leading-[17px]"
 						>
 							<span className="flex flex-row items-center gap-2">
-								<span>
-									{t("TRANSACTION.CONTRACT_DEPLOYMENT.BYTECODE_INPUT_HINT")}
-								</span>
+								<span>{t("TRANSACTION.CONTRACT_DEPLOYMENT.BYTECODE_INPUT_HINT")}</span>
 								<Icon
 									data-testid="Link__external"
 									name="ArrowExternal"
@@ -116,7 +113,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 							end: {
 								content: <></>,
 								wrapperClassName: "bottom-0!",
-							}
+							},
 						}}
 					/>
 				</FormField>
