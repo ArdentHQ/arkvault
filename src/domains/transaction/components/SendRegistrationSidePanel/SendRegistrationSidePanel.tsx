@@ -345,8 +345,8 @@ export const SendRegistrationSidePanel = ({
 			return (
 				<ThemeIcon
 					lightIcon={isContractDeployment ? "ReviewContractDeploymentLight": "DocumentView"}
-					darkIcon={isContractDeployment ? "SendContractDeploymentDark": "DocumentView"}
-					dimIcon={isContractDeployment ? "SendContractDeploymentDim": "DocumentView"}
+					darkIcon={isContractDeployment ? "ReviewContractDeploymentDark": "DocumentView"}
+					dimIcon={isContractDeployment ? "ReviewContractDeploymentDim": "DocumentView"}
 					dimensions={[24, 24]}
 				/>
 			);
