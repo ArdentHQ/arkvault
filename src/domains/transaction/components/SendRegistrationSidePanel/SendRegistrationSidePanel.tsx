@@ -172,7 +172,7 @@ export const SendRegistrationSidePanel = ({
 				contractDeployment: signContractDeployment,
 				usernameRegistration: signUsernameRegistration,
 				validatorRegistration: signValidatorRegistration,
-			}[registrationType as string];
+			}[registrationType as string] as Function;
 
 			const transaction = await method({
 				env,
