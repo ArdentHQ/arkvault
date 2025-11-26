@@ -12,7 +12,7 @@ interface AddonProperties {
 	content: JSX.Element;
 }
 
-type InputProperties = {
+export type InputProperties = {
 	addons?: {
 		start?: AddonProperties;
 		end?: AddonProperties;
