@@ -71,7 +71,7 @@ export const signContractDeployment = async ({ env, form, profile, signatory }: 
 
 	const transactionId = await senderWallet.transaction().signContractDeployment({
 		data: {
-			bytecode
+			bytecode,
 		},
 		gasLimit,
 		gasPrice,

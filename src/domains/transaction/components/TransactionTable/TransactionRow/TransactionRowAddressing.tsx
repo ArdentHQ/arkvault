@@ -83,9 +83,10 @@ const ContractAddressing = ({
 	direction: Direction;
 	t: any;
 }) => {
-	const address = isContractDeployment(transaction) && transaction.confirmations() > 0
-		? transaction.data().data.receipt.deployedContractAddress
-		: transaction.to();
+	const address =
+		isContractDeployment(transaction) && transaction.confirmations() > 0
+			? transaction.data().data.receipt.deployedContractAddress
+			: transaction.to();
 
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">

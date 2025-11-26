@@ -32,7 +32,8 @@ import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-sel
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { Image } from "@/app/components/Image";
 import {
-	ContractDeploymentForm, signContractDeployment,
+	ContractDeploymentForm,
+	signContractDeployment,
 } from "@/domains/transaction/components/ContractDeploymentForm";
 
 export const FORM_STEP = 1;
