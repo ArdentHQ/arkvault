@@ -153,7 +153,7 @@ const getContractOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction)
 		contractOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DEPLOY"),
 			value: "contract-deployment",
-		})
+		});
 	}
 
 	return contractOptions;
