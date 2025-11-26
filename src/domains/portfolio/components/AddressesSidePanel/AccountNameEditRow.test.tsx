@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
-import { env, getMainsailProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { AccountNameEditRow } from "./AccountNameEditRow";
-import { expect, vi } from "vitest";
+import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
 
 describe("AccountNameEditRow", () => {
