@@ -44,9 +44,9 @@ export const ReviewStep = ({
 					titleIcon={
 						<ThemeIcon
 							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
+							lightIcon="ReviewContractDeploymentLight"
+							darkIcon="SendContractDeploymentDark"
+							dimIcon="SendContractDeploymentDim"
 						/>
 					}
 				/>
