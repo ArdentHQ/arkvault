@@ -121,7 +121,7 @@ export const AddressesSidePanel = ({
 	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
 
 	const renderDeleteContent = (wallet: Contracts.IReadWriteWallet) => {
-		if (hdAccountToDelete === wallet.accountName()) {
+		if (!!hdAccountToDelete && hdAccountToDelete === wallet.accountName()) {
 			return <div />;
 		}
 
