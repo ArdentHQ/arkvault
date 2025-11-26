@@ -21,9 +21,11 @@ export type EncodeTransactionType =
 	| "validatorResignation"
 	| "usernameRegistration"
 	| "usernameResignation"
-	| "updateValidator";
+	| "updateValidator"
+	| "contractDeployment";
 
 export interface EncodeInputData {
+	bytecode?: string;
 	senderAddress: string;
 	recipientAddress?: string;
 	recipients?: RecipientPaymentItem[];
@@ -144,6 +146,13 @@ export class TransactionEncoder {
 		};
 	}
 
+	public contractDeployment(bytecode: Hex): EncodedData {
+		return {
+			data: bytecode,
+			to: "",
+		};
+	}
+
 	public vote(voteAddresses: string[]): EncodedData {
 		const vote = voteAddresses.at(0);
 		const isVote = !!vote;
@@ -183,6 +192,10 @@ export class TransactionEncoder {
 
 		if (type === "usernameResignation") {
 			return this.usernameResignation();
+		}
+
+		if (type === "contractDeployment") {
+			return this.contractDeployment(inputData.bytecode as Hex);
 		}
 
 		if (type === "updateValidator" && inputData.validatorPublicKey) {
