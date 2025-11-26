@@ -140,17 +140,21 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	return registrationOptions;
 };
 
-const getContractOptions = (_wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
+const getContractOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
+	const validWallets = wallets.filter((w) => w.balance() > 0 && isRestoredAndSynced(w));
+
 	const contractOptions: DropdownOptionGroup = {
 		key: "contract",
-		options: [
-			{
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DEPLOY"),
-				value: "contract-deployment",
-			},
-		],
+		options: [],
 		title: t("WALLETS.PAGE_WALLET_DETAILS.CONTRACTS"),
 	};
+
+	if (validWallets.length > 0) {
+		contractOptions.options.push({
+			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DEPLOY"),
+			value: "contract-deployment",
+		});
+	}
 
 	return contractOptions;
 };
