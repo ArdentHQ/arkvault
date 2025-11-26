@@ -344,9 +344,9 @@ export const SendRegistrationSidePanel = ({
 		if (activeTab === REVIEW_STEP) {
 			return (
 				<ThemeIcon
-					lightIcon={isContractDeployment ? "ReviewContractDeploymentLight": "DocumentView"}
-					darkIcon={isContractDeployment ? "ReviewContractDeploymentDark": "DocumentView"}
-					dimIcon={isContractDeployment ? "ReviewContractDeploymentDim": "DocumentView"}
+					lightIcon={isContractDeployment ? "ReviewContractDeploymentLight" : "DocumentView"}
+					darkIcon={isContractDeployment ? "ReviewContractDeploymentDark" : "DocumentView"}
+					dimIcon={isContractDeployment ? "ReviewContractDeploymentDim" : "DocumentView"}
 					dimensions={[24, 24]}
 				/>
 			);
