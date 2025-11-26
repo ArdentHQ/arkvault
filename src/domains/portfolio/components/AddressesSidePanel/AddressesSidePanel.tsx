@@ -150,7 +150,6 @@ export const AddressesSidePanel = ({
 			return true;
 		}
 
-		console.log({ hdAccountToDelete, walletAccountName: wallet.accountName() });
 		if (!!hdAccountToDelete && hdAccountToDelete === wallet.accountName()) {
 			return true;
 		}
