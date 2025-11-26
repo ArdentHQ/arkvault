@@ -108,6 +108,9 @@ export const translations = {
 	DELETE: "Delete",
 	DELETE_ADDRESS: "Delete Address",
 	DELETE_DESCRIPTION: "The address will be permanently removed, and a passphrase will be needed for re-import.",
+	DELETE_HD_WALLET_DESCRIPTION:
+		"The HD Wallet and all associated addresses will be permanently removed, and a passphrase will be needed for re-import.",
+	DELETE_WALLET: "Delete Wallet",
 	DESCRIPTION: "Description",
 	DETAILS: "Details",
 	DEVELOPMENT_NETWORKS: "Development Networks",
@@ -422,6 +425,7 @@ export const translations = {
 	REFRESH: "Refresh",
 	REGISTER: "Register",
 	REGISTRATIONS: "Registrations",
+	REGULAR_ADDRESS: "Regular Address",
 	RELOAD: "Reload",
 	REMOVE: "Remove",
 	REMOVE_ALL: "Remove All",

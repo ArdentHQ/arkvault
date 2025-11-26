@@ -39,6 +39,7 @@ export const AddressesSidePanel = ({
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [addressToDelete, setAddressToDelete] = useState<string | undefined>(undefined);
+	const [hdAccountToDelete, setHdAccountNameToDelete] = useState<string | undefined>(undefined);
 	const [addressToEdit, setAddressToEdit] = useState<string | undefined>(undefined);
 	const [showManageHint, setShowManageHint] = useState<boolean>(false);
 	const [manageHintHasShown, persistManageHint] = useLocalStorage("manage-hint", false);
@@ -118,6 +119,44 @@ export const AddressesSidePanel = ({
 	);
 
 	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
+
+	const renderDeleteContent = (wallet: Contracts.IReadWriteWallet) => {
+		if (hdAccountToDelete === wallet.accountName()) {
+			return <div />;
+		}
+
+		if (addressToDelete === wallet.address()) {
+			return (
+				<DeleteAddressMessage
+					onCancelDelete={disableManageState}
+					onConfirmDelete={() => void handleDelete(wallet)}
+				/>
+			);
+		}
+
+		return;
+	};
+
+	const renderErrorState = (wallet: Contracts.IReadWriteWallet) => {
+		if (!isManageMode) {
+			return false;
+		}
+
+		if (selectedAddresses.length === 0) {
+			return false;
+		}
+
+		if (wallet.address() === addressToDelete) {
+			return true;
+		}
+
+		console.log({ hdAccountToDelete, walletAccountName: wallet.accountName() });
+		if (!!hdAccountToDelete && hdAccountToDelete === wallet.accountName()) {
+			return true;
+		}
+
+		return false;
+	};
 
 	return (
 		<SidePanel
@@ -302,7 +341,23 @@ export const AddressesSidePanel = ({
 					groupedByAccountName.map(([accountName, wallets]) => (
 						<div>
 							{isManageMode && (
-								<AccountNameEditRow accountName={accountName} wallets={wallets} profile={profile} />
+								<AccountNameEditRow
+									accountName={accountName}
+									wallets={wallets}
+									profile={profile}
+									isDeleting={!!hdAccountToDelete && accountName === hdAccountToDelete}
+									onDelete={() => {
+										setHdAccountNameToDelete?.(accountName);
+									}}
+									onCancelDelete={() => {
+										setHdAccountNameToDelete?.(undefined);
+									}}
+									onConfirmDelete={() => {
+										Promise.all(
+											wallets.map((wallet: Contracts.IReadWriteWallet) => handleDelete(wallet)),
+										);
+									}}
+								/>
 							)}
 
 							<div>
@@ -315,10 +370,7 @@ export const AddressesSidePanel = ({
 													? "You need to have at least one address selected."
 													: undefined
 											}
-											isError={
-												(selectedAddresses.length === 0 && !isManageMode) ||
-												wallet.address() === addressToDelete
-											}
+											isError={renderErrorState(wallet)}
 											key={wallet.address()}
 											wallet={wallet}
 											toggleAddress={() => {
@@ -347,14 +399,7 @@ export const AddressesSidePanel = ({
 													/>
 												) : undefined
 											}
-											deleteContent={
-												addressToDelete === wallet.address() ? (
-													<DeleteAddressMessage
-														onCancelDelete={disableManageState}
-														onConfirmDelete={() => void handleDelete(wallet)}
-													/>
-												) : undefined
-											}
+											deleteContent={renderDeleteContent(wallet)}
 										/>
 									</div>
 								))}

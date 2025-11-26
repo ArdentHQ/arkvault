@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import React, { JSX, ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
@@ -6,18 +6,22 @@ import { Divider } from "@/app/components/Divider";
 export const DeleteAddressMessage = ({
 	onCancelDelete,
 	onConfirmDelete,
+	children,
+	confirmText,
 }: {
 	onConfirmDelete: () => void;
 	onCancelDelete: () => void;
+	children?: string | ReactElement;
+	confirmText?: string | ReactElement;
 }): JSX.Element => {
 	const { t } = useTranslation();
 	return (
 		<div
 			data-testid="DeleteAddressMessage"
-			className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex flex-col items-center rounded-b-sm px-4 py-3 sm:rounded-b-lg md:rounded-b-lg"
+			className="bg-thfme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex flex-col items-center rounded-b-sm px-4 py-3 sm:rounded-b-lg md:rounded-b-lg"
 		>
 			<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm">
-				{t("COMMON.DELETE_DESCRIPTION")}
+				{children ?? t("COMMON.DELETE_DESCRIPTION")}
 			</p>
 
 			<div className="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5">
@@ -43,7 +47,7 @@ export const DeleteAddressMessage = ({
 					onClick={onConfirmDelete}
 					className="text-theme-danger-400 dim:text-theme-danger-400 px-2 py-[3px] leading-5"
 				>
-					{t("COMMON.DELETE_ADDRESS")}
+					{confirmText ?? t("COMMON.DELETE_ADDRESS")}
 				</Button>
 			</div>
 		</div>
