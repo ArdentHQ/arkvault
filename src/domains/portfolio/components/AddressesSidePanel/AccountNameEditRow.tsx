@@ -16,16 +16,16 @@ export const AccountNameEditRow = ({
 }) => {
 	const [isEditing, setIsEditing] = useState(false);
 
-	if (accountName === "Regular Address") {
+	if (accountName === "undefined") {
 		return (
-			<div className="text-theme-secondary-500 mt-4 mb-2 px-3 font-semibold">
-				<div>{accountName}</div>
+			<div className="text-theme-secondary-500 mt-4 mb-2 px-3 font-semibold" data-testid="AccountNameEditRow__empty">
+				<div>Regular Address</div>
 			</div>
 		);
 	}
 
 	return (
-		<div className="border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 my-1 rounded-lg border">
+		<div className="border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 my-1 rounded-lg border" data-testid="AccountNameEditRow__wrapper">
 			<div className="px-4 py-3">
 				<div className="flex items-center justify-between">
 					<div className="no-ligatures text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-200 dim:text-theme-dim-100 dark:border-theme-dark-700 dim:border-theme-dim-700 inline-block truncate overflow-hidden rounded border bg-transparent px-1 py-0.5 text-xs leading-[15px] font-semibold uppercase">
@@ -37,6 +37,7 @@ export const AccountNameEditRow = ({
 								variant="transparent"
 								size="md"
 								className="h-6 w-6 p-0"
+								data-testid="AccountNameEditRow__edit"
 								onClick={() => {
 									setIsEditing(true);
 								}}
