@@ -113,8 +113,8 @@ export const AddressesSidePanel = ({
 		});
 
 	const groupedByAccountName = sortBy(
-		Object.entries(groupBy(addressesToShow, w => w.accountName() ?? undefined)),
-		([key]) => [key === undefined, key ?? ''],
+		Object.entries(groupBy(addressesToShow, (w) => w.accountName() ?? undefined)),
+		([key]) => [key === undefined, key ?? ""],
 	);
 
 	const isSelectAllDisabled = isManageMode || addressesToShow.length === 0;
