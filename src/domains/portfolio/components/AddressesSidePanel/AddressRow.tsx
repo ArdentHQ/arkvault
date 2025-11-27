@@ -98,7 +98,13 @@ export const AddressRow = ({
 	return (
 		<div
 			data-testid="AddressRow"
-			onClick={() => toggleAddress(wallet.address())}
+			onClick={() => {
+				if (isSingleView && isSelected) {
+					return
+				}
+
+				toggleAddress(wallet.address())
+			}}
 			onKeyPress={() => toggleAddress(wallet.address())}
 			tabIndex={0}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
