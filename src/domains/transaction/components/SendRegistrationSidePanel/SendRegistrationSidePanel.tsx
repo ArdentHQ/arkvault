@@ -367,6 +367,17 @@ export const SendRegistrationSidePanel = ({
 			return <ThemeIcon lightIcon="Mnemonic" darkIcon="Mnemonic" dimIcon="Mnemonic" dimensions={[24, 24]} />;
 		}
 
+		if (registrationType === "contractDeployment") {
+			return (
+				<ThemeIcon
+					dimensions={[24, 24]}
+					lightIcon="SendContractDeploymentLight"
+					darkIcon="SendContractDeploymentDark"
+					dimIcon="SendContractDeploymentDim"
+				/>
+			);
+		}
+
 		return (
 			<ThemeIcon
 				dimensions={[24, 24]}
