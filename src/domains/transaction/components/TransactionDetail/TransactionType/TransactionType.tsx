@@ -38,9 +38,9 @@ export const TransactionType = ({
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 
-	let bytecode: string|undefined;
+	let bytecode: string | undefined;
 
-	if(transaction.type().startsWith("0x")) {
+	if (transaction.type().startsWith("0x")) {
 		// @ts-expect-error data property exists on Extended transaction types
 		bytecode = transaction.isConfirmed() ? transaction.data().data.data : transaction.data().data().data;
 	}
@@ -71,7 +71,7 @@ export const TransactionType = ({
 							<DetailLabelText className="min-w-auto sm:min-w-24">{t("COMMON.BYTECODE")}</DetailLabelText>
 
 							<div className="flex items-center">
-								<div className="min-w-0 no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+								<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 min-w-0 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
 									<TruncateEnd text={bytecode} maxChars={9} showTooltip={false} />
 								</div>
 								<div className="h-5 leading-[17px] sm:leading-5">
@@ -88,7 +88,6 @@ export const TransactionType = ({
 								</Button>
 							</div>
 						</div>
-
 					)}
 
 					{(transaction.isValidatorRegistration() || transaction.isUpdateValidator()) && (
@@ -106,7 +105,7 @@ export const TransactionType = ({
 						"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 max-h-0 overflow-y-scroll border-t text-sm leading-5 opacity-0 transition-all sm:text-base sm:leading-7",
 						{
 							"mt-3 -mb-3 max-h-64 pt-3 opacity-100 sm:-mx-6 sm:mt-5 sm:-mb-1 sm:px-6 sm:pt-4":
-							showFullBytecode,
+								showFullBytecode,
 						},
 					)}
 				>
