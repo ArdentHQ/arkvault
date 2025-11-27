@@ -100,10 +100,10 @@ export const AddressRow = ({
 			data-testid="AddressRow"
 			onClick={() => {
 				if (isSingleView && isSelected) {
-					return
+					return;
 				}
 
-				toggleAddress(wallet.address())
+				toggleAddress(wallet.address());
 			}}
 			onKeyPress={() => toggleAddress(wallet.address())}
 			tabIndex={0}
