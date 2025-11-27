@@ -138,7 +138,7 @@ describe("AddressRow", () => {
 			/>,
 		);
 
-		await userEvent.click(screen.getByTestId("AddressRow--checkbox"));
+		await userEvent.click(screen.getByTestId("AddressRow"));
 		expect(toggleAddress).not.toHaveBeenCalledWith(wallet.address());
 	});
 
