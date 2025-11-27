@@ -135,6 +135,11 @@ export const CreateAddressesSidePanel = ({
 	};
 
 	const handleBack = () => {
+		if (activeTab === CreateStep.MethodStep) {
+			onOpenChange(false);
+			return;
+		}
+
 		if (!usesHDWallets && activeTab === CreateStep.WalletOverviewStep) {
 			onOpenChange(false);
 			return;
@@ -244,7 +249,7 @@ export const CreateAddressesSidePanel = ({
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
 			onMountChange={onMountChange}
-			hasSteps
+			hasSteps={activeTab !== CreateStep.MethodStep}
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
 			onBack={handleBack}
