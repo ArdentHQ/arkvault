@@ -199,6 +199,13 @@ export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?
 				value: "receive-funds",
 			},
 		);
+
+		if (wallets[0]?.accountName()) {
+			primaryOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.HD_WALLET_NAME"),
+				value: "hd-account-name",
+			});
+		}
 	}
 
 	const secondaryOptions: DropdownOptionGroup = {

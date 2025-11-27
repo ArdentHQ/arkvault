@@ -59,6 +59,7 @@ export const translations = {
 
 	MODAL_NAME_WALLET: {
 		DESCRIPTION: "Select a personalized address name, visible only to you",
+		HD_DESCRIPTION: "Select the HD Wallet name for this and all the associated addresses",
 		TITLE: "Address Name",
 	},
 
@@ -263,6 +264,7 @@ export const translations = {
 		OPTIONS: {
 			ADDRESS_NAME: "Address Name",
 			DELETE: "Delete",
+			HD_WALLET_NAME: "HD	Wallet Name",
 			MULTISIGNATURE: "Multisignature",
 			RECEIVE_FUNDS: "Receive Funds",
 			RECEIVE_FUNDS_QR: "QR",

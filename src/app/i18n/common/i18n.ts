@@ -1,4 +1,5 @@
 export const translations = {
+	ACCOUNT_NAME: "Account Name",
 	ACTION: "Action",
 	ADAPTER: "Adapter",
 	ADD: "Add",
