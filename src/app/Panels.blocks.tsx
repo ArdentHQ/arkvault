@@ -91,7 +91,7 @@ export const AppPanels = () => {
 
 						setTimeout(() => {
 							openPanel(Panel.ImportAddress);
-						}, SIDE_PANEL_TRANSITION_DURATION)
+						}, SIDE_PANEL_TRANSITION_DURATION);
 					}}
 				/>
 			</ResetWhenUnmounted>
