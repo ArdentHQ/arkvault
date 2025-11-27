@@ -57,7 +57,7 @@ describe("TransactionType", () => {
 										data: "0x60006000F3"
 									}
 								)
-							},
+							}
 						)
 					} as DTO.ExtendedSignedTransactionData
 				}
