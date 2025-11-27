@@ -48,17 +48,13 @@ describe("TransactionType", () => {
 				transaction={
 					{
 						...TransactionFixture,
-						type: () => "0x60006000",
+						data: () => ({
+							data: () => ({
+								data: "0x60006000F3",
+							}),
+						}),
 						isConfirmed: () => false,
-						data: () => (
-							{
-								data: () => (
-									{
-										data: "0x60006000F3"
-									}
-								)
-							}
-						)
+						type: () => "0x60006000",
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
@@ -74,15 +70,13 @@ describe("TransactionType", () => {
 				transaction={
 					{
 						...TransactionFixture,
-						type: () => "0x60006000",
+						data: () => ({
+							data: {
+								data: "0x60006000F3",
+							},
+						}),
 						isConfirmed: () => true,
-						data: () => (
-							{
-								data: {
-									data: "0x60006000F3"
-								}
-							}
-						)
+						type: () => "0x60006000",
 					} as DTO.ExtendedConfirmedTransactionData
 				}
 			/>,
@@ -100,15 +94,13 @@ describe("TransactionType", () => {
 				transaction={
 					{
 						...TransactionFixture,
-						type: () => "0x608060405",
+						data: () => ({
+							data: {
+								data: bytecode,
+							},
+						}),
 						isConfirmed: () => true,
-						data: () => (
-							{
-								data: {
-									data: bytecode,
-								}
-							}
-						)
+						type: () => "0x608060405",
 					} as DTO.ExtendedConfirmedTransactionData
 				}
 			/>,
