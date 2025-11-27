@@ -137,7 +137,7 @@ export const CreateAddressesSidePanel = ({
 	const handleBack = () => {
 		if (activeTab === CreateStep.MethodStep) {
 			onOpenChange(false);
-			return
+			return;
 		}
 
 		if (!usesHDWallets && activeTab === CreateStep.WalletOverviewStep) {
