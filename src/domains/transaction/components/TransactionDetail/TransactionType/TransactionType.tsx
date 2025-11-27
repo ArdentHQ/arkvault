@@ -41,6 +41,7 @@ export const TransactionType = ({
 	let bytecode: string|undefined;
 
 	if(transaction.type().startsWith("0x")) {
+		// @ts-expect-error data property exists on Extended transaction types
 		bytecode = transaction.isConfirmed() ? transaction.data().data.data : transaction.data().data().data;
 	}
 
