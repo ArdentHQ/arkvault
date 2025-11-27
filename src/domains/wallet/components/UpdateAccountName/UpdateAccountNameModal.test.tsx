@@ -32,19 +32,21 @@ describe("UpdateAccountNameModal", () => {
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.HD_DESCRIPTION);
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(commonTranslations.ACCOUNT_NAME);
-		})
+		});
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should update hd wallet account name", async () => {
 		const onAfterSave = vi.fn();
 
-		render(<UpdateAccountNameModal profile={profile} wallet={wallet} onAfterSave={onAfterSave} onCancel={vi.fn()} />);
+		render(
+			<UpdateAccountNameModal profile={profile} wallet={wallet} onAfterSave={onAfterSave} onCancel={vi.fn()} />,
+		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.HD_DESCRIPTION);
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(commonTranslations.ACCOUNT_NAME);
-		})
+		});
 
 		const name = "Sample label";
 
