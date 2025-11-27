@@ -3,8 +3,9 @@ import { DTO } from "@/app/lib/profiles";
 
 import { TransactionType } from "./TransactionType";
 import { translations } from "@/domains/transaction/i18n";
-import { renderResponsive, render } from "@/utils/testing-library";
+import { renderResponsive, render, screen } from "@/utils/testing-library";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
+import userEvent from "@testing-library/user-event";
 
 describe("TransactionType", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
@@ -39,6 +40,85 @@ describe("TransactionType", () => {
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.REGISTER_VALIDATOR);
 		expect(container).toHaveTextContent("validator");
+	});
+
+	it("should render contract deployment - signed transaction", () => {
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						type: () => "0x60006000",
+						isConfirmed: () => false,
+						data: () => (
+							{
+								data: () => (
+									{
+										data: "0x60006000F3"
+									}
+								)
+							},
+						),
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+		);
+
+		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT);
+		expect(container).toHaveTextContent("0x60006000");
+	});
+
+	it("should render contract deployment - confirmed transaction", () => {
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						type: () => "0x60006000",
+						isConfirmed: () => true,
+						data: () => (
+							{
+								data: {
+									data: "0x60006000F3"
+								}
+							},
+						),
+					} as DTO.ExtendedConfirmedTransactionData
+				}
+			/>,
+		);
+
+		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT);
+		expect(container).toHaveTextContent("0x60006000");
+	});
+
+	it("should show full bytecode for contract deployment", async () => {
+		const bytecode = "0x608060405234801561001057600080fd5b506040518060400160405280600681526020017f4441524b323000";
+
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						type: () => "0x608060405",
+						isConfirmed: () => true,
+						data: () => (
+							{
+								data: {
+									data: bytecode,
+								}
+							},
+						),
+					} as DTO.ExtendedConfirmedTransactionData
+				}
+			/>,
+		);
+
+		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT);
+
+		await userEvent.click(screen.getByTestId("ContractDeploymentForm--ShowFullByteCode"));
+
+		expect(container).toHaveTextContent(bytecode);
 	});
 
 	it("should render username if username registration", () => {
