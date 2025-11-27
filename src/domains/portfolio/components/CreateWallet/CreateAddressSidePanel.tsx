@@ -249,7 +249,7 @@ export const CreateAddressesSidePanel = ({
 			onOpenChange={onOpenChange}
 			dataTestId="CreateAddressSidePanel"
 			onMountChange={onMountChange}
-			hasSteps
+			hasSteps={activeTab !== CreateStep.MethodStep}
 			totalSteps={allSteps.length}
 			activeStep={activeTab}
 			onBack={handleBack}
