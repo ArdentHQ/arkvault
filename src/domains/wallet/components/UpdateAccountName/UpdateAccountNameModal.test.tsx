@@ -13,7 +13,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { wait } from "@testing-library/user-event/dist/types/utils";
 
 describe("UpdateAccountNameModal", () => {
 	let profile: Contracts.IProfile;
