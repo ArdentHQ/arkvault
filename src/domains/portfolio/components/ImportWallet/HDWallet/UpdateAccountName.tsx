@@ -43,7 +43,10 @@ export const UpdateAccountName = ({ onAfterSave, onCancel, profile, wallets }: U
 	const nameValidation = accountName({ currentAccountName, profile, t });
 
 	const onSubmit = async ({ name }: UpdateAddressNameState) => {
-		const hdWallets = profile.wallets().values().filter(hdWallet => hdWallet.accountName() === currentAccountName)
+		const hdWallets = profile
+			.wallets()
+			.values()
+			.filter((hdWallet) => hdWallet.accountName() === currentAccountName);
 
 		for (const wallet of hdWallets) {
 			wallet.mutator().accountName(name);
