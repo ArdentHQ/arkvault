@@ -81,8 +81,8 @@ describe("TransactionType", () => {
 								data: {
 									data: "0x60006000F3"
 								}
-							},
-						),
+							}
+						)
 					} as DTO.ExtendedConfirmedTransactionData
 				}
 			/>,
@@ -107,8 +107,8 @@ describe("TransactionType", () => {
 								data: {
 									data: bytecode,
 								}
-							},
-						),
+							}
+						)
 					} as DTO.ExtendedConfirmedTransactionData
 				}
 			/>,
