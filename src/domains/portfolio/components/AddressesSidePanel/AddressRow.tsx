@@ -151,7 +151,6 @@ export const AddressRow = ({
 						color="info"
 						className="m-0.5 h-5 w-5"
 						checked={isSelected}
-						onChange={() => toggleAddress(wallet.address())}
 					/>
 				)}
 
@@ -161,7 +160,6 @@ export const AddressRow = ({
 						data-testid="AddressRow--checkbox"
 						className="dim:not-checked:bg-transparent! m-0.5"
 						checked={isSelected}
-						onChange={() => toggleAddress(wallet.address())}
 					/>
 				)}
 
