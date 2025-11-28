@@ -55,7 +55,7 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 						signedData: {
 							...data.data(),
 							timestamp: Date.now(),
-						}
+						},
 					});
 
 					return updated;
@@ -93,10 +93,12 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 
 					const timestamp = localTransaction?.signedData.timestamp ?? Date.now();
 
-					updated[networkId][walletAddress].push({ signedData: {
-						...transaction,
-						timestamp,
-					}});
+					updated[networkId][walletAddress].push({
+						signedData: {
+							...transaction,
+							timestamp,
+						},
+					});
 
 					return updated;
 				});
