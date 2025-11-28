@@ -18,7 +18,7 @@ const signedTransactionData = {
 		r: "c88273028bf96f212eee0d20dc0a72aff1d3670ac2f49a8bc648a15a4366631c",
 		s: "7073c8d6d2530fdfeafd4ac4a72f0976f33284253e3b97de70b6779b70d7a2f3",
 		senderPublicKey: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
-		"timestamp": 1593561600000,
+		timestamp: 1593561600000,
 		to: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
 		username: "sdfsdf3",
 		v: 1,
@@ -36,7 +36,7 @@ const mockUnconfirmedTransactionData = {
 	hash: "d91057d3b535e43e890c794e2142803a54cd070edd3006e74ffd17dd18165f22",
 	nonce: "187",
 	senderPublicKey: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
-	"timestamp": 1593561600000,
+	timestamp: 1593561600000,
 	to: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
 	value: "0",
 };
