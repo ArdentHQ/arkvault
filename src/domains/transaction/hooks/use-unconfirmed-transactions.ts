@@ -70,7 +70,6 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 	const addUnconfirmedTransactionFromApi = useCallback(
 		(networkId: string, walletAddress: string, transaction: RawTransactionData) => {
 			try {
-				console.log("addUnconfirmedTransactionFromApi", networkId, walletAddress, transaction);
 				const targetHash = transaction.hash;
 
 				setUnconfirmedTransactions((prev) => {
