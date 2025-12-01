@@ -50,7 +50,13 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 						(tx) => tx.signedData.hash !== newHash,
 					);
 
-					updated[networkId][walletAddress].push(data);
+					updated[networkId][walletAddress].push({
+						...data,
+						signedData: {
+							...data.data(),
+							timestamp: Date.now(),
+						},
+					});
 
 					return updated;
 				});
@@ -77,11 +83,22 @@ export const useUnconfirmedTransactions = (): UseUnconfirmedTransactionsReturn =
 						updated[networkId][walletAddress] = [];
 					}
 
+					const localTransaction = updated[networkId][walletAddress].find(
+						(tx) => tx.signedData.hash === targetHash,
+					);
+
 					updated[networkId][walletAddress] = updated[networkId][walletAddress].filter(
 						(tx) => tx.signedData.hash !== targetHash,
 					);
 
-					updated[networkId][walletAddress].push({ signedData: transaction });
+					const timestamp = localTransaction?.signedData.timestamp ?? Date.now();
+
+					updated[networkId][walletAddress].push({
+						signedData: {
+							...transaction,
+							timestamp,
+						},
+					});
 
 					return updated;
 				});
