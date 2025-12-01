@@ -131,7 +131,10 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 				)}
 
 				{verificationError && (
-					<div data-testid="LedgerAddressVerification__error" className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
+					<div
+						data-testid="LedgerAddressVerification__error"
+						className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6"
+					>
 						<div className="flex items-center gap-1">
 							<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 flex items-center space-x-2">
 								<Icon name="CircleCross" size="md" className="h-4" />
