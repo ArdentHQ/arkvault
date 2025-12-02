@@ -223,7 +223,7 @@ export const PortfolioHeader = ({
 									<Button
 										size="xs"
 										variant="transparent"
-										data-testid="HideManageHint"
+										data-testid="HideImportHint"
 										className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 h-8 w-full px-4 py-1.5 sm:w-auto"
 										onClick={(e) => {
 											e.stopPropagation();
