@@ -239,10 +239,13 @@ export const PortfolioHeader = ({
 						>
 							<Button
 								variant="secondary"
-								className={
-									cn("dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent",
-										{"ring-theme-primary-400 py-[3px] h-auto! dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 rounded ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent": showImportHint},
-									)}
+								className={cn(
+									"dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent",
+									{
+										"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 h-auto! rounded py-[3px] ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
+											showImportHint,
+									},
+								)}
 								onClick={() => openPanel(Panel.ImportAddress)}
 							>
 								<Icon
