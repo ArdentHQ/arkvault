@@ -1,6 +1,6 @@
 import { LedgerMigrationBanner, useLedgerMigrationMenuOptions } from "@/domains/wallet/components/LedgerMigration";
 import { Panel, usePanels } from "@/app/contexts/Panels";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
@@ -84,6 +84,8 @@ export const PortfolioHeader = ({
 
 	const ledgerMigrationOptions = useLedgerMigrationMenuOptions();
 
+	const displayingHint = useRef<boolean>(false);
+
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
@@ -99,6 +101,8 @@ export const PortfolioHeader = ({
 			allWallets.length > 1 &&
 			profile.walletSelectionMode() === "single"
 		) {
+			displayingHint.current = true;
+
 			id = setTimeout(() => {
 				setShowHint(true);
 			}, 1000);
@@ -108,6 +112,32 @@ export const PortfolioHeader = ({
 			clearTimeout(id);
 		};
 	}, [hasFocus, hintHasShown, profile.walletSelectionMode(), profile.wallets().count()]);
+
+	const [showImportHint, setShowImportHint] = useState<boolean>(false);
+	const [importHintHasShown, persistImportHintShown] = useLocalStorage<boolean | undefined>(
+		`import-hd-wallet-hint-${profile.id()}`,
+		undefined,
+	);
+
+	useEffect(() => {
+		let id: NodeJS.Timeout;
+
+		const hasHDWallets = profile
+			.wallets()
+			.values()
+			.some((wallet) => wallet.isHDWallet());
+
+		if (hasFocus && importHintHasShown === undefined && hasHDWallets && !displayingHint.current) {
+			id = setTimeout(() => {
+				displayingHint.current = true;
+				setShowImportHint(true);
+			}, 1000);
+		}
+
+		return () => {
+			clearTimeout(id);
+		};
+	}, [hasFocus, hintHasShown, profile.wallets().count()]);
 
 	const handleViewAddress = () => {
 		if (allWallets.length > 1) {
@@ -135,9 +165,10 @@ export const PortfolioHeader = ({
 										e.stopPropagation();
 										persistHintShown(true);
 										setShowHint(false);
+										displayingHint.current = false;
 									}}
 								>
-									{t("COMMON.GOT_IT")},
+									{t("COMMON.GOT_IT")}
 								</Button>
 							</div>
 						}
@@ -188,20 +219,52 @@ export const PortfolioHeader = ({
 						</div>
 					</Tooltip>
 					<div className="flex flex-row items-center gap-1">
-						<Button
-							variant="secondary"
-							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
-							onClick={() => openPanel(Panel.ImportAddress)}
+						<Tooltip
+							visible={showImportHint}
+							content={
+								<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
+									<div className="mb-2 block max-w-96 whitespace-normal sm:mb-0 sm:inline">
+										<Trans i18nKey="WALLETS.IMPORT_HD_WALLET_HINT" />
+									</div>
+									<Button
+										size="xs"
+										variant="transparent"
+										data-testid="HideImportHint"
+										className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 h-8 w-full px-4 py-1.5 sm:w-auto"
+										onClick={(e) => {
+											e.stopPropagation();
+											persistImportHintShown(true);
+											setShowImportHint(false);
+											displayingHint.current = false;
+										}}
+									>
+										{t("COMMON.GOT_IT")}
+									</Button>
+								</div>
+							}
+							placement="bottom"
 						>
-							<Icon
-								name="ArrowTurnDownBracket"
-								size="md"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
-							/>
-							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
-								{t("COMMON.IMPORT")}
-							</p>
-						</Button>
+							<Button
+								variant="secondary"
+								className={cn(
+									"dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent",
+									{
+										"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 h-auto! rounded py-[3px] ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
+											showImportHint,
+									},
+								)}
+								onClick={() => openPanel(Panel.ImportAddress)}
+							>
+								<Icon
+									name="ArrowTurnDownBracket"
+									size="md"
+									className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+								/>
+								<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
+									{t("COMMON.IMPORT")}
+								</p>
+							</Button>
+						</Tooltip>
 						<Divider
 							type="vertical"
 							className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"

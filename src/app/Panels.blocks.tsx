@@ -1,4 +1,4 @@
-import { Panel, usePanels } from "./contexts";
+import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "./contexts";
 
 import { AddressesSidePanel } from "@/domains/portfolio/components/AddressesSidePanel";
 import { Alert } from "@/app/components/Alert";
@@ -89,7 +89,9 @@ export const AppPanels = () => {
 					onImportAddress={async () => {
 						await closePanel();
 
-						openPanel(Panel.ImportAddress);
+						setTimeout(() => {
+							openPanel(Panel.ImportAddress);
+						}, SIDE_PANEL_TRANSITION_DURATION);
 					}}
 				/>
 			</ResetWhenUnmounted>
