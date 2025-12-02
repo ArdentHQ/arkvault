@@ -1,6 +1,6 @@
 import { LedgerMigrationBanner, useLedgerMigrationMenuOptions } from "@/domains/wallet/components/LedgerMigration";
 import { Panel, usePanels } from "@/app/contexts/Panels";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
@@ -84,6 +84,8 @@ export const PortfolioHeader = ({
 
 	const ledgerMigrationOptions = useLedgerMigrationMenuOptions();
 
+	const displayingHint = useRef<boolean>(false);
+
 	const [showHint, setShowHint] = useState<boolean>(false);
 	const [hintHasShown, persistHintShown] = useLocalStorage<boolean | undefined>("single-address-hint", undefined);
 
@@ -99,6 +101,8 @@ export const PortfolioHeader = ({
 			allWallets.length > 1 &&
 			profile.walletSelectionMode() === "single"
 		) {
+			displayingHint.current = true;
+
 			id = setTimeout(() => {
 				setShowHint(true);
 			}, 1000);
@@ -123,8 +127,9 @@ export const PortfolioHeader = ({
 			.values()
 			.some((wallet) => wallet.isHDWallet());
 
-		if (hasFocus && importHintHasShown === undefined && hasHDWallets && !showHint) {
+		if (hasFocus && importHintHasShown === undefined && hasHDWallets && !displayingHint.current) {
 			id = setTimeout(() => {
+				displayingHint.current = true;
 				setShowImportHint(true);
 			}, 1000);
 		}
@@ -132,7 +137,7 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
-	}, [hasFocus, hintHasShown, showHint, profile.wallets().count()]);
+	}, [hasFocus, hintHasShown, profile.wallets().count()]);
 
 	const handleViewAddress = () => {
 		if (allWallets.length > 1) {
@@ -160,6 +165,7 @@ export const PortfolioHeader = ({
 										e.stopPropagation();
 										persistHintShown(true);
 										setShowHint(false);
+										displayingHint.current = false;
 									}}
 								>
 									{t("COMMON.GOT_IT")}
@@ -229,6 +235,7 @@ export const PortfolioHeader = ({
 											e.stopPropagation();
 											persistImportHintShown(true);
 											setShowImportHint(false);
+											displayingHint.current = false;
 										}}
 									>
 										{t("COMMON.GOT_IT")}
