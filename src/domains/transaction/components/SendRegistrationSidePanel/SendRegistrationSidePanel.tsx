@@ -32,7 +32,10 @@ import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { Image } from "@/app/components/Image";
-import { ContractDeploymentForm } from "@/domains/transaction/components/ContractDeploymentForm";
+import {
+	ContractDeploymentForm,
+	signContractDeployment,
+} from "@/domains/transaction/components/ContractDeploymentForm";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -167,31 +170,22 @@ export const SendRegistrationSidePanel = ({
 				secret,
 			});
 
-			if (registrationType === "validatorRegistration") {
-				const transaction = await signValidatorRegistration({
-					env,
-					form,
-					profile: activeProfile,
-					signatory,
-				});
+			const method = {
+				contractDeployment: signContractDeployment,
+				usernameRegistration: signUsernameRegistration,
+				validatorRegistration: signValidatorRegistration,
+			}[registrationType as string] as Function;
 
-				addUnconfirmedTransactionFromSigned(transaction);
-				setTransaction(transaction);
-				handleNext();
-			}
+			const transaction = await method({
+				env,
+				form,
+				profile: activeProfile,
+				signatory,
+			});
 
-			if (registrationType === "usernameRegistration") {
-				const transaction = await signUsernameRegistration({
-					env,
-					form,
-					profile: activeProfile,
-					signatory,
-				});
-
-				addUnconfirmedTransactionFromSigned(transaction);
-				setTransaction(transaction);
-				handleNext();
-			}
+			addUnconfirmedTransactionFromSigned(transaction);
+			setTransaction(transaction);
+			handleNext();
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(ERROR_STEP);

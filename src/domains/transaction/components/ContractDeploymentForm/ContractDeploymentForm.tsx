@@ -60,18 +60,18 @@ export const ContractDeploymentForm: SendRegistrationForm = {
 	transactionDetails,
 };
 
-export const signUsernameRegistration = async ({ env, form, profile, signatory }: any) => {
+export const signContractDeployment = async ({ env, form, profile, signatory }: any) => {
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { network, senderAddress, username, gasLimit, gasPrice } = getValues();
+	const { network, senderAddress, bytecode, gasLimit, gasPrice } = getValues();
 	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 	httpClient.forgetWalletCache(senderWallet);
 
-	const transactionId = await senderWallet.transaction().signUsernameRegistration({
+	const transactionId = await senderWallet.transaction().signContractDeployment({
 		data: {
-			username,
+			bytecode,
 		},
 		gasLimit,
 		gasPrice,

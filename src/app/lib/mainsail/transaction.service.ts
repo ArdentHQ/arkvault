@@ -282,6 +282,26 @@ export class TransactionService {
 		);
 	}
 
+	public async contractDeployment(input: Services.ContractDeploymentInput): Promise<SignedTransactionData> {
+		this.#assertGasFee(input);
+
+		const nonce = await this.#generateNonce(input);
+
+		const builder = await EvmCallBuilder.new()
+			.nonce(nonce)
+			.payload(input.data.bytecode)
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
+			.gasLimit(input.gasLimit.toString())
+			.sign(input.signatory.signingKey());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
 

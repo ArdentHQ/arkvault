@@ -110,6 +110,11 @@ export class TransactionService implements ITransactionService {
 		return this.#signTransaction("validatorResignation", input);
 	}
 
+	/** {@inheritDoc ITransactionService.signValidatorResignation} */
+	public async signContractDeployment(input: Services.ContractDeploymentInput): Promise<string> {
+		return this.#signTransaction("contractDeployment", input);
+	}
+
 	/** {@inheritDoc ITransactionService.signUpdateValidator} */
 	public async signUpdateValidator(input: Services.UpdateValidatorInput): Promise<string> {
 		return this.#signTransaction("updateValidator", input);
