@@ -324,7 +324,7 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 	const isDisabled = disabled || !isLedgerWalletCompatible(wallet);
 
 	return (
-		<Tooltip content={getTooltipContent(wallet, t)} disabled={!disabled}>
+		<Tooltip wrapperClass="block" content={getTooltipContent(wallet, t)} disabled={!disabled}>
 			<div
 				onClick={() => {
 					if (!isDisabled) {
