@@ -107,6 +107,25 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
+	}, [hasFocus, hintHasShown, profile.wallets().count()]);
+
+	const [showImportHint, setShowImportHint] = useState<boolean>(false);
+	const [importHintHasShown, persistImportHintShown] = useLocalStorage<boolean | undefined>(`import-hd-wallet-hint-${profile.id()}`, undefined);
+
+	useEffect(() => {
+		let id: NodeJS.Timeout;
+
+		const hasHDWallets = profile.wallets().values().some(wallet => wallet.isHDWallet());
+
+		if (hasFocus && importHintHasShown === undefined && hasHDWallets) {
+			id = setTimeout(() => {
+				setShowImportHint(true);
+			}, 1000);
+		}
+
+		return () => {
+			clearTimeout(id);
+		};
 	}, [hasFocus, hintHasShown, profile.walletSelectionMode(), profile.wallets().count()]);
 
 	const handleViewAddress = () => {
@@ -137,7 +156,7 @@ export const PortfolioHeader = ({
 										setShowHint(false);
 									}}
 								>
-									{t("COMMON.GOT_IT")},
+									{t("COMMON.GOT_IT")}
 								</Button>
 							</div>
 						}
@@ -188,6 +207,30 @@ export const PortfolioHeader = ({
 						</div>
 					</Tooltip>
 					<div className="flex flex-row items-center gap-1">
+						<Tooltip
+							visible={showImportHint}
+							content={
+								<div className="flex flex-col items-center px-[3px] pb-1.5 text-sm leading-5 sm:flex-row sm:space-x-4 sm:pt-px sm:pb-px">
+									<div className="mb-2 block max-w-96 whitespace-normal sm:mb-0 sm:inline">
+										<Trans i18nKey="WALLETS.IMPORT_HD_WALLET_HINT" />
+									</div>
+									<Button
+										size="xs"
+										variant="transparent"
+										data-testid="HideManageHint"
+										className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 h-8 w-full px-4 py-1.5 sm:w-auto"
+										onClick={(e) => {
+											e.stopPropagation();
+											persistImportHintShown(true);
+											setShowImportHint(false);
+										}}
+									>
+										{t("COMMON.GOT_IT")}
+									</Button>
+								</div>
+							}
+							placement="bottom"
+						>
 						<Button
 							variant="secondary"
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
@@ -202,6 +245,7 @@ export const PortfolioHeader = ({
 								{t("COMMON.IMPORT")}
 							</p>
 						</Button>
+						</Tooltip>
 						<Divider
 							type="vertical"
 							className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
