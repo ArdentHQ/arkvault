@@ -106,7 +106,7 @@ const SidePanelContent = ({
 	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
-	const popStateHandlerRef = useRef<() => void>(() => {});
+	const popStateHandlerRef = useRef<() => void>(() => { });
 	const { isMinimized, toggleMinimize, toggleExpand, isExpanded } = usePanels();
 
 	const { hasFixedFormButtons } = useNavigationContext();
@@ -160,8 +160,8 @@ const SidePanelContent = ({
 			},
 			common: {
 				transformOrigin: "right",
-				transitionProperty: "transform, opacity",
-				willChange: "transform, opacity",
+				transitionProperty: "transform, opacity, left",
+				willChange: "transform, opacity, left",
 			},
 			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
 			initial: {
@@ -251,12 +251,15 @@ const SidePanelContent = ({
 									<div
 										data-testid={isMinimized ? "MinimizedSidePanel" : "MaximizedSidePanel"}
 										style={styles}
-										className={cn("fixed right-0 w-full transition-all duration-300", className, {
-											"animate-shake": shake,
+										className={cn("fixed right-0 transition-all duration-300", className, {
+											"left-0": isExpanded,
+											"md:left-0 lg:left-[50%] xl:left-[65%]": !isExpanded && !isMinimized,
+											"left-auto": isMinimized,
 											"sm:top-0 sm:max-w-[425px]": isMinimized,
-											"top-0 sm:max-w-[608px]": !isMinimized && !isExpanded,
+											"top-0": !isMinimized && !isExpanded,
 											"top-[-56px]": !hasFixedFormButtons && isMinimized,
 											"top-[-68px]": hasFixedFormButtons && isMinimized,
+											"animate-shake": shake,
 										})}
 									>
 										<div
@@ -288,8 +291,8 @@ const SidePanelContent = ({
 															)}
 														>
 															<div
-																className={cn("flex w-full justify-between", {
-																	"mx-auto px-6 lg:w-4xl": isExpanded,
+																className={cn("flex justify-between transition-all duration-300 mx-auto w-full lg:w-4xl", {
+																	"lg:px-6": isExpanded,
 																})}
 															>
 																<div className="flex items-center gap-2">
@@ -331,7 +334,7 @@ const SidePanelContent = ({
 																			data-testid="SidePanel__expand-button"
 																			variant="transparent"
 																			size="md"
-																			className="h-6 w-6 p-0"
+																			className="h-6 w-6 p-0 hidden lg:flex"
 																			onClick={() => {
 																				toggleExpand();
 																			}}
@@ -451,9 +454,7 @@ const SidePanelContent = ({
 
 											<div
 												ref={scrollContainerRef}
-												className={cn("flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4", {
-													"mx-auto w-full lg:w-4xl": isExpanded,
-												})}
+												className={cn("flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4 mx-auto w-full lg:w-4xl max-w-full")}
 												data-testid="SidePanel__content"
 												inert={isMinimized}
 											>
@@ -475,8 +476,9 @@ const SidePanelContent = ({
 						</FloatingOverlay>
 					</>
 				</SidePanelContext.Provider>
-			)}
-		</FloatingPortal>
+			)
+			}
+		</FloatingPortal >
 	);
 };
 
