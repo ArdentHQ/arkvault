@@ -107,7 +107,7 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
-	}, [hasFocus, hintHasShown, profile.wallets().count()]);
+	}, [hasFocus, hintHasShown, profile.walletSelectionMode(), profile.wallets().count()]);
 
 	const [showImportHint, setShowImportHint] = useState<boolean>(false);
 	const [importHintHasShown, persistImportHintShown] = useLocalStorage<boolean | undefined>(
@@ -123,7 +123,7 @@ export const PortfolioHeader = ({
 			.values()
 			.some((wallet) => wallet.isHDWallet());
 
-		if (hasFocus && importHintHasShown === undefined && hasHDWallets) {
+		if (hasFocus && importHintHasShown === undefined && hasHDWallets && !showHint) {
 			id = setTimeout(() => {
 				setShowImportHint(true);
 			}, 1000);
@@ -132,7 +132,7 @@ export const PortfolioHeader = ({
 		return () => {
 			clearTimeout(id);
 		};
-	}, [hasFocus, hintHasShown, profile.walletSelectionMode(), profile.wallets().count()]);
+	}, [hasFocus, hintHasShown, showHint, profile.wallets().count()]);
 
 	const handleViewAddress = () => {
 		if (allWallets.length > 1) {
