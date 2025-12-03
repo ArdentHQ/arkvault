@@ -4,7 +4,7 @@ import { CURRENCIES, Money, Numeral } from "@/app/lib/intl";
 interface CurrencyFormatOptions {
 	locale?: string;
 	withTicker?: boolean;
-	decimals?: number
+	decimals?: number;
 }
 
 const DEFAULT_DECIMALS = 18;
