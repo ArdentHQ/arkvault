@@ -17,9 +17,7 @@ exports[`TransactionRowMobile > should render 1`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
@@ -331,9 +329,7 @@ exports[`TransactionRowMobile > should render 2`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
@@ -645,9 +641,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
@@ -961,9 +955,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
