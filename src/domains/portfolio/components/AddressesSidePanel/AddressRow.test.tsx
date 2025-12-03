@@ -122,6 +122,26 @@ describe("AddressRow", () => {
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
 	});
 
+	it("should not trigger `toggleAddress` when checkbox is clicked in single view mode", async () => {
+		const toggleAddress = vi.fn();
+
+		render(
+			<AddressRow
+				isSingleView
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={false}
+				toggleAddress={toggleAddress}
+				isSelected={true}
+				onEdit={vi.fn()}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("AddressRow"));
+		expect(toggleAddress).not.toHaveBeenCalledWith(wallet.address());
+	});
+
 	it("should trigger `toggleAddress` when row clicked", async () => {
 		const toggleAddress = vi.fn();
 

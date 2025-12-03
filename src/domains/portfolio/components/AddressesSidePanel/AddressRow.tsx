@@ -98,7 +98,13 @@ export const AddressRow = ({
 	return (
 		<div
 			data-testid="AddressRow"
-			onClick={() => toggleAddress(wallet.address())}
+			onClick={() => {
+				if (isSingleView && isSelected) {
+					return;
+				}
+
+				toggleAddress(wallet.address());
+			}}
 			onKeyPress={() => toggleAddress(wallet.address())}
 			tabIndex={0}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
@@ -145,7 +151,6 @@ export const AddressRow = ({
 						color="info"
 						className="m-0.5 h-5 w-5"
 						checked={isSelected}
-						onChange={() => toggleAddress(wallet.address())}
 					/>
 				)}
 
@@ -155,7 +160,6 @@ export const AddressRow = ({
 						data-testid="AddressRow--checkbox"
 						className="dim:not-checked:bg-transparent! m-0.5"
 						checked={isSelected}
-						onChange={() => toggleAddress(wallet.address())}
 					/>
 				)}
 

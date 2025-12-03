@@ -280,7 +280,7 @@ export const Welcome = () => {
 									</div>
 								</div>
 
-								<div className="static bottom-2 mt-8 w-full">
+								<div className="static bottom-2 mt-8 w-full text-center">
 									<span className="text-theme-secondary-text mb-4 text-center text-base sm:mb-0">
 										<span>{t("PROFILE.PAGE_WELCOME.HAS_EXPORTED_PROFILES")} </span>
 										<Link

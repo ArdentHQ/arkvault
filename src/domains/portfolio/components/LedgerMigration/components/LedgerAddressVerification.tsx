@@ -81,7 +81,7 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 					isVerifying && !isVerified && verificationError === undefined,
 			})}
 		>
-			<div className="space-y-3">
+			<div className="space-y-3" data-testid="LedgerAddressVerification">
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle>{t("COMMON.OLD")}</DetailTitle>
 					<Address
@@ -131,7 +131,10 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 				)}
 
 				{verificationError && (
-					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
+					<div
+						data-testid="LedgerAddressVerification__error"
+						className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6"
+					>
 						<div className="flex items-center gap-1">
 							<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 flex items-center space-x-2">
 								<Icon name="CircleCross" size="md" className="h-4" />
@@ -178,6 +181,7 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 						<DetailTitle> </DetailTitle>
 						<div className="flex items-center space-x-2">
 							<Button
+								data-testid="LedgerAddressVerification__VerifyAddress-button"
 								variant="secondary-icon"
 								onClick={handleVerifyAddress}
 								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent -ml-2 w-auto px-2 py-[3px] whitespace-nowrap"
