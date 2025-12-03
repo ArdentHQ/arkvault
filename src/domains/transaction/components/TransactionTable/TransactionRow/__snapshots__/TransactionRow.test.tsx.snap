@@ -1020,7 +1020,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0.00
+                  0 USD
                 </span>
               </span>
             </div>
@@ -1047,7 +1047,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0.00
+                  0 USD
                 </span>
               </span>
             </div>
@@ -1557,7 +1557,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0.00
+                  0 USD
                 </span>
               </span>
             </div>
@@ -1584,7 +1584,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0.00
+                  0 USD
                 </span>
               </span>
             </div>
@@ -1897,7 +1897,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0.00
+                    0 USD
                   </span>
                 </div>
               </div>
@@ -2408,7 +2408,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0.00
+                  0 USD
                 </span>
               </span>
             </div>
@@ -2422,7 +2422,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              $0.00
+              0 USD
             </span>
           </div>
         </td>
@@ -2733,7 +2733,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0.00
+                    0 USD
                   </span>
                 </div>
               </div>
@@ -3047,7 +3047,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0.00
+                    0 USD
                   </span>
                 </div>
               </div>
@@ -3361,7 +3361,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0.00
+                    0 USD
                   </span>
                 </div>
               </div>

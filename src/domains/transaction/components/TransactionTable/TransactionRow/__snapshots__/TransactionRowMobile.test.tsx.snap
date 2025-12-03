@@ -301,7 +301,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0
+                    0 ARK
                   </span>
                 </div>
               </div>
@@ -615,7 +615,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0
+                    0 ARK
                   </span>
                 </div>
               </div>

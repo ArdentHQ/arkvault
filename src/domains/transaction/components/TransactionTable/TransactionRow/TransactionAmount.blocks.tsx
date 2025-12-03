@@ -122,7 +122,7 @@ export const TransactionFiatAmount = ({
 
 	const amount = total - returnedAmount;
 
-	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
+	return <Amount value={convert(amount)} ticker={exchangeCurrency || "ARK"} allowHideBalance profile={profile} />;
 };
 
 export const TransactionTypeLabel = ({
