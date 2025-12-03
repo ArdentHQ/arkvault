@@ -12,6 +12,7 @@ interface AmountProperties {
 	className?: string;
 	allowHideBalance?: boolean;
 	profile?: Contracts.IProfile;
+	decimals?: number
 }
 
 const Amount = ({
@@ -23,8 +24,9 @@ const Amount = ({
 	className,
 	allowHideBalance = false,
 	profile,
+	decimals,
 }: AmountProperties) => {
-	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker });
+	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker, decimals });
 
 	const { hideBalance } = useBalanceVisibility({ profile });
 
