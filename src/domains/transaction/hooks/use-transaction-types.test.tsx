@@ -12,7 +12,7 @@ describe("useTransactionTypes", () => {
 
 	it("should get method signature", () => {
 		const { result } = renderHook(() => useTransactionTypes());
-		expect(result.current.getLabel("0x1234567890abcdef")).toBe("0x1234567890abcdef");
+		expect(result.current.getLabel("0x1234567890abcdef")).toBe("Contract Deployment");
 	});
 
 	it("should return the supported transaction types", () => {

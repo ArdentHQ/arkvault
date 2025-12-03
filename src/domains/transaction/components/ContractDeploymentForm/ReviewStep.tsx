@@ -80,7 +80,7 @@ export const ReviewStep = ({
 							<DetailTitle className="w-auto sm:min-w-[87px]">{t("COMMON.BYTECODE")}</DetailTitle>
 							<div className="flex items-center">
 								<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
-									<TruncateEnd text={bytecode} maxChars={12} />
+									<TruncateEnd text={bytecode} maxChars={12} showTooltip={false} />
 								</div>
 								<div className="h-5 leading-[17px] sm:leading-5">
 									<Divider type="vertical" size="md" />
