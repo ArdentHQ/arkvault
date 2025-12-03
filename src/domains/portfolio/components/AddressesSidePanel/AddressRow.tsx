@@ -242,7 +242,7 @@ export const AddressRow = ({
 				)}
 			</div>
 			{!!errorMessage && (
-				<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex items-center space-x-4 rounded-b-lg gap-3 px-4 py-3">
+				<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex items-center gap-3 space-x-4 rounded-b-lg px-4 py-3">
 					<div className="mx-[2px] flex w-5 items-center justify-center">
 						<Icon
 							name="CircleCross"
