@@ -223,15 +223,17 @@ const SidePanelContent = ({
 			{isMounted && (
 				<SidePanelContext.Provider value={{ setHasModalOpened }}>
 					<>
-						<div
-							className={cn(
-								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl transition-opacity duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
-								{
-									"opacity-100": !isMinimized,
-									"pointer-events-none opacity-0": isMinimized,
-								},
-							)}
-						/>
+						{!isExpanded && (
+							<div
+								className={cn(
+									"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl transition-opacity duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
+									{
+										"opacity-100": !isMinimized,
+										"pointer-events-none opacity-0": isMinimized,
+									},
+								)}
+							/>
+						)}
 						<FloatingOverlay
 							className={cn("transition-all duration-300", {
 								"pointer-events-none z-40": isMinimized,
@@ -253,7 +255,7 @@ const SidePanelContent = ({
 										style={styles}
 										className={cn("fixed right-0 transition-all duration-300", className, {
 											"animate-shake": shake,
-											"left-0": isExpanded,
+											"left-0 transition-none!": isExpanded,
 											"left-auto": isMinimized,
 											"md:left-0 lg:left-[50%] xl:left-[65%]": !isExpanded && !isMinimized,
 											"sm:top-0 sm:max-w-[425px]": isMinimized,
