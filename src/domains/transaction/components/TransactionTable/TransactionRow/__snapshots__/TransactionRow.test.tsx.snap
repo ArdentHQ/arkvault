@@ -1613,9 +1613,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
@@ -2449,9 +2447,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
@@ -2763,9 +2759,7 @@ exports[`TransactionRow > should render responsive 1`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
@@ -3077,9 +3071,7 @@ exports[`TransactionRow > should render responsive 2`] = `
             <div
               class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black"
             >
-              <div
-                class="max-w-32"
-              >
+              <div>
                 <div
                   class="flex flex-col gap-1 font-semibold"
                 >
