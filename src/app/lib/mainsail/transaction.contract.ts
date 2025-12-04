@@ -70,6 +70,10 @@ export interface MultiPaymentInput extends TransactionInput {
 	};
 }
 
+export interface ContractDeploymentInput extends TransactionInput {
+	data: { bytecode: string };
+}
+
 export type ValidatorResignationInput = TransactionInput;
 
 export type TransactionInputs = Record<string, any> & {

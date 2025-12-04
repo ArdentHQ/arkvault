@@ -9,4 +9,5 @@ export type TransactionRowProperties = {
 	isLoading?: boolean;
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
+	decimals?: number;
 } & React.HTMLProps<any>;

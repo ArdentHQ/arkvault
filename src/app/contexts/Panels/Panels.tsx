@@ -13,6 +13,7 @@ export enum Panel {
 	SendValidatorResignation = "SEND_VALIDATOR_RESIGNATION",
 	SendValidatorRegistration = "SEND_VALIDATOR_REGISTRATION",
 	SendUsernameRegistration = "SEND_USERNAME_REGISTRATION",
+	SendContractDeployment = "SEND_CONTRACT_DEPLOYMENT",
 	Addresses = "ADDRESSES",
 	LedgerMigration = "LEDGER_MIGRATION",
 	TransactionDetails = "TRANSACTION_DETAILS",
@@ -115,6 +116,9 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	};
 
 	const toggleMinimize = () => {
+		if (!isMinimized) {
+			setIsExpanded(false);
+		}
 		setIsMinimized(!isMinimized);
 	};
 

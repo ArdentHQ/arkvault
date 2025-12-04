@@ -129,6 +129,14 @@ export const AppPanels = () => {
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
+				<SendRegistrationSidePanel
+					open={currentOpenedPanel === Panel.SendContractDeployment}
+					registrationType="contractDeployment"
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
 				<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
 

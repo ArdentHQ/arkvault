@@ -64,6 +64,10 @@ export const PortfolioHeader = ({
 		}
 	};
 
+	const handleSendContractDeployment = () => {
+		openPanel(Panel.SendContractDeployment);
+	};
+
 	const handleSendUsernameResignation = () => {
 		openPanel(Panel.SendUsernameResignation);
 	};
@@ -73,13 +77,14 @@ export const PortfolioHeader = ({
 	};
 
 	const { activeModal, setActiveModal, handleSelectOption, handleSend } = useWalletActions({
+		handleSendContractDeployment,
 		handleSendRegistration,
 		handleSendUsernameResignation,
 		handleSendValidatorResignation,
 		wallets: selectedWallets,
 	});
 
-	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } =
+	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions, contractOptions } =
 		useWalletOptions(selectedWallets);
 
 	const ledgerMigrationOptions = useLedgerMigrationMenuOptions();
@@ -480,6 +485,7 @@ export const PortfolioHeader = ({
 											options={[
 												primaryOptions,
 												registrationOptions,
+												contractOptions,
 												{
 													key: additionalOptions.key,
 													options: hasWalletsToMigrate

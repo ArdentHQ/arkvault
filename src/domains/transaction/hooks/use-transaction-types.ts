@@ -20,10 +20,6 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 
 	return {
 		getLabel: (type: string) => {
-			if (type.startsWith("0x")) {
-				return type;
-			}
-
 			const translationKey = `TRANSACTION.TRANSACTION_TYPES.${constantCase(nameMap[type] || type)}`;
 
 			// check if the key exists in the translations

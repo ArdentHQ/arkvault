@@ -25,6 +25,7 @@ export const TransactionRow = memo(
 		isLoading = false,
 		profile,
 		hideSender = false,
+		decimals = 8,
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
@@ -34,6 +35,7 @@ export const TransactionRow = memo(
 		if (isXs || isSm) {
 			return (
 				<TransactionRowMobile
+					decimals={decimals}
 					isLoading={isLoading}
 					onClick={onClick}
 					transaction={transaction}
@@ -168,7 +170,12 @@ export const TransactionRow = memo(
 					})}
 				>
 					<div className="flex flex-col items-end gap-1">
-						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} profile={profile} />
+						<TransactionTotalLabel
+							transaction={transaction}
+							hideStyles={!hideSender}
+							profile={profile}
+							decimals={decimals}
+						/>
 						<span
 							className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
@@ -194,6 +201,7 @@ export const TransactionRow = memo(
 				>
 					{isXl ? (
 						<Amount
+							decimals={decimals}
 							value={transaction.convertedTotal()}
 							ticker={exchangeCurrency || ""}
 							allowHideBalance
@@ -202,6 +210,7 @@ export const TransactionRow = memo(
 					) : (
 						<div className="flex w-40 flex-col items-end gap-1">
 							<TransactionTotalLabel
+								decimals={decimals}
 								transaction={transaction}
 								hideStyles={!hideSender}
 								profile={profile}

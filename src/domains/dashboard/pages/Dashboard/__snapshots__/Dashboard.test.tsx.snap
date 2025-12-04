@@ -3153,7 +3153,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.0025404579555 ARK
+                                    - 0.00254046 ARK
                                   </span>
                                 </div>
                               </div>
@@ -3189,7 +3189,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.0025404579555 ARK
+                                    - 0.00254046 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6810,7 +6810,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.5010285261064 ARK
+                                    - 1.50102853 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6846,7 +6846,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.5010285261064 ARK
+                                    - 1.50102853 ARK
                                   </span>
                                 </div>
                               </div>
