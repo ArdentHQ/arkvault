@@ -152,6 +152,14 @@ const SidePanelContent = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
+	const duration = useMemo(() => {
+		if (isExpanded) {
+			return 0;
+		}
+
+		return isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION;
+	}, [isMinimized, isExpanded]);
+
 	const stylesConfiguration = useMemo(
 		() => ({
 			close: {
@@ -163,7 +171,7 @@ const SidePanelContent = ({
 				transitionProperty: "transform, opacity, left",
 				willChange: "transform, opacity, left",
 			},
-			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
+			duration,
 			initial: isExpanded
 				? undefined
 				: {
