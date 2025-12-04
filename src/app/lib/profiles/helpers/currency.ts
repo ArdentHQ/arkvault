@@ -14,7 +14,7 @@ export class Currency {
 		const withTicker = options.withTicker ?? true;
 		const decimals = options?.decimals ?? CURRENCIES[ticker]?.decimals ?? DEFAULT_DECIMALS;
 
-		if (decimals > 0) {
+		if (decimals > 2) {
 			const numeral = Numeral.make(options.locale, {
 				currencyDisplay: "name",
 				maximumFractionDigits: decimals,
@@ -45,6 +45,8 @@ export class Currency {
 				.trim();
 		}
 
-		return money.format();
+		let result = money.format().replace(/\.?0+$/, '').replace(/\.$/, '');
+
+		return result;
 	}
 }
