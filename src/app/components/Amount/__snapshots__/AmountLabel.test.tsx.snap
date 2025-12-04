@@ -99,7 +99,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
           tabindex="-1"
         >
           <div
-            style="opacity: 0; transform: scale(0.9);"
+            style="transition-property: opacity,transform; transition-duration: 250ms;"
           >
             <svg
               aria-hidden="true"
@@ -225,7 +225,7 @@ exports[`AmountLabel > should render with hint 1`] = `
           tabindex="-1"
         >
           <div
-            style="opacity: 0; transform: scale(0.9);"
+            style="transition-property: opacity,transform; transition-duration: 250ms;"
           >
             <svg
               aria-hidden="true"
