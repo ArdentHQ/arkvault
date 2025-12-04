@@ -12,9 +12,10 @@ const DEFAULT_DECIMALS = 18;
 export class Currency {
 	public static format(value: number, ticker: string, options: CurrencyFormatOptions = {}): string {
 		const withTicker = options.withTicker ?? true;
-		const decimals = options?.decimals ?? CURRENCIES[ticker]?.decimals ?? DEFAULT_DECIMALS;
+		const currencyDecimals = CURRENCIES[ticker]?.decimals ?? DEFAULT_DECIMALS
+		const decimals = options?.decimals ?? currencyDecimals
 
-		if (decimals > 2) {
+		if (currencyDecimals > 2) {
 			const numeral = Numeral.make(options.locale, {
 				currencyDisplay: "name",
 				maximumFractionDigits: decimals,
@@ -45,9 +46,6 @@ export class Currency {
 				.trim();
 		}
 
-		return money
-			.format()
-			.replace(/\.?0+$/, "")
-			.replace(/\.$/, "");
+		return money.format()
 	}
 }

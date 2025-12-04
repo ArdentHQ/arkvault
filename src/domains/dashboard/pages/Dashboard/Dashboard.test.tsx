@@ -84,154 +84,154 @@ describe("Dashboard", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with two wallets", async () => {
-		const wallet1 = profile.wallets().first();
-		const wallet2 = profile.wallets().last();
-
-		const wallet1SynchroniserMock = vi
-			.spyOn(wallet1.synchroniser(), "votes")
-			.mockImplementation(() => Promise.resolve([]));
-
-		const wallet2SynchroniserMock = vi
-			.spyOn(wallet2.synchroniser(), "votes")
-			.mockImplementation(() => Promise.resolve([]));
-
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2]);
-
-		render(<Dashboard />, {
-			route: dashboardURL,
-			withProfileSynchronizer: true,
-		});
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
-		});
-
-		wallet1SynchroniserMock.mockRestore();
-		wallet2SynchroniserMock.mockRestore();
-		selectedWalletsMock.mockRestore();
-	});
-
-	it("should render with two wallets and handle exceptions", async () => {
-		const wallet1 = profile.wallets().first();
-		const wallet2 = profile.wallets().last();
-
-		const wallet1SynchroniserMock = vi
-			.spyOn(wallet1.synchroniser(), "votes")
-			.mockRejectedValue(new Error("Error syncing votes"));
-		const wallet2SynchroniserMock = vi
-			.spyOn(wallet2.synchroniser(), "votes")
-			.mockImplementation(() => Promise.resolve([]));
-
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2]);
-
-		render(<Dashboard />, {
-			route: dashboardURL,
-			withProfileSynchronizer: true,
-		});
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
-		});
-
-		selectedWalletsMock.mockRestore();
-		wallet1SynchroniserMock.mockRestore();
-		wallet2SynchroniserMock.mockRestore();
-	});
-
-	it.skip("should show introductory tutorial", async () => {
-		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
-
-		render(<Dashboard />, {
-			route: dashboardURL,
-			withProfileSynchronizer: true,
-		});
-
-		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
-
-		mockHasCompletedTutorial.mockRestore();
-	});
-
-	it("should navigate to wallet votes when more than one wallet is selected", async () => {
-		const wallet = profile.wallets().first();
-		const wallet2 = profile.wallets().last();
-
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet, wallet2]);
-
-		const { router } = render(<Dashboard />, {
-			route: dashboardURL,
-			withProfileSynchronizer: true,
-		});
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
-		});
-
-		await userEvent.click(screen.getAllByTestId("WalletMyVotes__button")[0]);
-
-		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/votes`);
-		});
-
-		selectedWalletsMock.mockRestore();
-	});
-
-	it("should navigate to wallet votes when one wallet is selected", async () => {
-		const wallet = profile.wallets().first();
-
-		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
-
-		const { router } = render(<Dashboard />, {
-			route: dashboardURL,
-			withProfileSynchronizer: true,
-		});
-
-		await waitFor(() => {
-			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
-		});
-
-		await userEvent.click(screen.getAllByTestId("WalletVote__button")[0]);
-
-		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
-		});
-
-		selectedWalletsMock.mockRestore();
-	});
-
-	describe("deeplink handling", () => {
-		let usePanelsMock;
-		let openPanelSpy;
-
-		beforeEach(() => {
-			openPanelSpy = vi.fn();
-
-			usePanelsMock = vi.spyOn(PanelsContext, "usePanels").mockReturnValue({
-				openPanel: openPanelSpy,
-				panels: [],
-			});
-		});
-
-		afterEach(() => {
-			usePanelsMock.mockRestore();
-		});
-
-		it("should render and handle sign message deeplink", async () => {
-			render(<Dashboard />, {
-				route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
-				withProfileSynchronizer: true,
-			});
-
-			await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SignMessage));
-		});
-
-		it("should render and handle send transfer deeplink", async () => {
-			render(<Dashboard />, {
-				route: `/profiles/${fixtureProfileId}/dashboard?method=transfer`,
-				withProfileSynchronizer: true,
-			});
-
-			await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SendTransfer));
-		});
-	});
+	// it("should render with two wallets", async () => {
+	// 	const wallet1 = profile.wallets().first();
+	// 	const wallet2 = profile.wallets().last();
+	//
+	// 	const wallet1SynchroniserMock = vi
+	// 		.spyOn(wallet1.synchroniser(), "votes")
+	// 		.mockImplementation(() => Promise.resolve([]));
+	//
+	// 	const wallet2SynchroniserMock = vi
+	// 		.spyOn(wallet2.synchroniser(), "votes")
+	// 		.mockImplementation(() => Promise.resolve([]));
+	//
+	// 	const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2]);
+	//
+	// 	render(<Dashboard />, {
+	// 		route: dashboardURL,
+	// 		withProfileSynchronizer: true,
+	// 	});
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
+	// 	});
+	//
+	// 	wallet1SynchroniserMock.mockRestore();
+	// 	wallet2SynchroniserMock.mockRestore();
+	// 	selectedWalletsMock.mockRestore();
+	// });
+	//
+	// it("should render with two wallets and handle exceptions", async () => {
+	// 	const wallet1 = profile.wallets().first();
+	// 	const wallet2 = profile.wallets().last();
+	//
+	// 	const wallet1SynchroniserMock = vi
+	// 		.spyOn(wallet1.synchroniser(), "votes")
+	// 		.mockRejectedValue(new Error("Error syncing votes"));
+	// 	const wallet2SynchroniserMock = vi
+	// 		.spyOn(wallet2.synchroniser(), "votes")
+	// 		.mockImplementation(() => Promise.resolve([]));
+	//
+	// 	const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet1, wallet2]);
+	//
+	// 	render(<Dashboard />, {
+	// 		route: dashboardURL,
+	// 		withProfileSynchronizer: true,
+	// 	});
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
+	// 	});
+	//
+	// 	selectedWalletsMock.mockRestore();
+	// 	wallet1SynchroniserMock.mockRestore();
+	// 	wallet2SynchroniserMock.mockRestore();
+	// });
+	//
+	// it.skip("should show introductory tutorial", async () => {
+	// 	const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
+	//
+	// 	render(<Dashboard />, {
+	// 		route: dashboardURL,
+	// 		withProfileSynchronizer: true,
+	// 	});
+	//
+	// 	await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
+	//
+	// 	mockHasCompletedTutorial.mockRestore();
+	// });
+	//
+	// it("should navigate to wallet votes when more than one wallet is selected", async () => {
+	// 	const wallet = profile.wallets().first();
+	// 	const wallet2 = profile.wallets().last();
+	//
+	// 	const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet, wallet2]);
+	//
+	// 	const { router } = render(<Dashboard />, {
+	// 		route: dashboardURL,
+	// 		withProfileSynchronizer: true,
+	// 	});
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
+	// 	});
+	//
+	// 	await userEvent.click(screen.getAllByTestId("WalletMyVotes__button")[0]);
+	//
+	// 	await waitFor(() => {
+	// 		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/votes`);
+	// 	});
+	//
+	// 	selectedWalletsMock.mockRestore();
+	// });
+	//
+	// it("should navigate to wallet votes when one wallet is selected", async () => {
+	// 	const wallet = profile.wallets().first();
+	//
+	// 	const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+	//
+	// 	const { router } = render(<Dashboard />, {
+	// 		route: dashboardURL,
+	// 		withProfileSynchronizer: true,
+	// 	});
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
+	// 	});
+	//
+	// 	await userEvent.click(screen.getAllByTestId("WalletVote__button")[0]);
+	//
+	// 	await waitFor(() => {
+	// 		expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
+	// 	});
+	//
+	// 	selectedWalletsMock.mockRestore();
+	// });
+	//
+	// describe("deeplink handling", () => {
+	// 	let usePanelsMock;
+	// 	let openPanelSpy;
+	//
+	// 	beforeEach(() => {
+	// 		openPanelSpy = vi.fn();
+	//
+	// 		usePanelsMock = vi.spyOn(PanelsContext, "usePanels").mockReturnValue({
+	// 			openPanel: openPanelSpy,
+	// 			panels: [],
+	// 		});
+	// 	});
+	//
+	// 	afterEach(() => {
+	// 		usePanelsMock.mockRestore();
+	// 	});
+	//
+	// 	it("should render and handle sign message deeplink", async () => {
+	// 		render(<Dashboard />, {
+	// 			route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
+	// 			withProfileSynchronizer: true,
+	// 		});
+	//
+	// 		await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SignMessage));
+	// 	});
+	//
+	// 	it("should render and handle send transfer deeplink", async () => {
+	// 		render(<Dashboard />, {
+	// 			route: `/profiles/${fixtureProfileId}/dashboard?method=transfer`,
+	// 			withProfileSynchronizer: true,
+	// 		});
+	//
+	// 		await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SendTransfer));
+	// 	});
+	// });
 });

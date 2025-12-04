@@ -488,7 +488,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 class="whitespace-nowrap text-sm font-semibold"
                 data-testid="Amount"
               >
-                121.00
+                121
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -512,7 +512,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              ARK 0
+              0 ARK
             </span>
           </div>
         </td>
@@ -1010,7 +1010,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 class="whitespace-nowrap text-sm font-semibold"
                 data-testid="Amount"
               >
-                121.00
+                121
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1020,7 +1020,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0
+                  $0.00
                 </span>
               </span>
             </div>
@@ -1037,7 +1037,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 class="whitespace-nowrap text-sm font-semibold"
                 data-testid="Amount"
               >
-                121.00
+                121
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1047,7 +1047,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0
+                  $0.00
                 </span>
               </span>
             </div>
@@ -1547,7 +1547,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 class="whitespace-nowrap text-sm font-semibold"
                 data-testid="Amount"
               >
-                121.00
+                121
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1557,7 +1557,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0
+                  $0.00
                 </span>
               </span>
             </div>
@@ -1574,7 +1574,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 class="whitespace-nowrap text-sm font-semibold"
                 data-testid="Amount"
               >
-                121.00
+                121
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1584,7 +1584,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0
+                  $0.00
                 </span>
               </span>
             </div>
@@ -1895,7 +1895,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0
+                    $0.00
                   </span>
                 </div>
               </div>
@@ -2396,7 +2396,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 class="whitespace-nowrap text-sm font-semibold"
                 data-testid="Amount"
               >
-                121.00
+                121
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2406,7 +2406,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $0
+                  $0.00
                 </span>
               </span>
             </div>
@@ -2420,7 +2420,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              $0
+              $0.00
             </span>
           </div>
         </td>
@@ -2729,7 +2729,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0
+                    $0.00
                   </span>
                 </div>
               </div>
@@ -3041,7 +3041,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0
+                    $0.00
                   </span>
                 </div>
               </div>
@@ -3353,7 +3353,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    $0
+                    $0.00
                   </span>
                 </div>
               </div>
@@ -3854,7 +3854,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 class="whitespace-nowrap text-sm font-semibold"
                 data-testid="Amount"
               >
-                121.00
+                121
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3878,7 +3878,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              ARK 0
+              0 ARK
             </span>
           </div>
         </td>
