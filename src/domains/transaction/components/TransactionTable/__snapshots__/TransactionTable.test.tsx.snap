@@ -4041,7 +4041,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.0025404579555
+                        0
                       </span>
                     </div>
                   </div>
@@ -4364,7 +4364,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -4687,7 +4687,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -5010,7 +5010,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -5333,7 +5333,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -5656,7 +5656,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -5994,7 +5994,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.200105
+                        0.2
                       </span>
                     </div>
                   </div>
@@ -6263,7 +6263,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        1.5010285261064
+                        1.5
                       </span>
                     </div>
                   </div>
@@ -7286,7 +7286,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.0025404579555
+                        0
                       </span>
                     </div>
                   </div>
@@ -7609,7 +7609,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -7932,7 +7932,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -8255,7 +8255,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -8578,7 +8578,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -8901,7 +8901,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0
                       </span>
                     </div>
                   </div>
@@ -9239,7 +9239,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.200105
+                        0.2
                       </span>
                     </div>
                   </div>
@@ -9508,7 +9508,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        1.5010285261064
+                        1.5
                       </span>
                     </div>
                   </div>

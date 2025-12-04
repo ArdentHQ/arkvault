@@ -35,6 +35,7 @@ export const TransactionRow = memo(
 		if (isXs || isSm) {
 			return (
 				<TransactionRowMobile
+					decimals={decimals}
 					isLoading={isLoading}
 					onClick={onClick}
 					transaction={transaction}
