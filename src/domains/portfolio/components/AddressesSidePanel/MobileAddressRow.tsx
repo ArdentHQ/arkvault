@@ -165,7 +165,7 @@ export const MobileAddressRow = ({
 						/>
 					</div>
 					{!!errorMessage && (
-						<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex space-x-4 rounded-b-sm px-4 py-3">
+						<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex gap-3 space-x-4 rounded-b-sm px-4 py-3">
 							<div className="mx-[2px] mt-1 flex w-5 justify-center">
 								<Icon
 									name="CircleCross"
@@ -173,7 +173,7 @@ export const MobileAddressRow = ({
 									size="md"
 								/>
 							</div>
-							<p className="text-theme-secondary-700 dark:text-theme-dark-50 dim:text-theme-dim-50 max-w-60 text-sm">
+							<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm">
 								{errorMessage}
 							</p>
 						</div>
