@@ -73,7 +73,7 @@ exports[`UpdateAccountNameModal > should render 1`] = `
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Select the HD Wallet name for this and all the associated addresses
+              Enter a personalized HD Wallet name, visible only to you.
             </div>
             <form
               class="mt-4 space-y-6"
@@ -280,7 +280,7 @@ exports[`UpdateAccountNameModal > should show error message when name consists o
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Select the HD Wallet name for this and all the associated addresses
+              Enter a personalized HD Wallet name, visible only to you.
             </div>
             <form
               class="mt-4 space-y-6"
@@ -488,7 +488,7 @@ exports[`UpdateAccountNameModal > should show error message when name exceeds 42
             <div
               class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
             >
-              Select the HD Wallet name for this and all the associated addresses
+              Enter a personalized HD Wallet name, visible only to you.
             </div>
             <form
               class="mt-4 space-y-6"
