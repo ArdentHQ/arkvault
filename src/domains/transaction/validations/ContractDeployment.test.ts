@@ -11,4 +11,9 @@ describe("Contract Deployment Validation", () => {
 		const { validate } = contractDeployment(t).bytecode();
 		expect(validate("test")).toBe(t("COMMON.VALIDATION.HEX_REQUIRED"));
 	});
+
+	it("should validate", () => {
+		const { validate } = contractDeployment(t).bytecode();
+		expect(validate("0xabc")).toBe(undefined);
+	});
 });
