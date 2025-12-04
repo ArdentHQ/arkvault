@@ -22,6 +22,7 @@ export const TransactionRowMobile = memo(
 		profile,
 		exchangeCurrency,
 		hideSender = false,
+		decimals,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -86,6 +87,7 @@ export const TransactionRowMobile = memo(
 								className="w-full"
 							>
 								<TransactionTotalLabel
+									decimals={decimals}
 									transaction={transaction}
 									hideStyles={!hideSender}
 									profile={profile}

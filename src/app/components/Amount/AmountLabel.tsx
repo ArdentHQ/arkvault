@@ -42,6 +42,7 @@ interface AmountLabelProperties {
 	hideSign?: boolean;
 	allowHideBalance?: boolean;
 	profile?: Contracts.IProfile;
+	decimals?: number;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -56,6 +57,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	hideSign,
 	allowHideBalance = false,
 	profile,
+	decimals,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -88,6 +90,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 			<div className={cn("flex h-full items-center space-x-1")}>
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
 				<Amount
+					decimals={decimals}
 					showSign={!hideSign && value !== 0}
 					ticker={ticker}
 					value={value}
