@@ -115,6 +115,9 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 	};
 
 	const toggleMinimize = () => {
+		if (!isMinimized) {
+			setIsExpanded(false)
+		}
 		setIsMinimized(!isMinimized);
 	};
 

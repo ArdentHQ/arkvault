@@ -106,7 +106,7 @@ const SidePanelContent = ({
 	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
 	const { t } = useTranslation();
-	const popStateHandlerRef = useRef<() => void>(() => {});
+	const popStateHandlerRef = useRef<() => void>(() => { });
 	const { isMinimized, toggleMinimize, toggleExpand, isExpanded } = usePanels();
 
 	const { hasFixedFormButtons } = useNavigationContext();
@@ -167,14 +167,14 @@ const SidePanelContent = ({
 			initial: isExpanded
 				? undefined
 				: {
-						transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
-					},
+					transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+				},
 			open: {
 				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
 				transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
 			},
 		}),
-		[isMinimized],
+		[isMinimized, isExpanded],
 	);
 
 	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
@@ -257,14 +257,13 @@ const SidePanelContent = ({
 										style={styles}
 										className={cn("fixed right-0 transition-all duration-300", className, {
 											"animate-shake": shake,
-											"left-0": isExpanded,
-											"left-auto": isMinimized,
+											"left-0": isExpanded && !isMinimized,
+											"left-auto sm:top-0 sm:max-w-[425px]": isMinimized,
 											"md:left-0 lg:left-[50%] xl:left-[65%]": !isExpanded && !isMinimized,
-											"sm:top-0 sm:max-w-[425px]": isMinimized,
 											"top-0": !isMinimized && !isExpanded,
 											"top-[-56px]": !hasFixedFormButtons && isMinimized,
 											"top-[-68px]": hasFixedFormButtons && isMinimized,
-											"transform-none!": isExpanded && !open,
+											"transform-none!": isExpanded,
 										})}
 									>
 										<div
