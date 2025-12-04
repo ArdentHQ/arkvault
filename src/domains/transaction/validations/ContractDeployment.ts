@@ -7,7 +7,7 @@ export const contractDeployment = (t: any) => ({
 		}),
 		validate: (value) => {
 			if (!isHex(value)) {
-				return t("COMMON.VALIDATION.HEX_REQUIRED")
+				return t("COMMON.VALIDATION.HEX_REQUIRED");
 			}
 		},
 	}),
