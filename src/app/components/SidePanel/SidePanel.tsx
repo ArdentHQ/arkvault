@@ -114,11 +114,16 @@ const SidePanelContent = ({
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
+	const [isClosing, setIsClosing] = useState(false);
 
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
 	const toggleOpen = useCallback(
 		(open: boolean = false) => {
+			if (open === false) {
+				setIsClosing(true);
+			}
+
 			if (open === false && shakeWhenClosing && shouldPreventClosing()) {
 				setShake(true);
 				setTimeout(() => setShake(false), 900);
@@ -127,6 +132,10 @@ const SidePanelContent = ({
 			}
 
 			onOpenChange(open);
+
+			setTimeout(() => {
+				setIsClosing(false);
+			}, SIDE_PANEL_TRANSITION_DURATION);
 		},
 		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
 	);
@@ -153,12 +162,16 @@ const SidePanelContent = ({
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
 	const duration = useMemo(() => {
-		if (isExpanded) {
+		if (!open && isExpanded) {
+			return 0;
+		}
+
+		if (open && isExpanded && isClosing) {
 			return 0;
 		}
 
 		return isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION;
-	}, [isMinimized, isExpanded]);
+	}, [isClosing, isExpanded, open, isMinimized]);
 
 	const stylesConfiguration = useMemo(
 		() => ({
@@ -182,7 +195,7 @@ const SidePanelContent = ({
 				transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
 			},
 		}),
-		[isMinimized, isExpanded],
+		[isMinimized, isExpanded, duration],
 	);
 
 	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
@@ -263,7 +276,7 @@ const SidePanelContent = ({
 									<div
 										data-testid={isMinimized ? "MinimizedSidePanel" : "MaximizedSidePanel"}
 										style={styles}
-										className={cn("fixed right-0 transition-all duration-300", className, {
+										className={cn("fixed right-0", className, {
 											"animate-shake": shake,
 											"left-0": isExpanded && !isMinimized,
 											"left-auto sm:top-0 sm:max-w-[425px]": isMinimized,
