@@ -277,11 +277,7 @@ export const SendRegistrationSidePanel = ({
 	};
 
 	const getSubtitle = () => {
-		if (activeTab === ERROR_STEP) {
-			return t("TRANSACTION.ERROR.DESCRIPTION");
-		}
-
-		if (activeTab === summaryStep) {
+		if (activeTab === ERROR_STEP || activeTab === summaryStep) {
 			return;
 		}
 
