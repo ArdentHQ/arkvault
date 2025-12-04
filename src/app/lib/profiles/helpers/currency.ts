@@ -45,6 +45,9 @@ export class Currency {
 				.trim();
 		}
 
-		return money.format().replace(/\.?0+$/, '').replace(/\.$/, '');
+		return money
+			.format()
+			.replace(/\.?0+$/, "")
+			.replace(/\.$/, "");
 	}
 }
