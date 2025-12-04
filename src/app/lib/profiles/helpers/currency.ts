@@ -45,11 +45,6 @@ export class Currency {
 				.trim();
 		}
 
-		let result = money
-			.format()
-			.replace(/\.?0+$/, "")
-			.replace(/\.$/, "");
-
-		return result;
+		return money.format().replace(/\.?0+$/, '').replace(/\.$/, '');
 	}
 }
