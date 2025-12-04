@@ -25,7 +25,7 @@ export const TransactionRow = memo(
 		isLoading = false,
 		profile,
 		hideSender = false,
-		decimals = 2,
+		decimals = 8,
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
