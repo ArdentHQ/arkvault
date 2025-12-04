@@ -267,8 +267,8 @@ export const translations = {
 		OPTIONS: {
 			ADDRESS_NAME: "Address Name",
 			DELETE: "Delete",
-			HD_WALLET_NAME: "HD	Wallet Name",
 			DEPLOY: "Deploy",
+			HD_WALLET_NAME: "HD	Wallet Name",
 			MULTISIGNATURE: "Multisignature",
 			RECEIVE_FUNDS: "Receive Funds",
 			RECEIVE_FUNDS_QR: "QR",
