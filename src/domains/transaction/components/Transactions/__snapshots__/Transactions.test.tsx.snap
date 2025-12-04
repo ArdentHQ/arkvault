@@ -925,7 +925,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -952,7 +952,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1486,7 +1486,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1513,7 +1513,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2047,7 +2047,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2074,7 +2074,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2608,7 +2608,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2635,7 +2635,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3169,7 +3169,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3196,7 +3196,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3730,7 +3730,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3757,7 +3757,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4252,7 +4252,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4279,7 +4279,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4774,7 +4774,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4801,7 +4801,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5296,7 +5296,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -5323,7 +5323,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5818,7 +5818,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -5845,7 +5845,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -6340,7 +6340,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6367,7 +6367,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -6862,7 +6862,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6889,7 +6889,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -7384,7 +7384,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7411,7 +7411,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -7906,7 +7906,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7933,7 +7933,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8428,7 +8428,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8455,7 +8455,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8950,7 +8950,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8977,7 +8977,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9472,7 +9472,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -9499,7 +9499,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9994,7 +9994,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10021,7 +10021,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -10516,7 +10516,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10543,7 +10543,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11038,7 +11038,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11065,7 +11065,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11560,7 +11560,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11587,7 +11587,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12082,7 +12082,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12109,7 +12109,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12604,7 +12604,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12631,7 +12631,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13126,7 +13126,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13153,7 +13153,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13648,7 +13648,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13675,7 +13675,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14170,7 +14170,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14197,7 +14197,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14692,7 +14692,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14719,7 +14719,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15214,7 +15214,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15241,7 +15241,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15736,7 +15736,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15763,7 +15763,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16258,7 +16258,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -16285,7 +16285,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16780,7 +16780,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -16807,7 +16807,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17302,7 +17302,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17329,7 +17329,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17824,7 +17824,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17851,7 +17851,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18346,7 +18346,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18373,7 +18373,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18868,7 +18868,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18895,7 +18895,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19390,7 +19390,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19417,7 +19417,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19912,7 +19912,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19939,7 +19939,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -20434,7 +20434,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -20461,7 +20461,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -20956,7 +20956,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -20983,7 +20983,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -21478,7 +21478,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -21505,7 +21505,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -22000,7 +22000,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -22027,7 +22027,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -22522,7 +22522,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -22549,7 +22549,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -23083,7 +23083,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -23110,7 +23110,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -23644,7 +23644,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -23671,7 +23671,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -24205,7 +24205,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -24232,7 +24232,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -24766,7 +24766,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -24793,7 +24793,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -25327,7 +25327,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -25354,7 +25354,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -25888,7 +25888,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -25915,7 +25915,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -26248,7 +26248,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -26275,7 +26275,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -26608,7 +26608,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -26635,7 +26635,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -26968,7 +26968,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -26995,7 +26995,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -27328,7 +27328,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -27355,7 +27355,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -27688,7 +27688,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -27715,7 +27715,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -28048,7 +28048,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -28075,7 +28075,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -32430,7 +32430,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -32457,7 +32457,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -32952,7 +32952,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -32979,7 +32979,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -33474,7 +33474,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -33501,7 +33501,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -33996,7 +33996,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -34023,7 +34023,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -34518,7 +34518,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -34545,7 +34545,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -35040,7 +35040,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -35067,7 +35067,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -35562,7 +35562,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -35589,7 +35589,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -36123,7 +36123,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -36150,7 +36150,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -36483,7 +36483,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -36510,7 +36510,7 @@ exports[`Transactions > should hide view more button when there are no next page
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -38025,7 +38025,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -38052,7 +38052,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      2
+                      2.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -38547,7 +38547,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -38574,7 +38574,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -39069,7 +39069,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -39096,7 +39096,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -39591,7 +39591,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -39618,7 +39618,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -40113,7 +40113,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -40140,7 +40140,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -40635,7 +40635,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -40662,7 +40662,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -41157,7 +41157,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -41184,7 +41184,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0
+                      0.00
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -41718,7 +41718,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -41745,7 +41745,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      0.2
+                      0.20
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -42078,7 +42078,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -42105,7 +42105,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                       class="whitespace-nowrap text-sm font-semibold"
                       data-testid="Amount"
                     >
-                      1.5
+                      1.50
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
