@@ -74,7 +74,7 @@ export const TransactionDetailContent = ({
 						recipients={recipients}
 						labelClassName={labelClassName}
 						interactedWith={
-							isContractDeployment(transaction)
+							isContractDeployment(transaction) && transaction.confirmations() > 0
 								? transaction.data().data.receipt.deployedContractAddress
 								: undefined
 						}
