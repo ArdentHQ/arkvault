@@ -3533,7 +3533,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -3623,7 +3623,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             To
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -3871,7 +3871,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -4194,7 +4194,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -4517,7 +4517,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -4840,7 +4840,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -5163,7 +5163,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -5486,7 +5486,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -5809,7 +5809,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -5897,7 +5897,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             To
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -6147,7 +6147,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -6416,7 +6416,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -6506,7 +6506,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             To
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -6778,7 +6778,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -6868,7 +6868,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             To
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -7116,7 +7116,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -7439,7 +7439,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -7762,7 +7762,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -8085,7 +8085,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -8408,7 +8408,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -8731,7 +8731,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -9054,7 +9054,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -9142,7 +9142,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             To
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -9392,7 +9392,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -9661,7 +9661,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             From
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -9751,7 +9751,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             To
                           </div>
                           <div
-                            class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                            class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                           >
                             <span
                               class="grow"
@@ -10188,7 +10188,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -10281,7 +10281,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -10379,7 +10379,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -10475,7 +10475,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     From
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -10753,7 +10753,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -11275,7 +11275,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -11797,7 +11797,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -12319,7 +12319,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -12841,7 +12841,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -13363,7 +13363,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -13885,7 +13885,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -13976,7 +13976,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -14076,7 +14076,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -14174,7 +14174,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -14452,7 +14452,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -14812,7 +14812,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -14905,7 +14905,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -15003,7 +15003,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -15099,7 +15099,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     From
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -15552,7 +15552,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -15645,7 +15645,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -15743,7 +15743,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -15839,7 +15839,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     From
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -16117,7 +16117,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -16639,7 +16639,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -17161,7 +17161,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -17683,7 +17683,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -18205,7 +18205,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -18727,7 +18727,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -19249,7 +19249,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -19340,7 +19340,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -19440,7 +19440,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -19538,7 +19538,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -19816,7 +19816,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -20176,7 +20176,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -20269,7 +20269,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -20367,7 +20367,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -20463,7 +20463,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     From
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -20916,7 +20916,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -21009,7 +21009,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -21107,7 +21107,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -21203,7 +21203,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     From
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -21466,7 +21466,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -21973,7 +21973,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -22480,7 +22480,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -22987,7 +22987,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -23494,7 +23494,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -24001,7 +24001,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -24508,7 +24508,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -24599,7 +24599,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -24699,7 +24699,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -24797,7 +24797,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -25060,7 +25060,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -25405,7 +25405,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       From
                     </div>
                     <div
-                      class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                      class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                     >
                       <span
                         class="grow"
@@ -25498,7 +25498,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         To
                       </div>
                       <div
-                        class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                        class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                       >
                         <span
                           class="grow"
@@ -25596,7 +25596,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
@@ -25692,7 +25692,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     From
                   </div>
                   <div
-                    class="flex grow items-center justify-between space-x-4 md:px-4 lg:px-0 xl:min-w-36"
+                    class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
                   >
                     <span
                       class="grow"
