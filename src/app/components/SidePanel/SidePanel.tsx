@@ -114,11 +114,16 @@ const SidePanelContent = ({
 	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
 	const [shake, setShake] = useState(false);
 	const [hasModalOpened, setHasModalOpened] = useState(false);
+	const [isClosing, setIsClosing] = useState(false);
 
 	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
 
 	const toggleOpen = useCallback(
 		(open: boolean = false) => {
+			if (open === false) {
+				setIsClosing(true);
+			}
+
 			if (open === false && shakeWhenClosing && shouldPreventClosing()) {
 				setShake(true);
 				setTimeout(() => setShake(false), 900);
@@ -127,6 +132,10 @@ const SidePanelContent = ({
 			}
 
 			onOpenChange(open);
+
+			setTimeout(() => {
+				setIsClosing(false);
+			}, SIDE_PANEL_TRANSITION_DURATION);
 		},
 		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
 	);
@@ -152,6 +161,18 @@ const SidePanelContent = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
+	const duration = useMemo(() => {
+		if (!open && isExpanded) {
+			return 0;
+		}
+
+		if (open && isExpanded && isClosing) {
+			return 0;
+		}
+
+		return isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION;
+	}, [isClosing, isExpanded, open, isMinimized]);
+
 	const stylesConfiguration = useMemo(
 		() => ({
 			close: {
@@ -160,19 +181,21 @@ const SidePanelContent = ({
 			},
 			common: {
 				transformOrigin: "right",
-				transitionProperty: "transform, opacity",
-				willChange: "transform, opacity",
+				transitionProperty: "transform, opacity, left",
+				willChange: "transform, opacity, left",
 			},
-			duration: isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION,
-			initial: {
-				transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
-			},
+			duration,
+			initial: isExpanded
+				? undefined
+				: {
+						transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+					},
 			open: {
 				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
 				transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
 			},
 		}),
-		[isMinimized],
+		[isMinimized, isExpanded, duration],
 	);
 
 	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
@@ -225,10 +248,12 @@ const SidePanelContent = ({
 					<>
 						<div
 							className={cn(
-								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl transition-opacity duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
+								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
 								{
 									"opacity-100": !isMinimized,
 									"pointer-events-none opacity-0": isMinimized,
+									"transition-none": isExpanded,
+									"transition-opacity": !isExpanded,
 								},
 							)}
 						/>
@@ -251,12 +276,15 @@ const SidePanelContent = ({
 									<div
 										data-testid={isMinimized ? "MinimizedSidePanel" : "MaximizedSidePanel"}
 										style={styles}
-										className={cn("fixed right-0 w-full transition-all duration-300", className, {
+										className={cn("fixed right-0", className, {
 											"animate-shake": shake,
-											"sm:top-0 sm:max-w-[425px]": isMinimized,
-											"top-0 sm:max-w-[608px]": !isMinimized && !isExpanded,
+											"left-0": isExpanded && !isMinimized,
+											"left-auto sm:top-0 sm:max-w-[425px]": isMinimized,
+											"md:left-0 lg:left-[50%] xl:left-[65%]": !isExpanded && !isMinimized,
+											"top-0": !isMinimized && !isExpanded,
 											"top-[-56px]": !hasFixedFormButtons && isMinimized,
 											"top-[-68px]": hasFixedFormButtons && isMinimized,
+											"transform-none!": isExpanded,
 										})}
 									>
 										<div
@@ -288,9 +316,12 @@ const SidePanelContent = ({
 															)}
 														>
 															<div
-																className={cn("flex w-full justify-between", {
-																	"mx-auto px-6 lg:w-4xl": isExpanded,
-																})}
+																className={cn(
+																	"mx-auto flex w-full justify-between transition-all duration-300 lg:w-4xl",
+																	{
+																		"lg:px-6": isExpanded,
+																	},
+																)}
 															>
 																<div className="flex items-center gap-2">
 																	{titleIcon && (
@@ -324,14 +355,14 @@ const SidePanelContent = ({
 																<div className="flex flex-row items-center gap-3">
 																	<div
 																		className={cn(
-																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hidden h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white sm:block dark:bg-transparent dark:hover:text-white",
 																		)}
 																	>
 																		<Button
 																			data-testid="SidePanel__expand-button"
 																			variant="transparent"
 																			size="md"
-																			className="h-6 w-6 p-0"
+																			className="hidden h-6 w-6 p-0 lg:flex"
 																			onClick={() => {
 																				toggleExpand();
 																			}}
@@ -451,9 +482,9 @@ const SidePanelContent = ({
 
 											<div
 												ref={scrollContainerRef}
-												className={cn("flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4", {
-													"mx-auto w-full lg:w-4xl": isExpanded,
-												})}
+												className={cn(
+													"mx-auto flex w-full max-w-full flex-1 flex-col gap-4 overflow-y-auto px-6 py-4 lg:w-4xl",
+												)}
 												data-testid="SidePanel__content"
 												inert={isMinimized}
 											>

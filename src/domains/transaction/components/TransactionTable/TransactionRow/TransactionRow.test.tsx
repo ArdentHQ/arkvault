@@ -146,7 +146,7 @@ describe("TransactionRow", () => {
 							amount: () => 0,
 							wallet: () => ({
 								...fixture.wallet(),
-								currency: () => "shouldUseARKColors",
+								currency: () => "ARK",
 								isLedger: () => false,
 								network: () => ({
 									coin: () => "ARK",
@@ -197,18 +197,5 @@ describe("TransactionRow", () => {
 
 		expect(screen.getByTestId("TransactionRow__timestamp")).toHaveTextContent(commonTranslations.NOT_AVAILABLE);
 		expect(screen.getAllByText(commonTranslations.NOT_AVAILABLE)).toHaveLength(2);
-	});
-
-	it("should send default exchange currency if not provided", () => {
-		renderResponsive(
-			<table>
-				<tbody>
-					<TransactionRow transaction={fixture} profile={profile} onClick={() => {}} />
-				</tbody>
-			</table>,
-			"xl",
-		);
-
-		expect(screen.getByTestId("TransactionRow__exchange-currency")).toHaveTextContent("0");
 	});
 });

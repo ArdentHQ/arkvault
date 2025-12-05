@@ -98,7 +98,13 @@ export const AddressRow = ({
 	return (
 		<div
 			data-testid="AddressRow"
-			onClick={() => toggleAddress(wallet.address())}
+			onClick={() => {
+				if (isSingleView && isSelected) {
+					return;
+				}
+
+				toggleAddress(wallet.address());
+			}}
 			onKeyPress={() => toggleAddress(wallet.address())}
 			tabIndex={0}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
@@ -145,7 +151,6 @@ export const AddressRow = ({
 						color="info"
 						className="m-0.5 h-5 w-5"
 						checked={isSelected}
-						onChange={() => toggleAddress(wallet.address())}
 					/>
 				)}
 
@@ -155,7 +160,6 @@ export const AddressRow = ({
 						data-testid="AddressRow--checkbox"
 						className="dim:not-checked:bg-transparent! m-0.5"
 						checked={isSelected}
-						onChange={() => toggleAddress(wallet.address())}
 					/>
 				)}
 
@@ -238,7 +242,7 @@ export const AddressRow = ({
 				)}
 			</div>
 			{!!errorMessage && (
-				<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex items-center space-x-4 rounded-b-lg px-4 py-3">
+				<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex items-center gap-3 space-x-4 rounded-b-lg px-4 py-3">
 					<div className="mx-[2px] flex w-5 items-center justify-center">
 						<Icon
 							name="CircleCross"
@@ -246,7 +250,7 @@ export const AddressRow = ({
 							size="md"
 						/>
 					</div>
-					<p className="text-theme-secondary-700 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm">
+					<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm">
 						{errorMessage}
 					</p>
 				</div>

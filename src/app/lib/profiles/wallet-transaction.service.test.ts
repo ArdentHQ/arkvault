@@ -11,6 +11,7 @@ import { ExtendedSignedTransactionData } from "./signed-transaction.dto";
 const mockTransactionMethod = vi.fn().mockResolvedValue(TransactionFixture);
 
 const mockMainsailTransactionService = {
+	contractDeployment: mockTransactionMethod,
 	delegateRegistration: mockTransactionMethod,
 	delegateResignation: mockTransactionMethod,
 	multiPayment: mockTransactionMethod,
@@ -129,6 +130,16 @@ describe("TransactionService", () => {
 			signatory: {} as any,
 		};
 		const result = await subject.signValidatorRegistration(input);
+		expect(result).toBe(TransactionFixture.hash());
+		expect(mockTransactionMethod).toHaveBeenCalledWith(input);
+	});
+
+	it("should sign a contract deployment", async () => {
+		const input: Services.ContractDeploymentInput = {
+			data: { bytecode: "0x60006000F3" },
+			signatory: {} as any,
+		};
+		const result = await subject.signContractDeployment(input);
 		expect(result).toBe(TransactionFixture.hash());
 		expect(mockTransactionMethod).toHaveBeenCalledWith(input);
 	});

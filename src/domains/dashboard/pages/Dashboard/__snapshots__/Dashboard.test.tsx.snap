@@ -830,52 +830,56 @@ exports[`Dashboard > should render 1`] = `
                 <div
                   class="flex flex-row items-center gap-1"
                 >
-                  <button
-                    class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center gap-2"
-                    >
-                      <div
-                        class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                  <span>
+                    <span>
+                      <button
+                        class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+                        type="button"
                       >
                         <div
-                          style="height: 16px; width: 16px;"
+                          class="flex items-center gap-2"
                         >
-                          <svg
-                            id="arrow-turn-down-bracket"
-                            style="height: 100%; width: 100%;"
-                            viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
+                          <div
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <path
-                                d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
-                              />
-                              <path
-                                d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
-                              />
-                            </g>
-                          </svg>
+                              <svg
+                                id="arrow-turn-down-bracket"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                                  />
+                                  <path
+                                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                          <p
+                            class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+                          >
+                            Import
+                          </p>
                         </div>
-                      </div>
-                      <p
-                        class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
-                      >
-                        Import
-                      </p>
-                    </div>
-                  </button>
+                      </button>
+                    </span>
+                  </span>
                   <div
                     class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
                   />
@@ -3149,7 +3153,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.0025404579555 ARK
+                                    - 0.00254046 ARK
                                   </span>
                                 </div>
                               </div>
@@ -3185,7 +3189,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.0025404579555 ARK
+                                    - 0.00254046 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6806,7 +6810,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.5010285261064 ARK
+                                    - 1.50102853 ARK
                                   </span>
                                 </div>
                               </div>
@@ -6842,7 +6846,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 1.5010285261064 ARK
+                                    - 1.50102853 ARK
                                   </span>
                                 </div>
                               </div>

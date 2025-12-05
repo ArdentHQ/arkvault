@@ -14,11 +14,13 @@ export const useWalletActions = ({
 	handleSendRegistration,
 	handleSendUsernameResignation,
 	handleSendValidatorResignation,
+	handleSendContractDeployment,
 	wallets,
 }: {
 	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
 	handleSendUsernameResignation?: () => void;
 	handleSendValidatorResignation?: () => void;
+	handleSendContractDeployment?: () => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -124,6 +126,10 @@ export const useWalletActions = ({
 
 			if (option.value === "validator-resignation") {
 				handleSendValidatorResignation?.();
+			}
+
+			if (option.value === "contract-deployment") {
+				handleSendContractDeployment?.();
 			}
 
 			if (option.value === "username-registration") {

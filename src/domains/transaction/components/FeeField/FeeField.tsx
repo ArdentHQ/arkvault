@@ -3,7 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { useDebounce, useFees } from "@/app/hooks";
+import { useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 import { InputFeeViewType } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import { BigNumber } from "@/app/lib/helpers";
@@ -18,6 +18,7 @@ interface Properties {
 
 const gasLimit21k = BigNumber.make(21_000);
 export const GasLimit: Record<Properties["type"], BigNumber> = {
+	contractDeployment: BigNumber.make(2_000_000),
 	multiPayment: gasLimit21k,
 	multiSignature: gasLimit21k,
 	transfer: gasLimit21k,
@@ -30,7 +31,7 @@ export const GasLimit: Record<Properties["type"], BigNumber> = {
 	vote: BigNumber.make(200_000),
 };
 
-export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
+export const FeeField: React.FC<Properties> = ({ type, network, profile, data }: Properties) => {
 	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
@@ -42,12 +43,12 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasPrice = BigNumber.make(getValues("gasPrice") ?? 0);
 	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
 
-	const [data, _isLoadingData] = useDebounce(properties.data, 700);
-	const recipientsCount = properties.data?.recipientsCount ?? 1;
+	const dataDep = JSON.stringify(data ?? []);
 
 	useEffect(() => {
 		/* istanbul ignore else -- @preserve */
 		const isMultiPayment = type === "multiPayment";
+		const recipientsCount = data?.recipientsCount ?? 1;
 		const fallbackGasLimit = isMultiPayment ? GasLimit.multiPayment.times(recipientsCount) : GasLimit[type];
 
 		const estimate = async () => {
@@ -71,9 +72,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		};
 
 		void estimate();
-	}, [estimateGas, getValues, setValue, type, recipientsCount]);
-
-	const dataDep = JSON.stringify(data ?? []);
+	}, [estimateGas, getValues, setValue, type, dataDep]);
 
 	useEffect(() => {
 		const recalculateFee = async () => {

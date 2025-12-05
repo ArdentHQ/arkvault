@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -31,6 +32,10 @@ import cn from "classnames";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { Image } from "@/app/components/Image";
+import {
+	ContractDeploymentForm,
+	signContractDeployment,
+} from "@/domains/transaction/components/ContractDeploymentForm";
 
 export const FORM_STEP = 1;
 export const REVIEW_STEP = 2;
@@ -43,14 +48,18 @@ export const SendRegistrationSidePanel = ({
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	registrationType?: "validatorRegistration" | "usernameRegistration";
+	registrationType?: "validatorRegistration" | "usernameRegistration" | "contractDeployment";
 }) => {
 	const { t } = useTranslation();
 
 	const [activeTab, setActiveTab] = useState(FORM_STEP);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
-	const registrationForm =
-		registrationType === "validatorRegistration" ? ValidatorRegistrationForm : UsernameRegistrationForm;
+	const registrationForm = {
+		contractDeployment: ContractDeploymentForm,
+		usernameRegistration: UsernameRegistrationForm,
+		validatorRegistration: ValidatorRegistrationForm,
+	}[registrationType as string];
+
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const { env } = useEnvironmentContext();
@@ -161,31 +170,22 @@ export const SendRegistrationSidePanel = ({
 				secret,
 			});
 
-			if (registrationType === "validatorRegistration") {
-				const transaction = await signValidatorRegistration({
-					env,
-					form,
-					profile: activeProfile,
-					signatory,
-				});
+			const method = {
+				contractDeployment: signContractDeployment,
+				usernameRegistration: signUsernameRegistration,
+				validatorRegistration: signValidatorRegistration,
+			}[registrationType as string] as Function;
 
-				addUnconfirmedTransactionFromSigned(transaction);
-				setTransaction(transaction);
-				handleNext();
-			}
+			const transaction = await method({
+				env,
+				form,
+				profile: activeProfile,
+				signatory,
+			});
 
-			if (registrationType === "usernameRegistration") {
-				const transaction = await signUsernameRegistration({
-					env,
-					form,
-					profile: activeProfile,
-					signatory,
-				});
-
-				addUnconfirmedTransactionFromSigned(transaction);
-				setTransaction(transaction);
-				handleNext();
-			}
+			addUnconfirmedTransactionFromSigned(transaction);
+			setTransaction(transaction);
+			handleNext();
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(ERROR_STEP);
@@ -234,13 +234,13 @@ export const SendRegistrationSidePanel = ({
 			setActiveTab(FORM_STEP);
 			setErrorMessage(undefined);
 
-			if (registrationType === "validatorRegistration") {
-				unregister("validatorPublicKey");
-			}
+			const fieldKeyMap = {
+				contractDeployment: "bytecode",
+				usernameRegistration: "username",
+				validatorRegistration: "validatorPublicKey",
+			};
 
-			if (registrationType === "usernameRegistration") {
-				unregister("username");
-			}
+			unregister(fieldKeyMap[registrationType as string]);
 		}
 	}, []);
 
@@ -267,21 +267,20 @@ export const SendRegistrationSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.TITLE");
 		}
 
-		if (registrationType === "validatorRegistration") {
-			return hasSynced && activeWallet.isValidator()
-				? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
-				: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE");
-		} else {
-			return t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE");
-		}
+		const titleMap = {
+			contractDeployment: () => t("TRANSACTION.CONTRACT_DEPLOYMENT.FORM_STEP.TITLE"),
+			usernameRegistration: () => t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE"),
+			validatorRegistration: () =>
+				hasSynced && activeWallet.isValidator()
+					? t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE")
+					: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE"),
+		};
+
+		return titleMap[registrationType as string]();
 	};
 
 	const getSubtitle = () => {
-		if (activeTab === ERROR_STEP) {
-			return t("TRANSACTION.ERROR.DESCRIPTION");
-		}
-
-		if (activeTab === summaryStep) {
+		if (activeTab === ERROR_STEP || activeTab === summaryStep) {
 			return;
 		}
 
@@ -293,17 +292,21 @@ export const SendRegistrationSidePanel = ({
 			return t("TRANSACTION.REVIEW_STEP.DESCRIPTION");
 		}
 
-		if (registrationType === "validatorRegistration") {
-			if (hasSynced && activeWallet.isLegacyValidator()) {
-				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
-			}
-			if (hasSynced && activeWallet.isValidator()) {
-				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
-			}
-			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
-		} else {
-			return t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION");
-		}
+		const subtitleMap = {
+			contractDeployment: () => t("TRANSACTION.CONTRACT_DEPLOYMENT.FORM_STEP.DESCRIPTION"),
+			usernameRegistration: () => t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION"),
+			validatorRegistration: () => {
+				if (hasSynced && activeWallet.isLegacyValidator()) {
+					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
+				}
+				if (hasSynced && activeWallet.isValidator()) {
+					return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
+				}
+				return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
+			},
+		};
+
+		return subtitleMap[registrationType as string]();
 	};
 
 	const getTitleIcon = () => {
@@ -326,12 +329,14 @@ export const SendRegistrationSidePanel = ({
 			);
 		}
 
+		const isContractDeployment = registrationType === "contractDeployment";
+
 		if (activeTab === REVIEW_STEP) {
 			return (
 				<ThemeIcon
-					lightIcon="DocumentView"
-					darkIcon="DocumentView"
-					dimIcon="DocumentView"
+					lightIcon={isContractDeployment ? "ReviewContractDeploymentLight" : "DocumentView"}
+					darkIcon={isContractDeployment ? "ReviewContractDeploymentDark" : "DocumentView"}
+					dimIcon={isContractDeployment ? "ReviewContractDeploymentDim" : "DocumentView"}
 					dimensions={[24, 24]}
 				/>
 			);
@@ -355,9 +360,9 @@ export const SendRegistrationSidePanel = ({
 		return (
 			<ThemeIcon
 				dimensions={[24, 24]}
-				lightIcon="SendTransactionLight"
-				darkIcon="SendTransactionDark"
-				dimIcon="SendTransactionDim"
+				lightIcon={isContractDeployment ? "SendContractDeploymentLight" : "SendTransactionLight"}
+				darkIcon={isContractDeployment ? "SendContractDeploymentDark" : "SendTransactionDark"}
+				dimIcon={isContractDeployment ? "SendContractDeploymentDim" : "SendTransactionDim"}
 			/>
 		);
 	};
@@ -448,16 +453,8 @@ export const SendRegistrationSidePanel = ({
 
 						{registrationForm && (
 							<>
-								{registrationType === "validatorRegistration" && open && (
-									<ValidatorRegistrationForm.component
-										activeTab={activeTab}
-										wallet={activeWallet}
-										profile={activeProfile}
-										hideHeader
-									/>
-								)}
-								{registrationType === "usernameRegistration" && open && (
-									<UsernameRegistrationForm.component
+								{open && (
+									<registrationForm.component
 										activeTab={activeTab}
 										wallet={activeWallet}
 										profile={activeProfile}

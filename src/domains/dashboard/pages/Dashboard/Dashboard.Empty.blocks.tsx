@@ -43,12 +43,12 @@ export const AddressActionsMenuMobile = () => {
 
 	return (
 		<>
-			<div className="shadow-footer-smooth dark:shadow-footer-smooth-dark fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black">
+			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 shadow-footer-smooth dark:shadow-footer-smooth-dark fixed bottom-14 left-0 z-10 flex w-full flex-col justify-center border-b bg-white sm:hidden dark:bg-black">
 				<div className="flex items-center justify-center space-x-3 px-6 py-3">
 					<Button variant="secondary" className="w-full" onClick={() => openPanel(Panel.ImportAddress)}>
 						{t("COMMON.IMPORT")}
 					</Button>
-					<Button variant="primary" className="w-full" onClick={() => openPanel(Panel.CreateAddress)}>
+					<Button variant="secondary" className="w-full" onClick={() => openPanel(Panel.CreateAddress)}>
 						{t("COMMON.CREATE")}
 					</Button>
 				</div>

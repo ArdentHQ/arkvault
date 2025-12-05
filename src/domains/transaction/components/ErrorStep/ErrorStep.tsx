@@ -91,7 +91,7 @@ export const ErrorStep = ({
 			</div>
 
 			{!hideFooter && (
-				<FormButtons>
+				<FormButtons className="sm:pt-4">
 					{errorMessage && (
 						<div className="mr-auto">
 							<Clipboard variant="button" data={errorMessage}>

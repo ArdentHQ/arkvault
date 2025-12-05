@@ -18,6 +18,8 @@ export const translations = {
 		WAITING_DEVICE: "Waiting for confirmation ...",
 	},
 
+	IMPORT_HD_WALLET_HINT: "Use this option to import extra HD addresses",
+
 	MESSAGE: "Message",
 
 	MNEMONIC_VERIFICATION: {
@@ -257,12 +259,14 @@ export const translations = {
 
 	PAGE_WALLET_DETAILS: {
 		ADDITIONAL_OPTIONS: "Additional Options",
+		CONTRACTS: "Contracts",
 		COPY_ADDRESS: "Copy Address",
 		COPY_PUBLIC_KEY: "Copy Public Key",
 		MANAGE_VOTES_FOR_YOUR_ADDRESSES: "Manage votes for your addresses",
 		OPTIONS: {
 			ADDRESS_NAME: "Address Name",
 			DELETE: "Delete",
+			DEPLOY: "Deploy",
 			MULTISIGNATURE: "Multisignature",
 			RECEIVE_FUNDS: "Receive Funds",
 			RECEIVE_FUNDS_QR: "QR",

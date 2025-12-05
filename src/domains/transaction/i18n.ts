@@ -25,6 +25,14 @@ export const translations = {
 		DESCRIPTION: "Find and select preferred address from your saved contacts.",
 		TITLE: "My addresses",
 	},
+	CONTRACT_DEPLOYMENT: {
+		BYTECODE_INPUT_HINT: "What is bytecode?",
+		BYTECODE_PLACEHOLDER: "Enter bytecode here",
+		FORM_STEP: {
+			DESCRIPTION: "Enter the required details for deploying the contract.",
+			TITLE: "Contract Deployment",
+		},
+	},
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",
 	DESCRIPTION: "Description",
@@ -457,6 +465,7 @@ export const translations = {
 	VALIDATOR_NAME: "Validator Name",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
 	VALIDATOR_REGISTERED_WITHOUT_FEE: "This validator was registered without locking any funds.",
+	VIEW_FULL: "View Full",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",

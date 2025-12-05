@@ -22,6 +22,7 @@ export const TransactionRowMobile = memo(
 		profile,
 		exchangeCurrency,
 		hideSender = false,
+		decimals,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -38,7 +39,7 @@ export const TransactionRowMobile = memo(
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black">
-							<div className="max-w-32">
+							<div>
 								<TransactionRowId transaction={transaction} />
 							</div>
 							<div className="flex flex-row items-center">
@@ -86,6 +87,7 @@ export const TransactionRowMobile = memo(
 								className="w-full"
 							>
 								<TransactionTotalLabel
+									decimals={decimals}
 									transaction={transaction}
 									hideStyles={!hideSender}
 									profile={profile}

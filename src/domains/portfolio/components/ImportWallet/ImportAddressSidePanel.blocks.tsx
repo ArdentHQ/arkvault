@@ -130,7 +130,7 @@ export function useHDWalletStepHeaderConfig(step: HDWalletTabStep, importMethod?
 		}
 
 		case HDWalletTabStep.EnterImportValueStep: {
-			if (importMethod === "mnemonic") {
+			if (importMethod === "BIP44.MNEMONIC") {
 				return {
 					subtitle: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_MNEMONIC_STEP.SUBTITLE"),
 					title: t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_ENTER_MNEMONIC_STEP.TITLE"),

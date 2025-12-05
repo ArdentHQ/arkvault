@@ -14,6 +14,7 @@ interface Properties {
 
 const gasLimit21k = BigNumber.make(21_000);
 export const GasLimit: Record<Properties["type"], BigNumber> = {
+	contractDeployment: BigNumber.make(2_000_000),
 	multiPayment: gasLimit21k,
 	multiSignature: gasLimit21k,
 	transfer: gasLimit21k,
