@@ -15,6 +15,11 @@ describe("TransactionService", () => {
 
 	beforeEach(async () => {
 		config = new ConfigRepository({
+			crypto: {
+				network: {
+					chainId: 11812,
+				}
+			},
 			network: {
 				currency: {
 					decimals: 8,
