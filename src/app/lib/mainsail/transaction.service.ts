@@ -3,6 +3,7 @@ import {
 	ContractAddresses,
 	EvmCallBuilder,
 	MultipaymentBuilder,
+	Network,
 	TransferBuilder,
 	UnitConverter,
 	UnvoteBuilder,
@@ -21,6 +22,7 @@ import { IProfile } from "@/app/lib/profiles/profile.contract.js";
 import { Services } from "@/app/lib/mainsail";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
+import { NetworkConfig } from "@/app/lib/mainsail/network-config";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -44,6 +46,9 @@ export class TransactionService {
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
 		this.hdWalletService = new HDWalletService({ config });
+
+		// set Network instance for `typescript-crypto`
+		Network.set(new NetworkConfig(config));
 	}
 
 	#assertGasFee(input: TransactionsInputs): asserts input is ValidatedTransferInput {
