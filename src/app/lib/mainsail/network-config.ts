@@ -10,7 +10,7 @@ export class NetworkConfig extends AbstractNetwork {
 	}
 
 	public chainId(): number {
-		return this.#config.get(ConfigKey.NetworkId);
+		return this.#config.get("crypto.network.chainId");
 	}
 
 	public epoch(): string {
