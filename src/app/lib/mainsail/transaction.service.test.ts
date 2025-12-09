@@ -18,7 +18,7 @@ describe("TransactionService", () => {
 			crypto: {
 				network: {
 					chainId: 11812,
-				}
+				},
 			},
 			network: {
 				currency: {
