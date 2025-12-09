@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: mainsail-pg
+    environment:
+      POSTGRES_USER: test_db
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: test_db
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U test_db"]
+      interval: 2s
+      retries: 10
+
+  mainsail:
+    build: .
+    container_name: mainsail-dev
+    depends_on:
+      postgres: { condition: service_healthy }
+    ports:
+      - "4000:4000"   # p2p
+      - "4003:4003"   # api-sync
+      - "4004:4004"   # webhooks
+      - "4006:4006"   # http-api
+      - "4007:4007"   # transaction-pool api
+      - "4008:4008"   # evm api
+    environment:
+      MAINSAIL_DB_HOST: postgres
+      MAINSAIL_DB_PORT: 5432
+      MAINSAIL_DB_DATABASE: test_db
+      MAINSAIL_DB_USERNAME: test_db
+      MAINSAIL_DB_PASSWORD: password
+      MAINSAIL_API_SYNC_ENABLED: "true"
+      MAINSAIL_P2P_HOST: 0.0.0.0
+      MAINSAIL_API_DEV_HOST: 0.0.0.0
+      MAINSAIL_API_HTTP_HOST: 0.0.0.0
+      MAINSAIL_WEBHOOKS_HOST: 0.0.0.0
+      MAINSAIL_API_TRANSACTION_POOL_HOST: 0.0.0.0
+      MAINSAIL_API_EVM_HOST: 0.0.0.0
