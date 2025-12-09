@@ -7,16 +7,16 @@ describe("NetworkConfig", () => {
 		crypto: {
 			network: {
 				chainId: 11812,
-			}
+			},
 		},
 		network: {
 			constants: {
-				epoch: "2023-12-21T00:00:00.000Z"
+				epoch: "2023-12-21T00:00:00.000Z",
 			},
 			id: "test-network",
 			meta: {
-				wif: 186
-			}
+				wif: 186,
+			},
 		},
 	});
 
