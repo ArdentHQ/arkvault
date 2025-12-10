@@ -1,12 +1,13 @@
-import { Contracts } from "@/app/lib/profiles";
-import React from "react";
-import { useTranslation } from "react-i18next";
 import { EmptyVotes, Votes } from "./WalletVote.blocks";
-import { WalletVoteSkeleton } from "./WalletVoteSkeleton";
+
 import { Button } from "@/app/components/Button";
+import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
-import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import React from "react";
 import { Tooltip } from "@/app/components/Tooltip";
+import { WalletVoteSkeleton } from "./WalletVoteSkeleton";
+import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import { useTranslation } from "react-i18next";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet | undefined;
@@ -17,10 +18,10 @@ interface WalletVoteProperties {
 }
 
 const DefaultToken = () => (
-	<div className="text-white overflow-hidden rounded-full flex items-center justify-center bg-theme-primary-600 h-5 w-5">
-		<span className="-ml-[2px] leading-4 text-xs">T</span>
+	<div className="bg-theme-primary-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white">
+		<span className="text-xs font-semibold">T</span>
 	</div>
-)
+);
 
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {
 	const { t } = useTranslation();
@@ -62,23 +63,30 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 			data-testid="WalletVote"
 			className="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
 		>
-			{/*{wallets.length === 1 && wallet.tokenCount() > 0*/}
-				(<div className="w-full flex gap-1.5 items-center">
-					<span className="text-theme-secondary-700 font-semibold leading-5">Token Holdings</span>
-					<div className="bg-theme-secondary-200 rounded-xl p-[2px] flex">
-						<div className="first:ml-0 -ml-1 z-10 h-5 w-5 overflow-hidden rounded-full ring-2 ring-theme-secondary-200 dark:bg-theme-dark-900 dark:ring-theme-dark-800">
-							<DefaultToken/>
-							{/*<Icon name="XQR" dimensions={[20, 20]} className="bg-theme-success-900 text-white"/>*/}
-						</div>
-						<div className="first:ml-0 -ml-1 z-10 h-5 w-5 overflow-hidden rounded-full ring-2 ring-theme-secondary-200 dark:bg-theme-dark-900 dark:ring-theme-dark-800">
-							<Icon name="ARK" dimensions={[20, 20]} className="bg-theme-danger-500 text-white"/>
-						</div>
-						<div className="first:ml-0 -ml-1 z-10 h-5 w-5 overflow-hidden rounded-full ring-2 ring-theme-secondary-200 dark:bg-theme-dark-900 dark:ring-theme-dark-800">
-							<Icon name="BPL" dimensions={[20, 20]} className="bg-theme-primary-500 text-white"/>
-						</div>
+			{/*{wallets.length === 1 && wallet.tokenCount() > 0*/}(
+			<div className="flex w-full items-center gap-1.5">
+				<span className="text-theme-secondary-700 leading-5 font-semibold">Token Holdings</span>
+				<div className="bg-theme-secondary-200 p flex h-6 items-center rounded-xl">
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
+						<DefaultToken />
 					</div>
-				</div>)
-				{/*: renderVotes()*/}
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
+						<Icon
+							name="ARK"
+							dimensions={[16, 16]}
+							className="bg-theme-danger-500 flex h-5 w-5 items-center justify-center rounded-full text-white"
+						/>
+					</div>
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
+						<Icon
+							name="BPL"
+							dimensions={[16, 16]}
+							className="bg-theme-info-400 flex h-5 w-5 items-center justify-center rounded-full text-white"
+						/>
+					</div>
+				</div>
+			</div>
+			){/*: renderVotes()*/}
 			{/*}*/}
 			<div className="w-full md:w-auto md:max-md:self-end">
 				{wallets.length > 1 && (
