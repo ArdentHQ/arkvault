@@ -197,7 +197,7 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 dim:border-theme-dim-200 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3">
+									<div className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 dim:border-theme-dim-500 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3">
 										<span className="text-base leading-tight font-semibold">
 											{selectedFilterLabel}
 										</span>

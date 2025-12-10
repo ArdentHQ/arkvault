@@ -148,6 +148,7 @@ export const useWalletActions = ({
 				openPanel(Panel.LedgerMigration);
 			}
 
+			console.log("modal", option.value);
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
 		[
