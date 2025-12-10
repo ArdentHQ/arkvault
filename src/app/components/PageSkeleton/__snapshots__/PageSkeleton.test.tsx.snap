@@ -141,7 +141,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               <p
                                 class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
-                                Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
+                                Access and manage your ARK assets with our web-based ARK Wallet. Importing and viewing your addresses has never been simpler.
                               </p>
                             </div>
                             <div
@@ -246,7 +246,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               <p
                                 class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
-                                Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
+                                Access and manage your ARK assets with our web-based ARK Wallet. Importing and viewing your addresses has never been simpler.
                               </p>
                             </div>
                             <div
