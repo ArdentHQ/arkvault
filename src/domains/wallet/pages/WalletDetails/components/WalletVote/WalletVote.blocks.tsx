@@ -111,7 +111,7 @@ export const ValidatorName = ({
 	return <AddressLabel className={className}>{validatorName}</AddressLabel>;
 };
 
-const Votes = ({ votes, activeValidators }: VotesProperties) => {
+const Votes = ({ votes, activeValidators, withDivider }: VotesProperties) => {
 	const { t } = useTranslation();
 
 	const validator = votes[0].wallet!;
@@ -130,6 +130,13 @@ const Votes = ({ votes, activeValidators }: VotesProperties) => {
 					/>
 				</div>
 			</div>
+
+			{withDivider && (
+				<Divider
+					type="vertical"
+					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-1 hidden h-5 p-0 md:flex"
+				/>
+			)}
 
 			<div className="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0">
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5">

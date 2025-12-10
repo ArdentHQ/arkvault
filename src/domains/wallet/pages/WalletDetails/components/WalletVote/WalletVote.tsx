@@ -8,6 +8,8 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { WalletVoteSkeleton } from "./WalletVoteSkeleton";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { useTranslation } from "react-i18next";
+import { Divider } from "@/app/components/Divider";
+import cn from "classnames";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet | undefined;
@@ -23,6 +25,40 @@ const DefaultToken = () => (
 	</div>
 );
 
+const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
+	return (
+		<>
+			<div className="flex items-center gap-1">
+				<span className="text-theme-secondary-700 leading-5 font-semibold">Token Holdings</span>
+
+				<div className="bg-theme-secondary-200 p flex h-6 items-center rounded-xl">
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
+						<DefaultToken />
+					</div>
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
+						<Icon
+							name="ARK"
+							dimensions={[20, 20]}
+							className="bg-theme-danger-500 flex h-5 w-5 items-center justify-center rounded-full text-white"
+						/>
+					</div>
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
+						<Icon
+							name="BPL"
+							dimensions={[20, 20]}
+							className="bg-theme-info-400 flex h-5 w-5 items-center justify-center rounded-full text-white"
+						/>
+					</div>
+				</div>
+
+				{wallet.tokenCount() > 3 && (
+					<div className="text-theme-secondary-900 leading-5 font-semibold">+{wallet.tokenCount() - 3}</div>
+				)}
+			</div>
+		</>
+	);
+};
+
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {
 	const { t } = useTranslation();
 
@@ -32,7 +68,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 
 	const activeValidators = wallet.network().validatorCount();
 
-	const renderVotes = () => {
+	const renderVotes = (withDivider: boolean = false) => {
 		if (wallets.length > 1) {
 			return (
 				<div className="w-full">
@@ -47,7 +83,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 			return <EmptyVotes />;
 		}
 
-		return <Votes votes={votes} activeValidators={activeValidators} />;
+		return <Votes votes={votes} activeValidators={activeValidators} withDivider={withDivider} />;
 	};
 
 	const tooltipContent = () => {
@@ -58,36 +94,40 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
 	};
 
+	const hasTokens = wallets.length === 1 && wallet.tokenCount() > 0;
+
 	return (
 		<div
 			data-testid="WalletVote"
-			className="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
+			className="-mt-4 flex w-full flex-col items-center justify-between md:mt-0 md:flex-row md:items-center"
 		>
-			{/*{wallets.length === 1 && wallet.tokenCount() > 0*/}(
-			<div className="flex w-full items-center gap-1.5">
-				<span className="text-theme-secondary-700 leading-5 font-semibold">Token Holdings</span>
-				<div className="bg-theme-secondary-200 p flex h-6 items-center rounded-xl">
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
-						<DefaultToken />
-					</div>
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
-						<Icon
-							name="ARK"
-							dimensions={[16, 16]}
-							className="bg-theme-danger-500 flex h-5 w-5 items-center justify-center rounded-full text-white"
-						/>
-					</div>
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
-						<Icon
-							name="BPL"
-							dimensions={[16, 16]}
-							className="bg-theme-info-400 flex h-5 w-5 items-center justify-center rounded-full text-white"
-						/>
-					</div>
+			{hasTokens && (
+				<div className="hidden items-center md:flex">
+					<TokensSummary wallet={wallet} />
+
+					<Divider
+						type="vertical"
+						className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 ml-3 h-5"
+					/>
+
+					<Button
+						data-testid="WalletMyVotes__button"
+						variant="secondary-icon"
+						className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+						onClick={() => onButtonClick()}
+					>
+						<span>View Tokens</span>
+					</Button>
 				</div>
+			)}
+
+			<div
+				className={cn("w-full", {
+					"md:hidden": hasTokens,
+				})}
+			>
+				{renderVotes()}
 			</div>
-			){/*: renderVotes()*/}
-			{/*}*/}
 			<div className="w-full md:w-auto md:max-md:self-end">
 				{wallets.length > 1 && (
 					<>
@@ -113,45 +153,48 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 					</>
 				)}
 				{wallets.length === 1 && (
-					<Tooltip content={tooltipContent()}>
-						<div>
-							<Button
-								data-testid="WalletVote__button"
-								disabled={
-									wallet.balance() === 0 ||
-									(wallet.network().usesLockedBalance() &&
-										wallet.balance("available") < wallet.network().votesAmountStep()) ||
-									!wallet.hasBeenFullyRestored() ||
-									!wallet.hasSyncedWithNetwork() ||
-									!isLedgerWalletCompatible(wallet)
-								}
-								variant="secondary-icon"
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-								onClick={() => onButtonClick()}
-							>
-								<Icon name="Vote" />
-								<span>{t("COMMON.VOTE")}</span>
-							</Button>
+					<div className="md:flex">
+						<div className="hidden md:flex"> {hasTokens && renderVotes(hasTokens)} </div>
+						<Tooltip content={tooltipContent()}>
+							<div>
+								<Button
+									data-testid="WalletVote__button"
+									disabled={
+										wallet.balance() === 0 ||
+										(wallet.network().usesLockedBalance() &&
+											wallet.balance("available") < wallet.network().votesAmountStep()) ||
+										!wallet.hasBeenFullyRestored() ||
+										!wallet.hasSyncedWithNetwork() ||
+										!isLedgerWalletCompatible(wallet)
+									}
+									variant="secondary-icon"
+									className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+									onClick={() => onButtonClick()}
+								>
+									<Icon name="Vote" />
+									<span>{t("COMMON.VOTE")}</span>
+								</Button>
 
-							<Button
-								data-testid="WalletVote__button_mobile"
-								disabled={
-									wallet.balance() === 0 ||
-									(wallet.network().usesLockedBalance() &&
-										wallet.balance("available") < wallet.network().votesAmountStep()) ||
-									!wallet.hasBeenFullyRestored() ||
-									!wallet.hasSyncedWithNetwork() ||
-									!isLedgerWalletCompatible(wallet)
-								}
-								variant="secondary"
-								className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
-								onClick={() => onButtonClick()}
-							>
-								<Icon name="Vote" />
-								<span>{t("COMMON.VOTE")}</span>
-							</Button>
-						</div>
-					</Tooltip>
+								<Button
+									data-testid="WalletVote__button_mobile"
+									disabled={
+										wallet.balance() === 0 ||
+										(wallet.network().usesLockedBalance() &&
+											wallet.balance("available") < wallet.network().votesAmountStep()) ||
+										!wallet.hasBeenFullyRestored() ||
+										!wallet.hasSyncedWithNetwork() ||
+										!isLedgerWalletCompatible(wallet)
+									}
+									variant="secondary"
+									className="text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+									onClick={() => onButtonClick()}
+								>
+									<Icon name="Vote" />
+									<span>{t("COMMON.VOTE")}</span>
+								</Button>
+							</div>
+						</Tooltip>
+					</div>
 				)}
 			</div>
 		</div>
