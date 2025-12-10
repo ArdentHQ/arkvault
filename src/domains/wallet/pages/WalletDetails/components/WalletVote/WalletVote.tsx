@@ -25,39 +25,37 @@ const DefaultToken = () => (
 	</div>
 );
 
-const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
-	return (
-		<>
-			<div className="flex items-center gap-1">
-				<span className="text-theme-secondary-700 leading-5 font-semibold">Token Holdings</span>
+const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => (
+	<>
+		<div className="flex items-center gap-1">
+			<span className="text-theme-secondary-700 leading-5 font-semibold">Token Holdings</span>
 
-				<div className="bg-theme-secondary-200 p flex h-6 items-center rounded-xl">
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
-						<DefaultToken />
-					</div>
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
-						<Icon
-							name="ARK"
-							dimensions={[20, 20]}
-							className="bg-theme-danger-500 flex h-5 w-5 items-center justify-center rounded-full text-white"
-						/>
-					</div>
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
-						<Icon
-							name="BPL"
-							dimensions={[20, 20]}
-							className="bg-theme-info-400 flex h-5 w-5 items-center justify-center rounded-full text-white"
-						/>
-					</div>
+			<div className="bg-theme-secondary-200 p flex h-6 items-center rounded-xl">
+				<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
+					<DefaultToken />
 				</div>
-
-				{wallet.tokenCount() > 3 && (
-					<div className="text-theme-secondary-900 leading-5 font-semibold">+{wallet.tokenCount() - 3}</div>
-				)}
+				<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
+					<Icon
+						name="ARK"
+						dimensions={[20, 20]}
+						className="bg-theme-danger-500 flex h-5 w-5 items-center justify-center rounded-full text-white"
+					/>
+				</div>
+				<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
+					<Icon
+						name="BPL"
+						dimensions={[20, 20]}
+						className="bg-theme-info-400 flex h-5 w-5 items-center justify-center rounded-full text-white"
+					/>
+				</div>
 			</div>
-		</>
-	);
-};
+
+			{wallet.tokenCount() > 3 && (
+				<div className="text-theme-secondary-900 leading-5 font-semibold">+{wallet.tokenCount() - 3}</div>
+			)}
+		</div>
+	</>
+);
 
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {
 	const { t } = useTranslation();
