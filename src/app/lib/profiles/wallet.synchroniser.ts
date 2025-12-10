@@ -21,6 +21,7 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			const wallet: Contracts.WalletData = await this.#wallet.client().wallet(walletIdentifier);
 
 			this.#wallet.getAttributes().set("wallet", wallet);
+			this.#wallet.data().set(WalletData.TokenCount, wallet.tokenCount());
 
 			if (!this.#wallet.network().usesExtendedPublicKey()) {
 				this.#wallet.data().set(WalletData.PublicKey, wallet.publicKey());

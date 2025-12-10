@@ -250,6 +250,11 @@ export class Wallet implements IReadWriteWallet {
 		return new WalletSerialiser(this).toJSON();
 	}
 
+	/** {@inheritDoc IReadWriteWallet.tokenCount} */
+	public tokenCount(): number {
+		return this.data().get(WalletData.TokenCount, 0);
+	}
+
 	/** {@inheritDoc IReadWriteWallet.knownName} */
 	public knownName(): string | undefined {
 		return this.#profile.knownWallets().name(this.networkId(), this.address());
