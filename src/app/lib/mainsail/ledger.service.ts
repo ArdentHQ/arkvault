@@ -132,11 +132,12 @@ export class LedgerService {
 		useLegacy: boolean;
 		startPath?: string;
 		pageSize?: number;
+		slip44?: number;
 		onProgress?: (wallet: Contracts.WalletData) => void;
 	}): Promise<Services.LedgerWalletList> {
 		const pageSize = 5;
 		const page = 0;
-		let path = `m/44'/${this.slip44()}'/0'`;
+		let path = `m/44'/${options?.slip44 ?? this.slip44()}'/0'`;
 
 		if (options?.useLegacy) {
 			path = `m/44'/${this.slip44Legacy()}'/0'`;
