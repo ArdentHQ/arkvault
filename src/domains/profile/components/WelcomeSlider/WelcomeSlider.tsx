@@ -1,6 +1,7 @@
-import React from "react";
-import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
+
+import { Image } from "@/app/components/Image";
+import React from "react";
 
 interface SlideProperties {
 	title: string;
@@ -11,11 +12,11 @@ interface SlideProperties {
 
 const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => (
 	<div className="flex w-full flex-row md:w-auto lg:flex-col">
-		<div className="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]">
-			<h3 className="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]">
+		<div className="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]">
+			<h3 className="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]">
 				{title}
 			</h3>
-			<p className="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7">
+			<p className="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7">
 				{subtitle}
 			</p>
 		</div>
@@ -44,7 +45,7 @@ export const WelcomeSlider = (): JSX.Element => {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		customPaging: () => (
-			<button className="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600" />
+			<button className="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent" />
 		),
 		dots: true,
 		dotsClass: "welcome-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6",
@@ -58,7 +59,7 @@ export const WelcomeSlider = (): JSX.Element => {
 		<Slider {...settings}>
 			<Slide
 				title="Easy Access to Your Digital Assets"
-				subtitle="Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler."
+				subtitle="Access and manage your ARK assets with our web-based ARK Wallet. Importing and viewing your addresses has never been simpler."
 				imageName="WelcomeSlide1"
 				imageNameSm="WelcomeSlide1Sm"
 			/>

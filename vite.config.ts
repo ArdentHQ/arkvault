@@ -1,12 +1,12 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
-import svgrPlugin from "vite-plugin-svgr";
-import macrosPlugin from "vite-plugin-babel-macros";
 import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
-import { visualizer } from "rollup-plugin-visualizer";
 import { VitePWA } from "vite-plugin-pwa";
+import { defineConfig } from "vite";
+import macrosPlugin from "vite-plugin-babel-macros";
+import react from "@vitejs/plugin-react";
+import svgrPlugin from "vite-plugin-svgr";
+import tsconfigPaths from "vite-tsconfig-paths";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig(() => {
 	return {
@@ -103,7 +103,7 @@ export default defineConfig(() => {
 					start_url: "/",
 					name: "ARK Vault",
 					short_name: "ARK Vault",
-					description: "Control Your Assets",
+					description: "Official ARK Wallet | Control Your Assets",
 					theme_color: "#235b95",
 					background_color: "#235b95",
 					icons: [
