@@ -16,6 +16,12 @@ interface WalletVoteProperties {
 	wallets?: Contracts.IReadWriteWallet[];
 }
 
+const DefaultToken = () => (
+	<div className="text-white overflow-hidden rounded-full flex items-center justify-center bg-theme-primary-600 h-5 w-5">
+		<span className="-ml-[2px] leading-4 text-xs">T</span>
+	</div>
+)
+
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {
 	const { t } = useTranslation();
 
@@ -56,7 +62,24 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 			data-testid="WalletVote"
 			className="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
 		>
-			{renderVotes()}
+			{/*{wallets.length === 1 && wallet.tokenCount() > 0*/}
+				(<div className="w-full flex gap-1.5 items-center">
+					<span className="text-theme-secondary-700 font-semibold leading-5">Token Holdings</span>
+					<div className="bg-theme-secondary-200 rounded-xl p-[2px] flex">
+						<div className="first:ml-0 -ml-1 z-10 h-5 w-5 overflow-hidden rounded-full ring-2 ring-theme-secondary-200 dark:bg-theme-dark-900 dark:ring-theme-dark-800">
+							<DefaultToken/>
+							{/*<Icon name="XQR" dimensions={[20, 20]} className="bg-theme-success-900 text-white"/>*/}
+						</div>
+						<div className="first:ml-0 -ml-1 z-10 h-5 w-5 overflow-hidden rounded-full ring-2 ring-theme-secondary-200 dark:bg-theme-dark-900 dark:ring-theme-dark-800">
+							<Icon name="ARK" dimensions={[20, 20]} className="bg-theme-danger-500 text-white"/>
+						</div>
+						<div className="first:ml-0 -ml-1 z-10 h-5 w-5 overflow-hidden rounded-full ring-2 ring-theme-secondary-200 dark:bg-theme-dark-900 dark:ring-theme-dark-800">
+							<Icon name="BPL" dimensions={[20, 20]} className="bg-theme-primary-500 text-white"/>
+						</div>
+					</div>
+				</div>)
+				{/*: renderVotes()*/}
+			{/*}*/}
 			<div className="w-full md:w-auto md:max-md:self-end">
 				{wallets.length > 1 && (
 					<>
