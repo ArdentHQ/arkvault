@@ -96,15 +96,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]"
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
                             >
                               <h3
-                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -131,15 +131,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]"
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
                             >
                               <h3
-                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Access and manage your ARK assets with our web-based ARK Wallet. Importing and viewing your addresses has never been simpler.
                               </p>
@@ -166,15 +166,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]"
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
                             >
                               <h3
-                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Integrated Exchanges
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                               </p>
@@ -201,15 +201,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]"
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
                             >
                               <h3
-                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -236,15 +236,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]"
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
                             >
                               <h3
-                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Access and manage your ARK assets with our web-based ARK Wallet. Importing and viewing your addresses has never been simpler.
                               </p>
@@ -271,15 +271,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]"
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
                             >
                               <h3
-                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Integrated Exchanges
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                               </p>
@@ -306,15 +306,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[430px]"
+                              class="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]"
                             >
                               <h3
-                                class="xs:leading-5 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -342,21 +342,21 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         class="slick-active"
                       >
                         <button
-                          class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
                         />
                       </li>
                       <li
                         class=""
                       >
                         <button
-                          class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
                         />
                       </li>
                       <li
                         class=""
                       >
                         <button
-                          class="border-theme-navy-200 hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
                         />
                       </li>
                        
