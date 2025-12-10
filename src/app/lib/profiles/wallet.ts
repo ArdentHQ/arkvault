@@ -252,7 +252,7 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.tokenCount} */
 	public tokenCount(): number {
-		return this.data().get(WalletData.TokenCount, 0);
+		return this.data().get(WalletData.TokenCount, 0) as number;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.knownName} */
