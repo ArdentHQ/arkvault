@@ -18,7 +18,7 @@ interface WalletVoteProperties {
 }
 
 const DefaultToken = () => (
-	<div className="bg-theme-primary-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white">
+	<div className="bg-theme-primary-600 flex h-6 w-6 items-center justify-center overflow-hidden rounded-full text-white">
 		<span className="text-xs font-semibold">T</span>
 	</div>
 );
@@ -67,21 +67,21 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 			<div className="flex w-full items-center gap-1.5">
 				<span className="text-theme-secondary-700 leading-5 font-semibold">Token Holdings</span>
 				<div className="bg-theme-secondary-200 p flex h-6 items-center rounded-xl">
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-7 w-7 items-center justify-center overflow-hidden rounded-full">
 						<DefaultToken />
 					</div>
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-7 w-7 items-center justify-center overflow-hidden rounded-full">
 						<Icon
 							name="ARK"
 							dimensions={[16, 16]}
-							className="bg-theme-danger-500 flex h-5 w-5 items-center justify-center rounded-full text-white"
+							className="bg-theme-danger-500 flex h-6 w-6 items-center justify-center rounded-full text-white"
 						/>
 					</div>
-					<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
+					<div className="bg-theme-secondary-200 -ml-[5px] flex h-7 w-7 items-center justify-center overflow-hidden rounded-full">
 						<Icon
 							name="BPL"
 							dimensions={[16, 16]}
-							className="bg-theme-info-400 flex h-5 w-5 items-center justify-center rounded-full text-white"
+							className="bg-theme-info-400 flex h-6 w-6 items-center justify-center rounded-full text-white"
 						/>
 					</div>
 				</div>
