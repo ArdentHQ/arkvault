@@ -10,6 +10,7 @@ import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
+import { TokensSummary } from "@/domains/portfolio/components/Tokens/TokensSummary";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet | undefined;
@@ -18,44 +19,6 @@ interface WalletVoteProperties {
 	isLoadingVotes: boolean;
 	wallets?: Contracts.IReadWriteWallet[];
 }
-
-const DefaultToken = () => (
-	<div className="bg-theme-primary-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white">
-		<span className="text-xs font-semibold">T</span>
-	</div>
-);
-
-const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => (
-	<>
-		<div className="flex items-center gap-1">
-			<span className="text-theme-secondary-700 leading-5 font-semibold">Token Holdings</span>
-
-			<div className="bg-theme-secondary-200 p flex h-6 items-center rounded-xl">
-				<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
-					<DefaultToken />
-				</div>
-				<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
-					<Icon
-						name="ARK"
-						dimensions={[20, 20]}
-						className="bg-theme-danger-500 flex h-5 w-5 items-center justify-center rounded-full text-white"
-					/>
-				</div>
-				<div className="bg-theme-secondary-200 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
-					<Icon
-						name="BPL"
-						dimensions={[20, 20]}
-						className="bg-theme-info-400 flex h-5 w-5 items-center justify-center rounded-full text-white"
-					/>
-				</div>
-			</div>
-
-			{wallet.tokenCount() > 3 && (
-				<div className="text-theme-secondary-900 leading-5 font-semibold">+{wallet.tokenCount() - 3}</div>
-			)}
-		</div>
-	</>
-);
 
 export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {
 	const { t } = useTranslation();
@@ -109,12 +72,12 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 					/>
 
 					<Button
-						data-testid="WalletMyVotes__button"
+						data-testid="ViewTokens"
 						variant="secondary-icon"
 						className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-						onClick={() => onButtonClick()}
+						onClick={() => console.log("view tokens")}
 					>
-						<span>View Tokens</span>
+						<span>{t("COMMON.VIEW_TOKENS")}</span>
 					</Button>
 				</div>
 			)}
