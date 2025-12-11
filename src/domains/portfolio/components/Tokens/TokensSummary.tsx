@@ -21,7 +21,7 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 				</span>
 
 				<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
-					{Array.from({ length: VISIBLE_TOKEN_COUNT }).map((_, index) => (
+					{Array.from({ length: Math.min(VISIBLE_TOKEN_COUNT, wallet.tokenCount())}).map((_, index) => (
 						<div
 							key={index}
 							className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0"
