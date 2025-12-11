@@ -2,19 +2,21 @@ import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 
-const DefaultToken = ({tokenName}: {tokenName: string}) => (
+const DefaultToken = ({ tokenName }: { tokenName: string }) => (
 	<div className="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white">
 		<span className="text-xs font-semibold">{tokenName.charAt(0).toUpperCase()}</span>
 	</div>
 );
 
 export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
-	const {t} = useTranslation();
+	const { t } = useTranslation();
 
 	return (
 		<>
 			<div className="flex items-center gap-1">
-				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">{t("COMMON.TOKEN_HOLDINGS")}</span>
+				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+					{t("COMMON.TOKEN_HOLDINGS")}
+				</span>
 
 				<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
 					{Array.from({ length: 3 }).map((_, index) => (
@@ -25,9 +27,11 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 				</div>
 
 				{wallet.tokenCount() > 3 && (
-					<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 leading-5 font-semibold">+{wallet.tokenCount() - 3}</div>
+					<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 leading-5 font-semibold">
+						+{wallet.tokenCount() - 3}
+					</div>
 				)}
 			</div>
 		</>
 	);
-}
+};
