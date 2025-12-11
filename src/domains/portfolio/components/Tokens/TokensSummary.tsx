@@ -22,14 +22,20 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 
 				<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
 					{Array.from({ length: VISIBLE_TOKEN_COUNT }).map((_, index) => (
-						<div key={index} className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0">
+						<div
+							key={index}
+							className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0"
+						>
 							<DefaultToken tokenName="Test Token" />
 						</div>
 					))}
 				</div>
 
 				{wallet.tokenCount() > VISIBLE_TOKEN_COUNT && (
-					<div data-testid="TokensSummary--Count" className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 leading-5 font-semibold">
+					<div
+						data-testid="TokensSummary--Count"
+						className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 leading-5 font-semibold"
+					>
 						+{wallet.tokenCount() - VISIBLE_TOKEN_COUNT}
 					</div>
 				)}

@@ -1,12 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 
-import {
-	env,
-	render,
-	screen,
-	getMainsailProfileId,
-} from "@/utils/testing-library";
+import { env, render, screen, getMainsailProfileId } from "@/utils/testing-library";
 import { expect } from "vitest";
 import { TokensSummary } from "./TokensSummary";
 
