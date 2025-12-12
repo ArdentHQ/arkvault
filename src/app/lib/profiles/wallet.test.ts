@@ -76,6 +76,10 @@ describe("Wallet", () => {
 		}
 	});
 
+	it("should have a tokenCount", () => {
+		expect(wallet.tokenCount()).toBe(0);
+	});
+
 	it("should have a primary key", () => {
 		const mockWalletData = {
 			primaryKey: () => "test-primary-key",
