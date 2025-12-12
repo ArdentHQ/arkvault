@@ -546,42 +546,35 @@ export const PortfolioHeader = ({
 								</div>
 							</div>
 
+							<Divider
+								type="horizontal"
+								className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
+							/>
 
-							<div>
-								<Divider
-									type="horizontal"
-									className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
-								/>
-								<div className="flex justify-between md:hidden items-center">
-									<div>
-										<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
-											{t("COMMON.TOKEN_HOLDINGS")}
-										</span>
-									</div>
-									<div className="flex items-center">
-										<TokensSummary wallet={wallet} />
+							<div className="flex items-center justify-between md:hidden">
+								<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+									{t("COMMON.TOKEN_HOLDINGS")}
+								</span>
+								<div className="flex items-center">
+									<TokensSummary wallet={wallet} />
 
-										<Divider
-											type="vertical"
-											className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-5 ml-1.5 mr-0"
-										/>
+									<Divider
+										type="vertical"
+										className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mr-1 ml-1.5 h-5"
+									/>
 
-										<Button
-											data-testid="ViewTokens"
-											variant="secondary-icon"
-											className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent whitespace-nowrap disabled:bg-transparent ml-0.5 px-1 py-px dark:disabled:bg-transparent"
-											onClick={() => console.log("view tokens")}
-										>
-											<span>{t("COMMON.VIEW_TOKENS")}</span>
-										</Button>
-									</div>
+									<Button
+										data-testid="ViewTokens"
+										variant="secondary-icon"
+										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent px-0.5 py-px whitespace-nowrap disabled:bg-transparent dark:disabled:bg-transparent"
+										onClick={() => console.log("view tokens")}
+									>
+										<span>{t("COMMON.VIEW")}</span>
+									</Button>
 								</div>
 							</div>
 						</div>
 					</div>
-
-
-
 
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block">
 						<WalletVote

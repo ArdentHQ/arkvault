@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { TokensSummary } from "@/domains/portfolio/components/Tokens/TokensSummary";
+import { t } from "i18next";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet | undefined;
@@ -64,6 +65,9 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 		>
 			{hasTokens && (
 				<div className="hidden items-center md:flex">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-1.5 leading-5 font-semibold">
+						{t("COMMON.TOKEN_HOLDINGS")}
+					</div>
 					<TokensSummary wallet={wallet} />
 
 					<Divider
