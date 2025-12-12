@@ -58,13 +58,18 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 		this.#wallet.tokens().flush();
 
-		await Promise.allSettled(walletTokens.map(async (walletToken) => {
-			try {
-				const token = await this.#wallet.client().tokenByContractAddress(walletToken.tokenAddress())
-				this.#wallet.tokens().create({ token, walletToken })
-			} catch (error) {
-				console.error(`[WalletSynchroniser#tokens] Failed to fetch token for address: ${walletToken.tokenAddress()}`, { error })
-			}
-		}));
+		await Promise.allSettled(
+			walletTokens.map(async (walletToken) => {
+				try {
+					const token = await this.#wallet.client().tokenByContractAddress(walletToken.tokenAddress());
+					this.#wallet.tokens().create({ token, walletToken });
+				} catch (error) {
+					console.error(
+						`[WalletSynchroniser#tokens] Failed to fetch token for address: ${walletToken.tokenAddress()}`,
+						{ error },
+					);
+				}
+			}),
+		);
 	}
 }

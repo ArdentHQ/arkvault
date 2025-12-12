@@ -65,7 +65,7 @@ export class ClientService {
 
 	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {
 		const response = await this.#client.tokens().byWalletAddress(address);
-		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData))
+		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData));
 	}
 
 	public async tokenHolders(contractAddress: string): Promise<WalletTokenRepository> {
@@ -153,11 +153,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-					{
-						amount: 0,
-						id: vote,
-					},
-				]
+						{
+							amount: 0,
+							id: vote,
+						},
+					]
 				: [],
 		};
 	}

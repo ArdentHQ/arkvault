@@ -2,11 +2,10 @@ import { Contracts } from ".";
 import { WalletTokenRepository } from "./wallet-token.repository";
 
 export class TokenService {
-	#profile: Contracts.IProfile
+	#profile: Contracts.IProfile;
 
 	public constructor({ profile }: { profile: Contracts.IProfile }) {
 		this.#profile = profile;
-
 	}
 
 	/**
@@ -15,7 +14,13 @@ export class TokenService {
 	 * @returns {Promise<void>}
 	 */
 	public async sync(): Promise<void> {
-		await Promise.allSettled(this.#profile.wallets().selected().values().map(wallet => wallet.synchroniser().tokens()))
+		await Promise.allSettled(
+			this.#profile
+				.wallets()
+				.selected()
+				.values()
+				.map((wallet) => wallet.synchroniser().tokens()),
+		);
 	}
 
 	/**
@@ -24,14 +29,13 @@ export class TokenService {
 	 * @returns {number}
 	 */
 	selectedCount(): number {
-		let count = 0
+		let count = 0;
 
 		for (const wallet of this.#profile.wallets().selected().values()) {
-			count = count + wallet.tokens().count()
-
+			count = count + wallet.tokens().count();
 		}
 
-		return count
+		return count;
 	}
 
 	/**
@@ -40,16 +44,15 @@ export class TokenService {
 	 * @returns {WalletTokenRepository}
 	 */
 	selected(): WalletTokenRepository {
-		const tokens = new WalletTokenRepository()
+		const tokens = new WalletTokenRepository();
 
 		for (const wallet of this.#profile.wallets().selected().values()) {
 			for (const token of wallet.tokens().values()) {
-				tokens.push(token)
+				tokens.push(token);
 			}
-
 		}
 
-		return tokens
+		return tokens;
 	}
 
 	/**
@@ -58,12 +61,12 @@ export class TokenService {
 	 * @returns {number}
 	 */
 	selectedTotalBalance(): number {
-		let total = 0
+		let total = 0;
 
 		for (const token of this.selected().values()) {
-			total = total + token.balance()
+			total = total + token.balance();
 		}
 
-		return total
+		return total;
 	}
 }

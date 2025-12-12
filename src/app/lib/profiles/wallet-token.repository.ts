@@ -44,7 +44,7 @@ export class WalletTokenRepository {
 		this.#data.set(token.address(), token);
 	}
 
-	create(data: { walletToken: WalletTokenDTO, token: TokenDTO }) {
+	create(data: { walletToken: WalletTokenDTO; token: TokenDTO }) {
 		const token = new WalletToken(data);
 
 		this.push(token);

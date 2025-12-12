@@ -32,6 +32,6 @@ export class TokenDTO {
 	}
 
 	toJSON(): TokenData {
-		return this.#data
+		return this.#data;
 	}
 }

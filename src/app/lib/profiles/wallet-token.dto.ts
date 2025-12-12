@@ -23,4 +23,3 @@ export class WalletTokenDTO {
 		return this.#data;
 	}
 }
-
