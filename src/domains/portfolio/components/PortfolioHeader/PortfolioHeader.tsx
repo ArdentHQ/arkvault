@@ -28,6 +28,7 @@ import { useLedgerMigrationStatus } from "@/domains/wallet/hooks/use-ledger-wall
 import { useLocalStorage } from "usehooks-ts";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { TokensSummary } from "@/domains/portfolio/components/Tokens/TokensSummary";
 
 export const PortfolioHeader = ({
 	profile,
@@ -388,6 +389,7 @@ export const PortfolioHeader = ({
 								type="horizontal"
 								className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
 							/>
+
 							<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
 								<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
 									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
@@ -543,8 +545,43 @@ export const PortfolioHeader = ({
 									</div>
 								</div>
 							</div>
+
+
+							<div>
+								<Divider
+									type="horizontal"
+									className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
+								/>
+								<div className="flex justify-between md:hidden items-center">
+									<div>
+										<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+											{t("COMMON.TOKEN_HOLDINGS")}
+										</span>
+									</div>
+									<div className="flex items-center">
+										<TokensSummary wallet={wallet} />
+
+										<Divider
+											type="vertical"
+											className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-5 ml-1.5 mr-0"
+										/>
+
+										<Button
+											data-testid="ViewTokens"
+											variant="secondary-icon"
+											className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent whitespace-nowrap disabled:bg-transparent ml-0.5 px-1 py-px dark:disabled:bg-transparent"
+											onClick={() => console.log("view tokens")}
+										>
+											<span>{t("COMMON.VIEW_TOKENS")}</span>
+										</Button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+
+
+
 
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block">
 						<WalletVote

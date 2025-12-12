@@ -1,6 +1,9 @@
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
+import { Divider } from "@/app/components/Divider";
+import { Button } from "@/app/components/Button";
+import { t } from "i18next";
 
 const VISIBLE_TOKEN_COUNT = 3;
 
@@ -11,15 +14,9 @@ const DefaultToken = ({ tokenName }: { tokenName: string }) => (
 );
 
 export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
-	const { t } = useTranslation();
-
 	return (
 		<>
 			<div data-testid="TokensSummary" className="flex items-center gap-1">
-				<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
-					{t("COMMON.TOKEN_HOLDINGS")}
-				</span>
-
 				<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
 					{Array.from({ length: Math.min(VISIBLE_TOKEN_COUNT, wallet.tokenCount()) }).map((_, index) => (
 						<div
