@@ -151,6 +151,8 @@ export const PortfolioHeader = ({
 		}
 	};
 
+	const hasTokens = selectedWallets.length === 1 && wallet.tokenCount() > 0;
+
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
 			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
@@ -546,33 +548,37 @@ export const PortfolioHeader = ({
 								</div>
 							</div>
 
-							<Divider
-								type="horizontal"
-								className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
-							/>
-
-							<div className="flex items-center justify-between md:hidden">
-								<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
-									{t("COMMON.TOKEN_HOLDINGS")}
-								</span>
-								<div className="flex items-center">
-									<TokensSummary wallet={wallet} />
-
+							{hasTokens && (
+								<>
 									<Divider
-										type="vertical"
-										className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mr-1 ml-1.5 h-5"
+										type="horizontal"
+										className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
 									/>
 
-									<Button
-										data-testid="ViewTokens"
-										variant="secondary-icon"
-										className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent px-0.5 py-px whitespace-nowrap disabled:bg-transparent dark:disabled:bg-transparent"
-										onClick={() => console.log("view tokens")}
-									>
-										<span>{t("COMMON.VIEW")}</span>
-									</Button>
-								</div>
-							</div>
+									<div className="flex items-center justify-between md:hidden">
+										<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+											{t("COMMON.TOKEN_HOLDINGS")}
+										</span>
+										<div className="flex items-center">
+											<TokensSummary wallet={wallet} />
+
+											<Divider
+												type="vertical"
+												className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mr-1 ml-1.5 h-5"
+											/>
+
+											<Button
+												data-testid="ViewTokens"
+												variant="secondary-icon"
+												className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent px-0.5 py-px whitespace-nowrap disabled:bg-transparent dark:disabled:bg-transparent"
+												onClick={() => console.log("view tokens")}
+											>
+												<span>{t("COMMON.VIEW")}</span>
+											</Button>
+										</div>
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 
