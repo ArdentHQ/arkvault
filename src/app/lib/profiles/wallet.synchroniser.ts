@@ -27,7 +27,6 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			}
 
 			this.#wallet.data().set(WalletData.TokenCount, wallet.tokenCount());
-			this.#wallet.data().set(WalletData.TokenCount, wallet.tokenCount());
 			this.#wallet.data().set(WalletData.Balance, wallet.balance());
 			this.#wallet.data().set(WalletData.Sequence, wallet.nonce());
 		} catch {
