@@ -1306,162 +1306,175 @@ exports[`Dashboard > should render 1`] = `
                   class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block"
                 >
                   <div
-                    class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
+                    class="-mt-4 flex w-full flex-col items-center justify-between md:mt-0 md:flex-row md:items-center"
                     data-testid="WalletVote"
                   >
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+                      class="w-full"
                     >
                       <div
-                        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+                        class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
                       >
-                        <p
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
-                        >
-                          Voting for
-                        </p>
                         <div
-                          class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                          class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          <p
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
                           >
-                            <span>
+                            Voting for
+                          </p>
+                          <div
+                            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                          >
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            >
                               <span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                <span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                                  </span>
                                 </span>
                               </span>
-                            </span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
-                      >
-                        <p
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
-                        >
-                          Rank
-                        </p>
-                        <p
-                          class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
-                        >
-                          #21
-                        </p>
-                        <p
-                          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
-                        >
-                          Validator Status
-                        </p>
                         <div
-                          class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dim:text-theme-success-500 dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+                          class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
                         >
-                          Active
+                          <p
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                          >
+                            Rank
+                          </p>
+                          <p
+                            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+                          >
+                            #21
+                          </p>
+                          <p
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
+                          >
+                            Validator Status
+                          </p>
+                          <div
+                            class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dim:text-theme-success-500 dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+                          >
+                            Active
+                          </div>
+                          <div
+                            class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+                          />
                         </div>
-                        <div
-                          class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
-                        />
                       </div>
                     </div>
                     <div
                       class="w-full md:w-auto md:max-md:self-end"
                     >
-                      <span>
+                      <div
+                        class="md:flex"
+                      >
+                        <div
+                          class="hidden md:flex"
+                        >
+                            
+                        </div>
                         <span>
-                          <div>
-                            <button
-                              class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-                              data-testid="WalletVote__button"
-                              type="button"
-                            >
-                              <div
-                                class="flex items-center gap-2"
+                          <span>
+                            <div>
+                              <button
+                                class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+                                data-testid="WalletVote__button"
+                                type="button"
                               >
-                                <div>
-                                  <div
-                                    style="height: 16px; width: 16px;"
-                                  >
-                                    <svg
-                                      id="vote"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                <div
+                                  class="flex items-center gap-2"
+                                >
+                                  <div>
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <svg
+                                        id="vote"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
                                       >
-                                        <path
-                                          d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
-                                        />
-                                        <path
-                                          d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                                        />
-                                      </g>
-                                    </svg>
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                                          />
+                                          <path
+                                            d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
                                   </div>
+                                  <span>
+                                    Vote
+                                  </span>
                                 </div>
-                                <span>
-                                  Vote
-                                </span>
-                              </div>
-                            </button>
-                            <button
-                              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
-                              data-testid="WalletVote__button_mobile"
-                              type="button"
-                            >
-                              <div
-                                class="flex items-center gap-2"
+                              </button>
+                              <button
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+                                data-testid="WalletVote__button_mobile"
+                                type="button"
                               >
-                                <div>
-                                  <div
-                                    style="height: 16px; width: 16px;"
-                                  >
-                                    <svg
-                                      id="vote"
-                                      style="height: 100%; width: 100%;"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                <div
+                                  class="flex items-center gap-2"
+                                >
+                                  <div>
+                                    <div
+                                      style="height: 16px; width: 16px;"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <svg
+                                        id="vote"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
                                       >
-                                        <path
-                                          d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
-                                        />
-                                        <path
-                                          d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                                        />
-                                      </g>
-                                    </svg>
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                                          />
+                                          <path
+                                            d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
                                   </div>
+                                  <span>
+                                    Vote
+                                  </span>
                                 </div>
-                                <span>
-                                  Vote
-                                </span>
-                              </div>
-                            </button>
-                          </div>
+                              </button>
+                            </div>
+                          </span>
                         </span>
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1532,162 +1545,175 @@ exports[`Dashboard > should render 1`] = `
           class="mx-auto px-6 md:px-10 lg:container md:-my-2 w-full"
         >
           <div
-            class="-mt-4 flex w-full flex-col items-center md:mt-0 md:flex-row md:items-center"
+            class="-mt-4 flex w-full flex-col items-center justify-between md:mt-0 md:flex-row md:items-center"
             data-testid="WalletVote"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+              class="w-full"
             >
               <div
-                class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+                class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
               >
-                <p
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
-                >
-                  Voting for
-                </p>
                 <div
-                  class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                  class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                 >
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
                   >
-                    <span>
+                    Voting for
+                  </p>
+                  <div
+                    class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
                       <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                          </span>
                         </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div
-                class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
-              >
-                <p
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
-                >
-                  Rank
-                </p>
-                <p
-                  class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
-                >
-                  #21
-                </p>
-                <p
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
-                >
-                  Validator Status
-                </p>
                 <div
-                  class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dim:text-theme-success-500 dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+                  class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
                 >
-                  Active
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                  >
+                    Rank
+                  </p>
+                  <p
+                    class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+                  >
+                    #21
+                  </p>
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
+                  >
+                    Validator Status
+                  </p>
+                  <div
+                    class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded bg-theme-success-100 text-theme-success-700 dark:border dark:bg-transparent dark:text-theme-success-500 dim:text-theme-success-500 dark:border-theme-success-800 dim:border-theme-success-800 flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+                  >
+                    Active
+                  </div>
+                  <div
+                    class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+                  />
                 </div>
-                <div
-                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
-                />
               </div>
             </div>
             <div
               class="w-full md:w-auto md:max-md:self-end"
             >
-              <span>
+              <div
+                class="md:flex"
+              >
+                <div
+                  class="hidden md:flex"
+                >
+                    
+                </div>
                 <span>
-                  <div>
-                    <button
-                      class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-                      data-testid="WalletVote__button"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center gap-2"
+                  <span>
+                    <div>
+                      <button
+                        class="px-5 py-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-transparent dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
+                        data-testid="WalletVote__button"
+                        type="button"
                       >
-                        <div>
-                          <div
-                            style="height: 16px; width: 16px;"
-                          >
-                            <svg
-                              id="vote"
-                              style="height: 100%; width: 100%;"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="vote"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
-                                />
-                                <path
-                                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                                  />
+                                  <path
+                                    d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
+                          <span>
+                            Vote
+                          </span>
                         </div>
-                        <span>
-                          Vote
-                        </span>
-                      </div>
-                    </button>
-                    <button
-                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
-                      data-testid="WalletVote__button_mobile"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center gap-2"
+                      </button>
+                      <button
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white text-theme-primary-600 dim:text-theme-dim-navy-600 w-full disabled:bg-transparent md:hidden dark:text-white dark:disabled:bg-transparent"
+                        data-testid="WalletVote__button_mobile"
+                        type="button"
                       >
-                        <div>
-                          <div
-                            style="height: 16px; width: 16px;"
-                          >
-                            <svg
-                              id="vote"
-                              style="height: 100%; width: 100%;"
-                              viewBox="0 0 20 20"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          <div>
+                            <div
+                              style="height: 16px; width: 16px;"
                             >
-                              <g
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                              <svg
+                                id="vote"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <path
-                                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
-                                />
-                                <path
-                                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                                />
-                              </g>
-                            </svg>
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                                  />
+                                  <path
+                                    d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
                           </div>
+                          <span>
+                            Vote
+                          </span>
                         </div>
-                        <span>
-                          Vote
-                        </span>
-                      </div>
-                    </button>
-                  </div>
+                      </button>
+                    </div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </div>

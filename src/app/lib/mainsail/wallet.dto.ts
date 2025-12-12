@@ -122,6 +122,7 @@ export class WalletData {
 			nonce: this.nonce(),
 			publicKey: this.publicKey(),
 			rank: this.rank(),
+			tokenCount: this.tokenCount(),
 			username: this.username(),
 			votes: this.votes(),
 		};
@@ -158,6 +159,10 @@ export class WalletData {
 			...this.toObject(),
 			balance,
 		};
+	}
+
+	public tokenCount(): number {
+		return this.data.tokenCount ?? 0;
 	}
 
 	public raw(): KeyValuePair {

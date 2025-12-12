@@ -219,7 +219,13 @@
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
-			"bcrypto"
+			"@ardenthq/arkvault-url",
+			"@tailwindcss/oxide",
+			"bcrypto",
+			"esbuild",
+			"keccak",
+			"msw",
+			"secp256k1"
 		]
 	}
 }

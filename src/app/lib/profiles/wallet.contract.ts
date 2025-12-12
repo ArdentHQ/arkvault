@@ -244,6 +244,14 @@ export interface IReadWriteWallet {
 	toObject(): IWalletData;
 
 	/**
+	 * Get token count
+	 *
+	 * @return {number}
+	 * @memberof IReadWriteWallet
+	 */
+	tokenCount(): number;
+
+	/**
 	 * Get the known name.
 	 *
 	 * @return {(string | undefined)}
