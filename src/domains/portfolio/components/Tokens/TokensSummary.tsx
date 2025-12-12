@@ -1,9 +1,5 @@
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
-import { useTranslation } from "react-i18next";
-import { Divider } from "@/app/components/Divider";
-import { Button } from "@/app/components/Button";
-import { t } from "i18next";
 
 const VISIBLE_TOKEN_COUNT = 3;
 
