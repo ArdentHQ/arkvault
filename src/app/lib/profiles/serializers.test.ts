@@ -43,7 +43,7 @@ describe("WalletSerialiser", () => {
 			    "SIGNED_TRANSACTIONS": {},
 			    "STARRED": false,
 			    "STATUS": undefined,
-    "TOKEN_COUNT": 0,
+			    "TOKEN_COUNT": 0,
 			    "VOTES": [],
 			    "VOTES_AVAILABLE": 0,
 			    "VOTES_USED": 0,
