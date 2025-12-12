@@ -16,7 +16,7 @@ import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
-import { TokenRepository } from "../profiles/token.repository";
+import { TokenRepository } from "@/app/lib/profiles/token.repository";
 import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
