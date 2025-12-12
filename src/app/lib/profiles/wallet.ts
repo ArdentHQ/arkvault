@@ -702,7 +702,7 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	public tokens(): WalletTokenRepository {
-		return this.#tokens
+		return this.#tokens;
 	}
 
 	public generateAlias(): string {

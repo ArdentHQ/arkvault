@@ -54,11 +54,11 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 	/** {@inheritDoc IWalletSynchroniser.tokens} */
 	public async tokens(): Promise<void> {
-		const tokens = await this.#wallet.client().walletTokens(this.#wallet.address())
+		const tokens = await this.#wallet.client().walletTokens(this.#wallet.address());
 
-		this.#wallet.tokens().flush()
+		this.#wallet.tokens().flush();
 		for (const token of tokens.values()) {
-			this.#wallet.tokens().push(token)
+			this.#wallet.tokens().push(token);
 		}
 	}
 }
