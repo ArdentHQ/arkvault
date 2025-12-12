@@ -44,7 +44,6 @@ export class ClientService {
 			evm,
 			transactions,
 		});
-
 	}
 
 	public async transaction(
@@ -57,28 +56,28 @@ export class ClientService {
 
 	public async tokens(): Promise<TokenRepository> {
 		const response = await this.#client.tokens().all();
-		const tokens = new TokenRepository()
-		tokens.fill(response.data)
-		return tokens
+		const tokens = new TokenRepository();
+		tokens.fill(response.data);
+		return tokens;
 	}
 
 	public async walletTokens(address: string): Promise<WalletTokenRepository> {
 		const response = await this.#client.tokens().byWalletAddress(address);
-		const tokens = new WalletTokenRepository()
-		tokens.fill(response.data)
-		return tokens
+		const tokens = new WalletTokenRepository();
+		tokens.fill(response.data);
+		return tokens;
 	}
 
 	public async tokenHolders(contractAddress: string): Promise<WalletTokenRepository> {
-		const response = await this.#client.tokens().holders(contractAddress)
-		const holders = new WalletTokenRepository()
-		holders.fill(response.results)
-		return holders
+		const response = await this.#client.tokens().holders(contractAddress);
+		const holders = new WalletTokenRepository();
+		holders.fill(response.results);
+		return holders;
 	}
 
 	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
-		const response = await this.#client.tokens().get(contractAddress)
-		return new TokenDTO(response.data)
+		const response = await this.#client.tokens().get(contractAddress);
+		return new TokenDTO(response.data);
 	}
 
 	public async transactions(
@@ -154,11 +153,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-					{
-						amount: 0,
-						id: vote,
-					},
-				]
+						{
+							amount: 0,
+							id: vote,
+						},
+					]
 				: [],
 		};
 	}

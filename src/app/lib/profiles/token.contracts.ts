@@ -12,4 +12,3 @@ export interface IWalletTokenData {
 	balance: number;
 	tokenAddress: string;
 }
-
