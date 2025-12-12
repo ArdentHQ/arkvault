@@ -28,6 +28,7 @@ import { useLedgerMigrationStatus } from "@/domains/wallet/hooks/use-ledger-wall
 import { useLocalStorage } from "usehooks-ts";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { TokensSummary } from "@/domains/portfolio/components/Tokens/TokensSummary";
 
 export const PortfolioHeader = ({
 	profile,
@@ -149,6 +150,8 @@ export const PortfolioHeader = ({
 			openPanel(Panel.Addresses);
 		}
 	};
+
+	const hasTokens = selectedWallets.length === 1 && wallet.tokenCount() > 0;
 
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
@@ -388,6 +391,7 @@ export const PortfolioHeader = ({
 								type="horizontal"
 								className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
 							/>
+
 							<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
 								<div className="flex flex-col gap-2" data-testid="WalletHeader__balance">
 									<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
@@ -543,6 +547,38 @@ export const PortfolioHeader = ({
 									</div>
 								</div>
 							</div>
+
+							{hasTokens && (
+								<>
+									<Divider
+										type="horizontal"
+										className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
+									/>
+
+									<div className="flex items-center justify-between md:hidden">
+										<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+											{t("COMMON.TOKEN_HOLDINGS")}
+										</span>
+										<div className="flex items-center">
+											<TokensSummary wallet={wallet} />
+
+											<Divider
+												type="vertical"
+												className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mr-1 ml-1.5 h-5"
+											/>
+
+											<Button
+												data-testid="ViewTokens"
+												variant="secondary-icon"
+												className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent px-0.5 py-px whitespace-nowrap disabled:bg-transparent dark:disabled:bg-transparent"
+												onClick={() => console.log("view tokens")}
+											>
+												<span>{t("COMMON.VIEW")}</span>
+											</Button>
+										</div>
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 

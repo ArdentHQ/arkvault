@@ -64,6 +64,9 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 		>
 			{hasTokens && (
 				<div className="hidden items-center md:flex">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-1.5 leading-5 font-semibold">
+						{t("COMMON.TOKEN_HOLDINGS")}
+					</div>
 					<TokensSummary wallet={wallet} />
 
 					<Divider
