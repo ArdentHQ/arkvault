@@ -16,6 +16,9 @@ import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
+import { TokenRepository } from "../profiles/token.repository";
+import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -41,6 +44,7 @@ export class ClientService {
 			evm,
 			transactions,
 		});
+
 	}
 
 	public async transaction(
@@ -49,6 +53,32 @@ export class ClientService {
 	): Promise<ConfirmedTransactionData> {
 		const body = await this.#client.transactions().get(id, query);
 		return new ConfirmedTransactionData().configure(body.data);
+	}
+
+	public async tokens(): Promise<TokenRepository> {
+		const response = await this.#client.tokens().all();
+		const tokens = new TokenRepository()
+		tokens.fill(response.data)
+		return tokens
+	}
+
+	public async walletTokens(address: string): Promise<WalletTokenRepository> {
+		const response = await this.#client.tokens().byWalletAddress(address);
+		const tokens = new WalletTokenRepository()
+		tokens.fill(response.data)
+		return tokens
+	}
+
+	public async tokenHolders(contractAddress: string): Promise<WalletTokenRepository> {
+		const response = await this.#client.tokens().holders(contractAddress)
+		const holders = new WalletTokenRepository()
+		holders.fill(response.results)
+		return holders
+	}
+
+	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
+		const response = await this.#client.tokens().get(contractAddress)
+		return new TokenDTO(response.data)
 	}
 
 	public async transactions(
@@ -124,11 +154,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
