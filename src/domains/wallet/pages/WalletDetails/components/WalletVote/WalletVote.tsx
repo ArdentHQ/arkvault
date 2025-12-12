@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { TokensSummary } from "@/domains/portfolio/components/Tokens/TokensSummary";
-import { t } from "i18next";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet | undefined;
