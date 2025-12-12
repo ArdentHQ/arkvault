@@ -1,9 +1,9 @@
-import { ITokenDTO } from "./token.contracts";
+import { TokenData } from "./token.contracts";
 
 export class TokenDTO {
-	#data: ITokenDTO;
+	#data: TokenData;
 
-	constructor(data: ITokenDTO) {
+	constructor(data: TokenData) {
 		this.#data = data;
 	}
 
@@ -29,5 +29,9 @@ export class TokenDTO {
 
 	totalSupply(): string {
 		return this.#data.totalSupply;
+	}
+
+	toJSON(): TokenData {
+		return this.#data
 	}
 }

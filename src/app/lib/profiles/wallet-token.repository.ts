@@ -1,6 +1,7 @@
 import { DataRepository } from "./data.repository";
-import { IWalletTokenData } from "./token.contracts";
-import { WalletToken } from "./wallet-token.dto";
+import { TokenDTO } from "./token.dto";
+import { WalletToken } from "./wallet-token";
+import { WalletTokenDTO } from "./wallet-token.dto";
 
 export class WalletTokenRepository {
 	readonly #data: DataRepository;
@@ -36,14 +37,14 @@ export class WalletTokenRepository {
 	}
 
 	public findByTokenAddress(tokenAddress: string): WalletToken | undefined {
-		return this.values().find((token: WalletToken) => token.tokenAddress() === tokenAddress);
+		return this.values().find((item: WalletToken) => item.token().address() === tokenAddress);
 	}
 
 	public push(token: WalletToken): void {
 		this.#data.set(token.address(), token);
 	}
 
-	public create(data: IWalletTokenData): WalletToken {
+	create(data: { walletToken: WalletTokenDTO, token: TokenDTO }) {
 		const token = new WalletToken(data);
 
 		this.push(token);

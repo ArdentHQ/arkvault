@@ -1,5 +1,5 @@
 import { DataRepository } from "./data.repository";
-import { ITokenDTO } from "./token.contracts";
+import { TokenData } from "./token.contracts";
 import { TokenDTO } from "./token.dto";
 
 export class TokenRepository {
@@ -43,7 +43,7 @@ export class TokenRepository {
 		this.#data.set(token.address(), token);
 	}
 
-	public create(data: ITokenDTO): TokenDTO {
+	public create(data: TokenData): TokenDTO {
 		const token = new TokenDTO(data);
 
 		this.push(token);

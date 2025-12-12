@@ -19,6 +19,8 @@ import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfi
 import { TokenRepository } from "@/app/lib/profiles/token.repository";
 import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletTokenData } from "@/app/lib/profiles/token.contracts";
+import { WalletTokenDTO } from "../profiles/wallet-token.dto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -61,11 +63,9 @@ export class ClientService {
 		return tokens;
 	}
 
-	public async walletTokens(address: string): Promise<WalletTokenRepository> {
+	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {
 		const response = await this.#client.tokens().byWalletAddress(address);
-		const tokens = new WalletTokenRepository();
-		tokens.fill(response.data);
-		return tokens;
+		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData))
 	}
 
 	public async tokenHolders(contractAddress: string): Promise<WalletTokenRepository> {
@@ -153,11 +153,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}

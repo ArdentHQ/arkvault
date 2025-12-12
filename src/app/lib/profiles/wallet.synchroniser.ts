@@ -2,6 +2,7 @@ import { Contracts, Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
+import { WalletToken } from "./wallet-token.js";
 
 export class WalletSynchroniser implements IWalletSynchroniser {
 	readonly #wallet: IReadWriteWallet;
@@ -54,11 +55,17 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 	/** {@inheritDoc IWalletSynchroniser.tokens} */
 	public async tokens(): Promise<void> {
-		const tokens = await this.#wallet.client().walletTokens(this.#wallet.address());
+		const walletTokens = await this.#wallet.client().walletTokens(this.#wallet.address());
 
 		this.#wallet.tokens().flush();
-		for (const token of tokens.values()) {
-			this.#wallet.tokens().push(token);
-		}
+
+		await Promise.allSettled(walletTokens.map(async (walletToken) => {
+			try {
+				const token = await this.#wallet.client().tokenByContractAddress(walletToken.tokenAddress())
+				this.#wallet.tokens().create({ token, walletToken })
+			} catch (error) {
+				console.error(`[WalletSynchroniser#tokens] Failed to fetch token for address: ${walletToken.tokenAddress()}`, { error })
+			}
+		}));
 	}
 }

@@ -1,4 +1,4 @@
-export interface ITokenDTO {
+export interface TokenData {
 	address: string;
 	decimals: number;
 	deploymentHash: string;
@@ -7,7 +7,7 @@ export interface ITokenDTO {
 	totalSupply: string;
 }
 
-export interface IWalletTokenData {
+export interface WalletTokenData {
 	address: string;
 	balance: number;
 	tokenAddress: string;

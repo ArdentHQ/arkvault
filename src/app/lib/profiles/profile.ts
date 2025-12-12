@@ -54,6 +54,7 @@ import { BigNumber } from "@/app/lib/helpers/bignumber.js";
 import { WalletAliasProvider } from "./profile.wallet.alias.js";
 import { isPreview } from "@/utils/test-helpers";
 import { DraftTransactionFactory } from "@/app/lib/mainsail/draft-transaction.factory.js";
+import { TokenService } from "./token.service.js";
 
 export class Profile implements IProfile {
 	/**
@@ -256,6 +257,14 @@ export class Profile implements IProfile {
 	 */
 	readonly #status: IProfileStatus;
 
+	/**
+	 * The token service.
+	 *
+	 * @type {TokenService}
+	 * @memberof Profile
+	 */
+	readonly #tokenService: TokenService;
+
 	public constructor(data: IProfileInput, env: Environment) {
 		this.#attributes = new AttributeBag<IProfileInput>(data);
 		this.#contactRepository = new ContactRepository(this);
@@ -281,6 +290,7 @@ export class Profile implements IProfile {
 		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
 		this.#ledgerService = new LedgerService({ config: this.activeNetwork().config() });
 		this.#draftTransactionFactory = new DraftTransactionFactory({ env, profile: this });
+		this.#tokenService = new TokenService({ profile: this });
 	}
 
 	/** {@inheritDoc IProfile.id} */
@@ -594,5 +604,9 @@ export class Profile implements IProfile {
 
 	public draftTransactionFactory(): DraftTransactionFactory {
 		return this.#draftTransactionFactory;
+	}
+
+	public tokens(): TokenService {
+		return this.#tokenService;
 	}
 }

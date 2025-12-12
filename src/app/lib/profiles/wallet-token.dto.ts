@@ -1,9 +1,9 @@
-import { IWalletTokenData } from "./token.contracts";
+import { WalletTokenData } from "./token.contracts";
 
-export class WalletToken {
-	#data: IWalletTokenData;
+export class WalletTokenDTO {
+	#data: WalletTokenData;
 
-	constructor(data: IWalletTokenData) {
+	constructor(data: WalletTokenData) {
 		this.#data = data;
 	}
 
@@ -18,4 +18,9 @@ export class WalletToken {
 	tokenAddress(): string {
 		return this.#data.tokenAddress;
 	}
+
+	toJSON(): WalletTokenData {
+		return this.#data;
+	}
 }
+
