@@ -9,30 +9,28 @@ const DefaultToken = ({ tokenName }: { tokenName: string }) => (
 	</div>
 );
 
-export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
-	return (
-		<>
-			<div data-testid="TokensSummary" className="flex items-center gap-1">
-				<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
-					{Array.from({ length: Math.min(VISIBLE_TOKEN_COUNT, wallet.tokenCount()) }).map((_, index) => (
-						<div
-							key={index}
-							className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0"
-						>
-							<DefaultToken tokenName="Test Token" />
-						</div>
-					))}
-				</div>
-
-				{wallet.tokenCount() > VISIBLE_TOKEN_COUNT && (
+export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => (
+	<>
+		<div data-testid="TokensSummary" className="flex items-center gap-1">
+			<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
+				{Array.from({ length: Math.min(VISIBLE_TOKEN_COUNT, wallet.tokenCount()) }).map((_, index) => (
 					<div
-						data-testid="TokensSummary--Count"
-						className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 leading-5 font-semibold"
+						key={index}
+						className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0"
 					>
-						+{wallet.tokenCount() - VISIBLE_TOKEN_COUNT}
+						<DefaultToken tokenName="Test Token" />
 					</div>
-				)}
+				))}
 			</div>
-		</>
-	);
-};
+
+			{wallet.tokenCount() > VISIBLE_TOKEN_COUNT && (
+				<div
+					data-testid="TokensSummary--Count"
+					className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 leading-5 font-semibold"
+				>
+					+{wallet.tokenCount() - VISIBLE_TOKEN_COUNT}
+				</div>
+			)}
+		</div>
+	</>
+);
