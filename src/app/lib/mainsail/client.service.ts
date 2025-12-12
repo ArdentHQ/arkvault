@@ -20,7 +20,7 @@ import { TokenRepository } from "@/app/lib/profiles/token.repository";
 import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { WalletTokenData } from "@/app/lib/profiles/token.contracts";
-import { WalletTokenDTO } from "../profiles/wallet-token.dto";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 

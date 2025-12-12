@@ -2,7 +2,6 @@ import { Contracts, Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
-import { WalletToken } from "./wallet-token.js";
 
 export class WalletSynchroniser implements IWalletSynchroniser {
 	readonly #wallet: IReadWriteWallet;
