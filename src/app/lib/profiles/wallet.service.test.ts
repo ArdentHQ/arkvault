@@ -25,6 +25,7 @@ describe("WalletService", () => {
 			// Mock synchroniser methods
 			const identityFn = vi.fn().mockResolvedValue(undefined);
 			const votesFn = vi.fn().mockResolvedValue(undefined);
+			const tokensFn = vi.fn().mockResolvedValue(undefined);
 
 			// Mock wallets
 			const mockWallet = {
@@ -32,6 +33,7 @@ describe("WalletService", () => {
 				synchroniser: () => ({
 					identity: identityFn,
 					votes: votesFn,
+					tokens: tokensFn,
 				}),
 			};
 			const walletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([mockWallet as any]);
@@ -53,6 +55,7 @@ describe("WalletService", () => {
 			expect(pqueueSpy).toHaveBeenCalledWith(expect.any(Array));
 			expect(identityFn).toHaveBeenCalled();
 			expect(votesFn).toHaveBeenCalled();
+			expect(tokensFn).toHaveBeenCalled();
 
 			availableNetworksSpy.mockRestore();
 			walletsSpy.mockRestore();
