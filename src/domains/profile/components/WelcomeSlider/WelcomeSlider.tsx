@@ -1,6 +1,7 @@
-import React from "react";
-import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
+
+import { Image } from "@/app/components/Image";
+import React from "react";
 
 interface SlideProperties {
 	title: string;
@@ -58,7 +59,7 @@ export const WelcomeSlider = (): JSX.Element => {
 		<Slider {...settings}>
 			<Slide
 				title="Easy Access to Your Digital Assets"
-				subtitle="Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler."
+				subtitle="Access and manage your ARK assets with our web-based ARK Wallet. Importing and viewing your addresses has never been simpler."
 				imageName="WelcomeSlide1"
 				imageNameSm="WelcomeSlide1Sm"
 			/>
