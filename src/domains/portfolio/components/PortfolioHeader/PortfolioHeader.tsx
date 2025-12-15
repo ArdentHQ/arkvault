@@ -309,12 +309,12 @@ export const PortfolioHeader = ({
 											{t("COMMON.ADDRESS")}
 										</p>
 
-										<div className="flex h-[17px] items-center md:h-5 w-full sm:w-auto">
-											<div className="no-ligatures w-full sm:w-auto text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5">
-												<div className="hidden lg:hidden sm:block">
+										<div className="flex h-[17px] w-full items-center sm:w-auto md:h-5">
+											<div className="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 w-full text-base leading-[17px] font-semibold sm:w-auto md:text-base md:leading-5">
+												<div className="hidden sm:block lg:hidden">
 													<TruncateMiddle text={wallet.address()} maxChars={16} />
 												</div>
-												<div className="sm:hidden lg:min-w-[26.375rem] lg:block w-full grow">
+												<div className="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]">
 													<Address
 														address={wallet.address()}
 														truncateOnTable={true}

@@ -172,7 +172,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 			<Section className="flex-1 pt-2!">
 				<div
 					className={cn({
-						"hidden": mobileActiveTab !== "addressDetails",
+						hidden: mobileActiveTab !== "addressDetails",
 					})}
 				>
 					Address details
