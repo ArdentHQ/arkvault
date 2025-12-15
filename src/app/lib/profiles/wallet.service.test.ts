@@ -32,8 +32,8 @@ describe("WalletService", () => {
 				networkId: () => "test-network",
 				synchroniser: () => ({
 					identity: identityFn,
-					votes: votesFn,
 					tokens: tokensFn,
+					votes: votesFn,
 				}),
 			};
 			const walletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([mockWallet as any]);
