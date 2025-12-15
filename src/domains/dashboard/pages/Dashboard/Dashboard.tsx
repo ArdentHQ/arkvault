@@ -14,9 +14,6 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { useDeeplinkActionHandler } from "@/app/hooks/use-deeplink";
-import { wallet } from "@/domains/wallet/images";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Address } from "@/app/components/Address";
 import { useBreakpoint } from "@/app/hooks";
 
