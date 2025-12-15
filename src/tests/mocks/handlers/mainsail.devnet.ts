@@ -85,6 +85,7 @@ export const mainsailDevnetHandlers = [
 			result: "0x0",
 		});
 	}),
+
 	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier", (request) => {
 		const address = request.params.identifier as string;
 
@@ -97,5 +98,28 @@ export const mainsailDevnetHandlers = [
 		}
 
 		return HttpResponse.json(require("../../fixtures/coins/mainsail/devnet/wallets/not-found.json"));
+	}),
+
+	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier/tokens", (request) => {
+		const address = request.params.identifier as string;
+
+		if (!address) {
+			return HttpResponse.json(require("../../fixtures/coins/mainsail/mainnet/wallets/not-found.json"));
+		}
+
+		return HttpResponse.json({
+			"meta": {
+				"totalCountIsEstimate": false,
+				"count": 48,
+				"first": "/peers?limit=100&page=1",
+				"last": "/peers?limit=100&page=1",
+				"next": null,
+				"pageCount": 1,
+				"previous": null,
+				"self": "/peers?limit=100&page=1",
+				"totalCount": 48
+			},
+			"data": []
+		});
 	}),
 ];
