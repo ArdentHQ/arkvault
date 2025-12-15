@@ -125,6 +125,9 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 								<span className="whitespace-nowrap">{t("COMMON.VOTING")}</span>
 							</Tab>
 						)}
+						<Tab tabId="addressDetails" className="sm:hidden">
+							<span className="whitespace-nowrap">Address Details</span>
+						</Tab>
 					</TabList>
 				</TabScroll>
 			</Tabs>
@@ -163,6 +166,16 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 						onLoading={setIsUpdatingTransactions}
 						selectedWallets={selectedWallets.length}
 					/>
+				</div>
+			</Section>
+
+			<Section className="flex-1 pt-2!">
+				<div
+					className={cn({
+						"hidden": mobileActiveTab !== "addressDetails",
+					})}
+				>
+					Address details
 				</div>
 			</Section>
 		</Page>

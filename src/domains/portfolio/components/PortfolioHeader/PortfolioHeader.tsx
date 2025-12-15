@@ -309,23 +309,29 @@ export const PortfolioHeader = ({
 											{t("COMMON.ADDRESS")}
 										</p>
 
-										<div className="flex h-[17px] items-center md:h-5">
-											<span className="no-ligatures text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5">
-												<span className="lg:hidden">
+										<div className="flex h-[17px] items-center md:h-5 w-full sm:w-auto">
+											<div className="no-ligatures w-full sm:w-auto text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-base leading-[17px] font-semibold md:text-base md:leading-5">
+												<div className="hidden lg:hidden sm:block">
 													<TruncateMiddle text={wallet.address()} maxChars={16} />
-												</span>
-												<span className="hidden min-w-[26.375rem] lg:block">
-													<Address address={wallet.address()} />
-												</span>
-											</span>
+												</div>
+												<div className="sm:hidden lg:min-w-[26.375rem] lg:block w-full grow">
+													<Address
+														address={wallet.address()}
+														truncateOnTable={true}
+														addressClass="leading-[17px] sm:leading-5"
+													/>
+												</div>
+											</div>
 										</div>
 
-										<WalletIcons
-											wallet={wallet}
-											exclude={["isKnown", "isStarred", "isTestNetwork"]}
-											iconColor="text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
-											iconSize="md"
-										/>
+										<div className="hidden sm:block">
+											<WalletIcons
+												wallet={wallet}
+												exclude={["isKnown", "isStarred", "isTestNetwork"]}
+												iconColor="text-theme-secondary-300 dark:text-theme-dark-500 dim:text-theme-dim-500 hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200 p-0!"
+												iconSize="md"
+											/>
+										</div>
 									</div>
 								)}
 
@@ -359,11 +365,13 @@ export const PortfolioHeader = ({
 												/>
 
 												{!!wallet.publicKey() && (
-													<Copy
-														copyData={wallet.publicKey() as string}
-														tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
-														icon={() => <Icon name="CopyKey" />}
-													/>
+													<div className="hidden sm:block">
+														<Copy
+															copyData={wallet.publicKey() as string}
+															tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
+															icon={() => <Icon name="CopyKey" />}
+														/>
+													</div>
 												)}
 											</div>
 
@@ -434,6 +442,7 @@ export const PortfolioHeader = ({
 								<div className="flex flex-row items-center gap-3">
 									{selectedWallets.length === 1 && (
 										<Tooltip
+											wrapperClass="w-full sm:w-auto"
 											content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
 											disabled={
 												!(
@@ -463,6 +472,7 @@ export const PortfolioHeader = ({
 
 									{selectedWallets.length > 1 && (
 										<Tooltip
+											wrapperClass="w-full sm:w-auto"
 											content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
 											disabled={!profile.totalBalance().isZero()}
 										>
