@@ -108,18 +108,18 @@ export const mainsailDevnetHandlers = [
 		}
 
 		return HttpResponse.json({
-			"meta": {
-				"totalCountIsEstimate": false,
-				"count": 48,
-				"first": "/peers?limit=100&page=1",
-				"last": "/peers?limit=100&page=1",
-				"next": null,
-				"pageCount": 1,
-				"previous": null,
-				"self": "/peers?limit=100&page=1",
-				"totalCount": 48
+			meta: {
+				totalCountIsEstimate: false,
+				count: 48,
+				first: "/peers?limit=100&page=1",
+				last: "/peers?limit=100&page=1",
+				next: null,
+				pageCount: 1,
+				previous: null,
+				self: "/peers?limit=100&page=1",
+				totalCount: 48,
 			},
-			"data": []
+			data: [],
 		});
 	}),
 ];
