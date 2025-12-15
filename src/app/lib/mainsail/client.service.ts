@@ -17,7 +17,6 @@ import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 import { TokenRepository } from "@/app/lib/profiles/token.repository";
-import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { WalletTokenData } from "@/app/lib/profiles/token.contracts";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
@@ -68,9 +67,9 @@ export class ClientService {
 		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData));
 	}
 
-	public async tokenHolders(contractAddress: string): Promise<WalletTokenRepository> {
+	public async tokenHolders(contractAddress: string): Promise<TokenRepository> {
 		const response = await this.#client.tokens().holders(contractAddress);
-		const holders = new WalletTokenRepository();
+		const holders = new TokenRepository();
 		holders.fill(response.results);
 		return holders;
 	}
@@ -153,11 +152,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
