@@ -4,7 +4,7 @@ import { describe, it, expect, beforeAll } from "vitest";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 describe("TokenDTO", () => {
-	const Fixture = Fixtures.ByContractAddress.data;
+	const Fixture = Fixtures.ByContractAddress;
 	let token: TokenDTO;
 
 	beforeAll(() => {
