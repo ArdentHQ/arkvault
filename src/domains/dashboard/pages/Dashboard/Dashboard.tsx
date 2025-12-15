@@ -14,6 +14,11 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { useDeeplinkActionHandler } from "@/app/hooks/use-deeplink";
+import { wallet } from "@/domains/wallet/images";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { Address } from "@/app/components/Address";
+import { useBreakpoint } from "@/app/hooks";
 
 export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
@@ -98,6 +103,17 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 		}
 	}, [isUpdatingTransactions]);
 
+	const { isXs } = useBreakpoint();
+
+	const hasSingleWalletSelected = selectedWallets.length === 1;
+	const wallet = selectedWallets.at(0);
+
+	useEffect(() => {
+		if (!isXs || !hasSingleWalletSelected) {
+			setMobileActiveTab("transactions");
+		}
+	}, [isXs, hasSingleWalletSelected]);
+
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
 			<Section className="pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
@@ -125,9 +141,11 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 								<span className="whitespace-nowrap">{t("COMMON.VOTING")}</span>
 							</Tab>
 						)}
-						<Tab tabId="addressDetails" className="sm:hidden">
-							<span className="whitespace-nowrap">Address Details</span>
-						</Tab>
+						{hasSingleWalletSelected && (
+							<Tab tabId="addressDetails" className="sm:hidden">
+								<span className="whitespace-nowrap">Address Details</span>
+							</Tab>
+						)}
 					</TabList>
 				</TabScroll>
 			</Tabs>
@@ -169,15 +187,43 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 				</div>
 			</Section>
 
-			<Section className="flex-1 pt-2!">
-				<div
-					className={cn({
-						hidden: mobileActiveTab !== "addressDetails",
-					})}
-				>
-					Address details
-				</div>
-			</Section>
+			{hasSingleWalletSelected && wallet && (
+				<Section className="flex-1 pt-2!">
+					<div
+						className={cn("space-y-3", {
+							hidden: mobileActiveTab !== "addressDetails",
+						})}
+					>
+						{wallet.username() && (
+							<div className="border-theme-secondary-300 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold">
+								<div className="text-theme-secondary-700 shrink-0">{t("COMMON.USERNAME")}</div>
+								<div className="text-theme-secondary-900">{wallet.username()}</div>
+							</div>
+						)}
+
+						{wallet.isLedger() && (
+							<div className="border-theme-secondary-300 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold">
+								<div className="text-theme-secondary-700 shrink-0">{t("COMMON.TYPE")}</div>
+								<div className="text-theme-secondary-900">{t("COMMON.LEDGER")}</div>
+							</div>
+						)}
+
+						{wallet.publicKey() && (
+							<div className="border-theme-secondary-300 mb-3 flex min-w-0 items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold">
+								<div className="text-theme-secondary-700 shrink-0">{t("COMMON.PUBLIC_KEY")}</div>
+								<div className="text-theme-secondary-900 min-w-2/5">
+									<Address
+										address={wallet.publicKey()}
+										truncateOnTable
+										showCopyButton
+										addressClass="leading-[17px] sm:leading-5"
+									/>
+								</div>
+							</div>
+						)}
+					</div>
+				</Section>
+			)}
 		</Page>
 	);
 };
