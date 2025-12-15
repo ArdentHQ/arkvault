@@ -10,12 +10,6 @@ export class WalletTokenRepository {
 		this.#data = new DataRepository();
 	}
 
-	public fill(tokens: object): void {
-		for (const [id, token] of Object.entries(tokens)) {
-			this.#data.set(id, new WalletToken(token));
-		}
-	}
-
 	public all(): Record<string, WalletToken> {
 		return this.#data.all() as Record<string, WalletToken>;
 	}
