@@ -6,6 +6,7 @@ export const translations = {
 	ADDRESS: "Address",
 	ADDRESSES: "Addresses",
 	ADDRESSING: "Addressing",
+	ADDRESS_DETAILS: "Address Details",
 	ADDRESS_NAME: "Address Name",
 	ADDRESS_WITH_COUNT_one: "{{count}} Address",
 	ADDRESS_WITH_COUNT_other: "{{count}} Addresses",

@@ -140,7 +140,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 						)}
 						{hasSingleWalletSelected && (
 							<Tab tabId="addressDetails" className="sm:hidden">
-								<span className="whitespace-nowrap">Address Details</span>
+								<span className="whitespace-nowrap">{t("COMMON.ADDRESS_DETAILS")}</span>
 							</Tab>
 						)}
 					</TabList>
@@ -192,23 +192,33 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 						})}
 					>
 						{wallet.username() && (
-							<div className="border-theme-secondary-300 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold">
-								<div className="text-theme-secondary-700 shrink-0">{t("COMMON.USERNAME")}</div>
-								<div className="text-theme-secondary-900">{wallet.username()}</div>
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none">
+								<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0">
+									{t("COMMON.USERNAME")}
+								</div>
+								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 truncate">
+									{wallet.username()}
+								</div>
 							</div>
 						)}
 
 						{wallet.isLedger() && (
-							<div className="border-theme-secondary-300 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold">
-								<div className="text-theme-secondary-700 shrink-0">{t("COMMON.TYPE")}</div>
-								<div className="text-theme-secondary-900">{t("COMMON.LEDGER")}</div>
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none">
+								<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0">
+									{t("COMMON.TYPE")}
+								</div>
+								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50">
+									{t("COMMON.LEDGER")}
+								</div>
 							</div>
 						)}
 
 						{wallet.publicKey() && (
-							<div className="border-theme-secondary-300 mb-3 flex min-w-0 items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold">
-								<div className="text-theme-secondary-700 shrink-0">{t("COMMON.PUBLIC_KEY")}</div>
-								<div className="text-theme-secondary-900 min-w-2/5">
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex min-w-0 items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none">
+								<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0">
+									{t("COMMON.PUBLIC_KEY")}
+								</div>
+								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6">
 									<Address
 										address={wallet.publicKey()}
 										truncateOnTable
