@@ -7500,29 +7500,29 @@ exports[`Dashboard > should render 1`] = `
             class="space-y-3 hidden"
           >
             <div
-              class="border-theme-secondary-300 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none"
             >
               <div
-                class="text-theme-secondary-700 shrink-0"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0"
               >
                 Username
               </div>
               <div
-                class="text-theme-secondary-900"
+                class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 truncate"
               >
                 vault_test_address
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 mb-3 flex min-w-0 items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold"
+              class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex min-w-0 items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none"
             >
               <div
-                class="text-theme-secondary-700 shrink-0"
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0"
               >
                 Public Key
               </div>
               <div
-                class="text-theme-secondary-900 min-w-2/5"
+                class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6"
               >
                 <div
                   class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
