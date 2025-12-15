@@ -4,7 +4,6 @@ import { TokenRepository } from "./token.repository";
 import { TokenDTO } from "./token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
-
 describe("TokenRepository", () => {
 	const tokenAddress = Fixtures.ByContractAddress.data.address;
 	let repository: TokenRepository;
