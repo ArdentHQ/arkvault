@@ -22,4 +22,12 @@ export interface IWalletSynchroniser {
 	 * @memberof IReadWriteWallet
 	 */
 	votes(): Promise<void>;
+
+	/**
+	 * Synchronise wallet tokens.
+	 *
+	 * @return {Promise<void>}
+	 * @memberof IReadWriteWallet
+	 */
+	tokens(): Promise<void>;
 }

@@ -24,6 +24,7 @@ import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { Manifest } from "@/app/lib/mainsail/manifest.class";
+import { WalletTokenRepository } from "./wallet-token.repository.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -767,4 +768,12 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	generateAlias(): string;
+
+	/**
+	 * Returns wallet tokens repository.
+	 *
+	 * @return {WalletTokenRepository}
+	 * @memberof IReadWriteWallet
+	 */
+	tokens(): WalletTokenRepository;
 }
