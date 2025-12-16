@@ -127,6 +127,9 @@ import MobileSettingsDim from "./mobile-settings-light.svg?react";
 import MobileContactsDark from "./mobile-contacts-dark.svg?react";
 import MobileContactsLight from "./mobile-contacts-dim.svg?react";
 import MobileContactsDim from "./mobile-contacts-light.svg?react";
+import MobileExchangesDark from "./mobile-exchanges-dark.svg?react";
+import MobileExchangesLight from "./mobile-exchanges-dim.svg?react";
+import MobileExchangesDim from "./mobile-exchanges-light.svg?react";
 import ExchangesDark from "./exchanges-dark.svg?react";
 import ExchangesDim from "./exchanges-dim.svg?react";
 import ExchangesLight from "./exchanges-light.svg?react";
@@ -268,6 +271,9 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MobileContactsDark,
 	MobileContactsDim,
 	MobileContactsLight,
+	MobileExchangesDark,
+	MobileExchangesDim,
+	MobileExchangesLight,
 	MobileSettingsDark,
 	MobileSettingsDim,
 	MobileSettingsLight,
