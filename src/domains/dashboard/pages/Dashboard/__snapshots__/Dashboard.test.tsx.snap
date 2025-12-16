@@ -980,7 +980,7 @@ exports[`Dashboard > should render 1`] = `
                                   <span>
                                     <span>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-sm lg:text-base font-semibold text-base absolute w-full"
+                                        class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base absolute w-full"
                                         data-testid="Address__address"
                                       >
                                         0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
@@ -7533,7 +7533,7 @@ exports[`Dashboard > should render 1`] = `
                     <span>
                       <span>
                         <span
-                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 text-sm font-semibold text-base absolute w-full"
+                          class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-sm absolute w-full"
                           data-testid="Address__address"
                         >
                           021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175
