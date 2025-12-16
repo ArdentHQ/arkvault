@@ -41,6 +41,14 @@ export const SettingsWrapper = ({
 							dimIcon="SettingsDim"
 						/>
 					}
+					mobileTitleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="MobileSettingsLight"
+							darkIcon="MobileSettingsDark"
+							dimIcon="MobileSettingsDim"
+						/>
+					}
 				/>
 
 				<Section>

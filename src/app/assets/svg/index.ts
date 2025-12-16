@@ -121,6 +121,9 @@ import VotesLight from "./votes-light.svg?react";
 import MobileVotesDark from "./mobile-votes-dark.svg?react";
 import MobileVotesLight from "./mobile-votes-dim.svg?react";
 import MobileVotesDim from "./mobile-votes-light.svg?react";
+import MobileSettingsDark from "./mobile-settings-dark.svg?react";
+import MobileSettingsLight from "./mobile-settings-dim.svg?react";
+import MobileSettingsDim from "./mobile-settings-light.svg?react";
 import ExchangesDark from "./exchanges-dark.svg?react";
 import ExchangesDim from "./exchanges-dim.svg?react";
 import ExchangesLight from "./exchanges-light.svg?react";
@@ -259,6 +262,9 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MenuOpen,
 	Minimize,
 	MnemonicImportMethod,
+	MobileSettingsDark,
+	MobileSettingsDim,
+	MobileSettingsLight,
 	MobileVotesDark,
 	MobileVotesDim,
 	MobileVotesLight,
