@@ -6,6 +6,7 @@ import { useBreakpoint } from "@/app/hooks";
 interface Properties {
 	title: string;
 	titleIcon?: React.ReactNode;
+	mobileTitleIcon?: React.ReactNode;
 	subtitle?: string | React.ReactNode;
 	className?: string;
 	titleClassName?: string;
@@ -69,6 +70,7 @@ export const PageHeader = ({
 	subtitle,
 	extra,
 	border = false,
+	mobileTitleIcon,
 	...parameters
 }: Omit<Properties, "isPageHeader">) => {
 	const { isMdAndAbove } = useBreakpoint();
@@ -82,12 +84,10 @@ export const PageHeader = ({
 	}
 
 	return (
-		<section className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black">
-			<div className="flex flex-col gap-2">
-				<h1 className="mb-0 text-lg font-semibold">{title}</h1>
-				{subtitle && (
-					<div className="text-theme-secondary-text flex items-center text-sm leading-5">{subtitle}</div>
-				)}
+		<section className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black">
+			<div className="flex items-center gap-2">
+				<div className="inline">{mobileTitleIcon ?? undefined}</div>
+				<h1 className="mb-0 text-lg font-semibold leading-[21px]">{title}</h1>
 			</div>
 			{extra}
 		</section>

@@ -118,6 +118,9 @@ import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import VotesDark from "./votes-dark.svg?react";
 import VotesDim from "./votes-dim.svg?react";
 import VotesLight from "./votes-light.svg?react";
+import MobileVotesDark from "./mobile-votes-dark.svg?react";
+import MobileVotesLight from "./mobile-votes-dim.svg?react";
+import MobileVotesDim from "./mobile-votes-light.svg?react";
 import ExchangesDark from "./exchanges-dark.svg?react";
 import ExchangesDim from "./exchanges-dim.svg?react";
 import ExchangesLight from "./exchanges-light.svg?react";
@@ -256,6 +259,9 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MenuOpen,
 	Minimize,
 	MnemonicImportMethod,
+	MobileVotesDark,
+	MobileVotesDim,
+	MobileVotesLight,
 	MoneyCoinSwap,
 	NoteCheck,
 	Pencil,
