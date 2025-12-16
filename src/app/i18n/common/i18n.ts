@@ -10,6 +10,7 @@ export const translations = {
 	ADDRESS_WITH_COUNT_one: "{{count}} Address",
 	ADDRESS_WITH_COUNT_other: "{{count}} Addresses",
 	ADD_NEW: "Add New",
+	ADD_TOKEN: "Add Token",
 	AGE: "Age",
 	AGREE_DO_NOT_SHOW_AGAIN: "I agree, do not show this message again.",
 	ALERT: {
@@ -504,6 +505,8 @@ export const translations = {
 	TITLE: "Title",
 	TO: "To",
 	TOKEN: "Token",
+	TOKENS: "Tokens",
+	TOKEN_BALANCE: "Token Balance",
 	TOKEN_HOLDINGS: "Token Holdings",
 	TOTAL: "Total",
 	TOTAL_BALANCE: "Total Balance",

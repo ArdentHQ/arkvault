@@ -10,6 +10,7 @@ import { translations as TRANSACTION } from "../../../domains/transaction/i18n";
 import { translations as VOTE } from "../../../domains/vote/i18n";
 import { translations as WALLETS } from "../../../domains/wallet/i18n";
 import { translations as COMMON } from "../common/i18n";
+import { translations as TOKENS } from "../../../domains/tokens/i18n";
 
 export const buildTranslations = () => ({
 	COMMON,
@@ -23,4 +24,5 @@ export const buildTranslations = () => ({
 	TRANSACTION,
 	VOTE,
 	WALLETS,
+	TOKENS,
 });

@@ -13,6 +13,11 @@ export const getNavigationMenu = (t: TFunction, pathname: string): NavigationBar
 			title: t("COMMON.PORTFOLIO"),
 		},
 		{
+			isActive: pathname.includes("/tokens"),
+			mountPath: (profileId) => generatePath(ProfilePaths.Tokens, { profileId }),
+			title: t("COMMON.TOKENS"),
+		},
+		{
 			isActive: pathname.includes("/exchange"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 			title: t("COMMON.EXCHANGE"),
