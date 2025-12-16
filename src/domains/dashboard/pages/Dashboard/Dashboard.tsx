@@ -223,7 +223,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 										address={wallet.publicKey()}
 										truncateOnTable
 										showCopyButton
-										addressClass="leading-[17px] sm:leading-5"
+										addressClass="leading-[17px] sm:leading-5 text-sm"
 									/>
 								</div>
 							</div>

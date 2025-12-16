@@ -318,7 +318,7 @@ export const PortfolioHeader = ({
 													<Address
 														address={wallet.address()}
 														truncateOnTable={true}
-														addressClass="leading-[17px] sm:leading-5"
+														addressClass="leading-[17px] sm:leading-5 text-sm lg:text-base"
 													/>
 												</div>
 											</div>
