@@ -28,6 +28,7 @@ import { useLedgerMigrationStatus } from "@/domains/wallet/hooks/use-ledger-wall
 import { useLocalStorage } from "usehooks-ts";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { useBreakpoint } from "@/app/hooks";
 
 export const PortfolioHeader = ({
 	profile,
@@ -149,6 +150,8 @@ export const PortfolioHeader = ({
 			openPanel(Panel.Addresses);
 		}
 	};
+
+	const { isXs } = useBreakpoint();
 
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 md:pt-8 lg:container">
@@ -316,9 +319,10 @@ export const PortfolioHeader = ({
 												</div>
 												<div className="w-full grow sm:hidden lg:block lg:min-w-[26.375rem]">
 													<Address
+														size={isXs ? "sm" : undefined}
 														address={wallet.address()}
 														truncateOnTable={true}
-														addressClass="leading-[17px] sm:leading-5 text-sm lg:text-base"
+														addressClass="leading-[17px] sm:leading-5"
 													/>
 												</div>
 											</div>
