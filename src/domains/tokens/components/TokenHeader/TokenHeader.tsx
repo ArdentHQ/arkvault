@@ -101,7 +101,7 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile; }) => {
 						<Button
 							variant="secondary"
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
-							onClick={() => openPanel(Panel.CreateAddress)}
+							onClick={() => console.log("TODO: Refresh tokens")}
 						>
 
 							<Icon
