@@ -87,7 +87,7 @@ export const PageHeader = ({
 		<section className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black">
 			<div className="flex items-center gap-2">
 				<div className="inline">{mobileTitleIcon ?? undefined}</div>
-				<h1 className="mb-0 text-lg font-semibold leading-[21px]">{title}</h1>
+				<h1 className="mb-0 text-lg leading-[21px] font-semibold">{title}</h1>
 			</div>
 			{extra}
 		</section>
