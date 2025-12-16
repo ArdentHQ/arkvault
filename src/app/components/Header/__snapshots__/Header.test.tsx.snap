@@ -174,9 +174,6 @@ exports[`PageHeader > should render responsive (xs) 1`] = `
     <div
       class="flex items-center gap-2"
     >
-      <div
-        class="inline"
-      />
       <h1
         class="mb-0 text-lg leading-[21px] font-semibold"
       >

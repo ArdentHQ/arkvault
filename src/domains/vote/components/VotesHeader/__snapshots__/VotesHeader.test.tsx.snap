@@ -8,9 +8,6 @@ exports[`VotesHeader > should render a different title if on select validator st
     <div
       class="flex items-center gap-2"
     >
-      <div
-        class="inline"
-      />
       <h1
         class="mb-0 text-lg leading-[21px] font-semibold"
       >
