@@ -71,20 +71,6 @@ describe("TokenRepository", () => {
 		expect(values[0].address()).toBe(token.address());
 	});
 
-	it("should find token by name", () => {
-		repository.push(token);
-		const foundToken = repository.findByName("DARK20");
-
-		expect(foundToken).toBeInstanceOf(TokenDTO);
-		expect(foundToken?.address()).toBe(token.address());
-	});
-
-	it("should return undefined", () => {
-		const foundToken = repository.findByName("None");
-
-		expect(foundToken).toBeUndefined();
-	});
-
 	it("should push token to repository", () => {
 		repository.push(token);
 

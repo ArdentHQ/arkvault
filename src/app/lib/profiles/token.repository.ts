@@ -35,10 +35,6 @@ export class TokenRepository {
 		return this.#data.values();
 	}
 
-	public findByName(name: string): TokenDTO | undefined {
-		return this.values().find((token: TokenDTO) => token.name().toLowerCase() === name.toLowerCase());
-	}
-
 	public push(token: TokenDTO): void {
 		this.#data.set(token.address(), token);
 	}
