@@ -1,6 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import cn from "classnames";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -39,20 +38,6 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 
 	const selectedWallets = activeProfile.wallets().selected();
 	const selectedWallet = selectedWallets.at(0);
-
-	const handleVoteButton = () => {
-		if (selectedWallets.length > 1) {
-			navigate({
-				pathname: `/profiles/${activeProfile.id()}/votes`,
-			});
-
-			return;
-		}
-
-		const wallet = selectedWallets.at(0);
-
-		navigate(`/profiles/${activeProfile.id()}/wallets/${wallet?.id()}/votes`);
-	};
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
 	const [activeTab, setActiveTab] = useState<TabId>("tokens");
@@ -107,7 +92,7 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 				title={t("TOKENS.PAGE_TITLE")}
 				subtitle={t("TOKENS.PAGE_SUBTITLE")}
 				titleIcon={
-					<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" dimIcon="VotesDim" />
+					<ThemeIcon dimensions={[54, 55]} lightIcon="TokensLight" darkIcon="TokensDark" dimIcon="TokensDim" />
 				}
 			/>
 
@@ -120,7 +105,10 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 
 			<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
 				<TabScroll>
-					<TabList className="h-[48px]">
+					<TabList className="h-10">
+						<Tab tabId="tokens">
+							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
+						</Tab>
 						<Tab tabId="transactions">
 							<span className="whitespace-nowrap">{t("COMMON.TRANSACTIONS")}</span>
 						</Tab>
@@ -143,11 +131,7 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 
 			{activeTab === "transactions" && (
 				<Section className="flex-1 pt-2!">
-					<div
-						className={cn({
-							"hidden md:block": mobileActiveTab !== "transactions",
-						})}
-					>
+					<div>
 						<Transactions
 							showTabs={false}
 							profile={activeProfile}
@@ -161,11 +145,7 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 				</Section>
 			)}
 			{activeTab === "tokens" && (
-				<div
-					className={cn({
-						"hidden md:block": mobileActiveTab !== "transactions",
-					})}
-				>
+				<div>
 					<TokensTable />
 				</div>
 			)}

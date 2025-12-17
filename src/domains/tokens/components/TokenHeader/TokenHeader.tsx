@@ -32,8 +32,6 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 		}
 	};
 
-	const hasTokens = selectedWallets.length === 1 && wallet.tokenCount() > 0;
-
 	return (
 		<header data-testid="WalletHeader" className="md:px-10 lg:container">
 			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
