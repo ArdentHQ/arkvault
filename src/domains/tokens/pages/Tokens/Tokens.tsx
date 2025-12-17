@@ -85,7 +85,7 @@ export const Tokens = () => {
 						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
 							<Button
 								className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
-								data-testid="contacts__add-contact-btn-mobile"
+								data-testid="tokens__add-contact-btn-mobile"
 								onClick={() => console.log("TODO: ADD Token")}
 								variant="primary-transparent"
 								size="sm"
