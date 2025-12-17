@@ -14,7 +14,6 @@ import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable
 
 export const Tokens = () => {
 	const { t } = useTranslation();
-
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<TabId>("tokens");
 
@@ -53,8 +52,8 @@ export const Tokens = () => {
 				</TabScroll>
 			</Tabs>
 
-			<Section className="pt-2! pb-3">
-				<Tabs className="hidden md:block" activeId={activeTab} onChange={setActiveTab}>
+			<Section className="pt-2! pb-3 hidden md:block">
+				<Tabs activeId={activeTab} onChange={setActiveTab}>
 					<TabList className="h-10">
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
@@ -67,21 +66,19 @@ export const Tokens = () => {
 			</Section>
 
 			{activeTab === "transactions" && (
-				<Section className="flex-1 pt-2!">
-					<div>
-						<Transactions
-							showTabs={false}
-							profile={activeProfile}
-							wallets={[]}
-							isLoading={false}
-							onLoading={console.log}
-						/>
-					</div>
+				<Section className="flex-1 pt-0!">
+					<Transactions
+						showTabs={false}
+						profile={activeProfile}
+						wallets={[]}
+						isLoading={false}
+						onLoading={console.log}
+					/>
 				</Section>
 			)}
 			{activeTab === "tokens" && (
 				<div>
-					<Section className="my-0 py-0">
+					<Section className="my-0 py-0!">
 						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
 							<Button
 								className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
