@@ -121,10 +121,10 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 
 											<Divider
 												type="vertical"
-												className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:hidden"
+												className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:hidden h-3"
 											/>
 
-											<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm-hidden">{t("COMMON.NOT_AVAILABLE")}</p>
+											<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden">{t("COMMON.NOT_AVAILABLE")}</p>
 										</div>
 
 										<div className="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
