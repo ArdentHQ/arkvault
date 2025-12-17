@@ -5,7 +5,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
-import { Tooltip } from "@/app/components/Tooltip";
 import { assertWallet } from "@/utils/assertions";
 import cn from "classnames";
 import { t } from "i18next";
@@ -111,7 +110,6 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm">
 						<div className="flex w-full flex-col gap-3 p-4">
 							<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
-
 								<div className="flex items-center gap-3">
 									<div className="flex flex-col gap-2" data-testid="TokensHeader__tokens">
 										<div className="flex items-center gap-1">
@@ -121,10 +119,12 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 
 											<Divider
 												type="vertical"
-												className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:hidden h-3"
+												className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
 											/>
 
-											<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden">{t("COMMON.NOT_AVAILABLE")}</p>
+											<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden">
+												{t("COMMON.NOT_AVAILABLE")}
+											</p>
 										</div>
 
 										<div className="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
@@ -137,14 +137,16 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 										className="border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
 									/>
 
-									<div className="flex-col gap-2 hidden sm:flex" data-testid="TokensHeader__balance">
+									<div className="hidden flex-col gap-2 sm:flex" data-testid="TokensHeader__balance">
 										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
 											{t("COMMON.TOTAL_BALANCE")}
 										</p>
 
 										<div className="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
 											{profile.tokens().selectedCount() === 0 && (
-												<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500">{t("COMMON.NOT_AVAILABLE")}</p>
+												<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500">
+													{t("COMMON.NOT_AVAILABLE")}
+												</p>
 											)}
 
 											{profile.tokens().selectedCount() > 0 && (
@@ -183,7 +185,7 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 								</div>
 
 								<div className="flex flex-row items-center gap-3">
-									<div className="my-auto flex flex-1 w-full md:w-auto">
+									<div className="my-auto flex w-full flex-1 md:w-auto">
 										<Button
 											data-testid="TokensHeader__send-button"
 											className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
