@@ -177,7 +177,7 @@ export const TokensTable = () => {
 			searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
 			extra={
 				<div className="flex items-center space-x-2 mr-6">
-					<div className="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold">{t("TOKENS.HIDE_DUST")}</div>
+					<div className="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold">{t("TOKENS.HIDE_DUST")}</div>
 					<Toggle
 						disabled
 						name="hideDust"
