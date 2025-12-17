@@ -176,15 +176,17 @@ export const TokensTable = () => {
 			setSearchQuery={setQuery}
 			searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
 			extra={
-				<div className="flex items-center space-x-2 mr-6">
-					<div className="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold">{t("TOKENS.HIDE_DUST")}</div>
+				<div className="mr-6 flex items-center space-x-2">
+					<div className="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold whitespace-nowrap">
+						{t("TOKENS.HIDE_DUST")}
+					</div>
 					<Toggle
 						disabled
 						name="hideDust"
 						defaultChecked={false}
 						data-testid="Tokens__toggle-Toggle"
 						onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-							console.log("hide dust toggle", event.target.checked)
+							console.log("hide dust toggle", event.target.checked);
 						}}
 					/>
 				</div>
@@ -201,7 +203,7 @@ export const TokensTable = () => {
 					{renderTableRow}
 				</Table>
 			</div>
-		</SearchableTableWrapper >
+		</SearchableTableWrapper>
 	);
 
 	return (

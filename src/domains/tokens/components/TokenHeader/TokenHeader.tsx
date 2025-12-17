@@ -13,7 +13,7 @@ import cn from "classnames";
 import { t } from "i18next";
 import { useWalletActions } from "@/domains/wallet/hooks";
 
-export const TokenHeader = ({ profile }: { profile: Contracts.IProfile; }) => {
+export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { openPanel } = usePanels();
 
 	const allWallets = profile.wallets().values();
@@ -38,7 +38,7 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile; }) => {
 		<header data-testid="WalletHeader" className="md:px-10 lg:container">
 			<div className="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl">
 				<div className="z-30 flex w-full flex-row items-center justify-between px-4">
-					<div className="flex h-fit flex-row items-center gap-1" >
+					<div className="flex h-fit flex-row items-center gap-1">
 						<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block">
 							{t("COMMON.VIEWING")}:
 						</p>
@@ -103,7 +103,6 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile; }) => {
 							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => console.log("TODO: Refresh tokens")}
 						>
-
 							<Icon
 								name="ArrowRotateLeft"
 								style={{ animationDirection: "reverse" }}

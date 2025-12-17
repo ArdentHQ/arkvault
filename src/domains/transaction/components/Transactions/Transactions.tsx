@@ -143,7 +143,7 @@ export const Transactions = memo(function Transactions({
 	const showTransactionTabs = useMemo(() => {
 		// Explicitly disabled by props
 		if (showTabs === false) {
-			return false
+			return false;
 		}
 
 		if (isLoadingTransactions) {
