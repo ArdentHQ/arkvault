@@ -1,94 +1,25 @@
-import { Contracts } from "@/app/lib/profiles";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks/env";
 import { Transactions } from "@/domains/transaction/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
-import { Panel, usePanels } from "@/app/contexts/Panels";
-import { useDeeplinkActionHandler } from "@/app/hooks/use-deeplink";
 import { PageHeader } from "@/app/components/Header";
 import { ThemeIcon } from "@/app/components//Icon";
-import { TokensTable } from "../../components/WalletHeader/TokensTable/TokensTable";
+import { Button } from "@/app/components/Button";
+import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
 
-export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
-	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
-	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
-	const { openPanel } = usePanels();
-	useDeeplinkActionHandler({
-		onSignMessage: () => {
-			openPanel(Panel.SignMessage);
-		},
-		onTransfer: () => {
-			openPanel(Panel.SendTransfer);
-		},
-	});
-
-	const navigate = useNavigate();
+export const Tokens = () => {
 	const { t } = useTranslation();
 
-	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(activeProfile.id());
-
-	const selectedWallets = activeProfile.wallets().selected();
-	const selectedWallet = selectedWallets.at(0);
-
-	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
 	const [activeTab, setActiveTab] = useState<TabId>("tokens");
-	const [isLoadingVotes, setIsLoadingVotes] = useState(true);
-
-	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
-	const networkAllowsVoting = useMemo(() => selectedWallet?.network().allowsVoting(), [selectedWallet]);
-
-	const selectedWalletsUniqueKeys = useMemo<string>(
-		() => selectedWallets.map((wallet) => wallet.id()).join(","),
-		[selectedWallets],
-	);
-
-	useEffect(() => {
-		const syncVotes = async () => {
-			try {
-				setIsLoadingVotes(true);
-
-				// Sync votes for all selected wallets
-				await Promise.all(
-					selectedWallets.map(async (wallet) => {
-						await activeProfile.validators().sync(wallet.networkId());
-						await wallet.synchroniser().votes();
-					}),
-				);
-
-				// If there's only one wallet selected, show its votes
-				if (selectedWallets.length === 1) {
-					setVotes(selectedWallets[0].voting().current());
-				} else {
-					setVotes([]);
-				}
-			} catch {
-				setVotes([]);
-			}
-
-			setIsLoadingVotes(false);
-		};
-
-		void syncVotes();
-	}, [selectedWalletsUniqueKeys, env, activeProfile]);
-
-	useEffect(() => {
-		if (!isUpdatingTransactions) {
-			setIsUpdatingWallet(false);
-		}
-	}, [isUpdatingTransactions]);
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
-
 			<PageHeader
 				title={t("TOKENS.PAGE_TITLE")}
 				subtitle={t("TOKENS.PAGE_SUBTITLE")}
@@ -103,7 +34,7 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 				)}
 			</Section>
 
-			<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
+			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab}>
 				<TabScroll>
 					<TabList className="h-10">
 						<Tab tabId="tokens">
@@ -135,17 +66,32 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 						<Transactions
 							showTabs={false}
 							profile={activeProfile}
-							wallets={selectedWallets}
-							isLoading={profileIsSyncing}
-							isUpdatingWallet={isUpdatingWallet}
-							onLoading={setIsUpdatingTransactions}
-							selectedWallets={selectedWallets.length}
+							wallets={[]}
+							isLoading={false}
+							onLoading={console.log}
 						/>
 					</div>
 				</Section>
 			)}
 			{activeTab === "tokens" && (
 				<div>
+					<Section className="my-0 py-0">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
+							<Button
+								className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
+								data-testid="contacts__add-contact-btn-mobile"
+								onClick={() => console.log("TODO: ADD Token")}
+								variant="primary-transparent"
+								size="sm"
+								icon="Plus"
+							>
+								<p className="dim:text-theme-dim-50 text-base leading-5 font-semibold">
+									{t("COMMON.ADD_TOKEN")}
+								</p>
+							</Button>
+						</div>
+					</Section>
+
 					<TokensTable />
 				</div>
 			)}
