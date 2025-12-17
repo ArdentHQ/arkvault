@@ -5,7 +5,6 @@ import { Contracts } from "@/app/lib/profiles";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
-import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { assertWallet } from "@/utils/assertions";
 import cn from "classnames";
@@ -21,8 +20,6 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 	const selectedWallets = profile.wallets().selected();
 	const wallet = selectedWallets.at(0);
 	assertWallet(wallet);
-
-	const isRestored = wallet.hasBeenFullyRestored();
 
 	const { handleSend } = useWalletActions({ wallets: selectedWallets });
 
@@ -114,11 +111,21 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm">
 						<div className="flex w-full flex-col gap-3 p-4">
 							<div className="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0">
+
 								<div className="flex items-center gap-3">
-									<div className="flex flex-col gap-2" data-testid="TokensHeader__balance">
-										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
-											{t("COMMON.TOKENS")}
-										</p>
+									<div className="flex flex-col gap-2" data-testid="TokensHeader__tokens">
+										<div className="flex items-center gap-1">
+											<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
+												{t("COMMON.TOKENS")}
+											</p>
+
+											<Divider
+												type="vertical"
+												className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:hidden"
+											/>
+
+											<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm-hidden">{t("COMMON.NOT_AVAILABLE")}</p>
+										</div>
 
 										<div className="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
 											{profile.tokens().selectedCount()}
@@ -130,7 +137,7 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 										className="border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
 									/>
 
-									<div className="flex flex-col gap-2" data-testid="TokensHeader__balance">
+									<div className="flex-col gap-2 hidden sm:flex" data-testid="TokensHeader__balance">
 										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
 											{t("COMMON.TOTAL_BALANCE")}
 										</p>
@@ -176,22 +183,17 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 								</div>
 
 								<div className="flex flex-row items-center gap-3">
-									<Tooltip
-										content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
-										disabled={!profile.totalBalance().isZero()}
-									>
-										<div className="my-auto flex flex-1">
-											<Button
-												data-testid="TokensHeader__send-button"
-												className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
-												disabled={profile.totalBalance().isZero()}
-												variant="primary"
-												onClick={handleSend}
-											>
-												{t("COMMON.SEND")}
-											</Button>
-										</div>
-									</Tooltip>
+									<div className="my-auto flex flex-1 w-full md:w-auto">
+										<Button
+											data-testid="TokensHeader__send-button"
+											className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+											disabled={profile.totalBalance().isZero()}
+											variant="primary"
+											onClick={handleSend}
+										>
+											{t("COMMON.SEND")}
+										</Button>
+									</div>
 
 									<Button
 										variant="secondary"
