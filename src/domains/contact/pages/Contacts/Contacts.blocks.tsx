@@ -18,6 +18,14 @@ const ContactsHeader = () => {
 					dimIcon="ContactsDim"
 				/>
 			}
+			mobileTitleIcon={
+				<ThemeIcon
+					dimensions={[24, 24]}
+					lightIcon="MobileContactsLight"
+					darkIcon="MobileContactsDark"
+					dimIcon="MobileContactsDim"
+				/>
+			}
 		/>
 	);
 };

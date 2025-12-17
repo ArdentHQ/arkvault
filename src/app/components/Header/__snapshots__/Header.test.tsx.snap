@@ -169,21 +169,16 @@ exports[`PageHeader > should render responsive (md) 1`] = `
 exports[`PageHeader > should render responsive (xs) 1`] = `
 <DocumentFragment>
   <section
-    class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+    class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black"
   >
     <div
-      class="flex flex-col gap-2"
+      class="flex items-center gap-2"
     >
       <h1
-        class="mb-0 text-lg font-semibold"
+        class="mb-0 text-lg leading-[21px] font-semibold"
       >
         Header test
       </h1>
-      <div
-        class="text-theme-secondary-text flex items-center text-sm leading-5"
-      >
-        Subtitle test
-      </div>
     </div>
     extra
   </section>

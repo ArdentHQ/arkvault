@@ -3,21 +3,64 @@
 exports[`ContactsHeader > should render responsive 1`] = `
 <DocumentFragment>
   <section
-    class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+    class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black"
   >
     <div
-      class="flex flex-col gap-2"
+      class="flex items-center gap-2"
     >
+      <div
+        class="inline"
+      >
+        <div
+          data-testid="icon-MobileContactsLight"
+        >
+          <div
+            style="height: 24px; width: 24px;"
+          >
+            <svg
+              fill="none"
+              style="height: 100%; width: 100%;"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.32902 4.28906C3.49045 4.28906 2 5.77951 2 7.61808V19.0431C2 21.0068 3.59187 22.5987 5.55555 22.5987H16.7541C18.7177 22.5987 20.3096 21.0068 20.3096 19.0431V18.3724"
+                stroke="#2C4478"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M15.8376 2H8.72526C7.2525 2 6.05859 3.19391 6.05859 4.66667V19.0994C6.05859 20.5721 7.2525 21.7661 8.72526 21.7661H17.3322C18.805 21.7661 19.9989 20.5721 19.9989 19.0994V6.16127M15.8376 2L19.9989 6.16127M15.8376 2V5.27239C15.8376 5.76331 16.2356 6.16127 16.7265 6.16127H19.9989"
+                stroke="#9EB3DB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M2 15.6979C2 14.2252 3.19391 13.0312 4.66667 13.0312H13.111C13.7295 13.0312 14.3288 13.2462 14.8062 13.6394L16.8663 15.336C17.3437 15.7291 17.943 15.9441 18.5615 15.9441H19.5155C20.9883 15.9441 22.1822 17.138 22.1822 18.6108V19.0466C22.1822 21.0103 20.5903 22.6022 18.6266 22.6022H5.55555C3.59188 22.6022 2 21.0103 2 19.0466V15.6979Z"
+                fill="#2C4478"
+                stroke="#2C4478"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M8.62776 18.4819L10.9016 20.9787M10.9016 18.4819L8.62776 20.9787M5.217 16.6094C4.58909 16.6094 4.08008 17.0286 4.08008 17.5457V20.3545C4.08008 20.8716 4.58909 21.2908 5.217 21.2908C5.8449 21.2908 6.35392 20.8716 6.35392 20.3545V17.5457C6.35392 17.0286 5.8449 16.6094 5.217 16.6094ZM14.3124 16.6094C13.6845 16.6094 13.1754 17.0286 13.1754 17.5457V20.3545C13.1754 20.8716 13.6845 21.2908 14.3124 21.2908C14.9403 21.2908 15.4493 20.8716 15.4493 20.3545V17.5457C15.4493 17.0286 14.9403 16.6094 14.3124 16.6094ZM18.86 16.6094C18.2321 16.6094 17.7231 17.0286 17.7231 17.5457V20.3545C17.7231 20.8716 18.2321 21.2908 18.86 21.2908C19.4879 21.2908 19.997 20.8716 19.997 20.3545V17.5457C19.997 17.0286 19.4879 16.6094 18.86 16.6094Z"
+                stroke="#9EB3DB"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
       <h1
-        class="mb-0 text-lg font-semibold"
+        class="mb-0 text-lg leading-[21px] font-semibold"
       >
         Contacts
       </h1>
-      <div
-        class="text-theme-secondary-text flex items-center text-sm leading-5"
-      >
-        Manage your frequent Contacts.
-      </div>
     </div>
   </section>
 </DocumentFragment>

@@ -118,6 +118,18 @@ import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import VotesDark from "./votes-dark.svg?react";
 import VotesDim from "./votes-dim.svg?react";
 import VotesLight from "./votes-light.svg?react";
+import MobileVotesDark from "./mobile-votes-dark.svg?react";
+import MobileVotesLight from "./mobile-votes-dim.svg?react";
+import MobileVotesDim from "./mobile-votes-light.svg?react";
+import MobileSettingsDark from "./mobile-settings-dark.svg?react";
+import MobileSettingsLight from "./mobile-settings-dim.svg?react";
+import MobileSettingsDim from "./mobile-settings-light.svg?react";
+import MobileContactsDark from "./mobile-contacts-dark.svg?react";
+import MobileContactsLight from "./mobile-contacts-dim.svg?react";
+import MobileContactsDim from "./mobile-contacts-light.svg?react";
+import MobileExchangesDark from "./mobile-exchanges-dark.svg?react";
+import MobileExchangesLight from "./mobile-exchanges-dim.svg?react";
+import MobileExchangesDim from "./mobile-exchanges-light.svg?react";
 import ExchangesDark from "./exchanges-dark.svg?react";
 import ExchangesDim from "./exchanges-dim.svg?react";
 import ExchangesLight from "./exchanges-light.svg?react";
@@ -256,6 +268,18 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MenuOpen,
 	Minimize,
 	MnemonicImportMethod,
+	MobileContactsDark,
+	MobileContactsDim,
+	MobileContactsLight,
+	MobileExchangesDark,
+	MobileExchangesDim,
+	MobileExchangesLight,
+	MobileSettingsDark,
+	MobileSettingsDim,
+	MobileSettingsLight,
+	MobileVotesDark,
+	MobileVotesDim,
+	MobileVotesLight,
 	MoneyCoinSwap,
 	NoteCheck,
 	Pencil,
