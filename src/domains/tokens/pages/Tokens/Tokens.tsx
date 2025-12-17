@@ -1,90 +1,21 @@
-import { Contracts } from "@/app/lib/profiles";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks/env";
 import { Transactions } from "@/domains/transaction/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
-import { Panel, usePanels } from "@/app/contexts/Panels";
-import { useDeeplinkActionHandler } from "@/app/hooks/use-deeplink";
 import { PageHeader } from "@/app/components/Header";
 import { ThemeIcon } from "@/app/components//Icon";
-import { TokensTable } from "../../components/WalletHeader/TokensTable/TokensTable";
+import { Button } from "@/app/components/Button";
+import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
 
-export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
-	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
-	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
-	const { openPanel } = usePanels();
-	useDeeplinkActionHandler({
-		onSignMessage: () => {
-			openPanel(Panel.SignMessage);
-		},
-		onTransfer: () => {
-			openPanel(Panel.SendTransfer);
-		},
-	});
-
-	const navigate = useNavigate();
+export const Tokens = () => {
 	const { t } = useTranslation();
-
-	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
-	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(activeProfile.id());
-
-	const selectedWallets = activeProfile.wallets().selected();
-	const selectedWallet = selectedWallets.at(0);
-
-	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
 	const [activeTab, setActiveTab] = useState<TabId>("tokens");
-	const [isLoadingVotes, setIsLoadingVotes] = useState(true);
-
-	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
-	const networkAllowsVoting = useMemo(() => selectedWallet?.network().allowsVoting(), [selectedWallet]);
-
-	const selectedWalletsUniqueKeys = useMemo<string>(
-		() => selectedWallets.map((wallet) => wallet.id()).join(","),
-		[selectedWallets],
-	);
-
-	useEffect(() => {
-		const syncVotes = async () => {
-			try {
-				setIsLoadingVotes(true);
-
-				// Sync votes for all selected wallets
-				await Promise.all(
-					selectedWallets.map(async (wallet) => {
-						await activeProfile.validators().sync(wallet.networkId());
-						await wallet.synchroniser().votes();
-					}),
-				);
-
-				// If there's only one wallet selected, show its votes
-				if (selectedWallets.length === 1) {
-					setVotes(selectedWallets[0].voting().current());
-				} else {
-					setVotes([]);
-				}
-			} catch {
-				setVotes([]);
-			}
-
-			setIsLoadingVotes(false);
-		};
-
-		void syncVotes();
-	}, [selectedWalletsUniqueKeys, env, activeProfile]);
-
-	useEffect(() => {
-		if (!isUpdatingTransactions) {
-			setIsUpdatingWallet(false);
-		}
-	}, [isUpdatingTransactions]);
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
@@ -92,7 +23,12 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 				title={t("TOKENS.PAGE_TITLE")}
 				subtitle={t("TOKENS.PAGE_SUBTITLE")}
 				titleIcon={
-					<ThemeIcon dimensions={[54, 55]} lightIcon="TokensLight" darkIcon="TokensDark" dimIcon="TokensDim" />
+					<ThemeIcon
+						dimensions={[54, 55]}
+						lightIcon="TokensLight"
+						darkIcon="TokensDark"
+						dimIcon="TokensDim"
+					/>
 				}
 			/>
 
@@ -100,12 +36,12 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 				className="mt-0 pt-0 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 				innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 			>
-				{activeProfile.wallets().count() > 0 && <TokenHeader profile={activeProfile} />}
+				<TokenHeader profile={activeProfile} />
 			</Section>
 
-			<Tabs className="md:hidden" activeId={mobileActiveTab} onChange={setMobileActiveTab}>
+			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab}>
 				<TabScroll>
-					<TabList className="h-10">
+					<TabList className="pb-2">
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
 						</Tab>
@@ -116,8 +52,8 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 				</TabScroll>
 			</Tabs>
 
-			<Section className="pt-2! pb-3">
-				<Tabs className="hidden md:block" activeId={activeTab} onChange={setActiveTab}>
+			<Section className="hidden pt-2! pb-3 md:block">
+				<Tabs activeId={activeTab} onChange={setActiveTab}>
 					<TabList className="h-10">
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
@@ -130,22 +66,35 @@ export const Tokens = ({ hasFocus }: { hasFocus?: boolean }) => {
 			</Section>
 
 			{activeTab === "transactions" && (
-				<Section className="flex-1 pt-2!">
-					<div>
-						<Transactions
-							showTabs={false}
-							profile={activeProfile}
-							wallets={selectedWallets}
-							isLoading={profileIsSyncing}
-							isUpdatingWallet={isUpdatingWallet}
-							onLoading={setIsUpdatingTransactions}
-							selectedWallets={selectedWallets.length}
-						/>
-					</div>
+				<Section className="flex-1 pt-0!">
+					<Transactions
+						showTabs={false}
+						profile={activeProfile}
+						wallets={[]}
+						isLoading={false}
+						onLoading={console.log}
+					/>
 				</Section>
 			)}
 			{activeTab === "tokens" && (
 				<div>
+					<Section className="my-0 md:py-0!">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
+							<Button
+								className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
+								data-testid="tokens__add-contact-btn-mobile"
+								onClick={() => console.log("TODO: ADD Token")}
+								variant="primary-transparent"
+								size="sm"
+								icon="Plus"
+							>
+								<p className="dim:text-theme-dim-50 text-base leading-5 font-semibold">
+									{t("COMMON.ADD_TOKEN")}
+								</p>
+							</Button>
+						</div>
+					</Section>
+
 					<TokensTable />
 				</div>
 			)}
