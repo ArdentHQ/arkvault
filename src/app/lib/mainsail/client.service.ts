@@ -16,6 +16,10 @@ import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
+import { TokenRepository } from "@/app/lib/profiles/token.repository";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletTokenData } from "@/app/lib/profiles/token.contracts";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -49,6 +53,30 @@ export class ClientService {
 	): Promise<ConfirmedTransactionData> {
 		const body = await this.#client.transactions().get(id, query);
 		return new ConfirmedTransactionData().configure(body.data);
+	}
+
+	public async tokens(): Promise<TokenRepository> {
+		const response = await this.#client.tokens().all();
+		const tokens = new TokenRepository();
+		tokens.fill(response.data);
+		return tokens;
+	}
+
+	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {
+		const response = await this.#client.tokens().byWalletAddress(address);
+		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData));
+	}
+
+	public async tokenHolders(contractAddress: string): Promise<TokenRepository> {
+		const response = await this.#client.tokens().holders(contractAddress);
+		const holders = new TokenRepository();
+		holders.fill(response.results);
+		return holders;
+	}
+
+	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
+		const response = await this.#client.tokens().get(contractAddress);
+		return new TokenDTO(response.data);
 	}
 
 	public async transactions(

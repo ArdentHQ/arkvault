@@ -50,6 +50,7 @@ import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { WalletAliasProvider } from "./profile.wallet.alias.js";
+import { WalletTokenRepository } from "./wallet-token.repository.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -70,6 +71,7 @@ export class Wallet implements IReadWriteWallet {
 	readonly #signatoryFactory: ISignatoryFactory;
 	readonly #messageService: MessageService;
 	readonly #ledgerService: LedgerService;
+	readonly #tokens: WalletTokenRepository;
 
 	public constructor(id: string, initialState: any, profile: IProfile) {
 		this.#profile = profile;
@@ -92,6 +94,7 @@ export class Wallet implements IReadWriteWallet {
 		this.#signatoryFactory = new SignatoryFactory(this);
 		this.#messageService = new MessageService();
 		this.#ledgerService = profile.ledger();
+		this.#tokens = new WalletTokenRepository();
 
 		this.#restore();
 	}
@@ -701,6 +704,10 @@ export class Wallet implements IReadWriteWallet {
 
 	public exchangeRates(): ExchangeRateService {
 		return this.#profile.exchangeRates();
+	}
+
+	public tokens(): WalletTokenRepository {
+		return this.#tokens;
 	}
 
 	public generateAlias(): string {
