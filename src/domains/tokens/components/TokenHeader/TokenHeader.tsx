@@ -7,11 +7,11 @@ import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
-import { ViewingAddressInfo } from "./TokenHeader.blocks";
 import { assertWallet } from "@/utils/assertions";
 import cn from "classnames";
 import { t } from "i18next";
 import { useWalletActions } from "@/domains/wallet/hooks";
+import { ViewingAddressInfo } from "@/domains/portfolio/components/PortfolioHeader/PortfolioHeader.blocks";
 
 export const TokenHeader = ({ profile }: { profile: Contracts.IProfile; }) => {
 	const { openPanel } = usePanels();
