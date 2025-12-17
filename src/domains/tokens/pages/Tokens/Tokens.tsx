@@ -36,7 +36,7 @@ export const Tokens = () => {
 				className="mt-0 pt-0 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 				innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 			>
-				{activeProfile.wallets().count() > 0 && <TokenHeader profile={activeProfile} />}
+				<TokenHeader profile={activeProfile} />
 			</Section>
 
 			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab}>

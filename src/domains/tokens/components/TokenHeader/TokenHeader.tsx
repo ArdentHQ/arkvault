@@ -167,7 +167,7 @@ export const TokenHeader = ({ profile }: { profile: Contracts.IProfile }) => {
 													)}
 
 													<Amount
-														value={profile.totalBalanceConverted().toNumber()}
+														value={profile.tokens().selectedTotalBalance()}
 														ticker={wallet.exchangeCurrency()}
 														className={cn({
 															"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
