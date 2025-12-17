@@ -52,7 +52,7 @@ export const Tokens = () => {
 				</TabScroll>
 			</Tabs>
 
-			<Section className="pt-2! pb-3 hidden md:block">
+			<Section className="hidden pt-2! pb-3 md:block">
 				<Tabs activeId={activeTab} onChange={setActiveTab}>
 					<TabList className="h-10">
 						<Tab tabId="tokens">
