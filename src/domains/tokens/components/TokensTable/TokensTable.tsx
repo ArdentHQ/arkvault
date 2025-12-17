@@ -12,7 +12,7 @@ export const TokensTable = () => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
-	const tokens = activeProfile.tokens().selected()
+	const tokens = activeProfile.tokens().selected();
 
 	const { t } = useTranslation();
 
@@ -21,19 +21,19 @@ export const TokensTable = () => {
 			{
 				Header: t("COMMON.NAME"),
 				accessor: "name",
+				cellWidth: "w-48 xl:w-40",
 				headerClassName: "no-border",
 				noRoundedBorders: true,
-				cellWidth: "w-48 xl:w-40",
 			},
 			{
 				Header: t("COMMON.SYMBOL"),
-				headerClassName: "no-border",
 				cellWidth: "w-48 xl:w-40",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.TOKEN_BALANCE"),
-				headerClassName: "no-border",
 				cellWidth: "w-48 xl:w-40",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.CURRENCY"),
@@ -48,18 +48,22 @@ export const TokensTable = () => {
 		(token: WalletToken) => {
 			if (isMdAndAbove) {
 				return (
-					<tr><td>TODO: add token row {token.address()}</td></tr>
+					<tr>
+						<td>TODO: add token row {token.address()}</td>
+					</tr>
 				);
 			}
 
 			return (
-				<tr><td>TODO: add token row</td></tr>
+				<tr>
+					<td>TODO: add token row</td>
+				</tr>
 			);
 		},
 		[isMdAndAbove],
 	);
 
-	const shouldRenderTable = (isXs && tokens.count() > 0) || isSmAndAbove
+	const shouldRenderTable = (isXs && tokens.count() > 0) || isSmAndAbove;
 
 	return (
 		<>
@@ -79,15 +83,17 @@ export const TokensTable = () => {
 					setSearchQuery={setQuery}
 					searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
 					extra={
-						<div className="flex items-center space-x-2 mr-6">
-							<div className="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold">{t("TOKENS.HIDE_DUST")}</div>
+						<div className="mr-6 flex items-center space-x-2">
+							<div className="text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold whitespace-nowrap">
+								{t("TOKENS.HIDE_DUST")}
+							</div>
 							<Toggle
 								disabled
 								name="hideDust"
 								defaultChecked={false}
 								data-testid="Tokens__toggle-Toggle"
 								onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-									console.log("hide dust toggle", event.target.checked)
+									console.log("hide dust toggle", event.target.checked);
 								}}
 							/>
 						</div>
@@ -98,13 +104,15 @@ export const TokensTable = () => {
 							columns={listColumns}
 							data={[]}
 							className="with-x-padding"
-							footer={<TokensTableFooter tokensCount={tokens.count()} columnsCount={listColumns.length} />}
+							footer={
+								<TokensTableFooter tokensCount={tokens.count()} columnsCount={listColumns.length} />
+							}
 							hideHeader={!isMdAndAbove}
 						>
 							{renderTableRow}
 						</Table>
 					</div>
-				</SearchableTableWrapper >
+				</SearchableTableWrapper>
 			)}
 		</>
 	);

@@ -24,14 +24,20 @@ export const Tokens = () => {
 				title={t("TOKENS.PAGE_TITLE")}
 				subtitle={t("TOKENS.PAGE_SUBTITLE")}
 				titleIcon={
-					<ThemeIcon dimensions={[54, 55]} lightIcon="TokensLight" darkIcon="TokensDark" dimIcon="TokensDim" />
+					<ThemeIcon
+						dimensions={[54, 55]}
+						lightIcon="TokensLight"
+						darkIcon="TokensDark"
+						dimIcon="TokensDim"
+					/>
 				}
 			/>
 
-			<Section className="pt-0 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto mt-0" innerClassName="m-0 p-0 md:px-0 md:mx-auto">
-				{activeProfile.wallets().count() > 0 && (
-					<TokenHeader profile={activeProfile} />
-				)}
+			<Section
+				className="mt-0 pt-0 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
+				innerClassName="m-0 p-0 md:px-0 md:mx-auto"
+			>
+				{activeProfile.wallets().count() > 0 && <TokenHeader profile={activeProfile} />}
 			</Section>
 
 			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab}>

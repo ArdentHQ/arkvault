@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 
-export const TokensTableFooter = ({ tokensCount, columnsCount }: { tokensCount: number, columnsCount: number }) => {
+export const TokensTableFooter = ({ tokensCount, columnsCount }: { tokensCount: number; columnsCount: number }) => {
 	const { t } = useTranslation();
 
 	if (tokensCount > 0) {
-		return null
+		return null;
 	}
 
 	return (
@@ -31,6 +31,5 @@ export const TokensTableFooter = ({ tokensCount, columnsCount }: { tokensCount: 
 				)}
 			</td>
 		</tr>
-	)
-
+	);
 };

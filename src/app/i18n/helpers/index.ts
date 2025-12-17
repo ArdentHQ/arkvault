@@ -21,8 +21,8 @@ export const buildTranslations = () => ({
 	MESSAGE,
 	PROFILE,
 	SETTINGS,
+	TOKENS,
 	TRANSACTION,
 	VOTE,
 	WALLETS,
-	TOKENS,
 });

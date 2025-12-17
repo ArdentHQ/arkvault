@@ -14,5 +14,5 @@ export const routes: RouteItem[] = [
 	...SettingRoutes,
 	...VoteRoutes,
 	...ProfileRoutes,
-	...TokenRoutes
+	...TokenRoutes,
 ];
