@@ -1,8 +1,10 @@
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
 
 import { TokenHeader } from "./TokenHeader";
+import { Contracts } from "@/app/lib/profiles";
 
-let profile: any;
+let profile: Contracts.IProfile;
 let route: string;
 
 describe("TokenHeader", () => {
@@ -123,5 +125,42 @@ describe("TokenHeader", () => {
 
 		tokensSpy.mockRestore();
 		totalBalanceSpy.mockRestore();
+	});
+
+	it("should emit open panel event on address click", async () => {
+		const addressSidepanelSpy = vi.fn();
+		render(<TokenHeader profile={profile} onOpenAddressSidepanel={addressSidepanelSpy} />, {
+			route,
+		});
+
+		const addressButton = screen.getByTestId("ShowAddressesPanel");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ShowAddressesPanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(addressButton);
+
+		expect(addressSidepanelSpy).toHaveBeenCalled();
+	});
+
+	it("should not emit open panel event on address click", async () => {
+		const addressSidepanelSpy = vi.fn();
+		const walletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([profile.wallets().first()]);
+
+		render(<TokenHeader profile={profile} onOpenAddressSidepanel={addressSidepanelSpy} />, {
+			route,
+		});
+
+		const addressButton = screen.getByTestId("ShowAddressesPanel");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ShowAddressesPanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(addressButton);
+
+		expect(addressSidepanelSpy).not.toHaveBeenCalled();
+		walletsSpy.mockRestore();
 	});
 });

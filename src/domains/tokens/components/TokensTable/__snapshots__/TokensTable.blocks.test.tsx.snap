@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TokensTableFooter > should render empty state 1`] = `
+<DocumentFragment>
+  <p
+    class="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 px-6 py-4 text-center text-sm sm:py-0"
+  >
+    It looks like you don't have any Tokens yet. After adding new Tokens, they can be viewed here.
+  </p>
+</DocumentFragment>
+`;
+
+exports[`TokensTableFooter > should render null when tokens count > 0 1`] = `<DocumentFragment />`;
