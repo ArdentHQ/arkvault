@@ -327,7 +327,7 @@ jobs:
                 node-version:
                     - 22
         concurrency:
-            group: ${{ github.head_ref }}-test-domains-contact
+            group: ${{ github.head_ref }}-test-domains-tokens
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v4
