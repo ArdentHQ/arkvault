@@ -18,8 +18,16 @@ describe("Tokens", () => {
 			route,
 		});
 
+		const addressButton = screen.getByTestId("ShowAddressesPanel");
+		await waitFor(() => {
+			expect(screen.getByTestId("ShowAddressesPanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(addressButton);
+
 		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
 		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 

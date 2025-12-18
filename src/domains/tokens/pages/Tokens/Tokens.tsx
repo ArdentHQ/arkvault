@@ -11,11 +11,13 @@ import { PageHeader } from "@/app/components/Header";
 import { ThemeIcon } from "@/app/components//Icon";
 import { Button } from "@/app/components/Button";
 import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
+import { Panel, usePanels } from "@/app/contexts";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<TabId>("tokens");
+	const { openPanel } = usePanels();
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
@@ -36,7 +38,12 @@ export const Tokens = () => {
 				className="mt-0 pt-0 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 				innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 			>
-				<TokenHeader profile={activeProfile} />
+				<TokenHeader
+					profile={activeProfile}
+					onOpenAddressSidepanel={() => {
+						openPanel(Panel.Addresses);
+					}}
+				/>
 			</Section>
 
 			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab}>
@@ -67,15 +74,10 @@ export const Tokens = () => {
 
 			{activeTab === "transactions" && (
 				<Section className="flex-1 pt-0!">
-					<Transactions
-						showTabs={false}
-						profile={activeProfile}
-						wallets={[]}
-						isLoading={false}
-						onLoading={console.log}
-					/>
+					<Transactions showTabs={false} profile={activeProfile} wallets={[]} isLoading={false} />
 				</Section>
 			)}
+
 			{activeTab === "tokens" && (
 				<div>
 					<Section className="my-0 md:py-0!">
@@ -83,7 +85,6 @@ export const Tokens = () => {
 							<Button
 								className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
 								data-testid="tokens__add-contact-btn-mobile"
-								onClick={() => console.log("TODO: ADD Token")}
 								variant="primary-transparent"
 								size="sm"
 								icon="Plus"

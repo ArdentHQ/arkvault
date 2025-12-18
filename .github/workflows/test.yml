@@ -318,6 +318,43 @@ jobs:
                   max_attempts: 2
                   command: pnpm test:coverage src/app/components/[S-Z]**/**test*
 
+    domains-tokens:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/tokens
+        strategy:
+            matrix:
+                node-version:
+                    - 22
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-contact
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/tokens
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 2
+                  command: pnpm test:coverage src/domains/tokens
+
     domains-contact:
         runs-on: ubuntu-latest
         env:

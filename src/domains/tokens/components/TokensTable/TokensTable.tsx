@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { Table } from "@/app/components/Table";
@@ -44,23 +44,10 @@ export const TokensTable = () => {
 		[t],
 	);
 
-	const renderTableRow = useCallback(
-		(token: WalletToken) => {
-			if (isMdAndAbove) {
-				return (
-					<tr>
-						<td>TODO: add token row {token.address()}</td>
-					</tr>
-				);
-			}
-
-			return (
-				<tr>
-					<td>TODO: add token row</td>
-				</tr>
-			);
-		},
-		[isMdAndAbove],
+	const renderTableRow = () => (
+		<tr>
+			<td>TODO: add token row</td>{" "}
+		</tr>
 	);
 
 	const shouldRenderTable = (isXs && tokens.count() > 0) || isSmAndAbove;
@@ -87,14 +74,12 @@ export const TokensTable = () => {
 							<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold whitespace-nowrap">
 								{t("TOKENS.HIDE_DUST")}
 							</div>
+
 							<Toggle
 								disabled
 								name="hideDust"
 								defaultChecked={false}
 								data-testid="Tokens__toggle-Toggle"
-								onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-									console.log("hide dust toggle", event.target.checked);
-								}}
 							/>
 						</div>
 					}
@@ -102,7 +87,7 @@ export const TokensTable = () => {
 					<div data-testid="TokenList">
 						<Table
 							columns={listColumns}
-							data={[]}
+							data={tokens.values()}
 							className="with-x-padding"
 							footer={
 								<TokensTableFooter tokensCount={tokens.count()} columnsCount={listColumns.length} />
