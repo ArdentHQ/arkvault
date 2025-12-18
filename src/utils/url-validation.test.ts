@@ -22,14 +22,12 @@ describe("Url validation", () => {
 		await env.profiles().restore(emptyProfile);
 		await emptyProfile.sync();
 
-		expect(isDisabledUrl(
-			generatePath(ProfilePaths.Tokens, {profileId: emptyProfile.id()}),
-			env
-		)).toBe(emptyProfile.id());
+		expect(isDisabledUrl(generatePath(ProfilePaths.Tokens, { profileId: emptyProfile.id() }), env)).toBe(
+			emptyProfile.id(),
+		);
 
-		expect(isDisabledUrl(
-			generatePath(ProfilePaths.Tokens, {profileId: getMainsailProfileId()}),
-			env
-		)).toBe(false);
+		expect(isDisabledUrl(generatePath(ProfilePaths.Tokens, { profileId: getMainsailProfileId() }), env)).toBe(
+			false,
+		);
 	});
 });
