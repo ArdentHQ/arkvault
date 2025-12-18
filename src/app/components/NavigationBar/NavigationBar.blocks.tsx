@@ -241,15 +241,18 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		[selectedWallet, profile],
 	);
 
+	const isMenuItemDisabled = (id: string) =>
+		["tokens", "votes", "exchange"].includes(id) && profile.wallets().count() === 0;
+
 	const renderNavigationMenu = () => (
 		<>
 			<ul className="hidden h-12 items-center gap-0.5 xl:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => {
-					if (["tokens", "votes", "exchange"].includes(menuItem.id) && profile.wallets().count() === 0) {
+					if (isMenuItemDisabled(menuItem.id)) {
 						return (
 							<li key={index} className="flex">
 								<Tooltip content={menuItem.disabledMessage}>
-									<span className="text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-dark-200 cursor-pointer border-transparent bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold">
+									<span className="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 cursor-pointer border-transparent bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold">
 										{" "}
 										{menuItem.title}{" "}
 									</span>
@@ -295,6 +298,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					)}
 					onSelect={handleSelectMenuItem}
 					options={navigationMenu.map((menuItem) => ({
+						disabled: isMenuItemDisabled(menuItem.id),
 						label: menuItem.title,
 						value: menuItem.mountPath(profile.id()),
 					}))}
