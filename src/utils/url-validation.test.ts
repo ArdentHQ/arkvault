@@ -38,7 +38,6 @@ describe("Url validation", () => {
 		// should return false when profile id is invalid
 		expect(isDisabledUrl(generatePath(ProfilePaths.Tokens, { profileId: "1" }), env)).toBe(false);
 
-
 		// should return false when given path is not tokens, exchange or votes
 		expect(isDisabledUrl(generatePath(ProfilePaths.Contacts, { profileId: emptyProfile.id() }), env)).toBe(
 			undefined
