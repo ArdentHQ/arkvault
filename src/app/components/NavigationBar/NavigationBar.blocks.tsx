@@ -248,7 +248,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					if (["tokens", "votes", "exchange"].includes(menuItem.id) && profile.wallets().count() === 0) {
 						return (
 							<li key={index} className="flex">
-								<Tooltip content="Import or create an address to manage tokens">
+								<Tooltip content={menuItem.disabledMessage}>
 									<span className="text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-dark-200 cursor-pointer border-transparent bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold">
 										{" "}
 										{menuItem.title}{" "}

@@ -14,12 +14,14 @@ export const getNavigationMenu = (t: TFunction, pathname: string): NavigationBar
 			title: t("COMMON.PORTFOLIO"),
 		},
 		{
+			disabledMessage: t("COMMON.TOKENS_DISABLED"),
 			id: "tokens",
 			isActive: pathname.includes("/tokens"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Tokens, { profileId }),
 			title: t("COMMON.TOKENS"),
 		},
 		{
+			disabledMessage: t("COMMON.EXCHANGE_DISABLED"),
 			id: "exchange",
 			isActive: pathname.includes("/exchange"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
@@ -32,6 +34,7 @@ export const getNavigationMenu = (t: TFunction, pathname: string): NavigationBar
 			title: t("COMMON.CONTACTS"),
 		},
 		{
+			disabledMessage: t("COMMON.VOTES_DISABLED"),
 			id: "votes",
 			isActive: pathname.includes("/votes"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),

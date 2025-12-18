@@ -8,6 +8,7 @@ export interface NavigationBarMenuItem {
 	title: string;
 	id: string;
 	mountPath: ((profileId: string) => string) | (() => string);
+	disabledMessage?: string;
 }
 
 export interface NavigationBarProperties {
