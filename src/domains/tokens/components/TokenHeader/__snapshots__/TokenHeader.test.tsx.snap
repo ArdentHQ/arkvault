@@ -1,0 +1,1804 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TokenHeader > should not show address button when only one wallet exists 1`] = `
+<DocumentFragment>
+  <header
+    class="md:px-10 lg:container"
+    data-testid="TokensHeader"
+  >
+    <div
+      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+    >
+      <div
+        class="z-30 flex w-full flex-row items-center justify-between px-4"
+      >
+        <div
+          class="flex h-fit flex-row items-center gap-1"
+        >
+          <p
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+          >
+            Viewing:
+          </p>
+          <div
+            class="max-w-full rounded-r cursor-pointer"
+            data-testid="ShowAddressesPanel"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center gap-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  data-testid="Address__alias"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet 1
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <button
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
+                type="button"
+              >
+                <div
+                  class="flex items-center gap-2"
+                >
+                  <div>
+                    <div
+                      style="height: 26px; width: 26px;"
+                    >
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                        <path
+                          d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row items-center gap-1"
+        >
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p
+                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+              >
+                Add Token
+              </p>
+            </div>
+          </button>
+          <div
+            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+          />
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                style="animation-direction: reverse;"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="arrow-rotate-left"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-0.5"
+      >
+        <div
+          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+        >
+          <div
+            class="flex w-full flex-col gap-3 p-4"
+          >
+            <div
+              class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+            >
+              <div
+                class="flex items-center gap-3"
+              >
+                <div
+                  class="flex flex-col gap-2"
+                  data-testid="TokensHeader__tokens"
+                >
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <p
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    >
+                      Tokens
+                    </p>
+                    <div
+                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                    />
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                  <div
+                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    0
+                  </div>
+                </div>
+                <div
+                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                />
+                <div
+                  class="hidden flex-col gap-2 sm:flex"
+                  data-testid="TokensHeader__balance"
+                >
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                  >
+                    Total Balance
+                  </p>
+                  <div
+                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center gap-3"
+              >
+                <div
+                  class="my-auto flex w-full flex-1 md:w-auto"
+                >
+                  <button
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    data-testid="TokensHeader__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Send
+                    </div>
+                  </button>
+                </div>
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center gap-2"
+                  >
+                    <div>
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`TokenHeader > should not show wallet hd label 1`] = `
+<DocumentFragment>
+  <header
+    class="md:px-10 lg:container"
+    data-testid="TokensHeader"
+  >
+    <div
+      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+    >
+      <div
+        class="z-30 flex w-full flex-row items-center justify-between px-4"
+      >
+        <div
+          class="flex h-fit flex-row items-center gap-1"
+        >
+          <p
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+          >
+            Viewing:
+          </p>
+          <div
+            class="max-w-full rounded-r cursor-pointer"
+            data-testid="ShowAddressesPanel"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center gap-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  data-testid="Address__alias"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet 1
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <button
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
+                type="button"
+              >
+                <div
+                  class="flex items-center gap-2"
+                >
+                  <div>
+                    <div
+                      style="height: 26px; width: 26px;"
+                    >
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                        <path
+                          d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row items-center gap-1"
+        >
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p
+                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+              >
+                Add Token
+              </p>
+            </div>
+          </button>
+          <div
+            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+          />
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                style="animation-direction: reverse;"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="arrow-rotate-left"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-0.5"
+      >
+        <div
+          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+        >
+          <div
+            class="flex w-full flex-col gap-3 p-4"
+          >
+            <div
+              class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+            >
+              <div
+                class="flex items-center gap-3"
+              >
+                <div
+                  class="flex flex-col gap-2"
+                  data-testid="TokensHeader__tokens"
+                >
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <p
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    >
+                      Tokens
+                    </p>
+                    <div
+                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                    />
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                  <div
+                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    0
+                  </div>
+                </div>
+                <div
+                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                />
+                <div
+                  class="hidden flex-col gap-2 sm:flex"
+                  data-testid="TokensHeader__balance"
+                >
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                  >
+                    Total Balance
+                  </p>
+                  <div
+                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center gap-3"
+              >
+                <div
+                  class="my-auto flex w-full flex-1 md:w-auto"
+                >
+                  <button
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    data-testid="TokensHeader__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Send
+                    </div>
+                  </button>
+                </div>
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center gap-2"
+                  >
+                    <div>
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`TokenHeader > should render 1`] = `
+<DocumentFragment>
+  <header
+    class="md:px-10 lg:container"
+    data-testid="TokensHeader"
+  >
+    <div
+      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+    >
+      <div
+        class="z-30 flex w-full flex-row items-center justify-between px-4"
+      >
+        <div
+          class="flex h-fit flex-row items-center gap-1"
+        >
+          <p
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+          >
+            Viewing:
+          </p>
+          <div
+            class="max-w-full rounded-r cursor-pointer"
+            data-testid="ShowAddressesPanel"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center gap-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  data-testid="Address__alias"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet 1
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <button
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
+                type="button"
+              >
+                <div
+                  class="flex items-center gap-2"
+                >
+                  <div>
+                    <div
+                      style="height: 26px; width: 26px;"
+                    >
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                        <path
+                          d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row items-center gap-1"
+        >
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p
+                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+              >
+                Add Token
+              </p>
+            </div>
+          </button>
+          <div
+            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+          />
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                style="animation-direction: reverse;"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="arrow-rotate-left"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-0.5"
+      >
+        <div
+          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+        >
+          <div
+            class="flex w-full flex-col gap-3 p-4"
+          >
+            <div
+              class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+            >
+              <div
+                class="flex items-center gap-3"
+              >
+                <div
+                  class="flex flex-col gap-2"
+                  data-testid="TokensHeader__tokens"
+                >
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <p
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    >
+                      Tokens
+                    </p>
+                    <div
+                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                    />
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                  <div
+                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    0
+                  </div>
+                </div>
+                <div
+                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                />
+                <div
+                  class="hidden flex-col gap-2 sm:flex"
+                  data-testid="TokensHeader__balance"
+                >
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                  >
+                    Total Balance
+                  </p>
+                  <div
+                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center gap-3"
+              >
+                <div
+                  class="my-auto flex w-full flex-1 md:w-auto"
+                >
+                  <button
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    data-testid="TokensHeader__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Send
+                    </div>
+                  </button>
+                </div>
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center gap-2"
+                  >
+                    <div>
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`TokenHeader > should show account name label when wallet is HD and single wallet selected 1`] = `
+<DocumentFragment>
+  <header
+    class="md:px-10 lg:container"
+    data-testid="TokensHeader"
+  >
+    <div
+      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+    >
+      <div
+        class="z-30 flex w-full flex-row items-center justify-between px-4"
+      >
+        <div
+          class="flex h-fit flex-row items-center gap-1"
+        >
+          <p
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+          >
+            Viewing:
+          </p>
+          <div
+            class="max-w-full rounded-r cursor-pointer"
+            data-testid="ShowAddressesPanel"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center gap-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  data-testid="Address__alias"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet 1
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="inline-block font-semibold overflow-hidden no-ligatures px-1 rounded text-theme-primary-600 border-theme-primary-200 bg-transparent dark:text-theme-secondary-200 dim:text-theme-dim-100 dark:border-theme-dark-700 dim:border-theme-dim-700 text-xs leading-[15px] truncate border py-0.5 uppercase"
+              >
+                Main Account
+              </div>
+              <button
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
+                type="button"
+              >
+                <div
+                  class="flex items-center gap-2"
+                >
+                  <div>
+                    <div
+                      style="height: 26px; width: 26px;"
+                    >
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                        <path
+                          d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row items-center gap-1"
+        >
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p
+                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+              >
+                Add Token
+              </p>
+            </div>
+          </button>
+          <div
+            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+          />
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                style="animation-direction: reverse;"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="arrow-rotate-left"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-0.5"
+      >
+        <div
+          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+        >
+          <div
+            class="flex w-full flex-col gap-3 p-4"
+          >
+            <div
+              class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+            >
+              <div
+                class="flex items-center gap-3"
+              >
+                <div
+                  class="flex flex-col gap-2"
+                  data-testid="TokensHeader__tokens"
+                >
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <p
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    >
+                      Tokens
+                    </p>
+                    <div
+                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                    />
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                  <div
+                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    0
+                  </div>
+                </div>
+                <div
+                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                />
+                <div
+                  class="hidden flex-col gap-2 sm:flex"
+                  data-testid="TokensHeader__balance"
+                >
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                  >
+                    Total Balance
+                  </p>
+                  <div
+                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center gap-3"
+              >
+                <div
+                  class="my-auto flex w-full flex-1 md:w-auto"
+                >
+                  <button
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    data-testid="TokensHeader__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Send
+                    </div>
+                  </button>
+                </div>
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center gap-2"
+                  >
+                    <div>
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`TokenHeader > should show balance information when tokens are available 1`] = `
+<DocumentFragment>
+  <header
+    class="md:px-10 lg:container"
+    data-testid="TokensHeader"
+  >
+    <div
+      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+    >
+      <div
+        class="z-30 flex w-full flex-row items-center justify-between px-4"
+      >
+        <div
+          class="flex h-fit flex-row items-center gap-1"
+        >
+          <p
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+          >
+            Viewing:
+          </p>
+          <div
+            class="max-w-full rounded-r cursor-pointer"
+            data-testid="ShowAddressesPanel"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center gap-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  data-testid="Address__alias"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet 1
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <button
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
+                type="button"
+              >
+                <div
+                  class="flex items-center gap-2"
+                >
+                  <div>
+                    <div
+                      style="height: 26px; width: 26px;"
+                    >
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                        <path
+                          d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row items-center gap-1"
+        >
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p
+                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+              >
+                Add Token
+              </p>
+            </div>
+          </button>
+          <div
+            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+          />
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                style="animation-direction: reverse;"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="arrow-rotate-left"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-0.5"
+      >
+        <div
+          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+        >
+          <div
+            class="flex w-full flex-col gap-3 p-4"
+          >
+            <div
+              class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+            >
+              <div
+                class="flex items-center gap-3"
+              >
+                <div
+                  class="flex flex-col gap-2"
+                  data-testid="TokensHeader__tokens"
+                >
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <p
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    >
+                      Tokens
+                    </p>
+                    <div
+                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                    />
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                  <div
+                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    5
+                  </div>
+                </div>
+                <div
+                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                />
+                <div
+                  class="hidden flex-col gap-2 sm:flex"
+                  data-testid="TokensHeader__balance"
+                >
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                  >
+                    Total Balance
+                  </p>
+                  <div
+                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    <span
+                      class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50"
+                      data-testid="Amount"
+                    >
+                      100 ARK
+                    </span>
+                    <div
+                      class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
+                    />
+                    <span
+                      class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
+                      data-testid="Amount"
+                    >
+                      $100.00
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center gap-3"
+              >
+                <div
+                  class="my-auto flex w-full flex-1 md:w-auto"
+                >
+                  <button
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    data-testid="TokensHeader__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Send
+                    </div>
+                  </button>
+                </div>
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center gap-2"
+                  >
+                    <div>
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`TokenHeader > should show not available when no tokens are selected 1`] = `
+<DocumentFragment>
+  <header
+    class="md:px-10 lg:container"
+    data-testid="TokensHeader"
+  >
+    <div
+      class="bg-theme-primary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex flex-col gap-3 px-2 pt-3 pb-2 sm:gap-2 md:rounded-xl"
+    >
+      <div
+        class="z-30 flex w-full flex-row items-center justify-between px-4"
+      >
+        <div
+          class="flex h-fit flex-row items-center gap-1"
+        >
+          <p
+            class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 hidden rounded-l text-base leading-5 font-semibold sm:block"
+          >
+            Viewing:
+          </p>
+          <div
+            class="max-w-full rounded-r cursor-pointer"
+            data-testid="ShowAddressesPanel"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center gap-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+              >
+                <span
+                  class="font-semibold text-base text-sm leading-[17px] sm:text-base sm:leading-5 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+                  data-testid="Address__alias"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet 1
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <button
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed hover:text-theme-primary-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700 text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 h-6 w-6"
+                type="button"
+              >
+                <div
+                  class="flex items-center gap-2"
+                >
+                  <div>
+                    <div
+                      style="height: 26px; width: 26px;"
+                    >
+                      <svg
+                        fill="none"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4016 14.3984L12.1146 16.7502C12.0998 16.7655 12.0822 16.7776 12.0628 16.7859C12.0434 16.7942 12.0226 16.7984 12.0016 16.7984C11.9806 16.7984 11.9598 16.7942 11.9404 16.7859C11.921 16.7776 11.9033 16.7655 11.8885 16.7502L9.60156 14.3984"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                        <path
+                          d="M9.60234 9.60156L11.8893 7.24978C11.9041 7.23449 11.9217 7.22237 11.9411 7.21409C11.9605 7.20582 11.9813 7.20156 12.0023 7.20156C12.0233 7.20156 12.0441 7.20582 12.0635 7.21409C12.0829 7.22237 12.1006 7.23449 12.1154 7.24978L14.4023 9.60156"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.6"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row items-center gap-1"
+        >
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="plus"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <p
+                class="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block"
+              >
+                Add Token
+              </p>
+            </div>
+          </button>
+          <div
+            class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-4"
+          />
+          <button
+            class="space-x-3 text-base relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            type="button"
+          >
+            <div
+              class="flex items-center gap-2"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                style="animation-direction: reverse;"
+              >
+                <div
+                  style="height: 16px; width: 16px;"
+                >
+                  <svg
+                    id="arrow-rotate-left"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M10.01 20c1.407 0 2.81-.296 4.127-.883a9.766 9.766 0 0 0 5.232-5.576C21.29 8.323 18.675 2.538 13.54.645 9.827-.715 5.824.11 3.049 2.793v-.87a1.129 1.129 0 1 0-2.26 0V5.52a1.13 1.13 0 0 0 .282.743 1.123 1.123 0 0 0 .775.382c.027.001.044 0 .08.002h3.587a1.129 1.129 0 1 0 0-2.259H4.65c2.147-2.05 5.237-2.674 8.11-1.622 3.965 1.462 5.98 5.946 4.49 9.995a7.521 7.521 0 0 1-4.033 4.294 7.86 7.86 0 0 1-5.96.191 7.656 7.656 0 0 1-4.31-3.998 1.129 1.129 0 1 0-2.056.938 9.94 9.94 0 0 0 5.588 5.18A10.18 10.18 0 0 0 10.01 20z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-0.5"
+      >
+        <div
+          class="dark:bg-theme-dark-900 dim:bg-theme-dim-900 rounded bg-white md:rounded-t-lg md:rounded-b-sm"
+        >
+          <div
+            class="flex w-full flex-col gap-3 p-4"
+          >
+            <div
+              class="flex flex-col gap-3 sm:w-full sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+            >
+              <div
+                class="flex items-center gap-3"
+              >
+                <div
+                  class="flex flex-col gap-2"
+                  data-testid="TokensHeader__tokens"
+                >
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <p
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                    >
+                      Tokens
+                    </p>
+                    <div
+                      class="relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 h-3 sm:hidden"
+                    />
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold sm:hidden"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                  <div
+                    class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    0
+                  </div>
+                </div>
+                <div
+                  class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-12"
+                />
+                <div
+                  class="hidden flex-col gap-2 sm:flex"
+                  data-testid="TokensHeader__balance"
+                >
+                  <p
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+                  >
+                    Total Balance
+                  </p>
+                  <div
+                    class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
+                  >
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
+                    >
+                      N/A
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-row items-center gap-3"
+              >
+                <div
+                  class="my-auto flex w-full flex-1 md:w-auto"
+                >
+                  <button
+                    class="py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
+                    data-testid="TokensHeader__send-button"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center gap-2"
+                    >
+                      Send
+                    </div>
+                  </button>
+                </div>
+                <button
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 hover:bg-theme-primary-800 hover:text-white dim-hover:text-white text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center gap-2"
+                  >
+                    <div>
+                      <div
+                        style="height: 20px; width: 20px;"
+                      >
+                        <svg
+                          id="received"
+                          style="height: 100%; width: 100%;"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

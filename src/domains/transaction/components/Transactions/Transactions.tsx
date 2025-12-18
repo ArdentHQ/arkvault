@@ -26,6 +26,7 @@ interface TransactionsProperties {
 	onLoading?: (status: boolean) => void;
 	isUpdatingWallet?: boolean;
 	selectedWallets?: number;
+	showTabs?: boolean;
 }
 
 export const Transactions = memo(function Transactions({
@@ -38,6 +39,7 @@ export const Transactions = memo(function Transactions({
 	isUpdatingWallet,
 	onLoading,
 	selectedWallets,
+	showTabs,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
 
@@ -138,7 +140,12 @@ export const Transactions = memo(function Transactions({
 		[activeMode],
 	);
 
-	const showTabs = useMemo(() => {
+	const showTransactionTabs = useMemo(() => {
+		// Explicitly disabled by props
+		if (showTabs === false) {
+			return false;
+		}
+
 		if (isLoadingTransactions) {
 			return true;
 		}
@@ -177,7 +184,7 @@ export const Transactions = memo(function Transactions({
 				</div>
 			)}
 
-			{showTabs && (
+			{showTransactionTabs && (
 				<>
 					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
 						<TabList className="h-10">

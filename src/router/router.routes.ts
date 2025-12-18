@@ -5,6 +5,7 @@ import { SettingRoutes } from "@/domains/setting/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
 import { ProfileRoutes } from "@/domains/profile/routing";
 import { RouteItem } from "@/router/router.types";
+import { TokenRoutes } from "@/domains/tokens/routing";
 
 export const routes: RouteItem[] = [
 	...ContactRoutes,
@@ -13,4 +14,5 @@ export const routes: RouteItem[] = [
 	...SettingRoutes,
 	...VoteRoutes,
 	...ProfileRoutes,
+	...TokenRoutes,
 ];
