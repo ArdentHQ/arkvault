@@ -23,27 +23,19 @@ describe("Url validation", () => {
 		await emptyProfile.sync();
 
 		// should return profile id when given profile has no addresses
-		expect(isDisabledUrl(
-			generatePath(ProfilePaths.Tokens, {profileId: emptyProfile.id()}),
-			env
-		)).toBe(emptyProfile.id());
+		expect(isDisabledUrl(generatePath(ProfilePaths.Tokens, { profileId: emptyProfile.id() }), env)).toBe(
+			emptyProfile.id(),
+		);
 
 		// should return false when given profile has addresses
-		expect(isDisabledUrl(
-			generatePath(ProfilePaths.Tokens, {profileId: getMainsailProfileId()}),
-			env
-		)).toBe(false);
+		expect(isDisabledUrl(generatePath(ProfilePaths.Tokens, { profileId: getMainsailProfileId() }), env)).toBe(
+			false,
+		);
 
 		// should return false when path is not profile path
-		expect(isDisabledUrl(
-			generatePath(ProfilePaths.Welcome),
-			env
-		)).toBe(false);
+		expect(isDisabledUrl(generatePath(ProfilePaths.Welcome), env)).toBe(false);
 
 		// should return false when profile id is invalid
-		expect(isDisabledUrl(
-			generatePath(ProfilePaths.Tokens, {profileId: '1'}),
-			env
-		)).toBe(false);
+		expect(isDisabledUrl(generatePath(ProfilePaths.Tokens, { profileId: "1" }), env)).toBe(false);
 	});
 });
