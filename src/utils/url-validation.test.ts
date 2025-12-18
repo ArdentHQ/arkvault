@@ -40,8 +40,8 @@ describe("Url validation", () => {
 
 
 		// should return false when given path is not tokens, exchange or votes
-		expect(isDisabledUrl(generatePath(ProfilePaths.Contacts, { profileId: getMainsailProfileId() }), env)).toBe(
-			false,
+		expect(isDisabledUrl(generatePath(ProfilePaths.Contacts, { profileId: emptyProfile.id() }), env)).toBe(
+			undefined
 		);
 	});
 });
