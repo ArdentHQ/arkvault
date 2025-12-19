@@ -66,9 +66,7 @@ export const TokenDetailSidepanel = ({
 								</div>
 							</div>
 
-							<div
-								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-							>
+							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.FIAT")}</DetailTitle>
 
 								<div className="text-theme-secondary-500 dark:text-theme-dark-500 flex flex-1 flex-row items-center justify-end gap-2 font-semibold sm:w-full sm:justify-start">
@@ -80,20 +78,18 @@ export const TokenDetailSidepanel = ({
 
 					<DetailWrapper label={t("COMMON.DETAILS")} className="rounded-xl">
 						<div className="space-y-3">
-							<div
-								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-							>
+							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SYMBOL")}</DetailTitle>
 
 								<div className="font-semibold">{walletToken.token().symbol()}</div>
 							</div>
 
-							<div
-								className="flex md:items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-							>
-								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6 pt-1 md:pt-0">{t("COMMON.CONTRACT")}</DetailTitle>
+							<div className="flex justify-between space-x-2 sm:justify-start sm:space-x-0 md:items-center">
+								<DetailTitle className="w-auto pt-1 sm:min-w-28 sm:pr-6 md:pt-0">
+									{t("COMMON.CONTRACT")}
+								</DetailTitle>
 
-								<div className="flex-col flex flex-1 md:flex-row md:items-center justify-end gap-2 sm:w-full sm:justify-start">
+								<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
 									<Address
 										truncateOnTable
 										address={walletToken.token().address()}
@@ -105,21 +101,21 @@ export const TokenDetailSidepanel = ({
 										)}
 									/>
 
-									<div className="hidden md:block"><Divider type="vertical" /></div>
+									<div className="hidden md:block">
+										<Divider type="vertical" />
+									</div>
 
 									<Link
 										isExternal
 										to={walletToken.contractExplorerLink()}
-										className="whitespace-nowrap flex justify-end items-center"
+										className="flex items-center justify-end whitespace-nowrap"
 									>
 										{t("COMMON.EXPLORER")}
 									</Link>
 								</div>
 							</div>
 
-							<div
-								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-							>
+							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.DECIMALS")}</DetailTitle>
 
 								<div className="font-semibold">{walletToken.token().decimals()}</div>
