@@ -57,6 +57,7 @@ export class ClientService {
 
 	public async tokens(): Promise<TokenRepository> {
 		const response = await this.#client.tokens().all();
+		console.log({ response })
 		const tokens = new TokenRepository();
 		tokens.fill(response.data);
 		return tokens;
@@ -152,11 +153,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-						{
-							amount: 0,
-							id: vote,
-						},
-					]
+					{
+						amount: 0,
+						id: vote,
+					},
+				]
 				: [],
 		};
 	}
