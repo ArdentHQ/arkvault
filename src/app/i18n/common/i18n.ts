@@ -107,6 +107,7 @@ export const translations = {
 	},
 	DATE_FROM: "Date From",
 	DATE_TO: "Date To",
+	DECIMALS: "Decimals",
 	DEFAULT_CHOSEN_FEE: "Default fee type",
 	DELETE: "Delete",
 	DELETE_ADDRESS: "Delete Address",
