@@ -1,6 +1,6 @@
 import { DetailsCondensed, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useState } from "react";
-import { SidePanel } from "@/app/components/SidePanel/SidePanel";
+import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
@@ -10,6 +10,31 @@ import cn from "classnames";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
+import { Button } from "@/app/components/Button";
+
+
+const TokenDetailSidepanelFooter = () => {
+	const { t } = useTranslation();
+	return (
+		<SidePanelButtons>
+			<>
+				<Button
+					variant="secondary"
+				>
+					{t("COMMON.CLOSE")}
+				</Button>
+
+				<Button className="hidden md:block" >
+					{t("COMMON.SEND_TOKENS")}
+				</Button>
+
+				<Button className="md:hidden" >
+					{t("COMMON.SEND")}
+				</Button>
+			</>
+		</SidePanelButtons>
+	)
+}
 
 export const TokenDetailSidepanel = ({
 	isOpen: isSidePanelOpen,
@@ -22,7 +47,12 @@ export const TokenDetailSidepanel = ({
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
 
 	return (
-		<SidePanel title={t("TOKENS.TOKEN_INFORMATION")} open={isOpen} onOpenChange={setIsOpen}>
+		<SidePanel
+			title={t("TOKENS.TOKEN_INFORMATION")}
+			open={isOpen}
+			onOpenChange={setIsOpen}
+			footer={<TokenDetailSidepanelFooter />}
+		>
 			<DetailsCondensed>
 				<div className="space-y-4">
 					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">

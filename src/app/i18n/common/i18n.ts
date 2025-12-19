@@ -469,6 +469,7 @@ export const translations = {
 	SEND: "Send",
 	SENDER: "Sender",
 	SENDER_ADDRESS: "Sender address",
+	SEND_TOKENS: "Send Tokens",
 	SERVER_STATUS: {
 		DOWNGRADED:
 			"One or more networks are experiencing downgraded performance. See server settings for additional information.",
