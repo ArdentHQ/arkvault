@@ -13,7 +13,7 @@ import { Button } from "@/app/components/Button";
 import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
 import { Panel, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
-import { TokenDetailSidepanel } from "../../components/TokenDetailsSidepanel/TokensDetailSidepanel";
+import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 
 export const Tokens = () => {
@@ -22,13 +22,15 @@ export const Tokens = () => {
 	const [activeTab, setActiveTab] = useState<TabId>("tokens");
 	const { openPanel } = usePanels();
 
-	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined)
-	const tokens = activeProfile.tokens().selected()
-	console.log({ tokens: tokens.values() })
+	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
+	const tokens = activeProfile.tokens().selected();
+	console.log({ tokens: tokens.values() });
 
-	const {
-		transactions,
-	} = useProfileTransactions({ limit: 30, profile: activeProfile, wallets: activeProfile.wallets().values() });
+	const { transactions } = useProfileTransactions({
+		limit: 30,
+		profile: activeProfile,
+		wallets: activeProfile.wallets().values(),
+	});
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
@@ -111,12 +113,7 @@ export const Tokens = () => {
 				</div>
 			)}
 
-			{tokenModalItem && (
-				<TokenDetailSidepanel
-					isOpen={!!transactions.at(0)}
-					walletToken={tokens.first()}
-				/>
-			)}
+			{tokenModalItem && <TokenDetailSidepanel isOpen={!!transactions.at(0)} walletToken={tokens.first()} />}
 		</Page>
 	);
 };

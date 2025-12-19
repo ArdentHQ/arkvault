@@ -1,5 +1,5 @@
 import { Contracts } from ".";
-import { Networks } from "../mainsail";
+import { Networks } from "@/app/lib/mainsail";
 import { TokenDTO } from "./token.dto";
 import { WalletTokenDTO } from "./wallet-token.dto";
 import { BigNumber } from "@/app/lib/helpers";
@@ -10,11 +10,20 @@ export class WalletToken {
 	#walletToken: WalletTokenDTO;
 	#linkService: LinkService;
 
-	constructor({ walletToken, token, profile, network }: { walletToken: WalletTokenDTO; token: TokenDTO, profile: Contracts.IProfile, network: Networks.Network }) {
+	constructor({
+		walletToken,
+		token,
+		profile,
+		network,
+	}: {
+		walletToken: WalletTokenDTO;
+		token: TokenDTO;
+		profile: Contracts.IProfile;
+		network: Networks.Network;
+	}) {
 		this.#walletToken = walletToken;
 		this.#token = token;
-		this.#linkService = new LinkService({ profile, config: network.config() })
-
+		this.#linkService = new LinkService({ config: network.config(), profile });
 	}
 
 	address(): string {
@@ -30,6 +39,6 @@ export class WalletToken {
 	}
 
 	contractExplorerLink(): string {
-		return this.#linkService.wallet(this.token().address())
+		return this.#linkService.wallet(this.token().address());
 	}
 }

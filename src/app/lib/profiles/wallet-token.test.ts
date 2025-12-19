@@ -21,7 +21,12 @@ describe("WalletToken", () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		walletTokenDTO = new WalletTokenDTO(walletTokenData);
 		tokenDTO = new TokenDTO(fixtureData);
-		walletToken = new WalletToken({ token: tokenDTO, walletToken: walletTokenDTO, profile, network: profile.activeNetwork() });
+		walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
 	});
 
 	it("#address", () => {
@@ -37,7 +42,9 @@ describe("WalletToken", () => {
 	});
 
 	it("#contractExplorerLink", () => {
-		expect(walletToken.contractExplorerLink()).toBe("https://explorer-demo.mainsailhq.com/addresses/0xdeb478251073157e400c3d8d2ed92a85c958f9fa");
+		expect(walletToken.contractExplorerLink()).toBe(
+			"https://explorer-demo.mainsailhq.com/addresses/0xdeb478251073157e400c3d8d2ed92a85c958f9fa",
+		);
 	});
 
 	describe("TokenDTO", () => {
@@ -65,13 +72,17 @@ describe("WalletToken", () => {
 			expect(tokenDTO.totalSupply()).toBe(fixtureData.totalSupply);
 		});
 
-
 		it("#toJSON", () => {
 			expect(tokenDTO.toJSON()).toEqual(fixtureData);
 		});
 
 		it("should be accessible through walletToken.token()", () => {
-			const walletToken = new WalletToken({ token: tokenDTO, walletToken: new WalletTokenDTO(fixtureData), profile, network: profile.activeNetwork() });
+			const walletToken = new WalletToken({
+				network: profile.activeNetwork(),
+				profile,
+				token: tokenDTO,
+				walletToken: new WalletTokenDTO(fixtureData),
+			});
 			expect(walletToken.token().address()).toBe(tokenDTO.address());
 			expect(walletToken.token().decimals()).toBe(tokenDTO.decimals());
 			expect(walletToken.token().deploymentHash()).toBe(tokenDTO.deploymentHash());

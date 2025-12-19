@@ -1,12 +1,12 @@
 import { Contracts } from ".";
-import { Networks } from "../mainsail";
+import { Networks } from "@/app/lib/mainsail";
 import { WalletTokenRepository } from "./wallet-token.repository";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
 	#network: Networks.Network;
 
-	public constructor({ profile, network }: { profile: Contracts.IProfile, network: Networks.Network }) {
+	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
 		this.#network = network;
 	}

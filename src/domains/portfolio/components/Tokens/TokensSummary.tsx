@@ -4,7 +4,12 @@ import { twMerge } from "tailwind-merge";
 const VISIBLE_TOKEN_COUNT = 3;
 
 export const TokenNameInitials = ({ tokenName, className }: { tokenName: string; className?: string }) => (
-	<div className={twMerge("bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white text-xs font-semibold", className)}>
+	<div
+		className={twMerge(
+			"bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-xs font-semibold text-white",
+			className,
+		)}
+	>
 		<div>{tokenName.charAt(0).toUpperCase()}</div>
 	</div>
 );

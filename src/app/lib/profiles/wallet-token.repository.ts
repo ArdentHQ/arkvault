@@ -12,8 +12,8 @@ export class WalletTokenRepository {
 
 	public constructor(network: Networks.Network, profile: Contracts.IProfile) {
 		this.#data = new DataRepository();
-		this.#profile = profile
-		this.#network = network
+		this.#profile = profile;
+		this.#network = network;
 	}
 
 	public all(): Record<string, WalletToken> {
@@ -45,7 +45,7 @@ export class WalletTokenRepository {
 	}
 
 	create(data: { walletToken: WalletTokenDTO; token: TokenDTO }) {
-		const token = new WalletToken({ ...data, profile: this.#profile, network: this.#network });
+		const token = new WalletToken({ ...data, network: this.#network, profile: this.#profile });
 
 		this.push(token);
 

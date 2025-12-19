@@ -44,8 +44,8 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 		[t],
 	);
 
-	const renderTableRow = () => (
-		<tr>
+	const renderTableRow = (walletToken: WalletToken) => (
+		<tr onClick={() => onClick?.(walletToken)}>
 			<td>TODO: add token row</td>{" "}
 		</tr>
 	);
