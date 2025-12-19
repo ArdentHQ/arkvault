@@ -1,11 +1,12 @@
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
+import { twMerge } from "tailwind-merge";
 
 const VISIBLE_TOKEN_COUNT = 3;
 
-const DefaultToken = ({ tokenName }: { tokenName: string }) => (
-	<div className="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white">
-		<span className="text-xs font-semibold">{tokenName.charAt(0).toUpperCase()}</span>
+export const TokenNameInitials = ({ tokenName, className }: { tokenName: string; className?: string }) => (
+	<div className={twMerge("bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white text-xs font-semibold", className)}>
+		<div>{tokenName.charAt(0).toUpperCase()}</div>
 	</div>
 );
 
@@ -18,7 +19,7 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 						key={index}
 						className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -ml-[5px] flex h-6 w-6 items-center justify-center overflow-hidden rounded-full first:ml-0"
 					>
-						<DefaultToken tokenName="Test Token" />
+						<TokenNameInitials tokenName="Test Token" />
 					</div>
 				))}
 			</div>
