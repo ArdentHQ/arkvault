@@ -45,7 +45,7 @@ export const TokenDetailSidepanel = ({
 			footer={<TokenDetailSidepanelFooter />}
 		>
 			<DetailsCondensed>
-				<div className="space-y-4">
+				<div className="space-y-4" data-testid="TokenDetailSidepanel">
 					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">
 						<div className="flex justify-between">
 							<div className="flex items-center space-x-2">
@@ -72,10 +72,7 @@ export const TokenDetailSidepanel = ({
 
 					<DetailWrapper label={t("COMMON.BALANCE")} className="rounded-xl">
 						<div className="space-y-3">
-							<div
-								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-								data-testid="AmountSection"
-							>
+							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0" >
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.AMOUNT")}</DetailTitle>
 
 								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">

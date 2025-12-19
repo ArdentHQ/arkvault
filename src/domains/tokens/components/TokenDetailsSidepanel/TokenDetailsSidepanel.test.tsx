@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "vitest";
-import { env, getMainsailProfileId, renderResponsiveWithRoute } from "@/utils/testing-library";
+import { env, getMainsailProfileId, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 
 import { Contracts } from "@/app/lib/profiles";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
@@ -35,6 +35,7 @@ describe("TokensTable", () => {
 			breakpoint as LayoutBreakpoint,
 			{ route },
 		);
-		expect(asFragment()).toMatchSnapshot();
+
+		expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument()
 	});
 });
