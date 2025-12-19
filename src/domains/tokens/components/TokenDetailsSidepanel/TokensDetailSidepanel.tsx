@@ -68,7 +68,6 @@ export const TokenDetailSidepanel = ({
 
 							<div
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-								data-testid="FiatAmountSection"
 							>
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.FIAT")}</DetailTitle>
 
@@ -83,7 +82,6 @@ export const TokenDetailSidepanel = ({
 						<div className="space-y-3">
 							<div
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-								data-testid="AmountSection"
 							>
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SYMBOL")}</DetailTitle>
 
@@ -91,12 +89,11 @@ export const TokenDetailSidepanel = ({
 							</div>
 
 							<div
-								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-								data-testid="FiatAmountSection"
+								className="flex md:items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 							>
-								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.CONTRACT")}</DetailTitle>
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6 pt-1 md:pt-0">{t("COMMON.CONTRACT")}</DetailTitle>
 
-								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
+								<div className="flex-col flex flex-1 md:flex-row md:items-center justify-end gap-2 sm:w-full sm:justify-start">
 									<Address
 										truncateOnTable
 										address={walletToken.token().address()}
@@ -108,12 +105,12 @@ export const TokenDetailSidepanel = ({
 										)}
 									/>
 
-									<Divider type="vertical" />
+									<div className="hidden md:block"><Divider type="vertical" /></div>
 
 									<Link
 										isExternal
 										to={walletToken.contractExplorerLink()}
-										className="whitespace-nowrap"
+										className="whitespace-nowrap flex justify-end items-center"
 									>
 										{t("COMMON.EXPLORER")}
 									</Link>
@@ -122,7 +119,6 @@ export const TokenDetailSidepanel = ({
 
 							<div
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
-								data-testid="FiatAmountSection"
 							>
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.DECIMALS")}</DetailTitle>
 
