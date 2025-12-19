@@ -290,7 +290,7 @@ export class Profile implements IProfile {
 		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
 		this.#ledgerService = new LedgerService({ config: this.activeNetwork().config() });
 		this.#draftTransactionFactory = new DraftTransactionFactory({ env, profile: this });
-		this.#tokenService = new TokenService({ profile: this });
+		this.#tokenService = new TokenService({ profile: this, network: this.activeNetwork() });
 	}
 
 	/** {@inheritDoc IProfile.id} */
