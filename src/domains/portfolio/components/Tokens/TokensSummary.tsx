@@ -1,4 +1,3 @@
-import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { twMerge } from "tailwind-merge";
 

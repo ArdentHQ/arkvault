@@ -1,45 +1,34 @@
 import { DetailsCondensed, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SidePanel } from "@/app/components/SidePanel/SidePanel";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
-import { SIDE_PANEL_TRANSITION_DURATION } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensSummary";
 import { Icon } from "@/app/components/Icon";
+import cn from "classnames";
+import { Address } from "@/app/components/Address";
+import { Divider } from "@/app/components/Divider";
+import { Link } from "@/app/components/Link";
 
 export const TokenDetailSidepanel = ({
 	isOpen: isSidePanelOpen,
 	walletToken,
-	onClose,
 }: {
 	isOpen: boolean;
 	walletToken: WalletToken;
-	onClose: () => void;
 }) => {
 	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
-
-	useEffect(() => {
-		let timeoutId: NodeJS.Timeout | undefined;
-
-		if (!isOpen) {
-			timeoutId = setTimeout(() => {
-				onClose?.();
-			}, SIDE_PANEL_TRANSITION_DURATION);
-		}
-
-		return () => clearTimeout(timeoutId);
-	}, [isOpen]);
 
 	return (
 		<SidePanel title={t("TOKENS.TOKEN_INFORMATION")} open={isOpen} onOpenChange={setIsOpen}>
 			<DetailsCondensed>
 				<div className="space-y-4">
-					<div className="rounded-xl sm:border px-6 py-3 border-none dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 dim:text-theme-dim-50">
+					<div className="rounded-xl sm:border px-6 py-3 border-none dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50">
 						<div className="flex justify-between">
 							<div className="flex items-center space-x-2">
-								<TokenNameInitials tokenName={walletToken.token().name()} className="w-8 h-8 text-lg leading-4" />
+								<TokenNameInitials tokenName={walletToken.token().name()} className="w-8 h-8 text-md p-3 leading-8" />
 								<div className="text-lg font-semibold leading-4">{walletToken.token().name()}</div>
 							</div>
 
@@ -63,14 +52,14 @@ export const TokenDetailSidepanel = ({
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 								data-testid="AmountSection"
 							>
-								<DetailTitle className="w-auto sm:min-w-[85px] sm:pr-6">
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
 									{t("COMMON.AMOUNT")}
 								</DetailTitle>
 
 								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 									<Amount
 										ticker="ARK"
-										value={10}
+										value={walletToken.balance()}
 										className="text-sm font-semibold md:text-base"
 									/>
 								</div>
@@ -80,11 +69,11 @@ export const TokenDetailSidepanel = ({
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 								data-testid="FiatAmountSection"
 							>
-								<DetailTitle className="w-auto sm:min-w-[85px] sm:pr-6">
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
 									{t("COMMON.FIAT")}
 								</DetailTitle>
 
-								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start text-theme-secondary-500 font-semibold">
+								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start text-theme-secondary-500 dark:text-theme-dark-500 font-semibold">
 									{t("COMMON.NOT_AVAILABLE")}
 								</div>
 							</div>
@@ -97,33 +86,37 @@ export const TokenDetailSidepanel = ({
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 								data-testid="AmountSection"
 							>
-								<DetailTitle className="w-auto sm:min-w-[85px] sm:pr-6">
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
 									{t("COMMON.SYMBOL")}
 								</DetailTitle>
 
-								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-									<Amount
-										ticker="ARK"
-										value={10}
-										className="text-sm font-semibold md:text-base"
-									/>
-								</div>
+								<div className="font-semibold">{walletToken.token().symbol()}</div>
 							</div>
 
 							<div
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 								data-testid="FiatAmountSection"
 							>
-								<DetailTitle className="w-auto sm:min-w-[85px] sm:pr-6">
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
 									{t("COMMON.CONTRACT")}
 								</DetailTitle>
 
 								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-									<Amount
-										ticker="ARK"
-										value={10}
-										className="text-sm font-semibold md:text-base"
+									<Address
+										truncateOnTable
+										address={walletToken.token().address()}
+										showCopyButton
+										walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+										wrapperClass="justify-end sm:justify-start"
+										addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4")}
 									/>
+
+									<Divider type="vertical" />
+
+									<Link isExternal to={walletToken.contractExplorerLink()} className="whitespace-nowrap">
+										{t("COMMON.EXPLORER")}
+									</Link>
+
 								</div>
 							</div>
 
@@ -131,17 +124,11 @@ export const TokenDetailSidepanel = ({
 								className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
 								data-testid="FiatAmountSection"
 							>
-								<DetailTitle className="w-auto sm:min-w-[85px] sm:pr-6">
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
 									{t("COMMON.DECIMALS")}
 								</DetailTitle>
 
-								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
-									<Amount
-										ticker="ARK"
-										value={10}
-										className="text-sm font-semibold md:text-base"
-									/>
-								</div>
+								<div className="font-semibold">{walletToken.token().decimals()}</div>
 							</div>
 						</div>
 					</DetailWrapper>

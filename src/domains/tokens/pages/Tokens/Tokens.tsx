@@ -107,20 +107,14 @@ export const Tokens = () => {
 						</div>
 					</Section>
 
-					<TokensTable />
+					<TokensTable onClick={(walletToken) => setTokenModelItem(walletToken)} />
 				</div>
 			)}
 
-			{!!transactions.at(0) && (
+			{tokenModalItem && (
 				<TokenDetailSidepanel
 					isOpen={!!transactions.at(0)}
 					walletToken={tokens.first()}
-					onClose={() => {
-						// /* istanbul ignore next -- @preserve */
-						// closePanel().then(() => {
-						// 	// setTransactionModalItem(undefined);
-						// });
-					}}
 				/>
 			)}
 		</Page>

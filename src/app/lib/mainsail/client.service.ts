@@ -57,7 +57,6 @@ export class ClientService {
 
 	public async tokens(): Promise<TokenRepository> {
 		const response = await this.#client.tokens().all();
-		console.log({ response })
 		const tokens = new TokenRepository();
 		tokens.fill(response.data);
 		return tokens;

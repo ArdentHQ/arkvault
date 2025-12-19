@@ -8,7 +8,7 @@ import { Toggle } from "@/app/components/Toggle";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTableFooter } from "./TokensTable.blocks";
 
-export const TokensTable = () => {
+export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => void }) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
