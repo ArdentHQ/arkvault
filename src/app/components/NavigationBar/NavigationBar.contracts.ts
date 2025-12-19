@@ -6,7 +6,9 @@ import { NavbarVariant } from "@/types";
 export interface NavigationBarMenuItem {
 	isActive: boolean;
 	title: string;
+	id: string;
 	mountPath: ((profileId: string) => string) | (() => string);
+	disabledMessage?: string;
 }
 
 export interface NavigationBarProperties {
