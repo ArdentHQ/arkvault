@@ -1,12 +1,15 @@
 import { describe, it, expect, beforeAll } from "vitest";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 import { WalletTokenRepository } from "./wallet-token.repository";
 import { WalletTokenDTO } from "./wallet-token.dto";
 import { TokenDTO } from "./token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import { WalletToken } from "./wallet-token";
+import { Contracts } from ".";
 
 describe("WalletTokenRepository", () => {
+	let profile: Contracts.IProfile;
 	let repository: WalletTokenRepository;
 	let walletTokenDTO: WalletTokenDTO;
 	let tokenDTO: TokenDTO;
@@ -15,11 +18,19 @@ describe("WalletTokenRepository", () => {
 	const fixtureData = Fixtures.ByContractAddress.data;
 	const walletTokenData = Fixtures.ByWalletAddress.data[0];
 
-	beforeAll(() => {
+	beforeAll(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(profile);
+
 		walletTokenDTO = new WalletTokenDTO(walletTokenData);
 		tokenDTO = new TokenDTO(fixtureData);
-		walletToken = new WalletToken({ token: tokenDTO, walletToken: walletTokenDTO });
-		repository = new WalletTokenRepository();
+		walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+		repository = new WalletTokenRepository(profile.activeNetwork(), profile);
 	});
 
 	it("should initialize with empty data", () => {

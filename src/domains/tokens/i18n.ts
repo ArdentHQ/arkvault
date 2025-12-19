@@ -4,4 +4,5 @@ export const translations = {
 	HIDE_DUST: "Hide Dust",
 	PAGE_SUBTITLE: "View, manage, and organize the tokens tied to your address",
 	PAGE_TITLE: "Tokens",
+	TOKEN_INFORMATION: "Token Information",
 };

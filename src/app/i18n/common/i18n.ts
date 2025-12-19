@@ -107,6 +107,7 @@ export const translations = {
 	},
 	DATE_FROM: "Date From",
 	DATE_TO: "Date To",
+	DECIMALS: "Decimals",
 	DEFAULT_CHOSEN_FEE: "Default fee type",
 	DELETE: "Delete",
 	DELETE_ADDRESS: "Delete Address",
@@ -468,6 +469,7 @@ export const translations = {
 	SEND: "Send",
 	SENDER: "Sender",
 	SENDER_ADDRESS: "Sender address",
+	SEND_TOKENS: "Send Tokens",
 	SERVER_STATUS: {
 		DOWNGRADED:
 			"One or more networks are experiencing downgraded performance. See server settings for additional information.",
