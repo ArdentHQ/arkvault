@@ -24,7 +24,6 @@ export const Tokens = () => {
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
 	const tokens = activeProfile.tokens().selected();
-	console.log({ tokens: tokens.values() });
 
 	const { transactions } = useProfileTransactions({
 		limit: 30,
