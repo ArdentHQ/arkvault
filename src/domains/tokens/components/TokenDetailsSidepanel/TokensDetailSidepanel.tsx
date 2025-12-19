@@ -12,29 +12,20 @@ import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { Button } from "@/app/components/Button";
 
-
 const TokenDetailSidepanelFooter = () => {
 	const { t } = useTranslation();
 	return (
 		<SidePanelButtons>
 			<>
-				<Button
-					variant="secondary"
-				>
-					{t("COMMON.CLOSE")}
-				</Button>
+				<Button variant="secondary">{t("COMMON.CLOSE")}</Button>
 
-				<Button className="hidden md:block" >
-					{t("COMMON.SEND_TOKENS")}
-				</Button>
+				<Button className="hidden md:block">{t("COMMON.SEND_TOKENS")}</Button>
 
-				<Button className="md:hidden" >
-					{t("COMMON.SEND")}
-				</Button>
+				<Button className="md:hidden">{t("COMMON.SEND")}</Button>
 			</>
 		</SidePanelButtons>
-	)
-}
+	);
+};
 
 export const TokenDetailSidepanel = ({
 	isOpen: isSidePanelOpen,
