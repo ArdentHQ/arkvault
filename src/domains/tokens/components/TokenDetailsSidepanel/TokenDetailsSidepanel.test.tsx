@@ -30,7 +30,7 @@ describe("TokensTable", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
-		const { asFragment } = renderResponsiveWithRoute(
+		renderResponsiveWithRoute(
 			<TokenDetailSidepanel isOpen walletToken={profile.tokens().selected().first()} />,
 			breakpoint as LayoutBreakpoint,
 			{ route },
