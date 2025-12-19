@@ -36,6 +36,6 @@ describe("TokensTable", () => {
 			{ route },
 		);
 
-		expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument()
+		expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument();
 	});
 });
