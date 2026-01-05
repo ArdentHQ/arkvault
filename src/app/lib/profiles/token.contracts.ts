@@ -12,3 +12,12 @@ export interface WalletTokenData {
 	balance: number;
 	tokenAddress: string;
 }
+
+export interface TokenAddressesData {
+	addresses: Record<string, string>;
+	decimals: number;
+	name: string;
+	symbol: string;
+	supply: string;
+	token: string;
+}
