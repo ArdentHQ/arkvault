@@ -62,6 +62,10 @@ export interface RangeCriteria {
 	to?: number;
 }
 
+export interface TokenAddressesInput extends ClientPagination {
+	addresses: string[];
+}
+
 export interface ClientTransactionsInput extends ClientPagination {
 	// Addresses
 	identifiers?: WalletIdentifier[];

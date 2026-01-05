@@ -18,8 +18,10 @@ import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 import { TokenRepository } from "@/app/lib/profiles/token.repository";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
-import { WalletTokenData } from "@/app/lib/profiles/token.contracts";
+import { TokenAddressesData, WalletTokenData } from "@/app/lib/profiles/token.contracts";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenAddressesDTO } from "@/app/lib/profiles/token-addresses.dto";
+import { TokenAddressesDTOCollection } from "@/app/lib/mainsail/token-addresses-dto.collection";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -60,6 +62,15 @@ export class ClientService {
 		const tokens = new TokenRepository();
 		tokens.fill(response.data);
 		return tokens;
+	}
+
+	public async tokenAddresses(query: Services.TokenAddressesInput): Promise<TokenAddressesDTOCollection> {
+		const response = await this.#client.tokens().byWalletAddress(query.addresses.join(','));
+
+		return new TokenAddressesDTOCollection(
+			response.data.map((tokenAddresses: TokenAddressesData) => new TokenAddressesDTO(tokenAddresses)),
+			this.#createMetaPagination(response),
+		);
 	}
 
 	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {

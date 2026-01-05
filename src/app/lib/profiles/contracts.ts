@@ -34,6 +34,7 @@ export * from "./registration.aggregate.contract.js";
 export * from "./setting.repository.contract.js";
 export * from "./signatory.factory.contract.js";
 export * from "./transaction.aggregate.contract.js";
+export * from "./token-addresses.aggregate.contract.js";
 export * from "./transaction-index.contract.js";
 export * from "./usernames.service.contract.js";
 export * from "./validator.service.contract.js";
