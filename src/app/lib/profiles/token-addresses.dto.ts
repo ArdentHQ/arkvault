@@ -7,7 +7,7 @@ export class TokenAddressesDTO {
 		this.#data = data;
 	}
 
-	addresses(): Record<string, string>{
+	addresses(): Record<string, string> {
 		return this.#data.addresses;
 	}
 
