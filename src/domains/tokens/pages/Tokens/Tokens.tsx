@@ -15,7 +15,7 @@ import { Panel, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
-import { useProfileTokens } from "../../hooks/use-profile-tokens";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
@@ -24,7 +24,7 @@ export const Tokens = () => {
 	const { openPanel } = usePanels();
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
-	const { tokens, reload, isLoading } = useProfileTokens({ profile: activeProfile })
+	const { tokens, reload, isLoading } = useProfileTokens({ profile: activeProfile });
 
 	const { transactions } = useProfileTransactions({
 		limit: 30,

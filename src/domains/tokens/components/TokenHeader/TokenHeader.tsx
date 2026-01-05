@@ -17,7 +17,7 @@ export const TokenHeader = ({
 	onOpenAddressSidepanel,
 	onReload,
 }: {
-	isLoading?: boolean,
+	isLoading?: boolean;
 	profile: Contracts.IProfile;
 	onOpenAddressSidepanel?: () => void;
 	onReload?: () => void;
@@ -107,9 +107,12 @@ export const TokenHeader = ({
 							<Icon
 								name="ArrowRotateLeft"
 								style={{ animationDirection: "reverse" }}
-								className={classNames("text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50", {
-									"animate-spin": isLoading
-								})}
+								className={classNames(
+									"text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50",
+									{
+										"animate-spin": isLoading,
+									},
+								)}
 							/>
 						</Button>
 					</div>
