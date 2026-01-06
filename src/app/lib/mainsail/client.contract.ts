@@ -62,8 +62,9 @@ export interface RangeCriteria {
 	to?: number;
 }
 
-export interface TokenAddressesInput extends ClientPagination {
+export interface TokenAddressesQuery extends ClientPagination {
 	addresses: string[];
+	page?: number;
 }
 
 export interface ClientTransactionsInput extends ClientPagination {
