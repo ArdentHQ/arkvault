@@ -65,11 +65,11 @@ export class ClientService {
 	}
 
 	public async tokenAddresses(query: Services.TokenAddressesQuery): Promise<TokenAddressesDTOCollection> {
-		const response = await this.#client.tokens().byWalletAddress(query.addresses.join(","));
+		const response = await this.#client.tokens().tokenAddresses(query.addresses);
 
 		return new TokenAddressesDTOCollection(
 			response.data.map((tokenAddresses: TokenAddressesData) => new TokenAddressesDTO(tokenAddresses)),
-			this.#createMetaPagination(response),
+			this.#createMetaPagination({ meta: {} }), // replace it with response when response includes pagination data
 		);
 	}
 
