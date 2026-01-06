@@ -65,7 +65,7 @@ export class ClientService {
 	}
 
 	public async tokenAddresses(query: Services.TokenAddressesInput): Promise<TokenAddressesDTOCollection> {
-		const response = await this.#client.tokens().byWalletAddress(query.addresses.join(','));
+		const response = await this.#client.tokens().byWalletAddress(query.addresses.join(","));
 
 		return new TokenAddressesDTOCollection(
 			response.data.map((tokenAddresses: TokenAddressesData) => new TokenAddressesDTO(tokenAddresses)),
