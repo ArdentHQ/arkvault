@@ -69,7 +69,7 @@ export class ClientService {
 
 		return new TokenAddressesDTOCollection(
 			response.data.map((tokenAddresses: TokenAddressesData) => new TokenAddressesDTO(tokenAddresses)),
-			this.#createMetaPagination({ meta: {} }), // replace it with response when response includes pagination data
+			this.#createMetaPagination({ meta: {} }), // replace it with `response` when response includes pagination data
 		);
 	}
 
