@@ -2,7 +2,7 @@ import { Contracts } from ".";
 import { Networks } from "@/app/lib/mainsail";
 import { WalletTokenRepository } from "./wallet-token.repository";
 import { ClientService } from "@/app/lib/mainsail/client.service";
-import { TokenAddressesDTOCollection } from "@/app/lib/mainsail/token-addresses-dto.collection";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { TokenAddressesQuery } from "@/app/lib/mainsail/client.contract";
 
 export class TokenService {
@@ -61,18 +61,18 @@ export class TokenService {
 		return tokens;
 	}
 
-	public async tokenAddresses(query: TokenAddressesQuery): Promise<TokenAddressesDTOCollection> {
+	public async tokenAddresses(query: TokenAddressesQuery): Promise<WalletTokenCollection> {
 		const clientService = new ClientService({
 			config: this.#profile.activeNetwork().config(),
 			profile: this.#profile,
 		});
 
-		let response: TokenAddressesDTOCollection;
+		let response: WalletTokenCollection;
 
 		try {
 			response = await clientService.tokenAddresses(query);
 		} catch {
-			return new TokenAddressesDTOCollection([], {
+			return new WalletTokenCollection([], {
 				last: undefined,
 				next: 0,
 				prev: undefined,
@@ -80,7 +80,7 @@ export class TokenService {
 			});
 		}
 
-		return new TokenAddressesDTOCollection(response.items(), {
+		return new WalletTokenCollection(response.items(), {
 			last: undefined,
 			next: Number(response.nextPage()),
 			prev: undefined,

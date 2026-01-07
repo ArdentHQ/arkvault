@@ -8,7 +8,6 @@ import { Toggle } from "@/app/components/Toggle";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTableFooter } from "./TokensTable.blocks";
 import { useProfileTokens } from "@/domains/transaction/hooks/use-profile-tokens";
-import { TokenAddressesDTO } from "@/app/lib/profiles/token-addresses.dto";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { Contracts } from "@/app/lib/profiles";
 import { useWalletActions } from "@/domains/wallet/hooks";
@@ -64,7 +63,7 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 			},
 			{
 				Header: " ",
-				accessor: (token: TokenAddressesDTO) => token.token(),
+				accessor: (walletToken: WalletToken) => walletToken.token().address(),
 				className: "justify-end",
 				disableSortBy: true,
 				headerClassName: "no-border",
@@ -75,11 +74,14 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 	);
 
 	const renderTableRow = useCallback(
-		(row: TokenAddressesDTO) => (
+		(row: WalletToken) => (
 			<TokenRow
 				isLoading={isLoadingTokens}
-				onClick={() => handleSend()}
-				token={row}
+				onClick={() => {
+					onClick?.(row)
+				}}
+				onSend={() => handleSend()}
+				walletToken={row}
 				exchangeCurrency={activeProfile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 				profile={activeProfile}
 			/>

@@ -4,10 +4,10 @@ import { useSynchronizer } from "@/app/hooks";
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
 import { TokenAddressesQuery } from "@/app/lib/mainsail/client.contract";
-import { TokenAddressesDTO } from "@/app/lib/profiles/token-addresses.dto";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 interface TokensState {
-	tokens: TokenAddressesDTO[];
+	tokens: WalletToken[];
 	isLoadingTokens: boolean;
 	isLoadingMore: boolean;
 	hasMore?: boolean;
