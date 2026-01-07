@@ -20,12 +20,19 @@ interface WalletVoteProperties {
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
 	wallets?: Contracts.IReadWriteWallet[];
-	profile: Contracts.IProfile
+	profile: Contracts.IProfile;
 }
 
-export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [], profile }: WalletVoteProperties) => {
+export const WalletVote = ({
+	wallet,
+	onButtonClick,
+	votes,
+	isLoadingVotes,
+	wallets = [],
+	profile,
+}: WalletVoteProperties) => {
 	const { t } = useTranslation();
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
 	if (isLoadingVotes || !wallet) {
 		return <WalletVoteSkeleton />;
