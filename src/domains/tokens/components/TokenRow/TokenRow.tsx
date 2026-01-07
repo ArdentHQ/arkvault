@@ -48,12 +48,12 @@ export const TokenRow = memo(
 				<TableCell variant="start">
 					<div className="flex flex-row items-center gap-3">
 						<DefaultToken tokenName={token.name()} />
-						<span className="text-sm leading-[17px] font-semibold">{token.name()}</span>
+						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">{token.name()}</span>
 					</div>
 				</TableCell>
 
 				<TableCell className="hidden md-lg:table-cell">
-					<div className="text-theme-secondary-700 text-sm leading-[17px] font-semibold">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
 						{token.symbol()}
 					</div>
 				</TableCell>
@@ -61,12 +61,12 @@ export const TokenRow = memo(
 				<TableCell>
 					<Link to="https://example.com" showExternalIcon={false} isExternal={true}>
 						<div className="flex w-40 flex-row items-center gap-2 text-sm leading-[17px] font-semibold">
-							<TruncateMiddle text={token.token()} />
+							<TruncateMiddle text={token.token()} className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600" />
 							<Icon
 								data-testid="Link__external"
 								name="ArrowExternal"
 								dimensions={[12, 12]}
-								className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+								className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 shrink-0 align-middle duration-200"
 							/>
 						</div>
 					</Link>
@@ -77,12 +77,12 @@ export const TokenRow = memo(
 						ticker={token.symbol()}
 						showTicker={false}
 						value={Object.values(token.addresses())[0]}
-						className="text-theme-secondary-700 text-sm leading-[17px] font-semibold"
+						className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
 					/>
 				</TableCell>
 
 				<TableCell innerClassName="justify-center" className="hidden lg:table-cell">
-					<div className="text-theme-secondary-500 dark:text-theme-secondary-200 text-sm font-semibold">
+					<div className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm font-semibold">
 						{t("COMMON.NOT_AVAILABLE")}
 					</div>
 				</TableCell>
@@ -91,7 +91,7 @@ export const TokenRow = memo(
 					<Button
 						size="icon"
 						variant="transparent"
-						className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
+						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
 						onClick={() => onClick?.()}
 					>
 						{t("COMMON.SEND")}
