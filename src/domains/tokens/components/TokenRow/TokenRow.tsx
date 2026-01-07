@@ -6,7 +6,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 import { Contracts } from "@/app/lib/profiles";
 import { TokenAddressesDTO } from "@/app/lib/profiles/token-addresses.dto";
-import { DefaultToken } from "@/domains/portfolio/components/Tokens/TokensSummary";
+import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensSummary";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Link } from "@/app/components/Link";
 import { Icon } from "@/app/components/Icon";
@@ -47,7 +47,7 @@ export const TokenRow = memo(
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
 				<TableCell variant="start">
 					<div className="flex flex-row items-center gap-3">
-						<DefaultToken tokenName={token.name()} />
+						<TokenNameInitials tokenName={token.name()} />
 						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">{token.name()}</span>
 					</div>
 				</TableCell>
