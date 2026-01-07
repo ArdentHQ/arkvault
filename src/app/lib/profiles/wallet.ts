@@ -94,7 +94,7 @@ export class Wallet implements IReadWriteWallet {
 		this.#signatoryFactory = new SignatoryFactory(this);
 		this.#messageService = new MessageService();
 		this.#ledgerService = profile.ledger();
-		this.#tokens = new WalletTokenRepository();
+		this.#tokens = new WalletTokenRepository(profile.activeNetwork(), profile);
 
 		this.#restore();
 	}

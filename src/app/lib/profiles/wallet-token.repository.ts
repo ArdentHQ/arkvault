@@ -1,13 +1,19 @@
+import { Networks } from "@/app/lib/mainsail";
 import { DataRepository } from "./data.repository";
 import { TokenDTO } from "./token.dto";
 import { WalletToken } from "./wallet-token";
 import { WalletTokenDTO } from "./wallet-token.dto";
+import { Contracts } from ".";
 
 export class WalletTokenRepository {
 	readonly #data: DataRepository;
+	readonly #profile: Contracts.IProfile;
+	readonly #network: Networks.Network;
 
-	public constructor() {
+	public constructor(network: Networks.Network, profile: Contracts.IProfile) {
 		this.#data = new DataRepository();
+		this.#profile = profile;
+		this.#network = network;
 	}
 
 	public all(): Record<string, WalletToken> {
@@ -39,7 +45,7 @@ export class WalletTokenRepository {
 	}
 
 	create(data: { walletToken: WalletTokenDTO; token: TokenDTO }) {
-		const token = new WalletToken(data);
+		const token = new WalletToken({ ...data, network: this.#network, profile: this.#profile });
 
 		this.push(token);
 
