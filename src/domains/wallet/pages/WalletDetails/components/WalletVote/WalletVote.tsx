@@ -3,7 +3,6 @@ import { EmptyVotes, Votes } from "./WalletVote.blocks";
 import { Button } from "@/app/components/Button";
 import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
-import React from "react";
 import { Tooltip } from "@/app/components/Tooltip";
 import { WalletVoteSkeleton } from "./WalletVoteSkeleton";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
@@ -18,9 +17,17 @@ interface WalletVoteProperties {
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
 	wallets?: Contracts.IReadWriteWallet[];
+	onViewTokens?: () => void;
 }
 
-export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, wallets = [] }: WalletVoteProperties) => {
+export const WalletVote = ({
+	wallet,
+	onButtonClick,
+	votes,
+	isLoadingVotes,
+	wallets = [],
+	onViewTokens,
+}: WalletVoteProperties) => {
 	const { t } = useTranslation();
 
 	if (isLoadingVotes || !wallet) {
@@ -78,7 +85,7 @@ export const WalletVote = ({ wallet, onButtonClick, votes, isLoadingVotes, walle
 						data-testid="ViewTokens"
 						variant="secondary-icon"
 						className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-						onClick={() => console.log("view tokens")}
+						onClick={onViewTokens}
 					>
 						<span>{t("COMMON.VIEW_TOKENS")}</span>
 					</Button>
