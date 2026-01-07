@@ -3,7 +3,7 @@ import { Contracts } from "@/app/lib/profiles";
 
 const VISIBLE_TOKEN_COUNT = 3;
 
-const DefaultToken = ({ tokenName }: { tokenName: string }) => (
+export const DefaultToken = ({ tokenName }: { tokenName: string }) => (
 	<div className="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex h-5 w-5 items-center justify-center overflow-hidden rounded-full text-white">
 		<span className="text-xs font-semibold">{tokenName.charAt(0).toUpperCase()}</span>
 	</div>

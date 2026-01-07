@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { Table } from "@/app/components/Table";
@@ -7,12 +7,23 @@ import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper"
 import { Toggle } from "@/app/components/Toggle";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTableFooter } from "./TokensTable.blocks";
+import { useProfileTokens } from "@/domains/transaction/hooks/use-profile-tokens";
+import { TokenAddressesDTO } from "@/app/lib/profiles/token-addresses.dto";
+import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
+import { Contracts } from "@/app/lib/profiles";
 
 export const TokensTable = () => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
 	const tokens = activeProfile.tokens().selected();
+
+	const { tokens: tokenAddresses, isLoadingTokens } = useProfileTokens({
+		profile: activeProfile,
+		wallets: activeProfile.wallets().selected(),
+	});
+
+	console.log("tokens", tokenAddresses);
 
 	const { t } = useTranslation();
 
@@ -21,22 +32,39 @@ export const TokensTable = () => {
 			{
 				Header: t("COMMON.NAME"),
 				accessor: "name",
-				cellWidth: "w-48 xl:w-40",
+				cellWidth: "w-32 xl:w-40",
 				headerClassName: "no-border",
 				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.SYMBOL"),
+				cellWidth: "w-28",
+				headerClassName: "no-border",
+			},
+			{
+				Header: t("COMMON.CONTRACT"),
 				cellWidth: "w-48 xl:w-40",
 				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.TOKEN_BALANCE"),
-				cellWidth: "w-48 xl:w-40",
+				cellWidth: "w-40",
+				className: "justify-end",
+				disableSortBy: true,
+				headerClassName: "no-border whitespace-nowrap",
+			},
+
+			{
+				Header: t("COMMON.VALUE"),
+				cellWidth: "w-40",
+				className: "justify-center",
 				headerClassName: "no-border",
 			},
 			{
-				Header: t("COMMON.CURRENCY"),
+				Header: " ",
+				accessor: (token: TokenAddressesDTO) => token.token(),
+				className: "justify-end",
+				disableSortBy: true,
 				headerClassName: "no-border",
 				minimumWidth: true,
 			},
@@ -44,10 +72,17 @@ export const TokensTable = () => {
 		[t],
 	);
 
-	const renderTableRow = () => (
-		<tr>
-			<td>TODO: add token row</td>{" "}
-		</tr>
+	const renderTableRow = useCallback(
+		(row: TokenAddressesDTO) => (
+			<TokenRow
+				isLoading={isLoadingTokens}
+				onClick={() => console.log(row)}
+				token={row}
+				exchangeCurrency={activeProfile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
+				profile={activeProfile}
+			/>
+		),
+		[],
 	);
 
 	const shouldRenderTable = (isXs && tokens.count() > 0) || isSmAndAbove;
@@ -87,7 +122,7 @@ export const TokensTable = () => {
 					<div data-testid="TokenList">
 						<Table
 							columns={listColumns}
-							data={tokens.values()}
+							data={tokenAddresses}
 							className="with-x-padding"
 							footer={
 								<TokensTableFooter tokensCount={tokens.count()} columnsCount={listColumns.length} />
