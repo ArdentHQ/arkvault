@@ -584,6 +584,7 @@ export const PortfolioHeader = ({
 
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block">
 						<WalletVote
+							profile={profile}
 							wallet={wallet}
 							onButtonClick={handleVotesButtonClick}
 							votes={votes}

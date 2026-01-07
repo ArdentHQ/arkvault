@@ -140,6 +140,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 					})}
 				>
 					<WalletVote
+						profile={activeProfile}
 						isLoadingVotes={isLoadingVotes}
 						votes={votes}
 						wallet={selectedWallets.at(0)}
