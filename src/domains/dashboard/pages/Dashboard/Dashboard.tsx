@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
@@ -14,6 +14,7 @@ import { WalletVote } from "@/domains/wallet/pages/WalletDetails/components";
 import { PortfolioHeader } from "@/domains/portfolio/components/PortfolioHeader";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 import { useDeeplinkActionHandler } from "@/app/hooks/use-deeplink";
+import { ProfilePaths } from "@/router/paths";
 
 export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
@@ -110,6 +111,9 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 						isLoadingVotes={isLoadingVotes}
 						isUpdatingTransactions={isUpdatingTransactions}
 						onUpdate={setIsUpdatingWallet}
+						onViewTokens={() =>
+							navigate(generatePath(ProfilePaths.Tokens, { profileId: activeProfile.id() }))
+						}
 					/>
 				)}
 			</Section>
@@ -145,6 +149,9 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 						wallet={selectedWallets.at(0)}
 						wallets={selectedWallets}
 						onButtonClick={handleVoteButton}
+						onViewTokens={() =>
+							navigate(generatePath(ProfilePaths.Tokens, { profileId: activeProfile.id() }))
+						}
 					/>
 				</Section>
 			)}
