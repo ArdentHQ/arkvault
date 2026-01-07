@@ -112,6 +112,7 @@ export class ProfileValidator implements IProfileValidator {
 				[ProfileSetting.Sessions]: Joi.object(),
 				[ProfileSetting.LastVisitedPage]: Joi.object(),
 				[ProfileSetting.WalletSelectionMode]: Joi.string().allow("single", "multiple").default("single"),
+				[ProfileSetting.HideDustTokens]: Joi.boolean().optional().default(false)
 			}).required(),
 			wallets: Joi.object().pattern(
 				Joi.string().uuid(),
