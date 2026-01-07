@@ -33,10 +33,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 
 	const orderBy = sortBy; // format sortBy based on API needs
 
-	const [
-		{ tokens, isLoadingTokens, isLoadingMore, hasMore },
-		setState,
-	] = useState<TokensState>({
+	const [{ tokens, isLoadingTokens, isLoadingMore, hasMore }, setState] = useState<TokensState>({
 		hasMore: true,
 		isLoadingMore: false,
 		isLoadingTokens: true,
@@ -139,9 +136,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 		return () => stop();
 	}, [start, stop]);
 
-	const hasEmptyResults = useMemo(() => {
-		return tokens.length === 0 && !isLoadingTokens;
-	}, [isLoadingTokens, tokens.length]);
+	const hasEmptyResults = useMemo(() => tokens.length === 0 && !isLoadingTokens, [isLoadingTokens, tokens.length]);
 
 	return {
 		fetchMore,
