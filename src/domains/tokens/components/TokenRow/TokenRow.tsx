@@ -25,12 +25,9 @@ export type TokenRowProperties = {
 export const TokenRow = memo(
 	({
 		className,
-		exchangeCurrency,
 		token,
 		onClick,
 		isLoading = false,
-		profile,
-		decimals = 8,
 		...properties
 	}: TokenRowProperties) => {
 		const { isXs, isSm, isXl } = useBreakpoint();
@@ -95,7 +92,7 @@ export const TokenRow = memo(
 						size="icon"
 						variant="transparent"
 						className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-						onClick={() => console.log("test")}
+						onClick={() => onClick?.()}
 					>
 						{t("COMMON.SEND")}
 					</Button>

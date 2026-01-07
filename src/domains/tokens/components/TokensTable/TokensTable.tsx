@@ -11,6 +11,7 @@ import { useProfileTokens } from "@/domains/transaction/hooks/use-profile-tokens
 import { TokenAddressesDTO } from "@/app/lib/profiles/token-addresses.dto";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { Contracts } from "@/app/lib/profiles";
+import { useWalletActions } from "@/domains/wallet/hooks";
 
 export const TokensTable = () => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
@@ -23,6 +24,8 @@ export const TokensTable = () => {
 		profile: activeProfile,
 		wallets,
 	});
+
+	const { handleSend } = useWalletActions({ wallets });
 
 	const { t } = useTranslation();
 
@@ -75,7 +78,7 @@ export const TokensTable = () => {
 		(row: TokenAddressesDTO) => (
 			<TokenRow
 				isLoading={isLoadingTokens}
-				onClick={() => console.log(row)}
+				onClick={() => handleSend()}
 				token={row}
 				exchangeCurrency={activeProfile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 				profile={activeProfile}
@@ -125,10 +128,10 @@ export const TokensTable = () => {
 							className="with-x-padding"
 							footer={
 								<TokensTableFooter
-									tokensCount={length}
+									tokensCount={Number(!hasEmptyResults)}
 									isLoadingMore={isLoadingMore}
 									isLoading={isLoadingTokens}
-									hasMore={true}
+									hasMore={!!hasMore}
 									columnsCount={listColumns.length}
 									fetchMore={fetchMore}
 								/>
