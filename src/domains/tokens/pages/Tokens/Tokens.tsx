@@ -23,7 +23,6 @@ export const Tokens = () => {
 	const { openPanel } = usePanels();
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
-	const tokens = activeProfile.tokens().selected();
 
 	const { transactions } = useProfileTransactions({
 		limit: 30,
@@ -112,7 +111,7 @@ export const Tokens = () => {
 				</div>
 			)}
 
-			{tokenModalItem && <TokenDetailSidepanel isOpen={!!transactions.at(0)} walletToken={tokens.first()} />}
+			{tokenModalItem && <TokenDetailSidepanel isOpen={!!transactions.at(0)} walletToken={tokenModalItem} />}
 		</Page>
 	);
 };

@@ -1,6 +1,5 @@
 import { Contracts } from ".";
 import { Networks } from "@/app/lib/mainsail";
-import { WalletTokenRepository } from "./wallet-token.repository";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
@@ -20,7 +19,17 @@ export class TokenService {
 	 * @returns {Promise<void>}
 	 */
 	public async sync(): Promise<void> {
-		await this.#profile.tokens().selected();
+		const walletTokensCollection = await this.#profile.tokens().selected();
+		const walletTokens = walletTokensCollection.items();
+
+		for (const walletToken of walletTokens) {
+			const wallet = this.#profile.wallets().findByAddressWithNetwork(
+				walletToken.address(),
+				this.#network.id(),
+			);
+
+			wallet?.tokens().push(walletToken);
+		}
 	}
 
 	/**
@@ -78,12 +87,13 @@ export class TokenService {
 	 *
 	 * @returns {number}
 	 */
-	async selectedTotalBalance(): Promise<number> {
+	selectedTotalBalance(): number {
 		let total = 0;
-		const walletTokens = await this.selected();
 
-		for (const token of walletTokens.items()) {
-			total = total + token.balance();
+		for (const wallet of this.#profile.wallets().selected().values()) {
+			for (const token of wallet.tokens().values()) {
+				total = total + token.balance();
+			}
 		}
 
 		return total;
