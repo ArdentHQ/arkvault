@@ -78,7 +78,7 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 			<TokenRow
 				isLoading={isLoadingTokens}
 				onClick={() => {
-					onClick?.(row)
+					onClick?.(row);
 				}}
 				onSend={() => handleSend()}
 				walletToken={row}

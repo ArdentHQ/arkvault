@@ -82,19 +82,24 @@ export class ClientService {
 			const walletTokens: WalletTokenDTO[] = [];
 
 			for (const [walletAddress, balance] of Object.entries(tokenAddresses.addresses)) {
-				walletTokens.push(new WalletTokenDTO({
-					address: walletAddress,
-					balance: +balance,
-					tokenAddress: tokenAddresses.token,
-				}));
+				walletTokens.push(
+					new WalletTokenDTO({
+						address: walletAddress,
+						balance: +balance,
+						tokenAddress: tokenAddresses.token,
+					}),
+				);
 			}
 
-			return walletTokens.map(walletToken=> new WalletToken({
-					network: this.#profile.activeNetwork(),
-					profile: this.#profile,
-					token,
-					walletToken,
-				}))
+			return walletTokens.map(
+				(walletToken) =>
+					new WalletToken({
+						network: this.#profile.activeNetwork(),
+						profile: this.#profile,
+						token,
+						walletToken,
+					}),
+			);
 		}) as Array<WalletToken[]>;
 
 		return new WalletTokenCollection(walletTokens.flat(), this.#createMetaPagination(response));

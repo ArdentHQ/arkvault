@@ -25,10 +25,8 @@ export const TokensTableFooter = ({
 
 	if (hasMore) {
 		return (
-			<tr
-				className="border-t border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
-			>
-				<td colSpan={columnsCount} className="pt-3 pb-4 px-6">
+			<tr className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-solid md:border-b-4">
+				<td colSpan={columnsCount} className="px-6 pt-3 pb-4">
 					<Button
 						data-testid="transactions__fetch-more-button"
 						variant="secondary"
@@ -55,6 +53,6 @@ export const TokensTableFooter = ({
 					</p>
 				</td>
 			</tr>
-		)
+		);
 	}
 };

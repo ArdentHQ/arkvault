@@ -24,21 +24,12 @@ export type TokenRowProperties = {
 } & React.HTMLProps<any>;
 
 export const TokenRow = memo(
-	({
-		className,
-		walletToken,
-		onClick,
-		onSend,
-		isLoading = false,
-		...properties
-	}: TokenRowProperties) => {
+	({ className, walletToken, onClick, onSend, isLoading = false, ...properties }: TokenRowProperties) => {
 		const { isXs, isSm, isXl } = useBreakpoint();
 		const { t } = useTranslation();
 
 		if (isXs || isSm) {
-			return (
-				<div>TODO implement design for xs and sm</div>
-			);
+			return <div>TODO implement design for xs and sm</div>;
 		}
 
 		// if (isLoading) {
@@ -50,11 +41,13 @@ export const TokenRow = memo(
 				<TableCell variant="start">
 					<div className="flex flex-row items-center gap-3">
 						<TokenNameInitials tokenName={walletToken.token().name()} />
-						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">{walletToken.token().name()}</span>
+						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
+							{walletToken.token().name()}
+						</span>
 					</div>
 				</TableCell>
 
-				<TableCell className="hidden md-lg:table-cell">
+				<TableCell className="md-lg:table-cell hidden">
 					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
 						{walletToken.token().symbol()}
 					</div>
@@ -63,7 +56,10 @@ export const TokenRow = memo(
 				<TableCell>
 					<Link to={walletToken.contractExplorerLink()} showExternalIcon={false} isExternal={true}>
 						<div className="flex w-40 flex-row items-center gap-2 text-sm leading-[17px] font-semibold">
-							<TruncateMiddle text={walletToken.token().address()} className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600" />
+							<TruncateMiddle
+								text={walletToken.token().address()}
+								className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+							/>
 							<Icon
 								data-testid="Link__external"
 								name="ArrowExternal"
