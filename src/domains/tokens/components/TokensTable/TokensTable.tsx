@@ -13,7 +13,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => void }) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
-	const { persist } = useEnvironmentContext()
+	const { persist } = useEnvironmentContext();
 	const [query, setQuery] = useState("");
 	const tokens = activeProfile.tokens().selected();
 
@@ -83,10 +83,9 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 								defaultChecked={activeProfile.settings().get(ProfileSetting.HideDustTokens)}
 								data-testid="Tokens__toggle-Toggle"
 								onChange={async (event: React.ChangeEvent<HTMLInputElement>) => {
-									activeProfile.settings().set(ProfileSetting.HideDustTokens, event.target.checked)
-									await persist()
+									activeProfile.settings().set(ProfileSetting.HideDustTokens, event.target.checked);
+									await persist();
 								}}
-
 							/>
 						</div>
 					}

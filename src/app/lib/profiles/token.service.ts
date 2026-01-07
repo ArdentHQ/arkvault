@@ -7,7 +7,7 @@ import { WalletToken } from "./wallet-token";
 export class TokenService {
 	#profile: Contracts.IProfile;
 	#network: Networks.Network;
-	#dustBalanceThreshold = 1
+	#dustBalanceThreshold = 1;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
@@ -21,15 +21,18 @@ export class TokenService {
 	 * @returns {WalletToken[]}
 	 */
 	#walletTokens(wallet: Contracts.IReadWriteWallet): WalletToken[] {
-		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens)
+		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
 
-		return wallet.tokens().values().filter(token => {
-			if (hideDustTokens === true) {
-				return token.balance() > this.#dustBalanceThreshold
-			}
+		return wallet
+			.tokens()
+			.values()
+			.filter((token) => {
+				if (hideDustTokens === true) {
+					return token.balance() > this.#dustBalanceThreshold;
+				}
 
-			return true
-		})
+				return true;
+			});
 	}
 
 	/**
