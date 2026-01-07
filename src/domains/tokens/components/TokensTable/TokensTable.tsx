@@ -32,23 +32,26 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 		() => [
 			{
 				Header: t("COMMON.NAME"),
-				accessor: "name",
+				accessor: (walletToken: WalletToken) => walletToken.token().name(),
 				cellWidth: "w-32 xl:w-40",
 				headerClassName: "no-border",
 				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.SYMBOL"),
+				accessor: (walletToken: WalletToken) => walletToken.token().symbol(),
 				cellWidth: "w-28",
 				headerClassName: "no-border hidden md-lg:table-cell",
 			},
 			{
 				Header: t("COMMON.CONTRACT"),
+				accessor: (walletToken: WalletToken) => walletToken.token().address(),
 				cellWidth: "w-48 xl:w-40",
 				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.TOKEN_BALANCE"),
+				accessor: (walletToken: WalletToken) => walletToken.balance(),
 				cellWidth: "w-40",
 				className: "justify-end",
 				disableSortBy: true,
@@ -82,7 +85,6 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 				}}
 				onSend={() => handleSend()}
 				walletToken={row}
-				exchangeCurrency={activeProfile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 				profile={activeProfile}
 			/>
 		),

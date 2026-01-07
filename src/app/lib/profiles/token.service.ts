@@ -3,7 +3,7 @@ import { Networks } from "@/app/lib/mainsail";
 import { WalletTokenRepository } from "./wallet-token.repository";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
-import { TokenAddressesQuery } from "@/app/lib/mainsail/client.contract";
+import { WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
@@ -20,13 +20,7 @@ export class TokenService {
 	 * @returns {Promise<void>}
 	 */
 	public async sync(): Promise<void> {
-		await Promise.allSettled(
-			this.#profile
-				.wallets()
-				.selected()
-				.values()
-				.map((wallet) => wallet.synchroniser().tokens()),
-		);
+		await this.#profile.tokens().selected();
 	}
 
 	/**
@@ -49,19 +43,7 @@ export class TokenService {
 	 *
 	 * @returns {WalletTokenRepository}
 	 */
-	selected(): WalletTokenRepository {
-		const tokens = new WalletTokenRepository(this.#network, this.#profile);
-
-		for (const wallet of this.#profile.wallets().selected().values()) {
-			for (const token of wallet.tokens().values()) {
-				tokens.push(token);
-			}
-		}
-
-		return tokens;
-	}
-
-	public async tokenAddresses(query: TokenAddressesQuery): Promise<WalletTokenCollection> {
+	async selected(query?: WalletTokensQuery): Promise<WalletTokenCollection> {
 		const clientService = new ClientService({
 			config: this.#profile.activeNetwork().config(),
 			profile: this.#profile,
@@ -70,7 +52,10 @@ export class TokenService {
 		let response: WalletTokenCollection;
 
 		try {
-			response = await clientService.tokenAddresses(query);
+			response = await clientService.tokenAddresses({
+				addresses: this.#profile.wallets().selected().map(wallet => wallet.address()),
+				...(query ?? {}),
+			});
 		} catch {
 			return new WalletTokenCollection([], {
 				last: undefined,
@@ -93,10 +78,11 @@ export class TokenService {
 	 *
 	 * @returns {number}
 	 */
-	selectedTotalBalance(): number {
+	async selectedTotalBalance(): Promise<number> {
 		let total = 0;
+		const walletTokens = await this.selected();
 
-		for (const token of this.selected().values()) {
+		for (const token of walletTokens.items()) {
 			total = total + token.balance();
 		}
 

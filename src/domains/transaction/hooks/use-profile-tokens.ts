@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer } from "@/app/hooks";
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
-import { TokenAddressesQuery } from "@/app/lib/mainsail/client.contract";
+import { WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 interface TokensState {
@@ -69,14 +69,14 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 				return { hasMorePages: () => false, items: () => [] };
 			}
 
-			const queryParameters: TokenAddressesQuery = {
+			const queryParameters: WalletTokensQuery = {
 				addresses: wallets.map((wallet) => wallet.address()),
 				limit,
 				page,
 				// orderBy,
 			};
 
-			return profile.tokens().tokenAddresses(queryParameters);
+			return profile.tokens().selected(queryParameters);
 		},
 		[limit, orderBy, profile],
 	);
