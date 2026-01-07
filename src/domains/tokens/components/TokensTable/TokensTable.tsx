@@ -38,7 +38,7 @@ export const TokensTable = () => {
 			{
 				Header: t("COMMON.SYMBOL"),
 				cellWidth: "w-28",
-				headerClassName: "no-border",
+				headerClassName: "no-border hidden md-lg:table-cell",
 			},
 			{
 				Header: t("COMMON.CONTRACT"),
@@ -57,7 +57,7 @@ export const TokensTable = () => {
 				Header: t("COMMON.VALUE"),
 				cellWidth: "w-40",
 				className: "justify-center",
-				headerClassName: "no-border",
+				headerClassName: "no-border hidden lg:table-cell",
 			},
 			{
 				Header: " ",

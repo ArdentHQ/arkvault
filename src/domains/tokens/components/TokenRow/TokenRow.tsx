@@ -36,19 +36,11 @@ export const TokenRow = memo(
 		const { isXs, isSm, isXl } = useBreakpoint();
 		const { t } = useTranslation();
 
-		// if (isXs || isSm) {
-		// 	return (
-		// 		<TransactionRowMobile
-		// 			decimals={decimals}
-		// 			isLoading={isLoading}
-		// 			onClick={onClick}
-		// 			transaction={transaction}
-		// 			exchangeCurrency={exchangeCurrency}
-		// 			profile={profile}
-		// 			hideSender={hideSender}
-		// 		/>
-		// 	);
-		// }
+		if (isXs || isSm) {
+			return (
+				<div>TODO implement design for xs and sm</div>
+			);
+		}
 
 		// if (isLoading) {
 		// 	return <TransactionRowSkeleton hideSender={hideSender} />;
@@ -63,7 +55,7 @@ export const TokenRow = memo(
 					</div>
 				</TableCell>
 
-				<TableCell>
+				<TableCell className="hidden md-lg:table-cell">
 					<div className="text-theme-secondary-700 text-sm leading-[17px] font-semibold">
 						{token.symbol()}
 					</div>
@@ -92,7 +84,7 @@ export const TokenRow = memo(
 					/>
 				</TableCell>
 
-				<TableCell innerClassName="justify-center">
+				<TableCell innerClassName="justify-center" className="hidden lg:table-cell">
 					<div className="text-theme-secondary-500 dark:text-theme-secondary-200 text-sm font-semibold">
 						{t("COMMON.NOT_AVAILABLE")}
 					</div>
