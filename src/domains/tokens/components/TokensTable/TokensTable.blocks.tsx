@@ -20,7 +20,7 @@ export const TokensTableFooter = ({
 	const { t } = useTranslation();
 
 	if (isLoading) {
-		return null;
+		return;
 	}
 
 	if (hasMore) {
