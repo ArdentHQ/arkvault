@@ -3,7 +3,6 @@ import { EmptyVotes, Votes } from "./WalletVote.blocks";
 import { Button } from "@/app/components/Button";
 import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
-import React from "react";
 import { Tooltip } from "@/app/components/Tooltip";
 import { WalletVoteSkeleton } from "./WalletVoteSkeleton";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
@@ -11,8 +10,6 @@ import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import cn from "classnames";
 import { TokensSummary } from "@/domains/portfolio/components/Tokens/TokensSummary";
-import { generatePath, useNavigate } from "react-router";
-import { ProfilePaths } from "@/router/paths";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet | undefined;
@@ -20,7 +17,7 @@ interface WalletVoteProperties {
 	votes: Contracts.VoteRegistryItem[];
 	isLoadingVotes: boolean;
 	wallets?: Contracts.IReadWriteWallet[];
-	profile: Contracts.IProfile;
+	onViewTokens?: () => void;
 }
 
 export const WalletVote = ({
@@ -29,10 +26,9 @@ export const WalletVote = ({
 	votes,
 	isLoadingVotes,
 	wallets = [],
-	profile,
+	onViewTokens,
 }: WalletVoteProperties) => {
 	const { t } = useTranslation();
-	const navigate = useNavigate();
 
 	if (isLoadingVotes || !wallet) {
 		return <WalletVoteSkeleton />;
@@ -89,7 +85,7 @@ export const WalletVote = ({
 						data-testid="ViewTokens"
 						variant="secondary-icon"
 						className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
-						onClick={() => navigate(generatePath(ProfilePaths.Tokens, { profileId: profile.id() }))}
+						onClick={onViewTokens}
 					>
 						<span>{t("COMMON.VIEW_TOKENS")}</span>
 					</Button>

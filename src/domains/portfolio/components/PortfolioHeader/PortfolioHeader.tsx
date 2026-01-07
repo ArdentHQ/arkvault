@@ -38,6 +38,7 @@ export const PortfolioHeader = ({
 	handleVotesButtonClick,
 	onUpdate,
 	hasFocus,
+	onViewTokens,
 }: {
 	profile: Contracts.IProfile;
 	votes: Contracts.VoteRegistryItem[];
@@ -46,6 +47,7 @@ export const PortfolioHeader = ({
 	handleVotesButtonClick: () => void;
 	onUpdate?: (status: boolean) => void;
 	hasFocus?: boolean;
+	onViewTokens?: () => void;
 }) => {
 	const { openPanel } = usePanels();
 
@@ -584,12 +586,12 @@ export const PortfolioHeader = ({
 
 					<div className="dark:bg-theme-dark-900 dim:bg-theme-dim-900 hidden w-full rounded-t-sm rounded-b-lg bg-white p-4 md:block">
 						<WalletVote
-							profile={profile}
 							wallet={wallet}
 							onButtonClick={handleVotesButtonClick}
 							votes={votes}
 							isLoadingVotes={isLoadingVotes}
 							wallets={selectedWallets}
+							onViewTokens={onViewTokens}
 						/>
 					</div>
 				</div>
