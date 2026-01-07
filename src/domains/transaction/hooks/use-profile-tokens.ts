@@ -74,7 +74,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 
 			const queryParameters: TokenAddressesQuery = {
 				addresses: wallets.map((wallet) => wallet.address()),
-				// limit,
+				limit,
 				// orderBy,
 			};
 
@@ -107,7 +107,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 		}
 
 		const response = await fetchTokens({
-			// page: 1,
+			page: 1,
 			wallets,
 		});
 
