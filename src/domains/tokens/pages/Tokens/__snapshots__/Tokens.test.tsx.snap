@@ -1417,7 +1417,7 @@ exports[`Tokens > should render 1`] = `
                     >
                       <input
                         class="toggle-input sr-only"
-                        data-testid="Tokens__toggle-Toggle"
+                        data-testid="HideDustTokens"
                         name="hideDust"
                         type="checkbox"
                       />

@@ -102,7 +102,7 @@ exports[`TokensTable > should not render in lg 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -364,7 +364,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -617,7 +617,7 @@ exports[`TokensTable > should not render in md 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -879,7 +879,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -1132,7 +1132,7 @@ exports[`TokensTable > should not render in sm 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -1291,7 +1291,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -1441,7 +1441,7 @@ exports[`TokensTable > should not render in xl 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -1703,7 +1703,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -1967,7 +1967,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -2117,7 +2117,7 @@ exports[`TokensTable > should render 1`] = `
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />

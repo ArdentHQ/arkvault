@@ -79,9 +79,9 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 							</div>
 
 							<Toggle
+								data-testid="HideDustTokens"
 								name="hideDust"
 								defaultChecked={activeProfile.settings().get(ProfileSetting.HideDustTokens)}
-								data-testid="Tokens__toggle-Toggle"
 								onChange={async (event: React.ChangeEvent<HTMLInputElement>) => {
 									activeProfile.settings().set(ProfileSetting.HideDustTokens, event.target.checked);
 									await persist();
