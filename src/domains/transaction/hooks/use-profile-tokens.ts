@@ -64,7 +64,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 	}, [selectedWalletAddresses, orderBy]);
 
 	const fetchTokens = useCallback(
-		async ({ wallets }: FetchTokenProperties) => {
+		async ({ wallets, page }: FetchTokenProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
@@ -72,6 +72,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 			const queryParameters: TokenAddressesQuery = {
 				addresses: wallets.map((wallet) => wallet.address()),
 				limit,
+				page,
 				// orderBy,
 			};
 

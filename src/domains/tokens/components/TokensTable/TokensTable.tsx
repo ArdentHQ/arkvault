@@ -16,14 +16,13 @@ export const TokensTable = () => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
-	const tokens = activeProfile.tokens().selected();
 
-	const { tokens: tokenAddresses, isLoadingTokens } = useProfileTokens({
+	const wallets = activeProfile.wallets().selected();
+
+	const { tokens, isLoadingTokens, isLoadingMore, hasMore, hasEmptyResults, fetchMore } = useProfileTokens({
 		profile: activeProfile,
-		wallets: activeProfile.wallets().selected(),
+		wallets,
 	});
-
-	console.log("tokens", tokenAddresses);
 
 	const { t } = useTranslation();
 
@@ -85,11 +84,11 @@ export const TokensTable = () => {
 		[],
 	);
 
-	const shouldRenderTable = (isXs && tokens.count() > 0) || isSmAndAbove;
+	const shouldRenderTable = wallets.length === 1 && ((isXs && tokens.length > 0) || isSmAndAbove);
 
 	return (
 		<>
-			{isXs && tokens.count() === 0 && (
+			{isXs && tokens.length === 0 && (
 				<p
 					data-testid="NoResultsMessage"
 					className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 p-4 px-6 text-center text-sm"
@@ -122,10 +121,17 @@ export const TokensTable = () => {
 					<div data-testid="TokenList">
 						<Table
 							columns={listColumns}
-							data={tokenAddresses}
+							data={tokens}
 							className="with-x-padding"
 							footer={
-								<TokensTableFooter tokensCount={tokens.count()} columnsCount={listColumns.length} />
+								<TokensTableFooter
+									tokensCount={length}
+									isLoadingMore={isLoadingMore}
+									isLoading={isLoadingTokens}
+									hasMore={true}
+									columnsCount={listColumns.length}
+									fetchMore={fetchMore}
+								/>
 							}
 							hideHeader={!isMdAndAbove}
 						>
