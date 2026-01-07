@@ -199,6 +199,56 @@ describe("Dashboard", () => {
 		selectedWalletsMock.mockRestore();
 	});
 
+	it("should navigate to tokens page", async () => {
+		const wallet = profile.wallets().first();
+
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+		const tokenCountMock = vi.spyOn(wallet, "tokenCount").mockReturnValue(1);
+
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ViewTokens")[1]).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getAllByTestId("ViewTokens")[1]);
+
+		await waitFor(() => {
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/tokens`);
+		});
+
+		selectedWalletsMock.mockRestore();
+		tokenCountMock.mockRestore();
+	});
+
+	it("should navigate to tokens page from portfolio header", async () => {
+		const wallet = profile.wallets().first();
+
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+		const tokenCountMock = vi.spyOn(wallet, "tokenCount").mockReturnValue(1);
+
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ViewTokens")[0]).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getAllByTestId("ViewTokens")[0]);
+
+		await waitFor(() => {
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/tokens`);
+		});
+
+		selectedWalletsMock.mockRestore();
+		tokenCountMock.mockRestore();
+	});
+
 	describe("deeplink handling", () => {
 		let usePanelsMock;
 		let openPanelSpy;

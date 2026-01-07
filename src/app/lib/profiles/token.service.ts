@@ -1,4 +1,5 @@
 import { Contracts } from ".";
+import { Networks } from "@/app/lib/mainsail";
 import { WalletTokenRepository } from "./wallet-token.repository";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { TokenAddressesDTOCollection } from "@/app/lib/mainsail/token-addresses-dto.collection";
@@ -6,9 +7,11 @@ import { TokenAddressesQuery } from "@/app/lib/mainsail/client.contract";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
+	#network: Networks.Network;
 
-	public constructor({ profile }: { profile: Contracts.IProfile }) {
+	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
+		this.#network = network;
 	}
 
 	/**
@@ -47,7 +50,7 @@ export class TokenService {
 	 * @returns {WalletTokenRepository}
 	 */
 	selected(): WalletTokenRepository {
-		const tokens = new WalletTokenRepository();
+		const tokens = new WalletTokenRepository(this.#network, this.#profile);
 
 		for (const wallet of this.#profile.wallets().selected().values()) {
 			for (const token of wallet.tokens().values()) {

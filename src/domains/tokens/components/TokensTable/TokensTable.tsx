@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { Table } from "@/app/components/Table";
@@ -13,7 +13,7 @@ import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { Contracts } from "@/app/lib/profiles";
 import { useWalletActions } from "@/domains/wallet/hooks";
 
-export const TokensTable = () => {
+export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => void }) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
