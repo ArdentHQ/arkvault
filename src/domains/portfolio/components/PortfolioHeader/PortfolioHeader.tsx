@@ -573,7 +573,7 @@ export const PortfolioHeader = ({
 												data-testid="ViewTokens"
 												variant="secondary-icon"
 												className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent px-0.5 py-px whitespace-nowrap disabled:bg-transparent dark:disabled:bg-transparent"
-												onClick={() => console.log("view tokens")}
+												onClick={onViewTokens}
 											>
 												<span>{t("COMMON.VIEW")}</span>
 											</Button>
