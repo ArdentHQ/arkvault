@@ -85,7 +85,7 @@ export class ClientService {
 				walletTokens.push(
 					new WalletTokenDTO({
 						address: walletAddress,
-						balance: +balance,
+						balance,
 						tokenAddress: tokenAddresses.token,
 					}),
 				);

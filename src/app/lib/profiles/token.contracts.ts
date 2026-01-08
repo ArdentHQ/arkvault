@@ -9,7 +9,7 @@ export interface TokenData {
 
 export interface WalletTokenData {
 	address: string;
-	balance: number;
+	balance: string;
 	tokenAddress: string;
 }
 
