@@ -86,6 +86,36 @@ export const mainsailDevnetHandlers = [
 		});
 	}),
 
+	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", (request) => {
+		return HttpResponse.json(
+			{
+				"meta": {
+					"totalCountIsEstimate": false,
+					"count": 1,
+					"first": "/wallets/tokens?addresses=0x2DcA10145Dd4C6876321482627c6162b2541244d&limit=100&page=1",
+					"last": "/wallets/tokens?addresses=0x2DcA10145Dd4C6876321482627c6162b2541244d&limit=100&page=1",
+					"next": null,
+					"pageCount": 1,
+					"previous": null,
+					"self": "/wallets/tokens?addresses=0x2DcA10145Dd4C6876321482627c6162b2541244d&limit=100&page=1",
+					"totalCount": 1
+				},
+				"data": [
+					{
+						"token": "0xf8939a711e0116fcec11ab81165391fe185e5649",
+						"symbol": "DARK20",
+						"name": "DARK20",
+						"decimals": 18,
+						"supply": "100000000000000000000000000",
+						"addresses": {
+							"0x2DcA10145Dd4C6876321482627c6162b2541244d": "99999999999999999999999900"
+						}
+					}
+				]
+			}
+		);
+	}),
+
 	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier", (request) => {
 		const address = request.params.identifier as string;
 
