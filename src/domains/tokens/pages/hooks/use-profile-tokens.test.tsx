@@ -231,7 +231,7 @@ describe("useProfileTokens", () => {
 					data: [
 						{
 							addresses: {
-								[walletAddress]: isFirstCall ? "1000000000000000000": "2000000000000000000",
+								[walletAddress]: isFirstCall ? "1000000000000000000" : "2000000000000000000",
 							},
 							decimals: 18,
 							name: isFirstCall ? "Token 1" : "Token 2",
@@ -242,7 +242,7 @@ describe("useProfileTokens", () => {
 					],
 					meta: {},
 				});
-			})
+			}),
 		);
 
 		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
