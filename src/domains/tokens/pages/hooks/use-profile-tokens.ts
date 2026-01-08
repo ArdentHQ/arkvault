@@ -56,6 +56,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 					tokens: response.items(),
 				}));
 			} catch (error) {
+				/* istanbul ignore next -- @preserve */
 				console.error({ error });
 			}
 		};
