@@ -24,12 +24,6 @@ export const Tokens = () => {
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
 
-	const { transactions } = useProfileTransactions({
-		limit: 30,
-		profile: activeProfile,
-		wallets: activeProfile.wallets().values(),
-	});
-
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
 			<PageHeader
@@ -111,7 +105,7 @@ export const Tokens = () => {
 				</div>
 			)}
 
-			{tokenModalItem && <TokenDetailSidepanel isOpen={!!transactions.at(0)} walletToken={tokenModalItem} />}
+			{tokenModalItem && <TokenDetailSidepanel isOpen={!!tokenModalItem} walletToken={tokenModalItem} />}
 		</Page>
 	);
 };
