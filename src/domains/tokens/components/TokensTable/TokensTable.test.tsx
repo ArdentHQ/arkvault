@@ -6,14 +6,22 @@ import { Contracts } from "@/app/lib/profiles";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+import * as useRandomNumberHook from "../../../../app/hooks/use-random-number";
 
 let profile: Contracts.IProfile;
 let route: string;
+let useRandomNumberSpy: vi.SpyInstance;
 
 describe("TokensTable", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		route = `/profiles/${profile.id()}/tokens`;
+
+		useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+	});
+
+	afterAll(() => {
+		useRandomNumberSpy.mockRestore();
 	});
 
 	it("should render", () => {
