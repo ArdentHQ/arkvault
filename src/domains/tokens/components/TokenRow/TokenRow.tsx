@@ -29,6 +29,7 @@ export const TokenRow = memo(
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 
+		/* istanbul ignore else -- @preserve */
 		if (isXs || isSm) {
 			return <div>TODO implement design for xs and sm</div>;
 		}

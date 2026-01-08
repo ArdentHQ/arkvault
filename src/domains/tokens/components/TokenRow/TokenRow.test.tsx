@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 
 import { TokenRow } from "./TokenRow";
-import { env, getDefaultProfileId, render, screen, renderResponsive } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
