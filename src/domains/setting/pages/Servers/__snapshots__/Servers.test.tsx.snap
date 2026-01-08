@@ -3737,21 +3737,62 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black"
       >
         <div
-          class="flex flex-col gap-2"
+          class="flex items-center gap-2"
         >
+          <div
+            class="inline"
+          >
+            <div
+              data-testid="icon-MobileSettingsLight"
+            >
+              <div
+                style="height: 24px; width: 24px;"
+              >
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.444 22.5556H5.3329C3.36922 22.5556 1.77734 20.9637 1.77734 19V6.55556C1.77734 4.59188 3.36922 3 5.3329 3H6.44401"
+                    stroke="#2C4478"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M11.5111 3.79411L15.4312 2.4053C16.2698 2.10819 17.2046 2.32533 17.8264 2.96167L21.9578 7.1897C22.4261 7.66896 22.6603 8.32975 22.5981 8.99694L22.0499 14.8829C21.9674 15.7687 21.3778 16.526 20.5392 16.8231L16.6191 18.2119M11.5111 3.79411C10.6725 4.09122 10.0829 4.84845 10.0004 5.7343L9.45221 11.6202C9.41971 11.9692 9.46825 12.3164 9.58894 12.6368M11.5111 3.79411L8.92027 4.92187C7.47413 5.55136 6.50253 6.93794 6.40455 8.51209L6.13311 12.8728C6.10359 13.1897 6.14091 13.5051 6.2384 13.8003M16.6191 18.2119C15.7805 18.509 14.8457 18.2918 14.2239 17.6555L10.0925 13.4275C9.86911 13.1989 9.69902 12.929 9.58894 12.6368M16.6191 18.2119L13.9665 18.9841C12.4499 19.4256 10.8137 18.9789 9.73192 17.8279L6.77338 14.68C6.5275 14.4284 6.34617 14.1267 6.2384 13.8003M6.2384 13.8003L9.58894 12.6368"
+                    stroke="#9EB3DB"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M18.7916 9.05391C19.4672 10.8433 18.717 12.784 17.116 13.3885C16.5897 13.5873 16.0369 13.6169 15.5079 13.5035C14.4279 13.2719 13.4472 12.4443 12.9936 11.2431C12.5491 10.0658 12.7218 8.82305 13.3479 7.9384C13.6734 7.47845 14.1215 7.11531 14.6692 6.90851C16.2703 6.30398 18.1159 7.26451 18.7916 9.05391Z"
+                    stroke="#9EB3DB"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M1.77734 16.8958C1.77734 16.1595 2.3743 15.5625 3.11068 15.5625H9.47227C10.2319 15.5625 10.9555 15.8865 11.4614 16.4531L12.6488 17.783C13.1547 18.3496 13.8783 18.6736 14.638 18.6736H20.2723C20.858 18.6736 21.3329 19.1485 21.3329 19.7342C21.3329 21.2962 20.0666 22.5625 18.5046 22.5625H5.3329C3.36922 22.5625 1.77734 20.9706 1.77734 19.0069V16.8958Z"
+                    fill="#2C4478"
+                    stroke="#2C4478"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
           <h1
-            class="mb-0 text-lg font-semibold"
+            class="mb-0 text-lg leading-[21px] font-semibold"
           >
             Settings
           </h1>
-          <div
-            class="text-theme-secondary-text flex items-center text-sm leading-5"
-          >
-            Customize your wallet to suit your needs.
-          </div>
         </div>
       </section>
       <div
@@ -6854,21 +6895,62 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black"
       >
         <div
-          class="flex flex-col gap-2"
+          class="flex items-center gap-2"
         >
+          <div
+            class="inline"
+          >
+            <div
+              data-testid="icon-MobileSettingsLight"
+            >
+              <div
+                style="height: 24px; width: 24px;"
+              >
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.444 22.5556H5.3329C3.36922 22.5556 1.77734 20.9637 1.77734 19V6.55556C1.77734 4.59188 3.36922 3 5.3329 3H6.44401"
+                    stroke="#2C4478"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M11.5111 3.79411L15.4312 2.4053C16.2698 2.10819 17.2046 2.32533 17.8264 2.96167L21.9578 7.1897C22.4261 7.66896 22.6603 8.32975 22.5981 8.99694L22.0499 14.8829C21.9674 15.7687 21.3778 16.526 20.5392 16.8231L16.6191 18.2119M11.5111 3.79411C10.6725 4.09122 10.0829 4.84845 10.0004 5.7343L9.45221 11.6202C9.41971 11.9692 9.46825 12.3164 9.58894 12.6368M11.5111 3.79411L8.92027 4.92187C7.47413 5.55136 6.50253 6.93794 6.40455 8.51209L6.13311 12.8728C6.10359 13.1897 6.14091 13.5051 6.2384 13.8003M16.6191 18.2119C15.7805 18.509 14.8457 18.2918 14.2239 17.6555L10.0925 13.4275C9.86911 13.1989 9.69902 12.929 9.58894 12.6368M16.6191 18.2119L13.9665 18.9841C12.4499 19.4256 10.8137 18.9789 9.73192 17.8279L6.77338 14.68C6.5275 14.4284 6.34617 14.1267 6.2384 13.8003M6.2384 13.8003L9.58894 12.6368"
+                    stroke="#9EB3DB"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M18.7916 9.05391C19.4672 10.8433 18.717 12.784 17.116 13.3885C16.5897 13.5873 16.0369 13.6169 15.5079 13.5035C14.4279 13.2719 13.4472 12.4443 12.9936 11.2431C12.5491 10.0658 12.7218 8.82305 13.3479 7.9384C13.6734 7.47845 14.1215 7.11531 14.6692 6.90851C16.2703 6.30398 18.1159 7.26451 18.7916 9.05391Z"
+                    stroke="#9EB3DB"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M1.77734 16.8958C1.77734 16.1595 2.3743 15.5625 3.11068 15.5625H9.47227C10.2319 15.5625 10.9555 15.8865 11.4614 16.4531L12.6488 17.783C13.1547 18.3496 13.8783 18.6736 14.638 18.6736H20.2723C20.858 18.6736 21.3329 19.1485 21.3329 19.7342C21.3329 21.2962 20.0666 22.5625 18.5046 22.5625H5.3329C3.36922 22.5625 1.77734 20.9706 1.77734 19.0069V16.8958Z"
+                    fill="#2C4478"
+                    stroke="#2C4478"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
           <h1
-            class="mb-0 text-lg font-semibold"
+            class="mb-0 text-lg leading-[21px] font-semibold"
           >
             Settings
           </h1>
-          <div
-            class="text-theme-secondary-text flex items-center text-sm leading-5"
-          >
-            Customize your wallet to suit your needs.
-          </div>
         </div>
       </section>
       <div
@@ -10108,21 +10190,62 @@ exports[`Servers Settings > Added unreachable servers > should show status error
       class="flex flex-1 flex-col"
     >
       <section
-        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-8 py-6 md:h-13 dark:bg-black"
+        class="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black"
       >
         <div
-          class="flex flex-col gap-2"
+          class="flex items-center gap-2"
         >
+          <div
+            class="inline"
+          >
+            <div
+              data-testid="icon-MobileSettingsLight"
+            >
+              <div
+                style="height: 24px; width: 24px;"
+              >
+                <svg
+                  fill="none"
+                  style="height: 100%; width: 100%;"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.444 22.5556H5.3329C3.36922 22.5556 1.77734 20.9637 1.77734 19V6.55556C1.77734 4.59188 3.36922 3 5.3329 3H6.44401"
+                    stroke="#2C4478"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M11.5111 3.79411L15.4312 2.4053C16.2698 2.10819 17.2046 2.32533 17.8264 2.96167L21.9578 7.1897C22.4261 7.66896 22.6603 8.32975 22.5981 8.99694L22.0499 14.8829C21.9674 15.7687 21.3778 16.526 20.5392 16.8231L16.6191 18.2119M11.5111 3.79411C10.6725 4.09122 10.0829 4.84845 10.0004 5.7343L9.45221 11.6202C9.41971 11.9692 9.46825 12.3164 9.58894 12.6368M11.5111 3.79411L8.92027 4.92187C7.47413 5.55136 6.50253 6.93794 6.40455 8.51209L6.13311 12.8728C6.10359 13.1897 6.14091 13.5051 6.2384 13.8003M16.6191 18.2119C15.7805 18.509 14.8457 18.2918 14.2239 17.6555L10.0925 13.4275C9.86911 13.1989 9.69902 12.929 9.58894 12.6368M16.6191 18.2119L13.9665 18.9841C12.4499 19.4256 10.8137 18.9789 9.73192 17.8279L6.77338 14.68C6.5275 14.4284 6.34617 14.1267 6.2384 13.8003M6.2384 13.8003L9.58894 12.6368"
+                    stroke="#9EB3DB"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M18.7916 9.05391C19.4672 10.8433 18.717 12.784 17.116 13.3885C16.5897 13.5873 16.0369 13.6169 15.5079 13.5035C14.4279 13.2719 13.4472 12.4443 12.9936 11.2431C12.5491 10.0658 12.7218 8.82305 13.3479 7.9384C13.6734 7.47845 14.1215 7.11531 14.6692 6.90851C16.2703 6.30398 18.1159 7.26451 18.7916 9.05391Z"
+                    stroke="#9EB3DB"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M1.77734 16.8958C1.77734 16.1595 2.3743 15.5625 3.11068 15.5625H9.47227C10.2319 15.5625 10.9555 15.8865 11.4614 16.4531L12.6488 17.783C13.1547 18.3496 13.8783 18.6736 14.638 18.6736H20.2723C20.858 18.6736 21.3329 19.1485 21.3329 19.7342C21.3329 21.2962 20.0666 22.5625 18.5046 22.5625H5.3329C3.36922 22.5625 1.77734 20.9706 1.77734 19.0069V16.8958Z"
+                    fill="#2C4478"
+                    stroke="#2C4478"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
           <h1
-            class="mb-0 text-lg font-semibold"
+            class="mb-0 text-lg leading-[21px] font-semibold"
           >
             Settings
           </h1>
-          <div
-            class="text-theme-secondary-text flex items-center text-sm leading-5"
-          >
-            Customize your wallet to suit your needs.
-          </div>
         </div>
       </section>
       <div
