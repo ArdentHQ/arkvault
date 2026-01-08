@@ -2,6 +2,7 @@ import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/test
 
 import { TokenReceiveFunds } from "./TokenReceiveFunds";
 import { Contracts } from "@/app/lib/profiles";
+import userEvent from "@testing-library/user-event";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -13,18 +14,31 @@ describe("TokenReceiveFunds", () => {
 	});
 
 	it("should render directly receive funds modal for one wallet", async () => {
-		render(<TokenReceiveFunds profile={profile} wallets={[profile.wallets().first()]} isOpen />, {
-			route,
-		});
+		const closeMock = vi.fn();
+		render(
+			<TokenReceiveFunds profile={profile} wallets={[profile.wallets().first()]} isOpen onClose={closeMock} />,
+			{
+				route,
+			},
+		);
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(1));
+
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		expect(closeMock).toHaveBeenCalled();
 	});
 
 	it("should render wallet selection for multiple wallets", async () => {
-		render(<TokenReceiveFunds profile={profile} wallets={profile.wallets().values()} isOpen />, {
-			route,
-		});
+		const closeMock = vi.fn();
+		render(
+			<TokenReceiveFunds profile={profile} wallets={profile.wallets().values()} isOpen onClose={closeMock} />,
+			{
+				route,
+			},
+		);
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiverItem")).toHaveLength(profile.wallets().count()));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		expect(closeMock).toHaveBeenCalled();
 	});
 });

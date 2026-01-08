@@ -207,6 +207,7 @@ export const TokenHeader = ({
 										</div>
 
 										<Button
+											data-testid="TokenHeader__receive-modal-toggle"
 											variant="secondary"
 											size="icon"
 											className="text-theme-primary-600 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim:text-theme-dim-50"
