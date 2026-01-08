@@ -7,7 +7,7 @@ import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper"
 import { Toggle } from "@/app/components/Toggle";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTableFooter } from "./TokensTable.blocks";
-import { useProfileTokens } from "@/domains/transaction/hooks/use-profile-tokens";
+import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
 
