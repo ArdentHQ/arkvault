@@ -11,7 +11,13 @@ import { useProfileTokens } from "@/domains/transaction/hooks/use-profile-tokens
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
 
-export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => void }) => {
+export const TokensTable = ({
+	onClick,
+	skeletonRowsLimit = 8,
+}: {
+	onClick?: (wallet: WalletToken) => void;
+	skeletonRowsLimit?: number;
+}) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
@@ -27,30 +33,31 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 
 	const { t } = useTranslation();
 
+	const showSkeleton = isLoadingTokens && tokens.length === 0;
+
+	const skeletonRows: WalletToken[] = Array.from({ length: skeletonRowsLimit }, () => ({}) as WalletToken);
+	const data = showSkeleton ? skeletonRows : tokens;
+
 	const listColumns = useMemo<Column<WalletToken>[]>(
 		() => [
 			{
 				Header: t("COMMON.NAME"),
-				accessor: (walletToken: WalletToken) => walletToken.token().name(),
 				cellWidth: "w-32 xl:w-40",
 				headerClassName: "no-border",
 				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.SYMBOL"),
-				accessor: (walletToken: WalletToken) => walletToken.token().symbol(),
 				cellWidth: "w-28",
 				headerClassName: "no-border hidden md-lg:table-cell",
 			},
 			{
 				Header: t("COMMON.CONTRACT"),
-				accessor: (walletToken: WalletToken) => walletToken.token().address(),
 				cellWidth: "w-48 xl:w-40",
 				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.TOKEN_BALANCE"),
-				accessor: (walletToken: WalletToken) => walletToken.balance(),
 				cellWidth: "w-40",
 				className: "justify-end",
 				disableSortBy: true,
@@ -65,11 +72,12 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 			},
 			{
 				Header: " ",
-				accessor: (walletToken: WalletToken) => walletToken.token().address(),
+				accessor: "symbol",
 				className: "justify-end",
 				disableSortBy: true,
 				headerClassName: "no-border",
 				minimumWidth: true,
+				noRoundedBorders: true,
 			},
 		],
 		[t],
@@ -78,7 +86,7 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 	const renderTableRow = useCallback(
 		(row: WalletToken) => (
 			<TokenRow
-				isLoading={isLoadingTokens}
+				isLoading={showSkeleton}
 				onClick={() => {
 					onClick?.(row);
 				}}
@@ -87,14 +95,15 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 				profile={activeProfile}
 			/>
 		),
-		[],
+		[showSkeleton, onClick, handleSend, activeProfile],
 	);
 
-	const shouldRenderTable = wallets.length === 1 && ((isXs && tokens.length > 0) || isSmAndAbove);
+	const shouldRenderTable =
+		wallets.length === 1 && ((isXs && (tokens.length > 0 || showSkeleton)) || isSmAndAbove);
 
 	return (
 		<>
-			{isXs && tokens.length === 0 && (
+			{isXs && tokens.length === 0 && !showSkeleton && (
 				<p
 					data-testid="NoResultsMessage"
 					className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 p-4 px-6 text-center text-sm"
@@ -127,7 +136,7 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 					<div data-testid="TokenList">
 						<Table
 							columns={listColumns}
-							data={tokens}
+							data={data}
 							className="with-x-padding"
 							footer={
 								<TokensTableFooter

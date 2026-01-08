@@ -12,6 +12,7 @@ import { Icon } from "@/app/components/Icon";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenRowSkeleton } from "./TokenRowSkeleton";
 
 export type TokenRowProperties = {
 	walletToken: WalletToken;
@@ -25,16 +26,16 @@ export type TokenRowProperties = {
 
 export const TokenRow = memo(
 	({ className, walletToken, onClick, onSend, isLoading = false, ...properties }: TokenRowProperties) => {
-		const { isXs, isSm, isXl } = useBreakpoint();
+		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 
 		if (isXs || isSm) {
 			return <div>TODO implement design for xs and sm</div>;
 		}
 
-		// if (isLoading) {
-		// 	return <TransactionRowSkeleton hideSender={hideSender} />;
-		// }
+		if (isLoading) {
+			return <TokenRowSkeleton />;
+		}
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
