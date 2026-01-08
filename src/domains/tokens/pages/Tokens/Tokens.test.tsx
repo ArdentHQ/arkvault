@@ -50,4 +50,28 @@ describe("Tokens", () => {
 
 		expect(screen.queryByTestId("TokenList")).not.toBeInTheDocument();
 	});
+
+	it("should open token detail sidepanel when a token row is clicked", async () => {
+		const user = userEvent.setup();
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+		});
+
+		// Verify sidepanel is not open initially
+		expect(screen.queryByTestId("TokenDetailSidepanel")).not.toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
+		});
+
+		const tokenRow = screen.getAllByTestId("TokensTableRow")[0];
+		await user.click(tokenRow);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument();
+		});
+	});
 });
