@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Skeleton } from "@/app/components/Skeleton";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
