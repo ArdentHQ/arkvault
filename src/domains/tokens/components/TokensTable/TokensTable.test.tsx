@@ -69,7 +69,7 @@ describe("TokensTable", () => {
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
-		})
+		});
 
 		const row = screen.getAllByTestId("TokensTableRow")[0];
 		await user.click(row);
@@ -89,7 +89,7 @@ describe("TokensTable", () => {
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
-		})
+		});
 
 		const sendButton = screen.getAllByRole("button", { name: /send/i })[0];
 		await user.click(sendButton);
