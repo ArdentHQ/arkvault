@@ -26,10 +26,6 @@ describe("TokensTable", () => {
 		useRandomNumberSpy.mockRestore();
 	});
 
-	afterEach(() => {
-		vi.restoreAllMocks();
-	});
-
 	it("should render", () => {
 		const { asFragment } = render(<TokensTable />, {
 			route,
