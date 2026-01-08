@@ -41,7 +41,7 @@ describe("useProfileTokens", () => {
 
 		await waitFor(() => expect(result.current.isLoadingTokens).toBe(false));
 
-		console.log(result.current.tokens)
+		console.log(result.current.tokens);
 		expect(result.current.tokens).toBeDefined();
 		expect(Array.isArray(result.current.tokens)).toBe(true);
 	});
