@@ -86,6 +86,7 @@ export const TokensTable = ({
 	const renderTableRow = useCallback(
 		(row: WalletToken) => (
 			<TokenRow
+				data-testid="TokensTableRow"
 				isLoading={showSkeleton}
 				onClick={() => {
 					onClick?.(row);

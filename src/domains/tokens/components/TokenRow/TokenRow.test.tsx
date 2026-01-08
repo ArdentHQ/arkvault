@@ -30,7 +30,7 @@ describe("TokenRow", () => {
 		mockWalletToken = createMockWalletToken();
 	});
 
-	it("should render token row with token information", () => {
+	it("should render token row", () => {
 		render(
 			<table>
 				<tbody>
