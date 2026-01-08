@@ -1,12 +1,10 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { http, HttpResponse } from "msw";
-
 import { useProfileTokens } from "./use-profile-tokens";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { expect, vi } from "vitest";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-import * as hooksMock from "@/app/hooks";
 import { server } from "@/tests/mocks/server";
 
 const wrapper = ({ children }: any) => (
@@ -44,7 +42,6 @@ describe("useProfileTokens", () => {
 
 		await waitFor(() => expect(result.current.isLoadingTokens).toBe(false));
 
-		console.log(result.current.tokens);
 		expect(result.current.tokens).toBeDefined();
 		expect(Array.isArray(result.current.tokens)).toBe(true);
 	});
@@ -228,52 +225,24 @@ describe("useProfileTokens", () => {
 			http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", () => {
 				callCount++;
 
-				if (callCount === 1) {
-					// First call: return initial token
-					return HttpResponse.json({
-						data: [
-							{
-								addresses: {
-									[walletAddress]: "1000000000000000000",
-								},
-								decimals: 18,
-								name: "Token 1",
-								supply: "10000000000000000000000",
-								symbol: "TKN1",
-								token: "0xToken1",
+				const isFirstCall = callCount === 1;
+
+				return HttpResponse.json({
+					data: [
+						{
+							addresses: {
+								[walletAddress]: isFirstCall ? "1000000000000000000": "2000000000000000000",
 							},
-						],
-						meta: {
-							last: "page=1",
-							next: null,
-							previous: null,
-							self: "page=1",
+							decimals: 18,
+							name: isFirstCall ? "Token 1" : "Token 2",
+							supply: "20000000000000000000000",
+							symbol: isFirstCall ? "TKN1" : "TKN2",
+							token: isFirstCall ? "0xToken1" : "0xToken2",
 						},
-					});
-				} else {
-					// Second call (from checkNewTokens): return new token
-					return HttpResponse.json({
-						data: [
-							{
-								addresses: {
-									[walletAddress]: "2000000000000000000",
-								},
-								decimals: 18,
-								name: "Token 2",
-								supply: "20000000000000000000000",
-								symbol: "TKN2",
-								token: "0xToken2",
-							},
-						],
-						meta: {
-							last: "page=1",
-							next: null,
-							previous: null,
-							self: "page=1",
-						},
-					});
-				}
-			}),
+					],
+					meta: {},
+				});
+			})
 		);
 
 		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
@@ -322,7 +291,6 @@ describe("useProfileTokens", () => {
 
 		await waitFor(() => expect(result.current.isLoadingTokens).toBe(false));
 
-		// Verify initial state
 		expect(result.current.tokens).toHaveLength(0);
 		expect(result.current.hasEmptyResults).toBe(true);
 
