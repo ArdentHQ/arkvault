@@ -9,7 +9,6 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTableFooter } from "./TokensTable.blocks";
 import { useProfileTokens } from "@/domains/transaction/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
-import { Contracts } from "@/app/lib/profiles";
 import { useWalletActions } from "@/domains/wallet/hooks";
 
 export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => void }) => {
