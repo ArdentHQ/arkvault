@@ -3,6 +3,8 @@ import userEvent from "@testing-library/user-event";
 
 import { TokensTableFooter } from "./TokensTable.blocks";
 
+const getLoadMoreButton = () => screen.queryByTestId("tokens__fetch-more-button");
+
 describe("TokensTableFooter", () => {
 	it("should render empty state when tokensCount is 0", () => {
 		render(
@@ -24,7 +26,7 @@ describe("TokensTableFooter", () => {
 	});
 
 	it("should render nothing when tokens count > 0 and hasMore is false", () => {
-		const { container } = render(
+		render(
 			<table>
 				<tbody>
 					<TokensTableFooter
@@ -39,11 +41,12 @@ describe("TokensTableFooter", () => {
 			</table>,
 		);
 
-		expect(container.querySelector("tr")).not.toBeInTheDocument();
+		expect(getLoadMoreButton()).not.toBeInTheDocument();
+		expect(screen.queryByTestId("EmptyResults")).not.toBeInTheDocument();
 	});
 
 	it("should render nothing when isLoading is true", () => {
-		const { container } = render(
+		render(
 			<table>
 				<tbody>
 					<TokensTableFooter
@@ -58,7 +61,8 @@ describe("TokensTableFooter", () => {
 			</table>,
 		);
 
-		expect(container.querySelector("tr")).not.toBeInTheDocument();
+		expect(getLoadMoreButton()).not.toBeInTheDocument();
+		expect(screen.queryByTestId("EmptyResults")).not.toBeInTheDocument();
 	});
 
 	it("should render load more button when hasMore is true", () => {
@@ -77,7 +81,7 @@ describe("TokensTableFooter", () => {
 			</table>,
 		);
 
-		const button = screen.getByTestId("transactions__fetch-more-button");
+		const button = getLoadMoreButton();
 		expect(button).toBeInTheDocument();
 		expect(button).toHaveTextContent("Load More");
 		expect(button).not.toBeDisabled();
@@ -102,9 +106,7 @@ describe("TokensTableFooter", () => {
 			</table>,
 		);
 
-		const button = screen.getByTestId("transactions__fetch-more-button");
-		await user.click(button);
-
+		await user.click(getLoadMoreButton());
 		expect(fetchMoreMock).toHaveBeenCalledTimes(1);
 	});
 
@@ -124,8 +126,7 @@ describe("TokensTableFooter", () => {
 			</table>,
 		);
 
-		const button = screen.getByTestId("transactions__fetch-more-button");
-		expect(button).toBeDisabled();
+		expect(getLoadMoreButton()).toBeDisabled();
 	});
 
 	it("should show loading text when isLoadingMore is true", () => {
@@ -144,7 +145,6 @@ describe("TokensTableFooter", () => {
 			</table>,
 		);
 
-		const button = screen.getByTestId("transactions__fetch-more-button");
-		expect(button).toHaveTextContent("Loading");
+		expect(getLoadMoreButton()).toHaveTextContent("Loading");
 	});
 });

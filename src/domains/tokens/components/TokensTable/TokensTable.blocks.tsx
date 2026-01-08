@@ -28,7 +28,7 @@ export const TokensTableFooter = ({
 			<tr className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-solid md:border-b-4">
 				<td colSpan={columnsCount} className="px-6 pt-3 pb-4">
 					<Button
-						data-testid="transactions__fetch-more-button"
+						data-testid="tokens__fetch-more-button"
 						variant="secondary"
 						className="w-full py-1.5 leading-5"
 						disabled={isLoadingMore}
