@@ -98,8 +98,7 @@ export const TokensTable = ({
 		[showSkeleton, onClick, handleSend, activeProfile],
 	);
 
-	const shouldRenderTable =
-		wallets.length === 1 && ((isXs && (tokens.length > 0 || showSkeleton)) || isSmAndAbove);
+	const shouldRenderTable = wallets.length === 1 && ((isXs && (tokens.length > 0 || showSkeleton)) || isSmAndAbove);
 
 	return (
 		<>

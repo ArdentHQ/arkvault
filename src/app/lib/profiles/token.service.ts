@@ -23,10 +23,7 @@ export class TokenService {
 		const walletTokens = walletTokensCollection.items();
 
 		for (const walletToken of walletTokens) {
-			const wallet = this.#profile.wallets().findByAddressWithNetwork(
-				walletToken.address(),
-				this.#network.id(),
-			);
+			const wallet = this.#profile.wallets().findByAddressWithNetwork(walletToken.address(), this.#network.id());
 
 			wallet?.tokens().push(walletToken);
 		}
@@ -62,7 +59,10 @@ export class TokenService {
 
 		try {
 			response = await clientService.tokenAddresses({
-				addresses: this.#profile.wallets().selected().map(wallet => wallet.address()),
+				addresses: this.#profile
+					.wallets()
+					.selected()
+					.map((wallet) => wallet.address()),
 				...(query ?? {}),
 			});
 		} catch {
