@@ -13,6 +13,14 @@ describe("TokenReceiveFunds", () => {
 		route = `/profiles/${profile.id()}/tokens`;
 	});
 
+	it("should render closed by default", async () => {
+		render(<TokenReceiveFunds profile={profile} wallets={[profile.wallets().first()]} />, {
+			route,
+		});
+
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(0));
+	});
+
 	it("should render directly receive funds modal for one wallet", async () => {
 		const closeMock = vi.fn();
 		render(
