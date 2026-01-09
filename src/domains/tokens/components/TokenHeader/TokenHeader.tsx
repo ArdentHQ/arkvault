@@ -13,11 +13,15 @@ import { useState } from "react";
 import { TokenReceiveFunds } from "@/domains/tokens/components/TokenReceiveFunds";
 
 export const TokenHeader = ({
+	isLoading,
 	profile,
 	onOpenAddressSidepanel,
+	onReload,
 }: {
+	isLoading?: boolean;
 	profile: Contracts.IProfile;
 	onOpenAddressSidepanel?: () => void;
+	onReload?: () => void;
 }) => {
 	const allWallets = profile.wallets().values();
 
@@ -102,11 +106,17 @@ export const TokenHeader = ({
 							<Button
 								variant="secondary"
 								className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+								onClick={onReload}
 							>
 								<Icon
 									name="ArrowRotateLeft"
 									style={{ animationDirection: "reverse" }}
-									className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+									className={cn(
+										"text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50",
+										{
+											"animate-spin": isLoading,
+										},
+									)}
 								/>
 							</Button>
 						</div>
