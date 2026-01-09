@@ -18,6 +18,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { SelectToken } from "@/domains/tokens/components/SelectToken";
 
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -54,6 +55,7 @@ export const AddRecipient = ({
 	recipients = [],
 	showMultiPaymentOption = true,
 	wallet,
+	isTokenTransfer,
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
@@ -256,17 +258,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
@@ -366,7 +368,12 @@ export const AddRecipient = ({
 							</span>
 						</FormLabel>
 
-						<div className="flex space-x-2">
+						<div className="flex">
+							{isTokenTransfer && (
+								<div className="md:max-w-44">
+									<SelectToken tokens={profile.tokens().selected().values().map(token => ({ name: token.token().name() }))} />
+								</div>
+							)}
 							<div className="flex-1">
 								<InputCurrency
 									network={network}
