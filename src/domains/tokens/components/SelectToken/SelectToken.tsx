@@ -1,8 +1,10 @@
 import { OptionProperties, Select } from "@/app/components/SelectDropdown";
 import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensSummary";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const SelectToken = ({ tokens }: { tokens: { name: string }[] }) => {
+	const { t } = useTranslation()
 	const defaultToken = tokens.length === 1 ? { label: tokens[0].name, value: tokens[0].name } : undefined;
 	const [selectedToken, setSelectedToken] = useState<OptionProperties | undefined>(defaultToken);
 
@@ -15,7 +17,7 @@ export const SelectToken = ({ tokens }: { tokens: { name: string }[] }) => {
 				label: token.name,
 				value: token.name,
 			}))}
-			placeholder="Select"
+			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
 			innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 			onChange={(option: OptionProperties) => setSelectedToken(option)}
