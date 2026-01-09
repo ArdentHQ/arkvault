@@ -47,9 +47,11 @@ const MAX_TABS = 5;
 export const SendTransferSidePanel = ({
 	open,
 	onOpenChange,
+	isTokenTransfer,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
+	isTokenTransfer?: boolean
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -503,6 +505,7 @@ export const SendTransferSidePanel = ({
 					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
 						<TabPanel tabId={SendTransferStep.FormStep}>
 							<FormStep
+								isTokenTransfer={isTokenTransfer}
 								network={activeNetwork}
 								senderWallet={wallet}
 								profile={activeProfile}
