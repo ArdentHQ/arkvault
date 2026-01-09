@@ -258,17 +258,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-				end: {
-					content: (
-						<Amount
-							value={convert(amount || 0)}
-							ticker={exchangeTicker}
-							data-testid="AddRecipient__currency-balance"
-							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-						/>
-					),
-				},
-			}
+					end: {
+						content: (
+							<Amount
+								value={convert(amount || 0)}
+								ticker={exchangeTicker}
+								data-testid="AddRecipient__currency-balance"
+								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+							/>
+						),
+					},
+				}
 			: undefined;
 
 	return (
@@ -371,7 +371,13 @@ export const AddRecipient = ({
 						<div className="flex">
 							{isTokenTransfer && (
 								<div className="md:max-w-44">
-									<SelectToken tokens={profile.tokens().selected().values().map(token => ({ name: token.token().name() }))} />
+									<SelectToken
+										tokens={profile
+											.tokens()
+											.selected()
+											.values()
+											.map((token) => ({ name: token.token().name() }))}
+									/>
 								</div>
 							)}
 							<div className="flex-1">

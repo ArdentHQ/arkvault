@@ -51,7 +51,7 @@ export const SendTransferSidePanel = ({
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	isTokenTransfer?: boolean
+	isTokenTransfer?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 

@@ -1,1 +1,1 @@
-export * from "./SelectToken"
+export * from "./SelectToken";

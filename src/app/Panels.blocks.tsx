@@ -83,7 +83,11 @@ export const AppPanels = () => {
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTokenTransfer} onOpenChange={closePanel} isTokenTransfer />
+				<SendTransferSidePanel
+					open={currentOpenedPanel === Panel.SendTokenTransfer}
+					onOpenChange={closePanel}
+					isTokenTransfer
+				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
