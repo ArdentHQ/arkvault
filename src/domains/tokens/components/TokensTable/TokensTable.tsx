@@ -7,10 +7,13 @@ import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper"
 import { Toggle } from "@/app/components/Toggle";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTableFooter } from "./TokensTable.blocks";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => void }) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
+	const { persist } = useEnvironmentContext();
 	const [query, setQuery] = useState("");
 	const tokens = activeProfile.tokens().selected();
 
@@ -76,10 +79,13 @@ export const TokensTable = ({ onClick }: { onClick?: (wallet: WalletToken) => vo
 							</div>
 
 							<Toggle
-								disabled
+								data-testid="HideDustTokens"
 								name="hideDust"
-								defaultChecked={false}
-								data-testid="Tokens__toggle-Toggle"
+								defaultChecked={activeProfile.settings().get(ProfileSetting.HideDustTokens)}
+								onChange={async (event: React.ChangeEvent<HTMLInputElement>) => {
+									activeProfile.settings().set(ProfileSetting.HideDustTokens, event.target.checked);
+									await persist();
+								}}
 							/>
 						</div>
 					}

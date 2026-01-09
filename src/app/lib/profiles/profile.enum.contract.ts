@@ -25,6 +25,7 @@ export enum ProfileSetting {
 	LastVisitedPage = "LAST_VISITED_PAGE",
 	Sessions = "SESSIONS",
 	WalletSelectionMode = "WALLET_SELECTION_MODE",
+	HideDustTokens = "HIDE_DUST_TOKEN",
 }
 
 /**
