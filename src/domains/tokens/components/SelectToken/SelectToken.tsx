@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const SelectToken = ({ tokens }: { tokens: { name: string }[] }) => {
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 	const defaultToken = tokens.length === 1 ? { label: tokens[0].name, value: tokens[0].name } : undefined;
 	const [selectedToken, setSelectedToken] = useState<OptionProperties | undefined>(defaultToken);
 
