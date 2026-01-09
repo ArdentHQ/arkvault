@@ -7,7 +7,7 @@ import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { WalletTokenRepository } from "./wallet-token.repository";
 import { WalletTokenDTO } from "./wallet-token.dto";
 import { WalletToken } from "./wallet-token";
-import { WalletTokenCollection } from "../mainsail/wallet-token.collection";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 describe("TokenService", () => {
 	let profile: Contracts.IProfile;
