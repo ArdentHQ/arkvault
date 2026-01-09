@@ -98,12 +98,11 @@ exports[`TokensTable > should not render in lg 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -111,7 +110,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -1497,12 +1496,11 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -1510,7 +1508,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -2896,12 +2894,11 @@ exports[`TokensTable > should not render in md 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -2909,7 +2906,7 @@ exports[`TokensTable > should not render in md 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -4295,12 +4292,11 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -4308,7 +4304,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -5694,12 +5690,11 @@ exports[`TokensTable > should not render in sm 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -5707,7 +5702,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -5862,12 +5857,11 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -5875,7 +5869,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -6030,12 +6024,11 @@ exports[`TokensTable > should not render in xl 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -6043,7 +6036,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -7429,12 +7422,11 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -7442,7 +7434,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -8996,12 +8988,11 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -9009,7 +9000,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>
@@ -9164,12 +9155,11 @@ exports[`TokensTable > should render 1`] = `
                 Hide Dust
               </div>
               <label
-                class="flex items-center cursor-not-allowed h-4"
+                class="flex items-center cursor-pointer h-4"
               >
                 <input
                   class="toggle-input sr-only"
-                  data-testid="Tokens__toggle-Toggle"
-                  disabled=""
+                  data-testid="HideDustTokens"
                   name="hideDust"
                   type="checkbox"
                 />
@@ -9177,7 +9167,7 @@ exports[`TokensTable > should render 1`] = `
                   class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-[30px]"
                 >
                   <span
-                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-4 w-4"
+                    class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-secondary-400 dark:bg-theme-secondary-600 dim:bg-theme-dim-500 h-4 w-4 handle-inner"
                   />
                 </div>
               </label>

@@ -10,6 +10,8 @@ import { TokensTableFooter } from "./TokensTable.blocks";
 import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const TokensTable = ({
 	onClick,
@@ -20,6 +22,7 @@ export const TokensTable = ({
 }) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
+	const { persist } = useEnvironmentContext();
 	const [query, setQuery] = useState("");
 
 	const wallets = activeProfile.wallets().selected();
@@ -125,10 +128,13 @@ export const TokensTable = ({
 							</div>
 
 							<Toggle
-								disabled
+								data-testid="HideDustTokens"
 								name="hideDust"
-								defaultChecked={false}
-								data-testid="Tokens__toggle-Toggle"
+								defaultChecked={activeProfile.settings().get(ProfileSetting.HideDustTokens)}
+								onChange={async (event: React.ChangeEvent<HTMLInputElement>) => {
+									activeProfile.settings().set(ProfileSetting.HideDustTokens, event.target.checked);
+									await persist();
+								}}
 							/>
 						</div>
 					}

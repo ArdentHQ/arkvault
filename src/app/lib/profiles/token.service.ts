@@ -3,14 +3,38 @@ import { Networks } from "@/app/lib/mainsail";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
+import { ProfileSetting } from "./profile.enum.contract";
+import { WalletToken } from "./wallet-token";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
 	#network: Networks.Network;
+	#dustBalanceThreshold = 1;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
 		this.#network = network;
+	}
+
+	/**
+	 * Returns wallet tokens filtering out dust tokens if the setting is enabled.
+	 *
+	 * @param wallet
+	 * @returns {WalletToken[]}
+	 */
+	#walletTokens(wallet: Contracts.IReadWriteWallet): WalletToken[] {
+		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
+
+		return wallet
+			.tokens()
+			.values()
+			.filter((token) => {
+				if (hideDustTokens === true) {
+					return token.balance() > this.#dustBalanceThreshold;
+				}
+
+				return true;
+			});
 	}
 
 	/**
@@ -38,7 +62,7 @@ export class TokenService {
 		let count = 0;
 
 		for (const wallet of this.#profile.wallets().selected().values()) {
-			count = count + wallet.tokens().count();
+			count = count + this.#walletTokens(wallet).length;
 		}
 
 		return count;

@@ -38,6 +38,7 @@ export class ProfileInitialiser implements IProfileInitialiser {
 		this.#profile.settings().set(ProfileSetting.UseNetworkWalletNames, useNetworkWalletNames);
 		this.#profile.settings().set(ProfileSetting.UseTestNetworks, false);
 		this.#profile.settings().set(ProfileSetting.UseHDWallets, false);
+		this.#profile.settings().set(ProfileSetting.HideDustTokens, false);
 
 		this.#profile.status().markAsDirty();
 	}

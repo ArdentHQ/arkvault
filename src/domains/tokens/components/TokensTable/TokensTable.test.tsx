@@ -92,4 +92,16 @@ describe("TokensTable", () => {
 
 		expect(handleSendMock).toHaveBeenCalledTimes(1);
 	});
+
+	it("should toggle hide dust tokens", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("HideDustTokens"));
+
+		expect(screen.getByTestId("HideDustTokens")).toBeEnabled();
+	});
 });
