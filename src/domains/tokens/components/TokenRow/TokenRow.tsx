@@ -13,6 +13,7 @@ import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenRowSkeleton } from "./TokenRowSkeleton";
+import { TokenRowMobile } from "@/domains/tokens/components/TokenRow/TokenRowMobile";
 
 export type TokenRowProperties = {
 	walletToken: WalletToken;
@@ -29,9 +30,16 @@ export const TokenRow = memo(
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 
-		/* istanbul ignore else -- @preserve */
 		if (isXs || isSm) {
-			return <div>TODO implement design for xs and sm</div>;
+			return (
+				<TokenRowMobile
+					isLoading={isLoading}
+					walletToken={walletToken}
+					onSend={onSend}
+					onClick={onClick}
+					{...properties}
+				/>
+			);
 		}
 
 		if (isLoading) {
