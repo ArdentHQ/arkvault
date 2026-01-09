@@ -19,6 +19,7 @@ const baseSettings = {
 	DO_NOT_SHOW_FEE_WARNING: false,
 	EXCHANGE_CURRENCY: "BTC",
 	FALLBACK_TO_DEFAULT_NODES: true,
+	HIDE_DUST_TOKEN: false,
 	LOCALE: "en-US",
 	MARKET_PROVIDER: "cryptocompare",
 	NAME: profileName,
