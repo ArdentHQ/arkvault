@@ -6,6 +6,7 @@ export enum Panel {
 	CreateAddress = "CREATE_ADDRESS",
 	ImportAddress = "IMPORT_ADDRESS",
 	SendTransfer = "SEND_TRANSFER",
+	SendTokenTransfer = "SEND_TOKEN_TRANSFER",
 	SendVote = "SEND_VOTE",
 	SignMessage = "SIGN_MESSAGE",
 	VerifyMessage = "VERIFY_MESSAGE",
