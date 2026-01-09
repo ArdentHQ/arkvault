@@ -14,6 +14,7 @@ import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable
 import { Panel, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
@@ -22,6 +23,7 @@ export const Tokens = () => {
 	const { openPanel } = usePanels();
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
+	const { reload, isLoading } = useProfileTokens({ profile: activeProfile });
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
@@ -43,10 +45,12 @@ export const Tokens = () => {
 				innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 			>
 				<TokenHeader
+					isLoading={isLoading}
 					profile={activeProfile}
 					onOpenAddressSidepanel={() => {
 						openPanel(Panel.Addresses);
 					}}
+					onReload={reload}
 				/>
 			</Section>
 
@@ -88,7 +92,7 @@ export const Tokens = () => {
 						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
 							<Button
 								className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
-								data-testid="tokens__add-contact-btn-mobile"
+								data-testid="tokens__add-token-btn-mobile"
 								variant="primary-transparent"
 								size="sm"
 								icon="Plus"
