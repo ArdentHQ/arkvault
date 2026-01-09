@@ -1,4 +1,5 @@
 import { env, getMainsailProfileId, render, screen, renderResponsiveWithRoute } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
 
 import { TokensTable } from "./TokensTable";
 import { LayoutBreakpoint } from "@/types";
@@ -45,5 +46,17 @@ describe("TokensTable", () => {
 
 		const { asFragment } = renderResponsiveWithRoute(<TokensTable />, breakpoint as LayoutBreakpoint, { route });
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should toggle hide dust tokens", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("HideDustTokens"));
+
+		expect(screen.getByTestId("HideDustTokens")).toBeEnabled();
 	});
 });
