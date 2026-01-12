@@ -1,5 +1,5 @@
 import { describe, beforeAll, it } from "vitest"
-import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
 import { SelectToken } from "./SelectToken";
 
