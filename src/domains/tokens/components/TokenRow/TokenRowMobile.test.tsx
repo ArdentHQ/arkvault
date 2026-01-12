@@ -12,6 +12,7 @@ let profile: Contracts.IProfile;
 const createMockWalletToken = (overrides = {}) => ({
 	address: () => "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
 	balance: () => 100,
+	contractExplorerLink: () => "https://explorer.com/token1",
 	token: () => ({
 		address: () => "0xToken1",
 		decimals: () => 18,
