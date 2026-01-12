@@ -12,13 +12,14 @@ import { Link } from "@/app/components/Link";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
+import { TokenRowMobileSkeleton } from "./TokenRowMobileSkeleton";
 
 export const TokenRowMobile = memo(
 	({ className, onClick, isLoading = false, onSend, walletToken, ...properties }: TokenRowProperties) => {
 		const { t } = useTranslation();
 
 		if (isLoading) {
-			return <div>skeleton</div>;
+			return <TokenRowMobileSkeleton />;
 		}
 
 		return (
