@@ -5,14 +5,13 @@ import userEvent from "@testing-library/user-event";
 
 import { TokenRowMobile } from "./TokenRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
+import { env, getDefaultProfileId, screen, render } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
 const createMockWalletToken = (overrides = {}) => ({
 	address: () => "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
 	balance: () => 100,
-	contractExplorerLink: () => "https://test.com/token1",
 	token: () => ({
 		address: () => "0xToken1",
 		decimals: () => 18,
@@ -22,8 +21,7 @@ const createMockWalletToken = (overrides = {}) => ({
 	...overrides,
 });
 
-describe.each(["xs", "sm"])("TokenRowMobile", (breakpoint) => {
-	const render = (content: React.ReactNode) => renderResponsive(content, breakpoint);
+describe("TokenRowMobile", () => {
 	let mockWalletToken: any;
 
 	beforeAll(() => {
