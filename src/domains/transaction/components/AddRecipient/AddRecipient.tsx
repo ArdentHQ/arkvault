@@ -63,7 +63,7 @@ export const AddRecipient = ({
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
 
-	const { tokens, isLoading } = useProfileTokens({ profile })
+	const { tokens, isLoading } = useProfileTokens({ profile });
 
 	const {
 		getValues,
@@ -261,17 +261,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-				end: {
-					content: (
-						<Amount
-							value={convert(amount || 0)}
-							ticker={exchangeTicker}
-							data-testid="AddRecipient__currency-balance"
-							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-						/>
-					),
-				},
-			}
+					end: {
+						content: (
+							<Amount
+								value={convert(amount || 0)}
+								ticker={exchangeTicker}
+								data-testid="AddRecipient__currency-balance"
+								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+							/>
+						),
+					},
+				}
 			: undefined;
 
 	return (
@@ -374,9 +374,7 @@ export const AddRecipient = ({
 						<div className="flex">
 							{isTokenTransfer && !isLoading && (
 								<div className="md:max-w-44">
-									<SelectToken
-										tokens={tokens.map((token) => ({ name: token.token().name() }))}
-									/>
+									<SelectToken tokens={tokens.map((token) => ({ name: token.token().name() }))} />
 								</div>
 							)}
 							<div className="flex-1">
