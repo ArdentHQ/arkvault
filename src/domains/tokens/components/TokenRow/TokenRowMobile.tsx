@@ -35,7 +35,7 @@ export const TokenRowMobile = memo(
 										className="mr-2 p-1"
 										onClick={(event) => {
 											event.stopPropagation();
-											console.log("star clicked")
+											console.log("star clicked");
 										}}
 									>
 										<Icon name="Star" className="text-theme-warning-400" />
@@ -108,19 +108,17 @@ export const TokenRowMobile = memo(
 								</Link>
 							</MobileSection>
 
-							<div className="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700">
+							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden">
 								<Button
 									variant="transparent"
-									className="mr-2 p-1 -m-1"
+									className="-m-1 mr-2 p-1"
 									onClick={(event) => {
 										event.stopPropagation();
-										console.log("star clicked")
+										console.log("star clicked");
 									}}
 								>
 									<Icon name="Star" className="text-theme-warning-400" />
-									<div
-										className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
-									>
+									<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
 										{t("COMMON.FAVORITE")}
 									</div>
 								</Button>
