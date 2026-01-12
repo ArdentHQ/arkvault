@@ -123,7 +123,7 @@ export const TokensTable = ({
 						</div>
 					}
 				>
-					<div className="items-center justify-between flex py-3 md:hidden border-b border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 border-dashed">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden">
 						<TokensTableHeader activeProfile={activeProfile} />
 					</div>
 
