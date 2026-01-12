@@ -96,7 +96,7 @@ export const TokensTableHeader = ({ activeProfile }: { activeProfile: Contracts.
 				className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
 				onClick={() => {
 					/* istanbul ignore next -- @preserve */
-					console.log("manage clicked")
+					console.log("manage clicked");
 				}}
 			>
 				<Icon name="Gear" />
