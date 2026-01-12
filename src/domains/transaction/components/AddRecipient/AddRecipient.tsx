@@ -19,6 +19,7 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -61,6 +62,8 @@ export const AddRecipient = ({
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
+
+	const { tokens, isLoading } = useProfileTokens({ profile })
 
 	const {
 		getValues,
@@ -258,17 +261,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
@@ -369,14 +372,10 @@ export const AddRecipient = ({
 						</FormLabel>
 
 						<div className="flex">
-							{isTokenTransfer && (
+							{isTokenTransfer && !isLoading && (
 								<div className="md:max-w-44">
 									<SelectToken
-										tokens={profile
-											.tokens()
-											.selected()
-											.values()
-											.map((token) => ({ name: token.token().name() }))}
+										tokens={tokens.map((token) => ({ name: token.token().name() }))}
 									/>
 								</div>
 							)}
