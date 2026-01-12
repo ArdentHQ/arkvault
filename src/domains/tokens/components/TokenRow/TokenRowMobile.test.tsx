@@ -137,7 +137,6 @@ describe("TokenRowMobile", () => {
 		expect(onClickMock).not.toHaveBeenCalled();
 	});
 
-
 	it("should render favorite button on mobile", () => {
 		render(
 			<table>
