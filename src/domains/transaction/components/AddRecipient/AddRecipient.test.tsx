@@ -94,6 +94,14 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render with assets field", async () => {
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} isTokenTransfer />,
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it("should render with empty array of recipients as default", async () => {
 		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} />,
