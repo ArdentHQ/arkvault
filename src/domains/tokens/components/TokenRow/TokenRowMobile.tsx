@@ -32,7 +32,10 @@ export const TokenRowMobile = memo(
 										size="icon"
 										variant="transparent"
 										className="mr-2 p-1"
-										onClick={() => console.log(23423)}
+										onClick={(event) => {
+											event.stopPropagation();
+											console.log("star clicked")
+										}}
 									>
 										<Icon name="Star" className="text-theme-warning-400" />
 									</Button>
@@ -53,7 +56,10 @@ export const TokenRowMobile = memo(
 									size="icon"
 									variant="transparent"
 									className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
-									onClick={onSend}
+									onClick={(event) => {
+										event.stopPropagation();
+										onSend();
+									}}
 								>
 									{t("COMMON.SEND")}
 								</Button>
@@ -100,6 +106,24 @@ export const TokenRowMobile = memo(
 									</div>
 								</Link>
 							</MobileSection>
+
+							<div className="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700">
+								<Button
+									variant="transparent"
+									className="mr-2 p-1 -m-1"
+									onClick={(event) => {
+										event.stopPropagation();
+										console.log("star clicked")
+									}}
+								>
+									<Icon name="Star" className="text-theme-warning-400" />
+									<div
+										className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+									>
+										{t("COMMON.FAVORITE")}
+									</div>
+								</Button>
+							</div>
 						</div>
 					</MobileCard>
 				</td>
