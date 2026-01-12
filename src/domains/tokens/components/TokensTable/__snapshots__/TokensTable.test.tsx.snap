@@ -6504,7 +6504,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -6712,7 +6712,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -6920,7 +6920,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -7128,7 +7128,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -7336,7 +7336,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -7544,7 +7544,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -7752,7 +7752,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -7960,7 +7960,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -8434,7 +8434,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -8642,7 +8642,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -8850,7 +8850,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -9058,7 +9058,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -9266,7 +9266,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -9474,7 +9474,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -9682,7 +9682,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -9890,7 +9890,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -13404,7 +13404,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -13612,7 +13612,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -13820,7 +13820,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -14028,7 +14028,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -14236,7 +14236,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -14444,7 +14444,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -14652,7 +14652,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -14860,7 +14860,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -15334,7 +15334,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -15542,7 +15542,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -15750,7 +15750,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -15958,7 +15958,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -16166,7 +16166,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -16374,7 +16374,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -16582,7 +16582,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
@@ -16790,7 +16790,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                               </span>
                             </div>
                             <div
-                              class="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
+                              class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden"
                             >
                               <div
                                 class="flex flex-row items-center gap-2"
