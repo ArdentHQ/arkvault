@@ -47,7 +47,7 @@ export const TokenRowMobileSkeleton = () => {
 							<Skeleton height={17} width={contractWidth} />
 						</div>
 
-						<div className="sm:hidden border-t border-dashed pt-4 border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700">
+						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden">
 							<div className="flex flex-row items-center gap-2">
 								<Skeleton height={20} width={20} className="rounded-full" />
 								<Skeleton height={17} width={60} />
