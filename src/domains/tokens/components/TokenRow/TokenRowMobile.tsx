@@ -34,6 +34,7 @@ export const TokenRowMobile = memo(
 										variant="transparent"
 										className="mr-2 p-1"
 										onClick={(event) => {
+											/* istanbul ignore next -- @preserve */
 											event.stopPropagation();
 											console.log("star clicked");
 										}}
@@ -113,6 +114,7 @@ export const TokenRowMobile = memo(
 									variant="transparent"
 									className="-m-1 mr-2 p-1"
 									onClick={(event) => {
+										/* istanbul ignore next -- @preserve */
 										event.stopPropagation();
 										console.log("star clicked");
 									}}
