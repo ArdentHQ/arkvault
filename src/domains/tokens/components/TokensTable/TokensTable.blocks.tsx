@@ -85,8 +85,11 @@ export const TokensTableHeader = ({ activeProfile }: { activeProfile: Contracts.
 				/>
 			</div>
 
-
-			<Divider type="vertical" size="md" className="hidden md:block border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700" />
+			<Divider
+				type="vertical"
+				size="md"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
+			/>
 
 			<Button
 				variant="transparent"
