@@ -95,7 +95,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should render with assets field", async () => {
-		const token = { token: () => ({ name: () => "test" }) }
+		const token = { token: () => ({ name: () => "test" }) };
 		const selectedMock = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
 			items() {
 				return [token];
@@ -107,8 +107,8 @@ describe("AddRecipient", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("SelectDropdown")).toHaveLength(3)
-		})
+			expect(screen.getAllByTestId("SelectDropdown")).toHaveLength(3);
+		});
 
 		expect(container).toMatchSnapshot();
 		selectedMock.mockRestore();
