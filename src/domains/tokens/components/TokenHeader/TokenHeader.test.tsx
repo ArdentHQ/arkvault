@@ -163,4 +163,21 @@ describe("TokenHeader", () => {
 		expect(addressSidepanelSpy).not.toHaveBeenCalled();
 		walletsSpy.mockRestore();
 	});
+
+	it("should toggle receive funds mmodal", async () => {
+		const { asFragment } = render(<TokenHeader profile={profile} />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("TokenHeader__receive-modal-toggle"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__close-button")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		expect(asFragment()).toMatchSnapshot();
+	});
 });

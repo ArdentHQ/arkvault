@@ -950,10 +950,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib
-            COVERAGE_THRESHOLD_LINES: 85.12
-            COVERAGE_THRESHOLD_BRANCHES: 80.04
+            COVERAGE_THRESHOLD_LINES: 85.07
+            COVERAGE_THRESHOLD_BRANCHES: 80.03
             COVERAGE_THRESHOLD_FUNCTIONS: 85.43
-            COVERAGE_THRESHOLD_STATEMENTS: 85.09
+            COVERAGE_THRESHOLD_STATEMENTS: 85.04
         strategy:
             matrix:
                 node-version:

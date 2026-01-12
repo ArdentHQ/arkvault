@@ -7,6 +7,7 @@ import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import { TokenDetailSidepanel } from "./TokensDetailSidepanel";
 import { LayoutBreakpoint } from "@/types";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -15,23 +16,21 @@ describe("TokensTable", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		route = `/profiles/${profile.id()}/tokens`;
-
-		const fixtureData = Fixtures.ByContractAddress.data;
-		const walletTokenData = Fixtures.ByWalletAddress.data[0];
-
-		profile
-			.wallets()
-			.first()
-			.tokens()
-			.create({
-				token: new TokenDTO(fixtureData),
-				walletToken: new WalletTokenDTO(walletTokenData),
-			});
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
+		const fixtureData = Fixtures.ByContractAddress.data;
+		const walletTokenData = Fixtures.ByWalletAddress.data[0];
+
+		const walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile: profile,
+			token: new TokenDTO(fixtureData),
+			walletToken: new WalletTokenDTO(walletTokenData),
+		});
+
 		renderResponsiveWithRoute(
-			<TokenDetailSidepanel isOpen walletToken={profile.tokens().selected().first()} />,
+			<TokenDetailSidepanel isOpen walletToken={walletToken} />,
 			breakpoint as LayoutBreakpoint,
 			{ route },
 		);
