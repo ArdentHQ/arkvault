@@ -78,7 +78,7 @@ export const TokenRowMobile = memo(
 									ticker={walletToken.token().symbol()}
 									showTicker={false}
 									value={walletToken.balance()}
-									className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+									className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
 								/>
 							</MobileSection>
 
