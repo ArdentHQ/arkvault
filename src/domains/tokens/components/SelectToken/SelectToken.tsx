@@ -3,7 +3,7 @@ import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensS
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export const SelectToken = ({ tokens }: { tokens: { name: string }[] }) => {
+export const SelectToken = ({ tokens, className }: { tokens: { name: string }[]; className?: string }) => {
 	const { t } = useTranslation();
 	const defaultToken = tokens.length === 1 ? { label: tokens[0].name, value: tokens[0].name } : undefined;
 	const [selectedToken, setSelectedToken] = useState<OptionProperties | undefined>(defaultToken);
@@ -20,6 +20,7 @@ export const SelectToken = ({ tokens }: { tokens: { name: string }[] }) => {
 			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
 			innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+			className={className}
 			onChange={(option: OptionProperties) => setSelectedToken(option)}
 			addons={{
 				start: {

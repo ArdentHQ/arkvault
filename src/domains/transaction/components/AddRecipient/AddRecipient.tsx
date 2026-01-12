@@ -20,6 +20,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import cn from "classnames";
 
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -320,6 +321,17 @@ export const AddRecipient = ({
 						/>
 					</FormField>
 
+					{isTokenTransfer && !isLoading && (
+						<FormField name="asset">
+							<div className="block space-y-2 sm:hidden">
+								<FormLabel>
+									<div>{t("COMMON.ASSET")}</div>
+								</FormLabel>
+								<SelectToken tokens={tokens.map((token) => ({ name: token.token().name() }))} />
+							</div>
+						</FormField>
+					)}
+
 					<FormField name="amount">
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
@@ -373,12 +385,18 @@ export const AddRecipient = ({
 
 						<div className="flex">
 							{isTokenTransfer && !isLoading && (
-								<div className="md:max-w-44">
-									<SelectToken tokens={tokens.map((token) => ({ name: token.token().name() }))} />
+								<div className="hidden w-full sm:block sm:max-w-44">
+									<SelectToken
+										tokens={tokens.map((token) => ({ name: token.token().name() }))}
+										className="sm:rounded-r-none sm:border-r-transparent"
+									/>
 								</div>
 							)}
 							<div className="flex-1">
 								<InputCurrency
+									className={cn({
+										"sm:rounded-l-none sm:border-l-transparent": isTokenTransfer,
+									})}
 									network={network}
 									disabled={!isSenderFilled}
 									data-testid="AddRecipient__amount"
