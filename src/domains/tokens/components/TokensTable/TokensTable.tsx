@@ -1,17 +1,14 @@
-import { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import { Table } from "@/app/components/Table";
 import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
-import { Toggle } from "@/app/components/Toggle";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
-import { TokensTableFooter } from "./TokensTable.blocks";
+import { TokensTableFooter, TokensTableHeader } from "./TokensTable.blocks";
 import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
-import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
-import { useEnvironmentContext } from "@/app/contexts";
 
 export const TokensTable = ({
 	onClick,
@@ -22,7 +19,6 @@ export const TokensTable = ({
 }) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
-	const { persist } = useEnvironmentContext();
 	const [query, setQuery] = useState("");
 
 	const wallets = activeProfile.wallets().selected();
@@ -122,23 +118,15 @@ export const TokensTable = ({
 					setSearchQuery={setQuery}
 					searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
 					extra={
-						<div className="mr-6 flex items-center space-x-2">
-							<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold whitespace-nowrap">
-								{t("TOKENS.HIDE_DUST")}
-							</div>
-
-							<Toggle
-								data-testid="HideDustTokens"
-								name="hideDust"
-								defaultChecked={activeProfile.settings().get(ProfileSetting.HideDustTokens)}
-								onChange={async (event: React.ChangeEvent<HTMLInputElement>) => {
-									activeProfile.settings().set(ProfileSetting.HideDustTokens, event.target.checked);
-									await persist();
-								}}
-							/>
+						<div className="mr-6 hidden items-center space-x-1 md:flex">
+							<TokensTableHeader activeProfile={activeProfile} />
 						</div>
 					}
 				>
+					<div className="items-center justify-between flex py-3 md:hidden border-b border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 border-dashed">
+						<TokensTableHeader activeProfile={activeProfile} />
+					</div>
+
 					<div data-testid="TokenList">
 						<Table
 							columns={listColumns}
