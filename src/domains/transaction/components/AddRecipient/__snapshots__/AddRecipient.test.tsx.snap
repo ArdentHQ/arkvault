@@ -293,7 +293,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
@@ -636,7 +636,7 @@ exports[`AddRecipient > should render 1`] = `
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
@@ -964,7 +964,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
@@ -1292,7 +1292,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
@@ -1636,7 +1636,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
@@ -1894,7 +1894,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
@@ -2222,7 +2222,7 @@ exports[`AddRecipient > should set available amount 1`] = `
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
@@ -2550,7 +2550,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             </span>
           </label>
           <div
-            class="flex space-x-2"
+            class="flex"
           >
             <div
               class="flex-1"
