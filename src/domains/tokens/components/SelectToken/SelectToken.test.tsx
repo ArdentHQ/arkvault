@@ -1,17 +1,16 @@
-import { describe, beforeAll, it } from "vitest"
-import { env, getMainsailProfileId, render } from "@/utils/testing-library";
-import { Contracts } from "@/app/lib/profiles";
+import { describe, it } from "vitest"
+import { render } from "@/utils/testing-library";
 import { SelectToken } from "./SelectToken";
 
-let profile: Contracts.IProfile;
-
 describe("SelectToken", () => {
-	beforeAll(async () => {
-		profile = env.profiles().findById(getMainsailProfileId());
-	});
-
 	it("should render", async () => {
 		const { asFragment } = render(<SelectToken tokens={[{ name: "test" }]} />);
+		expect(asFragment()).toMatchSnapshot()
+
+	});
+
+	it("should render multiple ", async () => {
+		const { asFragment } = render(<SelectToken tokens={[{ name: "token1", }, { name: "token1", }]} />);
 		expect(asFragment()).toMatchSnapshot()
 
 	});
