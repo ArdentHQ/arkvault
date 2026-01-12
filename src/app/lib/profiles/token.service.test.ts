@@ -7,6 +7,7 @@ import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { WalletTokenRepository } from "./wallet-token.repository";
 import { WalletTokenDTO } from "./wallet-token.dto";
 import { WalletToken } from "./wallet-token";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 describe("TokenService", () => {
 	let profile: Contracts.IProfile;
@@ -39,16 +40,19 @@ describe("TokenService", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should return first token", () => {
-		expect(profile.tokens().selected()).toBeInstanceOf(WalletTokenRepository);
-		expect(profile.tokens().selected().first()).toBeInstanceOf(WalletToken);
+	it("should return first token", async () => {
+		const tokens = await profile.tokens().selected();
+		expect(tokens).toBeInstanceOf(WalletTokenCollection);
+		expect(tokens.items()[0]).toBeInstanceOf(WalletToken);
 	});
 
-	it("should remove dust balance tokens", () => {
-		vi.spyOn(profile.settings(), "get").mockReturnValue(true);
-		vi.spyOn(profile.tokens().selected().first(), "balance").mockReturnValue(0.1);
+	it("should remove dust balance tokens", async () => {
+		const tokens = await profile.tokens().selected();
 
-		expect(profile.tokens().selected()).toBeInstanceOf(WalletTokenRepository);
-		expect(profile.tokens().selected().first()).toBeUndefined();
+		vi.spyOn(profile.settings(), "get").mockReturnValue(true);
+		vi.spyOn(tokens.items()[0], "balance").mockReturnValue(0.1);
+
+		expect(tokens).toBeInstanceOf(WalletTokenCollection);
+		expect(tokens.items()[1]).toBeUndefined();
 	});
 });

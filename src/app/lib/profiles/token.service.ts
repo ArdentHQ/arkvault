@@ -1,6 +1,8 @@
 import { Contracts } from ".";
 import { Networks } from "@/app/lib/mainsail";
-import { WalletTokenRepository } from "./wallet-token.repository";
+import { ClientService } from "@/app/lib/mainsail/client.service";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
+import { WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
 import { ProfileSetting } from "./profile.enum.contract";
 import { WalletToken } from "./wallet-token";
 
@@ -41,13 +43,14 @@ export class TokenService {
 	 * @returns {Promise<void>}
 	 */
 	public async sync(): Promise<void> {
-		await Promise.allSettled(
-			this.#profile
-				.wallets()
-				.selected()
-				.values()
-				.map((wallet) => wallet.synchroniser().tokens()),
-		);
+		const walletTokensCollection = await this.#profile.tokens().selected();
+		const walletTokens = walletTokensCollection.items();
+
+		for (const walletToken of walletTokens) {
+			const wallet = this.#profile.wallets().findByAddressWithNetwork(walletToken.address(), this.#network.id());
+
+			wallet?.tokens().push(walletToken);
+		}
 	}
 
 	/**
@@ -70,16 +73,37 @@ export class TokenService {
 	 *
 	 * @returns {WalletTokenRepository}
 	 */
-	selected(): WalletTokenRepository {
-		const tokens = new WalletTokenRepository(this.#network, this.#profile);
+	async selected(query?: WalletTokensQuery): Promise<WalletTokenCollection> {
+		const clientService = new ClientService({
+			config: this.#profile.activeNetwork().config(),
+			profile: this.#profile,
+		});
 
-		for (const wallet of this.#profile.wallets().selected().values()) {
-			for (const token of this.#walletTokens(wallet)) {
-				tokens.push(token);
-			}
+		let response: WalletTokenCollection;
+
+		try {
+			response = await clientService.tokenAddresses({
+				addresses: this.#profile
+					.wallets()
+					.selected()
+					.map((wallet) => wallet.address()),
+				...(query ?? {}),
+			});
+		} catch {
+			return new WalletTokenCollection([], {
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			});
 		}
 
-		return tokens;
+		return new WalletTokenCollection(response.items(), {
+			last: undefined,
+			next: Number(response.nextPage()),
+			prev: undefined,
+			self: undefined,
+		});
 	}
 
 	/**
@@ -90,8 +114,10 @@ export class TokenService {
 	selectedTotalBalance(): number {
 		let total = 0;
 
-		for (const token of this.selected().values()) {
-			total = total + token.balance();
+		for (const wallet of this.#profile.wallets().selected().values()) {
+			for (const token of wallet.tokens().values()) {
+				total = total + token.balance();
+			}
 		}
 
 		return total;
