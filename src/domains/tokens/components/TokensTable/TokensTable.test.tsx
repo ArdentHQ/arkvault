@@ -140,5 +140,4 @@ describe("TokensTable", () => {
 
 		expect(getCheckbox()).not.toBeChecked();
 	});
-
 });
