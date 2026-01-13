@@ -106,19 +106,52 @@ describe("TokensTable", () => {
 		expect(screen.getAllByTestId("HideDustTokens")[0]).toBeEnabled();
 	});
 
-	it("should show manage actions when Manage button is clicked", async () => {
+	it("should toggle manage actions when Save button is clicked", async () => {
 		render(<TokensTable />, {
 			route,
 		});
 
 		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
 
+		// switch to manage mode
 		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
+		// ensure Cancel and Save buttons are visible
 		expect(screen.getAllByTestId("TokensTable_Cancel")).toHaveLength(2);
 		expect(screen.getAllByTestId("TokensTable_Save")).toHaveLength(2);
+
+		await userEvent.click(screen.getAllByTestId("TokensTable_Save")[0]);
+
+		expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
+
+		expect(screen.queryByTestId("TokensTable_Cancel")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("TokensTable_Save")).not.toBeInTheDocument();
+	});
+
+	it("should toggle manage actions when Cancel button is clicked", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		// switch to manage mode
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		// ensure Cancel and Save buttons are visible
+		expect(screen.getAllByTestId("TokensTable_Cancel")).toHaveLength(2);
+		expect(screen.getAllByTestId("TokensTable_Save")).toHaveLength(2);
+
+		await userEvent.click(screen.getAllByTestId("TokensTable_Cancel")[0]);
+
+		expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
+
+		expect(screen.queryByTestId("TokensTable_Cancel")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("TokensTable_Save")).not.toBeInTheDocument();
 	});
 
 	it("should show toggle row visibility", async () => {
@@ -139,5 +172,9 @@ describe("TokensTable", () => {
 		await userEvent.click(getCheckbox());
 
 		expect(getCheckbox()).not.toBeChecked();
+
+		await userEvent.click(getCheckbox());
+
+		expect(getCheckbox()).toBeChecked();
 	});
 });
