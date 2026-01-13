@@ -345,7 +345,9 @@ export const AddRecipient = ({
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(
 										<Amount
-											value={BigNumber.make(remainingBalance).decimalPlaces(8).toNumber()}
+											value={BigNumber.make(remainingBalance)
+												.decimalPlaces(isTokenTransfer ? 2 : 8)
+												.toNumber()}
 											ticker={ticker}
 											showTicker={false}
 										/>
@@ -359,7 +361,13 @@ export const AddRecipient = ({
 											className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
-											<Amount value={+remainingBalance} ticker={ticker} showTicker={true} />
+											<Amount
+												value={BigNumber.make(remainingBalance)
+													.decimalPlaces(isTokenTransfer ? 2 : 8)
+													.toNumber()}
+												ticker={ticker}
+												showTicker={true}
+											/>
 										</div>
 									)}
 									{isSenderFilled && !!remainingBalance && isSingle && (
