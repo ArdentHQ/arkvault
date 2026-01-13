@@ -35,7 +35,7 @@ export const TokenRowMobile = memo(
 
 		const toggleVisibility = () => {
 			toggleContractVisibility(walletToken.token().address());
-		}
+		};
 
 		return (
 			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
