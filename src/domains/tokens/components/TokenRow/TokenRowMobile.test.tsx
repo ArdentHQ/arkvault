@@ -37,7 +37,13 @@ describe("TokenRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRowMobile walletToken={mockWalletToken} profile={profile} onSend={vi.fn()} />
+					<TokenRowMobile
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -51,7 +57,14 @@ describe("TokenRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRowMobile walletToken={mockWalletToken} profile={profile} onSend={vi.fn()} isLoading />
+					<TokenRowMobile
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						isLoading
+					/>
 				</tbody>
 			</table>,
 		);
@@ -64,7 +77,13 @@ describe("TokenRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRowMobile walletToken={mockWalletToken} profile={profile} onSend={vi.fn()} />
+					<TokenRowMobile
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -79,7 +98,13 @@ describe("TokenRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRowMobile walletToken={mockWalletToken} profile={profile} onSend={onSendMock} />
+					<TokenRowMobile
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={onSendMock}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -98,6 +123,8 @@ describe("TokenRowMobile", () => {
 			<table>
 				<tbody>
 					<TokenRowMobile
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
 						walletToken={mockWalletToken}
 						profile={profile}
 						onSend={vi.fn()}
@@ -122,6 +149,8 @@ describe("TokenRowMobile", () => {
 			<table>
 				<tbody>
 					<TokenRowMobile
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
 						walletToken={mockWalletToken}
 						profile={profile}
 						onSend={onSendMock}
@@ -142,11 +171,143 @@ describe("TokenRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRowMobile walletToken={mockWalletToken} profile={profile} onSend={vi.fn()} />
+					<TokenRowMobile
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 		);
 
 		expect(screen.getByText(commonTranslations.FAVORITE)).toBeInTheDocument();
+	});
+
+	it("should render checkbox when isManageMode is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TokenRowMobile
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						isManageMode={true}
+						toggleContractVisibility={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getAllByTestId("TokenRow_VisibilityToggle")).toHaveLength(2);
+	});
+
+	it("should render Remove button when isManageMode is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TokenRowMobile
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						isManageMode={true}
+						toggleContractVisibility={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.queryByRole("button", { name: /send/i })).not.toBeInTheDocument();
+		expect(screen.getByTestId("TokenRow_RemoveToken")).toBeInTheDocument();
+	});
+
+	it("should call toggleContractVisibility when checkbox is clicked", async () => {
+		const user = userEvent.setup();
+		const onClickMock = vi.fn();
+		const toggleContractVisibilityMock = vi.fn();
+
+		render(
+			<table>
+				<tbody>
+					<TokenRowMobile
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						onClick={onClickMock}
+						isManageMode={true}
+						toggleContractVisibility={toggleContractVisibilityMock}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		const checkboxes = screen.getAllByTestId("TokenRow_VisibilityToggle");
+		await user.click(checkboxes[0]);
+
+		expect(onClickMock).not.toHaveBeenCalled();
+		expect(toggleContractVisibilityMock).toHaveBeenCalled();
+	});
+
+	it("should render checkbox as checked when isHidden is false", () => {
+		render(
+			<table>
+				<tbody>
+					<TokenRowMobile
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						isManageMode={true}
+						isHidden={false}
+						toggleContractVisibility={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		const checkboxes = screen.getAllByTestId("TokenRow_VisibilityToggle");
+		for (const checkbox of checkboxes) {
+			expect(checkbox).toBeChecked();
+		}
+	});
+
+	it("should render checkbox as unchecked when isHidden is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TokenRowMobile
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						isManageMode={true}
+						isHidden={true}
+						toggleContractVisibility={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		const checkboxes = screen.getAllByTestId("TokenRow_VisibilityToggle");
+		for (const checkbox of checkboxes) {
+			expect(checkbox).not.toBeChecked();
+		}
+	});
+
+	it("should not render favorite button when isManageMode is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TokenRowMobile
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						isManageMode={true}
+						toggleContractVisibility={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.queryByText(commonTranslations.FAVORITE)).not.toBeInTheDocument();
 	});
 });
