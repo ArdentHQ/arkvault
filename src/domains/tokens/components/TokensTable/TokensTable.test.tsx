@@ -9,6 +9,7 @@ import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import * as useWalletActionsHook from "@/domains/wallet/hooks";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -118,6 +119,26 @@ describe("TokensTable", () => {
 
 		expect(screen.getAllByTestId("TokensTable_Cancel")).toHaveLength(2);
 		expect(screen.getAllByTestId("TokensTable_Save")).toHaveLength(2);
+	});
+
+	it("should show toggle row visibility", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		const getCheckbox = () => screen.getByTestId("TokenRow_VisibilityToggle");
+
+		expect(getCheckbox()).toBeChecked();
+
+		await userEvent.click(getCheckbox());
+
+		expect(getCheckbox()).not.toBeChecked();
 	});
 
 });
