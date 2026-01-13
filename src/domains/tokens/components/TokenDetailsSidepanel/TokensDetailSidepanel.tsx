@@ -1,5 +1,5 @@
 import { DetailsCondensed, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
@@ -11,13 +11,16 @@ import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { Button } from "@/app/components/Button";
+import { SIDE_PANEL_TRANSITION_DURATION } from "@/app/contexts";
 
-const TokenDetailSidepanelFooter = () => {
+const TokenDetailSidepanelFooter = ({ onClose }: { onClose?: () => void }) => {
 	const { t } = useTranslation();
 	return (
 		<SidePanelButtons>
 			<>
-				<Button variant="secondary">{t("COMMON.CLOSE")}</Button>
+				<Button variant="secondary" onClick={onClose} data-testid="TokenDetailSidepanel__close-button">
+					{t("COMMON.CLOSE")}
+				</Button>
 
 				<Button className="hidden md:block">{t("COMMON.SEND_TOKENS")}</Button>
 
@@ -30,19 +33,33 @@ const TokenDetailSidepanelFooter = () => {
 export const TokenDetailSidepanel = ({
 	isOpen: isSidePanelOpen,
 	walletToken,
+	onClose,
 }: {
 	isOpen: boolean;
 	walletToken: WalletToken;
+	onClose?: () => void;
 }) => {
 	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
+
+	useEffect(() => {
+		let timeoutId: NodeJS.Timeout | undefined;
+
+		if (!isOpen) {
+			timeoutId = setTimeout(() => {
+				onClose?.();
+			}, SIDE_PANEL_TRANSITION_DURATION);
+		}
+
+		return () => clearTimeout(timeoutId);
+	}, [isOpen]);
 
 	return (
 		<SidePanel
 			title={t("TOKENS.TOKEN_INFORMATION")}
 			open={isOpen}
 			onOpenChange={setIsOpen}
-			footer={<TokenDetailSidepanelFooter />}
+			footer={<TokenDetailSidepanelFooter onClose={() => setIsOpen(false)} />}
 		>
 			<DetailsCondensed>
 				<div className="space-y-4" data-testid="TokenDetailSidepanel">
