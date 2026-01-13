@@ -33,6 +33,10 @@ export const TokenRowMobile = memo(
 			return <TokenRowMobileSkeleton />;
 		}
 
+		const toggleVisibility = () => {
+			toggleContractVisibility(walletToken.token().address());
+		}
+
 		return (
 			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
 				<td data-testid="TableRow__mobile">
@@ -60,9 +64,7 @@ export const TokenRowMobile = memo(
 												data-testid="TokenRow_VisibilityToggle"
 												checked={!isHidden}
 												className="-mt-1 mr-3"
-												onChange={() => {
-													toggleContractVisibility(walletToken.token().address());
-												}}
+												onChange={toggleVisibility}
 												onClick={(event) => {
 													event.stopPropagation();
 												}}
@@ -124,9 +126,7 @@ export const TokenRowMobile = memo(
 											data-testid="TokenRow_VisibilityToggle"
 											checked={!isHidden}
 											className="-mt-1 ml-3"
-											onChange={() => {
-												toggleContractVisibility(walletToken.token().address());
-											}}
+											onChange={toggleVisibility}
 											onClick={(event) => {
 												event.stopPropagation();
 											}}
