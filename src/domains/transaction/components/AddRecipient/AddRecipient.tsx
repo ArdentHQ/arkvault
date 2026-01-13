@@ -262,17 +262,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
@@ -336,7 +336,12 @@ export const AddRecipient = ({
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
 								<div className="flex flex-row items-center gap-1.5">
-									<span>{t("COMMON.AMOUNT")}</span>
+									{isTokenTransfer && (
+										<>
+											<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
+											<span className="hidden sm:block">{t("COMMON.ASSET_AMOUNT")}</span>
+										</>
+									)}
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(
 										<Amount
