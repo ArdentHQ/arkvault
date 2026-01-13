@@ -63,14 +63,26 @@ export const TokensTableFooter = ({
 	}
 };
 
-export const TokensTableHeader = ({ activeProfile }: { activeProfile: Contracts.IProfile }) => {
+export const TokensTableHeader = ({
+	activeProfile,
+	toggleManageMode,
+	isManageMode,
+	onCancel,
+	onSave,
+}: {
+	activeProfile: Contracts.IProfile;
+	isManageMode: boolean;
+	toggleManageMode: (isManageMode: boolean) => void;
+	onSave: () => void;
+	onCancel: () => void;
+}) => {
 	const { persist } = useEnvironmentContext();
 	const { t } = useTranslation();
 
 	return (
 		<>
-			<div className="flex items-center">
-				<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap">
+			<div className="flex items-center gap-1">
+				<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap">
 					{t("TOKENS.HIDE_DUST")}
 				</div>
 
@@ -91,17 +103,40 @@ export const TokensTableHeader = ({ activeProfile }: { activeProfile: Contracts.
 				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
 			/>
 
-			<Button
-				variant="transparent"
-				className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
-				onClick={() => {
-					/* istanbul ignore next -- @preserve */
-					console.log("manage clicked");
-				}}
-			>
-				<Icon name="Gear" />
-				{t("COMMON.MANAGE")}
-			</Button>
+			{!isManageMode && (
+				<Button
+					variant="transparent"
+					className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+					onClick={() => {
+						toggleManageMode(true);
+					}}
+				>
+					<Icon name="Gear" />
+					{t("COMMON.MANAGE")}
+				</Button>
+			)}
+
+			{isManageMode && (
+				<div className="flex items-center gap-1">
+					<Button
+						variant="transparent"
+						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+						onClick={onCancel}
+					>
+						{t("COMMON.CANCEL")}
+					</Button>
+
+					<Divider type="vertical" size="md" />
+
+					<Button
+						variant="transparent"
+						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+						onClick={onSave}
+					>
+						{t("COMMON.SAVE")}
+					</Button>
+				</div>
+			)}
 		</>
 	);
 };
