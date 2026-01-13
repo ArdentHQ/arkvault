@@ -156,4 +156,29 @@ describe("TokenRow", () => {
 		expect(screen.queryByRole("button", { name: /send/i })).not.toBeInTheDocument();
 		expect(screen.getByRole("button", { name: /remove/i })).toBeInTheDocument();
 	});
+
+	it("should call toggleContractVisibility when checkbox checked", async () => {
+		const user = userEvent.setup();
+		const onClickMock = vi.fn();
+		const onToggleContractVisibilityMock = vi.fn();
+
+		render(
+			<table>
+				<tbody>
+				<TokenRow
+					isManageMode={true}
+					toggleContractVisibility={onToggleContractVisibilityMock}
+					walletToken={mockWalletToken}
+					profile={profile}
+					onSend={vi.fn()}
+					onClick={onClickMock}
+				/>
+				</tbody>
+			</table>,
+		);
+
+		await user.click(screen.getByTestId("TokenRow_VisibilityToggle"));
+		expect(onClickMock).not.toHaveBeenCalled();
+		expect(onToggleContractVisibilityMock).toHaveBeenCalled();
+	});
 });
