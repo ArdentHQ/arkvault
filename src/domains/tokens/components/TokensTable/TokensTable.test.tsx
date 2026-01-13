@@ -119,5 +119,4 @@ describe("TokensTable", () => {
 		expect(screen.getAllByTestId("TokensTable_Cancel")).toHaveLength(2);
 		expect(screen.getAllByTestId("TokensTable_Save")).toHaveLength(2);
 	});
-
 });
