@@ -104,4 +104,20 @@ describe("TokensTable", () => {
 
 		expect(screen.getAllByTestId("HideDustTokens")[0]).toBeEnabled();
 	});
+
+	it("should show manage actions when Manage button is clicked", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		expect(screen.getAllByTestId("TokensTable_Cancel")).toHaveLength(2);
+		expect(screen.getAllByTestId("TokensTable_Save")).toHaveLength(2);
+	});
+
 });

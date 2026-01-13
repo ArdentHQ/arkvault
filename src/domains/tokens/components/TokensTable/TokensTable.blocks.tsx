@@ -105,6 +105,7 @@ export const TokensTableHeader = ({
 
 			{!isManageMode && (
 				<Button
+					data-testid="TokensTable_Manage"
 					variant="transparent"
 					className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
 					onClick={() => {
@@ -119,6 +120,7 @@ export const TokensTableHeader = ({
 			{isManageMode && (
 				<div className="flex items-center gap-1">
 					<Button
+						data-testid="TokensTable_Cancel"
 						variant="transparent"
 						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
 						onClick={onCancel}
@@ -129,6 +131,7 @@ export const TokensTableHeader = ({
 					<Divider type="vertical" size="md" />
 
 					<Button
+						data-testid="TokensTable_Save"
 						variant="transparent"
 						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
 						onClick={onSave}

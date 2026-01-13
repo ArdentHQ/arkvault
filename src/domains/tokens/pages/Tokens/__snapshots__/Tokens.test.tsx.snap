@@ -1439,6 +1439,7 @@ exports[`Tokens > should render 1`] = `
                     />
                     <button
                       class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+                      data-testid="TokensTable_Manage"
                       type="button"
                     >
                       <div
@@ -1515,6 +1516,7 @@ exports[`Tokens > should render 1`] = `
                     />
                     <button
                       class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+                      data-testid="TokensTable_Manage"
                       type="button"
                     >
                       <div
