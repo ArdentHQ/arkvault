@@ -45,6 +45,16 @@ export const TokensTable = ({
 		setManageMode(state);
 	};
 
+	const onSaveHandler = () => {
+		// persist changes
+		toggleManageMode(false);
+		console.log("onSave");
+	};
+
+	const onCancelHandler = () => {
+		toggleManageMode(false);
+	};
+
 	const wallets = activeProfile.wallets().selected();
 
 	const { tokens, isLoadingTokens, isLoadingMore, hasMore, hasEmptyResults, fetchMore } = useProfileTokens({
@@ -175,14 +185,8 @@ export const TokensTable = ({
 								activeProfile={activeProfile}
 								isManageMode={isManageMode}
 								toggleManageMode={toggleManageMode}
-								onSave={() => {
-									// persist changes
-									toggleManageMode(false);
-									console.log("onSave");
-								}}
-								onCancel={() => {
-									toggleManageMode(false);
-								}}
+								onSave={onSaveHandler}
+								onCancel={onCancelHandler}
 							/>
 						</div>
 					}
@@ -192,14 +196,8 @@ export const TokensTable = ({
 							activeProfile={activeProfile}
 							isManageMode={isManageMode}
 							toggleManageMode={toggleManageMode}
-							onSave={() => {
-								// persist changes
-								toggleManageMode(false);
-								console.log("onSave");
-							}}
-							onCancel={() => {
-								toggleManageMode(false);
-							}}
+							onSave={onSaveHandler}
+							onCancel={onCancelHandler}
 						/>
 					</div>
 
