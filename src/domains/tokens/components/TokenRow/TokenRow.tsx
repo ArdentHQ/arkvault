@@ -100,7 +100,10 @@ export const TokenRow = memo(
 						size="icon"
 						variant="transparent"
 						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-						onClick={onSend}
+						onClick={(event) => {
+							event.stopPropagation();
+							onSend();
+						}}
 					>
 						{t("COMMON.SEND")}
 					</Button>
