@@ -89,7 +89,7 @@ export const TokenRow = memo(
 							checked={!isHidden}
 							className="mt-1 sm:mt-0.5"
 							onChange={() => {
-								toggleContractVisibility(walletToken.token().address())
+								toggleContractVisibility(walletToken.token().address());
 							}}
 							onClick={(event) => {
 								event.stopPropagation();

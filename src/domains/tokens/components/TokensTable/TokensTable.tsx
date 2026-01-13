@@ -35,7 +35,7 @@ export const TokensTable = ({
 				return [...prev, address];
 			}
 		});
-	}
+	};
 
 	const toggleManageMode = (state: boolean) => {
 		if (state) {
@@ -43,7 +43,7 @@ export const TokensTable = ({
 			setHiddenContractAddresses([]);
 		}
 		setManageMode(state);
-	}
+	};
 
 	const wallets = activeProfile.wallets().selected();
 
