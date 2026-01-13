@@ -90,7 +90,7 @@ exports[`TokensTable > should not render in lg 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -1651,7 +1651,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -3212,7 +3212,7 @@ exports[`TokensTable > should not render in md 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -4773,7 +4773,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -6334,7 +6334,7 @@ exports[`TokensTable > should not render in sm 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -8264,7 +8264,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -10194,7 +10194,7 @@ exports[`TokensTable > should not render in xl 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -11755,7 +11755,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -13316,7 +13316,7 @@ exports[`TokensTable > should not render in xs 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -15246,7 +15246,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"
@@ -17176,7 +17176,7 @@ exports[`TokensTable > should render 1`] = `
               </div>
             </div>
             <div
-              class="mr-6 hidden items-center space-x-1 md:flex"
+              class="mr-6 hidden items-center md:flex gap-1"
             >
               <div
                 class="flex items-center gap-1"

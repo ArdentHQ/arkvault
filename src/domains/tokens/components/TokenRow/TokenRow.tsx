@@ -68,6 +68,7 @@ export const TokenRow = memo(
 				{!isManageMode && (
 					<TableCell variant="start" innerClassName="pl-2!">
 						<Button
+							data-testid="TokenRow_Favorite"
 							size="icon"
 							variant="transparent"
 							className="p-1"
@@ -85,7 +86,7 @@ export const TokenRow = memo(
 				{isManageMode && (
 					<TableCell variant="start">
 						<Checkbox
-							data-testid="CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"
+							data-testid="TokenRow_VisibilityToggle"
 							checked={!isHidden}
 							className="mt-1 sm:mt-0.5"
 							onChange={() => {
@@ -162,10 +163,12 @@ export const TokenRow = memo(
 
 					{isManageMode && (
 						<Button
+							data-testid="TokenRow_RemoveToken"
 							size="icon"
 							variant="transparent"
 							className="text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-300 dim:text-theme-danger-400 dim-hover:text-theme-danger-300 p-1 text-sm leading-[17px] hover:underline"
 							onClick={(event) => {
+								/* istanbul ignore next -- @preserve */
 								event.stopPropagation();
 							}}
 						>

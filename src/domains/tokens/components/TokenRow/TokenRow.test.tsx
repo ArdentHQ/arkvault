@@ -34,7 +34,13 @@ describe("TokenRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRow walletToken={mockWalletToken} profile={profile} onSend={vi.fn()} />
+					<TokenRow
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -51,7 +57,13 @@ describe("TokenRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRow walletToken={mockWalletToken} profile={profile} onSend={onSendMock} />
+					<TokenRow
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={onSendMock}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -69,7 +81,14 @@ describe("TokenRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRow walletToken={mockWalletToken} profile={profile} onSend={vi.fn()} onClick={onClickMock} />
+					<TokenRow
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						onClick={onClickMock}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -84,12 +103,57 @@ describe("TokenRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TokenRow walletToken={mockWalletToken} profile={profile} onSend={vi.fn()} isLoading />
+					<TokenRow
+						isManageMode={false}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						isLoading
+					/>
 				</tbody>
 			</table>,
 		);
 
 		expect(screen.getByRole("row")).toBeInTheDocument();
 		expect(screen.queryByText("Test Token")).not.toBeInTheDocument();
+	});
+
+	it("should render checkbox when isManageMode  is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TokenRow
+						isManageMode={true}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.queryByTestId("TokenRow_Favorite")).not.toBeInTheDocument();
+		expect(screen.getByTestId("TokenRow_VisibilityToggle")).toBeInTheDocument();
+	});
+
+	it("should render Remove button when isManageMode  is true", () => {
+		render(
+			<table>
+				<tbody>
+					<TokenRow
+						isManageMode={true}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.queryByRole("button", { name: /send/i })).not.toBeInTheDocument();
+		expect(screen.getByRole("button", { name: /remove/i })).toBeInTheDocument();
 	});
 });

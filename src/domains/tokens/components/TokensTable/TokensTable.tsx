@@ -170,7 +170,7 @@ export const TokensTable = ({
 					setSearchQuery={setQuery}
 					searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
 					extra={
-						<div className="mr-6 hidden items-center space-x-1 md:flex">
+						<div className="mr-6 hidden items-center gap-1 md:flex">
 							<TokensTableHeader
 								activeProfile={activeProfile}
 								isManageMode={isManageMode}
