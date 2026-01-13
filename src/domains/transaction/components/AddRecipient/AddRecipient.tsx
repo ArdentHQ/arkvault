@@ -408,7 +408,7 @@ export const AddRecipient = ({
 							<div className="flex-1">
 								<InputCurrency
 									className={cn({
-										"sm:rounded-l-none sm:border-l-transparent": isTokenTransfer,
+										"sm:rounded-l-none": isTokenTransfer,
 									})}
 									network={network}
 									disabled={!isSenderFilled}

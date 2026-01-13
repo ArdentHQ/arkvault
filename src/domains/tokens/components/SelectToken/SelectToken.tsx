@@ -19,7 +19,7 @@ export const SelectToken = ({ tokens, className }: { tokens: { name: string }[];
 			}))}
 			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
-			innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
 			className={className}
 			onChange={(option: OptionProperties) => setSelectedToken(option)}
 			addons={{

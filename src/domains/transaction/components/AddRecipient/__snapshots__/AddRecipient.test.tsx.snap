@@ -967,7 +967,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               aria-controls="SelectToken__dropdown-menu"
                               aria-labelledby="SelectToken__dropdown-label"
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                               data-testid="SelectDropdown__input"
                               id="SelectToken__dropdown-input"
                               name="asset"
@@ -976,7 +976,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               value="test"
                             />
                             <span
-                              class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                              class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                               data-testid="Input__suggestion"
                             >
                               <span
@@ -1199,7 +1199,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 aria-controls="SelectToken__dropdown-menu"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
-                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                                 data-testid="SelectDropdown__input"
                                 id="SelectToken__dropdown-input"
                                 name="amount"
@@ -1208,7 +1208,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 value="test"
                               />
                               <span
-                                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                                 data-testid="Input__suggestion"
                               >
                                 <span
@@ -1285,7 +1285,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                 class="relative"
               >
                 <div
-                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sm:rounded-l-none sm:border-l-transparent"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sm:rounded-l-none"
                 >
                   <div
                     class="relative flex h-full flex-1"
