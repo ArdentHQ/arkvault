@@ -93,10 +93,10 @@ exports[`TokensTable > should not render in lg 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -122,7 +122,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -169,10 +169,10 @@ exports[`TokensTable > should not render in lg 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -198,7 +198,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -255,9 +255,50 @@ exports[`TokensTable > should not render in lg 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-4 min-w-4"
                         colspan="1"
                         data-testid="table__th--0"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="text-theme-warning-400"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="star"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        colspan="1"
+                        data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
@@ -273,7 +314,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden md-lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-28 min-w-28"
                         colspan="1"
-                        data-testid="table__th--1"
+                        data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
@@ -289,7 +330,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                         colspan="1"
-                        data-testid="table__th--2"
+                        data-testid="table__th--3"
                         role="columnheader"
                       >
                         <div
@@ -305,7 +346,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--3"
+                        data-testid="table__th--4"
                         role="columnheader"
                       >
                         <div
@@ -321,7 +362,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--4"
+                        data-testid="table__th--5"
                         role="columnheader"
                       >
                         <div
@@ -337,7 +378,7 @@ exports[`TokensTable > should not render in lg 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
-                        data-testid="table__th--5"
+                        data-testid="table__th--6"
                         role="columnheader"
                       >
                         <div
@@ -1613,10 +1654,10 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -1642,7 +1683,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -1689,10 +1730,10 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -1718,7 +1759,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -1775,9 +1816,50 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-4 min-w-4"
                         colspan="1"
                         data-testid="table__th--0"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="text-theme-warning-400"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="star"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        colspan="1"
+                        data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
@@ -1793,7 +1875,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden md-lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-28 min-w-28"
                         colspan="1"
-                        data-testid="table__th--1"
+                        data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
@@ -1809,7 +1891,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                         colspan="1"
-                        data-testid="table__th--2"
+                        data-testid="table__th--3"
                         role="columnheader"
                       >
                         <div
@@ -1825,7 +1907,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--3"
+                        data-testid="table__th--4"
                         role="columnheader"
                       >
                         <div
@@ -1841,7 +1923,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--4"
+                        data-testid="table__th--5"
                         role="columnheader"
                       >
                         <div
@@ -1857,7 +1939,7 @@ exports[`TokensTable > should not render in lg with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
-                        data-testid="table__th--5"
+                        data-testid="table__th--6"
                         role="columnheader"
                       >
                         <div
@@ -3133,10 +3215,10 @@ exports[`TokensTable > should not render in md 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -3162,7 +3244,7 @@ exports[`TokensTable > should not render in md 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -3209,10 +3291,10 @@ exports[`TokensTable > should not render in md 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -3238,7 +3320,7 @@ exports[`TokensTable > should not render in md 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -3295,9 +3377,50 @@ exports[`TokensTable > should not render in md 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-4 min-w-4"
                         colspan="1"
                         data-testid="table__th--0"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="text-theme-warning-400"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="star"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        colspan="1"
+                        data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
@@ -3313,7 +3436,7 @@ exports[`TokensTable > should not render in md 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden md-lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-28 min-w-28"
                         colspan="1"
-                        data-testid="table__th--1"
+                        data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
@@ -3329,7 +3452,7 @@ exports[`TokensTable > should not render in md 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                         colspan="1"
-                        data-testid="table__th--2"
+                        data-testid="table__th--3"
                         role="columnheader"
                       >
                         <div
@@ -3345,7 +3468,7 @@ exports[`TokensTable > should not render in md 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--3"
+                        data-testid="table__th--4"
                         role="columnheader"
                       >
                         <div
@@ -3361,7 +3484,7 @@ exports[`TokensTable > should not render in md 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--4"
+                        data-testid="table__th--5"
                         role="columnheader"
                       >
                         <div
@@ -3377,7 +3500,7 @@ exports[`TokensTable > should not render in md 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
-                        data-testid="table__th--5"
+                        data-testid="table__th--6"
                         role="columnheader"
                       >
                         <div
@@ -4653,10 +4776,10 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -4682,7 +4805,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -4729,10 +4852,10 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -4758,7 +4881,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -4815,9 +4938,50 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-4 min-w-4"
                         colspan="1"
                         data-testid="table__th--0"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="text-theme-warning-400"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="star"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        colspan="1"
+                        data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
@@ -4833,7 +4997,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden md-lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-28 min-w-28"
                         colspan="1"
-                        data-testid="table__th--1"
+                        data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
@@ -4849,7 +5013,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                         colspan="1"
-                        data-testid="table__th--2"
+                        data-testid="table__th--3"
                         role="columnheader"
                       >
                         <div
@@ -4865,7 +5029,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--3"
+                        data-testid="table__th--4"
                         role="columnheader"
                       >
                         <div
@@ -4881,7 +5045,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--4"
+                        data-testid="table__th--5"
                         role="columnheader"
                       >
                         <div
@@ -4897,7 +5061,7 @@ exports[`TokensTable > should not render in md with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
-                        data-testid="table__th--5"
+                        data-testid="table__th--6"
                         role="columnheader"
                       >
                         <div
@@ -6173,10 +6337,10 @@ exports[`TokensTable > should not render in sm 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -6202,7 +6366,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -6249,10 +6413,10 @@ exports[`TokensTable > should not render in sm 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -6278,7 +6442,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -8103,10 +8267,10 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -8132,7 +8296,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -8179,10 +8343,10 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -8208,7 +8372,7 @@ exports[`TokensTable > should not render in sm with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -10033,10 +10197,10 @@ exports[`TokensTable > should not render in xl 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -10062,7 +10226,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -10109,10 +10273,10 @@ exports[`TokensTable > should not render in xl 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -10138,7 +10302,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -10195,9 +10359,50 @@ exports[`TokensTable > should not render in xl 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-4 min-w-4"
                         colspan="1"
                         data-testid="table__th--0"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="text-theme-warning-400"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="star"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        colspan="1"
+                        data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
@@ -10213,7 +10418,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden md-lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-28 min-w-28"
                         colspan="1"
-                        data-testid="table__th--1"
+                        data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
@@ -10229,7 +10434,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                         colspan="1"
-                        data-testid="table__th--2"
+                        data-testid="table__th--3"
                         role="columnheader"
                       >
                         <div
@@ -10245,7 +10450,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--3"
+                        data-testid="table__th--4"
                         role="columnheader"
                       >
                         <div
@@ -10261,7 +10466,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--4"
+                        data-testid="table__th--5"
                         role="columnheader"
                       >
                         <div
@@ -10277,7 +10482,7 @@ exports[`TokensTable > should not render in xl 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
-                        data-testid="table__th--5"
+                        data-testid="table__th--6"
                         role="columnheader"
                       >
                         <div
@@ -11553,10 +11758,10 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -11582,7 +11787,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -11629,10 +11834,10 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -11658,7 +11863,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -11715,9 +11920,50 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-4 min-w-4"
                         colspan="1"
                         data-testid="table__th--0"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="text-theme-warning-400"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="star"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        colspan="1"
+                        data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
@@ -11733,7 +11979,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden md-lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-28 min-w-28"
                         colspan="1"
-                        data-testid="table__th--1"
+                        data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
@@ -11749,7 +11995,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                         colspan="1"
-                        data-testid="table__th--2"
+                        data-testid="table__th--3"
                         role="columnheader"
                       >
                         <div
@@ -11765,7 +12011,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--3"
+                        data-testid="table__th--4"
                         role="columnheader"
                       >
                         <div
@@ -11781,7 +12027,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--4"
+                        data-testid="table__th--5"
                         role="columnheader"
                       >
                         <div
@@ -11797,7 +12043,7 @@ exports[`TokensTable > should not render in xl with tokens 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
-                        data-testid="table__th--5"
+                        data-testid="table__th--6"
                         role="columnheader"
                       >
                         <div
@@ -13073,10 +13319,10 @@ exports[`TokensTable > should not render in xs 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -13102,7 +13348,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -13149,10 +13395,10 @@ exports[`TokensTable > should not render in xs 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -13178,7 +13424,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -15003,10 +15249,10 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -15032,7 +15278,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -15079,10 +15325,10 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -15108,7 +15354,7 @@ exports[`TokensTable > should not render in xs with tokens 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -16933,10 +17179,10 @@ exports[`TokensTable > should render 1`] = `
               class="mr-6 hidden items-center space-x-1 md:flex"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -16962,7 +17208,7 @@ exports[`TokensTable > should render 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -17009,10 +17255,10 @@ exports[`TokensTable > should render 1`] = `
               class="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden"
             >
               <div
-                class="flex items-center"
+                class="flex items-center gap-1"
               >
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap"
+                  class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
                 >
                   Hide Dust
                 </div>
@@ -17038,7 +17284,7 @@ exports[`TokensTable > should render 1`] = `
                 class="h-5 relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
               />
               <button
-                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+                class="space-x-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
                 type="button"
               >
                 <div
@@ -17095,9 +17341,50 @@ exports[`TokensTable > should render 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-4 min-w-4"
                         colspan="1"
                         data-testid="table__th--0"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                            <div
+                              class="text-theme-warning-400"
+                            >
+                              <div
+                                style="height: 16px; width: 16px;"
+                              >
+                                <svg
+                                  id="star"
+                                  style="height: 100%; width: 100%;"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-32 min-w-32 xl:w-40"
+                        colspan="1"
+                        data-testid="table__th--1"
                         role="columnheader"
                       >
                         <div
@@ -17113,7 +17400,7 @@ exports[`TokensTable > should render 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden md-lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-28 min-w-28"
                         colspan="1"
-                        data-testid="table__th--1"
+                        data-testid="table__th--2"
                         role="columnheader"
                       >
                         <div
@@ -17129,7 +17416,7 @@ exports[`TokensTable > should render 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border first:rounded-tl-xl last:rounded-tr-xl w-48 min-w-48 xl:w-40"
                         colspan="1"
-                        data-testid="table__th--2"
+                        data-testid="table__th--3"
                         role="columnheader"
                       >
                         <div
@@ -17145,7 +17432,7 @@ exports[`TokensTable > should render 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--3"
+                        data-testid="table__th--4"
                         role="columnheader"
                       >
                         <div
@@ -17161,7 +17448,7 @@ exports[`TokensTable > should render 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                         colspan="1"
-                        data-testid="table__th--4"
+                        data-testid="table__th--5"
                         role="columnheader"
                       >
                         <div
@@ -17177,7 +17464,7 @@ exports[`TokensTable > should render 1`] = `
                       <th
                         class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-black dim:bg-theme-dim-950 dim:text-theme-dim-200 dim:border-theme-dim-700 no-border w-1"
                         colspan="1"
-                        data-testid="table__th--5"
+                        data-testid="table__th--6"
                         role="columnheader"
                       >
                         <div
