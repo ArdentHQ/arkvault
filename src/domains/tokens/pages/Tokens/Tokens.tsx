@@ -108,7 +108,13 @@ export const Tokens = () => {
 				</div>
 			)}
 
-			{tokenModalItem && <TokenDetailSidepanel isOpen={!!tokenModalItem} walletToken={tokenModalItem} />}
+			{tokenModalItem && (
+				<TokenDetailSidepanel
+					isOpen={!!tokenModalItem}
+					walletToken={tokenModalItem}
+					onClose={() => setTokenModelItem(undefined)}
+				/>
+			)}
 		</Page>
 	);
 };
