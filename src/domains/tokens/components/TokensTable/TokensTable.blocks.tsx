@@ -1,6 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import React from "react";
+import { useEnvironmentContext } from "@/app/contexts";
+import { Toggle } from "@/app/components/Toggle";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
+import { Divider } from "@/app/components/Divider";
+import { Icon } from "@/app/components/Icon";
+import { Contracts } from "@/app/lib/profiles";
 
 export const TokensTableFooter = ({
 	tokensCount,
@@ -55,4 +61,47 @@ export const TokensTableFooter = ({
 			</tr>
 		);
 	}
+};
+
+export const TokensTableHeader = ({ activeProfile }: { activeProfile: Contracts.IProfile }) => {
+	const { persist } = useEnvironmentContext();
+	const { t } = useTranslation();
+
+	return (
+		<>
+			<div className="flex items-center">
+				<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-3 font-semibold whitespace-nowrap">
+					{t("TOKENS.HIDE_DUST")}
+				</div>
+
+				<Toggle
+					data-testid="HideDustTokens"
+					name="hideDust"
+					defaultChecked={activeProfile.settings().get(ProfileSetting.HideDustTokens)}
+					onChange={async (event: React.ChangeEvent<HTMLInputElement>) => {
+						activeProfile.settings().set(ProfileSetting.HideDustTokens, event.target.checked);
+						await persist();
+					}}
+				/>
+			</div>
+
+			<Divider
+				type="vertical"
+				size="md"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
+			/>
+
+			<Button
+				variant="transparent"
+				className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+				onClick={() => {
+					/* istanbul ignore next -- @preserve */
+					console.log("manage clicked");
+				}}
+			>
+				<Icon name="Gear" />
+				{t("COMMON.MANAGE")}
+			</Button>
+		</>
+	);
 };

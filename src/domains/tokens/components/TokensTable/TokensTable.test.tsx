@@ -100,8 +100,8 @@ describe("TokensTable", () => {
 
 		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
 
-		await userEvent.click(screen.getByTestId("HideDustTokens"));
+		await userEvent.click(screen.getAllByTestId("HideDustTokens")[0]);
 
-		expect(screen.getByTestId("HideDustTokens")).toBeEnabled();
+		expect(screen.getAllByTestId("HideDustTokens")[0]).toBeEnabled();
 	});
 });

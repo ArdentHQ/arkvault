@@ -155,6 +155,7 @@ export const translations = {
 	FAILED_FETCH: "Failed to fetch {{name}}. Reason: {{reason}}",
 	FAILED_UPDATE: "Failed to update {{name}}. Reason: {{reason}}",
 	FAILED_UPDATE_CHECK: "Checking for updates failed.",
+	FAVORITE: "Favorite",
 	FEE: "Fee",
 	FEE_AVERAGE: "Avg.",
 	FEE_FAST: "Fast",
