@@ -6,7 +6,6 @@ import userEvent from "@testing-library/user-event";
 import { TokenRowMobile } from "./TokenRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { env, getDefaultProfileId, screen, render } from "@/utils/testing-library";
-import { TokenRow } from "./TokenRow";
 
 let profile: Contracts.IProfile;
 
