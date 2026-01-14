@@ -19,6 +19,7 @@ export const TokenRowMobile = memo(
 	({
 		className,
 		onClick,
+		onDelete,
 		isLoading = false,
 		isManageMode,
 		isHidden,
@@ -106,8 +107,8 @@ export const TokenRowMobile = memo(
 										variant="transparent"
 										className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 p-1 text-sm"
 										onClick={(event) => {
-											/* istanbul ignore next -- @preserve */
 											event.stopPropagation();
+											onDelete(walletToken);
 										}}
 									>
 										<Icon name="Trash" />

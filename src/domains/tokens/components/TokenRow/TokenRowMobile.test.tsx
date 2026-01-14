@@ -6,6 +6,7 @@ import userEvent from "@testing-library/user-event";
 import { TokenRowMobile } from "./TokenRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { env, getDefaultProfileId, screen, render } from "@/utils/testing-library";
+import { TokenRow } from "./TokenRow";
 
 let profile: Contracts.IProfile;
 
@@ -309,5 +310,29 @@ describe("TokenRowMobile", () => {
 		);
 
 		expect(screen.queryByText(commonTranslations.FAVORITE)).not.toBeInTheDocument();
+	});
+
+	it("should call onDelete when Delete button clicked", async () => {
+		const user = userEvent.setup();
+		const onDeleteMock = vi.fn();
+
+		render(
+			<table>
+				<tbody>
+				<TokenRowMobile
+					isManageMode={true}
+					toggleContractVisibility={vi.fn()}
+					walletToken={mockWalletToken}
+					profile={profile}
+					onSend={vi.fn()}
+					onClick={vi.fn()}
+					onDelete={onDeleteMock}
+				/>
+				</tbody>
+			</table>,
+		);
+
+		await user.click(screen.getByTestId("TokenRow_DeleteToken"));
+		expect(onDeleteMock).toHaveBeenCalled();
 	});
 });
