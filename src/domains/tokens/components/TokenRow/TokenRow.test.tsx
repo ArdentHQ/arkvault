@@ -181,4 +181,28 @@ describe("TokenRow", () => {
 		expect(onClickMock).not.toHaveBeenCalled();
 		expect(onToggleContractVisibilityMock).toHaveBeenCalled();
 	});
+
+	it("should call onDelete when Delete button clicked", async () => {
+		const user = userEvent.setup();
+		const onDeleteMock = vi.fn();
+
+		render(
+			<table>
+				<tbody>
+				<TokenRow
+					isManageMode={true}
+					toggleContractVisibility={vi.fn()}
+					walletToken={mockWalletToken}
+					profile={profile}
+					onSend={vi.fn()}
+					onClick={vi.fn()}
+					onDelete={onDeleteMock}
+				/>
+				</tbody>
+			</table>,
+		);
+
+		await user.click(screen.getByTestId("TokenRow_DeleteToken"));
+		expect(onDeleteMock).toHaveBeenCalled();
+	});
 });

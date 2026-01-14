@@ -26,7 +26,7 @@ export type TokenRowProperties = {
 	decimals?: number;
 	isManageMode?: boolean;
 	isHidden?: boolean;
-	onRemove: (token: WalletToken) => void;
+	onDelete: (token: WalletToken) => void;
 	toggleContractVisibility: (address: string) => void;
 } & React.HTMLProps<any>;
 
@@ -37,7 +37,7 @@ export const TokenRow = memo(
 		onClick,
 		onSend,
 		isManageMode,
-		onRemove,
+		onDelete,
 		isHidden,
 		isLoading = false,
 		toggleContractVisibility,
@@ -55,7 +55,7 @@ export const TokenRow = memo(
 					onClick={onClick}
 					isManageMode={isManageMode}
 					isHidden={isHidden}
-					onRemove={onRemove}
+					onDelete={onDelete}
 					toggleContractVisibility={toggleContractVisibility}
 					{...properties}
 				/>
@@ -172,7 +172,7 @@ export const TokenRow = memo(
 							className="text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-300 dim:text-theme-danger-400 dim-hover:text-theme-danger-300 p-1 text-sm leading-[17px] hover:underline"
 							onClick={(event) => {
 								event.stopPropagation();
-								onRemove(walletToken);
+								onDelete(walletToken);
 							}}
 						>
 							<Icon name="Trash" />
