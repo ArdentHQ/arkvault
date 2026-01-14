@@ -101,14 +101,16 @@ export class TransactionService {
 		this.#assertAmount(input);
 
 		const nonce = await this.#generateNonce(input);
-		const value = UnitConverter.parseUnits(input.data.amount, "gwei")
+		const value = UnitConverter.parseUnits(input.data.amount, "gwei");
 
 		const builder = await EvmCallBuilder.new({
 			senderPublicKey: input.signatory.address(),
-			value: value.toNumber()
+			value: value.toNumber(),
 		})
 			.to(input.tokenContractAddress)
-			.payload(new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, value.toNumber()]))
+			.payload(
+				new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, value.toNumber()]),
+			)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());

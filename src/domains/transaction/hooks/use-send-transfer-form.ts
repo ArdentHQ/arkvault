@@ -16,7 +16,13 @@ import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-t
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
-export const useSendTransferForm = ({ wallet, isTokenTransfer }: { wallet?: Contracts.IReadWriteWallet, isTokenTransfer?: boolean }) => {
+export const useSendTransferForm = ({
+	wallet,
+	isTokenTransfer,
+}: {
+	wallet?: Contracts.IReadWriteWallet;
+	isTokenTransfer?: boolean;
+}) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
@@ -88,9 +94,6 @@ export const useSendTransferForm = ({ wallet, isTokenTransfer }: { wallet?: Cont
 				tokenContractAddress,
 			} = getValues();
 
-			console.log("SUBMIT")
-			console.log({ tokenContractAddress })
-
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
@@ -107,11 +110,15 @@ export const useSendTransferForm = ({ wallet, isTokenTransfer }: { wallet?: Cont
 
 			setLastEstimatedExpiration(data.expiration);
 
-			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory, tokenContractAddress };
+			const transactionInput: Services.TransactionInputs = {
+				data,
+				gasLimit,
+				gasPrice,
+				signatory,
+				tokenContractAddress,
+			};
 
 			const abortSignal = abortReference.current.signal;
-
-			console.log({ transferType: getTransferType({ recipients, tokenContractAddress }) })
 
 			const { uuid, transaction } = await transactionBuilder.build(
 				getTransferType({ recipients, tokenContractAddress }),

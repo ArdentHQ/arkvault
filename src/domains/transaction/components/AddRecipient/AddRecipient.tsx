@@ -329,9 +329,15 @@ export const AddRecipient = ({
 								</FormLabel>
 								<SelectToken
 									defaultTokenValue={tokens.length === 1 ? tokens[0].token().address() : undefined}
-									tokens={tokens.map((token) => ({ label: token.token().name(), value: token.token().address() }))}
+									tokens={tokens.map((token) => ({
+										label: token.token().name(),
+										value: token.token().address(),
+									}))}
 									onChange={(tokenAddress) => {
-										setValue("tokenContractAddress", tokenAddress, { shouldDirty: true, shouldValidate: true });
+										setValue("tokenContractAddress", tokenAddress, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
 									}}
 								/>
 							</div>
@@ -406,11 +412,19 @@ export const AddRecipient = ({
 							{isTokenTransfer && !isLoading && (
 								<div className="hidden w-full sm:block sm:max-w-44">
 									<SelectToken
-										defaultTokenValue={tokens.length === 1 ? tokens[0].token().address() : undefined}
-										tokens={tokens.map((token) => ({ label: token.token().name(), value: token.token().address() }))}
+										defaultTokenValue={
+											tokens.length === 1 ? tokens[0].token().address() : undefined
+										}
+										tokens={tokens.map((token) => ({
+											label: token.token().name(),
+											value: token.token().address(),
+										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
-										onChange={(token) => {
-											console.log({ token })
+										onChange={(tokenAddress) => {
+											setValue("tokenContractAddress", tokenAddress, {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
 										}}
 									/>
 								</div>

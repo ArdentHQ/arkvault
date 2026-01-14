@@ -3,12 +3,20 @@ import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensS
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export const SelectToken = ({ tokens, className, onChange, defaultTokenValue }: { tokens: { label: string, value: string }[]; className?: string, onChange?: (tokenContractAddress?: string) => void, defaultTokenValue?: string }) => {
+export const SelectToken = ({
+	tokens,
+	className,
+	onChange,
+	defaultTokenValue,
+}: {
+	tokens: { label: string; value: string }[];
+	className?: string;
+	onChange?: (tokenContractAddress?: string) => void;
+	defaultTokenValue?: string;
+}) => {
 	const { t } = useTranslation();
 
-	const defaultToken = defaultTokenValue
-		? tokens.find(token => token.value === defaultTokenValue)
-		: undefined;
+	const defaultToken = defaultTokenValue ? tokens.find((token) => token.value === defaultTokenValue) : undefined;
 
 	const [selectedToken, setSelectedToken] = useState<OptionProperties | undefined>(defaultToken);
 
@@ -23,8 +31,8 @@ export const SelectToken = ({ tokens, className, onChange, defaultTokenValue }: 
 			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
 			className={className}
 			onChange={(option: OptionProperties) => {
-				setSelectedToken(option)
-				onChange?.(option.value as string | undefined)
+				setSelectedToken(option);
+				onChange?.(option.value as string | undefined);
 			}}
 			addons={{
 				start: {

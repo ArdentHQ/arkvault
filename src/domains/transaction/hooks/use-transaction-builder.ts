@@ -38,9 +38,6 @@ export const useTransactionBuilder = () => {
 		httpClient.forgetWalletCache(wallet);
 
 		const service = wallet.transaction();
-		console.log({ service })
-
-		console.log({ type: `sign${upperFirst(type)}` })
 
 		// @ts-ignore
 		const signFunction = (service[`sign${upperFirst(type)}`] as SignFunction).bind(service);

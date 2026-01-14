@@ -1,9 +1,12 @@
+// eslint-disable sonarjs/no-duplicate-string
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+
+const FIELD_REQUIRED = "COMMON.VALIDATION.FIELD_REQUIRED";
 
 export const sendTransfer = (t: TFunction) => ({
 	amount: (
@@ -28,7 +31,7 @@ export const sendTransfer = (t: TFunction) => ({
 
 				if (shouldRequire) {
 					if (amountValue === undefined || amountValue === "") {
-						return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+						return t(FIELD_REQUIRED, {
 							field: t("COMMON.AMOUNT"),
 						});
 					}
@@ -55,7 +58,7 @@ export const sendTransfer = (t: TFunction) => ({
 		},
 	}),
 	network: () => ({
-		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+		required: t(FIELD_REQUIRED, {
 			field: t("COMMON.CRYPTOASSET"),
 		}),
 	}),
@@ -80,7 +83,7 @@ export const sendTransfer = (t: TFunction) => ({
 				}
 
 				if (shouldRequire || !network) {
-					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+					return t(FIELD_REQUIRED, {
 						field: t("COMMON.RECIPIENT"),
 					});
 				}
@@ -96,12 +99,12 @@ export const sendTransfer = (t: TFunction) => ({
 		},
 	}),
 	senderAddress: () => ({
-		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+		required: t(FIELD_REQUIRED, {
 			field: t("COMMON.SENDER_ADDRESS"),
 		}),
 	}),
 	tokenContractAddress: () => ({
-		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+		required: t(FIELD_REQUIRED, {
 			field: t("COMMON.ASSET"),
 		}),
 	}),
