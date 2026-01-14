@@ -31,6 +31,7 @@ export interface SendTransferForm {
 	privateKey: string;
 	secret: string;
 	secondSecret: string;
+	tokenContractAddress?: string;
 }
 
 export interface BuildTransferDataProperties {

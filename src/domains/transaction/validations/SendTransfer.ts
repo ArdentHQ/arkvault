@@ -100,4 +100,9 @@ export const sendTransfer = (t: TFunction) => ({
 			field: t("COMMON.SENDER_ADDRESS"),
 		}),
 	}),
+	tokenContractAddress: () => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.ASSET"),
+		}),
+	}),
 });

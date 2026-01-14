@@ -16,7 +16,7 @@ import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-t
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 
-export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
+export const useSendTransferForm = ({ wallet, isTokenTransfer }: { wallet?: Contracts.IReadWriteWallet, isTokenTransfer?: boolean }) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
@@ -85,7 +85,11 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 				gasLimit,
 				gasPrice,
+				tokenContractAddress,
 			} = getValues();
+
+			console.log("SUBMIT")
+			console.log({ tokenContractAddress })
 
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,
@@ -103,12 +107,14 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			setLastEstimatedExpiration(data.expiration);
 
-			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
+			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory, tokenContractAddress };
 
 			const abortSignal = abortReference.current.signal;
 
+			console.log({ transferType: getTransferType({ recipients, tokenContractAddress }) })
+
 			const { uuid, transaction } = await transactionBuilder.build(
-				getTransferType({ recipients }),
+				getTransferType({ recipients, tokenContractAddress }),
 				transactionInput,
 				wallet,
 				{
@@ -133,6 +139,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("network", sendTransferValidation.network());
 		register("recipients", sendTransferValidation.recipients());
 		register("senderAddress", sendTransferValidation.senderAddress());
+		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
 		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet?.network()));
 		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet?.network()));
@@ -143,6 +150,10 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("inputFeeSettings");
 
 		register("suppressWarning");
+
+		if (isTokenTransfer) {
+			register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
+		}
 
 		if (networks.length === 1) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });

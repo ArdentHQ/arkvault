@@ -27,8 +27,13 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 	throw new Error(allErrors[0]);
 };
 
-export const getTransferType = ({ recipients }: { recipients: RecipientItem[] }): "multiPayment" | "transfer" =>
-	recipients.length > 1 ? "multiPayment" : "transfer";
+export const getTransferType = ({ recipients, tokenContractAddress }: { recipients: RecipientItem[], tokenContractAddress?: string }): "multiPayment" | "transfer" | "transferToken" => {
+	if (tokenContractAddress) {
+		return "transferToken";
+	}
+
+	return recipients.length > 1 ? "multiPayment" : "transfer";
+};
 
 export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
 	[
@@ -48,17 +53,17 @@ export const isContractDeployment = (transaction: DTO.RawTransactionData) =>
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>
-	<T>(promise: Promise<T>) =>
-		new Promise<T>((resolve, reject) => {
-			if (signal) {
-				signal.addEventListener("abort", () => {
-					callback?.();
-					reject("ERR_ABORT");
-				});
-			}
+		<T>(promise: Promise<T>) =>
+			new Promise<T>((resolve, reject) => {
+				if (signal) {
+					signal.addEventListener("abort", () => {
+						callback?.();
+						reject("ERR_ABORT");
+					});
+				}
 
-			return promise.then(resolve).catch(reject);
-		});
+				return promise.then(resolve).catch(reject);
+			});
 
 /*
  * Get subtitle for authentication step

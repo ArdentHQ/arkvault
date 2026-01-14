@@ -12,6 +12,7 @@ import {
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
+	ContractAbiType,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
 
@@ -85,6 +86,31 @@ export class TransactionService {
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			// @TODO https://app.clickup.com/t/86dwvx1ya get rid of .toString() for all `gas` calls
+			.gasLimit(input.gasLimit.toString());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public async tokenTransfer(input: Services.TransferInput): Promise<SignedTransactionData> {
+		this.#assertGasFee(input);
+		this.#assertAmount(input);
+
+		const nonce = await this.#generateNonce(input);
+		const value = UnitConverter.parseUnits(input.data.amount, "gwei")
+
+		const builder = await EvmCallBuilder.new({
+			senderPublicKey: input.signatory.address(),
+			value: value.toNumber()
+		})
+			.to(input.tokenContractAddress)
+			.payload(new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, value.toNumber()]))
+			.nonce(nonce)
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
 
 		await this.#sign(input, builder);

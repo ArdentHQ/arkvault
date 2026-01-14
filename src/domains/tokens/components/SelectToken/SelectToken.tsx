@@ -3,9 +3,13 @@ import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensS
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export const SelectToken = ({ tokens, className }: { tokens: { name: string }[]; className?: string }) => {
+export const SelectToken = ({ tokens, className, onChange, defaultTokenValue }: { tokens: { label: string, value: string }[]; className?: string, onChange?: (tokenContractAddress?: string) => void, defaultTokenValue?: string }) => {
 	const { t } = useTranslation();
-	const defaultToken = tokens.length === 1 ? { label: tokens[0].name, value: tokens[0].name } : undefined;
+
+	const defaultToken = defaultTokenValue
+		? tokens.find(token => token.value === defaultTokenValue)
+		: undefined;
+
 	const [selectedToken, setSelectedToken] = useState<OptionProperties | undefined>(defaultToken);
 
 	return (
@@ -13,15 +17,15 @@ export const SelectToken = ({ tokens, className }: { tokens: { name: string }[];
 			id="SelectToken__dropdown"
 			showCaret={true}
 			defaultValue={selectedToken?.value as string | undefined}
-			options={tokens.map((token) => ({
-				label: token.name,
-				value: token.name,
-			}))}
+			options={tokens}
 			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
 			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
 			className={className}
-			onChange={(option: OptionProperties) => setSelectedToken(option)}
+			onChange={(option: OptionProperties) => {
+				setSelectedToken(option)
+				onChange?.(option.value as string | undefined)
+			}}
 			addons={{
 				start: {
 					content: (
