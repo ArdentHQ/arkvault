@@ -318,15 +318,15 @@ describe("TokenRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-				<TokenRowMobile
-					isManageMode={true}
-					toggleContractVisibility={vi.fn()}
-					walletToken={mockWalletToken}
-					profile={profile}
-					onSend={vi.fn()}
-					onClick={vi.fn()}
-					onDelete={onDeleteMock}
-				/>
+					<TokenRowMobile
+						isManageMode={true}
+						toggleContractVisibility={vi.fn()}
+						walletToken={mockWalletToken}
+						profile={profile}
+						onSend={vi.fn()}
+						onClick={vi.fn()}
+						onDelete={onDeleteMock}
+					/>
 				</tbody>
 			</table>,
 		);
