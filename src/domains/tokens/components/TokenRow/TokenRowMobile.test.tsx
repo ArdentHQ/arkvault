@@ -219,7 +219,7 @@ describe("TokenRowMobile", () => {
 		);
 
 		expect(screen.queryByRole("button", { name: /send/i })).not.toBeInTheDocument();
-		expect(screen.getByTestId("TokenRow_RemoveToken")).toBeInTheDocument();
+		expect(screen.getByTestId("TokenRow_DeleteToken")).toBeInTheDocument();
 	});
 
 	it("should call toggleContractVisibility when checkbox is clicked", async () => {

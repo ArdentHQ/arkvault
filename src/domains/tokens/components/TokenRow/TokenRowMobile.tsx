@@ -35,7 +35,7 @@ export const TokenRowMobile = memo(
 
 		const toggleVisibility = () => {
 			toggleContractVisibility(walletToken.token().address());
-		}
+		};
 
 		return (
 			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
@@ -101,7 +101,7 @@ export const TokenRowMobile = memo(
 
 								{isManageMode && (
 									<Button
-										data-testid="TokenRow_RemoveToken"
+										data-testid="TokenRow_DeleteToken"
 										size="icon"
 										variant="transparent"
 										className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 p-1 text-sm"
@@ -111,7 +111,7 @@ export const TokenRowMobile = memo(
 										}}
 									>
 										<Icon name="Trash" />
-										<span className="hidden sm:inline">{t("COMMON.REMOVE")}</span>
+										<span className="hidden sm:inline">{t("COMMON.DELETE")}</span>
 									</Button>
 								)}
 

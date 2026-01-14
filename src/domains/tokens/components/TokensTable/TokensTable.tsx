@@ -10,6 +10,7 @@ import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-token
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { Icon } from "@/app/components/Icon";
+import { DeleteTokenConfirmationModal } from "@/domains/tokens/components/DeleteTokenConfirmationModal/DeleteTokenConfirmationModal";
 
 export const TokensTable = ({
 	onClick,
@@ -23,6 +24,8 @@ export const TokensTable = ({
 	const [query, setQuery] = useState("");
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
+
+	const [removeToken, setRemoveToken] = useState<WalletToken | undefined>(undefined);
 
 	// stores hidden contract addresses when in manage mode
 	const [hiddenContractAddresses, setHiddenContractAddresses] = useState<string[]>([]);
@@ -150,6 +153,7 @@ export const TokensTable = ({
 				onClick={() => {
 					onClick?.(row);
 				}}
+				onRemove={setRemoveToken}
 				toggleContractVisibility={toggleContractVisibility}
 				isHidden={!showSkeleton && hiddenContractAddresses.includes(row.token().address())}
 				onSend={() => handleSend()}
@@ -222,6 +226,9 @@ export const TokensTable = ({
 						</Table>
 					</div>
 				</SearchableTableWrapper>
+			)}
+			{removeToken && (
+				<DeleteTokenConfirmationModal walletToken={removeToken} onClose={() => setRemoveToken(undefined)} />
 			)}
 		</>
 	);
