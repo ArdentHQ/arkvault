@@ -232,7 +232,7 @@ export const TokensTable = ({
 					walletToken={removeToken}
 					onClose={() => setRemoveToken(undefined)}
 					onDelete={(walletToken: WalletToken) => {
-						console.log(walletToken.token().address())
+						console.log(walletToken.token().address());
 					}}
 				/>
 			)}
