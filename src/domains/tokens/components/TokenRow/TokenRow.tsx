@@ -78,7 +78,6 @@ export const TokenRow = memo(
 							onClick={(event) => {
 								/* istanbul ignore next -- @preserve */
 								event.stopPropagation();
-								console.log("star clicked");
 							}}
 						>
 							<Icon name="Star" className="text-theme-warning-400" />
