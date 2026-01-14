@@ -13,6 +13,7 @@ import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenRowSkeleton } from "./TokenRowSkeleton";
+import { TokenRowMobile } from "@/domains/tokens/components/TokenRow/TokenRowMobile";
 
 export type TokenRowProperties = {
 	walletToken: WalletToken;
@@ -29,9 +30,16 @@ export const TokenRow = memo(
 		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 
-		/* istanbul ignore else -- @preserve */
 		if (isXs || isSm) {
-			return <div>TODO implement design for xs and sm</div>;
+			return (
+				<TokenRowMobile
+					isLoading={isLoading}
+					walletToken={walletToken}
+					onSend={onSend}
+					onClick={onClick}
+					{...properties}
+				/>
+			);
 		}
 
 		if (isLoading) {
@@ -92,7 +100,10 @@ export const TokenRow = memo(
 						size="icon"
 						variant="transparent"
 						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 text-sm hover:underline"
-						onClick={onSend}
+						onClick={(event) => {
+							event.stopPropagation();
+							onSend();
+						}}
 					>
 						{t("COMMON.SEND")}
 					</Button>
