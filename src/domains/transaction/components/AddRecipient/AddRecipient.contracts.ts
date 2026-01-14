@@ -10,6 +10,7 @@ export interface AddRecipientProperties {
 	showMultiPaymentOption?: boolean;
 	wallet?: Contracts.IReadWriteWallet;
 	withDeeplink?: boolean;
+	isTokenTransfer?: boolean;
 }
 
 export interface ToggleButtonProperties {

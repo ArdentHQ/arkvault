@@ -24,7 +24,11 @@ describe("useProfileTokens", () => {
 	});
 
 	it("should reload tokens", async () => {
-		const syncMock = vi.spyOn(profile.tokens(), "sync").mockImplementation(vi.fn());
+		const selectedMock = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
+			items() {
+				return [];
+			},
+		});
 
 		const { result } = renderHook(() => useProfileTokens({ profile }));
 
@@ -38,6 +42,6 @@ describe("useProfileTokens", () => {
 			await result.current.reload();
 		});
 
-		expect(syncMock).toHaveBeenCalled();
+		expect(selectedMock).toHaveBeenCalled();
 	});
 });

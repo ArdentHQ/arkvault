@@ -94,6 +94,26 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render with assets field", async () => {
+		const token = { token: () => ({ name: () => "test" }) };
+		const selectedMock = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
+			items() {
+				return [token];
+			},
+		});
+
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} isTokenTransfer />,
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("SelectDropdown")).toHaveLength(3);
+		});
+
+		expect(container).toMatchSnapshot();
+		selectedMock.mockRestore();
+	});
+
 	it("should render with empty array of recipients as default", async () => {
 		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} />,
