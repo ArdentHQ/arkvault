@@ -35,6 +35,7 @@ export const FormStep = ({
 	onChange,
 	// @TODO: always hide header once the side panel is fully implemented
 	hideHeader = false,
+	isTokenTransfer,
 }: {
 	network: Networks.Network;
 	senderWallet?: Contracts.IReadWriteWallet;
@@ -43,6 +44,7 @@ export const FormStep = ({
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
 	hideHeader?: boolean;
+	isTokenTransfer?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -164,6 +166,7 @@ export const FormStep = ({
 
 				<div data-testid="recipient-address">
 					<AddRecipient
+						isTokenTransfer={isTokenTransfer}
 						onChange={(value: RecipientItem[]) => {
 							setValue("recipients", value, { shouldDirty: true, shouldValidate: true });
 						}}

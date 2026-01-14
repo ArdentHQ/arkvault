@@ -34,6 +34,7 @@ export const translations = {
 	ARKVAULT: "ARK Vault",
 	ASSET: "Asset",
 	ASSETS: "Assets",
+	ASSET_AMOUNT: "Asset and Amount",
 	ASSET_TYPE: "Asset Type",
 	AT: "at",
 	AUTHOR: "Author",
