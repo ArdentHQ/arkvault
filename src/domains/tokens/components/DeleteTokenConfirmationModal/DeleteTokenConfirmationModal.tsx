@@ -22,8 +22,8 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose, onDelete }:
 		<div className="no-my">
 			<DeleteResource
 				isOpen
-				title={t("CONTACTS.MODAL_DELETE_CONTACT.TITLE")}
-				description="Deleting a token contract only removes it from your wallet view. Your tokens stay safe, and you can re-add the contract anytime with “Add Token.”"
+				title={t("COMMON.CONFIRM_TOKEN_DELETE.TITLE")}
+				description={t("COMMON.CONFIRM_TOKEN_DELETE.DESCRIPTION")}
 				onClose={onClose}
 				modalImageClass="mt-0 mb-6"
 				onCancel={onClose}

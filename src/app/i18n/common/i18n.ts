@@ -72,6 +72,10 @@ export const translations = {
 	},
 	CONFIRMATION_TIME: "~{{time}}s",
 	CONFIRMATION_TIME_LABEL: "Confirmation Time",
+	CONFIRM_TOKEN_DELETE:{
+		DESCRIPTION: "Deleting a token contract only removes it from your wallet view. Your tokens stay safe, and you can re-add the contract anytime with “Add Token.”",
+		TITLE: "Delete Token",
+	},
 	CONTACT: "Contact",
 	CONTACTS: "Contacts",
 	CONTACT_US: "Contact Us",
