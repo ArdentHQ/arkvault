@@ -27,21 +27,16 @@ describe("DeleteTokenConfirmationModal", () => {
 	});
 
 	it("should render", async () => {
-		render(
-			<DeleteTokenConfirmationModal walletToken={mockWalletToken} onClose={vi.fn()} onDelete={vi.fn()} />,
-		);
+		render(<DeleteTokenConfirmationModal walletToken={mockWalletToken} onClose={vi.fn()} onDelete={vi.fn()} />);
 
 		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
 	});
-
 
 	it("should call onClose when cancel button is clicked", async () => {
 		const user = userEvent.setup();
 		const onCloseMock = vi.fn();
 
-		render(
-			<DeleteTokenConfirmationModal walletToken={mockWalletToken} onClose={onCloseMock} onDelete={vi.fn()} />,
-		);
+		render(<DeleteTokenConfirmationModal walletToken={mockWalletToken} onClose={onCloseMock} onDelete={vi.fn()} />);
 
 		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
 
