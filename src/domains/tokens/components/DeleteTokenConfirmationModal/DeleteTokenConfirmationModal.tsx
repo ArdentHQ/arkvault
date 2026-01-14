@@ -12,9 +12,10 @@ import { Amount } from "@/app/components/Amount";
 interface Properties {
 	walletToken: WalletToken;
 	onClose: () => void;
+	onDelete: (walletToken: WalletToken) => void;
 }
 
-export const DeleteTokenConfirmationModal = ({ walletToken, onClose }: Properties) => {
+export const DeleteTokenConfirmationModal = ({ walletToken, onClose, onDelete }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -25,12 +26,8 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose }: Propertie
 				description="Deleting a token contract only removes it from your wallet view. Your tokens stay safe, and you can re-add the contract anytime with “Add Token.”"
 				onClose={onClose}
 				modalImageClass="mt-0 mb-6"
-				onCancel={() => {
-					console.log("34");
-				}}
-				onDelete={() => {
-					console.log("34");
-				}}
+				onCancel={onClose}
+				onDelete={onDelete}
 			>
 				<DetailWrapper className="mt-4 rounded-xl">
 					<div className="space-y-3 leading-5">

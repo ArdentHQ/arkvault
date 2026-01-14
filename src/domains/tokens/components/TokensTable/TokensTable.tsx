@@ -228,7 +228,13 @@ export const TokensTable = ({
 				</SearchableTableWrapper>
 			)}
 			{removeToken && (
-				<DeleteTokenConfirmationModal walletToken={removeToken} onClose={() => setRemoveToken(undefined)} />
+				<DeleteTokenConfirmationModal
+					walletToken={removeToken}
+					onClose={() => setRemoveToken(undefined)}
+					onDelete={(walletToken: WalletToken) => {
+						console.log(walletToken.token().address())
+					}}
+				/>
 			)}
 		</>
 	);
