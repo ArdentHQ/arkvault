@@ -26,13 +26,13 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose }: Propertie
 				onClose={onClose}
 				modalImageClass="mt-0 mb-6"
 				onCancel={() => {
-					console.log("34")
+					console.log("34");
 				}}
 				onDelete={() => {
-					console.log("34")
+					console.log("34");
 				}}
 			>
-				<DetailWrapper className="rounded-xl mt-4">
+				<DetailWrapper className="mt-4 rounded-xl">
 					<div className="space-y-3 leading-5">
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle className="w-auto sm:min-w-24 sm:pr-6">{t("COMMON.TOKEN")}</DetailTitle>
@@ -54,8 +54,7 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose }: Propertie
 								{t("COMMON.CONTRACT")}
 							</DetailTitle>
 
-							<div
-								className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
+							<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
 								<Address
 									truncateOnTable
 									address={walletToken.token().address()}
