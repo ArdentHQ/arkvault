@@ -154,7 +154,7 @@ describe("TokenRow", () => {
 		);
 
 		expect(screen.queryByRole("button", { name: /send/i })).not.toBeInTheDocument();
-		expect(screen.getByRole("button", { name: /remove/i })).toBeInTheDocument();
+		expect(screen.getByRole("button", { name: /delete/i })).toBeInTheDocument();
 	});
 
 	it("should call toggleContractVisibility when checkbox checked", async () => {
