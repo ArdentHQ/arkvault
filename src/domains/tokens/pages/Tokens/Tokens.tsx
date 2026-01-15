@@ -113,7 +113,6 @@ export const Tokens = () => {
 					/>
 				</div>
 			)}
-
 			{tokenModalItem && (
 				<TokenDetailSidepanel
 					isOpen={!!tokenModalItem}
