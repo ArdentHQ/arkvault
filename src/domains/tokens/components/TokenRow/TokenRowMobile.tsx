@@ -129,6 +129,7 @@ export const TokenRowMobile = memo(
 											className="-mt-1 ml-3"
 											onChange={toggleVisibility}
 											onClick={(event) => {
+												/* istanbul ignore next -- @preserve */
 												event.stopPropagation();
 											}}
 										/>

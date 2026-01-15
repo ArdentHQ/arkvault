@@ -114,6 +114,21 @@ describe("TokensTable", () => {
 		expect(screen.getAllByTestId("HideDustTokens")[0]).toBeEnabled();
 	});
 
+	it("should call setManageMode when Manage button is clicked", async () => {
+		const setManageModeMock = vi.fn();
+
+		render(<TokensTable isManageMode={false} setManageMode={setManageModeMock} />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		// switch to manage mode
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(setManageModeMock).toHaveBeenCalledWith(true);
+	});
+
 	it("should call setManageMode when Save button is clicked", async () => {
 		const setManageModeMock = vi.fn();
 

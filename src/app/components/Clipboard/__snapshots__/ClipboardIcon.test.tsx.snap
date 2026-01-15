@@ -25,7 +25,7 @@ exports[`ClipboardIcon > should render with tooltip in the dark mode 1`] = `
       tabindex="-1"
     >
       <div
-        style="transition-property: opacity,transform; transition-duration: 250ms;"
+        style="opacity: 0; transform: scale(0.9);"
       >
         <svg
           aria-hidden="true"
