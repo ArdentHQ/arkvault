@@ -6,7 +6,7 @@ interface UseTokensPromptInput {
 	isDirty: boolean;
 }
 
-export const useTokensPrompt = ({ isDirty, }: UseTokensPromptInput) => {
+export const useTokensPrompt = ({ isDirty }: UseTokensPromptInput) => {
 	const shouldBlockNavigation = useCallback(
 		(path: string) => {
 			// Check if user is navigating to the tokens page
@@ -19,7 +19,7 @@ export const useTokensPrompt = ({ isDirty, }: UseTokensPromptInput) => {
 				path,
 			);
 
-			const isNavigatingToTokens= matchCurrent !== null;
+			const isNavigatingToTokens = matchCurrent !== null;
 
 			// Don't block if navigating to the tokens page.
 			if (isNavigatingToTokens) {

@@ -8,7 +8,7 @@ interface SettingsUnsavedChangesConfirmationProps {
 }
 
 export const TokensUnsavedChangesConfirmation: React.FC<SettingsUnsavedChangesConfirmationProps> = ({ isDirty }) => {
-	const {shouldBlockNavigation} = useTokensPrompt({isDirty});
+	const { shouldBlockNavigation } = useTokensPrompt({ isDirty });
 
 	const { isOpen, onConfirm, onCancel } = useNavigationBlocker({
 		shouldBlock: ({ nextLocation }) => shouldBlockNavigation(nextLocation.pathname),
