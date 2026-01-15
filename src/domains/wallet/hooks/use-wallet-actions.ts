@@ -65,14 +65,12 @@ export const useWalletActions = ({
 	);
 
 	const handleTokenSend = useCallback(
-		(event?: React.MouseEvent<HTMLElement>) => {
+		(options?: Record<string, unknown>) => {
 			if (!wallet) {
 				return;
 			}
 
-			stopEventBubbling(event);
-
-			openPanel(Panel.SendTokenTransfer);
+			openPanel(Panel.SendTokenTransfer, options);
 		},
 		[stopEventBubbling, openPanel, wallet],
 	);

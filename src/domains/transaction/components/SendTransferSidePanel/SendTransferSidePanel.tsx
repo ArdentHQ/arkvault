@@ -48,10 +48,12 @@ export const SendTransferSidePanel = ({
 	open,
 	onOpenChange,
 	isTokenTransfer,
+	tokenContractAddress,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 	isTokenTransfer?: boolean;
+	tokenContractAddress?: string
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -95,7 +97,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ isTokenTransfer, wallet });
+	} = useSendTransferForm({ isTokenTransfer, wallet, tokenContractAddress });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";

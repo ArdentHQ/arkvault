@@ -19,9 +19,11 @@ import { calculateGasFee } from "@/domains/transaction/components/InputFee/Input
 export const useSendTransferForm = ({
 	wallet,
 	isTokenTransfer,
+	tokenContractAddress,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
 	isTokenTransfer?: boolean;
+	tokenContractAddress?: string;
 }) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
@@ -47,10 +49,12 @@ export const useSendTransferForm = ({
 			recipients: [],
 			remainingBalance: wallet?.balance(),
 			senderAddress: undefined,
+			tokenContractAddress,
 		}),
 
 		[],
 	);
+
 	const form = useForm<SendTransferForm>({
 		defaultValues: formDefaultValues,
 		mode: "onChange",

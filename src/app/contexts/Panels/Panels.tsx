@@ -21,10 +21,15 @@ export enum Panel {
 	Notifications = "NOTIFICATIONS",
 }
 
+interface PanelWithProperties {
+	name: Panel;
+	properties?: Record<string, unknown>;
+}
+
 interface PanelsContextValue {
-	currentOpenedPanel: Panel | undefined;
+	currentOpenedPanel?: PanelWithProperties;
 	closePanel: () => Promise<void>;
-	openPanel: (panel: Panel) => void;
+	openPanel: (panel: Panel, properties?: Record<string, unknown>) => void;
 	isMinimized: boolean;
 	isExpanded: boolean;
 	setIsMinimized: (isMinimized: boolean) => void;
@@ -43,8 +48,8 @@ export const SIDE_PANEL_TRANSITION_DURATION = 350;
 
 export const PanelsProvider = ({ children }: { children: React.ReactNode | React.ReactNode[] }) => {
 	const { t } = useTranslation();
-	const [currentOpenedPanel, setCurrentOpenedPanel] = useState<Panel | undefined>(undefined);
-	const [panelToOpen, setPanelToOpen] = useState<Panel | undefined>(undefined);
+	const [currentOpenedPanel, setCurrentOpenedPanel] = useState<PanelWithProperties | undefined>(undefined);
+	const [panelToOpen, setPanelToOpen] = useState<PanelWithProperties | undefined>(undefined);
 	const [isMinimized, setIsMinimized] = useState(false);
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [showConfirmationModal, setShowConfirmationModal] = useState(false);
@@ -105,15 +110,15 @@ export const PanelsProvider = ({ children }: { children: React.ReactNode | React
 		}
 	}, [componentResetedPromiseResolver]);
 
-	const openPanel = (panel: Panel) => {
+	const openPanel = (panel: Panel, properties?: Record<string, unknown>) => {
 		if (isMinimized) {
 			setShowConfirmationModal(true);
-			setPanelToOpen(panel);
+			setPanelToOpen({ name: panel, properties });
 			return;
 		}
 
 		setIsMinimized(false);
-		setCurrentOpenedPanel(panel);
+		setCurrentOpenedPanel({ name: panel, properties });
 	};
 
 	const toggleMinimize = () => {
