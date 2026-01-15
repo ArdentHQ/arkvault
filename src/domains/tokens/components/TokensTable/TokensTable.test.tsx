@@ -37,7 +37,11 @@ describe("TokensTable", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s", (breakpoint) => {
-		const { asFragment } = renderResponsiveWithRoute(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, breakpoint as LayoutBreakpoint, { route });
+		const { asFragment } = renderResponsiveWithRoute(
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
+			breakpoint as LayoutBreakpoint,
+			{ route },
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -54,7 +58,11 @@ describe("TokensTable", () => {
 				walletToken: new WalletTokenDTO(walletTokenData),
 			});
 
-		const { asFragment } = renderResponsiveWithRoute(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, breakpoint as LayoutBreakpoint, { route });
+		const { asFragment } = renderResponsiveWithRoute(
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
+			breakpoint as LayoutBreakpoint,
+			{ route },
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
