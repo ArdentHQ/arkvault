@@ -75,11 +75,17 @@ export const AppPanels = () => {
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<VerifyMessageSidePanel open={currentOpenedPanel?.name === Panel.VerifyMessage} onOpenChange={closePanel} />
+				<VerifyMessageSidePanel
+					open={currentOpenedPanel?.name === Panel.VerifyMessage}
+					onOpenChange={closePanel}
+				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<SendTransferSidePanel open={currentOpenedPanel?.name === Panel.SendTransfer} onOpenChange={closePanel} />
+				<SendTransferSidePanel
+					open={currentOpenedPanel?.name === Panel.SendTransfer}
+					onOpenChange={closePanel}
+				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
@@ -105,7 +111,10 @@ export const AppPanels = () => {
 				/>
 			</ResetWhenUnmounted>
 			<ResetWhenUnmounted>
-				<ImportAddressesSidePanel open={currentOpenedPanel?.name === Panel.ImportAddress} onOpenChange={closePanel} />
+				<ImportAddressesSidePanel
+					open={currentOpenedPanel?.name === Panel.ImportAddress}
+					onOpenChange={closePanel}
+				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
@@ -150,10 +159,16 @@ export const AppPanels = () => {
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<NotificationsSidepanel open={currentOpenedPanel?.name === Panel.Notifications} onOpenChange={closePanel} />
+				<NotificationsSidepanel
+					open={currentOpenedPanel?.name === Panel.Notifications}
+					onOpenChange={closePanel}
+				/>
 			</ResetWhenUnmounted>
 
-			<LedgerMigrationSidepanel open={currentOpenedPanel?.name === Panel.LedgerMigration} onOpenChange={closePanel} />
+			<LedgerMigrationSidepanel
+				open={currentOpenedPanel?.name === Panel.LedgerMigration}
+				onOpenChange={closePanel}
+			/>
 
 			<DiscardPanelConfirmationModal />
 		</>
