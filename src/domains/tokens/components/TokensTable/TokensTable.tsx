@@ -11,9 +11,7 @@ import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { Icon } from "@/app/components/Icon";
 import { DeleteTokenConfirmationModal } from "@/domains/tokens/components/DeleteTokenConfirmationModal/DeleteTokenConfirmationModal";
-import {
-	TokensUnsavedChangesConfirmation
-} from "@/domains/tokens/components/TokensUnsavedChangesConfirmation/TokensUnsavedChangesConfirmation";
+import { TokensUnsavedChangesConfirmation } from "@/domains/tokens/components/TokensUnsavedChangesConfirmation/TokensUnsavedChangesConfirmation";
 
 export const TokensTable = ({
 	onClick,

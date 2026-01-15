@@ -6,9 +6,7 @@ interface SettingsUnsavedChangesConfirmationProps {
 	isDirty: boolean;
 }
 
-export const TokensUnsavedChangesConfirmation: React.FC<SettingsUnsavedChangesConfirmationProps> = ({
-	isDirty,
-}) => {
+export const TokensUnsavedChangesConfirmation: React.FC<SettingsUnsavedChangesConfirmationProps> = ({ isDirty }) => {
 	const { isOpen, onConfirm, onCancel } = useNavigationBlocker({
 		shouldBlock: () => isDirty,
 	});

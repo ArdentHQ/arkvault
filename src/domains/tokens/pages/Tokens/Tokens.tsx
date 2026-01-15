@@ -28,7 +28,7 @@ export const Tokens = () => {
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 
 	return (
-			<Page pageTitle={t("COMMON.PORTFOLIO")}>
+		<Page pageTitle={t("COMMON.PORTFOLIO")}>
 			<PageHeader
 				title={t("TOKENS.PAGE_TITLE")}
 				subtitle={t("TOKENS.PAGE_SUBTITLE")}
