@@ -1,13 +1,12 @@
-import React from "react";
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useNavigationBlocker } from "@/app/hooks/use-navigation-blocker";
 import { useTokensPrompt } from "@/domains/tokens/hooks/use-tokens-prompt";
 
-interface SettingsUnsavedChangesConfirmationProps {
+interface TokensUnsavedChangesConfirmationProps {
 	isDirty: boolean;
 }
 
-export const TokensUnsavedChangesConfirmation: React.FC<SettingsUnsavedChangesConfirmationProps> = ({ isDirty }) => {
+export const TokensUnsavedChangesConfirmation  = ({ isDirty } : TokensUnsavedChangesConfirmationProps) => {
 	const { shouldBlockNavigation } = useTokensPrompt({ isDirty });
 
 	const { isOpen, onConfirm, onCancel } = useNavigationBlocker({
