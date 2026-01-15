@@ -6,7 +6,7 @@ interface TokensUnsavedChangesConfirmationProps {
 	isDirty: boolean;
 }
 
-export const TokensUnsavedChangesConfirmation  = ({ isDirty } : TokensUnsavedChangesConfirmationProps) => {
+export const TokensUnsavedChangesConfirmation = ({ isDirty }: TokensUnsavedChangesConfirmationProps) => {
 	const { shouldBlockNavigation } = useTokensPrompt({ isDirty });
 
 	const { isOpen, onConfirm, onCancel } = useNavigationBlocker({
