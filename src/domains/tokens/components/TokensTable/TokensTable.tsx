@@ -9,6 +9,8 @@ import { TokensTableFooter, TokensTableHeader } from "./TokensTable.blocks";
 import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
+import { Icon } from "@/app/components/Icon";
+import { DeleteTokenConfirmationModal } from "@/domains/tokens/components/DeleteTokenConfirmationModal/DeleteTokenConfirmationModal";
 
 export const TokensTable = ({
 	onClick,
@@ -20,6 +22,41 @@ export const TokensTable = ({
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
+
+	const [isManageMode, setManageMode] = useState<boolean>(false);
+
+	const [removeToken, setRemoveToken] = useState<WalletToken | undefined>(undefined);
+
+	// stores hidden contract addresses when in manage mode
+	const [hiddenContractAddresses, setHiddenContractAddresses] = useState<string[]>([]);
+
+	const toggleContractVisibility = (address: string) => {
+		setHiddenContractAddresses((prev) => {
+			if (prev.includes(address)) {
+				return prev.filter((addr) => addr !== address);
+			} else {
+				return [...prev, address];
+			}
+		});
+	};
+
+	const toggleManageMode = (state: boolean) => {
+		if (state) {
+			// get hidden contract addresses from profile and fill `hiddenContractAddresses`
+			setHiddenContractAddresses([]);
+		}
+		setManageMode(state);
+	};
+
+	const onSaveHandler = () => {
+		// persist changes
+		toggleManageMode(false);
+		console.log("onSave");
+	};
+
+	const onCancelHandler = () => {
+		toggleManageMode(false);
+	};
 
 	const wallets = activeProfile.wallets().selected();
 
@@ -37,8 +74,8 @@ export const TokensTable = ({
 	const skeletonRows: WalletToken[] = Array.from({ length: skeletonRowsLimit }, () => ({}) as WalletToken);
 	const data = showSkeleton ? skeletonRows : tokens;
 
-	const listColumns = useMemo<Column<WalletToken>[]>(
-		() => [
+	const listColumns = useMemo<Column<WalletToken>[]>(() => {
+		const columns = [
 			{
 				Header: t("COMMON.NAME"),
 				cellWidth: "w-32 xl:w-40",
@@ -78,24 +115,53 @@ export const TokensTable = ({
 				minimumWidth: true,
 				noRoundedBorders: true,
 			},
-		],
-		[t],
-	);
+		];
+
+		if (isManageMode) {
+			return [
+				{
+					Header: t("COMMON.SHOW"),
+					accessor: "show",
+					cellWidth: "w-10",
+					disableSortBy: true,
+					headerClassName: "no-border",
+					noRoundedBorders: true,
+				},
+				...columns,
+			];
+		}
+
+		return [
+			{
+				Header: <Icon name="Star" className="text-theme-warning-400" />,
+				accessor: "star",
+				cellWidth: "w-4",
+				disableSortBy: true,
+				headerClassName: "no-border",
+				noRoundedBorders: true,
+			},
+			...columns,
+		];
+	}, [t, isManageMode]);
 
 	const renderTableRow = useCallback(
 		(row: WalletToken) => (
 			<TokenRow
 				data-testid="TokensTableRow"
+				isManageMode={isManageMode}
 				isLoading={showSkeleton}
 				onClick={() => {
 					onClick?.(row);
 				}}
+				onDelete={setRemoveToken}
+				toggleContractVisibility={toggleContractVisibility}
+				isHidden={!showSkeleton && hiddenContractAddresses.includes(row.token().address())}
 				onSend={() => handleSend()}
 				walletToken={row}
 				profile={activeProfile}
 			/>
 		),
-		[showSkeleton, onClick, handleSend, activeProfile],
+		[showSkeleton, onClick, handleSend, activeProfile, isManageMode, hiddenContractAddresses.length],
 	);
 
 	const shouldRenderTable = wallets.length === 1 && ((isXs && (tokens.length > 0 || showSkeleton)) || isSmAndAbove);
@@ -118,13 +184,25 @@ export const TokensTable = ({
 					setSearchQuery={setQuery}
 					searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
 					extra={
-						<div className="mr-6 hidden items-center space-x-1 md:flex">
-							<TokensTableHeader activeProfile={activeProfile} />
+						<div className="mr-6 hidden items-center gap-1 md:flex">
+							<TokensTableHeader
+								activeProfile={activeProfile}
+								isManageMode={isManageMode}
+								toggleManageMode={toggleManageMode}
+								onSave={onSaveHandler}
+								onCancel={onCancelHandler}
+							/>
 						</div>
 					}
 				>
 					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden">
-						<TokensTableHeader activeProfile={activeProfile} />
+						<TokensTableHeader
+							activeProfile={activeProfile}
+							isManageMode={isManageMode}
+							toggleManageMode={toggleManageMode}
+							onSave={onSaveHandler}
+							onCancel={onCancelHandler}
+						/>
 					</div>
 
 					<div data-testid="TokenList">
@@ -148,6 +226,16 @@ export const TokensTable = ({
 						</Table>
 					</div>
 				</SearchableTableWrapper>
+			)}
+			{removeToken && (
+				<DeleteTokenConfirmationModal
+					walletToken={removeToken}
+					onClose={() => setRemoveToken(undefined)}
+					onDelete={(walletToken: WalletToken) => {
+						/* istanbul ignore next -- @preserve */
+						console.log(walletToken.token().address());
+					}}
+				/>
 			)}
 		</>
 	);

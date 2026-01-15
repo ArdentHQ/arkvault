@@ -9,6 +9,7 @@ import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import * as useWalletActionsHook from "@/domains/wallet/hooks";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -103,5 +104,129 @@ describe("TokensTable", () => {
 		await userEvent.click(screen.getAllByTestId("HideDustTokens")[0]);
 
 		expect(screen.getAllByTestId("HideDustTokens")[0]).toBeEnabled();
+	});
+
+	it("should toggle manage actions when Save button is clicked", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		// switch to manage mode
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		// ensure Cancel and Save buttons are visible
+		expect(screen.getAllByTestId("TokensTable_Cancel")).toHaveLength(2);
+		expect(screen.getAllByTestId("TokensTable_Save")).toHaveLength(2);
+
+		await userEvent.click(screen.getAllByTestId("TokensTable_Save")[0]);
+
+		expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
+
+		expect(screen.queryByTestId("TokensTable_Cancel")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("TokensTable_Save")).not.toBeInTheDocument();
+	});
+
+	it("should toggle manage actions when Cancel button is clicked", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		// switch to manage mode
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		// ensure Cancel and Save buttons are visible
+		expect(screen.getAllByTestId("TokensTable_Cancel")).toHaveLength(2);
+		expect(screen.getAllByTestId("TokensTable_Save")).toHaveLength(2);
+
+		await userEvent.click(screen.getAllByTestId("TokensTable_Cancel")[0]);
+
+		expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
+
+		expect(screen.queryByTestId("TokensTable_Cancel")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("TokensTable_Save")).not.toBeInTheDocument();
+	});
+
+	it("should show toggle row visibility", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		const getCheckbox = () => screen.getByTestId("TokenRow_VisibilityToggle");
+
+		expect(getCheckbox()).toBeChecked();
+
+		await userEvent.click(getCheckbox());
+
+		expect(getCheckbox()).not.toBeChecked();
+
+		await userEvent.click(getCheckbox());
+
+		expect(getCheckbox()).toBeChecked();
+	});
+
+	it("should open delete token confirmation modal when delete button is clicked", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		// Switch to manage mode
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		// Verify modal is not visible initially
+		expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
+
+		// Click delete button to open modal
+		const deleteButton = screen.getByTestId("TokenRow_DeleteToken");
+		await userEvent.click(deleteButton);
+
+		// Verify modal is open
+		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
+	});
+
+	it("should close delete token confirmation modal when onClose is called", async () => {
+		render(<TokensTable />, {
+			route,
+		});
+
+		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
+
+		// Switch to manage mode
+		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		// Click delete button to open modal
+		const deleteButton = screen.getByTestId("TokenRow_DeleteToken");
+		await userEvent.click(deleteButton);
+
+		// Verify modal is open
+		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
+
+		// Click cancel button to close modal
+		const cancelButton = screen.getByTestId("DeleteResource__cancel-button");
+		await userEvent.click(cancelButton);
+
+		// Verify modal is closed
+		await waitFor(() => {
+			expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
+		});
 	});
 });
