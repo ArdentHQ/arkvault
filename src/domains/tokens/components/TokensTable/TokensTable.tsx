@@ -11,19 +11,24 @@ import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { Icon } from "@/app/components/Icon";
 import { DeleteTokenConfirmationModal } from "@/domains/tokens/components/DeleteTokenConfirmationModal/DeleteTokenConfirmationModal";
+import {
+	TokensUnsavedChangesConfirmation
+} from "@/domains/tokens/components/TokensUnsavedChangesConfirmation/TokensUnsavedChangesConfirmation";
 
 export const TokensTable = ({
 	onClick,
+	isManageMode,
+	setManageMode,
 	skeletonRowsLimit = 8,
 }: {
 	onClick?: (wallet: WalletToken) => void;
 	skeletonRowsLimit?: number;
+	isManageMode: boolean;
+	setManageMode: (isManageMode: boolean) => void;
 }) => {
 	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
-
-	const [isManageMode, setManageMode] = useState<boolean>(false);
 
 	const [removeToken, setRemoveToken] = useState<WalletToken | undefined>(undefined);
 
@@ -166,6 +171,8 @@ export const TokensTable = ({
 
 	const shouldRenderTable = wallets.length === 1 && ((isXs && (tokens.length > 0 || showSkeleton)) || isSmAndAbove);
 
+	const isDirty = isManageMode && hiddenContractAddresses.length > 0;
+
 	return (
 		<>
 			{isXs && tokens.length === 0 && !showSkeleton && (
@@ -237,6 +244,8 @@ export const TokensTable = ({
 					}}
 				/>
 			)}
+
+			<TokensUnsavedChangesConfirmation isDirty={isDirty} />
 		</>
 	);
 };

@@ -25,8 +25,10 @@ export const Tokens = () => {
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
 	const { reload, isLoading } = useProfileTokens({ profile: activeProfile });
 
+	const [isManageMode, setManageMode] = useState<boolean>(false);
+
 	return (
-		<Page pageTitle={t("COMMON.PORTFOLIO")}>
+			<Page pageTitle={t("COMMON.PORTFOLIO")}>
 			<PageHeader
 				title={t("TOKENS.PAGE_TITLE")}
 				subtitle={t("TOKENS.PAGE_SUBTITLE")}
@@ -54,7 +56,7 @@ export const Tokens = () => {
 				/>
 			</Section>
 
-			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab}>
+			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab} disabled={isManageMode}>
 				<TabScroll>
 					<TabList className="pb-2">
 						<Tab tabId="tokens">
@@ -68,7 +70,7 @@ export const Tokens = () => {
 			</Tabs>
 
 			<Section className="hidden pt-2! pb-3 md:block">
-				<Tabs activeId={activeTab} onChange={setActiveTab}>
+				<Tabs activeId={activeTab} onChange={setActiveTab} disabled={isManageMode}>
 					<TabList className="h-10">
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
@@ -104,7 +106,11 @@ export const Tokens = () => {
 						</div>
 					</Section>
 
-					<TokensTable onClick={(walletToken) => setTokenModelItem(walletToken)} />
+					<TokensTable
+						isManageMode={isManageMode}
+						setManageMode={setManageMode}
+						onClick={(walletToken) => setTokenModelItem(walletToken)}
+					/>
 				</div>
 			)}
 
