@@ -79,7 +79,7 @@ describe("TokensTable", () => {
 		const handleSendMock = vi.fn();
 
 		vi.spyOn(useWalletActionsHook, "useWalletActions").mockReturnValue({
-			handleSend: handleSendMock,
+			handleTokenSend: handleSendMock,
 		});
 
 		render(<TokensTable />, { route });
