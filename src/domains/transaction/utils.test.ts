@@ -75,8 +75,8 @@ describe("Transaction utils", () => {
 
 		it("transferToken", () => {
 			const type = getTransferType({
-				tokenContractAddress: "1",
 				recipients: [{ address: "1", amount: 0 }],
+				tokenContractAddress: "1",
 			});
 
 			expect(type).toBe("transferToken");
@@ -92,7 +92,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => false,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => { },
+				to: () => {},
 			};
 			expect(isContractDeployment(transaction as any)).toBe(true);
 		});
@@ -105,7 +105,7 @@ describe("Transaction utils", () => {
 				isValidatorRegistration: () => true,
 				isValidatorResignation: () => false,
 				isVote: () => false,
-				to: () => { },
+				to: () => {},
 			};
 			expect(isContractDeployment(transaction as any)).toBe(false);
 		});
