@@ -12,7 +12,7 @@ export const TransactionAmountLabel = ({
 	transaction,
 	profile,
 	allowHideBalance,
-	token
+	token,
 }: {
 	transaction: ExtendedTransactionData;
 	profile?: Contracts.IProfile;

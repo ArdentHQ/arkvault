@@ -21,7 +21,6 @@ import { useConfirmedTransaction } from "@/domains/transaction/components/Transa
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { useTranslation } from "react-i18next";
-import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 export const TransactionDetailContent = ({
@@ -39,7 +38,7 @@ export const TransactionDetailContent = ({
 	confirmations?: number;
 	containerClassname?: string;
 	allowHideBalance?: boolean;
-	token?: WalletToken
+	token?: WalletToken;
 }) => {
 	const { t } = useTranslation();
 

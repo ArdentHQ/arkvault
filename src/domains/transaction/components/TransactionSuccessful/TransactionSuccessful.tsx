@@ -30,8 +30,8 @@ export const TransactionSuccessful = ({
 
 	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.SUCCESS.CREATED");
 
-	const { tokens } = useProfileTokens({ profile: senderWallet.profile() })
-	const token = tokens.find(token => token.token().address() === transaction.to())
+	const { tokens } = useProfileTokens({ profile: senderWallet.profile() });
+	const token = tokens.find((token) => token.token().address() === transaction.to());
 
 	return (
 		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>

@@ -17,7 +17,7 @@ interface Properties {
 	labelClassName?: string;
 	profile?: Contracts.IProfile;
 	allowHideBalance?: boolean;
-	token?: WalletToken
+	token?: WalletToken;
 }
 export const TransactionSummary = ({
 	transaction,
@@ -28,8 +28,6 @@ export const TransactionSummary = ({
 	token,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
-
-	const ticker = typeof token !== "undefined" ? token.token().symbol() : transaction.wallet().currency()
 
 	const showAmount = useMemo(() => {
 		if (transaction.isValidatorRegistration()) {
