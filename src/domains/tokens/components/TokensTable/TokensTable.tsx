@@ -153,7 +153,6 @@ export const TokensTable = ({
 				onClick={() => {
 					onClick?.(row);
 				}}
-
 				onDelete={setRemoveToken}
 				toggleContractVisibility={toggleContractVisibility}
 				isHidden={!showSkeleton && hiddenContractAddresses.includes(row.token().address())}
