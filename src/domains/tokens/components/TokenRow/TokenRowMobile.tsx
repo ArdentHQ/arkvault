@@ -13,14 +13,30 @@ import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { TokenRowMobileSkeleton } from "./TokenRowMobileSkeleton";
+import { Checkbox } from "@/app/components/Checkbox";
 
 export const TokenRowMobile = memo(
-	({ className, onClick, isLoading = false, onSend, walletToken, ...properties }: TokenRowProperties) => {
+	({
+		className,
+		onClick,
+		onDelete,
+		isLoading = false,
+		isManageMode,
+		isHidden,
+		toggleContractVisibility,
+		onSend,
+		walletToken,
+		...properties
+	}: TokenRowProperties) => {
 		const { t } = useTranslation();
 
 		if (isLoading) {
 			return <TokenRowMobileSkeleton />;
 		}
+
+		const toggleVisibility = () => {
+			toggleContractVisibility(walletToken.token().address());
+		};
 
 		return (
 			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
@@ -29,18 +45,34 @@ export const TokenRowMobile = memo(
 						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between pr-3 pl-4 sm:pl-3 dark:bg-black">
 							<div className="flex flex-row items-center gap-3">
 								<div className="hidden flex-row items-center sm:flex">
-									<Button
-										size="icon"
-										variant="transparent"
-										className="mr-2 p-1"
-										onClick={(event) => {
-											/* istanbul ignore next -- @preserve */
-											event.stopPropagation();
-											console.log("star clicked");
-										}}
-									>
-										<Icon name="Star" className="text-theme-warning-400" />
-									</Button>
+									{!isManageMode && (
+										<Button
+											size="icon"
+											variant="transparent"
+											className="mr-2 p-1"
+											onClick={(event) => {
+												/* istanbul ignore next -- @preserve */
+												event.stopPropagation();
+											}}
+										>
+											<Icon name="Star" className="text-theme-warning-400" />
+										</Button>
+									)}
+
+									{isManageMode && (
+										<div>
+											<Checkbox
+												data-testid="TokenRow_VisibilityToggle"
+												checked={!isHidden}
+												className="-mt-1 mr-3"
+												onChange={toggleVisibility}
+												onClick={(event) => {
+													event.stopPropagation();
+												}}
+											/>
+										</div>
+									)}
+
 									<Divider
 										type="vertical"
 										className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
@@ -54,17 +86,54 @@ export const TokenRowMobile = memo(
 							</div>
 
 							<div className="flex flex-row items-center">
-								<Button
-									size="icon"
-									variant="transparent"
-									className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
-									onClick={(event) => {
-										event.stopPropagation();
-										onSend();
-									}}
-								>
-									{t("COMMON.SEND")}
-								</Button>
+								{!isManageMode && (
+									<Button
+										size="icon"
+										variant="transparent"
+										className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm hover:underline"
+										onClick={(event) => {
+											event.stopPropagation();
+											onSend();
+										}}
+									>
+										{t("COMMON.SEND")}
+									</Button>
+								)}
+
+								{isManageMode && (
+									<Button
+										data-testid="TokenRow_DeleteToken"
+										size="icon"
+										variant="transparent"
+										className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 p-1 text-sm"
+										onClick={(event) => {
+											event.stopPropagation();
+											onDelete(walletToken);
+										}}
+									>
+										<Icon name="Trash" />
+										<span className="hidden sm:inline">{t("COMMON.DELETE")}</span>
+									</Button>
+								)}
+
+								{isManageMode && (
+									<div className="ml-2 sm:hidden">
+										<Divider
+											type="vertical"
+											className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
+										/>
+
+										<Checkbox
+											data-testid="TokenRow_VisibilityToggle"
+											checked={!isHidden}
+											className="-mt-1 ml-3"
+											onChange={toggleVisibility}
+											onClick={(event) => {
+												event.stopPropagation();
+											}}
+										/>
+									</div>
+								)}
 							</div>
 						</div>
 
@@ -109,22 +178,23 @@ export const TokenRowMobile = memo(
 								</Link>
 							</MobileSection>
 
-							<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden">
-								<Button
-									variant="transparent"
-									className="-m-1 mr-2 p-1"
-									onClick={(event) => {
-										/* istanbul ignore next -- @preserve */
-										event.stopPropagation();
-										console.log("star clicked");
-									}}
-								>
-									<Icon name="Star" className="text-theme-warning-400" />
-									<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
-										{t("COMMON.FAVORITE")}
-									</div>
-								</Button>
-							</div>
+							{!isManageMode && (
+								<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden">
+									<Button
+										variant="transparent"
+										className="-m-1 mr-2 p-1"
+										onClick={(event) => {
+											/* istanbul ignore next -- @preserve */
+											event.stopPropagation();
+										}}
+									>
+										<Icon name="Star" className="text-theme-warning-400" />
+										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
+											{t("COMMON.FAVORITE")}
+										</div>
+									</Button>
+								</div>
+							)}
 						</div>
 					</MobileCard>
 				</td>

@@ -7,6 +7,7 @@ import { FormButtons } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
+import { twMerge } from "tailwind-merge";
 
 interface DeleteResourceProperties extends JSX.IntrinsicAttributes {
 	isOpen: boolean;
@@ -18,6 +19,7 @@ interface DeleteResourceProperties extends JSX.IntrinsicAttributes {
 	onCancel?: any;
 	onDelete: any;
 	deleteLabel?: string;
+	modalImageClass?: string;
 }
 
 export const DeleteResource = ({
@@ -30,6 +32,7 @@ export const DeleteResource = ({
 	onCancel,
 	onDelete,
 	deleteLabel,
+	modalImageClass,
 	...attributes
 }: DeleteResourceProperties) => {
 	const { t } = useTranslation();
@@ -37,7 +40,7 @@ export const DeleteResource = ({
 	return (
 		<Modal
 			title={title}
-			image={<Image name="Trash" className="mx-auto my-8 max-w-52" />}
+			image={<Image name="Trash" className={twMerge("mx-auto my-8 max-w-52", modalImageClass)} />}
 			size="2xl"
 			isOpen={isOpen}
 			onClose={onClose}
