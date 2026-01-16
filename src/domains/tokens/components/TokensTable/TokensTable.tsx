@@ -162,7 +162,7 @@ export const TokensTable = ({
 				profile={activeProfile}
 			/>
 		),
-		[showSkeleton, onClick, handleSend, handleTokenSend, activeProfile, isManageMode, hiddenContractAddresses.length],
+		[showSkeleton, onClick, handleTokenSend, activeProfile, isManageMode, hiddenContractAddresses.length],
 	);
 
 	const shouldRenderTable = wallets.length === 1 && ((isXs && (tokens.length > 0 || showSkeleton)) || isSmAndAbove);
