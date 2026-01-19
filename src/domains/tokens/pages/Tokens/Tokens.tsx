@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Page, Section } from "@/app/components/Layout";
@@ -15,6 +15,7 @@ import { Panel, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
@@ -26,6 +27,7 @@ export const Tokens = () => {
 	const { reload, isLoading } = useProfileTokens({ profile: activeProfile });
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
+	const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false);
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
@@ -50,7 +52,11 @@ export const Tokens = () => {
 					isLoading={isLoading}
 					profile={activeProfile}
 					onOpenAddressSidepanel={() => {
-						openPanel(Panel.Addresses);
+						if (isManageMode) {
+							setShowConfirmModal(true);
+						} else {
+							openPanel(Panel.Addresses);
+						}
 					}}
 					onReload={reload}
 				/>
@@ -113,6 +119,19 @@ export const Tokens = () => {
 					/>
 				</div>
 			)}
+
+			<ConfirmationModal
+				size="2xl"
+				description={t("TOKENS.CONFIRMATION_MESSAGE")}
+				isOpen={showConfirmModal}
+				onConfirm={() => {
+					openPanel(Panel.Addresses);
+					setShowConfirmModal(false);
+				}}
+				onCancel={() => {
+					setShowConfirmModal(false);
+				}}
+			/>
 
 			{tokenModalItem && (
 				<TokenDetailSidepanel
