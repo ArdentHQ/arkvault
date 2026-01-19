@@ -9,7 +9,6 @@ import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
 import { PageHeader } from "@/app/components/Header";
 import { ThemeIcon } from "@/app/components//Icon";
-import { Button } from "@/app/components/Button";
 import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
 import { Panel, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
