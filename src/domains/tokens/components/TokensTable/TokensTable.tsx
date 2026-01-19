@@ -132,14 +132,14 @@ export const TokensTable = ({
 		}
 
 		return [
-			{
-				Header: <Icon name="Star" className="text-theme-warning-400" />,
-				accessor: "star",
-				cellWidth: "w-4",
-				disableSortBy: true,
-				headerClassName: "no-border",
-				noRoundedBorders: true,
-			},
+			// {
+			// 	Header: <Icon name="Star" className="text-theme-warning-400" />,
+			// 	accessor: "star",
+			// 	cellWidth: "w-4",
+			// 	disableSortBy: true,
+			// 	headerClassName: "no-border",
+			// 	noRoundedBorders: true,
+			// },
 			...columns,
 		];
 	}, [t, isManageMode]);
@@ -184,7 +184,7 @@ export const TokensTable = ({
 					setSearchQuery={setQuery}
 					searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
 					extra={
-						<div className="mr-6 hidden items-center gap-1 md:flex">
+						<div className="hidden w-full items-center justify-between gap-1 md:flex">
 							<TokensTableHeader
 								activeProfile={activeProfile}
 								isManageMode={isManageMode}
@@ -195,7 +195,7 @@ export const TokensTable = ({
 						</div>
 					}
 				>
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed pb-3 md:hidden md:pt-3">
 						<TokensTableHeader
 							activeProfile={activeProfile}
 							isManageMode={isManageMode}

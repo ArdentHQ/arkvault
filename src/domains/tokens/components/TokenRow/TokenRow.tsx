@@ -15,6 +15,7 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenRowSkeleton } from "./TokenRowSkeleton";
 import { TokenRowMobile } from "@/domains/tokens/components/TokenRow/TokenRowMobile";
 import { Checkbox } from "@/app/components/Checkbox";
+import cn from "classnames";
 
 export type TokenRowProperties = {
 	walletToken: WalletToken;
@@ -68,22 +69,21 @@ export const TokenRow = memo(
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
-				{!isManageMode && (
-					<TableCell variant="start" innerClassName="pl-2!">
-						<Button
-							data-testid="TokenRow_Favorite"
-							size="icon"
-							variant="transparent"
-							className="p-1"
-							onClick={(event) => {
-								/* istanbul ignore next -- @preserve */
-								event.stopPropagation();
-							}}
-						>
-							<Icon name="Star" className="text-theme-warning-400" />
-						</Button>
-					</TableCell>
-				)}
+				{/*{!isManageMode && (*/}
+				{/*	<TableCell variant="start" innerClassName="pl-2!">*/}
+				{/*		<Button*/}
+				{/*			data-testid="TokenRow_Favorite"*/}
+				{/*			size="icon"*/}
+				{/*			variant="transparent"*/}
+				{/*			className="p-1"*/}
+				{/*			onClick={(event) => {*/}
+				{/*				event.stopPropagation();*/}
+				{/*			}}*/}
+				{/*		>*/}
+				{/*			<Icon name="Star" className="text-theme-warning-400" />*/}
+				{/*		</Button>*/}
+				{/*	</TableCell>*/}
+				{/*)}*/}
 
 				{isManageMode && (
 					<TableCell variant="start">
@@ -101,7 +101,7 @@ export const TokenRow = memo(
 					</TableCell>
 				)}
 
-				<TableCell>
+				<TableCell variant={isManageMode ? undefined : "start"} innerClassName="pl-2!">
 					<div className="flex flex-row items-center gap-3">
 						<TokenNameInitials tokenName={walletToken.token().name()} />
 						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
