@@ -93,11 +93,13 @@ export const Tokens = () => {
 				</Section>
 			)}
 
-			{activeTab === "tokens" && <TokensTable
-						isManageMode={isManageMode}
-						setManageMode={setManageMode}
-						onClick={(walletToken) => setTokenModelItem(walletToken)}
-					/>}
+			{activeTab === "tokens" && (
+				<TokensTable
+					isManageMode={isManageMode}
+					setManageMode={setManageMode}
+					onClick={(walletToken) => setTokenModelItem(walletToken)}
+				/>
+			)}
 
 			<ConfirmationModal
 				size="2xl"
