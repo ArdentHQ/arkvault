@@ -9,7 +9,6 @@ import { TokensTableFooter, TokensTableHeader } from "./TokensTable.blocks";
 import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
-import { Icon } from "@/app/components/Icon";
 import { DeleteTokenConfirmationModal } from "@/domains/tokens/components/DeleteTokenConfirmationModal/DeleteTokenConfirmationModal";
 
 export const TokensTable = ({
@@ -182,7 +181,9 @@ export const TokensTable = ({
 					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
 					searchQuery={query}
 					setSearchQuery={setQuery}
+					hideSearchInput={true}
 					searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
+					searchInputWrapperClass="hidden px-6 py-4 md:flex"
 					extra={
 						<div className="hidden w-full items-center justify-between gap-1 md:flex">
 							<TokensTableHeader
