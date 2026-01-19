@@ -102,10 +102,8 @@ export class TransactionService {
 
 		const nonce = await this.#generateNonce(input);
 		const value = UnitConverter.parseUnits(input.data.amount, "gwei");
-
 		const builder = await EvmCallBuilder.new({
 			senderPublicKey: input.signatory.address(),
-			value: value.toNumber(),
 		})
 			.to(input.tokenContractAddress)
 			.payload(

@@ -19,17 +19,19 @@ import { BigNumber } from "@/app/lib/helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
 	hideHeader?: boolean;
+	token?: WalletToken;
 }
 
 // This is to prevent Insufficient balance error when sending all
 const DUST_AMOUNT = 0.00015;
 
-export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepProperties) => {
+export const ReviewStep = ({ wallet, network, hideHeader = false, token }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
@@ -45,7 +47,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
 
-	const ticker = wallet.currency();
+	const ticker = token ? token.token().symbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
