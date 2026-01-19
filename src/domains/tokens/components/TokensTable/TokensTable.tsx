@@ -53,7 +53,7 @@ export const TokensTable = ({
 
 	useEffect(() => {
 		setHiddenContractAddresses([]);
-	}, [isManageMode])
+	}, [isManageMode]);
 
 	const onSaveHandler = () => {
 		// persist changes
