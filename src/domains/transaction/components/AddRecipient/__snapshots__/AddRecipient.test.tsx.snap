@@ -918,7 +918,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     readonly=""
                     tabindex="-1"
                     type="text"
-                    value="test"
+                    value="0xf8939a711e0116fcec11ab81165391fe185e5649"
                   />
                 </div>
               </div>
@@ -942,7 +942,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                         <div
                           class="invisible fixed w-auto whitespace-nowrap"
                         >
-                          test
+                          DARK20
                           …
                         </div>
                         <div
@@ -955,7 +955,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
                             >
                               <div>
-                                T
+                                D
                               </div>
                             </div>
                           </div>
@@ -973,7 +973,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               name="asset"
                               placeholder="Select Token"
                               type="text"
-                              value="test"
+                              value="DARK20"
                             />
                             <span
                               class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -982,7 +982,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               <span
                                 class="truncate"
                               >
-                                test
+                                DARK20
                               </span>
                             </span>
                           </div>
@@ -1150,7 +1150,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                       readonly=""
                       tabindex="-1"
                       type="text"
-                      value="test"
+                      value="0xf8939a711e0116fcec11ab81165391fe185e5649"
                     />
                   </div>
                 </div>
@@ -1174,7 +1174,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                           <div
                             class="invisible fixed w-auto whitespace-nowrap"
                           >
-                            test
+                            DARK20
                             …
                           </div>
                           <div
@@ -1187,7 +1187,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
                               >
                                 <div>
-                                  T
+                                  D
                                 </div>
                               </div>
                             </div>
@@ -1205,7 +1205,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 name="amount"
                                 placeholder="Select Token"
                                 type="text"
-                                value="test"
+                                value="DARK20"
                               />
                               <span
                                 class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -1214,7 +1214,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 <span
                                   class="truncate"
                                 >
-                                  test
+                                  DARK20
                                 </span>
                               </span>
                             </div>
