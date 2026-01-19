@@ -49,7 +49,7 @@ export const SelectToken = ({
 				},
 			}}
 			renderLabel={(option) => (
-				<div className="flex items-center space-x-2">
+				<div className="flex items-center space-x-2" data-testid="token-option">
 					<TokenNameInitials tokenName={option.label} className="text-md h-8 w-8 p-3 leading-8" />
 					<div>{option.label}</div>
 				</div>
