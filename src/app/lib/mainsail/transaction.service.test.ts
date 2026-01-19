@@ -507,4 +507,24 @@ describe("TransactionService", () => {
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
 	});
+
+	it("should sign token transfer and return SignedTransactionData for contractDeployment", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		const result = await transactionService.tokenTransfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
 });
