@@ -74,4 +74,79 @@ describe("Tokens", () => {
 			expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument();
 		});
 	});
+
+	it("should close confirmation modal and stay in manage mode when cancel is clicked", async () => {
+		const user = userEvent.setup();
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
+		});
+
+		await user.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTable_Save")[0]).toBeInTheDocument();
+		});
+
+		const addressButton = screen.getByTestId("ShowAddressesPanel");
+		await user.click(addressButton);
+
+		// Verify confirmation modal is open
+		await waitFor(() => {
+			expect(screen.getByTestId("ConfirmationModal")).toBeInTheDocument();
+		});
+
+		const cancelButton = screen.getByTestId("ConfirmationModal__no-button");
+		await user.click(cancelButton);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getAllByTestId("TokensTable_Save")[0]).toBeInTheDocument();
+	});
+
+	it("should close confirmation modal and exit manage mode when confirm is clicked", async () => {
+		const user = userEvent.setup();
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+		});
+
+		// Enter manage mode
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
+		});
+
+		await user.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTable_Save")[0]).toBeInTheDocument();
+		});
+
+		await user.click(screen.getByTestId("ShowAddressesPanel"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ConfirmationModal")).toBeInTheDocument();
+		});
+
+		const confirmButton = screen.getByTestId("ConfirmationModal__yes-button");
+		await user.click(confirmButton);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
+		});
+	});
 });
