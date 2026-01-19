@@ -127,6 +127,7 @@ export const Tokens = () => {
 				onConfirm={() => {
 					openPanel(Panel.Addresses);
 					setShowConfirmModal(false);
+					setManageMode(false);
 				}}
 				onCancel={() => {
 					setShowConfirmModal(false);
