@@ -15,7 +15,6 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenRowSkeleton } from "./TokenRowSkeleton";
 import { TokenRowMobile } from "@/domains/tokens/components/TokenRow/TokenRowMobile";
 import { Checkbox } from "@/app/components/Checkbox";
-import cn from "classnames";
 
 export type TokenRowProperties = {
 	walletToken: WalletToken;
