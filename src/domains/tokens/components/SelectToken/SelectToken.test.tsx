@@ -1,5 +1,5 @@
 import { describe, it } from "vitest";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 import { SelectToken } from "./SelectToken";
 import userEvent from "@testing-library/user-event";
 
