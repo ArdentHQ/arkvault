@@ -9,7 +9,6 @@ import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
 import { PageHeader } from "@/app/components/Header";
 import { ThemeIcon } from "@/app/components//Icon";
-import { Button } from "@/app/components/Button";
 import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
 import { Panel, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
@@ -86,27 +85,7 @@ export const Tokens = () => {
 				</Section>
 			)}
 
-			{activeTab === "tokens" && (
-				<div>
-					<Section className="my-0 md:py-0!">
-						<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded border sm:hidden">
-							<Button
-								className="text-theme-primary-600 dark:text-theme-primary-400 dark:hover:text-theme-primary-300 hover:text-theme-primary-700 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-50 h-12 w-full"
-								data-testid="tokens__add-token-btn-mobile"
-								variant="primary-transparent"
-								size="sm"
-								icon="Plus"
-							>
-								<p className="dim:text-theme-dim-50 text-base leading-5 font-semibold">
-									{t("COMMON.ADD_TOKEN")}
-								</p>
-							</Button>
-						</div>
-					</Section>
-
-					<TokensTable onClick={(walletToken) => setTokenModelItem(walletToken)} />
-				</div>
-			)}
+			{activeTab === "tokens" && <TokensTable onClick={(walletToken) => setTokenModelItem(walletToken)} />}
 
 			{tokenModalItem && (
 				<TokenDetailSidepanel

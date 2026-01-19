@@ -100,7 +100,7 @@ export const TokensTableHeader = ({
 			<Divider
 				type="vertical"
 				size="md"
-				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden md:block"
+				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden"
 			/>
 
 			{!isManageMode && (
