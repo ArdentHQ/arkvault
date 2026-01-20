@@ -35,6 +35,7 @@ export interface EncodeInputData {
 	validatorPublicKey?: string;
 	voteAddresses?: string[];
 	tokenContractAddress?: string;
+	tokenContractDecimals?: number;
 }
 
 interface EncodedData {
@@ -158,10 +159,11 @@ export class TransactionEncoder {
 
 	public tokenTransfer(tokenContractAddress: string, inputData: EncodeInputData): EncodedData {
 		const recipient = inputData.recipients?.at(0);
+		const amount = BigNumber.make(recipient?.amount ?? 0, inputData.tokenContractDecimals).toSatoshi();
 
 		const data = encodeFunctionData({
 			abi: TokenContract.abi,
-			args: [recipient?.address, recipient?.amount],
+			args: [recipient?.address, amount],
 			functionName: "transfer",
 		});
 

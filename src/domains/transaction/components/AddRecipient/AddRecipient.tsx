@@ -345,10 +345,17 @@ export const AddRecipient = ({
 									tokens={tokens.map((token) => ({
 										label: token.token().name(),
 										value: token.token().address(),
+										decimals: token.token().decimals()
 									}))}
 									onChange={(tokenAddress) => {
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 										onTokenChange?.(token);
+
+										setValue("tokenContractDecimals", token?.token().decimals(), {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
+
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
 											shouldValidate: true,

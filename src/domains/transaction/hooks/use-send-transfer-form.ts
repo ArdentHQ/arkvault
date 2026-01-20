@@ -172,6 +172,7 @@ export const useSendTransferForm = ({
 
 		if (isTokenTransfer) {
 			register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
+			register("tokenContractDecimals");
 		}
 
 		if (networks.length === 1) {
