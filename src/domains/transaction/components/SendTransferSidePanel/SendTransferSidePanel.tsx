@@ -61,7 +61,7 @@ export const SendTransferSidePanel = ({
 	const { env } = useEnvironmentContext();
 
 	const [mounted, setMounted] = useState(false);
-	const [selectedToken, setSelectedToken] = useState<WalletToken | undefined>(undefined)
+	const [selectedToken, setSelectedToken] = useState<WalletToken | undefined>(undefined);
 	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
 		active: mounted,
 	});
@@ -216,7 +216,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === firstTabIndex) {
-			setSelectedToken(undefined)
+			setSelectedToken(undefined);
 			onOpenChange(false);
 			return;
 		}
@@ -525,7 +525,12 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader selectedToken={selectedToken} />
+							<ReviewStep
+								wallet={wallet!}
+								network={activeNetwork}
+								hideHeader
+								selectedToken={selectedToken}
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
@@ -556,7 +561,7 @@ export const SendTransferSidePanel = ({
 								onClose={() => {
 									assertWallet(wallet);
 									onOpenChange(false);
-									setSelectedToken(undefined)
+									setSelectedToken(undefined);
 								}}
 								isBackDisabled={isSubmitting}
 								onBack={() => {

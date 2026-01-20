@@ -15,7 +15,6 @@ import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
-import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 export const useSendTransferForm = ({
@@ -27,7 +26,7 @@ export const useSendTransferForm = ({
 	wallet?: Contracts.IReadWriteWallet;
 	isTokenTransfer?: boolean;
 	tokenContractAddress?: string;
-	tokens?: WalletToken[]
+	tokens?: WalletToken[];
 }) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
