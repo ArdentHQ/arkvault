@@ -99,7 +99,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ isTokenTransfer, tokenContractAddress, wallet, selectedToken });
+	} = useSendTransferForm({ isTokenTransfer, selectedToken, tokenContractAddress, wallet });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -442,7 +442,7 @@ export const SendTransferSidePanel = ({
 	);
 
 	const isLastStep = activeTab === SendTransferStep.SummaryStep;
-	console.log({ selectedToken })
+	console.log({ selectedToken });
 
 	return (
 		<SidePanel

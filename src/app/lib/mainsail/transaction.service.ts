@@ -101,8 +101,8 @@ export class TransactionService {
 		this.#assertAmount(input);
 
 		const nonce = await this.#generateNonce(input);
-		const value = BigNumber.make(input.data.amount, input.tokenContractDecimals).toSatoshi()
-		console.log({ value: value.toNumber(), decimals: input.tokenContractDecimals })
+		const value = BigNumber.make(input.data.amount, input.tokenContractDecimals).toSatoshi();
+		console.log({ decimals: input.tokenContractDecimals, value: value.toNumber() });
 
 		const builder = await EvmCallBuilder.new({
 			senderPublicKey: input.signatory.address(),

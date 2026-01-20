@@ -120,14 +120,14 @@ export const useSendTransferForm = ({
 
 			setLastEstimatedExpiration(data.expiration);
 
-			console.log({ selectedToken })
+			console.log({ selectedToken });
 			const transactionInput: Services.TransactionInputs = {
 				data,
 				gasLimit,
 				gasPrice,
 				signatory,
 				tokenContractAddress,
-				tokenContractDecimals: selectedToken?.token().decimals() ?? 0
+				tokenContractDecimals: selectedToken?.token().decimals() ?? 0,
 			};
 
 			const abortSignal = abortReference.current.signal;
