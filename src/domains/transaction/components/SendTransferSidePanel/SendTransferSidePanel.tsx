@@ -41,6 +41,7 @@ import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { Image } from "@/app/components/Image";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 const MAX_TABS = 5;
 
@@ -60,6 +61,7 @@ export const SendTransferSidePanel = ({
 	const { env } = useEnvironmentContext();
 
 	const [mounted, setMounted] = useState(false);
+	const [selectedToken, setSelectedToken] = useState<WalletToken | undefined>(undefined)
 	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
 		active: mounted,
 	});
@@ -214,6 +216,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === firstTabIndex) {
+			setSelectedToken(undefined)
 			onOpenChange(false);
 			return;
 		}
@@ -516,12 +519,13 @@ export const SendTransferSidePanel = ({
 								onChange={({ sender }) => {
 									setWallet(sender);
 								}}
+								onTokenChange={setSelectedToken}
 								hideHeader
 							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
+							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader selectedToken={selectedToken} />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
@@ -552,6 +556,7 @@ export const SendTransferSidePanel = ({
 								onClose={() => {
 									assertWallet(wallet);
 									onOpenChange(false);
+									setSelectedToken(undefined)
 								}}
 								isBackDisabled={isSubmitting}
 								onBack={() => {

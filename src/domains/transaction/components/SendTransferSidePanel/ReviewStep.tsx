@@ -25,13 +25,13 @@ interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
 	hideHeader?: boolean;
-	token?: WalletToken;
+	selectedToken?: WalletToken;
 }
 
 // This is to prevent Insufficient balance error when sending all
 const DUST_AMOUNT = 0.00015;
 
-export const ReviewStep = ({ wallet, network, hideHeader = false, token }: ReviewStepProperties) => {
+export const ReviewStep = ({ wallet, network, hideHeader = false, selectedToken }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
@@ -47,7 +47,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false, token }: Revie
 		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
 
-	const ticker = token ? token.token().symbol() : wallet.currency();
+	const ticker = selectedToken ? selectedToken.token().symbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
