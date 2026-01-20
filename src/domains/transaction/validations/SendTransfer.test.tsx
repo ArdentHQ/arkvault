@@ -129,4 +129,11 @@ describe("Send transfer validations", () => {
 			expect(required).toBe(t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.SENDER_ADDRESS") }));
 		});
 	});
+
+	describe("Token", () => {
+		it("should return required validation", () => {
+			const { required } = sendTransfer(t).tokenContractAddress();
+			expect(required).toBe(t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.ASSET") }));
+		});
+	});
 });

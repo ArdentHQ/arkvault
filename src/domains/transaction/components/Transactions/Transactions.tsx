@@ -266,7 +266,7 @@ export const Transactions = memo(function Transactions({
 					isLoading={isLoadingTransactions}
 					skeletonRowsLimit={8}
 					onRowClick={(transaction) => {
-						if (currentOpenedPanel === Panel.TransactionDetails) {
+						if (currentOpenedPanel?.name === Panel.TransactionDetails) {
 							setIsMinimized(false);
 						} else {
 							openPanel(Panel.TransactionDetails);
@@ -306,7 +306,7 @@ export const Transactions = memo(function Transactions({
 					</>
 				)}
 
-				{transactionModalItem && currentOpenedPanel === Panel.TransactionDetails && (
+				{transactionModalItem && currentOpenedPanel?.name === Panel.TransactionDetails && (
 					<TransactionDetailSidePanel
 						isOpen={!!transactionModalItem}
 						transactionItem={transactionModalItem}

@@ -15,6 +15,7 @@ import { twMerge } from "tailwind-merge";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
@@ -33,6 +34,7 @@ export const FormStep = ({
 	deeplinkProps,
 	onScan,
 	onChange,
+	onTokenChange,
 	// @TODO: always hide header once the side panel is fully implemented
 	hideHeader = false,
 	isTokenTransfer,
@@ -43,6 +45,7 @@ export const FormStep = ({
 	deeplinkProps: Record<string, string>;
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
+	onTokenChange?: (token?: WalletToken) => void;
 	hideHeader?: boolean;
 	isTokenTransfer?: boolean;
 }) => {
@@ -174,6 +177,7 @@ export const FormStep = ({
 						recipients={getRecipients()}
 						showMultiPaymentOption={network.allows(Enums.FeatureFlag.TransactionMultiPayment)}
 						wallet={senderWallet}
+						onTokenChange={onTokenChange}
 					/>
 				</div>
 			</div>

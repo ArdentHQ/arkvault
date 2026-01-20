@@ -7,6 +7,7 @@ import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailSidePanel";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -28,6 +29,9 @@ export const TransactionSuccessful = ({
 	});
 
 	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.SUCCESS.CREATED");
+
+	const { tokens } = useProfileTokens({ profile: senderWallet.profile() });
+	const token = tokens.find((token) => token.token().address() === transaction.to());
 
 	return (
 		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>
@@ -54,6 +58,7 @@ export const TransactionSuccessful = ({
 				})}
 			>
 				<TransactionDetailContent
+					token={token}
 					transactionItem={confirmedTransaction ?? transaction}
 					profile={senderWallet.profile()}
 					isConfirmed={isConfirmed}

@@ -17,7 +17,10 @@ export const Portfolio = () => {
 		<>
 			{profile.wallets().selected().length > 0 && (
 				<Dashboard
-					hasFocus={currentOpenedPanel !== Panel.CreateAddress && currentOpenedPanel !== Panel.ImportAddress}
+					hasFocus={
+						currentOpenedPanel?.name !== Panel.CreateAddress &&
+						currentOpenedPanel?.name !== Panel.ImportAddress
+					}
 				/>
 			)}
 

@@ -9,12 +9,15 @@ import { useTranslation } from "react-i18next";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
 	labelClassName?: string;
 	profile?: Contracts.IProfile;
 	allowHideBalance?: boolean;
+	token?: WalletToken;
 }
 export const TransactionSummary = ({
 	transaction,
@@ -22,6 +25,7 @@ export const TransactionSummary = ({
 	labelClassName,
 	profile,
 	allowHideBalance = false,
+	token,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
@@ -51,6 +55,7 @@ export const TransactionSummary = ({
 						</DetailLabelText>
 
 						<TransactionAmountLabel
+							token={token}
 							transaction={transaction}
 							profile={profile}
 							allowHideBalance={allowHideBalance}

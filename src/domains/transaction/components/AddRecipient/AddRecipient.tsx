@@ -58,6 +58,7 @@ export const AddRecipient = ({
 	showMultiPaymentOption = true,
 	wallet,
 	isTokenTransfer,
+	onTokenChange,
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
@@ -75,7 +76,15 @@ export const AddRecipient = ({
 		clearErrors,
 		formState: { errors },
 	} = useFormContext();
-	const { network, senderAddress, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
+	const {
+		network,
+		senderAddress,
+		recipientAddress,
+		amount,
+		recipientAlias,
+		isSendAllSelected,
+		tokenContractAddress,
+	} = watch();
 	const { sendTransfer } = useValidation();
 
 	const ticker = network?.ticker();
@@ -327,7 +336,32 @@ export const AddRecipient = ({
 								<FormLabel>
 									<div>{t("COMMON.ASSET")}</div>
 								</FormLabel>
-								<SelectToken tokens={tokens.map((token) => ({ name: token.token().name() }))} />
+								<SelectToken
+									defaultTokenValue={
+										(tokenContractAddress ?? tokens.length === 1)
+											? tokens[0]?.token().address()
+											: undefined
+									}
+									tokens={tokens.map((token) => ({
+										decimals: token.token().decimals(),
+										label: token.token().name(),
+										value: token.token().address(),
+									}))}
+									onChange={(tokenAddress) => {
+										const token = tokens.find((token) => token.token().address() === tokenAddress);
+										onTokenChange?.(token);
+
+										setValue("tokenContractDecimals", token?.token().decimals(), {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
+
+										setValue("tokenContractAddress", tokenAddress, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
+									}}
+								/>
 							</div>
 						</FormField>
 					)}
@@ -400,8 +434,20 @@ export const AddRecipient = ({
 							{isTokenTransfer && !isLoading && (
 								<div className="hidden w-full sm:block sm:max-w-44">
 									<SelectToken
-										tokens={tokens.map((token) => ({ name: token.token().name() }))}
+										defaultTokenValue={
+											tokens.length === 1 ? tokens[0].token().address() : undefined
+										}
+										tokens={tokens.map((token) => ({
+											label: token.token().name(),
+											value: token.token().address(),
+										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
+										onChange={(tokenAddress) => {
+											setValue("tokenContractAddress", tokenAddress, {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
+										}}
 									/>
 								</div>
 							)}

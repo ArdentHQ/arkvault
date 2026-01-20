@@ -37,6 +37,8 @@ export interface TransferInput extends TransactionInput {
 		memo?: string;
 		expiration?: number;
 	};
+	tokenContractAddress?: string;
+	tokenContractDecimals?: number;
 }
 
 export interface SecondSignatureInput extends TransactionInput {

@@ -71,7 +71,7 @@ export const TokensTable = ({
 		wallets,
 	});
 
-	const { handleSend } = useWalletActions({ wallets });
+	const { handleTokenSend } = useWalletActions({ wallets });
 
 	const { t } = useTranslation();
 
@@ -162,12 +162,12 @@ export const TokensTable = ({
 				onDelete={setRemoveToken}
 				toggleContractVisibility={toggleContractVisibility}
 				isHidden={!showSkeleton && hiddenContractAddresses.includes(row.token().address())}
-				onSend={() => handleSend()}
+				onSend={() => handleTokenSend({ tokenContractAddress: row.token().address() })}
 				walletToken={row}
 				profile={activeProfile}
 			/>
 		),
-		[showSkeleton, onClick, handleSend, activeProfile, isManageMode, hiddenContractAddresses.length],
+		[showSkeleton, onClick, handleTokenSend, activeProfile, isManageMode, hiddenContractAddresses.length],
 	);
 
 	const shouldRenderTable = wallets.length === 1 && ((isXs && (tokens.length > 0 || showSkeleton)) || isSmAndAbove);

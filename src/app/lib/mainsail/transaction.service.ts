@@ -12,6 +12,7 @@ import {
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
+	ContractAbiType,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
 
@@ -91,6 +92,33 @@ export class TransactionService {
 
 		return new SignedTransactionData().configure(
 			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public async tokenTransfer(input: Services.TransferInput): Promise<SignedTransactionData> {
+		this.#assertGasFee(input);
+		this.#assertAmount(input);
+
+		const nonce = await this.#generateNonce(input);
+		const value = BigNumber.make(input.data.amount, input.tokenContractDecimals).toSatoshi();
+		console.log({ decimals: input.tokenContractDecimals, value: value.toNumber() });
+
+		const builder = await EvmCallBuilder.new({
+			senderPublicKey: input.signatory.address(),
+		})
+			.to(input.tokenContractAddress)
+			.payload(
+				new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, value.toBigInt()]),
+			)
+			.nonce(nonce)
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
+			.gasLimit(input.gasLimit.toString());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			{ ...builder.transaction.data, value: value.toNumber() },
 			builder.transaction.serialize().toString("hex"),
 		);
 	}

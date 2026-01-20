@@ -15,8 +15,21 @@ import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
-export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
+export const useSendTransferForm = ({
+	wallet,
+	isTokenTransfer,
+	tokenContractAddress,
+	tokens,
+	selectedToken,
+}: {
+	wallet?: Contracts.IReadWriteWallet;
+	isTokenTransfer?: boolean;
+	tokenContractAddress?: string;
+	tokens?: WalletToken[];
+	selectedToken?: WalletToken;
+}) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
@@ -41,10 +54,13 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			recipients: [],
 			remainingBalance: wallet?.balance(),
 			senderAddress: undefined,
+			tokenContractAddress,
+			tokens,
 		}),
 
 		[],
 	);
+
 	const form = useForm<SendTransferForm>({
 		defaultValues: formDefaultValues,
 		mode: "onChange",
@@ -85,6 +101,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 				gasLimit,
 				gasPrice,
+				tokenContractAddress,
 			} = getValues();
 
 			const signatory = await wallet.signatoryFactory().make({
@@ -103,12 +120,20 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			setLastEstimatedExpiration(data.expiration);
 
-			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
+			console.log({ selectedToken });
+			const transactionInput: Services.TransactionInputs = {
+				data,
+				gasLimit,
+				gasPrice,
+				signatory,
+				tokenContractAddress,
+				tokenContractDecimals: selectedToken?.token().decimals() ?? 0,
+			};
 
 			const abortSignal = abortReference.current.signal;
 
 			const { uuid, transaction } = await transactionBuilder.build(
-				getTransferType({ recipients }),
+				getTransferType({ recipients, tokenContractAddress }),
 				transactionInput,
 				wallet,
 				{
@@ -124,7 +149,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return transaction;
 		},
-		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, selectedToken],
 	);
 
 	const walletBalance = wallet?.balance();
@@ -132,6 +157,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("remainingBalance");
 		register("network", sendTransferValidation.network());
 		register("recipients", sendTransferValidation.recipients());
+		register("senderAddress", sendTransferValidation.senderAddress());
 		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
 		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet?.network()));
@@ -143,6 +169,11 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("inputFeeSettings");
 
 		register("suppressWarning");
+
+		if (isTokenTransfer) {
+			register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
+			register("tokenContractDecimals");
+		}
 
 		if (networks.length === 1) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });

@@ -1,7 +1,9 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Exceptions, Networks } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
 import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
+import { TokenContract } from "@arkecosystem/typescript-crypto";
 import { encodeFunctionData, EncodeFunctionDataReturnType, Hex, numberToHex } from "viem";
 import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
 
@@ -32,6 +34,8 @@ export interface EncodeInputData {
 	username?: string;
 	validatorPublicKey?: string;
 	voteAddresses?: string[];
+	tokenContractAddress?: string;
+	tokenContractDecimals?: number;
 }
 
 interface EncodedData {
@@ -153,6 +157,22 @@ export class TransactionEncoder {
 		};
 	}
 
+	public tokenTransfer(tokenContractAddress: string, inputData: EncodeInputData): EncodedData {
+		const recipient = inputData.recipients?.at(0);
+		const amount = BigNumber.make(recipient?.amount ?? 0, inputData.tokenContractDecimals).toSatoshi();
+
+		const data = encodeFunctionData({
+			abi: TokenContract.abi,
+			args: [recipient?.address, amount],
+			functionName: "transfer",
+		});
+
+		return {
+			data,
+			to: tokenContractAddress,
+		};
+	}
+
 	public vote(voteAddresses: string[]): EncodedData {
 		const vote = voteAddresses.at(0);
 		const isVote = !!vote;
@@ -170,6 +190,10 @@ export class TransactionEncoder {
 	}
 
 	byType(inputData: EncodeInputData, type: EncodeTransactionType): EncodedData {
+		if (type === "transfer" && !!inputData.tokenContractAddress) {
+			return this.tokenTransfer(inputData.tokenContractAddress, inputData);
+		}
+
 		if (type === "transfer" && inputData.recipientAddress) {
 			return this.transfer(inputData.recipientAddress);
 		}

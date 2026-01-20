@@ -7,6 +7,9 @@ import { BigNumber } from "@/app/lib/helpers";
 import { AddRecipient } from "./AddRecipient";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 import CryptoConfigurationFixture from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
 
@@ -66,6 +69,18 @@ describe("AddRecipient", () => {
 			.wallets()
 			.findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
 		network = wallet.network();
+
+		const fixtureData = Fixtures.ByContractAddress.data;
+		const walletTokenData = Fixtures.ByWalletAddress.data[0];
+
+		profile
+			.wallets()
+			.first()
+			.tokens()
+			.create({
+				token: new TokenDTO(fixtureData),
+				walletToken: new WalletTokenDTO(walletTokenData),
+			});
 	});
 
 	const Component = () => {
@@ -95,13 +110,6 @@ describe("AddRecipient", () => {
 	});
 
 	it("should render with assets field", async () => {
-		const token = { token: () => ({ name: () => "test" }) };
-		const selectedMock = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
-			items() {
-				return [token];
-			},
-		});
-
 		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} isTokenTransfer />,
 		);
@@ -111,7 +119,6 @@ describe("AddRecipient", () => {
 		});
 
 		expect(container).toMatchSnapshot();
-		selectedMock.mockRestore();
 	});
 
 	it("should render with empty array of recipients as default", async () => {

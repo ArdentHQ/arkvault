@@ -47,18 +47,20 @@ export const Tokens = () => {
 				className="mt-0 pt-0 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 				innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 			>
-				<TokenHeader
-					isLoading={isLoading}
-					profile={activeProfile}
-					onOpenAddressSidepanel={() => {
-						if (isManageMode) {
-							setShowConfirmModal(true);
-						} else {
-							openPanel(Panel.Addresses);
-						}
-					}}
-					onReload={reload}
-				/>
+				{activeProfile.wallets().selected().length > 0 && (
+					<TokenHeader
+						isLoading={isLoading}
+						profile={activeProfile}
+						onOpenAddressSidepanel={() => {
+							if (isManageMode) {
+								setShowConfirmModal(true);
+							} else {
+								openPanel(Panel.Addresses);
+							}
+						}}
+						onReload={reload}
+					/>
+				)}
 			</Section>
 
 			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab} disabled={isManageMode}>

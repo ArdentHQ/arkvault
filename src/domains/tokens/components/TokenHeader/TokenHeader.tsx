@@ -210,7 +210,7 @@ export const TokenHeader = ({
 												className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim-hover:bg-theme-dim-navy-700 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
 												disabled={profile.totalBalance().isZero()}
 												variant="primary"
-												onClick={handleTokenSend}
+												onClick={() => handleTokenSend()}
 											>
 												{t("COMMON.SEND")}
 											</Button>
