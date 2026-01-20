@@ -101,7 +101,9 @@ export class TransactionService {
 		this.#assertAmount(input);
 
 		const nonce = await this.#generateNonce(input);
-		const value = UnitConverter.parseUnits(input.data.amount, "gwei");
+		const value = BigNumber.make(input.data.amount, input.tokenContractDecimals).toSatoshi()
+		console.log({ value: value.toNumber(), decimals: input.tokenContractDecimals })
+
 		const builder = await EvmCallBuilder.new({
 			senderPublicKey: input.signatory.address(),
 		})
@@ -116,7 +118,7 @@ export class TransactionService {
 		await this.#sign(input, builder);
 
 		return new SignedTransactionData().configure(
-			{ ...builder.transaction.data, value: UnitConverter.parseUnits(input.data.amount, "ark") },
+			{ ...builder.transaction.data, value: value.toNumber() },
 			builder.transaction.serialize().toString("hex"),
 		);
 	}

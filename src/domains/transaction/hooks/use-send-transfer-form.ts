@@ -22,11 +22,13 @@ export const useSendTransferForm = ({
 	isTokenTransfer,
 	tokenContractAddress,
 	tokens,
+	selectedToken,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
 	isTokenTransfer?: boolean;
 	tokenContractAddress?: string;
 	tokens?: WalletToken[];
+	selectedToken?: WalletToken;
 }) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
@@ -118,12 +120,14 @@ export const useSendTransferForm = ({
 
 			setLastEstimatedExpiration(data.expiration);
 
+			console.log({ selectedToken })
 			const transactionInput: Services.TransactionInputs = {
 				data,
 				gasLimit,
 				gasPrice,
 				signatory,
 				tokenContractAddress,
+				tokenContractDecimals: selectedToken?.token().decimals() ?? 0
 			};
 
 			const abortSignal = abortReference.current.signal;
@@ -145,7 +149,7 @@ export const useSendTransferForm = ({
 
 			return transaction;
 		},
-		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, selectedToken],
 	);
 
 	const walletBalance = wallet?.balance();
