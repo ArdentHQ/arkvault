@@ -116,7 +116,7 @@ export class TransactionService {
 		await this.#sign(input, builder);
 
 		return new SignedTransactionData().configure(
-			builder.transaction.data,
+			{ ...builder.transaction.data, value: UnitConverter.parseUnits(input.data.amount, "ark") },
 			builder.transaction.serialize().toString("hex"),
 		);
 	}
