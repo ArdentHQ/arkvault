@@ -109,7 +109,7 @@ export class TransactionService {
 		})
 			.to(input.tokenContractAddress)
 			.payload(
-				new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, value.toNumber()]),
+				new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, value.toBigInt()]),
 			)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
