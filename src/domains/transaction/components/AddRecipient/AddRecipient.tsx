@@ -343,9 +343,9 @@ export const AddRecipient = ({
 											: undefined
 									}
 									tokens={tokens.map((token) => ({
+										decimals: token.token().decimals(),
 										label: token.token().name(),
 										value: token.token().address(),
-										decimals: token.token().decimals()
 									}))}
 									onChange={(tokenAddress) => {
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
