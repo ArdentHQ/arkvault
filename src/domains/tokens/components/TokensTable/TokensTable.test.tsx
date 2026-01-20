@@ -28,7 +28,7 @@ describe("TokensTable", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = render(<TokensTable />, {
+		const { asFragment } = render(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, {
 			route,
 		});
 
@@ -37,7 +37,11 @@ describe("TokensTable", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s", (breakpoint) => {
-		const { asFragment } = renderResponsiveWithRoute(<TokensTable />, breakpoint as LayoutBreakpoint, { route });
+		const { asFragment } = renderResponsiveWithRoute(
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
+			breakpoint as LayoutBreakpoint,
+			{ route },
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -54,7 +58,11 @@ describe("TokensTable", () => {
 				walletToken: new WalletTokenDTO(walletTokenData),
 			});
 
-		const { asFragment } = renderResponsiveWithRoute(<TokensTable />, breakpoint as LayoutBreakpoint, { route });
+		const { asFragment } = renderResponsiveWithRoute(
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
+			breakpoint as LayoutBreakpoint,
+			{ route },
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -62,7 +70,7 @@ describe("TokensTable", () => {
 		const user = userEvent.setup();
 		const onClickMock = vi.fn();
 
-		render(<TokensTable onClick={onClickMock} />, { route });
+		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} onClick={onClickMock} />, { route });
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
@@ -82,7 +90,7 @@ describe("TokensTable", () => {
 			handleSend: handleSendMock,
 		});
 
-		render(<TokensTable />, { route });
+		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, { route });
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
@@ -95,7 +103,7 @@ describe("TokensTable", () => {
 	});
 
 	it("should toggle hide dust tokens", async () => {
-		render(<TokensTable />, {
+		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, {
 			route,
 		});
 
@@ -106,8 +114,10 @@ describe("TokensTable", () => {
 		expect(screen.getAllByTestId("HideDustTokens")[0]).toBeEnabled();
 	});
 
-	it("should toggle manage actions when Save button is clicked", async () => {
-		render(<TokensTable />, {
+	it("should call setManageMode when Manage button is clicked", async () => {
+		const setManageModeMock = vi.fn();
+
+		render(<TokensTable isManageMode={false} setManageMode={setManageModeMock} />, {
 			route,
 		});
 
@@ -115,6 +125,16 @@ describe("TokensTable", () => {
 
 		// switch to manage mode
 		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
+
+		expect(setManageModeMock).toHaveBeenCalledWith(true);
+	});
+
+	it("should call setManageMode when Save button is clicked", async () => {
+		const setManageModeMock = vi.fn();
+
+		render(<TokensTable isManageMode={true} setManageMode={setManageModeMock} />, {
+			route,
+		});
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
@@ -124,21 +144,15 @@ describe("TokensTable", () => {
 
 		await userEvent.click(screen.getAllByTestId("TokensTable_Save")[0]);
 
-		expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
-
-		expect(screen.queryByTestId("TokensTable_Cancel")).not.toBeInTheDocument();
-		expect(screen.queryByTestId("TokensTable_Save")).not.toBeInTheDocument();
+		expect(setManageModeMock).toHaveBeenCalledWith(false);
 	});
 
-	it("should toggle manage actions when Cancel button is clicked", async () => {
-		render(<TokensTable />, {
+	it("should call setManageModel when Cancel button is clicked", async () => {
+		const setManageModeMock = vi.fn();
+
+		render(<TokensTable isManageMode={true} setManageMode={setManageModeMock} />, {
 			route,
 		});
-
-		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
-
-		// switch to manage mode
-		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
@@ -148,26 +162,21 @@ describe("TokensTable", () => {
 
 		await userEvent.click(screen.getAllByTestId("TokensTable_Cancel")[0]);
 
-		expect(screen.getAllByTestId("TokensTable_Manage")[0]).toBeInTheDocument();
-
-		expect(screen.queryByTestId("TokensTable_Cancel")).not.toBeInTheDocument();
-		expect(screen.queryByTestId("TokensTable_Save")).not.toBeInTheDocument();
+		expect(setManageModeMock).toHaveBeenCalledWith(false);
 	});
 
 	it("should show toggle row visibility", async () => {
-		render(<TokensTable />, {
+		render(<TokensTable isManageMode={true} setManageMode={vi.fn()} />, {
 			route,
 		});
-
-		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
-
-		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
 		const getCheckbox = () => screen.getByTestId("TokenRow_VisibilityToggle");
 
-		expect(getCheckbox()).toBeChecked();
+		await waitFor(() => {
+			expect(getCheckbox()).toBeChecked();
+		});
 
 		await userEvent.click(getCheckbox());
 
@@ -179,19 +188,16 @@ describe("TokensTable", () => {
 	});
 
 	it("should open delete token confirmation modal when delete button is clicked", async () => {
-		render(<TokensTable />, {
+		render(<TokensTable isManageMode={true} setManageMode={vi.fn()} />, {
 			route,
 		});
-
-		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
-
-		// Switch to manage mode
-		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
 		// Verify modal is not visible initially
 		expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
+
+		await expect(screen.findByTestId("TokenRow_DeleteToken")).resolves.toBeVisible();
 
 		// Click delete button to open modal
 		const deleteButton = screen.getByTestId("TokenRow_DeleteToken");
@@ -202,16 +208,13 @@ describe("TokensTable", () => {
 	});
 
 	it("should close delete token confirmation modal when onClose is called", async () => {
-		render(<TokensTable />, {
+		render(<TokensTable isManageMode={true} setManageMode={vi.fn()} />, {
 			route,
 		});
 
-		await expect(screen.findAllByTestId("TokensTable_Manage")).resolves.toHaveLength(2);
-
-		// Switch to manage mode
-		await userEvent.click(screen.getAllByTestId("TokensTable_Manage")[0]);
-
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		await expect(screen.findByTestId("TokenRow_DeleteToken")).resolves.toBeVisible();
 
 		// Click delete button to open modal
 		const deleteButton = screen.getByTestId("TokenRow_DeleteToken");

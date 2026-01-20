@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Page, Section } from "@/app/components/Layout";
@@ -14,6 +14,7 @@ import { Panel, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
@@ -23,6 +24,9 @@ export const Tokens = () => {
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
 	const { reload, isLoading } = useProfileTokens({ profile: activeProfile });
+
+	const [isManageMode, setManageMode] = useState<boolean>(false);
+	const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false);
 
 	return (
 		<Page pageTitle={t("COMMON.PORTFOLIO")}>
@@ -47,13 +51,17 @@ export const Tokens = () => {
 					isLoading={isLoading}
 					profile={activeProfile}
 					onOpenAddressSidepanel={() => {
-						openPanel(Panel.Addresses);
+						if (isManageMode) {
+							setShowConfirmModal(true);
+						} else {
+							openPanel(Panel.Addresses);
+						}
 					}}
 					onReload={reload}
 				/>
 			</Section>
 
-			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab}>
+			<Tabs className="md:hidden" activeId={activeTab} onChange={setActiveTab} disabled={isManageMode}>
 				<TabScroll>
 					<TabList className="pb-2">
 						<Tab tabId="tokens">
@@ -67,7 +75,7 @@ export const Tokens = () => {
 			</Tabs>
 
 			<Section className="hidden pt-2! pb-3 md:block">
-				<Tabs activeId={activeTab} onChange={setActiveTab}>
+				<Tabs activeId={activeTab} onChange={setActiveTab} disabled={isManageMode}>
 					<TabList className="h-10">
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
@@ -85,7 +93,27 @@ export const Tokens = () => {
 				</Section>
 			)}
 
-			{activeTab === "tokens" && <TokensTable onClick={(walletToken) => setTokenModelItem(walletToken)} />}
+			{activeTab === "tokens" && (
+				<TokensTable
+					isManageMode={isManageMode}
+					setManageMode={setManageMode}
+					onClick={(walletToken) => setTokenModelItem(walletToken)}
+				/>
+			)}
+
+			<ConfirmationModal
+				size="2xl"
+				description={t("TOKENS.CONFIRMATION_MESSAGE")}
+				isOpen={showConfirmModal}
+				onConfirm={() => {
+					openPanel(Panel.Addresses);
+					setShowConfirmModal(false);
+					setManageMode(false);
+				}}
+				onCancel={() => {
+					setShowConfirmModal(false);
+				}}
+			/>
 
 			{tokenModalItem && (
 				<TokenDetailSidepanel

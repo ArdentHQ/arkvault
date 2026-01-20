@@ -71,77 +71,95 @@ exports[`Confirmation Modal > should render with custom title and description 1`
             class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <svg
-              class="m-auto my-8 w-3/5"
-              fill="none"
-              height="163"
-              viewBox="0 0 303 163"
-              width="303"
+              class="m-auto mb-6 max-w-52"
+              viewBox="0 0 207 106"
+              xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g
-                clip-path="url(#clip0_8144_152326)"
-              >
-                <path
-                  d="M122.219 55.996L174.67 4.62a10 10 0 0 1 14.142 0l60.148 60.148a10.001 10.001 0 0 1 0 14.142l-60.148 60.149a9.999 9.999 0 0 1-14.142 0l-35.451-35.063c-3.905-3.9 1.095-8.9 5-5l30.319 29.35a9.997 9.997 0 0 0 14.142 0l49.569-49.569a10.002 10.002 0 0 0 0-14.142L188.68 15.066a10.001 10.001 0 0 0-14.142 0l-50.569 49.57-1.75-8.64z"
-                  stroke="#DF5E4C"
-                  stroke-width="2"
-                />
-                <path
-                  d="M72.274 124.997h-4.055a6.002 6.002 0 0 0-6 6v5a6 6 0 0 0 6 6h78a6 6 0 0 0 6-6v-5a6 6 0 0 0-6-6H82.245c-4.95 0-5.656-2.919-4.626-7.229 1.03-4.31 15.3-56.956 17.6-66.77 3.659-15.585 23.048-14.65 26 1 2.952 15.65 16 66.999 16 66.999"
-                  stroke="#212225"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                />
-                <path
-                  d="M126.219 107.998h-38a2.192 2.192 0 0 1-1.794-.971 2.18 2.18 0 0 1-.206-2.029c.559-1.861 1.784-6.09 2-7a2.91 2.91 0 0 1 3-2h33c1.318 0 1.856 1.547 2 2 .255.8 1.664 5.386 2 7 .336 1.614-.214 3-2 3zm-7-28h-23a2.18 2.18 0 0 1-2-3c.559-1.861 1.784-6.09 2-7a2.91 2.91 0 0 1 3-2h18c1.318 0 1.856 1.547 2 2a67.45 67.45 0 0 1 2 7c.189 1.59-.214 3-2 3z"
-                  stroke="#DDE0E6"
-                  stroke-width="2"
-                />
-                <path
-                  d="M274.219 162.383v-19h-38v19h-2v-19h-28v-2h28v-16h2v16h38v-39h-4v-2h4v-38h-4v-2h4v-23h2v23h6v2h-6v38h26v2h-26v39h26v2h-26v19h-2zm-19-56v-4h-4v-2h4v-4h2v4h4v2h-4v4h-2zm19-79v-4h-4v-2h4v-4h2v4h4v2h-4v4h-2zM28 17.383v19h38v-19h2v19h17v2H68v39h-2v-39H28v39h4v2h-4v38h4v2h-4v23h-2v-23h-6v-2h6v-38H0v-2h26v-39H0v-2h26v-19h2zm19 56v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2zm-19 79v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2z"
-                  fill="#DBDEE5"
-                />
-                <path
-                  d="M116.102 141.996h48.266m-123.266 0h48.266"
-                  stroke="#212225"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                />
-                <path
-                  d="M189.219 47.816a8 8 0 0 0-16 0v24a8 8 0 0 0 16 0v-24z"
-                  fill="#FFE7E2"
-                />
-                <path
-                  d="M188.219 47.816a7 7 0 1 0-14 0v24a7 7 0 1 0 14 0v-24z"
-                  stroke="#DF5E4C"
-                  stroke-width="2"
-                />
-                <path
-                  d="M189.219 91.816a8 8 0 1 0-16 0 8 8 0 0 0 16 0z"
-                  fill="#FFE7E2"
-                />
-                <path
-                  d="M188.219 91.816a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
-                  stroke="#DF5E4C"
-                  stroke-width="2"
-                />
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_8144_152326"
-                >
-                  <path
-                    d="M0 0h302.219v161.693H0z"
-                    fill="#fff"
-                    transform="translate(0 .691)"
-                  />
-                </clippath>
-              </defs>
+              <path
+                d="M131.5 68.9l11.6-11.6c2.4-2.4 2.4-6.2 0-8.6l-35.3-35.3c-2.4-2.4-6.2-2.4-8.6 0L63.9 48.7c-2.4 2.4-2.4 6.2 0 8.6l35.3 35.3c2.4 2.4 6.2 2.4 8.6 0l12.4-12.4m6.7-6.8l-2.7 2.7"
+                fill="none"
+                stroke="#FC9F0F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M89.5 16.7l7.6-7.6c3.5-3.5 9.3-3.5 12.8 0l37.4 37.4c3.5 3.5 3.5 9.3 0 12.8l-37.4 37.4c-3.5 3.5-9.3 3.5-12.8 0L59.7 59.4c-3.5-3.5-3.5-9.3 0-12.8L73.3 33m13.2-13.2l-9.8 9.8"
+                fill="none"
+                stroke="#FC9F0F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M100.5 40.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6v13.9c0 2-1.6 3.6-3.6 3.6s-3.6-1.6-3.6-3.6V40.4zm0 25.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6z"
+                fill="#F7FAFB"
+                stroke="#212225"
+                stroke-width="2"
+              />
+              <path
+                d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7z"
+                fill="#DBDEE5"
+              />
+              <path
+                d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm103.8 0h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm-43 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm66 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-66h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7V8h7V1h2v7h7v2h-7v7z"
+                fill="#DBDEE5"
+              />
             </svg>
             <div
-              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
+              class="flex flex-col overflow-hidden rounded-xl mb-2"
             >
-              My Description
+              <div
+                class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+              >
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <span>
+                  Warning
+                </span>
+              </div>
+              <div
+                class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+              >
+                My Description
+              </div>
             </div>
             <div
               class="modal-footer"
@@ -255,77 +273,95 @@ exports[`Confirmation Modal > should render with default title and description 1
             class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <svg
-              class="m-auto my-8 w-3/5"
-              fill="none"
-              height="163"
-              viewBox="0 0 303 163"
-              width="303"
+              class="m-auto mb-6 max-w-52"
+              viewBox="0 0 207 106"
+              xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g
-                clip-path="url(#clip0_8144_152326)"
-              >
-                <path
-                  d="M122.219 55.996L174.67 4.62a10 10 0 0 1 14.142 0l60.148 60.148a10.001 10.001 0 0 1 0 14.142l-60.148 60.149a9.999 9.999 0 0 1-14.142 0l-35.451-35.063c-3.905-3.9 1.095-8.9 5-5l30.319 29.35a9.997 9.997 0 0 0 14.142 0l49.569-49.569a10.002 10.002 0 0 0 0-14.142L188.68 15.066a10.001 10.001 0 0 0-14.142 0l-50.569 49.57-1.75-8.64z"
-                  stroke="#DF5E4C"
-                  stroke-width="2"
-                />
-                <path
-                  d="M72.274 124.997h-4.055a6.002 6.002 0 0 0-6 6v5a6 6 0 0 0 6 6h78a6 6 0 0 0 6-6v-5a6 6 0 0 0-6-6H82.245c-4.95 0-5.656-2.919-4.626-7.229 1.03-4.31 15.3-56.956 17.6-66.77 3.659-15.585 23.048-14.65 26 1 2.952 15.65 16 66.999 16 66.999"
-                  stroke="#212225"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                />
-                <path
-                  d="M126.219 107.998h-38a2.192 2.192 0 0 1-1.794-.971 2.18 2.18 0 0 1-.206-2.029c.559-1.861 1.784-6.09 2-7a2.91 2.91 0 0 1 3-2h33c1.318 0 1.856 1.547 2 2 .255.8 1.664 5.386 2 7 .336 1.614-.214 3-2 3zm-7-28h-23a2.18 2.18 0 0 1-2-3c.559-1.861 1.784-6.09 2-7a2.91 2.91 0 0 1 3-2h18c1.318 0 1.856 1.547 2 2a67.45 67.45 0 0 1 2 7c.189 1.59-.214 3-2 3z"
-                  stroke="#DDE0E6"
-                  stroke-width="2"
-                />
-                <path
-                  d="M274.219 162.383v-19h-38v19h-2v-19h-28v-2h28v-16h2v16h38v-39h-4v-2h4v-38h-4v-2h4v-23h2v23h6v2h-6v38h26v2h-26v39h26v2h-26v19h-2zm-19-56v-4h-4v-2h4v-4h2v4h4v2h-4v4h-2zm19-79v-4h-4v-2h4v-4h2v4h4v2h-4v4h-2zM28 17.383v19h38v-19h2v19h17v2H68v39h-2v-39H28v39h4v2h-4v38h4v2h-4v23h-2v-23h-6v-2h6v-38H0v-2h26v-39H0v-2h26v-19h2zm19 56v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2zm-19 79v4h4v2h-4v4h-2v-4h-4v-2h4v-4h2z"
-                  fill="#DBDEE5"
-                />
-                <path
-                  d="M116.102 141.996h48.266m-123.266 0h48.266"
-                  stroke="#212225"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                />
-                <path
-                  d="M189.219 47.816a8 8 0 0 0-16 0v24a8 8 0 0 0 16 0v-24z"
-                  fill="#FFE7E2"
-                />
-                <path
-                  d="M188.219 47.816a7 7 0 1 0-14 0v24a7 7 0 1 0 14 0v-24z"
-                  stroke="#DF5E4C"
-                  stroke-width="2"
-                />
-                <path
-                  d="M189.219 91.816a8 8 0 1 0-16 0 8 8 0 0 0 16 0z"
-                  fill="#FFE7E2"
-                />
-                <path
-                  d="M188.219 91.816a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
-                  stroke="#DF5E4C"
-                  stroke-width="2"
-                />
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_8144_152326"
-                >
-                  <path
-                    d="M0 0h302.219v161.693H0z"
-                    fill="#fff"
-                    transform="translate(0 .691)"
-                  />
-                </clippath>
-              </defs>
+              <path
+                d="M131.5 68.9l11.6-11.6c2.4-2.4 2.4-6.2 0-8.6l-35.3-35.3c-2.4-2.4-6.2-2.4-8.6 0L63.9 48.7c-2.4 2.4-2.4 6.2 0 8.6l35.3 35.3c2.4 2.4 6.2 2.4 8.6 0l12.4-12.4m6.7-6.8l-2.7 2.7"
+                fill="none"
+                stroke="#FC9F0F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M89.5 16.7l7.6-7.6c3.5-3.5 9.3-3.5 12.8 0l37.4 37.4c3.5 3.5 3.5 9.3 0 12.8l-37.4 37.4c-3.5 3.5-9.3 3.5-12.8 0L59.7 59.4c-3.5-3.5-3.5-9.3 0-12.8L73.3 33m13.2-13.2l-9.8 9.8"
+                fill="none"
+                stroke="#FC9F0F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M100.5 40.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6v13.9c0 2-1.6 3.6-3.6 3.6s-3.6-1.6-3.6-3.6V40.4zm0 25.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6z"
+                fill="#F7FAFB"
+                stroke="#212225"
+                stroke-width="2"
+              />
+              <path
+                d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7z"
+                fill="#DBDEE5"
+              />
+              <path
+                d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm103.8 0h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm-43 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm66 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-66h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7V8h7V1h2v7h7v2h-7v7z"
+                fill="#DBDEE5"
+              />
             </svg>
             <div
-              class="text-theme-secondary-text pr-10 text-sm whitespace-pre-line md:pr-0 md:text-base"
+              class="flex flex-col overflow-hidden rounded-xl mb-2"
             >
-              Are you sure you wish to navigate away from this page without saving?
+              <div
+                class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+              >
+                <div>
+                  <div
+                    style="height: 16px; width: 16px;"
+                  >
+                    <svg
+                      id="circle-exclamation-mark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="9"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 10.5v-5"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M10 14h0"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <span>
+                  Warning
+                </span>
+              </div>
+              <div
+                class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+              >
+                Are you sure you wish to navigate away from this page without saving?
+              </div>
             </div>
             <div
               class="modal-footer"
