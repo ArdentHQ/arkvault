@@ -44,40 +44,40 @@ export const TokenRowMobile = memo(
 					<MobileCard className="mb-3">
 						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between pr-3 pl-4 sm:pl-3 dark:bg-black">
 							<div className="flex flex-row items-center gap-3">
-								<div className="hidden flex-row items-center sm:flex">
-									{!isManageMode && (
-										<Button
-											size="icon"
-											variant="transparent"
-											className="mr-2 p-1"
-											onClick={(event) => {
-												/* istanbul ignore next -- @preserve */
-												event.stopPropagation();
-											}}
-										>
-											<Icon name="Star" className="text-theme-warning-400" />
-										</Button>
-									)}
+								{isManageMode && (
+									<div className="hidden flex-row items-center sm:flex">
+										{/*{!isManageMode && (*/}
+										{/*	<Button*/}
+										{/*		size="icon"*/}
+										{/*		variant="transparent"*/}
+										{/*		className="mr-2 p-1"*/}
+										{/*		onClick={(event) => {*/}
+										{/*			event.stopPropagation();*/}
+										{/*		}}*/}
+										{/*	>*/}
+										{/*		<Icon name="Star" className="text-theme-warning-400" />*/}
+										{/*	</Button>*/}
+										{/*)}*/}
 
-									{isManageMode && (
-										<div>
-											<Checkbox
-												data-testid="TokenRow_VisibilityToggle"
-												checked={!isHidden}
-												className="-mt-1 mr-3"
-												onChange={toggleVisibility}
-												onClick={(event) => {
-													event.stopPropagation();
-												}}
+										<>
+											<div>
+												<Checkbox
+													data-testid="TokenRow_VisibilityToggle"
+													checked={!isHidden}
+													className="-mt-1 mr-3"
+													onChange={toggleVisibility}
+													onClick={(event) => {
+														event.stopPropagation();
+													}}
+												/>
+											</div>
+											<Divider
+												type="vertical"
+												className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
 											/>
-										</div>
-									)}
-
-									<Divider
-										type="vertical"
-										className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
-									/>
-								</div>
+										</>
+									</div>
+								)}
 
 								<TokenNameInitials tokenName={walletToken.token().name()} />
 								<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
@@ -178,23 +178,22 @@ export const TokenRowMobile = memo(
 								</Link>
 							</MobileSection>
 
-							{!isManageMode && (
-								<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden">
-									<Button
-										variant="transparent"
-										className="-m-1 mr-2 p-1"
-										onClick={(event) => {
-											/* istanbul ignore next -- @preserve */
-											event.stopPropagation();
-										}}
-									>
-										<Icon name="Star" className="text-theme-warning-400" />
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
-											{t("COMMON.FAVORITE")}
-										</div>
-									</Button>
-								</div>
-							)}
+							{/*{!isManageMode && (*/}
+							{/*	<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-dashed pt-4 sm:hidden">*/}
+							{/*		<Button*/}
+							{/*			variant="transparent"*/}
+							{/*			className="-m-1 mr-2 p-1"*/}
+							{/*			onClick={(event) => {*/}
+							{/*				event.stopPropagation();*/}
+							{/*			}}*/}
+							{/*		>*/}
+							{/*			<Icon name="Star" className="text-theme-warning-400" />*/}
+							{/*			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">*/}
+							{/*				{t("COMMON.FAVORITE")}*/}
+							{/*			</div>*/}
+							{/*		</Button>*/}
+							{/*	</div>*/}
+							{/*)}*/}
 						</div>
 					</MobileCard>
 				</td>

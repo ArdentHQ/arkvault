@@ -9,7 +9,6 @@ import { TokensTableFooter, TokensTableHeader } from "./TokensTable.blocks";
 import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
-import { Icon } from "@/app/components/Icon";
 import { DeleteTokenConfirmationModal } from "@/domains/tokens/components/DeleteTokenConfirmationModal/DeleteTokenConfirmationModal";
 
 export const TokensTable = ({
@@ -132,14 +131,14 @@ export const TokensTable = ({
 		}
 
 		return [
-			{
-				Header: <Icon name="Star" className="text-theme-warning-400" />,
-				accessor: "star",
-				cellWidth: "w-4",
-				disableSortBy: true,
-				headerClassName: "no-border",
-				noRoundedBorders: true,
-			},
+			// {
+			// 	Header: <Icon name="Star" className="text-theme-warning-400" />,
+			// 	accessor: "star",
+			// 	cellWidth: "w-4",
+			// 	disableSortBy: true,
+			// 	headerClassName: "no-border",
+			// 	noRoundedBorders: true,
+			// },
 			...columns,
 		];
 	}, [t, isManageMode]);
@@ -182,9 +181,11 @@ export const TokensTable = ({
 					innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18"
 					searchQuery={query}
 					setSearchQuery={setQuery}
+					hideSearchInput={true}
 					searchPlaceholder={t("TOKENS.ENTER_TOKEN_NAME")}
+					searchInputWrapperClass="hidden px-6 py-4 md:flex"
 					extra={
-						<div className="mr-6 hidden items-center gap-1 md:flex">
+						<div className="hidden w-full items-center justify-between gap-1 md:flex">
 							<TokensTableHeader
 								activeProfile={activeProfile}
 								isManageMode={isManageMode}
@@ -195,7 +196,7 @@ export const TokensTable = ({
 						</div>
 					}
 				>
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed py-3 md:hidden">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed pb-3 md:hidden md:pt-3">
 						<TokensTableHeader
 							activeProfile={activeProfile}
 							isManageMode={isManageMode}
