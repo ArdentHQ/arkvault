@@ -339,7 +339,7 @@ export const AddRecipient = ({
 								<SelectToken
 									defaultTokenValue={
 										(tokenContractAddress ?? tokens.length === 1)
-											? tokens[0].token().address()
+											? tokens[0]?.token().address()
 											: undefined
 									}
 									tokens={tokens.map((token) => ({
