@@ -6,6 +6,7 @@ import { FormButtons } from "@/app/components/Form";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { Size } from "@/types";
+import { Alert } from "@/app/components/Alert";
 
 interface Properties {
 	isOpen: boolean;
@@ -23,12 +24,13 @@ export const ConfirmationModal = ({ description, title, size = "lg", isOpen, onC
 		<Modal
 			title={title || t("COMMON.CONFIRMATION_MODAL.TITLE")}
 			titleClass="text-theme-text"
-			image={<Image name="GenericWarning" className="m-auto my-8 w-3/5" />}
-			description={description || t("COMMON.CONFIRMATION_MODAL.DESCRIPTION")}
+			image={<Image name="Warning" className="m-auto mb-6 max-w-52" />}
 			size={size}
 			isOpen={isOpen}
 			onClose={onCancel}
 		>
+			<Alert className="mb-2">{description || t("COMMON.CONFIRMATION_MODAL.DESCRIPTION")}</Alert>
+
 			<div data-testid="ConfirmationModal" className="modal-footer">
 				<FormButtons>
 					<Button variant="secondary" onClick={onCancel} data-testid="ConfirmationModal__no-button">
