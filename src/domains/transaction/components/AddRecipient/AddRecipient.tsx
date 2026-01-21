@@ -97,10 +97,10 @@ export const AddRecipient = ({
 		if (isTokenTransfer) {
 			const token = tokens.find((token) => token.token().address() === tokenContractAddress);
 			if (token) {
-				return token.balance();
+				return token.balance().toString();
 			}
 
-			return 0;
+			return "0";
 		}
 
 		let senderBalance = BigNumber.make(wallet?.balance() || 0);
