@@ -1,4 +1,3 @@
-import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Contracts } from "@/app/lib/profiles";
 import { Divider } from "@/app/components/Divider";
