@@ -94,6 +94,15 @@ export const AddRecipient = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
+		if (isTokenTransfer) {
+			const token = tokens.find((token) => token.token().address() === tokenContractAddress);
+			if (token) {
+				return token.balance().toString();
+			}
+
+			return "0";
+		}
+
 		let senderBalance = BigNumber.make(wallet?.balance() || 0);
 
 		if (isSingle) {
@@ -105,7 +114,7 @@ export const AddRecipient = ({
 		}
 
 		return senderBalance.toString();
-	}, [addedRecipients, wallet, isSingle]);
+	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokens, tokenContractAddress]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 

@@ -1079,7 +1079,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27
+                    100,000,000
                   </span>
                   )
                 </span>
@@ -1101,7 +1101,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    95.27
+                    100,000,000
                   </span>
                 </div>
                 <div
