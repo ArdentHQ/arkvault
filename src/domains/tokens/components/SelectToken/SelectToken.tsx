@@ -32,7 +32,7 @@ export const SelectToken = ({
 			className={className}
 			onChange={(option: OptionProperties) => {
 				setSelectedToken(option);
-				onChange?.(option.value as string | undefined);
+				onChange?.(option?.value as string | undefined);
 			}}
 			addons={{
 				start: {
