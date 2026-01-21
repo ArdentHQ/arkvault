@@ -77,7 +77,8 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 				// orderBy,
 			};
 
-			return profile.tokens().selected(queryParameters);
+			await profile.tokens().sync(queryParameters);
+			return profile.tokens().selected()
 		},
 		[limit, orderBy, profile],
 	);
