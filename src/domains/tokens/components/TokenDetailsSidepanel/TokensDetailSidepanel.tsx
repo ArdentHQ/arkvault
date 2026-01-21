@@ -94,7 +94,7 @@ export const TokenDetailSidepanel = ({
 
 								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 									<Amount
-										ticker="ARK"
+										ticker={walletToken.token().symbol()}
 										value={walletToken.balance()}
 										className="text-sm font-semibold md:text-base"
 									/>
