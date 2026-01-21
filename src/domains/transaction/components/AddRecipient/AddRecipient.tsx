@@ -94,6 +94,15 @@ export const AddRecipient = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
+		if (isTokenTransfer) {
+			const token = tokens.find(token => token.token().address() === tokenContractAddress)
+			if (token) {
+				return token.balance()
+			}
+
+			return 0
+		}
+
 		let senderBalance = BigNumber.make(wallet?.balance() || 0);
 
 		if (isSingle) {
@@ -105,7 +114,7 @@ export const AddRecipient = ({
 		}
 
 		return senderBalance.toString();
-	}, [addedRecipients, wallet, isSingle]);
+	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokens, tokenContractAddress]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
@@ -271,17 +280,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
