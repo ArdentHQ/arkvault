@@ -1427,21 +1427,11 @@ exports[`TokenHeader > should show balance information when tokens are available
                   <div
                     class="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
                   >
-                    <span
-                      class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50"
-                      data-testid="Amount"
+                    <p
+                      class="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500"
                     >
-                      100 ARK
-                    </span>
-                    <div
-                      class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
-                    />
-                    <span
-                      class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
-                      data-testid="Amount"
-                    >
-                      $100.00
-                    </span>
+                      N/A
+                    </p>
                   </div>
                 </div>
               </div>
