@@ -110,9 +110,9 @@ export class TokenService {
 	}
 
 	/**
-	 * Retrieves all tokens from selected wallets.
+	 * Retrieves token transfers
 	 *
-	 * @returns {WalletTokenRepository}
+	 * @returns {ExtendedConfirmedTransactionDataCollection}
 	 */
 	async transfers(query?: TokenTransfersQuery): Promise<ExtendedConfirmedTransactionDataCollection> {
 		const activeNetwork = this.#profile.activeNetwork();

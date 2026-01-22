@@ -95,7 +95,7 @@ export const Transactions = memo(function Transactions({
 					profile={profile}
 					hideSender={selectedWallets === 1}
 					sortBy={{
-						column: "timestamp",
+						column: "date",
 						desc: true,
 					}}
 					onSortChange={() => {}}
