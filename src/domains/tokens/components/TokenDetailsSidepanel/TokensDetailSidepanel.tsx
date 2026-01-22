@@ -81,7 +81,7 @@ export const TokenDetailSidepanel = ({
 		>
 			<DetailsCondensed>
 				<div className="space-y-4" data-testid="TokenDetailSidepanel">
-					<div className="dark:bg-theme-dark-9950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">
+					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">
 						<div className="flex justify-between">
 							<div className="flex items-center space-x-2">
 								<TokenNameInitials
