@@ -651,6 +651,107 @@ describe("ClientService", () => {
 		});
 	});
 
+	describe("tokenTransfers", () => {
+		const tokenTransferMockData = {
+			blockNumber: "22773025",
+			from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
+			functionSig: "0xa9059cbb",
+			timestamp: "1769010139522",
+			to: "0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5",
+			token: {
+				address: "0x180a864a755fed0144c622df49b83db577befefb",
+				decimals: 18,
+				name: "DARK20",
+				symbol: "DARK20",
+			},
+			transactionHash: "bf060a019f9f5a036f571e2b5bc0227c6a5975ce763e790ed4e1dcf42b8f2d1d",
+			value: "5000000000000000000",
+		};
+
+		it("should fetch token transfers", async () => {
+			const mockResponse = {
+				data: [tokenTransferMockData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					last: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [tokenTransferMockData.from],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(1);
+			expect(result.items()[0].hash()).toBe(tokenTransferMockData.transactionHash);
+			expect(result.items()[0].from()).toBe(tokenTransferMockData.from);
+			expect(result.items()[0].to()).toBe(tokenTransferMockData.to);
+		});
+
+		it("should handle empty token transfers response", async () => {
+			const mockResponse = {
+				data: [],
+				meta: {
+					count: 0,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 0,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [validAddress],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(0);
+		});
+
+		it("should properly configure ConfirmedTransactionData from transfer", async () => {
+			const mockResponse = {
+				data: [tokenTransferMockData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [tokenTransferMockData.from],
+			});
+
+			const transfer = result.items()[0];
+			expect(transfer.hash()).toBe(tokenTransferMockData.transactionHash);
+			expect(transfer.from()).toBe(tokenTransferMockData.from);
+			expect(transfer.to()).toBe(tokenTransferMockData.to);
+		});
+	});
+
 	describe("tokenAddresses", () => {
 		it("should fetch token addresses for multiple wallets", async () => {
 			const walletAddress1 = `0x${"b".repeat(40)}`;
