@@ -22,6 +22,7 @@ import { TokenAddressesData, WalletTokenData } from "@/app/lib/profiles/token.co
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -120,6 +121,28 @@ export class ClientService {
 	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
 		const response = await this.#client.tokens().get(contractAddress);
 		return new TokenDTO(response.data);
+	}
+
+	public async tokenTransfers(query?: TokenTransfersQuery): Promise<ConfirmedTransactionDataCollection> {
+		const response = await this.#client.tokens().tokenTransfers({
+			...query,
+			from: query?.from?.join(','),
+			to: query?.to?.join(',')
+		})
+
+		return new ConfirmedTransactionDataCollection(
+			response.data.map((transfer) => {
+				return new ConfirmedTransactionData().configure({
+					data: transfer.functionSig,
+					hash: transfer.transactionHash,
+					receipt: {
+						status: 1
+					},
+					...transfer,
+				})
+			}),
+			this.#createMetaPagination(response),
+		);
 	}
 
 	public async transactions(

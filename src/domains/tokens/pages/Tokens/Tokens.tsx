@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useActiveProfile } from "@/app/hooks/env";
-import { Transactions } from "@/domains/transaction/components/Transactions";
+import { Transactions } from "@/domains/tokens/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
@@ -91,7 +91,13 @@ export const Tokens = () => {
 
 			{activeTab === "transactions" && (
 				<Section className="flex-1 pt-0!">
-					<Transactions showTabs={false} profile={activeProfile} wallets={[]} isLoading={false} />
+					<Transactions
+						showTabs={false}
+						profile={activeProfile}
+						selectedWallets={activeProfile.wallets().selected().length}
+						wallets={activeProfile.wallets().selected()}
+						isLoading={false}
+					/>
 				</Section>
 			)}
 
