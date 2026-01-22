@@ -30,8 +30,6 @@ export const Transactions = memo(function Transactions({
 	isVisible = true,
 	wallets,
 	title,
-	isUpdatingWallet,
-	onLoading,
 	selectedWallets,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
@@ -41,19 +39,6 @@ export const Transactions = memo(function Transactions({
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	const { isLoadingMore, transfers, hasMore, isLoadingTransfers, hasEmptyResults, fetchMore } = useTokenTransfers({profile, wallets})
-
-	console.log(transfers)
-	const showMore = hasMore;
-
-	// useEffect(() => {
-	// 	onLoading?.(isLoadingTransfers);
-	// }, [isLoadingTransfers, onLoading]);
-	//
-	// useEffect(() => {
-	// 	if (isUpdatingWallet) {
-	// 		updateFilters({ activeMode, activeTransactionType, selectedTransactionTypes, timestamp: Date.now() });
-	// 	}
-	// }, [isUpdatingWallet]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	if (!isVisible) {
 		return <></>;
@@ -67,7 +52,7 @@ export const Transactions = memo(function Transactions({
 				</div>
 			)}
 
-			<TableWrapper className={cn({ "rounded-b-none! border-none": showMore })}>
+			<TableWrapper className={cn({ "rounded-b-none! border-none": hasMore })}>
 				<div className="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 					{!isLoadingTransfers && (
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
@@ -106,8 +91,11 @@ export const Transactions = memo(function Transactions({
 					}}
 					profile={profile}
 					hideSender={selectedWallets === 1}
-					sortBy={"hash"}
-					onSortChange={() => console.log(234)}
+					sortBy={{
+						column: "timestamp",
+						desc: true,
+					}}
+					onSortChange={() => {}}
 				/>
 
 				{hasEmptyResults && (
@@ -136,7 +124,7 @@ export const Transactions = memo(function Transactions({
 				)}
 			</TableWrapper>
 
-			{showMore && (
+			{hasMore && (
 				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-6 -mt-1 rounded-b-xl border-t px-6 py-4 md:-mx-px md:mt-0 md:border md:border-t-0">
 					<Button
 						data-testid="transactions__fetch-more-button"
