@@ -12,11 +12,11 @@ export const useProfileTokens = ({ profile }: { profile: Contracts.IProfile }) =
 
 	useEffect(() => {
 		if (isLoading) {
-			return
+			return;
 		}
 
 		if (profile.tokens().selectedCount() > 0) {
-			return
+			return;
 		}
 
 		reload();

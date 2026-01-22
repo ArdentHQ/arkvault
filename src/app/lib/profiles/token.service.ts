@@ -112,7 +112,7 @@ export class TokenService {
 	}
 
 	selected(): WalletTokenCollection {
-		return this.#walletTokensCollection
+		return this.#walletTokensCollection;
 	}
 
 	/**

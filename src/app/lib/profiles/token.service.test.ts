@@ -42,7 +42,7 @@ describe("TokenService", () => {
 
 	it("should return first token", async () => {
 		await profile.tokens().sync();
-		const tokens = profile.tokens().selected()
+		const tokens = profile.tokens().selected();
 
 		expect(tokens).toBeInstanceOf(WalletTokenCollection);
 		expect(tokens.items()[0]).toBeInstanceOf(WalletToken);
@@ -50,7 +50,7 @@ describe("TokenService", () => {
 
 	it("should remove dust balance tokens", async () => {
 		await profile.tokens().sync();
-		const tokens = profile.tokens().selected()
+		const tokens = profile.tokens().selected();
 
 		vi.spyOn(profile.settings(), "get").mockReturnValue(true);
 		vi.spyOn(tokens.items()[0], "balance").mockReturnValue(0.1);

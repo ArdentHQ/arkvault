@@ -23,7 +23,7 @@ export const Tokens = () => {
 	const { openPanel } = usePanels();
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
-	const { reload, isLoading, tokens } = useProfileTokens({ profile: activeProfile });
+	const { reload, isLoading } = useProfileTokens({ profile: activeProfile });
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false);
