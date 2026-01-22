@@ -42,11 +42,7 @@ export const TransactionType = ({
 
 	if (transaction.type().startsWith("0x")) {
 		// @ts-expect-error data property exists on Extended transaction types
-		const data = transaction.data().data;
-
-		if (typeof data.data !== "string") {
-			bytecode = transaction.isConfirmed() ? data.data : data().data;
-		}
+		bytecode = transaction.isConfirmed() ? transaction.data().data.data : transaction.data().data().data;
 	}
 
 	return (
