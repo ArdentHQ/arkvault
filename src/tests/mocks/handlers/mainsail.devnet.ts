@@ -1,4 +1,5 @@
 import { http, HttpResponse, rest } from "msw";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/mainsail/devnet/blockchain.json") },
@@ -112,6 +113,10 @@ export const mainsailDevnetHandlers = [
 				},
 			],
 		});
+	}),
+
+	http.get("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", () => {
+		return HttpResponse.json(Fixtures.TokenTransfers);
 	}),
 
 	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier", (request) => {
