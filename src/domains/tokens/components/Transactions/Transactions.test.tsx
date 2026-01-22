@@ -4,16 +4,8 @@ import React from "react";
 
 import { Transactions } from "./Transactions";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	syncValidators,
-	waitFor,
-	within,
-} from "@/utils/testing-library";
-import { server, requestMock, } from "@/tests/mocks/server";
+import { env, getDefaultProfileId, render, screen, syncValidators, waitFor, within } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 let profile: Contracts.IProfile;
@@ -98,9 +90,7 @@ describe("Transactions", () => {
 			expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
 		});
 
-		expect(
-			within(screen.getByTestId("TransactionId")).getByText(/bf060a019f9f5a036f571e2/),
-		).toBeInTheDocument();
+		expect(within(screen.getByTestId("TransactionId")).getByText(/bf060a019f9f5a036f571e2/)).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("SidePanel__minimize-button"));
 
@@ -124,10 +114,7 @@ describe("Transactions", () => {
 		// Paginated result
 		server.use(
 			requestMock("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", {
-				data: [...Fixtures.TokenTransfers.data, ...Fixtures.TokenTransfers.data,].slice(
-					0,
-					10,
-				),
+				data: [...Fixtures.TokenTransfers.data, ...Fixtures.TokenTransfers.data].slice(0, 10),
 				meta: {
 					...Fixtures.TokenTransfers.meta,
 					count: 15,
@@ -170,10 +157,7 @@ describe("Transactions", () => {
 
 		server.use(
 			requestMock("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", {
-				data: [...Fixtures.TokenTransfers.data, ...Fixtures.TokenTransfers.data,].slice(
-					0,
-					10,
-				),
+				data: [...Fixtures.TokenTransfers.data, ...Fixtures.TokenTransfers.data].slice(0, 10),
 				meta: {
 					...Fixtures.TokenTransfers.meta,
 					count: 10,
