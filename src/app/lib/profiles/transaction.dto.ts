@@ -7,6 +7,7 @@ import { IReadWriteWallet } from "./contracts.js";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
+import { AbiDecoder, ContractAbiType, Deserializer } from "@arkecosystem/typescript-crypto";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -20,6 +21,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	public constructor(wallet: IReadWriteWallet, data: ConfirmedTransactionData) {
 		this.#wallet = wallet;
 		this.#data = data;
+
 	}
 
 	public hash(): string {
@@ -293,5 +295,9 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public gasUsed(): number {
 		return this.#data.gasUsed();
+	}
+
+	public isTokenTransfer(): boolean {
+		return this.#data.isTokenTransfer()
 	}
 }

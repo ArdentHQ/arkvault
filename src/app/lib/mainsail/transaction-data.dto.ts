@@ -44,6 +44,10 @@ export abstract class TransactionData {
 	}
 
 	public type(): string {
+		if (this.isTokenTransfer()) {
+			return "transfer"
+		}
+
 		if (this.isVoteCombination()) {
 			return "voteCombination";
 		}
@@ -65,6 +69,10 @@ export abstract class TransactionData {
 		}
 
 		return this.methodHash();
+	}
+
+	public isTokenTransfer() {
+		return TransactionTypeService.isTokenTransfer(this.data)
 	}
 
 	public toObject(): KeyValuePair {
