@@ -76,7 +76,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 				/>
 			)}
 
-			{errors.lockedFee && <Alert className={cn("mb-4", { "mt-4": !hideHeader })}>{errors.lockedFee.message}</Alert>}
+			{errors.lockedFee && (
+				<Alert className={cn("mb-4", { "mt-4": !hideHeader })}>{errors.lockedFee.message}</Alert>
+			)}
 
 			<FormField name="senderAddress" className={cn({ "mt-6 sm:mt-4": !hideHeader })}>
 				<FormLabel label={t("COMMON.SENDER")} />
