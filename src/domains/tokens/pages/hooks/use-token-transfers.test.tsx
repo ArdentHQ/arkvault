@@ -196,7 +196,9 @@ describe("useTokenTransfers", () => {
 				const isFirstCall = callCount === 1;
 
 				return HttpResponse.json({
-					data: isFirstCall ? Fixtures.TokenTransfers.data.slice(0, 1) : Fixtures.TokenTransfers.data.slice(1, 2),
+					data: isFirstCall
+						? Fixtures.TokenTransfers.data.slice(0, 1)
+						: Fixtures.TokenTransfers.data.slice(1, 2),
 					meta: { ...Fixtures.TokenTransfers.meta, next: null },
 				});
 			}),
