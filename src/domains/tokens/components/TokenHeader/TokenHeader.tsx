@@ -1,4 +1,3 @@
-import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Contracts } from "@/app/lib/profiles";
 import { Divider } from "@/app/components/Divider";
@@ -169,35 +168,9 @@ export const TokenHeader = ({
 												)}
 
 												{profile.tokens().selectedCount() > 0 && (
-													<>
-														<Amount
-															value={wallet.balance()}
-															ticker={wallet.currency()}
-															className="dark:text-theme-dark-50 dim:text-theme-dim-50"
-															allowHideBalance
-															profile={profile}
-														/>
-
-														{selectedWallets.length === 1 && (
-															<Divider
-																type="vertical"
-																className="border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
-															/>
-														)}
-
-														<Amount
-															value={profile.tokens().selectedTotalBalance()}
-															ticker={wallet.exchangeCurrency()}
-															className={cn({
-																"text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
-																	selectedWallets.length !== 1,
-																"text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden":
-																	selectedWallets.length === 1,
-															})}
-															allowHideBalance
-															profile={profile}
-														/>
-													</>
+													<p className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500">
+														{t("COMMON.NOT_AVAILABLE")}
+													</p>
 												)}
 											</div>
 										</div>
