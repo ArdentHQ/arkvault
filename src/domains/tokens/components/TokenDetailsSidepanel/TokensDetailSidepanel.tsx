@@ -13,7 +13,7 @@ import { Link } from "@/app/components/Link";
 import { Button } from "@/app/components/Button";
 import { SIDE_PANEL_TRANSITION_DURATION } from "@/app/contexts";
 
-const TokenDetailSidepanelFooter = ({ onClose, onSendToken }: { onClose?: () => void, onSendToken?: () => void }) => {
+const TokenDetailSidepanelFooter = ({ onClose, onSendToken }: { onClose?: () => void; onSendToken?: () => void }) => {
 	const { t } = useTranslation();
 	return (
 		<SidePanelButtons>
@@ -22,9 +22,17 @@ const TokenDetailSidepanelFooter = ({ onClose, onSendToken }: { onClose?: () => 
 					{t("COMMON.CLOSE")}
 				</Button>
 
-				<Button className="hidden md:block" data-testid="TokenDetailSidepanel__send-button" onClick={onSendToken}>{t("COMMON.SEND_TOKENS")}</Button>
+				<Button
+					className="hidden md:block"
+					data-testid="TokenDetailSidepanel__send-button"
+					onClick={onSendToken}
+				>
+					{t("COMMON.SEND_TOKENS")}
+				</Button>
 
-				<Button className="md:hidden" onClick={onSendToken}>{t("COMMON.SEND")}</Button>
+				<Button className="md:hidden" onClick={onSendToken}>
+					{t("COMMON.SEND")}
+				</Button>
 			</>
 		</SidePanelButtons>
 	);
@@ -34,7 +42,7 @@ export const TokenDetailSidepanel = ({
 	isOpen: isSidePanelOpen,
 	walletToken,
 	onClose,
-	onSendToken
+	onSendToken,
 }: {
 	isOpen: boolean;
 	walletToken: WalletToken;
@@ -61,10 +69,15 @@ export const TokenDetailSidepanel = ({
 			title={t("TOKENS.TOKEN_INFORMATION")}
 			open={isOpen}
 			onOpenChange={setIsOpen}
-			footer={<TokenDetailSidepanelFooter onClose={() => setIsOpen(false)} onSendToken={() => {
-				onSendToken?.(walletToken.token().address())
-				setIsOpen(false)
-			}} />}
+			footer={
+				<TokenDetailSidepanelFooter
+					onClose={() => setIsOpen(false)}
+					onSendToken={() => {
+						onSendToken?.(walletToken.token().address());
+						setIsOpen(false);
+					}}
+				/>
+			}
 		>
 			<DetailsCondensed>
 				<div className="space-y-4" data-testid="TokenDetailSidepanel">

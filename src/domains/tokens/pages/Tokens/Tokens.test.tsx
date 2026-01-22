@@ -77,7 +77,6 @@ describe("Tokens", () => {
 		await user.click(sendTokenButton);
 
 		await waitFor(() => expect(screen.queryByTestId("TokenDetailSidepanel")).not.toBeInTheDocument());
-
 	});
 	it("should open token detail sidepanel when a token row is clicked", async () => {
 		const user = userEvent.setup();

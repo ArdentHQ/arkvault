@@ -15,7 +15,6 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
-import { SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
@@ -125,7 +124,7 @@ export const Tokens = () => {
 					onClose={() => setTokenModelItem(undefined)}
 					onSendToken={(tokenContractAddress) => {
 						setTimeout(() => {
-							setTokenModelItem(undefined)
+							setTokenModelItem(undefined);
 							openPanel(Panel.SendTokenTransfer, { tokenContractAddress });
 						}, SIDE_PANEL_TRANSITION_DURATION);
 					}}
