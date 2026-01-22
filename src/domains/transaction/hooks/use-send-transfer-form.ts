@@ -120,7 +120,6 @@ export const useSendTransferForm = ({
 
 			setLastEstimatedExpiration(data.expiration);
 
-			console.log({ selectedToken });
 			const transactionInput: Services.TransactionInputs = {
 				data,
 				gasLimit,

@@ -442,7 +442,6 @@ export const SendTransferSidePanel = ({
 	);
 
 	const isLastStep = activeTab === SendTransferStep.SummaryStep;
-	console.log({ selectedToken });
 
 	return (
 		<SidePanel

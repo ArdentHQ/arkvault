@@ -135,6 +135,7 @@ export class ClientService {
 				new ConfirmedTransactionData().configure({
 					data: transfer.functionSig,
 					hash: transfer.transactionHash,
+					nonce: 0,
 					receipt: {
 						status: 1,
 					},
