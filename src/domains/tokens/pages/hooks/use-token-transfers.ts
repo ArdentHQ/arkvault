@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer } from "@/app/hooks";
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
-import { TokenTransfersQuery} from "@/app/lib/mainsail/client.contract";
+import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
 
 interface TokenTransfersState {
 	transfers: DTO.ExtendedConfirmedTransactionData[];
@@ -137,7 +137,10 @@ export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfe
 		return () => stop();
 	}, [start, stop]);
 
-	const hasEmptyResults = useMemo(() => transfers.length === 0 && !isLoadingTransfers, [isLoadingTransfers, transfers.length]);
+	const hasEmptyResults = useMemo(
+		() => transfers.length === 0 && !isLoadingTransfers,
+		[isLoadingTransfers, transfers.length],
+	);
 
 	return {
 		fetchMore,

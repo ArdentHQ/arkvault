@@ -38,7 +38,10 @@ export const Transactions = memo(function Transactions({
 
 	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
-	const { isLoadingMore, transfers, hasMore, isLoadingTransfers, hasEmptyResults, fetchMore } = useTokenTransfers({profile, wallets})
+	const { isLoadingMore, transfers, hasMore, isLoadingTransfers, hasEmptyResults, fetchMore } = useTokenTransfers({
+		profile,
+		wallets,
+	});
 
 	if (!isVisible) {
 		return <></>;

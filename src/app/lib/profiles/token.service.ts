@@ -148,13 +148,17 @@ export class TokenService {
 				return fromWallet;
 			}
 
-			return this.#profile.wallets().findByAddressWithNetwork(to, activeNetwork.id()) as Contracts.IReadWriteWallet;
-		}
+			return this.#profile
+				.wallets()
+				.findByAddressWithNetwork(to, activeNetwork.id()) as Contracts.IReadWriteWallet;
+		};
 
-		const transfers = response.items().map(transfer => new ExtendedConfirmedTransactionData(
-			findWallet(transfer.from(), transfer.to()),
-			transfer,
-		));
+		const transfers = response
+			.items()
+			.map(
+				(transfer) =>
+					new ExtendedConfirmedTransactionData(findWallet(transfer.from(), transfer.to()), transfer),
+			);
 
 		return new ExtendedConfirmedTransactionDataCollection(transfers, response.getPagination());
 	}

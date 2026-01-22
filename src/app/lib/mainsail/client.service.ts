@@ -126,21 +126,21 @@ export class ClientService {
 	public async tokenTransfers(query?: TokenTransfersQuery): Promise<ConfirmedTransactionDataCollection> {
 		const response = await this.#client.tokens().tokenTransfers({
 			...query,
-			from: query?.from?.join(','),
-			to: query?.to?.join(',')
-		})
+			from: query?.from?.join(","),
+			to: query?.to?.join(","),
+		});
 
 		return new ConfirmedTransactionDataCollection(
-			response.data.map((transfer) => {
-				return new ConfirmedTransactionData().configure({
+			response.data.map((transfer) =>
+				new ConfirmedTransactionData().configure({
 					data: transfer.functionSig,
 					hash: transfer.transactionHash,
 					receipt: {
-						status: 1
+						status: 1,
 					},
 					...transfer,
-				})
-			}),
+				}),
+			),
 			this.#createMetaPagination(response),
 		);
 	}
