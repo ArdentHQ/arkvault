@@ -21,6 +21,19 @@ describe("SelectToken", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with default value ", () => {
+		const { asFragment } = render(
+			<SelectToken
+				defaultTokenValue="token1"
+				tokens={[
+					{ label: "token1", value: "token1" },
+					{ label: "token2", value: "token2" },
+				]}
+			/>,
+		);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should change selection ", async () => {
 		const onChangeMock = vi.fn();
 		render(

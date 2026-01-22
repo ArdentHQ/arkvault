@@ -918,7 +918,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     readonly=""
                     tabindex="-1"
                     type="text"
-                    value="0xf8939a711e0116fcec11ab81165391fe185e5649"
+                    value="0xdeb478251073157e400c3d8d2ed92a85c958f9fa"
                   />
                 </div>
               </div>
@@ -1150,7 +1150,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                       readonly=""
                       tabindex="-1"
                       type="text"
-                      value="0xf8939a711e0116fcec11ab81165391fe185e5649"
+                      value="0xdeb478251073157e400c3d8d2ed92a85c958f9fa"
                     />
                   </div>
                 </div>
