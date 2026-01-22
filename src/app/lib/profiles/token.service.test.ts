@@ -60,13 +60,16 @@ describe("TokenService", () => {
 	});
 
 	it("should return first token", async () => {
-		const tokens = await profile.tokens().selected();
+		await profile.tokens().sync();
+		const tokens = profile.tokens().selected();
+
 		expect(tokens).toBeInstanceOf(WalletTokenCollection);
 		expect(tokens.items()[0]).toBeInstanceOf(WalletToken);
 	});
 
 	it("should remove dust balance tokens", async () => {
-		const tokens = await profile.tokens().selected();
+		await profile.tokens().sync();
+		const tokens = profile.tokens().selected();
 
 		vi.spyOn(profile.settings(), "get").mockReturnValue(true);
 		vi.spyOn(tokens.items()[0], "balance").mockReturnValue(0.1);

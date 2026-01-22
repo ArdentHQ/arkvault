@@ -84,8 +84,8 @@ describe("useProfileTokens", () => {
 
 		const selectedSpy = vi
 			.spyOn(profile.tokens(), "selected")
-			.mockResolvedValueOnce(mockFirstPage as any)
-			.mockResolvedValueOnce(mockSecondPage as any);
+			.mockReturnValueOnce(mockFirstPage as any)
+			.mockReturnValueOnce(mockSecondPage as any);
 
 		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
 			wrapper,
@@ -109,7 +109,7 @@ describe("useProfileTokens", () => {
 	it("should update hasEmptyResults when no tokens are loaded", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
+		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);
@@ -128,7 +128,7 @@ describe("useProfileTokens", () => {
 	it("should set hasMore to false when there are no more pages", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
+		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
 			hasMorePages: () => false,
 			items: () => [
 				{
@@ -192,26 +192,22 @@ describe("useProfileTokens", () => {
 
 	it("should use custom limit when provided", async () => {
 		const wallets = profile.wallets().values();
-		const customLimit = 50;
+		const limit = 50;
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
-			hasMorePages: () => false,
-			items: () => [],
-		} as any);
-
-		renderHook(() => useProfileTokens({ limit: customLimit, profile, wallets }), {
+		const syncSpy = vi.spyOn(profile.tokens(), "sync");
+		renderHook(() => useProfileTokens({ limit, profile, wallets }), {
 			wrapper,
 		});
 
-		await waitFor(() => expect(selectedSpy).toHaveBeenCalled());
+		await waitFor(() => expect(syncSpy).toHaveBeenCalled());
 
-		expect(selectedSpy).toHaveBeenCalledWith(
+		expect(syncSpy).toHaveBeenCalledWith(
 			expect.objectContaining({
-				limit: customLimit,
+				limit,
 			}),
 		);
 
-		selectedSpy.mockRestore();
+		syncSpy.mockRestore();
 	});
 
 	it("should check for new tokens periodically", async () => {

@@ -10,7 +10,7 @@ import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
 import { PageHeader } from "@/app/components/Header";
 import { ThemeIcon } from "@/app/components//Icon";
 import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
-import { Panel, usePanels } from "@/app/contexts";
+import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
@@ -128,6 +128,12 @@ export const Tokens = () => {
 					isOpen={!!tokenModalItem}
 					walletToken={tokenModalItem}
 					onClose={() => setTokenModelItem(undefined)}
+					onSendToken={(tokenContractAddress) => {
+						setTimeout(() => {
+							setTokenModelItem(undefined);
+							openPanel(Panel.SendTokenTransfer, { tokenContractAddress });
+						}, SIDE_PANEL_TRANSITION_DURATION);
+					}}
 				/>
 			)}
 		</Page>
