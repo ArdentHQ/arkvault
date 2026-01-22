@@ -17,7 +17,6 @@ interface TransactionsProperties {
 	isVisible?: boolean;
 	wallets: Contracts.IReadWriteWallet[];
 	isLoading?: boolean;
-	title?: React.ReactNode;
 	onLoading?: (status: boolean) => void;
 	isUpdatingWallet?: boolean;
 	selectedWallets?: number;
@@ -29,7 +28,6 @@ export const Transactions = memo(function Transactions({
 	profile,
 	isVisible = true,
 	wallets,
-	title,
 	selectedWallets,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
@@ -49,12 +47,6 @@ export const Transactions = memo(function Transactions({
 
 	return (
 		<>
-			{title && (
-				<div className="relative hidden justify-between md:flex">
-					<h2 className="mb-3 text-2xl font-bold">{title}</h2>
-				</div>
-			)}
-
 			<TableWrapper className={cn({ "rounded-b-none! border-none": hasMore })}>
 				<div className="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 					{!isLoadingTransfers && (
