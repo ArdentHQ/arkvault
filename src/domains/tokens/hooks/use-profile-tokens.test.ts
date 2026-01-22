@@ -3,6 +3,7 @@ import { describe, it, expect, vi, beforeEach, beforeAll } from "vitest";
 import { renderHook, waitFor } from "@testing-library/react";
 import { useProfileTokens } from "./use-profile-tokens";
 import { env, getMainsailProfileId, act } from "@/utils/testing-library";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 let profile: Contracts.IProfile;
 
@@ -24,11 +25,14 @@ describe("useProfileTokens", () => {
 	});
 
 	it("should reload tokens", async () => {
-		const selectedMock = vi.spyOn(profile.tokens(), "selected").mockResolvedValue({
-			items() {
-				return [];
-			},
+		const tokensCollection = new WalletTokenCollection([], {
+			last: undefined,
+			next: 0,
+			prev: undefined,
+			self: undefined,
 		});
+
+		const selectedMock = vi.spyOn(profile.tokens(), "selected").mockReturnValue(tokensCollection);
 
 		const { result } = renderHook(() => useProfileTokens({ profile }));
 
