@@ -13,7 +13,7 @@ import { Link } from "@/app/components/Link";
 import { Button } from "@/app/components/Button";
 import { SIDE_PANEL_TRANSITION_DURATION } from "@/app/contexts";
 
-const TokenDetailSidepanelFooter = ({ onClose }: { onClose?: () => void }) => {
+const TokenDetailSidepanelFooter = ({ onClose, onSendToken }: { onClose?: () => void, onSendToken?: () => void }) => {
 	const { t } = useTranslation();
 	return (
 		<SidePanelButtons>
@@ -22,9 +22,9 @@ const TokenDetailSidepanelFooter = ({ onClose }: { onClose?: () => void }) => {
 					{t("COMMON.CLOSE")}
 				</Button>
 
-				<Button className="hidden md:block">{t("COMMON.SEND_TOKENS")}</Button>
+				<Button className="hidden md:block" data-testid="TokenDetailSidepanel__send-button" onClick={onSendToken}>{t("COMMON.SEND_TOKENS")}</Button>
 
-				<Button className="md:hidden">{t("COMMON.SEND")}</Button>
+				<Button className="md:hidden" onClick={onSendToken}>{t("COMMON.SEND")}</Button>
 			</>
 		</SidePanelButtons>
 	);
@@ -34,10 +34,12 @@ export const TokenDetailSidepanel = ({
 	isOpen: isSidePanelOpen,
 	walletToken,
 	onClose,
+	onSendToken
 }: {
 	isOpen: boolean;
 	walletToken: WalletToken;
 	onClose?: () => void;
+	onSendToken?: (tokenAddress?: string) => void;
 }) => {
 	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
@@ -59,11 +61,14 @@ export const TokenDetailSidepanel = ({
 			title={t("TOKENS.TOKEN_INFORMATION")}
 			open={isOpen}
 			onOpenChange={setIsOpen}
-			footer={<TokenDetailSidepanelFooter onClose={() => setIsOpen(false)} />}
+			footer={<TokenDetailSidepanelFooter onClose={() => setIsOpen(false)} onSendToken={() => {
+				onSendToken?.(walletToken.token().address())
+				setIsOpen(false)
+			}} />}
 		>
 			<DetailsCondensed>
 				<div className="space-y-4" data-testid="TokenDetailSidepanel">
-					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">
+					<div className="dark:bg-theme-dark-9950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">
 						<div className="flex justify-between">
 							<div className="flex items-center space-x-2">
 								<TokenNameInitials
