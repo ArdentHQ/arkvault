@@ -125,15 +125,7 @@ describe("useTokenTransfers", () => {
 
 		const transfersSpy = vi.spyOn(profile.tokens(), "transfers").mockResolvedValue({
 			hasMorePages: () => false,
-			items: () => [
-				{
-					amount: () => 5,
-					from: () => wallets[0].address(),
-					hash: () => "hash1",
-					timestamp: () => ({ toUNIX: () => 1769010139522 }),
-					to: () => "0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5",
-				},
-			],
+			items: () => [],
 		} as any);
 
 		const { result } = renderHook(() => useTokenTransfers({ profile, wallets }), {
