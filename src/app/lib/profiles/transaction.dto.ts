@@ -21,7 +21,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	public constructor(wallet: IReadWriteWallet, data: ConfirmedTransactionData) {
 		this.#wallet = wallet;
 		this.#data = data;
-
 	}
 
 	public hash(): string {
@@ -298,6 +297,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public isTokenTransfer(): boolean {
-		return this.#data.isTokenTransfer()
+		return this.#data.isTokenTransfer();
 	}
 }

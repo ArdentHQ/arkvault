@@ -45,7 +45,7 @@ export abstract class TransactionData {
 
 	public type(): string {
 		if (this.isTokenTransfer()) {
-			return "transfer"
+			return "transfer";
 		}
 
 		if (this.isVoteCombination()) {
@@ -72,7 +72,7 @@ export abstract class TransactionData {
 	}
 
 	public isTokenTransfer() {
-		return TransactionTypeService.isTokenTransfer(this.data)
+		return TransactionTypeService.isTokenTransfer(this.data);
 	}
 
 	public toObject(): KeyValuePair {

@@ -2,7 +2,13 @@
 /* eslint-disable */
 import { Exceptions } from "@/app/lib/mainsail";
 import { FunctionSigs } from "@mainsail/evm-contracts";
-import { AbiDecoder, ConsensusContract, ContractAbiType, MultipaymentContract, UsernamesContract } from "@arkecosystem/typescript-crypto";
+import {
+	AbiDecoder,
+	ConsensusContract,
+	ContractAbiType,
+	MultipaymentContract,
+	UsernamesContract,
+} from "@arkecosystem/typescript-crypto";
 
 type TransactionData = Record<string, any>;
 
@@ -93,14 +99,14 @@ export class TransactionTypeService {
 	public static isTokenTransfer(data: TransactionData): boolean {
 		try {
 			if (typeof data.data === "string") {
-				const decodedData = new AbiDecoder(ContractAbiType.TOKEN).decodeFunctionData(data.data as string)
-				return decodedData.functionName === "transfer"
+				const decodedData = new AbiDecoder(ContractAbiType.TOKEN).decodeFunctionData(data.data as string);
+				return decodedData.functionName === "transfer";
 			}
 		} catch {
 			// Different abi type. Ignore.
 		}
 
-		return false
+		return false;
 	}
 
 	static #getFunctionIdentifiers(): Record<string, string> {
