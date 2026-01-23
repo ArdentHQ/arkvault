@@ -173,60 +173,6 @@ export class TokenService {
 	}
 
 	/**
-	 * Retrieves token transfers
-	 *
-	 * @returns {ExtendedConfirmedTransactionDataCollection}
-	 */
-	async transfers(query?: TokenTransfersQuery): Promise<ExtendedConfirmedTransactionDataCollection> {
-		const activeNetwork = this.#profile.activeNetwork();
-
-		const clientService = new ClientService({
-			config: activeNetwork.config(),
-			profile: this.#profile,
-		});
-
-		let response: ConfirmedTransactionDataCollection;
-
-		try {
-			response = await clientService.tokenTransfers({
-				from: this.#profile
-					.wallets()
-					.selected()
-					.map((wallet) => wallet.address()),
-				...(query ?? {}),
-			});
-		} catch {
-			return new ExtendedConfirmedTransactionDataCollection([], {
-				last: undefined,
-				next: 0,
-				prev: undefined,
-				self: undefined,
-			});
-		}
-
-		const findWallet = (from: string, to: string): Contracts.IReadWriteWallet => {
-			const fromWallet = this.#profile.wallets().findByAddressWithNetwork(from, activeNetwork.id());
-
-			if (fromWallet) {
-				return fromWallet;
-			}
-
-			return this.#profile
-				.wallets()
-				.findByAddressWithNetwork(to, activeNetwork.id()) as Contracts.IReadWriteWallet;
-		};
-
-		const transfers = response
-			.items()
-			.map(
-				(transfer) =>
-					new ExtendedConfirmedTransactionData(findWallet(transfer.from(), transfer.to()), transfer),
-			);
-
-		return new ExtendedConfirmedTransactionDataCollection(transfers, response.getPagination());
-	}
-
-	/**
 	 * Calculates the total balance of all tokens from selected wallets.
 	 *
 	 * @returns {number}
