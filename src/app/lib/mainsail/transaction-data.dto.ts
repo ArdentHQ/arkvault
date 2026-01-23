@@ -73,7 +73,7 @@ export abstract class TransactionData {
 
 	public isTokenTransfer() {
 		if (this.data?.token?.address && this.data.type === "transfer") {
-			return true
+			return true;
 		}
 
 		return TransactionTypeService.isTokenTransfer(this.data);

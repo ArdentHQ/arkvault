@@ -258,6 +258,6 @@ export class ExtendedSignedTransactionData {
 	}
 
 	public isTokenTransfer(): number {
-		return this.#data.isTransfer()
+		return this.#data.isTransfer();
 	}
 }

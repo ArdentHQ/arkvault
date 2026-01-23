@@ -266,7 +266,7 @@ export class SignedTransactionData {
 
 	public type(): string {
 		if (this.isTokenTransfer()) {
-			return "transfer"
+			return "transfer";
 		}
 
 		if (this.isVoteCombination()) {
