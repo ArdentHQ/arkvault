@@ -200,7 +200,7 @@ export class SignedTransactionData {
 
 	public token(): TokenDTO | undefined {
 		if (this.isTokenTransfer()) {
-			return new TokenDTO(this.data.token);
+			return new TokenDTO(this.data().token);
 		}
 	}
 
