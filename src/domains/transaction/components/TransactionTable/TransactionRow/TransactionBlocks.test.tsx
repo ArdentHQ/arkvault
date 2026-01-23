@@ -4,7 +4,12 @@ import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 import userEvent from "@testing-library/user-event";
-import { TransactionAmountLabel, TransactionFiatAmount, TransactionTypeLabel } from "./TransactionAmount.blocks";
+import {
+	TransactionAmountLabel,
+	TransactionFiatAmount,
+	TransactionTotalLabel,
+	TransactionTypeLabel,
+} from "./TransactionAmount.blocks";
 import { render, renderResponsive, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("TransactionAmount.blocks", () => {
@@ -67,6 +72,32 @@ describe("TransactionAmount.blocks", () => {
 		expect(screen.getByText("$5.00")).toBeInTheDocument();
 
 		exchangeMock.mockRestore();
+	});
+
+	it("should use token symbol for token transfers", () => {
+		const tokenTransferFixture = {
+			...TransactionFixture,
+			isTokenTransfer: () => true,
+			token: () => ({
+				symbol: () => "DARK20",
+			}),
+		};
+
+		render(<TransactionTotalLabel transaction={tokenTransferFixture} profile={profile} />);
+
+		expect(screen.getByText(/DARK20/)).toBeInTheDocument();
+	});
+
+	it("should use wallet currency for non-token transfers", () => {
+		const regularFixture = {
+			...TransactionFixture,
+			isTokenTransfer: () => false,
+			token: () => undefined,
+		};
+
+		render(<TransactionTotalLabel transaction={regularFixture} profile={profile} />);
+
+		expect(screen.getByText(/ARK/)).toBeInTheDocument();
 	});
 });
 
