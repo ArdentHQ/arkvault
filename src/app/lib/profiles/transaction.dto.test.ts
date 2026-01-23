@@ -6,6 +6,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { TokenDTO } from "./token.dto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -37,9 +38,18 @@ beforeEach(async () => {
 		isMultiPayment: () => false,
 		isReturn: () => false,
 		isSent: () => true,
+		isTokenTransfer: () => true,
 		payments: () => [],
 		recipients: () => [],
 		timestamp: () => DateTime.make("2021-01-01"),
+		token: () => new TokenDTO({
+			address: "0xdef",
+			decimals: 18,
+			deploymentHash: "0xaef",
+			name: "DARK 20",
+			symbol: "DARK20",
+			totalSupply: "10000000",
+		}),
 		value: () => BigNumber.make(10),
 	} as any;
 });
@@ -63,6 +73,11 @@ describe("ExtendedConfirmedTransactionData", () => {
 	it("should get explorer block link", () => {
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
 		expect(subject.explorerLinkForBlock()).toBe("https://explorer.com/block/block-hash");
+	});
+
+	it("should get token", () => {
+		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+		expect(subject.token()).toBeInstanceOf(TokenDTO);
 	});
 
 	it("should return undefined for block link if no block hash", () => {
