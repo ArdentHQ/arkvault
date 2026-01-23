@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Transactions > should fetch more transactions 1`] = `
+exports[`TokenTransfer > should fetch more token transfers 1`] = `
 <DocumentFragment>
   <div
     class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px] rounded-b-none! border-none"
@@ -10844,7 +10844,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Transactions > should hide view more button when there are no next pages 1`] = `
+exports[`TokenTransfer > should hide view more button when there are no next pages 1`] = `
 <DocumentFragment>
   <div
     class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px]"
@@ -16353,7 +16353,7 @@ exports[`Transactions > should hide view more button when there are no next page
 </DocumentFragment>
 `;
 
-exports[`Transactions > should open detail side panel on transaction row click 1`] = `
+exports[`TokenTransfer > should open detail side panel on token transfer row click 1`] = `
 <DocumentFragment>
   <div
     class="md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 dim:md:border-theme-dim-700 dim:md:outline-theme-dim-700 rounded-xl pb-2 outline outline-1 outline-transparent md:border-b-theme-secondary-200 border-transparent md:border-b-[5px] rounded-b-none! border-none"
@@ -19220,4 +19220,4 @@ exports[`Transactions > should open detail side panel on transaction row click 1
 </DocumentFragment>
 `;
 
-exports[`Transactions > should render hidden 1`] = `<DocumentFragment />`;
+exports[`TokenTransfer > should render hidden 1`] = `<DocumentFragment />`;
