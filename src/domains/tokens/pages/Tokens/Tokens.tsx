@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useActiveProfile } from "@/app/hooks/env";
-import { TokenTransfers } from "domains/tokens/components/TokenTransfers";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
@@ -15,6 +14,7 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
+import { TokenTransfers } from "@/domains/tokens/components/TokenTransfers";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
