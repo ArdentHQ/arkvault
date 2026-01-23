@@ -73,6 +73,8 @@ export const TransactionFixture = {
 	hasFailed: () => false,
 	getMeta: () => "",
 	setMeta: () => "",
+	token: () => undefined,
+	isTokenTransfer: () => false,
 	// @ts-ignore
 	explorerLink: () =>
 		"https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe",
