@@ -13,10 +13,17 @@ export class TokenService {
 	#profile: Contracts.IProfile;
 	#network: Networks.Network;
 	#dustBalanceThreshold = 1;
+	#walletTokensCollection: WalletTokenCollection;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
 		this.#network = network;
+		this.#walletTokensCollection = new WalletTokenCollection([], {
+			last: undefined,
+			next: 0,
+			prev: undefined,
+			self: undefined,
+		});
 	}
 
 	/**
@@ -45,9 +52,9 @@ export class TokenService {
 	 *
 	 * @returns {Promise<void>}
 	 */
-	public async sync(): Promise<void> {
-		const walletTokensCollection = await this.#profile.tokens().selected();
-		const walletTokens = walletTokensCollection.items();
+	public async sync(query?: WalletTokensQuery): Promise<void> {
+		await this.#syncTokenAddresses(query);
+		const walletTokens = this.#walletTokensCollection.items();
 
 		for (const walletToken of walletTokens) {
 			const wallet = this.#profile.wallets().findByAddressWithNetwork(walletToken.address(), this.#network.id());
@@ -76,24 +83,66 @@ export class TokenService {
 	 *
 	 * @returns {WalletTokenRepository}
 	 */
-	async selected(query?: WalletTokensQuery): Promise<WalletTokenCollection> {
+	async #syncTokenAddresses(query?: WalletTokensQuery): Promise<void> {
 		const clientService = new ClientService({
 			config: this.#profile.activeNetwork().config(),
 			profile: this.#profile,
 		});
 
-		let response: WalletTokenCollection;
-
 		try {
-			response = await clientService.tokenAddresses({
+			const response = await clientService.tokenAddresses({
 				addresses: this.#profile
 					.wallets()
 					.selected()
 					.map((wallet) => wallet.address()),
 				...(query ?? {}),
 			});
+
+			this.#walletTokensCollection = new WalletTokenCollection(response.items(), {
+				last: undefined,
+				next: Number(response.nextPage()),
+				prev: undefined,
+				self: undefined,
+			});
 		} catch {
-			return new WalletTokenCollection([], {
+			this.#walletTokensCollection = new WalletTokenCollection([], {
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			});
+		}
+	}
+
+	selected(): WalletTokenCollection {
+		return this.#walletTokensCollection;
+	}
+
+	/**
+	 * Retrieves token transfers
+	 *
+	 * @returns {ExtendedConfirmedTransactionDataCollection}
+	 */
+	async transfers(query?: TokenTransfersQuery): Promise<ExtendedConfirmedTransactionDataCollection> {
+		const activeNetwork = this.#profile.activeNetwork();
+
+		const clientService = new ClientService({
+			config: activeNetwork.config(),
+			profile: this.#profile,
+		});
+
+		let response: ConfirmedTransactionDataCollection;
+
+		try {
+			response = await clientService.tokenTransfers({
+				from: this.#profile
+					.wallets()
+					.selected()
+					.map((wallet) => wallet.address()),
+				...(query ?? {}),
+			});
+		} catch {
+			return new ExtendedConfirmedTransactionDataCollection([], {
 				last: undefined,
 				next: 0,
 				prev: undefined,
@@ -101,12 +150,26 @@ export class TokenService {
 			});
 		}
 
-		return new WalletTokenCollection(response.items(), {
-			last: undefined,
-			next: Number(response.nextPage()),
-			prev: undefined,
-			self: undefined,
-		});
+		const findWallet = (from: string, to: string): Contracts.IReadWriteWallet => {
+			const fromWallet = this.#profile.wallets().findByAddressWithNetwork(from, activeNetwork.id());
+
+			if (fromWallet) {
+				return fromWallet;
+			}
+
+			return this.#profile
+				.wallets()
+				.findByAddressWithNetwork(to, activeNetwork.id()) as Contracts.IReadWriteWallet;
+		};
+
+		const transfers = response
+			.items()
+			.map(
+				(transfer) =>
+					new ExtendedConfirmedTransactionData(findWallet(transfer.from(), transfer.to()), transfer),
+			);
+
+		return new ExtendedConfirmedTransactionDataCollection(transfers, response.getPagination());
 	}
 
 	/**

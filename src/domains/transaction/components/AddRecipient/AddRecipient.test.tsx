@@ -12,6 +12,8 @@ import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 import CryptoConfigurationFixture from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 const translations = buildTranslations();
 
@@ -81,6 +83,25 @@ describe("AddRecipient", () => {
 				token: new TokenDTO(fixtureData),
 				walletToken: new WalletTokenDTO(walletTokenData),
 			});
+
+		const tokensCollection = new WalletTokenCollection(
+			[
+				new WalletToken({
+					network: profile.activeNetwork(),
+					profile,
+					token: new TokenDTO(fixtureData),
+					walletToken: new WalletTokenDTO(walletTokenData),
+				}),
+			],
+			{
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			},
+		);
+
+		vi.spyOn(profile.tokens(), "selected").mockReturnValue(tokensCollection);
 	});
 
 	const Component = () => {
