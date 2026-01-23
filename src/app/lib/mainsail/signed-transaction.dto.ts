@@ -7,6 +7,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
 import { TransactionTypeService } from "./transaction-type.service";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 export class SignedTransactionData {
 	protected identifier!: string;
@@ -195,6 +196,12 @@ export class SignedTransactionData {
 
 	public toBroadcast() {
 		return this.serialized;
+	}
+
+	public token(): TokenDTO | undefined {
+		if (this.isTokenTransfer()) {
+			return new TokenDTO(this.data.token);
+		}
 	}
 
 	private normalizedData() {

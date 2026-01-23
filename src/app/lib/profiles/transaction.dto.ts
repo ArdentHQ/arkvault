@@ -7,7 +7,7 @@ import { IReadWriteWallet } from "./contracts.js";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
-import { AbiDecoder, ContractAbiType, Deserializer } from "@arkecosystem/typescript-crypto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -201,6 +201,10 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		}
 
 		return undefined;
+	}
+
+	public token(): TokenDTO | undefined {
+		return this.#data.token();
 	}
 
 	public toObject(): Contracts.KeyValuePair {
