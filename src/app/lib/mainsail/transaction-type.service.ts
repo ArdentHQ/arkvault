@@ -102,8 +102,7 @@ export class TransactionTypeService {
 				const decodedData = new AbiDecoder(ContractAbiType.TOKEN).decodeFunctionData(data.data as string);
 				return decodedData.functionName === "transfer";
 			}
-		} catch(e) {
-			console.error(e);
+		} catch {
 			// Different abi type. Ignore.
 		}
 
