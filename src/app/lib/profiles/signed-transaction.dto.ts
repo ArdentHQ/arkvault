@@ -256,4 +256,8 @@ export class ExtendedSignedTransactionData {
 	public gasLimit(): number {
 		return this.#data.gasLimit();
 	}
+
+	public isTokenTransfer(): number {
+		return this.#data.isTransfer()
+	}
 }
