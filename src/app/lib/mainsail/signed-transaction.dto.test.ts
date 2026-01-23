@@ -227,6 +227,14 @@ describe("SignedTransactionData", () => {
 			expect(transaction.isTransfer()).toBe(true);
 		});
 
+		it("should check isTokenTransfer", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(true);
+			expect(transaction.isTokenTransfer()).toBe(true);
+			tokenTransferMock.mockRestore();
+		});
+
 		it("should check isSecondSignature", () => {
 			expect(transaction.isSecondSignature()).toBe(false);
 		});

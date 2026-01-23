@@ -396,4 +396,21 @@ describe("TransactionData", () => {
 		transaction.configure({ ...commonData, asset: { lock: { expiration: { value: 100 } } } });
 		expect(transaction.expirationValue()).toBe(100);
 	});
+
+	it("#isTokenTransfer", () => {
+		transaction.configure({
+			...commonData,
+			asset: { lock: { expiration: { value: 100 } } },
+			token: { address: "0x1234567890abcdef" },
+			type: "transfer",
+		});
+		expect(transaction.isTokenTransfer()).toBe(true);
+
+		transaction.configure({
+			...commonData,
+			asset: { lock: { expiration: { value: 100 } } },
+			data: "0xa9059cbb000000000000000000000000a5cc0bfeb09742c5e4c610f2ebaab82eb142ca100000000000000000000000000000000000000000000000001bc16d674ec80000",
+		});
+		expect(transaction.isTokenTransfer()).toBe(true);
+	});
 });

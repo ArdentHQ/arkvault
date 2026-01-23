@@ -265,6 +265,10 @@ export class SignedTransactionData {
 	}
 
 	public type(): string {
+		if (this.isTokenTransfer()) {
+			return "transfer";
+		}
+
 		if (this.isVoteCombination()) {
 			return "voteCombination";
 		}
@@ -288,5 +292,9 @@ export class SignedTransactionData {
 
 	public gasUsed(): number {
 		return BigNumber.make(UnitConverter.formatUnits(this.signedData.gasPrice, "gwei")).toNumber();
+	}
+
+	public isTokenTransfer(): boolean {
+		return TransactionTypeService.isTokenTransfer(this.signedData);
 	}
 }
