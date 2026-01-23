@@ -552,11 +552,6 @@ export const PortfolioHeader = ({
 
 							{hasTokens && (
 								<>
-									<Divider
-										type="horizontal"
-										className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed"
-									/>
-
 									<div className="flex items-center justify-between md:hidden">
 										<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
 											{t("COMMON.TOKEN_HOLDINGS")}
