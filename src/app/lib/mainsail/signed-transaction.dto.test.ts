@@ -4,7 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
-import { TokenDTO } from "../profiles/token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 describe("SignedTransactionData", () => {
 	let transaction: SignedTransactionData;
@@ -152,6 +152,20 @@ describe("SignedTransactionData", () => {
 			}, mockSerialized);
 
 			expect(transaction.token()).toBeInstanceOf(TokenDTO);
+
+			tokenTransferMock.mockRestore();
+		});
+
+		it("should return `undefined` for token", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(false);
+
+			transaction.configure({
+				...mockSignedData,
+			}, mockSerialized);
+
+			expect(transaction.token()).toBe(undefined);
 
 			tokenTransferMock.mockRestore();
 		});
