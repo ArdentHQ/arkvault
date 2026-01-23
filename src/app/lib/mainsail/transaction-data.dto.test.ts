@@ -3,6 +3,7 @@ import { TransactionData, KeyValuePair } from "./transaction-data.dto";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 // Concrete implementation for testing the abstract class
 class TestTransactionData extends TransactionData {
@@ -47,6 +48,23 @@ describe("TransactionData", () => {
 		mockTransaction.configure(commonData);
 
 		expect(mockTransaction.type()).toBe("transfer");
+	});
+
+	it("should return token", () => {
+		const mockTransaction = new TestTransactionData();
+		mockTransaction.isTransfer = () => true;
+		mockTransaction.token = () =>
+			new TokenDTO({
+				address: "0xdef",
+				decimals: 18,
+				deploymentHash: "0xaef",
+				name: "DARK 20",
+				symbol: "DARK20",
+				totalSupply: "10000000",
+			});
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.token()).toBeInstanceOf(TokenDTO);
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
