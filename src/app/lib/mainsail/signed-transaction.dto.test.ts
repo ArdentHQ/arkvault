@@ -4,6 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
+import { TokenDTO } from "../profiles/token.dto";
 
 describe("SignedTransactionData", () => {
 	let transaction: SignedTransactionData;
@@ -129,6 +130,30 @@ describe("SignedTransactionData", () => {
 		it("should return to address", () => {
 			transaction.configure(mockSignedData, mockSerialized);
 			expect(transaction.to()).toBe(mockSignedData.to);
+		});
+	});
+
+	describe("token", () => {
+		it("should return token", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(true);
+
+			transaction.configure({
+				...mockSignedData,
+				token: {
+					address: "0xdef",
+					decimals: 18,
+					deploymentHash: "0xaef",
+					name: "DARK 20",
+					symbol: "DARK20",
+					totalSupply: "10000000",
+				}
+			}, mockSerialized);
+
+			expect(transaction.token()).toBeInstanceOf(TokenDTO);
+
+			tokenTransferMock.mockRestore();
 		});
 	});
 
