@@ -175,7 +175,7 @@ export const FormStep = ({
 						}}
 						profile={profile}
 						recipients={getRecipients()}
-						showMultiPaymentOption={network.allows(Enums.FeatureFlag.TransactionMultiPayment)}
+						showMultiPaymentOption={network.allows(Enums.FeatureFlag.TransactionMultiPayment) && !isTokenTransfer}
 						wallet={senderWallet}
 						onTokenChange={onTokenChange}
 					/>
