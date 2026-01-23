@@ -7,7 +7,6 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
 import { TransactionTypeService } from "./transaction-type.service";
-import { sign } from "viem/accounts";
 
 export class SignedTransactionData {
 	protected identifier!: string;
