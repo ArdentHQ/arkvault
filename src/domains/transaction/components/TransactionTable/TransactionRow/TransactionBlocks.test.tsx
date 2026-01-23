@@ -92,7 +92,7 @@ describe("TransactionAmount.blocks", () => {
 		const regularFixture = {
 			...TransactionFixture,
 			isTokenTransfer: () => false,
-			token: () => undefined,
+			token: () => {},
 		};
 
 		render(<TransactionTotalLabel transaction={regularFixture} profile={profile} />);
