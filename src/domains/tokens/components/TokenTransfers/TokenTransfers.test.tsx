@@ -1,8 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
-import React from "react";
-
-import { Transactions } from "./Transactions";
+import { TokenTransfers } from "./TokenTransfers";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { env, getDefaultProfileId, render, screen, syncValidators, waitFor, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
@@ -13,7 +11,7 @@ let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
 let tokensPageURL: string;
 
-describe("Transactions", () => {
+describe("TokenTransfer", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
@@ -28,7 +26,7 @@ describe("Transactions", () => {
 	});
 
 	it("should render", async () => {
-		render(<Transactions profile={profile} wallets={profile.wallets().values()} />, {
+		render(<TokenTransfers profile={profile} wallets={profile.wallets().values()} />, {
 			route: tokensPageURL,
 		});
 
@@ -39,7 +37,7 @@ describe("Transactions", () => {
 
 	it("should render hidden", async () => {
 		const { asFragment } = render(
-			<Transactions profile={profile} wallets={profile.wallets().values()} isVisible={false} />,
+			<TokenTransfers profile={profile} wallets={profile.wallets().values()} isVisible={false} />,
 			{
 				route: tokensPageURL,
 			},
@@ -48,11 +46,11 @@ describe("Transactions", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should open detail side panel on transaction row click", async () => {
+	it("should open detail side panel on token transfer row click", async () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { asFragment } = render(<Transactions profile={profile} wallets={profile.wallets().values()} />, {
+		const { asFragment } = render(<TokenTransfers profile={profile} wallets={profile.wallets().values()} />, {
 			route: tokensPageURL,
 		});
 
@@ -71,11 +69,11 @@ describe("Transactions", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should maximize and update side panel on transaction row click", async () => {
+	it("should maximize and update side panel on token transfer row click", async () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		render(<Transactions profile={profile} wallets={profile.wallets().values()} />, {
+		render(<TokenTransfers profile={profile} wallets={profile.wallets().values()} />, {
 			route: tokensPageURL,
 			withProviders: true,
 		});
@@ -105,7 +103,7 @@ describe("Transactions", () => {
 		});
 	});
 
-	it("should fetch more transactions", async () => {
+	it("should fetch more token transfers", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		await env.profiles().restore(profile);
@@ -125,7 +123,7 @@ describe("Transactions", () => {
 		);
 
 		const { asFragment } = render(
-			<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
+			<TokenTransfers profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
 			{
 				route: tokensPageURL,
 			},
@@ -168,7 +166,7 @@ describe("Transactions", () => {
 		);
 
 		const { asFragment } = render(
-			<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
+			<TokenTransfers profile={profile} isLoading={false} wallets={profile.wallets().values()} />,
 			{
 				route: tokensPageURL,
 			},
@@ -188,7 +186,7 @@ describe("Transactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		render(<Transactions isLoading profile={profile} wallets={profile.wallets().values()} />, {
+		render(<TokenTransfers isLoading profile={profile} wallets={profile.wallets().values()} />, {
 			route: tokensPageURL,
 		});
 
@@ -201,7 +199,7 @@ describe("Transactions", () => {
 		const emptyProfile = await env.profiles().create("test-empty");
 		const emptyProfileURL = `/profiles/${emptyProfile.id()}/dashboard`;
 
-		render(<Transactions profile={emptyProfile} wallets={[]} />, {
+		render(<TokenTransfers profile={emptyProfile} wallets={[]} />, {
 			route: emptyProfileURL,
 		});
 

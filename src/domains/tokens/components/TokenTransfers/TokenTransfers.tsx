@@ -11,7 +11,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Panel, usePanels } from "@/app/contexts";
 import { useTokenTransfers } from "@/domains/tokens/pages/hooks/use-token-transfers";
 
-interface TransactionsProperties {
+interface TokenTransfersProperties {
 	emptyText?: string;
 	profile: Contracts.IProfile;
 	isVisible?: boolean;
@@ -23,13 +23,13 @@ interface TransactionsProperties {
 	showTabs?: boolean;
 }
 
-export const Transactions = memo(function Transactions({
+export const TokenTransfers = memo(function TokenTransfers({
 	emptyText,
 	profile,
 	isVisible = true,
 	wallets,
 	selectedWallets,
-}: TransactionsProperties) {
+}: TokenTransfersProperties) {
 	const { t } = useTranslation();
 
 	const { setIsMinimized, currentOpenedPanel, closePanel, openPanel } = usePanels();
