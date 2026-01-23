@@ -141,6 +141,7 @@ export class ClientService {
 						status: 1,
 					},
 					...transfer,
+					type: "transfer",
 				}),
 			),
 			this.#createMetaPagination(response),
