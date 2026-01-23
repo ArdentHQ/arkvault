@@ -3,14 +3,14 @@ import { useTranslation } from "react-i18next";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useActiveProfile } from "@/app/hooks/env";
-import { Transactions } from "@/domains/transaction/components/Transactions";
+import { Transactions } from "@/domains/tokens/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
 import { PageHeader } from "@/app/components/Header";
 import { ThemeIcon } from "@/app/components//Icon";
 import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable";
-import { Panel, usePanels } from "@/app/contexts";
+import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
@@ -91,7 +91,13 @@ export const Tokens = () => {
 
 			{activeTab === "transactions" && (
 				<Section className="flex-1 pt-0!">
-					<Transactions showTabs={false} profile={activeProfile} wallets={[]} isLoading={false} />
+					<Transactions
+						showTabs={false}
+						profile={activeProfile}
+						selectedWallets={activeProfile.wallets().selected().length}
+						wallets={activeProfile.wallets().selected()}
+						isLoading={false}
+					/>
 				</Section>
 			)}
 
@@ -122,6 +128,12 @@ export const Tokens = () => {
 					isOpen={!!tokenModalItem}
 					walletToken={tokenModalItem}
 					onClose={() => setTokenModelItem(undefined)}
+					onSendToken={(tokenContractAddress) => {
+						setTimeout(() => {
+							setTokenModelItem(undefined);
+							openPanel(Panel.SendTokenTransfer, { tokenContractAddress });
+						}, SIDE_PANEL_TRANSITION_DURATION);
+					}}
 				/>
 			)}
 		</Page>

@@ -67,6 +67,12 @@ export interface WalletTokensQuery extends ClientPagination {
 	page?: number;
 }
 
+export interface TokenTransfersQuery extends ClientPagination {
+	from?: string[];
+	to?: string[];
+	page?: number;
+}
+
 export interface ClientTransactionsInput extends ClientPagination {
 	// Addresses
 	identifiers?: WalletIdentifier[];

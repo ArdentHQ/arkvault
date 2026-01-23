@@ -1,59 +1,58 @@
-import { Contracts, Contracts as ProfileContracts } from "@/app/lib/profiles";
+import { Contracts, Contracts as ProfileContracts, DTO } from "@/app/lib/profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSynchronizer } from "@/app/hooks";
 import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
-import { WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
 
-interface TokensState {
-	tokens: WalletToken[];
-	isLoadingTokens: boolean;
+interface TokenTransfersState {
+	transfers: DTO.ExtendedConfirmedTransactionData[];
+	isLoadingTransfers: boolean;
 	isLoadingMore: boolean;
 	hasMore?: boolean;
 }
 
-interface FetchTokenProperties {
+interface FetchTokenTransfersProperties {
 	wallets: ProfileContracts.IReadWriteWallet[];
 	page?: number;
 	orderBy?: string;
 }
 
-interface ProfileTokensProperties {
+interface TokenTransfersProperties {
 	profile: Contracts.IProfile;
 	wallets: Contracts.IReadWriteWallet[];
 	limit?: number;
 	orderBy?: string;
 }
 
-export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokensProperties) => {
+export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfersProperties) => {
 	const currentPage = useRef(1);
 
 	const [sortBy, setSortBy] = useState<SortBy>({ column: "date", desc: true });
 
 	const orderBy = sortBy; // format sortBy based on API needs
 
-	const [{ tokens, isLoadingTokens, isLoadingMore, hasMore }, setState] = useState<TokensState>({
+	const [{ transfers, isLoadingTransfers, isLoadingMore, hasMore }, setState] = useState<TokenTransfersState>({
 		hasMore: true,
 		isLoadingMore: false,
-		isLoadingTokens: true,
-		tokens: [],
+		isLoadingTransfers: true,
+		transfers: [],
 	});
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
 	useEffect(() => {
-		const loadTokens = async () => {
+		const loadTokenTransfers = async () => {
 			try {
-				const response = await fetchTokens({
+				const response = await fetchTokenTransfers({
 					wallets,
 				});
 
 				setState((state) => ({
 					...state,
 					hasMore: response.hasMorePages() as boolean,
-					isLoadingTokens: false,
-					tokens: response.items(),
+					isLoadingTransfers: false,
+					transfers: response.items(),
 				}));
 			} catch (error) {
 				/* istanbul ignore next -- @preserve */
@@ -61,24 +60,23 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 			}
 		};
 
-		delay(() => loadTokens(), 0);
+		delay(() => loadTokenTransfers(), 0);
 	}, [selectedWalletAddresses, orderBy]);
 
-	const fetchTokens = useCallback(
-		async ({ wallets, page }: FetchTokenProperties) => {
+	const fetchTokenTransfers = useCallback(
+		async ({ wallets, page }: FetchTokenTransfersProperties) => {
 			if (wallets.length === 0) {
 				return { hasMorePages: () => false, items: () => [] };
 			}
 
-			const queryParameters: WalletTokensQuery = {
-				addresses: wallets.map((wallet) => wallet.address()),
+			const queryParameters: TokenTransfersQuery = {
+				from: wallets.map((wallet) => wallet.address()),
 				limit,
 				page,
 				// orderBy,
 			};
 
-			await profile.tokens().sync(queryParameters);
-			return profile.tokens().selected();
+			return profile.tokens().transfers(queryParameters);
 		},
 		[limit, orderBy, profile],
 	);
@@ -87,7 +85,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 		currentPage.current = currentPage.current + 1;
 		setState((state) => ({ ...state, isLoadingMore: true }));
 
-		const response = await fetchTokens({
+		const response = await fetchTokenTransfers({
 			page: currentPage.current,
 			wallets,
 		});
@@ -96,17 +94,17 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 			...state,
 			hasMore: response.hasMorePages() as boolean,
 			isLoadingMore: false,
-			tokens: [...state.tokens, ...response.items()],
+			transfers: [...state.transfers, ...response.items()],
 		}));
-	}, [wallets, fetchTokens]);
+	}, [wallets, fetchTokenTransfers]);
 
-	const checkNewTokens = useCallback(async () => {
+	const checkNewTokenTransfers = useCallback(async () => {
 		/* istanbul ignore next -- @preserve */
 		if (wallets.length === 0) {
 			return;
 		}
 
-		const response = await fetchTokens({
+		const response = await fetchTokenTransfers({
 			page: 1,
 			wallets,
 		});
@@ -115,9 +113,9 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 			...state,
 			hasMore: response.hasMorePages() as boolean,
 			isLoadingMore: false,
-			tokens: response.items(),
+			transfers: response.items(),
 		}));
-	}, [wallets, fetchTokens, tokens]);
+	}, [wallets, fetchTokenTransfers, transfers]);
 
 	const walletAddresses = wallets.map((wallet) => wallet.address());
 	const walletAddressesStr = walletAddresses.join("-");
@@ -125,11 +123,11 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 	const jobs = useMemo(
 		() => [
 			{
-				callback: checkNewTokens,
+				callback: checkNewTokenTransfers,
 				interval: 15_000,
 			},
 		],
-		[walletAddressesStr, tokens],
+		[walletAddressesStr, transfers],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
@@ -139,16 +137,19 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 		return () => stop();
 	}, [start, stop]);
 
-	const hasEmptyResults = useMemo(() => tokens.length === 0 && !isLoadingTokens, [isLoadingTokens, tokens.length]);
+	const hasEmptyResults = useMemo(
+		() => transfers.length === 0 && !isLoadingTransfers,
+		[isLoadingTransfers, transfers.length],
+	);
 
 	return {
 		fetchMore,
 		hasEmptyResults,
 		hasMore,
 		isLoadingMore,
-		isLoadingTokens,
+		isLoadingTransfers,
 		setSortBy,
 		sortBy,
-		tokens,
+		transfers,
 	};
 };
