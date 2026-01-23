@@ -42,14 +42,15 @@ beforeEach(async () => {
 		payments: () => [],
 		recipients: () => [],
 		timestamp: () => DateTime.make("2021-01-01"),
-		token: () => new TokenDTO({
-			address: "0xdef",
-			decimals: 18,
-			deploymentHash: "0xaef",
-			name: "DARK 20",
-			symbol: "DARK20",
-			totalSupply: "10000000",
-		}),
+		token: () =>
+			new TokenDTO({
+				address: "0xdef",
+				decimals: 18,
+				deploymentHash: "0xaef",
+				name: "DARK 20",
+				symbol: "DARK20",
+				totalSupply: "10000000",
+			}),
 		value: () => BigNumber.make(10),
 	} as any;
 });
