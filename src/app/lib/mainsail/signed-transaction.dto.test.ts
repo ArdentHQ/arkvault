@@ -139,17 +139,20 @@ describe("SignedTransactionData", () => {
 				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
 				.mockReturnValue(true);
 
-			transaction.configure({
-				...mockSignedData,
-				token: {
-					address: "0xdef",
-					decimals: 18,
-					deploymentHash: "0xaef",
-					name: "DARK 20",
-					symbol: "DARK20",
-					totalSupply: "10000000",
-				}
-			}, mockSerialized);
+			transaction.configure(
+				{
+					...mockSignedData,
+					token: {
+						address: "0xdef",
+						decimals: 18,
+						deploymentHash: "0xaef",
+						name: "DARK 20",
+						symbol: "DARK20",
+						totalSupply: "10000000",
+					},
+				},
+				mockSerialized,
+			);
 
 			expect(transaction.token()).toBeInstanceOf(TokenDTO);
 
@@ -161,9 +164,12 @@ describe("SignedTransactionData", () => {
 				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
 				.mockReturnValue(false);
 
-			transaction.configure({
-				...mockSignedData,
-			}, mockSerialized);
+			transaction.configure(
+				{
+					...mockSignedData,
+				},
+				mockSerialized,
+			);
 
 			expect(transaction.token()).toBe(undefined);
 
