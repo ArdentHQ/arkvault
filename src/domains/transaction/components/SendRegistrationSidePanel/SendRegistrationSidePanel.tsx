@@ -89,12 +89,12 @@ export const SendRegistrationSidePanel = ({
 	const [mounted, setMounted] = useState(false);
 	const { activeWallet } = useSelectsTransactionSender({
 		active: mounted,
-		senderAddress,
 		onWalletChange: (wallet) => {
 			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
 
 			setValue("network", wallet?.network(), { shouldDirty: true, shouldValidate: true });
 		},
+		senderAddress,
 	});
 
 	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
