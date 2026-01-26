@@ -1,4 +1,3 @@
-import { NavigationBlocker, NavigationBlockingProvider } from "@/app/contexts/Navigation/NavigationBlocking";
 import { Page, Section } from "@/app/components/Layout";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -26,8 +25,6 @@ export const SettingsWrapper = ({
 	const { t } = useTranslation();
 
 	return (
-		<NavigationBlockingProvider>
-			<NavigationBlocker />
 			<Page pageTitle={t(`SETTINGS.${activeSettings.toUpperCase()}.MENU_ITEM`)} showBottomNavigationBar={false}>
 				<PageHeader
 					className="lg:-mb-4"
@@ -71,6 +68,5 @@ export const SettingsWrapper = ({
 					</div>
 				</Section>
 			</Page>
-		</NavigationBlockingProvider>
 	);
 };
