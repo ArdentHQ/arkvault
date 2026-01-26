@@ -40,7 +40,9 @@ export const useSelectsTransactionSender = ({
 
 	useEffect(() => {
 		if (senderAddress) {
-			const wallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeProfile.activeNetwork().id());
+			const wallet = activeProfile
+				.wallets()
+				.findByAddressWithNetwork(senderAddress, activeProfile.activeNetwork().id());
 			setActiveWallet(wallet);
 		}
 	}, [senderAddress]);
