@@ -431,4 +431,28 @@ describe("TransactionData", () => {
 		});
 		expect(transaction.isTokenTransfer()).toBe(true);
 	});
+
+	it("#token should return TokenDTO for token transfer", () => {
+		transaction.configure({
+			...commonData,
+			token: {
+				address: "0x180a864a755fed0144c622df49b83db577befefb",
+				decimals: 18,
+				name: "DARK20",
+				symbol: "DARK20",
+			},
+			type: "transfer",
+		});
+
+		const token = transaction.token();
+
+		expect(token).toBeInstanceOf(TokenDTO);
+		expect(token?.symbol()).toBe("DARK20");
+	});
+
+	it("#token should return undefined for non-token transfer", () => {
+		transaction.configure(commonData);
+
+		expect(transaction.token()).toBeUndefined();
+	});
 });
