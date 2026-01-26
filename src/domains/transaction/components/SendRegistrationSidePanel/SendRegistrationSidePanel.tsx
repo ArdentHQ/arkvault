@@ -89,6 +89,7 @@ export const SendRegistrationSidePanel = ({
 	const [mounted, setMounted] = useState(false);
 	const { activeWallet } = useSelectsTransactionSender({
 		active: mounted,
+		senderAddress,
 		onWalletChange: (wallet) => {
 			setValue("senderAddress", wallet?.address(), { shouldDirty: true, shouldValidate: true });
 
