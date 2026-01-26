@@ -6,11 +6,14 @@ import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { sort } from "@/app/lib/helpers/fast-sort";
 import { IProfile } from "../profiles/contracts";
 import { LedgerService } from "./ledger.service";
+import { options } from "joi";
 
 interface LedgerImportOptions {
 	slip44: number;
 	startPath?: string;
 	isLegacy: boolean;
+	pageSize?: number;
+	skipZeroBalance?: boolean;
 }
 
 export class LedgerScanner {
@@ -24,7 +27,7 @@ export class LedgerScanner {
 		this.#wallets = wallets
 	}
 
-	private calculateLastPath(slip44: number, useLegacy?: boolean): string | undefined {
+	#computeLastPath(slip44: number, useLegacy?: boolean): string | undefined {
 		const currentlyScannedWalletPaths = this.#wallets.map(({ path }) => path);
 		const profileWalletsPaths = Array.from(this.#profile.wallets().values())
 			.map((wallet) => wallet.data().get<string>(Contracts.WalletData.DerivationPath));
@@ -47,49 +50,24 @@ export class LedgerScanner {
 		return [
 			{
 				slip44: this.#ledgerService.slip44(),
-				startPath: this.calculateLastPath(this.#ledgerService.slip44()),
+				startPath: this.#computeLastPath(this.#ledgerService.slip44()),
 				isLegacy: false,
 			},
-			{
-				slip44: this.#ledgerService.slip44Eth(),
-				startPath: this.calculateLastPath(this.#ledgerService.slip44Eth()),
-				isLegacy: false,
-			},
+			// {
+			// 	slip44: this.#ledgerService.slip44Eth(),
+			// 	startPath: this.#computeLastPath(this.#ledgerService.slip44Eth()),
+			// 	isLegacy: false,
+			// },
 			{
 				slip44: this.#ledgerService.slip44Legacy(),
-				startPath: this.calculateLastPath(this.#ledgerService.slip44Legacy(), true),
+				startPath: this.#computeLastPath(this.#ledgerService.slip44Legacy(), true),
 				isLegacy: true,
 			}
 		];
 	}
 
 	async scan(options?: { isLoadingMore?: boolean, pageSize?: number }): Promise<LedgerData[]> {
-		const importConfigs = this.#importOptions()
-		let ledgerData: LedgerData[] = [];
-
-		for (const config of importConfigs) {
-			const scanOptions = {
-				pageSize: options?.pageSize ?? 5,
-				slip44: config.slip44,
-				startPath: config.startPath,
-			};
-
-			const wallets = config.isLegacy
-				? await this.#ledgerService.scanLegacy(scanOptions)
-				: await this.#ledgerService.scan(scanOptions);
-
-			for (const [path, data] of Object.entries(wallets)) {
-				const address = data.address();
-				const wallet = await this.#profile.walletFactory().fromAddress({ address });
-				await wallet.synchroniser().identity();
-
-				ledgerData.push({
-					address,
-					balance: wallet.balance(),
-					path,
-				});
-			}
-		}
+		let ledgerData = await this.scanWithBalancePriority(options)
 
 		if (options?.isLoadingMore) {
 			ledgerData = omitBy(ledgerData, (wallet) => this.#wallets.some((w) => w.address === wallet.address));
@@ -98,6 +76,66 @@ export class LedgerScanner {
 		}
 
 		return ledgerData;
+	}
+
+	async import(config: LedgerImportOptions): Promise<LedgerData[]> {
+		let ledgerData: LedgerData[] = [];
+
+		const wallets = config.isLegacy
+			? await this.#ledgerService.scanLegacy(config)
+			: await this.#ledgerService.scan(config);
+
+		for (const [path, data] of Object.entries(wallets)) {
+			const address = data.address();
+			const wallet = await this.#profile.walletFactory().fromAddress({ address });
+			await wallet.synchroniser().identity();
+
+			// Stop on first zero balance address.
+			if (config.skipZeroBalance && wallet.balance() === 0) {
+				continue;
+			}
+
+			ledgerData.push({
+				address,
+				balance: wallet.balance(),
+				path,
+			});
+		}
+
+		return ledgerData;
+	}
+
+
+	async scanWithBalancePriority(options?: { pageSize?: number }): Promise<LedgerData[]> {
+		const legacyAddresses = await this.import(
+			{
+				slip44: this.#ledgerService.slip44Legacy(),
+				startPath: this.#computeLastPath(this.#ledgerService.slip44Legacy(), true),
+				isLegacy: true,
+				skipZeroBalance: true
+			}
+		);
+
+		const ledgerAddresses = await this.import(
+			{
+				slip44: this.#ledgerService.slip44(),
+				startPath: this.#computeLastPath(this.#ledgerService.slip44()),
+				isLegacy: false,
+				pageSize: options?.pageSize
+			}
+		);
+
+
+		// Ledger scan finds no addresses with balance on slip44Legacy or slip44.
+		// Return only slip44 addresses
+		if (legacyAddresses.length === 0) {
+			return ledgerAddresses
+		}
+
+
+		console.log({ legacyAddresses, ledgerAddresses })
+		// Ledger scan finds no addresses with balance on slip44Legacy or slip44.
+		return [...legacyAddresses, ...ledgerAddresses]
 	}
 }
 

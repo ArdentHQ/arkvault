@@ -193,14 +193,12 @@ export class LedgerService {
 
 		if (options?.startPath) {
 			initialAccountIndex = BIP44.parse(options.startPath).account + 1;
-			console.log("withStartPath", { initialAccountIndex, options })
 		}
 
 		const ledgerWallets: Services.LedgerWalletList = {};
 		for (let index = 0; index < pageSize; index++) {
 			const accountIndex = initialAccountIndex + index;
 			const accountPath = `${path}/${accountIndex}'/0/0`;
-			console.log("scanning legacy", { accountPath })
 			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(accountPath);
 
 			const { address } = this.#addressService.fromPublicKey(extendedPublicKey);
