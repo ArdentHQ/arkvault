@@ -8,6 +8,9 @@ import { AddressService } from "./address.service.js";
 import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
+import { LedgerData } from "@/app/contexts/index.js";
+import { LedgerScanner, ScanOptions } from "./ledger.scanner.js";
+import { IProfile } from "../profiles/contracts.js";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
@@ -16,15 +19,17 @@ export class LedgerService {
 	#config: ConfigRepository;
 	#ethLedgerService!: any;
 	#transport!: any;
+	#profile: IProfile;
 
 	#extractAddressIndexFromPath(path: string): string {
 		return path.split("/").slice(-2).join("/");
 	}
 
-	constructor({ config }: { config: ConfigRepository }) {
+	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
 		this.#addressService = new AddressService();
 		this.#config = config;
 		this.#ethLedgerService = ledgerService;
+		this.#profile = profile
 	}
 
 	async #getPublicKeys(path: string): Promise<{ extendedPublicKey: string; publicKey: string }> {
@@ -129,19 +134,13 @@ export class LedgerService {
 	}
 
 	public async scan(options?: {
-		useLegacy: boolean;
 		startPath?: string;
 		pageSize?: number;
 		slip44?: number;
-		onProgress?: (wallet: Contracts.WalletData) => void;
 	}): Promise<Services.LedgerWalletList> {
 		const pageSize = 5;
 		const page = 0;
 		let path = `m/44'/${options?.slip44 ?? this.slip44()}'/0'`;
-
-		if (options?.useLegacy) {
-			path = `m/44'/${this.slip44Legacy()}'/0'`;
-		}
 
 		let initialAddressIndex = 0;
 
@@ -158,6 +157,55 @@ export class LedgerService {
 			const { address } = this.#addressService.fromPublicKey(extendedPublicKey);
 
 			ledgerWallets[`${path}/0/${addressIndex}`] = new WalletData({ config: this.#config }).fill({
+				address,
+				balance: 0,
+				publicKey,
+			});
+		}
+		return ledgerWallets;
+	}
+
+	/**
+	 * Scans for legacy Ledger wallets using BIP44 derivation paths.
+	 *
+	 * Increments the account index (3rd part of BIP44 path) instead of the address
+	 * index, allowing wallets with old (legacy) paths to be scanne.
+	 *
+	 * Example:
+	 *   m/44'/111'/0/0/0
+	 *   m/44'/111'/1/0/0
+	 *   m/44'/111'/2/0/0
+	 *   m/44'/111'/3/0/0
+	 *
+	 * @param options.startPath - Starting path for initial account index
+	 * @param options.pageSize - Number of accounts to scan.
+	 * @param options.slip44
+	 * @returns Promise<Services.LedgerWalletList>
+	 */
+	public async scanLegacy(options: {
+		startPath?: string;
+		pageSize?: number;
+		slip44?: number;
+	}): Promise<Services.LedgerWalletList> {
+		const pageSize = options?.pageSize ?? 5;
+		const path = `m/44'/${options?.slip44 ?? this.slip44Legacy()}'`;
+		let initialAccountIndex = 0;
+
+		if (options?.startPath) {
+			initialAccountIndex = BIP44.parse(options.startPath).account + 1;
+			console.log("withStartPath", { initialAccountIndex, options })
+		}
+
+		const ledgerWallets: Services.LedgerWalletList = {};
+		for (let index = 0; index < pageSize; index++) {
+			const accountIndex = initialAccountIndex + index;
+			const accountPath = `${path}/${accountIndex}'/0/0`;
+			console.log("scanning legacy", { accountPath })
+			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(accountPath);
+
+			const { address } = this.#addressService.fromPublicKey(extendedPublicKey);
+
+			ledgerWallets[accountPath] = new WalletData({ config: this.#config }).fill({
 				address,
 				balance: 0,
 				publicKey,
@@ -184,5 +232,9 @@ export class LedgerService {
 
 	public slip44Eth(): number {
 		return this.#config.get(ConfigKey.Slip44Eth);
+	}
+
+	public scanner({ scannedWallets }: { scannedWallets: LedgerData[] }): LedgerScanner {
+		return new LedgerScanner(this, this.#profile, scannedWallets)
 	}
 }

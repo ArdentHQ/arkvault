@@ -47,7 +47,7 @@ export const LedgerScanStep = ({
 	const pageSize = 0;
 	const legacyPageSize = 5;
 
-	const ledgerScanner = useLedgerScanner(network.coin(), network.id(), { legacyPageSize, pageSize, useLegacy: true });
+	const ledgerScanner = useLedgerScanner({ pageSize });
 
 	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
 	const walletsBySlip44 = (slip44: ConfigKey.Slip44Legacy | ConfigKey.Slip44) => {
