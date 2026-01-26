@@ -81,7 +81,7 @@ export abstract class TransactionData {
 	}
 
 	public token(): TokenDTO | undefined {
-		if (this.isTokenTransfer()) {
+		if (this.isTokenTransfer() && this.data.token) {
 			return new TokenDTO(this.data.token);
 		}
 	}
