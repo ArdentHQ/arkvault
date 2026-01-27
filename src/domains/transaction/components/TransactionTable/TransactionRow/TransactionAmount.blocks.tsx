@@ -55,7 +55,8 @@ export const TransactionTotalLabel = ({
 }): JSX.Element => {
 	const { t } = useTranslation();
 
-	const currency = transaction.wallet().currency();
+	const token = transaction.token();
+	const currency = transaction.isTokenTransfer() && token ? token.symbol() : transaction.wallet().currency();
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 

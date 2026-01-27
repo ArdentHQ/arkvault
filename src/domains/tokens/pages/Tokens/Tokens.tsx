@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useActiveProfile } from "@/app/hooks/env";
-import { Transactions } from "@/domains/tokens/components/Transactions";
 import { Tab, TabList, Tabs, TabScroll } from "@/app/components/Tabs";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TokenHeader } from "@/domains/tokens/components/TokenHeader";
@@ -15,6 +14,7 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
+import { TokenTransfers } from "@/domains/tokens/components/TokenTransfers";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
@@ -70,7 +70,7 @@ export const Tokens = () => {
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
 						</Tab>
 						<Tab tabId="transactions">
-							<span className="whitespace-nowrap">{t("COMMON.TRANSACTIONS")}</span>
+							<span className="whitespace-nowrap">{t("COMMON.TOKEN_TRANSFERS")}</span>
 						</Tab>
 					</TabList>
 				</TabScroll>
@@ -82,16 +82,16 @@ export const Tokens = () => {
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
 						</Tab>
-						<Tab tabId="transactions">
-							<span className="whitespace-nowrap">{t("COMMON.TRANSACTIONS")}</span>
+						<Tab tabId="tokenTransfers">
+							<span className="whitespace-nowrap">{t("COMMON.TOKEN_TRANSFERS")}</span>
 						</Tab>
 					</TabList>
 				</Tabs>
 			</Section>
 
-			{activeTab === "transactions" && (
+			{activeTab === "tokenTransfers" && (
 				<Section className="flex-1 pt-0!">
-					<Transactions
+					<TokenTransfers
 						showTabs={false}
 						profile={activeProfile}
 						selectedWallets={activeProfile.wallets().selected().length}

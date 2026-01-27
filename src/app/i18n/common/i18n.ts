@@ -519,6 +519,7 @@ export const translations = {
 	TOKENS_DISABLED: "Import or create an address to manage tokens",
 	TOKEN_BALANCE: "Token Balance",
 	TOKEN_HOLDINGS: "Token Holdings",
+	TOKEN_TRANSFERS: "Token Transfers",
 	TOTAL: "Total",
 	TOTAL_BALANCE: "Total Balance",
 	TOTAL_CURRENCY: "Total Currency",

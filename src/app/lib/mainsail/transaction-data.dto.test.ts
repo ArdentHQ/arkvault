@@ -3,6 +3,7 @@ import { TransactionData, KeyValuePair } from "./transaction-data.dto";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 // Concrete implementation for testing the abstract class
 class TestTransactionData extends TransactionData {
@@ -47,6 +48,23 @@ describe("TransactionData", () => {
 		mockTransaction.configure(commonData);
 
 		expect(mockTransaction.type()).toBe("transfer");
+	});
+
+	it("should return token", () => {
+		const mockTransaction = new TestTransactionData();
+		mockTransaction.isTransfer = () => true;
+		mockTransaction.token = () =>
+			new TokenDTO({
+				address: "0xdef",
+				decimals: 18,
+				deploymentHash: "0xaef",
+				name: "DARK 20",
+				symbol: "DARK20",
+				totalSupply: "10000000",
+			});
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.token()).toBeInstanceOf(TokenDTO);
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
@@ -412,5 +430,29 @@ describe("TransactionData", () => {
 			data: "0xa9059cbb000000000000000000000000a5cc0bfeb09742c5e4c610f2ebaab82eb142ca100000000000000000000000000000000000000000000000001bc16d674ec80000",
 		});
 		expect(transaction.isTokenTransfer()).toBe(true);
+	});
+
+	it("#token should return TokenDTO for token transfer", () => {
+		transaction.configure({
+			...commonData,
+			token: {
+				address: "0x180a864a755fed0144c622df49b83db577befefb",
+				decimals: 18,
+				name: "DARK20",
+				symbol: "DARK20",
+			},
+			type: "transfer",
+		});
+
+		const token = transaction.token();
+
+		expect(token).toBeInstanceOf(TokenDTO);
+		expect(token?.symbol()).toBe("DARK20");
+	});
+
+	it("#token should return undefined for non-token transfer", () => {
+		transaction.configure(commonData);
+
+		expect(transaction.token()).toBeUndefined();
 	});
 });

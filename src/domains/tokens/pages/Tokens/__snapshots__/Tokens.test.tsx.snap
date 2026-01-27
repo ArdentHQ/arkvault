@@ -1204,7 +1204,7 @@ exports[`Tokens > should render 1`] = `
                     <span
                       class="whitespace-nowrap"
                     >
-                      Transactions
+                      Token Transfers
                     </span>
                   </span>
                 </button>
@@ -1246,7 +1246,7 @@ exports[`Tokens > should render 1`] = `
                 aria-selected="false"
                 class="tab-button rounded px-3 py-1.5 text-base leading-5 font-semibold transition-all md:rounded-lg"
                 data-ring-focus-margin="-mx-3"
-                data-testid="tabs__tab-button-transactions"
+                data-testid="tabs__tab-button-tokenTransfers"
                 role="tab"
                 tabindex="-1"
                 type="button"
@@ -1255,7 +1255,7 @@ exports[`Tokens > should render 1`] = `
                   <span
                     class="whitespace-nowrap"
                   >
-                    Transactions
+                    Token Transfers
                   </span>
                 </span>
               </button>

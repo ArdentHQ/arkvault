@@ -6,6 +6,7 @@ import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 export type KeyValuePair = Record<string, any>;
 
@@ -77,6 +78,12 @@ export abstract class TransactionData {
 		}
 
 		return TransactionTypeService.isTokenTransfer(this.data);
+	}
+
+	public token(): TokenDTO | undefined {
+		if (this.isTokenTransfer() && this.data.token) {
+			return new TokenDTO(this.data.token);
+		}
 	}
 
 	public toObject(): KeyValuePair {
