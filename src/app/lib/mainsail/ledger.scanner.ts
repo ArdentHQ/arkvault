@@ -59,12 +59,64 @@ export class LedgerScanner {
 		return ledgerData;
 	}
 
-	async import(config: LedgerImportOptions): Promise<LedgerData[]> {
+	#incrementSlip44Index(path: string, isLegacy: boolean): string {
+		const parsed = BIP44.parse(path);
+
+		if (isLegacy) {
+			parsed.account++;
+		} else {
+			parsed.addressIndex++;
+		}
+
+		return BIP44.stringify(parsed);
+	}
+
+	async scanAllWithBalance(config: LedgerImportOptions): Promise<LedgerData[]> {
+		const ledgerData: LedgerData[] = [];
+		let startPath = config.startPath;
+
+		while (true) {
+			const wallets = config.isLegacy
+				? await this.#ledgerService.scanLegacy({ ...config, pageSize: 1, startPath })
+				: await this.#ledgerService.scan({ ...config, pageSize: 1, startPath });
+
+			const ledgerAddress = Object.entries(wallets)[0]
+
+			// No more wallets found stop.
+			if (!ledgerAddress) {
+				break;
+			}
+
+			const [path, data] = ledgerAddress
+			const address = data.address();
+
+			const wallet = await this.#profile.walletFactory().fromAddress({ address });
+			await wallet.synchroniser().identity();
+
+			// First zero-balance wallet found. Stop.
+			if (wallet.balance() === 0) {
+				break;
+			}
+
+			ledgerData.push({
+				address,
+				balance: wallet.balance(),
+				path,
+			});
+
+			startPath = this.#incrementSlip44Index(path, config.isLegacy)
+		}
+
+		return ledgerData;
+	}
+
+	async scanWithPager(config: LedgerImportOptions): Promise<LedgerData[]> {
 		let ledgerData: LedgerData[] = [];
 
 		const wallets = config.isLegacy
 			? await this.#ledgerService.scanLegacy(config)
 			: await this.#ledgerService.scan(config);
+
 
 		for (const [path, data] of Object.entries(wallets)) {
 			const address = data.address();
@@ -89,16 +141,14 @@ export class LedgerScanner {
 	async scanWithBalancePriority(options?: { pageSize?: number }): Promise<LedgerData[]> {
 		const pageSize = options?.pageSize ?? 5;
 
-		const legacyAddresses = await this.import({
+		const legacyAddresses = await this.scanAllWithBalance({
 			isLegacy: true,
-			skipZeroBalance: true,
 			slip44: this.#ledgerService.slip44Legacy(),
 			startPath: this.#computeLastPath(this.#ledgerService.slip44Legacy(), true),
 		});
 
-		const arkAddresses = await this.import({
+		const arkAddresses = await this.scanAllWithBalance({
 			isLegacy: false,
-			skipZeroBalance: true,
 			slip44: this.#ledgerService.slip44(),
 			startPath: this.#computeLastPath(this.#ledgerService.slip44()),
 		});
@@ -107,7 +157,7 @@ export class LedgerScanner {
 
 		// No legacy addresses. Generate all new.
 		if (addressesWithBalance.length === 0) {
-			return await this.import({
+			return await this.scanWithPager({
 				isLegacy: false,
 				pageSize: options?.pageSize,
 				slip44: this.#ledgerService.slip44Eth(),
@@ -117,7 +167,7 @@ export class LedgerScanner {
 
 		// Legacy addresses found. Generate new reimaining addresses for the page.
 		if (addressesWithBalance.length < pageSize) {
-			const ledgerAddresses = await this.import({
+			const ledgerAddresses = await this.scanWithPager({
 				isLegacy: false,
 				pageSize: pageSize - addressesWithBalance.length,
 				slip44: this.#ledgerService.slip44Eth(),
@@ -128,7 +178,7 @@ export class LedgerScanner {
 		}
 
 		// Legacy addresses are more or equeal to pageSize, just generate one empty.
-		const ledgerAddresses = await this.import({
+		const ledgerAddresses = await this.scanWithPager({
 			isLegacy: false,
 			pageSize: 1,
 			slip44: this.#ledgerService.slip44Eth(),
