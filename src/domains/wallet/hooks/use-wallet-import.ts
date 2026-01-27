@@ -25,16 +25,23 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		type,
 		value,
 		encryptedWif,
+		isAtomic,
 	}: {
 		network: Networks.Network;
 		type: string;
 		value: WalletGenerationInput;
 		encryptedWif: string;
+		isAtomic: boolean;
 	}): Promise<Contracts.IReadWriteWallet | undefined> => {
 		const defaultOptions = {
 			coin: network.coin(),
 			network: network.id(),
 		};
+
+		if (isAtomic) {
+
+			return;
+		}
 
 		const importOptions: ImportOptionsType = {
 			[OptionsValue.BIP39]: async () =>

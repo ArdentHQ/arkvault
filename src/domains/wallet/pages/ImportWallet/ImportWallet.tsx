@@ -76,6 +76,7 @@ export const ImportWallet = () => {
 		register("network", { required: true });
 		register({ name: "importOption", type: "custom" });
 		register("useEncryption");
+		register("isAtomicWallet");
 	}, [register]);
 
 	useEffect(() => {
@@ -176,13 +177,14 @@ export const ImportWallet = () => {
 	};
 
 	const importWallet = async (): Promise<void> => {
-		const { network, importOption, encryptedWif, value: walletInput } = getValues();
+		const { network, importOption, encryptedWif, value: walletInput, isAtomicWallet } = getValues();
 
 		const wallet = await importWalletByType({
 			encryptedWif,
 			network,
 			type: importOption.value,
 			value: walletInput,
+			isAtomic: isAtomicWallet,
 		});
 
 		assertWallet(wallet);
