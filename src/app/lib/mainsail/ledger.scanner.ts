@@ -80,14 +80,14 @@ export class LedgerScanner {
 				? await this.#ledgerService.scanLegacy({ ...config, pageSize: 1, startPath })
 				: await this.#ledgerService.scan({ ...config, pageSize: 1, startPath });
 
-			const ledgerAddress = Object.entries(wallets)[0]
+			const ledgerAddress = Object.entries(wallets)[0];
 
 			// No more wallets found stop.
 			if (!ledgerAddress) {
 				break;
 			}
 
-			const [path, data] = ledgerAddress
+			const [path, data] = ledgerAddress;
 			const address = data.address();
 
 			const wallet = await this.#profile.walletFactory().fromAddress({ address });
@@ -104,7 +104,7 @@ export class LedgerScanner {
 				path,
 			});
 
-			startPath = this.#incrementSlip44Index(path, config.isLegacy)
+			startPath = this.#incrementSlip44Index(path, config.isLegacy);
 		}
 
 		return ledgerData;
@@ -116,7 +116,6 @@ export class LedgerScanner {
 		const wallets = config.isLegacy
 			? await this.#ledgerService.scanLegacy(config)
 			: await this.#ledgerService.scan(config);
-
 
 		for (const [path, data] of Object.entries(wallets)) {
 			const address = data.address();
