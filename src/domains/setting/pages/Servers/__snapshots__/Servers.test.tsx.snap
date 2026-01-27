@@ -2,7 +2,6 @@
 
 exports[`Servers Settings > Added reachable servers > should ping the servers in an interval 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -1635,7 +1634,6 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
 
 exports[`Servers Settings > Added reachable servers > should render custom servers 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -3125,7 +3123,6 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
 
 exports[`Servers Settings > Added reachable servers > should render customs servers in xs 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -4650,7 +4647,6 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
 
 exports[`Servers Settings > Added reachable servers > should show status ok after ping the servers 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -6283,7 +6279,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
 
 exports[`Servers Settings > Added reachable servers > should show status ok after ping the servers on mobile 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -7951,7 +7946,6 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
 
 exports[`Servers Settings > Added unreachable servers > should show status error if request fails 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -9578,7 +9572,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
 
 exports[`Servers Settings > Added unreachable servers > should show status error if request fails on mobile 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -11240,7 +11233,6 @@ exports[`Servers Settings > Added unreachable servers > should show status error
 
 exports[`Servers Settings > should render servers page 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"

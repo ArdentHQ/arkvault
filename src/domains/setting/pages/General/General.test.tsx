@@ -46,11 +46,6 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
-	NavigationBlocker: () => <div />,
-	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-}));
-
 describe("General Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
