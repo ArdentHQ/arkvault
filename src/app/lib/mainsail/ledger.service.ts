@@ -1,4 +1,4 @@
-import { Contracts, Services } from "@/app/lib/mainsail";
+import { Services } from "@/app/lib/mainsail";
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
 import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 
@@ -9,8 +9,8 @@ import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 import { LedgerData } from "@/app/contexts/index.js";
-import { LedgerScanner, ScanOptions } from "./ledger.scanner.js";
-import { IProfile } from "../profiles/contracts.js";
+import { LedgerScanner } from "./ledger.scanner.js";
+import { IProfile } from "@/app/lib/profiles/contracts.js";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
@@ -25,11 +25,11 @@ export class LedgerService {
 		return path.split("/").slice(-2).join("/");
 	}
 
-	constructor({ config, profile }: { config: ConfigRepository, profile: IProfile }) {
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#addressService = new AddressService();
 		this.#config = config;
 		this.#ethLedgerService = ledgerService;
-		this.#profile = profile
+		this.#profile = profile;
 	}
 
 	async #getPublicKeys(path: string): Promise<{ extendedPublicKey: string; publicKey: string }> {
@@ -233,6 +233,6 @@ export class LedgerService {
 	}
 
 	public scanner({ scannedWallets }: { scannedWallets: LedgerData[] }): LedgerScanner {
-		return new LedgerScanner(this, this.#profile, scannedWallets)
+		return new LedgerScanner(this, this.#profile, scannedWallets);
 	}
 }
