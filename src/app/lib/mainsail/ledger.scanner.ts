@@ -68,6 +68,7 @@ export class LedgerScanner {
 
 	async scan(options?: { isLoadingMore?: boolean, pageSize?: number }): Promise<LedgerData[]> {
 		let ledgerData = await this.scanWithBalancePriority(options)
+		console.log({ ledgerData })
 
 		if (options?.isLoadingMore) {
 			ledgerData = omitBy(ledgerData, (wallet) => this.#wallets.some((w) => w.address === wallet.address));
@@ -92,7 +93,7 @@ export class LedgerScanner {
 
 			// Stop on first zero balance address.
 			if (config.skipZeroBalance && wallet.balance() === 0) {
-				continue;
+				break;
 			}
 
 			ledgerData.push({
@@ -107,6 +108,8 @@ export class LedgerScanner {
 
 
 	async scanWithBalancePriority(options?: { pageSize?: number }): Promise<LedgerData[]> {
+		const pageSize = options?.pageSize ?? 5
+
 		const legacyAddresses = await this.import(
 			{
 				slip44: this.#ledgerService.slip44Legacy(),
@@ -116,26 +119,57 @@ export class LedgerScanner {
 			}
 		);
 
-		const ledgerAddresses = await this.import(
+		const arkAddresses = await this.import(
 			{
 				slip44: this.#ledgerService.slip44(),
 				startPath: this.#computeLastPath(this.#ledgerService.slip44()),
 				isLegacy: false,
-				pageSize: options?.pageSize
-			}
+				skipZeroBalance: true
+			},
 		);
 
 
-		// Ledger scan finds no addresses with balance on slip44Legacy or slip44.
-		// Return only slip44 addresses
-		if (legacyAddresses.length === 0) {
-			return ledgerAddresses
+		const addressesWithBalance = [...legacyAddresses, ...arkAddresses]
+
+
+		// No legacy addresses. Generate all new.
+		if (addressesWithBalance.length === 0) {
+			return await this.import(
+				{
+					slip44: this.#ledgerService.slip44Eth(),
+					startPath: this.#computeLastPath(this.#ledgerService.slip44Eth()),
+					isLegacy: false,
+					pageSize: options?.pageSize
+				}
+			);
+
 		}
 
+		// Legacy addresses found. Generate reimaining addresses for the page.
+		if (addressesWithBalance.length < pageSize) {
+			const ledgerAddresses = await this.import(
+				{
+					slip44: this.#ledgerService.slip44Eth(),
+					startPath: this.#computeLastPath(this.#ledgerService.slip44Eth()),
+					isLegacy: false,
+					pageSize: pageSize - addressesWithBalance.length
+				}
+			);
 
-		console.log({ legacyAddresses, ledgerAddresses })
-		// Ledger scan finds no addresses with balance on slip44Legacy or slip44.
-		return [...legacyAddresses, ...ledgerAddresses]
+			return [...addressesWithBalance, ...ledgerAddresses]
+		}
+
+		// Legacy addresses are => for pageSize, just generate one.
+		const ledgerAddresses = await this.import(
+			{
+				slip44: this.#ledgerService.slip44Eth(),
+				startPath: this.#computeLastPath(this.#ledgerService.slip44Eth()),
+				isLegacy: false,
+				pageSize: 1
+			}
+		);
+
+		return [...addressesWithBalance, ...ledgerAddresses]
 	}
 }
 

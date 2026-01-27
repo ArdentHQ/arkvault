@@ -49,8 +49,8 @@ export const useLedgerScanner = (options?: { pageSize?: number }) => {
 			options: { factor: 1, randomize: false, retries: 50 },
 		});
 
-		const ledgerData = await profile.ledger().scanner({ scannedWallets: wallets }).scan({ isLoadingMore, pageSize: 2 })
-		console.log("new scan", ledgerData)
+		const ledgerData = await profile.ledger().scanner({ scannedWallets: wallets }).scan({ isLoadingMore, pageSize: options?.pageSize })
+		console.log("New scan", ledgerData)
 
 		dispatch({ payload: ledgerData, type: "success" });
 
