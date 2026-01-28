@@ -141,7 +141,7 @@ export class LedgerScanner {
 			});
 		}
 
-		return [...ledgerData, ...ledgerData];
+		return [...addressesWithBalance, ...ledgerData];
 	}
 
 	async scanWithBalancePriority(options?: { pageSize?: number }): Promise<LedgerData[]> {
