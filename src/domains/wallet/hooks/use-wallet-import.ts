@@ -38,19 +38,30 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			network: network.id(),
 		};
 
-		if (isAtomic) {
-
-			return;
-		}
-
 		const importOptions: ImportOptionsType = {
-			[OptionsValue.BIP39]: async () =>
-				profile.wallets().push(
-					await profile.walletFactory().fromMnemonicWithBIP39({
+			[OptionsValue.BIP39]: async () => {
+				let wallet: Contracts.IReadWriteWallet;
+
+				if (isAtomic) {
+					wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+						...defaultOptions,
+						levels: {
+							account: 0,
+							addressIndex: 0,
+							change: 0,
+						},
+						mnemonic: value,
+					});
+				} else {
+					wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 						...defaultOptions,
 						mnemonic: value,
-					}),
-				),
+					});
+				}
+
+				profile.wallets().push(wallet);
+				return wallet;
+			},
 			[OptionsValue.BIP44]: async () =>
 				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP44({
