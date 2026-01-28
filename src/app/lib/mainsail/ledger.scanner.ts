@@ -26,7 +26,15 @@ export class LedgerScanner {
 		this.#wallets = wallets;
 	}
 
-	#computeLastPath({ slip44, useLegacy, importedLedgerAddresses }: { importedLedgerAddresses: LedgerData[], slip44: number, useLegacy?: boolean }): string | undefined {
+	#computeLastPath({
+		slip44,
+		useLegacy,
+		importedLedgerAddresses,
+	}: {
+		importedLedgerAddresses: LedgerData[];
+		slip44: number;
+		useLegacy?: boolean;
+	}): string | undefined {
 		const currentlyScannedWalletPaths = importedLedgerAddresses.map(({ path }) => path);
 		const profileWalletsPaths = [...this.#profile.wallets().values()].map((wallet) =>
 			wallet.data().get<string>(Contracts.WalletData.DerivationPath),
@@ -111,7 +119,10 @@ export class LedgerScanner {
 			startPath: config.startPath,
 		});
 
-		const startPath = this.#computeLastPath({ slip44: this.#ledgerService.slip44Eth(), importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets] })
+		const startPath = this.#computeLastPath({
+			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
+			slip44: this.#ledgerService.slip44Eth(),
+		});
 		const wallets = await this.#ledgerService.scan({ ...config, startPath });
 
 		for (const [path, data] of Object.entries(wallets)) {
@@ -135,13 +146,20 @@ export class LedgerScanner {
 		const legacyAddresses = await this.scanAllWithBalance({
 			isLegacy: true,
 			slip44: this.#ledgerService.slip44Legacy(),
-			startPath: this.#computeLastPath({ slip44: this.#ledgerService.slip44Legacy(), useLegacy: true, importedLedgerAddresses: this.#wallets }),
+			startPath: this.#computeLastPath({
+				importedLedgerAddresses: this.#wallets,
+				slip44: this.#ledgerService.slip44Legacy(),
+				useLegacy: true,
+			}),
 		});
 
 		const arkAddresses = await this.scanAllWithBalance({
 			isLegacy: false,
 			slip44: this.#ledgerService.slip44(),
-			startPath: this.#computeLastPath({ slip44: this.#ledgerService.slip44(), importedLedgerAddresses: this.#wallets }),
+			startPath: this.#computeLastPath({
+				importedLedgerAddresses: this.#wallets,
+				slip44: this.#ledgerService.slip44(),
+			}),
 		});
 
 		const legacyWithBalance = [...legacyAddresses, ...arkAddresses];
@@ -152,7 +170,10 @@ export class LedgerScanner {
 			isLegacy: false,
 			pageSize: legacyWithBalance.length === 0 ? pageSize : remainingSize,
 			slip44: this.#ledgerService.slip44Eth(),
-			startPath: this.#computeLastPath({ slip44: this.#ledgerService.slip44Eth(), importedLedgerAddresses: this.#wallets }),
+			startPath: this.#computeLastPath({
+				importedLedgerAddresses: this.#wallets,
+				slip44: this.#ledgerService.slip44Eth(),
+			}),
 		});
 
 		return [...legacyWithBalance, ...ledgerAddresses];
