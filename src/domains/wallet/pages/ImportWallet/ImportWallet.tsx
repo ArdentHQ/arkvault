@@ -70,7 +70,15 @@ export const ImportWallet = () => {
 
 	const { getValues, formState, register, watch, trigger } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
-	const { value, importOption, encryptionPassword, confirmEncryptionPassword, isAtomicWallet, secondInput, useEncryption } = watch();
+	const {
+		value,
+		importOption,
+		encryptionPassword,
+		confirmEncryptionPassword,
+		isAtomicWallet,
+		secondInput,
+		useEncryption,
+	} = watch();
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -185,10 +193,10 @@ export const ImportWallet = () => {
 
 		const wallet = await importWalletByType({
 			encryptedWif,
+			isAtomic: isAtomicWallet,
 			network,
 			type: importOption.value,
 			value: walletInput,
-			isAtomic: isAtomicWallet,
 		});
 
 		assertWallet(wallet);

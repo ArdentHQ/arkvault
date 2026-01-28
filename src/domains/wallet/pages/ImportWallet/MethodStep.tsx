@@ -171,13 +171,13 @@ const ImportInputField = ({
 				if (isAtomicWallet) {
 					const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
 						coin: network.coin(),
-						network: network.id(),
 						levels: {
 							account: 0,
 							addressIndex: 0,
 							change: 0,
 						},
 						mnemonic: value,
+						network: network.id(),
 					});
 
 					return wallet.address();
