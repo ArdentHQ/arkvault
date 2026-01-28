@@ -26,8 +26,8 @@ export class LedgerScanner {
 		this.#wallets = wallets;
 	}
 
-	#computeLastPath(slip44: number, useLegacy?: boolean): string | undefined {
-		const currentlyScannedWalletPaths = this.#wallets.map(({ path }) => path);
+	#computeLastPath({ slip44, useLegacy, importedLedgerAddresses }: { importedLedgerAddresses: LedgerData[], slip44: number, useLegacy?: boolean }): string | undefined {
+		const currentlyScannedWalletPaths = importedLedgerAddresses.map(({ path }) => path);
 		const profileWalletsPaths = [...this.#profile.wallets().values()].map((wallet) =>
 			wallet.data().get<string>(Contracts.WalletData.DerivationPath),
 		);
@@ -102,22 +102,22 @@ export class LedgerScanner {
 		return ledgerData;
 	}
 
-	async scanWithPager(config: LedgerImportOptions): Promise<LedgerData[]> {
+	async scanNewAddresses(config: LedgerImportOptions): Promise<LedgerData[]> {
 		let ledgerData: LedgerData[] = [];
 
-		const wallets = config.isLegacy
-			? await this.#ledgerService.scanLegacy(config)
-			: await this.#ledgerService.scan(config);
+		const addressesWithBalance = await this.scanAllWithBalance({
+			isLegacy: config.isLegacy,
+			slip44: config.slip44,
+			startPath: config.startPath,
+		});
+
+		const startPath = this.#computeLastPath({ slip44: this.#ledgerService.slip44Eth(), importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets] })
+		const wallets = await this.#ledgerService.scan({ ...config, startPath });
 
 		for (const [path, data] of Object.entries(wallets)) {
 			const address = data.address();
 			const wallet = await this.#profile.walletFactory().fromAddress({ address });
 			await wallet.synchroniser().identity();
-
-			// Stop on first zero balance address.
-			if (config.skipZeroBalance && wallet.balance() === 0) {
-				break;
-			}
 
 			ledgerData.push({
 				address,
@@ -135,48 +135,27 @@ export class LedgerScanner {
 		const legacyAddresses = await this.scanAllWithBalance({
 			isLegacy: true,
 			slip44: this.#ledgerService.slip44Legacy(),
-			startPath: this.#computeLastPath(this.#ledgerService.slip44Legacy(), true),
+			startPath: this.#computeLastPath({ slip44: this.#ledgerService.slip44Legacy(), useLegacy: true, importedLedgerAddresses: this.#wallets }),
 		});
 
 		const arkAddresses = await this.scanAllWithBalance({
 			isLegacy: false,
 			slip44: this.#ledgerService.slip44(),
-			startPath: this.#computeLastPath(this.#ledgerService.slip44()),
+			startPath: this.#computeLastPath({ slip44: this.#ledgerService.slip44(), importedLedgerAddresses: this.#wallets }),
 		});
 
-		const addressesWithBalance = [...legacyAddresses, ...arkAddresses];
+		const legacyWithBalance = [...legacyAddresses, ...arkAddresses];
 
-		// No legacy addresses. Generate all new.
-		if (addressesWithBalance.length === 0) {
-			return await this.scanWithPager({
-				isLegacy: false,
-				pageSize: options?.pageSize,
-				slip44: this.#ledgerService.slip44Eth(),
-				startPath: this.#computeLastPath(this.#ledgerService.slip44Eth()),
-			});
-		}
-
-		// Legacy addresses found. Generate new reimaining addresses for the page.
-		if (addressesWithBalance.length < pageSize) {
-			const ledgerAddresses = await this.scanWithPager({
-				isLegacy: false,
-				pageSize: pageSize - addressesWithBalance.length,
-				slip44: this.#ledgerService.slip44Eth(),
-				startPath: this.#computeLastPath(this.#ledgerService.slip44Eth()),
-			});
-
-			return [...addressesWithBalance, ...ledgerAddresses];
-		}
-
-		// Legacy addresses are more or equeal to pageSize, just generate one empty.
-		const ledgerAddresses = await this.scanWithPager({
+		// Ensure at least 1 new empty address is generated.
+		const remainingSize = Math.max(1, pageSize - legacyWithBalance.length);
+		const ledgerAddresses = await this.scanNewAddresses({
 			isLegacy: false,
-			pageSize: 1,
+			pageSize: legacyWithBalance.length === 0 ? pageSize : remainingSize,
 			slip44: this.#ledgerService.slip44Eth(),
-			startPath: this.#computeLastPath(this.#ledgerService.slip44Eth()),
+			startPath: this.#computeLastPath({ slip44: this.#ledgerService.slip44Eth(), importedLedgerAddresses: this.#wallets }),
 		});
 
-		return [...addressesWithBalance, ...ledgerAddresses];
+		return [...legacyWithBalance, ...ledgerAddresses];
 	}
 }
 
