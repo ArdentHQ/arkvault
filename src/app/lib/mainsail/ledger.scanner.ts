@@ -65,7 +65,6 @@ export class LedgerScanner {
 
 		while (true) {
 			try {
-
 				const wallets = config.isLegacy
 					? await this.#ledgerService.scanLegacy({ ...config, pageSize: 1, startPath })
 					: await this.#ledgerService.scan({ ...config, pageSize: 1, startPath });
@@ -94,8 +93,8 @@ export class LedgerScanner {
 					path,
 				});
 
-				startPath = path
-			} catch (error) {
+				startPath = path;
+			} catch {
 				break;
 			}
 		}
@@ -138,7 +137,6 @@ export class LedgerScanner {
 			slip44: this.#ledgerService.slip44Legacy(),
 			startPath: this.#computeLastPath(this.#ledgerService.slip44Legacy(), true),
 		});
-
 
 		const arkAddresses = await this.scanAllWithBalance({
 			isLegacy: false,
