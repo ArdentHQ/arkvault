@@ -158,7 +158,9 @@ const ImportInputField = ({
 	profile: Contracts.IProfile;
 }) => {
 	const { t } = useTranslation();
-	const { register, getValues } = useFormContext();
+	const { register, getValues, watch } = useFormContext();
+
+	const isAtomicWallet = watch("isAtomicWallet");
 
 	const network = getValues("network");
 	assertNetwork(network);
@@ -166,8 +168,23 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (value: string) => {
 			try {
-				const { address } = await coin.address().fromMnemonic(value);
-				return address;
+				if (isAtomicWallet) {
+					const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+						coin: network.coin(),
+						network: network.id(),
+						levels: {
+							account: 0,
+							addressIndex: 0,
+							change: 0,
+						},
+						mnemonic: value,
+					});
+
+					return wallet.address();
+				} else {
+					const { address } = await coin.address().fromMnemonic(value);
+					return address;
+				}
 			} catch {
 				/* istanbul ignore next -- @preserve */
 				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
