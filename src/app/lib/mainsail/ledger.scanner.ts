@@ -59,52 +59,45 @@ export class LedgerScanner {
 		return ledgerData;
 	}
 
-	#incrementSlip44Index(path: string, isLegacy: boolean): string {
-		const parsed = BIP44.parse(path);
-
-		if (isLegacy) {
-			parsed.account++;
-		} else {
-			parsed.addressIndex++;
-		}
-
-		return BIP44.stringify(parsed);
-	}
-
 	async scanAllWithBalance(config: LedgerImportOptions): Promise<LedgerData[]> {
 		const ledgerData: LedgerData[] = [];
 		let startPath = config.startPath;
 
 		while (true) {
-			const wallets = config.isLegacy
-				? await this.#ledgerService.scanLegacy({ ...config, pageSize: 1, startPath })
-				: await this.#ledgerService.scan({ ...config, pageSize: 1, startPath });
+			try {
 
-			const ledgerAddress = Object.entries(wallets)[0];
+				const wallets = config.isLegacy
+					? await this.#ledgerService.scanLegacy({ ...config, pageSize: 1, startPath })
+					: await this.#ledgerService.scan({ ...config, pageSize: 1, startPath });
 
-			// No more wallets found stop.
-			if (!ledgerAddress) {
+				const ledgerAddress = Object.entries(wallets)[0];
+
+				// No more wallets found stop.
+				if (!ledgerAddress) {
+					break;
+				}
+
+				const [path, data] = ledgerAddress;
+				const address = data.address();
+
+				const wallet = await this.#profile.walletFactory().fromAddress({ address });
+				await wallet.synchroniser().identity();
+
+				// First zero-balance wallet found. Stop.
+				if (wallet.balance() === 0) {
+					break;
+				}
+
+				ledgerData.push({
+					address,
+					balance: wallet.balance(),
+					path,
+				});
+
+				startPath = path
+			} catch (error) {
 				break;
 			}
-
-			const [path, data] = ledgerAddress;
-			const address = data.address();
-
-			const wallet = await this.#profile.walletFactory().fromAddress({ address });
-			await wallet.synchroniser().identity();
-
-			// First zero-balance wallet found. Stop.
-			if (wallet.balance() === 0) {
-				break;
-			}
-
-			ledgerData.push({
-				address,
-				balance: wallet.balance(),
-				path,
-			});
-
-			startPath = this.#incrementSlip44Index(path, config.isLegacy);
 		}
 
 		return ledgerData;
@@ -145,6 +138,7 @@ export class LedgerScanner {
 			slip44: this.#ledgerService.slip44Legacy(),
 			startPath: this.#computeLastPath(this.#ledgerService.slip44Legacy(), true),
 		});
+
 
 		const arkAddresses = await this.scanAllWithBalance({
 			isLegacy: false,
