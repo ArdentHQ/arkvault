@@ -119,15 +119,14 @@ export class LedgerScanner {
 			startPath: config.startPath,
 		});
 
-
-		console.log({ addressesWithBalance })
+		console.log({ addressesWithBalance });
 
 		const startPath = this.#computeLastPath({
 			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
 			slip44: this.#ledgerService.slip44Eth(),
 		});
 
-		console.log({ startPath })
+		console.log({ startPath });
 		const wallets = await this.#ledgerService.scan({ ...config, startPath });
 
 		for (const [path, data] of Object.entries(wallets)) {
