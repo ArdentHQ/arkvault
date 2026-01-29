@@ -12,11 +12,10 @@ const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, 
 		const wif = await wallet.signingKey().get(password);
 
 		if (wallet.actsWithBip44MnemonicWithEncryption()) {
-			const { address } = await wallet.coin().address().fromMnemonic(
-				wif,
-				undefined,
-				wallet.data().get(Contracts.WalletData.DerivationPath)
-			);
+			const { address } = await wallet
+				.coin()
+				.address()
+				.fromMnemonic(wif, undefined, wallet.data().get(Contracts.WalletData.DerivationPath));
 
 			return address;
 		}
@@ -60,11 +59,10 @@ export const authentication = (t: any) => {
 			validate: {
 				matchSenderAddress: async (mnemonic: string) => {
 					try {
-						const { address } = await wallet.coin().address().fromMnemonic(
-							mnemonic,
-							undefined,
-							wallet.data().get(Contracts.WalletData.DerivationPath),
-						);
+						const { address } = await wallet
+							.coin()
+							.address()
+							.fromMnemonic(mnemonic, undefined, wallet.data().get(Contracts.WalletData.DerivationPath));
 
 						if (address === wallet.address()) {
 							return true;

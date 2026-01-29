@@ -168,13 +168,11 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (value: string) => {
 			try {
-				const slip =  coin.config().get("network.constants.slip44");
+				const slip = coin.config().get("network.constants.slip44");
 
-				const { address } = await coin.address().fromMnemonic(
-					value,
-					undefined,
-					isAtomicWallet ? `m/44'/${slip}'/0'/0/0` : undefined,
-				);
+				const { address } = await coin
+					.address()
+					.fromMnemonic(value, undefined, isAtomicWallet ? `m/44'/${slip}'/0'/0/0` : undefined);
 
 				return address;
 			} catch {
