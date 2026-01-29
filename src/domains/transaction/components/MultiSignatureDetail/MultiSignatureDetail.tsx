@@ -104,7 +104,7 @@ export const MultiSignatureDetail = ({
 					secondSecret,
 					secret,
 					wif,
-					path: wallet.data().get<string>(Contracts.WalletData.DerivationPath)
+					path: wallet.data().get<string>(Contracts.WalletData.DerivationPath),
 				});
 
 				await addSignature({ signatory, transactionId: transaction.id(), wallet });

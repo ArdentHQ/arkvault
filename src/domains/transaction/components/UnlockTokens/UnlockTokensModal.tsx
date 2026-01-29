@@ -50,7 +50,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 		try {
 			const signatory = await wallet.signatoryFactory().make({
 				...authenticationData,
-				path: wallet.data().get<string>(Contracts.WalletData.DerivationPath)
+				path: wallet.data().get<string>(Contracts.WalletData.DerivationPath),
 			});
 
 			const input: Services.UnlockTokenInput = {

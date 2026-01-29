@@ -101,7 +101,7 @@ export const SendDelegateResignation = () => {
 				secondSecret,
 				secret,
 				wif,
-				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath)
+				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signDelegateResignation({

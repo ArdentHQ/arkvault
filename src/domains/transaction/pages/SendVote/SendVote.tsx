@@ -292,7 +292,7 @@ export const SendVote = () => {
 				secondSecret,
 				secret,
 				wif,
-				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath)
+				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 			});
 
 			const voteTransactionInput: Services.TransactionInput = {
