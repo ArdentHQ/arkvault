@@ -19,7 +19,7 @@ export class LedgerScanner {
 	#ledgerService: LedgerService;
 	#profile: IProfile;
 	#wallets: LedgerData[];
-	#defaultPageSize: 5;
+	#defaultPageSize: number = 5;
 
 	constructor(ledgerService: LedgerService, profile: IProfile, wallets: LedgerData[]) {
 		this.#ledgerService = ledgerService;
