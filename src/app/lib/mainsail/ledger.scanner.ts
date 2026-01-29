@@ -92,7 +92,29 @@ export class LedgerScanner {
 
 				// First zero-balance wallet found. Stop.
 				if (wallet.balance() === 0) {
-					break;
+					console.log("Zero balance. checking next 5", { address, currentPath: path })
+					// Pre-scan next 5 addresses to find those with non-zero balances.
+					//
+					// Once we've found an address with empty balance, scan the next 5 addresses to see if they have balance.
+					// If none of the next 5 addresses have balance, then we just import the ones which do.
+					// If some of the next 5 addresses do have balance, then we keep scanning until we hit 5 that don't have balance.
+					//
+					// The scanning stops when we encounter 5 consecutive empty addresses.
+					const next5 = await this.scanWithPager({
+						isLegacy: config.isLegacy,
+						pageSize: 5,
+						slip44: config.slip44,
+						startPath: path,
+					});
+
+
+					const hasAnyBalance = next5.some((ledger) => typeof ledger?.balance === "number" && ledger.balance > 0)
+					console.log({ next5, hasAnyBalance })
+
+					// Break only of the following 5 don't have any balance.
+					if (!hasAnyBalance) {
+						break;
+					}
 				}
 
 				ledgerData.push({
@@ -110,6 +132,29 @@ export class LedgerScanner {
 		return ledgerData;
 	}
 
+	async scanWithPager(config: LedgerImportOptions): Promise<LedgerData[]> {
+		let ledgerData: LedgerData[] = [];
+
+		const wallets = config.isLegacy
+			? await this.#ledgerService.scanLegacy(config)
+			: await this.#ledgerService.scan(config);
+
+		for (const [path, data] of Object.entries(wallets)) {
+			const address = data.address();
+			const wallet = await this.#profile.walletFactory().fromAddress({ address });
+			await wallet.synchroniser().identity();
+
+			ledgerData.push({
+				address,
+				balance: wallet.balance(),
+				path,
+			});
+		}
+
+		return ledgerData
+	}
+
+
 	async scanNewAddresses(config: LedgerImportOptions): Promise<LedgerData[]> {
 		let ledgerData: LedgerData[] = [];
 
@@ -118,8 +163,6 @@ export class LedgerScanner {
 			slip44: config.slip44,
 			startPath: config.startPath,
 		});
-
-		console.log({ addressesWithBalance });
 
 		const startPath = this.#computeLastPath({
 			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
