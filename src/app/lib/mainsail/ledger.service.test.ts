@@ -52,7 +52,7 @@ describe("LedgerService", () => {
 		const closeSpy = vi.fn();
 		const mockTransport = {
 			close: closeSpy,
-			decorateAppAPIMethods: () => { },
+			decorateAppAPIMethods: () => {},
 		};
 		vi.spyOn(LedgerTransportFactory, "connectedTransport").mockResolvedValueOnce(mockTransport);
 		const ledgerService = new LedgerService({ config: { get: () => 60 } as any });

@@ -19,7 +19,7 @@ export class LedgerScanner {
 	#ledgerService: LedgerService;
 	#profile: IProfile;
 	#wallets: LedgerData[];
-	#defaultPageSize: 5
+	#defaultPageSize: 5;
 
 	constructor(ledgerService: LedgerService, profile: IProfile, wallets: LedgerData[]) {
 		this.#ledgerService = ledgerService;
@@ -163,7 +163,7 @@ export class LedgerScanner {
 		const startPath = this.#computeLastPath({
 			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
 			slip44: this.#ledgerService.slip44Eth(),
-			useLegacy: config.isLegacy
+			useLegacy: config.isLegacy,
 		});
 
 		const ledgerData = await this.scanWithPager({

@@ -24,12 +24,14 @@ describe("LedgerScannerTest", () => {
 	});
 
 	it("should scan", async () => {
-		await expect(profile.ledger().scanner({ scannedWallets: [] }).scan()).resolves.toHaveLength(1)
-		await expect(profile.ledger().scanner({ scannedWallets: [] }).scan({ pageSize: 1, isLoadingMore: true })).resolves.toHaveLength(1)
+		await expect(profile.ledger().scanner({ scannedWallets: [] }).scan()).resolves.toHaveLength(1);
+		await expect(
+			profile.ledger().scanner({ scannedWallets: [] }).scan({ isLoadingMore: true, pageSize: 1 }),
+		).resolves.toHaveLength(1);
 	});
 
 	it("should scan", async () => {
-		await expect(profile.ledger().scanner({ scannedWallets: [] }).scan()).resolves.toHaveLength(1)
+		await expect(profile.ledger().scanner({ scannedWallets: [] }).scan()).resolves.toHaveLength(1);
 	});
 
 	it("should scan with balance priority", async () => {
@@ -43,8 +45,8 @@ describe("LedgerScannerTest", () => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanWithPager({
 			isLegacy: false,
+			pageSize: 2,
 			slip44,
-			pageSize: 2
 		});
 
 		expect(result[0].path).toBe(`m/44'/${slip44}'/0'/0/0`);
@@ -52,20 +54,18 @@ describe("LedgerScannerTest", () => {
 	});
 
 	it("should scan legacy by incrementing the account index instead of address index", async () => {
-		const slip44 = 1
-
+		const slip44 = 1;
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
 		const result = await scanner.scanWithPager({
 			isLegacy: true,
+			pageSize: 2,
 			slip44,
-			pageSize: 2
 		});
 
 		expect(result[0].path).toBe(`m/44'/${slip44}'/0'/0/0`);
 		expect(result[1].path).toBe(`m/44'/${slip44}'/1'/0/0`);
 	});
-
 
 	it("should scan new addresses only", async () => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
@@ -77,9 +77,9 @@ describe("LedgerScannerTest", () => {
 		expect(result).toHaveLength(5);
 	});
 
-	it.each([{ isLegacy: false }, { isLegacy: true },])("should scan all that have balance %s", async ({ isLegacy }) => {
+	it.each([{ isLegacy: false }, { isLegacy: true }])("should scan all that have balance %s", async ({ isLegacy }) => {
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
-		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first())
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());
 
 		const result = await scanner.scanAllWithBalance({
 			isLegacy,
@@ -90,21 +90,21 @@ describe("LedgerScannerTest", () => {
 	});
 
 	it("should handle regular scan", async () => {
-		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first())
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValueOnce(profile.wallets().first());
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
-		const result = await scanner.scan({ pageSize: 3, isLoadingMore: true });
+		const result = await scanner.scan({ isLoadingMore: true, pageSize: 3 });
 
 		expect(result).toHaveLength(3);
 	});
 
 	it("should handle exception", async () => {
 		vi.spyOn(profile.walletFactory(), "fromAddress").mockImplementationOnce(() => {
-			throw new Error("error")
-		})
+			throw new Error("error");
+		});
 
 		const scanner = profile.ledger().scanner({ scannedWallets: [] });
-		const result = await scanner.scan({ pageSize: 3, isLoadingMore: true });
+		const result = await scanner.scan({ isLoadingMore: true, pageSize: 3 });
 
 		expect(result).toHaveLength(3);
 	});
