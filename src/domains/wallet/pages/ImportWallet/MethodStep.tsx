@@ -168,23 +168,15 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (value: string) => {
 			try {
-				if (isAtomicWallet) {
-					const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
-						coin: network.coin(),
-						network: network.id(),
-						levels: {
-							account: 0,
-							addressIndex: 0,
-							change: 0,
-						},
-						mnemonic: value,
-					});
+				const slip =  coin.config().get("network.constants.slip44");
 
-					return wallet.address();
-				} else {
-					const { address } = await coin.address().fromMnemonic(value);
-					return address;
-				}
+				const { address } = await coin.address().fromMnemonic(
+					value,
+					undefined,
+					isAtomicWallet ? `m/44'/${slip}'/0'/0/0` : undefined,
+				);
+
+				return address;
 			} catch {
 				/* istanbul ignore next -- @preserve */
 				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));

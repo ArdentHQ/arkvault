@@ -11,6 +11,16 @@ const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, 
 	try {
 		const wif = await wallet.signingKey().get(password);
 
+		if (wallet.actsWithBip44MnemonicWithEncryption()) {
+			const { address } = await wallet.coin().address().fromMnemonic(
+				wif,
+				undefined,
+				wallet.data().get(Contracts.WalletData.DerivationPath)
+			);
+
+			return address;
+		}
+
 		if (BIP39.validate(wif)) {
 			const { address } = await wallet.coin().address().fromMnemonic(wif);
 
@@ -50,7 +60,11 @@ export const authentication = (t: any) => {
 			validate: {
 				matchSenderAddress: async (mnemonic: string) => {
 					try {
-						const { address } = await wallet.coin().address().fromMnemonic(mnemonic);
+						const { address } = await wallet.coin().address().fromMnemonic(
+							mnemonic,
+							undefined,
+							wallet.data().get(Contracts.WalletData.DerivationPath),
+						);
 
 						if (address === wallet.address()) {
 							return true;
