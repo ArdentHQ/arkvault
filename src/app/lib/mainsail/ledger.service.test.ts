@@ -52,7 +52,7 @@ describe("LedgerService", () => {
 		const closeSpy = vi.fn();
 		const mockTransport = {
 			close: closeSpy,
-			decorateAppAPIMethods: () => {},
+			decorateAppAPIMethods: () => { },
 		};
 		vi.spyOn(LedgerTransportFactory, "connectedTransport").mockResolvedValueOnce(mockTransport);
 		const ledgerService = new LedgerService({ config: { get: () => 60 } as any });
@@ -106,6 +106,22 @@ describe("LedgerService", () => {
 			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(mockPublicKey);
 
 			const result = await ledgerService.scan({ pageSize: 1, useLegacy: false });
+
+			expect(result).toBeDefined();
+			expect(Object.keys(result)).toHaveLength(1);
+
+			const walletPath = Object.keys(result)[0];
+			const wallet = result[walletPath];
+			expect(wallet.address()).toBeDefined();
+			expect(wallet.balance()).toBeDefined();
+		});
+
+		it("should scan legacy path and create wallet data when getExtendedPublicKey works", async () => {
+			// Mock getExtendedPublicKey to return a valid public key
+			const mockPublicKey = "0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041";
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(mockPublicKey);
+
+			const result = await ledgerService.scanLegacy({ pageSize: 1 });
 
 			expect(result).toBeDefined();
 			expect(Object.keys(result)).toHaveLength(1);

@@ -19,6 +19,7 @@ export class LedgerScanner {
 	#ledgerService: LedgerService;
 	#profile: IProfile;
 	#wallets: LedgerData[];
+	#defaultPageSize: 5
 
 	constructor(ledgerService: LedgerService, profile: IProfile, wallets: LedgerData[]) {
 		this.#ledgerService = ledgerService;
@@ -92,7 +93,6 @@ export class LedgerScanner {
 
 				// First zero-balance wallet found. Stop.
 				if (wallet.balance() === 0) {
-					console.log("Zero balance. checking next 5", { address, currentPath: path });
 					// Pre-scan next 5 addresses to find those that might have non-zero balances.
 					//
 					// If none of the next 5 addresses have balance, then we just import the ones which do.
@@ -101,7 +101,7 @@ export class LedgerScanner {
 					// The scanning stops when we encounter 5 consecutive empty addresses.
 					const next5 = await this.scanWithPager({
 						isLegacy: config.isLegacy,
-						pageSize: 5,
+						pageSize: this.#defaultPageSize,
 						slip44: config.slip44,
 						startPath: path,
 					});
@@ -109,7 +109,6 @@ export class LedgerScanner {
 					const hasAnyBalance = next5.some(
 						(ledger) => typeof ledger?.balance === "number" && ledger.balance > 0,
 					);
-					console.log({ hasAnyBalance, next5 });
 
 					// Break only of the following 5 don't have any balance.
 					if (!hasAnyBalance) {
@@ -155,8 +154,6 @@ export class LedgerScanner {
 	}
 
 	async scanNewAddresses(config: LedgerImportOptions): Promise<LedgerData[]> {
-		let ledgerData: LedgerData[] = [];
-
 		const addressesWithBalance = await this.scanAllWithBalance({
 			isLegacy: config.isLegacy,
 			slip44: config.slip44,
@@ -166,28 +163,21 @@ export class LedgerScanner {
 		const startPath = this.#computeLastPath({
 			importedLedgerAddresses: [...addressesWithBalance, ...this.#wallets],
 			slip44: this.#ledgerService.slip44Eth(),
+			useLegacy: config.isLegacy
 		});
 
-		console.log({ startPath });
-		const wallets = await this.#ledgerService.scan({ ...config, startPath });
-
-		for (const [path, data] of Object.entries(wallets)) {
-			const address = data.address();
-			const wallet = await this.#profile.walletFactory().fromAddress({ address });
-			await wallet.synchroniser().identity();
-
-			ledgerData.push({
-				address,
-				balance: wallet.balance(),
-				path,
-			});
-		}
+		const ledgerData = await this.scanWithPager({
+			isLegacy: config.isLegacy,
+			pageSize: config.pageSize,
+			slip44: config.slip44,
+			startPath,
+		});
 
 		return [...addressesWithBalance, ...ledgerData];
 	}
 
 	async scanWithBalancePriority(options?: { pageSize?: number }): Promise<LedgerData[]> {
-		const pageSize = options?.pageSize ?? 5;
+		const pageSize = options?.pageSize ?? this.#defaultPageSize;
 
 		const legacyAddresses = await this.scanAllWithBalance({
 			isLegacy: true,
