@@ -92,7 +92,7 @@ export class LedgerScanner {
 
 				// First zero-balance wallet found. Stop.
 				if (wallet.balance() === 0) {
-					console.log("Zero balance. checking next 5", { address, currentPath: path })
+					console.log("Zero balance. checking next 5", { address, currentPath: path });
 					// Pre-scan next 5 addresses to find those with non-zero balances.
 					//
 					// Once we've found an address with empty balance, scan the next 5 addresses to see if they have balance.
@@ -107,9 +107,10 @@ export class LedgerScanner {
 						startPath: path,
 					});
 
-
-					const hasAnyBalance = next5.some((ledger) => typeof ledger?.balance === "number" && ledger.balance > 0)
-					console.log({ next5, hasAnyBalance })
+					const hasAnyBalance = next5.some(
+						(ledger) => typeof ledger?.balance === "number" && ledger.balance > 0,
+					);
+					console.log({ hasAnyBalance, next5 });
 
 					// Break only of the following 5 don't have any balance.
 					if (!hasAnyBalance) {
@@ -151,9 +152,8 @@ export class LedgerScanner {
 			});
 		}
 
-		return ledgerData
+		return ledgerData;
 	}
-
 
 	async scanNewAddresses(config: LedgerImportOptions): Promise<LedgerData[]> {
 		let ledgerData: LedgerData[] = [];
