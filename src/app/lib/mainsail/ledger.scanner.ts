@@ -93,9 +93,8 @@ export class LedgerScanner {
 				// First zero-balance wallet found. Stop.
 				if (wallet.balance() === 0) {
 					console.log("Zero balance. checking next 5", { address, currentPath: path });
-					// Pre-scan next 5 addresses to find those with non-zero balances.
+					// Pre-scan next 5 addresses to find those that might have non-zero balances.
 					//
-					// Once we've found an address with empty balance, scan the next 5 addresses to see if they have balance.
 					// If none of the next 5 addresses have balance, then we just import the ones which do.
 					// If some of the next 5 addresses do have balance, then we keep scanning until we hit 5 that don't have balance.
 					//
