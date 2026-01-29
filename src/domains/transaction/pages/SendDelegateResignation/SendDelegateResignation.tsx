@@ -96,12 +96,12 @@ export const SendDelegateResignation = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
+				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 				privateKey,
 				secondMnemonic,
 				secondSecret,
 				secret,
 				wif,
-				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 			});
 
 			const signedTransactionId = await activeWallet.transaction().signDelegateResignation({

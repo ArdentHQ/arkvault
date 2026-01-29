@@ -144,13 +144,14 @@ export const SendRegistration = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
+				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
+
 				privateKey,
 				/* istanbul ignore next -- @preserve */
 				secondMnemonic: registrationType === "secondSignature" ? undefined : secondMnemonic,
 				secondSecret,
 				secret,
 				wif,
-				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 			});
 
 			if (registrationType === "multiSignature") {
