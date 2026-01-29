@@ -46,8 +46,10 @@ const sign = async (
 	}
 
 	const getSignatory = async (): Promise<Signatories.Signatory | undefined> => {
+		const derivationPath = wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath);
+
 		if (mnemonic) {
-			return wallet.signatory().mnemonic(mnemonic);
+			return wallet.signatory().mnemonic(mnemonic, derivationPath);
 		}
 
 		if (secret) {
@@ -57,8 +59,8 @@ const sign = async (
 		if (encryptionPassword) {
 			const signingKey = await wallet.signingKey().get(encryptionPassword);
 
-			if (wallet.actsWithMnemonicWithEncryption()) {
-				return wallet.signatory().mnemonic(signingKey);
+			if (wallet.actsWithMnemonicWithEncryption() || wallet.actsWithBip44MnemonicWithEncryption()) {
+				return wallet.signatory().mnemonic(signingKey, derivationPath);
 			}
 
 			if (wallet.actsWithSecretWithEncryption()) {

@@ -91,7 +91,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 				secret,
 				wif,
-				path: wallet.data().get(Contracts.WalletData.DerivationPath)
+				path: wallet.data().get(Contracts.WalletData.DerivationPath),
 			});
 
 			const data = await buildTransferData({
