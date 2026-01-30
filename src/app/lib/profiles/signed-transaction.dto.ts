@@ -1,6 +1,7 @@
 /* istanbul ignore file */
 
 import { DTO } from "@/app/lib/mainsail";
+import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";
@@ -16,6 +17,10 @@ export class ExtendedSignedTransactionData {
 	public constructor(data: SignedTransactionData, wallet: IReadWriteWallet) {
 		this.#data = data;
 		this.#wallet = wallet;
+	}
+
+	public async sync(profile: ProfileContracts.IProfile): Promise<void>  {
+		await this.data().sync(profile);
 	}
 
 	public data(): SignedTransactionData {

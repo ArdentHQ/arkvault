@@ -133,7 +133,7 @@ export class ClientService {
 		return new ConfirmedTransactionDataCollection(
 			response.data.map((transfer) =>
 				new ConfirmedTransactionData().configure({
-					confirmations: 1,
+					confirmations: 0,
 					data: transfer.functionSig,
 					hash: transfer.transactionHash,
 					nonce: 0,

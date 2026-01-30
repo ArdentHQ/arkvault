@@ -2,6 +2,7 @@
 /* eslint-disable */
 
 import { Contracts } from "@/app/lib/mainsail";
+import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";
@@ -21,6 +22,10 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	public constructor(wallet: IReadWriteWallet, data: ConfirmedTransactionData) {
 		this.#wallet = wallet;
 		this.#data = data;
+	}
+
+	public async sync(profile: ProfileContracts.IProfile): Promise<void> {
+		await this.#data.sync(profile);
 	}
 
 	public hash(): string {

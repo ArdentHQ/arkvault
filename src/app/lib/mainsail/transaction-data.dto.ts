@@ -1,4 +1,5 @@
 import { Contracts } from "@/app/lib/mainsail";
+import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { MultiPaymentItem, TransactionDataMeta } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
@@ -7,6 +8,7 @@ import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { ClientService } from "@/app/lib/mainsail/client.service";
 
 export type KeyValuePair = Record<string, any>;
 
@@ -37,6 +39,15 @@ export abstract class TransactionData {
 	public configure(data: any): this {
 		this.data = data;
 		return this;
+	}
+
+	public async sync(profile: ProfileContracts.IProfile): Promise<void> {
+		const clientService = new ClientService({
+			config: profile.activeNetwork().config(),
+			profile: profile,
+		});
+
+		this.configure(await clientService.transaction(this.hash()));
 	}
 
 	public withDecimals(decimals?: number | string): this {

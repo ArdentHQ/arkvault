@@ -1,5 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
+import { Contracts } from "@/app/lib/profiles";
 
 import { MultiPaymentItem, MultiPaymentRecipient } from "./confirmed-transaction.dto.contract";
 
@@ -20,6 +21,8 @@ export interface SignedTransactionData {
 	setAttributes(attributes: { identifier: string }): void;
 
 	configure(identifier: string, signedData: RawTransactionData, serialized?: string, decimals?: number | string);
+
+	sync(profile: Contracts.IProfile): Promise<void>;
 
 	// All
 	hash(): string;
