@@ -1,3 +1,4 @@
+// eslint-disable unicorn/no-array-reduce
 import { omitBy, uniqBy } from "@/app/lib/helpers";
 
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
