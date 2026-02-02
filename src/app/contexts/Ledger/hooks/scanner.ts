@@ -53,7 +53,6 @@ export const useLedgerScanner = (options?: { pageSize?: number }) => {
 			.ledger()
 			.scanner({ scannedWallets: wallets })
 			.scan({ isLoadingMore, pageSize: options?.pageSize });
-		console.log("New scan", ledgerData);
 
 		dispatch({ payload: ledgerData, type: "success" });
 
