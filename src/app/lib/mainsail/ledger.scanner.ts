@@ -107,7 +107,10 @@ export class LedgerScanner {
 					});
 
 					// Break if we have 5 consecutive empty addresses.
-					const consecutiveEmpty = next5.reduce((count, ledger) => ledger?.hasSyncedWithNetwork ? 0 : count + 1, 0);
+					const consecutiveEmpty = next5.reduce(
+						(count, ledger) => (ledger?.hasSyncedWithNetwork ? 0 : count + 1),
+						0,
+					);
 					if (consecutiveEmpty === 5) {
 						break;
 					}
