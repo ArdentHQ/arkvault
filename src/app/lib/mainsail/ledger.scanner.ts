@@ -91,7 +91,7 @@ export class LedgerScanner {
 				const wallet = await this.#profile.walletFactory().fromAddress({ address });
 				await wallet.synchroniser().identity();
 
-				if (wallet.balance() === 0) {
+				if (!wallet.hasSyncedWithNetwork()) {
 					// Pre-scan next 5 addresses to find those that might have transaction history.
 					//
 					// If none of the next 5 addresses have transaction history, then we just import the ones which do.
@@ -145,8 +145,8 @@ export class LedgerScanner {
 			ledgerData.push({
 				address,
 				balance: wallet.balance(),
-				path,
 				hasSyncedWithNetwork: wallet.hasSyncedWithNetwork(),
+				path,
 			});
 		}
 
