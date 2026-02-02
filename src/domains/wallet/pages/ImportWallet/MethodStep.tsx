@@ -168,13 +168,14 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (value: string) => {
 			try {
-				const slip = coin.config().get("network.constants.slip44");
-
-				const { address } = await coin
-					.address()
-					.fromMnemonic(value, undefined, isAtomicWallet ? `m/44'/${slip}'/0'/0/0` : undefined);
-
-				return address;
+				if (isAtomicWallet) {
+					const slip = coin.config().get("network.constants.slip44");
+					const result = await coin.address().fromBip44Mnemonic(value, `m/44'/${slip}'/0'/0/0`);
+					return result.address;
+				} else {
+					const result = await coin.address().fromMnemonic(value);
+					return result.address;
+				}
 			} catch {
 				/* istanbul ignore next -- @preserve */
 				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
@@ -392,7 +393,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 							<span data-testid="ImportWallet__encryption">
 								<Toggle
 									data-testid="ImportWallet__encryption-toggle"
-									disabled={!importOption.canBeEncrypted}
+									disabled={!importOption.canBeEncrypte}
 									checked={isUseEncryptionChecked}
 									onChange={handleToggleEncryption}
 								/>
