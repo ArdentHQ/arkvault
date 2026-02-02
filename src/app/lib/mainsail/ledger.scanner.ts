@@ -91,14 +91,13 @@ export class LedgerScanner {
 				const wallet = await this.#profile.walletFactory().fromAddress({ address });
 				await wallet.synchroniser().identity();
 
-				// First zero-balance wallet found. Stop.
 				if (wallet.balance() === 0) {
-					// Pre-scan next 5 addresses to find those that might have non-zero balances.
+					// Pre-scan next 5 addresses to find those that might have transaction history.
 					//
-					// If none of the next 5 addresses have balance, then we just import the ones which do.
-					// If some of the next 5 addresses do have balance, then we keep scanning until we hit 5 that don't have balance.
+					// If none of the next 5 addresses have transaction history, then we just import the ones which do.
+					// If some of the next 5 addresses do have transaction history, then we keep scanning until we hit 5 without transaction history.
 					//
-					// The scanning stops when we encounter 5 consecutive empty addresses.
+					// The scanning stops when we encounter 5 consecutive without transaction history.
 					const next5 = await this.scanWithPager({
 						isLegacy: config.isLegacy,
 						pageSize: this.#defaultPageSize,
@@ -106,14 +105,14 @@ export class LedgerScanner {
 						startPath: path,
 					});
 
-					const hasAnyBalance = next5.some(
-						(ledger) => typeof ledger?.balance === "number" && ledger.balance > 0,
-					);
-
-					// Break only of the following 5 don't have any balance.
-					if (!hasAnyBalance) {
+					// Break if we have 5 consecutive empty addresses.
+					const consecutiveEmpty = next5.reduce((count, ledger) => ledger?.hasSyncedWithNetwork ? 0 : count + 1, 0);
+					if (consecutiveEmpty === 5) {
 						break;
 					}
+
+					startPath = path;
+					continue;
 				}
 
 				ledgerData.push({
@@ -147,6 +146,7 @@ export class LedgerScanner {
 				address,
 				balance: wallet.balance(),
 				path,
+				hasSyncedWithNetwork: wallet.hasSyncedWithNetwork(),
 			});
 		}
 
