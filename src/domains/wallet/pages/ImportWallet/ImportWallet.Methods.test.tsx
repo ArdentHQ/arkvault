@@ -183,7 +183,7 @@ describe("ImportWallet Methods", () => {
 
 		await expect(mnemonicInput()).toBeInTheDocument();
 
-		const user = userEvent.setup()
+		const user = userEvent.setup();
 
 		await user.click(mnemonicInput());
 		await user.paste(MNEMONICS[4]);
