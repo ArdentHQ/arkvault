@@ -1,7 +1,6 @@
 /* istanbul ignore file */
 
 import { DTO } from "@/app/lib/mainsail";
-import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";

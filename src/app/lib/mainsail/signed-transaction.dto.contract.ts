@@ -1,6 +1,5 @@
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
-import { Contracts } from "@/app/lib/profiles";
 
 import { MultiPaymentItem, MultiPaymentRecipient } from "./confirmed-transaction.dto.contract";
 

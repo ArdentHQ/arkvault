@@ -1,5 +1,4 @@
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
-import { Contracts } from "@/app/lib/profiles";
 import { Address, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { MultiPaymentItem, MultiPaymentRecipient } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 import { RawTransactionData, SignedTransactionObject } from "@/app/lib/mainsail/signed-transaction.dto.contract";
@@ -9,7 +8,6 @@ import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
 import { TransactionTypeService } from "./transaction-type.service";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
-import { ClientService } from "@/app/lib/mainsail/client.service";
 
 export class SignedTransactionData {
 	protected identifier!: string;
