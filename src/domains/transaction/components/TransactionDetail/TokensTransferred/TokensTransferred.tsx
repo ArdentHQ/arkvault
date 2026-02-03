@@ -14,7 +14,7 @@ interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
 	labelClassName?: string;
-	profile?: Contracts.IProfile;
+	profile: Contracts.IProfile;
 	allowHideBalance?: boolean;
 	token: TokenDTO;
 }
