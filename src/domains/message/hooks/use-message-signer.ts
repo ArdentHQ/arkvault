@@ -48,8 +48,12 @@ const sign = async (
 	const getSignatory = async (): Promise<Signatories.Signatory | undefined> => {
 		const derivationPath = wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath);
 
+		if (mnemonic && derivationPath) {
+			return wallet.signatory().bip44Mnemonic(mnemonic, derivationPath);
+		}
+
 		if (mnemonic) {
-			return wallet.signatory().mnemonic(mnemonic, derivationPath);
+			return wallet.signatory().mnemonic(mnemonic);
 		}
 
 		if (secret) {

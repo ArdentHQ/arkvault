@@ -15,7 +15,7 @@ const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, 
 			const { address } = await wallet
 				.coin()
 				.address()
-				.fromMnemonic(wif, undefined, wallet.data().get(Contracts.WalletData.DerivationPath));
+				.fromBip44Mnemonic(wif, wallet.data().get(Contracts.WalletData.DerivationPath) as string);
 
 			return address;
 		}
@@ -64,7 +64,7 @@ export const authentication = (t: any) => {
 						let address: string;
 
 						if (path) {
-							const result = await wallet.coin().address().fromBip44Mnemonic(mnemonic, path);
+							const result = await wallet.coin().address().fromBip44Mnemonic(mnemonic, path as string);
 							address = result.address;
 						} else {
 							const result = await wallet.coin().address().fromMnemonic(mnemonic);
