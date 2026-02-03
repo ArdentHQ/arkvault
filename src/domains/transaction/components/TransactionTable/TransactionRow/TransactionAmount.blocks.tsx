@@ -6,7 +6,7 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transaction/hooks/use-transaction-total";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Label, LabelProperties } from "@/app/components/Label";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 export const TransactionAmountLabel = ({
 	transaction,
@@ -17,10 +17,10 @@ export const TransactionAmountLabel = ({
 	transaction: ExtendedTransactionData;
 	profile?: Contracts.IProfile;
 	allowHideBalance?: boolean;
-	token?: WalletToken;
+	token?: TokenDTO;
 }): JSX.Element => {
 	const { t } = useTranslation();
-	const currency = token ? token.token().symbol() : transaction.wallet().currency();
+	const currency = token ? token.symbol() : transaction.wallet().currency();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
 	return (

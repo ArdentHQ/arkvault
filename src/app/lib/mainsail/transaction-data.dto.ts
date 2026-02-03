@@ -47,7 +47,12 @@ export abstract class TransactionData {
 			profile: profile,
 		});
 
-		this.configure(await clientService.transaction(this.hash()));
+		const data = await clientService.transaction(this.hash());
+
+		this.configure({
+			...this.raw(),
+			...data,
+		});
 	}
 
 	public withDecimals(decimals?: number | string): this {

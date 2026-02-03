@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -17,7 +17,7 @@ interface Properties {
 	labelClassName?: string;
 	profile?: Contracts.IProfile;
 	allowHideBalance?: boolean;
-	token?: WalletToken;
+	token?: TokenDTO;
 }
 export const TransactionSummary = ({
 	transaction,
@@ -35,6 +35,10 @@ export const TransactionSummary = ({
 				!transaction.isConfirmed() ||
 				(transaction.isConfirmed() && "isSuccess" in transaction && transaction.isSuccess())
 			);
+		}
+
+		if (transaction.isTokenTransfer()) {
+			return false;
 		}
 
 		return !BigNumber.make(transaction.value()).isZero();

@@ -1,5 +1,5 @@
 import { DetailLabel, DetailPadded, DetailsCondensed } from "@/app/components/DetailWrapper";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
 	TransactionAddresses,
 	TransactionConfirmations,
@@ -22,6 +22,7 @@ import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transa
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { useTranslation } from "react-i18next";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokensTransferred } from "@/domains/transaction/components/TransactionDetail/TokensTransferred";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -62,6 +63,16 @@ export const TransactionDetailContent = ({
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 
+	const interactedWith: string | undefined = useMemo(() => {
+		if (isContractDeployment(transaction) && transaction.confirmations() > 0) {
+			return transaction.data().data.receipt.deployedContractAddress;
+		}
+
+		if (transaction.isTokenTransfer()) {
+			return transaction.token().address();
+		}
+	}, [transaction]);
+
 	return (
 		<DetailsCondensed>
 			<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
@@ -76,11 +87,7 @@ export const TransactionDetailContent = ({
 						isMultiPayment={transaction.isMultiPayment()}
 						recipients={recipients}
 						labelClassName={labelClassName}
-						interactedWith={
-							isContractDeployment(transaction) && transaction.confirmations() > 0
-								? transaction.data().data.receipt.deployedContractAddress
-								: undefined
-						}
+						interactedWith={interactedWith}
 					/>
 				</DetailPadded>
 
@@ -89,9 +96,22 @@ export const TransactionDetailContent = ({
 					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} showValidator />}
 				</DetailPadded>
 
+				{transaction.isTokenTransfer() && (
+					<DetailPadded className="flex-1 sm:ml-0">
+						<TokensTransferred
+							token={transaction.token()}
+							labelClassName={labelClassName}
+							transaction={transaction}
+							senderWallet={transaction.wallet()}
+							profile={profile}
+							allowHideBalance={allowHideBalance}
+						/>
+					</DetailPadded>
+				)}
+
 				<DetailPadded className="flex-1 sm:ml-0">
 					<TransactionSummary
-						token={token}
+						token={token?.token()}
 						labelClassName={labelClassName}
 						transaction={transaction}
 						senderWallet={transaction.wallet()}
@@ -147,6 +167,7 @@ export const TransactionDetailSidePanel = ({
 	const transactionId = transactionItem.hash();
 
 	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+		tokenTransfer: transactionItem,
 		transactionId,
 		wallet,
 	});

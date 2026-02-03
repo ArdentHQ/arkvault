@@ -372,6 +372,7 @@ export const translations = {
 	},
 	SUMMARY: "Transaction Summary",
 	TIMESTAMP: "Timestamp",
+	TOKENS_TRANSFERRED: "Tokens Transferred",
 	TOTAL_AMOUNT: "Total Amount",
 	TRANSACTION: "Transaction",
 	TRANSACTIONS_AMOUNT: "Transaction(s) Amount",
