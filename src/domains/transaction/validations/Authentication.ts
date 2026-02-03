@@ -64,10 +64,7 @@ export const authentication = (t: any) => {
 						if (wallet.actsWithBip44MnemonicWithEncryption()) {
 							const path = wallet.data().get(Contracts.WalletData.DerivationPath) as string;
 
-							const result = await wallet
-								.coin()
-								.address()
-								.fromBip44Mnemonic(mnemonic, path);
+							const result = await wallet.coin().address().fromBip44Mnemonic(mnemonic, path);
 
 							address = result.address;
 						} else {
