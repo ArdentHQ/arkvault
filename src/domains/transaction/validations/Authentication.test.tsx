@@ -53,6 +53,21 @@ describe("Authentication", () => {
 		fromWifMock.mockRestore();
 	});
 
+	it("should validate BIP44 mnemonic", async () => {
+		const fromBip44MnemonicMock = vi
+			.spyOn(wallet.coin().address(), "fromBip44Mnemonic")
+			.mockResolvedValue({ address: wallet.address() } as any);
+
+		const walletActsWithBip44Mnemonic = vi.spyOn(wallet, "actsWithBip44Mnemonic").mockReturnValue(true);
+
+		const mnemonic = authentication(translationMock).mnemonic(wallet);
+
+		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).resolves.toBe(true);
+
+		fromBip44MnemonicMock.mockRestore();
+		walletActsWithBip44Mnemonic.mockRestore();
+	});
+
 	it("should fail mnemonic validation", async () => {
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 
