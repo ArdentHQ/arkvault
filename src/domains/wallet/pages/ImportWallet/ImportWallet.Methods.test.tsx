@@ -108,7 +108,7 @@ describe("ImportWallet Methods", () => {
 		});
 	});
 
-	it("should import by BIP44 mnemonic", async () => {
+	it("should import with BIP44 mnemonic", async () => {
 		const clearFixUInt8ArrayIssue = fixUInt8ArrayIssue();
 
 		render(
@@ -145,6 +145,86 @@ describe("ImportWallet Methods", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await waitFor(
+			() => {
+				expect(successStep()).toBeInTheDocument();
+			},
+			{ timeout: 15_000 },
+		);
+
+		clearFixUInt8ArrayIssue();
+	});
+
+	it("should import with BIP44 mnemonic and encryption on", async () => {
+		const clearFixUInt8ArrayIssue = fixUInt8ArrayIssue();
+
+		render(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(mnemonicInput()).toBeInTheDocument();
+
+		const user = userEvent.setup()
+
+		await user.click(mnemonicInput());
+		await user.paste(MNEMONICS[4]);
+
+		await userEvent.click(screen.getByTestId("ImportWallet__atomic_wallet-toggle"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__atomic_wallet-toggle")).toBeEnabled();
+		});
+
+		await enableEncryptionToggle();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeEnabled();
+		});
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+		});
+
+		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveValue(password);
+		});
+
+		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("PasswordValidation__confirmEncryptionPassword")).toHaveValue(password);
+		});
+
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
 
 		await userEvent.click(continueButton());
 
