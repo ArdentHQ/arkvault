@@ -104,8 +104,6 @@ describe("Use Message Signer Hook", () => {
 			if (key == Contracts.WalletData.AddressIndex) {
 				return 0;
 			}
-
-			console.log(key);
 		});
 
 		const signedMessage = await result.current.sign(wallet, "message", getDefaultWalletMnemonic());
