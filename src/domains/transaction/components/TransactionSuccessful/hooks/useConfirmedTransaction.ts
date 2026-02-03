@@ -20,7 +20,7 @@ export const useConfirmedTransaction = ({
 		if (tokenTransfer?.isTokenTransfer()) {
 			const { value, token, type, data, to } = tokenTransfer.data().raw();
 
-			return { value, token, type, data, to };
+			return { data, to, token, type, value };
 		}
 
 		return {};
