@@ -59,15 +59,16 @@ export const authentication = (t: any) => {
 			validate: {
 				matchSenderAddress: async (mnemonic: string) => {
 					try {
-						const path = wallet.data().get(Contracts.WalletData.DerivationPath);
-
 						let address: string;
 
-						if (path) {
+						if (wallet.actsWithBip44MnemonicWithEncryption()) {
+							const path = wallet.data().get(Contracts.WalletData.DerivationPath) as string;
+
 							const result = await wallet
 								.coin()
 								.address()
-								.fromBip44Mnemonic(mnemonic, path as string);
+								.fromBip44Mnemonic(mnemonic, path);
+
 							address = result.address;
 						} else {
 							const result = await wallet.coin().address().fromMnemonic(mnemonic);

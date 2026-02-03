@@ -393,7 +393,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 							<span data-testid="ImportWallet__encryption">
 								<Toggle
 									data-testid="ImportWallet__encryption-toggle"
-									disabled={!importOption.canBeEncrypte}
+									disabled={!importOption.canBeEncrypted}
 									checked={isUseEncryptionChecked}
 									onChange={handleToggleEncryption}
 								/>
