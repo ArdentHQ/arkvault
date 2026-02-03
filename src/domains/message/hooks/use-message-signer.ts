@@ -63,8 +63,12 @@ const sign = async (
 		if (encryptionPassword) {
 			const signingKey = await wallet.signingKey().get(encryptionPassword);
 
-			if (wallet.actsWithMnemonicWithEncryption() || wallet.actsWithBip44MnemonicWithEncryption()) {
-				return wallet.signatory().mnemonic(signingKey, derivationPath);
+			if (wallet.actsWithBip44MnemonicWithEncryption()) {
+				return wallet.signatory().bip44Mnemonic(signingKey, derivationPath as string);
+			}
+
+			if (wallet.actsWithMnemonicWithEncryption()) {
+				return wallet.signatory().mnemonic(signingKey);
 			}
 
 			if (wallet.actsWithSecretWithEncryption()) {
