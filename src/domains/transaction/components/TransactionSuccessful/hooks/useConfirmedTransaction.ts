@@ -18,7 +18,7 @@ export const useConfirmedTransaction = ({
 
 	const tokenTransferData = useMemo(() => {
 		if (tokenTransfer?.isTokenTransfer()) {
-			const { value, token, type, data, to } = tokenTransfer.data().raw();
+			const { value, token, type, data, to } = (tokenTransfer.data() as ConfirmedTransactionData).raw();
 
 			return { data, to, token, type, value };
 		}
