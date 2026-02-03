@@ -134,9 +134,9 @@ export class TransactionEncoder {
 
 		if (isVote) {
 			return {
+				data: TransactionDataEncoder.vote(vote),
 				to: ContractAddresses.CONSENSUS,
-				data: TransactionDataEncoder.vote(vote)
-			}
+			};
 		}
 
 		return {

@@ -12,7 +12,6 @@ import {
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
-	ContractAbiType,
 	TokenTransferBuilder,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
