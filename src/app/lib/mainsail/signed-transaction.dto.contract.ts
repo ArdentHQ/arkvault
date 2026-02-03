@@ -22,8 +22,6 @@ export interface SignedTransactionData {
 
 	configure(identifier: string, signedData: RawTransactionData, serialized?: string, decimals?: number | string);
 
-	sync(profile: Contracts.IProfile): Promise<void>;
-
 	// All
 	hash(): string;
 	data(): RawTransactionData;

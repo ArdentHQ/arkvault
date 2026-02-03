@@ -19,10 +19,6 @@ export class ExtendedSignedTransactionData {
 		this.#wallet = wallet;
 	}
 
-	public async sync(profile: ProfileContracts.IProfile): Promise<void> {
-		await this.data().sync(profile);
-	}
-
 	public data(): SignedTransactionData {
 		return this.#data;
 	}

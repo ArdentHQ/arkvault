@@ -42,15 +42,6 @@ export class SignedTransactionData {
 		return this;
 	}
 
-	public async sync(profile: Contracts.IProfile): Promise<void> {
-		const clientService = new ClientService({
-			config: profile.activeNetwork().config(),
-			profile: profile,
-		});
-
-		this.configure(await clientService.transaction(this.hash()), "");
-	}
-
 	public usesMultiSignature(): boolean {
 		return false;
 	}
