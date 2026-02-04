@@ -12,7 +12,7 @@ import {
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
-	ContractAbiType,
+	TokenTransferBuilder,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
 
@@ -103,13 +103,11 @@ export class TransactionService {
 		const nonce = await this.#generateNonce(input);
 		const value = BigNumber.make(input.data.amount, input.tokenContractDecimals).toSatoshi();
 
-		const builder = await EvmCallBuilder.new({
+		const builder = TokenTransferBuilder.new({
 			senderPublicKey: input.signatory.address(),
 		})
-			.to(input.tokenContractAddress)
-			.payload(
-				new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, value.toBigInt()]),
-			)
+			.recipient(input.data.to, value.toBigInt())
+			.contractAddress(input.data.to)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
