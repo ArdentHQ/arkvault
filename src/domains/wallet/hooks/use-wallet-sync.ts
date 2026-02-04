@@ -38,7 +38,7 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 		}
 	};
 
-	const syncTokens= async (wallet: Contracts.IReadWriteWallet) => {
+	const syncTokens = async (wallet: Contracts.IReadWriteWallet) => {
 		await wallet.synchroniser().tokens();
 	};
 
