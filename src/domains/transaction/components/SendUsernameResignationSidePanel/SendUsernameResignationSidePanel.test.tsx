@@ -71,6 +71,7 @@ const signedTransactionMock = {
 	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
+	isTokenTransfer: () => false,
 	isTransfer: () => false,
 	isUnvote: () => false,
 	isUpdateValidator: () => false,
@@ -97,7 +98,6 @@ const signedTransactionMock = {
 	usesMultiSignature: () => false,
 	value: () => BigNumber.make(0),
 	wallet: () => wallet,
-	isTokenTransfer: () => false,
 };
 
 const createUsernameResignationMock = (wallet: Contracts.IReadWriteWallet) =>

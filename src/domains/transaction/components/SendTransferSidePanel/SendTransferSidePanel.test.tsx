@@ -55,6 +55,7 @@ const signedTransactionMock = {
 	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
+	isTokenTransfer: () => false,
 	isTransfer: () => true,
 	isUnvote: () => false,
 	isUpdateValidator: () => false,
@@ -84,7 +85,6 @@ const signedTransactionMock = {
 	usesMultiSignature: () => false,
 	value: () => +transactionFixture.data.value / 1e8,
 	wallet: () => wallet,
-	isTokenTransfer: () => false,
 } as DTO.ExtendedSignedTransactionData;
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>

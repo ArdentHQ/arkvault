@@ -48,6 +48,7 @@ const transactionMethodsFixture = {
 	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
+	isTokenTransfer: () => false,
 	isTransfer: () => false,
 	isUnvote: () => false,
 	isUpdateValidator: () => false,
@@ -72,7 +73,6 @@ const transactionMethodsFixture = {
 	usesMultiSignature: () => false,
 	value: () => +transactionFixture.data.value / 1e8,
 	wallet: () => wallet,
-	isTokenTransfer: () => false,
 };
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
