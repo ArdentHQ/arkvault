@@ -4,6 +4,7 @@ import { renderHook, waitFor } from "@testing-library/react";
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { useConfirmedTransaction } from "./useConfirmedTransaction";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 describe("useConfirmedTransaction", () => {
 	let profile: Contracts.IProfile;
@@ -26,6 +27,31 @@ describe("useConfirmedTransaction", () => {
 			}),
 		);
 		expect(result.current.isConfirmed).toBe(false);
+	});
+
+	it("should sync token transfer transaction", async () => {
+		const sync = vi.fn();
+
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				transactionId: "123",
+				wallet: wallet,
+				tokenTransfer: {
+					...TransactionFixture,
+					isTokenTransfer: () => true,
+					sync,
+				},
+			}),
+		);
+
+		await waitFor(
+			() => {
+				expect(result.current.isConfirmed).toBe(true);
+			},
+			{ timeout: 5000 },
+		);
+
+		expect(sync).toHaveBeenCalled();
 	});
 
 	it("should set isConfirmed to true when transaction is found", async () => {
