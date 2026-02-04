@@ -111,11 +111,12 @@ export class TransactionService {
 			.find((token) => token.token().address() === input.tokenContractAddress);
 
 		assertToken(token);
+
 		const amount = BigNumber.make(input.data.amount, token.token().decimals()).toSatoshi();
-		const builder = await EvmCallBuilder.new({
+
+		const builder = TokenTransferBuilder.new({
 			senderPublicKey: input.signatory.address(),
 		})
-			.to(input.tokenContractAddress)
 			.recipient(input.data.to, amount.toBigInt())
 			.contractAddress(input.data.to)
 			.nonce(nonce)
