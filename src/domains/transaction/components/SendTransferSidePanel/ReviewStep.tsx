@@ -32,7 +32,7 @@ const DUST_AMOUNT = 0.00015;
 export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
-	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue, } = useFormContext();
+	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
 	const { recipients, tokenContractAddress } = watch();
 	const profile = useActiveProfile();
 	const { gasPrice, gasLimit } = getValues(["gasPrice", "gasLimit"]);
@@ -45,8 +45,14 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
 
-	const token = tokenContractAddress ? profile.tokens().selected().items().find(token => token.token().address() === tokenContractAddress) : undefined
-	console.log({ token, tokenContractAddress })
+	const token = tokenContractAddress
+		? profile
+				.tokens()
+				.selected()
+				.items()
+				.find((token) => token.token().address() === tokenContractAddress)
+		: undefined;
+	console.log({ token, tokenContractAddress });
 	const ticker = token ? token.token().symbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });

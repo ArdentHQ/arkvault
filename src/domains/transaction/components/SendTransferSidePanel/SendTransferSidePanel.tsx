@@ -524,11 +524,7 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep
-								wallet={wallet!}
-								network={activeNetwork}
-								hideHeader
-							/>
+							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
