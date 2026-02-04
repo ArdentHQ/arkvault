@@ -64,6 +64,7 @@ const transactionMethodsFixture = {
 	sender: () => transactionFixture.data.sender,
 	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
 	to: () => transactionFixture.data.to,
+	token: () => {},
 	total: () => {
 		const value = BigNumber.make(transactionFixture.data.value);
 		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);

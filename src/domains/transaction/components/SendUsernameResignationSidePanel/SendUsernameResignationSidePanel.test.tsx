@@ -87,6 +87,7 @@ const signedTransactionMock = {
 	recipients: () => [],
 	timestamp: () => DateTime.make(UsernameResignationFixture.data.timestamp),
 	to: () => UsernameResignationFixture.data.to,
+	token: () => {},
 	total: () => {
 		const value = BigNumber.make(UsernameResignationFixture.data.value);
 		const feeVal = BigNumber.make(UsernameResignationFixture.data.gasPrice).times(

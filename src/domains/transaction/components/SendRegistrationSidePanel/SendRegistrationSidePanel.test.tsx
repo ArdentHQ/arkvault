@@ -99,6 +99,7 @@ const signedTransactionMock = {
 	recipients: () => [],
 	timestamp: () => DateTime.make(ValidatorRegistrationFixture.data.timestamp),
 	to: () => ValidatorRegistrationFixture.data.to,
+	token: () => {},
 	total: () => {
 		const value = BigNumber.make(ValidatorRegistrationFixture.data.value);
 		const feeVal = BigNumber.make(ValidatorRegistrationFixture.data.gasPrice).times(
