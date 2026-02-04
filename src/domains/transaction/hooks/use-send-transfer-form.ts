@@ -250,7 +250,7 @@ export const useSendTransferForm = ({
 			return;
 		}
 
-		// Update initial default value if changed from input and the field is not dirty.
+		// Update initial default value if changed from parent component (e.g lazy field update) and the field is not dirty.
 		if (!formState.dirtyFields.tokenContractAddress && tokenContractAddress !== getValues("tokenContractAddress")) {
 			setValue("tokenContractAddress", tokenContractAddress, { shouldDirty: false, shouldValidate: false });
 		}
