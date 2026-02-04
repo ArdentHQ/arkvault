@@ -346,11 +346,7 @@ export const AddRecipient = ({
 									<div>{t("COMMON.ASSET")}</div>
 								</FormLabel>
 								<SelectToken
-									defaultTokenValue={
-										(tokenContractAddress ?? tokens.length === 1)
-											? tokens[0]?.token().address()
-											: undefined
-									}
+									value={tokenContractAddress}
 									tokens={tokens.map((token) => ({
 										decimals: token.token().decimals(),
 										label: token.token().name(),
@@ -360,11 +356,10 @@ export const AddRecipient = ({
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 										onTokenChange?.(token);
 
-										setValue("tokenContractDecimals", token?.token().decimals(), {
-											shouldDirty: true,
-											shouldValidate: true,
+										setValue("amount", amount, {
+											shouldDirty: !!token,
+											shouldValidate: !!token && !!amount,
 										});
-
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
 											shouldValidate: true,
@@ -443,15 +438,22 @@ export const AddRecipient = ({
 							{isTokenTransfer && !isLoading && (
 								<div className="hidden w-full sm:block sm:max-w-44">
 									<SelectToken
-										defaultTokenValue={
-											tokens.length === 1 ? tokens[0].token().address() : undefined
-										}
+										value={tokenContractAddress}
 										tokens={tokens.map((token) => ({
 											label: token.token().name(),
 											value: token.token().address(),
 										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
 										onChange={(tokenAddress) => {
+											const token = tokens.find(
+												(token) => token.token().address() === tokenAddress,
+											);
+
+											setValue("amount", amount, {
+												shouldDirty: !!token,
+												shouldValidate: !!token && !!amount,
+											});
+
 											setValue("tokenContractAddress", tokenAddress, {
 												shouldDirty: true,
 												shouldValidate: true,
