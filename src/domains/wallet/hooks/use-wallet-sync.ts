@@ -10,6 +10,8 @@ const syncBalance = async (wallet: Contracts.IReadWriteWallet) => wallet.synchro
 const syncRates = (profile: Contracts.IProfile, wallet: Contracts.IReadWriteWallet) =>
 	profile.exchangeRates().syncAll(profile, wallet.currency());
 
+const syncTokens = async (wallet: Contracts.IReadWriteWallet) => wallet.synchroniser().tokens();
+
 export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 	const syncFees = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
@@ -38,9 +40,7 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 		}
 	};
 
-	const syncTokens = async (wallet: Contracts.IReadWriteWallet) => {
-		await wallet.synchroniser().tokens();
-	};
+
 
 	const syncAll = async (wallet: Contracts.IReadWriteWallet) =>
 		Promise.allSettled([
