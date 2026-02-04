@@ -34,13 +34,13 @@ describe("useConfirmedTransaction", () => {
 
 		const { result } = renderHook(() =>
 			useConfirmedTransaction({
-				transactionId: "123",
-				wallet: wallet,
 				tokenTransfer: {
 					...TransactionFixture,
 					isTokenTransfer: () => true,
 					sync,
 				},
+				transactionId: "123",
+				wallet: wallet,
 			}),
 		);
 
