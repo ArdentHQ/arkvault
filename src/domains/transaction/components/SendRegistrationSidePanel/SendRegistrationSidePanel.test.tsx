@@ -109,6 +109,7 @@ const signedTransactionMock = {
 	usesMultiSignature: () => false,
 	value: () => BigNumber.make(0),
 	wallet: () => wallet,
+	isTokenTransfer: () => false,
 };
 
 const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>

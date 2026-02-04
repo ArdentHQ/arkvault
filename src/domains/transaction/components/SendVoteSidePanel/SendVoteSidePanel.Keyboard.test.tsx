@@ -70,6 +70,7 @@ const transactionMethodsFixture = {
 	},
 	usesMultiSignature: () => false,
 	value: () => +transactionFixture.data.value / 1e8,
+	isTokenTransfer: () => false,
 };
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>

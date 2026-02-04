@@ -68,7 +68,7 @@ export const TransactionDetailContent = ({
 			return transaction.data().data.receipt.deployedContractAddress;
 		}
 
-		if (transaction.isTokenTransfer()) {
+		if ("token" in transaction && transaction.token()) {
 			return transaction.token().address();
 		}
 	}, [transaction]);
