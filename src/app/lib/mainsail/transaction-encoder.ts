@@ -6,7 +6,7 @@ import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contr
 import { TokenContract } from "@arkecosystem/typescript-crypto";
 import { encodeFunctionData, EncodeFunctionDataReturnType, Hex, numberToHex } from "viem";
 import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
-import { IProfile } from "../profiles/contracts";
+import { IProfile } from "@/app/lib/profiles/contracts";
 import { assertToken } from "@/utils/assertions";
 
 interface RecipientPaymentItem {
@@ -161,11 +161,13 @@ export class TransactionEncoder {
 	}
 
 	public tokenTransfer(tokenContractAddress: string, inputData: EncodeInputData): EncodedData {
-		const token = this.#profile.tokens().selected().items().find((token) => {
-			return token.token().address() === inputData.tokenContractAddress
-		})
+		const token = this.#profile
+			.tokens()
+			.selected()
+			.items()
+			.find((token) => token.token().address() === inputData.tokenContractAddress);
 
-		assertToken(token)
+		assertToken(token);
 		const recipient = inputData.recipients?.at(0);
 		const amount = BigNumber.make(recipient?.amount ?? 0, token.token().decimals()).toSatoshi();
 

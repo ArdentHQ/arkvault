@@ -104,11 +104,13 @@ export class TransactionService {
 		this.#assertAmount(input);
 
 		const nonce = await this.#generateNonce(input);
-		const token = this.#profile.tokens().selected().items().find((token) => {
-			return token.token().address() === input.tokenContractAddress
-		})
+		const token = this.#profile
+			.tokens()
+			.selected()
+			.items()
+			.find((token) => token.token().address() === input.tokenContractAddress);
 
-		assertToken(token)
+		assertToken(token);
 
 		const amount = BigNumber.make(input.data.amount, token.token().decimals()).toSatoshi();
 		const builder = await EvmCallBuilder.new({
@@ -116,7 +118,10 @@ export class TransactionService {
 		})
 			.to(input.tokenContractAddress)
 			.payload(
-				new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [input.data.to, amount.toBigInt()]),
+				new AbiEncoder(ContractAbiType.TOKEN).encodeFunctionCall("transfer", [
+					input.data.to,
+					amount.toBigInt(),
+				]),
 			)
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
