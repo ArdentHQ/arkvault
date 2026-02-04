@@ -208,11 +208,13 @@ describe("AddRecipient", () => {
 		const address = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 		const amount = 1;
 
-		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([])
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} isTokenTransfer />);
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([]);
+		renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} isTokenTransfer />,
+		);
 
 		const amoutInput = screen.getByTestId("AddRecipient__amount");
-		const addressInput = screen.getAllByTestId("SelectDropdown__input")[0]
+		const addressInput = screen.getAllByTestId("SelectDropdown__input")[0];
 
 		await userEvent.clear(amoutInput);
 		await userEvent.type(amoutInput, String(amount));

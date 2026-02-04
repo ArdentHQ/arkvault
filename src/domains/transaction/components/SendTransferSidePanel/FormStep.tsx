@@ -15,7 +15,6 @@ import { twMerge } from "tailwind-merge";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 const QRCodeButton = ({ ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 	<button
