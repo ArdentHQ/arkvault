@@ -55,11 +55,11 @@ export abstract class TransactionData {
 			const { value, token, type, data, to } = this.raw();
 
 			tokenData = {
-				value,
-				token,
-				type,
 				data,
 				to,
+				token,
+				type,
+				value,
 			};
 		}
 		console.log(tokenData);
