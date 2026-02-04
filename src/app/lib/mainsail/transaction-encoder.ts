@@ -2,10 +2,8 @@
 import { Exceptions, Networks } from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
 
-import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contracts";
-import { TokenContract } from "@arkecosystem/typescript-crypto";
-import { encodeFunctionData, EncodeFunctionDataReturnType, Hex, numberToHex } from "viem";
-import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
+import { Hex, numberToHex } from "viem";
+import { ContractAddresses, UnitConverter, TransactionDataEncoder } from "@arkecosystem/typescript-crypto";
 
 interface RecipientPaymentItem {
 	address: string;
@@ -40,7 +38,7 @@ export interface EncodeInputData {
 
 interface EncodedData {
 	to: (typeof ContractAddresses)[keyof typeof ContractAddresses] | string;
-	data?: EncodeFunctionDataReturnType;
+	data?: Hex;
 }
 
 export class TransactionEncoder {
@@ -52,24 +50,17 @@ export class TransactionEncoder {
 
 	public multiPayment(recipientList: RecipientPaymentItem[]): EncodedData & { value: Hex } {
 		const recipients: string[] = [];
-		const amounts: BigNumber[] = [];
+		const amounts: string[] = [];
 
 		for (const payment of recipientList) {
 			recipients.push(payment.address);
-			// @TODO https://app.clickup.com/t/86dwvx1ya get rid of extra BigNumber.make
-			amounts.push(BigNumber.make(UnitConverter.parseUnits(payment.amount, "ark").toString()));
+			amounts.push(UnitConverter.parseUnits(payment.amount, "ark").toString());
 		}
 
 		const value = numberToHex(BigNumber.sum(amounts).toBigInt());
 
-		const data = encodeFunctionData({
-			abi: MultiPaymentAbi.abi,
-			args: [recipients, amounts],
-			functionName: "pay",
-		});
-
 		return {
-			data,
+			data: TransactionDataEncoder.multiPayment(recipients, amounts),
 			to: ContractAddresses.MULTIPAYMENT,
 			value,
 		};
@@ -83,69 +74,39 @@ export class TransactionEncoder {
 	}
 
 	public updateValidator(validatorPublicKey: string): EncodedData {
-		const data = encodeFunctionData({
-			abi: ConsensusAbi.abi,
-			args: [`0x${validatorPublicKey}`],
-			functionName: "updateValidator",
-		});
-
 		return {
-			data,
+			data: TransactionDataEncoder.updateValidator(validatorPublicKey),
 			to: ContractAddresses.CONSENSUS,
 		};
 	}
 
 	public usernameRegistration(username: string): EncodedData {
-		const data = encodeFunctionData({
-			abi: UsernamesAbi.abi,
-			args: [username],
-			functionName: "registerUsername",
-		});
-
 		return {
-			data,
+			data: TransactionDataEncoder.usernameRegistration(username),
 			to: ContractAddresses.USERNAMES,
 		};
 	}
 
 	public usernameResignation(): EncodedData {
-		const data = encodeFunctionData({
-			abi: UsernamesAbi.abi,
-			args: [],
-			functionName: "resignUsername",
-		});
-
 		return {
-			data,
+			data: TransactionDataEncoder.usernameResignation(),
 			to: ContractAddresses.USERNAMES,
 		};
 	}
 
 	public validatorRegistration(validatorPublicKey: string): EncodedData & { value: Hex } {
-		const data = encodeFunctionData({
-			abi: ConsensusAbi.abi,
-			args: [`0x${validatorPublicKey}`],
-			functionName: "registerValidator",
-		});
-
 		const value = this.#network.milestone()["validatorRegistrationFee"] ?? 0;
 
 		return {
-			data,
+			data: TransactionDataEncoder.validatorRegistration(validatorPublicKey),
 			to: ContractAddresses.CONSENSUS,
 			value: numberToHex(BigNumber.make(value).toBigInt()),
 		};
 	}
 
 	public validatorResignation(): EncodedData {
-		const data = encodeFunctionData({
-			abi: ConsensusAbi.abi,
-			args: [],
-			functionName: "resignValidator",
-		});
-
 		return {
-			data,
+			data: TransactionDataEncoder.validatorResignation(),
 			to: ContractAddresses.CONSENSUS,
 		};
 	}
@@ -161,14 +122,8 @@ export class TransactionEncoder {
 		const recipient = inputData.recipients?.at(0);
 		const amount = BigNumber.make(recipient?.amount ?? 0, inputData.tokenContractDecimals).toSatoshi();
 
-		const data = encodeFunctionData({
-			abi: TokenContract.abi,
-			args: [recipient?.address, amount],
-			functionName: "transfer",
-		});
-
 		return {
-			data,
+			data: TransactionDataEncoder.tokenTransfer(recipient?.address!, amount.toString()),
 			to: tokenContractAddress,
 		};
 	}
@@ -177,14 +132,15 @@ export class TransactionEncoder {
 		const vote = voteAddresses.at(0);
 		const isVote = !!vote;
 
-		const data = encodeFunctionData({
-			abi: ConsensusAbi.abi,
-			args: isVote ? [vote] : [],
-			functionName: isVote ? "vote" : "unvote",
-		});
+		if (isVote) {
+			return {
+				data: TransactionDataEncoder.vote(vote),
+				to: ContractAddresses.CONSENSUS,
+			};
+		}
 
 		return {
-			data,
+			data: TransactionDataEncoder.unvote(),
 			to: ContractAddresses.CONSENSUS,
 		};
 	}
