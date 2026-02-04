@@ -60,10 +60,9 @@ export abstract class TransactionData {
 				type,
 				data,
 				to,
-			}
+			};
 		}
-		console.log(tokenData)
-
+		console.log(tokenData);
 
 		this.configure({
 			...data.raw(),
