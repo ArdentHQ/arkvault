@@ -29,6 +29,8 @@ export const TransactionSummary = ({
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
+	const isTokenTransfer = transaction.isTokenTransfer();
+
 	const showAmount = useMemo(() => {
 		if (transaction.isValidatorRegistration()) {
 			return (
@@ -37,7 +39,7 @@ export const TransactionSummary = ({
 			);
 		}
 
-		if (transaction.isTokenTransfer()) {
+		if (isTokenTransfer) {
 			return false;
 		}
 
@@ -113,7 +115,7 @@ export const TransactionSummary = ({
 					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
-						value={transaction.convertedAmount()}
+						value={isTokenTransfer ? transaction.convertedFee() : transaction.convertedAmount()}
 						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 						allowHideBalance={allowHideBalance}
 						profile={profile}

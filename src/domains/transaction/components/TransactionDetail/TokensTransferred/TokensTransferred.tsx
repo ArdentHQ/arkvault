@@ -73,7 +73,7 @@ export const TokensTransferred = ({
 					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
-						value={transaction.convertedAmount()}
+						value={0}
 						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 						allowHideBalance={allowHideBalance}
 						profile={profile}
