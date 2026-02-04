@@ -52,7 +52,6 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 				.items()
 				.find((token) => token.token().address() === tokenContractAddress)
 		: undefined;
-	console.log({ token, tokenContractAddress });
 	const ticker = token ? token.token().symbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
