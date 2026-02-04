@@ -273,7 +273,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#wallet;
 	}
 
-	public data<T>(): T {
+	protected data<T>(): T {
 		return this.#data as unknown as T;
 	}
 

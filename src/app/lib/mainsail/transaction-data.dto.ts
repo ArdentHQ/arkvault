@@ -49,9 +49,25 @@ export abstract class TransactionData {
 
 		const data = await clientService.transaction(this.hash());
 
+		let tokenData: Record<string, any> = {};
+
+		if (this.isTokenTransfer()) {
+			const { value, token, type, data, to } = this.raw();
+
+			tokenData = {
+				value,
+				token,
+				type,
+				data,
+				to,
+			}
+		}
+		console.log(tokenData)
+
+
 		this.configure({
-			...this.raw(),
-			...data,
+			...data.raw(),
+			...tokenData,
 		});
 	}
 

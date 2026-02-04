@@ -16,16 +16,6 @@ export const useConfirmedTransaction = ({
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
-	const tokenTransferData = useMemo(() => {
-		if (tokenTransfer?.isTokenTransfer()) {
-			const { value, token, type, data, to } = (tokenTransfer.data() as ConfirmedTransactionData).raw();
-
-			return { data, to, token, type, value };
-		}
-
-		return {};
-	}, [tokenTransfer]);
-
 	useEffect(() => {
 		if (!transactionId || !wallet) {
 			return;
@@ -34,15 +24,15 @@ export const useConfirmedTransaction = ({
 		const checkConfirmed = (): void => {
 			const id = setInterval(async () => {
 				try {
-					const confirmedTransactionData = await wallet.client().transaction(transactionId);
-
-					const transaction = new ConfirmedTransactionData().configure({
-						...confirmedTransactionData.raw(),
-						...tokenTransferData,
-					});
+					if (tokenTransfer instanceof ExtendedConfirmedTransactionData && tokenTransfer.isTokenTransfer()) {
+						await tokenTransfer.sync(wallet.profile());
+						setTransaction(tokenTransfer);
+					} else {
+						const transaction = await wallet.client().transaction(transactionId);
+						setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
+					}
 
 					setIsConfirmed(true);
-					setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
 					clearInterval(id);
 				} catch {
 					// transaction is not forged yet, ignore the error
@@ -51,7 +41,7 @@ export const useConfirmedTransaction = ({
 		};
 
 		void checkConfirmed();
-	}, [wallet?.id(), transactionId, tokenTransferData]);
+	}, [wallet?.id(), transactionId]);
 
 	return { isConfirmed, transaction };
 };
