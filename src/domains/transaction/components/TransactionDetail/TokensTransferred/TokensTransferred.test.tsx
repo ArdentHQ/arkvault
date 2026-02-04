@@ -3,7 +3,7 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import { env, getDefaultProfileId, screen, render } from "@/utils/testing-library";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { BigNumber } from "@/app/lib/helpers";
-import { TokenDTO } from "../../../../../app/lib/profiles/token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { TokensTransferred } from "./TokensTransferred";
 
 describe("TokensTransferred", () => {
