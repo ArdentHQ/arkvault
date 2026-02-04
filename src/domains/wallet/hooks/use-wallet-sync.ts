@@ -38,12 +38,17 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 		}
 	};
 
+	const syncTokens= async (wallet: Contracts.IReadWriteWallet) => {
+		await wallet.synchroniser().tokens();
+	};
+
 	const syncAll = async (wallet: Contracts.IReadWriteWallet) =>
 		Promise.allSettled([
 			syncVotes(wallet),
 			syncRates(profile, wallet),
 			syncFees(wallet),
 			syncBalance(wallet),
+			syncTokens(wallet),
 			wallet.network().sync(),
 		]);
 
