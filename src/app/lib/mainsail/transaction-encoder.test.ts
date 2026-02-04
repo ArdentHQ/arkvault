@@ -2,9 +2,9 @@ import { describe, beforeAll, it } from "vitest";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
 import { TransactionEncoder } from "./transaction-encoder";
-import { WalletTokenDTO } from "../profiles/wallet-token.dto";
-import { TokenDTO } from "../profiles/token.dto";
-import { WalletToken } from "../profiles/wallet-token";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 let profile: Contracts.IProfile;
@@ -28,7 +28,7 @@ describe("TransactionEncoder", () => {
 			token: tokenDTO,
 			walletToken: walletTokenDTO,
 		});
-		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken])
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
 	});
 
 	const tokenEncodedData = {
@@ -38,16 +38,20 @@ describe("TransactionEncoder", () => {
 
 	it("should encode token transfer", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const address = walletToken.token().address()
+		const address = walletToken.token().address();
 
 		expect(
-			encoder.tokenTransfer(address, { recipients: [{ address, amount: 100 }], senderAddress: address, tokenContractAddress: address }),
+			encoder.tokenTransfer(address, {
+				recipients: [{ address, amount: 100 }],
+				senderAddress: address,
+				tokenContractAddress: address,
+			}),
 		).toEqual(tokenEncodedData);
 	});
 
 	it("should get token transfer if token info is provided", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const address = walletToken.token().address()
+		const address = walletToken.token().address();
 
 		expect(
 			encoder.byType(
