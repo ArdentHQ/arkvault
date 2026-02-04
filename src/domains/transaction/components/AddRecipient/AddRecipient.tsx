@@ -280,17 +280,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
@@ -352,8 +352,7 @@ export const AddRecipient = ({
 											: undefined
 									}
 									tokens={tokens.map((token) => ({
-										decimals: token.token().decimals(),
-										label: token.token().name(),
+										label: token.token().symbol(),
 										value: token.token().address(),
 									}))}
 									onChange={(tokenAddress) => {
@@ -447,7 +446,7 @@ export const AddRecipient = ({
 											tokens.length === 1 ? tokens[0].token().address() : undefined
 										}
 										tokens={tokens.map((token) => ({
-											label: token.token().name(),
+											label: token.token().symbol(),
 											value: token.token().address(),
 										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
