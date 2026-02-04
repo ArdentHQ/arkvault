@@ -280,17 +280,17 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.gasPrice && !errors.gasLimit && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: {
-						content: (
-							<Amount
-								value={convert(amount || 0)}
-								ticker={exchangeTicker}
-								data-testid="AddRecipient__currency-balance"
-								className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
-							/>
-						),
-					},
-				}
+				end: {
+					content: (
+						<Amount
+							value={convert(amount || 0)}
+							ticker={exchangeTicker}
+							data-testid="AddRecipient__currency-balance"
+							className="whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
+						/>
+					),
+				},
+			}
 			: undefined;
 
 	return (
@@ -360,11 +360,7 @@ export const AddRecipient = ({
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 										onTokenChange?.(token);
 
-										setValue("tokenContractDecimals", token?.token().decimals(), {
-											shouldDirty: true,
-											shouldValidate: true,
-										});
-
+										setValue("amount", amount, { shouldDirty: true, shouldValidate: true });
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
 											shouldValidate: true,
@@ -452,6 +448,7 @@ export const AddRecipient = ({
 										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
 										onChange={(tokenAddress) => {
+											setValue("amount", amount, { shouldDirty: true, shouldValidate: true });
 											setValue("tokenContractAddress", tokenAddress, {
 												shouldDirty: true,
 												shouldValidate: true,

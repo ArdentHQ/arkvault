@@ -6,6 +6,8 @@ import { ConsensusAbi, MultiPaymentAbi, UsernamesAbi } from "@mainsail/evm-contr
 import { TokenContract } from "@arkecosystem/typescript-crypto";
 import { encodeFunctionData, EncodeFunctionDataReturnType, Hex, numberToHex } from "viem";
 import { ContractAddresses, UnitConverter } from "@arkecosystem/typescript-crypto";
+import { IProfile } from "../profiles/contracts";
+import { assertToken } from "@/utils/assertions";
 
 interface RecipientPaymentItem {
 	address: string;
@@ -35,7 +37,6 @@ export interface EncodeInputData {
 	validatorPublicKey?: string;
 	voteAddresses?: string[];
 	tokenContractAddress?: string;
-	tokenContractDecimals?: number;
 }
 
 interface EncodedData {
@@ -45,8 +46,10 @@ interface EncodedData {
 
 export class TransactionEncoder {
 	#network: Networks.Network;
+	#profile: IProfile;
 
-	constructor(network: Networks.Network) {
+	constructor(profile: IProfile, network: Networks.Network) {
+		this.#profile = profile;
 		this.#network = network;
 	}
 
@@ -158,8 +161,13 @@ export class TransactionEncoder {
 	}
 
 	public tokenTransfer(tokenContractAddress: string, inputData: EncodeInputData): EncodedData {
+		const token = this.#profile.tokens().selected().items().find((token) => {
+			return token.token().address() === inputData.tokenContractAddress
+		})
+
+		assertToken(token)
 		const recipient = inputData.recipients?.at(0);
-		const amount = BigNumber.make(recipient?.amount ?? 0, inputData.tokenContractDecimals).toSatoshi();
+		const amount = BigNumber.make(recipient?.amount ?? 0, token.token().decimals()).toSatoshi();
 
 		const data = encodeFunctionData({
 			abi: TokenContract.abi,
