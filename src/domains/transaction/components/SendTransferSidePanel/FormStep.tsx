@@ -34,7 +34,6 @@ export const FormStep = ({
 	deeplinkProps,
 	onScan,
 	onChange,
-	onTokenChange,
 	// @TODO: always hide header once the side panel is fully implemented
 	hideHeader = false,
 	isTokenTransfer,
@@ -45,7 +44,6 @@ export const FormStep = ({
 	deeplinkProps: Record<string, string>;
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
-	onTokenChange?: (token?: WalletToken) => void;
 	hideHeader?: boolean;
 	isTokenTransfer?: boolean;
 }) => {
@@ -179,7 +177,6 @@ export const FormStep = ({
 							network.allows(Enums.FeatureFlag.TransactionMultiPayment) && !isTokenTransfer
 						}
 						wallet={senderWallet}
-						onTokenChange={onTokenChange}
 					/>
 				</div>
 			</div>
