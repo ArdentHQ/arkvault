@@ -24,7 +24,7 @@ export const useConfirmedTransaction = ({
 			const id = setInterval(async () => {
 				try {
 					if (tokenTransfer instanceof ExtendedConfirmedTransactionData && tokenTransfer.isTokenTransfer()) {
-						await tokenTransfer.sync(wallet.profile());
+						await tokenTransfer.sync();
 						setTransaction(tokenTransfer);
 					} else {
 						const transaction = await wallet.client().transaction(transactionId);

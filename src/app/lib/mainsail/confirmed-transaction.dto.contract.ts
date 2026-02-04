@@ -1,4 +1,3 @@
-import { Contracts } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
@@ -29,7 +28,7 @@ export interface UnspentTransactionData {
 export interface ConfirmedTransactionData {
 	configure(data: any): ConfirmedTransactionData;
 
-	sync(profile: Contracts.IProfile): Promise<void>;
+	sync(): Promise<void>;
 
 	withDecimals(decimals?: number | string): ConfirmedTransactionData;
 
