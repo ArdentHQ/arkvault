@@ -19,23 +19,21 @@ import { BigNumber } from "@/app/lib/helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
 	hideHeader?: boolean;
-	selectedToken?: WalletToken;
 }
 
 // This is to prevent Insufficient balance error when sending all
 const DUST_AMOUNT = 0.00015;
 
-export const ReviewStep = ({ wallet, network, hideHeader = false, selectedToken }: ReviewStepProperties) => {
+export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
-	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
-	const { recipients } = watch();
+	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue, } = useFormContext();
+	const { recipients, tokenContractAddress } = watch();
 	const profile = useActiveProfile();
 	const { gasPrice, gasLimit } = getValues(["gasPrice", "gasLimit"]);
 
@@ -47,7 +45,9 @@ export const ReviewStep = ({ wallet, network, hideHeader = false, selectedToken 
 		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
 
-	const ticker = selectedToken ? selectedToken.token().symbol() : wallet.currency();
+	const token = tokenContractAddress ? profile.tokens().selected().items().find(token => token.token().address() === tokenContractAddress) : undefined
+	console.log({ token, tokenContractAddress })
+	const ticker = token ? token.token().symbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 

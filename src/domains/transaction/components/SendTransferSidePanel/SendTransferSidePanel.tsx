@@ -216,7 +216,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === firstTabIndex) {
-			setSelectedToken(undefined);
+			form.setValue("tokenContractAddress", undefined);
 			onOpenChange(false);
 			return;
 		}
@@ -519,7 +519,6 @@ export const SendTransferSidePanel = ({
 								onChange={({ sender }) => {
 									setWallet(sender);
 								}}
-								onTokenChange={setSelectedToken}
 								hideHeader
 							/>
 						</TabPanel>
@@ -529,7 +528,6 @@ export const SendTransferSidePanel = ({
 								wallet={wallet!}
 								network={activeNetwork}
 								hideHeader
-								selectedToken={selectedToken}
 							/>
 						</TabPanel>
 
