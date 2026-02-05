@@ -216,7 +216,7 @@ const SelectDropdown = ({
 						placement="bottom"
 						className="dim:bg-transparent w-full bg-transparent dark:bg-transparent"
 						showFloatingArrow={false}
-						floatingWrapperClass="w-full"
+						floatingWrapperClass="min-w-full"
 						content={
 							<div>
 								<ul className="select-options-list">

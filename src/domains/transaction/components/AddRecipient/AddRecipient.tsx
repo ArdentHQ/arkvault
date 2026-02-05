@@ -352,8 +352,7 @@ export const AddRecipient = ({
 											: undefined
 									}
 									tokens={tokens.map((token) => ({
-										decimals: token.token().decimals(),
-										label: token.token().name(),
+										label: token.token().symbol(),
 										value: token.token().address(),
 									}))}
 									onChange={(tokenAddress) => {
@@ -447,7 +446,7 @@ export const AddRecipient = ({
 											tokens.length === 1 ? tokens[0].token().address() : undefined
 										}
 										tokens={tokens.map((token) => ({
-											label: token.token().name(),
+											label: token.token().symbol(),
 											value: token.token().address(),
 										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
