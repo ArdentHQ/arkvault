@@ -118,7 +118,7 @@ export class TransactionService {
 			senderPublicKey: input.signatory.address(),
 		})
 			.recipient(input.data.to, amount.toBigInt())
-			.contractAddress(input.data.to)
+			.contractAddress(token.token().address())
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
