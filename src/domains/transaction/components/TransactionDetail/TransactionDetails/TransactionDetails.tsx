@@ -9,9 +9,8 @@ import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
 import { DateTime } from "@/app/lib/intl/datetime";
 
 export const TransactionDetails = ({
-	transaction: initialTransaction,
+	transaction,
 	labelClassName,
-	isConfirmed,
 }: {
 	transaction: DTO.RawTransactionData;
 	labelClassName?: string;
@@ -20,27 +19,7 @@ export const TransactionDetails = ({
 	const { t } = useTranslation();
 	const format = useTimeFormat();
 
-	const transactionWallet: Contracts.IReadWriteWallet = initialTransaction.wallet();
-	const [transaction, setTransaction] = useState<DTO.RawTransactionData>(initialTransaction);
-
-	useEffect(() => {
-		// if it is a confirmed transaction, there is no need to refresh it
-		if (transaction.isConfirmed()) {
-			return;
-		}
-
-		// if `isConfirmed` is false, and transaction is not confirmed we probably need to wait
-		if (!isConfirmed) {
-			return;
-		}
-
-		const refreshTransaction = async () => {
-			const confirmedTransaction = await transactionWallet.client().transaction(transaction.hash());
-			setTransaction(confirmedTransaction);
-		};
-
-		void refreshTransaction();
-	}, [isConfirmed, transaction, transactionWallet]);
+	const transactionWallet: Contracts.IReadWriteWallet = transaction.wallet();
 
 	const timestamp = DateTime.make(
 		transaction.timestamp(),

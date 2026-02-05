@@ -26,11 +26,13 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+	const { isConfirmed: confirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		skipConfirmationCheck,
 		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});
+
+	const isConfirmed = confirmed || transaction?.confirmations().isGreaterThan(0);
 
 	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.SUCCESS.CREATED");
 
