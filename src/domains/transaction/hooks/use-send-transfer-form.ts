@@ -126,7 +126,6 @@ export const useSendTransferForm = ({
 				gasPrice,
 				signatory,
 				tokenContractAddress,
-				tokenContractDecimals: selectedToken?.token().decimals() ?? 0,
 			};
 
 			const abortSignal = abortReference.current.signal;
@@ -171,7 +170,6 @@ export const useSendTransferForm = ({
 
 		if (isTokenTransfer) {
 			register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
-			register("tokenContractDecimals");
 		}
 
 		if (networks.length === 1) {
