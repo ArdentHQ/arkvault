@@ -160,6 +160,8 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	it("should send a single transfer via side panel", async () => {
+		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
+
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
@@ -212,6 +214,7 @@ describe("SendTransferSidePanel", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+		walletSyncedMock.mockRestore();
 	});
 
 	it("should advance to ReviewStep on Enter when form valid and focus is not a button", async () => {

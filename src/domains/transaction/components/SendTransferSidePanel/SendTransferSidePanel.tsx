@@ -216,7 +216,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === firstTabIndex) {
-			setSelectedToken(undefined);
+			form.setValue("tokenContractAddress", undefined);
 			onOpenChange(false);
 			return;
 		}
@@ -519,18 +519,11 @@ export const SendTransferSidePanel = ({
 								onChange={({ sender }) => {
 									setWallet(sender);
 								}}
-								onTokenChange={setSelectedToken}
-								hideHeader
 							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep
-								wallet={wallet!}
-								network={activeNetwork}
-								hideHeader
-								selectedToken={selectedToken}
-							/>
+							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>

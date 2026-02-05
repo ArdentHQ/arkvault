@@ -458,7 +458,6 @@ export const SendRegistrationSidePanel = ({
 										activeTab={activeTab}
 										wallet={activeWallet}
 										profile={activeProfile}
-										hideHeader
 									/>
 								)}
 

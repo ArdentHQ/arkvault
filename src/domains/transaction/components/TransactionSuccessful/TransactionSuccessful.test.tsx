@@ -74,7 +74,7 @@ describe("TransactionSuccessful", () => {
 		const transaction = {
 			...TransactionFixture,
 			confirmations: () => BigNumber.make(0),
-			wallet: () => wallet
+			wallet: () => wallet,
 		};
 
 		vi.spyOn(transaction, "get").mockImplementation((attribute) =>

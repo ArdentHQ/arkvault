@@ -31,8 +31,8 @@ export const SelectToken = ({
 			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
 			className={className}
 			onChange={(option: OptionProperties) => {
-				setSelectedToken(option);
 				onChange?.(option?.value as string | undefined);
+				setSelectedToken(option);
 			}}
 			addons={{
 				start: {

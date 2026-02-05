@@ -2,6 +2,7 @@ import { AssertionError } from "assert";
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts, DTO, Wallet } from "@/app/lib/profiles";
 import { Profile } from "@/app/lib/profiles/profile";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {
 	if (!(profile instanceof Profile)) {
@@ -15,6 +16,14 @@ export function assertWallet(wallet?: Contracts.IReadWriteWallet): asserts walle
 	if (!(wallet instanceof Wallet)) {
 		throw new AssertionError({
 			message: `Expected 'wallet' to be Contracts.IReadWriteWallet, but received ${wallet}`,
+		});
+	}
+}
+
+export function assertToken(token?: WalletToken): asserts token is WalletToken {
+	if (!(token instanceof WalletToken)) {
+		throw new AssertionError({
+			message: `Expected 'token' to be WalletToken, but received ${token}`,
 		});
 	}
 }
