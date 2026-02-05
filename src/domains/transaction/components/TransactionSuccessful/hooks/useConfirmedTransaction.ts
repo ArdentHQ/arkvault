@@ -33,6 +33,11 @@ export const useConfirmedTransaction = ({
 		};
 
 		void checkConfirmed();
+
+		return () => {
+			setIsConfirmed(false);
+			setTransaction(undefined);
+		}
 	}, [wallet?.id(), transactionId]);
 
 	return { isConfirmed, transaction };
