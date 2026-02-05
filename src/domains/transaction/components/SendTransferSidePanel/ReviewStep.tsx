@@ -39,7 +39,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false, selectedToken 
 	const profile = useActiveProfile();
 	const { gasPrice, gasLimit } = getValues(["gasPrice", "gasLimit"]);
 
-	const nativeTokenBalance = wallet.balance()
+	const nativeTokenBalance = wallet.balance();
 
 	let amount = BigNumber.make(0);
 
