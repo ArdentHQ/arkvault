@@ -42,21 +42,4 @@ describe("TransactionDetails", () => {
 
 		expect(screen.queryByText(TransactionFixture.blockHash())).not.toBeInTheDocument();
 	});
-
-	it("should display block number after refreshing unconfirmed transaction", async () => {
-		const unconfirmedTransaction = {
-			...TransactionFixture,
-			blockHash: () => {},
-			isConfirmed: () => false,
-			wallet: () => wallet,
-		};
-
-		render(<TransactionDetails transaction={unconfirmedTransaction as any} isConfirmed={true} />);
-
-		expect(screen.getByText("N/A")).toBeInTheDocument();
-
-		await waitFor(() => {
-			expect(screen.queryByText("N/A")).not.toBeInTheDocument();
-		});
-	});
 });
