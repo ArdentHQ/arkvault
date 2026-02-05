@@ -126,10 +126,18 @@ export class TransactionTypeService {
 
 		const identifier = functionIdentifiers[identifierName];
 
-		return data.data.includes(identifier);
+		if (data.data.startsWith("0x")) {
+			return data.data.slice(2).startsWith(identifier);
+		}
+
+		return data.data.startsWith(identifier);
 	}
 
 	public static isUpdateValidator(data: TransactionData): boolean {
-		return data.data.includes(TransactionTypes.UpdateValidator.slice(2));
+		if (data.data.startsWith("0x")) {
+			return data.data.startsWith(TransactionTypes.UpdateValidator);
+		}
+
+		return data.data.startsWith(TransactionTypes.UpdateValidator.slice(2));
 	}
 }

@@ -43,8 +43,8 @@ describe("WalletTokenRepository", () => {
 	it("should have wallet token data", () => {
 		repository.push(walletToken);
 		expect(repository.count()).toBe(1);
-		expect(repository.all()).toEqual({ [walletToken.address()]: walletToken });
-		expect(repository.keys()).toEqual([walletToken.address()]);
+		expect(repository.all()).toEqual({ [walletToken.token().address()]: walletToken });
+		expect(repository.keys()).toEqual([walletToken.token().address()]);
 		expect(repository.values()).toEqual([walletToken]);
 	});
 
@@ -69,15 +69,15 @@ describe("WalletTokenRepository", () => {
 
 		expect(createdToken).toBeInstanceOf(WalletToken);
 		expect(repository.count()).toBe(1);
-		expect(repository.has(createdToken.address())).toBe(true);
+		expect(repository.has(createdToken.token().address())).toBe(true);
 	});
 
 	it("#has", () => {
-		expect(repository.has(walletToken.address())).toBe(true);
+		expect(repository.has(walletToken.token().address())).toBe(true);
 	});
 
 	it("#forget", () => {
-		const tokenAddress = walletToken.address();
+		const tokenAddress = walletToken.token().address();
 
 		expect(repository.has(tokenAddress)).toBe(true);
 		repository.forget(tokenAddress);
