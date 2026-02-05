@@ -15,7 +15,7 @@ export const useConfirmedTransaction = ({
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
 	useEffect(() => {
-		if (!transactionId || !wallet || !skipConfirmationCheck) {
+		if (!transactionId || !wallet || skipConfirmationCheck) {
 			return;
 		}
 
