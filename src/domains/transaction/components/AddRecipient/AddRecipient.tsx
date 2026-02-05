@@ -359,6 +359,7 @@ export const AddRecipient = ({
 											shouldDirty: !!token,
 											shouldValidate: !!token && !!amount,
 										});
+
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
 											shouldValidate: true,

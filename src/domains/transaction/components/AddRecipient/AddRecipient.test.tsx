@@ -223,6 +223,36 @@ describe("AddRecipient", () => {
 		findValidatorSpy.mockRestore();
 	});
 
+	it.each([[1], [2]])("should select a token with index %i", async (index: number) => {
+		const onChange = vi.fn();
+		renderWithFormProvider(
+			<AddRecipient
+				profile={profile}
+				wallet={wallet}
+				recipients={[]}
+				onChange={vi.fn()}
+				isTokenTransfer
+				onTokenChange={onChange}
+			/>,
+		);
+
+		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
+		await waitFor(() => {
+			expect(dropdowns).toHaveLength(3);
+		});
+
+		const tokenSelection = dropdowns[index];
+
+		const user = userEvent.setup();
+		await user.clear(tokenSelection);
+		await userEvent.paste("DARK20");
+		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+
+		await waitFor(() => {
+			expect(onChange).toHaveBeenCalled();
+		});
+	});
+
 	it("should select recipient", async () => {
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
 
