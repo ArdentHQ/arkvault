@@ -138,6 +138,6 @@ export class TransactionTypeService {
 			return data.data.startsWith(TransactionTypes.UpdateValidator);
 		}
 
-		return data.data.startsWith(TransactionTypes.UpdateValidator.slice(2))
+		return data.data.startsWith(TransactionTypes.UpdateValidator.slice(2));
 	}
 }
