@@ -1,4 +1,4 @@
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
@@ -96,6 +96,7 @@ export const SendDelegateResignation = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
+				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 				privateKey,
 				secondMnemonic,
 				secondSecret,

@@ -1,5 +1,5 @@
 import { Services } from "@ardenthq/sdk";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -102,6 +102,7 @@ export const SendIpfs = () => {
 		const signatory = await activeWallet.signatoryFactory().make({
 			encryptionPassword,
 			mnemonic,
+			path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 			privateKey,
 			secondMnemonic,
 			secondSecret,

@@ -86,6 +86,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
+				path: wallet.data().get(Contracts.WalletData.DerivationPath),
 				privateKey,
 				secondMnemonic,
 				secondSecret,

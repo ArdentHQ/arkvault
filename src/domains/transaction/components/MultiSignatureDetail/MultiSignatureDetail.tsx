@@ -99,6 +99,7 @@ export const MultiSignatureDetail = ({
 				const signatory = await wallet.signatoryFactory().make({
 					encryptionPassword,
 					mnemonic,
+					path: wallet.data().get<string>(Contracts.WalletData.DerivationPath),
 					privateKey,
 					secondMnemonic,
 					secondSecret,

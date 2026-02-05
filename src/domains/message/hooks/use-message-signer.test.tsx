@@ -4,6 +4,7 @@ import { renderHook } from "@testing-library/react";
 import { useMessageSigner } from "./use-message-signer";
 import {
 	env,
+	fixUInt8ArrayIssue,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
 	mockNanoXTransport,
@@ -80,6 +81,43 @@ describe("Use Message Signer Hook", () => {
 		walletActsWithMnemonicWithEncryption.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
+	});
+
+	it("should sign message with BIP44 mnemonic", async () => {
+		const uInt8ArrayFix = fixUInt8ArrayIssue();
+
+		const { result } = renderHook(() => useMessageSigner());
+
+		const wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+
+		const walletActsWithBip44Mnemonic = vi.spyOn(wallet, "actsWithBip44Mnemonic").mockReturnValue(true);
+
+		const mockWalletData = vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key === Contracts.WalletData.ImportMethod) {
+				return "BIP44.MNEMONIC";
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return "m/44'/111'/0'/0/0";
+			}
+
+			if (key == Contracts.WalletData.AddressIndex) {
+				return 0;
+			}
+		});
+
+		const signedMessage = await result.current.sign(wallet, "message", getDefaultWalletMnemonic());
+
+		expect(signedMessage).toStrictEqual({
+			message: "message",
+			signatory: "0216d933d0b8d5d1b41bedf9ada92a5bc0b5c33ffbb4d69bc15090e1d0897492ce",
+			signature:
+				"18f13ee9a78df382c96fde033038f1a6dd9b4ed86166043e1d127d193c1191fdb55bc912844770e688f9ef99b5ca6bf398fb84309d6f03d377bd708495b5ed26",
+		});
+
+		walletActsWithBip44Mnemonic.mockRestore();
+		mockWalletData.mockRestore();
+		uInt8ArrayFix();
 	});
 
 	it("should sign message with secret", async () => {
