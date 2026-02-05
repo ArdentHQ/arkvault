@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
