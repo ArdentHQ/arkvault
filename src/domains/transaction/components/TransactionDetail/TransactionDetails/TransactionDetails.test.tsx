@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, render, env, getDefaultProfileId, renderResponsiveWithRoute, waitFor } from "@/utils/testing-library";
+import { screen, render, env, getDefaultProfileId, renderResponsiveWithRoute } from "@/utils/testing-library";
 import { TransactionDetails } from "./TransactionDetails";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { Contracts } from "@/app/lib/profiles";
