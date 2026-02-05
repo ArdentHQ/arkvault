@@ -223,7 +223,7 @@ describe("AddRecipient", () => {
 		findValidatorSpy.mockRestore();
 	});
 
-	it.each([[1], [2]])("should select a token with index %i", async (index: number) => {
+	it.each([[1], [2]])("should select a token", async (index: number) => {
 		const onChange = vi.fn();
 		renderWithFormProvider(
 			<AddRecipient
