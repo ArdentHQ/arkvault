@@ -47,10 +47,10 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 
 	const token = tokenContractAddress
 		? profile
-			.tokens()
-			.selected()
-			.items()
-			.find((token) => token.token().address() === tokenContractAddress)
+				.tokens()
+				.selected()
+				.items()
+				.find((token) => token.token().address() === tokenContractAddress)
 		: undefined;
 	const ticker = token ? token.token().symbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
