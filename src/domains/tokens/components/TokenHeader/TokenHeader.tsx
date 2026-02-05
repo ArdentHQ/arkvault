@@ -118,7 +118,7 @@ export const TokenHeader = ({
 									name="ArrowRotateLeft"
 									style={{ animationDirection: "reverse" }}
 									className={cn(
-										"text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50",
+										"text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50",
 										{
 											"animate-spin": isLoading,
 										},

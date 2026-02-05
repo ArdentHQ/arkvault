@@ -143,7 +143,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -443,7 +443,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -743,7 +743,7 @@ exports[`TokenHeader > should render 1`] = `
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1048,7 +1048,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1348,7 +1348,7 @@ exports[`TokenHeader > should show balance information when tokens are available
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1648,7 +1648,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 style="animation-direction: reverse;"
               >
                 <div
@@ -1948,7 +1948,7 @@ exports[`TokenHeader > should toggle receive funds mmodal 1`] = `
               class="flex items-center gap-2"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                class="text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
                 style="animation-direction: reverse;"
               >
                 <div
