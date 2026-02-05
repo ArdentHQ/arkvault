@@ -8,22 +8,26 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailSidePanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 interface TransactionSuccessfulProperties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: ExtendedTransactionDTO;
 	senderWallet: Contracts.IReadWriteWallet;
 	children?: React.ReactNode;
 	noHeading?: boolean;
+	skipConfirmationCheck?: boolean;
 }
 
 export const TransactionSuccessful = ({
 	transaction,
 	senderWallet,
 	noHeading = false,
+	skipConfirmationCheck = false,
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+		skipConfirmationCheck,
 		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});

@@ -5,15 +5,17 @@ import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction
 export const useConfirmedTransaction = ({
 	wallet,
 	transactionId,
+	skipConfirmationCheck,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
 	transactionId?: string;
+	skipConfirmationCheck?: boolean;
 }): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
 	useEffect(() => {
-		if (!transactionId || !wallet) {
+		if (!transactionId || !wallet || !skipConfirmationCheck) {
 			return;
 		}
 
