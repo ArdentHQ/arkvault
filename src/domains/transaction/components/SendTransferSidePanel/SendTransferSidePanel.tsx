@@ -519,7 +519,6 @@ export const SendTransferSidePanel = ({
 								onChange={({ sender }) => {
 									setWallet(sender);
 								}}
-								hideHeader
 							/>
 						</TabPanel>
 
