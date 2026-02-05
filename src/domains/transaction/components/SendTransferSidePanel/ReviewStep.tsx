@@ -47,10 +47,10 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 
 	const token = tokenContractAddress
 		? profile
-				.tokens()
-				.selected()
-				.items()
-				.find((token) => token.token().address() === tokenContractAddress)
+			.tokens()
+			.selected()
+			.items()
+			.find((token) => token.token().address() === tokenContractAddress)
 		: undefined;
 	const ticker = token ? token.token().symbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
@@ -68,7 +68,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 
 	useEffect(() => {
 		// DO NOT adjust send amount if it is a token transfer
-		if (selectedToken) {
+		if (token) {
 			return;
 		}
 
@@ -97,7 +97,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 		return () => {
 			clearErrors("amount");
 		};
-	}, [isMultiPayment, nativeTokenBalance, amount.toString(), fee.toString()]);
+	}, [isMultiPayment, nativeTokenBalance, amount.toString(), fee.toString(), token]);
 
 	useEffect(() => {
 		unregister("mnemonic");
