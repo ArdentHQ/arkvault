@@ -27,7 +27,7 @@ export const TransactionSuccessful = ({
 	const { t } = useTranslation();
 
 	const { isConfirmed: confirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
-		skipConfirmationCheck,
+		disabled: skipConfirmationCheck,
 		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});
