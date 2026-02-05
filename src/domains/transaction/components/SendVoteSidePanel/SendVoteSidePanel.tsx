@@ -470,7 +470,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const stepsCount = skipFormStep ? 3 : 4;
 	const activeIndex = skipFormStep ? activeTab - 1 : activeTab;
 
-	const { isConfirmed } = useConfirmedTransaction({
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: selectedWallet,
 	});
@@ -682,7 +682,12 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					<TabPanel tabId={Step.SummaryStep}>
 						{activeWallet && (
-							<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} noHeading />
+							<TransactionSuccessful
+								transaction={confirmedTransaction || transaction}
+								senderWallet={activeWallet}
+								noHeading
+								skipConfirmationCheck
+							/>
 						)}
 					</TabPanel>
 
