@@ -359,11 +359,6 @@ export const AddRecipient = ({
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 										onTokenChange?.(token);
 
-										setValue("tokenContractDecimals", token?.token().decimals(), {
-											shouldDirty: true,
-											shouldValidate: true,
-										});
-
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
 											shouldValidate: true,
@@ -477,7 +472,12 @@ export const AddRecipient = ({
 									addons={amountAddons}
 									onChange={(amount: string) => {
 										setValue("isSendAllSelected", false);
-										setValue("amount", amount, { shouldDirty: true, shouldValidate: true });
+
+										setValue("amount", amount, {
+											shouldDirty: true,
+											shouldValidate: !(isTokenTransfer && !tokenContractAddress),
+										});
+
 										singleRecipientOnChange({
 											address: recipientAddress,
 											alias: recipientAlias,
