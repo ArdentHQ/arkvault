@@ -41,7 +41,7 @@ export class WalletTokenRepository {
 	}
 
 	public push(token: WalletToken): void {
-		this.#data.set(token.address(), token);
+		this.#data.set(token.token().address(), token);
 	}
 
 	create(data: { walletToken: WalletTokenDTO; token: TokenDTO }) {
