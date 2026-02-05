@@ -1048,7 +1048,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -1137,13 +1137,12 @@ exports[`AddRecipient > should render with assets field 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
-                      aria-invalid="true"
                       autocomplete="off"
                       class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                       data-testid="select-list__input"
@@ -1153,64 +1152,6 @@ exports[`AddRecipient > should render with assets field 1`] = `
                       type="text"
                       value="0xdeb478251073157e400c3d8d2ed92a85c958f9fa"
                     />
-                  </div>
-                  <div
-                    class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <span>
-                        <span>
-                          <span
-                            data-errortext="The balance is too low."
-                            data-testid="Input__error"
-                          >
-                            <div
-                              class="text-theme-danger-500"
-                            >
-                              <div
-                                style="height: 20px; width: 20px;"
-                              >
-                                <svg
-                                  id="circle-exclamation-mark"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                  >
-                                    <circle
-                                      cx="10"
-                                      cy="10"
-                                      r="9"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M10 10.5v-5"
-                                      stroke-linecap="round"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M10 14h0"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </div>
-                          </span>
-                        </span>
-                      </span>
-                    </div>
                   </div>
                 </div>
                 <div
@@ -1237,7 +1178,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                             …
                           </div>
                           <div
-                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sm:rounded-r-none sm:border-r-transparent"
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sm:rounded-r-none sm:border-r-transparent"
                           >
                             <div
                               class="flex items-center"
@@ -1256,7 +1197,6 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               <input
                                 aria-autocomplete="list"
                                 aria-controls="SelectToken__dropdown-menu"
-                                aria-invalid="true"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
                                 class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
@@ -1279,64 +1219,11 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               </span>
                             </div>
                             <div
-                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
                               data-testid="Input__addon-end"
                             >
                               <div
-                                class="pr-3"
-                              >
-                                <span>
-                                  <span>
-                                    <span
-                                      data-errortext="The balance is too low."
-                                      data-testid="Input__error"
-                                    >
-                                      <div
-                                        class="text-theme-danger-500"
-                                      >
-                                        <div
-                                          style="height: 20px; width: 20px;"
-                                        >
-                                          <svg
-                                            id="circle-exclamation-mark"
-                                            style="height: 100%; width: 100%;"
-                                            viewBox="0 0 20 20"
-                                            x="0"
-                                            xml:space="preserve"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            y="0"
-                                          >
-                                            <g
-                                              fill="none"
-                                              stroke="currentColor"
-                                              stroke-width="2"
-                                            >
-                                              <circle
-                                                cx="10"
-                                                cy="10"
-                                                r="9"
-                                                stroke-miterlimit="10"
-                                              />
-                                              <path
-                                                d="M10 10.5v-5"
-                                                stroke-linecap="round"
-                                                stroke-miterlimit="10"
-                                              />
-                                              <path
-                                                d="M10 14h0"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                              />
-                                            </g>
-                                          </svg>
-                                        </div>
-                                      </div>
-                                    </span>
-                                  </span>
-                                </span>
-                              </div>
-                              <div
-                                class="pl-3"
+                                class=""
                               >
                                 <div
                                   class="flex items-center"
@@ -1349,7 +1236,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                       class="absolute inset-0 block cursor-pointer md:hidden"
                                     />
                                     <div
-                                      class="transition-transform text-theme-danger-500"
+                                      class="transition-transform text-theme-secondary-500"
                                     >
                                       <div
                                         style="height: 10px; width: 10px;"
@@ -1398,13 +1285,12 @@ exports[`AddRecipient > should render with assets field 1`] = `
                 class="relative"
               >
                 <div
-                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sm:rounded-l-none"
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sm:rounded-l-none"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
-                      aria-invalid="true"
                       autocomplete="off"
                       class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
                       data-testid="AddRecipient__amount"
@@ -1413,64 +1299,6 @@ exports[`AddRecipient > should render with assets field 1`] = `
                       type="text"
                       value=""
                     />
-                  </div>
-                  <div
-                    class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <span>
-                        <span>
-                          <span
-                            data-errortext="The balance is too low."
-                            data-testid="Input__error"
-                          >
-                            <div
-                              class="text-theme-danger-500"
-                            >
-                              <div
-                                style="height: 20px; width: 20px;"
-                              >
-                                <svg
-                                  id="circle-exclamation-mark"
-                                  style="height: 100%; width: 100%;"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                  >
-                                    <circle
-                                      cx="10"
-                                      cy="10"
-                                      r="9"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M10 10.5v-5"
-                                      stroke-linecap="round"
-                                      stroke-miterlimit="10"
-                                    />
-                                    <path
-                                      d="M10 14h0"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </div>
-                          </span>
-                        </span>
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>
