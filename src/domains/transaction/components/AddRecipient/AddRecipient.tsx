@@ -359,7 +359,6 @@ export const AddRecipient = ({
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 										onTokenChange?.(token);
 
-										setValue("amount", amount, { shouldDirty: !!token, shouldValidate: !!token });
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
 											shouldValidate: true,
@@ -452,7 +451,6 @@ export const AddRecipient = ({
 											);
 											onTokenChange?.(token);
 
-											setValue("amount", amount, { shouldDirty: !!token, shouldValidate: !!token });
 											setValue("tokenContractAddress", tokenAddress, {
 												shouldDirty: true,
 												shouldValidate: true,
