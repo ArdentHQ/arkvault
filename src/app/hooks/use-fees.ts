@@ -88,7 +88,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 				.fees()
 				.estimateGas({
 					from: formData.senderAddress,
-					...new TransactionEncoder(profile.activeNetwork()).byType(formData, type),
+					...new TransactionEncoder(profile, profile.activeNetwork()).byType(formData, type),
 				});
 
 			// Add 20% buffer on the gas, in case the estimate is too low.

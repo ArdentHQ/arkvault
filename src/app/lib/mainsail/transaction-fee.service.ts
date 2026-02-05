@@ -45,7 +45,7 @@ export class TransactionFeeService {
 	public async gasLimit(transactionData: EncodeInputData, type: EncodeTransactionType): Promise<BigNumber> {
 		const gas = await this.#network.fees().estimateGas({
 			from: transactionData.senderAddress,
-			...new TransactionEncoder(this.#network).byType(transactionData, type),
+			...new TransactionEncoder(this.#profile, this.#network).byType(transactionData, type),
 		});
 
 		if (!gas.isZero()) {
