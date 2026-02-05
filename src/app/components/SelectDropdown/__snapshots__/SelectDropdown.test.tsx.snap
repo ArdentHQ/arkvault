@@ -962,7 +962,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
             />
           </span>
           <div
-            class="w-full"
+            class="min-w-full"
             data-floating-ui-focusable=""
             id="«rg»"
             role="tooltip"
@@ -1172,7 +1172,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
             />
           </span>
           <div
-            class="w-full"
+            class="min-w-full"
             data-floating-ui-focusable=""
             id="«rk»"
             role="tooltip"
@@ -1956,7 +1956,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
             />
           </span>
           <div
-            class="w-full"
+            class="min-w-full"
             data-floating-ui-focusable=""
             id="«ri»"
             role="tooltip"
@@ -2165,7 +2165,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
             />
           </span>
           <div
-            class="w-full"
+            class="min-w-full"
             data-floating-ui-focusable=""
             id="«rm»"
             role="tooltip"

@@ -150,7 +150,7 @@ export const NotificationLeftSide = ({ transaction }: { transaction: Transaction
 		return <FailedTransactionNotification transaction={transaction} />;
 	}
 
-	if (transaction.isTransfer() || transaction.isMultiPayment()) {
+	if (transaction.isTransfer() || transaction.isMultiPayment() || transaction.isTokenTransfer()) {
 		return <TransferNotification transaction={transaction} />;
 	}
 
