@@ -65,8 +65,8 @@ export const TransactionSuccessful = ({
 					token={token}
 					transactionItem={confirmedTransaction ?? transaction}
 					profile={senderWallet.profile()}
-					isConfirmed={isConfirmed}
-					confirmations={confirmedTransaction?.confirmations().toNumber() ?? 0}
+					isConfirmed={transaction.confirmations().isGreaterThan(0) || isConfirmed}
+					confirmations={confirmedTransaction?.confirmations().toNumber() ?? transaction.confirmations().toNumber()}
 					containerClassname="-mx-3 sm:mx-0"
 				/>
 			</div>
