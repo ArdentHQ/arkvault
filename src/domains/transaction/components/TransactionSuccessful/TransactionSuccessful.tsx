@@ -67,7 +67,7 @@ export const TransactionSuccessful = ({
 					token={token}
 					transactionItem={confirmedTransaction ?? transaction}
 					profile={senderWallet.profile()}
-					isConfirmed={transaction.confirmations().isGreaterThan(0) || isConfirmed}
+					isConfirmed={isConfirmed}
 					confirmations={
 						confirmedTransaction?.confirmations().toNumber() ?? transaction.confirmations().toNumber()
 					}
