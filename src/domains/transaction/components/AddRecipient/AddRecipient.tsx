@@ -452,6 +452,9 @@ export const AddRecipient = ({
 										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
 										onChange={(tokenAddress) => {
+											const token = tokens.find((token) => token.token().address() === tokenAddress);
+											onTokenChange?.(token);
+
 											setValue("tokenContractAddress", tokenAddress, {
 												shouldDirty: true,
 												shouldValidate: true,

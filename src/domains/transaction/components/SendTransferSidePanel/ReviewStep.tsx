@@ -39,7 +39,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false, selectedToken 
 	const profile = useActiveProfile();
 	const { gasPrice, gasLimit } = getValues(["gasPrice", "gasLimit"]);
 
-	const walletBalance = wallet.balance();
+	const balance = selectedToken ? selectedToken.balance() : wallet.balance();
 
 	let amount = BigNumber.make(0);
 
@@ -54,15 +54,20 @@ export const ReviewStep = ({ wallet, network, hideHeader = false, selectedToken 
 	const { common: commonValidation } = useValidation();
 
 	useEffect(() => {
-		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet.network()));
-		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet.network()));
-	}, [commonValidation, register, walletBalance]);
+		register("gasPrice", commonValidation.gasPrice(balance, getValues, wallet.network()));
+		register("gasLimit", commonValidation.gasLimit(balance, getValues, wallet.network()));
+	}, [commonValidation, register, balance]);
 
 	const fee = BigNumber.make(calculateGasFee(gasPrice, gasLimit));
 	const isMultiPayment = recipients.length > 1;
 
 	useEffect(() => {
-		const remainingBalance = BigNumber.make(walletBalance).minus(amount).minus(fee);
+		// DO NOT adjust send amount if it is a token transfer
+		if (selectedToken) {
+			return;
+		}
+
+		const remainingBalance = BigNumber.make(balance).minus(amount).minus(fee);
 		if (remainingBalance.isLessThanOrEqualTo(0)) {
 			if (isMultiPayment) {
 				setError("amount", {
@@ -87,7 +92,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false, selectedToken 
 		return () => {
 			clearErrors("amount");
 		};
-	}, [isMultiPayment, walletBalance, amount.toString(), fee.toString()]);
+	}, [isMultiPayment, balance, amount.toString(), fee.toString()]);
 
 	useEffect(() => {
 		unregister("mnemonic");
