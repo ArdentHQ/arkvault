@@ -9,8 +9,7 @@ import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transacti
 import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
 import { ExtendedConfirmedTransactionDataCollection } from "@/app/lib/profiles/transaction.collection";
 import { WalletTokenDTO } from "./wallet-token.dto";
-import { BigNumber } from "../helpers";
-import { exist } from "joi";
+import { BigNumber } from "@/app/lib/helpers";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
@@ -101,7 +100,7 @@ export class TokenService {
 				...(query ?? {}),
 			});
 
-			const aggregated = this.#aggregateTokens(response.items())
+			const aggregated = this.#aggregateTokens(response.items());
 
 			this.#walletTokensCollection = new WalletTokenCollection(aggregated, {
 				last: undefined,
@@ -120,31 +119,30 @@ export class TokenService {
 	}
 
 	#aggregateTokens(tokens: WalletToken[]): WalletToken[] {
-		const aggregated = new Map<string, WalletToken>()
+		const aggregated = new Map<string, WalletToken>();
 		for (const token of tokens) {
-			const existing = aggregated.get(token.token().address())
+			const existing = aggregated.get(token.token().address());
 
 			if (existing) {
 				const updatedWithBalance = new WalletToken({
-					profile: this.#profile,
 					network: this.#profile.activeNetwork(),
+					profile: this.#profile,
 					token: existing.token(),
 					walletToken: new WalletTokenDTO({
 						address: token.address(),
 						balance: BigNumber.make(token.balanceRaw()).plus(existing.balanceRaw()).toString(),
 						tokenAddress: token.token().address(),
-					})
-				})
+					}),
+				});
 
-				console.log(token.token().symbol(), token.balance(), existing.balance(), "=", updatedWithBalance.balance())
-				aggregated.set(token.token().address(), updatedWithBalance)
-				continue
+				aggregated.set(token.token().address(), updatedWithBalance);
+				continue;
 			}
 
-			aggregated.set(token.token().address(), token)
-			continue
+			aggregated.set(token.token().address(), token);
+			continue;
 		}
-		return [...aggregated.values()]
+		return [...aggregated.values()];
 	}
 
 	selected(): WalletTokenCollection {

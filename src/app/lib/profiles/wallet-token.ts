@@ -35,7 +35,7 @@ export class WalletToken {
 	}
 
 	balanceRaw(): number {
-		return this.#walletToken.balance()
+		return this.#walletToken.balance();
 	}
 
 	token(): TokenDTO {
