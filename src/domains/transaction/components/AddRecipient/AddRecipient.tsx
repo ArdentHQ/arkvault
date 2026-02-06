@@ -58,6 +58,7 @@ export const AddRecipient = ({
 	showMultiPaymentOption = true,
 	wallet,
 	isTokenTransfer,
+	onTokenChange,
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
@@ -362,6 +363,8 @@ export const AddRecipient = ({
 											shouldDirty: true,
 											shouldValidate: true,
 										});
+
+										onTokenChange?.(token);
 									}}
 								/>
 							</div>
@@ -456,6 +459,8 @@ export const AddRecipient = ({
 												shouldDirty: true,
 												shouldValidate: true,
 											});
+
+											onTokenChange?.(token);
 										}}
 									/>
 								</div>
