@@ -199,19 +199,20 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should set amount with token transfer enabled", async () => {
+	it.each([[1], [2]])("should select a token", async (index: number) => {
 		const onChange = vi.fn();
-		const findValidatorSpy = vi.spyOn(profile, "usernames").mockImplementation(() => ({
-			username: () => "validator username",
-		}));
-
-		const address = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
-		const amount = 1;
-
-		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([]);
 		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} isTokenTransfer />,
+			<AddRecipient
+				profile={profile}
+				wallet={wallet}
+				recipients={[]}
+				onChange={vi.fn()}
+				isTokenTransfer
+				onTokenChange={onChange}
+			/>,
 		);
+
+		const amount = 1;
 
 		const amoutInput = screen.getByTestId("AddRecipient__amount");
 		const addressInput = screen.getAllByTestId("SelectDropdown__input")[0];
@@ -222,19 +223,25 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(amoutInput).toHaveValue(String(amount)));
 
 		await userEvent.clear(addressInput);
-		await userEvent.type(addressInput, address);
+		await userEvent.type(addressInput, wallet.address());
 
-		await waitFor(() => expect(addressInput).toHaveValue(address));
+		await waitFor(() => expect(addressInput).toHaveValue(wallet.address()));
 
-		expect(onChange).toHaveBeenCalledWith([
-			{
-				address: address,
-				alias: "validator username",
-				amount: amount,
-			},
-		]);
+		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
+		await waitFor(() => {
+			expect(dropdowns).toHaveLength(3);
+		});
 
-		findValidatorSpy.mockRestore();
+		const tokenSelection = dropdowns[index];
+
+		const user = userEvent.setup();
+		await user.clear(tokenSelection);
+		await userEvent.paste("DARK20");
+		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+
+		await waitFor(() => {
+			expect(onChange).toHaveBeenCalled();
+		});
 	});
 
 	it("should select recipient", async () => {

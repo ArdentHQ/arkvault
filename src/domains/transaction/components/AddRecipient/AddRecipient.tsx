@@ -346,23 +346,25 @@ export const AddRecipient = ({
 									<div>{t("COMMON.ASSET")}</div>
 								</FormLabel>
 								<SelectToken
-									defaultTokenValue={
-										(tokenContractAddress ?? tokens.length === 1)
-											? tokens[0]?.token().address()
-											: undefined
-									}
+									value={tokenContractAddress}
 									tokens={tokens.map((token) => ({
 										label: token.token().symbol(),
 										value: token.token().address(),
 									}))}
 									onChange={(tokenAddress) => {
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
-										onTokenChange?.(token);
+
+										setValue("amount", amount, {
+											shouldDirty: !!token,
+											shouldValidate: !!token && !!amount,
+										});
 
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
+
+										onTokenChange?.(token);
 									}}
 								/>
 							</div>
@@ -437,9 +439,7 @@ export const AddRecipient = ({
 							{isTokenTransfer && !isLoading && (
 								<div className="hidden w-full sm:block sm:max-w-44">
 									<SelectToken
-										defaultTokenValue={
-											tokens.length === 1 ? tokens[0].token().address() : undefined
-										}
+										value={tokenContractAddress}
 										tokens={tokens.map((token) => ({
 											label: token.token().symbol(),
 											value: token.token().address(),
@@ -449,12 +449,18 @@ export const AddRecipient = ({
 											const token = tokens.find(
 												(token) => token.token().address() === tokenAddress,
 											);
-											onTokenChange?.(token);
+
+											setValue("amount", amount, {
+												shouldDirty: !!token,
+												shouldValidate: !!token && !!amount,
+											});
 
 											setValue("tokenContractAddress", tokenAddress, {
 												shouldDirty: true,
 												shouldValidate: true,
 											});
+
+											onTokenChange?.(token);
 										}}
 									/>
 								</div>
