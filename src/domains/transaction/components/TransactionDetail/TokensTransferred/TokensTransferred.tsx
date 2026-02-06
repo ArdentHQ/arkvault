@@ -9,6 +9,7 @@ import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { Address } from "@/app/components/Address";
 import cn from "classnames";
 import { useWalletAlias } from "@/app/hooks";
+import { Skeleton } from "@/app/components/Skeleton";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -17,6 +18,7 @@ interface Properties {
 	profile: Contracts.IProfile;
 	allowHideBalance?: boolean;
 	token: TokenDTO;
+	isRefreshingTransaction?: boolean;
 }
 export const TokensTransferred = ({
 	transaction,
@@ -25,6 +27,7 @@ export const TokensTransferred = ({
 	profile,
 	allowHideBalance = false,
 	token,
+	isRefreshingTransaction,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
@@ -42,17 +45,22 @@ export const TokensTransferred = ({
 				<div data-testid="TokensTransferred__To" className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TO")}</DetailLabelText>
 
-					<Address
-						truncateOnTable
-						address={transaction.to()}
-						walletName={alias}
-						showCopyButton
-						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-						wrapperClass="justify-end sm:justify-start"
-						addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
-							"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200": !!alias,
-						})}
-					/>
+					{!isRefreshingTransaction && (
+						<Address
+							truncateOnTable
+							address={transaction.to()}
+							walletName={alias}
+							showCopyButton
+							walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+							wrapperClass="justify-end sm:justify-start"
+							addressClass={cn("text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4", {
+								"text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200":
+									!!alias,
+							})}
+						/>
+					)}
+
+					{isRefreshingTransaction && <Skeleton height={16} width={150} />}
 				</div>
 
 				<div
@@ -61,12 +69,16 @@ export const TokensTransferred = ({
 				>
 					<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
 
-					<TransactionAmountLabel
-						token={token}
-						transaction={transaction}
-						profile={profile}
-						allowHideBalance={allowHideBalance}
-					/>
+					{!isRefreshingTransaction && (
+						<TransactionAmountLabel
+							token={token}
+							transaction={transaction}
+							profile={profile}
+							allowHideBalance={allowHideBalance}
+						/>
+					)}
+
+					{isRefreshingTransaction && <Skeleton height={16} width={100} />}
 				</div>
 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">

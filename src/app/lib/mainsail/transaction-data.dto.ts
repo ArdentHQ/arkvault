@@ -10,6 +10,7 @@ import { AbiDecoder, ContractAbiType, UnitConverter } from "@arkecosystem/typesc
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { AbiResult } from "@arkecosystem/typescript-crypto/dist/types";
+import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
 
 export type KeyValuePair = Record<string, any>;
 
@@ -42,10 +43,10 @@ export abstract class TransactionData {
 		return this;
 	}
 
-	public async sync(profile: ProfileContracts.IProfile): Promise<void> {
+	public async sync(wallet: IReadWriteWallet): Promise<void> {
 		const clientService = new ClientService({
-			config: profile.activeNetwork().config(),
-			profile: profile,
+			config: wallet.profile().activeNetwork().config(),
+			profile: wallet.profile(),
 		});
 
 		const data = await clientService.transaction(this.hash());
@@ -65,16 +66,15 @@ export abstract class TransactionData {
 		if (decodedData?.functionName === "transfer") {
 			const [to, value] = decodedData.args;
 
-			const token = profile
+			const token = wallet
 				.tokens()
-				.selected()
-				.items()
+				.values()
 				.find((walletToken) => walletToken.token().address().toLowerCase() === data.to().toLowerCase());
 
 			tokenData = {
 				to,
-				value,
 				token: token?.token().toJSON(),
+				value,
 				type: "transfer",
 			};
 		}

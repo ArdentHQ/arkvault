@@ -25,7 +25,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	public async sync(): Promise<void> {
-		await this.#data.sync(this.wallet().profile());
+		await this.#data.sync(this.wallet());
 	}
 
 	public hash(): string {

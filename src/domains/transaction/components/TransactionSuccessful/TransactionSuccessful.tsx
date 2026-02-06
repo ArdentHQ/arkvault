@@ -23,7 +23,11 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+	const {
+		isConfirmed,
+		isLoading,
+		transaction: confirmedTransaction,
+	} = useConfirmedTransaction({
 		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});
@@ -64,6 +68,7 @@ export const TransactionSuccessful = ({
 					isConfirmed={isConfirmed}
 					confirmations={confirmedTransaction?.confirmations().toNumber() ?? 0}
 					containerClassname="-mx-3 sm:mx-0"
+					isRefreshingTransaction={isLoading}
 				/>
 			</div>
 		</section>

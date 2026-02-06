@@ -32,6 +32,7 @@ export const TransactionDetailContent = ({
 	containerClassname,
 	allowHideBalance = false,
 	token,
+	isRefreshingTransaction,
 }: {
 	transactionItem: DTO.RawTransactionData;
 	profile: Contracts.IProfile;
@@ -40,6 +41,7 @@ export const TransactionDetailContent = ({
 	containerClassname?: string;
 	allowHideBalance?: boolean;
 	token?: WalletToken;
+	isRefreshingTransaction?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -99,6 +101,7 @@ export const TransactionDetailContent = ({
 				{transaction.isTokenTransfer() && (
 					<DetailPadded className="flex-1 sm:ml-0">
 						<TokensTransferred
+							isRefreshingTransaction={isRefreshingTransaction}
 							token={transaction.token()}
 							labelClassName={labelClassName}
 							transaction={transaction}
@@ -166,7 +169,11 @@ export const TransactionDetailSidePanel = ({
 	const wallet = transactionItem.wallet();
 	const transactionId = transactionItem.hash();
 
-	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
+	const {
+		isConfirmed,
+		isLoading,
+		transaction: confirmedTransaction,
+	} = useConfirmedTransaction({
 		tokenTransfer: transactionItem,
 		transactionId,
 		wallet,
@@ -195,6 +202,7 @@ export const TransactionDetailSidePanel = ({
 					confirmations={transactionItem.confirmations().toNumber()}
 					allowHideBalance
 					containerClassname="-mx-3 sm:mx-0"
+					isRefreshingTransaction={isLoading}
 				/>
 			</SidePanel>
 		);
@@ -215,6 +223,7 @@ export const TransactionDetailSidePanel = ({
 				confirmations={confirmationsToShow}
 				allowHideBalance
 				containerClassname="-mx-3 sm:mx-0"
+				isRefreshingTransaction={isLoading}
 			/>
 		</SidePanel>
 	);

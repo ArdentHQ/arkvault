@@ -11,7 +11,8 @@ export const useConfirmedTransaction = ({
 	wallet?: Contracts.IReadWriteWallet;
 	transactionId?: string;
 	tokenTransfer?: ExtendedTransactionDTO;
-}): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData } => {
+}): { isConfirmed: boolean; isLoading: boolean; transaction?: ExtendedConfirmedTransactionData } => {
+	const [isLoading, setIsLoading] = useState(false);
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
@@ -21,16 +22,14 @@ export const useConfirmedTransaction = ({
 		}
 
 		const checkConfirmed = (): void => {
+			setIsLoading(true);
+
 			const id = setInterval(async () => {
 				try {
-					if (tokenTransfer?.isTokenTransfer()) {
-						await (tokenTransfer as ExtendedConfirmedTransactionData).sync();
-						setTransaction(tokenTransfer as ExtendedConfirmedTransactionData);
-					} else {
-						const transaction = await wallet.client().transaction(transactionId);
-						setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
-					}
+					await (tokenTransfer as ExtendedConfirmedTransactionData).sync();
+					setTransaction(tokenTransfer as ExtendedConfirmedTransactionData);
 
+					setIsLoading(false);
 					setIsConfirmed(true);
 					clearInterval(id);
 				} catch {
@@ -42,5 +41,5 @@ export const useConfirmedTransaction = ({
 		void checkConfirmed();
 	}, [wallet?.id(), transactionId]);
 
-	return { isConfirmed, transaction };
+	return { isConfirmed, isLoading, transaction };
 };
