@@ -6,9 +6,10 @@ import { DateTime } from "@/app/lib/intl";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { AbiDecoder, ContractAbiType, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { ClientService } from "@/app/lib/mainsail/client.service";
+import { AbiResult } from "@arkecosystem/typescript-crypto/dist/types";
 
 export type KeyValuePair = Record<string, any>;
 
@@ -49,20 +50,34 @@ export abstract class TransactionData {
 
 		const data = await clientService.transaction(this.hash());
 
+		let decodedData: undefined | AbiResult;
+
+		if (typeof data.raw().data === "string") {
+			try {
+				decodedData = new AbiDecoder(ContractAbiType.TOKEN).decodeFunctionData(data.raw().data);
+			} catch {
+				// ignore exception
+			}
+		}
+
 		let tokenData: Record<string, any> = {};
 
-		if (this.isTokenTransfer()) {
-			const { value, token, type, data, to } = this.raw();
+		if (decodedData?.functionName === "transfer") {
+			const [to, value] = decodedData.args;
+
+			const token = profile
+				.tokens()
+				.selected()
+				.items()
+				.find((walletToken) => walletToken.token().address().toLowerCase() === data.to().toLowerCase());
 
 			tokenData = {
-				data,
 				to,
-				token,
-				type,
 				value,
+				token: token?.token().toJSON(),
+				type: "transfer",
 			};
 		}
-		console.log(tokenData);
 
 		this.configure({
 			...data.raw(),
