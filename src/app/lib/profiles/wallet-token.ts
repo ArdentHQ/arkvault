@@ -34,6 +34,10 @@ export class WalletToken {
 		return +BigNumber.make(this.#walletToken.balance(), this.token().decimals()).toHuman();
 	}
 
+	balanceRaw(): number {
+		return this.#walletToken.balance()
+	}
+
 	token(): TokenDTO {
 		return this.#token;
 	}
