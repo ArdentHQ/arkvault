@@ -918,7 +918,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     readonly=""
                     tabindex="-1"
                     type="text"
-                    value="0xdeb478251073157e400c3d8d2ed92a85c958f9fa"
+                    value=""
                   />
                 </div>
               </div>
@@ -940,25 +940,11 @@ exports[`AddRecipient > should render with assets field 1`] = `
                           id="SelectToken__dropdown-label"
                         />
                         <div
-                          class="invisible fixed w-auto whitespace-nowrap"
-                        >
-                          DARK20
-                          …
-                        </div>
-                        <div
                           class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                         >
                           <div
                             class="flex items-center"
-                          >
-                            <div
-                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
-                            >
-                              <div>
-                                D
-                              </div>
-                            </div>
-                          </div>
+                          />
                           <div
                             class="relative flex h-full flex-1"
                           >
@@ -967,24 +953,14 @@ exports[`AddRecipient > should render with assets field 1`] = `
                               aria-controls="SelectToken__dropdown-menu"
                               aria-labelledby="SelectToken__dropdown-label"
                               autocomplete="off"
-                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
+                              class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                               data-testid="SelectDropdown__input"
                               id="SelectToken__dropdown-input"
                               name="asset"
                               placeholder="Select Token"
                               type="text"
-                              value="DARK20"
+                              value=""
                             />
-                            <span
-                              class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
-                              data-testid="Input__suggestion"
-                            >
-                              <span
-                                class="truncate"
-                              >
-                                DARK20
-                              </span>
-                            </span>
                           </div>
                           <div
                             class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
@@ -1079,7 +1055,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    100,000,000
+                    0
                   </span>
                   )
                 </span>
@@ -1101,7 +1077,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    100,000,000
+                    0
                   </span>
                 </div>
                 <div
@@ -1150,7 +1126,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                       readonly=""
                       tabindex="-1"
                       type="text"
-                      value="0xdeb478251073157e400c3d8d2ed92a85c958f9fa"
+                      value=""
                     />
                   </div>
                 </div>
@@ -1172,25 +1148,11 @@ exports[`AddRecipient > should render with assets field 1`] = `
                             id="SelectToken__dropdown-label"
                           />
                           <div
-                            class="invisible fixed w-auto whitespace-nowrap"
-                          >
-                            DARK20
-                            …
-                          </div>
-                          <div
                             class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sm:rounded-r-none sm:border-r-transparent"
                           >
                             <div
                               class="flex items-center"
-                            >
-                              <div
-                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
-                              >
-                                <div>
-                                  D
-                                </div>
-                              </div>
-                            </div>
+                            />
                             <div
                               class="relative flex h-full flex-1"
                             >
@@ -1199,24 +1161,14 @@ exports[`AddRecipient > should render with assets field 1`] = `
                                 aria-controls="SelectToken__dropdown-menu"
                                 aria-labelledby="SelectToken__dropdown-label"
                                 autocomplete="off"
-                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! cursor-default text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
                                 data-testid="SelectDropdown__input"
                                 id="SelectToken__dropdown-input"
                                 name="amount"
                                 placeholder="Select Token"
                                 type="text"
-                                value="DARK20"
+                                value=""
                               />
-                              <span
-                                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
-                                data-testid="Input__suggestion"
-                              >
-                                <span
-                                  class="truncate"
-                                >
-                                  DARK20
-                                </span>
-                              </span>
                             </div>
                             <div
                               class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"

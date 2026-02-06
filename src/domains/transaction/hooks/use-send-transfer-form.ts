@@ -243,6 +243,17 @@ export const useSendTransferForm = ({
 		void trigger(["gasPrice", "gasLimit", "amount"]);
 	}, [gasLimitStr, gasPriceStr]);
 
+	useEffect(() => {
+		if (!tokenContractAddress) {
+			return;
+		}
+
+		// Update initial default value if changed from parent component (e.g lazy field update) and the field is not dirty.
+		if (!formState.dirtyFields.tokenContractAddress && tokenContractAddress !== getValues("tokenContractAddress")) {
+			setValue("tokenContractAddress", tokenContractAddress, { shouldDirty: false, shouldValidate: false });
+		}
+	}, [tokenContractAddress, setValue, formState]);
+
 	return {
 		form,
 		formState,
