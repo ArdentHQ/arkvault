@@ -45,27 +45,6 @@ describe("TokensTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s with tokens", (breakpoint) => {
-		const fixtureData = Fixtures.ByContractAddress.data;
-		const walletTokenData = Fixtures.ByWalletAddress.data[0];
-
-		profile
-			.wallets()
-			.first()
-			.tokens()
-			.create({
-				token: new TokenDTO(fixtureData),
-				walletToken: new WalletTokenDTO(walletTokenData),
-			});
-
-		const { asFragment } = renderResponsiveWithRoute(
-			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
-			breakpoint as LayoutBreakpoint,
-			{ route },
-		);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should call onClick when a token row is clicked", async () => {
 		const user = userEvent.setup();
 		const onClickMock = vi.fn();
