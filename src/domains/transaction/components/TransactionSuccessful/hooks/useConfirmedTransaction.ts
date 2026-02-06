@@ -12,10 +12,9 @@ export const useConfirmedTransaction = ({
 	wallet?: Contracts.IReadWriteWallet;
 	transactionId?: string;
 	tokenTransfer?: ExtendedTransactionDTO;
+	disabled?: boolean;
 }): { isConfirmed: boolean; isLoading: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isLoading, setIsLoading] = useState(false);
-	disabled?: boolean;
-}): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
