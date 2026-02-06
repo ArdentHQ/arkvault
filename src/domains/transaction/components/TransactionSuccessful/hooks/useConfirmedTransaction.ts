@@ -6,6 +6,7 @@ import { ExtendedTransactionDTO } from "@/domains/transaction/components/Transac
 export const useConfirmedTransaction = ({
 	wallet,
 	transactionId,
+	disabled,
 	tokenTransfer,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
@@ -13,11 +14,13 @@ export const useConfirmedTransaction = ({
 	tokenTransfer?: ExtendedTransactionDTO;
 }): { isConfirmed: boolean; isLoading: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isLoading, setIsLoading] = useState(false);
+	disabled?: boolean;
+}): { isConfirmed: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
 	useEffect(() => {
-		if (!transactionId || !wallet) {
+		if (!transactionId || !wallet || disabled) {
 			return;
 		}
 
@@ -39,6 +42,11 @@ export const useConfirmedTransaction = ({
 		};
 
 		void checkConfirmed();
+
+		return () => {
+			setIsConfirmed(false);
+			setTransaction(undefined);
+		};
 	}, [wallet?.id(), transactionId]);
 
 	return { isConfirmed, isLoading, transaction };

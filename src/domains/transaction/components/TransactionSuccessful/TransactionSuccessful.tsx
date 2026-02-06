@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -8,29 +8,35 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailSidePanel";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 interface TransactionSuccessfulProperties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: ExtendedTransactionDTO;
 	senderWallet: Contracts.IReadWriteWallet;
 	children?: React.ReactNode;
 	noHeading?: boolean;
+	skipConfirmationCheck?: boolean;
 }
 
 export const TransactionSuccessful = ({
 	transaction,
 	senderWallet,
 	noHeading = false,
+	skipConfirmationCheck = false,
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	const {
-		isConfirmed,
+		isConfirmed: confirmed,
 		isLoading,
 		transaction: confirmedTransaction,
 	} = useConfirmedTransaction({
+		disabled: skipConfirmationCheck,
 		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});
+
+	const isConfirmed = confirmed || transaction?.confirmations().isGreaterThan(0);
 
 	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.SUCCESS.CREATED");
 
@@ -66,7 +72,9 @@ export const TransactionSuccessful = ({
 					transactionItem={confirmedTransaction ?? transaction}
 					profile={senderWallet.profile()}
 					isConfirmed={isConfirmed}
-					confirmations={confirmedTransaction?.confirmations().toNumber() ?? 0}
+					confirmations={
+						confirmedTransaction?.confirmations().toNumber() ?? transaction.confirmations().toNumber()
+					}
 					containerClassname="-mx-3 sm:mx-0"
 					isRefreshingTransaction={isLoading}
 				/>

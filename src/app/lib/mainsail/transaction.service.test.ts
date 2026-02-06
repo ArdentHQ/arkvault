@@ -5,6 +5,10 @@ import { TransactionService } from "./transaction.service";
 import { ConfigRepository } from "./config.repository";
 import { BigNumber } from "@/app/lib/helpers";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
@@ -41,20 +45,6 @@ describe("TransactionService", () => {
 				id: "test-network",
 			},
 		});
-
-		// profile = {
-		// 	hosts: () => ({
-		// 		allByNetwork: () => [],
-		// 	}),
-		// 	ledger: () => ({
-		// 		connect: vi.fn(),
-		// 		getExtendedPublicKey: vi.fn(),
-		// 		sign: vi.fn(),
-		// 	}),
-		// 	settings: () => ({
-		// 		get: () => false,
-		// 	}),
-		// };
 
 		profile = await env.profiles().create("test profile");
 
@@ -509,6 +499,17 @@ describe("TransactionService", () => {
 	});
 
 	it("should sign token transfer and return SignedTransactionData for contractDeployment", async () => {
+		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
+		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
+		const walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
+
 		server.use(
 			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
 				data: {},
@@ -520,6 +521,7 @@ describe("TransactionService", () => {
 			gasLimit: BigNumber.make(21000),
 			gasPrice: BigNumber.make(20000000000),
 			signatory,
+			tokenContractAddress: walletToken.token().address(),
 		} as any;
 
 		const result = await transactionService.tokenTransfer(input);

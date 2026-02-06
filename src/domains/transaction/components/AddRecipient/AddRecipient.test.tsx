@@ -199,7 +199,7 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should set amount", async () => {
+	it("should set amount with token transfer enabled", async () => {
 		const onChange = vi.fn();
 		const findValidatorSpy = vi.spyOn(profile, "usernames").mockImplementation(() => ({
 			username: () => "validator username",
@@ -208,9 +208,23 @@ describe("AddRecipient", () => {
 		const address = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 		const amount = 1;
 
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} />);
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([]);
+		renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} isTokenTransfer />,
+		);
 
-		await fillFieldsWithValidAddressAndAmount(address, 1);
+		const amoutInput = screen.getByTestId("AddRecipient__amount");
+		const addressInput = screen.getAllByTestId("SelectDropdown__input")[0];
+
+		await userEvent.clear(amoutInput);
+		await userEvent.type(amoutInput, String(amount));
+
+		await waitFor(() => expect(amoutInput).toHaveValue(String(amount)));
+
+		await userEvent.clear(addressInput);
+		await userEvent.type(addressInput, address);
+
+		await waitFor(() => expect(addressInput).toHaveValue(address));
 
 		expect(onChange).toHaveBeenCalledWith([
 			{

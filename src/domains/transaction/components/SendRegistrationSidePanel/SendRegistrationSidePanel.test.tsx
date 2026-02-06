@@ -114,7 +114,10 @@ const signedTransactionMock = {
 };
 
 const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTransactionMock);
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		...signedTransactionMock,
+		confirmations: () => BigNumber.make(0),
+	});
 // @ts-ignore
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>

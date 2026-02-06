@@ -148,7 +148,7 @@ export const SendValidatorResignationSidePanel = ({
 		}
 	};
 
-	const { isConfirmed } = useConfirmedTransaction({
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: activeWallet,
 	});
@@ -347,7 +347,12 @@ export const SendValidatorResignationSidePanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={Step.SummaryStep}>
-						<TransactionSuccessful senderWallet={activeWallet!} transaction={transaction} noHeading />
+						<TransactionSuccessful
+							senderWallet={activeWallet!}
+							transaction={confirmedTransaction || transaction}
+							noHeading
+							skipConfirmationCheck
+						/>
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>

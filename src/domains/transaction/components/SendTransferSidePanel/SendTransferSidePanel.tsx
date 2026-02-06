@@ -216,7 +216,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === firstTabIndex) {
-			setSelectedToken(undefined);
+			form.setValue("tokenContractAddress", undefined);
 			onOpenChange(false);
 			return;
 		}
@@ -339,7 +339,7 @@ export const SendTransferSidePanel = ({
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
-	const { isConfirmed } = useConfirmedTransaction({
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: wallet,
 	});
@@ -519,18 +519,11 @@ export const SendTransferSidePanel = ({
 								onChange={({ sender }) => {
 									setWallet(sender);
 								}}
-								onTokenChange={setSelectedToken}
-								hideHeader
 							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep
-								wallet={wallet!}
-								network={activeNetwork}
-								hideHeader
-								selectedToken={selectedToken}
-							/>
+							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
@@ -553,7 +546,12 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.SummaryStep}>
-							<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
+							<TransactionSuccessful
+								transaction={confirmedTransaction || transaction!}
+								senderWallet={wallet!}
+								noHeading
+								skipConfirmationCheck
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>

@@ -102,7 +102,10 @@ const signedTransactionMock = {
 };
 
 const createUsernameResignationMock = (wallet: Contracts.IReadWriteWallet) =>
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue(signedTransactionMock);
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		...signedTransactionMock,
+		confirmations: () => BigNumber.make(0),
+	});
 
 const continueButton = () => screen.getByTestId("SendUsernameResignation__continue-button");
 const formStep = () => screen.findByTestId("SendUsernameResignation__form-step");
