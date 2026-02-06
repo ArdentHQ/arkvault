@@ -23,7 +23,7 @@ export const TokensTable = ({
 	isManageMode: boolean;
 	setManageMode: (isManageMode: boolean) => void;
 }) => {
-	const { isMdAndAbove, isXs, isSmAndAbove } = useBreakpoint();
+	const { isMdAndAbove, isXs } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
 
