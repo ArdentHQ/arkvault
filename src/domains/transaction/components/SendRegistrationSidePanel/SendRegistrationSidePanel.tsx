@@ -94,6 +94,7 @@ export const SendRegistrationSidePanel = ({
 
 			setValue("network", wallet?.network(), { shouldDirty: true, shouldValidate: true });
 		},
+		senderAddress,
 	});
 
 	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({

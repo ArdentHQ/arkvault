@@ -288,7 +288,7 @@ export class Profile implements IProfile {
 		this.#knownWalletService = new KnownWalletService();
 		this.#usernameService = new UsernamesService({ config: this.activeNetwork().config(), profile: this });
 		this.#exchangeRateService = new ExchangeRateService({ storage: env.storage() });
-		this.#ledgerService = new LedgerService({ config: this.activeNetwork().config() });
+		this.#ledgerService = new LedgerService({ config: this.activeNetwork().config(), profile: this });
 		this.#draftTransactionFactory = new DraftTransactionFactory({ env, profile: this });
 		this.#tokenService = new TokenService({ network: this.activeNetwork(), profile: this });
 	}
