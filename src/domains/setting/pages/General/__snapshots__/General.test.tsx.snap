@@ -2,7 +2,6 @@
 
 exports[`General Settings > should disable submit button when profile is not restored yet 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -2675,7 +2674,6 @@ exports[`General Settings > should disable submit button when profile is not res
 
 exports[`General Settings > should not update the uploaded avatar when removing focus from name input 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -5392,7 +5390,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
 
 exports[`General Settings > should render 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -8065,7 +8062,6 @@ exports[`General Settings > should render 1`] = `
 
 exports[`General Settings > should update profile 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -10738,7 +10734,6 @@ exports[`General Settings > should update profile 1`] = `
 
 exports[`General Settings > should update the avatar when removing focus from name input 1`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
@@ -13410,7 +13405,6 @@ exports[`General Settings > should update the avatar when removing focus from na
 
 exports[`General Settings > should update the avatar when removing focus from name input 2`] = `
 <DocumentFragment>
-  <div />
   <div
     class="relative flex flex-col sm:min-h-screen"
     style="min-height: -webkit-fill-available;"
