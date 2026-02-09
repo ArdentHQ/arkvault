@@ -14,7 +14,7 @@ export const useConfirmedTransaction = ({
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
 
-	const intervalId = useRef<NodeJS.Timeout|undefined>(undefined);
+	const intervalId = useRef<NodeJS.Timeout | undefined>(undefined);
 
 	useEffect(() => {
 		if (!transactionId || !wallet || disabled) {
