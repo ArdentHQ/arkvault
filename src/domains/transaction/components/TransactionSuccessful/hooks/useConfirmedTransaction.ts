@@ -28,13 +28,19 @@ export const useConfirmedTransaction = ({
 
 			const id = setInterval(async () => {
 				try {
-					await (tokenTransfer as ExtendedConfirmedTransactionData).sync();
-					setTransaction(tokenTransfer as ExtendedConfirmedTransactionData);
+					if (tokenTransfer?.isTokenTransfer()) {
+						await (tokenTransfer as ExtendedConfirmedTransactionData).sync();
+						setTransaction(tokenTransfer as ExtendedConfirmedTransactionData);
+					} else {
+						const transaction = await wallet.client().transaction(transactionId);
+						setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
+					}
 
 					setIsLoading(false);
 					setIsConfirmed(true);
 					clearInterval(id);
-				} catch {
+				} catch(e) {
+					console.log(e)
 					// transaction is not forged yet, ignore the error
 				}
 			}, 1000);
