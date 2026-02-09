@@ -2,6 +2,7 @@ import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 import { Contracts, Helpers } from "@/app/lib/profiles";
 import cn from "classnames";
 import React from "react";
+import { Tooltip } from "@/app/components/Tooltip";
 
 interface AmountProperties {
 	ticker: string;
@@ -28,10 +29,9 @@ const Amount = ({
 	decimals,
 	showCompactFormat
 }: AmountProperties) => {
-	let formattedAmount =
-		showCompactFormat
-			? Helpers.Currency.formatCompact(value, ticker, { decimals, withTicker: showTicker })
-			: Helpers.Currency.format(value, ticker, { decimals, withTicker: showTicker });
+	const compact = Helpers.Currency.formatCompact(value, ticker, { decimals, withTicker: showTicker })
+	const fullAmount = Helpers.Currency.format(value, ticker, { decimals, withTicker: showTicker });
+	let formattedAmount = showCompactFormat ? compact : fullAmount
 
 	const { hideBalance } = useBalanceVisibility({ profile });
 
@@ -48,10 +48,13 @@ const Amount = ({
 		formattedAmount = `${isNegative ? "-" : "+"} ${formattedAmount}`;
 	}
 
+
 	return (
-		<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
-			{formattedAmount}
-		</span>
+		<Tooltip content={fullAmount} disabled={!showCompactFormat}>
+			<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+				{formattedAmount}
+			</span>
+		</Tooltip>
 	);
 };
 
