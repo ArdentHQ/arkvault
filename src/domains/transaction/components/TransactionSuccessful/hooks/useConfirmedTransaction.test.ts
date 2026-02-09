@@ -50,4 +50,23 @@ describe("useConfirmedTransaction", () => {
 			{ timeout: 5000 },
 		);
 	});
+
+	it("should not make any calls when disabled", async () => {
+		const clientMock = vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: () => ({
+				confirmations: () => BigNumber.make(1),
+				id: () => "123",
+			}),
+		}));
+
+		renderHook(() =>
+			useConfirmedTransaction({
+				disabled: true,
+				transactionId: "123",
+				wallet: wallet
+			}),
+		);
+
+		expect(clientMock).not.toHaveBeenCalled();
+	});
 });
