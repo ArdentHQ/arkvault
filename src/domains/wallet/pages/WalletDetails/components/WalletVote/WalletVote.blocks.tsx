@@ -6,6 +6,7 @@ import { Link } from "@/app/components/Link";
 import { Address, AddressLabel } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { Divider } from "@/app/components/Divider";
+import cn from "classnames";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
@@ -111,7 +112,7 @@ export const ValidatorName = ({
 	return <AddressLabel className={className}>{validatorName}</AddressLabel>;
 };
 
-const Votes = ({ votes, activeValidators, withDivider }: VotesProperties) => {
+const Votes = ({ votes, activeValidators, withDivider, hasTokens }: VotesProperties) => {
 	const { t } = useTranslation();
 
 	const validator = votes[0].wallet!;
@@ -134,11 +135,19 @@ const Votes = ({ votes, activeValidators, withDivider }: VotesProperties) => {
 			{withDivider && (
 				<Divider
 					type="vertical"
-					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-1 hidden h-5 p-0 md:flex"
+					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 md-lg:flex mr-1 ml-1 hidden h-5 p-0"
 				/>
 			)}
 
-			<div className="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0">
+			<div
+				className={cn(
+					"flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0",
+					{
+						flex: !hasTokens,
+						"md-lg:flex hidden": hasTokens,
+					},
+				)}
+			>
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5">
 					{t("COMMON.RANK")}
 				</p>
@@ -153,6 +162,14 @@ const Votes = ({ votes, activeValidators, withDivider }: VotesProperties) => {
 					type="vertical"
 					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
 				/>
+			</div>
+			<div
+				className={cn("status", {
+					hidden: !hasTokens,
+					"md-lg:hidden hidden sm:flex": hasTokens,
+				})}
+			>
+				Status
 			</div>
 		</div>
 	);
