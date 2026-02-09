@@ -24,7 +24,7 @@ describe("SelectToken", () => {
 	it("should render with default value ", () => {
 		const { asFragment } = render(
 			<SelectToken
-				defaultTokenValue="token1"
+				value="token1"
 				tokens={[
 					{ label: "token1", value: "token1" },
 					{ label: "token2", value: "token2" },

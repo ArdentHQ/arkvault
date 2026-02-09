@@ -8,6 +8,8 @@ import { WalletToken } from "./wallet-token";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
 import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
 import { ExtendedConfirmedTransactionDataCollection } from "@/app/lib/profiles/transaction.collection";
+import { WalletTokenDTO } from "./wallet-token.dto";
+import { BigNumber } from "@/app/lib/helpers";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
@@ -98,7 +100,9 @@ export class TokenService {
 				...(query ?? {}),
 			});
 
-			this.#walletTokensCollection = new WalletTokenCollection(response.items(), {
+			const aggregated = this.#aggregateTokens(response.items());
+
+			this.#walletTokensCollection = new WalletTokenCollection(aggregated, {
 				last: undefined,
 				next: Number(response.nextPage()),
 				prev: undefined,
@@ -112,6 +116,33 @@ export class TokenService {
 				self: undefined,
 			});
 		}
+	}
+
+	#aggregateTokens(tokens: WalletToken[]): WalletToken[] {
+		const aggregated = new Map<string, WalletToken>();
+		for (const token of tokens) {
+			const existing = aggregated.get(token.token().address());
+
+			if (existing) {
+				const updatedWithBalance = new WalletToken({
+					network: this.#profile.activeNetwork(),
+					profile: this.#profile,
+					token: existing.token(),
+					walletToken: new WalletTokenDTO({
+						address: token.address(),
+						balance: BigNumber.make(token.balanceRaw()).plus(existing.balanceRaw()).toString(),
+						tokenAddress: token.token().address(),
+					}),
+				});
+
+				aggregated.set(token.token().address(), updatedWithBalance);
+				continue;
+			}
+
+			aggregated.set(token.token().address(), token);
+			continue;
+		}
+		return [...aggregated.values()];
 	}
 
 	selected(): WalletTokenCollection {

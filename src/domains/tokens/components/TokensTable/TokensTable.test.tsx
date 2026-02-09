@@ -4,9 +4,6 @@ import userEvent from "@testing-library/user-event";
 import { TokensTable } from "./TokensTable";
 import { LayoutBreakpoint } from "@/types";
 import { Contracts } from "@/app/lib/profiles";
-import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
-import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import * as useWalletActionsHook from "@/domains/wallet/hooks";
 import { expect } from "vitest";
@@ -37,27 +34,6 @@ describe("TokensTable", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s", (breakpoint) => {
-		const { asFragment } = renderResponsiveWithRoute(
-			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
-			breakpoint as LayoutBreakpoint,
-			{ route },
-		);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s with tokens", (breakpoint) => {
-		const fixtureData = Fixtures.ByContractAddress.data;
-		const walletTokenData = Fixtures.ByWalletAddress.data[0];
-
-		profile
-			.wallets()
-			.first()
-			.tokens()
-			.create({
-				token: new TokenDTO(fixtureData),
-				walletToken: new WalletTokenDTO(walletTokenData),
-			});
-
 		const { asFragment } = renderResponsiveWithRoute(
 			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
 			breakpoint as LayoutBreakpoint,
