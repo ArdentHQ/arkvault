@@ -47,7 +47,7 @@ const renderPanel = async () => {
 
 const signedTransactionMock = {
 	blockHash: () => {},
-	confirmations: () => BigNumber.make(154_178),
+	confirmations: () => BigNumber.make(0),
 	convertedAmount: () => BigNumber.make(10),
 	convertedFee: () => {
 		const fee = BigNumber.make(ValidatorResignationFixture.data.gasPrice)

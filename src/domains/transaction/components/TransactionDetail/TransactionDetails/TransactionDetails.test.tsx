@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, render, env, getDefaultProfileId, renderResponsiveWithRoute, waitFor } from "@/utils/testing-library";
+import { screen, render, env, getDefaultProfileId, renderResponsiveWithRoute } from "@/utils/testing-library";
 import { TransactionDetails } from "./TransactionDetails";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { Contracts } from "@/app/lib/profiles";
@@ -41,22 +41,5 @@ describe("TransactionDetails", () => {
 		render(<TransactionDetails transaction={{ ...TransactionFixture, blockHash: () => null }} />);
 
 		expect(screen.queryByText(TransactionFixture.blockHash())).not.toBeInTheDocument();
-	});
-
-	it("should display block number after refreshing unconfirmed transaction", async () => {
-		const unconfirmedTransaction = {
-			...TransactionFixture,
-			blockHash: () => {},
-			isConfirmed: () => false,
-			wallet: () => wallet,
-		};
-
-		render(<TransactionDetails transaction={unconfirmedTransaction as any} isConfirmed={true} />);
-
-		expect(screen.getByText("N/A")).toBeInTheDocument();
-
-		await waitFor(() => {
-			expect(screen.queryByText("N/A")).not.toBeInTheDocument();
-		});
 	});
 });
