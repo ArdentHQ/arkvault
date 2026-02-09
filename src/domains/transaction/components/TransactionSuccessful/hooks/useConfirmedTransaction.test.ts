@@ -63,7 +63,7 @@ describe("useConfirmedTransaction", () => {
 			useConfirmedTransaction({
 				disabled: true,
 				transactionId: "123",
-				wallet: wallet
+				wallet: wallet,
 			}),
 		);
 
