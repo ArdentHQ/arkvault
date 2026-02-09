@@ -5,9 +5,11 @@ import { useSearchParams } from "react-router";
 
 export const useSelectsTransactionSender = ({
 	active,
+	senderAddress,
 	onWalletChange,
 }: {
 	active: boolean;
+	senderAddress?: string;
 	onWalletChange?: (wallet?: Contracts.IReadWriteWallet) => void;
 }) => {
 	const [resetSearchParamsOnDeactivate, setResetSearchParamsOnDeactivate] = useState(false);
@@ -35,6 +37,15 @@ export const useSelectsTransactionSender = ({
 			}
 		}
 	}, [active]);
+
+	useEffect(() => {
+		if (senderAddress) {
+			const wallet = activeProfile
+				.wallets()
+				.findByAddressWithNetwork(senderAddress, activeProfile.activeNetwork().id());
+			setActiveWallet(wallet);
+		}
+	}, [senderAddress]);
 
 	useEffect(() => {
 		onWalletChange?.(activeWallet);

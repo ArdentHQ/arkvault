@@ -1,10 +1,9 @@
 import { Networks, Contracts } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
+import { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
@@ -303,25 +302,13 @@ export const LedgerScanStep = ({
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { register, unregister, setValue } = useFormContext();
-	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
+	const ledgerScanner = useLedgerScanner();
 
-	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
-
-	const lastPath = useMemo(() => {
-		const ledgerPaths = wallets.map(({ path }) => path);
-		const profileWalletsPaths = profile
-			.wallets()
-			.values()
-			.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath));
-
-		return [...profileWalletsPaths, ...ledgerPaths]
-			.filter(Boolean)
-			.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
-	}, [profile, wallets]);
+	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
 
 	const scanMore = useCallback(() => {
-		scan(profile, lastPath);
-	}, [scan, lastPath, profile]);
+		scan(profile);
+	}, [scan, profile]);
 
 	useEffect(() => {
 		setValue("isFinished", !isScanning, { shouldDirty: true, shouldValidate: true });
@@ -329,15 +316,15 @@ export const LedgerScanStep = ({
 
 	useEffect(() => {
 		if (canRetry) {
-			setRetryFn?.(() => scan(profile, lastPath));
+			setRetryFn?.(() => scan(profile));
 		} else {
 			setRetryFn?.(undefined);
 		}
 		return () => setRetryFn?.(undefined);
-	}, [setRetryFn, scan, canRetry, profile, lastPath]);
+	}, [setRetryFn, scan, canRetry, profile]);
 
 	useEffect(() => {
-		scan(profile, lastPath);
+		scan(profile);
 
 		return () => {
 			abortScanner();

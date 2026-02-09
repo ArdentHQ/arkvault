@@ -158,6 +158,14 @@ export const Exchange = () => {
 							dimIcon="ExchangesDim"
 						/>
 					}
+					mobileTitleIcon={
+						<ThemeIcon
+							dimensions={[24, 24]}
+							lightIcon="MobileExchangesLight"
+							darkIcon="MobileExchangesDark"
+							dimIcon="MobileExchangesDim"
+						/>
+					}
 				/>
 
 				<Section className="pt-0" innerClassName="px-6 lg:px-10">

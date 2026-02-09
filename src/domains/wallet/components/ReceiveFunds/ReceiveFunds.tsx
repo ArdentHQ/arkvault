@@ -118,9 +118,9 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 						{t("COMMON.QR_CODE_HELP_TEXT")}
 					</div>
 
-					<div className="relative mt-4 h-14 border border-transparent">
+					<div className="mt-4 h-14 border border-transparent">
 						<div
-							className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 absolute flex max-w-full overflow-auto rounded-lg border font-medium"
+							className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex max-w-full overflow-auto rounded-lg border font-medium"
 							data-testid="ReceiveFundsForm__uri"
 						>
 							<div className="bg-theme-secondary-200 dark:bg-theme-secondary-800 dim:bg-theme-dim-950 px-4 py-4.5 leading-5">
