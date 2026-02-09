@@ -1,3 +1,5 @@
+import { BigNumber } from "@/app/lib/helpers";
+
 /**
  * Implements helpers for numerical formatting with currencies and unit.
  *
@@ -71,6 +73,34 @@ export class Numeral {
 			currency,
 			style: "currency",
 		}).format(value);
+	}
+
+	public formatCompact(value: BigNumber | string | number): { value: number; suffix: string | undefined } {
+		const bnValue = BigNumber.make(value);
+
+		const scales: Array<{ exp: number; suffix: string }> = [
+			{ exp: 33, suffix: "De" },
+			{ exp: 30, suffix: "No" },
+			{ exp: 27, suffix: "Oc" },
+			{ exp: 24, suffix: "Sp" },
+			{ exp: 21, suffix: "Sx" },
+			{ exp: 18, suffix: "Qi" },
+			{ exp: 15, suffix: "Qa" },
+			{ exp: 12, suffix: "T" },
+			{ exp: 9, suffix: "B" },
+			{ exp: 6, suffix: "M" },
+			{ exp: 3, suffix: "K" },
+		];
+
+		for (const { exp, suffix } of scales) {
+			const threshold = BigNumber.powerOfTen(exp);
+			if (bnValue.isGreaterThanOrEqualTo(threshold)) {
+				const scaled = bnValue.divide(threshold);
+				return { value: scaled.toNumber(), suffix };
+			}
+		}
+
+		return { value: bnValue.toNumber(), suffix: undefined };
 	}
 
 	/**

@@ -68,22 +68,6 @@ export const TokenRow = memo(
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
-				{/*{!isManageMode && (*/}
-				{/*	<TableCell variant="start" innerClassName="pl-2!">*/}
-				{/*		<Button*/}
-				{/*			data-testid="TokenRow_Favorite"*/}
-				{/*			size="icon"*/}
-				{/*			variant="transparent"*/}
-				{/*			className="p-1"*/}
-				{/*			onClick={(event) => {*/}
-				{/*				event.stopPropagation();*/}
-				{/*			}}*/}
-				{/*		>*/}
-				{/*			<Icon name="Star" className="text-theme-warning-400" />*/}
-				{/*		</Button>*/}
-				{/*	</TableCell>*/}
-				{/*)}*/}
-
 				{isManageMode && (
 					<TableCell variant="start">
 						<Checkbox
@@ -103,14 +87,14 @@ export const TokenRow = memo(
 				<TableCell variant={isManageMode ? undefined : "start"} innerClassName="pl-2!">
 					<div className="flex flex-row items-center gap-3">
 						<TokenNameInitials tokenName={walletToken.token().name()} />
-						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
+						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold truncate">
 							{walletToken.token().name()}
 						</span>
 					</div>
 				</TableCell>
 
 				<TableCell className="md-lg:table-cell hidden">
-					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold truncate">
 						{walletToken.token().symbol()}
 					</div>
 				</TableCell>
@@ -138,6 +122,7 @@ export const TokenRow = memo(
 						showTicker={false}
 						value={walletToken.balance()}
 						className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+						showCompactFormat
 					/>
 				</TableCell>
 
