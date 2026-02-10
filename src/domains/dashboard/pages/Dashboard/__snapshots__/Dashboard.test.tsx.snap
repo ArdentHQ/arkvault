@@ -1372,7 +1372,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+                          class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
                         >
                           <p
                             class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1398,6 +1398,11 @@ exports[`Dashboard > should render 1`] = `
                             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
                           />
                         </div>
+                        <div
+                          class="status hidden"
+                        >
+                          Status
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1422,7 +1427,9 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex items-center gap-2"
                                 >
-                                  <div>
+                                  <div
+                                    class=""
+                                  >
                                     <div
                                       style="height: 16px; width: 16px;"
                                     >
@@ -1628,7 +1635,7 @@ exports[`Dashboard > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+                  class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
                 >
                   <p
                     class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1654,6 +1661,11 @@ exports[`Dashboard > should render 1`] = `
                     class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
                   />
                 </div>
+                <div
+                  class="status hidden"
+                >
+                  Status
+                </div>
               </div>
             </div>
             <div
@@ -1678,7 +1690,9 @@ exports[`Dashboard > should render 1`] = `
                         <div
                           class="flex items-center gap-2"
                         >
-                          <div>
+                          <div
+                            class=""
+                          >
                             <div
                               style="height: 16px; width: 16px;"
                             >

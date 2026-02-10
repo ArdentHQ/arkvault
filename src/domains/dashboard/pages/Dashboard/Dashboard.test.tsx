@@ -203,7 +203,7 @@ describe("Dashboard", () => {
 		const wallet = profile.wallets().first();
 
 		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
-		const tokenCountMock = vi.spyOn(wallet, "tokenCount").mockReturnValue(1);
+		const tokenCountMock = vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(1);
 
 		const { router } = render(<Dashboard />, {
 			route: dashboardURL,
@@ -228,7 +228,7 @@ describe("Dashboard", () => {
 		const wallet = profile.wallets().first();
 
 		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
-		const tokenCountMock = vi.spyOn(wallet, "tokenCount").mockReturnValue(1);
+		const tokenCountMock = vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(1);
 
 		const { router } = render(<Dashboard />, {
 			route: dashboardURL,
