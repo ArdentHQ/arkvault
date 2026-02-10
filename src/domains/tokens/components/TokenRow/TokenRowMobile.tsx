@@ -14,6 +14,7 @@ import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
 import { TokenRowMobileSkeleton } from "./TokenRowMobileSkeleton";
 import { Checkbox } from "@/app/components/Checkbox";
+import { TruncateEndResponsive } from "@/app/components/TruncateEnd";
 
 export const TokenRowMobile = memo(
 	({
@@ -43,22 +44,9 @@ export const TokenRowMobile = memo(
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between pr-3 pl-4 sm:pl-3 dark:bg-black">
-							<div className="flex flex-row items-center gap-3">
+							<div className="flex flex-row items-center gap-3 w-full">
 								{isManageMode && (
 									<div className="hidden flex-row items-center sm:flex">
-										{/*{!isManageMode && (*/}
-										{/*	<Button*/}
-										{/*		size="icon"*/}
-										{/*		variant="transparent"*/}
-										{/*		className="mr-2 p-1"*/}
-										{/*		onClick={(event) => {*/}
-										{/*			event.stopPropagation();*/}
-										{/*		}}*/}
-										{/*	>*/}
-										{/*		<Icon name="Star" className="text-theme-warning-400" />*/}
-										{/*	</Button>*/}
-										{/*)}*/}
-
 										<>
 											<div>
 												<Checkbox
@@ -79,9 +67,9 @@ export const TokenRowMobile = memo(
 									</div>
 								)}
 
-								<TokenNameInitials tokenName={walletToken.token().name()} />
-								<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold">
-									{walletToken.token().name()}
+								<TokenNameInitials tokenName={walletToken.token().name()} className="shrink-0" />
+								<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold w-full">
+									<TruncateEndResponsive>{walletToken.token().name()}</TruncateEndResponsive>
 								</span>
 							</div>
 
@@ -149,6 +137,7 @@ export const TokenRowMobile = memo(
 									showTicker={false}
 									value={walletToken.balance()}
 									className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+									showCompactFormat
 								/>
 							</MobileSection>
 
