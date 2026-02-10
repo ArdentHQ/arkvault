@@ -45,8 +45,8 @@ describe("TokenRow", () => {
 			</table>,
 		);
 
-		expect(screen.getByText("Test Token")).toBeInTheDocument();
-		expect(screen.getByText("TEST")).toBeInTheDocument();
+		expect(screen.getAllByText("Test Token")[0]).toBeInTheDocument();
+		expect(screen.getAllByText("TEST")[0]).toBeInTheDocument();
 		expect(screen.getByText("0xToken1")).toBeInTheDocument();
 	});
 
