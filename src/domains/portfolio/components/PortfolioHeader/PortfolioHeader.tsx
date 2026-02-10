@@ -154,7 +154,7 @@ export const PortfolioHeader = ({
 		}
 	};
 
-	const hasTokens = selectedWallets.length === 1 && wallet.tokenCount() > 0;
+	const hasTokens = profile.tokens().selectedCount() > 0;
 	const { isXs } = useBreakpoint();
 
 	return (
@@ -614,7 +614,7 @@ export const PortfolioHeader = ({
 							isLoadingVotes={isLoadingVotes}
 							wallets={selectedWallets}
 							onViewTokens={onViewTokens}
-							hasTokens={profile.tokens().selectedCount() > 0}
+							hasTokens={hasTokens}
 						/>
 					</div>
 				</div>

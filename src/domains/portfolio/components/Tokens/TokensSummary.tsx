@@ -32,12 +32,12 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 					))}
 			</div>
 
-			{wallet.tokenCount() > VISIBLE_TOKEN_COUNT && (
+			{wallet.profile().tokens().selectedCount() > VISIBLE_TOKEN_COUNT && (
 				<div
 					data-testid="TokensSummary--Count"
 					className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
 				>
-					+{wallet.tokenCount() - VISIBLE_TOKEN_COUNT}
+					+{wallet.profile().tokens().selectedCount() - VISIBLE_TOKEN_COUNT}
 				</div>
 			)}
 		</div>
