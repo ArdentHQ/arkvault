@@ -1,3 +1,5 @@
+import { BigNumber } from "@/app/lib/helpers";
+
 /**
  * Implements helpers for numerical formatting with currencies and unit.
  *
@@ -71,6 +73,42 @@ export class Numeral {
 			currency,
 			style: "currency",
 		}).format(value);
+	}
+
+	/**
+	 * Formats a value in compact form with a suffix.
+	 *
+	 * Example: 1500 should return { value: 1.5, suffix: 'K' }
+	 *
+	 * @param {BigNumber | number | string} value
+	 * @returns { value: number; suffix: string | undefined }
+	 */
+	public formatCompact(value: BigNumber | string | number): { value: number; suffix: string | undefined } {
+		const bnValue = BigNumber.make(value);
+
+		const scales: Array<{ exp: number; suffix: string }> = [
+			{ exp: 33, suffix: "D" }, // Decillion
+			{ exp: 30, suffix: "No" }, // Nonillion
+			{ exp: 27, suffix: "Oc" }, // Octillion
+			{ exp: 24, suffix: "Sp" }, // Septillion
+			{ exp: 21, suffix: "Sx" }, // Sextillion
+			{ exp: 18, suffix: "Qt" }, // Quintillion
+			{ exp: 15, suffix: "Qd" }, // Quadrillion
+			{ exp: 12, suffix: "T" }, // Trillion
+			{ exp: 9, suffix: "B" }, // Billion
+			{ exp: 6, suffix: "M" }, // Million
+			{ exp: 3, suffix: "K" }, // Thousand
+		];
+
+		for (const { exp, suffix } of scales) {
+			const threshold = BigNumber.powerOfTen(exp);
+			if (bnValue.isGreaterThanOrEqualTo(threshold)) {
+				const scaled = bnValue.divide(threshold);
+				return { suffix, value: scaled.toNumber() };
+			}
+		}
+
+		return { suffix: undefined, value: bnValue.toNumber() };
 	}
 
 	/**

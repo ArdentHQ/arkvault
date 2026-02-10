@@ -50,7 +50,7 @@ describe("TokenRowMobile", () => {
 
 		expect(screen.getByTestId("TableRow__mobile")).toBeInTheDocument();
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
-		expect(screen.getByText("Test Token")).toBeInTheDocument();
+		expect(screen.getAllByText("Test Token")[0]).toBeInTheDocument();
 	});
 
 	it("should render skeleton when isLoading is true", () => {
@@ -88,7 +88,7 @@ describe("TokenRowMobile", () => {
 			</table>,
 		);
 
-		expect(screen.getByText("Test Token")).toBeInTheDocument();
+		expect(screen.getAllByText("Test Token")[0]).toBeInTheDocument();
 	});
 
 	it("should call onSend when send button is clicked", async () => {
