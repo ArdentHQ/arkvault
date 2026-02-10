@@ -1421,7 +1421,7 @@ exports[`Dashboard > should render 1`] = `
                         class="md:flex"
                       >
                         <div
-                          class="hidden md:flex"
+                          class="hidden items-center md:flex"
                         >
                             
                         </div>
@@ -1693,7 +1693,7 @@ exports[`Dashboard > should render 1`] = `
                 class="md:flex"
               >
                 <div
-                  class="hidden md:flex"
+                  class="hidden items-center md:flex"
                 >
                     
                 </div>
