@@ -238,11 +238,15 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    12
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        12
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -260,11 +264,15 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    12 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        12 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -578,11 +586,15 @@ exports[`AddRecipient > should render 1`] = `
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -600,11 +612,15 @@ exports[`AddRecipient > should render 1`] = `
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -1051,11 +1067,15 @@ exports[`AddRecipient > should render with assets field 1`] = `
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -1073,11 +1093,15 @@ exports[`AddRecipient > should render with assets field 1`] = `
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -1501,11 +1525,15 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -1523,11 +1551,15 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -1826,11 +1858,15 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -1848,11 +1884,15 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -2167,11 +2207,15 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -2189,11 +2233,15 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -2422,11 +2470,15 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -2444,11 +2496,15 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -2747,11 +2803,15 @@ exports[`AddRecipient > should set available amount 1`] = `
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -2769,11 +2829,15 @@ exports[`AddRecipient > should set available amount 1`] = `
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    95.27653252 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        95.27653252 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div
@@ -3072,11 +3136,15 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden"
                 >
                   (
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0
+                      </span>
+                    </span>
                   </span>
                   )
                 </span>
@@ -3094,11 +3162,15 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                     Balance
                     :
                   </span>
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="Amount"
-                  >
-                    0 ARK
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 ARK
+                      </span>
+                    </span>
                   </span>
                 </div>
                 <div

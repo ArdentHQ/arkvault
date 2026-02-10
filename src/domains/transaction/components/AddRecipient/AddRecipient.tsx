@@ -389,6 +389,7 @@ export const AddRecipient = ({
 												.toNumber()}
 											ticker={ticker}
 											showTicker={false}
+											showCompactFormat
 										/>
 										)
 									</span>
@@ -406,6 +407,7 @@ export const AddRecipient = ({
 													.toNumber()}
 												ticker={ticker}
 												showTicker={!isTokenTransfer}
+												showCompactFormat
 											/>
 										</div>
 									)}
