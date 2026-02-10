@@ -38,7 +38,7 @@ export const WalletVote = ({
 
 	const activeValidators = wallet.network().validatorCount();
 
-	const renderVotes = (withDivider: boolean = false) => {
+	const renderVotes = (hasTokens: boolean = false) => {
 		if (wallets.length > 1) {
 			return (
 				<div className="w-full">
@@ -50,11 +50,21 @@ export const WalletVote = ({
 		}
 
 		if (votes.length === 0) {
-			return <EmptyVotes />;
+			return (
+				<>
+					<EmptyVotes hasTokens={hasTokens} />
+					{hasTokens && (
+						<Divider
+							type="vertical"
+							className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 ml-3 h-5"
+						/>
+					)}
+				</>
+			);
 		}
 
 		return (
-			<Votes votes={votes} activeValidators={activeValidators} withDivider={withDivider} hasTokens={hasTokens} />
+			<Votes votes={votes} activeValidators={activeValidators} withDivider={hasTokens} hasTokens={hasTokens} />
 		);
 	};
 
@@ -128,7 +138,7 @@ export const WalletVote = ({
 				)}
 				{wallets.length === 1 && (
 					<div className="md:flex">
-						<div className="hidden md:flex"> {hasTokens && renderVotes(hasTokens)} </div>
+						<div className="hidden items-center md:flex"> {hasTokens && renderVotes(hasTokens)} </div>
 						<Tooltip content={tooltipContent()}>
 							<div>
 								<Button
