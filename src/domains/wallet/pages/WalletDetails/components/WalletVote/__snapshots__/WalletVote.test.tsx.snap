@@ -14,9 +14,9 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
+           You have not voted for a Validator yet. 
           <span>
             <span>
               <a
@@ -75,7 +75,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -195,9 +195,9 @@ exports[`WalletVote > should render 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
+           You have not voted for a Validator yet. 
           <span>
             <span>
               <a
@@ -345,7 +345,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -463,9 +463,9 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
+           You have not voted for a Validator yet. 
           <span>
             <span>
               <a
@@ -524,7 +524,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -644,9 +644,9 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
+           You have not voted for a Validator yet. 
           <span>
             <span>
               <a
@@ -874,9 +874,9 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
+           You have not voted for a Validator yet. 
           <span>
             <span>
               <a
@@ -935,7 +935,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -1053,9 +1053,9 @@ exports[`WalletVote > should render without votes 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
+           You have not voted for a Validator yet. 
           <span>
             <span>
               <a
@@ -1292,7 +1292,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -1485,7 +1485,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
