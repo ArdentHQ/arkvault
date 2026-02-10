@@ -66,8 +66,6 @@ export const WalletVote = ({
 		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
 	};
 
-	// const hasTokens = wallets.length === 1 && wallet.tokenCount() > 0;
-
 	return (
 		<div
 			data-testid="WalletVote"
