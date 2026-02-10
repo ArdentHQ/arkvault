@@ -339,7 +339,7 @@ export const SendTransferSidePanel = ({
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
-	const { isConfirmed } = useConfirmedTransaction({
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: wallet,
 	});
@@ -546,7 +546,12 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.SummaryStep}>
-							<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
+							<TransactionSuccessful
+								transaction={confirmedTransaction || transaction!}
+								senderWallet={wallet!}
+								noHeading
+								skipConfirmationCheck
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>

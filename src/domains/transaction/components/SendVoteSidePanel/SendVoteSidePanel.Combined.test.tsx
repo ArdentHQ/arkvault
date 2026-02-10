@@ -32,6 +32,7 @@ const fixtureProfileId = getMainsailProfileId();
 
 const transactionMethodsFixture = {
 	blockHash: () => transactionFixture.data.blockHash,
+	confirmations: () => BigNumber.make(0),
 	convertedAmount: () => BigNumber.make(10),
 	data: () => transactionFixture.data,
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,

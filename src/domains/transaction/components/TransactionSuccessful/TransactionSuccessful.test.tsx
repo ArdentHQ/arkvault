@@ -6,6 +6,7 @@ import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
+import { BigNumber } from "@/app/lib/helpers";
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
@@ -72,6 +73,7 @@ describe("TransactionSuccessful", () => {
 	it("should render as pending", () => {
 		const transaction = {
 			...TransactionFixture,
+			confirmations: () => BigNumber.make(0),
 			wallet: () => wallet,
 		};
 
