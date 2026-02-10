@@ -7,6 +7,10 @@ interface CurrencyFormatOptions {
 	decimals?: number;
 }
 
+interface CompactFormatOptions extends CurrencyFormatOptions {
+	compactDecimals?: number;
+}
+
 const DEFAULT_DECIMALS = 18;
 
 export class Currency {
@@ -22,8 +26,6 @@ export class Currency {
 				minimumFractionDigits: 0,
 			});
 
-			// Intl.NumberFormat throws error for some tickers like DARK
-			// so format as BTC then replace
 			return numeral
 				.formatAsCurrency(Math.abs(value), "BTC")
 				.replace("BTC", withTicker ? ticker.toUpperCase() : "")
@@ -47,5 +49,30 @@ export class Currency {
 		}
 
 		return money.format();
+	}
+
+	public static formatCompact(
+		value: BigNumber | number | string,
+		ticker: string,
+		options: CompactFormatOptions = {},
+	): string {
+		const withTicker = options.withTicker ?? true;
+		const compactDecimals = options.compactDecimals ?? 2;
+
+		const numeral = Numeral.make(options.locale);
+		const { value: scaledValue, suffix } = numeral.formatCompact(value);
+
+		const formatted = Currency.format(scaledValue, ticker, {
+			...options,
+			decimals: compactDecimals,
+			withTicker: false,
+		});
+
+		if (!suffix) {
+			// No abbreviation is needed. Use normal format with ticker.
+			return Currency.format(scaledValue, ticker, options);
+		}
+
+		return withTicker ? `${formatted}${suffix} ${ticker.toUpperCase()}` : `${formatted}${suffix}`;
 	}
 }

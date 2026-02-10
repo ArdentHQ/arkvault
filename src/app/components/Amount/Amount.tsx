@@ -1,7 +1,7 @@
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 import { Contracts, Helpers } from "@/app/lib/profiles";
-import cn from "classnames";
-import React from "react";
+import { Tooltip } from "@/app/components/Tooltip";
+import { twMerge } from "tailwind-merge";
 
 interface AmountProperties {
 	ticker: string;
@@ -13,6 +13,7 @@ interface AmountProperties {
 	allowHideBalance?: boolean;
 	profile?: Contracts.IProfile;
 	decimals?: number;
+	showCompactFormat?: boolean;
 }
 
 const Amount = ({
@@ -25,15 +26,18 @@ const Amount = ({
 	allowHideBalance = false,
 	profile,
 	decimals,
+	showCompactFormat,
 }: AmountProperties) => {
-	let formattedAmount = Helpers.Currency.format(value, ticker, { decimals, withTicker: showTicker });
+	const compact = Helpers.Currency.formatCompact(value, ticker, { decimals, withTicker: showTicker });
+	const fullAmount = Helpers.Currency.format(value, ticker, { decimals, withTicker: showTicker });
+	let formattedAmount = showCompactFormat ? compact : fullAmount;
 
 	const { hideBalance } = useBalanceVisibility({ profile });
 
 	if (hideBalance && allowHideBalance) {
 		formattedAmount = formattedAmount.replaceAll(/[\d,.]+/g, "****");
 		return (
-			<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+			<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
 				{formattedAmount}
 			</span>
 		);
@@ -43,8 +47,18 @@ const Amount = ({
 		formattedAmount = `${isNegative ? "-" : "+"} ${formattedAmount}`;
 	}
 
+	if (showCompactFormat) {
+		return (
+			<Tooltip content={fullAmount}>
+				<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
+					{formattedAmount}
+				</span>
+			</Tooltip>
+		);
+	}
+
 	return (
-		<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+		<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
 			{formattedAmount}
 		</span>
 	);
