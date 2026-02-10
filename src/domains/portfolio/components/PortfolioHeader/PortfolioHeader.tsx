@@ -595,7 +595,7 @@ export const PortfolioHeader = ({
 										<Button
 											data-testid="ViewTokens"
 											variant="secondary-icon"
-											className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent hidden px-0.5 py-px text-sm whitespace-nowrap disabled:bg-transparent sm:block dark:disabled:bg-transparent"
+											className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent hidden px-0.5 py-px text-sm whitespace-nowrap disabled:bg-transparent sm:block md:hidden dark:disabled:bg-transparent"
 											onClick={onViewTokens}
 										>
 											<span>{t("COMMON.VIEW_TOKENS")}</span>
