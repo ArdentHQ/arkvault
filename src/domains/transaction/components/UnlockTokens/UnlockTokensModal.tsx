@@ -1,5 +1,5 @@
 import { Services } from "@ardenthq/sdk";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO, Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
@@ -48,7 +48,10 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 
 	const submit: SubmitHandler<UnlockTokensFormState> = async ({ selectedObjects, ...authenticationData }) => {
 		try {
-			const signatory = await wallet.signatoryFactory().make(authenticationData);
+			const signatory = await wallet.signatoryFactory().make({
+				...authenticationData,
+				path: wallet.data().get<string>(Contracts.WalletData.DerivationPath),
+			});
 
 			const input: Services.UnlockTokenInput = {
 				data: { objects: selectedObjects },

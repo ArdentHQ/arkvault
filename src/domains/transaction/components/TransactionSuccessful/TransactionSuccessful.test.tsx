@@ -41,10 +41,6 @@ describe("TransactionSuccessful", () => {
 	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
-			timestamp: () => ({
-				format: () => "2021-09-01 12:00",
-				unix: () => 1_630_497_600,
-			}),
 			wallet: () => wallet,
 		};
 
@@ -52,6 +48,10 @@ describe("TransactionSuccessful", () => {
 			transactionMockImplementation(attribute, transaction),
 		);
 
+		vi.spyOn(transaction, "timestamp").mockReturnValue({
+			format: () => "2021-09-01 12:00",
+			unix: () => 1_630_497_600,
+		});
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 

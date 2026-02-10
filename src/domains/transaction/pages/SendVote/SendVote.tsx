@@ -287,6 +287,7 @@ export const SendVote = () => {
 			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
+				path: activeWallet.data().get<string>(Contracts.WalletData.DerivationPath),
 				privateKey,
 				secondMnemonic,
 				secondSecret,

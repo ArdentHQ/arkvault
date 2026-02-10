@@ -158,7 +158,9 @@ const ImportInputField = ({
 	profile: Contracts.IProfile;
 }) => {
 	const { t } = useTranslation();
-	const { register, getValues } = useFormContext();
+	const { register, getValues, watch } = useFormContext();
+
+	const isAtomicWallet = watch("isAtomicWallet");
 
 	const network = getValues("network");
 	assertNetwork(network);
@@ -166,8 +168,14 @@ const ImportInputField = ({
 	if (type.startsWith("bip")) {
 		const findAddress = async (value: string) => {
 			try {
-				const { address } = await coin.address().fromMnemonic(value);
-				return address;
+				if (isAtomicWallet) {
+					const slip = coin.config().get("network.constants.slip44");
+					const result = await coin.address().fromBip44Mnemonic(value, `m/44'/${slip}'/0'/0/0`);
+					return result.address;
+				} else {
+					const result = await coin.address().fromMnemonic(value);
+					return result.address;
+				}
 			} catch {
 				/* istanbul ignore next -- @preserve */
 				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
@@ -312,6 +320,7 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { options, defaultOption } = useImportOptions(network.importMethods());
 
 	const useEncryption = watch("useEncryption");
+	const isAtomicWallet = watch("isAtomicWallet");
 	const importOption = watch("importOption") || defaultOption;
 
 	assertString(importOption.value);
@@ -320,6 +329,11 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 		setValue("useEncryption", event.target.checked);
 	};
 
+	const handleIsAtomicWalletToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setValue("isAtomicWallet", event.target.checked);
+	};
+
+	const isAtomicWalletChecked = isAtomicWallet ?? false;
 	const isUseEncryptionChecked = useEncryption ?? false;
 
 	useEffect(() => {
@@ -389,6 +403,33 @@ export const MethodStep = ({ profile }: { profile: Contracts.IProfile }) => {
 
 					<span className="mr-12 text-sm text-theme-secondary-500">
 						{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ENCRYPTION.DESCRIPTION")}
+					</span>
+				</div>
+
+				<div className="flex w-full flex-col space-y-2">
+					<div className="flex items-center justify-between space-x-5">
+						<span className="font-bold text-theme-secondary-text">
+							{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ATOMIC_IMPORT.TITLE")}
+						</span>
+
+						<Tooltip
+							className="-ml-3 mb-1"
+							content={t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ATOMIC_IMPORT.NOT_AVAILABLE")}
+							disabled={importOption.value === OptionsValue.BIP39}
+						>
+							<span data-testid="ImportWallet__atomic_wallet">
+								<Toggle
+									data-testid="ImportWallet__atomic_wallet-toggle"
+									disabled={importOption.value !== OptionsValue.BIP39}
+									checked={isAtomicWalletChecked}
+									onChange={handleIsAtomicWalletToggle}
+								/>
+							</span>
+						</Tooltip>
+					</div>
+
+					<span className="mr-12 text-sm text-theme-secondary-500">
+						{t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.ATOMIC_IMPORT.DESCRIPTION")}
 					</span>
 				</div>
 			</div>

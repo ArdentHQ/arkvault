@@ -68,15 +68,28 @@ export const ImportWallet = () => {
 		mode: "onChange",
 	});
 
-	const { getValues, formState, register, watch } = form;
+	const { getValues, formState, register, watch, trigger } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
-	const { value, importOption, encryptionPassword, confirmEncryptionPassword, secondInput, useEncryption } = watch();
+	const {
+		value,
+		importOption,
+		encryptionPassword,
+		confirmEncryptionPassword,
+		isAtomicWallet,
+		secondInput,
+		useEncryption,
+	} = watch();
 
 	useEffect(() => {
 		register("network", { required: true });
 		register({ name: "importOption", type: "custom" });
 		register("useEncryption");
+		register("isAtomicWallet");
 	}, [register]);
+
+	useEffect(() => {
+		trigger("value");
+	}, [isAtomicWallet]);
 
 	useEffect(() => {
 		if (value !== undefined) {
@@ -176,10 +189,11 @@ export const ImportWallet = () => {
 	};
 
 	const importWallet = async (): Promise<void> => {
-		const { network, importOption, encryptedWif, value: walletInput } = getValues();
+		const { network, importOption, encryptedWif, value: walletInput, isAtomicWallet } = getValues();
 
 		const wallet = await importWalletByType({
 			encryptedWif,
+			isAtomic: isAtomicWallet,
 			network,
 			type: importOption.value,
 			value: walletInput,
@@ -217,6 +231,12 @@ export const ImportWallet = () => {
 			importedWallet
 				.data()
 				.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION);
+		}
+
+		if (importedWallet.actsWithBip44Mnemonic()) {
+			importedWallet
+				.data()
+				.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
 		}
 
 		if (importedWallet.actsWithSecret()) {

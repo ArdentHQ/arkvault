@@ -14,6 +14,8 @@ import {
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	MNEMONICS,
+	fixUInt8ArrayIssue,
 } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
@@ -33,6 +35,7 @@ const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
 const methodStep = () => screen.getByTestId("ImportWallet__method-step");
 const publicKeyInput = () => screen.getByTestId("ImportWallet__publicKey-input");
+const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
 
 const secretInputID = "ImportWallet__secret-input";
 const password = "S3cUrePa$sword";
@@ -103,6 +106,136 @@ describe("ImportWallet Methods", () => {
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)).toBeInstanceOf(Wallet);
 		});
+	});
+
+	it("should import with BIP44 mnemonic", async () => {
+		const clearFixUInt8ArrayIssue = fixUInt8ArrayIssue();
+
+		render(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(mnemonicInput()).toBeInTheDocument();
+
+		const user = userEvent.setup();
+
+		await user.click(mnemonicInput());
+		await user.paste(MNEMONICS[3]);
+
+		await userEvent.click(screen.getByTestId("ImportWallet__atomic_wallet-toggle"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__atomic_wallet-toggle")).toBeEnabled();
+		});
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await waitFor(
+			() => {
+				expect(successStep()).toBeInTheDocument();
+			},
+			{ timeout: 15_000 },
+		);
+
+		clearFixUInt8ArrayIssue();
+	});
+
+	it("should import with BIP44 mnemonic and encryption on", async () => {
+		const clearFixUInt8ArrayIssue = fixUInt8ArrayIssue();
+
+		render(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(mnemonicInput()).toBeInTheDocument();
+
+		const user = userEvent.setup();
+
+		await user.click(mnemonicInput());
+		await user.paste(MNEMONICS[4]);
+
+		await userEvent.click(screen.getByTestId("ImportWallet__atomic_wallet-toggle"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__atomic_wallet-toggle")).toBeEnabled();
+		});
+
+		await enableEncryptionToggle();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeEnabled();
+		});
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
+		});
+
+		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveValue(password);
+		});
+
+		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("PasswordValidation__confirmEncryptionPassword")).toHaveValue(password);
+		});
+
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
+
+		await userEvent.click(continueButton());
+
+		await waitFor(
+			() => {
+				expect(successStep()).toBeInTheDocument();
+			},
+			{ timeout: 15_000 },
+		);
+
+		clearFixUInt8ArrayIssue();
 	});
 
 	it("should import by public key", async () => {
