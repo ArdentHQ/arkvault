@@ -1,8 +1,7 @@
 import { useBalanceVisibility } from "@/app/hooks/use-balance-visibility";
 import { Contracts, Helpers } from "@/app/lib/profiles";
-import cn from "classnames";
-import React from "react";
 import { Tooltip } from "@/app/components/Tooltip";
+import { twMerge } from "tailwind-merge";
 
 interface AmountProperties {
 	ticker: string;
@@ -38,7 +37,7 @@ const Amount = ({
 	if (hideBalance && allowHideBalance) {
 		formattedAmount = formattedAmount.replaceAll(/[\d,.]+/g, "****");
 		return (
-			<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+			<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
 				{formattedAmount}
 			</span>
 		);
@@ -51,7 +50,7 @@ const Amount = ({
 	if (showCompactFormat) {
 		return (
 			<Tooltip content={fullAmount}>
-				<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+				<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
 					{formattedAmount}
 				</span>
 			</Tooltip>
@@ -59,7 +58,7 @@ const Amount = ({
 	}
 
 	return (
-		<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+		<span data-testid="Amount" className={twMerge("whitespace-nowrap", className)}>
 			{formattedAmount}
 		</span>
 	);
