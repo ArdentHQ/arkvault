@@ -43,4 +43,32 @@ describe("Numeral", () => {
 		});
 		expect(numeral.formatAsUnit(10, "liter")).toBe("10 liters");
 	});
+
+	it("should format as unit with options", () => {
+		const numeral = Numeral.make("en-US", {
+			unitDisplay: "long",
+		});
+		expect(numeral.formatAsUnit(10, "liter")).toBe("10 liters");
+	});
+
+	it.each([
+		["decillion", 10n ** 33n, { value: 1, suffix: "De" }],
+		["decillion_large", 12345678901234567890123456789012345n, { value: 12.345678901234568, suffix: "De" }],
+		["nonillion", 10n ** 30n, { value: 1, suffix: "No" }],
+		["octillion", 10n ** 27n, { value: 1, suffix: "Oc" }],
+		["septillion", 10n ** 24n, { value: 1, suffix: "Sp" }],
+		["sextillion", 10n ** 21n, { value: 1, suffix: "Sx" }],
+		["quintillion", 10n ** 18n, { value: 1, suffix: "Qi" }],
+		["quadrillion", 10n ** 15n, { value: 1, suffix: "Qa" }],
+		["trillion", 10n ** 12n, { value: 1, suffix: "T" }],
+		["billion", 10n ** 9n, { value: 1, suffix: "B" }],
+		["million", 10n ** 6n, { value: 1, suffix: "M" }],
+		["thousand", 10n ** 3n, { value: 1, suffix: "K" }],
+		["below_thousand", 999, { value: 999, suffix: undefined }],
+		["zero", 0, { value: 0, suffix: undefined }],
+	])("should format compact a value in %s", (_, input, expected) => {
+		const numeral = Numeral.make("en-US");
+		const result = numeral.formatCompact(input);
+		expect(result).toEqual(expected);
+	});
 });

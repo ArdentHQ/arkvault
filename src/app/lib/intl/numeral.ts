@@ -75,21 +75,29 @@ export class Numeral {
 		}).format(value);
 	}
 
+	/**
+	 * Formats a value in compact form with a suffix.
+	 *
+	 * Example: 1500 should return { value: 1.5, suffix: 'K' }
+	 *
+	 * @param {BigNumber | number | string} value
+	 * @returns { value: number; suffix: string | undefined }
+	 */
 	public formatCompact(value: BigNumber | string | number): { value: number; suffix: string | undefined } {
 		const bnValue = BigNumber.make(value);
 
 		const scales: Array<{ exp: number; suffix: string }> = [
-			{ exp: 33, suffix: "De" },
-			{ exp: 30, suffix: "No" },
-			{ exp: 27, suffix: "Oc" },
-			{ exp: 24, suffix: "Sp" },
-			{ exp: 21, suffix: "Sx" },
-			{ exp: 18, suffix: "Qi" },
-			{ exp: 15, suffix: "Qa" },
-			{ exp: 12, suffix: "T" },
-			{ exp: 9, suffix: "B" },
-			{ exp: 6, suffix: "M" },
-			{ exp: 3, suffix: "K" },
+			{ exp: 33, suffix: "De" }, // Decillion
+			{ exp: 30, suffix: "No" }, // Nonillion
+			{ exp: 27, suffix: "Oc" }, // Octillion
+			{ exp: 24, suffix: "Sp" }, // Septillion
+			{ exp: 21, suffix: "Sx" }, // Sextillion
+			{ exp: 18, suffix: "Qi" }, // Quintillion
+			{ exp: 15, suffix: "Qa" }, // Quadrillion
+			{ exp: 12, suffix: "T" },  // Trillion
+			{ exp: 9, suffix: "B" },   // Billion
+			{ exp: 6, suffix: "M" },   // Million
+			{ exp: 3, suffix: "K" },   // Thousand
 		];
 
 		for (const { exp, suffix } of scales) {

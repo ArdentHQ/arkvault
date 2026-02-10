@@ -48,4 +48,17 @@ describe("Helpers.Currency", () => {
 		expect(Currency.format(1, "BTC", { locale: "en-US" })).toBe("1 BTC");
 		expect(Currency.format(1, "USD", { locale: "en-US" })).toBe("$1.00");
 	});
+
+	it("should handle small values without suffix", () => {
+		expect(Currency.formatCompact(100, "USD")).toBe("$100.00");
+	});
+
+	it("should format compact values with M suffix", () => {
+		expect(Currency.formatCompact(1500000, "USD")).toBe("1.50M USD");
+	});
+
+	it("should allow to options to use ticker and decimals", () => {
+		expect(Currency.formatCompact(1550, "USD", { withTicker: true })).toBe("1.55K USD");
+		expect(Currency.formatCompact(1556, "USD", { compactDecimals: 2, withTicker: false })).toBe("1.56K");
+	});
 });
