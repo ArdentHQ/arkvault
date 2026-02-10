@@ -86,16 +86,16 @@ export const TokenRow = memo(
 				)}
 
 				<TableCell variant={isManageMode ? undefined : "start"} innerClassName="pl-2!">
-					<div className="flex flex-row items-center gap-3 w-full">
+					<div className="flex w-full flex-row items-center gap-3">
 						<TokenNameInitials tokenName={walletToken.token().name()} className="shrink-0" />
-						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold block w-full">
+						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 block w-full text-sm leading-[17px] font-semibold">
 							<TruncateEndResponsive>{walletToken.token().name()}</TruncateEndResponsive>
 						</span>
 					</div>
 				</TableCell>
 
 				<TableCell className="md-lg:table-cell hidden">
-					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold w-full">
+					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-full text-sm leading-[17px] font-semibold">
 						<TruncateEndResponsive>{walletToken.token().symbol()}</TruncateEndResponsive>
 					</div>
 				</TableCell>

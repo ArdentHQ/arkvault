@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React from "react";
+import React, { ReactNode } from "react";
 import { Tooltip } from "@/app/components/Tooltip";
 
 type Properties = {
@@ -33,16 +33,10 @@ export const TruncateEnd = ({ className, text, maxChars = 16, showTooltip = true
 	);
 };
 
-export const TruncateEndResponsive: React.FC<{ children: ReactNode }> = ({
-	children,
-}) => {
-	return (
-		<span className="overflow-hidden whitespace-nowrap w-full relative inline-flex items-center">
-			{/* Provide line-height and dimensions while keeping the element visually hidden */}
-			<span className="w-0 overflow-hidden inline-block invisible">{children}</span>
-			<span className="absolute inset-0 truncate">
-				{children}
-			</span>
-		</span>
-	);
-};
+export const TruncateEndResponsive: React.FC<{ children: ReactNode }> = ({ children }) => (
+	<span className="relative inline-flex w-full items-center overflow-hidden whitespace-nowrap">
+		{/* Provide line-height and dimensions while keeping the element visually hidden */}
+		<span className="invisible inline-block w-0 overflow-hidden">{children}</span>
+		<span className="absolute inset-0 truncate">{children}</span>
+	</span>
+);

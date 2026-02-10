@@ -54,7 +54,7 @@ export class Currency {
 	public static formatCompact(
 		value: BigNumber | number | string,
 		ticker: string,
-		options: CompactFormatOptions = {}
+		options: CompactFormatOptions = {},
 	): string {
 		const withTicker = options.withTicker ?? true;
 		const compactDecimals = options.compactDecimals ?? 2;
@@ -64,8 +64,8 @@ export class Currency {
 
 		const formatted = Currency.format(scaledValue, ticker, {
 			...options,
-			withTicker: false,
 			decimals: compactDecimals,
+			withTicker: false,
 		});
 
 		if (!suffix) {

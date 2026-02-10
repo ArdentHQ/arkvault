@@ -44,7 +44,7 @@ export const TokenRowMobile = memo(
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between pr-3 pl-4 sm:pl-3 dark:bg-black">
-							<div className="flex flex-row items-center gap-3 w-full">
+							<div className="flex w-full flex-row items-center gap-3">
 								{isManageMode && (
 									<div className="hidden flex-row items-center sm:flex">
 										<>
@@ -68,7 +68,7 @@ export const TokenRowMobile = memo(
 								)}
 
 								<TokenNameInitials tokenName={walletToken.token().name()} className="shrink-0" />
-								<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold w-full">
+								<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 w-full text-sm leading-[17px] font-semibold">
 									<TruncateEndResponsive>{walletToken.token().name()}</TruncateEndResponsive>
 								</span>
 							</div>

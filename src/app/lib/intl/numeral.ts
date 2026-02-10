@@ -96,11 +96,11 @@ export class Numeral {
 			const threshold = BigNumber.powerOfTen(exp);
 			if (bnValue.isGreaterThanOrEqualTo(threshold)) {
 				const scaled = bnValue.divide(threshold);
-				return { value: scaled.toNumber(), suffix };
+				return { suffix, value: scaled.toNumber() };
 			}
 		}
 
-		return { value: bnValue.toNumber(), suffix: undefined };
+		return { suffix: undefined, value: bnValue.toNumber() };
 	}
 
 	/**

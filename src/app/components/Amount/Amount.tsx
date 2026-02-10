@@ -27,11 +27,11 @@ const Amount = ({
 	allowHideBalance = false,
 	profile,
 	decimals,
-	showCompactFormat
+	showCompactFormat,
 }: AmountProperties) => {
-	const compact = Helpers.Currency.formatCompact(value, ticker, { decimals, withTicker: showTicker })
+	const compact = Helpers.Currency.formatCompact(value, ticker, { decimals, withTicker: showTicker });
 	const fullAmount = Helpers.Currency.format(value, ticker, { decimals, withTicker: showTicker });
-	let formattedAmount = showCompactFormat ? compact : fullAmount
+	let formattedAmount = showCompactFormat ? compact : fullAmount;
 
 	const { hideBalance } = useBalanceVisibility({ profile });
 
@@ -47,7 +47,6 @@ const Amount = ({
 	if (showSign) {
 		formattedAmount = `${isNegative ? "-" : "+"} ${formattedAmount}`;
 	}
-
 
 	return (
 		<Tooltip content={fullAmount} disabled={!showCompactFormat}>
