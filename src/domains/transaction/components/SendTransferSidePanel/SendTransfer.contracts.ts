@@ -2,6 +2,7 @@ import { Networks } from "@/app/lib/mainsail";
 import { TransactionFees } from "types";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { BigNumber } from "@/app/lib/helpers";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 export enum SendTransferStep {
 	NetworkStep,
@@ -31,6 +32,8 @@ export interface SendTransferForm {
 	privateKey: string;
 	secret: string;
 	secondSecret: string;
+	tokenContractAddress?: string;
+	tokens?: WalletToken[];
 }
 
 export interface BuildTransferDataProperties {

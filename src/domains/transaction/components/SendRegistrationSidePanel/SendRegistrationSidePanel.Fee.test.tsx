@@ -105,6 +105,8 @@ describe("SendRegistrationSidePanel Fee", () => {
 
 	it("should set fee", async () => {
 		vi.spyOn(PublicKeyService.prototype, "verifyPublicKeyWithBLS").mockReturnValue(true);
+		const validatorPublicKey =
+			"a4dc0d9080e2542b4e5347af8cebe6327d8814dabda373fbee570165661f2e39b100723009e0fad9da6f207de81cea12";
 
 		const nanoXTransportMock = mockNanoXTransport();
 		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
@@ -113,11 +115,11 @@ describe("SendRegistrationSidePanel Fee", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.clear(screen.getByTestId("Input__validator_public_key"));
-		await userEvent.type(screen.getByTestId("Input__validator_public_key"), "validator-public-key");
-		await waitFor(() =>
-			expect(screen.getByTestId("Input__validator_public_key")).toHaveValue("validator-public-key"),
-		);
+		const user = userEvent.setup();
+		await user.clear(screen.getByTestId("Input__validator_public_key"));
+		await user.paste(validatorPublicKey);
+
+		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 

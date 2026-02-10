@@ -7,6 +7,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
 import { TransactionTypeService } from "./transaction-type.service";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 export class SignedTransactionData {
 	protected identifier!: string;
@@ -197,6 +198,12 @@ export class SignedTransactionData {
 		return this.serialized;
 	}
 
+	public token(): TokenDTO | undefined {
+		if (this.isTokenTransfer() && this.data().token) {
+			return new TokenDTO(this.data().token);
+		}
+	}
+
 	private normalizedData() {
 		let data = this.signedData.data as string;
 
@@ -265,6 +272,10 @@ export class SignedTransactionData {
 	}
 
 	public type(): string {
+		if (this.isTokenTransfer()) {
+			return "transfer";
+		}
+
 		if (this.isVoteCombination()) {
 			return "voteCombination";
 		}
@@ -288,5 +299,9 @@ export class SignedTransactionData {
 
 	public gasUsed(): number {
 		return BigNumber.make(UnitConverter.formatUnits(this.signedData.gasPrice, "gwei")).toNumber();
+	}
+
+	public isTokenTransfer(): boolean {
+		return TransactionTypeService.isTokenTransfer(this.signedData);
 	}
 }

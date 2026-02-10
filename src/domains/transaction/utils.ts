@@ -27,8 +27,19 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 	throw new Error(allErrors[0]);
 };
 
-export const getTransferType = ({ recipients }: { recipients: RecipientItem[] }): "multiPayment" | "transfer" =>
-	recipients.length > 1 ? "multiPayment" : "transfer";
+export const getTransferType = ({
+	recipients,
+	tokenContractAddress,
+}: {
+	recipients: RecipientItem[];
+	tokenContractAddress?: string;
+}): "multiPayment" | "transfer" | "transferToken" => {
+	if (tokenContractAddress) {
+		return "transferToken";
+	}
+
+	return recipients.length > 1 ? "multiPayment" : "transfer";
+};
 
 export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
 	[

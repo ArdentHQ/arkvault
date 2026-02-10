@@ -41,21 +41,27 @@ import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { Image } from "@/app/components/Image";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 const MAX_TABS = 5;
 
 export const SendTransferSidePanel = ({
 	open,
 	onOpenChange,
+	isTokenTransfer,
+	tokenContractAddress,
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
+	isTokenTransfer?: boolean;
+	tokenContractAddress?: string;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
 
 	const [mounted, setMounted] = useState(false);
+	const [selectedToken, setSelectedToken] = useState<WalletToken | undefined>(undefined);
 	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
 		active: mounted,
 	});
@@ -93,7 +99,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm(wallet);
+	} = useSendTransferForm({ isTokenTransfer, selectedToken, tokenContractAddress, wallet });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -210,6 +216,7 @@ export const SendTransferSidePanel = ({
 		}
 
 		if (activeTab === firstTabIndex) {
+			form.setValue("tokenContractAddress", undefined);
 			onOpenChange(false);
 			return;
 		}
@@ -332,7 +339,7 @@ export const SendTransferSidePanel = ({
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
-	const { isConfirmed } = useConfirmedTransaction({
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: wallet,
 	});
@@ -503,6 +510,7 @@ export const SendTransferSidePanel = ({
 					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
 						<TabPanel tabId={SendTransferStep.FormStep}>
 							<FormStep
+								isTokenTransfer={isTokenTransfer}
 								network={activeNetwork}
 								senderWallet={wallet}
 								profile={activeProfile}
@@ -511,7 +519,6 @@ export const SendTransferSidePanel = ({
 								onChange={({ sender }) => {
 									setWallet(sender);
 								}}
-								hideHeader
 							/>
 						</TabPanel>
 
@@ -539,7 +546,12 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.SummaryStep}>
-							<TransactionSuccessful transaction={transaction!} senderWallet={wallet!} noHeading />
+							<TransactionSuccessful
+								transaction={confirmedTransaction || transaction!}
+								senderWallet={wallet!}
+								noHeading
+								skipConfirmationCheck
+							/>
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>
@@ -547,6 +559,7 @@ export const SendTransferSidePanel = ({
 								onClose={() => {
 									assertWallet(wallet);
 									onOpenChange(false);
+									setSelectedToken(undefined);
 								}}
 								isBackDisabled={isSubmitting}
 								onBack={() => {

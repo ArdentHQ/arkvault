@@ -279,9 +279,9 @@ const SidePanelContent = ({
 										className={cn("fixed right-0", className, {
 											"animate-shake": shake,
 											"left-0": isExpanded && !isMinimized,
-											"left-0 md:left-[20%] lg:left-[50%] xl:left-[65%]":
+											"left-0 md:left-[40%] lg:left-[50%] xl:left-[60%]":
 												!isExpanded && !isMinimized,
-											"left-auto md:top-0 md:max-w-[425px]": isMinimized,
+											"left-auto sm:top-0 sm:max-w-[425px]": isMinimized,
 											"top-0": !isMinimized && !isExpanded,
 											"top-[-56px]": !hasFixedFormButtons && isMinimized,
 											"top-[-68px]": hasFixedFormButtons && isMinimized,

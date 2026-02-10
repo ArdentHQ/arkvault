@@ -45,6 +45,15 @@ export interface ITransactionService {
 	addSignature(id: string, signatory: Signatories.Signatory): Promise<Services.BroadcastResponse>;
 
 	/**
+	 * Sign a Token Transfer transaction.
+	 *
+	 * @param {Services.TransferInput} input
+	 * @return {Promise<string>}
+	 * @memberof ITransactionService
+	 */
+	signTransferToken(input: Services.TransferInput): Promise<string>;
+
+	/**
 	 * Sign a Transfer transaction.
 	 *
 	 * @param {Services.TransferInput} input

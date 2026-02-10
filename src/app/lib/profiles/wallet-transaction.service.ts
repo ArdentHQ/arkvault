@@ -65,6 +65,11 @@ export class TransactionService implements ITransactionService {
 		return this.#signTransaction("transfer", input);
 	}
 
+	/** {@inheritDoc ITransactionService.signTransfer} */
+	public async signTransferToken(input: Services.TransferInput): Promise<string> {
+		return this.#signTransaction("tokenTransfer", input);
+	}
+
 	/** {@inheritDoc ITransactionService.signSecondSignature} */
 	public async signSecondSignature(input: Services.SecondSignatureInput): Promise<string> {
 		return this.#signTransaction("secondSignature", input);

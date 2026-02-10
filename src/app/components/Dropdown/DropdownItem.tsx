@@ -6,6 +6,7 @@ import { DropdownVariantType } from "./Dropdown.contracts";
 export const DropdownItem = ({
 	isActive,
 	variant,
+	disabled,
 	...props
 }: { isActive: boolean; variant?: DropdownVariantType } & React.HTMLProps<HTMLLIElement>) => (
 	<li
@@ -20,7 +21,7 @@ export const DropdownItem = ({
 				"rounded-lg": !isActive && variant !== "navbar",
 				"sm:rounded-lg": !isActive && variant === "navbar",
 				"text-theme-secondary-700 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 cursor-pointer":
-					!isActive,
+					!isActive && !disabled,
 			}),
 			props.className,
 		)}

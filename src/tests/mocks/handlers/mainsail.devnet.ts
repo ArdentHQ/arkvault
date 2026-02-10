@@ -1,4 +1,5 @@
 import { http, HttpResponse, rest } from "msw";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 const endpoints = [
 	{ path: "/blockchain", data: require("../../fixtures/coins/mainsail/devnet/blockchain.json") },
@@ -85,6 +86,39 @@ export const mainsailDevnetHandlers = [
 			result: "0x0",
 		});
 	}),
+
+	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", (request) => {
+		return HttpResponse.json({
+			meta: {
+				totalCountIsEstimate: false,
+				count: 1,
+				first: "/wallets/tokens?addresses=0x2DcA10145Dd4C6876321482627c6162b2541244d&limit=100&page=1",
+				last: "/wallets/tokens?addresses=0x2DcA10145Dd4C6876321482627c6162b2541244d&limit=100&page=1",
+				next: null,
+				pageCount: 1,
+				previous: null,
+				self: "/wallets/tokens?addresses=0x2DcA10145Dd4C6876321482627c6162b2541244d&limit=100&page=1",
+				totalCount: 1,
+			},
+			data: [
+				{
+					token: "0xf8939a711e0116fcec11ab81165391fe185e5649",
+					symbol: "DARK20",
+					name: "DARK20",
+					decimals: 18,
+					supply: "100000000000000000000000000",
+					addresses: {
+						"0x2DcA10145Dd4C6876321482627c6162b2541244d": "99999999999999999999999900",
+					},
+				},
+			],
+		});
+	}),
+
+	http.get("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", () => {
+		return HttpResponse.json(Fixtures.TokenTransfers);
+	}),
+
 	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier", (request) => {
 		const address = request.params.identifier as string;
 
@@ -97,5 +131,28 @@ export const mainsailDevnetHandlers = [
 		}
 
 		return HttpResponse.json(require("../../fixtures/coins/mainsail/devnet/wallets/not-found.json"));
+	}),
+
+	http.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier/tokens", (request) => {
+		const address = request.params.identifier as string;
+
+		if (!address) {
+			return HttpResponse.json(require("../../fixtures/coins/mainsail/mainnet/wallets/not-found.json"));
+		}
+
+		return HttpResponse.json({
+			meta: {
+				totalCountIsEstimate: false,
+				count: 48,
+				first: "/peers?limit=100&page=1",
+				last: "/peers?limit=100&page=1",
+				next: null,
+				pageCount: 1,
+				previous: null,
+				self: "/peers?limit=100&page=1",
+				totalCount: 48,
+			},
+			data: [],
+		});
 	}),
 ];

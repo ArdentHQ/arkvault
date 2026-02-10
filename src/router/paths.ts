@@ -30,4 +30,6 @@ export enum ProfilePaths {
 	// Votes
 	Votes = "/profiles/:profileId/votes",
 	VotesWallet = "/profiles/:profileId/wallets/:walletId/votes",
+	// Tokens
+	Tokens = "/profiles/:profileId/tokens",
 }

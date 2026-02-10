@@ -19,7 +19,11 @@ const mockConfig = {
 	},
 	host: () => "http://localhost",
 };
-const mockProfile: any = {};
+const mockProfile: any = {
+	activeNetwork: () => ({
+		config: () => mockConfig,
+	}),
+};
 
 const transactionMockData = {
 	amount: 100,
@@ -644,6 +648,235 @@ describe("ClientService", () => {
 					"timestamp.to": 1100,
 				}),
 			);
+		});
+	});
+
+	describe("tokenTransfers", () => {
+		const tokenTransferMockData = {
+			blockNumber: "22773025",
+			from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
+			functionSig: "0xa9059cbb",
+			timestamp: "1769010139522",
+			to: "0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5",
+			token: {
+				address: "0x180a864a755fed0144c622df49b83db577befefb",
+				decimals: 18,
+				name: "DARK20",
+				symbol: "DARK20",
+			},
+			transactionHash: "bf060a019f9f5a036f571e2b5bc0227c6a5975ce763e790ed4e1dcf42b8f2d1d",
+			value: "5000000000000000000",
+		};
+
+		it("should fetch token transfers", async () => {
+			const mockResponse = {
+				data: [tokenTransferMockData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					last: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [tokenTransferMockData.from],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(1);
+			expect(result.items()[0].hash()).toBe(tokenTransferMockData.transactionHash);
+			expect(result.items()[0].from()).toBe(tokenTransferMockData.from);
+			expect(result.items()[0].to()).toBe(tokenTransferMockData.to);
+		});
+
+		it("should handle empty token transfers response", async () => {
+			const mockResponse = {
+				data: [],
+				meta: {
+					count: 0,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 0,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [validAddress],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(0);
+		});
+
+		it("should properly configure ConfirmedTransactionData from transfer", async () => {
+			const mockResponse = {
+				data: [tokenTransferMockData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [tokenTransferMockData.from],
+			});
+
+			const transfer = result.items()[0];
+			expect(transfer.hash()).toBe(tokenTransferMockData.transactionHash);
+			expect(transfer.from()).toBe(tokenTransferMockData.from);
+			expect(transfer.to()).toBe(tokenTransferMockData.to);
+		});
+	});
+
+	describe("tokenAddresses", () => {
+		it("should fetch token addresses for multiple wallets", async () => {
+			const walletAddress1 = `0x${"b".repeat(40)}`;
+			const walletAddress2 = `0x${"c".repeat(40)}`;
+			const tokenAddress = `0x${"d".repeat(40)}`;
+
+			const mockResponse = {
+				data: [
+					{
+						addresses: {
+							[walletAddress1]: "1000000000000000000",
+							[walletAddress2]: "2000000000000000000",
+						},
+						decimals: 18,
+						name: "Test Token",
+						supply: "10000000000000000000000",
+						symbol: "TEST",
+						token: tokenAddress,
+					},
+				],
+				meta: {
+					last: "page=1",
+					next: null,
+					previous: null,
+					self: "page=1",
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/wallets\/tokens.*/, mockResponse));
+
+			const result = await clientService.tokenAddresses({
+				addresses: [walletAddress1, walletAddress2],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(2);
+
+			const walletToken1 = result.items()[0];
+			expect(walletToken1.address()).toBe(walletAddress1);
+			expect(walletToken1.balance()).toBe(1);
+			expect(walletToken1.token().address()).toBe(tokenAddress);
+			expect(walletToken1.token().symbol()).toBe("TEST");
+			expect(walletToken1.token().name()).toBe("Test Token");
+			expect(walletToken1.token().decimals()).toBe(18);
+
+			const walletToken2 = result.items()[1];
+			expect(walletToken2.address()).toBe(walletAddress2);
+			expect(walletToken2.balance()).toBe(2);
+		});
+
+		it("should handle multiple tokens across multiple wallets", async () => {
+			const walletAddress1 = `0x${"b".repeat(40)}`;
+			const walletAddress2 = `0x${"c".repeat(40)}`;
+			const tokenAddress1 = `0x${"d".repeat(40)}`;
+			const tokenAddress2 = `0x${"e".repeat(40)}`;
+
+			const mockResponse = {
+				data: [
+					{
+						addresses: {
+							[walletAddress1]: "1000000000000000000",
+							[walletAddress2]: "2000000000000000000",
+						},
+						decimals: 18,
+						name: "Test Token 1",
+						supply: "10000000000000000000000",
+						symbol: "TEST1",
+						token: tokenAddress1,
+					},
+					{
+						addresses: {
+							[walletAddress1]: "500000000000000000",
+						},
+						decimals: 6,
+						name: "Test Token 2",
+						supply: "5000000000000",
+						symbol: "TEST2",
+						token: tokenAddress2,
+					},
+				],
+				meta: {
+					last: "page=1",
+					next: null,
+					previous: null,
+					self: "page=1",
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/wallets\/tokens.*/, mockResponse));
+
+			const result = await clientService.tokenAddresses({
+				addresses: [walletAddress1, walletAddress2],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(3); // 2 wallets for token1 + 1 wallet for token2
+
+			const token1Items = result.items().filter((item) => item.token().address() === tokenAddress1);
+			expect(token1Items).toHaveLength(2);
+
+			const token2Items = result.items().filter((item) => item.token().address() === tokenAddress2);
+			expect(token2Items).toHaveLength(1);
+			expect(token2Items[0].token().decimals()).toBe(6);
+		});
+
+		it("should handle empty token addresses response", async () => {
+			const mockResponse = {
+				data: [],
+				meta: {
+					last: `wallets/tokens?addresses=${validAddress}&limit=100&page=1`,
+					next: null,
+					previous: null,
+					self: `wallets/tokens?addresses=${validAddress}&limit=100&page=1`,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/wallets\/tokens.*/, mockResponse));
+
+			const result = await clientService.tokenAddresses({
+				addresses: [validAddress],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(0);
+			expect(result.isEmpty()).toBe(true);
 		});
 	});
 });

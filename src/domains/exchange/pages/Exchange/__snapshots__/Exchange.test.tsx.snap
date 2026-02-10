@@ -235,6 +235,18 @@ exports[`Exchange > should render empty 1`] = `
                 class="flex"
               >
                 <a
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                  title="Tokens"
+                >
+                  Tokens
+                </a>
+              </li>
+              <li
+                class="flex"
+              >
+                <a
                   aria-current="page"
                   class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-primary-600 border-theme-primary-200 bg-theme-secondary-200 dim:text-theme-dim-50 dim:bg-theme-dim-950 dim:border-theme-dim-700 dark:text-theme-dark-50 dark:bg-theme-dark-950 dark:border-theme-dark-700 active"
                   data-discover="true"
@@ -1134,6 +1146,18 @@ exports[`Exchange > should render with exchanges 1`] = `
                   title="Portfolio"
                 >
                   Portfolio
+                </a>
+              </li>
+              <li
+                class="flex"
+              >
+                <a
+                  class="ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent"
+                  data-discover="true"
+                  href="/profiles/877b7695-8a55-4e16-a7ff-412113131856/tokens"
+                  title="Tokens"
+                >
+                  Tokens
                 </a>
               </li>
               <li

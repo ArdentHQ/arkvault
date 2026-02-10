@@ -15,11 +15,11 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@arkecosystem/typescript-client':
-        specifier: ^0.0.9
-        version: 0.0.9
+        specifier: ^0.14.0
+        version: 0.14.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.15
-        version: 0.0.15
+        specifier: ^0.0.17
+        version: 0.0.17
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -426,12 +426,12 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@arkecosystem/typescript-client@0.0.9':
-    resolution: {integrity: sha512-5YXCPptjix6qQoXmx+qtpDyyb4A2S/mX0xDpDcJ9PR70oIxCV/4dnAX4H7Q3Lzu1JQB0bRH9dKlzmktglP8FiQ==}
+  '@arkecosystem/typescript-client@0.14.0':
+    resolution: {integrity: sha512-ePYhEjiL6Y9+Ghbpy30N0WIIvBupOThlvJQNmR+/G2D2sNi3+vv8MorapZ31DeuqPtR7eLTQh/vWIUeBB1r91Q==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.15':
-    resolution: {integrity: sha512-g7dXSmBPPcjsxi3XtVVYRHkC78jPJcw98GsgOV2In87Botg2ZLeHryTLQBMNdabvg0WqV4APqvuFWSmOcGR+qw==}
+  '@arkecosystem/typescript-crypto@0.0.17':
+    resolution: {integrity: sha512-E5uRsuUi0oCCliAgywbWM29EyqpPnVIVvDvXcse+OZJ/IQLDcWT4FuJKBmvO+0oNQKOEprz//H/eDpU1Ov9xOg==}
     engines: {node: '>=20.12.2'}
 
   '@asamuzakjp/css-color@3.2.0':
@@ -6609,9 +6609,9 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@arkecosystem/typescript-client@0.0.9': {}
+  '@arkecosystem/typescript-client@0.14.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.15':
+  '@arkecosystem/typescript-crypto@0.0.17':
     dependencies:
       '@noble/secp256k1': 2.3.0
       bignumber.js: 9.3.1

@@ -7,8 +7,13 @@ import { BigNumber } from "@/app/lib/helpers";
 import { AddRecipient } from "./AddRecipient";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 import CryptoConfigurationFixture from "@/tests/fixtures/coins/mainsail/devnet/cryptoConfiguration.json";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 const translations = buildTranslations();
 
@@ -66,6 +71,37 @@ describe("AddRecipient", () => {
 			.wallets()
 			.findByAddressWithNetwork("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", "mainsail.devnet")!;
 		network = wallet.network();
+
+		const fixtureData = Fixtures.ByContractAddress.data;
+		const walletTokenData = Fixtures.ByWalletAddress.data[0];
+
+		profile
+			.wallets()
+			.first()
+			.tokens()
+			.create({
+				token: new TokenDTO(fixtureData),
+				walletToken: new WalletTokenDTO(walletTokenData),
+			});
+
+		const tokensCollection = new WalletTokenCollection(
+			[
+				new WalletToken({
+					network: profile.activeNetwork(),
+					profile,
+					token: new TokenDTO(fixtureData),
+					walletToken: new WalletTokenDTO(walletTokenData),
+				}),
+			],
+			{
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			},
+		);
+
+		vi.spyOn(profile.tokens(), "selected").mockReturnValue(tokensCollection);
 	});
 
 	const Component = () => {
@@ -90,6 +126,18 @@ describe("AddRecipient", () => {
 		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 		);
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it("should render with assets field", async () => {
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} isTokenTransfer />,
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("SelectDropdown")).toHaveLength(3);
+		});
 
 		expect(container).toMatchSnapshot();
 	});
@@ -151,28 +199,49 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should set amount", async () => {
+	it.each([[1], [2]])("should select a token", async (index: number) => {
 		const onChange = vi.fn();
-		const findValidatorSpy = vi.spyOn(profile, "usernames").mockImplementation(() => ({
-			username: () => "validator username",
-		}));
+		renderWithFormProvider(
+			<AddRecipient
+				profile={profile}
+				wallet={wallet}
+				recipients={[]}
+				onChange={vi.fn()}
+				isTokenTransfer
+				onTokenChange={onChange}
+			/>,
+		);
 
-		const address = "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23";
 		const amount = 1;
 
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={onChange} recipients={[]} />);
+		const amoutInput = screen.getByTestId("AddRecipient__amount");
+		const addressInput = screen.getAllByTestId("SelectDropdown__input")[0];
 
-		await fillFieldsWithValidAddressAndAmount(address, 1);
+		await userEvent.clear(amoutInput);
+		await userEvent.type(amoutInput, String(amount));
 
-		expect(onChange).toHaveBeenCalledWith([
-			{
-				address: address,
-				alias: "validator username",
-				amount: amount,
-			},
-		]);
+		await waitFor(() => expect(amoutInput).toHaveValue(String(amount)));
 
-		findValidatorSpy.mockRestore();
+		await userEvent.clear(addressInput);
+		await userEvent.type(addressInput, wallet.address());
+
+		await waitFor(() => expect(addressInput).toHaveValue(wallet.address()));
+
+		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
+		await waitFor(() => {
+			expect(dropdowns).toHaveLength(3);
+		});
+
+		const tokenSelection = dropdowns[index];
+
+		const user = userEvent.setup();
+		await user.clear(tokenSelection);
+		await userEvent.paste("DARK20");
+		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+
+		await waitFor(() => {
+			expect(onChange).toHaveBeenCalled();
+		});
 	});
 
 	it("should select recipient", async () => {

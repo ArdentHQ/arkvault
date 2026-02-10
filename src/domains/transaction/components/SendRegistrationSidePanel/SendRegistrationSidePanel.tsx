@@ -214,7 +214,7 @@ export const SendRegistrationSidePanel = ({
 		setActiveTab(nextStep);
 	};
 
-	const { isConfirmed } = useConfirmedTransaction({
+	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId: transaction?.hash(),
 		wallet: activeWallet,
 	});
@@ -459,7 +459,6 @@ export const SendRegistrationSidePanel = ({
 										activeTab={activeTab}
 										wallet={activeWallet}
 										profile={activeProfile}
-										hideHeader
 									/>
 								)}
 
@@ -479,9 +478,10 @@ export const SendRegistrationSidePanel = ({
 
 								<TabPanel tabId={summaryStep}>
 									<TransactionSuccessful
-										transaction={transaction}
+										transaction={confirmedTransaction || transaction}
 										senderWallet={activeWallet!}
 										noHeading
+										skipConfirmationCheck
 									/>
 								</TabPanel>
 							</>

@@ -12,6 +12,7 @@ import {
 	ValidatorRegistrationBuilder,
 	ValidatorResignationBuilder,
 	VoteBuilder,
+	TokenTransferBuilder,
 } from "@arkecosystem/typescript-crypto";
 import { BigNumber, get } from "@/app/lib/helpers";
 
@@ -23,6 +24,7 @@ import { Services } from "@/app/lib/mainsail";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 import { NetworkConfig } from "@/app/lib/mainsail/network-config";
+import { assertToken } from "@/utils/assertions.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -40,8 +42,10 @@ export class TransactionService {
 	readonly hdWalletService!: HDWalletService;
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
+	readonly #profile!: IProfile;
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
+		this.#profile = profile;
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#clientService = new ClientService({ config, profile });
@@ -91,6 +95,38 @@ export class TransactionService {
 
 		return new SignedTransactionData().configure(
 			builder.transaction.data,
+			builder.transaction.serialize().toString("hex"),
+		);
+	}
+
+	public async tokenTransfer(input: Services.TransferInput): Promise<SignedTransactionData> {
+		this.#assertGasFee(input);
+		this.#assertAmount(input);
+
+		const nonce = await this.#generateNonce(input);
+		const token = this.#profile
+			.tokens()
+			.selected()
+			.items()
+			.find((token) => token.token().address() === input.tokenContractAddress);
+
+		assertToken(token);
+
+		const amount = BigNumber.make(input.data.amount, token.token().decimals()).toSatoshi();
+
+		const builder = TokenTransferBuilder.new({
+			senderPublicKey: input.signatory.address(),
+		})
+			.recipient(input.data.to, amount.toBigInt())
+			.contractAddress(token.token().address())
+			.nonce(nonce)
+			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
+			.gasLimit(input.gasLimit.toString());
+
+		await this.#sign(input, builder);
+
+		return new SignedTransactionData().configure(
+			{ ...builder.transaction.data, value: amount.toNumber() },
 			builder.transaction.serialize().toString("hex"),
 		);
 	}

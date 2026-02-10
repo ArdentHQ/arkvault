@@ -26,6 +26,7 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 				this.#wallet.data().set(WalletData.PublicKey, wallet.publicKey());
 			}
 
+			this.#wallet.data().set(WalletData.TokenCount, wallet.tokenCount());
 			this.#wallet.data().set(WalletData.Balance, wallet.balance());
 			this.#wallet.data().set(WalletData.Sequence, wallet.nonce());
 		} catch {
@@ -50,5 +51,26 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 		this.#wallet.data().set(WalletData.VotesAvailable, available);
 		this.#wallet.data().set(WalletData.Votes, votes);
 		this.#wallet.data().set(WalletData.VotesUsed, used);
+	}
+
+	/** {@inheritDoc IWalletSynchroniser.tokens} */
+	public async tokens(): Promise<void> {
+		const walletTokens = await this.#wallet.client().walletTokens(this.#wallet.address());
+
+		this.#wallet.tokens().flush();
+
+		await Promise.allSettled(
+			walletTokens.map(async (walletToken) => {
+				try {
+					const token = await this.#wallet.client().tokenByContractAddress(walletToken.tokenAddress());
+					this.#wallet.tokens().create({ token, walletToken });
+				} catch (error) {
+					console.error(
+						`[WalletSynchroniser#tokens] Failed to fetch token for address: ${walletToken.tokenAddress()}`,
+						{ error },
+					);
+				}
+			}),
+		);
 	}
 }

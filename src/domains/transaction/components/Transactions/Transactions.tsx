@@ -26,6 +26,7 @@ interface TransactionsProperties {
 	onLoading?: (status: boolean) => void;
 	isUpdatingWallet?: boolean;
 	selectedWallets?: number;
+	showTabs?: boolean;
 }
 
 export const Transactions = memo(function Transactions({
@@ -38,6 +39,7 @@ export const Transactions = memo(function Transactions({
 	isUpdatingWallet,
 	onLoading,
 	selectedWallets,
+	showTabs,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
 
@@ -138,7 +140,12 @@ export const Transactions = memo(function Transactions({
 		[activeMode],
 	);
 
-	const showTabs = useMemo(() => {
+	const showTransactionTabs = useMemo(() => {
+		// Explicitly disabled by props
+		if (showTabs === false) {
+			return false;
+		}
+
 		if (isLoadingTransactions) {
 			return true;
 		}
@@ -177,7 +184,7 @@ export const Transactions = memo(function Transactions({
 				</div>
 			)}
 
-			{showTabs && (
+			{showTransactionTabs && (
 				<>
 					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
 						<TabList className="h-10">
@@ -259,7 +266,7 @@ export const Transactions = memo(function Transactions({
 					isLoading={isLoadingTransactions}
 					skeletonRowsLimit={8}
 					onRowClick={(transaction) => {
-						if (currentOpenedPanel === Panel.TransactionDetails) {
+						if (currentOpenedPanel?.name === Panel.TransactionDetails) {
 							setIsMinimized(false);
 						} else {
 							openPanel(Panel.TransactionDetails);
@@ -299,7 +306,7 @@ export const Transactions = memo(function Transactions({
 					</>
 				)}
 
-				{transactionModalItem && currentOpenedPanel === Panel.TransactionDetails && (
+				{transactionModalItem && currentOpenedPanel?.name === Panel.TransactionDetails && (
 					<TransactionDetailSidePanel
 						isOpen={!!transactionModalItem}
 						transactionItem={transactionModalItem}

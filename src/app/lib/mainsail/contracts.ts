@@ -49,6 +49,8 @@ export interface WalletData {
 
 	rank(): number | undefined;
 
+	tokenCount(): number;
+
 	votes(): BigNumber | undefined;
 
 	// Flags

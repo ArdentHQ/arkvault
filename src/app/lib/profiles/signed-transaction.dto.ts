@@ -7,6 +7,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 export class ExtendedSignedTransactionData {
 	readonly #data: SignedTransactionData;
@@ -55,6 +56,10 @@ export class ExtendedSignedTransactionData {
 
 	public nonce(): BigNumber {
 		return this.#data.nonce();
+	}
+
+	public token(): TokenDTO | undefined {
+		return this.#data.token();
 	}
 
 	public timestamp(): DateTime {
@@ -255,5 +260,9 @@ export class ExtendedSignedTransactionData {
 
 	public gasLimit(): number {
 		return this.#data.gasLimit();
+	}
+
+	public isTokenTransfer(): boolean {
+		return this.#data.isTokenTransfer();
 	}
 }

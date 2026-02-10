@@ -64,6 +64,17 @@ export const useWalletActions = ({
 		[stopEventBubbling, openPanel, wallet],
 	);
 
+	const handleTokenSend = useCallback(
+		(options?: Record<string, unknown>) => {
+			if (!wallet) {
+				return;
+			}
+
+			openPanel(Panel.SendTokenTransfer, options);
+		},
+		[stopEventBubbling, openPanel, wallet],
+	);
+
 	const handleToggleStar = useCallback(
 		async (event?: React.MouseEvent<HTMLElement>) => {
 			if (!wallet) {
@@ -169,6 +180,7 @@ export const useWalletActions = ({
 		handleSelectOption,
 		handleSend,
 		handleToggleStar,
+		handleTokenSend,
 		setActiveModal,
 	};
 };

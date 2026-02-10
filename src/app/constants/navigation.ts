@@ -8,21 +8,34 @@ import { ProfilePaths } from "@/router/paths";
 export const getNavigationMenu = (t: TFunction, pathname: string): NavigationBarMenuItem[] => {
 	const menuItems: NavigationBarMenuItem[] = [
 		{
+			id: "dashboard",
 			isActive: pathname.includes("/dashboard"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Dashboard, { profileId }),
 			title: t("COMMON.PORTFOLIO"),
 		},
 		{
+			disabledMessage: t("COMMON.TOKENS_DISABLED"),
+			id: "tokens",
+			isActive: pathname.includes("/tokens"),
+			mountPath: (profileId) => generatePath(ProfilePaths.Tokens, { profileId }),
+			title: t("COMMON.TOKENS"),
+		},
+		{
+			disabledMessage: t("COMMON.EXCHANGE_DISABLED"),
+			id: "exchange",
 			isActive: pathname.includes("/exchange"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 			title: t("COMMON.EXCHANGE"),
 		},
 		{
+			id: "contacts",
 			isActive: pathname.includes("/contacts"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
 			title: t("COMMON.CONTACTS"),
 		},
 		{
+			disabledMessage: t("COMMON.VOTES_DISABLED"),
+			id: "votes",
 			isActive: pathname.includes("/votes"),
 			mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
 			title: t("COMMON.VOTES"),

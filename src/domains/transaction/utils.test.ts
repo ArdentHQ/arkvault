@@ -72,6 +72,15 @@ describe("Transaction utils", () => {
 
 			expect(type).toBe("transfer");
 		});
+
+		it("transferToken", () => {
+			const type = getTransferType({
+				recipients: [{ address: "1", amount: 0 }],
+				tokenContractAddress: "1",
+			});
+
+			expect(type).toBe("transferToken");
+		});
 	});
 
 	describe("isContractDeployment", () => {

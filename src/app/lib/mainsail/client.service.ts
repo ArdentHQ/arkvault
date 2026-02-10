@@ -16,6 +16,13 @@ import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
+import { TokenRepository } from "@/app/lib/profiles/token.repository";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TokenAddressesData, WalletTokenData } from "@/app/lib/profiles/token.contracts";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -28,9 +35,11 @@ const wellKnownContracts = {
 export class ClientService {
 	readonly #client!: ArkClient;
 	#config: ConfigRepository;
+	#profile: IProfile;
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
+		this.#profile = profile;
 
 		const api = config.host("full", profile);
 		const evm = config.host("evm", profile);
@@ -49,6 +58,94 @@ export class ClientService {
 	): Promise<ConfirmedTransactionData> {
 		const body = await this.#client.transactions().get(id, query);
 		return new ConfirmedTransactionData().configure(body.data);
+	}
+
+	public async tokens(): Promise<TokenRepository> {
+		const response = await this.#client.tokens().all();
+		const tokens = new TokenRepository();
+		tokens.fill(response.data);
+		return tokens;
+	}
+
+	public async tokenAddresses(query: Services.WalletTokensQuery): Promise<WalletTokenCollection> {
+		const response = await this.#client.tokens().tokenAddresses(query.addresses, query.page, query.limit);
+
+		const walletTokens = response.data.map((tokenAddresses: TokenAddressesData) => {
+			const token = new TokenDTO({
+				address: tokenAddresses.token,
+				decimals: tokenAddresses.decimals,
+				deploymentHash: "",
+				name: tokenAddresses.name,
+				symbol: tokenAddresses.symbol,
+				totalSupply: tokenAddresses.supply,
+			});
+
+			const walletTokens: WalletTokenDTO[] = [];
+
+			for (const [walletAddress, balance] of Object.entries(tokenAddresses.addresses)) {
+				walletTokens.push(
+					new WalletTokenDTO({
+						address: walletAddress,
+						balance,
+						tokenAddress: tokenAddresses.token,
+					}),
+				);
+			}
+
+			return walletTokens.map(
+				(walletToken) =>
+					new WalletToken({
+						network: this.#profile.activeNetwork(),
+						profile: this.#profile,
+						token,
+						walletToken,
+					}),
+			);
+		}) as Array<WalletToken[]>;
+
+		return new WalletTokenCollection(walletTokens.flat(), this.#createMetaPagination(response));
+	}
+
+	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {
+		const response = await this.#client.tokens().byWalletAddress(address);
+		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData));
+	}
+
+	public async tokenHolders(contractAddress: string): Promise<TokenRepository> {
+		const response = await this.#client.tokens().holders(contractAddress);
+		const holders = new TokenRepository();
+		holders.fill(response.results);
+		return holders;
+	}
+
+	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
+		const response = await this.#client.tokens().get(contractAddress);
+		return new TokenDTO(response.data);
+	}
+
+	public async tokenTransfers(query?: TokenTransfersQuery): Promise<ConfirmedTransactionDataCollection> {
+		const response = await this.#client.tokens().tokenTransfers({
+			...query,
+			from: query?.from?.join(","),
+			to: query?.to?.join(","),
+		});
+
+		return new ConfirmedTransactionDataCollection(
+			response.data.map((transfer) =>
+				new ConfirmedTransactionData().configure({
+					confirmations: 1,
+					data: transfer.functionSig,
+					hash: transfer.transactionHash,
+					nonce: 0,
+					receipt: {
+						status: 1,
+					},
+					...transfer,
+					type: "transfer",
+				}),
+			),
+			this.#createMetaPagination(response),
+		);
 	}
 
 	public async transactions(

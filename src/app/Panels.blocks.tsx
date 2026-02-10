@@ -71,20 +71,35 @@ export const AppPanels = () => {
 	return (
 		<>
 			<ResetWhenUnmounted>
-				<SignMessageSidePanel open={currentOpenedPanel === Panel.SignMessage} onOpenChange={closePanel} />
+				<SignMessageSidePanel open={currentOpenedPanel?.name === Panel.SignMessage} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<VerifyMessageSidePanel open={currentOpenedPanel === Panel.VerifyMessage} onOpenChange={closePanel} />
+				<VerifyMessageSidePanel
+					open={currentOpenedPanel?.name === Panel.VerifyMessage}
+					onOpenChange={closePanel}
+				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<SendTransferSidePanel open={currentOpenedPanel === Panel.SendTransfer} onOpenChange={closePanel} />
+				<SendTransferSidePanel
+					open={currentOpenedPanel?.name === Panel.SendTransfer}
+					onOpenChange={closePanel}
+				/>
+			</ResetWhenUnmounted>
+
+			<ResetWhenUnmounted>
+				<SendTransferSidePanel
+					open={currentOpenedPanel?.name === Panel.SendTokenTransfer}
+					onOpenChange={closePanel}
+					isTokenTransfer
+					tokenContractAddress={currentOpenedPanel?.properties?.tokenContractAddress as string | undefined}
+				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
 				<CreateAddressesSidePanel
-					open={currentOpenedPanel === Panel.CreateAddress}
+					open={currentOpenedPanel?.name === Panel.CreateAddress}
 					onOpenChange={closePanel}
 					onImportAddress={async () => {
 						await closePanel();
@@ -96,25 +111,28 @@ export const AppPanels = () => {
 				/>
 			</ResetWhenUnmounted>
 			<ResetWhenUnmounted>
-				<ImportAddressesSidePanel open={currentOpenedPanel === Panel.ImportAddress} onOpenChange={closePanel} />
+				<ImportAddressesSidePanel
+					open={currentOpenedPanel?.name === Panel.ImportAddress}
+					onOpenChange={closePanel}
+				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
 				<SendUsernameResignationSidePanel
-					open={currentOpenedPanel === Panel.SendUsernameResignation}
+					open={currentOpenedPanel?.name === Panel.SendUsernameResignation}
 					onOpenChange={closePanel}
 				/>
 			</ResetWhenUnmounted>
 			<ResetWhenUnmounted>
 				<SendValidatorResignationSidePanel
-					open={currentOpenedPanel === Panel.SendValidatorResignation}
+					open={currentOpenedPanel?.name === Panel.SendValidatorResignation}
 					onOpenChange={closePanel}
 				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
 				<SendRegistrationSidePanel
-					open={currentOpenedPanel === Panel.SendUsernameRegistration}
+					open={currentOpenedPanel?.name === Panel.SendUsernameRegistration}
 					registrationType="usernameRegistration"
 					onOpenChange={closePanel}
 				/>
@@ -122,7 +140,7 @@ export const AppPanels = () => {
 
 			<ResetWhenUnmounted>
 				<SendRegistrationSidePanel
-					open={currentOpenedPanel === Panel.SendValidatorRegistration}
+					open={currentOpenedPanel?.name === Panel.SendValidatorRegistration}
 					registrationType="validatorRegistration"
 					onOpenChange={closePanel}
 				/>
@@ -130,21 +148,27 @@ export const AppPanels = () => {
 
 			<ResetWhenUnmounted>
 				<SendRegistrationSidePanel
-					open={currentOpenedPanel === Panel.SendContractDeployment}
+					open={currentOpenedPanel?.name === Panel.SendContractDeployment}
 					registrationType="contractDeployment"
 					onOpenChange={closePanel}
 				/>
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<AddressesSidePanel open={currentOpenedPanel === Panel.Addresses} onOpenChange={closePanel} />
+				<AddressesSidePanel open={currentOpenedPanel?.name === Panel.Addresses} onOpenChange={closePanel} />
 			</ResetWhenUnmounted>
 
 			<ResetWhenUnmounted>
-				<NotificationsSidepanel open={currentOpenedPanel === Panel.Notifications} onOpenChange={closePanel} />
+				<NotificationsSidepanel
+					open={currentOpenedPanel?.name === Panel.Notifications}
+					onOpenChange={closePanel}
+				/>
 			</ResetWhenUnmounted>
 
-			<LedgerMigrationSidepanel open={currentOpenedPanel === Panel.LedgerMigration} onOpenChange={closePanel} />
+			<LedgerMigrationSidepanel
+				open={currentOpenedPanel?.name === Panel.LedgerMigration}
+				onOpenChange={closePanel}
+			/>
 
 			<DiscardPanelConfirmationModal />
 		</>

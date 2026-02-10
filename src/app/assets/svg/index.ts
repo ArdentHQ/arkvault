@@ -133,6 +133,9 @@ import MobileExchangesDim from "./mobile-exchanges-light.svg?react";
 import ExchangesDark from "./exchanges-dark.svg?react";
 import ExchangesDim from "./exchanges-dim.svg?react";
 import ExchangesLight from "./exchanges-light.svg?react";
+import TokensDark from "./tokens-dark.svg?react";
+import TokensDim from "./tokens-dim.svg?react";
+import TokensLight from "./tokens.svg?react";
 import Expand from "./expand.svg?react";
 import WalletMultipleLight from "./wallet-multiple-light.svg?react";
 import WalletMultipleDark from "./wallet-multiple-dark.svg?react";
@@ -311,6 +314,9 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	StatusOk,
 	StatusStandby,
 	Testnet,
+	TokensDark,
+	TokensDim,
+	TokensLight,
 	Trash,
 	UnderlineMoon,
 	UnderlineSun,

@@ -4,6 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 describe("SignedTransactionData", () => {
 	let transaction: SignedTransactionData;
@@ -132,6 +133,50 @@ describe("SignedTransactionData", () => {
 		});
 	});
 
+	describe("token", () => {
+		it("should return token", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(true);
+
+			transaction.configure(
+				{
+					...mockSignedData,
+					token: {
+						address: "0xdef",
+						decimals: 18,
+						deploymentHash: "0xaef",
+						name: "DARK 20",
+						symbol: "DARK20",
+						totalSupply: "10000000",
+					},
+				},
+				mockSerialized,
+			);
+
+			expect(transaction.token()).toBeInstanceOf(TokenDTO);
+
+			tokenTransferMock.mockRestore();
+		});
+
+		it("should return `undefined` for token", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(false);
+
+			transaction.configure(
+				{
+					...mockSignedData,
+				},
+				mockSerialized,
+			);
+
+			expect(transaction.token()).toBe(undefined);
+
+			tokenTransferMock.mockRestore();
+		});
+	});
+
 	describe("value", () => {
 		it("should return value for non-multi-payment", () => {
 			transaction.configure(mockSignedData, mockSerialized);
@@ -225,6 +270,14 @@ describe("SignedTransactionData", () => {
 		it("should check isTransfer", () => {
 			vi.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTransfer").mockReturnValue(true);
 			expect(transaction.isTransfer()).toBe(true);
+		});
+
+		it("should check isTokenTransfer", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(true);
+			expect(transaction.isTokenTransfer()).toBe(true);
+			tokenTransferMock.mockRestore();
 		});
 
 		it("should check isSecondSignature", () => {

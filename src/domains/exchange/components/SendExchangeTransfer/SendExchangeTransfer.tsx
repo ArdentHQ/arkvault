@@ -64,7 +64,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		values: { gasPrice, gasLimit },
 		formState: { isValid, isSubmitting },
 		handleSubmit,
-	} = useSendTransferForm(senderWallet);
+	} = useSendTransferForm({ wallet: senderWallet });
 
 	const fee = calculateGasFee(gasPrice, gasLimit);
 
