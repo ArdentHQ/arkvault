@@ -110,7 +110,7 @@ export const TokenDetailSidepanel = ({
 					<DetailWrapper label={t("COMMON.BALANCE")} className="rounded-xl">
 						<div className="space-y-3">
 							<div className="flex items-start justify-between space-x-2 sm:justify-start sm:space-x-0">
-								<DetailTitle className="w-auto lg:pt-0.5 sm:min-w-28 sm:pr-6">
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6 lg:pt-0.5">
 									{t("COMMON.AMOUNT")}
 								</DetailTitle>
 
