@@ -87,17 +87,17 @@ export class Numeral {
 		const bnValue = BigNumber.make(value);
 
 		const scales: Array<{ exp: number; suffix: string }> = [
-			{ exp: 33, suffix: "D" },   // Decillion
-			{ exp: 30, suffix: "No" },  // Nonillion
-			{ exp: 27, suffix: "Oc" },  // Octillion
-			{ exp: 24, suffix: "Sp" },  // Septillion
-			{ exp: 21, suffix: "Sx" },  // Sextillion
-			{ exp: 18, suffix: "Qt" },  // Quintillion
-			{ exp: 15, suffix: "Qd" },  // Quadrillion
-			{ exp: 12, suffix: "T" },   // Trillion
-			{ exp: 9, suffix: "B" },    // Billion
-			{ exp: 6, suffix: "M" },    // Million
-			{ exp: 3, suffix: "K" },    // Thousand
+			{ exp: 33, suffix: "D" }, // Decillion
+			{ exp: 30, suffix: "No" }, // Nonillion
+			{ exp: 27, suffix: "Oc" }, // Octillion
+			{ exp: 24, suffix: "Sp" }, // Septillion
+			{ exp: 21, suffix: "Sx" }, // Sextillion
+			{ exp: 18, suffix: "Qt" }, // Quintillion
+			{ exp: 15, suffix: "Qd" }, // Quadrillion
+			{ exp: 12, suffix: "T" }, // Trillion
+			{ exp: 9, suffix: "B" }, // Billion
+			{ exp: 6, suffix: "M" }, // Million
+			{ exp: 3, suffix: "K" }, // Thousand
 		];
 
 		for (const { exp, suffix } of scales) {
