@@ -48,12 +48,20 @@ const Amount = ({
 		formattedAmount = `${isNegative ? "-" : "+"} ${formattedAmount}`;
 	}
 
+	if (showCompactFormat) {
+		return (
+			<Tooltip content={fullAmount}>
+				<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+					{formattedAmount}
+				</span>
+			</Tooltip>
+		);
+	}
+
 	return (
-		<Tooltip content={fullAmount} disabled={!showCompactFormat}>
-			<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
-				{formattedAmount}
-			</span>
-		</Tooltip>
+		<span data-testid="Amount" className={cn("whitespace-nowrap", className)}>
+			{formattedAmount}
+		</span>
 	);
 };
 
