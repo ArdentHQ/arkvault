@@ -34,14 +34,6 @@ describe("TransactionData", () => {
 		};
 	});
 
-	it("should return voteCombination type when isVoteCombination is true", () => {
-		const mockTransaction = new TestTransactionData();
-		mockTransaction.isVoteCombination = () => true;
-		mockTransaction.configure(commonData);
-
-		expect(mockTransaction.type()).toBe("voteCombination");
-	});
-
 	it("should return transfer type when isTransfer is true", () => {
 		const mockTransaction = new TestTransactionData();
 		mockTransaction.isTransfer = () => true;

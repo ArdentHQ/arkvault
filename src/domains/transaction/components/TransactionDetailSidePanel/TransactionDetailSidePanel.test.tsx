@@ -227,7 +227,6 @@ describe("TransactionDetailModal", () => {
 					isConfirmed: () => false,
 					isUnvote: () => false,
 					isVote: () => false,
-					isVoteCombination: () => true,
 					type: () => "swap",
 					unvotes: () => TransactionFixture.unvotes(),
 					votes: () => TransactionFixture.votes(),

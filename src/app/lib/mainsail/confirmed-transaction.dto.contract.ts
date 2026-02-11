@@ -78,8 +78,6 @@ export interface ConfirmedTransactionData {
 
 	isValidatorRegistration(): boolean;
 
-	isVoteCombination(): boolean;
-
 	isVote(): boolean;
 
 	isUnvote(): boolean;

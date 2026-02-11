@@ -59,7 +59,6 @@ export const TransactionFixture = {
 	isValidatorResignation: () => false,
 	isUsernameRegistration: () => false,
 	isUsernameResignation: () => false,
-	isVoteCombination: () => false,
 	isUpdateValidator: () => false,
 	isVote: () => false,
 	isUnvote: () => false,

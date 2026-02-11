@@ -10,7 +10,6 @@ import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transacti
 import { DateTime } from "@/app/lib/intl";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { SignedTransactionData } from "./signed-transaction.dto";
-import { UsernamesAbi } from "@mainsail/evm-contracts";
 import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
@@ -22,7 +21,7 @@ import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
-import { Helpers, TransactionFunctionSigs } from "@arkecosystem/typescript-crypto";
+import { Helpers, TransactionFunctionSigs, UsernamesContract } from "@arkecosystem/typescript-crypto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -307,7 +306,7 @@ export class ClientService {
 
 			try {
 				data = encodeFunctionData({
-					abi: UsernamesAbi.abi,
+					abi: UsernamesContract.abi,
 					args: [addresses],
 					functionName: "getUsernames",
 				});
@@ -323,7 +322,7 @@ export class ClientService {
 			let decoded;
 			try {
 				decoded = decodeFunctionResult({
-					abi: UsernamesAbi.abi,
+					abi: UsernamesContract.abi,
 					data: response.result,
 					functionName: "getUsernames",
 				});

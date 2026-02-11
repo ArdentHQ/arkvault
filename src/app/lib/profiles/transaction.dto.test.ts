@@ -182,7 +182,6 @@ describe("ExtendedConfirmedTransactionData", () => {
 			"isUsernameRegistration",
 			"isUsernameResignation",
 			"isValidatorRegistration",
-			"isVoteCombination",
 			"isVote",
 			"isUnvote",
 			"isMultiPayment",

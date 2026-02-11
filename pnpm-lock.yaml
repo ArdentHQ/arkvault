@@ -35,9 +35,6 @@ importers:
       '@ledgerhq/hw-transport-webusb':
         specifier: ^6.29.8
         version: 6.29.8
-      '@mainsail/evm-contracts':
-        specifier: 0.0.1-evm.18
-        version: 0.0.1-evm.18
       '@tailwindcss/forms':
         specifier: ^0.5.10
         version: 0.5.10(tailwindcss@4.1.11)
@@ -1640,10 +1637,6 @@ packages:
 
   '@ledgerhq/types-live@6.78.0':
     resolution: {integrity: sha512-8popPS/tw8AmoTBSCfmiLc0wFskPpNAhhh5n4wqD9N6d0gFax84HWMEEHJSqsPor6wuzfVPmFYVivpjErlYi9Q==}
-
-  '@mainsail/evm-contracts@0.0.1-evm.18':
-    resolution: {integrity: sha512-WrNJc0SwZYhOSYGkFCP10GmSorKDNPpZMCYbI+iRT/20uZjbJ6YYmuRHHUEqIBB4Kpc0T7feZ4O0oOnAefm7hQ==}
-    engines: {node: '>=20.x'}
 
   '@mswjs/interceptors@0.39.2':
     resolution: {integrity: sha512-RuzCup9Ct91Y7V79xwCb146RaBRHZ7NBbrIUySumd1rpKqHL5OonaqrGIbug5hNwP/fRyxFMA6ISgw4FTtYFYg==}
@@ -8192,8 +8185,6 @@ snapshots:
     dependencies:
       bignumber.js: 9.3.1
       rxjs: 7.8.2
-
-  '@mainsail/evm-contracts@0.0.1-evm.18': {}
 
   '@mswjs/interceptors@0.39.2':
     dependencies:

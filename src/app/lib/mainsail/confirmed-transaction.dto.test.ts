@@ -30,14 +30,6 @@ describe("ConfirmedTransactionData", () => {
 		};
 	});
 
-	it("should return voteCombination type when isVoteCombination is true", () => {
-		const mockTransaction = new ConfirmedTransactionData();
-		mockTransaction.isVoteCombination = () => true;
-		mockTransaction.configure(commonData);
-
-		expect(mockTransaction.type()).toBe("voteCombination");
-	});
-
 	it("should return transfer type when isTransfer is true", () => {
 		const mockTransaction = new ConfirmedTransactionData();
 		mockTransaction.isTransfer = () => true;

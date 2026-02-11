@@ -23,7 +23,6 @@ export class SignedTransactionData {
 		{ method: "isValidatorRegistration", type: "validatorRegistration" },
 		{ method: "isValidatorResignation", type: "validatorResignation" },
 		{ method: "isVote", type: "vote" },
-		{ method: "isVoteCombination", type: "voteCombination" },
 		{ method: "isUpdateValidator", type: "updateValidator" },
 	];
 
@@ -138,10 +137,6 @@ export class SignedTransactionData {
 
 	public isUpdateValidator(): boolean {
 		return TransactionTypeIdentifier.isUpdateValidator(this.signedData.data);
-	}
-
-	public isVoteCombination(): boolean {
-		return false;
 	}
 
 	public isVote(): boolean {
@@ -273,10 +268,6 @@ export class SignedTransactionData {
 	public type(): string {
 		if (this.isTokenTransfer()) {
 			return "transfer";
-		}
-
-		if (this.isVoteCombination()) {
-			return "voteCombination";
 		}
 
 		for (const { type, method } of this.#types) {
