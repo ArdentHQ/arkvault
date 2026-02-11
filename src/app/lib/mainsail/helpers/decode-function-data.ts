@@ -1,5 +1,5 @@
 import { decodeFunctionData as viemDecodeFunctionData, Hex } from "viem";
-import { MultipaymentContract, UsernamesContract } from "@arkecosystem/typescript-crypto";
+import { ConsensusContract, MultipaymentContract, UsernamesContract } from "@arkecosystem/typescript-crypto";
 
 interface FunctionData {
 	functionName: string;
@@ -14,7 +14,7 @@ export enum AbiType {
 
 export const decodeFunctionData = (data: Hex, abiType: AbiType = AbiType.Consensus): FunctionData => {
 	const abiMap: Record<AbiType, any> = {
-		[AbiType.Consensus]: MultipaymentContract.abi,
+		[AbiType.Consensus]: ConsensusContract.abi,
 		[AbiType.Username]: UsernamesContract.abi,
 		[AbiType.MultiPayment]: MultipaymentContract.abi,
 	};
