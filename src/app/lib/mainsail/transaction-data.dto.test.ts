@@ -347,11 +347,6 @@ describe("TransactionData", () => {
 		expect(transaction.isTransfer()).toBe(false);
 	});
 
-	it("#isSecondSignature", () => {
-		transaction.configure(commonData);
-		expect(transaction.isSecondSignature()).toBe(false);
-	});
-
 	it("isUsernameRegistration", () => {
 		transaction.configure({ ...commonData, type: "usernameRegistration" });
 		expect(transaction.isUsernameRegistration()).toBe(false);

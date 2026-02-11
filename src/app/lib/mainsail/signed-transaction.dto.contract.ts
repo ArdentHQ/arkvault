@@ -34,7 +34,6 @@ export interface SignedTransactionData {
 
 	// Types
 	isTransfer(): boolean;
-	isSecondSignature(): boolean;
 	isValidatorRegistration(): boolean;
 	isUsernameRegistration(): boolean;
 	isUsernameResignation(): boolean;

@@ -280,10 +280,6 @@ describe("SignedTransactionData", () => {
 			tokenTransferMock.mockRestore();
 		});
 
-		it("should check isSecondSignature", () => {
-			expect(transaction.isSecondSignature()).toBe(false);
-		});
-
 		it("should check isUsernameRegistration", () => {
 			vi.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isUsernameRegistration").mockReturnValue(true);
 			expect(transaction.isUsernameRegistration()).toBe(true);
@@ -504,7 +500,6 @@ describe("SignedTransactionData", () => {
 
 		it("should return transfer when isTransfer is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
 			vi.spyOn(transaction, "isUnvote").mockReturnValue(false);
@@ -525,7 +520,6 @@ describe("SignedTransactionData", () => {
 		it("should return methodHash when no specific type matches", () => {
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
 			vi.spyOn(transaction, "isUnvote").mockReturnValue(false);
@@ -537,15 +531,8 @@ describe("SignedTransactionData", () => {
 			expect(transaction.type()).toBe("0x12345678");
 		});
 
-		it("should return secondSignature when isSecondSignature is true", () => {
-			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(true);
-			expect(transaction.type()).toBe("secondSignature");
-		});
-
 		it("should return usernameRegistration when isUsernameRegistration is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(true);
 			expect(transaction.type()).toBe("usernameRegistration");
@@ -553,7 +540,6 @@ describe("SignedTransactionData", () => {
 
 		it("should return usernameResignation when isUsernameResignation is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(true);
@@ -562,7 +548,6 @@ describe("SignedTransactionData", () => {
 
 		it("should return unvote when isUnvote is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
@@ -572,7 +557,6 @@ describe("SignedTransactionData", () => {
 
 		it("should return validatorRegistration when isValidatorRegistration is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
@@ -583,7 +567,6 @@ describe("SignedTransactionData", () => {
 
 		it("should return validatorResignation when isValidatorResignation is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
@@ -595,7 +578,6 @@ describe("SignedTransactionData", () => {
 
 		it("should return vote when isVote is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
@@ -608,7 +590,6 @@ describe("SignedTransactionData", () => {
 
 		it("should return updateValidator when isUpdateValidator is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
-			vi.spyOn(transaction, "isSecondSignature").mockReturnValue(false);
 			vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);

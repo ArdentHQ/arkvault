@@ -15,7 +15,6 @@ export class SignedTransactionData {
 
 	readonly #types = [
 		{ method: "isMultiPayment", type: "multiPayment" },
-		{ method: "isSecondSignature", type: "secondSignature" },
 		{ method: "isTransfer", type: "transfer" },
 		{ method: "isUsernameRegistration", type: "usernameRegistration" },
 		{ method: "isUsernameResignation", type: "usernameResignation" },
@@ -117,10 +116,6 @@ export class SignedTransactionData {
 
 	public isTransfer(): boolean {
 		return TransactionTypeIdentifier.isTransfer(this.signedData.data);
-	}
-
-	public isSecondSignature(): boolean {
-		return false;
 	}
 
 	public isUsernameRegistration(): boolean {

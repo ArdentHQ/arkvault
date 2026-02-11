@@ -70,8 +70,6 @@ export interface ConfirmedTransactionData {
 
 	isTransfer(): boolean;
 
-	isSecondSignature(): boolean;
-
 	isUsernameRegistration(): boolean;
 
 	isUsernameResignation(): boolean;
