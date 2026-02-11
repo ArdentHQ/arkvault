@@ -266,10 +266,6 @@ export class SignedTransactionData {
 		}
 
 		for (const { type, method } of this.#types) {
-			if (type === "voteCombination") {
-				continue;
-			}
-
 			if (this[method]()) {
 				return type;
 			}

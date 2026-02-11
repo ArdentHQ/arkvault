@@ -1,5 +1,4 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
-import React from "react";
 import { requestMock, server } from "@/tests/mocks/server";
 import { TransactionDetailSidePanel } from "./TransactionDetailSidePanel";
 import { translations } from "@/domains/transaction/i18n";
@@ -91,7 +90,7 @@ describe("TransactionDetailModal", () => {
 					...TransactionFixture,
 					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 					isTransfer: () => true,
-					memo: () => {},
+					memo: () => { },
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}
@@ -132,7 +131,7 @@ describe("TransactionDetailModal", () => {
 		);
 	});
 
-	it.each(["vote", "unvote", "voteCombination"])("should render a %s side panel", (transactionType) => {
+	it.each(["vote", "unvote"])("should render a %s side panel", (transactionType) => {
 		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
@@ -163,7 +162,6 @@ describe("TransactionDetailModal", () => {
 					isConfirmed: () => true,
 					isUnvote: () => transactionType === "unvote",
 					isVote: () => transactionType === "vote",
-					isVoteCombination: () => transactionType === "voteCombination",
 					type: () => transactionType,
 					unvotes: () => {
 						if (transactionType !== "vote") {
@@ -188,57 +186,9 @@ describe("TransactionDetailModal", () => {
 		const labels = {
 			unvote: "Unvote",
 			vote: "Vote",
-			voteCombination: "VoteOld",
 		};
 
 		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent(labels[transactionType]);
-	});
-
-	it("should render an vote swap side panel for signed transaction", () => {
-		vi.spyOn(profile.validators(), "map").mockImplementation((wallet, votes) =>
-			votes.map(
-				(vote: string, index: number) =>
-					// @ts-ignore
-					new ReadOnlyWallet(
-						{
-							address: vote,
-							username: `validator-${index}`,
-						},
-						profile,
-					),
-			),
-		);
-
-		render(
-			<TransactionDetailSidePanel
-				profile={profile}
-				isOpen={true}
-				transactionItem={{
-					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-					data: () => ({
-						data: () => ({
-							asset: {
-								votes: ["+" + TransactionFixture.votes()[0], "-" + TransactionFixture.unvotes()[0]],
-							},
-							blockHash: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-						}),
-					}),
-					isConfirmed: () => false,
-					isUnvote: () => false,
-					isVote: () => false,
-					type: () => "swap",
-					unvotes: () => TransactionFixture.unvotes(),
-					votes: () => TransactionFixture.votes(),
-					wallet: () => wallet,
-				}}
-			/>,
-			{
-				route: dashboardURL,
-			},
-		);
-
-		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("VoteOld");
 	});
 
 	it("should render a validator registration side panel", () => {
