@@ -119,8 +119,10 @@ export const SendRegistrationSidePanel = ({
 	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration, registrationType]);
 
 	useEffect(() => {
-		trigger("lockedFee");
-	}, [senderAddress]);
+		if (mounted) {
+			trigger("lockedFee");
+		}
+	}, [senderAddress, mounted]);
 
 	useToggleFeeFields({
 		activeTab,
