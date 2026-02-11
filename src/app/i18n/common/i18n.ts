@@ -241,6 +241,7 @@ export const translations = {
 	LANGUAGE: "Application Language",
 	LAST: "Last",
 	LAUNCH: "Launch",
+	LEARN: "Learn",
 	LEARN_MORE: "Learn more",
 	LEDGER: "Ledger",
 	LEDGER_COMPATIBILITY_ERROR: "ARK Vault requires the use of a chromium based browser when using a Ledger.",

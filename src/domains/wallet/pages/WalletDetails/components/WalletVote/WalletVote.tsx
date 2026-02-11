@@ -52,7 +52,7 @@ export const WalletVote = ({
 		if (votes.length === 0) {
 			return (
 				<>
-					<EmptyVotes hasTokens={hasTokens} />
+					<EmptyVotes />
 					{hasTokens && (
 						<Divider
 							type="vertical"

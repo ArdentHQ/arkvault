@@ -10,7 +10,7 @@ import cn from "classnames";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
-const EmptyVotes = ({ hasTokens }: { hasTokens?: boolean }) => {
+const EmptyVotes = () => {
 	const { t } = useTranslation();
 	return (
 		<div
@@ -18,15 +18,18 @@ const EmptyVotes = ({ hasTokens }: { hasTokens?: boolean }) => {
 			data-testid="EmptyVotes"
 		>
 			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
-				{hasTokens && t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION2")}{" "}
-				{!hasTokens && (
-					<>
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}{" "}
-						<Link to={votesHelpLink} isExternal className="inline-flex items-center">
-							<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
-						</Link>
-					</>
-				)}
+				<div className="md-lg:hidden hidden gap-2 sm:flex">
+					<span>{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION_SHORT")} </span>
+					<Link to={votesHelpLink} isExternal className="inline-flex items-center">
+						<span className="text-base leading-5">{t("COMMON.LEARN")}</span>
+					</Link>
+				</div>
+				<div className="md-lg:flex hidden gap-2">
+					<span>{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")} </span>
+					<Link to={votesHelpLink} isExternal className="inline-flex items-center">
+						<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
