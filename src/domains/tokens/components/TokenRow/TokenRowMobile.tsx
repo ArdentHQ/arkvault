@@ -105,7 +105,7 @@ export const TokenRowMobile = memo(
 								)}
 
 								{isManageMode && (
-									<div className="ml-2 sm:hidden">
+									<div className="ml-2 sm:hidden flex items-center">
 										<Divider
 											type="vertical"
 											className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
@@ -114,7 +114,7 @@ export const TokenRowMobile = memo(
 										<Checkbox
 											data-testid="TokenRow_VisibilityToggle"
 											checked={!isHidden}
-											className="-mt-1 ml-3"
+											className="ml-3"
 											onChange={toggleVisibility}
 											onClick={(event) => {
 												/* istanbul ignore next -- @preserve */
