@@ -221,11 +221,11 @@ export class ClientService {
 			used: hasVoted ? 1 : 0,
 			votes: hasVoted
 				? [
-					{
-						amount: 0,
-						id: vote,
-					},
-				]
+						{
+							amount: 0,
+							id: vote,
+						},
+					]
 				: [],
 		};
 	}
@@ -418,7 +418,10 @@ export class ClientService {
 			usernameResignation: TransactionFunctionSigs.ResignUsername,
 			validatorRegistration: TransactionFunctionSigs.RegisterValidator,
 			validatorResignation: TransactionFunctionSigs.ResignValidator,
-			vote: [Helpers.removeLeadingHexZero(TransactionFunctionSigs.Vote), Helpers.removeLeadingHexZero(TransactionFunctionSigs.Unvote)].join(","),
+			vote: [
+				Helpers.removeLeadingHexZero(TransactionFunctionSigs.Vote),
+				Helpers.removeLeadingHexZero(TransactionFunctionSigs.Unvote),
+			].join(","),
 		};
 
 		// @ts-ignore

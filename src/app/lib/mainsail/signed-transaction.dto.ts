@@ -141,7 +141,7 @@ export class SignedTransactionData {
 	}
 
 	public isVoteCombination(): boolean {
-		return false
+		return false;
 	}
 
 	public isVote(): boolean {
