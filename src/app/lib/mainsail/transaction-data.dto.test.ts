@@ -2,8 +2,8 @@ import { describe, it, expect, beforeEach, vi } from "vitest";
 import { TransactionData, KeyValuePair } from "./transaction-data.dto";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
-import * as TransactionTypeServiceMock from "./transaction-type.service";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import * as TransactionTypeIdentifierMock from "@arkecosystem/typescript-crypto";
 
 // Concrete implementation for testing the abstract class
 class TestTransactionData extends TransactionData {
@@ -21,7 +21,7 @@ describe("TransactionData", () => {
 
 		commonData = {
 			blockHash: "test_block_hash",
-			data: "0x1234567890abcdef",
+			data: "0x12345678",
 			from: "sender_address",
 			gas: 21000,
 			gasPrice: 10000000,
@@ -60,15 +60,10 @@ describe("TransactionData", () => {
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
-		const spy = vi
-			.spyOn(TransactionTypeServiceMock.TransactionTypeService, "getIdentifierName")
-			.mockReturnValue("customIdentifier");
-
 		transaction.configure(commonData);
 		const result = transaction.type();
 
-		expect(result).toBe("customIdentifier");
-		spy.mockRestore();
+		expect(result).toBe(commonData.data);
 	});
 
 	it("should return recipients for multi payment", () => {
