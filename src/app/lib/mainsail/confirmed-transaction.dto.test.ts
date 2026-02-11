@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { KeyValuePair } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";

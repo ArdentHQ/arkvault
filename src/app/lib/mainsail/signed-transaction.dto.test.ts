@@ -281,24 +281,31 @@ describe("SignedTransactionData", () => {
 		});
 
 		it("should check isUsernameRegistration", () => {
-			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isUsernameRegistration").mockReturnValue(true);
+			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isUsernameRegistration").mockReturnValue(
+				true,
+			);
 			expect(transaction.isUsernameRegistration()).toBe(true);
 		});
 
 		it("should check isUsernameResignation", () => {
-			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isUsernameResignation").mockReturnValue(true);
+			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isUsernameResignation").mockReturnValue(
+				true,
+			);
 			expect(transaction.isUsernameResignation()).toBe(true);
 		});
 
 		it("should check isValidatorRegistration", () => {
-			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isValidatorRegistration").mockReturnValue(
-				true,
-			);
+			vi.spyOn(
+				TransactionTypeIdentifierMock.TransactionTypeIdentifier,
+				"isValidatorRegistration",
+			).mockReturnValue(true);
 			expect(transaction.isValidatorRegistration()).toBe(true);
 		});
 
 		it("should check isUpdateValidator", () => {
-			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isUpdateValidator").mockReturnValue(true);
+			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isUpdateValidator").mockReturnValue(
+				true,
+			);
 			expect(transaction.isUpdateValidator()).toBe(true);
 		});
 
@@ -318,7 +325,9 @@ describe("SignedTransactionData", () => {
 		});
 
 		it("should check isValidatorResignation", () => {
-			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isValidatorResignation").mockReturnValue(true);
+			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isValidatorResignation").mockReturnValue(
+				true,
+			);
 			expect(transaction.isValidatorResignation()).toBe(true);
 		});
 	});
