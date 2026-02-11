@@ -22,47 +22,6 @@ const RecipientLabel = ({ type }: { type: string }) => {
 	);
 };
 
-const VoteCombinationLabel = ({
-	validator,
-	votes,
-	unvotes,
-}: {
-	validator?: Contracts.IReadOnlyWallet;
-	votes: string[];
-	unvotes: string[];
-}) => (
-	<span data-testid="TransactionRowVoteCombinationLabel">
-		{votes.length === 1 && unvotes.length === 1 ? (
-			<>
-				<RecipientLabel type="voteCombination" />
-				<ValidatorLabel username={validator?.username()} />
-			</>
-		) : (
-			<div className="space-x-1">
-				<span className="inline-flex max-w-72">
-					<RecipientLabel type="vote" />
-					{votes.length > 1 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1 font-semibold">
-							{votes.length}
-						</span>
-					)}
-				</span>
-
-				<span>/</span>
-
-				<span>
-					<RecipientLabel type="unvote" />
-					{unvotes.length > 1 && (
-						<span className="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 ml-1 font-semibold">
-							{unvotes.length}
-						</span>
-					)}
-				</span>
-			</div>
-		)}
-	</span>
-);
-
 const ValidatorLabel = ({ username, count }: { username?: string; count?: number }) => (
 	<span className="border-theme-secondary-300 text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700 ml-2 truncate border-l pl-2 font-semibold">
 		{username}
@@ -122,16 +81,6 @@ export const BaseTransactionRowRecipientLabel = ({
 					{transaction.recipients().length}
 				</span>
 			</span>
-		);
-	}
-
-	if (transaction?.isVoteCombination()) {
-		return (
-			<VoteCombinationLabel
-				validator={validators.votes[0]}
-				votes={transaction.votes()}
-				unvotes={transaction.unvotes()}
-			/>
 		);
 	}
 
