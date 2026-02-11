@@ -105,7 +105,7 @@ export const TokenRowMobile = memo(
 								)}
 
 								{isManageMode && (
-									<div className="ml-2 sm:hidden flex items-center">
+									<div className="ml-2 flex items-center sm:hidden">
 										<Divider
 											type="vertical"
 											className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
