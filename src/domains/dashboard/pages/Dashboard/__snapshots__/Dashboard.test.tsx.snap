@@ -1348,12 +1348,12 @@ exports[`Dashboard > should render 1`] = `
                           class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                         >
                           <p
-                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5 whitespace-nowrap"
                           >
                             Voting for
                           </p>
                           <div
-                            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                            class="w-full lg:shrink-0"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1604,12 +1604,12 @@ exports[`Dashboard > should render 1`] = `
                   class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5 whitespace-nowrap"
                   >
                     Voting for
                   </p>
                   <div
-                    class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                    class="w-full lg:shrink-0"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
