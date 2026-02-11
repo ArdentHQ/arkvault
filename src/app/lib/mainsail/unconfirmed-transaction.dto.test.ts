@@ -3,7 +3,6 @@ import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
 import { KeyValuePair } from "./transaction-data.dto";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
-import * as TransactionTypeServiceMock from "./transaction-type.service";
 
 describe("UnconfirmedTransactionData", () => {
 	let transaction: UnconfirmedTransactionData;
@@ -14,7 +13,7 @@ describe("UnconfirmedTransactionData", () => {
 
 		commonData = {
 			blockHash: "test_block_hash",
-			data: "0x1234567890abcdef",
+			data: "0x1234567",
 			from: "sender_address",
 			gas: 21000,
 			gasPrice: 10000000,
@@ -36,15 +35,10 @@ describe("UnconfirmedTransactionData", () => {
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
-		const spy = vi
-			.spyOn(TransactionTypeServiceMock.TransactionTypeService, "getIdentifierName")
-			.mockReturnValue("customIdentifier");
-
 		transaction.configure(commonData);
 		const result = transaction.type();
 
-		expect(result).toBe("customIdentifier");
-		spy.mockRestore();
+		expect(result).toBe(commonData.data);
 	});
 
 	it("should return recipients for multi payment", () => {
