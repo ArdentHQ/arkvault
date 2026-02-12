@@ -26,6 +26,7 @@ describe("TokensSummary", () => {
 
 	it("should display count when there are more than 3 tokens", async () => {
 		vi.spyOn(wallet, "tokenCount").mockReturnValue(25);
+		vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(25);
 
 		render(<TokensSummary wallet={wallet} />);
 

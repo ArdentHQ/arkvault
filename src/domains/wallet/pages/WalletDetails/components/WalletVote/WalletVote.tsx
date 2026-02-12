@@ -18,6 +18,7 @@ interface WalletVoteProperties {
 	isLoadingVotes: boolean;
 	wallets?: Contracts.IReadWriteWallet[];
 	onViewTokens?: () => void;
+	hasTokens?: boolean;
 }
 
 export const WalletVote = ({
@@ -27,6 +28,7 @@ export const WalletVote = ({
 	isLoadingVotes,
 	wallets = [],
 	onViewTokens,
+	hasTokens,
 }: WalletVoteProperties) => {
 	const { t } = useTranslation();
 
@@ -36,7 +38,7 @@ export const WalletVote = ({
 
 	const activeValidators = wallet.network().validatorCount();
 
-	const renderVotes = (withDivider: boolean = false) => {
+	const renderVotes = (hasTokens: boolean = false) => {
 		if (wallets.length > 1) {
 			return (
 				<div className="w-full">
@@ -48,10 +50,22 @@ export const WalletVote = ({
 		}
 
 		if (votes.length === 0) {
-			return <EmptyVotes />;
+			return (
+				<>
+					<EmptyVotes />
+					{hasTokens && (
+						<Divider
+							type="vertical"
+							className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 ml-3 h-5"
+						/>
+					)}
+				</>
+			);
 		}
 
-		return <Votes votes={votes} activeValidators={activeValidators} withDivider={withDivider} />;
+		return (
+			<Votes votes={votes} activeValidators={activeValidators} withDivider={hasTokens} hasTokens={hasTokens} />
+		);
 	};
 
 	const tooltipContent = () => {
@@ -61,8 +75,6 @@ export const WalletVote = ({
 
 		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
 	};
-
-	const hasTokens = wallets.length === 1 && wallet.tokenCount() > 0;
 
 	return (
 		<div
@@ -87,7 +99,8 @@ export const WalletVote = ({
 						className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 						onClick={onViewTokens}
 					>
-						<span>{t("COMMON.VIEW_TOKENS")}</span>
+						<span className="md-lg:inline hidden">{t("COMMON.VIEW_TOKENS")}</span>
+						<span className="md-lg:hidden">{t("COMMON.VIEW")}</span>
 					</Button>
 				</div>
 			)}
@@ -108,7 +121,7 @@ export const WalletVote = ({
 							className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent mt-4 hidden w-full space-x-2 whitespace-nowrap disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 							onClick={() => onButtonClick()}
 						>
-							<Icon name="Vote" />
+							<Icon className={cn({ "md-lg:block hidden": hasTokens })} name="Vote" />
 							<span>{t("COMMON.MY_VOTES")}</span>
 						</Button>
 
@@ -125,7 +138,7 @@ export const WalletVote = ({
 				)}
 				{wallets.length === 1 && (
 					<div className="md:flex">
-						<div className="hidden md:flex"> {hasTokens && renderVotes(hasTokens)} </div>
+						<div className="hidden items-center md:flex"> {hasTokens && renderVotes(hasTokens)} </div>
 						<Tooltip content={tooltipContent()}>
 							<div>
 								<Button
@@ -142,7 +155,7 @@ export const WalletVote = ({
 									className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 mt-4 hidden w-full space-x-2 disabled:bg-transparent md:mt-0 md:flex md:w-auto md:px-2 md:py-[3px] dark:disabled:bg-transparent"
 									onClick={() => onButtonClick()}
 								>
-									<Icon name="Vote" />
+									<Icon className={cn({ "md-lg:block hidden": hasTokens })} name="Vote" />
 									<span>{t("COMMON.VOTE")}</span>
 								</Button>
 

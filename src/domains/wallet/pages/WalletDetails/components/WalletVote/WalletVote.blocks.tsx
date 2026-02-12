@@ -6,6 +6,7 @@ import { Link } from "@/app/components/Link";
 import { Address, AddressLabel } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
 import { Divider } from "@/app/components/Divider";
+import cn from "classnames";
 
 const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
@@ -16,14 +17,55 @@ const EmptyVotes = () => {
 			className="xs:justify-center flex w-full flex-row items-center justify-start md:justify-start"
 			data-testid="EmptyVotes"
 		>
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
-				{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}{" "}
-				<Link to={votesHelpLink} isExternal className="inline-flex items-center">
-					<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
-				</Link>
+			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left">
+				<div className="md-lg:hidden hidden gap-2 sm:flex">
+					<span>{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION_SHORT")} </span>
+					<Link to={votesHelpLink} isExternal className="inline-flex items-center">
+						<span className="text-base leading-5">{t("COMMON.LEARN")}</span>
+					</Link>
+				</div>
+				<div className="md-lg:flex hidden gap-2">
+					<span>{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")} </span>
+					<Link to={votesHelpLink} isExternal className="inline-flex items-center">
+						<span className="text-base leading-5">{t("COMMON.LEARN_MORE")}</span>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
+};
+
+export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatusProperties) => {
+	// @ts-ignore
+	const activeCount = votes.filter(({ wallet }) => wallet?.rank() <= activeValidators).length;
+	const resignedCount = votes.filter(({ wallet }) => wallet?.isResignedValidator()).length;
+	const standbyCount = votes.length - activeCount - resignedCount;
+
+	if (activeCount === votes.length) {
+		return (
+			<div className="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent">
+				<div className="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2" />
+			</div>
+		);
+	}
+
+	if (standbyCount === votes.length) {
+		return (
+			<div className="bg-theme-warning-100 dark:border-theme-warning-800 dim:border-theme-warning-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent">
+				<div className="bg-theme-warning-700 border-theme-warning-200 dark:bg-theme-warning-400 dark:border-theme-warning-700 dim:bg-theme-warning-400 dim:border-theme-warning-700 h-2 w-2 rounded-full border-2" />
+			</div>
+		);
+	}
+
+	if (resignedCount === votes.length) {
+		return (
+			<div className="bg-theme-danger-100 dark:border-theme-danger-800 dim:border-theme-danger-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent">
+				<div className="bg-theme-danger-700 border-theme-danger-200 dark:bg-theme-danger-400 dark:border-theme-danger-700 dim:bg-theme-danger-400 dim:border-theme-danger-700 h-2 w-2 rounded-full border-2" />
+			</div>
+		);
+	}
+
+	return;
 };
 
 export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProperties) => {
@@ -111,7 +153,7 @@ export const ValidatorName = ({
 	return <AddressLabel className={className}>{validatorName}</AddressLabel>;
 };
 
-const Votes = ({ votes, activeValidators, withDivider }: VotesProperties) => {
+const Votes = ({ votes, activeValidators, withDivider, hasTokens }: VotesProperties) => {
 	const { t } = useTranslation();
 
 	const validator = votes[0].wallet!;
@@ -134,11 +176,19 @@ const Votes = ({ votes, activeValidators, withDivider }: VotesProperties) => {
 			{withDivider && (
 				<Divider
 					type="vertical"
-					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-1 hidden h-5 p-0 md:flex"
+					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 md-lg:flex mr-1 ml-1 hidden h-5 p-0"
 				/>
 			)}
 
-			<div className="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0">
+			<div
+				className={cn(
+					"flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0",
+					{
+						flex: !hasTokens,
+						"md-lg:flex hidden": hasTokens,
+					},
+				)}
+			>
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5">
 					{t("COMMON.RANK")}
 				</p>
@@ -152,6 +202,19 @@ const Votes = ({ votes, activeValidators, withDivider }: VotesProperties) => {
 				<Divider
 					type="vertical"
 					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+				/>
+			</div>
+			<div
+				className={cn("status", {
+					hidden: !hasTokens,
+					"md-lg:hidden hidden sm:flex": hasTokens,
+				})}
+			>
+				<ValidatorStatusIcon votes={votes} activeValidators={activeValidators} />
+
+				<Divider
+					type="vertical"
+					className="border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
 				/>
 			</div>
 		</div>
