@@ -15,7 +15,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 
-export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHeader = false }: FormStepProperties) => {
+export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { validatorRegistration } = useValidation();
@@ -61,35 +61,20 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
-			{!hideHeader && (
-				<StepHeader
-					title={getTitle()}
-					subtitle={getSubtitle()}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-				/>
-			)}
-
 			{errors.lockedFee && (
-				<Alert className={cn("mb-4", { "mt-4": !hideHeader })}>{errors.lockedFee.message}</Alert>
+				<Alert className="mb-4">{errors.lockedFee.message}</Alert>
 			)}
 
-			<FormField name="senderAddress" className={cn({ "mt-6 sm:mt-4": !hideHeader })}>
+			<FormField name="senderAddress">
 				<FormLabel label={t("COMMON.SENDER")} />
 
 				<SelectAddress
 					wallet={
 						wallet
 							? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
+								address: wallet.address(),
+								network: wallet.network(),
+							}
 							: undefined
 					}
 					wallets={profile.wallets().values()}
