@@ -1353,7 +1353,7 @@ exports[`Dashboard > should render 1`] = `
                             Voting for
                           </p>
                           <div
-                            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-44 shrink-0"
+                            class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1625,7 +1625,7 @@ exports[`Dashboard > should render 1`] = `
                     Voting for
                   </p>
                   <div
-                    class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-44 shrink-0"
+                    class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
