@@ -3,12 +3,13 @@ import userEvent from "@testing-library/user-event";
 import { DeleteTokenConfirmationModal } from "./DeleteTokenConfirmationModal";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { render, screen, waitFor } from "@/utils/testing-library";
+import { BigNumber } from "@/app/lib/helpers";
 
 const translations = buildTranslations();
 
 const createMockWalletToken = (overrides = {}) => ({
 	address: () => "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
-	balance: () => 100,
+	balance: () => BigNumber.make(100),
 	contractExplorerLink: () => "https://explorer.com/token/0xToken1",
 	token: () => ({
 		address: () => "0xToken1",
