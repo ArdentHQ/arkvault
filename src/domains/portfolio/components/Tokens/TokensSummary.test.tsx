@@ -37,7 +37,6 @@ describe("TokensSummary", () => {
 		expect(screen.getByTestId("TokensSummary--Count")).toBeInTheDocument();
 	});
 
-
 	it("should sort tokens by balance", async () => {
 		vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(4);
 
@@ -54,9 +53,9 @@ describe("TokensSummary", () => {
 			}),
 			walletToken: new WalletTokenDTO({
 				address: wallet.address(),
-				balance: '100',
+				balance: "100",
 				tokenAddress: "0xabc",
-			})
+			}),
 		});
 
 		repo.create({
@@ -70,9 +69,9 @@ describe("TokensSummary", () => {
 			}),
 			walletToken: new WalletTokenDTO({
 				address: wallet.address(),
-				balance: '200',
+				balance: "200",
 				tokenAddress: "0xabd",
-			})
+			}),
 		});
 
 		repo.create({
@@ -86,9 +85,9 @@ describe("TokensSummary", () => {
 			}),
 			walletToken: new WalletTokenDTO({
 				address: wallet.address(),
-				balance: '300',
+				balance: "300",
 				tokenAddress: "0xabe",
-			})
+			}),
 		});
 
 		repo.create({
@@ -102,9 +101,9 @@ describe("TokensSummary", () => {
 			}),
 			walletToken: new WalletTokenDTO({
 				address: wallet.address(),
-				balance: '300',
+				balance: "300",
 				tokenAddress: "0xabf",
-			})
+			}),
 		});
 
 		vi.spyOn(wallet, "tokens").mockReturnValue(repo);
@@ -112,8 +111,8 @@ describe("TokensSummary", () => {
 		render(<TokensSummary wallet={wallet} />);
 
 		expect(screen.getByTestId("TokensSummary")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TokeNameInitials")[0]).toHaveTextContent("D")
-		expect(screen.getAllByTestId("TokeNameInitials")[1]).toHaveTextContent("H")
-		expect(screen.getAllByTestId("TokeNameInitials")[2]).toHaveTextContent("P")
+		expect(screen.getAllByTestId("TokeNameInitials")[0]).toHaveTextContent("D");
+		expect(screen.getAllByTestId("TokeNameInitials")[1]).toHaveTextContent("H");
+		expect(screen.getAllByTestId("TokeNameInitials")[2]).toHaveTextContent("P");
 	});
 });
