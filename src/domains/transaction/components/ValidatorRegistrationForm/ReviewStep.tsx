@@ -53,9 +53,7 @@ export const ReviewStep = ({
 		<section data-testid="ValidatorRegistrationForm__review-step">
 			{errors.lockedFee && <Alert>{errors.lockedFee.message}</Alert>}
 
-			<div
-				className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4"
-			>
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-36"
 					senderAddress={wallet.address()}

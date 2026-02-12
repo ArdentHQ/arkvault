@@ -27,9 +27,7 @@ export const ReviewStep = ({
 
 	return (
 		<section data-testid="UsernameRegistrationForm__review-step">
-			<div
-				className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4"
-			>
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-[103px] sm:pr-6"
 					senderAddress={wallet.address()}

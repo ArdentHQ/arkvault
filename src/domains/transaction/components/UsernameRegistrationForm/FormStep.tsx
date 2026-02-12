@@ -71,9 +71,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					/>
 				</Alert>
 			) : (
-				<Alert variant="info">
-					{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
-				</Alert>
+				<Alert variant="info">{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}</Alert>
 			)}
 
 			<div className="mt-3 space-y-4 sm:mt-4">
@@ -84,9 +82,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 						wallet={
 							wallet
 								? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
+										address: wallet.address(),
+										network: wallet.network(),
+									}
 								: undefined
 						}
 						wallets={profile.wallets().values()}

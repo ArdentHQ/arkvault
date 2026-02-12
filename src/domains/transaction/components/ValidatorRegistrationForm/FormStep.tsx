@@ -42,9 +42,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
-			{errors.lockedFee && (
-				<Alert className="mb-4">{errors.lockedFee.message}</Alert>
-			)}
+			{errors.lockedFee && <Alert className="mb-4">{errors.lockedFee.message}</Alert>}
 
 			<FormField name="senderAddress">
 				<FormLabel label={t("COMMON.SENDER")} />
@@ -53,9 +51,9 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					wallet={
 						wallet
 							? {
-								address: wallet.address(),
-								network: wallet.network(),
-							}
+									address: wallet.address(),
+									network: wallet.network(),
+								}
 							: undefined
 					}
 					wallets={profile.wallets().values()}
