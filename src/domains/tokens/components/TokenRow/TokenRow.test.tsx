@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 
 import { TokenRow } from "./TokenRow";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-import { BigNumber } from "../../../../app/lib/helpers";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 
