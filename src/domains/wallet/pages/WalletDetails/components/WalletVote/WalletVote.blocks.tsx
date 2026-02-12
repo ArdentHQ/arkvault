@@ -164,7 +164,7 @@ const Votes = ({ votes, activeValidators, withDivider, hasTokens }: VotesPropert
 				<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
-				<div className="w-full lg:shrink-0">
+				<div className="w-full md:shrink-0">
 					<ValidatorName
 						validatorName={validator.username() || validator.address()}
 						className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5"
