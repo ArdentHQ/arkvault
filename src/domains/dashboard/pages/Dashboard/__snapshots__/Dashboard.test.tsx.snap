@@ -1348,12 +1348,12 @@ exports[`Dashboard > should render 1`] = `
                           class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                         >
                           <p
-                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5"
                           >
                             Voting for
                           </p>
                           <div
-                            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                            class="w-full lg:shrink-0"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1372,7 +1372,7 @@ exports[`Dashboard > should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+                          class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
                         >
                           <p
                             class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1398,6 +1398,20 @@ exports[`Dashboard > should render 1`] = `
                             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
                           />
                         </div>
+                        <div
+                          class="status hidden"
+                        >
+                          <div
+                            class="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+                          >
+                            <div
+                              class="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2"
+                            />
+                          </div>
+                          <div
+                            class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1407,7 +1421,7 @@ exports[`Dashboard > should render 1`] = `
                         class="md:flex"
                       >
                         <div
-                          class="hidden md:flex"
+                          class="hidden items-center md:flex"
                         >
                             
                         </div>
@@ -1422,7 +1436,9 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex items-center gap-2"
                                 >
-                                  <div>
+                                  <div
+                                    class=""
+                                  >
                                     <div
                                       style="height: 16px; width: 16px;"
                                     >
@@ -1604,12 +1620,12 @@ exports[`Dashboard > should render 1`] = `
                   class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
                 >
                   <p
-                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5"
                   >
                     Voting for
                   </p>
                   <div
-                    class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+                    class="w-full lg:shrink-0"
                   >
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1628,7 +1644,7 @@ exports[`Dashboard > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+                  class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
                 >
                   <p
                     class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1654,6 +1670,20 @@ exports[`Dashboard > should render 1`] = `
                     class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
                   />
                 </div>
+                <div
+                  class="status hidden"
+                >
+                  <div
+                    class="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+                  >
+                    <div
+                      class="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2"
+                    />
+                  </div>
+                  <div
+                    class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
+                  />
+                </div>
               </div>
             </div>
             <div
@@ -1663,7 +1693,7 @@ exports[`Dashboard > should render 1`] = `
                 class="md:flex"
               >
                 <div
-                  class="hidden md:flex"
+                  class="hidden items-center md:flex"
                 >
                     
                 </div>
@@ -1678,7 +1708,9 @@ exports[`Dashboard > should render 1`] = `
                         <div
                           class="flex items-center gap-2"
                         >
-                          <div>
+                          <div
+                            class=""
+                          >
                             <div
                               style="height: 16px; width: 16px;"
                             >

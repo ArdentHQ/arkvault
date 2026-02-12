@@ -154,7 +154,7 @@ export const PortfolioHeader = ({
 		}
 	};
 
-	const hasTokens = selectedWallets.length === 1 && wallet.tokenCount() > 0;
+	const hasTokens = profile.tokens().selectedCount() > 0;
 	const { isXs } = useBreakpoint();
 
 	return (
@@ -565,27 +565,41 @@ export const PortfolioHeader = ({
 
 							{hasTokens && (
 								<>
-									<div className="flex items-center justify-between md:hidden">
-										<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
-											{t("COMMON.TOKEN_HOLDINGS")}
-										</span>
-										<div className="flex items-center">
-											<TokensSummary wallet={wallet} />
+									<Divider
+										type="horizontal"
+										className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 my-0 h-px border-dashed md:hidden"
+									/>
+									<div className="flex items-center sm:justify-between">
+										<div className="flex w-full items-center justify-between gap-2 sm:w-auto md:hidden">
+											<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold">
+												{t("COMMON.TOKEN_HOLDINGS")}
+											</span>
+											<div className="flex items-center">
+												<TokensSummary wallet={wallet} />
 
-											<Divider
-												type="vertical"
-												className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mr-1 ml-1.5 h-5"
-											/>
+												<Divider
+													type="vertical"
+													className="border-theme-primary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mr-1 ml-1.5 h-3 sm:hidden"
+												/>
 
-											<Button
-												data-testid="ViewTokens"
-												variant="secondary-icon"
-												className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent px-0.5 py-px whitespace-nowrap disabled:bg-transparent dark:disabled:bg-transparent"
-												onClick={onViewTokens}
-											>
-												<span>{t("COMMON.VIEW")}</span>
-											</Button>
+												<Button
+													data-testid="ViewTokens"
+													variant="secondary-icon"
+													className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent px-0.5 py-px text-sm leading-[17px] whitespace-nowrap disabled:bg-transparent sm:hidden dark:disabled:bg-transparent"
+													onClick={onViewTokens}
+												>
+													<span>{t("COMMON.VIEW")}</span>
+												</Button>
+											</div>
 										</div>
+										<Button
+											data-testid="ViewTokens"
+											variant="secondary-icon"
+											className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent hidden px-0.5 py-px text-sm whitespace-nowrap disabled:bg-transparent sm:block md:hidden dark:disabled:bg-transparent"
+											onClick={onViewTokens}
+										>
+											<span>{t("COMMON.VIEW_TOKENS")}</span>
+										</Button>
 									</div>
 								</>
 							)}
@@ -600,6 +614,7 @@ export const PortfolioHeader = ({
 							isLoadingVotes={isLoadingVotes}
 							wallets={selectedWallets}
 							onViewTokens={onViewTokens}
+							hasTokens={hasTokens}
 						/>
 					</div>
 				</div>
