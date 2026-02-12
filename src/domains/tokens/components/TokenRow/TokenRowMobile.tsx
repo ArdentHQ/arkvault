@@ -135,7 +135,7 @@ export const TokenRowMobile = memo(
 								<Amount
 									ticker={walletToken.token().symbol()}
 									showTicker={false}
-									value={walletToken.balance()}
+									value={walletToken.balance().toNumber()}
 									className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
 									showCompactFormat
 								/>

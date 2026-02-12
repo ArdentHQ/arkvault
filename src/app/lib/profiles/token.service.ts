@@ -42,7 +42,7 @@ export class TokenService {
 			.values()
 			.filter((token) => {
 				if (hideDustTokens === true) {
-					return token.balance() > this.#dustBalanceThreshold;
+					return token.balance().isGreaterThan(BigNumber.make(this.#dustBalanceThreshold);
 				}
 
 				return true;
@@ -140,7 +140,6 @@ export class TokenService {
 			}
 
 			aggregated.set(token.token().address(), token);
-			continue;
 		}
 		return [...aggregated.values()];
 	}
@@ -208,12 +207,12 @@ export class TokenService {
 	 *
 	 * @returns {number}
 	 */
-	selectedTotalBalance(): number {
-		let total = 0;
+	selectedTotalBalance(): BigNumber{
+		let total = BigNumber.make(0);
 
 		for (const wallet of this.#profile.wallets().selected().values()) {
 			for (const token of wallet.tokens().values()) {
-				total = total + token.balance();
+				total = total.plus(token.balance());
 			}
 		}
 
