@@ -10,7 +10,7 @@ export const TokenNameInitials = ({ tokenName, className }: { tokenName: string;
 			className,
 		)}
 	>
-		<div>{tokenName.charAt(0).toUpperCase()}</div>
+		<div data-testid="TokeNameInitials">{tokenName.charAt(0).toUpperCase()}</div>
 	</div>
 );
 
