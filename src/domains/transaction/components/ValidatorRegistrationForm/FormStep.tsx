@@ -1,13 +1,11 @@
 import { FormField, FormLabel } from "@/app/components/Form";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import React, { ChangeEvent, useEffect } from "react";
-import cn from "classnames";
 import { Alert } from "@/app/components/Alert";
 import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { Link } from "@/app/components/Link";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { StepHeader } from "@/app/components/StepHeader";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -40,23 +38,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		if (!isFullyRestoredAndSynced) {
 			newSenderWallet?.synchroniser().identity();
 		}
-	};
-
-	const getTitle = () => {
-		if (wallet?.isValidator()) {
-			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE");
-		}
-		return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE");
-	};
-
-	const getSubtitle = () => {
-		if (wallet?.isLegacyValidator()) {
-			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
-		}
-		if (wallet?.isValidator()) {
-			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
-		}
-		return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
 	};
 
 	return (
