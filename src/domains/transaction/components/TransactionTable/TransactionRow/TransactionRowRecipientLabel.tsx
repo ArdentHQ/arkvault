@@ -12,13 +12,11 @@ interface Properties {
 	addressClass?: string;
 }
 
-const RecipientLabel = ({ children }: { children: ReactNode }) => {
-	return (
-		<span data-testid="TransactionRowRecipientLabel" className="text-theme-text font-semibold">
-			{children}
-		</span>
-	);
-};
+const RecipientLabel = ({ children }: { children: ReactNode }) => (
+	<span data-testid="TransactionRowRecipientLabel" className="text-theme-text font-semibold">
+		{children}
+	</span>
+);
 
 const VoteCombinationLabel = ({
 	validator,
@@ -29,7 +27,7 @@ const VoteCombinationLabel = ({
 	votes: string[];
 	unvotes: string[];
 }) => {
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 	return (
 		<span data-testid="TransactionRowVoteCombinationLabel">
 			{votes.length === 1 && unvotes.length === 1 ? (
@@ -61,7 +59,7 @@ const VoteCombinationLabel = ({
 				</div>
 			)}
 		</span>
-	)
+	);
 };
 
 const ValidatorLabel = ({ username, count }: { username?: string; count?: number }) => (
@@ -72,7 +70,7 @@ const ValidatorLabel = ({ username, count }: { username?: string; count?: number
 );
 
 const VoteLabel = ({ validators, isUnvote }: { validators: Contracts.IReadOnlyWallet[]; isUnvote?: boolean }) => {
-	const { t } = useTranslation()
+	const { t } = useTranslation();
 
 	return (
 		<span data-testid="TransactionRowVoteLabel">
@@ -80,7 +78,7 @@ const VoteLabel = ({ validators, isUnvote }: { validators: Contracts.IReadOnlyWa
 			{isUnvote && <RecipientLabel>{t("TRANSACTION.TRANSACTION_TYPES.UNVOTE")}</RecipientLabel>}
 			{validators.length > 0 && <ValidatorLabel username={validators[0]?.username()} count={validators.length} />}
 		</span>
-	)
+	);
 };
 
 export const BaseTransactionRowRecipientLabel = ({
@@ -151,7 +149,7 @@ export const BaseTransactionRowRecipientLabel = ({
 		);
 	}
 
-	return <RecipientLabel>{transaction?.type()}</RecipientLabel>
+	return <RecipientLabel>{transaction?.type()}</RecipientLabel>;
 };
 
 export const TransactionRowRecipientLabel = ({

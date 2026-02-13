@@ -2,7 +2,7 @@ import { Contracts, DTO } from "@/app/lib/profiles";
 import { uniq, constantCase } from "@/app/lib/helpers";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { isContractDeployment } from "../utils";
+import { isContractDeployment } from "@/domains/transaction/utils";
 
 interface TransactionTypeProperties {
 	wallets?: Contracts.IReadWriteWallet[];
@@ -21,7 +21,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 
 	return {
 		getLabel: (transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData) => {
-			const type = transaction.type()
+			const type = transaction.type();
 			const translationKey = `TRANSACTION.TRANSACTION_TYPES.${constantCase(nameMap[type] || type)}`;
 
 			// check if the key exists in the translations
@@ -33,7 +33,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 				return t("TRANSACTION.TRANSACTION_TYPES.CONTRACT_DEPLOYMENT");
 			}
 
-			return transaction.type()
+			return transaction.type();
 		},
 		types: {
 			core: useMemo(() => {
