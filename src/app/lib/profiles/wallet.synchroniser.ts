@@ -60,7 +60,6 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 		// await this.#wallet.client().tokenAddresses({
 		// 	addresses: profile.wallets().selected().map(wallet => wallet.address()),
 		// });
-
 		// const walletTokens = await this.#wallet.client().walletTokens(this.#wallet.address());
 		//
 		// this.#wallet.tokens().flush();

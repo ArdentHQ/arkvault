@@ -155,7 +155,7 @@ export const PortfolioHeader = ({
 		}
 	};
 
-	const _tokens = useProfileTokens({ profile })
+	const _tokens = useProfileTokens({ profile });
 	const hasTokens = profile.tokens().selectedCount() > 0;
 	const { isXs } = useBreakpoint();
 

@@ -71,7 +71,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		const syncTokens = {
 			callback: () => {
 				if (profile.status().isRestored()) {
-					return profile.tokens().sync()
+					return profile.tokens().sync();
 				}
 			},
 			interval: Intervals.Medium,
