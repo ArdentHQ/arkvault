@@ -14,7 +14,7 @@ describe("useTransactionTypes", () => {
 		isConfirmed: () => false,
 		to: () => null,
 		type: () => "0x60006000",
-	}
+	};
 	it("should get type label", () => {
 		const { result } = renderHook(() => useTransactionTypes());
 
