@@ -15,6 +15,7 @@ describe("useTransactionTypes", () => {
 		to: () => null,
 		type: () => "0x60006000",
 	};
+
 	it("should get type label", () => {
 		const { result } = renderHook(() => useTransactionTypes());
 
@@ -25,6 +26,23 @@ describe("useTransactionTypes", () => {
 	it("should get method signature", () => {
 		const { result } = renderHook(() => useTransactionTypes());
 		expect(result.current.getLabel(contractDeploymentFixture)).toBe("Contract Deployment");
+	});
+
+	it("should get the hash for unknown transaction", () => {
+		const { result } = renderHook(() => useTransactionTypes());
+		const type = "0x60003000";
+		expect(
+			result.current.getLabel({
+				...TransactionFixture,
+				data: () => ({
+					data: () => ({
+						data: "0x60006000F3",
+					}),
+				}),
+				isConfirmed: () => false,
+				type: () => type,
+			}),
+		).toBe(type);
 	});
 
 	it("should return the supported transaction types", () => {
