@@ -3,9 +3,10 @@ import React, { ReactNode, useEffect, useState } from "react";
 import { Address } from "@/app/components/Address";
 import { useBreakpoint } from "@/app/hooks";
 import { useTranslation } from "react-i18next";
+import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 interface Properties {
-	transaction?: DTO.ExtendedConfirmedTransactionData;
+	transaction: DTO.ExtendedConfirmedTransactionData;
 	type: string;
 	recipient: string;
 	walletName?: string;
@@ -90,6 +91,7 @@ export const BaseTransactionRowRecipientLabel = ({
 }: Properties) => {
 	const { isXs, isSm } = useBreakpoint();
 	const { t } = useTranslation();
+	const { getLabel } = useTransactionTypes()
 
 	const [validators, setValidators] = useState<{
 		votes: Contracts.IReadOnlyWallet[];
@@ -149,7 +151,7 @@ export const BaseTransactionRowRecipientLabel = ({
 		);
 	}
 
-	return <RecipientLabel>{transaction?.type()}</RecipientLabel>;
+	return <RecipientLabel>{getLabel(transaction)}</RecipientLabel>;
 };
 
 export const TransactionRowRecipientLabel = ({
