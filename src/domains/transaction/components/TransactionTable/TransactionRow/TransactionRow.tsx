@@ -105,9 +105,9 @@ export const TransactionRow = memo(
 						color="secondary"
 						noBorder
 						size="xs"
-						tooltipContent={getLabel(transaction.type())}
+						tooltipContent={getLabel(transaction)}
 					>
-						{getLabel(transaction.type())}
+						{getLabel(transaction)}
 					</TransactionTypeLabel>
 				</TableCell>
 

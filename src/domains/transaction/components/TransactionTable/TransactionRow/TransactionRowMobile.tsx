@@ -58,7 +58,7 @@ export const TransactionRowMobile = memo(
 
 						<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
 							<MobileSection
-								title={getLabel(transaction.type())}
+								title={getLabel(transaction)}
 								className="w-full"
 								data-testid="TransactionRowMobile__label"
 							>
