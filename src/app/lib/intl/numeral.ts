@@ -107,7 +107,7 @@ export class Numeral {
 			{ exp: 12, suffix: "T" },     // Trillion
 			{ exp: 9, suffix: "B" },      // Billion
 			{ exp: 6, suffix: "M" },      // Million
-			{ exp: 3, suffix: "k" },      // Thousand
+			{ exp: 3, suffix: "K" },      // Thousand
 		];
 
 		for (const { exp, suffix } of scales) {
