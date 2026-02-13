@@ -91,7 +91,7 @@ export const BaseTransactionRowRecipientLabel = ({
 }: Properties) => {
 	const { isXs, isSm } = useBreakpoint();
 	const { t } = useTranslation();
-	const { getLabel } = useTransactionTypes()
+	const { getLabel } = useTransactionTypes();
 
 	const [validators, setValidators] = useState<{
 		votes: Contracts.IReadOnlyWallet[];
