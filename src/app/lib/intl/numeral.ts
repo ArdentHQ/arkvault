@@ -87,27 +87,27 @@ export class Numeral {
 		const bnValue = BigNumber.make(value);
 
 		const scales: Array<{ exp: number; suffix: string }> = [
-			{ exp: 63, suffix: "Vg" },    // Vigintillion
-			{ exp: 60, suffix: "Nod" },   // Novemdecillion
-			{ exp: 57, suffix: "Ocd" },   // Octodecillion
-			{ exp: 54, suffix: "Spd" },   // Septendecillion
-			{ exp: 51, suffix: "Sxd" },   // Sexdecillion
-			{ exp: 48, suffix: "Qid" },   // Quindecillion
-			{ exp: 45, suffix: "Qad" },   // Quattuordecillion
-			{ exp: 42, suffix: "Td" },    // Tredecillion
-			{ exp: 39, suffix: "Dd" },    // Duodecillion
-			{ exp: 36, suffix: "Ud" },    // Undecillion
-			{ exp: 33, suffix: "Dc" },    // Decillion
-			{ exp: 30, suffix: "No" },    // Nonillion
-			{ exp: 27, suffix: "Oc" },    // Octillion
-			{ exp: 24, suffix: "Sp" },    // Septillion
-			{ exp: 21, suffix: "Sx" },    // Sextillion
-			{ exp: 18, suffix: "Qi" },    // Quintillion
-			{ exp: 15, suffix: "Qa" },    // Quadrillion
-			{ exp: 12, suffix: "T" },     // Trillion
-			{ exp: 9, suffix: "B" },      // Billion
-			{ exp: 6, suffix: "M" },      // Million
-			{ exp: 3, suffix: "k" },      // Thousand
+			{ exp: 63, suffix: "Vg" }, // Vigintillion
+			{ exp: 60, suffix: "Nod" }, // Novemdecillion
+			{ exp: 57, suffix: "Ocd" }, // Octodecillion
+			{ exp: 54, suffix: "Spd" }, // Septendecillion
+			{ exp: 51, suffix: "Sxd" }, // Sexdecillion
+			{ exp: 48, suffix: "Qid" }, // Quindecillion
+			{ exp: 45, suffix: "Qad" }, // Quattuordecillion
+			{ exp: 42, suffix: "Td" }, // Tredecillion
+			{ exp: 39, suffix: "Dd" }, // Duodecillion
+			{ exp: 36, suffix: "Ud" }, // Undecillion
+			{ exp: 33, suffix: "Dc" }, // Decillion
+			{ exp: 30, suffix: "No" }, // Nonillion
+			{ exp: 27, suffix: "Oc" }, // Octillion
+			{ exp: 24, suffix: "Sp" }, // Septillion
+			{ exp: 21, suffix: "Sx" }, // Sextillion
+			{ exp: 18, suffix: "Qi" }, // Quintillion
+			{ exp: 15, suffix: "Qa" }, // Quadrillion
+			{ exp: 12, suffix: "T" }, // Trillion
+			{ exp: 9, suffix: "B" }, // Billion
+			{ exp: 6, suffix: "M" }, // Million
+			{ exp: 3, suffix: "k" }, // Thousand
 		];
 
 		for (const { exp, suffix } of scales) {
