@@ -55,22 +55,28 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 
 	/** {@inheritDoc IWalletSynchroniser.tokens} */
 	public async tokens(): Promise<void> {
-		const walletTokens = await this.#wallet.client().walletTokens(this.#wallet.address());
+		// const profile = this.#wallet.profile();
+		//
+		// await this.#wallet.client().tokenAddresses({
+		// 	addresses: profile.wallets().selected().map(wallet => wallet.address()),
+		// });
 
-		this.#wallet.tokens().flush();
-
-		await Promise.allSettled(
-			walletTokens.map(async (walletToken) => {
-				try {
-					const token = await this.#wallet.client().tokenByContractAddress(walletToken.tokenAddress());
-					this.#wallet.tokens().create({ token, walletToken });
-				} catch (error) {
-					console.error(
-						`[WalletSynchroniser#tokens] Failed to fetch token for address: ${walletToken.tokenAddress()}`,
-						{ error },
-					);
-				}
-			}),
-		);
+		// const walletTokens = await this.#wallet.client().walletTokens(this.#wallet.address());
+		//
+		// this.#wallet.tokens().flush();
+		//
+		// await Promise.allSettled(
+		// 	walletTokens.map(async (walletToken) => {
+		// 		try {
+		// 			const token = await this.#wallet.client().tokenByContractAddress(walletToken.tokenAddress());
+		// 			this.#wallet.tokens().create({ token, walletToken });
+		// 		} catch (error) {
+		// 			console.error(
+		// 				`[WalletSynchroniser#tokens] Failed to fetch token for address: ${walletToken.tokenAddress()}`,
+		// 				{ error },
+		// 			);
+		// 		}
+		// 	}),
+		// );
 	}
 }
