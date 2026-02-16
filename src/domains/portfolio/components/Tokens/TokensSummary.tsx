@@ -23,7 +23,6 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 					.tokens()
 					.selected()
 					.items()
-					.values()
 					.toSorted((a, b) => b.balance().comparedTo(a.balance()))
 					.slice(0, VISIBLE_TOKEN_COUNT)
 					.toSorted((a, b) => a.token().name().localeCompare(b.token().name()))
