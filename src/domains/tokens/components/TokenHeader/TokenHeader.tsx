@@ -42,7 +42,7 @@ export const TokenHeader = ({
 		wallet
 			.tokens()
 			.values()
-			.some((walletToken) => walletToken.balance() > 0),
+			.some((walletToken) => walletToken.balance().isGreaterThan(0)),
 	);
 
 	return (
