@@ -30,11 +30,11 @@ export class WalletToken {
 		return this.#walletToken.address();
 	}
 
-	balance(): number {
-		return +BigNumber.make(this.#walletToken.balance(), this.token().decimals()).toHuman();
+	balance(): BigNumber {
+		return BigNumber.make(this.#walletToken.balance(), this.token().decimals());
 	}
 
-	balanceRaw(): number {
+	balanceRaw(): string {
 		return this.#walletToken.balance();
 	}
 

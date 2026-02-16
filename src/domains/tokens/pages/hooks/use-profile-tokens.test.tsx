@@ -253,7 +253,7 @@ describe("useProfileTokens", () => {
 		expect(result.current.tokens).toHaveLength(1);
 		expect(result.current.tokens[0].token().address()).toBe("0xToken1");
 		expect(result.current.tokens[0].token().name()).toBe("Token 1");
-		expect(result.current.tokens[0].balance()).toBe(1);
+		expect(result.current.tokens[0].balance().toHuman()).toBe(1);
 
 		await act(async () => {
 			await vi.advanceTimersByTimeAsync(15_000);
@@ -266,7 +266,7 @@ describe("useProfileTokens", () => {
 		// Verify that after checkNewTokens runs, the second token is present
 		expect(result.current.tokens[0].token().address()).toBe("0xToken2");
 		expect(result.current.tokens[0].token().name()).toBe("Token 2");
-		expect(result.current.tokens[0].balance()).toBe(2);
+		expect(result.current.tokens[0].balance().toHuman()).toBe(2);
 
 		vi.useRealTimers();
 	});
