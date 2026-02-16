@@ -106,7 +106,7 @@ export const Tooltip = ({
 								style={{ fontFeatureSettings: '"liga" off, "calt" off' }}
 								className={twMerge(
 									cn(
-										"overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-72 sm:max-w-2xl rounded-md px-2 py-1 text-sm font-semibold break-words text-white",
+										"overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-72 rounded-md px-2 py-1 text-sm font-semibold break-words text-white sm:max-w-2xl",
 										{
 											"text-xs font-medium": size === "sm",
 										},
