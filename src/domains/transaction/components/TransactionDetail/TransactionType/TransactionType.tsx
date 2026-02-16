@@ -52,7 +52,7 @@ export const TransactionType = ({
 					<div className="flex w-full justify-between sm:justify-start">
 						<DetailLabelText className={labelClassName}>{t("COMMON.METHOD")}</DetailLabelText>
 						<Label color="neutral" size="xs">
-							{getLabel(transaction.type())}
+							{getLabel(transaction)}
 						</Label>
 					</div>
 

@@ -54,6 +54,7 @@ describe("TransactionType", () => {
 							}),
 						}),
 						isConfirmed: () => false,
+						to: () => null,
 						type: () => "0x60006000",
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -76,6 +77,7 @@ describe("TransactionType", () => {
 							},
 						}),
 						isConfirmed: () => true,
+						to: () => false,
 						type: () => "0x60006000",
 					} as DTO.ExtendedConfirmedTransactionData
 				}
@@ -100,6 +102,8 @@ describe("TransactionType", () => {
 							},
 						}),
 						isConfirmed: () => true,
+						isValidatorRegistration: () => false,
+						to: () => null,
 						type: () => "0x608060405",
 					} as DTO.ExtendedConfirmedTransactionData
 				}
