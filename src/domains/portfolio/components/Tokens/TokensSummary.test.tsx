@@ -7,7 +7,7 @@ import { TokensSummary } from "./TokensSummary";
 import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
-import { WalletTokenCollection } from "../../../../app/lib/mainsail/wallet-token.collection";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 const fixtureProfileId = getMainsailProfileId();
 
