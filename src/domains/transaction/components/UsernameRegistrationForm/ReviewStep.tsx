@@ -2,22 +2,17 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import cn from "classnames";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
-import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { ThemeIcon } from "@/app/components/Icon";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 
 export const ReviewStep = ({
 	wallet,
 	profile,
-	hideHeader = false,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
-	hideHeader?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -32,26 +27,7 @@ export const ReviewStep = ({
 
 	return (
 		<section data-testid="UsernameRegistrationForm__review-step">
-			{!hideHeader && (
-				<StepHeader
-					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-				/>
-			)}
-
-			<div
-				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
-					"mt-6 sm:mt-4": !hideHeader,
-				})}
-			>
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-[103px] sm:pr-6"
 					senderAddress={wallet.address()}
