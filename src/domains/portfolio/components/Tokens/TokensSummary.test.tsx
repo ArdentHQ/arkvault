@@ -107,12 +107,14 @@ describe("TokensSummary", () => {
 			}),
 		});
 
-		vi.spyOn(profile.tokens(), "selected").mockReturnValue(new WalletTokenCollection(repo.values(), {
-			last: undefined,
-			next: undefined,
-			prev: undefined,
-			self: undefined,
-		}));
+		vi.spyOn(profile.tokens(), "selected").mockReturnValue(
+			new WalletTokenCollection(repo.values(), {
+				last: undefined,
+				next: undefined,
+				prev: undefined,
+				self: undefined,
+			}),
+		);
 
 		render(<TokensSummary wallet={wallet} />);
 
