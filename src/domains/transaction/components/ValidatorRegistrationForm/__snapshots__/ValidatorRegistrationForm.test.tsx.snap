@@ -11,35 +11,8 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
       <section
         data-testid="ValidatorRegistrationForm_form-step"
       >
-        <div
-          class="bg-theme-background flex items-end justify-between"
-        >
-          <div
-            class="space-y-2"
-          >
-            <div
-              class="mb-1 flex items-center gap-3"
-            >
-              <div
-                class="hidden sm:inline"
-              />
-              <h1
-                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
-                data-testid="header__title"
-              >
-                Register Validator
-              </h1>
-            </div>
-            <div
-              class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
-              data-testid="header__subtitle"
-            >
-              Register a new Validator address on the network below.
-            </div>
-          </div>
-        </div>
         <fieldset
-          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 mt-6 sm:mt-4"
+          class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
         >
           <label
             class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -261,34 +234,7 @@ exports[`ValidatorRegistrationForm > should render review step 1`] = `
         data-testid="ValidatorRegistrationForm__review-step"
       >
         <div
-          class="bg-theme-background flex items-end justify-between"
-        >
-          <div
-            class="space-y-2"
-          >
-            <div
-              class="mb-1 flex items-center gap-3"
-            >
-              <div
-                class="hidden sm:inline"
-              />
-              <h1
-                class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
-                data-testid="header__title"
-              >
-                Transaction Review
-              </h1>
-            </div>
-            <div
-              class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
-              data-testid="header__subtitle"
-            >
-              Review details below to send your transaction.
-            </div>
-          </div>
-        </div>
-        <div
-          class="-mx-3 space-y-3 sm:mx-0 sm:space-y-4 mt-6 sm:mt-4"
+          class="-mx-3 space-y-3 sm:mx-0 sm:space-y-4"
         >
           <div
             data-testid="DetailWrapper"
