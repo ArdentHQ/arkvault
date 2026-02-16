@@ -125,7 +125,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
               </clippath>
             </svg>
             <div
-              class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-72 sm:max-w-2xl rounded-md px-2 py-1 text-sm font-semibold break-words text-white"
+              class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-72 rounded-md px-2 py-1 text-sm font-semibold break-words text-white sm:max-w-2xl"
               style="font-feature-settings: "liga" off, "calt" off;"
             >
               <div>
@@ -251,7 +251,7 @@ exports[`AmountLabel > should render with hint 1`] = `
               </clippath>
             </svg>
             <div
-              class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-72 sm:max-w-2xl rounded-md px-2 py-1 text-sm font-semibold break-words text-white"
+              class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-72 rounded-md px-2 py-1 text-sm font-semibold break-words text-white sm:max-w-2xl"
               style="font-feature-settings: "liga" off, "calt" off;"
             >
               <div>
