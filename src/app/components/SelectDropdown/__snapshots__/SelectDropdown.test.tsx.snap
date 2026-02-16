@@ -973,7 +973,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
               style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
               <div
-                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-72 sm:max-w-2xl rounded-md px-2 py-1 text-sm font-semibold break-words text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
                 style="font-feature-settings: "liga" off, "calt" off;"
               >
                 <div>
@@ -1183,7 +1183,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
               style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
               <div
-                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-72 sm:max-w-2xl rounded-md px-2 py-1 text-sm font-semibold break-words text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
                 style="font-feature-settings: "liga" off, "calt" off;"
               >
                 <div>
@@ -1967,7 +1967,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
               style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
               <div
-                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-72 sm:max-w-2xl rounded-md px-2 py-1 text-sm font-semibold break-words text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
                 style="font-feature-settings: "liga" off, "calt" off;"
               >
                 <div>
@@ -2176,7 +2176,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
               style="transition-property: opacity,transform; transition-duration: 250ms;"
             >
               <div
-                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
+                class="overflow-wrap-anywhere dark:text-theme-secondary-200 dim:text-theme-dim-50 max-w-72 sm:max-w-2xl rounded-md px-2 py-1 text-sm font-semibold break-words text-white dim:bg-transparent w-full bg-transparent dark:bg-transparent"
                 style="font-feature-settings: "liga" off, "calt" off;"
               >
                 <div>
