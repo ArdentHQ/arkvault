@@ -70,7 +70,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 		const syncTokens = {
 			callback: () => {
-				if (profile.status().isRestored()) {
+				if (profile.status().isRestored() && profile.wallets().selected().length > 0) {
 					return profile.tokens().sync();
 				}
 			},
