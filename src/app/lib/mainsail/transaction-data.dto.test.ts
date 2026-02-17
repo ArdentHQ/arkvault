@@ -74,7 +74,7 @@ describe("TransactionData", () => {
 	it("should return tokens", () => {
 		const mockTransaction = new TestTransactionData();
 		mockTransaction.isTransfer = () => true;
-		mockTransaction.tokens = () => ([
+		mockTransaction.tokens = () => [
 			new TransactionToken({
 				from: "0xabc",
 				index: 0,
@@ -86,8 +86,8 @@ describe("TransactionData", () => {
 				},
 				to: "0xdef",
 				value: "1000",
-			})
-		]);
+			}),
+		];
 		mockTransaction.configure(commonData);
 
 		expect(mockTransaction.tokens()?.length).toBe(1);
