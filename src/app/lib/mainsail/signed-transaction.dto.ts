@@ -208,7 +208,7 @@ export class SignedTransactionData {
 
 	public tokens(): TransactionToken[] | undefined {
 		if (this.isTokenTransfer() && this.data().tokens) {
-			return this.data().tokens.map((token: TransactionTokenData) => new TransactionToken({ data: token }));
+			return this.data().tokens.map((token: TransactionTokenData) => new TransactionToken(token));
 		}
 	}
 

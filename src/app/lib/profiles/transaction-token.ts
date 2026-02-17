@@ -5,7 +5,7 @@ import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 export class TransactionToken {
 	#data: TransactionTokenData;
 
-	constructor({ data }: { data: TransactionTokenData }) {
+	constructor(data: TransactionTokenData) {
 		this.#data = data;
 	}
 
