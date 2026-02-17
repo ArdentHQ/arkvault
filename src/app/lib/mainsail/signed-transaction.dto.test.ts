@@ -215,7 +215,7 @@ describe("SignedTransactionData", () => {
 			expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
 			expect(transaction.tokens()?.[0].from()).toBe("0xabc");
 			expect(transaction.tokens()?.[0].to()).toBe("0xdef");
-			expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO)
+			expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO);
 
 			tokenTransferMock.mockRestore();
 		});

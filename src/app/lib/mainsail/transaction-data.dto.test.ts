@@ -90,15 +90,15 @@ describe("TransactionData", () => {
 					},
 					to: "0xdef",
 					value: "1000",
-				}
-			]
-		})
+				},
+			],
+		});
 
 		expect(transaction.tokens()).toBeInstanceOf(Array);
 		expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
 		expect(transaction.tokens()?.[0].from()).toBe("0xabc");
 		expect(transaction.tokens()?.[0].to()).toBe("0xdef");
-		expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO)
+		expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO);
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
