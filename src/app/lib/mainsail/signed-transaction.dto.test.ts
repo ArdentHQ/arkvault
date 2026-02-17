@@ -5,6 +5,7 @@ import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { TokenDTO } from "../profiles/token.dto";
 
 describe("SignedTransactionData", () => {
 	let transaction: SignedTransactionData;
@@ -210,8 +211,11 @@ describe("SignedTransactionData", () => {
 				mockSerialized,
 			);
 
-			expect(transaction.tokens()?.length).toBe(1);
+			expect(transaction.tokens()).toBeInstanceOf(Array);
 			expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
+			expect(transaction.tokens()?.[0].from()).toBe("0xabc");
+			expect(transaction.tokens()?.[0].to()).toBe("0xdef");
+			expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO)
 
 			tokenTransferMock.mockRestore();
 		});
