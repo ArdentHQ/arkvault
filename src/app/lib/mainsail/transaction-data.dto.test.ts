@@ -91,6 +91,18 @@ describe("TransactionData", () => {
 					to: "0xdef",
 					value: "1000",
 				},
+				{
+					from: "0xdbc",
+					index: 1,
+					metadata: {
+						tokenAddress: "0xbef",
+						tokenDecimals: 18,
+						tokenName: "DARK 22",
+						tokenSymbol: "DARK22",
+					},
+					to: "0xeef",
+					value: "21000",
+				},
 			],
 		});
 
@@ -99,6 +111,9 @@ describe("TransactionData", () => {
 		expect(transaction.tokens()?.[0].from()).toBe("0xabc");
 		expect(transaction.tokens()?.[0].to()).toBe("0xdef");
 		expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO);
+
+		expect(transaction.tokens()?.[1]).toBeInstanceOf(TransactionToken);
+		expect(transaction.tokens()?.[1].from()).toBe("0xdbc");
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
