@@ -71,6 +71,29 @@ describe("TransactionData", () => {
 		expect(mockTransaction.token()).toBeInstanceOf(TransactionToken);
 	});
 
+	it("should return tokens", () => {
+		const mockTransaction = new TestTransactionData();
+		mockTransaction.isTransfer = () => true;
+		mockTransaction.tokens = () => ([
+			new TransactionToken({
+				from: "0xabc",
+				index: 0,
+				metadata: {
+					tokenAddress: "0xaef",
+					tokenDecimals: 18,
+					tokenName: "DARK 20",
+					tokenSymbol: "DARK20",
+				},
+				to: "0xdef",
+				value: "1000",
+			})
+		]);
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.tokens()?.length).toBe(1);
+		expect(mockTransaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
+	});
+
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
 		const spy = vi
 			.spyOn(TransactionTypeServiceMock.TransactionTypeService, "getIdentifierName")
