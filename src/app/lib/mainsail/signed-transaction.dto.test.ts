@@ -153,9 +153,9 @@ describe("SignedTransactionData", () => {
 								tokenSymbol: "DARK20",
 							},
 							to: "0xdef",
-							value: "234234"
+							value: "234234",
 						},
-					]
+					],
 				},
 				mockSerialized,
 			);

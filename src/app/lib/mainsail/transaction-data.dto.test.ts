@@ -64,7 +64,7 @@ describe("TransactionData", () => {
 					tokenSymbol: "DARK20",
 				},
 				to: "0xdef",
-				value: "1000"
+				value: "1000",
 			});
 		mockTransaction.configure(commonData);
 
@@ -451,7 +451,7 @@ describe("TransactionData", () => {
 						tokenSymbol: "DARK20",
 					},
 					to: "0xdef",
-					value: "234234"
+					value: "234234",
 				},
 			],
 			type: "transfer",
