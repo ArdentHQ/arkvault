@@ -8,6 +8,8 @@ import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
 import { TransactionTypeService } from "./transaction-type.service";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 
 export class SignedTransactionData {
 	protected identifier!: string;
@@ -201,6 +203,12 @@ export class SignedTransactionData {
 	public token(): TokenDTO | undefined {
 		if (this.isTokenTransfer() && this.data().token) {
 			return new TokenDTO(this.data().token);
+		}
+	}
+
+	public tokens(): TransactionToken[] | undefined {
+		if (this.isTokenTransfer() && this.data().tokens) {
+			return this.data().tokens.map((token: TransactionTokenData) => new TransactionToken({ data: token }));
 		}
 	}
 

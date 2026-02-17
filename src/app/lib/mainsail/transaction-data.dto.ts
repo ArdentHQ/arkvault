@@ -7,6 +7,8 @@ import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 
 export type KeyValuePair = Record<string, any>;
 
@@ -83,6 +85,12 @@ export abstract class TransactionData {
 	public token(): TokenDTO | undefined {
 		if (this.isTokenTransfer() && this.data.token) {
 			return new TokenDTO(this.data.token);
+		}
+	}
+
+	public tokens(): TransactionToken[] | undefined {
+		if (this.isTokenTransfer() && this.data.tokens) {
+			return this.data.tokens.map((token: TransactionTokenData) => new TransactionToken({ data: token }));
 		}
 	}
 

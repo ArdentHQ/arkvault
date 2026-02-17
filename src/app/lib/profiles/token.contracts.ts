@@ -21,3 +21,16 @@ export interface TokenAddressesData {
 	supply: string;
 	token: string;
 }
+
+export interface TransactionTokenData {
+	from: string;
+	to: string;
+	value: string;
+	index: number;
+	metadata: {
+		tokenAddress: string;
+		tokenDecimals: number;
+		tokenName: string;
+		tokenSymbol: string;
+	};
+}
