@@ -79,7 +79,9 @@ describe("TransactionAmount.blocks", () => {
 			...TransactionFixture,
 			isTokenTransfer: () => true,
 			token: () => ({
-				symbol: () => "DARK20",
+				token: () => ({
+					symbol: () => "DARK20",
+				}),
 			}),
 		};
 
