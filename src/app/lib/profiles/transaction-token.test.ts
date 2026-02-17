@@ -15,7 +15,7 @@ describe("TransactionToken", () => {
 		},
 		to: "0xdef",
 		value: "234234",
-	}
+	};
 
 	beforeEach(() => {
 		transactionToken = new TransactionToken(fixtureData);
