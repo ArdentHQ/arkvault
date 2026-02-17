@@ -144,7 +144,23 @@ export class ClientService {
 						status: 1,
 					},
 					...transfer,
+					to: transfer.token.address,
+					tokens: [
+						{
+							from: transfer.from,
+							to: transfer.to,
+							index: 0,
+							value: transfer.value,
+							metadata: {
+								tokenAddress: transfer.token.address,
+								tokenDecimals: transfer.token.decimals,
+								tokenName: transfer.token.name,
+								tokenSymbol: transfer.token.symbol,
+							}
+						}
+					],
 					type: "transfer",
+					value: "0",
 				}),
 			),
 			this.#createMetaPagination(response),
