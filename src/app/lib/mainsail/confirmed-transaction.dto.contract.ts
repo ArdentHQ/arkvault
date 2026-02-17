@@ -61,7 +61,7 @@ export interface ConfirmedTransactionData {
 
 	token(): TokenDTO | undefined;
 
-	token(): TransactionToken[] | undefined;
+	tokens(): TransactionToken[] | undefined;
 
 	isConfirmed(): boolean;
 
