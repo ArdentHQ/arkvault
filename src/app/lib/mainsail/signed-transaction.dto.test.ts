@@ -183,6 +183,57 @@ describe("SignedTransactionData", () => {
 		});
 	});
 
+	describe("tokens", () => {
+		it("should return tokens", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(true);
+
+			transaction.configure(
+				{
+					...mockSignedData,
+					tokens: [
+						{
+							from: "0xabc",
+							index: 0,
+							metadata: {
+								tokenAddress: "0xdec",
+								tokenDecimals: 18,
+								tokenName: "DARK 20",
+								tokenSymbol: "DARK20",
+							},
+							to: "0xdef",
+							value: "234234",
+						},
+					],
+				},
+				mockSerialized,
+			);
+
+			expect(transaction.tokens()?.length).toBe(1)
+			expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken)
+
+			tokenTransferMock.mockRestore();
+		});
+
+		it("should return `undefined` for tokens", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(false);
+
+			transaction.configure(
+				{
+					...mockSignedData,
+				},
+				mockSerialized,
+			);
+
+			expect(transaction.tokens()).toBe(undefined);
+
+			tokenTransferMock.mockRestore();
+		});
+	});
+
 	describe("value", () => {
 		it("should return value for non-multi-payment", () => {
 			transaction.configure(mockSignedData, mockSerialized);
