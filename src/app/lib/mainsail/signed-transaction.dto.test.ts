@@ -210,8 +210,8 @@ describe("SignedTransactionData", () => {
 				mockSerialized,
 			);
 
-			expect(transaction.tokens()?.length).toBe(1)
-			expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken)
+			expect(transaction.tokens()?.length).toBe(1);
+			expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
 
 			tokenTransferMock.mockRestore();
 		});
