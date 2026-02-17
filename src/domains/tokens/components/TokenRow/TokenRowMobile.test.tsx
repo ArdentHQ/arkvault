@@ -6,12 +6,13 @@ import userEvent from "@testing-library/user-event";
 import { TokenRowMobile } from "./TokenRowMobile";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { env, getDefaultProfileId, screen, render } from "@/utils/testing-library";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 
 const createMockWalletToken = (overrides = {}) => ({
 	address: () => "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
-	balance: () => 100,
+	balance: () => BigNumber.make(100),
 	contractExplorerLink: () => "https://explorer.com/token1",
 	token: () => ({
 		address: () => "0xToken1",

@@ -101,13 +101,8 @@ export const TransactionRow = memo(
 							!hideSender,
 					})}
 				>
-					<TransactionTypeLabel
-						color="secondary"
-						noBorder
-						size="xs"
-						tooltipContent={getLabel(transaction.type())}
-					>
-						{getLabel(transaction.type())}
+					<TransactionTypeLabel color="secondary" noBorder size="xs" tooltipContent={getLabel(transaction)}>
+						{getLabel(transaction)}
 					</TransactionTypeLabel>
 				</TableCell>
 

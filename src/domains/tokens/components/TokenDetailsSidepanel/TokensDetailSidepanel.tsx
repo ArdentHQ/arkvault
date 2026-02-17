@@ -117,7 +117,7 @@ export const TokenDetailSidepanel = ({
 								<div className="flex w-full flex-1 flex-row items-center justify-end gap-2 pr-2 sm:w-full sm:justify-start">
 									<Amount
 										ticker={walletToken.token().symbol()}
-										value={walletToken.balance()}
+										value={walletToken.balance().toHuman()}
 										className="text-sm font-semibold break-all whitespace-normal md:text-base"
 										showTicker={false}
 									/>
