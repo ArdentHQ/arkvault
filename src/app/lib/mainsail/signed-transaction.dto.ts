@@ -7,7 +7,6 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Hex } from "viem";
 import { TransactionTypeService } from "./transaction-type.service";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 

@@ -4,7 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 describe("SignedTransactionData", () => {
 	let transaction: SignedTransactionData;
@@ -142,19 +142,25 @@ describe("SignedTransactionData", () => {
 			transaction.configure(
 				{
 					...mockSignedData,
-					token: {
-						address: "0xdef",
-						decimals: 18,
-						deploymentHash: "0xaef",
-						name: "DARK 20",
-						symbol: "DARK20",
-						totalSupply: "10000000",
-					},
+					tokens: [
+						{
+							from: "0xabc",
+							index: 0,
+							metadata: {
+								tokenAddress: "0xdec",
+								tokenDecimals: 18,
+								tokenName: "DARK 20",
+								tokenSymbol: "DARK20",
+							},
+							to: "0xdef",
+							value: "234234"
+						},
+					]
 				},
 				mockSerialized,
 			);
 
-			expect(transaction.token()).toBeInstanceOf(TokenDTO);
+			expect(transaction.token()).toBeInstanceOf(TransactionToken);
 
 			tokenTransferMock.mockRestore();
 		});

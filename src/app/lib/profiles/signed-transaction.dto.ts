@@ -7,7 +7,6 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 export class ExtendedSignedTransactionData {

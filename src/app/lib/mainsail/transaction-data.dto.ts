@@ -6,7 +6,6 @@ import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 

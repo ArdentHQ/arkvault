@@ -3,7 +3,7 @@ import { TransactionData, KeyValuePair } from "./transaction-data.dto";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 // Concrete implementation for testing the abstract class
 class TestTransactionData extends TransactionData {
@@ -54,17 +54,21 @@ describe("TransactionData", () => {
 		const mockTransaction = new TestTransactionData();
 		mockTransaction.isTransfer = () => true;
 		mockTransaction.token = () =>
-			new TokenDTO({
-				address: "0xdef",
-				decimals: 18,
-				deploymentHash: "0xaef",
-				name: "DARK 20",
-				symbol: "DARK20",
-				totalSupply: "10000000",
+			new TransactionToken({
+				from: "0xabc",
+				index: 0,
+				metadata: {
+					tokenAddress: "0xaef",
+					tokenDecimals: 18,
+					tokenName: "DARK 20",
+					tokenSymbol: "DARK20",
+				},
+				to: "0xdef",
+				value: "1000"
 			});
 		mockTransaction.configure(commonData);
 
-		expect(mockTransaction.token()).toBeInstanceOf(TokenDTO);
+		expect(mockTransaction.token()).toBeInstanceOf(TransactionToken);
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
@@ -432,22 +436,31 @@ describe("TransactionData", () => {
 		expect(transaction.isTokenTransfer()).toBe(true);
 	});
 
-	it("#token should return TokenDTO for token transfer", () => {
+	it("#token should return TransactionToken for token transfer", () => {
 		transaction.configure({
 			...commonData,
-			token: {
-				address: "0x180a864a755fed0144c622df49b83db577befefb",
-				decimals: 18,
-				name: "DARK20",
-				symbol: "DARK20",
-			},
+			data: "0xa9059cbb000000000000000000000000fcf1dbaedcefcfc6c290154cae88dd5ac6201f1a0000000000000000000000000000000000000000000000056bc75e2d63100000",
+			tokens: [
+				{
+					from: "0xabc",
+					index: 0,
+					metadata: {
+						tokenAddress: "0xdec",
+						tokenDecimals: 18,
+						tokenName: "DARK 20",
+						tokenSymbol: "DARK20",
+					},
+					to: "0xdef",
+					value: "234234"
+				},
+			],
 			type: "transfer",
 		});
 
 		const token = transaction.token();
 
-		expect(token).toBeInstanceOf(TokenDTO);
-		expect(token?.symbol()).toBe("DARK20");
+		expect(token).toBeInstanceOf(TransactionToken);
+		expect(token?.token().symbol()).toBe("DARK20");
 	});
 
 	it("#token should return undefined for non-token transfer", () => {
