@@ -148,16 +148,16 @@ export class ClientService {
 					tokens: [
 						{
 							from: transfer.from,
-							to: transfer.to,
 							index: 0,
-							value: transfer.value,
 							metadata: {
 								tokenAddress: transfer.token.address,
 								tokenDecimals: transfer.token.decimals,
 								tokenName: transfer.token.name,
 								tokenSymbol: transfer.token.symbol,
-							}
-						}
+							},
+							to: transfer.to,
+							value: transfer.value,
+						},
 					],
 					type: "transfer",
 					value: "0",
