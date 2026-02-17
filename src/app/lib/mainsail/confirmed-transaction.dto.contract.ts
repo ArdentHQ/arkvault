@@ -59,7 +59,7 @@ export interface ConfirmedTransactionData {
 
 	outputs(): UnspentTransactionData[];
 
-	token(): TokenDTO | undefined;
+	token(): TransactionToken | undefined;
 
 	tokens(): TransactionToken[] | undefined;
 

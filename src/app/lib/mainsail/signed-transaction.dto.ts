@@ -200,9 +200,10 @@ export class SignedTransactionData {
 		return this.serialized;
 	}
 
-	public token(): TokenDTO | undefined {
-		if (this.isTokenTransfer() && this.data().token) {
-			return new TokenDTO(this.data().token);
+	public token(): TransactionToken | undefined {
+		const tokens = this.tokens();
+		if (tokens) {
+			return tokens[0];
 		}
 	}
 

@@ -59,7 +59,7 @@ export class ExtendedSignedTransactionData {
 		return this.#data.nonce();
 	}
 
-	public token(): TokenDTO | undefined {
+	public token(): TransactionToken | undefined {
 		return this.#data.token();
 	}
 

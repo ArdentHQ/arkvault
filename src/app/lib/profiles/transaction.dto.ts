@@ -204,7 +204,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return undefined;
 	}
 
-	public token(): TokenDTO | undefined {
+	public token(): TransactionToken | undefined {
 		return this.#data.token();
 	}
 
