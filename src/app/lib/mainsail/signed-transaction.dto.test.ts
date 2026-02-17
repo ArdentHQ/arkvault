@@ -5,7 +5,7 @@ import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
-import { TokenDTO } from "../profiles/token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 describe("SignedTransactionData", () => {
 	let transaction: SignedTransactionData;

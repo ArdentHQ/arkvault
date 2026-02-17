@@ -4,6 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 // Concrete implementation for testing the abstract class
 class TestTransactionData extends TransactionData {
@@ -72,26 +73,32 @@ describe("TransactionData", () => {
 	});
 
 	it("should return tokens", () => {
-		const mockTransaction = new TestTransactionData();
-		mockTransaction.isTransfer = () => true;
-		mockTransaction.tokens = () => [
-			new TransactionToken({
-				from: "0xabc",
-				index: 0,
-				metadata: {
-					tokenAddress: "0xaef",
-					tokenDecimals: 18,
-					tokenName: "DARK 20",
-					tokenSymbol: "DARK20",
-				},
-				to: "0xdef",
-				value: "1000",
-			}),
-		];
-		mockTransaction.configure(commonData);
+		const transaction = new TestTransactionData();
 
-		expect(mockTransaction.tokens()?.length).toBe(1);
-		expect(mockTransaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
+		transaction.configure({
+			...commonData,
+			data: "0xa9059cbb000000000000000000000000fcf1dbaedcefcfc6c290154cae88dd5ac6201f1a0000000000000000000000000000000000000000000000056bc75e2d63100000",
+			tokens: [
+				{
+					from: "0xabc",
+					index: 0,
+					metadata: {
+						tokenAddress: "0xaef",
+						tokenDecimals: 18,
+						tokenName: "DARK 20",
+						tokenSymbol: "DARK20",
+					},
+					to: "0xdef",
+					value: "1000",
+				}
+			]
+		})
+
+		expect(transaction.tokens()).toBeInstanceOf(Array);
+		expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
+		expect(transaction.tokens()?.[0].from()).toBe("0xabc");
+		expect(transaction.tokens()?.[0].to()).toBe("0xdef");
+		expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO)
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
