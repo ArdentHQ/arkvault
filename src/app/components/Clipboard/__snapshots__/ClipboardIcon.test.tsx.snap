@@ -51,7 +51,7 @@ exports[`ClipboardIcon > should render with tooltip in the dark mode 1`] = `
           </clippath>
         </svg>
         <div
-          class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 max-w-[600px] rounded-md px-2 py-1 text-sm font-semibold break-words whitespace-nowrap text-white"
+          class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 whitespace-wrap max-w-72 rounded-md px-2 py-1 text-sm font-semibold break-words text-white sm:max-w-2xl sm:whitespace-nowrap"
           style="font-feature-settings: "liga" off, "calt" off;"
         >
           <div>
