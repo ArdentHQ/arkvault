@@ -19,7 +19,7 @@ export class Currency {
 		const currencyDecimals = CURRENCIES[ticker]?.decimals ?? DEFAULT_DECIMALS;
 		const decimals = options?.decimals ?? currencyDecimals;
 
-		const valueBigNumber = BigNumber.make(value, decimals);
+		const valueBigNumber = BigNumber.make(value);
 		const absValue = valueBigNumber.isNegative() ? valueBigNumber.times(-1) : valueBigNumber;
 
 		if (currencyDecimals > 2) {
@@ -34,7 +34,7 @@ export class Currency {
 				.replace("BTC", withTicker ? ticker.toUpperCase() : "")
 				.trim();
 		}
-
+	console.log(value, valueBigNumber.toString(), absValue.toString());
 		let money =
 			decimals === 2
 				? Money.make(Math.round(absValue.times(100).toNumber()), ticker)
