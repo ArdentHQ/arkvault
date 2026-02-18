@@ -5,7 +5,7 @@ export const buildTransferData = ({ recipients, memo }: BuildTransferDataPropert
 
 	if (recipients?.length === 1) {
 		data = {
-			amount: +(recipients[0].amount ?? 0),
+			amount: recipients[0].amount ?? 0,
 			to: recipients[0].address,
 		};
 	}
@@ -13,7 +13,7 @@ export const buildTransferData = ({ recipients, memo }: BuildTransferDataPropert
 	if (!!recipients?.length && recipients.length > 1) {
 		data = {
 			payments: recipients.map(({ address, amount }) => ({
-				amount: +(amount ?? 0),
+				amount: amount ?? 0,
 				to: address,
 			})),
 		};

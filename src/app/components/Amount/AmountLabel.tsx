@@ -33,7 +33,7 @@ const AmountLabelHint = ({ className, isCompact, tooltipContent }: AmountLabelHi
 interface AmountLabelProperties {
 	isCompact?: boolean;
 	isNegative: boolean;
-	value: number;
+	value: number | string;
 	ticker: string;
 	hint?: string;
 	size?: Size;
