@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
-import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 export const useConfirmedTransaction = ({
 	wallet,
