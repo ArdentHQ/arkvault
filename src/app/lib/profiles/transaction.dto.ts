@@ -104,10 +104,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data.isTransfer();
 	}
 
-	public isSecondSignature(): boolean {
-		return this.#data.isSecondSignature();
-	}
-
 	public isUsernameRegistration(): boolean {
 		return this.#data.isUsernameRegistration();
 	}
@@ -118,10 +114,6 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public isValidatorRegistration(): boolean {
 		return this.#data.isValidatorRegistration();
-	}
-
-	public isVoteCombination(): boolean {
-		return this.#data.isVoteCombination();
 	}
 
 	public isVote(): boolean {

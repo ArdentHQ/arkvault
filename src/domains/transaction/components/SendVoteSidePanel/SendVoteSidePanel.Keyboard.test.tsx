@@ -56,7 +56,6 @@ const transactionMethodsFixture = {
 	isValidatorRegistration: () => false,
 	isValidatorResignation: () => false,
 	isVote: () => true,
-	isVoteCombination: () => false,
 	memo: () => transactionFixture.data.memo || undefined,
 	nonce: () => BigNumber.make(transactionFixture.data.nonce),
 	payments: () => [],

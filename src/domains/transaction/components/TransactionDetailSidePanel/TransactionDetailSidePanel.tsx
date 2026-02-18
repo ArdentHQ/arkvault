@@ -42,9 +42,7 @@ export const TransactionDetailContent = ({
 }) => {
 	const { t } = useTranslation();
 
-	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
-		Boolean,
-	);
+	const isVoteTransaction = [transaction.isVote(), transaction.isUnvote()].some(Boolean);
 
 	const isValidatorRegistrationOrResignation =
 		transaction.isValidatorRegistration() || transaction.isValidatorResignation();
@@ -57,8 +55,8 @@ export const TransactionDetailContent = ({
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const labelClassName = cn({
-		"min-w-24": !transaction.isVoteCombination() && !isValidatorRegistrationOrResignation,
-		"min-w-32": transaction.isVoteCombination() && !isValidatorRegistrationOrResignation,
+		"min-w-24": !isValidatorRegistrationOrResignation,
+		"min-w-32": !isValidatorRegistrationOrResignation,
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 
