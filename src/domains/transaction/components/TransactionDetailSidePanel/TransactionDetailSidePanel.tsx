@@ -169,10 +169,7 @@ export const TransactionDetailSidePanel = ({
 	const wallet = transactionItem.wallet();
 	const transactionId = transactionItem.hash();
 
-	const {
-		isLoading,
-		transaction: confirmedTransaction,
-	} = useConfirmedTransaction({
+	const { isLoading, transaction: confirmedTransaction } = useConfirmedTransaction({
 		transactionId,
 		wallet,
 	});
