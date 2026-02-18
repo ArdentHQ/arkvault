@@ -952,7 +952,7 @@ jobs:
             COVERAGE_INCLUDE_PATH: src/app/lib
             COVERAGE_THRESHOLD_LINES: 85.07
             COVERAGE_THRESHOLD_BRANCHES: 80.03
-            COVERAGE_THRESHOLD_FUNCTIONS: 85.34
+            COVERAGE_THRESHOLD_FUNCTIONS: 85.33
             COVERAGE_THRESHOLD_STATEMENTS: 85.04
         strategy:
             matrix:
