@@ -187,7 +187,7 @@ describe("SignedTransactionData", () => {
 	describe("tokens", () => {
 		it("should return tokens", () => {
 			const tokenTransferMock = vi
-				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isTokenTransfer")
 				.mockReturnValue(true);
 
 			transaction.configure(
@@ -222,8 +222,8 @@ describe("SignedTransactionData", () => {
 
 		it("should return `undefined` for tokens when `isTokenTransfer` is false", () => {
 			const tokenTransferMock = vi
-				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
-				.mockReturnValue(false);
+				.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isTokenTransfer")
+				.mockReturnValue(true);
 
 			transaction.configure(
 				{
@@ -240,7 +240,7 @@ describe("SignedTransactionData", () => {
 
 		it("should return `undefined` for tokens when `tokens` is not present", () => {
 			const tokenTransferMock = vi
-				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isTokenTransfer")
 				.mockReturnValue(true);
 
 			transaction.configure(
