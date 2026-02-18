@@ -1,16 +1,13 @@
 import { Contracts } from "@/app/lib/mainsail";
-import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { MultiPaymentItem, TransactionDataMeta } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
-import { AbiDecoder, ContractAbiType, UnitConverter } from "@arkecosystem/typescript-crypto";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
-import { ClientService } from "@/app/lib/mainsail/client.service";
-import { AbiResult } from "@arkecosystem/typescript-crypto/dist/types";
-import { IReadWriteWallet } from "@/app/lib/profiles/wallet.contract";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 
 export type KeyValuePair = Record<string, any>;
 
@@ -41,48 +38,6 @@ export abstract class TransactionData {
 	public configure(data: any): this {
 		this.data = data;
 		return this;
-	}
-
-	public async sync(wallet: IReadWriteWallet): Promise<void> {
-		const clientService = new ClientService({
-			config: wallet.profile().activeNetwork().config(),
-			profile: wallet.profile(),
-		});
-
-		const data = await clientService.transaction(this.hash());
-
-		let decodedData: undefined | AbiResult;
-
-		if (typeof data.raw().data === "string") {
-			try {
-				decodedData = new AbiDecoder(ContractAbiType.TOKEN).decodeFunctionData(data.raw().data);
-			} catch {
-				// ignore exception
-			}
-		}
-
-		let tokenData: Record<string, any> = {};
-
-		if (decodedData?.functionName === "transfer") {
-			const [to, value] = decodedData.args;
-
-			const token = wallet
-				.tokens()
-				.values()
-				.find((walletToken) => walletToken.token().address().toLowerCase() === data.to().toLowerCase());
-
-			tokenData = {
-				to,
-				token: token?.token().toJSON(),
-				value,
-				type: "transfer",
-			};
-		}
-
-		this.configure({
-			...data.raw(),
-			...tokenData,
-		});
 	}
 
 	public withDecimals(decimals?: number | string): this {
@@ -126,9 +81,16 @@ export abstract class TransactionData {
 		return TransactionTypeService.isTokenTransfer(this.data);
 	}
 
-	public token(): TokenDTO | undefined {
-		if (this.isTokenTransfer() && this.data.token) {
-			return new TokenDTO(this.data.token);
+	public token(): TransactionToken | undefined {
+		const tokens = this.tokens();
+		if (tokens) {
+			return tokens[0];
+		}
+	}
+
+	public tokens(): TransactionToken[] | undefined {
+		if (this.isTokenTransfer() && this.data.tokens) {
+			return this.data.tokens.map((token: TransactionTokenData) => new TransactionToken(token));
 		}
 	}
 

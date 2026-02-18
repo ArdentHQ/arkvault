@@ -73,6 +73,24 @@ describe("useSelectsTransactionSender", () => {
 		expect(result.current.activeWallet).toBeUndefined();
 	});
 
+	it("should update activeWallet when senderAddress changes", () => {
+		const onWalletChange = vi.fn();
+
+		const { result, rerender } = renderHook(
+			({ active, onWalletChange, senderAddress }) =>
+				useSelectsTransactionSender({ active, onWalletChange, senderAddress }),
+			{
+				initialProps: { active: true, onWalletChange, senderAddress: undefined },
+			},
+		);
+
+		expect(result.current.activeWallet).toBe(selectedWallet);
+
+		rerender({ active: true, onWalletChange, senderAddress: wallet.address() });
+
+		expect(result.current.activeWallet).toBe(wallet);
+	});
+
 	it("should call onWalletChange when activeWallet changes", () => {
 		const onWalletChange = vi.fn();
 

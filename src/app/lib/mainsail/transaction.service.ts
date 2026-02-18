@@ -126,7 +126,23 @@ export class TransactionService {
 		await this.#sign(input, builder);
 
 		return new SignedTransactionData().configure(
-			{ ...builder.transaction.data, value: amount.toNumber() },
+			{
+				...builder.transaction.data,
+				tokens: [
+					{
+						from: input.signatory.address(),
+						index: 0,
+						metadata: {
+							tokenAddress: token.token().address(),
+							tokenDecimals: token.token().decimals(),
+							tokenName: token.token().name(),
+							tokenSymbol: token.token().symbol(),
+						},
+						to: input.data.to,
+						value: amount.toString(),
+					},
+				],
+			},
 			builder.transaction.serialize().toString("hex"),
 		);
 	}

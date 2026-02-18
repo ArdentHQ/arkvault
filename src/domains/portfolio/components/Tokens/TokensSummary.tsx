@@ -10,7 +10,7 @@ export const TokenNameInitials = ({ tokenName, className }: { tokenName: string;
 			className,
 		)}
 	>
-		<div>{tokenName.charAt(0).toUpperCase()}</div>
+		<div data-testid="TokeNameInitials">{tokenName.charAt(0).toUpperCase()}</div>
 	</div>
 );
 
@@ -19,9 +19,13 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 		<div data-testid="TokensSummary" className="flex items-center gap-1">
 			<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
 				{wallet
+					.profile()
 					.tokens()
-					.values()
+					.selected()
+					.items()
+					.toSorted((a, b) => b.balance().comparedTo(a.balance()))
 					.slice(0, VISIBLE_TOKEN_COUNT)
+					.toSorted((a, b) => a.token().name().localeCompare(b.token().name()))
 					.map((walletToken, index) => (
 						<div
 							key={index}
@@ -32,12 +36,12 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 					))}
 			</div>
 
-			{wallet.tokenCount() > VISIBLE_TOKEN_COUNT && (
+			{wallet.profile().tokens().selectedCount() > VISIBLE_TOKEN_COUNT && (
 				<div
 					data-testid="TokensSummary--Count"
-					className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 leading-5 font-semibold"
+					className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
 				>
-					+{wallet.tokenCount() - VISIBLE_TOKEN_COUNT}
+					+{wallet.profile().tokens().selectedCount() - VISIBLE_TOKEN_COUNT}
 				</div>
 			)}
 		</div>

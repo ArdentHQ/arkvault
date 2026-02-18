@@ -30,11 +30,6 @@ const evmApiUrl = "https://dwallets-evm.mainsailhq.com/evm/api";
 
 const customServerName = 'Mainsail Devnet "Peer" #1';
 
-vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
-	NavigationBlocker: () => <div />,
-	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-}));
-
 const networksStub: any = {
 	mainsail: {
 		devnet: [

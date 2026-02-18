@@ -4,6 +4,7 @@ export interface VotesProperties {
 	votes: Contracts.VoteRegistryItem[];
 	activeValidators: number;
 	withDivider?: boolean;
+	hasTokens?: boolean;
 }
 
 export interface ValidatorStatusProperties {

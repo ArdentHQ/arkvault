@@ -9,6 +9,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -208,8 +209,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return undefined;
 	}
 
-	public token(): TokenDTO | undefined {
+	public token(): TransactionToken | undefined {
 		return this.#data.token();
+	}
+
+	public tokens(): TransactionToken[] | undefined {
+		return this.#data.tokens();
 	}
 
 	public toObject(): Contracts.KeyValuePair {

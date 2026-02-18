@@ -298,6 +298,7 @@ export const translations = {
 			ACTIVE_one: "Active",
 			ACTIVE_other: "All Active",
 			EMPTY_DESCRIPTION: "You have not voted for a Validator yet.",
+			EMPTY_DESCRIPTION_SHORT: "No Validator voted yet.",
 			LOCKED_UNVOTES: "Locked Unvotes",
 			LOCKED_VOTES: "Locked Votes",
 			MULTIVOTE: "Multivote",

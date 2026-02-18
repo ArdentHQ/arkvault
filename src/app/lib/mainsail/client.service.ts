@@ -56,7 +56,10 @@ export class ClientService {
 		id: string,
 		query?: Record<string, string | number | boolean | null>,
 	): Promise<ConfirmedTransactionData> {
-		const body = await this.#client.transactions().get(id, query);
+		const body = await this.#client.transactions().get(id, {
+			...query,
+			includeTokens: true,
+		});
 		return new ConfirmedTransactionData().configure(body.data);
 	}
 
@@ -143,7 +146,23 @@ export class ClientService {
 						status: 1,
 					},
 					...transfer,
+					to: transfer.token.address,
+					tokens: [
+						{
+							from: transfer.from,
+							index: 0,
+							metadata: {
+								tokenAddress: transfer.token.address,
+								tokenDecimals: transfer.token.decimals,
+								tokenName: transfer.token.name,
+								tokenSymbol: transfer.token.symbol,
+							},
+							to: transfer.to,
+							value: transfer.value,
+						},
+					],
 					type: "transfer",
+					value: "0",
 				}),
 			),
 			this.#createMetaPagination(response),

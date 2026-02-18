@@ -4,6 +4,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import * as TransactionTypeServiceMock from "./transaction-type.service";
 import * as DecodeFunctionDataMock from "./helpers/decode-function-data";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 describe("SignedTransactionData", () => {
@@ -142,19 +143,25 @@ describe("SignedTransactionData", () => {
 			transaction.configure(
 				{
 					...mockSignedData,
-					token: {
-						address: "0xdef",
-						decimals: 18,
-						deploymentHash: "0xaef",
-						name: "DARK 20",
-						symbol: "DARK20",
-						totalSupply: "10000000",
-					},
+					tokens: [
+						{
+							from: "0xabc",
+							index: 0,
+							metadata: {
+								tokenAddress: "0xdec",
+								tokenDecimals: 18,
+								tokenName: "DARK 20",
+								tokenSymbol: "DARK20",
+							},
+							to: "0xdef",
+							value: "234234",
+						},
+					],
 				},
 				mockSerialized,
 			);
 
-			expect(transaction.token()).toBeInstanceOf(TokenDTO);
+			expect(transaction.token()).toBeInstanceOf(TransactionToken);
 
 			tokenTransferMock.mockRestore();
 		});
@@ -172,6 +179,78 @@ describe("SignedTransactionData", () => {
 			);
 
 			expect(transaction.token()).toBe(undefined);
+
+			tokenTransferMock.mockRestore();
+		});
+	});
+
+	describe("tokens", () => {
+		it("should return tokens", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(true);
+
+			transaction.configure(
+				{
+					...mockSignedData,
+					tokens: [
+						{
+							from: "0xabc",
+							index: 0,
+							metadata: {
+								tokenAddress: "0xdec",
+								tokenDecimals: 18,
+								tokenName: "DARK 20",
+								tokenSymbol: "DARK20",
+							},
+							to: "0xdef",
+							value: "234234",
+						},
+					],
+				},
+				mockSerialized,
+			);
+
+			expect(transaction.tokens()).toBeInstanceOf(Array);
+			expect(transaction.tokens()?.[0]).toBeInstanceOf(TransactionToken);
+			expect(transaction.tokens()?.[0].from()).toBe("0xabc");
+			expect(transaction.tokens()?.[0].to()).toBe("0xdef");
+			expect(transaction.tokens()?.[0].token()).toBeInstanceOf(TokenDTO);
+
+			tokenTransferMock.mockRestore();
+		});
+
+		it("should return `undefined` for tokens when `isTokenTransfer` is false", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(false);
+
+			transaction.configure(
+				{
+					...mockSignedData,
+					tokens: [],
+				},
+				mockSerialized,
+			);
+
+			expect(transaction.tokens()).toBe(undefined);
+
+			tokenTransferMock.mockRestore();
+		});
+
+		it("should return `undefined` for tokens when `tokens` is not present", () => {
+			const tokenTransferMock = vi
+				.spyOn(TransactionTypeServiceMock.TransactionTypeService, "isTokenTransfer")
+				.mockReturnValue(true);
+
+			transaction.configure(
+				{
+					...mockSignedData,
+				},
+				mockSerialized,
+			);
+
+			expect(transaction.tokens()).toBe(undefined);
 
 			tokenTransferMock.mockRestore();
 		});

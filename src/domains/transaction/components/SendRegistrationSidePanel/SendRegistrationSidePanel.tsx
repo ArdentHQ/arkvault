@@ -94,6 +94,7 @@ export const SendRegistrationSidePanel = ({
 
 			setValue("network", wallet?.network(), { shouldDirty: true, shouldValidate: true });
 		},
+		senderAddress,
 	});
 
 	const { validatorRegistrationFee } = useValidatorRegistrationLockedFee({
@@ -118,8 +119,10 @@ export const SendRegistrationSidePanel = ({
 	}, [register, activeWallet, common, fees, validatorRegistrationFee, validatorRegistration, registrationType]);
 
 	useEffect(() => {
-		trigger("lockedFee");
-	}, [senderAddress]);
+		if (mounted) {
+			trigger("lockedFee");
+		}
+	}, [senderAddress, mounted]);
 
 	useToggleFeeFields({
 		activeTab,

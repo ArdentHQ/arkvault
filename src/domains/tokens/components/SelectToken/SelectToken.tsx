@@ -1,30 +1,26 @@
 import { OptionProperties, Select } from "@/app/components/SelectDropdown";
 import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensSummary";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const SelectToken = ({
 	tokens,
 	className,
 	onChange,
-	defaultTokenValue,
+	value,
 }: {
 	tokens: { label: string; value: string }[];
 	className?: string;
-	onChange?: (tokenContractAddress?: string) => void;
-	defaultTokenValue?: string;
+	onChange?: (tokenContractAddress?: string, shouldValidate?: boolean) => void;
+	value?: string;
 }) => {
 	const { t } = useTranslation();
-
-	const defaultToken = defaultTokenValue ? tokens.find((token) => token.value === defaultTokenValue) : undefined;
-
-	const [selectedToken, setSelectedToken] = useState<OptionProperties | undefined>(defaultToken);
+	const selectedToken = value ? tokens.find((token) => token.value === value) : undefined;
 
 	return (
 		<Select
 			id="SelectToken__dropdown"
+			defaultValue={selectedToken?.value}
 			showCaret={true}
-			defaultValue={selectedToken?.value as string | undefined}
 			options={tokens}
 			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
@@ -32,7 +28,6 @@ export const SelectToken = ({
 			className={className}
 			onChange={(option: OptionProperties) => {
 				onChange?.(option?.value as string | undefined);
-				setSelectedToken(option);
 			}}
 			addons={{
 				start: {

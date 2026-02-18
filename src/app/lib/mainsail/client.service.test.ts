@@ -694,7 +694,9 @@ describe("ClientService", () => {
 			expect(result.items()).toHaveLength(1);
 			expect(result.items()[0].hash()).toBe(tokenTransferMockData.transactionHash);
 			expect(result.items()[0].from()).toBe(tokenTransferMockData.from);
-			expect(result.items()[0].to()).toBe(tokenTransferMockData.to);
+			expect(result.items()[0].to()).toBe(tokenTransferMockData.token.address);
+			expect(result.items()[0].tokens()?.[0].to()).toBe(tokenTransferMockData.to);
+			expect(result.items()[0].tokens()?.[0].value().toString()).toBe(tokenTransferMockData.value);
 		});
 
 		it("should handle empty token transfers response", async () => {
@@ -748,7 +750,7 @@ describe("ClientService", () => {
 			const transfer = result.items()[0];
 			expect(transfer.hash()).toBe(tokenTransferMockData.transactionHash);
 			expect(transfer.from()).toBe(tokenTransferMockData.from);
-			expect(transfer.to()).toBe(tokenTransferMockData.to);
+			expect(transfer.to()).toBe(tokenTransferMockData.token.address);
 		});
 	});
 
@@ -791,7 +793,7 @@ describe("ClientService", () => {
 
 			const walletToken1 = result.items()[0];
 			expect(walletToken1.address()).toBe(walletAddress1);
-			expect(walletToken1.balance()).toBe(1);
+			expect(walletToken1.balance().toHuman()).toBe(1);
 			expect(walletToken1.token().address()).toBe(tokenAddress);
 			expect(walletToken1.token().symbol()).toBe("TEST");
 			expect(walletToken1.token().name()).toBe("Test Token");
@@ -799,7 +801,7 @@ describe("ClientService", () => {
 
 			const walletToken2 = result.items()[1];
 			expect(walletToken2.address()).toBe(walletAddress2);
-			expect(walletToken2.balance()).toBe(2);
+			expect(walletToken2.balance().toHuman()).toBe(2);
 		});
 
 		it("should handle multiple tokens across multiple wallets", async () => {

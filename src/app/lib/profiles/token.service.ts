@@ -8,6 +8,8 @@ import { WalletToken } from "./wallet-token";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
 import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
 import { ExtendedConfirmedTransactionDataCollection } from "@/app/lib/profiles/transaction.collection";
+import { WalletTokenDTO } from "./wallet-token.dto";
+import { BigNumber } from "@/app/lib/helpers";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
@@ -40,7 +42,7 @@ export class TokenService {
 			.values()
 			.filter((token) => {
 				if (hideDustTokens === true) {
-					return token.balance() > this.#dustBalanceThreshold;
+					return token.balance().isGreaterThan(BigNumber.make(this.#dustBalanceThreshold));
 				}
 
 				return true;
@@ -98,7 +100,9 @@ export class TokenService {
 				...(query ?? {}),
 			});
 
-			this.#walletTokensCollection = new WalletTokenCollection(response.items(), {
+			const aggregated = this.#aggregateTokens(response.items());
+
+			this.#walletTokensCollection = new WalletTokenCollection(aggregated, {
 				last: undefined,
 				next: Number(response.nextPage()),
 				prev: undefined,
@@ -112,6 +116,32 @@ export class TokenService {
 				self: undefined,
 			});
 		}
+	}
+
+	#aggregateTokens(tokens: WalletToken[]): WalletToken[] {
+		const aggregated = new Map<string, WalletToken>();
+		for (const token of tokens) {
+			const existing = aggregated.get(token.token().address());
+
+			if (existing) {
+				const updatedWithBalance = new WalletToken({
+					network: this.#profile.activeNetwork(),
+					profile: this.#profile,
+					token: existing.token(),
+					walletToken: new WalletTokenDTO({
+						address: token.address(),
+						balance: BigNumber.make(token.balanceRaw()).plus(existing.balanceRaw()).toString(),
+						tokenAddress: token.token().address(),
+					}),
+				});
+
+				aggregated.set(token.token().address(), updatedWithBalance);
+				continue;
+			}
+
+			aggregated.set(token.token().address(), token);
+		}
+		return [...aggregated.values()];
 	}
 
 	selected(): WalletTokenCollection {
@@ -177,12 +207,12 @@ export class TokenService {
 	 *
 	 * @returns {number}
 	 */
-	selectedTotalBalance(): number {
-		let total = 0;
+	selectedTotalBalance(): BigNumber {
+		let total = BigNumber.make(0);
 
 		for (const wallet of this.#profile.wallets().selected().values()) {
 			for (const token of wallet.tokens().values()) {
-				total = total + token.balance();
+				total = total.plus(token.balance());
 			}
 		}
 

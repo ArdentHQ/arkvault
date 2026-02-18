@@ -83,15 +83,17 @@ export const TokenDetailSidepanel = ({
 				<div className="space-y-4" data-testid="TokenDetailSidepanel">
 					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">
 						<div className="flex justify-between">
-							<div className="flex items-center space-x-2">
+							<div className="flex w-full items-center space-x-2 truncate">
 								<TokenNameInitials
 									tokenName={walletToken.token().name()}
-									className="text-md h-8 w-8 p-3 leading-8"
+									className="text-md h-8 w-8 shrink-0 p-3 leading-8"
 								/>
-								<div className="text-lg leading-4 font-semibold">{walletToken.token().name()}</div>
+								<div className="w-full truncate text-lg leading-4 font-semibold">
+									{walletToken.token().name()}
+								</div>
 							</div>
 
-							<div className="flex items-center space-x-4">
+							<div className="flex shrink-0 items-center space-x-4">
 								<Icon
 									name="ArrowRotateLeft"
 									style={{ animationDirection: "reverse" }}
@@ -107,14 +109,17 @@ export const TokenDetailSidepanel = ({
 
 					<DetailWrapper label={t("COMMON.BALANCE")} className="rounded-xl">
 						<div className="space-y-3">
-							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.AMOUNT")}</DetailTitle>
+							<div className="flex items-start justify-between space-x-2 sm:justify-start sm:space-x-0">
+								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6 lg:pt-0.5">
+									{t("COMMON.AMOUNT")}
+								</DetailTitle>
 
-								<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
+								<div className="flex w-full flex-1 flex-row items-center justify-end gap-2 pr-2 sm:w-full sm:justify-start">
 									<Amount
 										ticker={walletToken.token().symbol()}
-										value={walletToken.balance()}
-										className="text-sm font-semibold md:text-base"
+										value={walletToken.balance().toHuman()}
+										className="text-sm font-semibold break-all whitespace-normal md:text-base"
+										showTicker={false}
 									/>
 								</div>
 							</div>

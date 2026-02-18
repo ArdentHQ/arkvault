@@ -3,6 +3,7 @@ export interface LedgerData {
 	path: string;
 	balance?: number;
 	isNew?: boolean;
+	hasSyncedWithNetwork?: boolean;
 }
 
 export interface LedgerDerivationScheme {

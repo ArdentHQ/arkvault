@@ -25,11 +25,6 @@ const menuItemID = "side-menu__item--password";
 const password = "S3cUrePa$sword";
 const secondaryPassword = "S3cUrePa$sword2different";
 
-vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
-	NavigationBlocker: () => <div />,
-	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-}));
-
 describe("Password Settings", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

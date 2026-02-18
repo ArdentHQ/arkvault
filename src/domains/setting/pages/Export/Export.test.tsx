@@ -11,11 +11,6 @@ import { toasts } from "@/app/services";
 
 let profile: Contracts.IProfile;
 
-vi.mock("@/app/contexts/Navigation/NavigationBlocking", () => ({
-	NavigationBlocker: () => <div />,
-	NavigationBlockingProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-}));
-
 describe("Export Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());

@@ -2,19 +2,18 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import React, { ChangeEvent, useEffect } from "react";
 
 import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
-import { StepHeader } from "@/app/components/StepHeader";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useEnvironmentContext } from "@/app/contexts";
 import { TextArea } from "@/app/components/TextArea";
 import { Link } from "@/app/components/Link";
 
-export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHeader = false }: FormStepProperties) => {
+export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { contractDeployment } = useValidation();
@@ -43,21 +42,6 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile, hideHe
 
 	return (
 		<section data-testid="ContractDeploymentForm__form-step">
-			{!hideHeader && (
-				<StepHeader
-					title={t("TRANSACTION.CONTRACT_DEPLOYMENT.FORM_STEP.TITLE")}
-					subtitle={t("TRANSACTION.CONTRACT_DEPLOYMENT.FORM_STEP.DESCRIPTION")}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-				/>
-			)}
-
 			<div className="space-y-4">
 				<FormField name="senderAddress">
 					<FormLabel label={t("TRANSACTION.SENDER")} />

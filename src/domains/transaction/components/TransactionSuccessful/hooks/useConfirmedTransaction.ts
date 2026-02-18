@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
 import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
@@ -11,12 +11,14 @@ export const useConfirmedTransaction = ({
 }: {
 	wallet?: Contracts.IReadWriteWallet;
 	transactionId?: string;
-	tokenTransfer?: ExtendedTransactionDTO;
 	disabled?: boolean;
+	tokenTransfer?: ExtendedTransactionDTO;
 }): { isConfirmed: boolean; isLoading: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isConfirmed, setIsConfirmed] = useState(false);
 	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
+
+	const intervalId = useRef<NodeJS.Timeout | undefined>(undefined);
 
 	useEffect(() => {
 		if (!transactionId || !wallet || disabled) {
@@ -26,21 +28,14 @@ export const useConfirmedTransaction = ({
 		const checkConfirmed = (): void => {
 			setIsLoading(true);
 
-			const id = setInterval(async () => {
+			intervalId.current = setInterval(async () => {
 				try {
-					if (tokenTransfer?.isTokenTransfer()) {
-						await (tokenTransfer as ExtendedConfirmedTransactionData).sync();
-						setTransaction(tokenTransfer as ExtendedConfirmedTransactionData);
-					} else {
-						const transaction = await wallet.client().transaction(transactionId);
-						setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
-					}
-
-					setIsLoading(false);
+					const transaction = await wallet.client().transaction(transactionId);
 					setIsConfirmed(true);
-					clearInterval(id);
-				} catch(e) {
-					console.log(e)
+					setIsLoading(false);
+					setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
+					clearInterval(intervalId.current);
+				} catch {
 					// transaction is not forged yet, ignore the error
 				}
 			}, 1000);
@@ -51,8 +46,9 @@ export const useConfirmedTransaction = ({
 		return () => {
 			setIsConfirmed(false);
 			setTransaction(undefined);
+			clearInterval(intervalId.current);
 		};
-	}, [wallet?.id(), transactionId]);
+	}, [wallet?.id(), transactionId, disabled]);
 
 	return { isConfirmed, isLoading, transaction };
 };

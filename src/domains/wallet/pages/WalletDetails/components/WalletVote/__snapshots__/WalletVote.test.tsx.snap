@@ -14,57 +14,118 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
-          <span>
+          <div
+            class="md-lg:hidden hidden gap-2 sm:flex"
+          >
             <span>
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://arkvault.io/docs/transactions/vote"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+              No Validator voted yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
                 >
                   <span
-                    class="text-base leading-5"
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                   >
-                    Learn more
-                  </span>
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
-                  >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="text-base leading-5"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      Learn
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </span>
             </span>
-          </span>
+          </div>
+          <div
+            class="md-lg:flex hidden gap-2"
+          >
+            <span>
+              You have not voted for a Validator yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  >
+                    <span
+                      class="text-base leading-5"
+                    >
+                      Learn more
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -75,7 +136,7 @@ exports[`WalletVote > should disable vote button when balance is less than votes
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -91,7 +152,9 @@ exports[`WalletVote > should disable vote button when balance is less than votes
                 <div
                   class="flex items-center gap-2"
                 >
-                  <div>
+                  <div
+                    class=""
+                  >
                     <div
                       style="height: 16px; width: 16px;"
                     >
@@ -193,57 +256,118 @@ exports[`WalletVote > should render 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
-          <span>
+          <div
+            class="md-lg:hidden hidden gap-2 sm:flex"
+          >
             <span>
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://arkvault.io/docs/transactions/vote"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+              No Validator voted yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
                 >
                   <span
-                    class="text-base leading-5"
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                   >
-                    Learn more
-                  </span>
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
-                  >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="text-base leading-5"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      Learn
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </span>
             </span>
-          </span>
+          </div>
+          <div
+            class="md-lg:flex hidden gap-2"
+          >
+            <span>
+              You have not voted for a Validator yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  >
+                    <span
+                      class="text-base leading-5"
+                    >
+                      Learn more
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -270,12 +394,12 @@ exports[`WalletVote > should render as all resigned 1`] = `
           class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
         >
           <p
-            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5"
           >
             Voting for
           </p>
           <div
-            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+            class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -294,7 +418,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
           </div>
         </div>
         <div
-          class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+          class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
         >
           <p
             class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -320,6 +444,20 @@ exports[`WalletVote > should render as all resigned 1`] = `
             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
           />
         </div>
+        <div
+          class="status hidden"
+        >
+          <div
+            class="bg-theme-danger-100 dark:border-theme-danger-800 dim:border-theme-danger-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+          >
+            <div
+              class="bg-theme-danger-700 border-theme-danger-200 dark:bg-theme-danger-400 dark:border-theme-danger-700 dim:bg-theme-danger-400 dim:border-theme-danger-700 h-2 w-2 rounded-full border-2"
+            />
+          </div>
+          <div
+            class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -329,7 +467,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -344,7 +482,9 @@ exports[`WalletVote > should render as all resigned 1`] = `
                 <div
                   class="flex items-center gap-2"
                 >
-                  <div>
+                  <div
+                    class=""
+                  >
                     <div
                       style="height: 16px; width: 16px;"
                     >
@@ -445,57 +585,118 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
-          <span>
+          <div
+            class="md-lg:hidden hidden gap-2 sm:flex"
+          >
             <span>
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://arkvault.io/docs/transactions/vote"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+              No Validator voted yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
                 >
                   <span
-                    class="text-base leading-5"
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                   >
-                    Learn more
-                  </span>
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
-                  >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="text-base leading-5"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      Learn
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </span>
             </span>
-          </span>
+          </div>
+          <div
+            class="md-lg:flex hidden gap-2"
+          >
+            <span>
+              You have not voted for a Validator yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  >
+                    <span
+                      class="text-base leading-5"
+                    >
+                      Learn more
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -506,7 +707,7 @@ exports[`WalletVote > should render disabled vote button 1`] = `
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -522,7 +723,9 @@ exports[`WalletVote > should render disabled vote button 1`] = `
                 <div
                   class="flex items-center gap-2"
                 >
-                  <div>
+                  <div
+                    class=""
+                  >
                     <div
                       style="height: 16px; width: 16px;"
                     >
@@ -624,57 +827,118 @@ exports[`WalletVote > should render ledger for incompatible ledger wallet 1`] = 
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
-          <span>
+          <div
+            class="md-lg:hidden hidden gap-2 sm:flex"
+          >
             <span>
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://arkvault.io/docs/transactions/vote"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+              No Validator voted yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
                 >
                   <span
-                    class="text-base leading-5"
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                   >
-                    Learn more
-                  </span>
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
-                  >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="text-base leading-5"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      Learn
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </span>
             </span>
-          </span>
+          </div>
+          <div
+            class="md-lg:flex hidden gap-2"
+          >
+            <span>
+              You have not voted for a Validator yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  >
+                    <span
+                      class="text-base leading-5"
+                    >
+                      Learn more
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -854,57 +1118,118 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
-          <span>
+          <div
+            class="md-lg:hidden hidden gap-2 sm:flex"
+          >
             <span>
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://arkvault.io/docs/transactions/vote"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+              No Validator voted yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
                 >
                   <span
-                    class="text-base leading-5"
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                   >
-                    Learn more
-                  </span>
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
-                  >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="text-base leading-5"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      Learn
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </span>
             </span>
-          </span>
+          </div>
+          <div
+            class="md-lg:flex hidden gap-2"
+          >
+            <span>
+              You have not voted for a Validator yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  >
+                    <span
+                      class="text-base leading-5"
+                    >
+                      Learn more
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -915,7 +1240,7 @@ exports[`WalletVote > should render the maximum votes 1`] = `
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -930,7 +1255,9 @@ exports[`WalletVote > should render the maximum votes 1`] = `
                 <div
                   class="flex items-center gap-2"
                 >
-                  <div>
+                  <div
+                    class=""
+                  >
                     <div
                       style="height: 16px; width: 16px;"
                     >
@@ -1031,57 +1358,118 @@ exports[`WalletVote > should render without votes 1`] = `
         data-testid="EmptyVotes"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 px-[22px] pb-4 text-center text-base leading-5 font-semibold md:mt-0 md:px-0 md:pb-0 md:text-left"
         >
-          You have not voted for a Validator yet. 
-          <span>
+          <div
+            class="md-lg:hidden hidden gap-2 sm:flex"
+          >
             <span>
-              <a
-                class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://arkvault.io/docs/transactions/vote"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+              No Validator voted yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
                 >
                   <span
-                    class="text-base leading-5"
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                   >
-                    Learn more
-                  </span>
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                  data-testid="Link__external"
-                >
-                  <div
-                    style="height: 12px; width: 12px;"
-                  >
-                    <svg
-                      id="arrow-external"
-                      style="height: 100%; width: 100%;"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
+                    <span
+                      class="text-base leading-5"
                     >
-                      <path
-                        d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
+                      Learn
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </span>
             </span>
-          </span>
+          </div>
+          <div
+            class="md-lg:flex hidden gap-2"
+          >
+            <span>
+              You have not voted for a Validator yet. 
+            </span>
+            <span>
+              <span>
+                <a
+                  class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-flex items-center"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="Link"
+                  href="https://arkvault.io/docs/transactions/vote"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+                  >
+                    <span
+                      class="text-base leading-5"
+                    >
+                      Learn more
+                    </span>
+                  </span>
+                  <div
+                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                  >
+                    <div
+                      style="height: 12px; width: 12px;"
+                    >
+                      <svg
+                        id="arrow-external"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1108,12 +1496,12 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
           class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
         >
           <p
-            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5"
           >
             Voting for
           </p>
           <div
-            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+            class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1132,7 +1520,7 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
           </div>
         </div>
         <div
-          class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+          class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
         >
           <p
             class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1156,6 +1544,20 @@ exports[`WalletVote > single vote networks > should render a vote for a standby 
           </div>
           <div
             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+          />
+        </div>
+        <div
+          class="status hidden"
+        >
+          <div
+            class="bg-theme-warning-100 dark:border-theme-warning-800 dim:border-theme-warning-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+          >
+            <div
+              class="bg-theme-warning-700 border-theme-warning-200 dark:bg-theme-warning-400 dark:border-theme-warning-700 dim:bg-theme-warning-400 dim:border-theme-warning-700 h-2 w-2 rounded-full border-2"
+            />
+          </div>
+          <div
+            class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
           />
         </div>
       </div>
@@ -1183,12 +1585,12 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
           class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
         >
           <p
-            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5"
           >
             Voting for
           </p>
           <div
-            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+            class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1207,7 +1609,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
           </div>
         </div>
         <div
-          class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+          class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
         >
           <p
             class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1233,6 +1635,20 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
           />
         </div>
+        <div
+          class="status hidden"
+        >
+          <div
+            class="bg-theme-warning-100 dark:border-theme-warning-800 dim:border-theme-warning-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+          >
+            <div
+              class="bg-theme-warning-700 border-theme-warning-200 dark:bg-theme-warning-400 dark:border-theme-warning-700 dim:bg-theme-warning-400 dim:border-theme-warning-700 h-2 w-2 rounded-full border-2"
+            />
+          </div>
+          <div
+            class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -1242,7 +1658,7 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -1257,7 +1673,9 @@ exports[`WalletVote > single vote networks > should render a vote for a validato
                 <div
                   class="flex items-center gap-2"
                 >
-                  <div>
+                  <div
+                    class=""
+                  >
                     <div
                       style="height: 16px; width: 16px;"
                     >
@@ -1360,12 +1778,12 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
           class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
         >
           <p
-            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5"
           >
             Voting for
           </p>
           <div
-            class="xs:max-w-32 max-w-28 flex-1 truncate sm:max-w-40 md:max-w-60"
+            class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1384,7 +1802,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
           </div>
         </div>
         <div
-          class="flex flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0"
+          class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
         >
           <p
             class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
@@ -1410,6 +1828,20 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
           />
         </div>
+        <div
+          class="status hidden"
+        >
+          <div
+            class="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+          >
+            <div
+              class="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2"
+            />
+          </div>
+          <div
+            class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -1419,7 +1851,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
         class="md:flex"
       >
         <div
-          class="hidden md:flex"
+          class="hidden items-center md:flex"
         >
             
         </div>
@@ -1434,7 +1866,9 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
                 <div
                   class="flex items-center gap-2"
                 >
-                  <div>
+                  <div
+                    class=""
+                  >
                     <div
                       style="height: 16px; width: 16px;"
                     >

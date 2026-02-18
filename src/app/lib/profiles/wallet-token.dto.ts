@@ -11,8 +11,8 @@ export class WalletTokenDTO {
 		return this.#data.address;
 	}
 
-	balance(): number {
-		return +this.#data.balance;
+	balance(): string {
+		return this.#data.balance;
 	}
 
 	tokenAddress(): string {
