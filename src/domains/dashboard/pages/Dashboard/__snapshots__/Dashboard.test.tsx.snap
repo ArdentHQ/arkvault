@@ -3257,7 +3257,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.00254046 ARK
+                                    - 0.00254045 ARK
                                   </span>
                                 </div>
                               </div>
@@ -3293,7 +3293,7 @@ exports[`Dashboard > should render 1`] = `
                                     class="whitespace-nowrap text-sm"
                                     data-testid="Amount"
                                   >
-                                    - 0.00254046 ARK
+                                    - 0.00254045 ARK
                                   </span>
                                 </div>
                               </div>
