@@ -23,7 +23,6 @@ import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-tra
 import { useTranslation } from "react-i18next";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTransferred } from "@/domains/transaction/components/TransactionDetail/TokensTransferred";
-import { transaction } from "@/domains/transaction/images";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -171,7 +170,6 @@ export const TransactionDetailSidePanel = ({
 	const transactionId = transactionItem.hash();
 
 	const {
-		isConfirmed,
 		isLoading,
 		transaction: confirmedTransaction,
 	} = useConfirmedTransaction({
