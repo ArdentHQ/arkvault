@@ -2,6 +2,7 @@ import { DateTime } from "@/app/lib/intl";
 import { useCallback } from "react";
 
 import { IProfile } from "@/app/lib/profiles/contracts";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface Input {
 	ticker?: string;
@@ -15,12 +16,12 @@ interface Output {
 
 export const useExchangeRate = ({ profile, ticker, exchangeTicker }: Input): Output => {
 	const convert = useCallback(
-		(value?: number) => {
+		(value?: number|string) => {
 			if (!ticker || !exchangeTicker || !value) {
 				return 0;
 			}
 
-			return profile.exchangeRates().exchange(ticker, exchangeTicker, DateTime.make(), value);
+			return profile.exchangeRates().exchange(ticker, exchangeTicker, DateTime.make(), BigNumber.make(value));
 		},
 		[exchangeTicker, ticker],
 	);

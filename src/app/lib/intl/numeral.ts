@@ -67,7 +67,7 @@ export class Numeral {
 	 * @returns {string}
 	 * @memberof Numeral
 	 */
-	public formatAsCurrency(value: number, currency: string): string {
+	public formatAsCurrency(value: number|Intl.StringNumericLiteral, currency: string): string {
 		return new Intl.NumberFormat(this.#locale, {
 			...this.#options,
 			currency,
