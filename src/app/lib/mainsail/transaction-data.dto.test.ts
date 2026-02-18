@@ -436,4 +436,43 @@ describe("TransactionData", () => {
 
 		expect(transaction.token()).toBeUndefined();
 	});
+
+	it("should return approve type", () => {
+		const mockTransaction = new TestTransactionData();
+		mockTransaction.isApprove = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.type()).toBe("approve");
+	});
+
+	it("should return revoke type", () => {
+		const mockTransaction = new TestTransactionData();
+		mockTransaction.isRevoke = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.type()).toBe("revoke");
+	});
+
+	it("should return batchtransfer type", () => {
+		const mockTransaction = new TestTransactionData();
+		mockTransaction.isBatchTransfer = () => true;
+		mockTransaction.configure(commonData);
+
+		expect(mockTransaction.type()).toBe("batchtransfer");
+	});
+
+	it("should return transfer for token transfer", () => {
+		transaction.configure({
+			...commonData,
+			token: { address: "0x1234567890abcdef" },
+			type: "transfer",
+		});
+		transaction.isTokenTransfer = () => true;
+		expect(transaction.type()).toBe("transfer");
+	});
+
+	it("should return method hash when none of the specific types match", () => {
+		transaction.configure({ ...commonData, data: "0xabcdef0123456789" });
+		expect(transaction.type()).toBe("0xabcdef01");
+	});
 });
