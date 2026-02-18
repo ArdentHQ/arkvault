@@ -133,7 +133,7 @@ export class TransactionEncoder {
 		const amount = BigNumber.make(recipient?.amount ?? 0, token.token().decimals()).toSatoshi();
 
 		return {
-			data: TransactionDataEncoder.tokenTransfer(recipient?.address!, amount.toString()),
+			data: TransactionDataEncoder.tokenTransfer(recipient?.address!, amount.toFixed(0)),
 			to: tokenContractAddress,
 		};
 	}

@@ -81,7 +81,6 @@ const signedTransactionMock = {
 	isValidatorRegistration: () => false,
 	isValidatorResignation: () => true,
 	isVote: () => false,
-	isVoteCombination: () => false,
 	memo: () => ValidatorResignationFixture.data.memo || undefined,
 	nonce: () => BigNumber.make(ValidatorResignationFixture.data.nonce),
 	payments: () => [],

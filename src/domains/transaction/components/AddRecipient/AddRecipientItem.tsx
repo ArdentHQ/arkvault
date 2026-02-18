@@ -130,7 +130,7 @@ const RecipientRow = ({
 	onDelete: (index: number) => void;
 	address: string;
 	alias: string | undefined;
-	amount: number;
+	amount: number | string;
 	ticker: string;
 	exchangeTicker: string;
 	convertedAmount: number;

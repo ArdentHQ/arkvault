@@ -2,7 +2,6 @@
 
 import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
-import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { decodeFunctionResult, encodeFunctionData } from "viem";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
@@ -11,7 +10,6 @@ import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transacti
 import { DateTime } from "@/app/lib/intl";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { SignedTransactionData } from "./signed-transaction.dto";
-import { UsernamesAbi } from "@mainsail/evm-contracts";
 import { WalletData } from "./wallet.dto";
 import dotify from "node-dotify";
 import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
@@ -23,6 +21,7 @@ import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
+import { Helpers, TransactionFunctionSigs, UsernamesContract } from "@arkecosystem/typescript-crypto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -328,7 +327,7 @@ export class ClientService {
 
 			try {
 				data = encodeFunctionData({
-					abi: UsernamesAbi.abi,
+					abi: UsernamesContract.abi,
 					args: [addresses],
 					functionName: "getUsernames",
 				});
@@ -344,7 +343,7 @@ export class ClientService {
 			let decoded;
 			try {
 				decoded = decodeFunctionResult({
-					abi: UsernamesAbi.abi,
+					abi: UsernamesContract.abi,
 					data: response.result,
 					functionName: "getUsernames",
 				});
@@ -432,21 +431,24 @@ export class ClientService {
 		}
 
 		const transactionTypeMap: Record<string, string | undefined> = {
-			multiPayment: TransactionTypes.MultiPayment,
-			transfer: TransactionTypes.Transfer,
-			updateValidator: TransactionTypes.UpdateValidator,
-			usernameRegistration: TransactionTypes.RegisterUsername,
-			usernameResignation: TransactionTypes.ResignUsername,
-			validatorRegistration: TransactionTypes.RegisterValidator,
-			validatorResignation: TransactionTypes.ResignValidator,
-			vote: [trimHexPrefix(TransactionTypes.Vote), trimHexPrefix(TransactionTypes.Unvote)].join(","),
+			multiPayment: TransactionFunctionSigs.MultiPayment,
+			transfer: TransactionFunctionSigs.Transfer,
+			updateValidator: TransactionFunctionSigs.UpdateValidator,
+			usernameRegistration: TransactionFunctionSigs.RegisterUsername,
+			usernameResignation: TransactionFunctionSigs.ResignUsername,
+			validatorRegistration: TransactionFunctionSigs.RegisterValidator,
+			validatorResignation: TransactionFunctionSigs.ResignValidator,
+			vote: [
+				Helpers.removeLeadingHexZero(TransactionFunctionSigs.Vote),
+				Helpers.removeLeadingHexZero(TransactionFunctionSigs.Unvote),
+			].join(","),
 		};
 
 		// @ts-ignore
 		if (body.type) {
 			const data = transactionTypeMap[body.type];
 			if (data !== undefined) {
-				result.searchParams.data = trimHexPrefix(data);
+				result.searchParams.data = Helpers.removeLeadingHexZero(data);
 			}
 
 			delete body.type;
@@ -460,7 +462,7 @@ export class ClientService {
 
 				// a transfer is an empty string, so explicitly check for undefined
 				if (datum !== undefined) {
-					data.push(trimHexPrefix(datum));
+					data.push(Helpers.removeLeadingHexZero(datum));
 				}
 			}
 

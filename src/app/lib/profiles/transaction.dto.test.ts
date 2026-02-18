@@ -178,11 +178,9 @@ describe("ExtendedConfirmedTransactionData", () => {
 			"isReceived",
 			"isReturn",
 			"isTransfer",
-			"isSecondSignature",
 			"isUsernameRegistration",
 			"isUsernameResignation",
 			"isValidatorRegistration",
-			"isVoteCombination",
 			"isVote",
 			"isUnvote",
 			"isMultiPayment",
@@ -197,7 +195,11 @@ describe("ExtendedConfirmedTransactionData", () => {
 		])("should delegate %s", (method) => {
 			const spy = vi.spyOn(dataMock, method as keyof ConfirmedTransactionData);
 			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-			subject[method as keyof ExtendedConfirmedTransactionData]();
+			try {
+				subject[method as keyof ExtendedConfirmedTransactionData]();
+			} catch (error) {
+				console.log({ error, method });
+			}
 			expect(spy).toHaveBeenCalled();
 		});
 

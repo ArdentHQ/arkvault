@@ -1,10 +1,9 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { KeyValuePair } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Exceptions } from ".";
-import * as TransactionTypeServiceMock from "./transaction-type.service";
 
 describe("ConfirmedTransactionData", () => {
 	let transaction: ConfirmedTransactionData;
@@ -16,7 +15,7 @@ describe("ConfirmedTransactionData", () => {
 		commonData = {
 			blockHash: "test_block_hash",
 			confirmations: 10,
-			data: "0x1234567890abcdef",
+			data: "0x12345678",
 			from: "sender_address",
 			gas: 21000,
 			gasPrice: 10000000,
@@ -30,14 +29,6 @@ describe("ConfirmedTransactionData", () => {
 		};
 	});
 
-	it("should return voteCombination type when isVoteCombination is true", () => {
-		const mockTransaction = new ConfirmedTransactionData();
-		mockTransaction.isVoteCombination = () => true;
-		mockTransaction.configure(commonData);
-
-		expect(mockTransaction.type()).toBe("voteCombination");
-	});
-
 	it("should return transfer type when isTransfer is true", () => {
 		const mockTransaction = new ConfirmedTransactionData();
 		mockTransaction.isTransfer = () => true;
@@ -47,15 +38,10 @@ describe("ConfirmedTransactionData", () => {
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
-		const spy = vi
-			.spyOn(TransactionTypeServiceMock.TransactionTypeService, "getIdentifierName")
-			.mockReturnValue("customIdentifier");
-
 		transaction.configure(commonData);
 		const result = transaction.type();
 
-		expect(result).toBe("customIdentifier");
-		spy.mockRestore();
+		expect(result).toBe(commonData.data);
 	});
 
 	it("should return recipients for multi payment", () => {
@@ -352,11 +338,6 @@ describe("ConfirmedTransactionData", () => {
 	it("#isTransfer", () => {
 		transaction.configure({ ...commonData, data: "0x000000" });
 		expect(transaction.isTransfer()).toBe(false);
-	});
-
-	it("#isSecondSignature", () => {
-		transaction.configure(commonData);
-		expect(transaction.isSecondSignature()).toBe(false);
 	});
 
 	it("isUsernameRegistration", () => {
