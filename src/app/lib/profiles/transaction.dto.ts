@@ -2,13 +2,11 @@
 /* eslint-disable */
 
 import { Contracts } from "@/app/lib/mainsail";
-import { Contracts as ProfileContracts } from "@/app/lib/profiles";
 import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 export interface ExtendedTransactionRecipient {
