@@ -11,7 +11,7 @@ interface Input {
 }
 
 interface Output {
-	convert: (value?: number|string) => number;
+	convert: (value?: number | string) => number;
 }
 
 export const useExchangeRate = ({ profile, ticker, exchangeTicker }: Input): Output => {
