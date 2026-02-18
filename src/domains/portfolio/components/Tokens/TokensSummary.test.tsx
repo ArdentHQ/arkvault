@@ -7,6 +7,7 @@ import { TokensSummary } from "./TokensSummary";
 import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 const fixtureProfileId = getMainsailProfileId();
 
@@ -106,7 +107,14 @@ describe("TokensSummary", () => {
 			}),
 		});
 
-		vi.spyOn(wallet, "tokens").mockReturnValue(repo);
+		vi.spyOn(profile.tokens(), "selected").mockReturnValue(
+			new WalletTokenCollection(repo.values(), {
+				last: undefined,
+				next: undefined,
+				prev: undefined,
+				self: undefined,
+			}),
+		);
 
 		render(<TokensSummary wallet={wallet} />);
 

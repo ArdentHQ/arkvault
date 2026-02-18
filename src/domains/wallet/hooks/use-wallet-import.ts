@@ -205,6 +205,8 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 
 		await persist();
 
+		void profile.tokens().sync();
+
 		return wallets;
 	};
 

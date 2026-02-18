@@ -30,6 +30,7 @@ import { useLedgerMigrationStatus } from "@/domains/wallet/hooks/use-ledger-wall
 import { useLocalStorage } from "usehooks-ts";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 export const PortfolioHeader = ({
 	profile,
@@ -154,6 +155,7 @@ export const PortfolioHeader = ({
 		}
 	};
 
+	useProfileTokens({ profile });
 	const hasTokens = profile.tokens().selectedCount() > 0;
 	const { isXs } = useBreakpoint();
 
