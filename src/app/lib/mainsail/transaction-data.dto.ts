@@ -42,7 +42,6 @@ export abstract class TransactionData {
 	}
 
 	public type(): string {
-
 		if (this.isTokenTransfer()) {
 			return "transfer";
 		}
