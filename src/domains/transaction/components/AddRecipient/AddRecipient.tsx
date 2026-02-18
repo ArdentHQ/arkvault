@@ -130,7 +130,7 @@ export const AddRecipient = ({
 	}, [register]);
 
 	useEffect(() => {
-		const remaining = +remainingBalance <= 0 ? 0 : remainingBalance;
+		const remaining = BigNumber.make(remainingBalance).isLessThanOrEqualTo(0) ? "0" : remainingBalance;
 
 		setValue("remainingBalance", remaining);
 	}, [remainingBalance, setValue, amount, recipientAddress, senderAddress]);
@@ -234,7 +234,7 @@ export const AddRecipient = ({
 	}: {
 		address: string | undefined;
 		alias?: WalletAliasResult;
-		amount: string | number | undefined;
+		amount: string | undefined;
 	}) => {
 		if (!isSingle) {
 			return;
@@ -248,7 +248,7 @@ export const AddRecipient = ({
 			{
 				address,
 				alias: alias?.alias,
-				amount: +amount,
+				amount,
 			},
 		]);
 	};
@@ -259,7 +259,7 @@ export const AddRecipient = ({
 		const newRecipient: RecipientItem = {
 			address: recipientAddress,
 			alias: recipientAlias?.alias,
-			amount: +amount,
+			amount,
 		};
 
 		const newRecipients = [...addedRecipients, newRecipient];

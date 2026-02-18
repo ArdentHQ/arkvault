@@ -3,9 +3,8 @@ import { MultiPaymentItem, TransactionDataMeta } from "@/app/lib/mainsail/confir
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
-import { TransactionTypeService } from "./transaction-type.service";
 import { AddressService } from "./address.service";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
+import { TransactionTypeIdentifier, UnitConverter } from "@arkecosystem/typescript-crypto";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 
@@ -16,7 +15,6 @@ export abstract class TransactionData {
 	readonly #meta: Record<string, TransactionDataMeta> = {};
 	readonly #types = [
 		{ method: "isMultiPayment", type: "multiPayment" },
-		{ method: "isSecondSignature", type: "secondSignature" },
 		{ method: "isTransfer", type: "transfer" },
 		{ method: "isUsernameRegistration", type: "usernameRegistration" },
 		{ method: "isUsernameResignation", type: "usernameResignation" },
@@ -24,7 +22,6 @@ export abstract class TransactionData {
 		{ method: "isValidatorRegistration", type: "validatorRegistration" },
 		{ method: "isValidatorResignation", type: "validatorResignation" },
 		{ method: "isVote", type: "vote" },
-		{ method: "isVoteCombination", type: "voteCombination" },
 		{ method: "isUpdateValidator", type: "updateValidator" },
 	];
 
@@ -50,24 +47,10 @@ export abstract class TransactionData {
 			return "transfer";
 		}
 
-		if (this.isVoteCombination()) {
-			return "voteCombination";
-		}
-
 		for (const { type, method } of this.#types) {
-			if (type === "voteCombination") {
-				continue;
-			}
-
 			if (this[method]()) {
 				return type;
 			}
-		}
-
-		const identifierName = TransactionTypeService.getIdentifierName(this.data);
-
-		if (identifierName !== null) {
-			return identifierName;
 		}
 
 		return this.methodHash();
@@ -78,7 +61,7 @@ export abstract class TransactionData {
 			return true;
 		}
 
-		return TransactionTypeService.isTokenTransfer(this.data);
+		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
 	}
 
 	public token(): TransactionToken | undefined {
@@ -213,47 +196,39 @@ export abstract class TransactionData {
 	}
 
 	public isTransfer(): boolean {
-		return TransactionTypeService.isTransfer(this.data);
-	}
-
-	public isSecondSignature(): boolean {
-		return false;
+		return TransactionTypeIdentifier.isTransfer(this.data.data);
 	}
 
 	public isUsernameRegistration(): boolean {
-		return TransactionTypeService.isUsernameRegistration(this.data);
+		return TransactionTypeIdentifier.isUsernameRegistration(this.data.data);
 	}
 
 	public isUsernameResignation(): boolean {
-		return TransactionTypeService.isUsernameResignation(this.data);
+		return TransactionTypeIdentifier.isUsernameResignation(this.data.data);
 	}
 
 	public isValidatorRegistration(): boolean {
-		return TransactionTypeService.isValidatorRegistration(this.data);
+		return TransactionTypeIdentifier.isValidatorRegistration(this.data.data);
 	}
 
 	public isUpdateValidator(): boolean {
-		return TransactionTypeService.isUpdateValidator(this.data);
-	}
-
-	public isVoteCombination(): boolean {
-		return TransactionTypeService.isVoteCombination(this.data);
+		return TransactionTypeIdentifier.isUpdateValidator(this.data.data);
 	}
 
 	public isVote(): boolean {
-		return TransactionTypeService.isVote(this.data);
+		return TransactionTypeIdentifier.isVote(this.data.data);
 	}
 
 	public isUnvote(): boolean {
-		return TransactionTypeService.isUnvote(this.data);
+		return TransactionTypeIdentifier.isUnvote(this.data.data);
 	}
 
 	public isMultiPayment(): boolean {
-		return TransactionTypeService.isMultiPayment(this.data);
+		return TransactionTypeIdentifier.isMultiPayment(this.data.data);
 	}
 
 	public isValidatorResignation(): boolean {
-		return TransactionTypeService.isValidatorResignation(this.data);
+		return TransactionTypeIdentifier.isValidatorResignation(this.data.data);
 	}
 
 	public username(): string {
