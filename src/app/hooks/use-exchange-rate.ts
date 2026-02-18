@@ -16,7 +16,7 @@ interface Output {
 
 export const useExchangeRate = ({ profile, ticker, exchangeTicker }: Input): Output => {
 	const convert = useCallback(
-		(value?: number|string) => {
+		(value?: number | string) => {
 			if (!ticker || !exchangeTicker || !value) {
 				return 0;
 			}
