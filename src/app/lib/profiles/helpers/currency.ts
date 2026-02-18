@@ -19,7 +19,7 @@ export class Currency {
 		const currencyDecimals = CURRENCIES[ticker]?.decimals ?? DEFAULT_DECIMALS;
 		const decimals = options?.decimals ?? currencyDecimals;
 
-		const valueBigNumber = BigNumber.make(value);
+		const valueBigNumber = BigNumber.make(value, decimals);
 		const absValue = valueBigNumber.isNegative() ? valueBigNumber.times(-1) : valueBigNumber;
 
 		if (currencyDecimals > 2) {
