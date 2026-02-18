@@ -70,8 +70,8 @@ export const TransactionDetailContent = ({
 			return transaction.data().data.receipt.deployedContractAddress;
 		}
 
-		if ("token" in transaction && transaction.token()) {
-			return transaction.token().token().address();
+		if (transaction.isTokenTransfer()) {
+			return transaction.to();
 		}
 	}, [transaction]);
 

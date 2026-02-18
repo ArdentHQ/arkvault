@@ -61,7 +61,6 @@ export const TransactionSummary = ({
 						</DetailLabelText>
 
 						<TransactionAmountLabel
-							token={token}
 							transaction={transaction}
 							profile={profile}
 							allowHideBalance={allowHideBalance}

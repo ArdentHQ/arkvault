@@ -12,20 +12,22 @@ export const TransactionAmountLabel = ({
 	transaction,
 	profile,
 	allowHideBalance,
-	token,
 }: {
 	transaction: ExtendedTransactionData;
 	profile?: Contracts.IProfile;
 	allowHideBalance?: boolean;
-	token?: TokenDTO;
 }): JSX.Element => {
 	const { t } = useTranslation();
-	const currency = token ? token.symbol() : transaction.wallet().currency();
+
+	const transactionToken = transaction.token();
+
+	const currency = transactionToken ? transactionToken.token().symbol() : transaction.wallet().currency();
+	const value = transactionToken ? transactionToken.value().toHuman() : transaction.value();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
 	return (
 		<AmountLabel
-			value={transaction.value()}
+			value={value}
 			isNegative={transaction.isSent()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}

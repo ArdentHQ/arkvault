@@ -71,7 +71,6 @@ export const TokensTransferred = ({
 
 					{!isRefreshingTransaction && (
 						<TransactionAmountLabel
-							token={token}
 							transaction={transaction}
 							profile={profile}
 							allowHideBalance={allowHideBalance}
