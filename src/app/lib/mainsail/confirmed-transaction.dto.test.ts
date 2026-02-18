@@ -426,4 +426,19 @@ describe("ConfirmedTransactionData", () => {
 		transaction.configure(commonData);
 		expect(transaction.gasUsed()).toBe(0.01);
 	});
+
+	it("#isApprove", () => {
+		transaction.configure({ ...commonData, data: "0x000000" });
+		expect(transaction.isApprove()).toBe(false);
+	});
+
+	it("#isRevoke", () => {
+		transaction.configure({ ...commonData, data: "0x000000" });
+		expect(transaction.isRevoke()).toBe(false);
+	});
+
+	it("#isBatchTransfer", () => {
+		transaction.configure({ ...commonData, data: "0x000000" });
+		expect(transaction.isBatchTransfer()).toBe(false);
+	});
 });
