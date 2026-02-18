@@ -26,7 +26,6 @@ export const TokensTransferred = ({
 	labelClassName,
 	profile,
 	allowHideBalance = false,
-	token,
 	isRefreshingTransaction,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
