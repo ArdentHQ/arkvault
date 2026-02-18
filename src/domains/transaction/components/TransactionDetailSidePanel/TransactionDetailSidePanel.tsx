@@ -4,9 +4,9 @@ import {
 	TransactionAddresses,
 	TransactionConfirmations,
 	TransactionDetails,
+	TransactionGas,
 	TransactionSummary,
 	TransactionType,
-	TransactionGas,
 } from "@/domains/transaction/components/TransactionDetail";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -23,6 +23,7 @@ import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-tra
 import { useTranslation } from "react-i18next";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTransferred } from "@/domains/transaction/components/TransactionDetail/TokensTransferred";
+import { transaction } from "@/domains/transaction/images";
 
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
@@ -71,7 +72,7 @@ export const TransactionDetailContent = ({
 		}
 
 		if ("token" in transaction && transaction.token()) {
-			return transaction.token().address();
+			return transaction.token().token().address();
 		}
 	}, [transaction]);
 
@@ -102,7 +103,7 @@ export const TransactionDetailContent = ({
 					<DetailPadded className="flex-1 sm:ml-0">
 						<TokensTransferred
 							isRefreshingTransaction={isRefreshingTransaction}
-							token={transaction.token()}
+							token={transaction.token()?.token()}
 							labelClassName={labelClassName}
 							transaction={transaction}
 							senderWallet={transaction.wallet()}
@@ -174,7 +175,6 @@ export const TransactionDetailSidePanel = ({
 		isLoading,
 		transaction: confirmedTransaction,
 	} = useConfirmedTransaction({
-		tokenTransfer: transactionItem,
 		transactionId,
 		wallet,
 	});
@@ -191,36 +191,15 @@ export const TransactionDetailSidePanel = ({
 		return () => clearTimeout(timeoutId);
 	}, [isOpen]);
 
-	// If already confirmed, skip the hook entirely
-	if (transactionItem.isConfirmed()) {
-		return (
-			<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
-				<TransactionDetailContent
-					transactionItem={transactionItem}
-					profile={profile}
-					isConfirmed={transactionItem.isConfirmed()}
-					confirmations={transactionItem.confirmations().toNumber()}
-					allowHideBalance
-					containerClassname="-mx-3 sm:mx-0"
-					isRefreshingTransaction={isLoading}
-				/>
-			</SidePanel>
-		);
-	}
-
 	const transactionToShow = confirmedTransaction ?? transactionItem;
-	const confirmationsToShow = confirmedTransaction
-		? confirmedTransaction.confirmations().toNumber()
-		: transactionItem.confirmations().toNumber();
-	const isConfirmedToShow = isConfirmed;
 
 	return (
 		<SidePanel title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} open={isOpen} onOpenChange={setIsOpen}>
 			<TransactionDetailContent
 				transactionItem={transactionToShow}
 				profile={profile}
-				isConfirmed={isConfirmedToShow}
-				confirmations={confirmationsToShow}
+				isConfirmed={transactionToShow.isConfirmed()}
+				confirmations={transactionToShow.confirmations().toNumber()}
 				allowHideBalance
 				containerClassname="-mx-3 sm:mx-0"
 				isRefreshingTransaction={isLoading}

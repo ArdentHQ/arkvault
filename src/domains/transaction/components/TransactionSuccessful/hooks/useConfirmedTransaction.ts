@@ -7,12 +7,10 @@ export const useConfirmedTransaction = ({
 	wallet,
 	transactionId,
 	disabled,
-	tokenTransfer,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
 	transactionId?: string;
 	disabled?: boolean;
-	tokenTransfer?: ExtendedTransactionDTO;
 }): { isConfirmed: boolean; isLoading: boolean; transaction?: ExtendedConfirmedTransactionData } => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isConfirmed, setIsConfirmed] = useState(false);
@@ -32,8 +30,10 @@ export const useConfirmedTransaction = ({
 				try {
 					const transaction = await wallet.client().transaction(transactionId);
 					setIsConfirmed(true);
+
 					setIsLoading(false);
 					setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
+
 					clearInterval(intervalId.current);
 				} catch {
 					// transaction is not forged yet, ignore the error
