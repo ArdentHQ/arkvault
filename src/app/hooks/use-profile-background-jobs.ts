@@ -26,6 +26,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				syncExchangeRates: undefined,
 				syncProfileWallets: undefined,
 				syncServerStatus: undefined,
+				syncTokens: undefined,
 			};
 		}
 
@@ -67,6 +68,15 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			interval: Intervals.Long,
 		};
 
+		const syncTokens = {
+			callback: () => {
+				if (profile.status().isRestored() && profile.wallets().selected().length > 0) {
+					return profile.tokens().sync();
+				}
+			},
+			interval: Intervals.Medium,
+		};
+
 		const syncNotifications = {
 			callback: () => profile.notifications().transactions().sync(),
 			interval: Intervals.Long,
@@ -92,10 +102,12 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				syncValidators,
 				syncProfileWallets,
 				syncServerStatus,
+				syncTokens,
 			],
 			syncExchangeRates: syncExchangeRates.callback,
 			syncProfileWallets: syncProfileWallets.callback,
 			syncServerStatus: syncServerStatus.callback,
+			syncTokens: syncTokens.callback,
 		};
 	}, [env, profile, walletsCount, setConfiguration, profileId]);
 };

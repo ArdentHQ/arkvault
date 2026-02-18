@@ -19,8 +19,10 @@ export const TokensSummary = ({ wallet }: { wallet: Contracts.IReadWriteWallet }
 		<div data-testid="TokensSummary" className="flex items-center gap-1">
 			<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex h-6 items-center rounded-xl">
 				{wallet
+					.profile()
 					.tokens()
-					.values()
+					.selected()
+					.items()
 					.toSorted((a, b) => b.balance().comparedTo(a.balance()))
 					.slice(0, VISIBLE_TOKEN_COUNT)
 					.toSorted((a, b) => a.token().name().localeCompare(b.token().name()))
