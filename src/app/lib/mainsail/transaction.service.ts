@@ -117,7 +117,7 @@ export class TransactionService {
 		const builder = TokenTransferBuilder.new({
 			senderPublicKey: input.signatory.address(),
 		})
-			.recipient(input.data.to, amount.toBigInt())
+			.recipient(input.data.to, BigInt(amount.toFixed(0)))
 			.contractAddress(token.token().address())
 			.nonce(nonce)
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))

@@ -156,7 +156,6 @@ export const useSendTransferForm = ({
 		register("network", sendTransferValidation.network());
 		register("recipients", sendTransferValidation.recipients());
 		register("senderAddress", sendTransferValidation.senderAddress());
-		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
 		register("gasPrice", commonValidation.gasPrice(walletBalance, getValues, wallet?.network()));
 		register("gasLimit", commonValidation.gasLimit(walletBalance, getValues, wallet?.network()));
