@@ -249,7 +249,7 @@ describe("ExtendedConfirmedTransactionData", () => {
 	});
 
 	describe("Token methods", () => {
-		it.each(["#isApprove", "#isRevoke", "#isBatchTransfer"])("should delegate %s", (method) => {
+		it.each(["isApprove", "isRevoke", "isBatchTransfer"])("should delegate %s", (method) => {
 			const spy = vi.spyOn(dataMock, method as keyof ConfirmedTransactionData);
 			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
 			try {
