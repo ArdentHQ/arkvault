@@ -29,31 +29,6 @@ describe("useConfirmedTransaction", () => {
 		expect(result.current.isConfirmed).toBe(false);
 	});
 
-	it("should sync token transfer transaction", async () => {
-		const sync = vi.fn();
-
-		const { result } = renderHook(() =>
-			useConfirmedTransaction({
-				tokenTransfer: {
-					...TransactionFixture,
-					isTokenTransfer: () => true,
-					sync,
-				},
-				transactionId: "123",
-				wallet: wallet,
-			}),
-		);
-
-		await waitFor(
-			() => {
-				expect(result.current.isConfirmed).toBe(true);
-			},
-			{ timeout: 5000 },
-		);
-
-		expect(sync).toHaveBeenCalled();
-	});
-
 	it("should set isConfirmed to true when transaction is found", async () => {
 		vi.spyOn(wallet, "client").mockImplementation(() => ({
 			transaction: () => ({

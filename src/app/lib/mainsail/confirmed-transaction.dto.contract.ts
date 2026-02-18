@@ -28,8 +28,6 @@ export interface UnspentTransactionData {
 export interface ConfirmedTransactionData {
 	configure(data: any): ConfirmedTransactionData;
 
-	sync(): Promise<void>;
-
 	withDecimals(decimals?: number | string): ConfirmedTransactionData;
 
 	hash(): string;
