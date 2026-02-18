@@ -55,6 +55,7 @@ export const useWalletSelection = (profile: Contracts.IProfile) => {
 		);
 
 		await persist();
+		void profile.tokens().sync();
 	};
 
 	/**
@@ -71,6 +72,7 @@ export const useWalletSelection = (profile: Contracts.IProfile) => {
 		}
 
 		await persist();
+		void profile.tokens().sync();
 	};
 
 	/**

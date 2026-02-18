@@ -2,9 +2,8 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -13,16 +12,13 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useValidatorRegistrationLockedFee } from "./hooks/useValidatorRegistrationLockedFee";
 import { Alert } from "@/app/components/Alert";
 import { BigNumber } from "@/app/lib/helpers";
-import cn from "classnames";
 
 export const ReviewStep = ({
 	wallet,
 	profile,
-	hideHeader = false,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
-	hideHeader?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -55,28 +51,9 @@ export const ReviewStep = ({
 
 	return (
 		<section data-testid="ValidatorRegistrationForm__review-step">
-			{!hideHeader && (
-				<StepHeader
-					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-				/>
-			)}
+			{errors.lockedFee && <Alert>{errors.lockedFee.message}</Alert>}
 
-			{errors.lockedFee && <Alert className={cn({ "mt-4": !hideHeader })}>{errors.lockedFee.message}</Alert>}
-
-			<div
-				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
-					"mt-6 sm:mt-4": !hideHeader,
-				})}
-			>
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-36"
 					senderAddress={wallet.address()}
