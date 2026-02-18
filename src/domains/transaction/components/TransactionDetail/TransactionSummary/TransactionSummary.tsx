@@ -25,7 +25,6 @@ export const TransactionSummary = ({
 	labelClassName,
 	profile,
 	allowHideBalance = false,
-	token,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
