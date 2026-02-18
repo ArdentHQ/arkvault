@@ -4,7 +4,6 @@ import { renderHook, waitFor } from "@testing-library/react";
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { useConfirmedTransaction } from "./useConfirmedTransaction";
-import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 describe("useConfirmedTransaction", () => {
 	let profile: Contracts.IProfile;
