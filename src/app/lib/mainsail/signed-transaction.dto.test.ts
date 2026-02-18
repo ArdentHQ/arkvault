@@ -241,7 +241,7 @@ describe("SignedTransactionData", () => {
 		it("should return `undefined` for tokens when `tokens` is not present", () => {
 			const tokenTransferMock = vi
 				.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isTokenTransfer")
-				.mockReturnValue(true);
+				.mockReturnValue(false);
 
 			transaction.configure(
 				{
