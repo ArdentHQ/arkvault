@@ -90,10 +90,6 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isTransfer();
 	}
 
-	public isSecondSignature(): boolean {
-		return this.#data.isSecondSignature();
-	}
-
 	public isValidatorRegistration(): boolean {
 		return this.#data.isValidatorRegistration();
 	}
@@ -108,10 +104,6 @@ export class ExtendedSignedTransactionData {
 
 	public isUsernameResignation(): boolean {
 		return this.#data.isUsernameResignation();
-	}
-
-	public isVoteCombination(): boolean {
-		return this.#data.isVoteCombination();
 	}
 
 	public isVote(): boolean {

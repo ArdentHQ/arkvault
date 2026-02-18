@@ -18,8 +18,8 @@ importers:
         specifier: ^0.14.0
         version: 0.14.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.17
-        version: 0.0.17
+        specifier: ^0.0.18
+        version: 0.0.18
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -35,9 +35,6 @@ importers:
       '@ledgerhq/hw-transport-webusb':
         specifier: ^6.29.8
         version: 6.29.8
-      '@mainsail/evm-contracts':
-        specifier: 0.0.1-evm.18
-        version: 0.0.1-evm.18
       '@tailwindcss/forms':
         specifier: ^0.5.10
         version: 0.5.10(tailwindcss@4.1.11)
@@ -430,8 +427,8 @@ packages:
     resolution: {integrity: sha512-ePYhEjiL6Y9+Ghbpy30N0WIIvBupOThlvJQNmR+/G2D2sNi3+vv8MorapZ31DeuqPtR7eLTQh/vWIUeBB1r91Q==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.17':
-    resolution: {integrity: sha512-E5uRsuUi0oCCliAgywbWM29EyqpPnVIVvDvXcse+OZJ/IQLDcWT4FuJKBmvO+0oNQKOEprz//H/eDpU1Ov9xOg==}
+  '@arkecosystem/typescript-crypto@0.0.18':
+    resolution: {integrity: sha512-t0HFN/MUvLqY2XOwkacyQHkYhs4R4JNo9x4omYBee/oH6cjNJX/V1I3CV6vWGz1wo0NehrpI+/4RifFlDC0jGA==}
     engines: {node: '>=20.12.2'}
 
   '@asamuzakjp/css-color@3.2.0':
@@ -1640,10 +1637,6 @@ packages:
 
   '@ledgerhq/types-live@6.78.0':
     resolution: {integrity: sha512-8popPS/tw8AmoTBSCfmiLc0wFskPpNAhhh5n4wqD9N6d0gFax84HWMEEHJSqsPor6wuzfVPmFYVivpjErlYi9Q==}
-
-  '@mainsail/evm-contracts@0.0.1-evm.18':
-    resolution: {integrity: sha512-WrNJc0SwZYhOSYGkFCP10GmSorKDNPpZMCYbI+iRT/20uZjbJ6YYmuRHHUEqIBB4Kpc0T7feZ4O0oOnAefm7hQ==}
-    engines: {node: '>=20.x'}
 
   '@mswjs/interceptors@0.39.2':
     resolution: {integrity: sha512-RuzCup9Ct91Y7V79xwCb146RaBRHZ7NBbrIUySumd1rpKqHL5OonaqrGIbug5hNwP/fRyxFMA6ISgw4FTtYFYg==}
@@ -3659,12 +3652,12 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-dirs@3.0.1:
     resolution: {integrity: sha512-NBcGGFbBA9s1VzD41QXDG+3++t9Mn5t1FpLdhESY6oKY4gYTFpX4wO3sqGUa0Srjtbfj3szX0RnemmrVRUdULA==}
@@ -6611,7 +6604,7 @@ snapshots:
 
   '@arkecosystem/typescript-client@0.14.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.17':
+  '@arkecosystem/typescript-crypto@0.0.18':
     dependencies:
       '@noble/secp256k1': 2.3.0
       bignumber.js: 9.3.1
@@ -8192,8 +8185,6 @@ snapshots:
     dependencies:
       bignumber.js: 9.3.1
       rxjs: 7.8.2
-
-  '@mainsail/evm-contracts@0.0.1-evm.18': {}
 
   '@mswjs/interceptors@0.39.2':
     dependencies:
