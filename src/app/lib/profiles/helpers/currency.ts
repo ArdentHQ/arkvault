@@ -34,7 +34,7 @@ export class Currency {
 				.replace("BTC", withTicker ? ticker.toUpperCase() : "")
 				.trim();
 		}
-	console.log(value, valueBigNumber.toString(), absValue.toString());
+
 		let money =
 			decimals === 2
 				? Money.make(Math.round(absValue.times(100).toNumber()), ticker)
