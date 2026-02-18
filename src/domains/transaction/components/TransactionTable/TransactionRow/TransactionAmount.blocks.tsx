@@ -18,7 +18,7 @@ export const TransactionAmountLabel = ({
 }): JSX.Element => {
 	const { t } = useTranslation();
 
-	const transactionToken = transaction.token();
+	const transactionToken = 'token' in transaction ? transaction.token() : undefined;
 
 	const currency = transactionToken ? transactionToken.token().symbol() : transaction.wallet().currency();
 	const value = transactionToken ? transactionToken.value().toHuman() : transaction.value();
