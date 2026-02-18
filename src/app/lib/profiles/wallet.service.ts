@@ -26,7 +26,6 @@ export class WalletService implements IWalletService {
 			promises.push(
 				() => wallet?.synchroniser().identity(),
 				() => wallet?.synchroniser().votes(),
-				() => wallet?.synchroniser().tokens(),
 			);
 		}
 

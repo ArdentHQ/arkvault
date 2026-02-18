@@ -348,7 +348,6 @@ export class WalletRepository implements IWalletRepository {
 			async () => {
 				await wallet.mutator().address({ address });
 				await wallet.synchroniser().identity(options);
-				await wallet.synchroniser().tokens();
 			},
 			{
 				onFailedAttempt: (error) => {
