@@ -4,8 +4,8 @@ import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 export type ExtendedTransactionData = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 
-const calculateReturnedAmount = function (transaction: ExtendedTransactionData): number {
-	let returnedAmount = 0;
+const calculateReturnedAmount = function (transaction: ExtendedTransactionData): BigNumber {
+	let returnedAmount = BigNumber.ZERO;
 
 	if (!transaction.isMultiPayment()) {
 		return returnedAmount;
@@ -18,7 +18,7 @@ const calculateReturnedAmount = function (transaction: ExtendedTransactionData):
 
 	for (const recipient of transaction.recipients().values()) {
 		if (transaction.isSent() && transaction.from() === recipient.address) {
-			returnedAmount += recipient.amount;
+			returnedAmount = returnedAmount.plus(recipient.amount);
 		}
 	}
 
@@ -32,15 +32,13 @@ const calculateTotal = (transaction: ExtendedTransactionData) => {
 		}
 
 		return BigNumber.make(transaction.total())
-			.minus(UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"))
-			.toNumber();
+			.minus(UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"));
 	}
 
 	// For validator resignation, we need to manually add the fee to the total
 	if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
 		return BigNumber.make(UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"))
-			.minus(transaction.total())
-			.toNumber();
+			.minus(transaction.total());
 	}
 
 	return transaction.total();
@@ -48,7 +46,7 @@ const calculateTotal = (transaction: ExtendedTransactionData) => {
 
 export const useTransactionTotal = (
 	transaction: ExtendedTransactionData,
-): { total: number; returnedAmount: number } => ({
+): { total: BigNumber; returnedAmount: BigNumber } => ({
 	returnedAmount: calculateReturnedAmount(transaction),
 	total: calculateTotal(transaction),
 });
