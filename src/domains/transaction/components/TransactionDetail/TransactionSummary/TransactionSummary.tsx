@@ -54,6 +54,7 @@ export const TransactionSummary = ({
 							{transaction.isValidatorRegistration() ? t("COMMON.LOCKED_AMOUNT") : t("COMMON.AMOUNT")}
 						</DetailLabelText>
 
+						salam-
 						<TransactionAmountLabel
 							token={token}
 							transaction={transaction}
