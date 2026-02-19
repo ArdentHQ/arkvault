@@ -673,7 +673,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -704,7 +704,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -1215,7 +1215,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -1246,7 +1246,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -1757,7 +1757,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -1788,7 +1788,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -2299,7 +2299,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -2330,7 +2330,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -2841,7 +2841,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -2872,7 +2872,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -3383,7 +3383,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -3414,7 +3414,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -3925,7 +3925,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -3956,7 +3956,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -4467,7 +4467,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -4498,7 +4498,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -5009,7 +5009,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -5040,7 +5040,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -5551,7 +5551,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -5582,7 +5582,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -6093,7 +6093,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -6124,7 +6124,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -6635,7 +6635,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -6666,7 +6666,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -7177,7 +7177,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -7208,7 +7208,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -7719,7 +7719,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -7750,7 +7750,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -8261,7 +8261,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -8292,7 +8292,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -8803,7 +8803,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -8834,7 +8834,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -9345,7 +9345,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -9376,7 +9376,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -9887,7 +9887,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -9918,7 +9918,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -10429,7 +10429,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -10460,7 +10460,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -10971,7 +10971,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -11002,7 +11002,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -11717,7 +11717,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -11748,7 +11748,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -12259,7 +12259,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -12290,7 +12290,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -12801,7 +12801,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -12832,7 +12832,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -13343,7 +13343,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -13374,7 +13374,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -13885,7 +13885,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -13916,7 +13916,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -14427,7 +14427,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -14458,7 +14458,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -14969,7 +14969,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -15000,7 +15000,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -15511,7 +15511,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -15542,7 +15542,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -16053,7 +16053,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -16084,7 +16084,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -16595,7 +16595,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -16626,7 +16626,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -17326,7 +17326,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -17357,7 +17357,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          5
                         </span>
                       </span>
                     </span>
@@ -17868,7 +17868,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -17899,7 +17899,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          2
                         </span>
                       </span>
                     </span>
@@ -18410,7 +18410,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -18441,7 +18441,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          100.378293
                         </span>
                       </span>
                     </span>
@@ -18952,7 +18952,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -18983,7 +18983,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          10.3
                         </span>
                       </span>
                     </span>
@@ -19494,7 +19494,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
@@ -19525,7 +19525,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          NaN
+                          1.2
                         </span>
                       </span>
                     </span>
