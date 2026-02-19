@@ -32,7 +32,14 @@ describe("TokenDTO", () => {
 	});
 
 	it("should return the display symbol", () => {
-		expect(token.displaySymbol()).toBe("DARK2");
+		expect(token.displaySymbol()).toBe("DARK2…");
+
+		const token2 = new TokenDTO({
+			...Fixture.data,
+			symbol: "ABC",
+		});
+
+		expect(token2.displaySymbol()).toBe("ABC");
 	});
 
 	it("should return the total supply", () => {
