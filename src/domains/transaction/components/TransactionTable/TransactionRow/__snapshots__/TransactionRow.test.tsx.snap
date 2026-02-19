@@ -484,11 +484,15 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             <div
               class="flex flex-col items-end gap-1"
             >
-              <span
-                class="whitespace-nowrap text-sm font-semibold"
-                data-testid="Amount"
-              >
-                121
+              <span>
+                <span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </span>
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1006,11 +1010,15 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
             <div
               class="flex flex-col items-end gap-1"
             >
-              <span
-                class="whitespace-nowrap text-sm font-semibold"
-                data-testid="Amount"
-              >
-                121
+              <span>
+                <span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </span>
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1033,11 +1041,15 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
             <div
               class="flex w-40 flex-col items-end gap-1"
             >
-              <span
-                class="whitespace-nowrap text-sm font-semibold"
-                data-testid="Amount"
-              >
-                121
+              <span>
+                <span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </span>
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1543,11 +1555,15 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
             <div
               class="flex flex-col items-end gap-1"
             >
-              <span
-                class="whitespace-nowrap text-sm font-semibold"
-                data-testid="Amount"
-              >
-                121
+              <span>
+                <span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </span>
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1570,11 +1586,15 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
             <div
               class="flex w-40 flex-col items-end gap-1"
             >
-              <span
-                class="whitespace-nowrap text-sm font-semibold"
-                data-testid="Amount"
-              >
-                121
+              <span>
+                <span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </span>
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1872,11 +1892,15 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -2392,11 +2416,15 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
             <div
               class="flex flex-col items-end gap-1"
             >
-              <span
-                class="whitespace-nowrap text-sm font-semibold"
-                data-testid="Amount"
-              >
-                121
+              <span>
+                <span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </span>
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2706,11 +2734,15 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -3018,11 +3050,15 @@ exports[`TransactionRow > should render responsive 1`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -3330,11 +3366,15 @@ exports[`TransactionRow > should render responsive 2`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -3850,11 +3890,15 @@ exports[`TransactionRow > should render with currency 1`] = `
             <div
               class="flex flex-col items-end gap-1"
             >
-              <span
-                class="whitespace-nowrap text-sm font-semibold"
-                data-testid="Amount"
-              >
-                121
+              <span>
+                <span>
+                  <span
+                    class="whitespace-nowrap text-sm font-semibold"
+                    data-testid="Amount"
+                  >
+                    121
+                  </span>
+                </span>
               </span>
               <span
                 class="text-theme-secondary-700 text-xs font-semibold lg:hidden"

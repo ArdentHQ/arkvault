@@ -21,7 +21,7 @@ export const TransactionAmountLabel = ({
 	token?: WalletToken;
 }): JSX.Element => {
 	const { t } = useTranslation();
-	const currency = token ? token.token().symbol() : transaction.wallet().currency();
+	const currency = token ? token.token().displaySymbol() : transaction.wallet().currency();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
 	return (
@@ -81,6 +81,7 @@ export const TransactionTotalLabel = ({
 				className="text-sm font-semibold"
 				allowHideBalance
 				profile={profile}
+				showCompactFormat
 			/>
 		);
 	}
@@ -101,6 +102,7 @@ export const TransactionTotalLabel = ({
 			className="h-[21px] rounded dark:border"
 			allowHideBalance
 			profile={profile}
+			showCompactFormat
 		/>
 	);
 };

@@ -276,11 +276,15 @@ exports[`TransactionRowMobile > should render 1`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -588,11 +592,15 @@ exports[`TransactionRowMobile > should render 2`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -902,11 +910,15 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
@@ -1216,11 +1228,15 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    121
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        121
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>

@@ -59,6 +59,7 @@ describe("useProfileTokens", () => {
 					token: () => ({
 						address: () => "0xToken1",
 						decimals: () => 18,
+						displaySymbol: () => "TKN1",
 						name: () => "Token 1",
 						symbol: () => "TKN1",
 					}),
@@ -75,6 +76,7 @@ describe("useProfileTokens", () => {
 					token: () => ({
 						address: () => "0xToken2",
 						decimals: () => 18,
+						displaySymbol: () => "TKN2",
 						name: () => "Token 2",
 						symbol: () => "TKN2",
 					}),
@@ -137,6 +139,7 @@ describe("useProfileTokens", () => {
 					token: () => ({
 						address: () => "0xToken1",
 						decimals: () => 18,
+						displaySymbol: () => "TKN1",
 						name: () => "Token 1",
 						symbol: () => "TKN1",
 					}),

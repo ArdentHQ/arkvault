@@ -44,6 +44,7 @@ interface AmountLabelProperties {
 	allowHideBalance?: boolean;
 	profile?: Contracts.IProfile;
 	decimals?: number;
+	showCompactFormat?: boolean;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -59,6 +60,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	allowHideBalance = false,
 	profile,
 	decimals,
+	showCompactFormat,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -99,6 +101,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 					className={twMerge("text-sm", textClassName)}
 					allowHideBalance={allowHideBalance}
 					profile={profile}
+					showCompactFormat={showCompactFormat}
 				/>
 			</div>
 		</Label>

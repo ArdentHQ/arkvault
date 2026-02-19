@@ -133,7 +133,7 @@ export const TokenRowMobile = memo(
 								data-testid="TokenRow__balance"
 							>
 								<Amount
-									ticker={walletToken.token().symbol()}
+									ticker={walletToken.token().displaySymbol()}
 									showTicker={false}
 									value={walletToken.balance().toHuman()}
 									className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
