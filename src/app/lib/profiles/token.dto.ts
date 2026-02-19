@@ -27,6 +27,17 @@ export class TokenDTO {
 		return this.#data.symbol;
 	}
 
+	displaySymbol(): string {
+		const symbol = this.symbol();
+		const allowedCharCount = 5;
+
+		if (symbol.length <= allowedCharCount) {
+			return symbol;
+		}
+
+		return this.#data.symbol.slice(0, allowedCharCount) + "…";
+	}
+
 	totalSupply(): string {
 		return this.#data.totalSupply;
 	}
