@@ -125,7 +125,7 @@ export const TransactionFiatAmount = ({
 
 	const amount = total.minus(returnedAmount);
 
-	return <Amount value={convert(amount.toString())} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
+	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
 };
 
 export const TransactionTypeLabel = ({
