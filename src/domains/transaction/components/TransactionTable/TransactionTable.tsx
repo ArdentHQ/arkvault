@@ -23,7 +23,6 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	coinName,
 }) => {
 	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
-	console.log({ coinName });
 	const columns = useTransactionTableColumns({ coin: coinName, hideSender });
 
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
