@@ -13,6 +13,7 @@ const createMockWalletToken = (overrides = {}) => ({
 	contractExplorerLink: () => "https://explorer.com/token/0xToken1",
 	token: () => ({
 		address: () => "0xToken1",
+		displaySymbol: () => "TEST",
 		decimals: () => 18,
 		name: () => "Test Token",
 		symbol: () => "TEST",

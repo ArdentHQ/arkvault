@@ -80,6 +80,7 @@ describe("TransactionAmount.blocks", () => {
 			isTokenTransfer: () => true,
 			token: () => ({
 				symbol: () => "DARK20",
+				displaySymbol: () => "DARK2…",
 			}),
 		};
 

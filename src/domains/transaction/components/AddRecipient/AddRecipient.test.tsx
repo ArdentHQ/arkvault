@@ -236,7 +236,7 @@ describe("AddRecipient", () => {
 
 		const user = userEvent.setup();
 		await user.clear(tokenSelection);
-		await userEvent.paste("DARK20");
+		await userEvent.paste("DARK2");
 		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
 
 		await waitFor(() => {
