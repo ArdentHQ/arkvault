@@ -58,8 +58,8 @@ describe("useProfileTokens", () => {
 					balance: () => "1000",
 					token: () => ({
 						address: () => "0xToken1",
-						displaySymbol: () => "TKN1",
 						decimals: () => 18,
+						displaySymbol: () => "TKN1",
 						name: () => "Token 1",
 						symbol: () => "TKN1",
 					}),
@@ -75,8 +75,8 @@ describe("useProfileTokens", () => {
 					balance: () => "2000",
 					token: () => ({
 						address: () => "0xToken2",
-						displaySymbol: () => "TKN2",
 						decimals: () => 18,
+						displaySymbol: () => "TKN2",
 						name: () => "Token 2",
 						symbol: () => "TKN2",
 					}),
@@ -138,8 +138,8 @@ describe("useProfileTokens", () => {
 					balance: () => "1000",
 					token: () => ({
 						address: () => "0xToken1",
-						displaySymbol: () => "TKN1",
 						decimals: () => 18,
+						displaySymbol: () => "TKN1",
 						name: () => "Token 1",
 						symbol: () => "TKN1",
 					}),

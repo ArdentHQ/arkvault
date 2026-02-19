@@ -14,9 +14,9 @@ const createMockWalletToken = (overrides = {}) => ({
 	token: () => ({
 		address: () => "0xToken1",
 		decimals: () => 18,
+		displaySymbol: () => "TEST",
 		name: () => "Test Token",
 		symbol: () => "TEST",
-		displaySymbol: () => "TEST",
 	}),
 	...overrides,
 });
