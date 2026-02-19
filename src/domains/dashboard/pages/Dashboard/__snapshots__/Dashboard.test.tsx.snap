@@ -2713,11 +2713,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    + 2 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        + 2 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -2749,11 +2753,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    + 2 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        + 2 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -3253,11 +3261,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.00254045 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.00254046 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -3289,11 +3301,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.00254045 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.00254046 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -3793,11 +3809,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -3829,11 +3849,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -4333,11 +4357,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -4369,11 +4397,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -4873,11 +4905,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -4909,11 +4945,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -5413,11 +5453,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -5449,11 +5493,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -5953,11 +6001,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -5989,11 +6041,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.001 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.001 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -6532,11 +6588,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.200105 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.200105 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -6568,11 +6628,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 0.200105 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 0.200105 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -6910,11 +6974,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 1.50102852 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 1.50102853 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -6946,11 +7014,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    - 1.50102852 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        - 1.50102853 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -7493,11 +7565,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    + 4.98 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        + 4.98 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
@@ -7529,11 +7605,15 @@ exports[`Dashboard > should render 1`] = `
                                 <div
                                   class="flex h-full items-center space-x-1"
                                 >
-                                  <span
-                                    class="whitespace-nowrap text-sm"
-                                    data-testid="Amount"
-                                  >
-                                    + 4.98 ARK
+                                  <span>
+                                    <span>
+                                      <span
+                                        class="whitespace-nowrap text-sm"
+                                        data-testid="Amount"
+                                      >
+                                        + 4.98 ARK
+                                      </span>
+                                    </span>
                                   </span>
                                 </div>
                               </div>
