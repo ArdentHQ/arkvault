@@ -24,7 +24,7 @@ export class TokenDTO {
 	}
 
 	symbol(): string {
-		return this.#data.symbol;
+		return this.#data.symbol.slice(0, 5);
 	}
 
 	totalSupply(): string {

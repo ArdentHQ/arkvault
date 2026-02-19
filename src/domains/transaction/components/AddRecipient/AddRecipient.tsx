@@ -348,7 +348,7 @@ export const AddRecipient = ({
 								<SelectToken
 									value={tokenContractAddress}
 									tokens={tokens.map((token) => ({
-										label: token.token().symbol().slice(0, 6),
+										label: token.token().symbol(),
 										value: token.token().address(),
 									}))}
 									onChange={(tokenAddress) => {
@@ -443,7 +443,7 @@ export const AddRecipient = ({
 									<SelectToken
 										value={tokenContractAddress}
 										tokens={tokens.map((token) => ({
-											label: token.token().symbol().slice(0, 6),
+											label: token.token().symbol(),
 											value: token.token().address(),
 										}))}
 										className="sm:rounded-r-none sm:border-r-transparent"
