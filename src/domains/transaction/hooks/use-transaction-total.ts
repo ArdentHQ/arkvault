@@ -31,14 +31,16 @@ const calculateTotal = (transaction: ExtendedTransactionData) => {
 			return transaction.total();
 		}
 
-		return BigNumber.make(transaction.total())
-			.minus(UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"));
+		return BigNumber.make(transaction.total()).minus(
+			UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"),
+		);
 	}
 
 	// For validator resignation, we need to manually add the fee to the total
 	if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
-		return BigNumber.make(UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"))
-			.minus(transaction.total());
+		return BigNumber.make(
+			UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"),
+		).minus(transaction.total());
 	}
 
 	return transaction.total();

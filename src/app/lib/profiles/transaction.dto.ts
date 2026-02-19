@@ -237,7 +237,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		if (this.isMultiPayment()) {
 			for (const recipient of this.recipients()) {
 				if (recipient.address !== this.wallet().address()) {
-					total = total.minus(recipient.amount)
+					total = total.minus(recipient.amount);
 				}
 			}
 		}
