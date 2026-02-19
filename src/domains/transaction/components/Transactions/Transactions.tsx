@@ -261,6 +261,7 @@ export const Transactions = memo(function Transactions({
 				</div>
 
 				<TransactionTable
+					coinName={profile.activeNetwork().ticker()}
 					transactions={transactions}
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					isLoading={isLoadingTransactions}
