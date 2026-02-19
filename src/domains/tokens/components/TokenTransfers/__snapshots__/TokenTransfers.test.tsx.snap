@@ -156,7 +156,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class=""
                   >
-                    Amount (ARK)
+                    Amount 
                   </div>
                 </div>
               </th>
@@ -11160,7 +11160,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class=""
                   >
-                    Amount (ARK)
+                    Amount 
                   </div>
                 </div>
               </th>
@@ -16749,7 +16749,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class=""
                   >
-                    Amount (ARK)
+                    Amount 
                   </div>
                 </div>
               </th>
