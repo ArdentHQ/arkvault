@@ -31,6 +31,10 @@ describe("TokenDTO", () => {
 		expect(token.symbol()).toBe(Fixture.data.symbol);
 	});
 
+	it("should return the display symbol", () => {
+		expect(token.displaySymbol()).toBe("DARK2");
+	});
+
 	it("should return the total supply", () => {
 		expect(token.totalSupply()).toBe(Fixture.data.totalSupply);
 	});
