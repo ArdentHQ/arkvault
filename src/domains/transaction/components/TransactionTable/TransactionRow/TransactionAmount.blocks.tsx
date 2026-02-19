@@ -80,6 +80,7 @@ export const TransactionTotalLabel = ({
 				className="text-sm font-semibold"
 				allowHideBalance
 				profile={profile}
+				showCompactFormat
 			/>
 		);
 	}
@@ -100,6 +101,7 @@ export const TransactionTotalLabel = ({
 			className="h-[21px] rounded dark:border"
 			allowHideBalance
 			profile={profile}
+			showCompactFormat
 		/>
 	);
 };

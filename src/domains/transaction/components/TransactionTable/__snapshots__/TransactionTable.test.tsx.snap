@@ -3714,11 +3714,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        2
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            2
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -4037,11 +4041,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.00254046
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.00254046
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -4360,11 +4368,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -4683,11 +4695,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -5006,11 +5022,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -5329,11 +5349,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -5652,11 +5676,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -5990,11 +6018,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.200105
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.200105
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -6259,11 +6291,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        1.50102853
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            1.50102853
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -6597,11 +6633,15 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        4.98
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            4.98
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -6959,11 +6999,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        2
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            2
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -7282,11 +7326,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.00254046
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.00254046
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -7605,11 +7653,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -7928,11 +7980,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -8251,11 +8307,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -8574,11 +8634,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -8897,11 +8961,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.001
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.001
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -9235,11 +9303,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        0.200105
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            0.200105
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -9504,11 +9576,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        1.50102853
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            1.50102853
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -9842,11 +9918,15 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
                     >
-                      <span
-                        class="whitespace-nowrap text-sm font-semibold"
-                        data-testid="Amount"
-                      >
-                        4.98
+                      <span>
+                        <span>
+                          <span
+                            class="whitespace-nowrap text-sm font-semibold"
+                            data-testid="Amount"
+                          >
+                            4.98
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -10565,11 +10645,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    2
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        2
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10592,11 +10676,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    2
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        2
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11087,11 +11175,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.00254046
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.00254046
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11114,11 +11206,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.00254046
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.00254046
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11609,11 +11705,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11636,11 +11736,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12131,11 +12235,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12158,11 +12266,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12653,11 +12765,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12680,11 +12796,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13175,11 +13295,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13202,11 +13326,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13697,11 +13825,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13724,11 +13856,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14264,11 +14400,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.200105
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.200105
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14291,11 +14431,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.200105
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.200105
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14624,11 +14768,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    1.50102853
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        1.50102853
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14651,11 +14799,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    1.50102853
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        1.50102853
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15189,11 +15341,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    4.98
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        4.98
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15216,11 +15372,15 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    4.98
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        4.98
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15929,11 +16089,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    2
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        2
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15956,11 +16120,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    2
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        2
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16451,11 +16619,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.00254046
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.00254046
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -16478,11 +16650,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.00254046
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.00254046
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16973,11 +17149,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17000,11 +17180,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17495,11 +17679,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17522,11 +17710,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18017,11 +18209,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18044,11 +18240,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18539,11 +18739,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18566,11 +18770,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19061,11 +19269,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19088,11 +19300,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19628,11 +19844,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.200105
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.200105
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19655,11 +19875,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.200105
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.200105
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19988,11 +20212,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    1.50102853
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        1.50102853
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -20015,11 +20243,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    1.50102853
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        1.50102853
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -20553,11 +20785,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    4.98
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        4.98
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -20580,11 +20816,15 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class="flex w-40 flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    4.98
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        4.98
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -21293,11 +21533,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    2
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        2
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -21800,11 +22044,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.00254046
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.00254046
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -22307,11 +22555,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -22814,11 +23066,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -23321,11 +23577,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -23828,11 +24088,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -24335,11 +24599,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.001
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.001
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -24887,11 +25155,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    0.200105
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        0.200105
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -25232,11 +25504,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    1.50102853
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        1.50102853
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -25782,11 +26058,15 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class="flex flex-col items-end gap-1"
                 >
-                  <span
-                    class="whitespace-nowrap text-sm font-semibold"
-                    data-testid="Amount"
-                  >
-                    4.98
+                  <span>
+                    <span>
+                      <span
+                        class="whitespace-nowrap text-sm font-semibold"
+                        data-testid="Amount"
+                      >
+                        4.98
+                      </span>
+                    </span>
                   </span>
                   <span
                     class="text-theme-secondary-700 text-xs font-semibold lg:hidden"

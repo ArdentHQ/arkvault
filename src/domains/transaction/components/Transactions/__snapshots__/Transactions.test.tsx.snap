@@ -921,11 +921,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -948,11 +952,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1482,11 +1490,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1509,11 +1521,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2043,11 +2059,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2070,11 +2090,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2604,11 +2628,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2631,11 +2659,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3165,11 +3197,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3192,11 +3228,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3726,11 +3766,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3753,11 +3797,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4248,11 +4296,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4275,11 +4327,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4770,11 +4826,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4797,11 +4857,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5292,11 +5356,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -5319,11 +5387,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5814,11 +5886,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -5841,11 +5917,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -6336,11 +6416,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6363,11 +6447,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -6858,11 +6946,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6885,11 +6977,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -7380,11 +7476,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7407,11 +7507,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -7902,11 +8006,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7929,11 +8037,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8424,11 +8536,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8451,11 +8567,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8946,11 +9066,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8973,11 +9097,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9468,11 +9596,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -9495,11 +9627,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9990,11 +10126,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10017,11 +10157,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -10512,11 +10656,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10539,11 +10687,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11034,11 +11186,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11061,11 +11217,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11556,11 +11716,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11583,11 +11747,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12078,11 +12246,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12105,11 +12277,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12600,11 +12776,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12627,11 +12807,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13122,11 +13306,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13149,11 +13337,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13644,11 +13836,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13671,11 +13867,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14166,11 +14366,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14193,11 +14397,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14688,11 +14896,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14715,11 +14927,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15210,11 +15426,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15237,11 +15457,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15732,11 +15956,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15759,11 +15987,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16254,11 +16486,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -16281,11 +16517,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16776,11 +17016,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -16803,11 +17047,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17298,11 +17546,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17325,11 +17577,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17820,11 +18076,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17847,11 +18107,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18342,11 +18606,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18369,11 +18637,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18864,11 +19136,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18891,11 +19167,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19386,11 +19666,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19413,11 +19697,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19908,11 +20196,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19935,11 +20227,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -20430,11 +20726,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -20457,11 +20757,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -20952,11 +21256,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -20979,11 +21287,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -21474,11 +21786,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -21501,11 +21817,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -21996,11 +22316,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -22023,11 +22347,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -22518,11 +22846,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -22545,11 +22877,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -23079,11 +23415,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -23106,11 +23446,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -23640,11 +23984,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -23667,11 +24015,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -24201,11 +24553,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -24228,11 +24584,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -24762,11 +25122,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -24789,11 +25153,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -25323,11 +25691,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -25350,11 +25722,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -25884,11 +26260,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -25911,11 +26291,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -26244,11 +26628,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -26271,11 +26659,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -26604,11 +26996,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -26631,11 +27027,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -26964,11 +27364,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -26991,11 +27395,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -27324,11 +27732,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -27351,11 +27763,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -27684,11 +28100,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -27711,11 +28131,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -28044,11 +28468,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -28071,11 +28499,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -28609,11 +29041,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -28636,11 +29072,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -29174,11 +29614,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -29201,11 +29645,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -29739,11 +30187,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -29766,11 +30218,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -30304,11 +30760,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -30331,11 +30791,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -30869,11 +31333,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -30896,11 +31364,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -31434,11 +31906,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -31461,11 +31937,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -32426,11 +32906,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -32453,11 +32937,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -32948,11 +33436,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -32975,11 +33467,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -33470,11 +33966,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -33497,11 +33997,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -33992,11 +34496,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -34019,11 +34527,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -34514,11 +35026,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -34541,11 +35057,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -35036,11 +35556,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -35063,11 +35587,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -35558,11 +36086,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -35585,11 +36117,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -36119,11 +36655,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -36146,11 +36686,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -36479,11 +37023,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -36506,11 +37054,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -37044,11 +37596,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -37071,11 +37627,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -38021,11 +38581,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -38048,11 +38612,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -38543,11 +39111,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -38570,11 +39142,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.00254046
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.00254046
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -39065,11 +39641,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -39092,11 +39672,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -39587,11 +40171,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -39614,11 +40202,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -40109,11 +40701,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -40136,11 +40732,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -40631,11 +41231,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -40658,11 +41262,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -41153,11 +41761,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -41180,11 +41792,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.001
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.001
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -41714,11 +42330,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -41741,11 +42361,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0.200105
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0.200105
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -42074,11 +42698,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -42101,11 +42729,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.50102853
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.50102853
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -42639,11 +43271,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -42666,11 +43302,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      4.98
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          4.98
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"

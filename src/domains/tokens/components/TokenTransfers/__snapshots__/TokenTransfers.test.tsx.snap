@@ -665,11 +665,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -692,11 +696,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1197,11 +1205,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1224,11 +1236,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1729,11 +1745,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1756,11 +1776,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2261,11 +2285,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2288,11 +2316,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2793,11 +2825,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2820,11 +2856,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3325,11 +3365,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3352,11 +3396,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3857,11 +3905,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3884,11 +3936,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4389,11 +4445,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4416,11 +4476,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4921,11 +4985,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4948,11 +5016,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5453,11 +5525,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -5480,11 +5556,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5985,11 +6065,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6012,11 +6096,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -6517,11 +6605,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6544,11 +6636,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -7049,11 +7145,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7076,11 +7176,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -7581,11 +7685,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7608,11 +7716,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8113,11 +8225,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8140,11 +8256,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8645,11 +8765,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8672,11 +8796,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9177,11 +9305,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -9204,11 +9336,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9709,11 +9845,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -9736,11 +9876,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -10241,11 +10385,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10268,11 +10416,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -10773,11 +10925,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10800,11 +10956,15 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11509,11 +11669,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11536,11 +11700,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12041,11 +12209,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12068,11 +12240,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12573,11 +12749,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12600,11 +12780,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13105,11 +13289,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13132,11 +13320,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13637,11 +13829,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13664,11 +13860,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14169,11 +14369,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14196,11 +14400,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14701,11 +14909,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14728,11 +14940,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15233,11 +15449,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15260,11 +15480,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15765,11 +15989,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15792,11 +16020,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16297,11 +16529,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -16324,11 +16560,15 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17018,11 +17258,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17045,11 +17289,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      5
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          5
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17550,11 +17798,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17577,11 +17829,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18082,11 +18338,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18109,11 +18369,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      100.378293
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          100.378293
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18614,11 +18878,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18641,11 +18909,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      10.3
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          10.3
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19146,11 +19418,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19173,11 +19449,15 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      1.2
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          1.2
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
