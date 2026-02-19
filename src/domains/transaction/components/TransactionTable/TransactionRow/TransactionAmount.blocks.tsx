@@ -24,7 +24,6 @@ export const TransactionAmountLabel = ({
 	const currency = token ? token.token().symbol() : transaction.wallet().currency();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
-	console.log(transaction.value())
 	return (
 		<AmountLabel
 			value={transaction.value()}
