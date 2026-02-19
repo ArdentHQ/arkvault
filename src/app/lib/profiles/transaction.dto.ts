@@ -228,7 +228,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 			return this.value() - this.fee();
 		}
 
-		if (this.isSent()) {
+		if (this.isSent() && !this.isTokenTransfer()) {
 			return this.value() + this.fee();
 		}
 
