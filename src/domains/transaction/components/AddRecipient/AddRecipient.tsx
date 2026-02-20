@@ -21,6 +21,7 @@ import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import cn from "classnames";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -97,25 +98,26 @@ export const AddRecipient = ({
 		if (isTokenTransfer) {
 			const token = tokens.find((token) => token.token().address() === tokenContractAddress);
 			if (token) {
-				return token.balance().toString();
+				return token.balance();
 			}
 
-			return "0";
+			return BigNumber.ZERO;
 		}
 
 		let senderBalance = BigNumber.make(wallet?.balance() || 0);
 
 		if (isSingle) {
-			return senderBalance.toString();
+			return senderBalance;
 		}
 
 		for (const recipient of addedRecipients) {
 			senderBalance = senderBalance.minus(BigNumber.make(recipient.amount || 0));
 		}
 
-		return senderBalance.toString();
+		return senderBalance;
 	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokens, tokenContractAddress]);
 
+	const formattedBalance = UnitConverter.formatUnits(remainingBalance.toString(), "ark");
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
 	const clearFields = useCallback(() => {
@@ -130,13 +132,13 @@ export const AddRecipient = ({
 	}, [register]);
 
 	useEffect(() => {
-		const remaining = BigNumber.make(remainingBalance).isLessThanOrEqualTo(0) ? "0" : remainingBalance;
+		const remaining = remainingBalance.isLessThanOrEqualTo(0) ? "0" : remainingBalance.toString();
 
 		setValue("remainingBalance", remaining);
 	}, [remainingBalance, setValue, amount, recipientAddress, senderAddress]);
 
 	useEffect(() => {
-		register("amount", sendTransfer.amount(network, remainingBalance, addedRecipients, isSingle));
+		register("amount", sendTransfer.amount(network, remainingBalance.toString(), addedRecipients, isSingle));
 		register("recipientAddress", sendTransfer.recipientAddress(profile, network, addedRecipients, isSingle));
 	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingBalance]);
 
@@ -384,9 +386,7 @@ export const AddRecipient = ({
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(
 										<Amount
-											value={BigNumber.make(remainingBalance)
-												.decimalPlaces(isTokenTransfer ? 2 : 8)
-												.toNumber()}
+											value={remainingBalance}
 											ticker={ticker}
 											showTicker={false}
 											showCompactFormat
@@ -395,16 +395,14 @@ export const AddRecipient = ({
 									</span>
 								</div>
 								<div className="flex flex-row items-center gap-2">
-									{isSenderFilled && !!remainingBalance && (
+									{isSenderFilled &&  (
 										<div
 											data-testid="AddRecipient__available"
 											className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount
-												value={BigNumber.make(remainingBalance)
-													.decimalPlaces(isTokenTransfer ? 2 : 8)
-													.toNumber()}
+												value={formattedBalance.toString()}
 												ticker={ticker}
 												showTicker={!isTokenTransfer}
 												showCompactFormat
