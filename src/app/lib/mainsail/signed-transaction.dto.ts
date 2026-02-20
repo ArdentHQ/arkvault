@@ -285,4 +285,16 @@ export class SignedTransactionData {
 	public isTokenTransfer(): boolean {
 		return TransactionTypeIdentifier.isTokenTransfer(this.signedData.data);
 	}
+
+	public isApprove(): boolean {
+		return TransactionTypeIdentifier.isApprove(this.signedData.data);
+	}
+
+	public isRevoke(): boolean {
+		return TransactionTypeIdentifier.isRevoke(this.signedData.data);
+	}
+
+	public isBatchTransfer(): boolean {
+		return TransactionTypeIdentifier.isBatchTransfer(this.signedData.data);
+	}
 }

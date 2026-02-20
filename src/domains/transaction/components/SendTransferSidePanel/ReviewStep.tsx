@@ -169,7 +169,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 											ticker={ticker}
 											value={amount}
 											decimals={token?.token().decimals()}
-											className="text-sm font-semibold md:text-base"
+											className="text-sm font-semibold break-all whitespace-normal md:text-base"
 										/>
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
 											<div className="text-theme-secondary-700 font-semibold">
@@ -177,7 +177,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 												<Amount
 													ticker={exchangeTicker}
 													value={convertedAmount}
-													className="text-sm md:text-base"
+													className="text-sm break-all whitespace-normal md:text-base"
 												/>
 												)
 											</div>

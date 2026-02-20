@@ -82,6 +82,9 @@ export const TransactionFixture = {
 	convertedTotal: () => 0,
 	wallet: () => wallet,
 	coin: () => undefined,
+	isApprove: () => false,
+	isRevoke: () => false,
+	isBatchTransfer: () => false,
 	data: () => {
 		return {
 			data: () => {},
