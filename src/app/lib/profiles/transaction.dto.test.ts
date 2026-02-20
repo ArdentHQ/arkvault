@@ -96,7 +96,7 @@ describe("ExtendedConfirmedTransactionData", () => {
 
 	it("should calculate total for a sent transaction without fee if token transfer", () => {
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-		expect(subject.total()).toBe(10);
+		expect(subject.total().toString()).toBe('10');
 	});
 
 	it("should calculate total for a return transaction", () => {
