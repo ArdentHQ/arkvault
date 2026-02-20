@@ -295,4 +295,16 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	public isTokenTransfer(): boolean {
 		return this.#data.isTokenTransfer();
 	}
+
+	public isApprove(): boolean {
+		return this.#data.isApprove();
+	}
+
+	public isRevoke(): boolean {
+		return this.#data.isRevoke();
+	}
+
+	public isBatchTransfer(): boolean {
+		return this.#data.isBatchTransfer();
+	}
 }

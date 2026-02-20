@@ -18,8 +18,8 @@ importers:
         specifier: ^0.14.0
         version: 0.14.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.18
-        version: 0.0.18
+        specifier: ^0.0.19
+        version: 0.0.19
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -427,8 +427,8 @@ packages:
     resolution: {integrity: sha512-ePYhEjiL6Y9+Ghbpy30N0WIIvBupOThlvJQNmR+/G2D2sNi3+vv8MorapZ31DeuqPtR7eLTQh/vWIUeBB1r91Q==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.18':
-    resolution: {integrity: sha512-t0HFN/MUvLqY2XOwkacyQHkYhs4R4JNo9x4omYBee/oH6cjNJX/V1I3CV6vWGz1wo0NehrpI+/4RifFlDC0jGA==}
+  '@arkecosystem/typescript-crypto@0.0.19':
+    resolution: {integrity: sha512-O9ApuxDChC+ckYjNdz14Qp1kGNYnhbyKYw6rkj3FMsPbakLwKbNywn2RNLSntou247kYAqHoTs3OiyH3C3T4yQ==}
     engines: {node: '>=20.12.2'}
 
   '@asamuzakjp/css-color@3.2.0':
@@ -6604,7 +6604,7 @@ snapshots:
 
   '@arkecosystem/typescript-client@0.14.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.18':
+  '@arkecosystem/typescript-crypto@0.0.19':
     dependencies:
       '@noble/secp256k1': 2.3.0
       bignumber.js: 9.3.1
