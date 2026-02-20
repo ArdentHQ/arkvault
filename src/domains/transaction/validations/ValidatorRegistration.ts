@@ -13,7 +13,7 @@ export const validatorRegistration = (t: any) => ({
 			field: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.LOCKED_FEE"),
 		}),
 		validate: {
-			insufficientBalance: (lockedFee: number) => {
+			insufficientBalance: (lockedFee: string) => {
 				// If the wallet is a validator, we can only update the public key
 				// that does not require a fee.
 				if (wallet?.isValidator()) {
@@ -30,8 +30,8 @@ export const validatorRegistration = (t: any) => ({
 					"gwei",
 				);
 
-				if (lockedFee + fees > (wallet?.balance() ?? 0)) {
-					if (fees === 0) {
+				if (BigNumber.make(lockedFee).plus(fees).isGreaterThan((wallet?.balance() ?? 0))) {
+					if (fees.isZero()) {
 						return t(
 							"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE",
 							{
@@ -48,7 +48,7 @@ export const validatorRegistration = (t: any) => ({
 					return t(
 						"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE",
 						{
-							fee: Helpers.Currency.format(fees, wallet?.currency() ?? "ARK", {
+							fee: Helpers.Currency.format(fees.toString(), wallet?.currency() ?? "ARK", {
 								withTicker: true,
 							}),
 							lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
