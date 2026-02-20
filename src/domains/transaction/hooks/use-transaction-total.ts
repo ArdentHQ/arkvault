@@ -31,7 +31,7 @@ const calculateTotal = (transaction: ExtendedTransactionData) => {
 			return transaction.total();
 		}
 
-		return BigNumber.make(transaction.total()).minus(
+		return transaction.total().minus(
 			UnitConverter.formatUnits(transaction.wallet().validatorFee()?.toString() ?? "0", "ARK"),
 		);
 	}
