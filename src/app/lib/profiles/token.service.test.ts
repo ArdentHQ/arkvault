@@ -11,6 +11,7 @@ import { WalletToken } from "./wallet-token";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { ExtendedConfirmedTransactionDataCollection } from "@/app/lib/profiles/transaction.collection";
 import { server } from "@/tests/mocks/server";
+import { BigNumber } from "@/app/lib/helpers";
 
 const createTransferData = (from: string) => ({
 	blockNumber: "22773025",
@@ -95,5 +96,19 @@ describe("TokenService", () => {
 		expect(transfers).toBeInstanceOf(ExtendedConfirmedTransactionDataCollection);
 		expect(transfers.items()).toHaveLength(1);
 		expect(transfers.items()[0].wallet().address()).toBe(walletAddress);
+	});
+
+	it("should return selected count", () => {
+		const count = profile.tokens().selectedCount();
+
+		expect(count).toBe(1);
+	});
+
+	it("should return selected total balance", async () => {
+		await profile.tokens().sync();
+		const totalBalance = profile.tokens().selectedTotalBalance();
+
+		expect(totalBalance).toBeInstanceOf(BigNumber);
+		expect(totalBalance.toNumber()).toBeGreaterThan(0);
 	});
 });

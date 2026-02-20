@@ -624,4 +624,28 @@ describe("SignedTransactionData", () => {
 			expect(transaction.gasUsed()).toBe(20);
 		});
 	});
+
+	describe("isApprove", () => {
+		it("should check isApprove", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isApprove").mockReturnValue(true);
+			expect(transaction.isApprove()).toBe(true);
+		});
+	});
+
+	describe("isRevoke", () => {
+		it("should check isRevoke", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isRevoke").mockReturnValue(true);
+			expect(transaction.isRevoke()).toBe(true);
+		});
+	});
+
+	describe("isBatchTransfer", () => {
+		it("should check isBatchTransfer", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isBatchTransfer").mockReturnValue(true);
+			expect(transaction.isBatchTransfer()).toBe(true);
+		});
+	});
 });

@@ -179,7 +179,8 @@ export class WalletRepository implements IWalletRepository {
 		// If the wallet to be deleted is a selected wallet,
 		// change the selection to the first available wallet before deleting.
 		const walletToBeDeleted = this.findById(id);
-		if (this.#profile.walletSelectionMode() === "single" && walletToBeDeleted.isSelected()) {
+		const selected = this.#profile.wallets().selected();
+		if (selected.length === 1 && walletToBeDeleted.isSelected()) {
 			const firstAvailable = this.#profile
 				.wallets()
 				.values()

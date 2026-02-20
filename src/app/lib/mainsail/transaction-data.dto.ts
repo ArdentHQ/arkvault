@@ -46,6 +46,18 @@ export abstract class TransactionData {
 			return "transfer";
 		}
 
+		if (this.isApprove()) {
+			return "approve";
+		}
+
+		if (this.isRevoke()) {
+			return "revoke";
+		}
+
+		if (this.isBatchTransfer()) {
+			return "batchtransfer";
+		}
+
 		for (const { type, method } of this.#types) {
 			if (this[method]()) {
 				return type;
@@ -61,6 +73,18 @@ export abstract class TransactionData {
 		}
 
 		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
+	}
+
+	public isApprove() {
+		return TransactionTypeIdentifier.isApprove(this.data.data);
+	}
+
+	public isRevoke() {
+		return TransactionTypeIdentifier.isRevoke(this.data.data);
+	}
+
+	public isBatchTransfer() {
+		return TransactionTypeIdentifier.isBatchTransfer(this.data.data);
 	}
 
 	public token(): TokenDTO | undefined {

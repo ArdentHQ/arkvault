@@ -247,4 +247,17 @@ describe("ExtendedConfirmedTransactionData", () => {
 			expect(subject.gasUsed()).toBe(0.01);
 		});
 	});
+
+	describe("Token methods", () => {
+		it.each(["isApprove", "isRevoke", "isBatchTransfer"])("should delegate %s", (method) => {
+			const spy = vi.spyOn(dataMock, method as keyof ConfirmedTransactionData);
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			try {
+				subject[method as keyof ExtendedConfirmedTransactionData]();
+			} catch (error) {
+				console.log({ error, method });
+			}
+			expect(spy).toHaveBeenCalled();
+		});
+	});
 });
