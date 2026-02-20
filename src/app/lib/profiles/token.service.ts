@@ -148,6 +148,23 @@ export class TokenService {
 		return this.#walletTokensCollection;
 	}
 
+	#setTransactionMetadata(transactions: ConfirmedTransactionDataCollection, queryAddresses?: string[]): void {
+		for (const transaction of transactions.items()) {
+			const address = queryAddresses?.find((address) => [transaction.to(), transaction.from()].includes(address));
+
+			if (address) {
+				const wallet = this.#profile
+					.wallets()
+					.values()
+					.find((wallet) => wallet.address() === address);
+				if (wallet) {
+					transaction.setMeta("publicKey", wallet.publicKey());
+					transaction.setMeta("address", wallet.address());
+				}
+			}
+		}
+	}
+
 	/**
 	 * Retrieves token transfers
 	 *
@@ -163,14 +180,22 @@ export class TokenService {
 
 		let response: ConfirmedTransactionDataCollection;
 
+		const transfersQuery = {
+			from: this.#profile
+				.wallets()
+				.selected()
+				.map((wallet) => wallet.address()),
+			...(query ?? {}),
+		};
+
 		try {
-			response = await clientService.tokenTransfers({
-				from: this.#profile
-					.wallets()
-					.selected()
-					.map((wallet) => wallet.address()),
-				...(query ?? {}),
-			});
+			response = await clientService.tokenTransfers(transfersQuery);
+
+			const queryAddresses = [...transfersQuery.from, ...(transfersQuery.to ?? [])].filter(
+				(address) => !!address,
+			);
+
+			this.#setTransactionMetadata(response, queryAddresses);
 		} catch {
 			return new ExtendedConfirmedTransactionDataCollection([], {
 				last: undefined,

@@ -571,10 +571,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -590,21 +590,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -1111,10 +1113,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -1130,21 +1132,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -1651,10 +1655,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -1670,21 +1674,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -2191,10 +2197,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -2210,21 +2216,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -2731,10 +2739,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -2750,21 +2758,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -3271,10 +3281,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -3290,21 +3300,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -3811,10 +3823,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -3830,21 +3842,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -4351,10 +4365,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -4370,21 +4384,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -4891,10 +4907,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -4910,21 +4926,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -5431,10 +5449,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -5450,21 +5468,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -5971,10 +5991,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -5990,21 +6010,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -6511,10 +6533,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -6530,21 +6552,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -7051,10 +7075,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -7070,21 +7094,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -7591,10 +7617,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -7610,21 +7636,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -8131,10 +8159,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -8150,21 +8178,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -8671,10 +8701,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -8690,21 +8720,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -9211,10 +9243,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -9230,21 +9262,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -9751,10 +9785,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -9770,21 +9804,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -10291,10 +10327,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -10310,21 +10346,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -10831,10 +10869,10 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -10850,21 +10888,23 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -11575,10 +11615,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -11594,21 +11634,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -12115,10 +12157,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -12134,21 +12176,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -12655,10 +12699,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -12674,21 +12718,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -13195,10 +13241,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -13214,21 +13260,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -13735,10 +13783,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -13754,21 +13802,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -14275,10 +14325,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -14294,21 +14344,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -14815,10 +14867,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -14834,21 +14886,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -15355,10 +15409,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -15374,21 +15428,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -15895,10 +15951,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -15914,21 +15970,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -16435,10 +16493,10 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -16454,21 +16512,23 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -17164,10 +17224,10 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -17183,21 +17243,23 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -17704,10 +17766,10 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -17723,21 +17785,23 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -18244,10 +18308,10 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -18263,21 +18327,23 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -18784,10 +18850,10 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -18803,21 +18869,23 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -19324,10 +19392,10 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -19343,21 +19411,23 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
