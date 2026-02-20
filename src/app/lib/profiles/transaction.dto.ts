@@ -6,15 +6,16 @@ import { IReadWriteWallet } from "./contracts.js";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
+import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
-import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
 	amount: BigNumber;
 }
 
-export class ExtendedConfirmedTransactionData {
+// @ts-expect-error unimplemented methods
+export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTransactionData {
 	readonly #wallet: IReadWriteWallet;
 	readonly #data: ConfirmedTransactionData;
 
