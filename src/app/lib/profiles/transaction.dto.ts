@@ -14,8 +14,7 @@ export interface ExtendedTransactionRecipient {
 	amount: BigNumber;
 }
 
-// @ts-expect-error unimplemented methods
-export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTransactionData {
+export class ExtendedConfirmedTransactionData {
 	readonly #wallet: IReadWriteWallet;
 	readonly #data: ConfirmedTransactionData;
 
