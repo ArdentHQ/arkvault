@@ -89,7 +89,14 @@ describe("ExtendedConfirmedTransactionData", () => {
 
 	it("should calculate total for a sent transaction", () => {
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+		const tokenTransferMock = vi.spyOn(subject, "isTokenTransfer").mockReturnValue(false);
 		expect(subject.total().toString()).toBe("11"); // value + fee
+		tokenTransferMock.mockRestore();
+	});
+
+	it("should calculate total for a sent transaction without fee if token transfer", () => {
+		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+		expect(subject.total()).toBe(10);
 	});
 
 	it("should calculate total for a return transaction", () => {
@@ -121,7 +128,9 @@ describe("ExtendedConfirmedTransactionData", () => {
 
 	it("should get converted total", () => {
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+		const tokenTransferMock = vi.spyOn(subject, "isTokenTransfer").mockReturnValue(false);
 		expect(subject.convertedTotal()).toBe(22); // total (11) * 2
+		tokenTransferMock.mockRestore();
 	});
 
 	it("should get converted amount", () => {

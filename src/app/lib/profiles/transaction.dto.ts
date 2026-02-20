@@ -228,7 +228,7 @@ export class ExtendedConfirmedTransactionData {
 			return this.value().minus(this.fee());
 		}
 
-		if (this.isSent()) {
+		if (this.isSent() && !this.isTokenTransfer()) {
 			return this.value().plus(this.fee());
 		}
 
