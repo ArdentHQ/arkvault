@@ -95,7 +95,7 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 	return {
 		amount: () => truncate(amount, currency).toString(),
 		convertedAmount: () => truncate(converted(amount, rate), exchangeCurrency).toString(),
-		convertedFee: () => (fee.isEqualTo(0) ? 0 : truncate(converted(fee, rate), exchangeCurrency).toString()),
+		convertedFee: () => (fee.isEqualTo(0) ? "0" : truncate(converted(fee, rate), exchangeCurrency).toString()),
 		convertedTotal: () => truncate(converted(total, rate), exchangeCurrency).toString(),
 		datetime: () => transaction.timestamp()?.format(`DD.MM.YYYY ${timeFormat}`),
 		fee: () => fee.toString(),
