@@ -671,7 +671,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -702,7 +702,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -1211,7 +1211,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -1242,7 +1242,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -1751,7 +1751,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -1782,7 +1782,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -2291,7 +2291,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -2322,7 +2322,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -2831,7 +2831,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -2862,7 +2862,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -3371,7 +3371,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -3402,7 +3402,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -3911,7 +3911,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -3942,7 +3942,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -4451,7 +4451,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -4482,7 +4482,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -4991,7 +4991,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -5022,7 +5022,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -5531,7 +5531,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -5562,7 +5562,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -6071,7 +6071,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -6102,7 +6102,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -6611,7 +6611,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -6642,7 +6642,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -7151,7 +7151,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -7182,7 +7182,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -7691,7 +7691,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -7722,7 +7722,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -8231,7 +8231,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -8262,7 +8262,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -8771,7 +8771,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -8802,7 +8802,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -9311,7 +9311,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -9342,7 +9342,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -9851,7 +9851,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -9882,7 +9882,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -10391,7 +10391,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -10422,7 +10422,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -10931,7 +10931,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -10962,7 +10962,7 @@ exports[`TokenTransfer > should fetch more token transfers 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -11675,7 +11675,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -11706,7 +11706,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -12215,7 +12215,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -12246,7 +12246,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -12755,7 +12755,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -12786,7 +12786,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -13295,7 +13295,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -13326,7 +13326,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -13835,7 +13835,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -13866,7 +13866,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -14375,7 +14375,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -14406,7 +14406,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -14915,7 +14915,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -14946,7 +14946,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -15455,7 +15455,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -15486,7 +15486,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -15995,7 +15995,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -16026,7 +16026,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -16535,7 +16535,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -16566,7 +16566,7 @@ exports[`TokenTransfer > should hide view more button when there are no next pag
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -17264,7 +17264,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -17295,7 +17295,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          5
+                          5 DARK20
                         </span>
                       </span>
                     </span>
@@ -17804,7 +17804,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -17835,7 +17835,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 DARK20
                         </span>
                       </span>
                     </span>
@@ -18344,7 +18344,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -18375,7 +18375,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          100.378293
+                          100.378293 DARK20
                         </span>
                       </span>
                     </span>
@@ -18884,7 +18884,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -18915,7 +18915,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          10.3
+                          10.3 DARK20
                         </span>
                       </span>
                     </span>
@@ -19424,7 +19424,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
@@ -19455,7 +19455,7 @@ exports[`TokenTransfer > should open detail side panel on token transfer row cli
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.2
+                          1.2 DARK20
                         </span>
                       </span>
                     </span>
