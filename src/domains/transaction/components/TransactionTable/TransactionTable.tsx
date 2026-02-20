@@ -1,5 +1,5 @@
 import { DTO } from "@/app/lib/profiles";
-import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
+import React, { FC, useCallback, useMemo } from "react";
 import { TableState } from "react-table";
 
 import { TransactionRow } from "./TransactionRow/TransactionRow";
@@ -20,19 +20,10 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	hideSender = false,
 	sortBy,
 	onSortChange,
+	coinName,
 }) => {
-	const [coinName, setCoinName] = useState<string>();
 	const { isXs, isSm, isMdAndAbove } = useBreakpoint();
 	const columns = useTransactionTableColumns({ coin: coinName, hideSender });
-
-	useEffect(() => {
-		try {
-			const wallet = profile.wallets().first();
-			setCoinName(wallet.currency());
-		} catch {
-			//
-		}
-	}, [profile]);
 
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({

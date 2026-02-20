@@ -138,7 +138,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toBeInTheDocument();
 	});
 
-	it("shoult hide sender when hideSender is true", () => {
+	it("should hide sender when hideSender is true", () => {
 		render(
 			<table>
 				<tbody>
@@ -154,7 +154,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={fixture} profile={profile} hideSender={true} />
+					<TransactionRowMobile transaction={fixture} profile={profile} hideSender={true} coinName="ARK" />
 				</tbody>
 			</table>,
 		);

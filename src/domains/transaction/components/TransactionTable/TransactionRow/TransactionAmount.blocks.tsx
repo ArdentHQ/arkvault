@@ -48,11 +48,13 @@ export const TransactionTotalLabel = ({
 	hideStyles = false,
 	profile,
 	decimals,
+	showTicker,
 }: {
 	transaction: ExtendedTransactionData;
 	hideStyles?: boolean;
 	profile?: Contracts.IProfile;
 	decimals?: number;
+	showTicker?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -74,7 +76,7 @@ export const TransactionTotalLabel = ({
 			<Amount
 				decimals={decimals}
 				showSign={false}
-				showTicker={false}
+				showTicker={showTicker}
 				ticker={currency}
 				value={total}
 				isNegative={getIsNegative()}

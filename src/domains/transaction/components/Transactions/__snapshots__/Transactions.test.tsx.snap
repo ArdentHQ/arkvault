@@ -927,7 +927,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -958,7 +958,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -1496,7 +1496,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -1527,7 +1527,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -2065,7 +2065,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -2096,7 +2096,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -2634,7 +2634,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -2665,7 +2665,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -3203,7 +3203,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -3234,7 +3234,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -3772,7 +3772,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -3803,7 +3803,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -4302,7 +4302,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -4333,7 +4333,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -4832,7 +4832,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -4863,7 +4863,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -5362,7 +5362,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -5393,7 +5393,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -5892,7 +5892,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -5923,7 +5923,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -6422,7 +6422,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -6453,7 +6453,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -6952,7 +6952,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -6983,7 +6983,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -7482,7 +7482,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -7513,7 +7513,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -8012,7 +8012,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -8043,7 +8043,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -8542,7 +8542,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -8573,7 +8573,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -9072,7 +9072,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -9103,7 +9103,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -9602,7 +9602,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -9633,7 +9633,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -10132,7 +10132,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -10163,7 +10163,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -10662,7 +10662,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -10693,7 +10693,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -11192,7 +11192,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -11223,7 +11223,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -11722,7 +11722,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -11753,7 +11753,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -12252,7 +12252,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -12283,7 +12283,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -12782,7 +12782,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -12813,7 +12813,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -13312,7 +13312,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -13343,7 +13343,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -13842,7 +13842,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -13873,7 +13873,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -14372,7 +14372,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -14403,7 +14403,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -14902,7 +14902,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -14933,7 +14933,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -15432,7 +15432,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -15463,7 +15463,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -15962,7 +15962,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -15993,7 +15993,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -16492,7 +16492,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -16523,7 +16523,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -17022,7 +17022,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -17053,7 +17053,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -17552,7 +17552,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -17583,7 +17583,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -18082,7 +18082,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -18113,7 +18113,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -18612,7 +18612,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -18643,7 +18643,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -19142,7 +19142,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -19173,7 +19173,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -19672,7 +19672,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -19703,7 +19703,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -20202,7 +20202,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -20233,7 +20233,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -20732,7 +20732,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -20763,7 +20763,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -21262,7 +21262,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -21293,7 +21293,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -21792,7 +21792,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -21823,7 +21823,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -22322,7 +22322,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -22353,7 +22353,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -22852,7 +22852,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -22883,7 +22883,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -23421,7 +23421,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -23452,7 +23452,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -23990,7 +23990,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -24021,7 +24021,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -24559,7 +24559,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -24590,7 +24590,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -25128,7 +25128,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -25159,7 +25159,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -25697,7 +25697,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -25728,7 +25728,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -26266,7 +26266,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -26297,7 +26297,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -26634,7 +26634,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -26665,7 +26665,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -27002,7 +27002,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -27033,7 +27033,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -27370,7 +27370,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -27401,7 +27401,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -27738,7 +27738,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -27769,7 +27769,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -28106,7 +28106,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -28137,7 +28137,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -28474,7 +28474,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -28505,7 +28505,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -29047,7 +29047,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -29078,7 +29078,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -29620,7 +29620,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -29651,7 +29651,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -30193,7 +30193,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -30224,7 +30224,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -30766,7 +30766,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -30797,7 +30797,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -31339,7 +31339,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -31370,7 +31370,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -31912,7 +31912,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -31943,7 +31943,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -32912,7 +32912,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -32943,7 +32943,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -33442,7 +33442,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -33473,7 +33473,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -33972,7 +33972,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -34003,7 +34003,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -34502,7 +34502,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -34533,7 +34533,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -35032,7 +35032,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -35063,7 +35063,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -35562,7 +35562,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -35593,7 +35593,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -36092,7 +36092,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -36123,7 +36123,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -36661,7 +36661,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -36692,7 +36692,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -37029,7 +37029,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -37060,7 +37060,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -37602,7 +37602,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -37633,7 +37633,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -38587,7 +38587,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -38618,7 +38618,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2 ARK
                         </span>
                       </span>
                     </span>
@@ -39117,7 +39117,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -39148,7 +39148,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.00254046
+                          0.00254046 ARK
                         </span>
                       </span>
                     </span>
@@ -39647,7 +39647,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -39678,7 +39678,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -40177,7 +40177,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -40208,7 +40208,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -40707,7 +40707,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -40738,7 +40738,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -41237,7 +41237,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -41268,7 +41268,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -41767,7 +41767,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -41798,7 +41798,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.001
+                          0.001 ARK
                         </span>
                       </span>
                     </span>
@@ -42336,7 +42336,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -42367,7 +42367,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0.200105
+                          0.200105 ARK
                         </span>
                       </span>
                     </span>
@@ -42704,7 +42704,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -42735,7 +42735,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          1.50102853
+                          1.50102853 ARK
                         </span>
                       </span>
                     </span>
@@ -43277,7 +43277,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>
@@ -43308,7 +43308,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          4.98
+                          4.98 ARK
                         </span>
                       </span>
                     </span>

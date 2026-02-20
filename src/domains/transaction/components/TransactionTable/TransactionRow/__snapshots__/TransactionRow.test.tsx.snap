@@ -490,7 +490,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121
+                    121 ARK
                   </span>
                 </span>
               </span>
@@ -1016,7 +1016,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121
+                    121 ARK
                   </span>
                 </span>
               </span>
@@ -1047,7 +1047,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121
+                    121 ARK
                   </span>
                 </span>
               </span>
@@ -1561,7 +1561,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121
+                    121 ARK
                   </span>
                 </span>
               </span>
@@ -1592,7 +1592,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121
+                    121 ARK
                   </span>
                 </span>
               </span>
@@ -1887,7 +1887,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                 <span
                   class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
-                  Amount (ARK)
+                  Amount
                 </span>
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -1898,7 +1898,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121
+                        121 ARK
                       </span>
                     </span>
                   </span>
@@ -2422,7 +2422,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121
+                    121 ARK
                   </span>
                 </span>
               </span>
@@ -2729,7 +2729,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                 <span
                   class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
-                  Amount (ARK)
+                  Amount
                 </span>
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -2740,7 +2740,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121
+                        121 ARK
                       </span>
                     </span>
                   </span>
@@ -3045,7 +3045,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                 <span
                   class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
-                  Amount (ARK)
+                  Amount
                 </span>
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -3056,7 +3056,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121
+                        121 ARK
                       </span>
                     </span>
                   </span>
@@ -3361,7 +3361,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                 <span
                   class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                 >
-                  Amount (ARK)
+                  Amount
                 </span>
                 <div
                   class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -3372,7 +3372,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121
+                        121 ARK
                       </span>
                     </span>
                   </span>
@@ -3896,7 +3896,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     class="whitespace-nowrap text-sm font-semibold"
                     data-testid="Amount"
                   >
-                    121
+                    121 ARK
                   </span>
                 </span>
               </span>

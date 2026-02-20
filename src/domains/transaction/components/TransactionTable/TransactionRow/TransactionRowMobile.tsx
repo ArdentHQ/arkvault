@@ -23,6 +23,7 @@ export const TransactionRowMobile = memo(
 		exchangeCurrency,
 		hideSender = false,
 		decimals,
+		coinName,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -33,6 +34,8 @@ export const TransactionRowMobile = memo(
 		}
 
 		const timeStamp = transaction.timestamp();
+
+		const amountLabel = coinName ? `${t("COMMON.AMOUNT")} (${coinName})` : t("COMMON.AMOUNT");
 
 		return (
 			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
@@ -82,10 +85,7 @@ export const TransactionRowMobile = memo(
 								)}
 							</MobileSection>
 
-							<MobileSection
-								title={`${t("COMMON.AMOUNT")} (${transaction.wallet().currency()})`}
-								className="w-full"
-							>
+							<MobileSection title={amountLabel} className="w-full">
 								<TransactionTotalLabel
 									decimals={decimals}
 									transaction={transaction}
