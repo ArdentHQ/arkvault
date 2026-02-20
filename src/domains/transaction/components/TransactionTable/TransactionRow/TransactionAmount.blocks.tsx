@@ -7,7 +7,6 @@ import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transact
 import { Tooltip } from "@/app/components/Tooltip";
 import { Label, LabelProperties } from "@/app/components/Label";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
-import { hide } from "@floating-ui/react";
 
 export const TransactionAmountLabel = ({
 	transaction,
@@ -60,6 +59,7 @@ export const TransactionTotalLabel = ({
 
 	const token = transaction.token();
 	const currency = transaction.isTokenTransfer() && token ? token.symbol() : transaction.wallet().currency();
+	console.log({ currency, hideStyles });
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
