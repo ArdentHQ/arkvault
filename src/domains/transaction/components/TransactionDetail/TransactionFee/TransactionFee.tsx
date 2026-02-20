@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { BigNumber } from "@/app/lib/helpers";
 import { Amount } from "@/app/components/Amount";
 import {
 	TransactionDetail,
@@ -9,7 +10,7 @@ import {
 
 type TransactionFeeProperties = {
 	currency: string;
-	value: number;
+	value: BigNumber;
 	exchangeCurrency?: string;
 	convertedValue?: number;
 } & TransactionDetailProperties;

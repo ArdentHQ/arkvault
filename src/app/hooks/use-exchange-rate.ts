@@ -11,12 +11,12 @@ interface Input {
 }
 
 interface Output {
-	convert: (value?: number | string) => number;
+	convert: (value?: number | string | BigNumber) => number;
 }
 
 export const useExchangeRate = ({ profile, ticker, exchangeTicker }: Input): Output => {
 	const convert = useCallback(
-		(value?: number | string) => {
+		(value?: number | string | BigNumber) => {
 			if (!ticker || !exchangeTicker || !value) {
 				return 0;
 			}
