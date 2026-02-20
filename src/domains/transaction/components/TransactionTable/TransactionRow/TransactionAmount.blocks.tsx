@@ -7,6 +7,7 @@ import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transact
 import { Tooltip } from "@/app/components/Tooltip";
 import { Label, LabelProperties } from "@/app/components/Label";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { hide } from "@floating-ui/react";
 
 export const TransactionAmountLabel = ({
 	transaction,
@@ -47,11 +48,13 @@ export const TransactionTotalLabel = ({
 	hideStyles = false,
 	profile,
 	decimals,
+	showTicker,
 }: {
 	transaction: ExtendedTransactionData;
 	hideStyles?: boolean;
 	profile?: Contracts.IProfile;
 	decimals?: number;
+	showTicker?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -73,7 +76,7 @@ export const TransactionTotalLabel = ({
 			<Amount
 				decimals={decimals}
 				showSign={false}
-				showTicker={false}
+				showTicker={showTicker}
 				ticker={currency}
 				value={total}
 				isNegative={getIsNegative()}

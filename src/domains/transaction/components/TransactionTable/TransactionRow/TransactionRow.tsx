@@ -168,6 +168,7 @@ export const TransactionRow = memo(
 				>
 					<div className="flex flex-col items-end gap-1">
 						<TransactionTotalLabel
+							showTicker={!coinName}
 							transaction={transaction}
 							hideStyles={!hideSender}
 							profile={profile}
