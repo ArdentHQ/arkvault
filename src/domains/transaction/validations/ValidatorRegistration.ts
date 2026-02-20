@@ -30,7 +30,11 @@ export const validatorRegistration = (t: any) => ({
 					"gwei",
 				);
 
-				if (BigNumber.make(lockedFee).plus(fees).isGreaterThan((wallet?.balance() ?? 0))) {
+				if (
+					BigNumber.make(lockedFee)
+						.plus(fees)
+						.isGreaterThan(wallet?.balance() ?? 0)
+				) {
 					if (fees.isZero()) {
 						return t(
 							"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE",

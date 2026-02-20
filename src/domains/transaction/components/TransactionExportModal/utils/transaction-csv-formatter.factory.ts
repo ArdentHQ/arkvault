@@ -73,7 +73,7 @@ const transactionFee = (transaction: DTO.ExtendedConfirmedTransactionData): BigN
 
 const converted = (value: BigNumber, rate: BigNumber) => value.times(rate);
 
-const truncate = (value: BigNumber|number, currency: string) => {
+const truncate = (value: BigNumber | number, currency: string) => {
 	const decimals = CURRENCIES[currency]?.decimals ?? 18;
 
 	return BigNumber.make(value, decimals);
@@ -88,13 +88,9 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 	const currency = transaction.wallet().currency();
 	const exchangeCurrency = transaction.wallet().exchangeCurrency();
 
-	const rate =
-		transaction.total().isEqualTo(0)
-			? BigNumber.ZERO
-			: truncate(
-					BigNumber.make(transaction.convertedTotal()).divide(transaction.total()),
-					exchangeCurrency,
-				);
+	const rate = transaction.total().isEqualTo(0)
+		? BigNumber.ZERO
+		: truncate(BigNumber.make(transaction.convertedTotal()).divide(transaction.total()), exchangeCurrency);
 
 	return {
 		amount: () => truncate(amount, currency).toString(),
