@@ -1,6 +1,7 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { Contracts, DTO, Helpers } from "@/app/lib/profiles";
 
+import { BigNumber } from "@/app/lib/helpers";
 import React, { JSX } from "react";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isNil } from "@/app/lib/helpers";
@@ -41,7 +42,7 @@ const ExchangeTooltip: React.FC<ExchangeTooltipProperties> = ({
 interface TransactionRowProperties {
 	isSent: boolean;
 	wallet: Contracts.IReadWriteWallet;
-	total: number;
+	total: BigNumber;
 	convertedTotal?: number;
 	exchangeCurrency?: string;
 	exchangeTooltip?: boolean;
@@ -59,7 +60,8 @@ const BaseTransactionRowAmount: React.FC<TransactionRowProperties> = ({
 	isCompact,
 	isTestNetwork,
 }: TransactionRowProperties) => {
-	const isNegative = total !== 0 && isSent;
+	const isNegative = !total.isZero() && isSent;
+
 	const TransactionAmount = (
 		<AmountLabel isNegative={isNegative} value={total} ticker={wallet.currency()} isCompact={isCompact} />
 	);

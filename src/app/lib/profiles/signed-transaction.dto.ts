@@ -38,16 +38,16 @@ export class ExtendedSignedTransactionData {
 		return this.#data.to();
 	}
 
-	public value(): number {
-		return this.#data.value().toHuman();
+	public value(): BigNumber {
+		return this.#data.value();
 	}
 
 	public convertedAmount(): number {
 		return this.#convertAmount(this.value());
 	}
 
-	public fee(): number {
-		return this.#data.fee().toHuman();
+	public fee(): BigNumber {
+		return this.#data.fee();
 	}
 
 	public convertedFee(): number {
@@ -126,16 +126,16 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isValidatorResignation();
 	}
 
-	public total(): number {
+	public total(): BigNumber {
 		if (this.isReturn()) {
-			return this.value() - this.fee();
+			return this.value().minus(this.fee());
 		}
 
 		// We want to return amount + fee for the transactions using multi-signature
 		// because the total should be calculated from the sender perspective.
 		// This is specific for signed - unconfirmed transactions only.
 		if (this.isSent()) {
-			return this.value() + this.fee();
+			return this.value().plus(this.fee());
 		}
 
 		let total = this.value();
@@ -143,7 +143,7 @@ export class ExtendedSignedTransactionData {
 		if (this.isMultiPayment()) {
 			for (const recipient of this.recipients()) {
 				if (recipient.address !== this.wallet().address()) {
-					total -= recipient.amount;
+					total = total.minus(recipient.amount);
 				}
 			}
 		}
@@ -202,7 +202,7 @@ export class ExtendedSignedTransactionData {
 	public recipients(): ExtendedTransactionRecipient[] {
 		return this.#data.recipients().map((payment: { address: string; amount: BigNumber }) => ({
 			address: payment.address,
-			amount: payment.amount.toHuman(),
+			amount: payment.amount,
 		}));
 	}
 
@@ -230,7 +230,7 @@ export class ExtendedSignedTransactionData {
 		return false;
 	}
 
-	#convertAmount(value: number): number {
+	#convertAmount(value: BigNumber): number {
 		const timestamp: DateTime | undefined = this.timestamp();
 
 		if (timestamp === undefined) {

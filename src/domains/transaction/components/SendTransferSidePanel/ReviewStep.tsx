@@ -167,7 +167,8 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 										<Amount
 											ticker={ticker}
-											value={amount.toNumber()}
+											value={amount}
+											decimals={token?.token().decimals()}
 											className="text-sm font-semibold break-all whitespace-normal md:text-base"
 										/>
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (

@@ -7,6 +7,7 @@ import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transact
 import { Tooltip } from "@/app/components/Tooltip";
 import { Label, LabelProperties } from "@/app/components/Label";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const TransactionAmountLabel = ({
 	transaction,
@@ -31,7 +32,7 @@ export const TransactionAmountLabel = ({
 			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
-				returnedAmount
+				BigNumber.make(returnedAmount).isGreaterThan(0)
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
@@ -62,7 +63,7 @@ export const TransactionTotalLabel = ({
 
 	const getIsNegative = () => {
 		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
-			return total < 0;
+			return total.isNegative();
 		}
 
 		return transaction.isSent();
@@ -94,7 +95,7 @@ export const TransactionTotalLabel = ({
 			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
-				returnedAmount
+				returnedAmount.isGreaterThan(0)
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
@@ -124,7 +125,7 @@ export const TransactionFiatAmount = ({
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
-	const amount = total - returnedAmount;
+	const amount = total.minus(returnedAmount);
 
 	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
 };

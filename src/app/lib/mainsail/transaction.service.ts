@@ -126,7 +126,7 @@ export class TransactionService {
 		await this.#sign(input, builder);
 
 		return new SignedTransactionData().configure(
-			{ ...builder.transaction.data, value: amount.toNumber() },
+			{ ...builder.transaction.data, value: amount.toFixed(0).toString() },
 			builder.transaction.serialize().toString("hex"),
 		);
 	}
