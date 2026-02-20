@@ -60,7 +60,8 @@ const BaseTransactionRowAmount: React.FC<TransactionRowProperties> = ({
 	isCompact,
 	isTestNetwork,
 }: TransactionRowProperties) => {
-	const isNegative = !total.isZero(0) && isSent;
+	const isNegative = !total.isZero() && isSent;
+
 	const TransactionAmount = (
 		<AmountLabel isNegative={isNegative} value={total} ticker={wallet.currency()} isCompact={isCompact} />
 	);
