@@ -107,10 +107,15 @@ export const Contacts: FC = () => {
 		[t],
 	);
 
-	const hasBalance = useMemo(
-		() => Object.values(activeProfile.wallets().all()).reduce((acc, wallet) => acc.plus(wallet.balance()), BigNumber.ZERO).isGreaterThan(0),
-		[activeProfile],
-	);
+	const hasBalance = useMemo(() => {
+		let total = BigNumber.ZERO;
+
+		for (const wallet of Object.values(activeProfile.wallets().all())) {
+			total = total.plus(wallet.balance());
+		}
+
+		return total.isGreaterThan(0);
+	}, [activeProfile]);
 
 	const renderTableRow = useCallback(
 		(contact: Contracts.IContact) => {
