@@ -20,7 +20,7 @@ export interface SendTransferForm {
 	gasLimit: BigNumber;
 	remainingBalance: BigNumber;
 	recipientAddress: string;
-	amount: BigNumber;
+	amount: BigNumber | undefined;
 	isSendAllSelected: string;
 	network?: Networks.Network;
 	recipients: RecipientItem[];

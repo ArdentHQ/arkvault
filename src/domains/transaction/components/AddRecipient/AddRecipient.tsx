@@ -23,6 +23,14 @@ import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import cn from "classnames";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
+const formatAmount = (value: string): BigNumber => {
+	if (!value || value === "") {
+		return BigNumber.make(0);
+	}
+
+	return BigNumber.make(value);
+}
+
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
 
@@ -132,13 +140,11 @@ export const AddRecipient = ({
 	}, [register]);
 
 	useEffect(() => {
-		const remaining = remainingBalance.isLessThanOrEqualTo(0) ? "0" : remainingBalance.toString();
-
-		setValue("remainingBalance", remaining);
-	}, [remainingBalance, setValue, amount, recipientAddress, senderAddress]);
+		setValue("remainingBalance", remainingBalance);
+	}, [remainingBalance.toString(), setValue, amount, recipientAddress, senderAddress]);
 
 	useEffect(() => {
-		register("amount", sendTransfer.amount(network, remainingBalance.toString(), addedRecipients, isSingle));
+		register("amount", sendTransfer.amount(network, remainingBalance, addedRecipients, isSingle));
 		register("recipientAddress", sendTransfer.recipientAddress(profile, network, addedRecipients, isSingle));
 	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingBalance]);
 
@@ -236,7 +242,7 @@ export const AddRecipient = ({
 	}: {
 		address: string | undefined;
 		alias?: WalletAliasResult;
-		amount: string | undefined;
+		amount: BigNumber|undefined;
 	}) => {
 		if (!isSingle) {
 			return;

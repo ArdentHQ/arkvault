@@ -2,6 +2,7 @@
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
+import { BigNumber } from "@/app/lib/helpers";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { AddressService } from "@/app/lib/mainsail/address.service";
@@ -11,15 +12,16 @@ const FIELD_REQUIRED = "COMMON.VALIDATION.FIELD_REQUIRED";
 export const sendTransfer = (t: TFunction) => ({
 	amount: (
 		network: Networks.Network | undefined,
-		balance: string | undefined,
+		balance: BigNumber,
 		recipients: RecipientItem[],
 		isSingleRecipient: boolean,
 	) => ({
 		validate: {
-			valid: (amountValue: number | string) => {
-				const amount = Number(amountValue) || 0;
-				const hasSufficientBalance =
-					Number(balance || 0) >= amount && balance !== "0" && balance !== undefined && balance !== "";
+			valid: (amountValue: string|undefined) => {
+				const hasValidAmount = amountValue !== undefined && amountValue !== "";
+				const amount = BigNumber.make(hasValidAmount ? amountValue : 0);
+
+				const hasSufficientBalance = balance.isGreaterThanOrEqualTo(amount);
 				const shouldRequire = isSingleRecipient || recipients.length === 0;
 
 				if (!hasSufficientBalance) {
@@ -30,13 +32,13 @@ export const sendTransfer = (t: TFunction) => ({
 				}
 
 				if (shouldRequire) {
-					if (amountValue === undefined || amountValue === "") {
+					if (!hasValidAmount) {
 						return t(FIELD_REQUIRED, {
 							field: t("COMMON.AMOUNT"),
 						});
 					}
 
-					if (amount === 0) {
+					if (amount.isZero()) {
 						return t("TRANSACTION.VALIDATION.AMOUNT_BELOW_MINIMUM", {
 							coinId: network?.coin(),
 							min: "0.00000001",

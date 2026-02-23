@@ -10,6 +10,7 @@ import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 import { Spinner } from "@/app/components/Spinner";
 import { Trans } from "react-i18next";
 import { twMerge } from "tailwind-merge";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
 	const amountWidth = useRandomNumber(100, 130);
@@ -39,7 +40,7 @@ export const AddressMobileItem = ({
 	isDisabled?: boolean;
 	isLoading: boolean;
 	address: string;
-	balance?: number;
+	balance?: BigNumber;
 	coin: string;
 	isSelected: boolean;
 	handleClick: () => void;
