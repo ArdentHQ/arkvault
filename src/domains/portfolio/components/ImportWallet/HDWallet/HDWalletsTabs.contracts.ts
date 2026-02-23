@@ -1,6 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import { Networks } from "@/app/lib/mainsail";
 import { Services } from "@/app/lib/mainsail";
+import { BigNumber } from "@/app/lib/helpers";
 
 export enum HDWalletTabStep {
 	SelectAccountStep = 1,
@@ -37,7 +38,7 @@ export interface AddressTableProperties {
 export interface AddressData {
 	address: string;
 	path: string;
-	balance?: number;
+	balance?: BigNumber;
 	isImported?: boolean;
 	levels: Services.IdentityLevels;
 }

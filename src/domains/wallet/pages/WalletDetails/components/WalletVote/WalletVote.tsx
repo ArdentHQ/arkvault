@@ -144,9 +144,9 @@ export const WalletVote = ({
 								<Button
 									data-testid="WalletVote__button"
 									disabled={
-										wallet.balance() === 0 ||
+										wallet.balance().isZero() ||
 										(wallet.network().usesLockedBalance() &&
-											wallet.balance("available") < wallet.network().votesAmountStep()) ||
+											wallet.balance("available").isLessThan(wallet.network().votesAmountStep())) ||
 										!wallet.hasBeenFullyRestored() ||
 										!wallet.hasSyncedWithNetwork() ||
 										!isLedgerWalletCompatible(wallet)

@@ -12,6 +12,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
 import { twMerge } from "tailwind-merge";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface FooterContentProperties {
 	label: string;
@@ -35,7 +36,7 @@ const FooterContent = ({ label, value, disabled, className }: FooterContentPrope
 
 interface ValidatorFooterProperties {
 	selectedWallet: Contracts.IReadWriteWallet;
-	availableBalance: number;
+	availableBalance: BigNumber;
 	selectedVotes: VoteValidatorProperties[];
 	selectedUnvotes: VoteValidatorProperties[];
 	maxVotes: number;

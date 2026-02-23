@@ -65,7 +65,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	// 	return registrationOptions;
 	// }
 
-	const walletsWithValidatorActions = wallets.filter((w) => w.balance() > 0 && isRestoredAndSynced(w));
+	const walletsWithValidatorActions = wallets.filter((w) => w.balance().isGreaterThan(0) && isRestoredAndSynced(w));
 
 	if (walletsWithValidatorActions.length > 0) {
 		if (
@@ -141,7 +141,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 };
 
 const getContractOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
-	const validWallets = wallets.filter((w) => w.balance() > 0 && isRestoredAndSynced(w));
+	const validWallets = wallets.filter((w) => w.balance().isGreaterThan(0) && isRestoredAndSynced(w));
 
 	const contractOptions: DropdownOptionGroup = {
 		key: "contract",
@@ -166,7 +166,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 		title: t("WALLETS.PAGE_WALLET_DETAILS.ADDITIONAL_OPTIONS"),
 	};
 
-	if (wallets.some((w) => (w.balance() > 0 || w.publicKey()) && isRestoredAndSynced(w))) {
+	if (wallets.some((w) => (w.balance().isGreaterThan(0) || w.publicKey()) && isRestoredAndSynced(w))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.TRANSACTION_HISTORY"),
 			value: "transaction-history",
