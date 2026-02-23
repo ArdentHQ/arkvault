@@ -77,7 +77,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				if (balance.isNegative()) {
+				if (balance.isLessThanOrEqualTo(0)) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance: 0,
 						coinId: network.coin(),
