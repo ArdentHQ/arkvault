@@ -18,9 +18,9 @@ export interface SendTransferForm {
 	fees: TransactionFees;
 	gasPrice: BigNumber;
 	gasLimit: BigNumber;
-	remainingBalance: number;
+	remainingBalance: BigNumber;
 	recipientAddress: string;
-	amount: string;
+	amount: BigNumber;
 	isSendAllSelected: string;
 	network?: Networks.Network;
 	recipients: RecipientItem[];
