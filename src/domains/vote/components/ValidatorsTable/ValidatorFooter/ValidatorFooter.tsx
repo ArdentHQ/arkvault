@@ -45,7 +45,6 @@ interface ValidatorFooterProperties {
 
 export const ValidatorFooter = ({
 	selectedWallet,
-	availableBalance,
 	selectedVotes,
 	selectedUnvotes,
 	maxVotes,
@@ -130,21 +129,21 @@ export const ValidatorFooter = ({
 							</div>
 						</div>
 
-						{requiresStakeAmount && (
-							<div
-								className="flex flex-row space-x-2 px-6"
-								data-testid="ValidatorTable__available-balance"
-							>
-								<LabelWrapper>
-									{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
-										percent: Math.ceil((availableBalance / selectedWallet.balance()) * 100),
-									})}
-								</LabelWrapper>
-								<TextWrapper>
-									<Amount value={availableBalance} ticker={selectedWallet.network().ticker()} />
-								</TextWrapper>
-							</div>
-						)}
+						{/*{requiresStakeAmount && (*/}
+						{/*	<div*/}
+						{/*		className="flex flex-row space-x-2 px-6"*/}
+						{/*		data-testid="ValidatorTable__available-balance"*/}
+						{/*	>*/}
+						{/*		<LabelWrapper>*/}
+						{/*			{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {*/}
+						{/*				percent: Math.ceil((availableBalance / selectedWallet.balance()) * 100),*/}
+						{/*			})}*/}
+						{/*		</LabelWrapper>*/}
+						{/*		<TextWrapper>*/}
+						{/*			<Amount value={availableBalance} ticker={selectedWallet.network().ticker()} />*/}
+						{/*		</TextWrapper>*/}
+						{/*	</div>*/}
+						{/*)}*/}
 					</div>
 					<div className="flex flex-1 flex-col items-center justify-center sm:flex-row">
 						<div className="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none">

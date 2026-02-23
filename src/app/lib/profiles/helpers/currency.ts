@@ -14,7 +14,7 @@ interface CompactFormatOptions extends CurrencyFormatOptions {
 const DEFAULT_DECIMALS = 18;
 
 export class Currency {
-	public static format(value: number | string, ticker: string, options: CurrencyFormatOptions = {}): string {
+	public static format(value: number | string | BigNumber, ticker: string, options: CurrencyFormatOptions = {}): string {
 		const withTicker = options.withTicker ?? true;
 		const currencyDecimals = CURRENCIES[ticker]?.decimals ?? DEFAULT_DECIMALS;
 		const decimals = options?.decimals ?? currencyDecimals;
