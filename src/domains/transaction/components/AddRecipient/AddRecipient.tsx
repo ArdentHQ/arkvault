@@ -395,7 +395,7 @@ export const AddRecipient = ({
 									</span>
 								</div>
 								<div className="flex flex-row items-center gap-2">
-									{isSenderFilled &&  (
+									{isSenderFilled && (
 										<div
 											data-testid="AddRecipient__available"
 											className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
