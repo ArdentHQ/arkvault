@@ -363,23 +363,6 @@ export const ValidatorRow = ({
 				</Link>
 			</TableCell>
 
-			{/*{requiresStakeAmount && (*/}
-			{/*	<ValidatorVoteAmount*/}
-			{/*		voted={voted}*/}
-			{/*		selectedWallet={selectedWallet}*/}
-			{/*		isSelectedVote={isSelectedVote}*/}
-			{/*		isSelectedUnvote={isSelectedUnvote}*/}
-			{/*		selectedVotes={selectedVotes}*/}
-			{/*		selectedUnvotes={selectedUnvotes}*/}
-			{/*		validatorAddress={validator.address()}*/}
-			{/*		availableBalance={availableBalance}*/}
-			{/*		setAvailableBalance={setAvailableBalance}*/}
-			{/*		toggleUnvotesSelected={toggleUnvotesSelected}*/}
-			{/*		toggleVotesSelected={toggleVotesSelected}*/}
-			{/*		rowColor={rowColor}*/}
-			{/*	/>*/}
-			{/*)}*/}
-
 			<TableCell
 				variant="end"
 				className="w-30 min-w-32"
