@@ -26,6 +26,7 @@ export const TransactionRow = memo(
 		profile,
 		hideSender = false,
 		decimals = 8,
+		coinName,
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
@@ -35,6 +36,7 @@ export const TransactionRow = memo(
 		if (isXs || isSm) {
 			return (
 				<TransactionRowMobile
+					coinName={coinName}
 					decimals={decimals}
 					isLoading={isLoading}
 					onClick={onClick}
@@ -166,6 +168,7 @@ export const TransactionRow = memo(
 				>
 					<div className="flex flex-col items-end gap-1">
 						<TransactionTotalLabel
+							showTicker={!coinName}
 							transaction={transaction}
 							hideStyles={!hideSender}
 							profile={profile}

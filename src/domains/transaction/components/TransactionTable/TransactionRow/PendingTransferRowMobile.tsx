@@ -75,7 +75,7 @@ export const PendingTransferRowMobile = ({
 
 						<MobileSection title={`${t("COMMON.VALUE")} (${transaction.wallet().network().coinName()})`}>
 							<AmountLabel
-								value={transaction.value() + transaction.fee()}
+								value={transaction.value().plus(transaction.fee())}
 								isNegative={transaction.isSent()}
 								ticker={wallet.currency()}
 								isCompact

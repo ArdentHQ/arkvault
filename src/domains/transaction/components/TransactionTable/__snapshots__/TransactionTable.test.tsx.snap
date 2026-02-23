@@ -143,7 +143,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 <div
                   class=""
                 >
-                  Amount (ARK)
+                  Amount 
                 </div>
               </div>
             </th>
@@ -1838,7 +1838,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 <div
                   class=""
                 >
-                  Amount (ARK)
+                  Amount 
                 </div>
               </div>
             </th>
@@ -3709,7 +3709,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -3720,7 +3720,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            2
+                            2 ARK
                           </span>
                         </span>
                       </span>
@@ -4036,7 +4036,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -4047,7 +4047,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.00254046
+                            0.00254046 ARK
                           </span>
                         </span>
                       </span>
@@ -4363,7 +4363,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -4374,7 +4374,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -4690,7 +4690,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -4701,7 +4701,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -5017,7 +5017,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -5028,7 +5028,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -5344,7 +5344,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -5355,7 +5355,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -5671,7 +5671,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -5682,7 +5682,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -6013,7 +6013,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -6024,7 +6024,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.200105
+                            0.200105 ARK
                           </span>
                         </span>
                       </span>
@@ -6286,7 +6286,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -6297,7 +6297,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            1.50102853
+                            1.50102853 ARK
                           </span>
                         </span>
                       </span>
@@ -6628,7 +6628,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -6639,7 +6639,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            4.98
+                            4.98 ARK
                           </span>
                         </span>
                       </span>
@@ -6994,7 +6994,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -7005,7 +7005,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            2
+                            2 ARK
                           </span>
                         </span>
                       </span>
@@ -7321,7 +7321,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -7332,7 +7332,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.00254046
+                            0.00254046 ARK
                           </span>
                         </span>
                       </span>
@@ -7648,7 +7648,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -7659,7 +7659,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -7975,7 +7975,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -7986,7 +7986,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -8302,7 +8302,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -8313,7 +8313,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -8629,7 +8629,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -8640,7 +8640,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -8956,7 +8956,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -8967,7 +8967,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.001
+                            0.001 ARK
                           </span>
                         </span>
                       </span>
@@ -9298,7 +9298,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -9309,7 +9309,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            0.200105
+                            0.200105 ARK
                           </span>
                         </span>
                       </span>
@@ -9571,7 +9571,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -9582,7 +9582,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            1.50102853
+                            1.50102853 ARK
                           </span>
                         </span>
                       </span>
@@ -9913,7 +9913,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                     <span
                       class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-sm font-semibold"
                     >
-                      Amount (ARK)
+                      Amount
                     </span>
                     <div
                       class="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold"
@@ -9924,7 +9924,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                             class="whitespace-nowrap text-sm font-semibold"
                             data-testid="Amount"
                           >
-                            4.98
+                            4.98 ARK
                           </span>
                         </span>
                       </span>
@@ -10103,7 +10103,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class=""
                 >
-                  Amount (ARK)
+                  Amount 
                 </div>
               </div>
             </th>
@@ -10651,7 +10651,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        2
+                        2 ARK
                       </span>
                     </span>
                   </span>
@@ -10682,7 +10682,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        2
+                        2 ARK
                       </span>
                     </span>
                   </span>
@@ -11181,7 +11181,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.00254046
+                        0.00254046 ARK
                       </span>
                     </span>
                   </span>
@@ -11212,7 +11212,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.00254046
+                        0.00254046 ARK
                       </span>
                     </span>
                   </span>
@@ -11711,7 +11711,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -11742,7 +11742,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -12241,7 +12241,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -12272,7 +12272,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -12771,7 +12771,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -12802,7 +12802,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -13301,7 +13301,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -13332,7 +13332,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -13831,7 +13831,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -13862,7 +13862,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -14406,7 +14406,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.200105
+                        0.200105 ARK
                       </span>
                     </span>
                   </span>
@@ -14437,7 +14437,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.200105
+                        0.200105 ARK
                       </span>
                     </span>
                   </span>
@@ -14774,7 +14774,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        1.50102853
+                        1.50102853 ARK
                       </span>
                     </span>
                   </span>
@@ -14805,7 +14805,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        1.50102853
+                        1.50102853 ARK
                       </span>
                     </span>
                   </span>
@@ -15347,7 +15347,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        4.98
+                        4.98 ARK
                       </span>
                     </span>
                   </span>
@@ -15378,7 +15378,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        4.98
+                        4.98 ARK
                       </span>
                     </span>
                   </span>
@@ -15547,7 +15547,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class=""
                 >
-                  Amount (ARK)
+                  Amount 
                 </div>
               </div>
             </th>
@@ -16095,7 +16095,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        2
+                        2 ARK
                       </span>
                     </span>
                   </span>
@@ -16126,7 +16126,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        2
+                        2 ARK
                       </span>
                     </span>
                   </span>
@@ -16625,7 +16625,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.00254046
+                        0.00254046 ARK
                       </span>
                     </span>
                   </span>
@@ -16656,7 +16656,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.00254046
+                        0.00254046 ARK
                       </span>
                     </span>
                   </span>
@@ -17155,7 +17155,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -17186,7 +17186,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -17685,7 +17685,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -17716,7 +17716,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -18215,7 +18215,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -18246,7 +18246,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -18745,7 +18745,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -18776,7 +18776,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -19275,7 +19275,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -19306,7 +19306,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -19850,7 +19850,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.200105
+                        0.200105 ARK
                       </span>
                     </span>
                   </span>
@@ -19881,7 +19881,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.200105
+                        0.200105 ARK
                       </span>
                     </span>
                   </span>
@@ -20218,7 +20218,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        1.50102853
+                        1.50102853 ARK
                       </span>
                     </span>
                   </span>
@@ -20249,7 +20249,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        1.50102853
+                        1.50102853 ARK
                       </span>
                     </span>
                   </span>
@@ -20791,7 +20791,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        4.98
+                        4.98 ARK
                       </span>
                     </span>
                   </span>
@@ -20822,7 +20822,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        4.98
+                        4.98 ARK
                       </span>
                     </span>
                   </span>
@@ -20991,7 +20991,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class=""
                 >
-                  Amount (ARK)
+                  Amount 
                 </div>
               </div>
             </th>
@@ -21539,7 +21539,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        2
+                        2 ARK
                       </span>
                     </span>
                   </span>
@@ -22050,7 +22050,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.00254046
+                        0.00254046 ARK
                       </span>
                     </span>
                   </span>
@@ -22561,7 +22561,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -23072,7 +23072,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -23583,7 +23583,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -24094,7 +24094,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -24605,7 +24605,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.001
+                        0.001 ARK
                       </span>
                     </span>
                   </span>
@@ -25161,7 +25161,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0.200105
+                        0.200105 ARK
                       </span>
                     </span>
                   </span>
@@ -25510,7 +25510,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        1.50102853
+                        1.50102853 ARK
                       </span>
                     </span>
                   </span>
@@ -26064,7 +26064,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        4.98
+                        4.98 ARK
                       </span>
                     </span>
                   </span>

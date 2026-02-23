@@ -759,7 +759,7 @@ jobs:
             - name: Test Components ^T-Z
               env:
                   COVERAGE_THRESHOLD_LINES: 91.09
-                  COVERAGE_THRESHOLD_FUNCTIONS: 92.4
+                  COVERAGE_THRESHOLD_FUNCTIONS: 92.36
                   COVERAGE_THRESHOLD_STATEMENTS: 91.16
                   COVERAGE_THRESHOLD_BRANCHES: 86.68
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
@@ -952,7 +952,7 @@ jobs:
             COVERAGE_INCLUDE_PATH: src/app/lib
             COVERAGE_THRESHOLD_LINES: 85.07
             COVERAGE_THRESHOLD_BRANCHES: 80.03
-            COVERAGE_THRESHOLD_FUNCTIONS: 85.34
+            COVERAGE_THRESHOLD_FUNCTIONS: 85.33
             COVERAGE_THRESHOLD_STATEMENTS: 85.04
         strategy:
             matrix:

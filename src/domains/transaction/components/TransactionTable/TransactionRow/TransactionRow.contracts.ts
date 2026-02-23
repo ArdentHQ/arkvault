@@ -10,4 +10,5 @@ export type TransactionRowProperties = {
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
 	decimals?: number;
+	coinName?: string;
 } & React.HTMLProps<any>;
