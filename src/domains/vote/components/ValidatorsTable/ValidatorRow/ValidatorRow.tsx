@@ -3,7 +3,6 @@ import { TableCell, TableRow } from "@/app/components/Table";
 
 import { Contracts } from "@/app/lib/profiles";
 import { ValidatorRowSkeleton } from "./ValidatorRowSkeleton";
-import { ValidatorVoteAmount } from "./ValidatorVoteAmount";
 import { ValidatorVoteButton } from "./ValidatorVoteButton";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -13,6 +12,7 @@ import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTabl
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { twMerge } from "tailwind-merge";
+import { BigNumber } from "@/app/lib/helpers";
 
 export interface ValidatorRowProperties {
 	index: number;
@@ -23,8 +23,8 @@ export interface ValidatorRowProperties {
 	isVoteDisabled?: boolean;
 	isLoading?: boolean;
 	selectedWallet: Contracts.IReadWriteWallet;
-	availableBalance: number;
-	setAvailableBalance: (balance: number) => void;
+	availableBalance: BigNumber;
+	setAvailableBalance: (balance: BigNumber) => void;
 	toggleUnvotesSelected: (address: string, voteAmount?: number) => void;
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
@@ -284,14 +284,12 @@ export const ValidatorRow = ({
 	isVoteDisabled = false,
 	isLoading = false,
 	selectedWallet,
-	availableBalance,
-	setAvailableBalance,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
 }: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useValidatorRow(
+	const { requiresStakeAmount, renderButton, rowColor, isActive } = useValidatorRow(
 		{
 			index,
 			isVoteDisabled,
@@ -304,6 +302,7 @@ export const ValidatorRow = ({
 			voted,
 		},
 	);
+	console.log(requiresStakeAmount)
 
 	if (isLoading) {
 		return <ValidatorRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
@@ -366,22 +365,22 @@ export const ValidatorRow = ({
 				</Link>
 			</TableCell>
 
-			{requiresStakeAmount && (
-				<ValidatorVoteAmount
-					voted={voted}
-					selectedWallet={selectedWallet}
-					isSelectedVote={isSelectedVote}
-					isSelectedUnvote={isSelectedUnvote}
-					selectedVotes={selectedVotes}
-					selectedUnvotes={selectedUnvotes}
-					validatorAddress={validator.address()}
-					availableBalance={availableBalance}
-					setAvailableBalance={setAvailableBalance}
-					toggleUnvotesSelected={toggleUnvotesSelected}
-					toggleVotesSelected={toggleVotesSelected}
-					rowColor={rowColor}
-				/>
-			)}
+			{/*{requiresStakeAmount && (*/}
+			{/*	<ValidatorVoteAmount*/}
+			{/*		voted={voted}*/}
+			{/*		selectedWallet={selectedWallet}*/}
+			{/*		isSelectedVote={isSelectedVote}*/}
+			{/*		isSelectedUnvote={isSelectedUnvote}*/}
+			{/*		selectedVotes={selectedVotes}*/}
+			{/*		selectedUnvotes={selectedUnvotes}*/}
+			{/*		validatorAddress={validator.address()}*/}
+			{/*		availableBalance={availableBalance}*/}
+			{/*		setAvailableBalance={setAvailableBalance}*/}
+			{/*		toggleUnvotesSelected={toggleUnvotesSelected}*/}
+			{/*		toggleVotesSelected={toggleVotesSelected}*/}
+			{/*		rowColor={rowColor}*/}
+			{/*	/>*/}
+			{/*)}*/}
 
 			<TableCell
 				variant="end"
