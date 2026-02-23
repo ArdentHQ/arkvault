@@ -34,7 +34,7 @@ const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Cont
 		return false;
 	}
 
-	if (wallet.balance() === 0) {
+	if (wallet.balance().isZero()) {
 		return false;
 	}
 

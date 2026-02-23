@@ -172,14 +172,14 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.balance} */
-	public balance(type: WalletBalanceType = "available"): number {
+	public balance(type: WalletBalanceType = "available"): BigNumber {
 		const value: Contracts.WalletBalance | undefined = this.data().get(WalletData.Balance);
 
 		if (value && value[type]) {
-			return +BigNumber.make(value[type] as BigNumber, this.#decimals()).toHuman();
+			return BigNumber.make(value[type] as BigNumber, this.#decimals());
 		}
 
-		return 0;
+		return BigNumber.ZERO;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.convertedBalance} */

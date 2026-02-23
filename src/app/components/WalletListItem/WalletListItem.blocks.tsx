@@ -225,7 +225,7 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 };
 
 const getTooltipContent = (wallet: Contracts.IReadWriteWallet, t: TFunction): string => {
-	if (wallet.balance() === 0) {
+	if (wallet.balance().isZero()) {
 		return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 	}
 

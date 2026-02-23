@@ -16,6 +16,7 @@ import { ContactListItemOption } from "@/domains/contact/components/ContactListI
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { Button } from "@/app/components/Button";
 import { ProfilePaths } from "@/router/paths";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
@@ -107,7 +108,7 @@ export const Contacts: FC = () => {
 	);
 
 	const hasBalance = useMemo(
-		() => Object.values(activeProfile.wallets().all()).reduce((acc, wallet) => acc + wallet.balance(), 0) > 0,
+		() => Object.values(activeProfile.wallets().all()).reduce((acc, wallet) => acc.plus(wallet.balance()), BigNumber.ZERO).isGreaterThan(0),
 		[activeProfile],
 	);
 

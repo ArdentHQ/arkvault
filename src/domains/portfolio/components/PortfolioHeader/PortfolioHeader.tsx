@@ -352,7 +352,7 @@ export const PortfolioHeader = ({
 										</p>
 										<div>
 											<Amount
-												value={profile.totalBalance().toNumber()}
+												value={profile.totalBalance()}
 												ticker={wallet.currency()}
 												className="text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
 												allowHideBalance
@@ -457,7 +457,7 @@ export const PortfolioHeader = ({
 											content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")}
 											disabled={
 												!(
-													wallet.balance() === 0 ||
+													wallet.balance().isZero() ||
 													!wallet.hasBeenFullyRestored() ||
 													!wallet.hasSyncedWithNetwork()
 												)
@@ -468,7 +468,7 @@ export const PortfolioHeader = ({
 													data-testid="WalletHeader__s!isLoading&& end-button"
 													className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
 													disabled={
-														wallet.balance() === 0 ||
+														wallet.balance().isZero() ||
 														!wallet.hasBeenFullyRestored() ||
 														!wallet.hasSyncedWithNetwork()
 													}

@@ -182,10 +182,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the balance.
 	 *
-	 * @return {number}
+	 * @return {BigNumber}
 	 * @memberof IReadWriteWallet
 	 */
-	balance(type?: WalletBalanceType): number;
+	balance(type?: WalletBalanceType): BigNumber;
 
 	/**
 	 * Get the converted balance.
