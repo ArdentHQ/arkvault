@@ -11,7 +11,7 @@ export const common = (t: TFunction) => ({
 			return true;
 		},
 	}),
-	gasLimit: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
+	gasLimit: (balance = BigNumber.ZERO, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
 			valid: (gasLimit: BigNumber | undefined) => {
 				if (!network?.coin() || !gasLimit) {
@@ -38,7 +38,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				if (Math.sign(balance) <= 0) {
+				if (balance.isLessThanOrEqualTo(0)) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance: 0,
 						coinId: network.coin(),
@@ -53,7 +53,7 @@ export const common = (t: TFunction) => ({
 
 				const fee = calculateGasFee(gasPrice, gasLimit);
 
-				if (+fee > balance) {
+				if (fee.isGreaterThan(balance)) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance,
 						coinId: network.coin(),
@@ -64,7 +64,7 @@ export const common = (t: TFunction) => ({
 			},
 		},
 	}),
-	gasPrice: (balance = 0, getValues: () => object, network?: Networks.Network) => ({
+	gasPrice: (balance = BigNumber.ZERO, getValues: () => object, network?: Networks.Network) => ({
 		validate: {
 			valid: (gasPrice: BigNumber | undefined) => {
 				if (!network?.coin() || !gasPrice) {
@@ -77,7 +77,7 @@ export const common = (t: TFunction) => ({
 					});
 				}
 
-				if (Math.sign(balance) <= 0) {
+				if (balance.isNegative()) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance: 0,
 						coinId: network.coin(),
@@ -106,7 +106,7 @@ export const common = (t: TFunction) => ({
 
 				const fee = calculateGasFee(gasPrice, gasLimit);
 
-				if (+fee > balance) {
+				if (fee.isGreaterThan(balance)) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance,
 						coinId: network.coin(),
