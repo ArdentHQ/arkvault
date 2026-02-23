@@ -164,7 +164,9 @@ export const WalletVote = ({
 									disabled={
 										wallet.balance().isZero() ||
 										(wallet.network().usesLockedBalance() &&
-											wallet.balance("available").isLessThan(wallet.network().votesAmountStep())) ||
+											wallet
+												.balance("available")
+												.isLessThan(wallet.network().votesAmountStep())) ||
 										!wallet.hasBeenFullyRestored() ||
 										!wallet.hasSyncedWithNetwork() ||
 										!isLedgerWalletCompatible(wallet)
