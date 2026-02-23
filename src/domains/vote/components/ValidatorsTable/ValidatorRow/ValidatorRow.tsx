@@ -289,20 +289,18 @@ export const ValidatorRow = ({
 }: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { requiresStakeAmount, renderButton, rowColor, isActive } = useValidatorRow(
-		{
-			index,
-			isVoteDisabled,
-			selectedUnvotes,
-			selectedVotes,
-			selectedWallet,
-			toggleUnvotesSelected,
-			toggleVotesSelected,
-			validator,
-			voted,
-		},
-	);
-	console.log(requiresStakeAmount)
+	const { requiresStakeAmount, renderButton, rowColor, isActive } = useValidatorRow({
+		index,
+		isVoteDisabled,
+		selectedUnvotes,
+		selectedVotes,
+		selectedWallet,
+		toggleUnvotesSelected,
+		toggleVotesSelected,
+		validator,
+		voted,
+	});
+	console.log(requiresStakeAmount);
 
 	if (isLoading) {
 		return <ValidatorRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
