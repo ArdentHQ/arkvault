@@ -21,8 +21,9 @@ export const ViewingAddressInfo = ({
 	const { getWalletAlias } = useWalletAlias();
 
 	const lastWallet = wallets[wallets.length - 1];
+	const isSingle = mode === AddressViewSelection.single || wallets.length === 1;
 
-	if (mode === AddressViewSelection.single && lastWallet) {
+	if (isSingle && lastWallet) {
 		const { alias } = getWalletAlias({
 			address: lastWallet.address(),
 			network: lastWallet.network(),
