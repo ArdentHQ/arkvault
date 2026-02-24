@@ -835,7 +835,7 @@ describe("Wallet", () => {
 
 		// This should use default decimals (18) and not throw
 		const result = newWallet.balance();
-		expect(result).toBeInstanceOf(BigNumber)
+		expect(result).toBeInstanceOf(BigNumber);
 	});
 
 	it("should cover username early return when cold wallet", () => {
