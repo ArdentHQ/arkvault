@@ -165,7 +165,7 @@ export const TransactionRowAddressing = ({
 	const isMusigTransfer = false;
 
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
-	const isContract = !transaction.isTransfer();
+	const isContract = transaction.isContractTransaction();
 
 	let direction: Direction = isNegative ? "sent" : "received";
 	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {

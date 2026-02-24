@@ -286,8 +286,8 @@ export class SignedTransactionData {
 		return TransactionTypeIdentifier.isTokenTransfer(this.signedData.data);
 	}
 
-	public isContractDeployment() {
-		const isContractTransaction = [
+	public isContractTransaction(): boolean {
+		return [
 			this.isValidatorRegistration(),
 			this.isValidatorResignation(),
 			this.isVote(),
@@ -295,8 +295,10 @@ export class SignedTransactionData {
 			this.isUsernameRegistration(),
 			this.isUsernameResignation(),
 		].some(Boolean);
+	}
 
-		return [!isContractTransaction, !this.to()].every(Boolean);
+	public isContractDeployment() {
+		return [!this.isContractTransaction(), !this.to()].every(Boolean);
 	}
 
 	public isApprove(): boolean {

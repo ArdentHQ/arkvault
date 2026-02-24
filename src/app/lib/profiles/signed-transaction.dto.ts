@@ -273,4 +273,8 @@ export class ExtendedSignedTransactionData {
 	public isContractDeployment() {
 		return this.#data.isContractDeployment();
 	}
+
+	public isContractTransaction() {
+		return this.#data.isContractTransaction();
+	}
 }

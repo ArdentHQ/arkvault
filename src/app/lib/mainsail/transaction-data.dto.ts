@@ -58,10 +58,6 @@ export abstract class TransactionData {
 			return "batchtransfer";
 		}
 
-		if (this.isContractDeployment()) {
-			return "contractdeployment";
-		}
-
 		for (const { type, method } of this.#types) {
 			if (this[method]()) {
 				return type;
@@ -79,8 +75,8 @@ export abstract class TransactionData {
 		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
 	}
 
-	public isContractDeployment() {
-		const isContractTransaction = [
+	public isContractTransaction() {
+		return [
 			this.isValidatorRegistration(),
 			this.isValidatorResignation(),
 			this.isVote(),
@@ -88,8 +84,10 @@ export abstract class TransactionData {
 			this.isUsernameRegistration(),
 			this.isUsernameResignation(),
 		].some(Boolean);
+	}
 
-		return [!isContractTransaction, !this.to()].every(Boolean);
+	public isContractDeployment() {
+		return [!this.isContractTransaction(), !this.to()].every(Boolean);
 	}
 
 	public isApprove() {

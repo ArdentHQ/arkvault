@@ -311,4 +311,8 @@ export class ExtendedConfirmedTransactionData {
 	public isContractDeployment(): boolean {
 		return this.#data.isContractDeployment();
 	}
+
+	public isContractTransaction(): boolean {
+		return this.#data.isContractTransaction();
+	}
 }
