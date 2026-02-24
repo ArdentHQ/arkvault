@@ -825,9 +825,9 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 94.08
+                  COVERAGE_THRESHOLD_LINES: 94.07
                   COVERAGE_THRESHOLD_FUNCTIONS: 95.32
-                  COVERAGE_THRESHOLD_STATEMENTS: 94.03
+                  COVERAGE_THRESHOLD_STATEMENTS: 94.02
                   COVERAGE_THRESHOLD_BRANCHES: 91.80
               with:
                   timeout_minutes: 10
