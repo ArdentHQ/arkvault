@@ -80,10 +80,16 @@ export abstract class TransactionData {
 	}
 
 	public isContractDeployment() {
-		/**
-		 * Contract deployment is appearing as transfer without recipient.
-		 */
-		return [this.isTransfer(), !this.to()].every(Boolean);
+		const isContractTransaction = [
+			this.isValidatorRegistration(),
+			this.isValidatorResignation(),
+			this.isVote(),
+			this.isUnvote(),
+			this.isUsernameRegistration(),
+			this.isUsernameResignation(),
+		].some(Boolean);
+
+		return [!isContractTransaction, !this.to()].every(Boolean);
 	}
 
 	public isApprove() {
