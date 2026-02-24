@@ -59,7 +59,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	const hasVotes = useMemo(() => votes.length > 0, [votes]);
 
 	const tooltipContent = () => {
-		if (!wallet.balance()) {
+		if (wallet.balance().isZero()) {
 			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 		}
 

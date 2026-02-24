@@ -13,6 +13,7 @@ import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncValidators } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { within } from "@testing-library/react";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -318,7 +319,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render disable vote button & tooltip when balance is zero", async () => {
-		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
 
 		render(
 			<AddressWrapper>
