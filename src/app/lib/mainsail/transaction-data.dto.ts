@@ -58,6 +58,10 @@ export abstract class TransactionData {
 			return "batchtransfer";
 		}
 
+		if (this.isContractDeployment()) {
+			return "contractdeployment";
+		}
+
 		for (const { type, method } of this.#types) {
 			if (this[method]()) {
 				return type;
@@ -73,6 +77,13 @@ export abstract class TransactionData {
 		}
 
 		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
+	}
+
+	public isContractDeployment() {
+		/**
+		 * Contract deployment is appearing as transfer without recipient.
+		 */
+		return [this.isTransfer(), !this.to()].every(Boolean);
 	}
 
 	public isApprove() {

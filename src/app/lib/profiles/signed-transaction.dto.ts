@@ -269,4 +269,8 @@ export class ExtendedSignedTransactionData {
 	public isBatchTransfer(): boolean {
 		return this.#data.isBatchTransfer();
 	}
+
+	public isContractDeployment() {
+		return this.#data.isContractDeployment();
+	}
 }

@@ -307,4 +307,8 @@ export class ExtendedConfirmedTransactionData {
 	public isBatchTransfer(): boolean {
 		return this.#data.isBatchTransfer();
 	}
+
+	public isContractDeployment(): boolean {
+		return this.#data.isContractDeployment();
+	}
 }

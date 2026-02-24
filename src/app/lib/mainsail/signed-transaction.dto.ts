@@ -286,6 +286,13 @@ export class SignedTransactionData {
 		return TransactionTypeIdentifier.isTokenTransfer(this.signedData.data);
 	}
 
+	public isContractDeployment() {
+		/**
+		 * Contract deployment is appearing as transfer without recipient.
+		 */
+		return [this.isTransfer(), !this.to()].every(Boolean);
+	}
+
 	public isApprove(): boolean {
 		return TransactionTypeIdentifier.isApprove(this.signedData.data);
 	}

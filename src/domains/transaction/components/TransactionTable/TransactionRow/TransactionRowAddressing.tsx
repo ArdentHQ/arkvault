@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
 import { Link } from "@/app/components/Link";
-import { isContractDeployment, isContractTransaction } from "@/domains/transaction/utils";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
@@ -84,7 +83,7 @@ const ContractAddressing = ({
 	t: any;
 }) => {
 	const address =
-		isContractDeployment(transaction) && transaction.confirmations() > 0
+		transaction.isContractDeployment() && transaction.confirmations() > 0
 			? transaction.data().data.receipt.deployedContractAddress
 			: transaction.to();
 
@@ -166,7 +165,7 @@ export const TransactionRowAddressing = ({
 	const isMusigTransfer = false;
 
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
-	const isContract = isContractTransaction(transaction);
+	const isContract = !transaction.isTransfer();
 
 	let direction: Direction = isNegative ? "sent" : "received";
 	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {
@@ -222,7 +221,7 @@ export const TransactionRowAddressing = ({
 	}
 
 	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
-		if (isContract || isContractDeployment(transaction)) {
+		if (isContract || transaction.isContractDeployment()) {
 			return (
 				<div
 					className="flex w-full flex-row gap-2"
@@ -273,7 +272,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (isContract || isContractDeployment(transaction)) {
+	if (isContract || transaction.isContractDeployment()) {
 		return <ContractAddressing transaction={transaction} direction={direction} t={t} />;
 	}
 
