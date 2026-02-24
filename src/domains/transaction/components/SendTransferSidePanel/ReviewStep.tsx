@@ -72,7 +72,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 			return;
 		}
 
-		const remainingBalance = BigNumber.make(nativeTokenBalance).minus(amount).minus(fee);
+		const remainingBalance = nativeTokenBalance.minus(amount).minus(fee);
 		if (remainingBalance.isLessThanOrEqualTo(0)) {
 			if (isMultiPayment) {
 				setError("amount", {
@@ -88,7 +88,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 					{
 						address: firstRecipient.address,
 						alias: firstRecipient.alias,
-						amount: newAmount.toString(),
+						amount: newAmount.toFixed(0),
 					},
 				]);
 			}
@@ -97,7 +97,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 		return () => {
 			clearErrors("amount");
 		};
-	}, [isMultiPayment, nativeTokenBalance, amount.toString(), fee.toString(), token]);
+	}, [isMultiPayment, nativeTokenBalance.toString(), amount.toString(), fee.toString(), token]);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -120,7 +120,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 
 	const isTestnet = wallet.network().isTest();
-	const convertedAmount = isTestnet ? 0 : convert(amount.toNumber());
+	const convertedAmount = isTestnet ? 0 : convert(amount.toFixed(0));
 
 	return (
 		<section data-testid="SendTransfer__review-step">
