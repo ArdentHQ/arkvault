@@ -15,6 +15,7 @@ import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { Column } from "react-table";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const SectionHeaderMobile = ({ title }: { title: string }) => (
 	<div
@@ -156,7 +157,7 @@ export const ImportedLedgerMobileItem = ({
 	onClick,
 }: {
 	address: string;
-	balance?: number;
+	balance?: BigNumber;
 	coin: string;
 	name: string;
 	onClick: () => void;
