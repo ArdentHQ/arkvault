@@ -176,7 +176,7 @@ export class Wallet implements IReadWriteWallet {
 		const value: Contracts.WalletBalance | undefined = this.data().get(WalletData.Balance);
 
 		if (value && value[type]) {
-			return BigNumber.make(value[type] as BigNumber, this.#decimals());
+			return BigNumber.make(value[type] as BigNumber, this.#decimals()).divide("1000000000000000000");
 		}
 
 		return BigNumber.ZERO;

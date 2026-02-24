@@ -50,7 +50,7 @@ export const useSendTransferForm = ({
 
 	const formDefaultValues = useMemo<DefaultValues<SendTransferForm>>(
 		() => ({
-			amount: undefined,
+			amount: "",
 			recipients: [],
 			remainingBalance: wallet?.balance() ?? BigNumber.ZERO,
 			senderAddress: undefined,
