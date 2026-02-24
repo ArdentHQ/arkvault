@@ -13,6 +13,8 @@ describe("useTransactionTypes", () => {
 		}),
 		isConfirmed: () => false,
 		to: () => null,
+		isContractDeployment: () => true,
+		isContractTransaction: () => false,
 		type: () => "0x60006000",
 	};
 
@@ -24,6 +26,7 @@ describe("useTransactionTypes", () => {
 	});
 
 	it("should get method signature", () => {
+		vi.spyOn(TransactionFixture, "isContractDeployment").mockReturnValue(true);
 		const { result } = renderHook(() => useTransactionTypes());
 		expect(result.current.getLabel(contractDeploymentFixture)).toBe("Contract Deployment");
 	});
@@ -39,6 +42,7 @@ describe("useTransactionTypes", () => {
 						data: "0x60006000F3",
 					}),
 				}),
+				isContractDeployment: () => false,
 				isConfirmed: () => false,
 				type: () => type,
 			}),
