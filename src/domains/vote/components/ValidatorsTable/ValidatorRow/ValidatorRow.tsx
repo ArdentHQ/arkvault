@@ -289,7 +289,7 @@ export const ValidatorRow = ({
 }: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { requiresStakeAmount, renderButton, rowColor, isActive, } = useValidatorRow({
+	const { requiresStakeAmount, renderButton, rowColor, isActive } = useValidatorRow({
 		index,
 		isVoteDisabled,
 		selectedUnvotes,
