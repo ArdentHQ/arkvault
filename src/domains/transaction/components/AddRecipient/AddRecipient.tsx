@@ -23,14 +23,6 @@ import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import cn from "classnames";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
-const formatAmount = (value: string): BigNumber => {
-	if (!value || value === "") {
-		return BigNumber.make(0);
-	}
-
-	return BigNumber.make(value);
-}
-
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
 
@@ -125,7 +117,6 @@ export const AddRecipient = ({
 		return senderBalance;
 	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokens, tokenContractAddress]);
 
-	const formattedBalance = UnitConverter.formatUnits(remainingBalance.toString(), "ark");
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
 	const clearFields = useCallback(() => {
@@ -231,7 +222,7 @@ export const AddRecipient = ({
 		singleRecipientOnChange({
 			address: recipientAddress,
 			alias: recipientAlias,
-			amount: remainingBalance,
+			amount: remainingBalance.toFixed(0),
 		});
 	}, [isSendAllSelected, remainingBalance, setValue]);
 
@@ -242,7 +233,7 @@ export const AddRecipient = ({
 	}: {
 		address: string | undefined;
 		alias?: WalletAliasResult;
-		amount: BigNumber|undefined;
+		amount: string | undefined;
 	}) => {
 		if (!isSingle) {
 			return;
@@ -408,7 +399,7 @@ export const AddRecipient = ({
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount
-												value={formattedBalance.toString()}
+												value={remainingBalance}
 												ticker={ticker}
 												showTicker={!isTokenTransfer}
 												showCompactFormat
