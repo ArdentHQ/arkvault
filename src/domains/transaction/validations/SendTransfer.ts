@@ -17,7 +17,7 @@ export const sendTransfer = (t: TFunction) => ({
 		isSingleRecipient: boolean,
 	) => ({
 		validate: {
-			valid: (amountValue: string|undefined) => {
+			valid: (amountValue: string | undefined) => {
 				const hasValidAmount = amountValue !== undefined && amountValue !== "";
 				const amount = BigNumber.make(hasValidAmount ? amountValue : 0);
 
