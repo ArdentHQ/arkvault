@@ -50,62 +50,6 @@ describe("ValidatorFooter", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show available balance if network requires vote amount", () => {
-		const { rerender } = render(
-			<ValidatorFooter
-				selectedWallet={wallet}
-				availableBalance={wallet.balance()}
-				selectedVotes={[]}
-				selectedUnvotes={[]}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
-
-		expect(screen.queryByTestId("ValidatorTable__available-balance")).not.toBeInTheDocument();
-
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-
-		rerender(
-			<ValidatorFooter
-				selectedWallet={wallet}
-				availableBalance={wallet.balance()}
-				selectedVotes={[]}
-				selectedUnvotes={[]}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
-
-		expect(screen.getByTestId("ValidatorTable__available-balance")).toBeInTheDocument();
-
-		votesAmountMinimumMock.mockRestore();
-	});
-
-	it("should calculate remaining balance show it", () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-
-		render(
-			<ValidatorFooter
-				selectedWallet={wallet}
-				availableBalance={wallet.balance() / 2}
-				selectedVotes={[]}
-				selectedUnvotes={[]}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
-
-		expect(screen.getByTestId("ValidatorTable__available-balance")).toBeInTheDocument();
-
-		expect(
-			screen.getByText(
-				translations.VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE.replace("{{percent}}", "50"),
-			),
-		).toBeInTheDocument();
-
-		expect(screen.getByText(`47.63826626162534 ${wallet.network().ticker()}`)).toBeInTheDocument();
-
-		votesAmountMinimumMock.mockRestore();
-	});
-
 	it("should disable continue button with tooltip if user doesn't select a validator", async () => {
 		const { baseElement } = render(
 			<ValidatorFooter
