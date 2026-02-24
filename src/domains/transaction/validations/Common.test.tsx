@@ -94,14 +94,14 @@ describe("Common Validations", () => {
 		});
 
 		it("should fail if balance is zero or negative", () => {
-			let gasLimitValidation = common(t).gasLimit(0, getValues, network);
+			let gasLimitValidation = common(t).gasLimit(BigNumber.ZERO, getValues, network);
 			expect(gasLimitValidation.validate.valid(BigNumber.make(100))).toBe(
 				t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 					balance: 0,
 					coinId: network.coin(),
 				}),
 			);
-			gasLimitValidation = common(t).gasLimit(-10, getValues, network);
+			gasLimitValidation = common(t).gasLimit(BigNumber.make(-10), getValues, network);
 			expect(gasLimitValidation.validate.valid(BigNumber.make(100))).toBe(
 				t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 					balance: 0,
@@ -112,7 +112,7 @@ describe("Common Validations", () => {
 
 		it("should return true if gasPrice is not defined", () => {
 			getValues = () => ({ gasPrice: undefined });
-			const gasLimitValidation = common(t).gasLimit(100, getValues, network);
+			const gasLimitValidation = common(t).gasLimit(BigNumber.make(100), getValues, network);
 			expect(gasLimitValidation.validate.valid(BigNumber.make(100))).toBe(true);
 		});
 
@@ -128,7 +128,7 @@ describe("Common Validations", () => {
 
 		it("should fail if fee is greater than balance", () => {
 			getValues = () => ({ gasPrice: BigNumber.make(10) });
-			const gasLimitValidation = common(t).gasLimit(50, getValues, network);
+			const gasLimitValidation = common(t).gasLimit(BigNumber.make(50), getValues, network);
 
 			vi.spyOn(inputFee, "calculateGasFee").mockReturnValue(BigNumber.make(100));
 
@@ -142,7 +142,7 @@ describe("Common Validations", () => {
 
 		it("should pass validation", () => {
 			getValues = () => ({ gasPrice: BigNumber.make(1) });
-			const gasLimitValidation = common(t).gasLimit(100, getValues, network);
+			const gasLimitValidation = common(t).gasLimit(BigNumber.make(100), getValues, network);
 
 			vi.spyOn(inputFee, "calculateGasFee").mockReturnValue(BigNumber.make(50));
 
@@ -162,21 +162,21 @@ describe("Common Validations", () => {
 
 	describe("gasPrice", () => {
 		it("should return true if network coin or gasPrice is not defined", () => {
-			const gasPriceValidation = common(t).gasPrice(100, getValues, undefined);
+			const gasPriceValidation = common(t).gasPrice(BigNumber.make(100), getValues, undefined);
 			expect(gasPriceValidation.validate.valid(BigNumber.make(100))).toBe(true);
 
-			const gasPriceValidation2 = common(t).gasPrice(100, getValues, network);
+			const gasPriceValidation2 = common(t).gasPrice(BigNumber.make(100), getValues, network);
 			expect(gasPriceValidation2.validate.valid(undefined)).toBe(true);
 
 			const noCoinSpy = vi.spyOn(network, "coin").mockReturnValue("");
-			const gasPriceValidation3 = common(t).gasPrice(100, getValues, network);
+			const gasPriceValidation3 = common(t).gasPrice(BigNumber.make(100), getValues, network);
 			expect(gasPriceValidation3.validate.valid(BigNumber.make(100))).toBe(true);
 			noCoinSpy.mockRestore();
 			expect(gasPriceValidation3.validate.valid(BigNumber.make(100))).toBe(true);
 		});
 
 		it("should fail if gasPrice is zero", () => {
-			const gasPriceValidation = common(t).gasPrice(100, getValues, network);
+			const gasPriceValidation = common(t).gasPrice(BigNumber.make(100), getValues, network);
 			expect(gasPriceValidation.validate.valid(BigNumber.make(0))).toBe(
 				t("COMMON.VALIDATION.FIELD_REQUIRED", {
 					field: t("COMMON.GAS_PRICE"),
@@ -185,7 +185,7 @@ describe("Common Validations", () => {
 		});
 
 		it("should fail if balance is zero or negative", () => {
-			let gasPriceValidation = common(t).gasPrice(0, getValues, network);
+			let gasPriceValidation = common(t).gasPrice(BigNumber.make(0), getValues, network);
 			expect(gasPriceValidation.validate.valid(BigNumber.make(100))).toBe(
 				t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 					balance: 0,
@@ -193,7 +193,7 @@ describe("Common Validations", () => {
 				}),
 			);
 
-			gasPriceValidation = common(t).gasPrice(-10, getValues, network);
+			gasPriceValidation = common(t).gasPrice(BigNumber.make(-10), getValues, network);
 			expect(gasPriceValidation.validate.valid(BigNumber.make(100))).toBe(
 				t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 					balance: 0,
@@ -203,7 +203,7 @@ describe("Common Validations", () => {
 		});
 
 		it("should fail if gasPrice is too low", () => {
-			const gasPriceValidation = common(t).gasPrice(100, getValues, network);
+			const gasPriceValidation = common(t).gasPrice(BigNumber.make(100), getValues, network);
 			expect(gasPriceValidation.validate.valid(BigNumber.make(5))).toBe(
 				t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_LOW", {
 					minGasPrice: BigNumber.make(10),
@@ -212,7 +212,7 @@ describe("Common Validations", () => {
 		});
 
 		it("should fail if gasPrice is too high", () => {
-			const gasPriceValidation = common(t).gasPrice(100, getValues, network);
+			const gasPriceValidation = common(t).gasPrice(BigNumber.make(100), getValues, network);
 			expect(gasPriceValidation.validate.valid(BigNumber.make(2000))).toBe(
 				t("COMMON.VALIDATION.GAS_PRICE_IS_TOO_HIGH", {
 					maxGasPrice: BigNumber.make(1000),
@@ -222,13 +222,13 @@ describe("Common Validations", () => {
 
 		it("should return true if gasLimit is not defined", () => {
 			getValues = () => ({ gasLimit: undefined });
-			const gasPriceValidation = common(t).gasPrice(100, getValues, network);
+			const gasPriceValidation = common(t).gasPrice(BigNumber.make(100), getValues, network);
 			expect(gasPriceValidation.validate.valid(BigNumber.make(100))).toBe(true);
 		});
 
 		it("should fail if fee is greater than balance", () => {
 			getValues = () => ({ gasLimit: BigNumber.make(10) });
-			const gasPriceValidation = common(t).gasPrice(50, getValues, network);
+			const gasPriceValidation = common(t).gasPrice(BigNumber.make(50), getValues, network);
 
 			vi.spyOn(inputFee, "calculateGasFee").mockReturnValue(BigNumber.make(100));
 
@@ -242,7 +242,7 @@ describe("Common Validations", () => {
 
 		it("should pass validation", () => {
 			getValues = () => ({ gasLimit: BigNumber.make(1) });
-			const gasPriceValidation = common(t).gasPrice(100, getValues, network);
+			const gasPriceValidation = common(t).gasPrice(BigNumber.make(100), getValues, network);
 
 			vi.spyOn(inputFee, "calculateGasFee").mockReturnValue(BigNumber.make(50));
 
