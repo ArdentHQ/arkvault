@@ -9,6 +9,7 @@ import * as ReactRouter from "react-router";
 const formStepID = "SendTransfer__form-step";
 const reviewStepID = "SendTransfer__review-step";
 const recipientAddButton = "AddRecipient__add-button";
+import { BigNumber } from "@/app/lib/helpers";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -85,7 +86,7 @@ describe("SendTransferSidePanel MultiPayment", () => {
 	});
 
 	it("should prevent sending when amount + fee exceeds balance", async () => {
-		const walletSpy = vi.spyOn(wallet, "balance").mockReturnValue(50);
+		const walletSpy = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(50));
 
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
