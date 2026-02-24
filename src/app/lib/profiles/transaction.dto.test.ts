@@ -258,7 +258,7 @@ describe("ExtendedConfirmedTransactionData", () => {
 	});
 
 	describe("Token methods", () => {
-		it.each(["isApprove", "isRevoke", "isBatchTransfer"])("should delegate %s", (method) => {
+		it.each(["isApprove", "isRevoke", "isBatchTransfer"])("should check %s", (method) => {
 			const spy = vi.spyOn(dataMock, method as keyof ConfirmedTransactionData);
 			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
 			try {
@@ -266,6 +266,20 @@ describe("ExtendedConfirmedTransactionData", () => {
 			} catch (error) {
 				console.log({ error, method });
 			}
+			expect(spy).toHaveBeenCalled();
+		});
+
+		it("should for isContractTransaction", () => {
+			const spy = vi.spyOn(dataMock, "isContractTransaction");
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject.isContractTransaction();
+			expect(spy).toHaveBeenCalled();
+		});
+
+		it("should check for isContractDeployment", () => {
+			const spy = vi.spyOn(dataMock, "isContractDeployment");
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject.isContractDeployment();
 			expect(spy).toHaveBeenCalled();
 		});
 	});

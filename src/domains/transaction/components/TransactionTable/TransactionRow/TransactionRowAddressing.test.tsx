@@ -8,6 +8,7 @@ describe("TransactionRowAddressing", () => {
 	let profile: Contracts.IProfile;
 	const fixture = {
 		...TransactionFixture,
+		isContractTransaction: () => true,
 		wallet: () => ({
 			...TransactionFixture.wallet(),
 			currency: () => "ARK",
@@ -15,11 +16,13 @@ describe("TransactionRowAddressing", () => {
 		}),
 	};
 
+	const transferFixture = { ...fixture, isContractTransaction: () => false };
+
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 	it("should render", () => {
-		render(<TransactionRowAddressing transaction={fixture as any} profile={profile} />);
+		render(<TransactionRowAddressing transaction={transferFixture} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeTruthy();
 	});
@@ -89,7 +92,11 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should expand width of address container if the wallet has alias", () => {
-		const aliasFixture = { ...fixture, sender: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" };
+		const aliasFixture = {
+			...fixture,
+			sender: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			isContractTransaction: () => false,
+		};
 
 		render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
 
@@ -97,14 +104,14 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render label with the 'Return' prefix if transaction is sent to address itself", () => {
-		const returnFixture = { ...fixture, isReturn: () => true };
+		const returnFixture = { ...fixture, isReturn: () => true, isContractTransaction: () => false };
 		render(<TransactionRowAddressing transaction={returnFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("Return");
 	});
 
 	it("should not expand width of address container if the wallet has no alias", () => {
-		render(<TransactionRowAddressing transaction={fixture as any} profile={profile} />);
+		render(<TransactionRowAddressing transaction={transferFixture} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__address-container")).not.toHaveClass("w-30");
 	});
@@ -112,7 +119,7 @@ describe("TransactionRowAddressing", () => {
 	it("should render advanced sender variant if the props isAdvanced is true and variant is start", () => {
 		render(
 			<TransactionRowAddressing
-				transaction={fixture as any}
+				transaction={transferFixture}
 				profile={profile}
 				isAdvanced={true}
 				variant="sender"
@@ -145,7 +152,7 @@ describe("TransactionRowAddressing", () => {
 	it("should render advanced recipient variant if the props isAdvanced is true and variant is recipient", () => {
 		render(
 			<TransactionRowAddressing
-				transaction={fixture as any}
+				transaction={transferFixture}
 				profile={profile}
 				isAdvanced={true}
 				variant="recipient"
@@ -179,7 +186,7 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render vote advanced variant if transaction is a contract transaction and isAdvanced is true", () => {
-		const voteFixture = { ...fixture, isVote: () => true };
+		const voteFixture = { ...fixture, isVote: () => true, isContractTransaction: () => true };
 		render(
 			<TransactionRowAddressing
 				transaction={voteFixture as any}
