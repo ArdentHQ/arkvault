@@ -21,7 +21,6 @@ import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import cn from "classnames";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();

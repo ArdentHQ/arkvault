@@ -232,9 +232,7 @@ export const useSendTransferForm = ({
 			return;
 		}
 		const fee = calculateGasFee(gasPrice, gasLimit);
-
-		const remaining = remainingBalance.minus(fee);
-		setValue("amount", remaining);
+		setValue("amount", remainingBalance.minus(fee).toFixed(0));
 		void trigger(["gasPrice", "gasLimit", "amount"]);
 	}, [gasLimitStr, gasPriceStr]);
 
