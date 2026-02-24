@@ -12,8 +12,6 @@ import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/test
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
 
-const translations = buildTranslations();
-
 const continueButton = () => screen.getByTestId("ValidatorTable__continue-button");
 
 describe("ValidatorFooter", () => {

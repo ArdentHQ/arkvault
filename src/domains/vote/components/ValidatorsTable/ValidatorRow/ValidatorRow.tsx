@@ -300,7 +300,6 @@ export const ValidatorRow = ({
 		validator,
 		voted,
 	});
-	console.log(requiresStakeAmount);
 
 	if (isLoading) {
 		return <ValidatorRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
