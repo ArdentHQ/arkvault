@@ -34,7 +34,7 @@ describe("WalletToken", () => {
 	});
 
 	it("#balance", () => {
-		expect(walletToken.balance().toHuman()).toBe(100000000);
+		expect(walletToken.balance().toString()).toBe("100000000");
 	});
 
 	it("#token", () => {

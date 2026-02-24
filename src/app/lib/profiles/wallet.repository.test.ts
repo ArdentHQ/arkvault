@@ -3,6 +3,7 @@ import { IProfile, IReadWriteWallet, IWalletRepository, WalletData, WalletSettin
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import * as queue from "./helpers/queue";
 import { DataRepository } from "./data.repository";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -156,7 +157,7 @@ describe("WalletRepository", () => {
 	});
 
 	it("should exclude wallets on toObject", async () => {
-		vi.spyOn(wallet, "balance").mockReturnValue(1000000000000000000);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(1000000000000000000));
 
 		const ledgerWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[2],
@@ -170,7 +171,7 @@ describe("WalletRepository", () => {
 			mnemonic: MAINSAIL_MNEMONICS[3],
 		});
 
-		vi.spyOn(emptyWallet, "balance").mockReturnValue(0);
+		vi.spyOn(emptyWallet, "balance").mockReturnValue(BigNumber.ZERO);
 
 		subject.push(emptyWallet);
 

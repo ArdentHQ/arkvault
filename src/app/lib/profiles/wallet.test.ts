@@ -126,20 +126,20 @@ describe("Wallet", () => {
 
 	it("should have a balance", () => {
 		const result = wallet.balance();
-		expect(typeof result).toBe("number");
-		expect(result).toBeGreaterThanOrEqual(0);
+		expect(result).toBeInstanceOf(BigNumber);
+		expect(+result).toBeGreaterThanOrEqual(0);
 	});
 
 	it("should have a balance for different types", () => {
 		const available = wallet.balance("available");
 		const fees = wallet.balance("fees");
-		expect(typeof available).toBe("number");
-		expect(typeof fees).toBe("number");
+		expect(available).toBeInstanceOf(BigNumber);
+		expect(fees).toBeInstanceOf(BigNumber);
 	});
 
 	it("should return 0 for balance when undefined", () => {
 		vi.spyOn(wallet.data(), "get").mockReturnValue(undefined);
-		expect(wallet.balance()).toBe(0);
+		expect(wallet.balance()).toBe(BigNumber.ZERO);
 	});
 
 	it("should have a converted balance", () => {
@@ -156,7 +156,7 @@ describe("Wallet", () => {
 			}),
 		}));
 		const result = wallet.balance();
-		expect(typeof result).toBe("number");
+		expect(result).toBeInstanceOf(BigNumber);
 	});
 
 	it("should return 0 for converted balance on test network", () => {
@@ -729,7 +729,7 @@ describe("Wallet", () => {
 		const newWallet = new Wallet("test-id", {}, profile);
 
 		// Check that balance is set to default values
-		expect(newWallet.balance()).toBe(0);
+		expect(newWallet.balance().toString()).toBe("0");
 		expect(newWallet.nonce()).toEqual(BigNumber.ZERO);
 	});
 
@@ -744,7 +744,7 @@ describe("Wallet", () => {
 		// Trigger restore by creating another wallet
 		const restoredWallet = new Wallet("test-id-2", {}, profile);
 
-		expect(typeof restoredWallet.balance()).toBe("number");
+		expect(restoredWallet.balance()).toBeInstanceOf(BigNumber);
 		expect(restoredWallet.nonce()).toBeInstanceOf(BigNumber);
 	});
 
@@ -752,7 +752,7 @@ describe("Wallet", () => {
 		const newWallet = new Wallet("test-id", {}, profile);
 
 		// Test that decimals are used correctly
-		expect(newWallet.balance()).toBeGreaterThanOrEqual(0);
+		expect(newWallet.balance().isGreaterThanOrEqualTo(0)).toBe(true);
 	});
 
 	it("should use default decimals when manifest fails", () => {
@@ -762,7 +762,7 @@ describe("Wallet", () => {
 		});
 
 		// Should still work with default decimals
-		expect(newWallet.balance()).toBeGreaterThanOrEqual(0);
+		expect(newWallet.balance().isGreaterThanOrEqualTo(0)).toBe(true);
 	});
 
 	it("should create wallet with proper attributes", () => {
@@ -835,7 +835,7 @@ describe("Wallet", () => {
 
 		// This should use default decimals (18) and not throw
 		const result = newWallet.balance();
-		expect(typeof result).toBe("number");
+		expect(result).toBeInstanceOf(BigNumber)
 	});
 
 	it("should cover username early return when cold wallet", () => {
@@ -901,7 +901,7 @@ describe("Wallet", () => {
 
 		// This should use default decimals (18) when manifest access fails
 		const result = newWallet.balance();
-		expect(typeof result).toBe("number");
+		expect(result).toBeInstanceOf(BigNumber);
 	});
 
 	it("should test all displayName branches", () => {
