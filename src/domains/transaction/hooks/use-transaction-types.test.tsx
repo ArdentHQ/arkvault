@@ -12,9 +12,9 @@ describe("useTransactionTypes", () => {
 			}),
 		}),
 		isConfirmed: () => false,
-		to: () => null,
 		isContractDeployment: () => true,
 		isContractTransaction: () => false,
+		to: () => null,
 		type: () => "0x60006000",
 	};
 
@@ -42,8 +42,8 @@ describe("useTransactionTypes", () => {
 						data: "0x60006000F3",
 					}),
 				}),
-				isContractDeployment: () => false,
 				isConfirmed: () => false,
+				isContractDeployment: () => false,
 				type: () => type,
 			}),
 		).toBe(type);
