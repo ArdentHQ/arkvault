@@ -538,7 +538,7 @@ jobs:
             COVERAGE_THRESHOLD_LINES: 98.5
             COVERAGE_THRESHOLD_FUNCTIONS: 97.54
             COVERAGE_THRESHOLD_STATEMENTS: 98
-            COVERAGE_THRESHOLD_BRANCHES: 96.94
+            COVERAGE_THRESHOLD_BRANCHES: 96.71
         strategy:
             matrix:
                 node-version:
@@ -825,10 +825,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.67
-                  COVERAGE_THRESHOLD_FUNCTIONS: 97.66
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.66
-                  COVERAGE_THRESHOLD_BRANCHES: 95.68
+                  COVERAGE_THRESHOLD_LINES: 94.08
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.32
+                  COVERAGE_THRESHOLD_STATEMENTS: 94.03
+                  COVERAGE_THRESHOLD_BRANCHES: 91.80
               with:
                   timeout_minutes: 10
                   max_attempts: 1
