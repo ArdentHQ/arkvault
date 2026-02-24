@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { twMerge } from "tailwind-merge";
 import { BigNumber } from "@/app/lib/helpers";
+import { ValidatorVoteAmount } from "@/domains/vote/components/ValidatorsTable/ValidatorRow/ValidatorVoteAmount";
 
 export interface ValidatorRowProperties {
 	index: number;
@@ -289,7 +290,7 @@ export const ValidatorRow = ({
 }: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { requiresStakeAmount, renderButton, rowColor, isActive } = useValidatorRow({
+	const { requiresStakeAmount, renderButton, rowColor, isActive, isSelectedVote, isSelectedUnvote } = useValidatorRow({
 		index,
 		isVoteDisabled,
 		selectedUnvotes,
@@ -362,6 +363,23 @@ export const ValidatorRow = ({
 					<span>{t("COMMON.VIEW")}</span>
 				</Link>
 			</TableCell>
+
+			{/*{requiresStakeAmount && (*/}
+			{/*	<ValidatorVoteAmount*/}
+			{/*		voted={voted}*/}
+			{/*		selectedWallet={selectedWallet}*/}
+			{/*		isSelectedVote={isSelectedVote}*/}
+			{/*		isSelectedUnvote={isSelectedUnvote}*/}
+			{/*		selectedVotes={selectedVotes}*/}
+			{/*		selectedUnvotes={selectedUnvotes}*/}
+			{/*		validatorAddress={validator.address()}*/}
+			{/*		availableBalance={4}*/}
+			{/*		setAvailableBalance={() => {}}*/}
+			{/*		toggleUnvotesSelected={toggleUnvotesSelected}*/}
+			{/*		toggleVotesSelected={toggleVotesSelected}*/}
+			{/*		rowColor={rowColor}*/}
+			{/*	/>*/}
+			{/*)}*/}
 
 			<TableCell
 				variant="end"

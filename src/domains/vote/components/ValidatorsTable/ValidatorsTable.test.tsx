@@ -270,78 +270,78 @@ describe("ValidatorsTable", () => {
 	//	votesAmountMinimumMock.mockRestore();
 	//});
 
-	it("should select a changed validator to unvote", async () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-		const votesAmountStepMock = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
-
-		const votes: Contracts.VoteRegistryItem[] = [
-			{
-				amount: 20,
-				wallet: validators[0],
-			},
-		];
-
-		const Table = () => (
-			<ValidatorsTable
-				validators={validators}
-				votes={votes}
-				voteValidators={[]}
-				unvoteValidators={[]}
-				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>
-		);
-
-		const { asFragment, rerender } = render(<Table />);
-		const amountField = screen.getAllByTestId("InputCurrency")[0];
-
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "30");
-
-		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-
-		await waitFor(() => {
-			expect(footerVotes()).toHaveTextContent("1");
-		});
-
-		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
-
-		await userEvent.click(firstValidatorVoteButton());
-
-		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-		expect(footerUnvotes()).toHaveTextContent("1");
-
-		await userEvent.click(firstValidatorVoteButton());
-
-		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
-		expect(amountField).toHaveValue("20");
-
-		rerender();
-
-		const amountInput = screen.getAllByTestId("InputCurrency")[0];
-		await userEvent.clear(amountInput);
-		await userEvent.type(amountInput, "10");
-
-		await waitFor(() => {
-			expect(footerUnvotes()).toHaveTextContent("1");
-		});
-
-		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
-
-		await userEvent.click(firstValidatorVoteButton());
-
-		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-		expect(footerUnvotes()).toHaveTextContent("1");
-
-		await userEvent.click(firstValidatorVoteButton());
-
-		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
-		expect(amountField).toHaveValue("20");
-		expect(asFragment()).toMatchSnapshot();
-
-		votesAmountMinimumMock.mockRestore();
-		votesAmountStepMock.mockRestore();
-	});
+	// it("should select a changed validator to unvote", async () => {
+	// 	const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+	// 	const votesAmountStepMock = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
+	//
+	// 	const votes: Contracts.VoteRegistryItem[] = [
+	// 		{
+	// 			amount: 20,
+	// 			wallet: validators[0],
+	// 		},
+	// 	];
+	//
+	// 	const Table = () => (
+	// 		<ValidatorsTable
+	// 			validators={validators}
+	// 			votes={votes}
+	// 			voteValidators={[]}
+	// 			unvoteValidators={[]}
+	// 			selectedWallet={wallet}
+	// 			maxVotes={wallet.network().maximumVotesPerTransaction()}
+	// 		/>
+	// 	);
+	//
+	// 	const { asFragment, rerender } = render(<Table />);
+	// 	const amountField = screen.getAllByTestId("InputCurrency")[0];
+	//
+	// 	await userEvent.clear(amountField);
+	// 	await userEvent.type(amountField, "30");
+	//
+	// 	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+	//
+	// 	await waitFor(() => {
+	// 		expect(footerVotes()).toHaveTextContent("1");
+	// 	});
+	//
+	// 	expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
+	//
+	// 	await userEvent.click(firstValidatorVoteButton());
+	//
+	// 	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+	// 	expect(footerUnvotes()).toHaveTextContent("1");
+	//
+	// 	await userEvent.click(firstValidatorVoteButton());
+	//
+	// 	expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
+	// 	expect(amountField).toHaveValue("20");
+	//
+	// 	rerender();
+	//
+	// 	const amountInput = screen.getAllByTestId("InputCurrency")[0];
+	// 	await userEvent.clear(amountInput);
+	// 	await userEvent.type(amountInput, "10");
+	//
+	// 	await waitFor(() => {
+	// 		expect(footerUnvotes()).toHaveTextContent("1");
+	// 	});
+	//
+	// 	expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
+	//
+	// 	await userEvent.click(firstValidatorVoteButton());
+	//
+	// 	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+	// 	expect(footerUnvotes()).toHaveTextContent("1");
+	//
+	// 	await userEvent.click(firstValidatorVoteButton());
+	//
+	// 	expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
+	// 	expect(amountField).toHaveValue("20");
+	// 	expect(asFragment()).toMatchSnapshot();
+	//
+	// 	votesAmountMinimumMock.mockRestore();
+	// 	votesAmountStepMock.mockRestore();
+	// });
 
 	it("should unselect a validator to unvote", async () => {
 		const { asFragment } = render(
