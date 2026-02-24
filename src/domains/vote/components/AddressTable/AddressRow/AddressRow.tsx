@@ -191,7 +191,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	const isButtonDisabled =
 		!wallet.hasBeenFullyRestored() ||
 		!wallet.hasSyncedWithNetwork() ||
-		!wallet.balance() ||
+		wallet.balance().isZero() ||
 		!isLedgerWalletCompatible(wallet);
 
 	return (

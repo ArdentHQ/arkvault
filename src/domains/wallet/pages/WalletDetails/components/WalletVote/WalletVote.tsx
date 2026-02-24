@@ -69,7 +69,7 @@ export const WalletVote = ({
 	};
 
 	const tooltipContent = () => {
-		if (!wallet.balance()) {
+		if (wallet.balance().isZero()) {
 			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 		}
 
