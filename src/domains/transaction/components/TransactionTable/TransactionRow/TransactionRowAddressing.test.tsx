@@ -94,8 +94,8 @@ describe("TransactionRowAddressing", () => {
 	it("should expand width of address container if the wallet has alias", () => {
 		const aliasFixture = {
 			...fixture,
-			sender: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			isContractTransaction: () => false,
+			sender: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 		};
 
 		render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
@@ -104,7 +104,7 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render label with the 'Return' prefix if transaction is sent to address itself", () => {
-		const returnFixture = { ...fixture, isReturn: () => true, isContractTransaction: () => false };
+		const returnFixture = { ...fixture, isContractTransaction: () => false, isReturn: () => true };
 		render(<TransactionRowAddressing transaction={returnFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("Return");
@@ -186,7 +186,7 @@ describe("TransactionRowAddressing", () => {
 	});
 
 	it("should render vote advanced variant if transaction is a contract transaction and isAdvanced is true", () => {
-		const voteFixture = { ...fixture, isVote: () => true, isContractTransaction: () => true };
+		const voteFixture = { ...fixture, isContractTransaction: () => true, isVote: () => true };
 		render(
 			<TransactionRowAddressing
 				transaction={voteFixture as any}
