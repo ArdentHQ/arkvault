@@ -6,7 +6,6 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transaction/hooks/use-transaction-total";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Label, LabelProperties } from "@/app/components/Label";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { BigNumber } from "@/app/lib/helpers";
 
 export const TransactionAmountLabel = ({
