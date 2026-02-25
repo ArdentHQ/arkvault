@@ -96,7 +96,7 @@ export const TokenRow = memo(
 
 				<TableCell className="md-lg:table-cell hidden">
 					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-full text-sm leading-[17px] font-semibold">
-						<TruncateEndResponsive>{walletToken.token().symbol()}</TruncateEndResponsive>
+						{walletToken.token().displaySymbol()}
 					</div>
 				</TableCell>
 
@@ -119,7 +119,7 @@ export const TokenRow = memo(
 
 				<TableCell innerClassName="justify-end">
 					<Amount
-						ticker={walletToken.token().symbol()}
+						ticker={walletToken.token().displaySymbol()}
 						showTicker={false}
 						value={walletToken.balance().toHuman()}
 						className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"

@@ -12,10 +12,10 @@ import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
-	amount: number;
+	amount: BigNumber;
 }
 
-export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTransactionData {
+export class ExtendedConfirmedTransactionData {
 	readonly #wallet: IReadWriteWallet;
 	readonly #data: ConfirmedTransactionData;
 
@@ -55,12 +55,12 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	// @ts-ignore
 	public recipients(): ExtendedTransactionRecipient[] {
 		/* istanbul ignore next */
-		return this.#data.recipients().map(({ address, amount }) => ({ address, amount: amount.toHuman() }));
+		return this.#data.recipients().map(({ address, amount }) => ({ address, amount }));
 	}
 
 	// @ts-ignore
-	public value(): number {
-		return this.#data.value().toHuman();
+	public value(): BigNumber {
+		return this.#data.value();
 	}
 
 	public convertedAmount(): number {
@@ -68,8 +68,8 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	// @ts-ignore
-	public fee(): number {
-		return this.#data.fee().toHuman();
+	public fee(): BigNumber {
+		return this.#data.fee();
 	}
 
 	public convertedFee(): number {
@@ -153,13 +153,13 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	}
 
 	// @ts-ignore
-	public payments(): { recipientId: string; amount: number }[] {
+	public payments(): { recipientId: string; amount: BigNumber }[] {
 		return this.data<Contracts.ConfirmedTransactionData>()
 			.payments()
 			.map((payment) => {
 				return {
 					recipientId: payment.recipientId,
-					amount: payment.amount.toHuman(),
+					amount: payment.amount,
 				};
 			});
 	}
@@ -228,13 +228,13 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 	 * These methods serve as helpers to aggregate commonly used values.
 	 */
 
-	public total(): number {
+	public total(): BigNumber {
 		if (this.isReturn()) {
-			return this.value() - this.fee();
+			return this.value().minus(this.fee());
 		}
 
-		if (this.isSent()) {
-			return this.value() + this.fee();
+		if (this.isSent() && !this.isTokenTransfer()) {
+			return this.value().plus(this.fee());
 		}
 
 		let total = this.value();
@@ -242,7 +242,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		if (this.isMultiPayment()) {
 			for (const recipient of this.recipients()) {
 				if (recipient.address !== this.wallet().address()) {
-					total -= recipient.amount;
+					total = total.minus(recipient.amount);
 				}
 			}
 		}
@@ -269,7 +269,7 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 		return this.#data as unknown as T;
 	}
 
-	#convertAmount(value: number): number {
+	#convertAmount(value: BigNumber): number {
 		const timestamp: DateTime | undefined = this.timestamp();
 
 		if (timestamp === undefined) {
@@ -299,5 +299,17 @@ export class ExtendedConfirmedTransactionData implements Contracts.ConfirmedTran
 
 	public isTokenTransfer(): boolean {
 		return this.#data.isTokenTransfer();
+	}
+
+	public isApprove(): boolean {
+		return this.#data.isApprove();
+	}
+
+	public isRevoke(): boolean {
+		return this.#data.isRevoke();
+	}
+
+	public isBatchTransfer(): boolean {
+		return this.#data.isBatchTransfer();
 	}
 }

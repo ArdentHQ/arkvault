@@ -1,5 +1,6 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { CsvFormatter } from "./transaction-csv-formatter.factory";
+import { BigNumber } from "@/app/lib/helpers";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 
 const dateTime = "13.03.2025 15";
@@ -29,17 +30,17 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should format transaction fields for transfer type", () => {
-		expect(fields.amount()).toBe(2);
-		expect(fields.convertedAmount()).toBe(0);
-		expect(fields.convertedFee()).toBe(0);
-		expect(fields.convertedTotal()).toBe(0);
+		expect(fields.amount()).toBe("2");
+		expect(fields.convertedAmount()).toBe("0");
+		expect(fields.convertedFee()).toBe("0");
+		expect(fields.convertedTotal()).toBe("0");
 		expect(fields.datetime()).toBe(dateTime);
-		expect(fields.fee()).toBe(0);
-		expect(fields.rate()).toBe(0);
+		expect(fields.fee()).toBe("0");
+		expect(fields.rate()).toBe("0");
 		expect(fields.recipient()).toBe("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6");
 		expect(fields.sender()).toBe("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
 		expect(fields.timestamp()).toBe(1_741_880_196);
-		expect(fields.total()).toBe(2);
+		expect(fields.total()).toBe("2");
 	});
 
 	it("should set amount to for transfer type if sender is recipient", () => {
@@ -47,7 +48,7 @@ describe("CsvFormatter", () => {
 
 		const fields = CsvFormatter(transaction, "HH");
 
-		expect(fields.amount()).toBe(2);
+		expect(fields.amount()).toBe("2");
 		expect(fields.recipient()).toBe("0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6");
 		expect(fields.sender()).toBe("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
 	});
@@ -74,17 +75,17 @@ describe("CsvFormatter", () => {
 
 		const fields = CsvFormatter(transaction, "HH");
 
-		expect(fields.amount()).toBe(-1);
-		expect(fields.convertedAmount()).toBe(-0);
-		expect(fields.convertedFee()).toBe(-0);
-		expect(fields.convertedTotal()).toBe(-0);
+		expect(fields.amount()).toBe("-1");
+		expect(fields.convertedAmount()).toBe("0");
+		expect(fields.convertedFee()).toBe("0");
+		expect(fields.convertedTotal()).toBe("0");
 		expect(fields.datetime()).toBe(dateTime);
-		expect(fields.fee()).toBe(-0.000_105);
-		expect(fields.rate()).toBe(0);
+		expect(fields.fee()).toBe("-0.000105");
+		expect(fields.rate()).toBe("0");
 		expect(fields.recipient()).toBe("Multiple (3)");
 		expect(fields.sender()).toBe(profile.wallets().first().address());
 		expect(fields.timestamp()).toBe(1_741_880_196);
-		expect(fields.total()).toBe(-1.000_105);
+		expect(fields.total()).toBe("-1.000105");
 	});
 
 	it("should format multipayment transaction fields for recipient wallet", () => {
@@ -92,21 +93,21 @@ describe("CsvFormatter", () => {
 		vi.spyOn(transaction, "recipients").mockReturnValue([
 			{
 				address: transaction.wallet().address(),
-				amount: 1,
+				amount: BigNumber.make(1),
 			},
 			{
 				address: "0x93485b57ff3DeD81430D08579142fAe8234c6A17",
-				amount: 10,
+				amount: BigNumber.make(10),
 			},
 			{
 				address: "0x93485b57ff3DeD81430D08579142fAe8234c6A17",
-				amount: 10,
+				amount: BigNumber.make(10),
 			},
 		]);
 
 		const fields = CsvFormatter(transaction, "HH");
 
-		expect(fields.amount()).toBe(1);
+		expect(fields.amount()).toBe("1");
 		expect(fields.convertedAmount()).toBeCloseTo(0, 6);
 		expect(fields.convertedFee()).toBeCloseTo(0, 6);
 		expect(fields.convertedTotal()).toBeCloseTo(0, 6);
@@ -116,24 +117,24 @@ describe("CsvFormatter", () => {
 		expect(fields.recipient()).toBe("Multiple (3)");
 		expect(fields.sender()).toBe("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
 		expect(fields.timestamp()).toBe(1_741_880_196);
-		expect(fields.total()).toBe(1);
+		expect(fields.total()).toBe("1");
 	});
 
 	it("should format transaction fields for vote type", () => {
 		vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 		vi.spyOn(transaction, "isVote").mockReturnValue(true);
 
-		expect(fields.amount()).toBe(2);
-		expect(fields.convertedAmount()).toBe(0);
-		expect(fields.convertedFee()).toBe(0);
-		expect(fields.convertedTotal()).toBe(0);
+		expect(fields.amount()).toBe("2");
+		expect(fields.convertedAmount()).toBe("0");
+		expect(fields.convertedFee()).toBe("0");
+		expect(fields.convertedTotal()).toBe("0");
 		expect(fields.datetime()).toBe(dateTime);
-		expect(fields.fee()).toBe(0);
-		expect(fields.rate()).toBe(0);
+		expect(fields.fee()).toBe("0");
+		expect(fields.rate()).toBe("0");
 		expect(fields.recipient()).toBe("Vote Transaction");
 		expect(fields.sender()).toBe("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
 		expect(fields.timestamp()).toBe(1_741_880_196);
-		expect(fields.total()).toBe(2);
+		expect(fields.total()).toBe("2");
 	});
 
 	it("should format transaction fields for unvote type", () => {
@@ -141,39 +142,39 @@ describe("CsvFormatter", () => {
 		vi.spyOn(transaction, "isVote").mockReturnValue(false);
 		vi.spyOn(transaction, "isUnvote").mockReturnValue(true);
 
-		expect(fields.amount()).toBe(2);
-		expect(fields.convertedAmount()).toBe(0);
-		expect(fields.convertedFee()).toBe(0);
-		expect(fields.convertedTotal()).toBe(0);
+		expect(fields.amount()).toBe("2");
+		expect(fields.convertedAmount()).toBe("0");
+		expect(fields.convertedFee()).toBe("0");
+		expect(fields.convertedTotal()).toBe("0");
 		expect(fields.datetime()).toBe(dateTime);
-		expect(fields.fee()).toBe(0);
-		expect(fields.rate()).toBe(0);
+		expect(fields.fee()).toBe("0");
+		expect(fields.rate()).toBe("0");
 		expect(fields.recipient()).toBe("Vote Transaction");
 		expect(fields.sender()).toBe("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
 		expect(fields.timestamp()).toBe(1_741_880_196);
-		expect(fields.total()).toBe(2);
+		expect(fields.total()).toBe("2");
 	});
 
 	it("should format transaction other types", () => {
 		vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
 		vi.spyOn(transaction, "isVote").mockReturnValue(false);
 
-		expect(fields.amount()).toBe(2);
-		expect(fields.convertedAmount()).toBe(0);
-		expect(fields.convertedFee()).toBe(0);
-		expect(fields.convertedTotal()).toBe(0);
+		expect(fields.amount()).toBe("2");
+		expect(fields.convertedAmount()).toBe("0");
+		expect(fields.convertedFee()).toBe("0");
+		expect(fields.convertedTotal()).toBe("0");
 		expect(fields.datetime()).toBe(dateTime);
-		expect(fields.fee()).toBe(0);
-		expect(fields.rate()).toBe(0);
+		expect(fields.fee()).toBe("0");
+		expect(fields.rate()).toBe("0");
 		expect(fields.recipient()).toBe("Other");
 		expect(fields.sender()).toBe("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
 		expect(fields.timestamp()).toBe(1_741_880_196);
-		expect(fields.total()).toBe(2);
+		expect(fields.total()).toBe("2");
 	});
 
-	it("should use zero rate if tranraction total is zero", () => {
-		vi.spyOn(transaction, "total").mockReturnValue(0);
+	it("should use zero rate if transaction total is zero", () => {
+		vi.spyOn(transaction, "total").mockReturnValue(BigNumber.make(0));
 
-		expect(CsvFormatter(transaction, "HH").rate()).toBe(0);
+		expect(CsvFormatter(transaction, "HH").rate()).toBe("0");
 	});
 });

@@ -71,7 +71,7 @@ export const TransactionSummary = ({
 						<DetailLabelText className={labelClassName}>{t("COMMON.UNLOCKED_AMOUNT")}</DetailLabelText>
 
 						<AmountLabel
-							value={UnitConverter.formatUnits(BigNumber.make(validatorFee).toString(), "ARK")}
+							value={UnitConverter.formatUnits(BigNumber.make(validatorFee).toString(), "ARK").toString()}
 							isNegative={false}
 							ticker={transaction.wallet().currency()}
 							hideSign={false}

@@ -80,6 +80,7 @@ describe("TransactionAmount.blocks", () => {
 			isTokenTransfer: () => true,
 			token: () => ({
 				token: () => ({
+					displaySymbol: () => "DARK2…",
 					symbol: () => "DARK20",
 				}),
 			}),
@@ -87,7 +88,7 @@ describe("TransactionAmount.blocks", () => {
 
 		render(<TransactionTotalLabel transaction={tokenTransferFixture} profile={profile} />);
 
-		expect(screen.getByText(/DARK20/)).toBeInTheDocument();
+		expect(screen.getByText(/DARK2/)).toBeInTheDocument();
 	});
 
 	it("should use wallet currency for non-token transfers", () => {
