@@ -213,7 +213,9 @@ export const AddRecipient = ({
 			return;
 		}
 
-		setValue("amount", remainingBalance, {
+		const balance = remainingBalance.toFixed();
+
+		setValue("amount", balance, {
 			shouldDirty: true,
 			shouldValidate: true,
 		});
@@ -221,7 +223,7 @@ export const AddRecipient = ({
 		singleRecipientOnChange({
 			address: recipientAddress,
 			alias: recipientAlias,
-			amount: remainingBalance.toFixed(0),
+			amount: balance,
 		});
 	}, [isSendAllSelected, remainingBalance, setValue]);
 

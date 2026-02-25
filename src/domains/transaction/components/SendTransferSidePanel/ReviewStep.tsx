@@ -88,7 +88,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 					{
 						address: firstRecipient.address,
 						alias: firstRecipient.alias,
-						amount: newAmount.toFixed(0),
+						amount: newAmount.toFixed(),
 					},
 				]);
 			}
@@ -120,7 +120,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 	const showFeeInput = useMemo(() => !network.chargesZeroFees(), [network]);
 
 	const isTestnet = wallet.network().isTest();
-	const convertedAmount = isTestnet ? 0 : convert(amount.toFixed(0));
+	const convertedAmount = isTestnet ? 0 : convert(amount.toFixed());
 
 	return (
 		<section data-testid="SendTransfer__review-step">
