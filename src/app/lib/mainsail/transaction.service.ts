@@ -139,7 +139,7 @@ export class TransactionService {
 							tokenSymbol: token.token().symbol(),
 						},
 						to: input.data.to,
-						value: amount.toString(),
+						value: amount.toFixed(0),
 					},
 				],
 			},
