@@ -103,7 +103,6 @@ export class TransactionService {
 	}
 
 	public async tokenTransfer(input: Services.TransferInput): Promise<SignedTransactionData> {
-		console.log({ input });
 		this.#assertGasFee(input);
 		this.#assertAmount(input);
 
@@ -116,10 +115,8 @@ export class TransactionService {
 
 		assertToken(token);
 
-		console.log({ token });
 		const amount = BigNumber.make(input.data.amount, token.token().decimals()).toSatoshi();
 		const senderPublicKey = await this.#signerPublicKey(input);
-		console.log({ amount, senderPublicKey });
 
 		const builder = TokenTransferBuilder.new({
 			senderPublicKey,
@@ -130,7 +127,6 @@ export class TransactionService {
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			.gasLimit(input.gasLimit.toString());
 
-		console.log({ builder });
 		await this.#sign(input, builder);
 
 		return new SignedTransactionData().configure(
@@ -377,7 +373,6 @@ export class TransactionService {
 			publicKey = await this.#ledgerService.getPublicKey(input.signatory.path());
 		}
 
-		console.log("signerData", { address, publicKey });
 		return { address, publicKey };
 	}
 
