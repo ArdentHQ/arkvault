@@ -3,13 +3,11 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { ValidatorFooter } from "./ValidatorFooter";
-import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { translations as voteTranslations } from "@/domains/vote/i18n";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
-let validator: Contracts.IReadOnlyWallet;
 
 const continueButton = () => screen.getByTestId("ValidatorTable__continue-button");
 
