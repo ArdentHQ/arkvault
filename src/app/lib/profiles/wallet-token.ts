@@ -32,7 +32,7 @@ export class WalletToken {
 
 	balance(): BigNumber {
 		const decimals = this.token().decimals();
-		return BigNumber.make(this.#walletToken.balance(), decimals).divide(`1${"0".repeat(decimals)}`);
+		return BigNumber.make(this.#walletToken.balance(), decimals).divide(BigNumber.powerOfTen(decimals));
 	}
 
 	balanceRaw(): string {
