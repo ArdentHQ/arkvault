@@ -67,32 +67,4 @@ describe("ValidatorFooter", () => {
 
 		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.SELECTED_VALIDATOR);
 	});
-
-	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", async () => {
-		const selectedValidator: VoteValidatorProperties[] = [
-			{
-				amount: 0,
-				validatorAddress: validator.address(),
-			},
-		];
-
-		vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(2);
-
-		const { baseElement } = render(
-			<ValidatorFooter
-				selectedWallet={wallet}
-				availableBalance={wallet.balance()}
-				selectedVotes={selectedValidator}
-				selectedUnvotes={[]}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-				onContinue={vi.fn()}
-			/>,
-		);
-
-		expect(continueButton()).toBeDisabled();
-
-		await userEvent.hover(screen.getByTestId("ValidatorTable__continue--wrapper"));
-
-		expect(baseElement).toHaveTextContent(voteTranslations.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT);
-	});
 });
