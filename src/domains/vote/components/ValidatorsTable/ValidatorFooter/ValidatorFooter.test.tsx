@@ -1,10 +1,9 @@
-import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { ValidatorFooter } from "./ValidatorFooter";
 import { translations as voteTranslations } from "@/domains/vote/i18n";
-import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
@@ -15,19 +14,6 @@ describe("ValidatorFooter", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
-
-		validator = new ReadOnlyWallet(
-			{
-				address: data[0].address,
-				explorerLink: "",
-				governanceIdentifier: "address",
-				isResignedValidator: false,
-				isValidator: true,
-				publicKey: data[0].publicKey,
-				username: data[0].username,
-			},
-			profile,
-		);
 	});
 
 	it("should render", () => {
