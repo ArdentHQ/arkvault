@@ -52,7 +52,6 @@ export const ValidatorFooter = ({
 	const { t } = useTranslation();
 	const [tooltipContent, setTooltipContent] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isContinueDisabled, setIsContinueDisabled] = useState(true);
-	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
 	const { setHasFixedFormButtons } = useNavigationContext();
 
@@ -75,18 +74,9 @@ export const ValidatorFooter = ({
 			return;
 		}
 
-		const hasZeroAmount =
-			selectedVotes.some(({ amount }) => amount === 0) || selectedUnvotes.some(({ amount }) => amount === 0);
-
-		if (requiresStakeAmount && hasZeroAmount) {
-			setTooltipContent(t("VOTE.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT"));
-			setIsContinueDisabled(true);
-			return;
-		}
-
 		setTooltipContent("");
 		setIsContinueDisabled(false);
-	}, [totalVotes, requiresStakeAmount, selectedUnvotes, selectedVotes, t]);
+	}, [totalVotes, selectedUnvotes, selectedVotes, t]);
 
 	useEffect(() => {
 		// Adds the separator between the mobile navigation and the voting controls
@@ -105,11 +95,9 @@ export const ValidatorFooter = ({
 			<div className="mx-auto px-8 md:px-10 lg:container">
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
 					<div className="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex">
-						<div className={cn("flex grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
+						<div className="flex grow overflow-x-auto">
 							<div
-								className={cn("flex h-full flex-1 grow flex-row items-center overflow-x-auto", {
-									"w-36": requiresStakeAmount,
-								})}
+								className="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
 							>
 								<div className="flex items-center space-x-2 overflow-hidden">
 									<LabelWrapper className="hidden whitespace-nowrap sm:block">

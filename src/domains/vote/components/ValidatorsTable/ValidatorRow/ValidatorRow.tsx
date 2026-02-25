@@ -53,20 +53,12 @@ export const useValidatorRow = ({
 }: UseValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
-
 	const isSelectedUnvote = useMemo(
 		() =>
 			!!selectedUnvotes?.find((unvote) => {
-				const isEqualToValidator = unvote.validatorAddress === validator?.address?.();
-
-				if (isEqualToValidator && requiresStakeAmount) {
-					return unvote.amount === voted?.amount;
-				}
-
-				return isEqualToValidator;
+				return unvote.validatorAddress === validator?.address?.();
 			}),
-		[validator, requiresStakeAmount, selectedUnvotes, voted],
+		[validator, selectedUnvotes, voted],
 	);
 
 	const isSelectedVote = useMemo(
@@ -244,7 +236,6 @@ export const useValidatorRow = ({
 		isSelectedUnvote,
 		isSelectedVote,
 		renderButton,
-		requiresStakeAmount,
 		rowColor,
 		status,
 	};
@@ -289,7 +280,7 @@ export const ValidatorRow = ({
 }: ValidatorRowProperties) => {
 	const { t } = useTranslation();
 
-	const { requiresStakeAmount, renderButton, rowColor, isActive } = useValidatorRow({
+	const { renderButton, rowColor, isActive } = useValidatorRow({
 		index,
 		isVoteDisabled,
 		selectedUnvotes,
@@ -302,7 +293,7 @@ export const ValidatorRow = ({
 	});
 
 	if (isLoading) {
-		return <ValidatorRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
+		return <ValidatorRowSkeleton />;
 	}
 
 	return (

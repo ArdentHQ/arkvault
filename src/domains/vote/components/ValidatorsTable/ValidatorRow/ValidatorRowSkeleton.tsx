@@ -4,11 +4,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
 
-interface ValidatorRowSkeletonProperties {
-	requiresStakeAmount?: boolean;
-}
-
-export const ValidatorRowSkeleton = ({ requiresStakeAmount }: ValidatorRowSkeletonProperties) => {
+export const ValidatorRowSkeleton = () => {
 	const nameWidth = useRandomNumber(120, 150);
 
 	return (
@@ -28,12 +24,6 @@ export const ValidatorRowSkeleton = ({ requiresStakeAmount }: ValidatorRowSkelet
 			<TableCell className="hidden sm:table-cell" innerClassName="justify-center">
 				<Skeleton height={16} width={22} />
 			</TableCell>
-
-			{requiresStakeAmount && (
-				<TableCell className="w-68" innerClassName="justify-center">
-					<Skeleton height={34} width={220} className="align-middle" />
-				</TableCell>
-			)}
 
 			<TableCell variant="end" className="w-40" innerClassName="justify-end">
 				<Skeleton width={80} height={20} />
