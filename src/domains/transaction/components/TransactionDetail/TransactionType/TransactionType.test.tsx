@@ -132,4 +132,20 @@ describe("TransactionType", () => {
 
 		expect(container).toHaveTextContent("validator");
 	});
+
+	it("should render validator registration", () => {
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						isValidatorRegistration: () => true,
+						username: () => "validator",
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+		);
+
+		expect(container).toHaveTextContent("Public Key");
+	});
 });

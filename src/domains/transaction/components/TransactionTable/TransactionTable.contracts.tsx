@@ -14,6 +14,7 @@ export interface TransactionTableProperties {
 	hideSender?: boolean;
 	sortBy: SortBy;
 	onSortChange: (column: string, desc: boolean) => void;
+	coinName?: string;
 }
 
 export interface Transaction {

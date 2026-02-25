@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Amount } from "@/app/components/Amount";
-import { assertNumber } from "@/utils/assertions";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { twMerge } from "tailwind-merge";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface Properties {
 	amount: number | string;
@@ -47,13 +47,10 @@ export const TotalAmountBox = ({
 }: Properties) => {
 	const { t } = useTranslation();
 
-	const amount = +properties.amount;
-	const fee = +properties.fee;
+	const amount = BigNumber.make(properties.amount);
+	const fee = BigNumber.make(properties.fee);
 
-	assertNumber(amount);
-	assertNumber(fee);
-
-	const total = amount + fee;
+	const total = amount.plus(fee);
 	const convertedTotal = convertedAmount && convertedFee ? convertedAmount + convertedFee : undefined;
 	return (
 		<DetailWrapper

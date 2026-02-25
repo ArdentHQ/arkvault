@@ -165,7 +165,12 @@ const Votes = ({ votes, activeValidators, withDivider, hasTokens }: VotesPropert
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 				</p>
 
-				<div className="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44">
+				<div
+					className={cn({
+						"w-full shrink-0": !!validator.username(),
+						"xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44": !validator.username(),
+					})}
+				>
 					<ValidatorName
 						validatorName={validator.username() || validator.address()}
 						className="dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5"

@@ -52,7 +52,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 				.items()
 				.find((token) => token.token().address() === tokenContractAddress)
 		: undefined;
-	const ticker = token ? token.token().symbol() : wallet.currency();
+	const ticker = token ? token.token().displaySymbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
 
@@ -167,8 +167,9 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 									<div className="flex flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 										<Amount
 											ticker={ticker}
-											value={amount.toNumber()}
-											className="text-sm font-semibold md:text-base"
+											value={amount}
+											decimals={token?.token().decimals()}
+											className="text-sm font-semibold break-all whitespace-normal md:text-base"
 										/>
 										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
 											<div className="text-theme-secondary-700 font-semibold">
@@ -176,7 +177,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 												<Amount
 													ticker={exchangeTicker}
 													value={convertedAmount}
-													className="text-sm md:text-base"
+													className="text-sm break-all whitespace-normal md:text-base"
 												/>
 												)
 											</div>

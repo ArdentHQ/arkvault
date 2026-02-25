@@ -1598,20 +1598,7 @@ exports[`Tokens > should render 1`] = `
                               <div
                                 class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-full text-sm leading-[17px] font-semibold"
                               >
-                                <span
-                                  class="relative inline-flex w-full items-center overflow-hidden whitespace-nowrap"
-                                >
-                                  <span
-                                    class="invisible inline-block w-0 overflow-hidden"
-                                  >
-                                    DARK20
-                                  </span>
-                                  <span
-                                    class="absolute inset-0 truncate"
-                                  >
-                                    DARK20
-                                  </span>
-                                </span>
+                                DARK2…
                               </div>
                             </div>
                           </td>

@@ -23,7 +23,7 @@ export const calculateGasFee = (gasPrice?: BigNumber, gasLimit?: BigNumber): num
 		return 0;
 	}
 
-	return UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei");
+	return UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei").toNumber();
 };
 
 const FEE_DISPLAY_VALUE_DECIMALS = 8;

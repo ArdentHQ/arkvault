@@ -8,6 +8,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
 import { twMerge } from "tailwind-merge";
 import { Contracts } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface AmountLabelHintProperties {
 	className: string;
@@ -33,7 +34,7 @@ const AmountLabelHint = ({ className, isCompact, tooltipContent }: AmountLabelHi
 interface AmountLabelProperties {
 	isCompact?: boolean;
 	isNegative: boolean;
-	value: number | string;
+	value: number | string | BigNumber;
 	ticker: string;
 	hint?: string;
 	size?: Size;
@@ -43,6 +44,7 @@ interface AmountLabelProperties {
 	allowHideBalance?: boolean;
 	profile?: Contracts.IProfile;
 	decimals?: number;
+	showCompactFormat?: boolean;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -58,6 +60,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	allowHideBalance = false,
 	profile,
 	decimals,
+	showCompactFormat,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -68,7 +71,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 		hintClassName = "bg-theme-danger-info-border text-theme-danger-info-text dark:text-white/70";
 	}
 
-	if (value === 0 || hideSign) {
+	if (BigNumber.make(value).isZero() || hideSign) {
 		labelColor = "secondary";
 		hintClassName = "";
 	}
@@ -98,6 +101,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 					className={twMerge("text-sm", textClassName)}
 					allowHideBalance={allowHideBalance}
 					profile={profile}
+					showCompactFormat={showCompactFormat}
 				/>
 			</div>
 		</Label>

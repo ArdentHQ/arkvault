@@ -6,6 +6,8 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transaction/hooks/use-transaction-total";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Label, LabelProperties } from "@/app/components/Label";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const TransactionAmountLabel = ({
 	transaction,
@@ -20,7 +22,7 @@ export const TransactionAmountLabel = ({
 
 	const transactionToken = "token" in transaction ? transaction.token() : undefined;
 
-	const currency = transactionToken ? transactionToken.token().symbol() : transaction.wallet().currency();
+	const currency = transactionToken ? transactionToken.token().displaySymbol() : transaction.wallet().currency();
 	const value = transactionToken ? transactionToken.value().toHuman() : transaction.value();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
@@ -32,7 +34,7 @@ export const TransactionAmountLabel = ({
 			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
-				returnedAmount
+				BigNumber.make(returnedAmount).isGreaterThan(0)
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
@@ -48,22 +50,25 @@ export const TransactionTotalLabel = ({
 	hideStyles = false,
 	profile,
 	decimals,
+	showTicker,
 }: {
 	transaction: ExtendedTransactionData;
 	hideStyles?: boolean;
 	profile?: Contracts.IProfile;
 	decimals?: number;
+	showTicker?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
 	const token = transaction.token();
-	const currency = transaction.isTokenTransfer() && token ? token.token().symbol() : transaction.wallet().currency();
+	const currency =
+		transaction.isTokenTransfer() && token ? token.token().displaySymbol() : transaction.wallet().currency();
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
 	const getIsNegative = () => {
 		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
-			return total < 0;
+			return total.isNegative();
 		}
 
 		return transaction.isSent();
@@ -74,13 +79,14 @@ export const TransactionTotalLabel = ({
 			<Amount
 				decimals={decimals}
 				showSign={false}
-				showTicker={false}
+				showTicker={showTicker}
 				ticker={currency}
 				value={total}
 				isNegative={getIsNegative()}
 				className="text-sm font-semibold"
 				allowHideBalance
 				profile={profile}
+				showCompactFormat
 			/>
 		);
 	}
@@ -94,13 +100,14 @@ export const TransactionTotalLabel = ({
 			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
-				returnedAmount
+				returnedAmount.isGreaterThan(0)
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
 			allowHideBalance
 			profile={profile}
+			showCompactFormat
 		/>
 	);
 };
@@ -123,7 +130,7 @@ export const TransactionFiatAmount = ({
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
-	const amount = total - returnedAmount;
+	const amount = total.minus(returnedAmount);
 
 	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
 };

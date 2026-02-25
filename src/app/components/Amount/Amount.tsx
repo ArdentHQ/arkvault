@@ -30,7 +30,7 @@ const Amount = ({
 	showCompactFormat,
 }: AmountProperties) => {
 	const compact = Helpers.Currency.formatCompact(value, ticker, { decimals, withTicker: showTicker });
-	const fullAmount = Helpers.Currency.format(BigNumber.make(value).toString(), ticker, {
+	const fullAmount = Helpers.Currency.format(BigNumber.make(value, decimals).toString(), ticker, {
 		decimals,
 		withTicker: showTicker,
 	});
