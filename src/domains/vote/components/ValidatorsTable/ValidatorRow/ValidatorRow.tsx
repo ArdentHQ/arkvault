@@ -54,10 +54,7 @@ export const useValidatorRow = ({
 	const { t } = useTranslation();
 
 	const isSelectedUnvote = useMemo(
-		() =>
-			!!selectedUnvotes?.find((unvote) => {
-				return unvote.validatorAddress === validator?.address?.();
-			}),
+		() => !!selectedUnvotes?.find((unvote) => unvote.validatorAddress === validator?.address?.()),
 		[validator, selectedUnvotes, voted],
 	);
 

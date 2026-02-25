@@ -95,9 +95,7 @@ export const ValidatorFooter = ({
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
 					<div className="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex">
 						<div className="flex grow overflow-x-auto">
-							<div
-								className="flex h-full flex-1 grow flex-row items-center overflow-x-auto"
-							>
+							<div className="flex h-full flex-1 grow flex-row items-center overflow-x-auto">
 								<div className="flex items-center space-x-2 overflow-hidden">
 									<LabelWrapper className="hidden whitespace-nowrap sm:block">
 										{t("VOTE.VALIDATOR_TABLE.VOTING_ADDRESS")}:
