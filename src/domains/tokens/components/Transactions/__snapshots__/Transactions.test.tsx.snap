@@ -571,10 +571,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -590,21 +590,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -665,11 +667,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -692,11 +698,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1103,10 +1113,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -1122,21 +1132,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -1197,11 +1209,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1224,11 +1240,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -1635,10 +1655,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -1654,21 +1674,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -1729,11 +1751,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -1756,11 +1782,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2167,10 +2197,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -2186,21 +2216,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -2261,11 +2293,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2288,11 +2324,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -2699,10 +2739,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -2718,21 +2758,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -2793,11 +2835,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -2820,11 +2866,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3231,10 +3281,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -3250,21 +3300,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -3325,11 +3377,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3352,11 +3408,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -3763,10 +3823,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -3782,21 +3842,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -3857,11 +3919,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -3884,11 +3950,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4295,10 +4365,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -4314,21 +4384,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -4389,11 +4461,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4416,11 +4492,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -4827,10 +4907,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -4846,21 +4926,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -4921,11 +5003,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -4948,11 +5034,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5359,10 +5449,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -5378,21 +5468,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -5453,11 +5545,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -5480,11 +5576,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -5891,10 +5991,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -5910,21 +6010,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -5985,11 +6087,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6012,11 +6118,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -6423,10 +6533,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -6442,21 +6552,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -6517,11 +6629,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -6544,11 +6660,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -6955,10 +7075,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -6974,21 +7094,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -7049,11 +7171,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7076,11 +7202,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -7487,10 +7617,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -7506,21 +7636,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -7581,11 +7713,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -7608,11 +7744,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8019,10 +8159,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -8038,21 +8178,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -8113,11 +8255,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8140,11 +8286,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -8551,10 +8701,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -8570,21 +8720,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -8645,11 +8797,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -8672,11 +8828,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9083,10 +9243,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -9102,21 +9262,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -9177,11 +9339,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -9204,11 +9370,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -9615,10 +9785,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -9634,21 +9804,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -9709,11 +9881,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -9736,11 +9912,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -10147,10 +10327,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -10166,21 +10346,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -10241,11 +10423,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10268,11 +10454,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -10679,10 +10869,10 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -10698,21 +10888,23 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -10773,11 +10965,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -10800,11 +10996,15 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11415,10 +11615,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -11434,21 +11634,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -11509,11 +11711,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -11536,11 +11742,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -11947,10 +12157,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -11966,21 +12176,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -12041,11 +12253,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12068,11 +12284,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -12479,10 +12699,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -12498,21 +12718,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -12573,11 +12795,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -12600,11 +12826,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13011,10 +13241,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -13030,21 +13260,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -13105,11 +13337,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13132,11 +13368,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -13543,10 +13783,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -13562,21 +13802,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -13637,11 +13879,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -13664,11 +13910,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14075,10 +14325,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -14094,21 +14344,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -14169,11 +14421,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14196,11 +14452,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -14607,10 +14867,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -14626,21 +14886,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -14701,11 +14963,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -14728,11 +14994,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15139,10 +15409,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -15158,21 +15428,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -15233,11 +15505,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15260,11 +15536,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -15671,10 +15951,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -15690,21 +15970,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -15765,11 +16047,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -15792,11 +16078,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16203,10 +16493,10 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -16222,21 +16512,23 @@ exports[`Transactions > should hide view more button when there are no next page
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -16297,11 +16589,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -16324,11 +16620,15 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -16924,10 +17224,10 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -16943,21 +17243,23 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -17018,11 +17320,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17045,11 +17351,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17456,10 +17766,10 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -17475,21 +17785,23 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -17550,11 +17862,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -17577,11 +17893,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -17988,10 +18308,10 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -18007,21 +18327,23 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -18082,11 +18404,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18109,11 +18435,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -18520,10 +18850,10 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -18539,21 +18869,23 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -18614,11 +18946,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -18641,11 +18977,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
@@ -19052,10 +19392,10 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="inline-block font-semibold overflow-hidden no-ligatures bg-theme-success-100 text-theme-success-700 dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500 dim:border-theme-success-700 dim:text-theme-success-500 text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
+                      class="inline-block font-semibold overflow-hidden no-ligatures text-theme-danger-info-text bg-theme-danger-info-background dark:bg-transparent dark:border-theme-danger-info-border dim:border-theme-danger-info-border dim:text-theme-danger-info-text text-xs leading-[15px] flex! h-[21px] w-12 min-w-12 items-center justify-center rounded px-1 py-[3px] dark:border"
                       data-testid="TransactionRowAddressing__label"
                     >
-                      From
+                      To
                     </div>
                     <div
                       class="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36"
@@ -19071,21 +19411,23 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="font-semibold text-sm text-theme-text"
-                                data-testid="Address__alias"
+                              <div
+                                class="relative grow leading-[17px] sm:leading-5 text-left"
                               >
                                 <span>
                                   <span>
                                     <span
-                                      class="no-ligatures transition-colors duration-200"
-                                      data-testid="TruncateEnd"
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
+                                      data-testid="Address__address"
                                     >
-                                      Mainsail Wallet …
+                                      0x180a864a755fed0144c622df49b83db577befefb
                                     </span>
                                   </span>
                                 </span>
-                              </span>
+                                <span>
+                                   
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </span>
@@ -19146,11 +19488,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold lg:hidden"
@@ -19173,11 +19519,15 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                   <div
                     class="flex w-40 flex-col items-end gap-1"
                   >
-                    <span
-                      class="whitespace-nowrap text-sm font-semibold"
-                      data-testid="Amount"
-                    >
-                      0
+                    <span>
+                      <span>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold"
+                          data-testid="Amount"
+                        >
+                          0 DARK2…
+                        </span>
+                      </span>
                     </span>
                     <span
                       class="text-theme-secondary-700 text-xs font-semibold xl:hidden"
