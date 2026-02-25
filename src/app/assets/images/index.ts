@@ -33,6 +33,7 @@ import InfoLight from "./info-light.svg?react";
 import InfoDark from "./info-dark.svg?react";
 import WarningLight from "./warning-light.svg?react";
 import WarningDark from "./warning-dark.svg?react";
+import WarningDim from "./warning-dim.svg?react";
 import WorldMap from "./world-map.svg?react";
 import CreateAddressDark from "./create-address-dark.svg?react";
 import ImportAddressDark from "./import-address-dark.svg?react";
@@ -96,6 +97,7 @@ export const images = {
 		TrashDim,
 		TrashLight,
 		WarningDark,
+		WarningDim,
 		WarningLight,
 		WelcomeBannerDark,
 		WelcomeBannerLight,
