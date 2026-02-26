@@ -1228,7 +1228,7 @@ exports[`Dashboard > should render 1`] = `
                             class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50"
                             data-testid="Amount"
                           >
-                            95.27653252325068 ARK
+                            95.276532523250678785 ARK
                           </span>
                           <div
                             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"

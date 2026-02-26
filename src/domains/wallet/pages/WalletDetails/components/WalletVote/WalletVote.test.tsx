@@ -3,6 +3,7 @@ import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { BigNumber } from "@/app/lib/helpers";
 
 import { WalletVote } from "./WalletVote";
 import {
@@ -71,7 +72,7 @@ describe("WalletVote", () => {
 	});
 
 	it("should render tooltip when wallet does not have sufficient funds", async () => {
-		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
 
 		render(
 			<WalletVote
@@ -119,7 +120,7 @@ describe("WalletVote", () => {
 	});
 
 	it("should render disabled vote button", async () => {
-		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
 
 		const { asFragment } = render(
 			<WalletVote
@@ -142,7 +143,7 @@ describe("WalletVote", () => {
 	it("should disable vote button when balance is less than votesAmountStep", async () => {
 		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
 		const votesAmountStepSpy = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
-		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(5);
+		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(5));
 
 		const { asFragment } = render(
 			<WalletVote

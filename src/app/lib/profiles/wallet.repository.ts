@@ -227,7 +227,7 @@ export class WalletRepository implements IWalletRepository {
 				continue;
 			}
 
-			if (excludeEmptyWallets && wallet.balance() === 0) {
+			if (excludeEmptyWallets && wallet.balance().isZero()) {
 				continue;
 			}
 

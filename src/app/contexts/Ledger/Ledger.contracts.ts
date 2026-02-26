@@ -1,7 +1,9 @@
+import { BigNumber } from "@/app/lib/helpers";
+
 export interface LedgerData {
 	address: string;
 	path: string;
-	balance?: number;
+	balance?: BigNumber;
 	isNew?: boolean;
 	hasSyncedWithNetwork?: boolean;
 }

@@ -6,6 +6,7 @@ import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/Ad
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncValidators } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -352,7 +353,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render tooltip wallet when balance is zero", async () => {
-		vi.spyOn(wallet, "balance").mockReturnValue(0);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
 
 		render(
 			<AddressWrapper>

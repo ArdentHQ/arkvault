@@ -305,7 +305,7 @@ export const SelectAddressStep = ({
 		}));
 
 		if (skipEmptyAddresses) {
-			const allAddressesEmpty = newAddresses.every((address) => address.balance === 0);
+			const allAddressesEmpty = newAddresses.every((address) => address.balance?.isZero());
 
 			if (allAddressesEmpty) {
 				newAddresses = newAddresses.slice(0, 1);

@@ -7,7 +7,7 @@ export const WalletCapabilities = (wallet: Contracts.IReadWriteWallet) => ({
 	 * @returns {boolean}
 	 */
 	canBroadcast() {
-		return wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork() && wallet.balance() > 0;
+		return wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork() && wallet.balance().isGreaterThan(0);
 	},
 	/**
 	 * Determines whether the wallet can send a transfer transaction.
