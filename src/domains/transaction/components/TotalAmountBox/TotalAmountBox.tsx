@@ -7,7 +7,7 @@ import { BigNumber } from "@/app/lib/helpers";
 
 interface Properties {
 	amount: number | string;
-	fee: number | string;
+	fee: number | string | BigNumber;
 	ticker: string;
 	convertedAmount?: number;
 	convertedFee?: number;

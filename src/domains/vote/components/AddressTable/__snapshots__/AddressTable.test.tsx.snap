@@ -299,7 +299,7 @@ exports[`AddressTable > should render 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  95.27653252325068 ARK
+                  95.276532523250678785 ARK
                 </span>
               </div>
             </td>
@@ -715,7 +715,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  95.27653252325068 ARK
+                  95.276532523250678785 ARK
                 </span>
               </div>
             </td>
@@ -1364,7 +1364,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  95.27653252325068 ARK
+                  95.276532523250678785 ARK
                 </span>
               </div>
             </td>

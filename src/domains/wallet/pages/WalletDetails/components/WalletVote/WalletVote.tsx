@@ -69,7 +69,7 @@ export const WalletVote = ({
 	};
 
 	const tooltipContent = () => {
-		if (!wallet.balance()) {
+		if (wallet.balance().isZero()) {
 			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 		}
 
@@ -144,9 +144,11 @@ export const WalletVote = ({
 								<Button
 									data-testid="WalletVote__button"
 									disabled={
-										wallet.balance() === 0 ||
+										wallet.balance().isZero() ||
 										(wallet.network().usesLockedBalance() &&
-											wallet.balance("available") < wallet.network().votesAmountStep()) ||
+											wallet
+												.balance("available")
+												.isLessThan(wallet.network().votesAmountStep())) ||
 										!wallet.hasBeenFullyRestored() ||
 										!wallet.hasSyncedWithNetwork() ||
 										!isLedgerWalletCompatible(wallet)
@@ -162,9 +164,11 @@ export const WalletVote = ({
 								<Button
 									data-testid="WalletVote__button_mobile"
 									disabled={
-										wallet.balance() === 0 ||
+										wallet.balance().isZero() ||
 										(wallet.network().usesLockedBalance() &&
-											wallet.balance("available") < wallet.network().votesAmountStep()) ||
+											wallet
+												.balance("available")
+												.isLessThan(wallet.network().votesAmountStep())) ||
 										!wallet.hasBeenFullyRestored() ||
 										!wallet.hasSyncedWithNetwork() ||
 										!isLedgerWalletCompatible(wallet)

@@ -195,7 +195,7 @@ export const AddressRow = ({
 					<div className="flex w-1/2 min-w-0 flex-col items-end space-y-2">
 						<Amount
 							ticker={wallet.network().ticker()}
-							value={+wallet.balance().toFixed(2)}
+							value={wallet.balance()}
 							className={cn("leading-5", {
 								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
 									!isSelected,

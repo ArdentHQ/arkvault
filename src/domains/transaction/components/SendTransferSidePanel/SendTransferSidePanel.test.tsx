@@ -148,7 +148,7 @@ describe("SendTransferSidePanel", () => {
 	beforeEach(() => {
 		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 
-		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("1000000000000000000"));
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
 			confirmations: 10,
@@ -402,7 +402,7 @@ describe("SendTransferSidePanel", () => {
 				return derivationPath;
 			}
 		});
-		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("1000000000000000000"));
 
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,

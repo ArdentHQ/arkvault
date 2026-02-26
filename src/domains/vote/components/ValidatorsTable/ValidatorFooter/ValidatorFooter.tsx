@@ -1,17 +1,16 @@
 import { Contracts } from "@/app/lib/profiles";
-import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { DefaultTReturn, TOptions } from "i18next";
 import { LabelWrapper, TextWrapper } from "./ValidatorFooter.styles";
 import { Address } from "@/app/components/Address";
-import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Tooltip } from "@/app/components/Tooltip";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
 import { twMerge } from "tailwind-merge";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface FooterContentProperties {
 	label: string;
@@ -35,7 +34,7 @@ const FooterContent = ({ label, value, disabled, className }: FooterContentPrope
 
 interface ValidatorFooterProperties {
 	selectedWallet: Contracts.IReadWriteWallet;
-	availableBalance: number;
+	availableBalance: BigNumber;
 	selectedVotes: VoteValidatorProperties[];
 	selectedUnvotes: VoteValidatorProperties[];
 	maxVotes: number;
@@ -44,7 +43,6 @@ interface ValidatorFooterProperties {
 
 export const ValidatorFooter = ({
 	selectedWallet,
-	availableBalance,
 	selectedVotes,
 	selectedUnvotes,
 	maxVotes,
@@ -53,7 +51,6 @@ export const ValidatorFooter = ({
 	const { t } = useTranslation();
 	const [tooltipContent, setTooltipContent] = useState<string | DefaultTReturn<TOptions>>("");
 	const [isContinueDisabled, setIsContinueDisabled] = useState(true);
-	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
 	const { setHasFixedFormButtons } = useNavigationContext();
 
@@ -76,18 +73,9 @@ export const ValidatorFooter = ({
 			return;
 		}
 
-		const hasZeroAmount =
-			selectedVotes.some(({ amount }) => amount === 0) || selectedUnvotes.some(({ amount }) => amount === 0);
-
-		if (requiresStakeAmount && hasZeroAmount) {
-			setTooltipContent(t("VOTE.VALIDATOR_TABLE.TOOLTIP.INVALID_AMOUNT"));
-			setIsContinueDisabled(true);
-			return;
-		}
-
 		setTooltipContent("");
 		setIsContinueDisabled(false);
-	}, [totalVotes, requiresStakeAmount, selectedUnvotes, selectedVotes, t]);
+	}, [totalVotes, selectedUnvotes, selectedVotes, t]);
 
 	useEffect(() => {
 		// Adds the separator between the mobile navigation and the voting controls
@@ -106,12 +94,8 @@ export const ValidatorFooter = ({
 			<div className="mx-auto px-8 md:px-10 lg:container">
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
 					<div className="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex">
-						<div className={cn("flex grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
-							<div
-								className={cn("flex h-full flex-1 grow flex-row items-center overflow-x-auto", {
-									"w-36": requiresStakeAmount,
-								})}
-							>
+						<div className="flex grow overflow-x-auto">
+							<div className="flex h-full flex-1 grow flex-row items-center overflow-x-auto">
 								<div className="flex items-center space-x-2 overflow-hidden">
 									<LabelWrapper className="hidden whitespace-nowrap sm:block">
 										{t("VOTE.VALIDATOR_TABLE.VOTING_ADDRESS")}:
@@ -128,22 +112,6 @@ export const ValidatorFooter = ({
 								</div>
 							</div>
 						</div>
-
-						{requiresStakeAmount && (
-							<div
-								className="flex flex-row space-x-2 px-6"
-								data-testid="ValidatorTable__available-balance"
-							>
-								<LabelWrapper>
-									{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
-										percent: Math.ceil((availableBalance / selectedWallet.balance()) * 100),
-									})}
-								</LabelWrapper>
-								<TextWrapper>
-									<Amount value={availableBalance} ticker={selectedWallet.network().ticker()} />
-								</TextWrapper>
-							</div>
-						)}
 					</div>
 					<div className="flex flex-1 flex-col items-center justify-center sm:flex-row">
 						<div className="flex flex-1 items-center sm:-ml-6 md:ml-0 md:flex-none">

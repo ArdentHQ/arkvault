@@ -58,7 +58,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 			totalVotesAmount += validator.amount;
 		}
 
-		setAvailableBalance(availableBalance - totalVotesAmount);
+		setAvailableBalance(availableBalance.minus(totalVotesAmount));
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {

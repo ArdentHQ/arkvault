@@ -69,10 +69,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	useEffect(() => {
-		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
-		const remainingNetBalance = netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
+		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee);
 
-		form.register("amount", sendTransfer.amount(network, remainingNetBalance, recipients, true));
+		form.register("amount", sendTransfer.amount(network, netBalance, recipients, true));
 
 		const validate = async () => {
 			await form.trigger("amount");

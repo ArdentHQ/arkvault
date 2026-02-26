@@ -97,23 +97,23 @@ export const AddRecipient = ({
 		if (isTokenTransfer) {
 			const token = tokens.find((token) => token.token().address() === tokenContractAddress);
 			if (token) {
-				return token.balance().toString();
+				return token.balance();
 			}
 
-			return "0";
+			return BigNumber.ZERO;
 		}
 
 		let senderBalance = BigNumber.make(wallet?.balance() || 0);
 
 		if (isSingle) {
-			return senderBalance.toString();
+			return senderBalance;
 		}
 
 		for (const recipient of addedRecipients) {
 			senderBalance = senderBalance.minus(BigNumber.make(recipient.amount || 0));
 		}
 
-		return senderBalance.toString();
+		return senderBalance;
 	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokens, tokenContractAddress]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
@@ -130,10 +130,8 @@ export const AddRecipient = ({
 	}, [register]);
 
 	useEffect(() => {
-		const remaining = BigNumber.make(remainingBalance).isLessThanOrEqualTo(0) ? "0" : remainingBalance;
-
-		setValue("remainingBalance", remaining);
-	}, [remainingBalance, setValue, amount, recipientAddress, senderAddress]);
+		setValue("remainingBalance", remainingBalance);
+	}, [remainingBalance.toString(), setValue, amount, recipientAddress, senderAddress]);
 
 	useEffect(() => {
 		register("amount", sendTransfer.amount(network, remainingBalance, addedRecipients, isSingle));
@@ -215,7 +213,9 @@ export const AddRecipient = ({
 			return;
 		}
 
-		setValue("amount", remainingBalance, {
+		const balance = remainingBalance.toFixed();
+
+		setValue("amount", balance, {
 			shouldDirty: true,
 			shouldValidate: true,
 		});
@@ -223,7 +223,7 @@ export const AddRecipient = ({
 		singleRecipientOnChange({
 			address: recipientAddress,
 			alias: recipientAlias,
-			amount: remainingBalance,
+			amount: balance,
 		});
 	}, [isSendAllSelected, remainingBalance, setValue]);
 
@@ -384,9 +384,7 @@ export const AddRecipient = ({
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(
 										<Amount
-											value={BigNumber.make(remainingBalance)
-												.decimalPlaces(isTokenTransfer ? 2 : 8)
-												.toNumber()}
+											value={remainingBalance}
 											ticker={ticker}
 											showTicker={false}
 											showCompactFormat
@@ -395,16 +393,14 @@ export const AddRecipient = ({
 									</span>
 								</div>
 								<div className="flex flex-row items-center gap-2">
-									{isSenderFilled && !!remainingBalance && (
+									{isSenderFilled && (
 										<div
 											data-testid="AddRecipient__available"
 											className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 hidden sm:flex"
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount
-												value={BigNumber.make(remainingBalance)
-													.decimalPlaces(isTokenTransfer ? 2 : 8)
-													.toNumber()}
+												value={remainingBalance}
 												ticker={ticker}
 												showTicker={!isTokenTransfer}
 												showCompactFormat
