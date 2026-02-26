@@ -139,16 +139,6 @@ export const ActionType = ({
 
 	const approveDetails = transaction.approveDetails();
 
-	const walletToken = profile
-		.tokens()
-		.selected()
-		.items()
-		.find(
-			(walletToken) => walletToken.token().address().toLowerCase() === transaction.to().toLowerCase(),
-		) as WalletToken;
-
-	const token = walletToken.token();
-
 	const { getWalletAlias } = useWalletAlias();
 
 	const { alias } = useMemo(
@@ -160,6 +150,20 @@ export const ActionType = ({
 			}),
 		[profile, getWalletAlias, transaction],
 	);
+
+	const walletToken = profile
+		.tokens()
+		.selected()
+		.items()
+		.find(
+			(walletToken) => walletToken.token().address().toLowerCase() === transaction.to().toLowerCase(),
+		);
+
+	if (!walletToken) {
+		return;
+	}
+
+	const token = walletToken.token();
 
 	return (
 		<div data-testid="ActionType">
