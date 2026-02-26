@@ -140,7 +140,6 @@ describe("TransactionData", () => {
 		expect(validatorPublicKey).toBe("abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890");
 	});
 
-
 	it("should return approve details from decoded function data", () => {
 		const mockTransaction = new TestTransactionData();
 

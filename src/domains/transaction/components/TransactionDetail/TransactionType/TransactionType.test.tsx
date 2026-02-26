@@ -109,15 +109,13 @@ describe("TransactionType", () => {
 				transaction={
 					{
 						...TransactionFixture,
+						approveDetails: () => ({ address: "0xabd", amount: 500000000000 }),
 						data: () => ({
 							data: {
 								data: "0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000",
 							},
 						}),
 						isApprove: () => true,
-						approveDetails: () => {
-							return { amount: 500000000000, address: "0xabd" };
-						},
 						isConfirmed: () => true,
 						to: () => "0xabc",
 						wallet: () => profile.wallets().first(),
