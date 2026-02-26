@@ -277,7 +277,7 @@ export abstract class TransactionData {
 
 	public approveDetails(): ApproveDetails {
 		const [address, amount] = decodeFunctionData(this.data.data, AbiType.Token).args;
-		return { amount, address };
+		return { address, amount };
 	}
 
 	public votes(): string[] {
