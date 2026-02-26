@@ -173,7 +173,7 @@ export class SignedTransactionData {
 
 	public approveDetails(): ApproveDetails {
 		const [address, amount] = decodeFunctionData(this.normalizedData() as Hex, AbiType.Token).args;
-		return { amount, address };
+		return { address, amount };
 	}
 
 	public isMultiPayment(): boolean {
