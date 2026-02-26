@@ -30,6 +30,7 @@ export const translations = {
 	AMOUNT_PLACEHOLDER: "Enter an amount",
 	AND: "and",
 	APPEARANCE: "Appearance",
+	APPROVE: "Approve",
 	APP_NAME: "<strong>ARK</strong>Vault",
 	ARK: "ARK",
 	ARKVAULT: "ARK Vault",
