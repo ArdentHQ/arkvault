@@ -1,4 +1,4 @@
-import { DTO, Services } from "@/app/lib/mainsail";
+import { Services } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { TFunction } from "i18next";
@@ -40,22 +40,6 @@ export const getTransferType = ({
 
 	return recipients.length > 1 ? "multiPayment" : "transfer";
 };
-
-export const isContractTransaction = (transaction: DTO.RawTransactionData) =>
-	[
-		transaction.isValidatorRegistration(),
-		transaction.isValidatorResignation(),
-		transaction.isVote(),
-		transaction.isUnvote(),
-		transaction.isUsernameRegistration(),
-		transaction.isUsernameResignation(),
-	].some(Boolean);
-
-/**
- * Contract deployment is appearing as transfer without recipient.
- */
-export const isContractDeployment = (transaction: DTO.RawTransactionData) =>
-	[!isContractTransaction(transaction), !transaction.to()].every(Boolean);
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>

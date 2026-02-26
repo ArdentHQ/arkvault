@@ -648,4 +648,26 @@ describe("SignedTransactionData", () => {
 			expect(transaction.isBatchTransfer()).toBe(true);
 		});
 	});
+
+	describe("isContractTransaction", () => {
+		it("should return true if it is a contract transaction", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(transaction, "isValidatorRegistration").mockReturnValue(true);
+			vi.spyOn(transaction, "isValidatorResignation").mockReturnValue(false);
+			vi.spyOn(transaction, "isVote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUnvote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
+			expect(transaction.isContractTransaction()).toBe(true);
+		});
+	});
+
+	describe("isContractDeployment", () => {
+		it("should return true if it is not a contract transaction and has no recipient", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(transaction, "isContractTransaction").mockReturnValue(false);
+			vi.spyOn(transaction, "to").mockReturnValue("");
+			expect(transaction.isContractDeployment()).toBe(true);
+		});
+	});
 });
