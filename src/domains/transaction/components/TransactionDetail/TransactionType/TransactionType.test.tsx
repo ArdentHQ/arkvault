@@ -6,13 +6,10 @@ import { translations } from "@/domains/transaction/i18n";
 import { renderResponsive, render, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import userEvent from "@testing-library/user-event";
-import { SendTransferSidePanel } from "../../SendTransferSidePanel/SendTransferSidePanel";
-import { ApproveDetails } from "../../../../../app/lib/mainsail/confirmed-transaction.dto.contract";
-import { WalletToken } from "../../../../../app/lib/profiles/wallet-token";
-import { WalletTokenRepository } from "../../../../../app/lib/profiles/wallet-token.repository";
-import { TokenDTO } from "../../../../../app/lib/profiles/token.dto";
-import { WalletTokenDTO } from "../../../../../app/lib/profiles/wallet-token.dto";
-import { WalletTokenCollection } from "../../../../../app/lib/mainsail/wallet-token.collection";
+import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 
 describe("TransactionType", () => {
 	let profile: Contracts.IProfile;
