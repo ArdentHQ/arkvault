@@ -286,6 +286,21 @@ export class SignedTransactionData {
 		return TransactionTypeIdentifier.isTokenTransfer(this.signedData.data);
 	}
 
+	public isContractTransaction(): boolean {
+		return [
+			this.isValidatorRegistration(),
+			this.isValidatorResignation(),
+			this.isVote(),
+			this.isUnvote(),
+			this.isUsernameRegistration(),
+			this.isUsernameResignation(),
+		].some(Boolean);
+	}
+
+	public isContractDeployment() {
+		return [!this.isContractTransaction(), !this.to()].every(Boolean);
+	}
+
 	public isApprove(): boolean {
 		return TransactionTypeIdentifier.isApprove(this.signedData.data);
 	}
