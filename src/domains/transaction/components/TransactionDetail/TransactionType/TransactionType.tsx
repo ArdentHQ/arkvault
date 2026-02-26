@@ -16,7 +16,6 @@ import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { Link } from "@/app/components/Link";
 import { Icon } from "@/app/components/Icon";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 const validatorPublickey = (transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData) => {
 	try {
