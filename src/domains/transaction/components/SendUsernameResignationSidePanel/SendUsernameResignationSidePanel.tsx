@@ -266,6 +266,7 @@ export const SendUsernameResignationSidePanel = ({
 	const isLastStep = activeTab === Step.SummaryStep;
 
 	const preventAccidentalClosing = activeTab !== Step.FormStep;
+	const isLedgerAuthenticationStep = activeWallet && activeWallet.isLedger() && activeTab === Step.AuthenticationStep;
 
 	return (
 		<SidePanel
@@ -286,7 +287,7 @@ export const SendUsernameResignationSidePanel = ({
 			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
-				<SidePanelButtons>
+				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
 					{activeTab < stepCount && (
 						<Button
 							data-testid="SendUsernameResignation__back-button"
