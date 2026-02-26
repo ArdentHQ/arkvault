@@ -172,7 +172,7 @@ export class SignedTransactionData {
 	}
 
 	public approveDetails(): ApproveDetails {
-		const [address, amount] = decodeFunctionData(this.data.data, AbiType.Token).args;
+		const [address, amount] = decodeFunctionData(this.normalizedData() as Hex, AbiType.Token).args;
 		return { amount, address };
 	}
 
