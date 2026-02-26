@@ -139,9 +139,13 @@ export const ActionType = ({
 
 	const approveDetails = transaction.approveDetails();
 
-	const walletToken = profile.tokens().selected().items().find(walletToken => {
-		return walletToken.token().address().toLowerCase() === transaction.to().toLowerCase();
-	}) as WalletToken;
+	const walletToken = profile
+		.tokens()
+		.selected()
+		.items()
+		.find(
+			(walletToken) => walletToken.token().address().toLowerCase() === transaction.to().toLowerCase(),
+		) as WalletToken;
 
 	const token = walletToken.token();
 
@@ -168,13 +172,17 @@ export const ActionType = ({
 								i18nKey="TRANSACTION.APPROVE_DETAILS"
 								components={{
 									Address: (
-										<Link to={transaction.wallet().link().wallet(transaction.from())} showExternalIcon={false} isExternal>
+										<Link
+											to={transaction.wallet().link().wallet(transaction.from())}
+											showExternalIcon={false}
+											isExternal
+										>
 											<span className="flex flex-row items-center gap-2">
 												<Address
 													walletName={alias}
 													address={alias ? undefined : transaction.from()}
 													truncateOnTable
-													wrapperClass={cn("flex-inline", {"w-44": !alias})}
+													wrapperClass={cn("flex-inline", { "w-44": !alias })}
 													addressClass="leading-6 text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 w-44 min-w-44"
 													walletNameClass="leading-6 text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
 												/>
@@ -201,11 +209,15 @@ export const ActionType = ({
 									),
 									ContractAddress: (
 										<span className="inline-flex items-center gap-2">
-											<Link to={transaction.wallet().link().wallet(approveDetails.address)} showExternalIcon={false} isExternal>
+											<Link
+												to={transaction.wallet().link().wallet(approveDetails.address)}
+												showExternalIcon={false}
+												isExternal
+											>
 												<span className="flex flex-row items-center gap-2">
 													<TruncateMiddle
 														text={approveDetails.address}
-														className="leading-6 text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+														className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
 													/>
 
 													<Icon
@@ -216,7 +228,11 @@ export const ActionType = ({
 													/>
 												</span>
 											</Link>
-											<Icon className="bg-theme-secondary-200 px-1 py-[3px] rounded text-theme-secondary-700" name="Contract" dimensions={[12, 12]} />
+											<Icon
+												className="bg-theme-secondary-200 text-theme-secondary-700 rounded px-1 py-[3px]"
+												name="Contract"
+												dimensions={[12, 12]}
+											/>
 										</span>
 									),
 								}}
