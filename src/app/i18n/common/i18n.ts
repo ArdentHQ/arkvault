@@ -548,6 +548,7 @@ export const translations = {
 	UPDATE_NOW: "Update Now",
 	UPDATING: "Updating...",
 	URL: "URL",
+	UNLIMITED: "Unlimited",
 	USERNAME: "Username",
 	VALIDATING_URI: "Validating URI. Please wait ...",
 	VALIDATION: {

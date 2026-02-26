@@ -155,15 +155,15 @@ export const ActionType = ({
 		.tokens()
 		.selected()
 		.items()
-		.find(
-			(walletToken) => walletToken.token().address().toLowerCase() === transaction.to().toLowerCase(),
-		);
+		.find((walletToken) => walletToken.token().address().toLowerCase() === transaction.to().toLowerCase());
 
 	if (!walletToken) {
 		return;
 	}
 
 	const token = walletToken.token();
+
+	const maxUint256 = BigInt(2) ** BigInt(256) - BigInt(1);
 
 	return (
 		<div data-testid="ActionType">
@@ -200,17 +200,22 @@ export const ActionType = ({
 											</span>
 										</Link>
 									),
-									Amount: (
-										<Amount
-											ticker={token.displaySymbol()}
-											className="leading-6"
-											value={BigNumber.make(approveDetails.amount, token.decimals()).divide(
-												BigNumber.powerOfTen(token.decimals()),
-											)}
-											showTicker
-											showCompactFormat
-										/>
-									),
+									Amount:
+										approveDetails.amount === maxUint256 ? (
+											<span>
+												{t("COMMON.UNLIMITED")} {token.displaySymbol()}
+											</span>
+										) : (
+											<Amount
+												ticker={token.displaySymbol()}
+												className="leading-6"
+												value={BigNumber.make(approveDetails.amount, token.decimals()).divide(
+													BigNumber.powerOfTen(token.decimals()),
+												)}
+												showTicker
+												showCompactFormat
+											/>
+										),
 									ContractAddress: (
 										<span className="inline-flex items-center gap-2">
 											<Link
