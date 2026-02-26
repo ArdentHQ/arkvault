@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { KeyValuePair } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";
@@ -440,5 +440,27 @@ describe("ConfirmedTransactionData", () => {
 	it("#isBatchTransfer", () => {
 		transaction.configure({ ...commonData, data: "0x000000" });
 		expect(transaction.isBatchTransfer()).toBe(false);
+	});
+
+	describe("isContractTransaction", () => {
+		it("should return true if it is a contract transaction", () => {
+			transaction.configure(commonData);
+			vi.spyOn(transaction, "isValidatorRegistration").mockReturnValue(true);
+			vi.spyOn(transaction, "isValidatorResignation").mockReturnValue(false);
+			vi.spyOn(transaction, "isVote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUnvote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
+			expect(transaction.isContractTransaction()).toBe(true);
+		});
+	});
+
+	describe("isContractDeployment", () => {
+		it("should return true if it is not a contract transaction and has no recipient", () => {
+			transaction.configure(commonData);
+			vi.spyOn(transaction, "isContractTransaction").mockReturnValue(false);
+			vi.spyOn(transaction, "to").mockReturnValue("");
+			expect(transaction.isContractDeployment()).toBe(true);
+		});
 	});
 });

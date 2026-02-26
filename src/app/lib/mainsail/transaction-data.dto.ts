@@ -75,6 +75,21 @@ export abstract class TransactionData {
 		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
 	}
 
+	public isContractTransaction() {
+		return [
+			this.isValidatorRegistration(),
+			this.isValidatorResignation(),
+			this.isVote(),
+			this.isUnvote(),
+			this.isUsernameRegistration(),
+			this.isUsernameResignation(),
+		].some(Boolean);
+	}
+
+	public isContractDeployment() {
+		return [!this.isContractTransaction(), !this.to()].every(Boolean);
+	}
+
 	public isApprove() {
 		return TransactionTypeIdentifier.isApprove(this.data.data);
 	}

@@ -2,7 +2,6 @@ import { renderHook } from "@testing-library/react";
 import {
 	getTransferType,
 	handleBroadcastError,
-	isContractDeployment,
 	isNoDeviceError,
 	isRejectionError,
 	withAbortPromise,
@@ -80,47 +79,6 @@ describe("Transaction utils", () => {
 			});
 
 			expect(type).toBe("transferToken");
-		});
-	});
-
-	describe("isContractDeployment", () => {
-		it("should return true for a contract deployment", () => {
-			const transaction = {
-				isUnvote: () => false,
-				isUsernameRegistration: () => false,
-				isUsernameResignation: () => false,
-				isValidatorRegistration: () => false,
-				isValidatorResignation: () => false,
-				isVote: () => false,
-				to: () => {},
-			};
-			expect(isContractDeployment(transaction as any)).toBe(true);
-		});
-
-		it("should return false for a contract transaction", () => {
-			const transaction = {
-				isUnvote: () => false,
-				isUsernameRegistration: () => false,
-				isUsernameResignation: () => false,
-				isValidatorRegistration: () => true,
-				isValidatorResignation: () => false,
-				isVote: () => false,
-				to: () => {},
-			};
-			expect(isContractDeployment(transaction as any)).toBe(false);
-		});
-
-		it("should return false for a transfer transaction", () => {
-			const transaction = {
-				isUnvote: () => false,
-				isUsernameRegistration: () => false,
-				isUsernameResignation: () => false,
-				isValidatorRegistration: () => false,
-				isValidatorResignation: () => false,
-				isVote: () => false,
-				to: () => "some-address",
-			};
-			expect(isContractDeployment(transaction as any)).toBe(false);
 		});
 	});
 
