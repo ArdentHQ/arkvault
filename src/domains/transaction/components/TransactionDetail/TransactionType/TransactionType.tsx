@@ -162,7 +162,7 @@ export const ActionType = ({
 	);
 
 	return (
-		<div data-testid="TransactionType">
+		<div data-testid="ActionType">
 			<DetailWrapper label={t("COMMON.ACTION")}>
 				<div className="space-y-3">
 					<div className="flex w-full justify-between sm:justify-start">
@@ -191,7 +191,7 @@ export const ActionType = ({
 													data-testid="Link__external"
 													name="ArrowExternal"
 													dimensions={[12, 12]}
-													className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+													className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
 												/>
 											</span>
 										</Link>
@@ -224,7 +224,7 @@ export const ActionType = ({
 														data-testid="Link__external"
 														name="ArrowExternal"
 														dimensions={[12, 12]}
-														className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+														className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
 													/>
 												</span>
 											</Link>
