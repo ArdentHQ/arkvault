@@ -229,7 +229,7 @@ export const ActionType = ({
 												</span>
 											</Link>
 											<Icon
-												className="bg-theme-secondary-200 text-theme-secondary-700 rounded px-1 py-[3px]"
+												className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 dim:bg-theme-dark-700 dim:bg-theme-dim-200 rounded px-1 py-[3px]"
 												name="Contract"
 												dimensions={[12, 12]}
 											/>
