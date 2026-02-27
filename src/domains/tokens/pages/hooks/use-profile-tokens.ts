@@ -111,13 +111,24 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 			wallets,
 		});
 
-		setState((state) => ({
-			...state,
-			hasMore: response.hasMorePages() as boolean,
-			isLoadingMore: false,
-			tokens: response.items(),
-		}));
-	}, [wallets, fetchTokens, tokens]);
+		const newTokens = response.items();
+
+		setState((state) => {
+			const existingIds = new Set(state.tokens.map((token) => token.token().address()));
+			const uniqueNewTokens = newTokens.filter((token) => !existingIds.has(token.token().address()));
+
+			if (uniqueNewTokens.length === 0) {
+				return state;
+			}
+
+			return {
+				...state,
+				hasMore: response.hasMorePages() as boolean,
+				isLoadingMore: false,
+				tokens: [...uniqueNewTokens, ...state.tokens],
+			};
+		});
+	}, [wallets, fetchTokens]);
 
 	const walletAddresses = wallets.map((wallet) => wallet.address());
 	const walletAddressesStr = walletAddresses.join("-");
@@ -129,7 +140,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 				interval: 15_000,
 			},
 		],
-		[walletAddressesStr, tokens],
+		[walletAddressesStr],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
