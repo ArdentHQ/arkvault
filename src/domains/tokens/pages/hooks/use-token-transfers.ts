@@ -44,7 +44,10 @@ export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfe
 	useEffect(() => {
 		const loadTokenTransfers = async () => {
 			try {
+				setState((state) => ({ ...state, isLoadingTransfers: true }));
+
 				const response = await fetchTokenTransfers({
+					page: 1,
 					wallets,
 				});
 
@@ -54,6 +57,8 @@ export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfe
 					isLoadingTransfers: false,
 					transfers: response.items(),
 				}));
+
+				currentPage.current = 1;
 			} catch (error) {
 				/* istanbul ignore next -- @preserve */
 				console.error({ error });
@@ -109,13 +114,23 @@ export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfe
 			wallets,
 		});
 
-		setState((state) => ({
-			...state,
-			hasMore: response.hasMorePages() as boolean,
-			isLoadingMore: false,
-			transfers: response.items(),
-		}));
-	}, [wallets, fetchTokenTransfers, transfers]);
+		const newTransfers = response.items();
+
+		setState((state) => {
+			const existingIds = new Set(state.transfers.map((transfer) => transfer.hash()));
+			const uniqueNewTransfers = newTransfers.filter((transfer) => !existingIds.has(transfer.hash()));
+
+			if (uniqueNewTransfers.length === 0) {
+				return state;
+			}
+
+			return {
+				...state,
+				isLoadingMore: false,
+				transfers: [...uniqueNewTransfers, ...state.transfers],
+			};
+		});
+	}, [wallets, fetchTokenTransfers]);
 
 	const walletAddresses = wallets.map((wallet) => wallet.address());
 	const walletAddressesStr = walletAddresses.join("-");
@@ -127,7 +142,7 @@ export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfe
 				interval: 15_000,
 			},
 		],
-		[walletAddressesStr, transfers],
+		[walletAddressesStr],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
