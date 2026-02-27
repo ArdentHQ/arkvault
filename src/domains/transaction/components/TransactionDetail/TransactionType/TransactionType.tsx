@@ -60,7 +60,7 @@ export const TransactionType = ({
 		<div data-testid="TransactionType">
 			<DetailWrapper label={t("COMMON.ACTION")}>
 				<div className="space-y-3">
-					<div className="flex w-full justify-between sm:justify-start">
+					<div className="flex w-full justify-between gap-2 sm:justify-start">
 						<DetailLabelText className={labelClassName}>{t("COMMON.METHOD")}</DetailLabelText>
 						<Label color="neutral" size="xs">
 							{getLabel(transaction)}
@@ -68,7 +68,7 @@ export const TransactionType = ({
 					</div>
 
 					{transaction.isUsernameRegistration() && (
-						<div className="flex w-full justify-between sm:justify-start">
+						<div className="flex w-full justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
 
 							<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
@@ -78,7 +78,7 @@ export const TransactionType = ({
 					)}
 
 					{bytecode && (
-						<div className="flex w-full justify-between sm:justify-start">
+						<div className="flex w-full justify-between gap-2 sm:justify-start">
 							<DetailLabelText className="min-w-auto sm:min-w-24">{t("COMMON.BYTECODE")}</DetailLabelText>
 
 							<div className="flex items-center">
@@ -102,7 +102,7 @@ export const TransactionType = ({
 					)}
 
 					{(transaction.isValidatorRegistration() || transaction.isUpdateValidator()) && (
-						<div className="flex w-full justify-between sm:justify-start">
+						<div className="flex w-full justify-between gap-2 sm:justify-start">
 							<DetailLabelText className={labelClassName}>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
 							<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
@@ -168,7 +168,7 @@ export const ActionType = ({
 		<div data-testid="ActionType">
 			<DetailWrapper label={t("COMMON.ACTION")}>
 				<div className="space-y-3">
-					<div className="flex w-full justify-between sm:justify-start">
+					<div className="flex w-full justify-between gap-2 sm:justify-start">
 						<DetailLabelText>{t("COMMON.APPROVE")}</DetailLabelText>
 						<div className="w-full leading-6 font-semibold">
 							<Trans
