@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import React, { useMemo, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
@@ -9,6 +9,13 @@ import cn from "classnames";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { Divider } from "@/app/components/Divider";
 import { Button } from "@/app/components/Button";
+import { Amount } from "@/app/components/Amount";
+import { BigNumber } from "@/app/lib/helpers";
+import { Address } from "@/app/components/Address";
+import { useActiveProfile, useWalletAlias } from "@/app/hooks";
+import { Link } from "@/app/components/Link";
+import { Icon } from "@/app/components/Icon";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 
 const validatorPublickey = (transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData) => {
 	try {
@@ -29,6 +36,10 @@ export const TransactionType = ({
 	const [showFullBytecode, setShowFullByteCode] = useState(false);
 
 	const { getLabel } = useTransactionTypes();
+
+	if (transaction.isApprove()) {
+		return <ActionType transaction={transaction} />;
+	}
 
 	const isValidatorRegistrationOrResignation =
 		transaction.isValidatorRegistration() || transaction.isValidatorResignation();
@@ -110,6 +121,132 @@ export const TransactionType = ({
 					)}
 				>
 					{bytecode}
+				</div>
+			</DetailWrapper>
+		</div>
+	);
+};
+
+export const ActionType = ({
+	transaction,
+}: {
+	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
+}) => {
+	const { t } = useTranslation();
+
+	const profile = useActiveProfile();
+
+	const approveDetails = transaction.approveDetails();
+
+	const { getWalletAlias } = useWalletAlias();
+
+	const { alias } = useMemo(
+		() =>
+			getWalletAlias({
+				address: transaction.from(),
+				network: transaction.wallet().network(),
+				profile,
+			}),
+		[profile, getWalletAlias, transaction],
+	);
+
+	const walletToken = profile
+		.tokens()
+		.selected()
+		.items()
+		.find((walletToken) => walletToken.token().address().toLowerCase() === transaction.to().toLowerCase());
+
+	if (!walletToken) {
+		return;
+	}
+
+	const token = walletToken.token();
+
+	const maxUint256 = BigInt(2) ** BigInt(256) - BigInt(1);
+
+	return (
+		<div data-testid="ActionType">
+			<DetailWrapper label={t("COMMON.ACTION")}>
+				<div className="space-y-3">
+					<div className="flex w-full justify-between sm:justify-start">
+						<DetailLabelText>{t("COMMON.APPROVE")}</DetailLabelText>
+						<div className="w-full leading-6 font-semibold">
+							<Trans
+								i18nKey="TRANSACTION.APPROVE_DETAILS"
+								components={{
+									Address: (
+										<Link
+											to={transaction.wallet().link().wallet(transaction.from())}
+											showExternalIcon={false}
+											isExternal
+										>
+											<span className="flex flex-row items-center gap-2">
+												<Address
+													walletName={alias}
+													address={alias ? undefined : transaction.from()}
+													truncateOnTable
+													wrapperClass={cn("flex-inline", { "w-44": !alias })}
+													addressClass="leading-6 text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 w-44 min-w-44"
+													walletNameClass="leading-6 text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+												/>
+
+												<Icon
+													data-testid="Link__external"
+													name="ArrowExternal"
+													dimensions={[12, 12]}
+													className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
+												/>
+											</span>
+										</Link>
+									),
+									Amount:
+										approveDetails.amount === maxUint256 ? (
+											<span>
+												{t("COMMON.UNLIMITED")} {token.displaySymbol()}
+											</span>
+										) : (
+											<Amount
+												ticker={token.displaySymbol()}
+												className="leading-6"
+												value={BigNumber.make(approveDetails.amount, token.decimals()).divide(
+													BigNumber.powerOfTen(token.decimals()),
+												)}
+												showTicker
+												showCompactFormat
+											/>
+										),
+									ContractAddress: (
+										<span className="inline-flex items-center gap-2">
+											<Link
+												to={transaction.wallet().link().wallet(approveDetails.address)}
+												showExternalIcon={false}
+												isExternal
+											>
+												<span className="flex flex-row items-center gap-2">
+													<TruncateMiddle
+														text={approveDetails.address}
+														className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
+													/>
+
+													<Icon
+														data-testid="Link__external"
+														name="ArrowExternal"
+														dimensions={[12, 12]}
+														className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
+													/>
+												</span>
+											</Link>
+											<Icon
+												className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 dim:bg-theme-dark-700 dim:bg-theme-dim-200 rounded px-1 py-[3px]"
+												name="Contract"
+												dimensions={[12, 12]}
+											/>
+										</span>
+									),
+								}}
+							/>
+						</div>
+					</div>
 				</div>
 			</DetailWrapper>
 		</div>
