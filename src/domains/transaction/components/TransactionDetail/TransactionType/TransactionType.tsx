@@ -245,9 +245,7 @@ export const ActionType = ({
 											/>
 										</span>
 									),
-									Token: (
-										<span>{token.displaySymbol()}</span>
-									)
+									Token: <span>{token.displaySymbol()}</span>,
 								}}
 							/>
 						</div>
