@@ -43,7 +43,7 @@ export const TransactionRecipient = ({
 
 	return (
 		<>
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle
 					className={cn(labelClassName, {
 						invisible: !showLabel,
@@ -101,7 +101,7 @@ export const TransactionRecipients = ({
 
 	return (
 		<>
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
