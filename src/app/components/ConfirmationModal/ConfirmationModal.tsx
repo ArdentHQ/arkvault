@@ -24,7 +24,7 @@ export const ConfirmationModal = ({ description, title, size = "lg", isOpen, onC
 		<Modal
 			title={title || t("COMMON.CONFIRMATION_MODAL.TITLE")}
 			titleClass="text-theme-text"
-			image={<Image name="Warning" className="m-auto mb-6 max-w-52" />}
+			image={<Image name="Warning" className="mx-auto mb-6 max-w-52" />}
 			size={size}
 			isOpen={isOpen}
 			onClose={onCancel}
