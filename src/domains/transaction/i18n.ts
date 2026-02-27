@@ -348,7 +348,7 @@ export const translations = {
 		DESCRIPTION: "Review details below to send your transaction.",
 		TITLE: "Transaction Review",
 	},
-	REVOKE_DETAILS: "Removed permission for <Token/>  for use by <ContractAddress/>  on behalf of <Address/>",
+	REVOKE_DETAILS: "Removed permission for <Token/>  use by <ContractAddress/>  on behalf of <Address/>",
 	SECOND_MNEMONIC: "2nd Mnemonic",
 	SECOND_SECRET: "2nd Secret",
 	SENDER: "Sender",
