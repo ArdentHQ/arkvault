@@ -47,8 +47,8 @@ export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfe
 				setState((state) => ({ ...state, isLoadingTransfers: true }));
 
 				const response = await fetchTokenTransfers({
-					wallets,
 					page: 1,
+					wallets,
 				});
 
 				setState((state) => ({
