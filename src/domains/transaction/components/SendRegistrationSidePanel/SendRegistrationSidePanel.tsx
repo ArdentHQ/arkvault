@@ -376,6 +376,7 @@ export const SendRegistrationSidePanel = ({
 	);
 
 	const isLastStep = activeTab === summaryStep;
+	const isLedgerAuthenticationStep = activeWallet && activeWallet.isLedger() && activeTab === authenticationStep;
 
 	return (
 		<SidePanel
@@ -396,7 +397,7 @@ export const SendRegistrationSidePanel = ({
 			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
-				<SidePanelButtons>
+				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
 					{activeTab < stepCount && (
 						<Button
 							data-testid="SendRegistration__back-button"
