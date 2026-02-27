@@ -26,7 +26,7 @@ exports[`TransferLedgerReview > should render 1`] = `
           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           <div
-            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -324,7 +324,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           <div
-            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
@@ -639,7 +639,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
         >
           <div
-            class="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0"
+            class="flex items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0"
           >
             <div
               class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
