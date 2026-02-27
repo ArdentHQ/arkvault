@@ -263,7 +263,7 @@ describe("useProfileTokens", () => {
 		});
 
 		await waitFor(() => {
-			expect(result.current.tokens).toHaveLength(1);
+			expect(result.current.tokens).toHaveLength(2);
 		});
 
 		// Verify that after checkNewTokens runs, the second token is present
