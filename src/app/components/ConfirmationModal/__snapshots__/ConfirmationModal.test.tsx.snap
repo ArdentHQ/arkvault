@@ -71,7 +71,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
             class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <svg
-              class="m-auto mb-6 max-w-52"
+              class="mx-auto mb-6 max-w-52"
               viewBox="0 0 207 106"
               xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@ exports[`Confirmation Modal > should render with default title and description 1
             class="flex flex-1 flex-col px-6 pt-4 sm:pb-4"
           >
             <svg
-              class="m-auto mb-6 max-w-52"
+              class="mx-auto mb-6 max-w-52"
               viewBox="0 0 207 106"
               xml:space="preserve"
               xmlns="http://www.w3.org/2000/svg"

@@ -55,7 +55,7 @@ export const TransactionDetailContent = ({
 
 	const labelClassName = cn({
 		"min-w-24": !isValidatorRegistrationOrResignation,
-		"min-w-32": !isValidatorRegistrationOrResignation,
+		// "min-w-32": !isValidatorRegistrationOrResignation,
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 

@@ -8,6 +8,7 @@ export const translations = {
 	ALL: "All",
 	ALL_TRANSACTIONS: "All Transactions",
 	AMOUNT: "Amount",
+	APPROVE_DETAILS: "<Amount/>  for use by <ContractAddress/>  on behalf of <Address/>",
 	AUTHENTICATION_STEP: {
 		DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to authenticate the transaction.",
 		DESCRIPTION_LEDGER: "Check your Ledger device and sign the transaction.",

@@ -8,6 +8,7 @@ import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { ApproveDetails } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 
 export class ExtendedSignedTransactionData {
 	readonly #data: SignedTransactionData;
@@ -190,6 +191,10 @@ export class ExtendedSignedTransactionData {
 
 	public validatorPublicKey(): string {
 		return this.#data.validatorPublicKey();
+	}
+
+	public approveDetails(): ApproveDetails {
+		return this.#data.approveDetails();
 	}
 
 	public payments(): { recipientId: string; amount: number }[] {
