@@ -65,7 +65,7 @@ const signedTransactionMock = {
 	gasLimit: () => ValidatorResignationFixture.data.gasLimit,
 	gasUsed: () => ValidatorResignationFixture.data.gas,
 	hash: () => ValidatorResignationFixture.data.hash,
-	isApprove: () => false,
+	isApprove: () => false, isRevoke: () => false,
 	isConfirmed: () => false,
 	isContractDeployment: () => false,
 	isContractTransaction: () => true,
