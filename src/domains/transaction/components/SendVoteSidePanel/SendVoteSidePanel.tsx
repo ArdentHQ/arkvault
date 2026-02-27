@@ -570,6 +570,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	};
 
 	const preventAccidentalClosing = activeTab !== Step.FormStep;
+	const isLedgerAuthenticationStep = activeWallet && activeWallet.isLedger() && activeTab === Step.AuthenticationStep;
 
 	return (
 		<SidePanel
@@ -590,7 +591,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			shakeWhenClosing={preventAccidentalClosing}
 			onMountChange={onMountChange}
 			footer={
-				<SidePanelButtons>
+				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
 					{activeTab !== Step.SummaryStep && (
 						<Button
 							data-testid="SendVote__back-button"
