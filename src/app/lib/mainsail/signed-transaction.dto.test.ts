@@ -375,6 +375,19 @@ describe("SignedTransactionData", () => {
 		});
 	});
 
+	describe("approveDetails", () => {
+		it("should decode approve details correctly", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(DecodeFunctionDataMock, "decodeFunctionData").mockReturnValue({
+				args: ["0x0fdAb71F04aDadF40964C5Fd9c95886740f0591C", BigInt("999999999999999983222784")],
+			});
+
+			const details = transaction.approveDetails();
+			expect(details.address).toBe("0x0fdAb71F04aDadF40964C5Fd9c95886740f0591C");
+			expect(details.amount).toBe(BigInt("999999999999999983222784"));
+		});
+	});
+
 	describe("validatorPublicKey", () => {
 		it("should decode validator public key and remove 0x prefix", () => {
 			transaction.configure(mockSignedData, mockSerialized);

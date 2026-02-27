@@ -25,6 +25,11 @@ export interface UnspentTransactionData {
 	address(): string;
 }
 
+export interface ApproveDetails {
+	address: string;
+	amount: bigint;
+}
+
 export interface ConfirmedTransactionData {
 	configure(data: any): ConfirmedTransactionData;
 
@@ -90,6 +95,8 @@ export interface ConfirmedTransactionData {
 	username(): string;
 
 	validatorPublicKey(): string;
+
+	approveDetails(): ApproveDetails;
 
 	// Vote
 	votes(): string[];

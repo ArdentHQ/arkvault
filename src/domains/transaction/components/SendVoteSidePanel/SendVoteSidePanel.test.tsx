@@ -44,6 +44,7 @@ const transactionMethodsFixture = {
 	gasLimit: () => transactionFixture.data.gasLimit,
 	gasUsed: () => transactionFixture.data.receipt.gasUsed,
 	hash: () => transactionFixture.data.hash,
+	isApprove: () => false,
 	isConfirmed: () => false,
 	isContractDeployment: () => false,
 	isContractTransaction: () => true,
