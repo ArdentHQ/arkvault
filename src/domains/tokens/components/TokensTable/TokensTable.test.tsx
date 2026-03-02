@@ -35,8 +35,8 @@ describe("TokensTable", () => {
 
 	it.each(["xs"])("should show no results message if profile has no tokens in %s", async (breakpoint) => {
 		const emptyResponseMock = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
-			items: () => [],
 			hasMorePages: () => false,
+			items: () => [],
 		});
 		const { asFragment } = renderResponsiveWithRoute(
 			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
