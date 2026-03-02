@@ -3,11 +3,35 @@ import userEvent from "@testing-library/user-event";
 
 import { TokenHeader } from "./TokenHeader";
 import { Contracts } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 let profile: Contracts.IProfile;
 let route: string;
 
 describe("TokenHeader", () => {
+	let walletTokenDTO: WalletTokenDTO;
+	let tokenDTO: TokenDTO;
+	let walletToken: WalletToken;
+
+	const fixtureData = Fixtures.ByContractAddress.data;
+	const walletTokenData = Fixtures.ByWalletAddress.data[0];
+
+	beforeAll(() => {
+		profile = env.profiles().findById(getMainsailProfileId());
+		walletTokenDTO = new WalletTokenDTO(walletTokenData);
+		tokenDTO = new TokenDTO(fixtureData);
+		walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+	});
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		route = `/profiles/${profile.id()}/tokens`;
@@ -20,6 +44,17 @@ describe("TokenHeader", () => {
 
 		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with tokens", () => {
+		const tokensWithBalance = vi.spyOn(profile.wallets().first().tokens(), "values").mockReturnValue([walletToken]);
+		const { asFragment } = render(<TokenHeader profile={profile} />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+		tokensWithBalance.mockReset();
 	});
 
 	it("should display correct wallet information", () => {
