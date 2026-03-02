@@ -44,7 +44,6 @@ export const TokenHeader = ({
 			.values()
 			.some((walletToken) => walletToken.balance().isGreaterThan(0)),
 	);
-	console.log({ hasTokenBalance, tokens: wallet.tokens().values() });
 
 	return (
 		<>
