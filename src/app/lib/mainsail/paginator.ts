@@ -37,8 +37,8 @@ export abstract class Paginator<T> {
 		return this.#pagination.last;
 	}
 
-	public totalCount(): ClientPaginatorCursor {
-		return this.#pagination.totalCount;
+	public totalCount(): number {
+		return +(this.#pagination.totalCount ?? 0);
 	}
 
 	public hasMorePages(): boolean {
