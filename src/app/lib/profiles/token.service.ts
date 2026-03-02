@@ -25,6 +25,7 @@ export class TokenService {
 			next: 0,
 			prev: undefined,
 			self: undefined,
+			totalCount: undefined,
 		});
 	}
 
@@ -71,13 +72,7 @@ export class TokenService {
 	 * @returns {number}
 	 */
 	selectedCount(): number {
-		let count = 0;
-
-		for (const wallet of this.#profile.wallets().selected().values()) {
-			count = count + this.#walletTokens(wallet).length;
-		}
-
-		return count;
+		return this.#walletTokensCollection.totalCount();
 	}
 
 	/**
@@ -102,18 +97,14 @@ export class TokenService {
 
 			const aggregated = this.#aggregateTokens(response.items());
 
-			this.#walletTokensCollection = new WalletTokenCollection(aggregated, {
-				last: undefined,
-				next: Number(response.nextPage()),
-				prev: undefined,
-				self: undefined,
-			});
+			this.#walletTokensCollection = new WalletTokenCollection(aggregated, response.getPagination());
 		} catch {
 			this.#walletTokensCollection = new WalletTokenCollection([], {
 				last: undefined,
 				next: 0,
 				prev: undefined,
 				self: undefined,
+				totalCount: undefined,
 			});
 		}
 	}
@@ -202,6 +193,7 @@ export class TokenService {
 				next: 0,
 				prev: undefined,
 				self: undefined,
+				totalCount: undefined,
 			});
 		}
 
