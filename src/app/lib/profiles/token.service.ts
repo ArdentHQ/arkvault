@@ -3,7 +3,6 @@ import { Networks } from "@/app/lib/mainsail";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { TokenTransfersQuery, WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
-import { ProfileSetting } from "./profile.enum.contract";
 import { WalletToken } from "./wallet-token";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
 import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
@@ -14,7 +13,7 @@ import { BigNumber } from "@/app/lib/helpers";
 export class TokenService {
 	#profile: Contracts.IProfile;
 	#network: Networks.Network;
-	#dustBalanceThreshold = 1;
+	// #dustBalanceThreshold = 1;
 	#walletTokensCollection: WalletTokenCollection;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
