@@ -51,7 +51,7 @@ export class TokenService {
 	 * @returns {number}
 	 */
 	selectedCount(): number {
-		return this.#walletTokensCollection.totalCount();
+		return this.selected().totalCount();
 	}
 
 	/**
