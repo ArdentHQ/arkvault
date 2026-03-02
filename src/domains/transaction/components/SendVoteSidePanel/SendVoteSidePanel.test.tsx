@@ -51,6 +51,7 @@ const transactionMethodsFixture = {
 	isMultiPayment: () => false,
 	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
+	isRevoke: () => false,
 	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
