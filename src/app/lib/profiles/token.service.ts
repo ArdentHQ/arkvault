@@ -30,27 +30,6 @@ export class TokenService {
 	}
 
 	/**
-	 * Returns wallet tokens filtering out dust tokens if the setting is enabled.
-	 *
-	 * @param wallet
-	 * @returns {WalletToken[]}
-	 */
-	#walletTokens(wallet: Contracts.IReadWriteWallet): WalletToken[] {
-		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
-
-		return wallet
-			.tokens()
-			.values()
-			.filter((token) => {
-				if (hideDustTokens === true) {
-					return token.balance().isGreaterThan(BigNumber.make(this.#dustBalanceThreshold));
-				}
-
-				return true;
-			});
-	}
-
-	/**
 	 * Synchronises tokens for all selected wallets.
 	 *
 	 * @returns {Promise<void>}
