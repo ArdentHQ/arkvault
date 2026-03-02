@@ -3,7 +3,6 @@ import userEvent from "@testing-library/user-event";
 
 import { TokenHeader } from "./TokenHeader";
 import { Contracts } from "@/app/lib/profiles";
-import { BigNumber } from "@/app/lib/helpers";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
