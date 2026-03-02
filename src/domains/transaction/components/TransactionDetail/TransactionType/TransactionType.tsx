@@ -37,7 +37,7 @@ export const TransactionType = ({
 
 	const { getLabel } = useTransactionTypes();
 
-	if (transaction.isApprove()) {
+	if (transaction.isApprove() || transaction.isRevoke()) {
 		return <ActionType transaction={transaction} />;
 	}
 
@@ -160,6 +160,8 @@ export const ActionType = ({
 		return;
 	}
 
+	const isRevoke = transaction.isRevoke();
+
 	const token = walletToken.token();
 
 	const maxUint256 = BigInt(2) ** BigInt(256) - BigInt(1);
@@ -169,10 +171,10 @@ export const ActionType = ({
 			<DetailWrapper label={t("COMMON.ACTION")}>
 				<div className="space-y-3">
 					<div className="flex w-full justify-between gap-2 sm:justify-start">
-						<DetailLabelText>{t("COMMON.APPROVE")}</DetailLabelText>
+						<DetailLabelText>{isRevoke ? t("COMMON.REVOKE") : t("COMMON.APPROVE")}</DetailLabelText>
 						<div className="w-full leading-6 font-semibold">
 							<Trans
-								i18nKey="TRANSACTION.APPROVE_DETAILS"
+								i18nKey={isRevoke ? "TRANSACTION.REVOKE_DETAILS" : "TRANSACTION.APPROVE_DETAILS"}
 								components={{
 									Address: (
 										<Link
@@ -243,6 +245,7 @@ export const ActionType = ({
 											/>
 										</span>
 									),
+									Token: <span>{token.displaySymbol()}</span>,
 								}}
 							/>
 						</div>
