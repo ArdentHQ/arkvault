@@ -11,11 +11,11 @@ import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transacti
 import { SendTransferForm } from "@/domains/transaction/components/SendTransferSidePanel";
 import { buildTransferData } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.helpers";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
-import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const useSendTransferForm = ({
 	wallet,
@@ -52,7 +52,7 @@ export const useSendTransferForm = ({
 		() => ({
 			amount: "",
 			recipients: [],
-			remainingBalance: wallet?.balance(),
+			remainingBalance: wallet?.balance() ?? BigNumber.ZERO,
 			senderAddress: undefined,
 			tokenContractAddress,
 			tokens,
@@ -232,13 +232,7 @@ export const useSendTransferForm = ({
 			return;
 		}
 		const fee = calculateGasFee(gasPrice, gasLimit);
-
-		const remaining = remainingBalance - fee;
-
-		// Using `18` for precision because is the maximum number of decimals
-		// that the amount field supports.
-		setValue("amount", precisionRound(remaining, 18));
-
+		setValue("amount", remainingBalance.minus(fee).toFixed());
 		void trigger(["gasPrice", "gasLimit", "amount"]);
 	}, [gasLimitStr, gasPriceStr]);
 

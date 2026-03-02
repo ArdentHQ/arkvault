@@ -76,10 +76,14 @@ const signedTransactionMock = {
 	gasLimit: () => ValidatorRegistrationFixture.data.gasLimit,
 	gasUsed: () => ValidatorRegistrationFixture.data.gas,
 	hash: () => ValidatorRegistrationFixture.data.hash,
+	isApprove: () => false,
 	isConfirmed: () => false,
+	isContractDeployment: () => false,
+	isContractTransaction: () => true,
 	isMultiPayment: () => false,
 	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
+	isRevoke: () => false,
 	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
@@ -136,6 +140,8 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
 		isConfirmed: () => true,
+		isContractDeployment: () => false,
+		isContractTransaction: () => true,
 		isIpfs: () => false,
 		isMultiSignatureRegistration: () => true,
 		isValidatorRegistration: () => false,
@@ -183,7 +189,7 @@ describe("SendRegistrationSidePanel", () => {
 			}),
 		);
 
-		vi.spyOn(secondWallet, "balance").mockReturnValue(1200);
+		vi.spyOn(secondWallet, "balance").mockReturnValue(BigNumber.make(1200));
 
 		vi.spyOn(wallet, "isValidator").mockImplementation(() => false);
 		vi.spyOn(secondWallet, "isValidator").mockImplementation(() => false);

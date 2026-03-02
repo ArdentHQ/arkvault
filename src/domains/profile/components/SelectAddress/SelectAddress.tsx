@@ -44,7 +44,7 @@ export const SelectAddress = ({
 	title,
 	description,
 	ref,
-	disableAction = (wallet: Contracts.IReadWriteWallet) => !wallet.balance(),
+	disableAction = (wallet: Contracts.IReadWriteWallet) => wallet.balance().isZero(),
 	variant = "default",
 }: SelectAddressProperties) => {
 	const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);

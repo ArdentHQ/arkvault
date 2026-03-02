@@ -16,6 +16,7 @@ import { ContactListItemOption } from "@/domains/contact/components/ContactListI
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { Button } from "@/app/components/Button";
 import { ProfilePaths } from "@/router/paths";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const Contacts: FC = () => {
 	const { state } = useEnvironmentContext();
@@ -106,10 +107,15 @@ export const Contacts: FC = () => {
 		[t],
 	);
 
-	const hasBalance = useMemo(
-		() => Object.values(activeProfile.wallets().all()).reduce((acc, wallet) => acc + wallet.balance(), 0) > 0,
-		[activeProfile],
-	);
+	const hasBalance = useMemo(() => {
+		let total = BigNumber.ZERO;
+
+		for (const wallet of Object.values(activeProfile.wallets().all())) {
+			total = total.plus(wallet.balance());
+		}
+
+		return total.isGreaterThan(0);
+	}, [activeProfile]);
 
 	const renderTableRow = useCallback(
 		(contact: Contracts.IContact) => {

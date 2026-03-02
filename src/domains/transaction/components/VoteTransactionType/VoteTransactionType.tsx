@@ -44,7 +44,7 @@ export const VoteTransactionType = ({
 	return (
 		<DetailWrapper label={t("COMMON.ACTION")}>
 			<div className="flex flex-col gap-3" data-testid="VoteDetail">
-				<div className="flex w-full items-center justify-between sm:justify-start">
+				<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 					<DetailTitle
 						className={cn("w-auto", {
 							"sm:min-w-[132px]": voteCategory === "swap",
@@ -85,7 +85,7 @@ export const VoteTransactionType = ({
 				)}
 
 				{showValidatorField && (
-					<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-2">
 						<DetailTitle
 							className={cn("w-auto", {
 								"sm:min-w-[132px]": voteCategory === "swap",

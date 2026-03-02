@@ -8,6 +8,7 @@ export const translations = {
 	ALL: "All",
 	ALL_TRANSACTIONS: "All Transactions",
 	AMOUNT: "Amount",
+	APPROVE_DETAILS: "<Amount/>  for use by <ContractAddress/>  on behalf of <Address/>",
 	AUTHENTICATION_STEP: {
 		DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to authenticate the transaction.",
 		DESCRIPTION_LEDGER: "Check your Ledger device and sign the transaction.",
@@ -347,6 +348,7 @@ export const translations = {
 		DESCRIPTION: "Review details below to send your transaction.",
 		TITLE: "Transaction Review",
 	},
+	REVOKE_DETAILS: "Removed permission for <Token/>  use by <ContractAddress/>  on behalf of <Address/>",
 	SECOND_MNEMONIC: "2nd Mnemonic",
 	SECOND_SECRET: "2nd Secret",
 	SENDER: "Sender",

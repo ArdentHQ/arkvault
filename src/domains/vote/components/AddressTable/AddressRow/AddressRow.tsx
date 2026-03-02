@@ -181,7 +181,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	};
 
 	const tooltipContent = () => {
-		if (!wallet.balance()) {
+		if (wallet.balance().isZero()) {
 			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 		}
 
@@ -191,7 +191,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	const isButtonDisabled =
 		!wallet.hasBeenFullyRestored() ||
 		!wallet.hasSyncedWithNetwork() ||
-		!wallet.balance() ||
+		wallet.balance().isZero() ||
 		!isLedgerWalletCompatible(wallet);
 
 	return (

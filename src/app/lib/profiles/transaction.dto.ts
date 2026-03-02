@@ -9,6 +9,7 @@ import { DateTime } from "@/app/lib/intl";
 import { ConfirmedTransactionData } from "../mainsail/confirmed-transaction.dto.js";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { ApproveDetails } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 
 export interface ExtendedTransactionRecipient {
 	address: string;
@@ -144,6 +145,11 @@ export class ExtendedConfirmedTransactionData {
 	public validatorPublicKey(): string {
 		return this.data<Contracts.ConfirmedTransactionData>().validatorPublicKey();
 	}
+
+	public approveDetails(): ApproveDetails {
+		return this.data<Contracts.ConfirmedTransactionData>().approveDetails();
+	}
+
 	public expirationType(): number {
 		return this.data<Contracts.ConfirmedTransactionData>().expirationType();
 	}
@@ -311,5 +317,13 @@ export class ExtendedConfirmedTransactionData {
 
 	public isBatchTransfer(): boolean {
 		return this.#data.isBatchTransfer();
+	}
+
+	public isContractDeployment(): boolean {
+		return this.#data.isContractDeployment();
+	}
+
+	public isContractTransaction(): boolean {
+		return this.#data.isContractTransaction();
 	}
 }

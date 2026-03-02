@@ -16,7 +16,6 @@ import { TransactionDetailModalProperties } from "./TransactionDetailSidePanel.c
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import cn from "classnames";
-import { isContractDeployment } from "@/domains/transaction/utils";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
@@ -56,7 +55,6 @@ export const TransactionDetailContent = ({
 
 	const labelClassName = cn({
 		"min-w-24": !isValidatorRegistrationOrResignation,
-		"min-w-32": !isValidatorRegistrationOrResignation,
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 
@@ -75,7 +73,7 @@ export const TransactionDetailContent = ({
 						recipients={recipients}
 						labelClassName={labelClassName}
 						interactedWith={
-							isContractDeployment(transaction) && transaction.confirmations() > 0
+							transaction.isContractDeployment() && transaction.confirmations() > 0
 								? transaction.data().data.receipt.deployedContractAddress
 								: undefined
 						}

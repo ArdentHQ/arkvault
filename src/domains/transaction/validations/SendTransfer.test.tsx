@@ -6,6 +6,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { sendTransfer } from "./SendTransfer";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 let network: any;
@@ -24,34 +25,34 @@ describe("Send transfer validations", () => {
 		});
 
 		it("should pass", () => {
-			const { validate } = sendTransfer(t).amount(network, "10", [], true);
+			const { validate } = sendTransfer(t).amount(network, BigNumber.make("10"), [], true);
 			expect(validate.valid("5")).toBe(true);
 		});
 
 		it("should pass if not required", () => {
-			const { validate } = sendTransfer(t).amount(network, "10", [{} as RecipientItem], false);
+			const { validate } = sendTransfer(t).amount(network, BigNumber.make("10"), [{} as RecipientItem], false);
 			expect(validate.valid("")).toBe(true);
 		});
 
 		it("should fail with insufficient balance", () => {
-			const { validate } = sendTransfer(t).amount(network, "5", [], true);
+			const { validate } = sendTransfer(t).amount(network, BigNumber.make("5"), [], true);
 			expect(validate.valid("10")).toBe(
 				t("TRANSACTION.VALIDATION.LOW_BALANCE", { balance: "5", coinId: network.coin() }),
 			);
 		});
 
 		it("should fail with undefined balance", () => {
-			const { validate } = sendTransfer(t).amount(network, undefined, [], true);
+			const { validate } = sendTransfer(t).amount(network, BigNumber.ZERO, [], true);
 			expect(validate.valid("10")).toBe(t("TRANSACTION.VALIDATION.LOW_BALANCE", { coinId: network.coin() }));
 		});
 
 		it("should fail if required but empty", () => {
-			const { validate } = sendTransfer(t).amount(network, "10", [], true);
+			const { validate } = sendTransfer(t).amount(network, BigNumber.make("10"), [], true);
 			expect(validate.valid("")).toBe(t("COMMON.VALIDATION.FIELD_REQUIRED", { field: t("COMMON.AMOUNT") }));
 		});
 
 		it("should fail with zero amount", () => {
-			const { validate } = sendTransfer(t).amount(network, "10", [], true);
+			const { validate } = sendTransfer(t).amount(network, BigNumber.make("10"), [], true);
 			expect(validate.valid("0")).toBe(
 				t("TRANSACTION.VALIDATION.AMOUNT_BELOW_MINIMUM", { coinId: network.coin(), min: "0.00000001" }),
 			);

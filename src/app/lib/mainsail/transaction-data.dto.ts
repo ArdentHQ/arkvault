@@ -1,5 +1,9 @@
 import { Contracts } from "@/app/lib/mainsail";
-import { MultiPaymentItem, TransactionDataMeta } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
+import {
+	ApproveDetails,
+	MultiPaymentItem,
+	TransactionDataMeta,
+} from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
@@ -74,6 +78,21 @@ export abstract class TransactionData {
 		}
 
 		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
+	}
+
+	public isContractTransaction() {
+		return [
+			this.isValidatorRegistration(),
+			this.isValidatorResignation(),
+			this.isVote(),
+			this.isUnvote(),
+			this.isUsernameRegistration(),
+			this.isUsernameResignation(),
+		].some(Boolean);
+	}
+
+	public isContractDeployment() {
+		return [!this.isContractTransaction(), !this.to()].every(Boolean);
 	}
 
 	public isApprove() {
@@ -262,6 +281,11 @@ export abstract class TransactionData {
 	public validatorPublicKey(): string {
 		const key = decodeFunctionData(this.data.data).args[0] as string;
 		return key.slice(2);
+	}
+
+	public approveDetails(): ApproveDetails {
+		const [address, amount] = decodeFunctionData(this.data.data, AbiType.Token).args;
+		return { address, amount };
 	}
 
 	public votes(): string[] {

@@ -31,7 +31,8 @@ export class WalletToken {
 	}
 
 	balance(): BigNumber {
-		return BigNumber.make(this.#walletToken.balance(), this.token().decimals());
+		const decimals = this.token().decimals();
+		return BigNumber.make(this.#walletToken.balance(), decimals).divide(BigNumber.powerOfTen(decimals));
 	}
 
 	balanceRaw(): string {

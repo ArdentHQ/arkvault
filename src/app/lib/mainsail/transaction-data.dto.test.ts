@@ -189,6 +189,22 @@ describe("TransactionData", () => {
 		expect(validatorPublicKey).toBe("abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890");
 	});
 
+	it("should return approve details from decoded function data", () => {
+		const mockTransaction = new TestTransactionData();
+
+		const realEncodedData =
+			"0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000";
+
+		mockTransaction.configure({
+			...commonData,
+			data: realEncodedData,
+		});
+
+		const approveDetails = mockTransaction.approveDetails();
+		expect(approveDetails.address).toBe("0x0fdAb71F04aDadF40964C5Fd9c95886740f0591C");
+		expect(approveDetails.amount).toBe(BigInt("999999999999999983222784"));
+	});
+
 	it("should return votes array from decoded function data", () => {
 		const mockTransaction = new TestTransactionData();
 

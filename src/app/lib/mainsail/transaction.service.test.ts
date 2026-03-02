@@ -449,6 +449,7 @@ describe("TransactionService", () => {
 			mnemonic: MAINSAIL_MNEMONICS[0],
 		});
 
+		vi.spyOn(ledgerSignatory, "path").mockReturnValue("m/44'/60'/0'/0/0");
 		vi.spyOn(ledgerSignatory, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(ledgerSignatory, "actsWithLedger").mockReturnValue(true);
 
@@ -457,6 +458,7 @@ describe("TransactionService", () => {
 			getExtendedPublicKey: vi
 				.fn()
 				.mockResolvedValue("0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041"),
+			getPublicKey: vi.fn().mockResolvedValue(wallet.publicKey()),
 			sign: vi.fn(),
 		});
 
