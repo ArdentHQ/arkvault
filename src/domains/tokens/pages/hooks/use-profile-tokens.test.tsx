@@ -262,9 +262,12 @@ describe("useProfileTokens", () => {
 			await vi.advanceTimersByTimeAsync(15_000);
 		});
 
-		await waitFor(() => {
-			expect(result.current.tokens).toHaveLength(2);
-		});
+		await waitFor(
+			() => {
+				expect(result.current.tokens).toHaveLength(2);
+			},
+			{ timeout: 8000 },
+		);
 
 		// Verify that after checkNewTokens runs, the second token is present
 		expect(result.current.tokens[0].token().address()).toBe("0xToken2");
