@@ -3,7 +3,7 @@ import { http, HttpResponse } from "msw";
 import { useProfileTokens } from "./use-profile-tokens";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { expect, vi } from "vitest";
+import { expect, it, vi } from "vitest";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { server } from "@/tests/mocks/server";
 
@@ -310,5 +310,22 @@ describe("useProfileTokens", () => {
 		expect(result.current.hasEmptyResults).toBe(true);
 
 		vi.useRealTimers();
+	});
+
+	it("should reload tokens", async () => {
+		const syncMock = vi.spyOn(profile.tokens(), "sync");
+
+		const wallets = profile.wallets().values();
+		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
+			wrapper,
+		});
+
+		expect(result.current.isReloading).toBe(false);
+
+		await act(async () => {
+			await result.current.reload();
+		});
+
+		expect(syncMock).toHaveBeenCalled();
 	});
 });
