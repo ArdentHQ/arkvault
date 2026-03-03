@@ -3,7 +3,6 @@ import { Networks } from "@/app/lib/mainsail";
 import { ClientService } from "@/app/lib/mainsail/client.service";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { TokenTransfersQuery, WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
-import { ProfileSetting } from "./profile.enum.contract";
 import { WalletToken } from "./wallet-token";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
 import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
@@ -14,7 +13,7 @@ import { BigNumber } from "@/app/lib/helpers";
 export class TokenService {
 	#profile: Contracts.IProfile;
 	#network: Networks.Network;
-	#dustBalanceThreshold = 1;
+	// #dustBalanceThreshold = 1;
 	#walletTokensCollection: WalletTokenCollection;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
@@ -25,28 +24,8 @@ export class TokenService {
 			next: 0,
 			prev: undefined,
 			self: undefined,
+			totalCount: undefined,
 		});
-	}
-
-	/**
-	 * Returns wallet tokens filtering out dust tokens if the setting is enabled.
-	 *
-	 * @param wallet
-	 * @returns {WalletToken[]}
-	 */
-	#walletTokens(wallet: Contracts.IReadWriteWallet): WalletToken[] {
-		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
-
-		return wallet
-			.tokens()
-			.values()
-			.filter((token) => {
-				if (hideDustTokens === true) {
-					return token.balance().isGreaterThan(BigNumber.make(this.#dustBalanceThreshold));
-				}
-
-				return true;
-			});
 	}
 
 	/**
@@ -71,13 +50,7 @@ export class TokenService {
 	 * @returns {number}
 	 */
 	selectedCount(): number {
-		let count = 0;
-
-		for (const wallet of this.#profile.wallets().selected().values()) {
-			count = count + this.#walletTokens(wallet).length;
-		}
-
-		return count;
+		return this.selected().totalCount();
 	}
 
 	/**
@@ -102,18 +75,14 @@ export class TokenService {
 
 			const aggregated = this.#aggregateTokens(response.items());
 
-			this.#walletTokensCollection = new WalletTokenCollection(aggregated, {
-				last: undefined,
-				next: Number(response.nextPage()),
-				prev: undefined,
-				self: undefined,
-			});
+			this.#walletTokensCollection = new WalletTokenCollection(aggregated, response.getPagination());
 		} catch {
 			this.#walletTokensCollection = new WalletTokenCollection([], {
 				last: undefined,
 				next: 0,
 				prev: undefined,
 				self: undefined,
+				totalCount: undefined,
 			});
 		}
 	}
@@ -202,6 +171,7 @@ export class TokenService {
 				next: 0,
 				prev: undefined,
 				self: undefined,
+				totalCount: undefined,
 			});
 		}
 

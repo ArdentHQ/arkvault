@@ -13,6 +13,7 @@ export interface MetaPagination {
 	self: ClientPaginatorCursor;
 	next: ClientPaginatorCursor;
 	last: ClientPaginatorCursor;
+	totalCount?: ClientPaginatorCursor;
 }
 
 export interface BroadcastResponse {

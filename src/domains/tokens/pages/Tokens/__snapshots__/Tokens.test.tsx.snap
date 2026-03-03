@@ -1068,7 +1068,7 @@ exports[`Tokens > should render 1`] = `
                           <div
                             class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
                           >
-                            0
+                            1
                           </div>
                         </div>
                         <div
