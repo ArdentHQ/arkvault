@@ -455,6 +455,7 @@ export const translations = {
 	RESULTS: "Results",
 	RETRY: "Retry",
 	RETURN: "Return",
+	REVOKE: "Revoke",
 	SAVE: "Save",
 	SAVE_FILE: {
 		ERROR: "Could not save file: {{error}}",
