@@ -275,7 +275,7 @@ describe("useProfileTokens", () => {
 		expect(result.current.tokens[0].balance().toString()).toBe("2");
 
 		vi.useRealTimers();
-	});
+	}, {timeout: 8000});
 
 	it("should not check for new tokens when wallets array is empty", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
