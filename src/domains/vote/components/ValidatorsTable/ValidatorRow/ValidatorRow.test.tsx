@@ -240,35 +240,6 @@ describe("ValidatorRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render when network requires vote amount", () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-
-		const { container, asFragment } = render(
-			<table>
-				<tbody>
-					<ValidatorRow
-						index={0}
-						validator={validator}
-						selectedVotes={[]}
-						selectedUnvotes={[]}
-						availableBalance={wallet.balance()}
-						setAvailableBalance={vi.fn()}
-						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
-						selectedWallet={wallet}
-					/>
-				</tbody>
-			</table>,
-		);
-
-		expect(screen.getByTestId("ValidatorVoteAmount")).toBeInTheDocument();
-
-		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-
-		votesAmountMinimumMock.mockRestore();
-	});
-
 	it("should render changed style when network requires vote amount", () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 

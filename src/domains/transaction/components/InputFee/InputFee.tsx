@@ -18,12 +18,12 @@ import { useTranslation } from "react-i18next";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { Network } from "@/app/lib/mainsail/network";
 
-export const calculateGasFee = (gasPrice?: BigNumber, gasLimit?: BigNumber): number => {
+export const calculateGasFee = (gasPrice?: BigNumber, gasLimit?: BigNumber): BigNumber => {
 	if (!gasPrice || !gasLimit) {
-		return 0;
+		return BigNumber.ZERO;
 	}
 
-	return UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei").toNumber();
+	return BigNumber.make(UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei"));
 };
 
 const FEE_DISPLAY_VALUE_DECIMALS = 8;

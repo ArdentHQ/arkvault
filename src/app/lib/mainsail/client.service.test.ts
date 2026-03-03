@@ -793,7 +793,7 @@ describe("ClientService", () => {
 
 			const walletToken1 = result.items()[0];
 			expect(walletToken1.address()).toBe(walletAddress1);
-			expect(walletToken1.balance().toHuman()).toBe(1);
+			expect(walletToken1.balance().toString()).toBe("1");
 			expect(walletToken1.token().address()).toBe(tokenAddress);
 			expect(walletToken1.token().symbol()).toBe("TEST");
 			expect(walletToken1.token().name()).toBe("Test Token");
@@ -801,7 +801,7 @@ describe("ClientService", () => {
 
 			const walletToken2 = result.items()[1];
 			expect(walletToken2.address()).toBe(walletAddress2);
-			expect(walletToken2.balance().toHuman()).toBe(2);
+			expect(walletToken2.balance().toString()).toBe("2");
 		});
 
 		it("should handle multiple tokens across multiple wallets", async () => {

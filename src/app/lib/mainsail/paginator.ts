@@ -37,6 +37,10 @@ export abstract class Paginator<T> {
 		return this.#pagination.last;
 	}
 
+	public totalCount(): number {
+		return +(this.#pagination.totalCount ?? 0);
+	}
+
 	public hasMorePages(): boolean {
 		return Boolean(this.nextPage());
 	}

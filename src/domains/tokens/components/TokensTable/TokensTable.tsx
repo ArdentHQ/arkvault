@@ -57,7 +57,6 @@ export const TokensTable = ({
 	const onSaveHandler = () => {
 		// persist changes
 		toggleManageMode(false);
-		console.log("onSave");
 	};
 
 	const onCancelHandler = () => {

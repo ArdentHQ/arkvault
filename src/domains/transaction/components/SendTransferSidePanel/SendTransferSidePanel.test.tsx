@@ -48,10 +48,14 @@ const signedTransactionMock = {
 	gasLimit: () => transactionFixture.data.gasLimit,
 	gasUsed: () => transactionFixture.data.receipt.gasUsed,
 	hash: () => transactionFixture.data.hash,
+	isApprove: () => false,
 	isConfirmed: () => false,
+	isContractDeployment: () => false,
+	isContractTransaction: () => false,
 	isMultiPayment: () => false,
 	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
+	isRevoke: () => false,
 	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
@@ -147,7 +151,7 @@ describe("SendTransferSidePanel", () => {
 	beforeEach(() => {
 		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 
-		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("1000000000000000000"));
 
 		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({
 			confirmations: 10,
@@ -401,7 +405,7 @@ describe("SendTransferSidePanel", () => {
 				return derivationPath;
 			}
 		});
-		vi.spyOn(wallet, "balance").mockReturnValue(1_000_000_000_000_000_000);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("1000000000000000000"));
 
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,

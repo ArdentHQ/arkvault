@@ -380,6 +380,7 @@ export class ClientService {
 			next: getPage(body.meta.next) || undefined,
 			prev: getPage(body.meta.previous) || undefined,
 			self: getPage(body.meta.self) || undefined,
+			totalCount: body.meta.totalCount || undefined,
 		};
 	}
 

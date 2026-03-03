@@ -1,6 +1,10 @@
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { Address, TransactionTypeIdentifier, UnitConverter } from "@arkecosystem/typescript-crypto";
-import { MultiPaymentItem, MultiPaymentRecipient } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
+import {
+	ApproveDetails,
+	MultiPaymentItem,
+	MultiPaymentRecipient,
+} from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 import { RawTransactionData, SignedTransactionObject } from "@/app/lib/mainsail/signed-transaction.dto.contract";
 
 import { BigNumber } from "@/app/lib/helpers";
@@ -168,6 +172,11 @@ export class SignedTransactionData {
 		return key.slice(2); // removes 0x part
 	}
 
+	public approveDetails(): ApproveDetails {
+		const [address, amount] = decodeFunctionData(this.normalizedData() as Hex, AbiType.Token).args;
+		return { address, amount };
+	}
+
 	public isMultiPayment(): boolean {
 		return TransactionTypeIdentifier.isMultiPayment(this.signedData.data);
 	}
@@ -292,6 +301,21 @@ export class SignedTransactionData {
 
 	public isTokenTransfer(): boolean {
 		return TransactionTypeIdentifier.isTokenTransfer(this.signedData.data);
+	}
+
+	public isContractTransaction(): boolean {
+		return [
+			this.isValidatorRegistration(),
+			this.isValidatorResignation(),
+			this.isVote(),
+			this.isUnvote(),
+			this.isUsernameRegistration(),
+			this.isUsernameResignation(),
+		].some(Boolean);
+	}
+
+	public isContractDeployment() {
+		return [!this.isContractTransaction(), !this.to()].every(Boolean);
 	}
 
 	public isApprove(): boolean {

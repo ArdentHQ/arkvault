@@ -13,6 +13,7 @@ export interface MetaPagination {
 	self: ClientPaginatorCursor;
 	next: ClientPaginatorCursor;
 	last: ClientPaginatorCursor;
+	totalCount?: ClientPaginatorCursor;
 }
 
 export interface BroadcastResponse {
@@ -68,6 +69,7 @@ export interface WalletTokensQuery extends ClientPagination {
 }
 
 export interface TokenTransfersQuery extends ClientPagination {
+	addresses?: string[];
 	from?: string[];
 	to?: string[];
 	page?: number;

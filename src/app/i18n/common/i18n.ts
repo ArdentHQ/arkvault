@@ -30,6 +30,7 @@ export const translations = {
 	AMOUNT_PLACEHOLDER: "Enter an amount",
 	AND: "and",
 	APPEARANCE: "Appearance",
+	APPROVE: "Approve",
 	APP_NAME: "<strong>ARK</strong>Vault",
 	ARK: "ARK",
 	ARKVAULT: "ARK Vault",
@@ -454,6 +455,7 @@ export const translations = {
 	RESULTS: "Results",
 	RETRY: "Retry",
 	RETURN: "Return",
+	REVOKE: "Revoke",
 	SAVE: "Save",
 	SAVE_FILE: {
 		ERROR: "Could not save file: {{error}}",
@@ -537,6 +539,7 @@ export const translations = {
 	TX_ID: "Tx ID",
 	TYPE: "Type",
 	TYPES: "Types",
+	UNLIMITED: "Unlimited",
 	UNLOCKED_AMOUNT: "Unlocked Amount",
 	UNSELECT: "Unselect",
 	UNSELECTED: "Unselected",

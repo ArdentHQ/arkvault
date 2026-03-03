@@ -8,6 +8,7 @@ import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
 import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { ApproveDetails } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 
 export class ExtendedSignedTransactionData {
 	readonly #data: SignedTransactionData;
@@ -196,6 +197,10 @@ export class ExtendedSignedTransactionData {
 		return this.#data.validatorPublicKey();
 	}
 
+	public approveDetails(): ApproveDetails {
+		return this.#data.approveDetails();
+	}
+
 	public payments(): { recipientId: string; amount: number }[] {
 		return this.#data.payments().map((payment) => ({
 			amount: payment.amount.toHuman(),
@@ -272,5 +277,13 @@ export class ExtendedSignedTransactionData {
 
 	public isBatchTransfer(): boolean {
 		return this.#data.isBatchTransfer();
+	}
+
+	public isContractDeployment() {
+		return this.#data.isContractDeployment();
+	}
+
+	public isContractTransaction() {
+		return this.#data.isContractTransaction();
 	}
 }

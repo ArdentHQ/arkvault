@@ -454,6 +454,19 @@ describe("SignedTransactionData", () => {
 		});
 	});
 
+	describe("approveDetails", () => {
+		it("should decode approve details correctly", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(DecodeFunctionDataMock, "decodeFunctionData").mockReturnValue({
+				args: ["0x0fdAb71F04aDadF40964C5Fd9c95886740f0591C", BigInt("999999999999999983222784")],
+			});
+
+			const details = transaction.approveDetails();
+			expect(details.address).toBe("0x0fdAb71F04aDadF40964C5Fd9c95886740f0591C");
+			expect(details.amount).toBe(BigInt("999999999999999983222784"));
+		});
+	});
+
 	describe("validatorPublicKey", () => {
 		it("should decode validator public key and remove 0x prefix", () => {
 			transaction.configure(mockSignedData, mockSerialized);
@@ -725,6 +738,28 @@ describe("SignedTransactionData", () => {
 			transaction.configure(mockSignedData, mockSerialized);
 			vi.spyOn(TransactionTypeIdentifierMock.TransactionTypeIdentifier, "isBatchTransfer").mockReturnValue(true);
 			expect(transaction.isBatchTransfer()).toBe(true);
+		});
+	});
+
+	describe("isContractTransaction", () => {
+		it("should return true if it is a contract transaction", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(transaction, "isValidatorRegistration").mockReturnValue(true);
+			vi.spyOn(transaction, "isValidatorResignation").mockReturnValue(false);
+			vi.spyOn(transaction, "isVote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUnvote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
+			expect(transaction.isContractTransaction()).toBe(true);
+		});
+	});
+
+	describe("isContractDeployment", () => {
+		it("should return true if it is not a contract transaction and has no recipient", () => {
+			transaction.configure(mockSignedData, mockSerialized);
+			vi.spyOn(transaction, "isContractTransaction").mockReturnValue(false);
+			vi.spyOn(transaction, "to").mockReturnValue("");
+			expect(transaction.isContractDeployment()).toBe(true);
 		});
 	});
 });
