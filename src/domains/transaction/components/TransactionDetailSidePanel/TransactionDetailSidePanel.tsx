@@ -62,7 +62,7 @@ export const TransactionDetailContent = ({
 	});
 
 	const interactedWith: string | undefined = useMemo(() => {
-		if (isContractDeployment(transaction) && transaction.confirmations() > 0) {
+		if (transaction.isContractDeployment() && transaction.confirmations() > 0) {
 			return transaction.data().data.receipt.deployedContractAddress;
 		}
 
@@ -85,11 +85,7 @@ export const TransactionDetailContent = ({
 						isMultiPayment={transaction.isMultiPayment()}
 						recipients={recipients}
 						labelClassName={labelClassName}
-						interactedWith={
-							transaction.isContractDeployment() && transaction.confirmations() > 0
-								? transaction.data().data.receipt.deployedContractAddress
-								: undefined
-						}
+						interactedWith={interactedWith}
 					/>
 				</DetailPadded>
 
