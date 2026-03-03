@@ -43,7 +43,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 		tokens: [],
 	});
 
-	const {state} = useEnvironmentContext();
+	const { state } = useEnvironmentContext();
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 

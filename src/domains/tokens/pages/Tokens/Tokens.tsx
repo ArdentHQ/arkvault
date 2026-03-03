@@ -24,11 +24,11 @@ export const Tokens = () => {
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
 
-	const { tokens, isLoadingTokens, isLoadingMore, isReloading, hasMore, hasEmptyResults, fetchMore, reload } = useProfileTokens({
-		profile: activeProfile,
-		wallets: activeProfile.wallets().selected(),
-	});
-
+	const { tokens, isLoadingTokens, isLoadingMore, isReloading, hasMore, hasEmptyResults, fetchMore, reload } =
+		useProfileTokens({
+			profile: activeProfile,
+			wallets: activeProfile.wallets().selected(),
+		});
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false);
