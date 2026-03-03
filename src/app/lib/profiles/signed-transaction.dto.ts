@@ -7,7 +7,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 import { ApproveDetails } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 
 export class ExtendedSignedTransactionData {
@@ -59,8 +59,12 @@ export class ExtendedSignedTransactionData {
 		return this.#data.nonce();
 	}
 
-	public token(): TokenDTO | undefined {
+	public token(): TransactionToken | undefined {
 		return this.#data.token();
+	}
+
+	public tokens(): TransactionToken[] | undefined {
+		return this.#data.tokens();
 	}
 
 	public timestamp(): DateTime {

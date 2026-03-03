@@ -34,6 +34,7 @@ describe("useProfileTokens", () => {
 			next: 0,
 			prev: undefined,
 			self: undefined,
+			totalCount: 0,
 		});
 
 		const selectedMock = vi.spyOn(profile.tokens(), "selected").mockReturnValue(tokensCollection);
