@@ -1108,7 +1108,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
                   <div
                     class="dark:text-theme-dark-50 text-theme-secondary-900 dim:text-theme-dim-50 items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]"
                   >
-                    1
+                    0
                   </div>
                 </div>
                 <div
