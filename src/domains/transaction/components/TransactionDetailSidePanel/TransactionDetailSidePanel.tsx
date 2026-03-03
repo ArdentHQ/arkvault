@@ -67,7 +67,7 @@ export const TransactionDetailContent = ({
 		}
 
 		if (transaction.isTokenTransfer()) {
-			return transaction.token().token().address();
+			return transaction.token() ? transaction.token().token().address() : transaction.to();
 		}
 	}, [transaction]);
 

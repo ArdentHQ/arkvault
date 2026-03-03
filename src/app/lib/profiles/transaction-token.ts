@@ -18,7 +18,7 @@ export class TransactionToken {
 	}
 
 	value(): BigNumber {
-		return BigNumber.make(this.#data.value, this.token().decimals());
+		return BigNumber.make(this.#data.value, this.token().decimals()).divide(BigNumber.powerOfTen(this.token().decimals()));
 	}
 
 	index(): number {
