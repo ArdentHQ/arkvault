@@ -73,7 +73,7 @@ export class TokenService {
 					.wallets()
 					.selected()
 					.map((wallet) => wallet.address()),
-				minBalance: hideDustTokens ? this.#dustBalanceThreshold : undefined,
+				minBalance: hideDustTokens ? this.#dustBalanceThreshold : "0",
 				...(query ?? {}),
 			});
 
