@@ -694,7 +694,7 @@ describe("ClientService", () => {
 			expect(result.items()).toHaveLength(1);
 			expect(result.items()[0].hash()).toBe(tokenTransferMockData.transactionHash);
 			expect(result.items()[0].from()).toBe(tokenTransferMockData.from);
-			expect(result.items()[0].to()).toBe(tokenTransferMockData.token.address);
+			expect(result.items()[0].to()).toBe(tokenTransferMockData.to);
 			expect(result.items()[0].tokens()?.[0].to()).toBe(tokenTransferMockData.to);
 			expect(result.items()[0].tokens()?.[0].value().toString()).toBe(tokenTransferMockData.value);
 		});
