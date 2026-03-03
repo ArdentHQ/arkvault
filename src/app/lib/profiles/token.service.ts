@@ -73,9 +73,7 @@ export class TokenService {
 				...(query ?? {}),
 			});
 
-			const aggregated = this.#aggregateTokens(response.items());
-
-			this.#walletTokensCollection = new WalletTokenCollection(aggregated, response.getPagination());
+			this.#walletTokensCollection = new WalletTokenCollection(response.items(), response.getPagination());
 		} catch {
 			this.#walletTokensCollection = new WalletTokenCollection([], {
 				last: undefined,
@@ -115,6 +113,16 @@ export class TokenService {
 
 	selected(): WalletTokenCollection {
 		return this.#walletTokensCollection;
+	}
+
+	aggregated(): WalletTokenCollection {
+		return new WalletTokenCollection(this.#aggregateTokens(this.#walletTokensCollection.items()), {
+			last: this.#walletTokensCollection.lastPage(),
+			next: this.#walletTokensCollection.nextPage(),
+			prev: this.#walletTokensCollection.previousPage(),
+			self: undefined,
+			totalCount: this.#walletTokensCollection.totalCount(),
+		});
 	}
 
 	#setTransactionMetadata(transactions: ConfirmedTransactionDataCollection, queryAddresses?: string[]): void {
