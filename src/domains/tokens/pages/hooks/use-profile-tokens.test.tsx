@@ -85,7 +85,7 @@ describe("useProfileTokens", () => {
 		};
 
 		const selectedSpy = vi
-			.spyOn(profile.tokens(), "selected")
+			.spyOn(profile.tokens(), "aggregated")
 			.mockReturnValueOnce(mockFirstPage as any)
 			.mockReturnValueOnce(mockSecondPage as any);
 
@@ -111,7 +111,7 @@ describe("useProfileTokens", () => {
 	it("should update hasEmptyResults when no tokens are loaded", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockReturnValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);
@@ -130,7 +130,7 @@ describe("useProfileTokens", () => {
 	it("should set hasMore to false when there are no more pages", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockReturnValue({
 			hasMorePages: () => false,
 			items: () => [
 				{
@@ -160,7 +160,7 @@ describe("useProfileTokens", () => {
 	it("should handle errors during token fetching", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockRejectedValue(new Error("Fetch error"));
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockRejectedValue(new Error("Fetch error"));
 
 		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
 			wrapper,
@@ -176,7 +176,7 @@ describe("useProfileTokens", () => {
 		const firstWallet = [wallets[0]];
 		const secondWallet = [wallets[1]];
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected");
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated");
 
 		const { result, rerender } = renderHook(({ wallets }) => useProfileTokens({ profile, wallets }), {
 			initialProps: { wallets: firstWallet },

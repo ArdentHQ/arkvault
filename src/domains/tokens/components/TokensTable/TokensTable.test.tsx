@@ -34,7 +34,7 @@ describe("TokensTable", () => {
 	});
 
 	it.each(["xs"])("should show no results message if profile has no tokens in %s", async (breakpoint) => {
-		const emptyResponseMock = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
+		const emptyResponseMock = vi.spyOn(profile.tokens(), "aggregated").mockReturnValue({
 			hasMorePages: () => false,
 			items: () => [],
 		});
