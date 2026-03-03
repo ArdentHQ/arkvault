@@ -244,7 +244,7 @@ export const useSendTransferForm = ({
 			previousTokenContractAddress.current = tokenContractAddress;
 			setValue("tokenContractAddress", tokenContractAddress, { shouldDirty: false, shouldValidate: false });
 		}
-	}, [tokenContractAddress, setValue, getValues]);
+	}, [tokenContractAddress, setValue]);
 
 	return {
 		form,
