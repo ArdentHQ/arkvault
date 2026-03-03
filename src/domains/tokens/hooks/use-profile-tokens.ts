@@ -23,9 +23,9 @@ export const useProfileTokens = ({ profile }: { profile: Contracts.IProfile }) =
 	}, [profile, reload]);
 
 	return {
+		aggregated: profile.tokens().aggregated(),
 		isLoading,
 		reload,
 		tokens: profile.tokens().selected().items(),
-		aggregated: profile.tokens().aggregated(),
 	};
 };
