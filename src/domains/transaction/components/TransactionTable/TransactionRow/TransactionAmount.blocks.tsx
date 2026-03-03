@@ -22,7 +22,7 @@ export const TransactionAmountLabel = ({
 	const transactionToken = "token" in transaction ? transaction.token() : undefined;
 
 	const currency = transactionToken ? transactionToken.token().displaySymbol() : transaction.wallet().currency();
-	const value = transactionToken ? transactionToken.value().toHuman() : transaction.value();
+	const value = transactionToken ? transactionToken.value() : transaction.value();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
 	return (
