@@ -5,6 +5,7 @@ import { SortBy } from "@/app/components/Table";
 import { delay } from "@/utils/delay";
 import { WalletTokensQuery } from "@/app/lib/mainsail/client.contract";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { useEnvironmentContext } from "@/app/contexts";
 
 interface TokensState {
 	tokens: WalletToken[];
@@ -33,12 +34,16 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 
 	const orderBy = sortBy; // format sortBy based on API needs
 
+	const [isReloading, setIsReloading] = useState(false);
+
 	const [{ tokens, isLoadingTokens, isLoadingMore, hasMore }, setState] = useState<TokensState>({
 		hasMore: true,
 		isLoadingMore: false,
 		isLoadingTokens: true,
 		tokens: [],
 	});
+
+	const {state} = useEnvironmentContext();
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
@@ -62,7 +67,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 		};
 
 		delay(() => loadTokens(), 0);
-	}, [selectedWalletAddresses, orderBy]);
+	}, [selectedWalletAddresses, orderBy, state]);
 
 	const fetchTokens = useCallback(
 		async ({ wallets, page }: FetchTokenProperties) => {
@@ -140,7 +145,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 				interval: 15_000,
 			},
 		],
-		[walletAddressesStr],
+		[walletAddressesStr, state],
 	);
 
 	const { start, stop } = useSynchronizer(jobs);
@@ -152,12 +157,20 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 
 	const hasEmptyResults = useMemo(() => tokens.length === 0 && !isLoadingTokens, [isLoadingTokens, tokens.length]);
 
+	const reload = useCallback(async () => {
+		setIsReloading(true);
+		await profile.tokens().sync();
+		setIsReloading(false);
+	}, [profile]);
+
 	return {
 		fetchMore,
 		hasEmptyResults,
 		hasMore,
 		isLoadingMore,
 		isLoadingTokens,
+		isReloading,
+		reload,
 		setSortBy,
 		sortBy,
 		tokens,

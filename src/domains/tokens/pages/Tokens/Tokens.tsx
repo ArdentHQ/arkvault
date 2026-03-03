@@ -12,7 +12,7 @@ import { TokensTable } from "@/domains/tokens/components/TokensTable/TokensTable
 import { Panel, SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSidepanel/TokensDetailSidepanel";
-import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { TokenTransfers } from "@/domains/tokens/components/TokenTransfers";
 
@@ -23,7 +23,12 @@ export const Tokens = () => {
 	const { openPanel } = usePanels();
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
-	const { reload, isLoading } = useProfileTokens({ profile: activeProfile });
+
+	const { tokens, isLoadingTokens, isLoadingMore, isReloading, hasMore, hasEmptyResults, fetchMore, reload } = useProfileTokens({
+		profile: activeProfile,
+		wallets: activeProfile.wallets().selected(),
+	});
+
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false);
@@ -49,7 +54,7 @@ export const Tokens = () => {
 			>
 				{activeProfile.wallets().selected().length > 0 && (
 					<TokenHeader
-						isLoading={isLoading}
+						isLoading={isLoadingTokens || isReloading}
 						profile={activeProfile}
 						onOpenAddressSidepanel={() => {
 							if (isManageMode) {
@@ -106,6 +111,12 @@ export const Tokens = () => {
 					isManageMode={isManageMode}
 					setManageMode={setManageMode}
 					onClick={(walletToken) => setTokenModelItem(walletToken)}
+					tokens={tokens}
+					isLoadingTokens={isLoadingTokens}
+					isLoadingMore={isLoadingMore}
+					hasMore={!!hasMore}
+					fetchMore={fetchMore}
+					hasEmptyResults={hasEmptyResults}
 				/>
 			)}
 
