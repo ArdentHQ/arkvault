@@ -33,6 +33,25 @@ describe("TokensTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it.each(["xs"])("should show no results message if profile has no tokens in %s", async (breakpoint) => {
+		const emptyResponseMock = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+		const { asFragment } = renderResponsiveWithRoute(
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
+			breakpoint as LayoutBreakpoint,
+			{ route },
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("NoResultsMessage")[0]).toBeInTheDocument();
+		});
+		expect(asFragment()).toMatchSnapshot();
+
+		emptyResponseMock.mockRestore();
+	});
+
 	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
