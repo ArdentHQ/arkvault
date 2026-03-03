@@ -75,7 +75,7 @@ export const useTokenTransfers = ({ profile, wallets, limit = 30 }: TokenTransfe
 			}
 
 			const queryParameters: TokenTransfersQuery = {
-				from: wallets.map((wallet) => wallet.address()),
+				addresses: wallets.map((wallet) => wallet.address()),
 				limit,
 				page,
 				// orderBy,
