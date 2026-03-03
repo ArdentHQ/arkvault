@@ -9,7 +9,8 @@ import { DateTime } from "@/app/lib/intl";
 import { AbiType, decodeFunctionData } from "./helpers/decode-function-data";
 import { AddressService } from "./address.service";
 import { TransactionTypeIdentifier, UnitConverter } from "@arkecosystem/typescript-crypto";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { TransactionTokenData } from "@/app/lib/profiles/token.contracts";
 
 export type KeyValuePair = Record<string, any>;
 
@@ -106,9 +107,16 @@ export abstract class TransactionData {
 		return TransactionTypeIdentifier.isBatchTransfer(this.data.data);
 	}
 
-	public token(): TokenDTO | undefined {
-		if (this.isTokenTransfer() && this.data.token) {
-			return new TokenDTO(this.data.token);
+	public token(): TransactionToken | undefined {
+		const tokens = this.tokens();
+		if (tokens) {
+			return tokens[0];
+		}
+	}
+
+	public tokens(): TransactionToken[] | undefined {
+		if (this.isTokenTransfer() && this.data.tokens) {
+			return this.data.tokens.map((token: TransactionTokenData) => new TransactionToken(token));
 		}
 	}
 

@@ -1,6 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
-import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 export interface MultiPaymentRecipient {
 	address: string;
@@ -63,7 +63,9 @@ export interface ConfirmedTransactionData {
 
 	outputs(): UnspentTransactionData[];
 
-	token(): TokenDTO | undefined;
+	token(): TransactionToken | undefined;
+
+	tokens(): TransactionToken[] | undefined;
 
 	isConfirmed(): boolean;
 
