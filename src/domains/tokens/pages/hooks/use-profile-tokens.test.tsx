@@ -213,69 +213,73 @@ describe("useProfileTokens", () => {
 		syncSpy.mockRestore();
 	});
 
-	it("should check for new tokens periodically", async () => {
-		vi.useFakeTimers({ shouldAdvanceTime: true });
+	it(
+		"should check for new tokens periodically",
+		async () => {
+			vi.useFakeTimers({ shouldAdvanceTime: true });
 
-		const wallets = profile.wallets().values();
-		const walletAddress = wallets[0].address();
-		let callCount = 0;
+			const wallets = profile.wallets().values();
+			const walletAddress = wallets[0].address();
+			let callCount = 0;
 
-		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", () => {
-				callCount++;
+			server.use(
+				http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", () => {
+					callCount++;
 
-				const isFirstCall = callCount === 1;
+					const isFirstCall = callCount === 1;
 
-				return HttpResponse.json({
-					data: [
-						{
-							addresses: {
-								[walletAddress]: isFirstCall ? "1000000000000000000" : "2000000000000000000",
+					return HttpResponse.json({
+						data: [
+							{
+								addresses: {
+									[walletAddress]: isFirstCall ? "1000000000000000000" : "2000000000000000000",
+								},
+								decimals: 18,
+								name: isFirstCall ? "Token 1" : "Token 2",
+								supply: "20000000000000000000000",
+								symbol: isFirstCall ? "TKN1" : "TKN2",
+								token: isFirstCall ? "0xToken1" : "0xToken2",
 							},
-							decimals: 18,
-							name: isFirstCall ? "Token 1" : "Token 2",
-							supply: "20000000000000000000000",
-							symbol: isFirstCall ? "TKN1" : "TKN2",
-							token: isFirstCall ? "0xToken1" : "0xToken2",
-						},
-					],
-					meta: {},
-				});
-			}),
-		);
+						],
+						meta: {},
+					});
+				}),
+			);
 
-		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
-			wrapper,
-		});
+			const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
+				wrapper,
+			});
 
-		await waitFor(() => {
-			expect(result.current.isLoadingTokens).toBe(false);
-		});
+			await waitFor(() => {
+				expect(result.current.isLoadingTokens).toBe(false);
+			});
 
-		// Verify that the first token is present after initial load
-		expect(result.current.tokens).toHaveLength(1);
-		expect(result.current.tokens[0].token().address()).toBe("0xToken1");
-		expect(result.current.tokens[0].token().name()).toBe("Token 1");
-		expect(result.current.tokens[0].balance().toString()).toBe("1");
+			// Verify that the first token is present after initial load
+			expect(result.current.tokens).toHaveLength(1);
+			expect(result.current.tokens[0].token().address()).toBe("0xToken1");
+			expect(result.current.tokens[0].token().name()).toBe("Token 1");
+			expect(result.current.tokens[0].balance().toString()).toBe("1");
 
-		await act(async () => {
-			await vi.advanceTimersByTimeAsync(15_000);
-		});
+			await act(async () => {
+				await vi.advanceTimersByTimeAsync(15_000);
+			});
 
-		await waitFor(
-			() => {
-				expect(result.current.tokens).toHaveLength(2);
-			},
-			{ timeout: 8000 },
-		);
+			await waitFor(
+				() => {
+					expect(result.current.tokens).toHaveLength(2);
+				},
+				{ timeout: 8000 },
+			);
 
-		// Verify that after checkNewTokens runs, the second token is present
-		expect(result.current.tokens[0].token().address()).toBe("0xToken2");
-		expect(result.current.tokens[0].token().name()).toBe("Token 2");
-		expect(result.current.tokens[0].balance().toString()).toBe("2");
+			// Verify that after checkNewTokens runs, the second token is present
+			expect(result.current.tokens[0].token().address()).toBe("0xToken2");
+			expect(result.current.tokens[0].token().name()).toBe("Token 2");
+			expect(result.current.tokens[0].balance().toString()).toBe("2");
 
-		vi.useRealTimers();
-	}, {timeout: 8000});
+			vi.useRealTimers();
+		},
+		{ timeout: 8000 },
+	);
 
 	it("should not check for new tokens when wallets array is empty", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
