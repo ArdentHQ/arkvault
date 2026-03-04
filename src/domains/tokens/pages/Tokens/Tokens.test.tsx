@@ -14,7 +14,7 @@ describe("Tokens", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(<Tokens />, {
+		render(<Tokens />, {
 			route,
 		});
 
