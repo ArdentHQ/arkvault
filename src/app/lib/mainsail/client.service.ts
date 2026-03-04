@@ -146,7 +146,6 @@ export class ClientService {
 						status: 1,
 					},
 					...transfer,
-					to: transfer.token.address,
 					tokens: [
 						{
 							from: transfer.from,
