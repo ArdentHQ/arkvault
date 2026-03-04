@@ -166,6 +166,7 @@ export const TransactionDetailSidePanel = ({
 	const transactionId = transactionItem.hash();
 
 	const { isLoading, transaction: confirmedTransaction } = useConfirmedTransaction({
+		disabled: !transactionItem.isTokenTransfer(),
 		transactionId,
 		wallet,
 	});
