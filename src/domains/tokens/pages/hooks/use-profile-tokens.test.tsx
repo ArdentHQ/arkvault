@@ -219,32 +219,46 @@ describe("useProfileTokens", () => {
 			vi.useFakeTimers({ shouldAdvanceTime: true });
 
 			const wallets = profile.wallets().values();
-			const walletAddress = wallets[0].address();
-			let callCount = 0;
 
-			server.use(
-				http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", () => {
-					callCount++;
+			const mockFirstPage = {
+				hasMorePages: () => true,
+				items: () => [
+					{
+						address: () => wallets[0].address(),
+						balance: () => "1",
+						token: () => ({
+							address: () => "0xToken1",
+							decimals: () => 18,
+							displaySymbol: () => "TKN1",
+							name: () => "Token 1",
+							symbol: () => "TKN1",
+						}),
+					},
+				],
+				count: () => 1,
+			};
 
-					const isFirstCall = callCount === 1;
+			const mockSecondPage = {
+				hasMorePages: () => false,
+				items: () => [
+					{
+						address: () => wallets[0].address(),
+						balance: () => "2",
+						token: () => ({
+							address: () => "0xToken2",
+							decimals: () => 18,
+							displaySymbol: () => "TKN2",
+							name: () => "Token 2",
+							symbol: () => "TKN2",
+						}),
+					},
+				],
+			};
 
-					return HttpResponse.json({
-						data: [
-							{
-								addresses: {
-									[walletAddress]: isFirstCall ? "1000000000000000000" : "2000000000000000000",
-								},
-								decimals: 18,
-								name: isFirstCall ? "Token 1" : "Token 2",
-								supply: "20000000000000000000000",
-								symbol: isFirstCall ? "TKN1" : "TKN2",
-								token: isFirstCall ? "0xToken1" : "0xToken2",
-							},
-						],
-						meta: {},
-					});
-				}),
-			);
+			const selectedSpy = vi
+				.spyOn(profile.tokens(), "aggregated")
+				.mockReturnValueOnce(mockFirstPage as any)
+				.mockReturnValueOnce(mockSecondPage as any);
 
 			const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
 				wrapper,
@@ -255,7 +269,7 @@ describe("useProfileTokens", () => {
 			});
 
 			// Verify that the first token is present after initial load
-			expect(result.current.tokens).toHaveLength(1);
+			expect(result.current.tokens.length).toBe(1);
 			expect(result.current.tokens[0].token().address()).toBe("0xToken1");
 			expect(result.current.tokens[0].token().name()).toBe("Token 1");
 			expect(result.current.tokens[0].balance().toString()).toBe("1");
@@ -277,6 +291,7 @@ describe("useProfileTokens", () => {
 			expect(result.current.tokens[0].balance().toString()).toBe("2");
 
 			vi.useRealTimers();
+			selectedSpy.mockRestore();
 		},
 		{ timeout: 8000 },
 	);
