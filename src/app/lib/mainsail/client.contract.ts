@@ -66,6 +66,7 @@ export interface RangeCriteria {
 export interface WalletTokensQuery extends ClientPagination {
 	addresses: string[];
 	page?: number;
+	minBalance?: string;
 }
 
 export interface TokenTransfersQuery extends ClientPagination {

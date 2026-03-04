@@ -7,15 +7,68 @@ import { Contracts } from "@/app/lib/profiles";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import * as useWalletActionsHook from "@/domains/wallet/hooks";
 import { expect } from "vitest";
+import { WalletTokenRepository } from "@/app/lib/profiles/wallet-token.repository";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 let profile: Contracts.IProfile;
 let route: string;
 let useRandomNumberSpy: vi.SpyInstance;
+let tokens: WalletToken[];
+
+const defaultProps = (overrides) => ({
+	fetchMore: vi.fn(),
+	hasEmptyResults: false,
+	hasMore: false,
+	isLoadingMore: false,
+	isLoadingTokens: false,
+	tokens,
+	...overrides,
+});
 
 describe("TokensTable", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		route = `/profiles/${profile.id()}/tokens`;
+
+		const repo = new WalletTokenRepository(profile.activeNetwork(), profile);
+
+		const wallet = profile.wallets().first();
+
+		repo.create({
+			token: new TokenDTO({
+				address: "0xabc",
+				decimals: 18,
+				deploymentHash: "0xabc",
+				name: "ABC",
+				symbol: "ABC",
+				totalSupply: "10000",
+			}),
+			walletToken: new WalletTokenDTO({
+				address: wallet.address(),
+				balance: "100",
+				tokenAddress: "0xabc",
+			}),
+		});
+
+		repo.create({
+			token: new TokenDTO({
+				address: "0xabd",
+				decimals: 18,
+				deploymentHash: "0xabd",
+				name: "DEF",
+				symbol: "DEF",
+				totalSupply: "20000",
+			}),
+			walletToken: new WalletTokenDTO({
+				address: wallet.address(),
+				balance: "200",
+				tokenAddress: "0xabd",
+			}),
+		});
+
+		tokens = repo.values();
 
 		useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 	});
@@ -25,9 +78,12 @@ describe("TokensTable", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = render(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, {
-			route,
-		});
+		const { asFragment } = render(
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} {...defaultProps({ tokens })} />,
+			{
+				route,
+			},
+		);
 
 		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -38,8 +94,9 @@ describe("TokensTable", () => {
 			hasMorePages: () => false,
 			items: () => [],
 		});
+
 		const { asFragment } = renderResponsiveWithRoute(
-			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} {...defaultProps({ tokens: [] })} />,
 			breakpoint as LayoutBreakpoint,
 			{ route },
 		);
@@ -47,14 +104,13 @@ describe("TokensTable", () => {
 		await waitFor(() => {
 			expect(screen.getAllByTestId("NoResultsMessage")[0]).toBeInTheDocument();
 		});
-		expect(asFragment()).toMatchSnapshot();
 
-		emptyResponseMock.mockRestore();
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
-			<TokensTable isManageMode={false} setManageMode={vi.fn()} />,
+			<TokensTable isManageMode={false} setManageMode={vi.fn()} {...defaultProps({ tokens })} />,
 			breakpoint as LayoutBreakpoint,
 			{ route },
 		);
@@ -65,7 +121,15 @@ describe("TokensTable", () => {
 		const user = userEvent.setup();
 		const onClickMock = vi.fn();
 
-		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} onClick={onClickMock} />, { route });
+		render(
+			<TokensTable
+				isManageMode={false}
+				setManageMode={vi.fn()}
+				onClick={onClickMock}
+				{...defaultProps({ tokens })}
+			/>,
+			{ route },
+		);
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
@@ -85,7 +149,7 @@ describe("TokensTable", () => {
 			handleTokenSend: handleSendMock,
 		});
 
-		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, { route });
+		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} {...defaultProps({ tokens })} />, { route });
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
@@ -98,7 +162,7 @@ describe("TokensTable", () => {
 	});
 
 	it("should toggle hide dust tokens", async () => {
-		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} />, {
+		render(<TokensTable isManageMode={false} setManageMode={vi.fn()} {...defaultProps({ tokens })} />, {
 			route,
 		});
 
@@ -112,7 +176,7 @@ describe("TokensTable", () => {
 	it("should call setManageMode when Manage button is clicked", async () => {
 		const setManageModeMock = vi.fn();
 
-		render(<TokensTable isManageMode={false} setManageMode={setManageModeMock} />, {
+		render(<TokensTable isManageMode={false} setManageMode={setManageModeMock} {...defaultProps({ tokens })} />, {
 			route,
 		});
 
@@ -127,7 +191,7 @@ describe("TokensTable", () => {
 	it("should call setManageMode when Save button is clicked", async () => {
 		const setManageModeMock = vi.fn();
 
-		render(<TokensTable isManageMode={true} setManageMode={setManageModeMock} />, {
+		render(<TokensTable isManageMode={true} setManageMode={setManageModeMock} {...defaultProps({ tokens })} />, {
 			route,
 		});
 
@@ -145,7 +209,7 @@ describe("TokensTable", () => {
 	it("should call setManageModel when Cancel button is clicked", async () => {
 		const setManageModeMock = vi.fn();
 
-		render(<TokensTable isManageMode={true} setManageMode={setManageModeMock} />, {
+		render(<TokensTable isManageMode={true} setManageMode={setManageModeMock} {...defaultProps({ tokens })} />, {
 			route,
 		});
 
@@ -161,9 +225,18 @@ describe("TokensTable", () => {
 	});
 
 	it("should show toggle row visibility", async () => {
-		render(<TokensTable isManageMode={true} setManageMode={vi.fn()} />, {
-			route,
-		});
+		render(
+			<TokensTable
+				isManageMode={true}
+				setManageMode={vi.fn()}
+				{...defaultProps({
+					tokens: tokens.slice(0, 1),
+				})}
+			/>,
+			{
+				route,
+			},
+		);
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
@@ -183,9 +256,18 @@ describe("TokensTable", () => {
 	});
 
 	it("should open delete token confirmation modal when delete button is clicked", async () => {
-		render(<TokensTable isManageMode={true} setManageMode={vi.fn()} />, {
-			route,
-		});
+		render(
+			<TokensTable
+				isManageMode={true}
+				setManageMode={vi.fn()}
+				{...defaultProps({
+					tokens: tokens.slice(0, 1),
+				})}
+			/>,
+			{
+				route,
+			},
+		);
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
@@ -203,9 +285,18 @@ describe("TokensTable", () => {
 	});
 
 	it("should close delete token confirmation modal when onClose is called", async () => {
-		render(<TokensTable isManageMode={true} setManageMode={vi.fn()} />, {
-			route,
-		});
+		render(
+			<TokensTable
+				isManageMode={true}
+				setManageMode={vi.fn()}
+				{...defaultProps({
+					tokens: tokens.slice(0, 1),
+				})}
+			/>,
+			{
+				route,
+			},
+		);
 
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 

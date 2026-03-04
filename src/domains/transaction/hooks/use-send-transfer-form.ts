@@ -1,6 +1,6 @@
 import { Networks, Services } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
+import { MutableRefObject, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";
 import { assertWallet } from "@/utils/assertions";
@@ -236,16 +236,15 @@ export const useSendTransferForm = ({
 		void trigger(["gasPrice", "gasLimit", "amount"]);
 	}, [gasLimitStr, gasPriceStr]);
 
-	useEffect(() => {
-		if (!tokenContractAddress) {
-			return;
-		}
+	const previousTokenContractAddress = useRef<string | undefined>(tokenContractAddress);
 
-		// Update initial default value if changed from parent component (e.g lazy field update) and the field is not dirty.
-		if (!formState.dirtyFields.tokenContractAddress && tokenContractAddress !== getValues("tokenContractAddress")) {
+	useEffect(() => {
+		// Update initial default value if changed from parent component (e.g lazy field update).
+		if (previousTokenContractAddress.current !== tokenContractAddress) {
+			previousTokenContractAddress.current = tokenContractAddress;
 			setValue("tokenContractAddress", tokenContractAddress, { shouldDirty: false, shouldValidate: false });
 		}
-	}, [tokenContractAddress, setValue, formState]);
+	}, [tokenContractAddress, setValue]);
 
 	return {
 		form,
