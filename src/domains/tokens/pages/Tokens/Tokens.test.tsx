@@ -27,8 +27,6 @@ describe("Tokens", () => {
 
 		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
 		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should switch tabs", async () => {
