@@ -1,5 +1,5 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
-import { http, HttpResponse } from "msw";
+import { http } from "msw";
 import { useProfileTokens } from "./use-profile-tokens";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
@@ -221,6 +221,7 @@ describe("useProfileTokens", () => {
 			const wallets = profile.wallets().values();
 
 			const mockFirstPage = {
+				count: () => 1,
 				hasMorePages: () => true,
 				items: () => [
 					{
@@ -235,7 +236,6 @@ describe("useProfileTokens", () => {
 						}),
 					},
 				],
-				count: () => 1,
 			};
 
 			const mockSecondPage = {
