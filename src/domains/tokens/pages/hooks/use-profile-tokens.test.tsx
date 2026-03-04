@@ -258,8 +258,12 @@ describe("useProfileTokens", () => {
 		let callCount = 0;
 		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockImplementation(() => {
 			callCount++;
-			if (callCount === 1) return mockFirstPage;
-			if (callCount === 2) return mockSecondPage;
+			if (callCount === 1) {
+				return mockFirstPage;
+			}
+			if (callCount === 2) {
+				return mockSecondPage;
+			}
 			return mockSecondPage;
 		});
 
