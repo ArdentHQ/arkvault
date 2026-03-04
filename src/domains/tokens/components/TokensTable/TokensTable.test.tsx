@@ -106,6 +106,7 @@ describe("TokensTable", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
+		emptyResponseMock.mockRestore();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s", (breakpoint) => {
