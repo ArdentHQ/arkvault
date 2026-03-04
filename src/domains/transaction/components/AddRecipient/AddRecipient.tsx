@@ -65,7 +65,7 @@ export const AddRecipient = ({
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
 
-	const { tokens, isLoading } = useProfileTokens({ profile });
+	const { aggregated: tokens, isLoading } = useProfileTokens({ profile });
 
 	const {
 		getValues,
