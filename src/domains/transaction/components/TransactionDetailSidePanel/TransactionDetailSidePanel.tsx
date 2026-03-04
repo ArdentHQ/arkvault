@@ -166,7 +166,7 @@ export const TransactionDetailSidePanel = ({
 	const transactionId = transactionItem.hash();
 
 	const { isLoading, transaction: confirmedTransaction } = useConfirmedTransaction({
-		disabled: !transactionItem.isTokenTransfer() || transactionItem.isConfirmed(),
+		disabled: transactionItem.isTokenTransfer() ? false : transactionItem.isConfirmed(),
 		transactionId,
 		wallet,
 	});
