@@ -6,7 +6,6 @@ import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTableFooter, TokensTableHeader } from "./TokensTable.blocks";
-import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { TokenRow } from "@/domains/tokens/components/TokenRow/TokenRow";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { DeleteTokenConfirmationModal } from "@/domains/tokens/components/DeleteTokenConfirmationModal/DeleteTokenConfirmationModal";
@@ -17,11 +16,23 @@ export const TokensTable = ({
 	isManageMode,
 	setManageMode,
 	skeletonRowsLimit = 8,
+	tokens,
+	isLoadingTokens,
+	isLoadingMore,
+	hasMore,
+	hasEmptyResults,
+	fetchMore,
 }: {
 	onClick?: (wallet: WalletToken) => void;
 	skeletonRowsLimit?: number;
 	isManageMode: boolean;
 	setManageMode: (isManageMode: boolean) => void;
+	tokens: WalletToken[];
+	isLoadingTokens: boolean;
+	isLoadingMore: boolean;
+	hasMore: boolean;
+	hasEmptyResults: boolean;
+	fetchMore: () => Promise<void>;
 }) => {
 	const { isMdAndAbove, isXs } = useBreakpoint();
 	const activeProfile = useActiveProfile();
@@ -64,11 +75,6 @@ export const TokensTable = ({
 	};
 
 	const wallets = activeProfile.wallets().selected();
-
-	const { tokens, isLoadingTokens, isLoadingMore, hasMore, hasEmptyResults, fetchMore } = useProfileTokens({
-		profile: activeProfile,
-		wallets,
-	});
 
 	const { handleTokenSend } = useWalletActions({ wallets });
 

@@ -9,12 +9,13 @@ import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction
 import { ExtendedConfirmedTransactionDataCollection } from "@/app/lib/profiles/transaction.collection";
 import { WalletTokenDTO } from "./wallet-token.dto";
 import { BigNumber } from "@/app/lib/helpers";
+import { ProfileSetting } from "./profile.enum.contract";
 import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
 	#network: Networks.Network;
-	// #dustBalanceThreshold = 1;
+	#dustBalanceThreshold = "0.01";
 	#walletTokensCollection: WalletTokenCollection;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
@@ -65,12 +66,15 @@ export class TokenService {
 			profile: this.#profile,
 		});
 
+		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
+
 		try {
 			const response = await clientService.tokenAddresses({
 				addresses: this.#profile
 					.wallets()
 					.selected()
 					.map((wallet) => wallet.address()),
+				minBalance: hideDustTokens ? this.#dustBalanceThreshold : "0",
 				...(query ?? {}),
 			});
 
