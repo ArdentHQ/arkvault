@@ -3,6 +3,8 @@ import { Contracts } from "@/app/lib/profiles";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { TFunction } from "i18next";
 
+export const DISPLAY_DECIMALS = 8;
+
 export const isNoDeviceError = (error: any) => {
 	if (!error) {
 		return false;
