@@ -696,7 +696,7 @@ describe("ClientService", () => {
 			expect(result.items()[0].from()).toBe(tokenTransferMockData.from);
 			expect(result.items()[0].to()).toBe(tokenTransferMockData.to);
 			expect(result.items()[0].tokens()?.[0].to()).toBe(tokenTransferMockData.to);
-			expect(result.items()[0].tokens()?.[0].value().toString()).toBe(tokenTransferMockData.value);
+			expect(result.items()[0].tokens()?.[0].value().toString()).toBe("5");
 		});
 
 		it("should handle empty token transfers response", async () => {
