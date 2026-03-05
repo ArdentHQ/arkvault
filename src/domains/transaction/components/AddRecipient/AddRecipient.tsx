@@ -19,7 +19,6 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
-import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 import cn from "classnames";
 
 const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
@@ -102,8 +101,6 @@ export const AddRecipient = ({
 			if (token) {
 				return token.balance();
 			}
-
-			return BigNumber.ZERO;
 		}
 
 		let senderBalance = BigNumber.make(wallet?.balance() || 0);
