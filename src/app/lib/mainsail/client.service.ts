@@ -140,6 +140,8 @@ export class ClientService {
 				new ConfirmedTransactionData().configure({
 					confirmations: 1,
 					data: transfer.functionSig,
+					gas: 0,
+					gasPrice: 0,
 					hash: transfer.transactionHash,
 					nonce: 0,
 					receipt: {

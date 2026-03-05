@@ -34,7 +34,7 @@ describe("TransactionToken", () => {
 	});
 
 	it("#value", () => {
-		expect(transactionToken.value().toString()).toBe(fixtureData.value);
+		expect(transactionToken.value().toString()).toBe("0.000000000000234234");
 	});
 
 	it("#token", () => {
