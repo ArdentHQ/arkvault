@@ -84,6 +84,7 @@ export const AddRecipient = ({
 		tokenContractAddress,
 	} = watch();
 	const { sendTransfer } = useValidation();
+	const selectedAsset = tokenContractAddress;
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string;
@@ -96,10 +97,14 @@ export const AddRecipient = ({
 			const token = wallet
 				.tokens()
 				.values()
-				.find((token) => token.token().address() === tokenContractAddress);
+				.find((token) => token.token().address() === selectedAsset);
 
 			if (token) {
 				return token.balance();
+			}
+
+			if (!selectedAsset) {
+				return BigNumber.ZERO;
 			}
 		}
 
@@ -114,7 +119,7 @@ export const AddRecipient = ({
 		}
 
 		return senderBalance;
-	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokenContractAddress]);
+	}, [addedRecipients, wallet, isSingle, isTokenTransfer, selectedAsset]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
@@ -346,7 +351,7 @@ export const AddRecipient = ({
 									<div>{t("COMMON.ASSET")}</div>
 								</FormLabel>
 								<SelectToken
-									value={tokenContractAddress}
+									value={selectedAsset}
 									tokens={tokens.map((token) => ({
 										label: token.token().displaySymbol(),
 										value: token.token().address(),
@@ -439,11 +444,11 @@ export const AddRecipient = ({
 							{isTokenTransfer && (
 								<div className="hidden w-full sm:block sm:max-w-44">
 									<SelectToken
-										value={tokenContractAddress}
+										value={selectedAsset}
 										tokens={[
 											{
-												label: wallet?.network().ticker()!,
-												value: wallet?.address()!,
+												label: profile.activeNetwork().ticker(),
+												value: profile.activeNetwork().ticker(),
 											},
 											...tokens.map((token) => ({
 												label: token.token().displaySymbol(),
@@ -488,7 +493,7 @@ export const AddRecipient = ({
 
 										setValue("amount", amount, {
 											shouldDirty: true,
-											shouldValidate: !(isTokenTransfer && !tokenContractAddress),
+											shouldValidate: !(isTokenTransfer && !selectedAsset),
 										});
 
 										singleRecipientOnChange({

@@ -22,13 +22,11 @@ export const useSendTransferForm = ({
 	isTokenTransfer,
 	tokenContractAddress,
 	tokens,
-	selectedToken,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
 	isTokenTransfer?: boolean;
 	tokenContractAddress?: string;
 	tokens?: WalletToken[];
-	selectedToken?: WalletToken;
 }) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
@@ -48,13 +46,14 @@ export const useSendTransferForm = ({
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
 
+	const defaultAsset = activeProfile.activeNetwork().ticker();
 	const formDefaultValues = useMemo<DefaultValues<SendTransferForm>>(
 		() => ({
 			amount: "",
 			recipients: [],
 			remainingBalance: wallet?.balance() ?? BigNumber.ZERO,
 			senderAddress: undefined,
-			tokenContractAddress,
+			tokenContractAddress: tokenContractAddress ?? defaultAsset,
 			tokens,
 		}),
 
@@ -83,7 +82,6 @@ export const useSendTransferForm = ({
 		},
 		[reset, formDefaultValues, network],
 	);
-	console.log({ tokens });
 
 	const submitForm = useCallback(
 		// TODO: make it as separate async redux-saga generator
@@ -150,7 +148,7 @@ export const useSendTransferForm = ({
 
 			return transaction;
 		},
-		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, selectedToken, tokens],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, tokens],
 	);
 
 	const walletBalance = wallet?.balance();
@@ -247,7 +245,7 @@ export const useSendTransferForm = ({
 			previousTokenContractAddress.current = tokenContractAddress;
 			setValue("tokenContractAddress", tokenContractAddress, { shouldDirty: false, shouldValidate: false });
 		}
-	}, [tokenContractAddress, setValue]);
+	}, [tokenContractAddress, setValue, wallet]);
 
 	return {
 		form,
