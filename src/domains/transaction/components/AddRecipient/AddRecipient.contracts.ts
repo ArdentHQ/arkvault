@@ -13,6 +13,7 @@ export interface AddRecipientProperties {
 	withDeeplink?: boolean;
 	isTokenTransfer?: boolean;
 	onTokenChange?: (token?: WalletToken) => void;
+	tokens?: WalletToken[];
 }
 
 export interface ToggleButtonProperties {

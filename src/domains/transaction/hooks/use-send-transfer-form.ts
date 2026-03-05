@@ -83,6 +83,7 @@ export const useSendTransferForm = ({
 		},
 		[reset, formDefaultValues, network],
 	);
+	console.log({ tokens });
 
 	const submitForm = useCallback(
 		// TODO: make it as separate async redux-saga generator
@@ -120,18 +121,20 @@ export const useSendTransferForm = ({
 
 			setLastEstimatedExpiration(data.expiration);
 
+			const token = tokens?.find((token) => token.token().address() === tokenContractAddress);
+
 			const transactionInput: Services.TransactionInputs = {
 				data,
 				gasLimit,
 				gasPrice,
 				signatory,
-				tokenContractAddress,
+				token,
 			};
 
 			const abortSignal = abortReference.current.signal;
 
 			const { uuid, transaction } = await transactionBuilder.build(
-				getTransferType({ recipients, tokenContractAddress }),
+				getTransferType({ recipients }),
 				transactionInput,
 				wallet,
 				{
@@ -147,7 +150,7 @@ export const useSendTransferForm = ({
 
 			return transaction;
 		},
-		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, selectedToken],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, selectedToken, tokens],
 	);
 
 	const walletBalance = wallet?.balance();

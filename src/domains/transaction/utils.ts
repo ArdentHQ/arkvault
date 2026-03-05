@@ -31,15 +31,9 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 
 export const getTransferType = ({
 	recipients,
-	tokenContractAddress,
 }: {
 	recipients: RecipientItem[];
-	tokenContractAddress?: string;
 }): "multiPayment" | "transfer" | "transferToken" => {
-	if (tokenContractAddress) {
-		return "transferToken";
-	}
-
 	return recipients.length > 1 ? "multiPayment" : "transfer";
 };
 

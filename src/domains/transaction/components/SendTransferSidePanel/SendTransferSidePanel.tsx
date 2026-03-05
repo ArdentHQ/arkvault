@@ -42,6 +42,7 @@ import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { Image } from "@/app/components/Image";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 const MAX_TABS = 5;
 
@@ -68,6 +69,8 @@ export const SendTransferSidePanel = ({
 
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
+	const { tokens } = useProfileTokens({ profile: activeProfile });
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
@@ -99,7 +102,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ isTokenTransfer, selectedToken, tokenContractAddress, wallet });
+	} = useSendTransferForm({ isTokenTransfer, selectedToken, tokenContractAddress, wallet, tokens });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -511,6 +514,7 @@ export const SendTransferSidePanel = ({
 					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
 						<TabPanel tabId={SendTransferStep.FormStep}>
 							<FormStep
+								tokens={tokens}
 								isTokenTransfer={isTokenTransfer}
 								network={activeNetwork}
 								senderWallet={wallet}

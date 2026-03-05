@@ -81,6 +81,10 @@ export class TransactionService {
 	}
 
 	public async transfer(input: Services.TransferInput): Promise<SignedTransactionData> {
+		if (input.token) {
+			return await this.tokenTransfer(input);
+		}
+
 		this.#assertGasFee(input);
 		this.#assertAmount(input);
 
@@ -107,11 +111,7 @@ export class TransactionService {
 		this.#assertAmount(input);
 
 		const nonce = await this.#generateNonce(input);
-		const token = this.#profile
-			.tokens()
-			.selected()
-			.items()
-			.find((token) => token.token().address() === input.tokenContractAddress);
+		const token = input.token;
 
 		assertToken(token);
 

@@ -59,13 +59,12 @@ export const AddRecipient = ({
 	wallet,
 	isTokenTransfer,
 	onTokenChange,
+	tokens = [],
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
-
-	const { aggregated: tokens, isLoading } = useProfileTokens({ profile });
 
 	const {
 		getValues,
@@ -343,7 +342,7 @@ export const AddRecipient = ({
 						/>
 					</FormField>
 
-					{isTokenTransfer && !isLoading && (
+					{isTokenTransfer && (
 						<FormField name="asset">
 							<div className="block space-y-2 sm:hidden">
 								<FormLabel>
@@ -355,7 +354,9 @@ export const AddRecipient = ({
 										label: token.token().displaySymbol(),
 										value: token.token().address(),
 									}))}
-									onChange={(tokenAddress) => {
+									onChange={({ value, label }) => {
+										console.log("onchange", value, label);
+										const tokenAddress = value;
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 
 										setValue("amount", amount, {
@@ -438,16 +439,23 @@ export const AddRecipient = ({
 						</FormLabel>
 
 						<div className="flex">
-							{isTokenTransfer && !isLoading && (
+							{isTokenTransfer && (
 								<div className="hidden w-full sm:block sm:max-w-44">
 									<SelectToken
 										value={tokenContractAddress}
-										tokens={tokens.map((token) => ({
-											label: token.token().displaySymbol(),
-											value: token.token().address(),
-										}))}
+										tokens={[
+											{
+												label: wallet?.network().ticker()!,
+												value: wallet?.address()!,
+											},
+											...tokens.map((token) => ({
+												label: token.token().displaySymbol(),
+												value: token.token().address(),
+											})),
+										]}
 										className="sm:rounded-r-none sm:border-r-transparent"
-										onChange={(tokenAddress) => {
+										onChange={({ value, label }) => {
+											const tokenAddress = value;
 											const token = tokens.find(
 												(token) => token.token().address() === tokenAddress,
 											);
