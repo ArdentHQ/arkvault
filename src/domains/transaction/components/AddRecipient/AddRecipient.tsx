@@ -65,7 +65,7 @@ export const AddRecipient = ({
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
 	const isMountedReference = useRef(false);
 
-	const { tokens, isLoading } = useProfileTokens({ profile });
+	const { aggregated: tokens, isLoading } = useProfileTokens({ profile });
 
 	const {
 		getValues,
@@ -94,8 +94,12 @@ export const AddRecipient = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
-		if (isTokenTransfer) {
-			const token = tokens.find((token) => token.token().address() === tokenContractAddress);
+		if (isTokenTransfer && wallet) {
+			const token = wallet
+				.tokens()
+				.values()
+				.find((token) => token.token().address() === tokenContractAddress);
+
 			if (token) {
 				return token.balance();
 			}
@@ -114,7 +118,7 @@ export const AddRecipient = ({
 		}
 
 		return senderBalance;
-	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokens, tokenContractAddress]);
+	}, [addedRecipients, wallet, isSingle, isTokenTransfer, tokenContractAddress]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 

@@ -90,6 +90,11 @@ describe("TokensTable", () => {
 	});
 
 	it.each(["xs"])("should show no results message if profile has no tokens in %s", async (breakpoint) => {
+		const emptyResponseMock = vi.spyOn(profile.tokens(), "aggregated").mockReturnValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
+
 		const { asFragment } = renderResponsiveWithRoute(
 			<TokensTable isManageMode={false} setManageMode={vi.fn()} {...defaultProps({ tokens: [] })} />,
 			breakpoint as LayoutBreakpoint,
@@ -101,6 +106,7 @@ describe("TokensTable", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
+		emptyResponseMock.mockRestore();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should not render in %s", (breakpoint) => {

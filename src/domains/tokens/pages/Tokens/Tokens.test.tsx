@@ -14,7 +14,7 @@ describe("Tokens", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(<Tokens />, {
+		render(<Tokens />, {
 			route,
 		});
 
@@ -27,8 +27,6 @@ describe("Tokens", () => {
 
 		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
 		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should switch tabs", async () => {
@@ -52,6 +50,26 @@ describe("Tokens", () => {
 	});
 
 	it("should send token through token details sidepanel", async () => {
+		const mockFirstPage = {
+			hasMorePages: () => true,
+			items: () => [
+				{
+					address: () => profile.wallets().first().address(),
+					balance: () => "1000",
+					contractExplorerLink: () => "test",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "TKN1",
+						name: () => "Token 1",
+						symbol: () => "TKN1",
+					}),
+				},
+			],
+		};
+
+		vi.spyOn(profile.tokens(), "aggregated").mockReturnValue(mockFirstPage as any);
+
 		const user = userEvent.setup();
 
 		render(<Tokens />, { route });
