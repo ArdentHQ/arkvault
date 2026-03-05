@@ -55,6 +55,7 @@ const transactionMethodsFixture = {
 	isSecondSignature: () => false,
 	isSent: () => true,
 	isSuccess: () => true,
+	isTokenTransfer: () => false,
 	isTransfer: () => false,
 	isUnvote: () => false,
 	isUpdateValidator: () => false,

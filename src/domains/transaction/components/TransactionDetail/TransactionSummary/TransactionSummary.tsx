@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -17,7 +17,7 @@ interface Properties {
 	labelClassName?: string;
 	profile?: Contracts.IProfile;
 	allowHideBalance?: boolean;
-	token?: WalletToken;
+	token?: TokenDTO;
 }
 export const TransactionSummary = ({
 	transaction,
@@ -25,9 +25,10 @@ export const TransactionSummary = ({
 	labelClassName,
 	profile,
 	allowHideBalance = false,
-	token,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
+
+	const isTokenTransfer = transaction.isTokenTransfer();
 
 	const showAmount = useMemo(() => {
 		if (transaction.isValidatorRegistration()) {
@@ -35,6 +36,10 @@ export const TransactionSummary = ({
 				!transaction.isConfirmed() ||
 				(transaction.isConfirmed() && "isSuccess" in transaction && transaction.isSuccess())
 			);
+		}
+
+		if (isTokenTransfer) {
+			return false;
 		}
 
 		return !BigNumber.make(transaction.value()).isZero();
@@ -55,7 +60,6 @@ export const TransactionSummary = ({
 						</DetailLabelText>
 
 						<TransactionAmountLabel
-							token={token}
 							transaction={transaction}
 							profile={profile}
 							allowHideBalance={allowHideBalance}
@@ -109,7 +113,7 @@ export const TransactionSummary = ({
 					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
-						value={transaction.convertedAmount()}
+						value={isTokenTransfer ? transaction.convertedFee() : transaction.convertedAmount()}
 						className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 						allowHideBalance={allowHideBalance}
 						profile={profile}

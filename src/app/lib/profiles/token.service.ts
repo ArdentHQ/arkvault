@@ -10,6 +10,7 @@ import { ExtendedConfirmedTransactionDataCollection } from "@/app/lib/profiles/t
 import { WalletTokenDTO } from "./wallet-token.dto";
 import { BigNumber } from "@/app/lib/helpers";
 import { ProfileSetting } from "./profile.enum.contract";
+import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 
 export class TokenService {
 	#profile: Contracts.IProfile;
@@ -121,19 +122,34 @@ export class TokenService {
 		return this.#walletTokensCollection;
 	}
 
+	#getTransactionWallet(
+		transaction: ConfirmedTransactionData,
+		queryAddresses?: string[],
+	): Contracts.IReadWriteWallet | undefined {
+		const address = queryAddresses?.find((address) =>
+			[
+				transaction.to()?.toLowerCase(),
+				transaction.from()?.toLowerCase(),
+				transaction.token()?.to().toLowerCase(),
+				transaction.token()?.from().toLowerCase(),
+			].includes(address.toLowerCase()),
+		);
+
+		if (address) {
+			return this.#profile
+				.wallets()
+				.values()
+				.find((wallet) => wallet.address().toLowerCase() === address.toLowerCase());
+		}
+	}
+
 	#setTransactionMetadata(transactions: ConfirmedTransactionDataCollection, queryAddresses?: string[]): void {
 		for (const transaction of transactions.items()) {
-			const address = queryAddresses?.find((address) => [transaction.to(), transaction.from()].includes(address));
+			const wallet = this.#getTransactionWallet(transaction, queryAddresses);
 
-			if (address) {
-				const wallet = this.#profile
-					.wallets()
-					.values()
-					.find((wallet) => wallet.address() === address);
-				if (wallet) {
-					transaction.setMeta("publicKey", wallet.publicKey());
-					transaction.setMeta("address", wallet.address());
-				}
+			if (wallet) {
+				transaction.setMeta("publicKey", wallet.publicKey());
+				transaction.setMeta("address", wallet.address());
 			}
 		}
 	}
@@ -179,24 +195,17 @@ export class TokenService {
 			});
 		}
 
-		const findWallet = (from: string, to: string): Contracts.IReadWriteWallet => {
-			const fromWallet = this.#profile.wallets().findByAddressWithNetwork(from, activeNetwork.id());
-
-			if (fromWallet) {
-				return fromWallet;
-			}
-
-			return this.#profile
-				.wallets()
-				.findByAddressWithNetwork(to, activeNetwork.id()) as Contracts.IReadWriteWallet;
-		};
-
-		const transfers = response
-			.items()
-			.map(
-				(transfer) =>
-					new ExtendedConfirmedTransactionData(findWallet(transfer.from(), transfer.to()), transfer),
+		const transfers = response.items().map((transfer) => {
+			const wallet = this.#getTransactionWallet(
+				transfer,
+				this.#profile
+					.wallets()
+					.values()
+					.map((wallet) => wallet.address()),
 			);
+
+			return new ExtendedConfirmedTransactionData(wallet!, transfer);
+		});
 
 		return new ExtendedConfirmedTransactionDataCollection(transfers, response.getPagination());
 	}
