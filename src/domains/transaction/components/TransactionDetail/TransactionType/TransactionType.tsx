@@ -41,7 +41,7 @@ export const TransactionType = ({
 	const { getLabel } = useTransactionTypes();
 
 	if (transaction.isApprove() || transaction.isRevoke()) {
-		return isRefreshingTransaction ? <ActionTypeSkeleton/> : <ActionType transaction={transaction} />;
+		return isRefreshingTransaction ? <ActionTypeSkeleton /> : <ActionType transaction={transaction} />;
 	}
 
 	const isValidatorRegistrationOrResignation =
@@ -169,7 +169,7 @@ export const ActionType = ({
 				<div className="space-y-3">
 					<div className="flex w-full justify-between gap-2 sm:justify-start">
 						<DetailLabelText>{isRevoke ? t("COMMON.REVOKE") : t("COMMON.APPROVE")}</DetailLabelText>
-						<div className="w-full leading-6 font-semibold text-right sm:text-left">
+						<div className="w-full text-right leading-6 font-semibold sm:text-left">
 							<Trans
 								i18nKey={isRevoke ? "TRANSACTION.REVOKE_DETAILS" : "TRANSACTION.APPROVE_DETAILS"}
 								components={{
@@ -264,7 +264,7 @@ export const ActionTypeSkeleton = () => {
 						<DetailLabelText>
 							<Skeleton height={20} width={75} />
 						</DetailLabelText>
-						<div className="w-full leading-6 font-semibold flex flex-col gap-2.5 [&>*]:flex-row-reverse sm:[&>*]:flex-row">
+						<div className="flex w-full flex-col gap-2.5 leading-6 font-semibold [&>*]:flex-row-reverse sm:[&>*]:flex-row">
 							<Skeleton height={20} className="!w-[85%]" />
 							<Skeleton height={20} className="!w-[75%]" />
 							<div className="lg:hidden [&>*]:flex-row-reverse sm:[&>*]:flex-row">
