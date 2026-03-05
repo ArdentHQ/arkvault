@@ -27,8 +27,6 @@ export const GasLimit: Record<Properties["type"], BigNumber> = {
 	vote: BigNumber.make(200_000),
 };
 
-const FEE_DISPLAY_VALUE_DECIMALS = 8;
-
 export class TransactionFeeService {
 	readonly #network: Networks.Network;
 	readonly #env: Environment;
