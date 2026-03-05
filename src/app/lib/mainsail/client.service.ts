@@ -163,7 +163,6 @@ export class ClientService {
 						},
 					],
 					type: "transfer",
-					value: "0",
 				}),
 			),
 			this.#createMetaPagination(response),
