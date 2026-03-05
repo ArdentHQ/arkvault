@@ -85,24 +85,24 @@ describe("TransactionType", () => {
 								data: "0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000",
 							},
 						}),
-						tokens: [
-							{
-								"action": "Transfer",
-								"from": "0xabd",
-								"index": 1,
-								"metadata": {
-									"tokenAddress": "0xdeb478251073157e400c3d8d2ed92a85c958f9fa",
-									"tokenDecimals": 18,
-									"tokenName": "ABC",
-									"tokenSymbol": "ABC"
-								},
-								"to": "0x432b093d9542B905C87587607491C369408475b4",
-								"value": "500000000000000000000000000"
-							}
-						],
 						isApprove: () => true,
 						isConfirmed: () => true,
 						to: () => "0xabc",
+						tokens: [
+							{
+								action: "Transfer",
+								from: "0xabd",
+								index: 1,
+								metadata: {
+									tokenAddress: "0xdeb478251073157e400c3d8d2ed92a85c958f9fa",
+									tokenDecimals: 18,
+									tokenName: "ABC",
+									tokenSymbol: "ABC",
+								},
+								to: "0x432b093d9542B905C87587607491C369408475b4",
+								value: "500000000000000000000000000",
+							},
+						],
 						wallet: () => profile.wallets().first(),
 					} as DTO.ExtendedConfirmedTransactionData
 				}
