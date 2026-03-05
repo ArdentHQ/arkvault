@@ -86,6 +86,7 @@ export const AppPanels = () => {
 					open={currentOpenedPanel?.name === Panel.SendTransfer}
 					onOpenChange={closePanel}
 					isTokenTransfer
+					tokenContractAddress={currentOpenedPanel?.properties?.tokenContractAddress as string | undefined}
 				/>
 			</ResetWhenUnmounted>
 

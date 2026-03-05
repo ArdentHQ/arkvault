@@ -46,14 +46,13 @@ export const useSendTransferForm = ({
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
 
-	const defaultAsset = activeProfile.activeNetwork().ticker();
 	const formDefaultValues = useMemo<DefaultValues<SendTransferForm>>(
 		() => ({
 			amount: "",
 			recipients: [],
 			remainingBalance: wallet?.balance() ?? BigNumber.ZERO,
 			senderAddress: undefined,
-			tokenContractAddress: tokenContractAddress ?? defaultAsset,
+			tokenContractAddress: tokenContractAddress,
 			tokens,
 		}),
 

@@ -21,21 +21,23 @@ import { useTranslation } from "react-i18next";
 export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 	const [isUpdatingTransactions, setIsUpdatingTransactions] = useState(false);
 	const [isUpdatingWallet, setIsUpdatingWallet] = useState(false);
+	const { env } = useEnvironmentContext();
+	const activeProfile = useActiveProfile();
+
 	const { openPanel } = usePanels();
+
 	useDeeplinkActionHandler({
 		onSignMessage: () => {
 			openPanel(Panel.SignMessage);
 		},
 		onTransfer: () => {
-			openPanel(Panel.SendTransfer);
+			openPanel(Panel.SendTokenTransfer, { tokenContractAddress: activeProfile.activeNetwork().ticker() });
 		},
 	});
 
 	const navigate = useNavigate();
 	const { t } = useTranslation();
 
-	const { env } = useEnvironmentContext();
-	const activeProfile = useActiveProfile();
 	const { profileIsSyncing } = useConfiguration().getProfileConfiguration(activeProfile.id());
 
 	const selectedWallets = activeProfile.wallets().selected();
