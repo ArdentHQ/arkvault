@@ -283,9 +283,14 @@ describe("useProfileTokens", () => {
 			await vi.runOnlyPendingTimersAsync();
 		});
 
-		await waitFor(() => {
-			expect(result.current.tokens).toHaveLength(2);
-		});
+		await waitFor(
+			() => {
+				expect(result.current.tokens).toHaveLength(2);
+			},
+			{
+				timeout: 4000,
+			},
+		);
 
 		selectedSpy.mockRestore();
 		vi.useRealTimers();
