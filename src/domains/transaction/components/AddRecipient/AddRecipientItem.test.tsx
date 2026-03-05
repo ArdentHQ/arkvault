@@ -6,6 +6,7 @@ import { AddRecipientItem } from "./AddRecipientItem";
 import { env, getDefaultProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 
 const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton-1");
+const deleteButtonMobile = () => screen.getByTestId("AddRecipientItem--deleteButton_mobile");
 
 describe("Add Recipient item", () => {
 	let profile: Contracts.IProfile;
@@ -85,10 +86,10 @@ describe("Add Recipient item", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle the delete button", async () => {
+	it.each(["xs", "lg"] as const)("should handle the delete button in %s", async (size) => {
 		const onDelete = vi.fn();
 
-		render(
+		renderResponsive(
 			<AddRecipientItem
 				recipient={recipient}
 				ticker="DARK"
@@ -98,9 +99,14 @@ describe("Add Recipient item", () => {
 				onDelete={onDelete}
 				profile={profile}
 			/>,
+			size,
 		);
 
-		await userEvent.click(deleteButton());
+		if (size === "xs") {
+			await userEvent.click(deleteButtonMobile());
+		} else {
+			await userEvent.click(deleteButton());
+		}
 
 		expect(onDelete).toHaveBeenCalledWith(1);
 	});
