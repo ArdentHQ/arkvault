@@ -5,7 +5,8 @@ import {
 	isNoDeviceError,
 	isRejectionError,
 	withAbortPromise,
-	getAuthenticationStepSubtitle, isNullAddress,
+	getAuthenticationStepSubtitle,
+	isNullAddress,
 } from "./utils";
 import { useTranslation } from "react-i18next";
 import { getMainsailProfileId } from "@/utils/testing-library";
@@ -36,7 +37,7 @@ describe("Transaction utils", () => {
 		it("should return `false`", () => {
 			const result = isNullAddress("0xabc");
 
-			expect(result ).toBe(false);
+			expect(result).toBe(false);
 		});
 
 		it("should return `true`", () => {
