@@ -220,10 +220,10 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	const displayAsContract = (isContract || transaction.isContractDeployment()) && transaction.to();
+	const showAsContract = (isContract || transaction.isContractDeployment()) && transaction.to();
 
 	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
-		if (displayAsContract) {
+		if (showAsContract) {
 			return (
 				<div
 					className="flex w-full flex-row gap-2"
@@ -274,7 +274,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (displayAsContract) {
+	if (showAsContract) {
 		return <ContractAddressing transaction={transaction} direction={direction} t={t} />;
 	}
 
