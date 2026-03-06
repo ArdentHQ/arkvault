@@ -21,12 +21,13 @@ import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import cn from "classnames";
 
-const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonProperties) => {
+const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
 
 	return (
 		<div className="flex items-center space-x-2">
 			<Switch
+				disabled={disableMultiple}
 				size="sm"
 				value={isSingle}
 				onChange={onChange}
@@ -50,7 +51,6 @@ const TransferType = ({ isSingle, onChange, maxRecipients }: ToggleButtonPropert
 };
 
 export const AddRecipient = ({
-	disableMultiPaymentOption,
 	onChange,
 	profile,
 	recipients = [],
@@ -85,6 +85,7 @@ export const AddRecipient = ({
 	} = watch();
 	const { sendTransfer } = useValidation();
 	const selectedAsset = tokenContractAddress;
+	const selectedToken = tokens.find((token) => token.token().address() === selectedAsset);
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string;
@@ -122,6 +123,13 @@ export const AddRecipient = ({
 	}, [addedRecipients, wallet, isSingle, isTokenTransfer, selectedAsset]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
+
+	// Force single send when a token is selected.
+	useEffect(() => {
+		if (selectedToken && !isSingle) {
+			setIsSingle(true);
+		}
+	}, [selectedToken, isSingle]);
 
 	const clearFields = useCallback(() => {
 		setValue("amount", undefined);
@@ -303,16 +311,14 @@ export const AddRecipient = ({
 			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
 				<div className="text-sm font-semibold transition-colors duration-100">{t("TRANSACTION.RECIPIENT")}</div>
 
-				{showMultiPaymentOption && (
-					<TransferType
-						maxRecipients={maxRecipients}
-						isSingle={isSingle}
-						disableMultiple={disableMultiPaymentOption}
-						onChange={(isSingle) => {
-							setIsSingle(isSingle);
-						}}
-					/>
-				)}
+				<TransferType
+					maxRecipients={maxRecipients}
+					isSingle={isSingle}
+					disableMultiple={!!selectedToken}
+					onChange={(isSingle) => {
+						setIsSingle(isSingle);
+					}}
+				/>
 			</div>
 
 			<SubForm
@@ -357,7 +363,6 @@ export const AddRecipient = ({
 										value: token.token().address(),
 									}))}
 									onChange={({ value, label }) => {
-										console.log("onchange", value, label);
 										const tokenAddress = value;
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 
