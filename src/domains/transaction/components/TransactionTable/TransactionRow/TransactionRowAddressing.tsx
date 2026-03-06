@@ -12,6 +12,7 @@ import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transa
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
 import { Clipboard } from "@/app/components/Clipboard";
+import { isNullAddress } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction, style }: { direction: Direction; style?: Direction }) => {
@@ -220,7 +221,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	const showAsContract = (isContract || transaction.isContractDeployment()) && transaction.to();
+	const showAsContract = (isContract || transaction.isContractDeployment()) && !isNullAddress(senderAddress);
 
 	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
 		if (showAsContract) {

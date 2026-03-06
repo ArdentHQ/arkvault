@@ -5,6 +5,8 @@ import { TFunction } from "i18next";
 
 export const DISPLAY_DECIMALS = 8;
 
+export const isNullAddress = (address: string) => address.toLowerCase() === "0x0000000000000000000000000000000000000000";
+
 export const isNoDeviceError = (error: any) => {
 	if (!error) {
 		return false;
