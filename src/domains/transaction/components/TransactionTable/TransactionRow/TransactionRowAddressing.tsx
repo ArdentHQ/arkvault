@@ -175,7 +175,7 @@ export const TransactionRowAddressing = ({
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const network = transaction.wallet().network();
-	const recipientAddress = transaction.to();
+	const recipientAddress = transaction.to() || transaction.token()?.to();
 	const senderAddress = transaction.from();
 
 	const recipientAlias = useMemo(() => {
@@ -220,8 +220,10 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
+	const displayAsContract = (isContract || transaction.isContractDeployment()) && transaction.to();
+
 	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
-		if (isContract || transaction.isContractDeployment()) {
+		if (displayAsContract) {
 			return (
 				<div
 					className="flex w-full flex-row gap-2"
@@ -272,7 +274,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (isContract || transaction.isContractDeployment()) {
+	if (displayAsContract) {
 		return <ContractAddressing transaction={transaction} direction={direction} t={t} />;
 	}
 
