@@ -85,7 +85,7 @@ const ContractAddressing = ({
 }) => {
 	const address =
 		transaction.isContractDeployment() && transaction.confirmations() > 0
-			? transaction.data().data.receipt.deployedContractAddress || transaction.from()
+			? transaction.data().data.receipt.deployedContractAddress
 			: transaction.to();
 
 	return (
