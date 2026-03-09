@@ -490,7 +490,7 @@ export const AddRecipient = ({
 
 										setValue("amount", amount, {
 											shouldDirty: true,
-											shouldValidate: !selectedAsset,
+											shouldValidate: !(isTokenTransfer && !selectedAsset),
 										});
 
 										singleRecipientOnChange({
