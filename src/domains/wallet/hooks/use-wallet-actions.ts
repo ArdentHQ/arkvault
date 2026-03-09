@@ -60,8 +60,8 @@ export const useWalletActions = ({
 			stopEventBubbling(event);
 
 			openPanel(Panel.SendTransfer, {
-				tokenContractAddress: profile.activeNetwork().ticker(),
 				isTokenTransfer: false,
+				tokenContractAddress: profile.activeNetwork().ticker(),
 			});
 		},
 		[stopEventBubbling, openPanel, wallet],

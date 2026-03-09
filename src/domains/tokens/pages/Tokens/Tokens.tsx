@@ -142,7 +142,7 @@ export const Tokens = () => {
 					onSendToken={(tokenContractAddress) => {
 						setTimeout(() => {
 							setTokenModelItem(undefined);
-							openPanel(Panel.SendTokenTransfer, { tokenContractAddress, isTokenTransfer: true });
+							openPanel(Panel.SendTokenTransfer, { isTokenTransfer: true, tokenContractAddress });
 						}, SIDE_PANEL_TRANSITION_DURATION);
 					}}
 				/>

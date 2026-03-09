@@ -28,8 +28,8 @@ export const SelectToken = ({
 			className={className}
 			onChange={(option?: OptionProperties) => {
 				onChange?.({
-					value: option?.value,
 					label: option?.label,
+					value: option?.value,
 				});
 			}}
 			addons={{

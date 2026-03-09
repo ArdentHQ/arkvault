@@ -19,7 +19,6 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
-import cn from "classnames";
 import { Enums } from "@/app/lib/mainsail";
 
 const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
@@ -311,15 +310,15 @@ export const AddRecipient = ({
 		value: token.token().address(),
 	}));
 
-	const assets = !isTokenTransfer
-		? [
+	const assets = isTokenTransfer
+		? assetOptions
+		: [
 				{
 					label: profile.activeNetwork().ticker(),
 					value: profile.activeNetwork().ticker(),
 				},
 				...assetOptions,
-			]
-		: assetOptions;
+			];
 
 	return (
 		<AddRecipientWrapper>
@@ -375,7 +374,7 @@ export const AddRecipient = ({
 							<SelectToken
 								value={selectedAsset}
 								tokens={assets}
-								onChange={({ value, label }) => {
+								onChange={({ value }) => {
 									const tokenAddress = value;
 									const token = tokens.find((token) => token.token().address() === tokenAddress);
 
@@ -459,7 +458,7 @@ export const AddRecipient = ({
 									value={selectedAsset}
 									tokens={assets}
 									className="sm:rounded-r-none sm:border-r-transparent"
-									onChange={({ value, label }) => {
+									onChange={({ value }) => {
 										const tokenAddress = value;
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 

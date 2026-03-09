@@ -32,8 +32,8 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 		},
 		onTransfer: () => {
 			openPanel(Panel.SendTransfer, {
-				tokenContractAddress: activeProfile.activeNetwork().ticker(),
 				isTokenTransfer: true,
+				tokenContractAddress: activeProfile.activeNetwork().ticker(),
 			});
 		},
 	});

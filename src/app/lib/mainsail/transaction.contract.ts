@@ -1,7 +1,7 @@
 import { Signatory } from "./signatories";
 import { SignedTransactionData } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";
-import { WalletToken } from "../profiles/wallet-token";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 export interface TransactionService {
 	// Core

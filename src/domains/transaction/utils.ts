@@ -33,9 +33,7 @@ export const getTransferType = ({
 	recipients,
 }: {
 	recipients: RecipientItem[];
-}): "multiPayment" | "transfer" | "transferToken" => {
-	return recipients.length > 1 ? "multiPayment" : "transfer";
-};
+}): "multiPayment" | "transfer" | "transferToken" => (recipients.length > 1 ? "multiPayment" : "transfer");
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>

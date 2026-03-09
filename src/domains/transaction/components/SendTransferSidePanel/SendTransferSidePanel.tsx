@@ -12,7 +12,7 @@ import { Form } from "@/app/components/Form";
 import { QRModal } from "@/app/components/QRModal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet } from "@/app/hooks";
+import { useActiveProfile } from "@/app/hooks";
 import { useKeyup } from "@/app/hooks/use-keyup";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -100,7 +100,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ tokenContractAddress, wallet, tokens });
+	} = useSendTransferForm({ tokenContractAddress, tokens, wallet });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";

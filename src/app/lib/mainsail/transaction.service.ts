@@ -44,10 +44,8 @@ export class TransactionService {
 	readonly #addressService!: AddressService;
 	readonly #publicKeyService!: PublicKeyService;
 	readonly #clientService!: ClientService;
-	readonly #profile!: IProfile;
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
-		this.#profile = profile;
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
 		this.#publicKeyService = new PublicKeyService();
