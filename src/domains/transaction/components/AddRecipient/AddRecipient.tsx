@@ -20,7 +20,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { Enums } from "@/app/lib/mainsail";
-import { useTransferAssets } from "../../hooks/use-send-transfer-assets";
+import { useTransferAssets } from "@/domains/transaction/hooks/use-send-transfer-assets";
 
 const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -240,7 +240,7 @@ export const AddRecipient = ({
 		});
 	}, [isSendAllSelected, remainingBalance, setValue]);
 
-	const { assets } = useTransferAssets({ profile, isSingle, isTokenTransfer, tokens });
+	const { assets } = useTransferAssets({ isSingle, isTokenTransfer, profile, tokens });
 
 	const singleRecipientOnChange = ({
 		address,
