@@ -325,7 +325,7 @@ export const AddRecipient = ({
 			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
 				<div className="text-sm font-semibold transition-colors duration-100">{t("TRANSACTION.RECIPIENT")}</div>
 
-				{network.allows(Enums.FeatureFlag.TransactionMultiPayment) && (
+				{network?.allows(Enums.FeatureFlag.TransactionMultiPayment) && (
 					<TransferType
 						maxRecipients={maxRecipients}
 						isSingle={isSingle}
