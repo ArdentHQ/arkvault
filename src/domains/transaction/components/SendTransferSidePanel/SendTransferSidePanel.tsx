@@ -53,17 +53,17 @@ export const SendTransferSidePanel = ({
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	isTokenTransfer?: boolean;
 	tokenContractAddress?: string;
+	isTokenTransfer?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
-
 	const { env } = useEnvironmentContext();
 
 	const [mounted, setMounted] = useState(false);
 	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
 		active: mounted,
 	});
+	console.log("isTokenTransfer", isTokenTransfer);
 
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
@@ -100,7 +100,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ isTokenTransfer, tokenContractAddress, wallet, tokens });
+	} = useSendTransferForm({ tokenContractAddress, wallet, tokens });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";

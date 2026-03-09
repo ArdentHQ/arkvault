@@ -1,6 +1,6 @@
 import { Enums, Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -121,9 +121,6 @@ export const FormStep = ({
 						}}
 						profile={profile}
 						recipients={getRecipients()}
-						showMultiPaymentOption={
-							network.allows(Enums.FeatureFlag.TransactionMultiPayment) && !isTokenTransfer
-						}
 						wallet={senderWallet}
 					/>
 				</div>

@@ -19,12 +19,10 @@ import { BigNumber } from "@/app/lib/helpers";
 
 export const useSendTransferForm = ({
 	wallet,
-	isTokenTransfer,
 	tokenContractAddress,
 	tokens,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
-	isTokenTransfer?: boolean;
 	tokenContractAddress?: string;
 	tokens?: WalletToken[];
 }) => {
@@ -167,9 +165,7 @@ export const useSendTransferForm = ({
 
 		register("suppressWarning");
 
-		if (isTokenTransfer) {
-			register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
-		}
+		register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
 
 		if (networks.length === 1) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });

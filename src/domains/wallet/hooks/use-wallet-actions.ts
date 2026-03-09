@@ -59,7 +59,10 @@ export const useWalletActions = ({
 
 			stopEventBubbling(event);
 
-			openPanel(Panel.SendTokenTransfer, { tokenContractAddress: profile.activeNetwork().ticker() });
+			openPanel(Panel.SendTransfer, {
+				tokenContractAddress: profile.activeNetwork().ticker(),
+				isTokenTransfer: false,
+			});
 		},
 		[stopEventBubbling, openPanel, wallet],
 	);
@@ -70,7 +73,7 @@ export const useWalletActions = ({
 				return;
 			}
 
-			openPanel(Panel.SendTokenTransfer, options);
+			openPanel(Panel.SendTokenTransfer, { ...options, isTokenTransfer: true });
 		},
 		[stopEventBubbling, openPanel, wallet],
 	);

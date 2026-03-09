@@ -20,6 +20,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import cn from "classnames";
+import { Enums } from "@/app/lib/mainsail";
 
 const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -54,11 +55,10 @@ export const AddRecipient = ({
 	onChange,
 	profile,
 	recipients = [],
-	showMultiPaymentOption = true,
 	wallet,
-	isTokenTransfer,
 	onTokenChange,
 	tokens = [],
+	isTokenTransfer,
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
@@ -94,7 +94,7 @@ export const AddRecipient = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
-		if (isTokenTransfer && wallet) {
+		if (wallet) {
 			const token = wallet
 				.tokens()
 				.values()
@@ -120,7 +120,7 @@ export const AddRecipient = ({
 		}
 
 		return senderBalance;
-	}, [addedRecipients, wallet, isSingle, isTokenTransfer, selectedAsset]);
+	}, [addedRecipients, wallet, isSingle, selectedAsset]);
 
 	const isSenderFilled = useMemo(() => !!network?.id() && !!senderAddress, [network, senderAddress]);
 
@@ -306,19 +306,36 @@ export const AddRecipient = ({
 				}
 			: undefined;
 
+	const assetOptions = tokens.map((token) => ({
+		label: token.token().displaySymbol(),
+		value: token.token().address(),
+	}));
+
+	const assets = !isTokenTransfer
+		? [
+				{
+					label: profile.activeNetwork().ticker(),
+					value: profile.activeNetwork().ticker(),
+				},
+				...assetOptions,
+			]
+		: assetOptions;
+
 	return (
 		<AddRecipientWrapper>
 			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
 				<div className="text-sm font-semibold transition-colors duration-100">{t("TRANSACTION.RECIPIENT")}</div>
 
-				<TransferType
-					maxRecipients={maxRecipients}
-					isSingle={isSingle}
-					disableMultiple={!!selectedToken}
-					onChange={(isSingle) => {
-						setIsSingle(isSingle);
-					}}
-				/>
+				{network.allows(Enums.FeatureFlag.TransactionMultiPayment) && (
+					<TransferType
+						maxRecipients={maxRecipients}
+						isSingle={isSingle}
+						disableMultiple={!!selectedToken}
+						onChange={(isSingle) => {
+							setIsSingle(isSingle);
+						}}
+					/>
+				)}
 			</div>
 
 			<SubForm
@@ -350,49 +367,40 @@ export const AddRecipient = ({
 						/>
 					</FormField>
 
-					{isTokenTransfer && (
-						<FormField name="asset">
-							<div className="block space-y-2 sm:hidden">
-								<FormLabel>
-									<div>{t("COMMON.ASSET")}</div>
-								</FormLabel>
-								<SelectToken
-									value={selectedAsset}
-									tokens={tokens.map((token) => ({
-										label: token.token().displaySymbol(),
-										value: token.token().address(),
-									}))}
-									onChange={({ value, label }) => {
-										const tokenAddress = value;
-										const token = tokens.find((token) => token.token().address() === tokenAddress);
+					<FormField name="asset">
+						<div className="block space-y-2 sm:hidden">
+							<FormLabel>
+								<div>{t("COMMON.ASSET")}</div>
+							</FormLabel>
+							<SelectToken
+								value={selectedAsset}
+								tokens={assets}
+								onChange={({ value, label }) => {
+									const tokenAddress = value;
+									const token = tokens.find((token) => token.token().address() === tokenAddress);
 
-										setValue("amount", amount, {
-											shouldDirty: !!token,
-											shouldValidate: !!token && !!amount,
-										});
+									setValue("amount", amount, {
+										shouldDirty: !!token,
+										shouldValidate: !!token && !!amount,
+									});
 
-										setValue("tokenContractAddress", tokenAddress, {
-											shouldDirty: true,
-											shouldValidate: true,
-										});
+									setValue("tokenContractAddress", tokenAddress, {
+										shouldDirty: true,
+										shouldValidate: true,
+									});
 
-										onTokenChange?.(token);
-									}}
-								/>
-							</div>
-						</FormField>
-					)}
+									onTokenChange?.(token);
+								}}
+							/>
+						</div>
+					</FormField>
 
 					<FormField name="amount">
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
 								<div className="flex flex-row items-center gap-1.5">
-									{isTokenTransfer && (
-										<>
-											<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
-											<span className="hidden sm:block">{t("COMMON.ASSET_AMOUNT")}</span>
-										</>
-									)}
+									<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
+									<span className="hidden sm:block">{t("COMMON.ASSET_AMOUNT")}</span>
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(
 										<Amount
@@ -414,7 +422,7 @@ export const AddRecipient = ({
 											<Amount
 												value={remainingBalance}
 												ticker={ticker}
-												showTicker={!isTokenTransfer}
+												showTicker
 												showCompactFormat
 											/>
 										</div>
@@ -446,47 +454,32 @@ export const AddRecipient = ({
 						</FormLabel>
 
 						<div className="flex">
-							{isTokenTransfer && (
-								<div className="hidden w-full sm:block sm:max-w-44">
-									<SelectToken
-										value={selectedAsset}
-										tokens={[
-											{
-												label: profile.activeNetwork().ticker(),
-												value: profile.activeNetwork().ticker(),
-											},
-											...tokens.map((token) => ({
-												label: token.token().displaySymbol(),
-												value: token.token().address(),
-											})),
-										]}
-										className="sm:rounded-r-none sm:border-r-transparent"
-										onChange={({ value, label }) => {
-											const tokenAddress = value;
-											const token = tokens.find(
-												(token) => token.token().address() === tokenAddress,
-											);
+							<div className="hidden w-full sm:block sm:max-w-44">
+								<SelectToken
+									value={selectedAsset}
+									tokens={assets}
+									className="sm:rounded-r-none sm:border-r-transparent"
+									onChange={({ value, label }) => {
+										const tokenAddress = value;
+										const token = tokens.find((token) => token.token().address() === tokenAddress);
 
-											setValue("amount", amount, {
-												shouldDirty: !!token,
-												shouldValidate: !!token && !!amount,
-											});
+										setValue("amount", amount, {
+											shouldDirty: !!token,
+											shouldValidate: !!token && !!amount,
+										});
 
-											setValue("tokenContractAddress", tokenAddress, {
-												shouldDirty: true,
-												shouldValidate: true,
-											});
+										setValue("tokenContractAddress", tokenAddress, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
 
-											onTokenChange?.(token);
-										}}
-									/>
-								</div>
-							)}
+										onTokenChange?.(token);
+									}}
+								/>
+							</div>
 							<div className="flex-1">
 								<InputCurrency
-									className={cn({
-										"sm:rounded-l-none": isTokenTransfer,
-									})}
+									className="sm:rounded-l-none"
 									network={network}
 									disabled={!isSenderFilled}
 									data-testid="AddRecipient__amount"
@@ -498,7 +491,7 @@ export const AddRecipient = ({
 
 										setValue("amount", amount, {
 											shouldDirty: true,
-											shouldValidate: !(isTokenTransfer && !selectedAsset),
+											shouldValidate: !selectedAsset,
 										});
 
 										singleRecipientOnChange({
