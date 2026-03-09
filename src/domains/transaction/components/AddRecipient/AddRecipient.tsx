@@ -20,6 +20,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { Enums } from "@/app/lib/mainsail";
+import { useTransferAssets } from "../../hooks/use-send-transfer-assets";
 
 const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -239,6 +240,8 @@ export const AddRecipient = ({
 		});
 	}, [isSendAllSelected, remainingBalance, setValue]);
 
+	const { assets } = useTransferAssets({ profile, isSingle, isTokenTransfer, tokens });
+
 	const singleRecipientOnChange = ({
 		address,
 		alias,
@@ -305,21 +308,6 @@ export const AddRecipient = ({
 				}
 			: undefined;
 
-	const assetOptions = tokens.map((token) => ({
-		label: token.token().displaySymbol(),
-		value: token.token().address(),
-	}));
-
-	const assets = isTokenTransfer
-		? assetOptions
-		: [
-				{
-					label: profile.activeNetwork().ticker(),
-					value: profile.activeNetwork().ticker(),
-				},
-				...assetOptions,
-			];
-
 	return (
 		<AddRecipientWrapper>
 			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
@@ -329,7 +317,7 @@ export const AddRecipient = ({
 					<TransferType
 						maxRecipients={maxRecipients}
 						isSingle={isSingle}
-						disableMultiple={!!selectedToken}
+						disableMultiple={!!selectedToken || !selectedAsset}
 						onChange={(isSingle) => {
 							setIsSingle(isSingle);
 						}}
