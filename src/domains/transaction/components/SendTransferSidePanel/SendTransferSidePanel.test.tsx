@@ -28,6 +28,12 @@ import * as unconfirmedHook from "@/domains/transaction/hooks/use-unconfirmed-tr
 import * as appHooks from "@/app/hooks";
 import * as ReactRouter from "react-router";
 
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
 
@@ -105,6 +111,7 @@ const continueButton = () => screen.getByTestId("SendTransfer__continue-button")
 const sendButton = () => screen.getByTestId("SendTransfer__send-button");
 const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
+const selectedAsset = "ARK";
 
 // Select sender address via shared SelectAddressDropdown
 const selectNthSenderAddress = async (index = 0) => {
@@ -146,6 +153,37 @@ describe("SendTransferSidePanel", () => {
 				transactionFixture,
 			),
 		);
+
+		const fixtureData = Fixtures.ByContractAddress.data;
+		const walletTokenData = Fixtures.ByWalletAddress.data[0];
+
+		profile
+			.wallets()
+			.first()
+			.tokens()
+			.create({
+				token: new TokenDTO(fixtureData),
+				walletToken: new WalletTokenDTO(walletTokenData),
+			});
+
+		const tokensCollection = new WalletTokenCollection(
+			[
+				new WalletToken({
+					network: profile.activeNetwork(),
+					profile,
+					token: new TokenDTO(fixtureData),
+					walletToken: new WalletTokenDTO(walletTokenData),
+				}),
+			],
+			{
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			},
+		);
+
+		vi.spyOn(profile.tokens(), "selected").mockReturnValue(tokensCollection);
 	});
 
 	beforeEach(() => {
@@ -166,7 +204,7 @@ describe("SendTransferSidePanel", () => {
 	it("should send a single transfer via side panel", async () => {
 		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
 
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -178,7 +216,7 @@ describe("SendTransferSidePanel", () => {
 		await selectRecipient();
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
@@ -192,7 +230,7 @@ describe("SendTransferSidePanel", () => {
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 		await userEvent.click(document.body);
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		expect(continueButton()).not.toBeDisabled();
 		await userEvent.click(continueButton());
@@ -222,7 +260,7 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	it("should advance to ReviewStep on Enter when form valid and focus is not a button", async () => {
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -270,7 +308,7 @@ describe("SendTransferSidePanel", () => {
 	});
 
 	it("should do nothing on Enter when at or past AuthenticationStep", async () => {
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -312,7 +350,7 @@ describe("SendTransferSidePanel", () => {
 			addUnconfirmedTransactionFromSigned: vi.fn(),
 		} as any);
 
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -407,7 +445,7 @@ describe("SendTransferSidePanel", () => {
 		});
 		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("1000000000000000000"));
 
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -479,7 +517,7 @@ describe("SendTransferSidePanel", () => {
 			fetchWalletUnconfirmedTransactions: vi.fn().mockResolvedValue([signedTransactionMock]),
 		} as any);
 
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -520,7 +558,7 @@ describe("SendTransferSidePanel", () => {
 
 	it("should show ErrorStep on sign error and allow going back", async () => {
 		const onOpenChange = vi.fn();
-		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -565,7 +603,7 @@ describe("SendTransferSidePanel", () => {
 
 	it("should show ErrorStep on sign error and allow closing side panel", async () => {
 		const onOpenChange = vi.fn();
-		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -612,7 +650,7 @@ describe("SendTransferSidePanel", () => {
 		vi.spyOn(LedgerTransportFactory, "isLedgerTransportSupported").mockReturnValue(false);
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -657,7 +695,7 @@ describe("SendTransferSidePanel", () => {
 		} as any);
 
 		const onOpenChange = vi.fn();
-		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
@@ -701,7 +739,7 @@ describe("SendTransferSidePanel", () => {
 
 	it("should disable send button if the encryption password is not provided", async () => {
 		const onOpenChange = vi.fn();
-		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
 
