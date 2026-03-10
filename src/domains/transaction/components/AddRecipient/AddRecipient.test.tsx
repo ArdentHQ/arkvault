@@ -64,6 +64,16 @@ const fillFieldsWithValidAddressAndAmount = async (address: string, amount: stri
 
 const selectRecipientID = "SelectRecipient__select-recipient";
 
+const setupTokenSelection = async (index: number, tokenName: string) => {
+	const dropdowns = screen.getAllByTestId("SelectDropdown__input");
+	const tokenSelection = dropdowns[index];
+
+	const user = userEvent.setup();
+	await user.clear(tokenSelection);
+	await userEvent.paste(tokenName);
+	await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+};
+
 describe("AddRecipient", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -226,8 +236,9 @@ describe("AddRecipient", () => {
 			/>,
 		);
 
-		const amount = 1;
+		await setupTokenSelection(index, "DARK2");
 
+		const amount = 1;
 		const amoutInput = screen.getByTestId("AddRecipient__amount");
 		const addressInput = screen.getAllByTestId("SelectDropdown__input")[2];
 
@@ -245,13 +256,6 @@ describe("AddRecipient", () => {
 		await waitFor(() => {
 			expect(dropdowns).toHaveLength(3);
 		});
-
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("DARK2");
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
 
 		await waitFor(() => {
 			expect(onChange).toHaveBeenCalled();
@@ -287,14 +291,7 @@ describe("AddRecipient", () => {
 			/>,
 		);
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+		await setupTokenSelection(2, "ARK");
 
 		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
@@ -355,14 +352,7 @@ describe("AddRecipient", () => {
 			},
 		);
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+		await setupTokenSelection(2, "ARK");
 		await waitFor(() => expect(screen.queryByText("AddRecipient__available")).not.toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
@@ -376,14 +366,7 @@ describe("AddRecipient", () => {
 
 		const recipientLabel = "Recipient #1";
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+		await setupTokenSelection(2, "ARK");
 
 		expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument();
 
@@ -438,14 +421,7 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+		await setupTokenSelection(2, "ARK");
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
@@ -477,14 +453,7 @@ describe("AddRecipient", () => {
 	it("should keep values while toggling between single and multiple recipients", async () => {
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+		await setupTokenSelection(2, "ARK");
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
@@ -557,19 +526,11 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+		await setupTokenSelection(2, "ARK");
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
-		// Invalid address
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[0], values.recipientAddress);
 
@@ -583,7 +544,6 @@ describe("AddRecipient", () => {
 			expect(addRecipientButton()).toBeDisabled();
 		});
 
-		// Valid address
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 		await userEvent.type(
 			screen.getAllByTestId("SelectDropdown__input")[0],
@@ -693,7 +653,7 @@ describe("AddRecipient", () => {
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "10000000000");
 
-		await waitFor(() => expect(screen.queryAllByTestId("Input__error")[0]).toBeInTheDocument());
+		await waitFor(() => expect(screen.getAllByTestId("Input__error")[0]).toBeInTheDocument());
 	});
 
 	it("should show error for zero balance", async () => {
@@ -714,7 +674,7 @@ describe("AddRecipient", () => {
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "0.1");
 
-		await waitFor(() => expect(screen.queryAllByTestId("Input__error")[0]).toBeInTheDocument());
+		await waitFor(() => expect(screen.getAllByTestId("Input__error")[0]).toBeInTheDocument());
 
 		mockWalletBalance.mockRestore();
 	});
@@ -787,6 +747,8 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
+		await setupTokenSelection(2, "ARK");
+
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await userEvent.type(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
@@ -847,15 +809,7 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-
-		await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+		await setupTokenSelection(2, "ARK");
 		await userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
@@ -891,14 +845,7 @@ describe("AddRecipient", () => {
 			/>,
 		);
 
-		const index = 2;
-		const dropdowns = screen.getAllByTestId("SelectDropdown__input");
-		const tokenSelection = dropdowns[index];
-
-		const user = userEvent.setup();
-		await user.clear(tokenSelection);
-		await userEvent.paste("ARK");
-
+		await setupTokenSelection(2, "ARK");
 		await userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		await expect(screen.findByTestId(selectRecipientID)).resolves.toBeVisible();
