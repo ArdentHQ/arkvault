@@ -157,18 +157,18 @@ export const TransactionDetailSidePanel = ({
 	transactionItem,
 	profile,
 	onClose,
+	wallets,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
 
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
 
-	const wallet = transactionItem.wallet();
 	const transactionId = transactionItem.hash();
 
 	const { isLoading, transaction: confirmedTransaction } = useConfirmedTransaction({
 		disabled: transactionItem.isTokenTransfer() ? false : transactionItem.isConfirmed(),
 		transactionId,
-		wallet,
+		wallet: wallets?.[0],
 	});
 
 	useEffect(() => {

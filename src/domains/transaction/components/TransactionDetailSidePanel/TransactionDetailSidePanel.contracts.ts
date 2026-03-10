@@ -13,6 +13,7 @@ export interface TransactionDetailModalProperties {
 	transactionItem: ExtendedTransactionDTO;
 	profile: Contracts.IProfile;
 	onClose?: () => void;
+	wallets?: Contracts.IReadWriteWallet[];
 }
 
 export interface TransactionDetailProperties {
