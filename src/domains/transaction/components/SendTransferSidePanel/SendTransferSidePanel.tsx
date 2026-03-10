@@ -63,7 +63,6 @@ export const SendTransferSidePanel = ({
 	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
 		active: mounted,
 	});
-	console.log("isTokenTransfer", isTokenTransfer);
 
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
