@@ -72,7 +72,7 @@ export const AddRecipient = ({
 		watch,
 		trigger,
 		clearErrors,
-		formState: { errors },
+		formState: { errors, dirtyFields },
 	} = useFormContext();
 	const {
 		network,
@@ -368,7 +368,7 @@ export const AddRecipient = ({
 
 									setValue("amount", amount, {
 										shouldDirty: !!token,
-										shouldValidate: !!token && !!amount,
+										shouldValidate: !!dirtyFields.amount,
 									});
 
 									setValue("tokenContractAddress", tokenAddress, {
@@ -452,7 +452,7 @@ export const AddRecipient = ({
 
 										setValue("amount", amount, {
 											shouldDirty: !!token,
-											shouldValidate: !!token && !!amount,
+											shouldValidate: !!dirtyFields.amount,
 										});
 
 										setValue("tokenContractAddress", tokenAddress, {
