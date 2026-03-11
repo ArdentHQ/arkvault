@@ -84,6 +84,7 @@ export const translations = {
 	CONTACT_US: "Contact Us",
 	CONTINUE: "Continue",
 	CONTRACT: "Contract",
+	CONTRACT_ADDRESS: "Contract Address",
 	COPY: "Copy",
 	COPY_ADDRESS: "Copy Address",
 	COPY_ERROR: "Copy Error",
@@ -508,6 +509,7 @@ export const translations = {
 	STATUS: "Status",
 	SUBMIT: "Submit",
 	SUCCESS: "Success",
+	SUPPLY: "Supply",
 	SUPPORT: "Support",
 	SWITCH_TO_SINGLE_VIEW: "Switch to single address view for options.",
 	SYMBOL: "Symbol",
@@ -554,6 +556,7 @@ export const translations = {
 	VALIDATING_URI: "Validating URI. Please wait ...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required.",
+		DOES_NOT_EXISTS: "{{field}} does not exist.",
 		EXISTS: "{{field}} already exists.",
 		FIELD_INVALID: "{{field}} invalid.",
 		FIELD_REQUIRED: "{{field}} required.",

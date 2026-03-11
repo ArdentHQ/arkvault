@@ -17,6 +17,7 @@ import {
 	validatorRegistration,
 } from "@/domains/transaction/validations";
 import { contractDeployment } from "@/domains/transaction/validations/ContractDeployment";
+import { addToken } from "@/domains/transaction/validations/AddToken";
 
 export const useValidation = () => {
 	const { t } = useTranslation();
@@ -24,6 +25,7 @@ export const useValidation = () => {
 
 	return useMemo(
 		() => ({
+			addToken: addToken(t),
 			authentication: authentication(t),
 			common: common(t),
 			contractDeployment: contractDeployment(t),

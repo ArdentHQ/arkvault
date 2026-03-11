@@ -1,4 +1,10 @@
 export const translations = {
+	ADD_TOKEN: {
+		FORM_STEP: {
+			TIP_TITLE: "Need help adding a token?",
+			TITLE: "Add Token",
+		},
+	},
 	CONFIRMATION_MESSAGE:
 		"Please mind that selecting another address will not save the changes you have made. Do you want to continue?",
 	EMPTY_TOKENS: "It looks like you don't have any Tokens yet. After adding new Tokens, they can be viewed here.",
