@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Form, FormField, FormLabel } from "@/app/components/Form";
 import { useActiveProfile, useValidation } from "@/app/hooks";
-import { useKeydown } from "@/app/hooks/use-keydown";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -34,8 +33,9 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const { formState, register, reset: resetForm, setValue, watch } = form;
 	const { isValid, isSubmitting, isValidating } = formState;
 
-	const { addToken } = useValidation();
 	const contractAddress = watch("contractAddress");
+
+	const { addToken } = useValidation();
 
 	useEffect(() => {
 		register("contractAddress", addToken.contractAddress());
@@ -79,16 +79,6 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 		void getToken();
 	}, [isValid, contractAddress, isValidating]);
-
-	useKeydown("Enter", () => {
-		const isButton = (document.activeElement as any)?.type === "button";
-
-		if (isButton || !isValid) {
-			return;
-		}
-
-		return handleSubmit();
-	});
 
 	const handleSubmit = async () => {
 		profile.whitelistContractAddress(contractAddress as string);
