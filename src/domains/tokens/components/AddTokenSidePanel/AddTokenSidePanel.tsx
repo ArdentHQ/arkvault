@@ -32,7 +32,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, reset: resetForm, setValue, watch } = form;
-	const { isValid, isSubmitting, errors, isValidating } = formState;
+	const { isValid, isSubmitting, isValidating } = formState;
 
 	const { addToken } = useValidation();
 	const contractAddress = watch("contractAddress");
@@ -41,8 +41,6 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		register("contractAddress", addToken.contractAddress());
 	}, [addToken, register]);
 
-	const hasContractAddressErrors = "contractAddress" in errors;
-
 	const contractController = useRef<AbortController | undefined>(undefined);
 
 	useEffect(() => {
@@ -50,7 +48,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		setIsLoadingToken(false);
 		setIsInvalidContractAddress(false);
 
-		if (hasContractAddressErrors || !contractAddress || isValidating) {
+		if (!isValid || !contractAddress || isValidating) {
 			return;
 		}
 
@@ -80,7 +78,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		};
 
 		void getToken();
-	}, [hasContractAddressErrors, contractAddress, isValidating]);
+	}, [isValid, contractAddress, isValidating]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -119,7 +117,13 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			minimizeable
 			onOpenChange={onOpenChange}
 			title={t("TOKENS.ADD_TOKEN.TITLE")}
-			titleIcon={<Icon name="AddToken" dimensions={[24, 24]} className="text-theme-navy-600" />}
+			titleIcon={
+				<Icon
+					name="AddToken"
+					dimensions={[24, 24]}
+					className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+				/>
+			}
 			dataTestId="AddTokenSidePanel"
 			disableEscapeKey={isSubmitting}
 			onMountChange={onMountChange}
@@ -163,11 +167,11 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 						</Alert>
 
 						{!token && !isInvalidContractAddress && (
-							<div className="border-theme-secondary-300 overflow-hidden rounded-xl border">
+							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl border">
 								{!isLoadingToken && (
 									<div className="flex items-center gap-4 px-6 pt-5 pb-3">
 										<Image name="ContractAddress" />
-										<p className="text-theme-secondary-700 leading-5 font-semibold">
+										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
 											{t("TOKENS.ADD_TOKEN.EMPTY_STATE_TEXT")}
 										</p>
 									</div>
@@ -177,13 +181,13 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 									<div className="flex items-center gap-2 px-6 pt-5 pb-3">
 										<Spinner color="warning-alt" size="sm" width={3} />
 										<Divider type="vertical" />
-										<p className="text-theme-secondary-700 leading-5 font-semibold">
+										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
 											{t("TOKENS.ADD_TOKEN.LOADING_STATE_TEXT")}
 										</p>
 									</div>
 								)}
-								<div className="bg-theme-secondary-100 px-6 py-3">
-									<p className="text-theme-secondary-700 text-sm leading-5">
+								<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 px-6 py-3">
+									<p className="text-theme-secondary-700 dark:text-theme-dark-100 dim:text-theme-dim-100 text-sm leading-5">
 										{t("TOKENS.ADD_TOKEN.HEADS_UP_MESSAGE")}
 									</p>
 								</div>
@@ -193,8 +197,10 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 						{(token || isInvalidContractAddress) && (
 							<div
 								className={cn("overflow-hidden rounded-xl border", {
-									"border-theme-danger-300": !token,
-									"border-theme-warning-300": token,
+									"border-theme-danger-300 dark:border-theme-danger-400 dim:border-theme-danger-400":
+										!token,
+									"border-theme-warning-300 dark:border-theme-warning-700 dim:border-theme-warning-700":
+										token,
 								})}
 							>
 								{token && (
@@ -292,7 +298,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 										</div>
 
 										<Divider type="vertical" />
-										<div className="text-theme-secondary-700 leading-5 font-semibold">
+										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
 											{t("TOKENS.ADD_TOKEN.FAIL_STATE_TEXT")}
 										</div>
 									</div>
@@ -300,8 +306,10 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 								<div
 									className={cn("px-6 py-3", {
-										"bg-theme-danger-50 text-theme-secondary-700": !token,
-										"bg-theme-warning-50 text-theme-secondary-900": token,
+										"bg-theme-danger-50 dark:bg-theme-dark-950 dim:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-dark-100 dim:text-theme-dim-100":
+											!token,
+										"bg-theme-warning-50 dark:bg-theme-dark-950 dim:bg-theme-dim-950 text-theme-secondary-900 dark:text-theme-dark-100 dim:text-theme-dim-100":
+											token,
 									})}
 								>
 									<p className="text-sm leading-5">{t("TOKENS.ADD_TOKEN.HEADS_UP_MESSAGE")}</p>
