@@ -1,9 +1,15 @@
 export const translations = {
 	ADD_TOKEN: {
-		FORM_STEP: {
-			TIP_TITLE: "Need help adding a token?",
-			TITLE: "Add Token",
-		},
+		EMPTY_STATE_TEXT: "Fill in a valid contract address to load token details.",
+		FAIL_STATE_TEXT: "The provided address is not a valid ERC20 token.",
+		HEADS_UP_MESSAGE:
+			"Exercise caution when adding custom token contracts and confirm they match the intended asset.",
+		LOADING_STATE_TEXT: "We’re fetching the token details.",
+		TIP_GUIDELINE_1: "Ensure the address is prefixed with 0x.",
+		TIP_GUIDELINE_2: "Verify you’re adding the address of the deployed token contract.",
+		TIP_GUIDELINE_TITLE: "Please mind the following when adding a token contract address:",
+		TIP_TITLE: "Need help adding a token?",
+		TITLE: "Add Token",
 	},
 	CONFIRMATION_MESSAGE:
 		"Please mind that selecting another address will not save the changes you have made. Do you want to continue?",

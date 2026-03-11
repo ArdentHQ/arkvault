@@ -97,7 +97,11 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			const url = profile.activeNetwork().config().host("full", profile);
 
 			const searchParams = new URLSearchParams({
-				addresses: profile.wallets().selected().map(w => w.address()).join(','),
+				addresses: profile
+					.wallets()
+					.selected()
+					.map((w) => w.address())
+					.join(","),
 				minBalance: "0",
 			});
 
@@ -122,7 +126,6 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			console.log("[POST] Parsed response:", result);
 
 			return result;
-
 		} catch (error) {
 			console.log(error);
 		}
@@ -142,15 +145,8 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			open={open}
 			minimizeable
 			onOpenChange={onOpenChange}
-			title={t("TOKENS.ADD_TOKEN.FORM_STEP.TITLE")}
-			titleIcon={
-				<ThemeIcon
-					lightIcon="SendTransactionLight"
-					darkIcon="SendTransactionDark"
-					dimIcon="SendTransactionDim"
-					dimensions={[24, 24]}
-				/>
-			}
+			title={t("TOKENS.ADD_TOKEN.TITLE")}
+			titleIcon={<Icon name="AddToken" dimensions={[24, 24]} className="text-theme-navy-600" />}
 			dataTestId="AddTokenSidePanel"
 			disableEscapeKey={isSubmitting}
 			onMountChange={onMountChange}
@@ -185,18 +181,11 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 							/>
 						</FormField>
 
-						<Alert title={t("TOKENS.ADD_TOKEN.FORM_STEP.TIP_TITLE")} variant="info" collapsible={true}>
-							<p>
-								{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}
-								Please mind the following when adding a token contract address:
-							</p>
+						<Alert title={t("TOKENS.ADD_TOKEN.TIP_TITLE")} variant="info" collapsible={true}>
+							<p>{t("TOKENS.ADD_TOKEN.TIP_GUIDELINE_TITLE")}</p>
 							<ol className="list-disc pl-5">
-								<li>
-									Ensure the address is prefixed with 0x.
-								</li>
-								<li>
-									Verify you’re adding the address of the deployed token contract.
-								</li>
+								<li>{t("TOKENS.ADD_TOKEN.TIP_GUIDELINE_1")}</li>
+								<li>{t("TOKENS.ADD_TOKEN.TIP_GUIDELINE_2")}</li>
 							</ol>
 						</Alert>
 
@@ -206,7 +195,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 									<div className="flex items-center gap-4 px-6 pt-5 pb-3">
 										<Image name="ContractAddress" />
 										<p className="text-theme-secondary-700 leading-5 font-semibold">
-											Fill in a valid contract address to load token details.
+											{t("TOKENS.ADD_TOKEN.EMPTY_STATE_TEXT")}
 										</p>
 									</div>
 								)}
@@ -216,14 +205,13 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 										<Spinner color="warning-alt" size="sm" width={3} />
 										<Divider type="vertical" />
 										<p className="text-theme-secondary-700 leading-5 font-semibold">
-											We’re fetching the token details.
+											{t("TOKENS.ADD_TOKEN.LOADING_STATE_TEXT")}
 										</p>
 									</div>
 								)}
 								<div className="bg-theme-secondary-100 px-6 py-3">
 									<p className="text-theme-secondary-700 text-sm leading-5">
-										Exercise caution when adding custom token contracts and confirm they match the
-										intended asset.
+										{t("TOKENS.ADD_TOKEN.HEADS_UP_MESSAGE")}
 									</p>
 								</div>
 							</div>
@@ -240,7 +228,9 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 									<div className="px-6 pt-5 pb-3">
 										<div className="space-y-3">
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.TOKEN")}</DetailTitle>
+												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+													{t("COMMON.TOKEN")}
+												</DetailTitle>
 
 												<div className="font-semibold break-all whitespace-normal">
 													{token.name()}
@@ -248,7 +238,9 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											</div>
 
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SYMBOL")}</DetailTitle>
+												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+													{t("COMMON.SYMBOL")}
+												</DetailTitle>
 
 												<div className="font-semibold break-all whitespace-normal">
 													{token.symbol()}
@@ -287,13 +279,17 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											</div>
 
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.DECIMALS")}</DetailTitle>
+												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+													{t("COMMON.DECIMALS")}
+												</DetailTitle>
 
 												<div className="font-semibold">{token.decimals()}</div>
 											</div>
 
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SUPPLY")}</DetailTitle>
+												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+													{t("COMMON.SUPPLY")}
+												</DetailTitle>
 
 												<div className="font-semibold">
 													<Amount
@@ -317,14 +313,14 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 												className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400"
 												size="md"
 											/>
-											<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 font-semibold leading-5">
+											<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 leading-5 font-semibold">
 												{t("COMMON.ERROR")}
 											</div>
 										</div>
 
 										<Divider type="vertical" />
-										<div className="text-theme-secondary-700 font-semibold leading-5">
-											The provided address is not a valid ERC20 token.
+										<div className="text-theme-secondary-700 leading-5 font-semibold">
+											{t("TOKENS.ADD_TOKEN.FAIL_STATE_TEXT")}
 										</div>
 									</div>
 								)}
@@ -335,10 +331,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 										"bg-theme-warning-50 text-theme-secondary-900": token,
 									})}
 								>
-									<p className="text-sm leading-5">
-										Exercise caution when adding custom token contracts and confirm they match the
-										intended asset.
-									</p>
+									<p className="text-sm leading-5">{t("TOKENS.ADD_TOKEN.HEADS_UP_MESSAGE")}</p>
 								</div>
 							</div>
 						)}
