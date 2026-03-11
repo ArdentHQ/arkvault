@@ -10,21 +10,21 @@ describe("Add Token", () => {
 	it("should fail if address does not start with 0x", async () => {
 		const { validate } = addToken(t).contractAddress();
 		await expect(validate("hello")).resolves.toBe(
-			t("COMMON.VALIDATION.FIELD_INVALID", { field: t("COMMON.CONTRACT_ADDRESS")}),
+			t("COMMON.VALIDATION.FIELD_INVALID", { field: t("COMMON.CONTRACT_ADDRESS") }),
 		);
 	});
 
 	it("should fail if length does not match the requirement", async () => {
 		const { validate } = addToken(t).contractAddress();
 		await expect(validate("0xabc")).resolves.toBe(
-			t("COMMON.VALIDATION.FIELD_INVALID", { field: t("COMMON.CONTRACT_ADDRESS")}),
+			t("COMMON.VALIDATION.FIELD_INVALID", { field: t("COMMON.CONTRACT_ADDRESS") }),
 		);
 	});
 
 	it("should fail if the address includes invalid chars", async () => {
 		const { validate } = addToken(t).contractAddress();
 		await expect(validate("0xsauron")).resolves.toBe(
-			t("COMMON.VALIDATION.FIELD_INVALID", { field: t("COMMON.CONTRACT_ADDRESS")}),
+			t("COMMON.VALIDATION.FIELD_INVALID", { field: t("COMMON.CONTRACT_ADDRESS") }),
 		);
 	});
 
