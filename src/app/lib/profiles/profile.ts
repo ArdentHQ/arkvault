@@ -620,7 +620,7 @@ export class Profile implements IProfile {
 		const existingContractAddresses = this.whitelistedContractAddresses();
 
 		// do nothing if address is already in the list
-		if(existingContractAddresses.some((a) => a.toLowerCase() === address.toLowerCase())) {
+		if (existingContractAddresses.some((a) => a.toLowerCase() === address.toLowerCase())) {
 			return existingContractAddresses;
 		}
 
@@ -638,7 +638,7 @@ export class Profile implements IProfile {
 		const existingContractAddresses = this.whitelistedContractAddresses();
 
 		// do nothing if address is not in the list
-		if(!existingContractAddresses.some((a) => a.toLowerCase() === address.toLowerCase())) {
+		if (!existingContractAddresses.some((a) => a.toLowerCase() === address.toLowerCase())) {
 			return existingContractAddresses;
 		}
 

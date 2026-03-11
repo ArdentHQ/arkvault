@@ -473,7 +473,7 @@ export interface IProfile {
 	 * @returns {Array<string>}
 	 * @memberof IProfile
 	 */
-	whitelistedContractAddresses(): string[]
+	whitelistedContractAddresses(): string[];
 
 	/**
 	 * Whitelists the given contract address.
@@ -491,5 +491,5 @@ export interface IProfile {
 	 * @returns {Array<string>}
 	 * @memberof IProfile
 	 */
-	removeWhitelistedContractAddress(address: string): string[]
+	removeWhitelistedContractAddress(address: string): string[];
 }

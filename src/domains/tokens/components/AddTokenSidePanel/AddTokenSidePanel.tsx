@@ -94,10 +94,12 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const handleSubmit = async () => {
 		profile.whitelistContractAddress(contractAddress as string);
-		toasts.success(t("TOKENS.ADD_TOKEN.TOKEN_ADDED_MESSAGE", {
-			name: token?.name(),
-			symbol: token?.displaySymbol()
-		}));
+		toasts.success(
+			t("TOKENS.ADD_TOKEN.TOKEN_ADDED_MESSAGE", {
+				name: token?.name(),
+				symbol: token?.displaySymbol(),
+			}),
+		);
 
 		onOpenChange(false);
 	};
