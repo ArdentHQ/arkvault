@@ -227,7 +227,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 														address={token.address()}
 														showCopyButton
 														walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-														wrapperClass="justify-end sm:justify-start"
+														wrapperClass="justify-end sm:justify-start md:max-w-96"
 														addressClass={cn(
 															"text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4",
 														)}
