@@ -93,7 +93,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const handleSubmit = async () => {
 		profile.whitelistContractAddress(contractAddress as string);
 		toasts.success(
-			t("TOKENS.ADD_TOKEN.TOKEN_ADDED_MESSAGE", {
+			t("TOKENS.ADD_TOKEN.SUCCESS_TOKEN_ADDED", {
 				name: token?.name(),
 				symbol: token?.displaySymbol(),
 			}),
@@ -158,11 +158,11 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 							/>
 						</FormField>
 
-						<Alert title={t("TOKENS.ADD_TOKEN.TIP_TITLE")} variant="info" collapsible={true}>
-							<p>{t("TOKENS.ADD_TOKEN.TIP_GUIDELINE_TITLE")}</p>
+						<Alert title={t("TOKENS.ADD_TOKEN.HELP_TITLE")} variant="info" collapsible={true}>
+							<p>{t("TOKENS.ADD_TOKEN.GUIDELINE_TITLE")}</p>
 							<ol className="list-disc pl-5">
-								<li>{t("TOKENS.ADD_TOKEN.TIP_GUIDELINE_1")}</li>
-								<li>{t("TOKENS.ADD_TOKEN.TIP_GUIDELINE_2")}</li>
+								<li>{t("TOKENS.ADD_TOKEN.GUIDELINE_ADDRESS_PREFIX")}</li>
+								<li>{t("TOKENS.ADD_TOKEN.GUIDELINE_CONTRACT_ADDRESS")}</li>
 							</ol>
 						</Alert>
 
@@ -172,7 +172,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 									<div className="flex items-center gap-4 px-6 pt-5 pb-3">
 										<Image name="ContractAddress" />
 										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
-											{t("TOKENS.ADD_TOKEN.EMPTY_STATE_TEXT")}
+											{t("TOKENS.ADD_TOKEN.STATE_EMPTY_TEXT")}
 										</p>
 									</div>
 								)}
@@ -182,13 +182,13 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 										<Spinner color="warning-alt" size="sm" width={3} />
 										<Divider type="vertical" />
 										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
-											{t("TOKENS.ADD_TOKEN.LOADING_STATE_TEXT")}
+											{t("TOKENS.ADD_TOKEN.STATE_LOADING_TEXT")}
 										</p>
 									</div>
 								)}
 								<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 px-6 py-3">
 									<p className="text-theme-secondary-700 dark:text-theme-dark-100 dim:text-theme-dim-100 text-sm leading-5">
-										{t("TOKENS.ADD_TOKEN.HEADS_UP_MESSAGE")}
+										{t("TOKENS.ADD_TOKEN.WARNING_CUSTOM_TOKEN")}
 									</p>
 								</div>
 							</div>
@@ -299,7 +299,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 										<Divider type="vertical" />
 										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
-											{t("TOKENS.ADD_TOKEN.FAIL_STATE_TEXT")}
+											{t("TOKENS.ADD_TOKEN.STATE_INVALID_TOKEN_TEXT")}
 										</div>
 									</div>
 								)}
@@ -312,7 +312,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											token,
 									})}
 								>
-									<p className="text-sm leading-5">{t("TOKENS.ADD_TOKEN.HEADS_UP_MESSAGE")}</p>
+									<p className="text-sm leading-5">{t("TOKENS.ADD_TOKEN.WARNING_CUSTOM_TOKEN")}</p>
 								</div>
 							</div>
 						)}
