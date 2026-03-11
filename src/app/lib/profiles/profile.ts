@@ -635,14 +635,9 @@ export class Profile implements IProfile {
 
 	/** {@inheritDoc IProfile.removeWhitelistedContractAddress} */
 	public removeWhitelistedContractAddress(address: string): string[] {
-		const existingContractAddresses = this.whitelistedContractAddresses();
-
-		// do nothing if address is not in the list
-		if (!existingContractAddresses.some((a) => a.toLowerCase() === address.toLowerCase())) {
-			return existingContractAddresses;
-		}
-
-		const updatedList = existingContractAddresses.filter((a) => a.toLowerCase() !== address.toLowerCase());
+		const updatedList = this.whitelistedContractAddresses().filter(
+			(a) => a.toLowerCase() !== address.toLowerCase(),
+		);
 
 		this.data().set(ProfileData.WhitelistedContractAddresses, updatedList);
 
