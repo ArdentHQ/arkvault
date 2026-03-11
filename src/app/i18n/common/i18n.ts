@@ -556,7 +556,6 @@ export const translations = {
 	VALIDATING_URI: "Validating URI. Please wait ...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required.",
-		DOES_NOT_EXISTS: "{{field}} does not exist.",
 		EXISTS: "{{field}} already exists.",
 		FIELD_INVALID: "{{field}} invalid.",
 		FIELD_REQUIRED: "{{field}} required.",
