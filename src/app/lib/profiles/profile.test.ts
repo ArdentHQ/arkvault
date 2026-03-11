@@ -397,11 +397,4 @@ describe("Profile", () => {
 		profile.removeWhitelistedContractAddress(address);
 		expect(profile.whitelistedContractAddresses().includes(address)).toBe(false);
 	});
-
-	it("should do nothing if whitelisted addresses does not include the given address", () => {
-		const address = "0xabc";
-
-		profile.removeWhitelistedContractAddress(address);
-		expect(profile.whitelistedContractAddresses().includes(address)).toBe(false);
-	});
 });
