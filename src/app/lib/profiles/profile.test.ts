@@ -370,4 +370,38 @@ describe("Profile", () => {
 		spy.mockRestore();
 		spyInit.mockRestore();
 	});
+
+	it("should whitelist an address", () => {
+		const address = "0xabc";
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+	});
+
+	it("should do nothing if an address is already whitelisted", () => {
+		const address = "0xabc";
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+	});
+
+	it("should remove a whitelisted address", () => {
+		const address = "0xabc";
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+
+		profile.removeWhitelistedContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(false);
+	});
+
+	it("should do nothing if whitelisted addresses does not include the given address", () => {
+		const address = "0xabc";
+
+		profile.removeWhitelistedContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(false);
+	});
 });

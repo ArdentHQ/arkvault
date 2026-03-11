@@ -642,7 +642,7 @@ export class Profile implements IProfile {
 			return existingContractAddresses;
 		}
 
-		const updatedList = existingContractAddresses.filter((a) => a.toLowerCase() === address.toLowerCase());
+		const updatedList = existingContractAddresses.filter((a) => a.toLowerCase() !== address.toLowerCase());
 
 		this.data().set(ProfileData.WhitelistedContractAddresses, updatedList);
 
