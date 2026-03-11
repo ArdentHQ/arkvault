@@ -38,6 +38,7 @@ export class ProfileValidator implements IProfileValidator {
 				}),
 				[ProfileData.HasCompletedIntroductoryTutorial]: Joi.boolean(),
 				[ProfileData.HasAcceptedManualInstallationDisclaimer]: Joi.boolean(),
+				[ProfileData.WhitelistedContractAddresses]: Joi.array(),
 			}).required(),
 			exchangeTransactions: Joi.object()
 				.pattern(

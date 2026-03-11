@@ -6,7 +6,7 @@ import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { Button } from "@/app/components/Button";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
 import { Alert } from "@/app/components/Alert";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
@@ -18,6 +18,7 @@ import { DetailTitle } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Link } from "@/app/components/Link";
 import { Amount } from "@/app/components/Amount";
+import { toasts } from "@/app/services";
 
 export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) => {
 	const { t } = useTranslation();
@@ -92,43 +93,13 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	});
 
 	const handleSubmit = async () => {
-		try {
-			console.log(profile.activeNetwork().config().host("full", profile));
-			const url = profile.activeNetwork().config().host("full", profile);
+		profile.whitelistContractAddress(contractAddress as string);
+		toasts.success(t("TOKENS.ADD_TOKEN.TOKEN_ADDED_MESSAGE", {
+			name: token?.name(),
+			symbol: token?.displaySymbol()
+		}));
 
-			const searchParams = new URLSearchParams({
-				addresses: profile
-					.wallets()
-					.selected()
-					.map((w) => w.address())
-					.join(","),
-				minBalance: "0",
-			});
-
-			const response = await fetch(`${url}/wallets/tokens?${searchParams.toString()}`, {
-				body: JSON.stringify({
-					whitelist: [contractAddress],
-				}),
-				headers: {
-					"Content-Type": "application/json",
-				},
-				method: "POST",
-			});
-
-			if (!response.ok) {
-				const text = await response.text();
-				console.error("[POST] Server error:", text);
-				throw new Error(`HTTP ${response.status}`);
-			}
-
-			const result = await response.json();
-
-			console.log("[POST] Parsed response:", result);
-
-			return result;
-		} catch (error) {
-			console.log(error);
-		}
+		onOpenChange(false);
 	};
 
 	const onMountChange = useCallback(

@@ -10,6 +10,7 @@ export const translations = {
 		TIP_GUIDELINE_TITLE: "Please mind the following when adding a token contract address:",
 		TIP_TITLE: "Need help adding a token?",
 		TITLE: "Add Token",
+		TOKEN_ADDED_MESSAGE: "Token {{name}} ({{symbol}}) successfully added",
 	},
 	CONFIRMATION_MESSAGE:
 		"Please mind that selecting another address will not save the changes you have made. Do you want to continue?",
