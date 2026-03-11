@@ -12,25 +12,31 @@ export const setupEthTransportInstance = (transport: LedgerTransport) => ({
 
 const accessLedgerDevice = async (ledgerService: LedgerService) => {
 	try {
+		console.log("[accessLedgerDevice] Connecting...");
 		await ledgerService.connect();
 	} catch (error) {
+		console.log("[accessLedgerDevice] Error", error);
 		// If the device is open, continue normally.
 		// Can be triggered when the user retries ledger connection.
 		if (error.message !== "The device is already open.") {
 			throw error;
 		}
 	}
+	console.log("[accessLedgerDevice] Connected.");
 };
 
 const accessLedgerApp = async ({ ledgerService }: { ledgerService: LedgerService }) => {
 	await accessLedgerDevice(ledgerService);
 
-	await ledgerService.getPublicKey(
+	console.log("[accessLedgerApp] Getting public key...");
+
+	const publicKey = await ledgerService.getPublicKey(
 		formatLedgerDerivationPath({
 			coinType: ledgerService.slip44(),
 		}),
 	);
 
+	console.log("[accessLedgerApp] Got public key", publicKey);
 	// Allows only eth based ledger apps and rejects others, including the old ark ledger app.
 	const isEthApp = await ledgerService.isEthBasedApp();
 	if (!isEthApp) {
@@ -47,6 +53,8 @@ export const persistLedgerConnection = async ({
 	options: Options;
 	hasRequestedAbort: () => boolean;
 }) => {
+	console.log("[persistLedgerConnection] Accessing ledger...");
+
 	const retryAccess: any = async (attempts: number) => {
 		if (hasRequestedAbort() && attempts > 1) {
 			throw new AbortError("CONNECTION_ERROR");
@@ -54,7 +62,9 @@ export const persistLedgerConnection = async ({
 
 		try {
 			await accessLedgerApp({ ledgerService });
+			console.log("[persistLedgerConnection] Connected");
 		} catch (error) {
+			console.log("[persistLedgerConnection] Error", error);
 			// Delay retry if an operation is in progress.
 			// Error: InvalidStateError: An operation that changes the device state is in progress.
 			if (error?.message?.includes?.("in progress")) {

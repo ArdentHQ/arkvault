@@ -383,10 +383,12 @@ export class TransactionService {
 		}
 
 		if (input.signatory.actsWithLedger()) {
+			console.log("[signerData] Getting Public key");
 			await this.#ledgerService.connect();
 			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
 			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
 			publicKey = await this.#ledgerService.getPublicKey(input.signatory.path());
+			console.log("[signerData] Got public key", publicKey);
 		}
 
 		return { address, publicKey };
@@ -429,10 +431,13 @@ export class TransactionService {
 	}
 
 	async #signWithLedger(input: Services.TransferInput, transaction: any): Promise<void> {
+		console.log("[signWithLedger] Singing transaction", input);
 		const signature = await this.#ledgerService.sign(
 			input.signatory.signingKey(),
 			transaction.serialize().toString("hex"),
 		);
+
+		console.log("[signWithLedger] Signed", { signature });
 
 		transaction.data = {
 			...transaction.data,
