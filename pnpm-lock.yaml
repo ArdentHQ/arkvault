@@ -18,8 +18,8 @@ importers:
         specifier: ^0.15.0
         version: 0.15.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.20
-        version: 0.0.20
+        specifier: ^0.0.21
+        version: 0.0.21
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -427,8 +427,8 @@ packages:
     resolution: {integrity: sha512-B7tcG1vu2z2gCPR41kSc4qJZe6AhlVmy7jDNF+viVnT8I/XW7p/lnN4Fh9o/R2fy2mfsfIeRYX2nKxvaX+UKFA==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.20':
-    resolution: {integrity: sha512-mD2pwiw3z64JF93ptj5tg7X0GvnGZqmEHmhezhJIFm9/2R1Ww9D71fO78YRhAMiCoIse9xaVWp8Pg9iefnlPlg==}
+  '@arkecosystem/typescript-crypto@0.0.21':
+    resolution: {integrity: sha512-QUDFYXG4u3UjB02LXAeb+sXsCeRUmgtxo/56XyqkvDgNCndBr2hYkqUiTs9kXV8tD9wgfBRxpfMG9zNw6yXLfw==}
     engines: {node: '>=20.12.2'}
 
   '@asamuzakjp/css-color@3.2.0':
@@ -3407,8 +3407,8 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
-  ethers@6.15.0:
-    resolution: {integrity: sha512-Kf/3ZW54L4UT0pZtsY/rf+EkBU7Qi5nnhonjUb8yTXcxH3cdcWrV2cRyk0Xk/4jK6OoHhxxZHriyhje20If2hQ==}
+  ethers@6.16.0:
+    resolution: {integrity: sha512-U1wulmetNymijEhpSEQ7Ct/P/Jw9/e7R1j5XIbPRydgV2DjLVMsULDlNksq3RQnFgKoLlZf88ijYtWEXcPa07A==}
     engines: {node: '>=14.0.0'}
 
   eventemitter3@5.0.1:
@@ -6604,11 +6604,11 @@ snapshots:
 
   '@arkecosystem/typescript-client@0.15.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.20':
+  '@arkecosystem/typescript-crypto@0.0.21':
     dependencies:
       '@noble/secp256k1': 2.3.0
       bignumber.js: 9.3.1
-      ethers: 6.15.0
+      ethers: 6.16.0
       wif: 5.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -10185,7 +10185,7 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  ethers@6.15.0:
+  ethers@6.16.0:
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       '@noble/curves': 1.2.0
