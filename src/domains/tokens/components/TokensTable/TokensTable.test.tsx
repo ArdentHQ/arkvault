@@ -257,12 +257,16 @@ describe("TokensTable", () => {
 	});
 
 	it("should open delete token confirmation modal when delete button is clicked", async () => {
+		const token = tokens.slice(0, 1)[0];
+
+		vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue([token.token().address()]);
+
 		render(
 			<TokensTable
 				isManageMode={true}
 				setManageMode={vi.fn()}
 				{...defaultProps({
-					tokens: tokens.slice(0, 1),
+					tokens: [token]
 				})}
 			/>,
 			{

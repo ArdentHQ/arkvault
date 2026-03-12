@@ -58,6 +58,7 @@ export const TokenRow = memo(
 					onClick={onClick}
 					isManageMode={isManageMode}
 					isHidden={isHidden}
+					isDeletable={isDeletable}
 					onDelete={onDelete}
 					toggleContractVisibility={toggleContractVisibility}
 					{...properties}

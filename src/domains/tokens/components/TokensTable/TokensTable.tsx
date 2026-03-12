@@ -154,7 +154,12 @@ export const TokensTable = ({
 				onClick={() => {
 					onClick?.(row);
 				}}
-				isDeletable={!showSkeleton && activeProfile.whitelistedContractAddresses().some(address => address.toLowerCase() === row.token().address().toLowerCase())}
+				isDeletable={
+					!showSkeleton &&
+					activeProfile
+						.whitelistedContractAddresses()
+						.some((address) => address.toLowerCase() === row.token().address().toLowerCase())
+				}
 				onDelete={setTokenToDelete}
 				toggleContractVisibility={toggleContractVisibility}
 				isHidden={!showSkeleton && hiddenContractAddresses.includes(row.token().address())}
