@@ -43,26 +43,34 @@ export class Signatory {
 		throw new ForbiddenMethodCallException(this.constructor.name, this.confirmKey.name);
 	}
 
-	public address(): string {
+	public address(): string | undefined {
 		// @TODO: deduplicate this
 		if (this.#signatory instanceof AbstractSignatory) {
 			return this.#signatory.address();
 		}
 
 		if (this.#signatory instanceof AbstractDoubleSignatory) {
+			return this.#signatory.address();
+		}
+
+		if (this.#signatory instanceof LedgerSignatory) {
 			return this.#signatory.address();
 		}
 
 		throw new ForbiddenMethodCallException(this.constructor.name, this.address.name);
 	}
 
-	public publicKey(): string {
+	public publicKey(): string | undefined {
 		// @TODO: deduplicate this
 		if (this.#signatory instanceof AbstractSignatory) {
 			return this.#signatory.publicKey();
 		}
 
 		if (this.#signatory instanceof AbstractDoubleSignatory) {
+			return this.#signatory.publicKey();
+		}
+
+		if (this.#signatory instanceof LedgerSignatory) {
 			return this.#signatory.publicKey();
 		}
 

@@ -115,7 +115,7 @@ export class TransactionService {
 		const amount = BigNumber.make(input.data.amount, token.token().decimals()).toSatoshi();
 
 		const builder = TokenTransferBuilder.new({
-			senderPublicKey: input.signatory.address(),
+			senderPublicKey: input.signatory.publicKey(),
 		})
 			.recipient(input.data.to, BigInt(amount.toFixed(0)))
 			.contractAddress(token.token().address())
