@@ -508,6 +508,7 @@ export const translations = {
 	STATUS: "Status",
 	SUBMIT: "Submit",
 	SUCCESS: "Success",
+	SUPPLY: "Supply",
 	SUPPORT: "Support",
 	SWITCH_TO_SINGLE_VIEW: "Switch to single address view for options.",
 	SYMBOL: "Symbol",
