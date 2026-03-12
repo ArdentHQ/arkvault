@@ -259,7 +259,7 @@ describe("TokensTable", () => {
 	it("should open delete token confirmation modal when delete button is clicked", async () => {
 		const token = tokens.slice(0, 1)[0];
 
-		vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue([token.token().address()]);
+		const profileSpy = vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue([token.token().address()]);
 
 		render(
 			<TokensTable
@@ -287,9 +287,15 @@ describe("TokensTable", () => {
 
 		// Verify modal is open
 		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
+
+		profileSpy.mockRestore();
 	});
 
 	it("should close delete token confirmation modal when onClose is called", async () => {
+		const token = tokens.slice(0, 1)[0];
+
+		const profileSpy = vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue([token.token().address()]);
+
 		render(
 			<TokensTable
 				isManageMode={true}
@@ -322,5 +328,50 @@ describe("TokensTable", () => {
 		await waitFor(() => {
 			expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
 		});
+
+		profileSpy.mockRestore();
+	});
+
+	it("should call onDelete", async () => {
+		const token = tokens.slice(0, 1)[0];
+		const whitelistedContractAddressesSpy = vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue([token.token().address()]);
+		const removeWhitelistedContractAddressesSpy = vi.spyOn(profile, "removeWhitelistedContractAddress").mockReturnValue([]);
+
+		render(
+			<TokensTable
+				isManageMode={true}
+				setManageMode={vi.fn()}
+				{...defaultProps({
+					tokens: [token]
+				})}
+			/>,
+			{
+				route,
+			},
+		);
+
+		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
+
+		await expect(screen.findByTestId("TokenRow_DeleteToken")).resolves.toBeVisible();
+
+		// Click delete button to open modal
+		const deleteButton = screen.getByTestId("TokenRow_DeleteToken");
+		await userEvent.click(deleteButton);
+
+		// Verify modal is open
+		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
+
+		const submitButton = screen.getByTestId("DeleteResource__submit-button");
+		await userEvent.click(submitButton);
+
+		expect(removeWhitelistedContractAddressesSpy).toHaveBeenCalledWith(token.token().address());
+
+		// Verify modal is closed
+		await waitFor(() => {
+			expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
+		});
+
+		whitelistedContractAddressesSpy.mockRestore();
+		removeWhitelistedContractAddressesSpy.mockRestore();
 	});
 });
