@@ -38,7 +38,7 @@ export const TokensTable = ({
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
 
-	const [removeToken, setRemoveToken] = useState<WalletToken | undefined>(undefined);
+	const [tokenToDelete, setTokenToDelete] = useState<WalletToken | undefined>(undefined);
 
 	// stores hidden contract addresses when in manage mode
 	const [hiddenContractAddresses, setHiddenContractAddresses] = useState<string[]>([]);
@@ -154,7 +154,8 @@ export const TokensTable = ({
 				onClick={() => {
 					onClick?.(row);
 				}}
-				onDelete={setRemoveToken}
+				isDeletable={!showSkeleton && activeProfile.whitelistedContractAddresses().some(address => address.toLowerCase() === row.token().address().toLowerCase())}
+				onDelete={setTokenToDelete}
 				toggleContractVisibility={toggleContractVisibility}
 				isHidden={!showSkeleton && hiddenContractAddresses.includes(row.token().address())}
 				onSend={() => handleTokenSend({ tokenContractAddress: row.token().address() })}
@@ -228,13 +229,13 @@ export const TokensTable = ({
 				</div>
 			</SearchableTableWrapper>
 
-			{removeToken && (
+			{tokenToDelete && (
 				<DeleteTokenConfirmationModal
-					walletToken={removeToken}
-					onClose={() => setRemoveToken(undefined)}
-					onDelete={(walletToken: WalletToken) => {
-						/* istanbul ignore next -- @preserve */
-						console.log(walletToken.token().address());
+					walletToken={tokenToDelete}
+					onClose={() => setTokenToDelete(undefined)}
+					onDelete={() => {
+						activeProfile.removeWhitelistedContractAddress(tokenToDelete.token().address());
+						setTokenToDelete(undefined);
 					}}
 				/>
 			)}

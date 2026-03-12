@@ -27,6 +27,7 @@ export type TokenRowProperties = {
 	decimals?: number;
 	isManageMode?: boolean;
 	isHidden?: boolean;
+	isDeletable?: boolean;
 	onDelete: (token: WalletToken) => void;
 	toggleContractVisibility: (address: string) => void;
 } & React.HTMLProps<any>;
@@ -40,6 +41,7 @@ export const TokenRow = memo(
 		isManageMode,
 		onDelete,
 		isHidden,
+		isDeletable,
 		isLoading = false,
 		toggleContractVisibility,
 		...properties
@@ -148,7 +150,7 @@ export const TokenRow = memo(
 						</Button>
 					)}
 
-					{isManageMode && (
+					{isManageMode && isDeletable && (
 						<Button
 							data-testid="TokenRow_DeleteToken"
 							size="icon"
