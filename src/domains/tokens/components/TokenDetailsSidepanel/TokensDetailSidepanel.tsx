@@ -184,7 +184,7 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SUPPLY")}</DetailTitle>
 
-								<div className="font-semibold break-words">{walletToken.token().totalSupply()}</div>
+								<div className="font-semibold break-all whitespace-normal text-right sm:text-left">{walletToken.token().totalSupply()}</div>
 							</div>
 						</div>
 					</DetailWrapper>
