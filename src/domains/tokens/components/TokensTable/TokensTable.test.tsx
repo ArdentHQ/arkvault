@@ -266,7 +266,7 @@ describe("TokensTable", () => {
 				isManageMode={true}
 				setManageMode={vi.fn()}
 				{...defaultProps({
-					tokens: [token]
+					tokens: [token],
 				})}
 			/>,
 			{
