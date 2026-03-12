@@ -197,7 +197,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 									<div className="px-6 pt-5 pb-3">
 										<div className="space-y-3">
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+												<DetailTitle className="w-auto min-w-14 sm:min-w-28 sm:pr-6">
 													{t("COMMON.TOKEN")}
 												</DetailTitle>
 
@@ -207,7 +207,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											</div>
 
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+												<DetailTitle className="w-auto min-w-14 sm:min-w-28 sm:pr-6">
 													{t("COMMON.SYMBOL")}
 												</DetailTitle>
 
@@ -217,23 +217,23 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											</div>
 
 											<div className="flex justify-between space-x-2 sm:justify-start sm:space-x-0 md:items-center">
-												<DetailTitle className="w-auto pt-1 sm:min-w-28 sm:pr-6 md:pt-0">
+												<DetailTitle className="w-auto pt-1 min-w-14 sm:min-w-28 sm:pr-6 md:pt-0">
 													{t("COMMON.CONTRACT")}
 												</DetailTitle>
 
-												<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start md:flex-row md:items-center">
+												<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start sm:flex-row sm:items-center">
 													<Address
 														truncateOnTable
 														address={token.address()}
 														showCopyButton
 														walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-														wrapperClass="justify-end sm:justify-start md:max-w-96"
+														wrapperClass="self-end sm:self-start  justify-end sm:justify-start w-40 sm:w-80 md:w-full md:max-w-96"
 														addressClass={cn(
 															"text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4",
 														)}
 													/>
 
-													<div className="hidden md:block">
+													<div className="hidden sm:block">
 														<Divider type="vertical" />
 													</div>
 
@@ -248,7 +248,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											</div>
 
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+												<DetailTitle className="w-auto min-w-14 sm:min-w-28 sm:pr-6">
 													{t("COMMON.DECIMALS")}
 												</DetailTitle>
 
@@ -256,7 +256,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											</div>
 
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-												<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">
+												<DetailTitle className="w-auto min-w-14 sm:min-w-28 sm:pr-6">
 													{t("COMMON.SUPPLY")}
 												</DetailTitle>
 
