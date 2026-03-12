@@ -336,15 +336,19 @@ describe("TokensTable", () => {
 
 	it("should call onDelete", async () => {
 		const token = tokens.slice(0, 1)[0];
-		const whitelistedContractAddressesSpy = vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue([token.token().address()]);
-		const removeWhitelistedContractAddressesSpy = vi.spyOn(profile, "removeWhitelistedContractAddress").mockReturnValue([]);
+		const whitelistedContractAddressesSpy = vi
+			.spyOn(profile, "whitelistedContractAddresses")
+			.mockReturnValue([token.token().address()]);
+		const removeWhitelistedContractAddressesSpy = vi
+			.spyOn(profile, "removeWhitelistedContractAddress")
+			.mockReturnValue([]);
 
 		render(
 			<TokensTable
 				isManageMode={true}
 				setManageMode={vi.fn()}
 				{...defaultProps({
-					tokens: [token]
+					tokens: [token],
 				})}
 			/>,
 			{
