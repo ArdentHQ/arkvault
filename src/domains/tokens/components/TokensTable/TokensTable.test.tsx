@@ -27,6 +27,8 @@ const defaultProps = (overrides) => ({
 	...overrides,
 });
 
+const deleteTokenModalTitle = "Delete Token";
+
 describe("TokensTable", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -277,7 +279,7 @@ describe("TokensTable", () => {
 		expect(screen.queryByTestId("TokensTable_Manage")).not.toBeInTheDocument();
 
 		// Verify modal is not visible initially
-		expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
+		expect(screen.queryByText(deleteTokenModalTitle)).not.toBeInTheDocument();
 
 		await expect(screen.findByTestId("TokenRow_DeleteToken")).resolves.toBeVisible();
 
@@ -286,7 +288,7 @@ describe("TokensTable", () => {
 		await userEvent.click(deleteButton);
 
 		// Verify modal is open
-		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
+		await expect(screen.findByText(deleteTokenModalTitle)).resolves.toBeVisible();
 
 		profileSpy.mockRestore();
 	});
@@ -318,7 +320,7 @@ describe("TokensTable", () => {
 		await userEvent.click(deleteButton);
 
 		// Verify modal is open
-		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
+		await expect(screen.findByText(deleteTokenModalTitle)).resolves.toBeVisible();
 
 		// Click cancel button to close modal
 		const cancelButton = screen.getByTestId("DeleteResource__cancel-button");
@@ -326,7 +328,7 @@ describe("TokensTable", () => {
 
 		// Verify modal is closed
 		await waitFor(() => {
-			expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
+			expect(screen.queryByText(deleteTokenModalTitle)).not.toBeInTheDocument();
 		});
 
 		profileSpy.mockRestore();
@@ -359,7 +361,7 @@ describe("TokensTable", () => {
 		await userEvent.click(deleteButton);
 
 		// Verify modal is open
-		await expect(screen.findByText("Delete Token")).resolves.toBeVisible();
+		await expect(screen.findByText(deleteTokenModalTitle)).resolves.toBeVisible();
 
 		const submitButton = screen.getByTestId("DeleteResource__submit-button");
 		await userEvent.click(submitButton);
@@ -368,7 +370,7 @@ describe("TokensTable", () => {
 
 		// Verify modal is closed
 		await waitFor(() => {
-			expect(screen.queryByText("Delete Token")).not.toBeInTheDocument();
+			expect(screen.queryByText(deleteTokenModalTitle)).not.toBeInTheDocument();
 		});
 
 		whitelistedContractAddressesSpy.mockRestore();
