@@ -366,6 +366,7 @@ export class TransactionService {
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string; publicKey?: string }> {
 		let address: string | undefined;
 		let publicKey: string | undefined;
+		console.log("[signerData] Check if wallet acts with ledger", input.signatory.actsWithLedger());
 
 		if (input.signatory.actsWithBip44Mnemonic()) {
 			address = this.hdWalletService.getAddress(input.signatory.signingKey(), input.signatory.path());
