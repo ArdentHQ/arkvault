@@ -6,6 +6,7 @@ import {
 	isRejectionError,
 	withAbortPromise,
 	getAuthenticationStepSubtitle,
+	isNullAddress,
 } from "./utils";
 import { useTranslation } from "react-i18next";
 import { getMainsailProfileId } from "@/utils/testing-library";
@@ -29,6 +30,20 @@ describe("Transaction utils", () => {
 			const error = isNoDeviceError("random string");
 
 			expect(error).toBe(false);
+		});
+	});
+
+	describe("isNullAddress", () => {
+		it("should return `false`", () => {
+			const result = isNullAddress("0xabc");
+
+			expect(result).toBe(false);
+		});
+
+		it("should return `true`", () => {
+			const result = isNullAddress("0x0000000000000000000000000000000000000000");
+
+			expect(result).toBe(true);
 		});
 	});
 

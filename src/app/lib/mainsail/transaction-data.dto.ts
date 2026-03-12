@@ -73,10 +73,6 @@ export abstract class TransactionData {
 	}
 
 	public isTokenTransfer() {
-		if (this.data?.token?.address && this.data.type === "transfer") {
-			return true;
-		}
-
 		return TransactionTypeIdentifier.isTokenTransfer(this.data.data);
 	}
 
@@ -115,7 +111,7 @@ export abstract class TransactionData {
 	}
 
 	public tokens(): TransactionToken[] | undefined {
-		if (this.isTokenTransfer() && this.data.tokens) {
+		if (this.data.tokens) {
 			return this.data.tokens.map((token: TransactionTokenData) => new TransactionToken(token));
 		}
 	}
