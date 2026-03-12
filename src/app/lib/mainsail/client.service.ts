@@ -262,9 +262,7 @@ export class ClientService {
 		let response: Contracts.KeyValuePair;
 
 		try {
-			console.log("broadcasting", transactionToBroadcast);
 			response = await this.#client.transactions().create({ transactions: transactionToBroadcast });
-			console.log({ response });
 		} catch (error) {
 			response = error.response.json();
 		}
