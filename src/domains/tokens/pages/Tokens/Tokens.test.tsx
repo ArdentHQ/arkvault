@@ -63,6 +63,7 @@ describe("Tokens", () => {
 						displaySymbol: () => "TKN1",
 						name: () => "Token 1",
 						symbol: () => "TKN1",
+						totalSupply: () => 100,
 					}),
 				},
 			],
