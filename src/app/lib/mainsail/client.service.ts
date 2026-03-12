@@ -2,7 +2,7 @@
 
 import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
-import { decodeFunctionResult, encodeFunctionData } from "viem";
+import { decodeFunctionResult, encodeFunctionData, TransactionTypeNotSupportedError } from "viem";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
@@ -70,9 +70,9 @@ export class ClientService {
 	}
 
 	public async tokenAddresses(query: Services.WalletTokensQuery): Promise<WalletTokenCollection> {
-		const response = await this.#client.tokens().tokenAddresses({
+		const response = await this.#client.wallets().tokens({
 			...query,
-			addresses: query.addresses.join(","),
+			address: query.addresses.join(","),
 		});
 
 		const walletTokens = response.data.map((tokenAddresses: TokenAddressesData) => {
@@ -112,24 +112,24 @@ export class ClientService {
 	}
 
 	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {
-		const response = await this.#client.tokens().byWalletAddress(address);
+		const response = await this.#client.wallets().tokensFor(address);
 		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData));
 	}
 
 	public async tokenHolders(contractAddress: string): Promise<TokenRepository> {
-		const response = await this.#client.tokens().holders(contractAddress);
+		const response = await this.#client.tokens().holdersFor(contractAddress);
 		const holders = new TokenRepository();
 		holders.fill(response.results);
 		return holders;
 	}
 
 	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
-		const response = await this.#client.tokens().get(contractAddress);
+		const response = await this.#client.tokens().whitelist(contractAddress);
 		return new TokenDTO(response.data);
 	}
 
 	public async tokenTransfers(query?: TokenTransfersQuery): Promise<ConfirmedTransactionDataCollection> {
-		const response = await this.#client.tokens().tokenTransfers({
+		const response = await this.#client.tokens().transfers({
 			...query,
 			from: query?.from?.join(","),
 			to: query?.to?.join(","),
@@ -175,7 +175,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const response = await this.#client.transactions().all(page, limit, parameters);
+		const response = await this.#client.transactions().all({ ...parameters, page, limit });
 
 		return new ConfirmedTransactionDataCollection(
 			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
@@ -189,7 +189,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const response = await this.#client.transactions().allUnconfirmed(page, limit, parameters);
+		const response = await this.#client.transactions().allUnconfirmed({ ...parameters, page, limit });
 
 		return new UnconfirmedTransactionDataCollection(
 			response.data.map((transaction) => new UnconfirmedTransactionData().configure(transaction)),
@@ -206,7 +206,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1 } = searchParams;
 
-		const response = await this.#client.wallets().all(page, limit);
+		const response = await this.#client.wallets().all({ page, limit });
 
 		return new Collections.WalletDataCollection(
 			response.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
@@ -223,7 +223,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const body = await this.#client.validators().all(page, limit, parameters);
+		const body = await this.#client.validators().all({ ...parameters, page, limit });
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
@@ -262,7 +262,9 @@ export class ClientService {
 		let response: Contracts.KeyValuePair;
 
 		try {
-			response = await this.#client.transactions().create(transactionToBroadcast);
+			console.log("broadcasting", transactionToBroadcast);
+			response = await this.#client.transactions().create({ transactions: transactionToBroadcast });
+			console.log({ response });
 		} catch (error) {
 			response = error.response.json();
 		}
