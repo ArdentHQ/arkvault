@@ -217,11 +217,11 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 											</div>
 
 											<div className="flex justify-between space-x-2 sm:justify-start sm:space-x-0 md:items-center">
-												<DetailTitle className="w-auto pt-1 min-w-14 sm:min-w-28 sm:pr-6 md:pt-0">
+												<DetailTitle className="w-auto min-w-14 pt-1 sm:min-w-28 sm:pr-6 md:pt-0">
 													{t("COMMON.CONTRACT")}
 												</DetailTitle>
 
-												<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:justify-start sm:flex-row sm:items-center">
+												<div className="flex flex-1 flex-col justify-end gap-2 sm:w-full sm:flex-row sm:items-center sm:justify-start">
 													<Address
 														truncateOnTable
 														address={token.address()}
