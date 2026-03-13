@@ -93,8 +93,8 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
+			/* istanbul ignore next -- @preserve */
 			if (!mounted) {
-				/* istanbul ignore next -- @preserve */
 				resetForm();
 			}
 		},
