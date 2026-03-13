@@ -464,11 +464,7 @@ export const SendTransferSidePanel = ({
 			disableEscapeKey={preventAccidentalClosing}
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
-				<SidePanelButtons
-					className={cn({
-						hidden: isLedgerAuthenticationStep,
-					})}
-				>
+				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
 					{!isLastStep && (
 						<Button
 							data-testid="SendTransfer__back-button"
