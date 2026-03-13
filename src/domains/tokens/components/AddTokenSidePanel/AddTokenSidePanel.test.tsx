@@ -129,7 +129,7 @@ describe("AddTokenSidePanel", () => {
 	});
 
 	it("should add a custom token", async () => {
-		const {mockOnOpenChange} = await renderPanel();
+		const { mockOnOpenChange } = await renderPanel();
 
 		const user = userEvent.setup();
 
