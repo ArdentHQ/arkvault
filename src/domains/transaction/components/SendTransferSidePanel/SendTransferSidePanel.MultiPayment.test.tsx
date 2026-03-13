@@ -15,6 +15,7 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+const selectedAsset = "ARK";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const selectNthSenderAddress = async (index = 0) => {
@@ -52,7 +53,7 @@ describe("SendTransferSidePanel MultiPayment", () => {
 	});
 
 	it("should select two recipients", async () => {
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 
@@ -88,7 +89,7 @@ describe("SendTransferSidePanel MultiPayment", () => {
 	it("should prevent sending when amount + fee exceeds balance", async () => {
 		const walletSpy = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(50));
 
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 
