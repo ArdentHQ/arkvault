@@ -329,7 +329,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const { openPanel } = usePanels();
 
 	const sendButtonClickHandler = () => {
-		openPanel(Panel.SendTransfer);
+		openPanel(Panel.SendTransfer, { isTokenTransfer: false });
 	};
 
 	const receiveButtonClickHandler = useCallback(() => {

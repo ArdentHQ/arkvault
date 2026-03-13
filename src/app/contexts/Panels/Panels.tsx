@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export enum Panel {
+	AddToken = "ADD_TOKEN",
 	CreateAddress = "CREATE_ADDRESS",
 	ImportAddress = "IMPORT_ADDRESS",
 	SendTransfer = "SEND_TRANSFER",

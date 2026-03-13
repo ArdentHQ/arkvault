@@ -39,4 +39,5 @@ export enum ProfileData {
 	MigrationResult = "MIGRATION_RESULT",
 	HasCompletedIntroductoryTutorial = "HAS_COMPLETED_INTRODUCTORY_TUTORIAL",
 	HasAcceptedManualInstallationDisclaimer = "HAS_ACCEPTED_MANUAL_INSTALLATION_DISCLAIMER",
+	WhitelistedContractAddresses = "WHITELISTED_CONTRACT_ADDRESS",
 }

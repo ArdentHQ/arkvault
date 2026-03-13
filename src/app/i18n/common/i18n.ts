@@ -84,6 +84,7 @@ export const translations = {
 	CONTACT_US: "Contact Us",
 	CONTINUE: "Continue",
 	CONTRACT: "Contract",
+	CONTRACT_ADDRESS: "Contract Address",
 	COPY: "Copy",
 	COPY_ADDRESS: "Copy Address",
 	COPY_ERROR: "Copy Error",

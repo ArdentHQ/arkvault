@@ -281,7 +281,12 @@ describe("Dashboard", () => {
 				withProfileSynchronizer: true,
 			});
 
-			await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SendTransfer));
+			await waitFor(() =>
+				expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SendTransfer, {
+					isTokenTransfer: true,
+					tokenContractAddress: "ARK",
+				}),
+			);
 		});
 	});
 });

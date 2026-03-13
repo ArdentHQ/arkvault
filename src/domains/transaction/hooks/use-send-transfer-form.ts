@@ -19,16 +19,12 @@ import { BigNumber } from "@/app/lib/helpers";
 
 export const useSendTransferForm = ({
 	wallet,
-	isTokenTransfer,
 	tokenContractAddress,
 	tokens,
-	selectedToken,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
-	isTokenTransfer?: boolean;
 	tokenContractAddress?: string;
 	tokens?: WalletToken[];
-	selectedToken?: WalletToken;
 }) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
@@ -54,7 +50,7 @@ export const useSendTransferForm = ({
 			recipients: [],
 			remainingBalance: wallet?.balance() ?? BigNumber.ZERO,
 			senderAddress: undefined,
-			tokenContractAddress,
+			tokenContractAddress: tokenContractAddress,
 			tokens,
 		}),
 
@@ -120,18 +116,20 @@ export const useSendTransferForm = ({
 
 			setLastEstimatedExpiration(data.expiration);
 
+			const token = tokens?.find((token) => token.token().address() === tokenContractAddress);
+
 			const transactionInput: Services.TransactionInputs = {
 				data,
 				gasLimit,
 				gasPrice,
 				signatory,
-				tokenContractAddress,
+				token,
 			};
 
 			const abortSignal = abortReference.current.signal;
 
 			const { uuid, transaction } = await transactionBuilder.build(
-				getTransferType({ recipients, tokenContractAddress }),
+				getTransferType({ recipients }),
 				transactionInput,
 				wallet,
 				{
@@ -147,7 +145,7 @@ export const useSendTransferForm = ({
 
 			return transaction;
 		},
-		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, selectedToken],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, tokens],
 	);
 
 	const walletBalance = wallet?.balance();
@@ -167,9 +165,7 @@ export const useSendTransferForm = ({
 
 		register("suppressWarning");
 
-		if (isTokenTransfer) {
-			register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
-		}
+		register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
 
 		if (networks.length === 1) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
@@ -244,7 +240,7 @@ export const useSendTransferForm = ({
 			previousTokenContractAddress.current = tokenContractAddress;
 			setValue("tokenContractAddress", tokenContractAddress, { shouldDirty: false, shouldValidate: false });
 		}
-	}, [tokenContractAddress, setValue]);
+	}, [tokenContractAddress, setValue, wallet]);
 
 	return {
 		form,
