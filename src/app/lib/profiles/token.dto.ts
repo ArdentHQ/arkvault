@@ -41,7 +41,7 @@ export class TokenDTO {
 
 	totalSupply(): BigNumber {
 		const decimals = this.decimals();
-		return BigNumber.make(this.#data.totalSupply, decimals).divide(BigNumber.powerOfTen(decimals))
+		return BigNumber.make(this.#data.totalSupply, decimals).divide(BigNumber.powerOfTen(decimals));
 	}
 
 	toJSON(): TokenData {
