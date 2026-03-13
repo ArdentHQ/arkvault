@@ -62,7 +62,7 @@ describe("AddTokenSidePanel", () => {
 		expect(continueButton()).toBeDisabled();
 	});
 
-	it("should display error when an non-existent contract address entered", async () => {
+	it("should display error when a non-existent contract address entered", async () => {
 		await renderPanel();
 
 		const invalidAddress = "0x22f6677522292654a231007c47b07971a7610904";
@@ -73,6 +73,30 @@ describe("AddTokenSidePanel", () => {
 				{ error: "Not Found", message: "Token not found", statusCode: 404 },
 				{
 					status: 404,
+				},
+			),
+		);
+
+		const user = userEvent.setup();
+
+		await user.clear(addressInput());
+		await user.paste(invalidAddress);
+
+		await expect(screen.findByText(/The provided address is not a valid ERC20 token./)).resolves.toBeVisible();
+		expect(continueButton()).toBeDisabled();
+	});
+
+	it("should display error when contract address lookup fails", async () => {
+		await renderPanel();
+
+		const invalidAddress = "0x22f6677522292654a231007c47b07971a7610904";
+
+		server.use(
+			requestMock(
+				`https://dwallets-evm.mainsailhq.com/api/tokens/${invalidAddress}`,
+				{},
+				{
+					status: 500,
 				},
 			),
 		);
