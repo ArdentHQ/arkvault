@@ -6,7 +6,7 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { expect, vi } from "vitest";
 import { AddTokenSidePanel } from "./AddTokenSidePanel";
-import { waitFor } from "@testing-library/react";
+import { toasts } from "@/app/services";
 
 let profile: Contracts.IProfile;
 
@@ -114,17 +114,39 @@ describe("AddTokenSidePanel", () => {
 		expect(screen.queryByText(/The provided address is not a valid ERC20 token./)).not.toBeInTheDocument();
 	});
 
-	// it("should display token details when a valid contract address entered", async () => {
-	// 	await renderPanel();
-	//
-	// 	const user = userEvent.setup();
-	//
-	// 	await user.clear(addressInput());
-	// 	await user.paste(validAddress);
-	//
-	// 	await expect(screen.findByText(/SAM/)).resolves.toBeVisible();
-	// 	await expect(screen.findByText(/SamCoin/)).resolves.toBeVisible();
-	//
-	// 	expect(continueButton()).toBeEnabled();
-	// });
+	it("should display token details when a valid contract address entered", async () => {
+		await renderPanel();
+
+		const user = userEvent.setup();
+
+		await user.clear(addressInput());
+		await user.paste(validAddress);
+
+		await expect(screen.findByText(/SAM/)).resolves.toBeVisible();
+		await expect(screen.findByText(/SamCoin/)).resolves.toBeVisible();
+
+		expect(continueButton()).toBeEnabled();
+	});
+
+	it("should add a custom token", async () => {
+		const {mockOnOpenChange} = await renderPanel();
+
+		const user = userEvent.setup();
+
+		await user.clear(addressInput());
+		await user.paste(validAddress);
+
+		await expect(screen.findByText(/SamCoin/)).resolves.toBeVisible();
+
+		expect(continueButton()).toBeEnabled();
+
+		const whitelistContractAddressSpy = vi.spyOn(profile, "whitelistContractAddress");
+		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
+
+		await user.click(continueButton());
+
+		expect(whitelistContractAddressSpy).toHaveBeenCalledWith(validAddress);
+		expect(successToastSpy).toHaveBeenCalled();
+		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+	});
 });
