@@ -103,7 +103,10 @@ describe("useWalletActions", () => {
 			current.handleSend();
 		});
 
-		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer, {
+			isTokenTransfer: false,
+			tokenContractAddress: "ARK",
+		});
 
 		act(() => {
 			current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);

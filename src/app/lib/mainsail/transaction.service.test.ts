@@ -521,7 +521,7 @@ describe("TransactionService", () => {
 			gasLimit: BigNumber.make(21000),
 			gasPrice: BigNumber.make(20000000000),
 			signatory,
-			tokenContractAddress: walletToken.token().address(),
+			token: walletToken,
 		} as any;
 
 		const result = await transactionService.tokenTransfer(input);
