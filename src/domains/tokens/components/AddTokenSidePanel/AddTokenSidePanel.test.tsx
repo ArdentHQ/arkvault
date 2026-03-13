@@ -7,6 +7,7 @@ import userEvent from "@testing-library/user-event";
 import { expect, vi } from "vitest";
 import { AddTokenSidePanel } from "./AddTokenSidePanel";
 import { toasts } from "@/app/services";
+import { http, HttpResponse } from "msw";
 
 let profile: Contracts.IProfile;
 
@@ -116,13 +117,7 @@ describe("AddTokenSidePanel", () => {
 		const invalidAddress = "0x22f6677522292654a231007c47b07971a7610904";
 
 		server.use(
-			requestMock(
-				`https://dwallets-evm.mainsailhq.com/api/tokens/${invalidAddress}`,
-				{ error: "Not Found", message: "Token not found", statusCode: 404 },
-				{
-					status: 404,
-				},
-			),
+			http.get(`https://dwallets-evm.mainsailhq.com/api/tokens/${invalidAddress}`, () => HttpResponse.error()),
 		);
 
 		const user = userEvent.setup();
