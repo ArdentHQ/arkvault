@@ -43,7 +43,7 @@ describe("TokenDTO", () => {
 	});
 
 	it("should return the total supply", () => {
-		expect(token.totalSupply()).toBe(Fixture.data.totalSupply);
+		expect(token.totalSupply().toString()).toBe("100000000");
 	});
 
 	it("should return the data as JSON", () => {
