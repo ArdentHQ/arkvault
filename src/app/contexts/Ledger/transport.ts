@@ -31,17 +31,13 @@ export const isLedgerTransportSupported = () => {
 export const connectedTransport = async () => {
 	await closeDevices();
 	await openTransport();
-	console.log("[connectedTransport] Checking transport");
+
 	const transport = await supportedTransport();
-	console.log("[connectedTransport] Connected to transport", transport);
 
 	try {
-		console.log("[connectedTransport] Opening transport");
 		const response = await transport.openConnected();
-		console.log("[connectedTransport] Opened transport", response);
 		return response;
 	} catch (error) {
-		console.log("[connectedTransport] Error opening transport", { error });
 		// `transport.openConnected()` calls device.open() internally,
 		// and throws the error below when called multiple times.
 		// To ensure the transport is always provided,
