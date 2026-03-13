@@ -5,6 +5,13 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import userEvent from "@testing-library/user-event";
 import * as ReactRouter from "react-router";
 import { afterAll } from "vitest";
+
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
@@ -12,6 +19,7 @@ vi.mock("@/utils/delay", () => ({
 let profile: any;
 let useSearchParamsMock;
 
+const selectedAsset = "ARK";
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
 	userEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
@@ -25,7 +33,7 @@ const sendAllID = "AddRecipient__send-all";
 
 const selectNthSenderAddress = async (index = 0) => {
 	const container = screen.getByTestId("sender-address");
-	await userEvent.click(within(container).getByTestId("SelectDropdown__input"));
+	await userEvent.click(within(container).getAllByTestId("SelectDropdown__input")[0]);
 	await waitFor(() => {
 		expect(screen.getByTestId(`SelectDropdown__option--${index}`)).toBeInTheDocument();
 	});
@@ -33,6 +41,24 @@ const selectNthSenderAddress = async (index = 0) => {
 };
 
 const selectFirstSenderAddress = async () => selectNthSenderAddress(0);
+
+const setupTokenSelection = async (index: number, tokenName: string) => {
+	const dropdowns = screen.getAllByTestId("SelectDropdown__input");
+	const tokenSelection = dropdowns[index];
+
+	if (!tokenSelection) {
+		return;
+	}
+
+	const user = userEvent.setup();
+	await user.clear(tokenSelection);
+	await userEvent.paste(tokenName);
+	await userEvent.click(screen.getAllByTestId("select-list__input")[index]);
+
+	await waitFor(() => {
+		expect(tokenSelection).toHaveValue(tokenName);
+	});
+};
 
 describe("SendTransferSidePanel Fee Handling", () => {
 	beforeAll(async () => {
@@ -42,6 +68,37 @@ describe("SendTransferSidePanel Fee Handling", () => {
 		useSearchParamsMock = vi
 			.spyOn(ReactRouter, "useSearchParams")
 			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
+		const fixtureData = Fixtures.ByContractAddress.data;
+		const walletTokenData = Fixtures.ByWalletAddress.data[0];
+
+		profile
+			.wallets()
+			.first()
+			.tokens()
+			.create({
+				token: new TokenDTO(fixtureData),
+				walletToken: new WalletTokenDTO(walletTokenData),
+			});
+
+		const tokensCollection = new WalletTokenCollection(
+			[
+				new WalletToken({
+					network: profile.activeNetwork(),
+					profile,
+					token: new TokenDTO(fixtureData),
+					walletToken: new WalletTokenDTO(walletTokenData),
+				}),
+			],
+			{
+				last: undefined,
+				next: 0,
+				prev: undefined,
+				self: undefined,
+			},
+		);
+
+		vi.spyOn(profile.tokens(), "selected").mockReturnValue(tokensCollection);
 	});
 
 	afterAll(() => {
@@ -49,7 +106,7 @@ describe("SendTransferSidePanel Fee Handling", () => {
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 
@@ -63,6 +120,7 @@ describe("SendTransferSidePanel Fee Handling", () => {
 		await waitFor(() =>
 			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
 		);
+		await setupTokenSelection(2, selectedAsset);
 
 		await userEvent.click(screen.getByTestId(sendAllID));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"));
@@ -73,19 +131,19 @@ describe("SendTransferSidePanel Fee Handling", () => {
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.00012768");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.0001512");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
 	});
 
 	it("should keep the selected fee when user steps back", async () => {
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 
@@ -124,7 +182,7 @@ describe("SendTransferSidePanel Fee Handling", () => {
 	});
 
 	it("should handle fee change", async () => {
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} />, {
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${getDefaultProfileId()}/dashboard`,
 		});
 
@@ -144,15 +202,15 @@ describe("SendTransferSidePanel Fee Handling", () => {
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
-		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.00012768");
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.0001064");
 
 		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
-		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.0001512");
+		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.000126");
 
 		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),

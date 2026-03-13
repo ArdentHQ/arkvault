@@ -86,6 +86,8 @@ export const AppPanels = () => {
 				<SendTransferSidePanel
 					open={currentOpenedPanel?.name === Panel.SendTransfer}
 					onOpenChange={closePanel}
+					tokenContractAddress={currentOpenedPanel?.properties?.tokenContractAddress as string | undefined}
+					isTokenTransfer={currentOpenedPanel?.properties?.isTokenTransfer as boolean | undefined}
 				/>
 			</ResetWhenUnmounted>
 
@@ -93,8 +95,8 @@ export const AppPanels = () => {
 				<SendTransferSidePanel
 					open={currentOpenedPanel?.name === Panel.SendTokenTransfer}
 					onOpenChange={closePanel}
-					isTokenTransfer
 					tokenContractAddress={currentOpenedPanel?.properties?.tokenContractAddress as string | undefined}
+					isTokenTransfer={currentOpenedPanel?.properties?.isTokenTransfer as boolean}
 				/>
 			</ResetWhenUnmounted>
 
