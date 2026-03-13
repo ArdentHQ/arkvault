@@ -188,7 +188,7 @@ export const TokenDetailSidepanel = ({
 									<Amount
 										ticker={walletToken.token().symbol()}
 										value={walletToken.token().totalSupply()}
-										className="font-semibold break-all whitespace-normal text-base"
+										className="text-base font-semibold break-all whitespace-normal"
 										showTicker={false}
 									/>
 								</div>
