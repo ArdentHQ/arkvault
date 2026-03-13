@@ -114,7 +114,7 @@ export const TokenDetailSidepanel = ({
 									{t("COMMON.AMOUNT")}
 								</DetailTitle>
 
-								<div className="flex w-full flex-1 flex-row items-center justify-end gap-2 pr-2 sm:w-full sm:justify-start">
+								<div className="flex w-full flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
 									<Amount
 										ticker={walletToken.token().symbol()}
 										value={walletToken.balance()}
@@ -127,7 +127,7 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.FIAT")}</DetailTitle>
 
-								<div className="text-theme-secondary-500 dark:text-theme-dark-500 flex flex-1 flex-row items-center justify-end gap-2 font-semibold sm:w-full sm:justify-start">
+								<div className="text-theme-secondary-500 dark:text-theme-dark-500 flex flex-1 flex-row items-center justify-end gap-2 text-sm leading-[17px] font-semibold sm:w-full sm:justify-start sm:text-base sm:leading-5">
 									{t("COMMON.NOT_AVAILABLE")}
 								</div>
 							</div>
@@ -139,7 +139,7 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SYMBOL")}</DetailTitle>
 
-								<div className="font-semibold break-all whitespace-normal">
+								<div className="text-sm leading-[17px] font-semibold break-all whitespace-normal sm:text-base sm:leading-5">
 									{walletToken.token().symbol()}
 								</div>
 							</div>
@@ -178,7 +178,9 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.DECIMALS")}</DetailTitle>
 
-								<div className="font-semibold">{walletToken.token().decimals()}</div>
+								<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+									{walletToken.token().decimals()}
+								</div>
 							</div>
 
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
@@ -188,7 +190,7 @@ export const TokenDetailSidepanel = ({
 									<Amount
 										ticker={walletToken.token().symbol()}
 										value={walletToken.token().totalSupply()}
-										className="font-semibold break-all whitespace-normal text-base"
+										className="text-sm leading-[17px] font-semibold break-all whitespace-normal sm:text-base sm:leading-5"
 										showTicker={false}
 									/>
 								</div>
