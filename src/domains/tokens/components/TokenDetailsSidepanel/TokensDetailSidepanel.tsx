@@ -184,8 +184,13 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SUPPLY")}</DetailTitle>
 
-								<div className="font-semibold break-all whitespace-normal">
-									{walletToken.token().totalSupply()}
+								<div className="flex w-full flex-1 flex-row items-center justify-end gap-2 sm:w-full sm:justify-start">
+									<Amount
+										ticker={walletToken.token().symbol()}
+										value={walletToken.token().totalSupply()}
+										className="font-semibold break-all whitespace-normal text-base"
+										showTicker={false}
+									/>
 								</div>
 							</div>
 						</div>
