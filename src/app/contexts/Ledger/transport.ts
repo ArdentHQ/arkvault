@@ -29,6 +29,8 @@ export const isLedgerTransportSupported = () => {
 // Assumes user has already granted permission.
 // Won't trigger the native permission dialog.
 export const connectedTransport = async () => {
+	await closeDevices();
+	await openTransport();
 	console.log("[connectedTransport] Checking transport");
 	const transport = await supportedTransport();
 	console.log("[connectedTransport] Connected to transport", transport);
