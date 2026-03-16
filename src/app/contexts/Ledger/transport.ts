@@ -32,9 +32,7 @@ export const connectedTransport = async () => {
 	await closeDevices();
 	await openTransport();
 
-	console.log("[connectedTransport] Checking transport");
 	const transport = await supportedTransport();
-	console.log("[connectedTransport] Connected to transport");
 
 	try {
 		console.log("[connectedTransport] Opening transport");
@@ -47,9 +45,9 @@ export const connectedTransport = async () => {
 		// and throws the error below when called multiple times.
 		// To ensure the transport is always provided,
 		// close all opened devices, re-open transport, and retry.
-		if (error.message === "The device is already open.") {
-			await closeDevices();
-			await openTransport();
+		const errorsToRetry = ["The device is already open"];
+		if (errorsToRetry.some((retryError) => error?.message.includes(retryError))) {
+			console.log("[connectedTransport] Retrying...");
 			return connectedTransport();
 		}
 

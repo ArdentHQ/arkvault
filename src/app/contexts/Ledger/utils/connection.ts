@@ -28,15 +28,12 @@ const accessLedgerDevice = async (ledgerService: LedgerService) => {
 const accessLedgerApp = async ({ ledgerService }: { ledgerService: LedgerService }) => {
 	await accessLedgerDevice(ledgerService);
 
-	// console.log("[accessLedgerApp] Getting public key...");
-	//
-	// const publicKey = await ledgerService.getPublicKey(
-	// 	formatLedgerDerivationPath({
-	// 		coinType: ledgerService.slip44Eth(),
-	// 	}),
-	// );
-	//
-	// console.log("[accessLedgerApp] Got public key", publicKey);
+	await ledgerService.getPublicKey(
+		formatLedgerDerivationPath({
+			coinType: ledgerService.slip44Eth(),
+		}),
+	);
+
 	// Allows only eth based ledger apps and rejects others, including the old ark ledger app.
 	const isEthApp = await ledgerService.isEthBasedApp();
 	if (!isEthApp) {

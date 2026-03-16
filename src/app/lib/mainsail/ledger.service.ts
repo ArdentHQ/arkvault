@@ -65,6 +65,8 @@ export class LedgerService {
 	}
 
 	public async connect(): Promise<void> {
+		await this.disconnect();
+
 		this.#ledger = await ledgerTransportFactory();
 		this.#transport = new Eth(this.#ledger);
 	}
