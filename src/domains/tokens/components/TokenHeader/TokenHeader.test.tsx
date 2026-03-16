@@ -258,7 +258,7 @@ describe("TokenHeader", () => {
 	});
 
 	it("should disable `Send` button", async () => {
-		const balanceSpy = vi.spyOn(profile, "totalBalance").mockReturnValue(BigNumber.ZERO)
+		const balanceSpy = vi.spyOn(profile, "totalBalance").mockReturnValue(BigNumber.ZERO);
 
 		render(<TokenHeader profile={profile} />, {
 			route,
