@@ -38,15 +38,16 @@ describe("Tokens", () => {
 		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
 
 		const tokensTab = screen.getAllByTestId("tabs__tab-button-tokens")[0];
-		const transactionsTab = screen.getAllByTestId("tabs__tab-button-transactions")[0];
+		const transfersTab = screen.getAllByTestId("tabs__tab-button-tokenTransfers")[0];
 
 		await waitFor(() => {
 			expect(tokensTab).toBeInTheDocument();
 		});
 
-		await userEvent.click(transactionsTab);
+		await userEvent.click(transfersTab);
 
 		expect(screen.queryByTestId("TokenList")).not.toBeInTheDocument();
+		expect(screen.getByTestId("TransactionTable")).toBeInTheDocument();
 	});
 
 	it("should send token through token details sidepanel", async () => {
