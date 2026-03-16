@@ -359,7 +359,6 @@ export class TransactionService {
 
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
-		let publicKey: string | undefined;
 		console.log("[signerData] Check if wallet acts with ledger", input.signatory.actsWithLedger());
 
 		if (input.signatory.actsWithBip44Mnemonic()) {
