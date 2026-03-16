@@ -8,6 +8,7 @@ import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import * as PanelsMock from "@/app/contexts/Panels";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -235,7 +236,7 @@ describe("TokenHeader", () => {
 		usePanelsMock.mockRestore();
 	});
 
-	it("should open `Send Token` side panel", async () => {
+	it("should open `Send Transfer` side panel", async () => {
 		const openPanelSpy = vi.fn();
 		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
 			openPanel: openPanelSpy,
@@ -257,5 +258,18 @@ describe("TokenHeader", () => {
 		);
 
 		usePanelsMock.mockRestore();
+	});
+
+	it("should disable `Send` button", async () => {
+		const balanceSpy = vi.spyOn(profile, "totalBalance").mockReturnValue(BigNumber.ZERO)
+
+		render(<TokenHeader profile={profile} />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
+		expect(screen.getByTestId("TokensHeader__send-button")).toBeDisabled();
+
+		balanceSpy.mockRestore();
 	});
 });
