@@ -234,4 +234,28 @@ describe("TokenHeader", () => {
 
 		usePanelsMock.mockRestore();
 	});
+
+	it("should open `Send Token` side panel", async () => {
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
+		render(<TokenHeader profile={profile} />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("TokensHeader__send-button"));
+
+		expect(openPanelSpy).toHaveBeenCalledWith(
+			PanelsMock.Panel.SendTokenTransfer,
+			{
+				isTokenTransfer: true,
+			}
+		);
+
+		usePanelsMock.mockRestore();
+	});
 });
