@@ -250,12 +250,9 @@ describe("TokenHeader", () => {
 		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
 		await userEvent.click(screen.getByTestId("TokensHeader__send-button"));
 
-		expect(openPanelSpy).toHaveBeenCalledWith(
-			PanelsMock.Panel.SendTokenTransfer,
-			{
-				isTokenTransfer: true,
-			}
-		);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTokenTransfer, {
+			isTokenTransfer: true,
+		});
 
 		usePanelsMock.mockRestore();
 	});
