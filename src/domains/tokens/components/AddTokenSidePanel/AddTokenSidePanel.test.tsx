@@ -7,7 +7,7 @@ import userEvent from "@testing-library/user-event";
 import { expect, vi } from "vitest";
 import { AddTokenSidePanel } from "./AddTokenSidePanel";
 import { toasts } from "@/app/services";
-import { http, HttpResponse } from "msw";
+import { delay, http, HttpResponse } from "msw";
 
 let profile: Contracts.IProfile;
 
@@ -167,5 +167,25 @@ describe("AddTokenSidePanel", () => {
 		expect(whitelistContractAddressSpy).toHaveBeenCalledWith(validAddress);
 		expect(successToastSpy).toHaveBeenCalled();
 		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+	});
+
+	it("should display loading indicator while loading token", async () => {
+		await renderPanel();
+
+		server.use(
+			http.get(`https://dwallets-evm.mainsailhq.com/api/tokens/${validAddress}`, async () => {
+				await delay(1000);
+
+				return HttpResponse.json(samCoinData)
+			}),
+		);
+
+		const user = userEvent.setup();
+
+		await user.clear(addressInput());
+		await user.paste(validAddress);
+
+
+		await expect(screen.findByText(/We’re fetching the token details./)).resolves.toBeVisible();
 	});
 });
