@@ -182,12 +182,12 @@ describe("useTokenTransfers", () => {
 		const wallets = profile.wallets().values();
 
 		server.use(
-			http.get("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", () => {
-				return HttpResponse.json({
+			http.get("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", () =>
+				HttpResponse.json({
 					data: Fixtures.TokenTransfers.data.slice(0, 1),
 					meta: { ...Fixtures.TokenTransfers.meta, next: null },
-				});
-			}),
+				}),
+			),
 		);
 
 		const { result } = renderHook(() => useTokenTransfers({ profile, wallets }), {
