@@ -15,7 +15,8 @@ describe("useProfileTokens", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 	});
-	beforeEach(() => {
+
+	afterEach(() => {
 		vi.clearAllMocks();
 	});
 
@@ -52,6 +53,29 @@ describe("useProfileTokens", () => {
 		});
 
 		expect(selectedMock).toHaveBeenCalled();
+	});
+
+	it("should not trigger reload when already loading", async () => {
+		const syncMock = vi.fn(() => new Promise((resolve) => {
+			setTimeout(resolve, 2500);
+		}));
+
+		vi.spyOn(profile.tokens(), "sync").mockImplementation(syncMock);
+
+		const { result, rerender } = renderHook(
+			({ profile }) => useProfileTokens({ profile }),
+			{ initialProps: { profile } },
+		);
+
+		expect(result.current.isLoading).toBe(true);
+
+		// trigger useEffect again
+		rerender({ profile });
+
+		// reload should still only have been called once
+		expect(syncMock).toHaveBeenCalledTimes(1);
+
+		syncMock.mockRestore();
 	});
 
 	it("should not reload if already loaded", async () => {

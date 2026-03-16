@@ -19,7 +19,7 @@ export const useProfileTokens = ({ profile }: { profile: Contracts.IProfile }) =
 			return;
 		}
 
-		reload();
+		void reload();
 	}, [profile, reload]);
 
 	return {
