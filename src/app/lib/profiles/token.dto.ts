@@ -1,4 +1,5 @@
 import { TokenData } from "./token.contracts";
+import { BigNumber } from "@/app/lib/helpers";
 
 export class TokenDTO {
 	#data: TokenData;
@@ -38,8 +39,9 @@ export class TokenDTO {
 		return this.#data.symbol.slice(0, allowedCharCount) + "…";
 	}
 
-	totalSupply(): string {
-		return this.#data.totalSupply;
+	totalSupply(): BigNumber {
+		const decimals = this.decimals();
+		return BigNumber.make(this.#data.totalSupply, decimals).divide(BigNumber.powerOfTen(decimals));
 	}
 
 	toJSON(): TokenData {

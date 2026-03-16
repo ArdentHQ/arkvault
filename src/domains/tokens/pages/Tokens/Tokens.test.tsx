@@ -3,6 +3,7 @@ import { env, getMainsailProfileId, render, waitFor, screen } from "@/utils/test
 import { Contracts } from "@/app/lib/profiles";
 import { Tokens } from "./Tokens";
 import userEvent from "@testing-library/user-event";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -64,6 +65,7 @@ describe("Tokens", () => {
 						displaySymbol: () => "TKN1",
 						name: () => "Token 1",
 						symbol: () => "TKN1",
+						totalSupply: () => BigNumber.make(100),
 					}),
 				},
 			],

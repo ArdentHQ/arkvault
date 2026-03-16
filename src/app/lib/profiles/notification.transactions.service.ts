@@ -122,7 +122,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		this.#isSyncing = true;
 
 		try {
-			this.#profile.transactionAggregate().flush("received");
+			this.#profile.transactionAggregate().flush("all");
 
 			const transactions: ExtendedConfirmedTransactionDataCollection = await this.#profile
 				.transactionAggregate()

@@ -23,6 +23,7 @@ export const TokenRowMobile = memo(
 		onDelete,
 		isLoading = false,
 		isManageMode,
+		isDeletable,
 		isHidden,
 		toggleContractVisibility,
 		onSend,
@@ -88,7 +89,7 @@ export const TokenRowMobile = memo(
 									</Button>
 								)}
 
-								{isManageMode && (
+								{isManageMode && isDeletable && (
 									<Button
 										data-testid="TokenRow_DeleteToken"
 										size="icon"
@@ -106,10 +107,12 @@ export const TokenRowMobile = memo(
 
 								{isManageMode && (
 									<div className="ml-2 flex items-center sm:hidden">
-										<Divider
-											type="vertical"
-											className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
-										/>
+										{isDeletable && (
+											<Divider
+												type="vertical"
+												className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 m-0 h-[17px]"
+											/>
+										)}
 
 										<Checkbox
 											data-testid="TokenRow_VisibilityToggle"
