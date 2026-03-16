@@ -176,7 +176,7 @@ describe("AddTokenSidePanel", () => {
 			http.get(`https://dwallets-evm.mainsailhq.com/api/tokens/${validAddress}`, async () => {
 				await delay(1000);
 
-				return HttpResponse.json(samCoinData)
+				return HttpResponse.json(samCoinData);
 			}),
 		);
 
@@ -184,7 +184,6 @@ describe("AddTokenSidePanel", () => {
 
 		await user.clear(addressInput());
 		await user.paste(validAddress);
-
 
 		await expect(screen.findByText(/We’re fetching the token details./)).resolves.toBeVisible();
 	});
