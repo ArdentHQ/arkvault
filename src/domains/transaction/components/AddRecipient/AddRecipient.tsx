@@ -240,7 +240,7 @@ export const AddRecipient = ({
 		});
 	}, [isSendAllSelected, remainingBalance, setValue]);
 
-	const { assets } = useTransferAssets({ isSingle, isTokenTransfer, profile, tokens });
+	const { assets } = useTransferAssets({ isSingle, profile, tokens });
 
 	const singleRecipientOnChange = ({
 		address,
