@@ -257,7 +257,7 @@ export const ActionTypeSkeleton = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="ActionType">
+		<div data-testid="ActionTypeSkeleton">
 			<DetailWrapper label={t("COMMON.ACTION")}>
 				<div className="space-y-3">
 					<div className="flex w-full justify-between gap-2 sm:justify-start">

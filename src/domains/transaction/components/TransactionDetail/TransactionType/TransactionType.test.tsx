@@ -121,6 +121,37 @@ describe("TransactionType", () => {
 		});
 	});
 
+	it("should render skeleton when loading approve transaction details", async () => {
+		render(
+			<TransactionType
+				isRefreshingTransaction={true}
+				transaction={
+					{
+						...TransactionFixture,
+						approveDetails: () => ({ address: "0xabd", amount: 500000000000 }),
+						data: () => ({
+							data: {
+								data: "0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000",
+							},
+						}),
+						isApprove: () => true,
+						isConfirmed: () => true,
+						to: () => "0xabc",
+						tokens: [],
+						wallet: () => profile.wallets().first(),
+					} as DTO.ExtendedConfirmedTransactionData
+				}
+			/>,
+			{
+				route: `/profiles/${profile.id()}/dashboard`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ActionTypeSkeleton")).toBeInTheDocument();
+		});
+	});
+
 	it("should render contract deployment - confirmed transaction", () => {
 		const { container } = render(
 			<TransactionType
