@@ -88,7 +88,7 @@ describe("TransactionType", () => {
 		expect(container).toHaveTextContent("0x60006000");
 	});
 
-	it("should render approve transaction details", () => {
+	it("should render approve transaction details", async () => {
 		const { container } = render(
 			<TransactionType
 				transaction={
@@ -116,11 +116,11 @@ describe("TransactionType", () => {
 			},
 		);
 
-		waitFor(() => {
+		await waitFor(() => {
 			expect(container).toHaveTextContent("Approve");
 		});
 
-		waitFor(() => {
+		await waitFor(() => {
 			expect(container).toHaveTextContent("0.0000005 ABC for use by 0xabd on behalf of Mainsail Wallet");
 		});
 	});
