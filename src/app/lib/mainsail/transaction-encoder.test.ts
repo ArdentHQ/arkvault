@@ -57,10 +57,10 @@ describe("TransactionEncoder", () => {
 		expect(
 			encoder.byType(
 				{
+					recipientAddress: address,
 					recipients: [{ address, amount: 100 }],
 					senderAddress: address,
 					tokenContractAddress: address,
-					recipientAddress: address,
 				},
 				"transfer",
 			),
