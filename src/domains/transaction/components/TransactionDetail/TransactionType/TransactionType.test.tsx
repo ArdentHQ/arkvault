@@ -103,7 +103,10 @@ describe("TransactionType", () => {
 						isApprove: () => true,
 						isConfirmed: () => true,
 						to: () => "0xabc",
-						tokens: [{ ...tokenData }],
+						tokens: [
+							new TransactionToken(tokenData)
+						],
+						token: () => new TransactionToken(tokenData),
 						wallet: () => profile.wallets().first(),
 					} as DTO.ExtendedConfirmedTransactionData
 				}
@@ -169,7 +172,9 @@ describe("TransactionType", () => {
 						isApprove: () => false,
 						isConfirmed: () => true,
 						to: () => "0xabc",
-						tokens: [{ ...tokenData }],
+						tokens: [
+							new TransactionToken(tokenData)
+						],
 						token: () => new TransactionToken(tokenData),
 						wallet: () => profile.wallets().first(),
 					} as DTO.ExtendedConfirmedTransactionData
