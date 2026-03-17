@@ -15,7 +15,10 @@ const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileC
 
 	const signature = await wallet
 		.signatory()
-		.ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!);
+		.ledger(wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath)!, {
+			senderPublicKey: wallet.publicKey(),
+			address: wallet.address(),
+		});
 
 	return {
 		...input,

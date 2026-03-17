@@ -31,7 +31,6 @@ import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { useVoteFormContext } from "@/domains/vote/contexts/VoteFormContext";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import classNames from "classnames";
-import { useConnectLedger } from "@/domains/transaction/hooks/use-connect-ledger";
 import { Image } from "@/app/components/Image";
 
 enum Step {
@@ -69,7 +68,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 	const form = useForm({ mode: "onChange" });
 	const { senderAddress } = form.watch();
 
-	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, ledgerDevice, connect } = useLedgerContext();
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
@@ -81,11 +80,24 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const abortReference = useRef(new AbortController());
 	const transactionBuilder = useTransactionBuilder();
+	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
-	const { connectLedger } = useConnectLedger({
-		onReady: () => void handleSubmit(submitForm)(),
-		profile: activeProfile,
-	});
+	const connectLedger = useCallback(async () => {
+		if (senderAddress) {
+			await connect(activeProfile);
+			setIsWaitingLedger(true);
+		}
+	}, [senderAddress, activeProfile, connect]);
+
+	useEffect(() => {
+		if (!isConnected && ledgerDevice?.id && isWaitingLedger) {
+			void connectLedger();
+		}
+
+		if (isConnected && isWaitingLedger) {
+			void handleSubmit(submitForm)();
+		}
+	}, [isConnected, ledgerDevice?.id, isWaitingLedger]);
 
 	const activeWallet = useMemo(
 		() => activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id()),

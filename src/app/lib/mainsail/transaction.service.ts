@@ -25,6 +25,9 @@ import { SignedTransactionData } from "./signed-transaction.dto";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 import { NetworkConfig } from "@/app/lib/mainsail/network-config";
 import { assertToken } from "@/utils/assertions.js";
+import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection.js";
+import { closeDevices, openTransport } from "@/app/contexts/Ledger/transport.js";
+import { LedgerService } from "./ledger.service.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -38,7 +41,7 @@ type TransactionsInputs =
 	| Services.ValidatorResignationInput;
 
 export class TransactionService {
-	readonly #ledgerService!: Services.LedgerService;
+	readonly #ledgerService!: LedgerService;
 	readonly hdWalletService!: HDWalletService;
 	readonly #addressService!: AddressService;
 	readonly #clientService!: ClientService;
@@ -374,10 +377,12 @@ export class TransactionService {
 		}
 
 		if (input.signatory.actsWithLedger()) {
-			console.log("[signerData] Getting Public key");
-			await this.#ledgerService.connect();
-			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
-			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
+			if (input.signatory.address()) {
+				address = input.signatory.address();
+			} else {
+				const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
+				address = this.#addressService.fromPublicKey(extendedPublicKey).address;
+			}
 		}
 
 		return { address };
@@ -415,6 +420,11 @@ export class TransactionService {
 
 	async #signWithLedger(input: Services.TransferInput, transaction: any): Promise<void> {
 		console.log("[signWithLedger] Singing transaction", input);
+
+		await closeDevices();
+		await openTransport();
+		await this.#ledgerService.accessLedgerApp();
+
 		const signature = await this.#ledgerService.sign(
 			input.signatory.signingKey(),
 			transaction.serialize().toString("hex"),
