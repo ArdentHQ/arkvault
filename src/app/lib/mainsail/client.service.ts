@@ -21,7 +21,12 @@ import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
-import { Helpers, TransactionFunctionSigs, UsernamesContract } from "@arkecosystem/typescript-crypto";
+import {
+	Helpers,
+	TransactionFunctionSigs,
+	TransactionTypeIdentifier,
+	UsernamesContract,
+} from "@arkecosystem/typescript-crypto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -148,6 +153,7 @@ export class ClientService {
 						status: 1,
 					},
 					...transfer,
+					to: TransactionTypeIdentifier.isTokenTransfer(transfer.functionSig) ? transfer.to : undefined,
 					tokens: [
 						{
 							from: transfer.from,
@@ -162,8 +168,6 @@ export class ClientService {
 							value: transfer.value,
 						},
 					],
-					type: "transfer",
-					value: "0",
 				}),
 			),
 			this.#createMetaPagination(response),

@@ -1,5 +1,5 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
-import { http, HttpResponse } from "msw";
+import { http } from "msw";
 import { useProfileTokens } from "./use-profile-tokens";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
@@ -85,7 +85,7 @@ describe("useProfileTokens", () => {
 		};
 
 		const selectedSpy = vi
-			.spyOn(profile.tokens(), "selected")
+			.spyOn(profile.tokens(), "aggregated")
 			.mockReturnValueOnce(mockFirstPage as any)
 			.mockReturnValueOnce(mockSecondPage as any);
 
@@ -111,7 +111,7 @@ describe("useProfileTokens", () => {
 	it("should update hasEmptyResults when no tokens are loaded", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockReturnValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);
@@ -130,7 +130,7 @@ describe("useProfileTokens", () => {
 	it("should set hasMore to false when there are no more pages", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockReturnValue({
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockReturnValue({
 			hasMorePages: () => false,
 			items: () => [
 				{
@@ -160,7 +160,7 @@ describe("useProfileTokens", () => {
 	it("should handle errors during token fetching", async () => {
 		const wallets = profile.wallets().values();
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected").mockRejectedValue(new Error("Fetch error"));
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockRejectedValue(new Error("Fetch error"));
 
 		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
 			wrapper,
@@ -176,7 +176,7 @@ describe("useProfileTokens", () => {
 		const firstWallet = [wallets[0]];
 		const secondWallet = [wallets[1]];
 
-		const selectedSpy = vi.spyOn(profile.tokens(), "selected");
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated");
 
 		const { result, rerender } = renderHook(({ wallets }) => useProfileTokens({ profile, wallets }), {
 			initialProps: { wallets: firstWallet },
@@ -213,73 +213,88 @@ describe("useProfileTokens", () => {
 		syncSpy.mockRestore();
 	});
 
-	it(
-		"should check for new tokens periodically",
-		async () => {
-			vi.useFakeTimers({ shouldAdvanceTime: true });
+	it("should check for new tokens periodically", async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "setTimeout", "Date"],
+		});
 
-			const wallets = profile.wallets().values();
-			const walletAddress = wallets[0].address();
-			let callCount = 0;
+		const wallets = profile.wallets().values();
 
-			server.use(
-				http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", () => {
-					callCount++;
-
-					const isFirstCall = callCount === 1;
-
-					return HttpResponse.json({
-						data: [
-							{
-								addresses: {
-									[walletAddress]: isFirstCall ? "1000000000000000000" : "2000000000000000000",
-								},
-								decimals: 18,
-								name: isFirstCall ? "Token 1" : "Token 2",
-								supply: "20000000000000000000000",
-								symbol: isFirstCall ? "TKN1" : "TKN2",
-								token: isFirstCall ? "0xToken1" : "0xToken2",
-							},
-						],
-						meta: {},
-					});
-				}),
-			);
-
-			const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
-				wrapper,
-			});
-
-			await waitFor(() => {
-				expect(result.current.isLoadingTokens).toBe(false);
-			});
-
-			// Verify that the first token is present after initial load
-			expect(result.current.tokens).toHaveLength(1);
-			expect(result.current.tokens[0].token().address()).toBe("0xToken1");
-			expect(result.current.tokens[0].token().name()).toBe("Token 1");
-			expect(result.current.tokens[0].balance().toString()).toBe("1");
-
-			await act(async () => {
-				await vi.advanceTimersByTimeAsync(15_000);
-			});
-
-			await waitFor(
-				() => {
-					expect(result.current.tokens).toHaveLength(2);
+		const mockFirstPage = {
+			hasMorePages: () => true,
+			items: () => [
+				{
+					address: () => wallets[0].address(),
+					balance: () => "1",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "TKN1",
+						name: () => "Token 1",
+						symbol: () => "TKN1",
+					}),
 				},
-				{ timeout: 8000 },
-			);
+			],
+		};
 
-			// Verify that after checkNewTokens runs, the second token is present
-			expect(result.current.tokens[0].token().address()).toBe("0xToken2");
-			expect(result.current.tokens[0].token().name()).toBe("Token 2");
-			expect(result.current.tokens[0].balance().toString()).toBe("2");
+		const mockSecondPage = {
+			hasMorePages: () => false,
+			items: () => [
+				{
+					address: () => wallets[0].address(),
+					balance: () => "2",
+					token: () => ({
+						address: () => "0xToken2",
+						decimals: () => 18,
+						displaySymbol: () => "TKN2",
+						name: () => "Token 2",
+						symbol: () => "TKN2",
+					}),
+				},
+			],
+		};
 
-			vi.useRealTimers();
-		},
-		{ timeout: 8000 },
-	);
+		let callCount = 0;
+		const selectedSpy = vi.spyOn(profile.tokens(), "aggregated").mockImplementation(() => {
+			callCount++;
+			if (callCount === 1) {
+				return mockFirstPage;
+			}
+			if (callCount === 2) {
+				return mockSecondPage;
+			}
+			return mockSecondPage;
+		});
+
+		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
+			wrapper,
+		});
+
+		await waitFor(() => {
+			expect(result.current.isLoadingTokens).toBe(false);
+		});
+
+		expect(result.current.tokens.length).toBe(1);
+		expect(callCount).toBe(1); // Should have been called once
+
+		await act(async () => {
+			vi.advanceTimersByTime(30_000);
+			await vi.runOnlyPendingTimersAsync();
+		});
+
+		await waitFor(
+			() => {
+				expect(result.current.tokens).toHaveLength(2);
+			},
+			{
+				timeout: 4000,
+			},
+		);
+
+		selectedSpy.mockRestore();
+		vi.useRealTimers();
+	});
 
 	it("should not check for new tokens when wallets array is empty", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });

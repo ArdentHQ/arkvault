@@ -28,7 +28,7 @@ let useActiveProfileSpy: MockInstance;
 const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 
 const selectSender = async () => {
-	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectDropdown__input"));
+	await userEvent.click(within(screen.getByTestId("sender-address")).getAllByTestId("SelectDropdown__input")[0]);
 
 	await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
@@ -110,7 +110,7 @@ describe("SendExchangeTransfer", () => {
 
 		await selectSender();
 
-		await expect(screen.getAllByTestId("Amount")).toHaveLength(3);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
 
 	it("should sync wallet if new sender wallet is not restored or synced", async () => {

@@ -1,4 +1,4 @@
-import { Enums, Networks } from "@/app/lib/mainsail";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
@@ -11,6 +11,7 @@ import { Button } from "@/app/components/Button";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 export const FormStep = ({
 	network,
@@ -20,6 +21,7 @@ export const FormStep = ({
 	onScan,
 	onChange,
 	isTokenTransfer,
+	tokens,
 }: {
 	network: Networks.Network;
 	senderWallet?: Contracts.IReadWriteWallet;
@@ -28,6 +30,7 @@ export const FormStep = ({
 	onScan?: () => void;
 	onChange?: ({ sender }: { sender?: Contracts.IReadWriteWallet }) => void;
 	isTokenTransfer?: boolean;
+	tokens: WalletToken[];
 }) => {
 	const { t } = useTranslation();
 
@@ -111,15 +114,13 @@ export const FormStep = ({
 
 				<div data-testid="recipient-address">
 					<AddRecipient
+						tokens={tokens}
 						isTokenTransfer={isTokenTransfer}
 						onChange={(value: RecipientItem[]) => {
 							setValue("recipients", value, { shouldDirty: true, shouldValidate: true });
 						}}
 						profile={profile}
 						recipients={getRecipients()}
-						showMultiPaymentOption={
-							network.allows(Enums.FeatureFlag.TransactionMultiPayment) && !isTokenTransfer
-						}
 						wallet={senderWallet}
 					/>
 				</div>

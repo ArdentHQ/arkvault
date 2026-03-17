@@ -10,7 +10,7 @@ export const SelectToken = ({
 }: {
 	tokens: { label: string; value: string }[];
 	className?: string;
-	onChange?: (tokenContractAddress?: string, shouldValidate?: boolean) => void;
+	onChange?: (selected: { label?: string; value?: string | number }) => void;
 	value?: string;
 }) => {
 	const { t } = useTranslation();
@@ -26,8 +26,11 @@ export const SelectToken = ({
 			allowFreeInput={false}
 			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
 			className={className}
-			onChange={(option: OptionProperties) => {
-				onChange?.(option?.value as string | undefined);
+			onChange={(option?: OptionProperties) => {
+				onChange?.({
+					label: option?.label,
+					value: option?.value,
+				});
 			}}
 			addons={{
 				start: {

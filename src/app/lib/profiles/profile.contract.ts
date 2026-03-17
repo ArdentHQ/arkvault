@@ -466,4 +466,30 @@ export interface IProfile {
 	 * @memberof IProfile
 	 */
 	tokens(): TokenService;
+
+	/**
+	 * Returns whitelisted contract addresses
+	 *
+	 * @returns {Array<string>}
+	 * @memberof IProfile
+	 */
+	whitelistedContractAddresses(): string[];
+
+	/**
+	 * Whitelists the given contract address.
+	 *
+	 * @param {string} address
+	 * @returns {Array<string>}
+	 * @memberof IProfile
+	 */
+	whitelistContractAddress(address: string): string[];
+
+	/**
+	 * Removes the given address from whitelisted contract addresses.
+	 *
+	 * @param {string} address
+	 * @returns {Array<string>}
+	 * @memberof IProfile
+	 */
+	removeWhitelistedContractAddress(address: string): string[];
 }

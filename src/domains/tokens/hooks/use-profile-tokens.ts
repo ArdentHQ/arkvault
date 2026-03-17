@@ -19,10 +19,11 @@ export const useProfileTokens = ({ profile }: { profile: Contracts.IProfile }) =
 			return;
 		}
 
-		reload();
+		void reload();
 	}, [profile, reload]);
 
 	return {
+		aggregated: profile.tokens().aggregated().items(),
 		isLoading,
 		reload,
 		tokens: profile.tokens().selected().items(),

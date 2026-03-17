@@ -4,7 +4,6 @@ import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export interface AddRecipientProperties {
-	disableMultiPaymentOption?: boolean;
 	onChange: (recipients: RecipientItem[]) => void;
 	profile: Contracts.IProfile;
 	recipients: RecipientItem[];
@@ -13,6 +12,7 @@ export interface AddRecipientProperties {
 	withDeeplink?: boolean;
 	isTokenTransfer?: boolean;
 	onTokenChange?: (token?: WalletToken) => void;
+	tokens?: WalletToken[];
 }
 
 export interface ToggleButtonProperties {

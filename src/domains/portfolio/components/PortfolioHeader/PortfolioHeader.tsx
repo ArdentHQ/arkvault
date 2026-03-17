@@ -31,6 +31,7 @@ import { useLocalStorage } from "usehooks-ts";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import { DISPLAY_DECIMALS } from "@/domains/transaction/utils";
 
 export const PortfolioHeader = ({
 	profile,
@@ -352,7 +353,7 @@ export const PortfolioHeader = ({
 										</p>
 										<div>
 											<Amount
-												value={profile.totalBalance()}
+												value={profile.totalBalance().decimalPlaces(DISPLAY_DECIMALS)}
 												ticker={wallet.currency()}
 												className="text-theme-primary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold md:text-base md:leading-5"
 												allowHideBalance
@@ -416,7 +417,7 @@ export const PortfolioHeader = ({
 									<div className="text-theme-secondary-900 dim:text-theme-dim-50 flex flex-row items-center text-lg leading-[21px] font-semibold md:text-2xl md:leading-[29px]">
 										{isRestored && selectedWallets.length === 1 && (
 											<Amount
-												value={wallet.balance()}
+												value={wallet.balance().decimalPlaces(DISPLAY_DECIMALS)}
 												ticker={wallet.currency()}
 												className="dark:text-theme-dark-50 dim:text-theme-dim-50"
 												allowHideBalance

@@ -69,7 +69,7 @@ describe("WalletToken", () => {
 		});
 
 		it("#totalSupply", () => {
-			expect(tokenDTO.totalSupply()).toBe(fixtureData.totalSupply);
+			expect(tokenDTO.totalSupply().toString()).toBe("100000000");
 		});
 
 		it("#toJSON", () => {
@@ -88,7 +88,7 @@ describe("WalletToken", () => {
 			expect(walletToken.token().deploymentHash()).toBe(tokenDTO.deploymentHash());
 			expect(walletToken.token().name()).toBe(tokenDTO.name());
 			expect(walletToken.token().symbol()).toBe(tokenDTO.symbol());
-			expect(walletToken.token().totalSupply()).toBe(tokenDTO.totalSupply());
+			expect(walletToken.token().totalSupply().toString()).toBe(tokenDTO.totalSupply().toString());
 			expect(walletToken.token().toJSON()).toEqual(tokenDTO.toJSON());
 		});
 	});
