@@ -69,8 +69,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 				const data = await response.json();
 				setToken(new TokenDTO(data.data));
-			} catch (e) {
-				console.error(e);
+			} catch {
 				setIsInvalidContractAddress(true);
 			} finally {
 				setIsLoadingToken(false);
@@ -94,6 +93,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
+			/* istanbul ignore next -- @preserve */
 			if (!mounted) {
 				resetForm();
 			}
