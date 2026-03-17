@@ -153,8 +153,8 @@ describe("Signatory", () => {
 
 		it("should return address for ledger signatory", () => {
 			const ledgerSignatory = new LedgerSignatory({
-				signingKey: "m/44'/60'/0'/0/0",
 				options: { address: "0xabc" },
+				signingKey: "m/44'/60'/0'/0/0",
 			});
 
 			const signatory = new Signatory(ledgerSignatory);
@@ -218,8 +218,8 @@ describe("Signatory", () => {
 
 		it("should return publicKey for ledger signatory", () => {
 			const ledgerSignatory = new LedgerSignatory({
-				signingKey: "m/44'/60'/0'/0/0",
 				options: { senderPublicKey: "0xabc" },
+				signingKey: "m/44'/60'/0'/0/0",
 			});
 
 			const signatory = new Signatory(ledgerSignatory);
