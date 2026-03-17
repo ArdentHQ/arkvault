@@ -4,11 +4,13 @@ import { server, requestMock } from "@/tests/mocks/server";
 import { TransactionService } from "./transaction.service";
 import { ConfigRepository } from "./config.repository";
 import { BigNumber } from "@/app/lib/helpers";
-import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { env, MAINSAIL_MNEMONICS, mockNanoSTransport } from "@/utils/testing-library";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { Signatory } from "./signatory";
+import { LedgerSignatory } from "./ledger.signatory";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
@@ -437,22 +439,22 @@ describe("TransactionService", () => {
 	});
 
 	it("should call #signWithLedger for ledger signatory in #sign", async () => {
+		mockNanoSTransport();
 		server.use(
 			requestMock("https://test1.com/wallets/0x47ea9bAa16edd859C1792933556c4659A647749C", {
 				data: {},
 			}),
 		);
 
-		const ledgerSignatory = await wallet.signatoryFactory().make({
-			// using mnemonic to make a signatory that I can spy
-			// to emulate the ledger signatory
-			mnemonic: MAINSAIL_MNEMONICS[0],
+		const ledgerSignatory = new LedgerSignatory({
+			options: { senderPublicKey: "0xabc" },
+			signingKey: "m/44'/60'/0'/0/0",
 		});
 
-		vi.spyOn(ledgerSignatory, "actsWithMnemonic").mockReturnValue(false);
-		vi.spyOn(ledgerSignatory, "actsWithLedger").mockReturnValue(true);
+		const signatory = new Signatory(ledgerSignatory);
 
 		const profileLedgerSpy = vi.spyOn(profile, "ledger").mockReturnValue({
+			accessLedgerApp: vi.fn(),
 			connect: vi.fn(),
 			getExtendedPublicKey: vi
 				.fn()
@@ -466,7 +468,7 @@ describe("TransactionService", () => {
 			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
 			gasLimit: BigNumber.make(21000),
 			gasPrice: BigNumber.make(20000000000),
-			signatory: ledgerSignatory,
+			signatory,
 		} as any;
 
 		const result = await transactionService.transfer(input);
