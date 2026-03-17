@@ -5,9 +5,7 @@ export const useTransferAssets = ({
 	profile,
 	tokens,
 	isSingle,
-	isTokenTransfer,
 }: {
-	isTokenTransfer?: boolean;
 	profile: Contracts.IProfile;
 	tokens: WalletToken[];
 	isSingle?: boolean;
@@ -22,9 +20,7 @@ export const useTransferAssets = ({
 		value: profile.activeNetwork().ticker(),
 	};
 
-	const assets = isTokenTransfer ? assetOptions : [mainsailAsset, ...assetOptions];
-
 	return {
-		assets: isSingle ? assets : [mainsailAsset],
+		assets: isSingle ? [mainsailAsset, ...assetOptions] : [mainsailAsset],
 	};
 };
