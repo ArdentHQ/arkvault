@@ -60,8 +60,7 @@ export const TransactionTotalLabel = ({
 	const { t } = useTranslation();
 
 	const token = transaction.token();
-	const currency =
-		transaction.isTokenTransfer() && token ? token.token().displaySymbol() : transaction.wallet().currency();
+	const currency = showTicker && token ? token.token().displaySymbol() : transaction.wallet().currency();
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
