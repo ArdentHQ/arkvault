@@ -230,7 +230,7 @@ describe("SendTransferSidePanel", () => {
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 		await userEvent.click(document.body);
 
-		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000105");
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
 
 		expect(continueButton()).not.toBeDisabled();
 		await userEvent.click(continueButton());
