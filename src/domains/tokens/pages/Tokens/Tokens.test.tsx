@@ -39,15 +39,16 @@ describe("Tokens", () => {
 		expect(screen.getByTestId("TokenList")).toBeInTheDocument();
 
 		const tokensTab = screen.getAllByTestId("tabs__tab-button-tokens")[0];
-		const transactionsTab = screen.getAllByTestId("tabs__tab-button-transactions")[0];
+		const transfersTab = screen.getAllByTestId("tabs__tab-button-tokenTransfers")[0];
 
 		await waitFor(() => {
 			expect(tokensTab).toBeInTheDocument();
 		});
 
-		await userEvent.click(transactionsTab);
+		await userEvent.click(transfersTab);
 
 		expect(screen.queryByTestId("TokenList")).not.toBeInTheDocument();
+		expect(screen.getByTestId("TransactionTable")).toBeInTheDocument();
 	});
 
 	it("should send token through token details sidepanel", async () => {
@@ -98,7 +99,38 @@ describe("Tokens", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("TokenDetailSidepanel")).not.toBeInTheDocument());
 	});
-	it("should open token detail sidepanel when a token row is clicked", async () => {
+
+	it("should close token detail side panel when cancel button is clicked", async () => {
+		const user = userEvent.setup();
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+		});
+
+		// Verify side panel is not open initially
+		expect(screen.queryByTestId("TokenDetailSidepanel")).not.toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
+		});
+
+		const tokenRow = screen.getAllByTestId("TokensTableRow")[0];
+		await user.click(tokenRow);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("TokenDetailSidepanel__close-button"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("TokenDetailSidepanel")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should open token detail side panel when a token row is clicked", async () => {
 		const user = userEvent.setup();
 
 		render(<Tokens />, { route });
