@@ -45,14 +45,11 @@ export class LedgerService {
 	}
 
 	async #getExtendedPublicKeyWithRetry(path: string, retryCount = 0): Promise<string> {
-		console.log("[getExtendedPublicKeyWithRetry] Getting extended public keys for path", { path, retryCount });
 		try {
 			const result = await this.#transport.getAddress(path);
-			console.log("[getExtendedPublicKeyWithRetry] Got result", { result });
 
 			return result.publicKey;
 		} catch (error) {
-			console.log("[getExtendedPublicKeyWithRetry] Error", error);
 			if (error?.message?.includes?.("busy") && retryCount < 3) {
 				await new Promise((resolve) => setTimeout(resolve, 500));
 				return await this.#getExtendedPublicKeyWithRetry(path, retryCount + 1);
@@ -68,11 +65,9 @@ export class LedgerService {
 	public async connect(): Promise<void> {
 		this.#ledger = await ledgerTransportFactory();
 		this.#transport = new Eth(this.#ledger);
-		console.log("connected", this.#ledger, this.#transport);
 	}
 
 	public async disconnect(): Promise<void> {
-		console.log("disconnect");
 		if (this.#ledger) {
 			await this.#ledger.close();
 			await closeDevices();
@@ -85,16 +80,12 @@ export class LedgerService {
 	}
 
 	public async getPublicKey(path: string): Promise<string> {
-		console.log("[LedgerService#getPublicKey] Getting public keys for path", { path });
-
 		const derivationPath = `m/${this.#extractAddressIndexFromPath(path)}`;
 		const publicKey = await this.getExtendedPublicKey(path);
 
 		const pubKey: string = HDKey.fromCompressedPublicKey(publicKey)
 			.derive(derivationPath)
 			.publicKey.toString("hex");
-
-		console.log("[LedgerService#getPublicKey] Got public key", { pubKey });
 
 		return pubKey;
 	}
@@ -114,10 +105,7 @@ export class LedgerService {
 			},
 		);
 
-		console.log({ resolution });
-
 		const signature = await this.#transport.signTransaction(path, serialized, resolution);
-		console.log({ signature });
 
 		return {
 			...signature,
@@ -253,17 +241,14 @@ export class LedgerService {
 
 	async #accessLedgerDevice() {
 		try {
-			console.log("[accessLedgerDevice] Connecting...");
 			await this.connect();
 		} catch (error) {
-			console.log("[accessLedgerDevice] Error", error);
 			// If the device is open, continue normally.
 			// Can be triggered when the user retries ledger connection.
 			if (error.message !== "The device is already open.") {
 				throw error;
 			}
 		}
-		console.log("[accessLedgerDevice] Connected.");
 	}
 
 	public async accessLedgerApp() {

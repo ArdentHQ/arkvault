@@ -35,19 +35,15 @@ export const connectedTransport = async () => {
 	const transport = await supportedTransport();
 
 	try {
-		console.log("[connectedTransport] Opening transport");
 		const response = await transport.openConnected();
-		console.log("[connectedTransport] Opened transport", response);
 		return response;
 	} catch (error) {
-		console.log("[connectedTransport] Error opening transport", { error });
 		// `transport.openConnected()` calls device.open() internally,
 		// and throws the error below when called multiple times.
 		// To ensure the transport is always provided,
 		// close all opened devices, re-open transport, and retry.
 		const errorsToRetry = ["The device is already open"];
 		if (errorsToRetry.some((retryError) => error?.message.includes(retryError))) {
-			console.log("[connectedTransport] Retrying...");
 			return connectedTransport();
 		}
 

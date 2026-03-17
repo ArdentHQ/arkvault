@@ -18,19 +18,14 @@ export const persistLedgerConnection = async ({
 	options: Options;
 	hasRequestedAbort: () => boolean;
 }) => {
-	console.log("[persistLedgerConnection] Accessing ledger...");
-
 	const retryAccess: any = async (attempts: number) => {
-		console.log("retryAccess", attempts);
 		if (hasRequestedAbort() && attempts > 1) {
 			throw new AbortError("CONNECTION_ERROR");
 		}
 
 		try {
 			await ledgerService.accessLedgerApp();
-			console.log("[persistLedgerConnection] Connected");
 		} catch (error) {
-			console.log("[persistLedgerConnection] Error", error);
 			// Delay retry if an operation is in progress.
 			// Error: InvalidStateError: An operation that changes the device state is in progress.
 			if (error?.message?.includes?.("in progress")) {
@@ -51,6 +46,5 @@ export const persistLedgerConnection = async ({
 		}
 	};
 
-	console.log("Retry options", options);
 	await retry(retryAccess, options);
 };

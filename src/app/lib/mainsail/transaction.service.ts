@@ -361,7 +361,6 @@ export class TransactionService {
 
 	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
-		console.log("[signerData] Check if wallet acts with ledger", input.signatory.actsWithLedger());
 
 		if (input.signatory.actsWithBip44Mnemonic()) {
 			address = this.hdWalletService.getAddress(input.signatory.signingKey(), input.signatory.path());
@@ -418,8 +417,6 @@ export class TransactionService {
 	}
 
 	async #signWithLedger(input: Services.TransferInput, transaction: any): Promise<void> {
-		console.log("[signWithLedger] Singing transaction", input);
-
 		await closeDevices();
 		await openTransport();
 		await this.#ledgerService.accessLedgerApp();
@@ -428,8 +425,6 @@ export class TransactionService {
 			input.signatory.signingKey(),
 			transaction.serialize().toString("hex"),
 		);
-
-		console.log("[signWithLedger] Signed", { signature });
 
 		transaction.data = {
 			...transaction.data,
