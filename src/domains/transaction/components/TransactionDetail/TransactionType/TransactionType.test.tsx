@@ -103,10 +103,8 @@ describe("TransactionType", () => {
 						isApprove: () => true,
 						isConfirmed: () => true,
 						to: () => "0xabc",
-						tokens: [
-							new TransactionToken(tokenData)
-						],
 						token: () => new TransactionToken(tokenData),
+						tokens: [new TransactionToken(tokenData)],
 						wallet: () => profile.wallets().first(),
 					} as DTO.ExtendedConfirmedTransactionData
 				}
@@ -168,14 +166,12 @@ describe("TransactionType", () => {
 								data: "0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000",
 							},
 						}),
-						isRevoke: () => true,
 						isApprove: () => false,
 						isConfirmed: () => true,
+						isRevoke: () => true,
 						to: () => "0xabc",
-						tokens: [
-							new TransactionToken(tokenData)
-						],
 						token: () => new TransactionToken(tokenData),
+						tokens: [new TransactionToken(tokenData)],
 						wallet: () => profile.wallets().first(),
 					} as DTO.ExtendedConfirmedTransactionData
 				}
