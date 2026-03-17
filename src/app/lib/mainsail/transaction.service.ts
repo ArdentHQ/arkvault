@@ -25,7 +25,6 @@ import { SignedTransactionData } from "./signed-transaction.dto";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 import { NetworkConfig } from "@/app/lib/mainsail/network-config";
 import { assertToken } from "@/utils/assertions.js";
-import { accessLedgerApp } from "@/app/contexts/Ledger/utils/connection.js";
 import { closeDevices, openTransport } from "@/app/contexts/Ledger/transport.js";
 import { LedgerService } from "./ledger.service.js";
 
