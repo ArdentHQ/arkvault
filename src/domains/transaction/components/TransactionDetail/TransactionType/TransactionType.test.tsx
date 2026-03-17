@@ -7,6 +7,7 @@ import { renderResponsive, render, screen, env, getDefaultProfileId } from "@/ut
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 describe("TransactionType", () => {
 	let profile: Contracts.IProfile;
@@ -14,6 +15,20 @@ describe("TransactionType", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
+
+	const tokenData = {
+		action: "Transfer",
+		from: "0xabd",
+		index: 1,
+		metadata: {
+			tokenAddress: "0xdeb478251073157e400c3d8d2ed92a85c958f9fa",
+			tokenDecimals: 18,
+			tokenName: "ABC",
+			tokenSymbol: "ABC",
+		},
+		to: "0x432b093d9542B905C87587607491C369408475b4",
+		value: "500000000000000000000000000",
+	};
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
 		const { container } = renderResponsive(
@@ -88,21 +103,7 @@ describe("TransactionType", () => {
 						isApprove: () => true,
 						isConfirmed: () => true,
 						to: () => "0xabc",
-						tokens: [
-							{
-								action: "Transfer",
-								from: "0xabd",
-								index: 1,
-								metadata: {
-									tokenAddress: "0xdeb478251073157e400c3d8d2ed92a85c958f9fa",
-									tokenDecimals: 18,
-									tokenName: "ABC",
-									tokenSymbol: "ABC",
-								},
-								to: "0x432b093d9542B905C87587607491C369408475b4",
-								value: "500000000000000000000000000",
-							},
-						],
+						tokens: [{ ...tokenData }],
 						wallet: () => profile.wallets().first(),
 					} as DTO.ExtendedConfirmedTransactionData
 				}
@@ -149,6 +150,42 @@ describe("TransactionType", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ActionTypeSkeleton")).toBeInTheDocument();
+		});
+	});
+
+	it("should render revoke transaction details", async () => {
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						approveDetails: () => ({ address: "0xabd", amount: 500000000000 }),
+						data: () => ({
+							data: {
+								data: "0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000",
+							},
+						}),
+						isRevoke: () => true,
+						isApprove: () => false,
+						isConfirmed: () => true,
+						to: () => "0xabc",
+						tokens: [{ ...tokenData }],
+						token: () => new TransactionToken(tokenData),
+						wallet: () => profile.wallets().first(),
+					} as DTO.ExtendedConfirmedTransactionData
+				}
+			/>,
+			{
+				route: `/profiles/${profile.id()}/dashboard`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(container).toHaveTextContent("Revoke");
+		});
+
+		await waitFor(() => {
+			expect(container).toHaveTextContent("Removed permission for ABC use by 0xabd on behalf of Mainsail Wallet");
 		});
 	});
 
