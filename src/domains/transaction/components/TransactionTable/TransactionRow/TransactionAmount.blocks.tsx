@@ -106,6 +106,7 @@ export const TransactionTotalLabel = ({
 			allowHideBalance
 			profile={profile}
 			showCompactFormat
+			showTicker={showTicker}
 		/>
 	);
 };

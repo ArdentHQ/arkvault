@@ -45,6 +45,7 @@ interface AmountLabelProperties {
 	profile?: Contracts.IProfile;
 	decimals?: number;
 	showCompactFormat?: boolean;
+	showTicker?: boolean;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -61,6 +62,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	profile,
 	decimals,
 	showCompactFormat,
+	showTicker,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -94,6 +96,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
 				<Amount
 					decimals={decimals}
+					showTicker={showTicker}
 					showSign={!hideSign && value !== 0}
 					ticker={ticker}
 					value={value}
