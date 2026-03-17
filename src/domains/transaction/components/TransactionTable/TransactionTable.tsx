@@ -56,6 +56,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				exchangeCurrency={exchangeCurrency}
 				profile={profile}
 				hideSender={hideSender}
+				coinName={coinName}
 			/>
 		),
 		[showSkeleton, onRowClick, exchangeCurrency, profile, hideSender],
