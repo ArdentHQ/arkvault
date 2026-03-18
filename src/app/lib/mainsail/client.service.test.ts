@@ -512,18 +512,18 @@ describe("ClientService", () => {
 
 		it("should handle orderBy", async () => {
 			await clientService.transactions({ orderBy: "amount:desc" });
-			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1, orderBy: "amount:desc" }));
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, orderBy: "amount:desc", page: 1 }));
 		});
 
 		it("should handle identifiers", async () => {
 			await clientService.transactions({ identifiers: [{ value: "addr1" }, { value: "addr2" }] });
-			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1, address: "addr1,addr2" }));
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ address: "addr1,addr2", limit: 10, page: 1 }));
 		});
 
 		it("should handle transaction types", async () => {
 			await clientService.transactions({ types: ["transfer", "vote"] });
 			expect(spy).toHaveBeenCalledWith(
-				expect.objectContaining({ limit: 10, page: 1, data: expect.stringContaining(",6dd7d8ea,3174b689") }),
+				expect.objectContaining({ data: expect.stringContaining(",6dd7d8ea,3174b689"), limit: 10, page: 1 }),
 			);
 		});
 
@@ -536,7 +536,7 @@ describe("ClientService", () => {
 
 		it("should handle single transaction type", async () => {
 			await clientService.transactions({ type: "transfer" });
-			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1, data: "" }));
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ data: "", limit: 10, page: 1 }));
 		});
 
 		it("should handle timestamp without epoch", async () => {
