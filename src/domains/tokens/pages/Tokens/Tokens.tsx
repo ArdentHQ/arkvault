@@ -74,7 +74,7 @@ export const Tokens = () => {
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
 						</Tab>
-						<Tab tabId="transactions">
+						<Tab tabId="tokenTransfers">
 							<span className="whitespace-nowrap">{t("COMMON.TOKEN_TRANSFERS")}</span>
 						</Tab>
 					</TabList>
@@ -142,7 +142,7 @@ export const Tokens = () => {
 					onSendToken={(tokenContractAddress) => {
 						setTimeout(() => {
 							setTokenModelItem(undefined);
-							openPanel(Panel.SendTokenTransfer, { tokenContractAddress });
+							openPanel(Panel.SendTokenTransfer, { isTokenTransfer: true, tokenContractAddress });
 						}, SIDE_PANEL_TRANSITION_DURATION);
 					}}
 				/>

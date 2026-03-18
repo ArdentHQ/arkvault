@@ -18,8 +18,8 @@ importers:
         specifier: ^0.15.0
         version: 0.15.0
       '@arkecosystem/typescript-crypto':
-        specifier: ^0.0.20
-        version: 0.0.20
+        specifier: ^0.0.21
+        version: 0.0.21
       '@faustbrian/node-haveibeenpwned':
         specifier: ^1.1.0
         version: 1.1.0
@@ -30,8 +30,8 @@ importers:
         specifier: ^6.45.12
         version: 6.45.12
       '@ledgerhq/hw-transport-webhid':
-        specifier: ^6.30.4
-        version: 6.30.4
+        specifier: ^6.32.0
+        version: 6.32.0
       '@ledgerhq/hw-transport-webusb':
         specifier: ^6.29.8
         version: 6.29.8
@@ -427,8 +427,8 @@ packages:
     resolution: {integrity: sha512-B7tcG1vu2z2gCPR41kSc4qJZe6AhlVmy7jDNF+viVnT8I/XW7p/lnN4Fh9o/R2fy2mfsfIeRYX2nKxvaX+UKFA==}
     engines: {node: '>=20.12.2'}
 
-  '@arkecosystem/typescript-crypto@0.0.20':
-    resolution: {integrity: sha512-mD2pwiw3z64JF93ptj5tg7X0GvnGZqmEHmhezhJIFm9/2R1Ww9D71fO78YRhAMiCoIse9xaVWp8Pg9iefnlPlg==}
+  '@arkecosystem/typescript-crypto@0.0.21':
+    resolution: {integrity: sha512-QUDFYXG4u3UjB02LXAeb+sXsCeRUmgtxo/56XyqkvDgNCndBr2hYkqUiTs9kXV8tD9wgfBRxpfMG9zNw6yXLfw==}
     engines: {node: '>=20.12.2'}
 
   '@asamuzakjp/css-color@3.2.0':
@@ -1602,6 +1602,9 @@ packages:
   '@ledgerhq/cryptoassets-evm-signatures@13.5.10':
     resolution: {integrity: sha512-1s0a6P2E4KKDbk12eVmJfvSA/zmTC8GKuXz+XVVYJIY+xPWs4B3qtPLXC2EpdZhj7GOehj8i0csxlV3rhQRC6w==}
 
+  '@ledgerhq/devices@8.11.0':
+    resolution: {integrity: sha512-R4tSytEZBbvAnePrDsJzD9vltxmmKBdR5+ur4usqlGY7dwNH+WB4frZO0MoHhI646DVQY5jktbcZd4Ls3gv13g==}
+
   '@ledgerhq/devices@8.4.8':
     resolution: {integrity: sha512-joodpi1lTIoPswpH6DBtlAieEfP0xB1NlM8RY3xj82EtO8eU1IRqTQz7wtsbstXJ1FdLRg/CJ5OL41omdBsrZQ==}
 
@@ -1610,6 +1613,9 @@ packages:
 
   '@ledgerhq/errors@6.23.0':
     resolution: {integrity: sha512-bM7tPYShPThtBy1Y+9D28iquOeP5W5s4p7KKD/cUQoaVaPibrtC7Mm4u+IeSlH4WGvFJkTmv0vmZJajuZtM79A==}
+
+  '@ledgerhq/errors@6.30.0':
+    resolution: {integrity: sha512-MnN0JDIcGRJRjLTt9bTXYhuWsoyeUXMkC/UcjG/HbukYAZx28o3Y8eRxu1Zfi4cL7lInuBuc8Nq2wwngHjg6jw==}
 
   '@ledgerhq/evm-tools@1.7.1':
     resolution: {integrity: sha512-Un3GBDmJ6zUTX6Zf+ODnxnej/20VCZ4CQWobuRdEzR5PoCjgtb/u+v3XLbP/xU/CkYgOS2+ieWwnvOe0a0/WXg==}
@@ -1620,8 +1626,8 @@ packages:
   '@ledgerhq/hw-transport-mocker@6.29.8':
     resolution: {integrity: sha512-Ea7j0M9miX6KkZTdHcCdcfT1yne1Uuy6/Ph51OKhleiSSBQytSxLtbsEw8r4dppqVHNybf+DoKOsBgo2p7XayA==}
 
-  '@ledgerhq/hw-transport-webhid@6.30.4':
-    resolution: {integrity: sha512-A13E89U1wfWx8reA9ciwm/+SsbGM163yl1UXuWUQ521hIDAAwVbpnRhwaQT4XjTmDbWhvtT2RYRCoOWWO7N6GA==}
+  '@ledgerhq/hw-transport-webhid@6.32.0':
+    resolution: {integrity: sha512-d3Lx/EstO9F8yEigGPkbnDyHPCKzEigAV4QfE1MCEMZDt3rjs5vcKOkTWlJ7TqLXYwYoP5tlAUj4bwx52zc/Fw==}
 
   '@ledgerhq/hw-transport-webusb@6.29.8':
     resolution: {integrity: sha512-hAFTnJYB++Ey8qlpGBL2ZHBX4ULQOcBzYzNBcrKUNXqlDaWODtc5uyPCyfGmfUjLnVvZoarDa3h+zDVVQCUHVA==}
@@ -1629,11 +1635,17 @@ packages:
   '@ledgerhq/hw-transport@6.31.8':
     resolution: {integrity: sha512-iH74gILq8BkkLX1Il0wNhcYp1BJ3tjR18fdok4KEdU86i9dOXRKfLbWNhDDFf1px/pMrsGlDS4SpaO74janeEA==}
 
+  '@ledgerhq/hw-transport@6.33.0':
+    resolution: {integrity: sha512-pRlINA4FTF2Yt/tzjlIHBL89Zf3Y5GQ7Binra2zHM7eeXcRpD5OizuBkSddfKwXqroNKut9zZt365s//Q2DMjQ==}
+
   '@ledgerhq/live-env@2.12.0':
     resolution: {integrity: sha512-p1pqfXN88TZWHdoQVLtrs1WdX1/VG07ZDDOwmrgi04iSh6NWaiiGJS27Xye3xSf/vL0pU5nLWmj2LP5Rjhxs6g==}
 
   '@ledgerhq/logs@6.13.0':
     resolution: {integrity: sha512-4+qRW2Pc8V+btL0QEmdB2X+uyx0kOWMWE1/LWsq5sZy3Q5tpi4eItJS6mB0XL3wGW59RQ+8bchNQQ1OW/va8Og==}
+
+  '@ledgerhq/logs@6.15.0':
+    resolution: {integrity: sha512-AJSXELFIDTyKkMs8udR9B3YxftQIibceeZFWC36pGkAXDnY53vPR8s25IgQefEANGr8e2ZdAEwTL1tLOYAHqSw==}
 
   '@ledgerhq/types-live@6.78.0':
     resolution: {integrity: sha512-8popPS/tw8AmoTBSCfmiLc0wFskPpNAhhh5n4wqD9N6d0gFax84HWMEEHJSqsPor6wuzfVPmFYVivpjErlYi9Q==}
@@ -3407,8 +3419,8 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
-  ethers@6.15.0:
-    resolution: {integrity: sha512-Kf/3ZW54L4UT0pZtsY/rf+EkBU7Qi5nnhonjUb8yTXcxH3cdcWrV2cRyk0Xk/4jK6OoHhxxZHriyhje20If2hQ==}
+  ethers@6.16.0:
+    resolution: {integrity: sha512-U1wulmetNymijEhpSEQ7Ct/P/Jw9/e7R1j5XIbPRydgV2DjLVMsULDlNksq3RQnFgKoLlZf88ijYtWEXcPa07A==}
     engines: {node: '>=14.0.0'}
 
   eventemitter3@5.0.1:
@@ -5521,6 +5533,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.3:
+    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   serialize-javascript@6.0.2:
     resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
 
@@ -6604,11 +6621,11 @@ snapshots:
 
   '@arkecosystem/typescript-client@0.15.0': {}
 
-  '@arkecosystem/typescript-crypto@0.0.20':
+  '@arkecosystem/typescript-crypto@0.0.21':
     dependencies:
       '@noble/secp256k1': 2.3.0
       bignumber.js: 9.3.1
-      ethers: 6.15.0
+      ethers: 6.16.0
       wif: 5.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -8096,6 +8113,13 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@ledgerhq/devices@8.11.0':
+    dependencies:
+      '@ledgerhq/errors': 6.30.0
+      '@ledgerhq/logs': 6.15.0
+      rxjs: 7.8.2
+      semver: 7.7.3
+
   '@ledgerhq/devices@8.4.8':
     dependencies:
       '@ledgerhq/errors': 6.23.0
@@ -8116,6 +8140,8 @@ snapshots:
       - debug
 
   '@ledgerhq/errors@6.23.0': {}
+
+  '@ledgerhq/errors@6.30.0': {}
 
   '@ledgerhq/evm-tools@1.7.1':
     dependencies:
@@ -8153,12 +8179,12 @@ snapshots:
       '@ledgerhq/logs': 6.13.0
       rxjs: 7.8.2
 
-  '@ledgerhq/hw-transport-webhid@6.30.4':
+  '@ledgerhq/hw-transport-webhid@6.32.0':
     dependencies:
-      '@ledgerhq/devices': 8.4.8
-      '@ledgerhq/errors': 6.23.0
-      '@ledgerhq/hw-transport': 6.31.8
-      '@ledgerhq/logs': 6.13.0
+      '@ledgerhq/devices': 8.11.0
+      '@ledgerhq/errors': 6.30.0
+      '@ledgerhq/hw-transport': 6.33.0
+      '@ledgerhq/logs': 6.15.0
 
   '@ledgerhq/hw-transport-webusb@6.29.8':
     dependencies:
@@ -8174,12 +8200,21 @@ snapshots:
       '@ledgerhq/logs': 6.13.0
       events: 3.3.0
 
+  '@ledgerhq/hw-transport@6.33.0':
+    dependencies:
+      '@ledgerhq/devices': 8.11.0
+      '@ledgerhq/errors': 6.30.0
+      '@ledgerhq/logs': 6.15.0
+      events: 3.3.0
+
   '@ledgerhq/live-env@2.12.0':
     dependencies:
       rxjs: 7.8.2
       utility-types: 3.11.0
 
   '@ledgerhq/logs@6.13.0': {}
+
+  '@ledgerhq/logs@6.15.0': {}
 
   '@ledgerhq/types-live@6.78.0':
     dependencies:
@@ -10185,7 +10220,7 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  ethers@6.15.0:
+  ethers@6.16.0:
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       '@noble/curves': 1.2.0
@@ -12266,6 +12301,8 @@ snapshots:
       lru-cache: 6.0.0
 
   semver@7.7.2: {}
+
+  semver@7.7.3: {}
 
   serialize-javascript@6.0.2:
     dependencies:

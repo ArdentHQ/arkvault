@@ -176,6 +176,42 @@ describe("useTokenTransfers", () => {
 		transfersSpy.mockRestore();
 	});
 
+	it("should do nothing when there are no new transfers", async () => {
+		vi.useFakeTimers({ shouldAdvanceTime: true });
+
+		const wallets = profile.wallets().values();
+
+		server.use(
+			http.get("https://dwallets-evm.mainsailhq.com/api/tokens/transfers", () =>
+				HttpResponse.json({
+					data: Fixtures.TokenTransfers.data.slice(0, 1),
+					meta: { ...Fixtures.TokenTransfers.meta, next: null },
+				}),
+			),
+		);
+
+		const { result } = renderHook(() => useTokenTransfers({ profile, wallets }), {
+			wrapper,
+		});
+
+		await waitFor(() => {
+			expect(result.current.isLoadingTransfers).toBe(false);
+		});
+
+		expect(result.current.transfers).toHaveLength(1);
+		const firstTransferHash = result.current.transfers[0].hash();
+
+		await act(async () => {
+			await vi.advanceTimersByTimeAsync(15_000);
+		});
+
+		await waitFor(() => {
+			expect(result.current.transfers[0].hash()).toBe(firstTransferHash);
+		});
+
+		vi.useRealTimers();
+	});
+
 	it("should check for new token transfers periodically", async () => {
 		vi.useFakeTimers({ shouldAdvanceTime: true });
 

@@ -151,11 +151,19 @@ describe("Signatory", () => {
 			expect(signatory.address()).toBe("0xabc");
 		});
 
-		it("should throw ForbiddenMethodCallException for ledger signatory", () => {
+		it("should return address for ledger signatory", () => {
 			const ledgerSignatory = new LedgerSignatory({
+				options: { address: "0xabc" },
 				signingKey: "m/44'/60'/0'/0/0",
 			});
+
 			const signatory = new Signatory(ledgerSignatory);
+
+			expect(signatory.address()).toBe("0xabc");
+		});
+
+		it("should throw ForbiddenMethodCallException for unknown signatory type", () => {
+			const signatory = new Signatory(undefined!);
 
 			expect(() => signatory.address()).toThrow(ForbiddenMethodCallException);
 		});
@@ -208,11 +216,19 @@ describe("Signatory", () => {
 			expect(signatory.publicKey()).toBe("pubkeyabc");
 		});
 
-		it("should throw ForbiddenMethodCallException for ledger signatory", () => {
+		it("should return publicKey for ledger signatory", () => {
 			const ledgerSignatory = new LedgerSignatory({
+				options: { senderPublicKey: "0xabc" },
 				signingKey: "m/44'/60'/0'/0/0",
 			});
+
 			const signatory = new Signatory(ledgerSignatory);
+
+			expect(signatory.publicKey()).toBe("0xabc");
+		});
+
+		it("should throw ForbiddenMethodCallException for ledger signatory", () => {
+			const signatory = new Signatory(undefined!);
 
 			expect(() => signatory.publicKey()).toThrow(ForbiddenMethodCallException);
 		});

@@ -145,6 +145,8 @@ describe("TokenRow", () => {
 			<table>
 				<tbody>
 					<TokenRow
+						onDelete={vi.fn()}
+						isDeletable={true}
 						isManageMode={true}
 						toggleContractVisibility={vi.fn()}
 						walletToken={mockWalletToken}
@@ -193,6 +195,7 @@ describe("TokenRow", () => {
 				<tbody>
 					<TokenRow
 						isManageMode={true}
+						isDeletable={true}
 						toggleContractVisibility={vi.fn()}
 						walletToken={mockWalletToken}
 						profile={profile}

@@ -29,18 +29,21 @@ export const isLedgerTransportSupported = () => {
 // Assumes user has already granted permission.
 // Won't trigger the native permission dialog.
 export const connectedTransport = async () => {
+	await closeDevices();
+	await openTransport();
+
 	const transport = await supportedTransport();
 
 	try {
-		return await transport.openConnected();
+		const response = await transport.openConnected();
+		return response;
 	} catch (error) {
 		// `transport.openConnected()` calls device.open() internally,
 		// and throws the error below when called multiple times.
 		// To ensure the transport is always provided,
 		// close all opened devices, re-open transport, and retry.
-		if (error.message === "The device is already open.") {
-			await closeDevices();
-			await openTransport();
+		const errorsToRetry = ["The device is already open"];
+		if (errorsToRetry.some((retryError) => error?.message.includes(retryError))) {
 			return connectedTransport();
 		}
 

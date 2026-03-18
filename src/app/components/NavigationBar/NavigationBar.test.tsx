@@ -278,7 +278,9 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(sendButton);
 
-		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer, {
+			isTokenTransfer: false,
+		});
 
 		usePanelsMock.mockRestore();
 	});
@@ -296,7 +298,9 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(sendButton);
 
-		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer, {
+			isTokenTransfer: false,
+		});
 
 		usePanelsMock.mockRestore();
 	});
