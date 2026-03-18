@@ -15,8 +15,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@arkecosystem/typescript-client':
-        specifier: ^0.15.0
-        version: 0.15.0
+        specifier: ^0.18.0
+        version: 0.18.0
       '@arkecosystem/typescript-crypto':
         specifier: ^0.0.20
         version: 0.0.20
@@ -423,8 +423,8 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@arkecosystem/typescript-client@0.15.0':
-    resolution: {integrity: sha512-B7tcG1vu2z2gCPR41kSc4qJZe6AhlVmy7jDNF+viVnT8I/XW7p/lnN4Fh9o/R2fy2mfsfIeRYX2nKxvaX+UKFA==}
+  '@arkecosystem/typescript-client@0.18.0':
+    resolution: {integrity: sha512-xaMSABZJhdfVIjwyEE8ig161JwYF7tyvRmL+1/irWOg8fAHKxWmVVTR1+RlOJ4c1WRHIUbJiTm9pYDe+t/7H0Q==}
     engines: {node: '>=20.12.2'}
 
   '@arkecosystem/typescript-crypto@0.0.20':
@@ -6602,7 +6602,7 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@arkecosystem/typescript-client@0.15.0': {}
+  '@arkecosystem/typescript-client@0.18.0': {}
 
   '@arkecosystem/typescript-crypto@0.0.20':
     dependencies:
