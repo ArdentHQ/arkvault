@@ -75,10 +75,7 @@ export class ClientService {
 	}
 
 	public async tokenAddresses(query: Services.WalletTokensQuery): Promise<WalletTokenCollection> {
-		const response = await this.#client.wallets().tokens({
-			...query,
-			address: query.addresses.join(","),
-		});
+		const response = await this.#client.wallets().tokens(query);
 
 		const walletTokens = response.data.map((tokenAddresses: TokenAddressesData) => {
 			const token = new TokenDTO({
