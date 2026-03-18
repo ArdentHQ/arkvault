@@ -102,6 +102,7 @@ const signedTransactionMock = {
 	usesMultiSignature: () => false,
 	value: () => BigNumber.make(0),
 	wallet: () => wallet,
+	setMeta: () => undefined,
 };
 
 const createUsernameResignationMock = (wallet: Contracts.IReadWriteWallet) =>

@@ -94,6 +94,7 @@ const signedTransactionMock = {
 	usesMultiSignature: () => false,
 	value: () => +transactionFixture.data.value / 1e8,
 	wallet: () => wallet,
+	setMeta: () => undefined,
 } as DTO.ExtendedSignedTransactionData;
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
