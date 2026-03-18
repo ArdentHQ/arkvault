@@ -33,7 +33,7 @@ describe("useConfirmedTransaction", () => {
 			transaction: () => ({
 				confirmations: () => BigNumber.make(1),
 				id: () => "123",
-				setMeta: () => undefined,
+				setMeta: () => {},
 			}),
 		}));
 

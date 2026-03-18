@@ -100,6 +100,7 @@ const signedTransactionMock = {
 	nonce: () => BigNumber.make(ValidatorRegistrationFixture.data.nonce),
 	payments: () => [],
 	recipients: () => [],
+	setMeta: () => {},
 	timestamp: () => DateTime.make(ValidatorRegistrationFixture.data.timestamp),
 	to: () => ValidatorRegistrationFixture.data.to,
 	token: () => {},
@@ -114,7 +115,6 @@ const signedTransactionMock = {
 	usesMultiSignature: () => false,
 	value: () => BigNumber.make(0),
 	wallet: () => wallet,
-	setMeta: () => undefined,
 };
 
 const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
