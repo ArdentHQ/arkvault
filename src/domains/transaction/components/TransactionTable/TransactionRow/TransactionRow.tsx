@@ -208,6 +208,7 @@ export const TransactionRow = memo(
 					) : (
 						<div className="flex w-40 flex-col items-end gap-1">
 							<TransactionTotalLabel
+								showTicker={!coinName}
 								decimals={decimals}
 								transaction={transaction}
 								hideStyles={!hideSender}

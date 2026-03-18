@@ -74,7 +74,7 @@ export const Tokens = () => {
 						<Tab tabId="tokens">
 							<span className="whitespace-nowrap">{t("COMMON.TOKENS")}</span>
 						</Tab>
-						<Tab tabId="transactions">
+						<Tab tabId="tokenTransfers">
 							<span className="whitespace-nowrap">{t("COMMON.TOKEN_TRANSFERS")}</span>
 						</Tab>
 					</TabList>
