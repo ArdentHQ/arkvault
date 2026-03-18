@@ -442,7 +442,8 @@ export const SendTransferSidePanel = ({
 	);
 
 	const isLastStep = activeTab === SendTransferStep.SummaryStep;
-	const isLedgerAuthenticationStep = wallet && wallet.isLedger() && activeTab === SendTransferStep.AuthenticationStep;
+	const isLedgerAuthenticationStep =
+		!!wallet && wallet.isLedger() && activeTab === SendTransferStep.AuthenticationStep;
 
 	return (
 		<SidePanel

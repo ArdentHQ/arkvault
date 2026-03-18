@@ -82,7 +82,9 @@ export class SignatoryFactory implements ISignatoryFactory {
 				throw new TypeError("[derivationPath] must be string.");
 			}
 
-			return this.#wallet.signatory().ledger(derivationPath);
+			return this.#wallet
+				.signatory()
+				.ledger(derivationPath, { senderPublicKey: this.#wallet.publicKey(), address: this.#wallet.address() });
 		}
 
 		if (secret && secondSecret) {

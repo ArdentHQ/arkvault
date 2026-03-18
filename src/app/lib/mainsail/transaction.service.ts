@@ -24,8 +24,9 @@ import { Services } from "@/app/lib/mainsail";
 import { SignedTransactionData } from "./signed-transaction.dto";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 import { NetworkConfig } from "@/app/lib/mainsail/network-config";
-import { assertString, assertToken } from "@/utils/assertions.js";
-import { PublicKeyService } from "./public-key.service.js";
+import { assertToken } from "@/utils/assertions.js";
+import { closeDevices, openTransport } from "@/app/contexts/Ledger/transport.js";
+import { LedgerService } from "./ledger.service.js";
 
 interface ValidatedTransferInput extends Services.TransferInput {
 	gasPrice: BigNumber;
@@ -39,16 +40,14 @@ type TransactionsInputs =
 	| Services.ValidatorResignationInput;
 
 export class TransactionService {
-	readonly #ledgerService!: Services.LedgerService;
+	readonly #ledgerService!: LedgerService;
 	readonly hdWalletService!: HDWalletService;
 	readonly #addressService!: AddressService;
-	readonly #publicKeyService!: PublicKeyService;
 	readonly #clientService!: ClientService;
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#ledgerService = profile.ledger();
 		this.#addressService = new AddressService();
-		this.#publicKeyService = new PublicKeyService();
 		this.#clientService = new ClientService({ config, profile });
 		this.hdWalletService = new HDWalletService({ config });
 
@@ -114,10 +113,9 @@ export class TransactionService {
 		assertToken(token);
 
 		const amount = BigNumber.make(input.data.amount, token.token().decimals()).toSatoshi();
-		const senderPublicKey = await this.#signerPublicKey(input);
 
 		const builder = TokenTransferBuilder.new({
-			senderPublicKey,
+			senderPublicKey: input.signatory.publicKey(),
 		})
 			.recipient(input.data.to, BigInt(amount.toFixed(0)))
 			.contractAddress(token.token().address())
@@ -361,33 +359,31 @@ export class TransactionService {
 		);
 	}
 
-	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string; publicKey?: string }> {
+	async #signerData(input: Services.TransactionInputs): Promise<{ address?: string }> {
 		let address: string | undefined;
-		let publicKey: string | undefined;
 
 		if (input.signatory.actsWithBip44Mnemonic()) {
 			address = this.hdWalletService.getAddress(input.signatory.signingKey(), input.signatory.path());
-			publicKey = this.hdWalletService.getPublicKey(input.signatory.signingKey(), input.signatory.path());
 		}
 
 		if (input.signatory.actsWithMnemonic() || input.signatory.actsWithConfirmationMnemonic()) {
 			address = this.#addressService.fromMnemonic(input.signatory.signingKey()).address;
-			publicKey = this.#publicKeyService.fromMnemonic(input.signatory.signingKey()).publicKey;
 		}
 
 		if (input.signatory.actsWithSecret() || input.signatory.actsWithConfirmationSecret()) {
 			address = this.#addressService.fromSecret(input.signatory.signingKey()).address;
-			publicKey = this.#publicKeyService.fromSecret(input.signatory.signingKey()).publicKey;
 		}
 
 		if (input.signatory.actsWithLedger()) {
-			await this.#ledgerService.connect();
-			const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
-			address = this.#addressService.fromPublicKey(extendedPublicKey).address;
-			publicKey = await this.#ledgerService.getPublicKey(input.signatory.path());
+			if (input.signatory.address()) {
+				address = input.signatory.address();
+			} else {
+				const extendedPublicKey = await this.#ledgerService.getExtendedPublicKey(input.signatory.signingKey());
+				address = this.#addressService.fromPublicKey(extendedPublicKey).address;
+			}
 		}
 
-		return { address, publicKey };
+		return { address };
 	}
 
 	async #generateNonce(input: Services.TransactionInputs): Promise<string> {
@@ -401,12 +397,6 @@ export class TransactionService {
 		return wallet.nonce().toFixed(0);
 	}
 
-	async #signerPublicKey(input: Services.TransactionInputs): Promise<string> {
-		const { publicKey } = await this.#signerData(input);
-		assertString(publicKey);
-		return publicKey;
-	}
-
 	async #sign(input: Services.TransferInput, builder: any): Promise<void> {
 		const { address } = await this.#signerData(input);
 		builder.transaction.data.from = address;
@@ -416,7 +406,7 @@ export class TransactionService {
 		}
 
 		if (input.signatory.actsWithLedger()) {
-			return this.#signWithLedger(input, builder.transaction);
+			return await this.#signWithLedger(input, builder.transaction);
 		}
 
 		if (input.signatory.actsWithConfirmationMnemonic() || input.signatory.actsWithConfirmationSecret()) {
@@ -427,6 +417,10 @@ export class TransactionService {
 	}
 
 	async #signWithLedger(input: Services.TransferInput, transaction: any): Promise<void> {
+		await closeDevices();
+		await openTransport();
+		await this.#ledgerService.accessLedgerApp();
+
 		const signature = await this.#ledgerService.sign(
 			input.signatory.signingKey(),
 			transaction.serialize().toString("hex"),
