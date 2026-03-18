@@ -5,6 +5,9 @@ import { TFunction } from "i18next";
 
 export const DISPLAY_DECIMALS = 8;
 
+export const isNullAddress = (address: string) =>
+	address.toLowerCase() === "0x0000000000000000000000000000000000000000";
+
 export const isNoDeviceError = (error: any) => {
 	if (!error) {
 		return false;
@@ -31,17 +34,9 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 
 export const getTransferType = ({
 	recipients,
-	tokenContractAddress,
 }: {
 	recipients: RecipientItem[];
-	tokenContractAddress?: string;
-}): "multiPayment" | "transfer" | "transferToken" => {
-	if (tokenContractAddress) {
-		return "transferToken";
-	}
-
-	return recipients.length > 1 ? "multiPayment" : "transfer";
-};
+}): "multiPayment" | "transfer" | "transferToken" => (recipients.length > 1 ? "multiPayment" : "transfer");
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>

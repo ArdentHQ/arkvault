@@ -7,6 +7,8 @@ import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import * as PanelsMock from "@/app/contexts/Panels";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -198,7 +200,7 @@ describe("TokenHeader", () => {
 		walletsSpy.mockRestore();
 	});
 
-	it("should toggle receive funds mmodal", async () => {
+	it("should toggle receive funds modal", async () => {
 		const { asFragment } = render(<TokenHeader profile={profile} />, {
 			route,
 		});
@@ -213,5 +215,58 @@ describe("TokenHeader", () => {
 		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should open `Add Token` side panel", async () => {
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
+		render(<TokenHeader profile={profile} />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
+		await userEvent.click(screen.getByText("Add Token"));
+
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.AddToken);
+
+		usePanelsMock.mockRestore();
+	});
+
+	it("should open `Send Transfer` side panel", async () => {
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
+		render(<TokenHeader profile={profile} />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
+		await userEvent.click(screen.getByTestId("TokensHeader__send-button"));
+
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTokenTransfer, {
+			isTokenTransfer: true,
+		});
+
+		usePanelsMock.mockRestore();
+	});
+
+	it("should disable `Send` button", async () => {
+		const balanceSpy = vi.spyOn(profile, "totalBalance").mockReturnValue(BigNumber.ZERO);
+
+		render(<TokenHeader profile={profile} />, {
+			route,
+		});
+
+		expect(screen.getByTestId("TokensHeader")).toBeInTheDocument();
+		expect(screen.getByTestId("TokensHeader__send-button")).toBeDisabled();
+
+		balanceSpy.mockRestore();
 	});
 });

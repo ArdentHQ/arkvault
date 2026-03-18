@@ -18,4 +18,12 @@ export class LedgerSignatory {
 	public options(): IdentityOptions | undefined {
 		return this.#options;
 	}
+
+	public publicKey(): string | undefined {
+		return this.#options?.senderPublicKey;
+	}
+
+	public address(): string | undefined {
+		return this.#options?.address;
+	}
 }

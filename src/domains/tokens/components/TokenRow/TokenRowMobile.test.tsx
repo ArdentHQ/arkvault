@@ -210,6 +210,8 @@ describe("TokenRowMobile", () => {
 			<table>
 				<tbody>
 					<TokenRowMobile
+						onDelete={vi.fn()}
+						isDeletable={true}
 						walletToken={mockWalletToken}
 						profile={profile}
 						onSend={vi.fn()}
@@ -321,6 +323,7 @@ describe("TokenRowMobile", () => {
 			<table>
 				<tbody>
 					<TokenRowMobile
+						isDeletable={true}
 						isManageMode={true}
 						toggleContractVisibility={vi.fn()}
 						walletToken={mockWalletToken}

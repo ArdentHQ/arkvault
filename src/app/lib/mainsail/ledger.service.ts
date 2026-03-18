@@ -1,6 +1,6 @@
 import { Services } from "@/app/lib/mainsail";
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
-import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
+import { closeDevices, connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature } from "./ledger.service.types.js";
@@ -11,6 +11,7 @@ import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
 import { LedgerData } from "@/app/contexts/index.js";
 import { LedgerScanner } from "./ledger.scanner.js";
 import { IProfile } from "@/app/lib/profiles/contracts.js";
+import { formatLedgerDerivationPath } from "@/app/contexts/Ledger/utils/format-ledger-derivation-path.js";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
@@ -46,6 +47,7 @@ export class LedgerService {
 	async #getExtendedPublicKeyWithRetry(path: string, retryCount = 0): Promise<string> {
 		try {
 			const result = await this.#transport.getAddress(path);
+
 			return result.publicKey;
 		} catch (error) {
 			if (error?.message?.includes?.("busy") && retryCount < 3) {
@@ -68,6 +70,7 @@ export class LedgerService {
 	public async disconnect(): Promise<void> {
 		if (this.#ledger) {
 			await this.#ledger.close();
+			await closeDevices();
 		}
 	}
 
@@ -234,5 +237,33 @@ export class LedgerService {
 
 	public scanner({ scannedWallets }: { scannedWallets: LedgerData[] }): LedgerScanner {
 		return new LedgerScanner(this, this.#profile, scannedWallets);
+	}
+
+	async #accessLedgerDevice() {
+		try {
+			await this.connect();
+		} catch (error) {
+			// If the device is open, continue normally.
+			// Can be triggered when the user retries ledger connection.
+			if (error.message !== "The device is already open.") {
+				throw error;
+			}
+		}
+	}
+
+	public async accessLedgerApp() {
+		await this.#accessLedgerDevice();
+
+		await this.getPublicKey(
+			formatLedgerDerivationPath({
+				coinType: this.slip44Eth(),
+			}),
+		);
+
+		// Allows only eth based ledger apps and rejects others, including the old ark ledger app.
+		const isEthApp = await this.isEthBasedApp();
+		if (!isEthApp) {
+			throw new Error("INCOMPATIBLE_APP");
+		}
 	}
 }

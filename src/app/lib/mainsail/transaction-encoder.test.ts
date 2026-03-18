@@ -52,10 +52,16 @@ describe("TransactionEncoder", () => {
 	it("should get token transfer if token info is provided", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
 		const address = walletToken.token().address();
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
 
 		expect(
 			encoder.byType(
-				{ recipients: [{ address, amount: 100 }], senderAddress: address, tokenContractAddress: address },
+				{
+					recipientAddress: address,
+					recipients: [{ address, amount: 100 }],
+					senderAddress: address,
+					tokenContractAddress: address,
+				},
 				"transfer",
 			),
 		).toEqual(tokenEncodedData);

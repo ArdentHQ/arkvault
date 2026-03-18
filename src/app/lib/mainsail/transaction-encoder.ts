@@ -156,7 +156,17 @@ export class TransactionEncoder {
 	}
 
 	byType(inputData: EncodeInputData, type: EncodeTransactionType): EncodedData {
-		if (type === "transfer" && !!inputData.tokenContractAddress) {
+		if (type === "transfer" && !!inputData.tokenContractAddress && inputData.recipientAddress) {
+			const hasToken = this.#profile
+				.tokens()
+				.selected()
+				.items()
+				.some((token) => token.token().address() === inputData.tokenContractAddress);
+
+			if (!hasToken) {
+				return this.transfer(inputData.recipientAddress);
+			}
+
 			return this.tokenTransfer(inputData.tokenContractAddress, inputData);
 		}
 

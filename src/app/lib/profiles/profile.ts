@@ -609,4 +609,40 @@ export class Profile implements IProfile {
 	public tokens(): TokenService {
 		return this.#tokenService;
 	}
+
+	/** {@inheritDoc IProfile.whitelistedContractAddresses} */
+	public whitelistedContractAddresses(): string[] {
+		return this.data().get(ProfileData.WhitelistedContractAddresses, []) as string[];
+	}
+
+	/** {@inheritDoc IProfile.whitelistContractAddress} */
+	public whitelistContractAddress(address: string): string[] {
+		const existingContractAddresses = this.whitelistedContractAddresses();
+
+		// do nothing if address is already in the list
+		if (existingContractAddresses.some((a) => a.toLowerCase() === address.toLowerCase())) {
+			return existingContractAddresses;
+		}
+
+		const updatedList = [...existingContractAddresses, address];
+
+		this.data().set(ProfileData.WhitelistedContractAddresses, updatedList);
+
+		this.status().markAsDirty();
+
+		return updatedList;
+	}
+
+	/** {@inheritDoc IProfile.removeWhitelistedContractAddress} */
+	public removeWhitelistedContractAddress(address: string): string[] {
+		const updatedList = this.whitelistedContractAddresses().filter(
+			(a) => a.toLowerCase() !== address.toLowerCase(),
+		);
+
+		this.data().set(ProfileData.WhitelistedContractAddresses, updatedList);
+
+		this.status().markAsDirty();
+
+		return updatedList;
+	}
 }

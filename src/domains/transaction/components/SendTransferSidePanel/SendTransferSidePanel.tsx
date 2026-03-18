@@ -41,7 +41,7 @@ import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { Image } from "@/app/components/Image";
-import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 const MAX_TABS = 5;
 
@@ -53,21 +53,21 @@ export const SendTransferSidePanel = ({
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	isTokenTransfer?: boolean;
 	tokenContractAddress?: string;
+	isTokenTransfer?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
-
 	const { env } = useEnvironmentContext();
 
 	const [mounted, setMounted] = useState(false);
-	const [selectedToken, setSelectedToken] = useState<WalletToken | undefined>(undefined);
 	const { activeWallet: wallet, setActiveWallet: setWallet } = useSelectsTransactionSender({
 		active: mounted,
 	});
 
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
+	const { aggregated: tokens } = useProfileTokens({ profile: activeProfile });
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
@@ -99,7 +99,7 @@ export const SendTransferSidePanel = ({
 		getValues,
 		lastEstimatedExpiration,
 		formState: { isDirty, isValid, isSubmitting, dirtyFields },
-	} = useSendTransferForm({ isTokenTransfer, selectedToken, tokenContractAddress, wallet });
+	} = useSendTransferForm({ tokenContractAddress, tokens, wallet });
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -442,7 +442,8 @@ export const SendTransferSidePanel = ({
 	);
 
 	const isLastStep = activeTab === SendTransferStep.SummaryStep;
-	const isLedgerAuthenticationStep = wallet && wallet.isLedger() && activeTab === SendTransferStep.AuthenticationStep;
+	const isLedgerAuthenticationStep =
+		!!wallet && wallet.isLedger() && activeTab === SendTransferStep.AuthenticationStep;
 
 	return (
 		<SidePanel
@@ -511,6 +512,7 @@ export const SendTransferSidePanel = ({
 					<StepsProvider steps={MAX_TABS - 1} activeStep={activeTab}>
 						<TabPanel tabId={SendTransferStep.FormStep}>
 							<FormStep
+								tokens={tokens}
 								isTokenTransfer={isTokenTransfer}
 								network={activeNetwork}
 								senderWallet={wallet}
@@ -560,7 +562,6 @@ export const SendTransferSidePanel = ({
 								onClose={() => {
 									assertWallet(wallet);
 									onOpenChange(false);
-									setSelectedToken(undefined);
 								}}
 								isBackDisabled={isSubmitting}
 								onBack={() => {

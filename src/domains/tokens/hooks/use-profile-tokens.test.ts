@@ -15,6 +15,7 @@ describe("useProfileTokens", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getMainsailProfileId());
 	});
+
 	beforeEach(() => {
 		vi.clearAllMocks();
 	});
