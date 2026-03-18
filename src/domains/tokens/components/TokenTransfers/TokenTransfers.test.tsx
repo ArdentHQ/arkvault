@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import { TokenTransfers } from "./TokenTransfers";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { env, getDefaultProfileId, render, screen, syncValidators, waitFor, within } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
@@ -17,8 +17,6 @@ describe("TokenTransfer", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		await syncValidators(profile);
 	});
 
 	beforeEach(async () => {
