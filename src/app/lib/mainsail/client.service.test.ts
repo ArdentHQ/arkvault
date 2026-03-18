@@ -507,37 +507,36 @@ describe("ClientService", () => {
 
 		it("should map memo to vendorField", async () => {
 			await clientService.transactions({ memo: "test" });
-			expect(spy).toHaveBeenCalledWith(1, 10, { vendorField: "test" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1, vendorField: "test" }));
 		});
 
 		it("should handle orderBy", async () => {
 			await clientService.transactions({ orderBy: "amount:desc" });
-			expect(spy).toHaveBeenCalledWith(1, 10, { orderBy: "amount:desc" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, orderBy: "amount:desc", page: 1 }));
 		});
 
 		it("should handle identifiers", async () => {
 			await clientService.transactions({ identifiers: [{ value: "addr1" }, { value: "addr2" }] });
-			expect(spy).toHaveBeenCalledWith(1, 10, { address: "addr1,addr2" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ address: "addr1,addr2", limit: 10, page: 1 }));
 		});
 
 		it("should handle transaction types", async () => {
 			await clientService.transactions({ types: ["transfer", "vote"] });
-			// Transfer is an empty string, so we only check for the vote part
-			expect(spy).toHaveBeenCalledWith(1, 10, { data: expect.stringContaining("6dd7d8ea,3174b689") });
+			expect(spy).toHaveBeenCalledWith(
+				expect.objectContaining({ data: expect.stringContaining(",6dd7d8ea,3174b689"), limit: 10, page: 1 }),
+			);
 		});
 
 		it("should handle timestamp", async () => {
 			await clientService.transactions({ timestamp: { from: 1, to: 2 } });
 			expect(spy).toHaveBeenCalledWith(
-				1,
-				10,
-				expect.objectContaining({ "timestamp.from": 1, "timestamp.to": 2 }),
+				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": 1, "timestamp.to": 2 }),
 			);
 		});
 
 		it("should handle single transaction type", async () => {
 			await clientService.transactions({ type: "transfer" });
-			expect(spy).toHaveBeenCalledWith(1, 10, { data: "" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ data: "", limit: 10, page: 1 }));
 		});
 
 		it("should handle timestamp without epoch", async () => {
@@ -549,30 +548,28 @@ describe("ClientService", () => {
 
 			await serviceWithoutEpoch.transactions({ timestamp: { from: 1000, to: 2000 } });
 			expect(spy).toHaveBeenCalledWith(
-				1,
-				10,
-				expect.objectContaining({ "timestamp.from": 1000, "timestamp.to": 2000 }),
+				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": 1000, "timestamp.to": 2000 }),
 			);
 		});
 
 		it("should handle empty query", async () => {
 			await clientService.transactions({});
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle identifiers with empty addresses", async () => {
 			await clientService.transactions({ identifiers: [{ value: "" }] });
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle undefined transaction type", async () => {
 			await clientService.transactions({ type: "unknownType" as any });
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle types with undefined values", async () => {
 			await clientService.transactions({ types: ["unknownType1", "unknownType2"] as any });
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle meta pagination with null values", async () => {
@@ -593,7 +590,7 @@ describe("ClientService", () => {
 			} as any);
 
 			await clientService.transactions({ limit: undefined, page: undefined } as any);
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 
 			spy.mockRestore();
 		});
@@ -605,7 +602,7 @@ describe("ClientService", () => {
 			} as any);
 
 			await clientService.wallets({ limit: undefined, page: undefined } as any);
-			expect(spy).toHaveBeenCalledWith(1, 10);
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 
 			spy.mockRestore();
 		});
@@ -617,7 +614,7 @@ describe("ClientService", () => {
 			} as any);
 
 			await clientService.validators({ limit: undefined, page: undefined } as any);
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 
 			spy.mockRestore();
 		});
@@ -641,12 +638,7 @@ describe("ClientService", () => {
 			await serviceWithEpoch.transactions({ timestamp: { from: futureTimestamp, to: futureTimestamp + 100 } });
 
 			expect(spy).toHaveBeenCalledWith(
-				1,
-				10,
-				expect.objectContaining({
-					"timestamp.from": 1000,
-					"timestamp.to": 1100,
-				}),
+				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": 1000, "timestamp.to": 1100 }),
 			);
 		});
 	});

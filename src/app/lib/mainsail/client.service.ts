@@ -75,10 +75,7 @@ export class ClientService {
 	}
 
 	public async tokenAddresses(query: Services.WalletTokensQuery): Promise<WalletTokenCollection> {
-		const response = await this.#client.tokens().tokenAddresses({
-			...query,
-			addresses: query.addresses.join(","),
-		});
+		const response = await this.#client.wallets().tokens(query);
 
 		const walletTokens = response.data.map((tokenAddresses: TokenAddressesData) => {
 			const token = new TokenDTO({
@@ -117,24 +114,24 @@ export class ClientService {
 	}
 
 	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {
-		const response = await this.#client.tokens().byWalletAddress(address);
+		const response = await this.#client.wallets().tokensFor(address);
 		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData));
 	}
 
 	public async tokenHolders(contractAddress: string): Promise<TokenRepository> {
-		const response = await this.#client.tokens().holders(contractAddress);
+		const response = await this.#client.tokens().holdersFor(contractAddress);
 		const holders = new TokenRepository();
 		holders.fill(response.results);
 		return holders;
 	}
 
 	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
-		const response = await this.#client.tokens().get(contractAddress);
+		const response = await this.#client.tokens().whitelist(contractAddress);
 		return new TokenDTO(response.data);
 	}
 
 	public async tokenTransfers(query?: TokenTransfersQuery): Promise<ConfirmedTransactionDataCollection> {
-		const response = await this.#client.tokens().tokenTransfers({
+		const response = await this.#client.tokens().transfers({
 			...query,
 			from: query?.from?.join(","),
 			to: query?.to?.join(","),
@@ -180,7 +177,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const response = await this.#client.transactions().all(page, limit, parameters);
+		const response = await this.#client.transactions().all({ ...parameters, limit, page });
 
 		return new ConfirmedTransactionDataCollection(
 			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
@@ -194,7 +191,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const response = await this.#client.transactions().allUnconfirmed(page, limit, parameters);
+		const response = await this.#client.transactions().allUnconfirmed({ ...parameters, limit, page });
 
 		return new UnconfirmedTransactionDataCollection(
 			response.data.map((transaction) => new UnconfirmedTransactionData().configure(transaction)),
@@ -211,7 +208,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1 } = searchParams;
 
-		const response = await this.#client.wallets().all(page, limit);
+		const response = await this.#client.wallets().all({ limit, page });
 
 		return new Collections.WalletDataCollection(
 			response.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
@@ -228,7 +225,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const body = await this.#client.validators().all(page, limit, parameters);
+		const body = await this.#client.validators().all({ ...parameters, limit, page });
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
@@ -267,7 +264,7 @@ export class ClientService {
 		let response: Contracts.KeyValuePair;
 
 		try {
-			response = await this.#client.transactions().create(transactionToBroadcast);
+			response = await this.#client.transactions().create({ transactions: transactionToBroadcast });
 		} catch (error) {
 			response = error.response.json();
 		}
