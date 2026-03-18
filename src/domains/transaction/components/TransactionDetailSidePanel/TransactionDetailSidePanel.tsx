@@ -173,7 +173,7 @@ export const TransactionDetailSidePanel = ({
 	const { isLoading, transaction: confirmedTransaction } = useConfirmedTransaction({
 		disabled: requiresRefresh ? false : transactionItem.isConfirmed(),
 		transactionId,
-		wallet: wallets?.[0],
+		wallet: wallets?.find((wallet) => [transactionItem.from(), transactionItem.to()].includes(wallet.address())),
 	});
 
 	useEffect(() => {
