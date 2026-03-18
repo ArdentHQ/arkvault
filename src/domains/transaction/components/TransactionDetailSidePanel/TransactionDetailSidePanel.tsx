@@ -90,7 +90,9 @@ export const TransactionDetailContent = ({
 				</DetailPadded>
 
 				<DetailPadded className="flex-1 sm:ml-0">
-					{!isVoteTransaction && <TransactionType transaction={transaction} />}
+					{!isVoteTransaction && (
+						<TransactionType isRefreshingTransaction={isRefreshingTransaction} transaction={transaction} />
+					)}
 					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} showValidator />}
 				</DetailPadded>
 
@@ -165,8 +167,11 @@ export const TransactionDetailSidePanel = ({
 	const wallet = transactionItem.wallet();
 	const transactionId = transactionItem.hash();
 
+	const requiresRefresh =
+		transactionItem.isTokenTransfer() || transactionItem.isApprove() || transactionItem.isRevoke();
+
 	const { isLoading, transaction: confirmedTransaction } = useConfirmedTransaction({
-		disabled: transactionItem.isTokenTransfer() ? false : transactionItem.isConfirmed(),
+		disabled: requiresRefresh ? false : transactionItem.isConfirmed(),
 		transactionId,
 		wallet,
 	});
