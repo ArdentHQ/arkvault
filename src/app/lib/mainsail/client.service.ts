@@ -2,7 +2,7 @@
 
 import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
-import { decodeFunctionResult, encodeFunctionData, TransactionTypeNotSupportedError } from "viem";
+import { decodeFunctionResult, encodeFunctionData } from "viem";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
@@ -177,7 +177,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const response = await this.#client.transactions().all({ ...parameters, page, limit });
+		const response = await this.#client.transactions().all({ ...parameters, limit, page });
 
 		return new ConfirmedTransactionDataCollection(
 			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
@@ -191,7 +191,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const response = await this.#client.transactions().allUnconfirmed({ ...parameters, page, limit });
+		const response = await this.#client.transactions().allUnconfirmed({ ...parameters, limit, page });
 
 		return new UnconfirmedTransactionDataCollection(
 			response.data.map((transaction) => new UnconfirmedTransactionData().configure(transaction)),
@@ -208,7 +208,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1 } = searchParams;
 
-		const response = await this.#client.wallets().all({ page, limit });
+		const response = await this.#client.wallets().all({ limit, page });
 
 		return new Collections.WalletDataCollection(
 			response.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
@@ -225,7 +225,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const body = await this.#client.validators().all({ ...parameters, page, limit });
+		const body = await this.#client.validators().all({ ...parameters, limit, page });
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
