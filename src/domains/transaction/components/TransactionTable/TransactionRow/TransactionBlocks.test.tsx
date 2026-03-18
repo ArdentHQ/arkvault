@@ -86,7 +86,7 @@ describe("TransactionAmount.blocks", () => {
 			}),
 		};
 
-		render(<TransactionTotalLabel transaction={tokenTransferFixture} profile={profile} />);
+		render(<TransactionTotalLabel showTicker={true} transaction={tokenTransferFixture} profile={profile} />);
 
 		expect(screen.getByText(/DARK2/)).toBeInTheDocument();
 	});
