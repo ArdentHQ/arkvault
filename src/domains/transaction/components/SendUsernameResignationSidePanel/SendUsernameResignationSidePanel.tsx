@@ -1,7 +1,6 @@
 import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { FormStep } from "@/domains/transaction/components/SendUsernameResignationSidePanel/FormStep";
@@ -41,7 +40,6 @@ export const SendUsernameResignationSidePanel = ({
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 }) => {
-	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const form = useForm({ mode: "onChange" });
