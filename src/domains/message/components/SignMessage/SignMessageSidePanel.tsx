@@ -369,6 +369,8 @@ export const SignMessageSidePanel = ({
 								onClose={handleBack}
 								errorMessage={errorMessage}
 								hideHeader
+								withCopyErrorButton
+								hideFooter
 								onBack={() => {
 									setAuthenticateLedger(false);
 

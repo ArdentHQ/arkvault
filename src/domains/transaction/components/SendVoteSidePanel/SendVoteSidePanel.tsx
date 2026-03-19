@@ -712,6 +712,8 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 								setActiveTab(Step.ReviewStep);
 							}}
 							errorMessage={errorMessage}
+							withCopyErrorButton
+							hideFooter
 						/>
 					</TabPanel>
 				</Tabs>

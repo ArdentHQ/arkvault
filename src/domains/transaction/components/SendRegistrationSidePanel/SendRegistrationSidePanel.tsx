@@ -452,6 +452,8 @@ export const SendRegistrationSidePanel = ({
 								}}
 								errorMessage={errorMessage}
 								hideHeader
+								hideFooter
+								withCopyErrorButton
 							/>
 						</TabPanel>
 

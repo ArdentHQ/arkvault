@@ -90,7 +90,7 @@ export class TransactionService {
 		const builder = TransferBuilder.new()
 			.value(UnitConverter.parseUnits(input.data.amount, "ark"))
 			.to(input.data.to)
-			.nonce(nonce)
+			.nonce("4")
 			.gasPrice(UnitConverter.parseUnits(input.gasPrice.toString(), "gwei"))
 			// @TODO https://app.clickup.com/t/86dwvx1ya get rid of .toString() for all `gas` calls
 			.gasLimit(input.gasLimit.toString());

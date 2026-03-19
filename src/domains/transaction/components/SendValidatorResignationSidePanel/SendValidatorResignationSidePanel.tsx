@@ -364,6 +364,8 @@ export const SendValidatorResignationSidePanel = ({
 							}}
 							errorMessage={errorMessage}
 							hideHeader
+							withCopyErrorButton
+							hideFooter
 						/>
 					</TabPanel>
 				</Tabs>

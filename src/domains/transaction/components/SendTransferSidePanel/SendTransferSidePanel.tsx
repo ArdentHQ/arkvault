@@ -569,6 +569,8 @@ export const SendTransferSidePanel = ({
 								}}
 								errorMessage={errorMessage}
 								hideHeader
+								withCopyErrorButton
+								hideFooter
 							/>
 						</TabPanel>
 

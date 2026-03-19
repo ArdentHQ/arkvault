@@ -364,6 +364,8 @@ export const SendUsernameResignationSidePanel = ({
 							}}
 							errorMessage={errorMessage}
 							hideHeader
+							withCopyErrorButton
+							hideFooter
 						/>
 					</TabPanel>
 				</Tabs>
