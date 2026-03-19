@@ -37,7 +37,9 @@ export const FormStep = ({
 	}, [unregister]);
 
 	const handleRecipientWalletChange = (wallet?: Contracts.IReadWriteWallet) => {
-		handleSelectAddress(wallet?.address() || "");
+		if (wallet) {
+			handleSelectAddress(wallet.address());
+		}
 	};
 
 	const { activeNetwork } = useActiveNetwork({ profile });

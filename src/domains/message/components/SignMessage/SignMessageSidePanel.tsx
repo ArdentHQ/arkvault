@@ -41,18 +41,6 @@ export const SignMessageSidePanel = ({
 	const queryParameters = useQueryParameters();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
-	const profileWallets = activeProfile.wallets().values();
-	const selectedWallets = activeProfile.wallets().selected();
-	const walletSelectionMode = activeProfile.walletSelectionMode();
-
-	const selectableWallets = useMemo(() => {
-		if (walletSelectionMode === AddressViewSelection.single) {
-			return [selectedWallets[0]];
-		}
-
-		return profileWallets;
-	}, [walletSelectionMode, selectedWallets, profileWallets]);
-
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [authenticateLedger, setAuthenticateLedger] = useState<boolean>(false);
 
@@ -353,7 +341,7 @@ export const SignMessageSidePanel = ({
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
-									wallets={selectableWallets}
+									wallets={activeProfile.wallets().selected()}
 									disableMessageInput={false}
 									maxLength={signMessage.message().maxLength.value}
 									wallet={selectedWallet}
