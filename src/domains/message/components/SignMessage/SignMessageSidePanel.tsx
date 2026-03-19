@@ -375,16 +375,10 @@ export const SignMessageSidePanel = ({
 						<TabPanel tabId={Step.ErrorStep}>
 							<ErrorStep
 								description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
-								onClose={handleBack}
 								errorMessage={errorMessage}
 								hideHeader
 								hideFooter
 								withCopyErrorButton
-								onBack={() => {
-									setAuthenticateLedger(false);
-
-									setActiveTab(Step.FormStep);
-								}}
 							/>
 						</TabPanel>
 					</StepsProvider>
