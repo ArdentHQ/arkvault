@@ -100,6 +100,11 @@ export const SendUsernameResignationSidePanel = ({
 			return onOpenChange(false);
 		}
 
+		if (activeTab === Step.ErrorStep) {
+			setActiveTab(Step.FormStep);
+			return;
+		}
+
 		setActiveTab(activeTab - 1);
 	};
 
@@ -288,7 +293,7 @@ export const SendUsernameResignationSidePanel = ({
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
-					{activeTab < stepCount && (
+					{!isLastStep && (
 						<Button
 							data-testid="SendUsernameResignation__back-button"
 							variant="secondary"

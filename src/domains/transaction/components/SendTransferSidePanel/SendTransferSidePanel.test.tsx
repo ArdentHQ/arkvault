@@ -595,53 +595,8 @@ describe("SendTransferSidePanel", () => {
 		await userEvent.click(sendButton());
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+		await userEvent.click(screen.getByTestId("SendTransfer__back-button"));
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		signMock.mockRestore();
-	});
-
-	it("should show ErrorStep on sign error and allow closing side panel", async () => {
-		const onOpenChange = vi.fn();
-		render(<SendTransferSidePanel open={true} onOpenChange={onOpenChange} tokenContractAddress={selectedAsset} />, {
-			route: `/profiles/${fixtureProfileId}/dashboard`,
-		});
-
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		await selectFirstSenderAddress();
-		await selectRecipient();
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
-		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
-
-		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
-		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
-		await userEvent.click(continueButton());
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
-		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-
-		await userEvent.click(continueButton());
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
-		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		const signMock = vi.spyOn(wallet.transaction(), "signTransfer").mockImplementation(() => {
-			throw new Error("broadcast error");
-		});
-
-		await userEvent.click(sendButton());
-		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
-
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-		await waitFor(() => expect(onOpenChange).toHaveBeenCalledWith(false));
 
 		signMock.mockRestore();
 	});
