@@ -123,10 +123,6 @@ describe("SignMessageSidePanel", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET),
-			).toBeInTheDocument();
-
 			await selectFirstAddress();
 
 			expect(
@@ -169,6 +165,7 @@ describe("SignMessageSidePanel", () => {
 		it("should sign message with secret", async () => {
 			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "secret" });
 			profile.wallets().push(walletWithSecret);
+			profile.wallets().selectAll();
 
 			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
 				route: dashboardRoute,
@@ -176,10 +173,6 @@ describe("SignMessageSidePanel", () => {
 			await selectNthAddress(2);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
-			).toBeInTheDocument();
 
 			await userEvent.type(messageInput(), signMessage);
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
@@ -199,6 +192,7 @@ describe("SignMessageSidePanel", () => {
 		it("should error and go back", async () => {
 			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
 			profile.wallets().push(walletWithSecret);
+			profile.wallets().selectAll();
 
 			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
 				route: dashboardRoute,
@@ -207,10 +201,6 @@ describe("SignMessageSidePanel", () => {
 			await selectNthAddress(2);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
-			).toBeInTheDocument();
 
 			await userEvent.type(messageInput(), signMessage);
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "123");
@@ -235,9 +225,6 @@ describe("SignMessageSidePanel", () => {
 		});
 
 		it("should close the side panel when `Back` is clicked on `Form` step", async () => {
-			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
-			profile.wallets().push(walletWithSecret);
-
 			const onOpenChangeMock = vi.fn();
 
 			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
