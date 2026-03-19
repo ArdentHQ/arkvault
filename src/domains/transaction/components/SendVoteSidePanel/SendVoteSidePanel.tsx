@@ -710,11 +710,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>
-						<ErrorStep
-							errorMessage={errorMessage}
-							withCopyErrorButton
-							hideFooter
-						/>
+						<ErrorStep errorMessage={errorMessage} withCopyErrorButton hideFooter />
 					</TabPanel>
 				</Tabs>
 			</Form>
