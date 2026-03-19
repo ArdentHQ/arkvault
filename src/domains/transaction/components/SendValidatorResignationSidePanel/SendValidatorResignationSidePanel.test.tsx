@@ -307,7 +307,7 @@ describe("SendValidatorResignationSidePanel", () => {
 			throw new Error("broadcast error");
 		});
 
-		const { asFragment, mockOnOpenChange } = await renderPanel();
+		const { asFragment } = await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 

@@ -98,12 +98,10 @@ describe("SignMessage with ledger", () => {
 		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
+			expect(screen.getByTestId("SignMessage__back-button")).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-
-		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+		await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
 		ledgerSpy.mockRestore();
 		isLedgerMock.mockRestore();

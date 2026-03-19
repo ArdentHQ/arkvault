@@ -99,6 +99,10 @@ export const SendValidatorResignationSidePanel = ({
 			return onOpenChange(false);
 		}
 
+		if (activeTab === Step.ErrorStep) {
+			setActiveTab(Step.FormStep);
+		}
+
 		setActiveTab(activeTab - 1);
 	};
 
@@ -358,7 +362,6 @@ export const SendValidatorResignationSidePanel = ({
 					<TabPanel tabId={Step.ErrorStep}>
 						<ErrorStep
 							onClose={() => onOpenChange(false)}
-							isBackDisabled={isSubmitting || !isValid}
 							errorMessage={errorMessage}
 							hideHeader
 							withCopyErrorButton
