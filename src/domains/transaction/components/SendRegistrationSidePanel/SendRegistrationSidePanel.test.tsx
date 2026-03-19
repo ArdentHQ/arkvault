@@ -612,8 +612,9 @@ describe("SendRegistrationSidePanel", () => {
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
 
+		await expect(formStep()).resolves.toBeVisible();
 		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
 
 		signMock.mockRestore();
