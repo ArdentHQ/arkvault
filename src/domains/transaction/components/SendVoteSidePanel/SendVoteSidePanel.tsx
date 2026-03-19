@@ -234,6 +234,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			return handleOpenChange(false);
 		}
 
+		if (activeTab === Step.ErrorStep) {
+			setActiveTab(Step.ReviewStep);
+			return;
+		}
+
 		setActiveTab(activeTab - 1);
 	};
 
