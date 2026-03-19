@@ -231,5 +231,22 @@ describe("SignMessageSidePanel", () => {
 
 			profile.wallets().forget(walletWithSecret.id());
 		});
+
+		it("should close the side panel when `Back` is clicked on `Form` step", async () => {
+			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
+			profile.wallets().push(walletWithSecret);
+
+			const onOpenChangeMock = vi.fn();
+
+			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
+
+			await expect(screen.findByTestId("SignMessage__back-button")).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
+
+			expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+		});
 	});
 });
