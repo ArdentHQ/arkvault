@@ -359,12 +359,7 @@ export const SendUsernameResignationSidePanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>
-						<ErrorStep
-							errorMessage={errorMessage}
-							hideHeader
-							withCopyErrorButton
-							hideFooter
-						/>
+						<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
 					</TabPanel>
 				</Tabs>
 			</Form>
