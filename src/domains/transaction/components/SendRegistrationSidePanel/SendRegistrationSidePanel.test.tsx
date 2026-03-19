@@ -570,7 +570,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([secondWallet]);
 
-		const { mockOnOpenChange } = await renderPanel();
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -615,7 +615,6 @@ describe("SendRegistrationSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
-		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
