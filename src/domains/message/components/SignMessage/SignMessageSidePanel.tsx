@@ -133,6 +133,13 @@ export const SignMessageSidePanel = ({
 		// Abort any existing listener
 		abortReference.current.abort();
 
+		setAuthenticateLedger(false);
+
+		if (activeTab !== Step.FormStep) {
+			setActiveTab(Step.FormStep);
+			return;
+		}
+
 		onOpenChange(false);
 	};
 
@@ -271,12 +278,14 @@ export const SignMessageSidePanel = ({
 			shakeWhenClosing={preventAccidentalClosing}
 			footer={
 				<SidePanelButtons>
-					{activeTab === Step.FormStep && (
-						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
+					<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
+						{!isLastStep && (
 							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
 								{t("COMMON.BACK")}
 							</Button>
+						)}
 
+						{activeTab === Step.FormStep && (
 							<Button
 								type="submit"
 								disabled={!isValid || !selectedWallet}
@@ -285,8 +294,8 @@ export const SignMessageSidePanel = ({
 							>
 								{t("COMMON.SIGN")}
 							</Button>
-						</div>
-					)}
+						)}
+					</div>
 
 					{isLastStep && (
 						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
@@ -369,8 +378,8 @@ export const SignMessageSidePanel = ({
 								onClose={handleBack}
 								errorMessage={errorMessage}
 								hideHeader
-								withCopyErrorButton
 								hideFooter
+								withCopyErrorButton
 								onBack={() => {
 									setAuthenticateLedger(false);
 

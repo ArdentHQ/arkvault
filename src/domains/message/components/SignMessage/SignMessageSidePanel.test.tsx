@@ -224,9 +224,9 @@ describe("SignMessageSidePanel", () => {
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 			await userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("ErrorStep__back-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId("SignMessage__back-button")).resolves.toBeVisible();
 
-			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 			profile.wallets().forget(walletWithSecret.id());
