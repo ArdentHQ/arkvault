@@ -360,12 +360,7 @@ export const SendValidatorResignationSidePanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>
-						<ErrorStep
-							errorMessage={errorMessage}
-							hideHeader
-							withCopyErrorButton
-							hideFooter
-						/>
+						<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
 					</TabPanel>
 				</Tabs>
 			</Form>

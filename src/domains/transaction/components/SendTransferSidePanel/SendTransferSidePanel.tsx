@@ -558,12 +558,7 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>
-							<ErrorStep
-								errorMessage={errorMessage}
-								hideHeader
-								withCopyErrorButton
-								hideFooter
-							/>
+							<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
 						</TabPanel>
 
 						{!hideStepNavigation && (
