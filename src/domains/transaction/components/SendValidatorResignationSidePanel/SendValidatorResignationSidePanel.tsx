@@ -361,7 +361,6 @@ export const SendValidatorResignationSidePanel = ({
 
 					<TabPanel tabId={Step.ErrorStep}>
 						<ErrorStep
-							onClose={() => onOpenChange(false)}
 							errorMessage={errorMessage}
 							hideHeader
 							withCopyErrorButton

@@ -362,11 +362,6 @@ export const SendUsernameResignationSidePanel = ({
 
 					<TabPanel tabId={Step.ErrorStep}>
 						<ErrorStep
-							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
-							isBackDisabled={isSubmitting || !isValid}
-							onBack={() => {
-								setActiveTab(Step.FormStep);
-							}}
 							errorMessage={errorMessage}
 							hideHeader
 							withCopyErrorButton

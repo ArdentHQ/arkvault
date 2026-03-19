@@ -711,11 +711,6 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					<TabPanel tabId={Step.ErrorStep}>
 						<ErrorStep
-							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
-							isBackDisabled={isSubmitting}
-							onBack={() => {
-								setActiveTab(Step.ReviewStep);
-							}}
 							errorMessage={errorMessage}
 							withCopyErrorButton
 							hideFooter
