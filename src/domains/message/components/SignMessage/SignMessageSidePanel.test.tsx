@@ -242,12 +242,14 @@ describe("SignMessageSidePanel", () => {
 		}
 
 		it("should reset the form when unmounted", async () => {
+			// render the wrapper
 			render(<Component />, {
 				route: dashboardRoute,
 			});
 
 			const user = userEvent.setup();
 
+			// open up the side panel
 			await user.click(screen.getByText("Toggle"));
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
@@ -255,12 +257,14 @@ describe("SignMessageSidePanel", () => {
 			await user.clear(messageInput());
 			await user.paste(signMessage);
 
+			// close the side panel
 			await user.click(screen.getByText("Toggle"));
 
 			await waitFor(() => {
 				expect(screen.queryByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE)).not.toBeInTheDocument();
 			});
 
+			// re-open the side panel
 			await user.click(screen.getByText("Toggle"));
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
