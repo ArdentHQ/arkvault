@@ -232,6 +232,23 @@ describe("SignMessageSidePanel", () => {
 			expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 		});
 
+		it("should unset the wallet when no wallet is found for the given address", async () => {
+			const onOpenChangeMock = vi.fn();
+
+			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
+
+			const user = userEvent.setup();
+
+			await user.clear(screen.getByTestId("SelectDropdown__input"));
+			await user.paste("0xabc")
+
+			await waitFor(() => {
+				expect(screen.queryByTestId("TruncateEnd")).not.toBeInTheDocument();
+			});
+		});
+
 		const Component = () => {
 			const [isOpen, setIsOpen] = React.useState(false);
 

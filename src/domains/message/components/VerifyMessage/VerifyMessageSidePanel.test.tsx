@@ -217,7 +217,7 @@ describe("VerifyMessage", () => {
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
 	});
 
-	it("should prefill values when mode switches", async () => {
+	it("should not prefill fields after switching modes if the form is empty.", async () => {
 		render(<VerifyMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: dashboardRoute,
 		});
