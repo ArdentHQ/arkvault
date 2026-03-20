@@ -159,12 +159,12 @@ export const TransactionDetailSidePanel = ({
 	transactionItem,
 	profile,
 	onClose,
+	wallets,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
 
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
 
-	const wallet = transactionItem.wallet();
 	const transactionId = transactionItem.hash();
 
 	const requiresRefresh =
@@ -173,7 +173,7 @@ export const TransactionDetailSidePanel = ({
 	const { isLoading, transaction: confirmedTransaction } = useConfirmedTransaction({
 		disabled: requiresRefresh ? false : transactionItem.isConfirmed(),
 		transactionId,
-		wallet,
+		wallet: wallets?.find((wallet) => [transactionItem.from(), transactionItem.to()].includes(wallet.address())),
 	});
 
 	useEffect(() => {
