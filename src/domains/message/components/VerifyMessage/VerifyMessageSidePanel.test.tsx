@@ -236,7 +236,7 @@ describe("VerifyMessage", () => {
 
 		await waitFor(
 			() => {
-				expect(jsonInput()).toHaveValue('');
+				expect(jsonInput()).toHaveValue("");
 			},
 			{ timeout: 4000 },
 		);
