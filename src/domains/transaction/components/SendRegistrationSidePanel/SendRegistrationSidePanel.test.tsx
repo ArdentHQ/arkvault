@@ -100,6 +100,7 @@ const signedTransactionMock = {
 	nonce: () => BigNumber.make(ValidatorRegistrationFixture.data.nonce),
 	payments: () => [],
 	recipients: () => [],
+	setMeta: () => {},
 	timestamp: () => DateTime.make(ValidatorRegistrationFixture.data.timestamp),
 	to: () => ValidatorRegistrationFixture.data.to,
 	token: () => {},
