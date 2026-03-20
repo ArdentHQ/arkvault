@@ -116,9 +116,11 @@ describe("SignMessage with ledger", () => {
 			.spyOn(wallet.ledger(), "signMessage")
 			.mockImplementation(() => new Promise((resolve) => setTimeout(() => resolve("signature"), 300)));
 
-		const getPublicKeyMock = vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(
-			"0453a97a244e6323ef60430e9761be5a972228e533f31723d376397808b4be3b4658578da4e51ee8fe1ea076fb2341902247f80fd87ee1b15b1e85a05905912c3a",
-		);
+		const getPublicKeyMock = vi
+			.spyOn(wallet.ledger(), "getExtendedPublicKey")
+			.mockResolvedValue(
+				"0453a97a244e6323ef60430e9761be5a972228e533f31723d376397808b4be3b4658578da4e51ee8fe1ea076fb2341902247f80fd87ee1b15b1e85a05905912c3a",
+			);
 
 		const getVersionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
 
