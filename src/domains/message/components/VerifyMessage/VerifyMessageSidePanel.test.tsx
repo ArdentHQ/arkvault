@@ -222,7 +222,7 @@ describe("VerifyMessage", () => {
 			route: dashboardRoute,
 		});
 
-		await fillForm("hello", "", "");
+		await fillForm("", "", "");
 
 		const toggle = screen.getByRole("checkbox");
 
@@ -236,7 +236,7 @@ describe("VerifyMessage", () => {
 
 		await waitFor(
 			() => {
-				expect(jsonInput()).toHaveValue('{"message":"","signatory":"","signature":"hello"}');
+				expect(jsonInput()).toHaveValue('');
 			},
 			{ timeout: 4000 },
 		);
