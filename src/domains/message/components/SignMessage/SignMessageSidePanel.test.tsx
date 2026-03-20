@@ -235,11 +235,13 @@ describe("SignMessageSidePanel", () => {
 		const Component = () => {
 			const [isOpen, setIsOpen] = React.useState(false);
 
-			return <div>
-				<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
-				<SignMessageSidePanel open={isOpen} onOpenChange={setIsOpen} onMountChange={vi.fn()} />
-			</div>
-		}
+			return (
+				<div>
+					<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
+					<SignMessageSidePanel open={isOpen} onOpenChange={setIsOpen} onMountChange={vi.fn()} />
+				</div>
+			);
+		};
 
 		it("should reset the form when unmounted", async () => {
 			render(<Component />, {
@@ -258,7 +260,9 @@ describe("SignMessageSidePanel", () => {
 			await user.click(screen.getByText("Toggle"));
 
 			await waitFor(() => {
-				expect(screen.queryByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE)).not.toBeInTheDocument();
+				expect(
+					screen.queryByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE),
+				).not.toBeInTheDocument();
 			});
 
 			await user.click(screen.getByText("Toggle"));
