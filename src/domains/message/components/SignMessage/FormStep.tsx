@@ -48,39 +48,17 @@ export const FormStep = ({
 
 	return (
 		<section className="space-y-4">
-			{wallets.length > 1 ? (
-				<FormField name="signatory-address">
-					<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
-					<SelectAddressDropdown
-						disabled={disabled}
-						profile={profile}
-						onChange={handleRecipientWalletChange}
-						wallets={wallets}
-						wallet={wallet}
-						defaultNetwork={activeNetwork}
-					/>
-				</FormField>
-			) : (
-				<DetailWrapper label={t("COMMON.SIGNING_ADDRESS")}>
-					<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
-						<Address
-							truncateOnTable
-							address={wallet?.address()}
-							walletName={
-								getWalletAlias({
-									address: wallet?.address() ?? "",
-									network: wallet?.network() ?? activeNetwork,
-									profile,
-								}).alias
-							}
-							showCopyButton
-							walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-							addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
-							wrapperClass="justify-end sm:justify-start"
-						/>
-					</div>
-				</DetailWrapper>
-			)}
+			<FormField name="signatory-address">
+				<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
+				<SelectAddressDropdown
+					disabled={disabled}
+					profile={profile}
+					onChange={handleRecipientWalletChange}
+					wallets={wallets}
+					wallet={wallet}
+					defaultNetwork={activeNetwork}
+				/>
+			</FormField>
 
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />

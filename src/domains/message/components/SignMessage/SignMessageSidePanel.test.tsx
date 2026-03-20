@@ -75,10 +75,6 @@ describe("SignMessageSidePanel", () => {
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
 
-		profile.wallets().selectAll();
-
-		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
-
 		await triggerMessageSignOnce(wallet);
 	});
 
@@ -165,7 +161,6 @@ describe("SignMessageSidePanel", () => {
 		it("should sign message with secret", async () => {
 			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "secret" });
 			profile.wallets().push(walletWithSecret);
-			profile.wallets().selectAll();
 
 			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
 				route: dashboardRoute,
@@ -192,7 +187,6 @@ describe("SignMessageSidePanel", () => {
 		it("should error and go back", async () => {
 			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
 			profile.wallets().push(walletWithSecret);
-			profile.wallets().selectAll();
 
 			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
 				route: dashboardRoute,

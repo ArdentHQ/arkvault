@@ -340,7 +340,7 @@ export const SignMessageSidePanel = ({
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
-									wallets={activeProfile.wallets().selected()}
+									wallets={activeProfile.wallets().values()}
 									disableMessageInput={false}
 									maxLength={signMessage.message().maxLength.value}
 									wallet={selectedWallet}
