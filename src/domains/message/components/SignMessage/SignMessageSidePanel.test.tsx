@@ -242,7 +242,7 @@ describe("SignMessageSidePanel", () => {
 			const user = userEvent.setup();
 
 			await user.clear(screen.getByTestId("SelectDropdown__input"));
-			await user.paste("0xabc")
+			await user.paste("0xabc");
 
 			await waitFor(() => {
 				expect(screen.queryByTestId("TruncateEnd")).not.toBeInTheDocument();
