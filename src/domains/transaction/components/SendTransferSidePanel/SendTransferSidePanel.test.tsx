@@ -83,6 +83,7 @@ const signedTransactionMock = {
 			amount: +transactionFixture.data.value / 1e8,
 		},
 	],
+	setMeta: () => {},
 	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
 	to: () => transactionFixture.data.to,
 	total: () => {

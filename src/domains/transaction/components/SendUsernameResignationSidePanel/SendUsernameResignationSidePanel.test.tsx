@@ -88,6 +88,7 @@ const signedTransactionMock = {
 	nonce: () => BigNumber.make(UsernameResignationFixture.data.nonce),
 	payments: () => [],
 	recipients: () => [],
+	setMeta: () => {},
 	timestamp: () => DateTime.make(UsernameResignationFixture.data.timestamp),
 	to: () => UsernameResignationFixture.data.to,
 	token: () => {},

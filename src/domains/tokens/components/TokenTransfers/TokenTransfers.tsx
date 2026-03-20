@@ -109,6 +109,7 @@ export const TokenTransfers = memo(function TokenTransfers({
 						isOpen={!!transactionModalItem}
 						transactionItem={transactionModalItem}
 						profile={profile}
+						wallets={wallets}
 						onClose={() => {
 							/* istanbul ignore next -- @preserve */
 							closePanel().then(() => {
