@@ -217,6 +217,31 @@ describe("VerifyMessage", () => {
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
 	});
 
+	it("should prefill values when mode switches", async () => {
+		render(<VerifyMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: dashboardRoute,
+		});
+
+		await fillForm("hello", "", "");
+
+		const toggle = screen.getByRole("checkbox");
+
+		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
+
+		await userEvent.click(toggle);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("VerifyMessage__json")).toBeInTheDocument();
+		});
+
+		await waitFor(
+			() => {
+				expect(jsonInput()).toHaveValue('{"message":"","signatory":"","signature":"hello"}');
+			},
+			{ timeout: 4000 },
+		);
+	});
+
 	it("should render with deeplink values and use them", async () => {
 		render(<VerifyMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: `/profiles/${profile.id()}/dashboard?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=0xc607eab8cd4d8458a3c784888b6579da23544473d86a6e51a93f9ac19c28ade92d7585c678106b0b8dbba0136f483a615a17cec28cf0bc11424996ffddc4eeb61b&coin=Mainsail&network=mainsail.mainnet`,
