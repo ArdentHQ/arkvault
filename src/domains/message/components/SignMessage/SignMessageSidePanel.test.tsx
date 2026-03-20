@@ -231,5 +231,60 @@ describe("SignMessageSidePanel", () => {
 
 			expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 		});
+
+		const Component = () => {
+			const [isOpen, setIsOpen] = React.useState(false);
+
+			return <div>
+				<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
+				<SignMessageSidePanel open={isOpen} onOpenChange={setIsOpen} onMountChange={vi.fn()} />
+			</div>
+		}
+
+		it("should reset the form when unmounted", async () => {
+			render(<Component />, {
+				route: dashboardRoute,
+			});
+
+			const user = userEvent.setup();
+
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await user.clear(messageInput());
+			await user.paste(signMessage);
+
+			await user.click(screen.getByText("Toggle"));
+
+			await waitFor(() => {
+				expect(screen.queryByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE)).not.toBeInTheDocument();
+			});
+
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await waitFor(() => {
+				expect(messageInput().value).toBe("");
+			});
+		});
+
+		// it("should prefill message field when it exists in query string", async () => {
+		// 	const onOpenChangeMock = vi.fn();
+		//
+		// 	const {unmount} = render(<SignMessageSidePanel open={false} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+		// 		route: `${dashboardRoute}`,
+		// 	});
+		//
+		// 	unmount();
+		//
+		//
+		// 	// await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+		// 	//
+		// 	// await waitFor(() => {
+		// 	// 	expect(messageInput().value).toBe("hello world");
+		// 	// });
+		// });
 	});
 });

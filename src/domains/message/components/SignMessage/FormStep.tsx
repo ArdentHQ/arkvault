@@ -31,6 +31,7 @@ export const FormStep = ({
 
 	const { setValue, unregister, watch } = useFormContext();
 	const { message } = watch();
+	console.log("watch message", message);
 
 	useEffect(() => {
 		unregister("mnemonic");
@@ -43,8 +44,6 @@ export const FormStep = ({
 	};
 
 	const { activeNetwork } = useActiveNetwork({ profile });
-
-	const { getWalletAlias } = useWalletAlias();
 
 	return (
 		<section className="space-y-4">
