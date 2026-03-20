@@ -7,9 +7,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { DetailWrapper } from "@/app/components/DetailWrapper";
-import { Address } from "@/app/components/Address";
-import { useWalletAlias } from "@/app/hooks";
+
 export const FormStep = ({
 	disabled,
 	wallet,
@@ -31,7 +29,6 @@ export const FormStep = ({
 
 	const { setValue, unregister, watch } = useFormContext();
 	const { message } = watch();
-	console.log("watch message", message);
 
 	useEffect(() => {
 		unregister("mnemonic");

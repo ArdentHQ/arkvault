@@ -270,21 +270,20 @@ describe("SignMessageSidePanel", () => {
 			});
 		});
 
-		// it("should prefill message field when it exists in query string", async () => {
-		// 	const onOpenChangeMock = vi.fn();
-		//
-		// 	const {unmount} = render(<SignMessageSidePanel open={false} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
-		// 		route: `${dashboardRoute}`,
-		// 	});
-		//
-		// 	unmount();
-		//
-		//
-		// 	// await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-		// 	//
-		// 	// await waitFor(() => {
-		// 	// 	expect(messageInput().value).toBe("hello world");
-		// 	// });
-		// });
+		it("should prefill message field when it exists in query string", async () => {
+			render(<Component />, {
+				route: `${dashboardRoute}?message=hello+world`,
+			});
+
+			const user = userEvent.setup();
+
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await waitFor(() => {
+				expect(messageInput().value).toBe("hello world");
+			});
+		});
 	});
 });
