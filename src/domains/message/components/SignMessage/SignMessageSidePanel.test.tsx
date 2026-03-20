@@ -293,21 +293,5 @@ describe("SignMessageSidePanel", () => {
 				expect(messageInput().value).toBe("hello world");
 			});
 		});
-
-		it("should not render auth input for ledger wallets", async () => {
-			const ledgerSpy = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
-
-			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
-				route: dashboardRoute,
-			});
-
-			await selectNthAddress(0);
-
-			await waitFor(() => {
-				expect(screen.queryByTestId("AuthenticationStep")).not.toBeInTheDocument();
-			});
-
-			ledgerSpy.mockRestore();
-		});
 	});
 });

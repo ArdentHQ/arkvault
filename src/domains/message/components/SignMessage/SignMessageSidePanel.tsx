@@ -173,12 +173,12 @@ export const SignMessageSidePanel = ({
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE");
 		}
 
-		if (authenticateLedger) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
-		}
-
 		if (activeTab === Step.SuccessStep) {
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE");
+		}
+
+		if (authenticateLedger) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
 
 		return t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE");

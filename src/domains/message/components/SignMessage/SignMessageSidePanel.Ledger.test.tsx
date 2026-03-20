@@ -109,22 +109,16 @@ describe("SignMessage with ledger", () => {
 		ledgerListenMock.mockRestore();
 	});
 
-	it.skip("should sign message with a ledger wallet", async () => {
+	it("should sign message with a ledger wallet", async () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 		const signMessageSpy = vi
 			.spyOn(wallet.ledger(), "signMessage")
 			.mockImplementation(() => new Promise((resolve) => setTimeout(() => resolve("signature"), 300)));
 
-		const publicKeyPaths = new Map([
-			["m/44'/111'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
-			["m/44'/111'/1'/0/0", wallet.publicKey()!],
-			["m/44'/111'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
-		]);
-
-		const getPublicKeyMock = vi
-			.spyOn(wallet.ledger(), "getPublicKey")
-			.mockResolvedValue(publicKeyPaths.values().next().value);
+		const getPublicKeyMock = vi.spyOn(wallet.ledger(), "getExtendedPublicKey").mockResolvedValue(
+			"0453a97a244e6323ef60430e9761be5a972228e533f31723d376397808b4be3b4658578da4e51ee8fe1ea076fb2341902247f80fd87ee1b15b1e85a05905912c3a",
+		);
 
 		const getVersionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
 
@@ -136,8 +130,7 @@ describe("SignMessage with ledger", () => {
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-		// The profile only have one address so we dont need to select any address
-
+		// The profile only have one address so we don't need to select any address
 		expect(
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
 		).toBeInTheDocument();
@@ -148,7 +141,7 @@ describe("SignMessage with ledger", () => {
 
 		await userEvent.click(continueButton());
 
-		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/1'/0'/0/0"));
+		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/60'/0'/0/0"));
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
@@ -158,5 +151,4 @@ describe("SignMessage with ledger", () => {
 		getVersionMock.mockRestore();
 		getPublicKeyMock.mockRestore();
 	});
-	//
 });
