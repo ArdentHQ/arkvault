@@ -372,6 +372,26 @@ describe("InputFee", () => {
 			networkIsLive.mockRestore();
 			getFiatCurrency.mockRestore();
 		});
+
+		it("should handle undefined gasPrice and gasLimit", () => {
+			const { asFragment } = render(<InputFee {...defaultProps} gasPrice={undefined} gasLimit={undefined} />);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should use default viewType and selectedFeeOption when undefined", () => {
+			const { asFragment } = render(
+				<InputFee
+					{...defaultProps}
+					viewType={undefined}
+					selectedFeeOption={undefined}
+					gasPrice={defaultProps.gasPrice}
+					gasLimit={defaultProps.gasLimit}
+				/>,
+			);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
 	});
 });
 

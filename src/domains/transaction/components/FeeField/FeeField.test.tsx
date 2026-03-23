@@ -122,4 +122,89 @@ describe("FeeField", () => {
 		calculate.mockRestore();
 		useFeesMock.mockRestore();
 	});
+
+	it("should set gasLimit to estimatedGasLimit when switching to advanced view", async () => {
+		const calculate = vi.fn().mockResolvedValue({ avg: 30, max: 1, min: 1 });
+		const estimateGas = vi.fn().mockResolvedValue(BigNumber.make(50_000));
+		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas }));
+
+		render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
+
+		await userEvent.click(screen.getByText("Advanced"));
+
+		expect(screen.getByTestId("Input_GasLimit")).toHaveValue("50000");
+
+		estimateGas.mockRestore();
+		calculate.mockRestore();
+		useFeesMock.mockRestore();
+	});
+
+	it("should handle zero gasLimit from estimateGas", async () => {
+		const calculate = vi.fn().mockResolvedValue({ avg: 30, max: 1, min: 1 });
+		const estimateGas = vi.fn().mockResolvedValue(BigNumber.ZERO);
+		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas }));
+
+		render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
+
+		await userEvent.click(screen.getByText("Advanced"));
+
+		expect(screen.getByTestId("Input_GasLimit")).toHaveValue("21000");
+
+		estimateGas.mockRestore();
+		calculate.mockRestore();
+		useFeesMock.mockRestore();
+	});
+
+	it("should call onChangeGasLimit when up button is clicked", async () => {
+		render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
+
+		await userEvent.click(screen.getByText("Advanced"));
+
+		const upButton = screen.getByTestId("InputFeeAdvanced__gasLimit__up");
+		expect(upButton).toBeInTheDocument();
+
+		await userEvent.click(upButton);
+
+		expect(screen.getByTestId("Input_GasLimit")).toHaveValue("26200");
+	});
+
+	it("should handle multiPayment type", async () => {
+		render(<Component type="multiPayment" data={{ recipientsCount: 3 }} />);
+
+		await userEvent.click(screen.getByText("Advanced"));
+
+		expect(screen.getByTestId("Input_GasLimit")).toBeInTheDocument();
+	});
+
+	it("should handle Simple view type", async () => {
+		render(
+			<Component
+				type="transfer"
+				data={{ amount: 1, recipientAddress: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" }}
+			/>,
+		);
+
+		expect(screen.getByText("Simple")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByText("Simple"));
+
+		expect(screen.queryByTestId("InputFeeAdvanced__gasLimit__up")).not.toBeInTheDocument();
+	});
 });

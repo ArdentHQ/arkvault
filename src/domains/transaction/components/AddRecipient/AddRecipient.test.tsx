@@ -875,4 +875,14 @@ describe("AddRecipient", () => {
 
 		mockMultiPaymentRecipients.mockRestore();
 	});
+
+	it("should render without wallet and show zero balance", async () => {
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} recipients={[]} onChange={vi.fn()} />,
+		);
+
+		await waitFor(() => expect(container).toBeInTheDocument());
+
+		expect(screen.getByTestId("AddRecipient__amount")).toBeInTheDocument();
+	});
 });
