@@ -97,7 +97,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 				<Amount
 					decimals={decimals}
 					showTicker={showTicker}
-					showSign={!hideSign && value !== 0}
+					showSign={!hideSign && !BigNumber.make(value).isZero()}
 					ticker={ticker}
 					value={value}
 					isNegative={isNegative}
