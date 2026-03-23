@@ -18,7 +18,6 @@ import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { AddressViewSelection } from "@/app/lib/profiles/wallet.enum";
 import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
 import { Image } from "@/app/components/Image";
 
@@ -40,18 +39,6 @@ export const SignMessageSidePanel = ({
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
-
-	const profileWallets = activeProfile.wallets().values();
-	const selectedWallets = activeProfile.wallets().selected();
-	const walletSelectionMode = activeProfile.walletSelectionMode();
-
-	const selectableWallets = useMemo(() => {
-		if (walletSelectionMode === AddressViewSelection.single) {
-			return [selectedWallets[0]];
-		}
-
-		return profileWallets;
-	}, [walletSelectionMode, selectedWallets, profileWallets]);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [authenticateLedger, setAuthenticateLedger] = useState<boolean>(false);
@@ -186,12 +173,12 @@ export const SignMessageSidePanel = ({
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE");
 		}
 
-		if (authenticateLedger) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
-		}
-
 		if (activeTab === Step.SuccessStep) {
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE");
+		}
+
+		if (authenticateLedger) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
 
 		return t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE");
@@ -353,7 +340,7 @@ export const SignMessageSidePanel = ({
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
-									wallets={selectableWallets}
+									wallets={activeProfile.wallets().values()}
 									disableMessageInput={false}
 									maxLength={signMessage.message().maxLength.value}
 									wallet={selectedWallet}

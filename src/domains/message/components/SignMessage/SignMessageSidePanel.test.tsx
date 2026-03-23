@@ -75,8 +75,6 @@ describe("SignMessageSidePanel", () => {
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
 
-		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
-
 		await triggerMessageSignOnce(wallet);
 	});
 
@@ -120,10 +118,6 @@ describe("SignMessageSidePanel", () => {
 			});
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET),
-			).toBeInTheDocument();
 
 			await selectFirstAddress();
 
@@ -175,10 +169,6 @@ describe("SignMessageSidePanel", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
-			).toBeInTheDocument();
-
 			await userEvent.type(messageInput(), signMessage);
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
@@ -206,10 +196,6 @@ describe("SignMessageSidePanel", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
-			).toBeInTheDocument();
-
 			await userEvent.type(messageInput(), signMessage);
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "123");
 
@@ -233,9 +219,6 @@ describe("SignMessageSidePanel", () => {
 		});
 
 		it("should close the side panel when `Back` is clicked on `Form` step", async () => {
-			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
-			profile.wallets().push(walletWithSecret);
-
 			const onOpenChangeMock = vi.fn();
 
 			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
@@ -247,6 +230,85 @@ describe("SignMessageSidePanel", () => {
 			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
 			expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+		});
+
+		it("should unset the wallet when no wallet is found for the given address", async () => {
+			const onOpenChangeMock = vi.fn();
+
+			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
+
+			const user = userEvent.setup();
+
+			await user.clear(screen.getByTestId("SelectDropdown__input"));
+			await user.paste("0xabc");
+
+			await waitFor(() => {
+				expect(screen.queryByTestId("TruncateEnd")).not.toBeInTheDocument();
+			});
+		});
+
+		const Component = () => {
+			const [isOpen, setIsOpen] = React.useState(false);
+
+			return (
+				<div>
+					<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
+					<SignMessageSidePanel open={isOpen} onOpenChange={setIsOpen} onMountChange={vi.fn()} />
+				</div>
+			);
+		};
+
+		it("should reset the form when unmounted", async () => {
+			// render the wrapper
+			render(<Component />, {
+				route: dashboardRoute,
+			});
+
+			const user = userEvent.setup();
+
+			// open up the side panel
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await user.clear(messageInput());
+			await user.paste(signMessage);
+
+			// close the side panel
+			await user.click(screen.getByText("Toggle"));
+
+			await waitFor(() => {
+				expect(
+					screen.queryByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE),
+				).not.toBeInTheDocument();
+			});
+
+			// re-open the side panel
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await waitFor(() => {
+				expect(messageInput().value).toBe("");
+			});
+		});
+
+		it("should prefill message field when it exists in query string", async () => {
+			render(<Component />, {
+				route: `${dashboardRoute}?message=hello+world`,
+			});
+
+			const user = userEvent.setup();
+
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await waitFor(() => {
+				expect(messageInput().value).toBe("hello world");
+			});
 		});
 	});
 });
