@@ -224,12 +224,29 @@ describe("SignMessageSidePanel", () => {
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 			await userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("ErrorStep__back-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId("SignMessage__back-button")).resolves.toBeVisible();
 
-			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 			profile.wallets().forget(walletWithSecret.id());
+		});
+
+		it("should close the side panel when `Back` is clicked on `Form` step", async () => {
+			const walletWithSecret = await profile.walletFactory().fromSecret({ secret: "123" });
+			profile.wallets().push(walletWithSecret);
+
+			const onOpenChangeMock = vi.fn();
+
+			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
+
+			await expect(screen.findByTestId("SignMessage__back-button")).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
+
+			expect(onOpenChangeMock).toHaveBeenCalledWith(false);
 		});
 	});
 });

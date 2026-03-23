@@ -912,10 +912,10 @@ describe("SendVote", () => {
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-		expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
+		expect(screen.getByTestId("SendVote__back-button")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("SendVote__back-button"));
 
 		signMock.mockRestore();
 	});
@@ -965,7 +965,7 @@ describe("SendVote", () => {
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+		await userEvent.click(screen.getByTestId("SendVote__back-button"));
 
 		// Should return to review step
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();

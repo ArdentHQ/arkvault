@@ -234,6 +234,11 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			return handleOpenChange(false);
 		}
 
+		if (activeTab === Step.ErrorStep) {
+			setActiveTab(Step.ReviewStep);
+			return;
+		}
+
 		setActiveTab(activeTab - 1);
 	};
 
@@ -705,14 +710,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>
-						<ErrorStep
-							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
-							isBackDisabled={isSubmitting}
-							onBack={() => {
-								setActiveTab(Step.ReviewStep);
-							}}
-							errorMessage={errorMessage}
-						/>
+						<ErrorStep errorMessage={errorMessage} withCopyErrorButton hideFooter />
 					</TabPanel>
 				</Tabs>
 			</Form>

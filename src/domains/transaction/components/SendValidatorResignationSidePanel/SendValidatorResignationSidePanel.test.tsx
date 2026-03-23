@@ -307,7 +307,7 @@ describe("SendValidatorResignationSidePanel", () => {
 			throw new Error("broadcast error");
 		});
 
-		const { asFragment, mockOnOpenChange } = await renderPanel();
+		const { asFragment } = await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -334,9 +334,7 @@ describe("SendValidatorResignationSidePanel", () => {
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(asFragment()).toMatchSnapshot();
 
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-
-		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+		await userEvent.click(screen.getByText("Back"));
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

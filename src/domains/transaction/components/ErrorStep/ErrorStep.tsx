@@ -19,6 +19,7 @@ interface Properties {
 	errorMessage?: string;
 	hideHeader?: boolean;
 	hideFooter?: boolean;
+	withCopyErrorButton?: boolean;
 }
 
 export const ErrorStep = ({
@@ -30,6 +31,7 @@ export const ErrorStep = ({
 	errorMessage,
 	hideHeader = false,
 	hideFooter = false,
+	withCopyErrorButton,
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef(null);
@@ -113,6 +115,19 @@ export const ErrorStep = ({
 						</Button>
 					)}
 				</FormButtons>
+			)}
+
+			{withCopyErrorButton && (
+				<div className="mt-2 flex justify-end">
+					<Clipboard
+						variant="icon"
+						data={errorMessage!}
+						iconButtonClassName="rounded px-2 py-[3px] flex items-center transition-colors-shadow duration-100 ease-linear cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 font-semibold gap-2"
+					>
+						<Icon name="Copy" size="md" />
+						<span className="leading-5">{t("COMMON.COPY_ERROR")}</span>
+					</Clipboard>
+				</div>
 			)}
 		</div>
 	);

@@ -571,7 +571,7 @@ describe("SendRegistrationSidePanel", () => {
 
 		const selectedWalletSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([secondWallet]);
 
-		const { mockOnOpenChange } = await renderPanel();
+		await renderPanel();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -613,9 +613,9 @@ describe("SendRegistrationSidePanel", () => {
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
 
-		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+		await expect(formStep()).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

@@ -288,7 +288,7 @@ describe("SendUsernameResignationSidePanel", () => {
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 
 		// Go back to form step
-		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
 
