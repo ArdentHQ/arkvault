@@ -1,7 +1,6 @@
 import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { FormStep } from "@/domains/transaction/components/SendUsernameResignationSidePanel/FormStep";
@@ -41,7 +40,6 @@ export const SendUsernameResignationSidePanel = ({
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
 }) => {
-	const navigate = useNavigate();
 	const { t } = useTranslation();
 
 	const form = useForm({ mode: "onChange" });
@@ -98,6 +96,11 @@ export const SendUsernameResignationSidePanel = ({
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {
 			return onOpenChange(false);
+		}
+
+		if (activeTab === Step.ErrorStep) {
+			setActiveTab(Step.FormStep);
+			return;
 		}
 
 		setActiveTab(activeTab - 1);
@@ -288,7 +291,7 @@ export const SendUsernameResignationSidePanel = ({
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
-					{activeTab < stepCount && (
+					{!isLastStep && (
 						<Button
 							data-testid="SendUsernameResignation__back-button"
 							variant="secondary"
@@ -356,15 +359,7 @@ export const SendUsernameResignationSidePanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>
-						<ErrorStep
-							onClose={() => navigate(`/profiles/${activeProfile.id()}/dashboard`)}
-							isBackDisabled={isSubmitting || !isValid}
-							onBack={() => {
-								setActiveTab(Step.FormStep);
-							}}
-							errorMessage={errorMessage}
-							hideHeader
-						/>
+						<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
 					</TabPanel>
 				</Tabs>
 			</Form>

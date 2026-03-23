@@ -558,18 +558,7 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>
-							<ErrorStep
-								onClose={() => {
-									assertWallet(wallet);
-									onOpenChange(false);
-								}}
-								isBackDisabled={isSubmitting}
-								onBack={() => {
-									setActiveTab(SendTransferStep.FormStep);
-								}}
-								errorMessage={errorMessage}
-								hideHeader
-							/>
+							<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
 						</TabPanel>
 
 						{!hideStepNavigation && (

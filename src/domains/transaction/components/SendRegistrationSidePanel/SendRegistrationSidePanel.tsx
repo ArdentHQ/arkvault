@@ -201,6 +201,11 @@ export const SendRegistrationSidePanel = ({
 			return;
 		}
 
+		if (activeTab === ERROR_STEP) {
+			setActiveTab(FORM_STEP);
+			return;
+		}
+
 		setActiveTab(activeTab - 1);
 	};
 
@@ -398,7 +403,7 @@ export const SendRegistrationSidePanel = ({
 			onMountChange={onMountChange}
 			footer={
 				<SidePanelButtons hidden={isLedgerAuthenticationStep}>
-					{activeTab < stepCount && (
+					{!isLastStep && (
 						<Button
 							data-testid="SendRegistration__back-button"
 							variant="secondary"
@@ -442,17 +447,7 @@ export const SendRegistrationSidePanel = ({
 				<Form data-testid="Registration__form" context={form} onSubmit={handleSubmit}>
 					<Tabs activeId={activeTab}>
 						<TabPanel tabId={ERROR_STEP}>
-							<ErrorStep
-								onClose={() => {
-									onOpenChange(false);
-								}}
-								isBackDisabled={isSubmitting}
-								onBack={() => {
-									setActiveTab(FORM_STEP);
-								}}
-								errorMessage={errorMessage}
-								hideHeader
-							/>
+							<ErrorStep errorMessage={errorMessage} hideHeader hideFooter withCopyErrorButton />
 						</TabPanel>
 
 						{registrationForm && (
