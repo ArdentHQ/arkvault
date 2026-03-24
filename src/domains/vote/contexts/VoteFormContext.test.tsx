@@ -2,14 +2,7 @@ import React from "react";
 
 import { Contracts } from "@/app/lib/profiles";
 import { beforeAll, expect, vi } from "vitest";
-import {
-	env,
-	getMainsailProfileId,
-	render,
-	renderWithoutRouter,
-	waitFor,
-	screen,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, renderWithoutRouter, waitFor, screen } from "@/utils/testing-library";
 import { useVoteFormContext, VoteFormProvider } from "./VoteFormContext";
 import * as ReactRouter from "react-router";
 
@@ -48,9 +41,7 @@ describe("VoteFormContext", () => {
 
 	beforeEach(() => {
 		// const _useSearchParamsMock = vi
-		vi
-			.spyOn(ReactRouter, "useSearchParams")
-			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 	});
 
 	it("should throw without provider", () => {
@@ -68,7 +59,7 @@ describe("VoteFormContext", () => {
 	});
 
 	it("should fetch validators", async () => {
-		const {container} =  render(
+		const { container } = render(
 			<VoteFormProvider profile={profile} wallet={wallet} network={profile.activeNetwork()}>
 				<Component />
 			</VoteFormProvider>,
