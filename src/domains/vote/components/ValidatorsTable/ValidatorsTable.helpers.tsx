@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
 import { ValidatorsTableColumnsProperties, VoteValidatorProperties } from "./ValidatorsTable.contracts";
-import { Icon } from "@/app/components/Icon";
-import { Tooltip } from "@/app/components/Tooltip";
 
 export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTableColumnsProperties) => {
 	const { t } = useTranslation();
