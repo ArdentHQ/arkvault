@@ -12,7 +12,6 @@ import { validatorExistsInVotes } from "@/domains/vote/components/ValidatorsTabl
 import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { twMerge } from "tailwind-merge";
-import { BigNumber } from "@/app/lib/helpers";
 
 export interface ValidatorRowProperties {
 	index: number;

@@ -16,7 +16,6 @@ import { VotesFilter } from "@/domains/vote/components/VotesFilter";
 export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	validators,
 	isLoading = false,
-	maxVotes,
 	unvoteValidators,
 	voteValidators,
 	selectedWallet,
@@ -47,12 +46,8 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 	const hasVotes = votes.length > 0;
 
 	useEffect(() => {
-		if ((hasVotes || maxVotes > 1) && selectedVotes.length === maxVotes) {
-			setIsVoteDisabled(true);
-		} else {
-			setIsVoteDisabled(false);
-		}
-	}, [hasVotes, maxVotes, selectedVotes]);
+		setIsVoteDisabled(hasVotes && selectedVotes.length  === 1);
+	}, [hasVotes, selectedVotes]);
 
 	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage]);
 
@@ -84,25 +79,16 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 
 				setSelectedUnvotes(unvotesInstance);
 
-				if (maxVotes === 1 && selectedVotes.length > 0) {
-					setSelectedVotes([]);
-				}
-
 				return;
 			}
 
 			const voteValidator: VoteValidatorProperties = {
-				amount: 0,
 				validatorAddress: address,
 			};
 
-			if (maxVotes === 1) {
-				setSelectedUnvotes([voteValidator]);
-			} else {
-				setSelectedUnvotes([...unvotesInstance, voteValidator]);
-			}
+			setSelectedUnvotes([voteValidator]);
 		},
-		[selectedUnvotes, votes, setSelectedUnvotes, setSelectedVotes, maxVotes, selectedVotes.length],
+		[selectedUnvotes, votes, setSelectedUnvotes, setSelectedVotes, selectedVotes.length],
 	);
 
 	const toggleVotesSelected = useCallback(
@@ -115,34 +101,24 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 
 				setSelectedVotes(votesInstance);
 
-				if (maxVotes === 1 && hasVotes) {
-					setSelectedUnvotes([]);
-				}
-
 				return;
 			}
 
 			const voteValidator: VoteValidatorProperties = {
-				amount: 0,
 				validatorAddress: address,
 			};
 
-			if (maxVotes === 1) {
-				setSelectedVotes([voteValidator]);
+			setSelectedVotes([voteValidator]);
 
-				if (hasVotes) {
-					setSelectedUnvotes(
-						votes.map((vote) => ({
-							amount: vote.amount,
-							validatorAddress: vote.wallet!.address(),
-						})),
-					);
-				}
-			} else {
-				setSelectedVotes([...votesInstance, voteValidator]);
+			if (hasVotes) {
+				setSelectedUnvotes(
+					votes.map((vote) => ({
+						validatorAddress: vote.wallet!.address(),
+					})),
+				);
 			}
 		},
-		[selectedVotes, hasVotes, setSelectedUnvotes, maxVotes, votes],
+		[selectedVotes, hasVotes, setSelectedUnvotes, votes],
 	);
 
 	const handleSelectPage = useCallback(
@@ -280,7 +256,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 				selectedWallet={selectedWallet}
 				selectedVotes={selectedVotes}
 				selectedUnvotes={selectedUnvotes}
-				maxVotes={maxVotes}
+				maxVotes={1}
 				onContinue={onContinue}
 			/>
 		</div>

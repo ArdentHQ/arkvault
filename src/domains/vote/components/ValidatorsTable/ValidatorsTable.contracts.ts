@@ -7,7 +7,6 @@ import { FilterOption } from "@/domains/vote/components/VotesFilter";
 export interface ValidatorsTableProperties extends Omit<SearchableTableWrapperProperties, "children"> {
 	validators: Contracts.IReadOnlyWallet[];
 	isLoading?: boolean;
-	maxVotes: number;
 	unvoteValidators: VoteValidatorProperties[];
 	voteValidators: VoteValidatorProperties[];
 	selectedWallet: Contracts.IReadWriteWallet;
@@ -23,7 +22,7 @@ export interface ValidatorsTableProperties extends Omit<SearchableTableWrapperPr
 
 export interface VoteValidatorProperties {
 	validatorAddress: string;
-	amount: number;
+	amount?: number;
 }
 
 export interface ValidatorsTableColumnsProperties {

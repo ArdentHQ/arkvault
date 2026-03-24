@@ -53,8 +53,6 @@ export const VotesPage: FC<{
 		setSelectedAddress,
 		searchQuery,
 		setSearchQuery,
-		maxVotes,
-		setMaxVotes,
 	} = useVoteFilters({
 		filter,
 		hasWalletId: !!hasWalletId,
@@ -125,11 +123,10 @@ export const VotesPage: FC<{
 			setSelectedAddress(address);
 			// setSelectedNetwork(network);
 			setSelectedWallet(wallet);
-			setMaxVotes(wallet.network().maximumVotesPerWallet());
 
 			await fetchValidators(wallet);
 		},
-		[activeProfile, fetchValidators, setMaxVotes, setSearchQuery, setSelectedAddress, activeNetwork],
+		[activeProfile, fetchValidators, setSearchQuery, setSelectedAddress, activeNetwork],
 	);
 
 	const isSelectValidatorStep = !!selectedAddress;
@@ -167,7 +164,6 @@ export const VotesPage: FC<{
 					searchQuery={searchQuery}
 					validators={filteredValidators}
 					isLoading={isLoadingValidators}
-					maxVotes={maxVotes!}
 					votes={votes}
 					resignedValidatorVotes={resignedValidatorVotes}
 					unvoteValidators={unvoteValidators}
