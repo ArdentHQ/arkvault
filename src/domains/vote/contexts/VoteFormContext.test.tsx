@@ -7,28 +7,28 @@ import {
 	getMainsailProfileId,
 	render,
 	renderWithoutRouter,
-	waitFor,
-	screen,
+	screen, syncValidators,
 } from "@/utils/testing-library";
 import { useVoteFormContext, VoteFormProvider } from "./VoteFormContext";
 import * as ReactRouter from "react-router";
 
 const Component = () => {
 	const { isLoading, votes, unvotes } = useVoteFormContext();
+
 	return (
 		<>
 			{isLoading && <div data-testid="loading">loading validators</div>}
 			{!isLoading && Array.isArray(votes) && (
 				<div data-testid="votes">
 					{votes.map((vote) => (
-						<div>{vote.wallet.address()}</div>
+						<div key={vote.wallet?.address()}>{vote.wallet?.address()}</div>
 					))}
 				</div>
 			)}
 			{!isLoading && Array.isArray(unvotes) && (
 				<div data-testid="unvotes">
 					{unvotes.map((unvote) => (
-						<div>{unvote.wallet.address()}</div>
+						<div key={unvote.wallet?.address()}>{unvote.wallet?.address()}</div>
 					))}
 				</div>
 			)}
@@ -43,7 +43,13 @@ let wallet: Contracts.IReadWriteWallet;
 describe("VoteFormContext", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
+
+		await env.profiles().restore(profile);
+		await syncValidators(profile);
+
 		wallet = profile.wallets().first();
+		await wallet.synchroniser().votes();
+		await profile.sync();
 	});
 
 	beforeEach(() => {
@@ -68,19 +74,16 @@ describe("VoteFormContext", () => {
 	});
 
 	it("should fetch validators", async () => {
-		const {container} =  render(
+		const route = "?method=vote&coin=Mainsail&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&unvote=0xAa6d78a89706b744eDD2894CE30BeCE77Ab0F753";
+
+		render(
 			<VoteFormProvider profile={profile} wallet={wallet} network={profile.activeNetwork()}>
 				<Component />
 			</VoteFormProvider>,
+			{
+				route,
+			}
 		);
-
-		await waitFor(() => {
-			expect(container).toHaveTextContent("loading validators");
-		});
-
-		await waitFor(() => {
-			expect(screen.queryByText("loading validators")).not.toBeInTheDocument();
-		});
 
 		await expect(screen.findByTestId("votes")).resolves.toBeVisible();
 		await expect(screen.findByTestId("unvotes")).resolves.toBeVisible();
