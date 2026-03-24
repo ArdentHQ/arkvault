@@ -40,6 +40,7 @@ export const TransactionAmountLabel = ({
 			className="h-[21px] rounded dark:border"
 			allowHideBalance={allowHideBalance}
 			profile={profile}
+			showCompactFormat
 		/>
 	);
 };
