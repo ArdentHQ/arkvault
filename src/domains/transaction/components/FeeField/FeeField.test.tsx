@@ -219,7 +219,7 @@ describe("FeeField", () => {
 		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate, estimateGas }));
 
 		const ComponentWithInitialGasPrice = ({ balance = 10, network = networks, type, data }: any) => {
-			const form = useForm({ mode: "onChange", defaultValues: { gasPrice: 100 } });
+			const form = useForm({ defaultValues: { gasPrice: 100 }, mode: "onChange" });
 
 			const { register, watch } = form;
 			const { common } = useValidation();

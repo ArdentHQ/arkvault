@@ -6,7 +6,7 @@ import { describe, expect, it, vi } from "vitest";
 
 describe("InputFeeAdvancedAddon", () => {
 	it("should render with default type button when type prop is not provided", () => {
-		const { container } = render(
+		render(
 			<InputFeeAdvancedAddon
 				convertedValue={0}
 				disabled={false}
@@ -18,7 +18,7 @@ describe("InputFeeAdvancedAddon", () => {
 			/>,
 		);
 
-		const buttons = container.querySelectorAll("button");
+		const buttons = screen.getAllByRole("button");
 		expect(buttons).toHaveLength(2);
 
 		expect(buttons[0]).toHaveAttribute("type", "button");
@@ -42,7 +42,7 @@ describe("InputFeeAdvancedAddon", () => {
 	});
 
 	it("should not show converted value when showConvertedValue is false", () => {
-		const { container } = render(
+		render(
 			<InputFeeAdvancedAddon
 				convertedValue={10.5}
 				disabled={false}
@@ -54,6 +54,6 @@ describe("InputFeeAdvancedAddon", () => {
 			/>,
 		);
 
-		expect(container.querySelector('[data-testid="InputFeeAdvanced__up"]')).toBeInTheDocument();
+		expect(screen.getByTestId("InputFeeAdvanced__up")).toBeInTheDocument();
 	});
 });

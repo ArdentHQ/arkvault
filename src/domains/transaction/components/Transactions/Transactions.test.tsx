@@ -474,7 +474,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByText(/Showing/)).toBeInTheDocument());
+		expect(await screen.findByText(/Showing/)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -487,7 +487,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("FilterTransactions")).toBeInTheDocument());
+		expect(await screen.findByTestId("FilterTransactions")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
