@@ -106,7 +106,7 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 				setSelectedVotes(votesInstance);
 
 				if (hasVotes) {
-					setSelectedVotes([]);
+					setSelectedUnvotes([]);
 				}
 
 				return;
