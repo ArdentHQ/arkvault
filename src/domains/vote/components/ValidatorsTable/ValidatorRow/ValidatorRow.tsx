@@ -23,13 +23,11 @@ export interface ValidatorRowProperties {
 	isVoteDisabled?: boolean;
 	isLoading?: boolean;
 	selectedWallet: Contracts.IReadWriteWallet;
-	availableBalance: BigNumber;
-	setAvailableBalance: (balance: BigNumber) => void;
 	toggleUnvotesSelected: (address: string, voteAmount?: number) => void;
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
 
-type UseValidatorRowProperties = Omit<ValidatorRowProperties, "isLoading" | "availableBalance" | "setAvailableBalance">;
+type UseValidatorRowProperties = Omit<ValidatorRowProperties, "isLoading">;
 
 export enum ValidatorStatusEnum {
 	Changed = "changed",

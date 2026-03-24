@@ -34,7 +34,6 @@ const FooterContent = ({ label, value, disabled, className }: FooterContentPrope
 
 interface ValidatorFooterProperties {
 	selectedWallet: Contracts.IReadWriteWallet;
-	availableBalance: BigNumber;
 	selectedVotes: VoteValidatorProperties[];
 	selectedUnvotes: VoteValidatorProperties[];
 	maxVotes: number;
