@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect } from "react";
 
-import { AddressTable } from "@/domains/vote/components/AddressTable";
+import { AddressTable, getNameAccessor } from "@/domains/vote/components/AddressTable";
 import {
 	env,
 	render,
@@ -13,6 +13,7 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -134,5 +135,15 @@ describe("AddressTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		walletVotingMock.mockRestore();
+	});
+
+	it("should return wallet alias or address", () => {
+		expect(getNameAccessor(wallet)).toBe("Mainsail Wallet 1")
+
+		const walletAliasMock = vi.spyOn(wallet, "alias").mockReturnValue(undefined);
+
+		expect(getNameAccessor(wallet)).toBe(wallet.address());
+
+		walletAliasMock.mockRestore();
 	});
 });

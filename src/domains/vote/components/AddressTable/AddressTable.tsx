@@ -18,7 +18,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
 			{
 				Header: t("COMMON.NAME"),
-				accessor: (wallet) => wallet.alias() || wallet.address(),
+				accessor: getNameAccessor,
 				cellWidth: "w-80",
 				headerClassName: "no-border",
 				noRoundedBorders: true,
@@ -150,3 +150,5 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, sh
 		</div>
 	);
 };
+
+export const getNameAccessor = (wallet: Contracts.IReadWriteWallet) => wallet.alias() || wallet.address();
