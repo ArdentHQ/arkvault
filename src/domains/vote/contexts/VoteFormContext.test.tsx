@@ -47,8 +47,6 @@ const Component = () => {
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-const setSearchParamsFn = vi.fn();
-let deleteSearchParamMock;
 
 describe("VoteFormContext", () => {
 	beforeAll(async () => {
@@ -63,12 +61,7 @@ describe("VoteFormContext", () => {
 	});
 
 	beforeEach(() => {
-		const searchParams = new URLSearchParams();
-
-		vi.spyOn(searchParams, "has").mockReturnValue(true);
-		deleteSearchParamMock = vi.spyOn(searchParams, "delete");
-
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParamsFn]);
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 	});
 
 	it("should throw without provider", () => {
@@ -125,6 +118,37 @@ describe("VoteFormContext", () => {
 		});
 
 		expect(screen.queryByTestId("unvotes")).not.toBeInTheDocument();
+	});
+
+	it("should remove `method` from query string", async () => {
+		const searchParams = new URLSearchParams();
+
+		vi.spyOn(searchParams, "has").mockReturnValue(true);
+		const deleteSearchParamMock = vi.spyOn(searchParams, "delete");
+
+		const setSearchParamsFn = vi.fn();
+
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParamsFn]);
+
+		const route =
+			"?method=vote&coin=Mainsail&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&unvote=0xAa6d78a89706b744eDD2894CE30BeCE77Ab0F753";
+
+		render(
+			<VoteFormProvider profile={profile} wallet={wallet} network={profile.activeNetwork()}>
+				<Component />
+			</VoteFormProvider>,
+			{
+				route,
+			},
+		);
+
+		await expect(screen.findByTestId("votes")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("toggle-vote-panel"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("votes")).not.toBeInTheDocument();
+		});
 
 		expect(deleteSearchParamMock).toHaveBeenCalledWith("method");
 		expect(setSearchParamsFn).toHaveBeenCalled();
