@@ -35,7 +35,6 @@ interface ValidatorFooterProperties {
 	selectedWallet: Contracts.IReadWriteWallet;
 	selectedVotes: VoteValidatorProperties[];
 	selectedUnvotes: VoteValidatorProperties[];
-	maxVotes: number;
 	onContinue?: (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => void;
 }
 
