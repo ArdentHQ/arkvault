@@ -40,9 +40,12 @@ const Component = () => {
 				toggle vote panel
 			</button>
 
-			<button data-testid="open-vote-panel" onClick={() => {
-				setShowSendVotePanel(true);
-			}}>
+			<button
+				data-testid="open-vote-panel"
+				onClick={() => {
+					setShowSendVotePanel(true);
+				}}
+			>
 				open send vote panel
 			</button>
 
