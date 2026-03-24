@@ -16,7 +16,7 @@ import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
 
 const Component = () => {
-	const { isLoading, votes, unvotes, showSendVotePanel, setShowSendVotePanel, openSendVotePanel } = useVoteFormContext();
+	const { isLoading, votes, unvotes, showSendVotePanel, setShowSendVotePanel } = useVoteFormContext();
 
 	return (
 		<>
