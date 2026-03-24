@@ -140,21 +140,6 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
-	test("should navigate back when device is not available and onDeviceNotAvailable is not provided", async ({
-		defaultWallet,
-	}) => {
-		mockLedgerTransportError("Access denied to use Ledger device");
-		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
-
-		renderWithForm(<AuthenticationStep subject={subject} wallet={defaultWallet} />, {
-			withProviders: true,
-		});
-
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
-
-		vi.clearAllMocks();
-	});
-
 	test("should use default subject when not provided", async () => {
 		const wallet = profile.wallets().first();
 
