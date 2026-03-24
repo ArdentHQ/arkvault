@@ -43,7 +43,6 @@ export const ValidatorFooter = ({
 	selectedWallet,
 	selectedVotes,
 	selectedUnvotes,
-	maxVotes,
 	onContinue,
 }: ValidatorFooterProperties) => {
 	const { t } = useTranslation();
@@ -53,16 +52,12 @@ export const ValidatorFooter = ({
 	const { setHasFixedFormButtons } = useNavigationContext();
 
 	const totalVotes = useMemo(() => {
-		if (maxVotes === 1) {
-			if (selectedVotes.length > 0) {
-				return selectedVotes.length;
-			}
-
-			return selectedUnvotes.length;
+		if (selectedVotes.length > 0) {
+			return selectedVotes.length;
 		}
 
-		return selectedVotes.length + selectedUnvotes.length;
-	}, [maxVotes, selectedUnvotes, selectedVotes]);
+		return selectedUnvotes.length;
+	}, [selectedUnvotes, selectedVotes]);
 
 	useEffect(() => {
 		if (totalVotes < 1) {
@@ -133,7 +128,7 @@ export const ValidatorFooter = ({
 							<FooterContent
 								className="flex md:hidden lg:flex"
 								label={t("VOTE.VALIDATOR_TABLE.TOTAL")}
-								value={`${totalVotes}/${maxVotes}`}
+								value={`${totalVotes}/1`}
 							/>
 						</div>
 

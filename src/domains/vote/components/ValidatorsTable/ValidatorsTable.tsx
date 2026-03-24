@@ -79,6 +79,10 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 
 				setSelectedUnvotes(unvotesInstance);
 
+				if (selectedVotes.length > 0) {
+					setSelectedVotes([]);
+				}
+
 				return;
 			}
 
@@ -100,6 +104,10 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 				votesInstance = selectedVotes.filter(({ validatorAddress }) => validatorAddress !== address);
 
 				setSelectedVotes(votesInstance);
+
+				if (selectedVotes.length > 0) {
+					setSelectedVotes([]);
+				}
 
 				return;
 			}
@@ -256,7 +264,6 @@ export const ValidatorsTable: FC<ValidatorsTableProperties> = ({
 				selectedWallet={selectedWallet}
 				selectedVotes={selectedVotes}
 				selectedUnvotes={selectedUnvotes}
-				maxVotes={1}
 				onContinue={onContinue}
 			/>
 		</div>
