@@ -261,4 +261,24 @@ describe("ContactForm", () => {
 			expect(saveButton()).not.toBeDisabled();
 		});
 	});
+
+	it("should show error for empty address", async () => {
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
+
+		await userEvent.type(nameInput(), "name");
+
+		await waitFor(() => {
+			expect(nameInput()).toHaveValue("name");
+		});
+
+		await userEvent.type(addressInput(), "   ");
+
+		await waitFor(() => {
+			expect(addressInput()).toHaveValue("   ");
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+		});
+	});
 });
