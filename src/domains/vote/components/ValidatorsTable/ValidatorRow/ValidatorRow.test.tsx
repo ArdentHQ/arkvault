@@ -206,12 +206,10 @@ describe("ValidatorRow", () => {
 	it("should render the unselected vote", () => {
 		const selectedUnvotes: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validator.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {
-			amount: 10,
 			wallet: validator,
 		};
 
@@ -238,46 +236,5 @@ describe("ValidatorRow", () => {
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.UNSELECTED);
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render changed style when network requires vote amount", () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-
-		const selectedVotes: VoteValidatorProperties[] = [
-			{
-				amount: 20,
-				validatorAddress: validator.address(),
-			},
-		];
-		const voted: Contracts.VoteRegistryItem = {
-			amount: 10,
-			wallet: validator,
-		};
-
-		const toggleVotesSelectedMock = vi.fn();
-		const { container, asFragment } = render(
-			<table>
-				<tbody>
-					<ValidatorRow
-						index={0}
-						validator={validator}
-						voted={voted}
-						selectedVotes={selectedVotes}
-						selectedUnvotes={[]}
-						availableBalance={wallet.balance()}
-						setAvailableBalance={vi.fn()}
-						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={toggleVotesSelectedMock}
-						selectedWallet={wallet}
-					/>
-				</tbody>
-			</table>,
-		);
-
-		expect(container).toBeInTheDocument();
-		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
-		expect(asFragment()).toMatchSnapshot();
-
-		votesAmountMinimumMock.mockRestore();
 	});
 });
