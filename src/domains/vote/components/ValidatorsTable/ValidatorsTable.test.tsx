@@ -7,7 +7,7 @@ import { VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
@@ -45,7 +45,6 @@ describe("ValidatorsTable", () => {
 
 		votes = [
 			{
-				amount: 0,
 				wallet: validators[0],
 			},
 		];
@@ -55,143 +54,137 @@ describe("ValidatorsTable", () => {
 		useRandomNumberSpy.mockRestore();
 	});
 
-	//it("should render", () => {
-	//	const { container, asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	expect(container).toBeInTheDocument();
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should render mobile view in XS screen", () => {
-	//	renderResponsive(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//		"xs",
-	//	);
-	//
-	//	expect(screen.getAllByTestId("ValidatorRowMobile")[0]).toBeInTheDocument();
-	//});
-	//
-	//
-	//it("should render with empty list", () => {
-	//	const { container, asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={[]}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	expect(container).toBeInTheDocument();
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should render with subtitle", () => {
-	//	const { container, asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//			subtitle={<p>test</p>}
-	//		/>,
-	//	);
-	//
-	//	expect(container).toBeInTheDocument();
-	//	expect(screen.getByText("test")).toBeInTheDocument();
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should select a validator to vote", async () => {
-	//	const { asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-	//	expect(footerVotes()).toHaveTextContent("1");
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(firstValidatorVoteButton()).toHaveTextContent(translations.SELECT);
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should unselect a validator to vote", async () => {
-	//	const { asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={votes}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//	const selectButton = screen.getByTestId("ValidatorRow__toggle-1");
-	//
-	//	await userEvent.click(selectButton);
-	//
-	//	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-	//	expect(footerVotes()).toHaveTextContent("1");
-	//
-	//	await userEvent.click(selectButton);
-	//
-	//	expect(selectButton).toHaveTextContent(translations.SELECTED);
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should select a validator to unvote", async () => {
-	//	const { asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={votes}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-	//	expect(footerUnvotes()).toHaveTextContent("1");
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
+	it("should render", () => {
+		const { container, asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render mobile view in XS screen", () => {
+		renderResponsive(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+			"xs",
+		);
+
+		expect(screen.getAllByTestId("ValidatorRowMobile")[0]).toBeInTheDocument();
+	});
+
+
+	it("should render with empty list", () => {
+		const { container, asFragment } = render(
+			<ValidatorsTable
+				validators={[]}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with subtitle", () => {
+		const { container, asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+				subtitle={<p>test</p>}
+			/>,
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(screen.getByText("test")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should select a validator to vote", async () => {
+		const { asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(footerVotes()).toHaveTextContent("1");
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.SELECT);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should unselect a validator to vote", async () => {
+		const { asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={votes}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+		);
+		const selectButton = screen.getByTestId("ValidatorRow__toggle-1");
+
+		await userEvent.click(selectButton);
+
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(footerVotes()).toHaveTextContent("1");
+
+		await userEvent.click(selectButton);
+
+		expect(selectButton).toHaveTextContent(translations.SELECTED);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should select a validator to unvote", async () => {
+		const { asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={votes}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+		);
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(footerUnvotes()).toHaveTextContent("1");
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 
 	it("should unselect a validator to unvote", async () => {
 		const { asFragment } = render(
