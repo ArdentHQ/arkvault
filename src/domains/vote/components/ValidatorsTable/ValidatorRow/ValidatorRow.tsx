@@ -29,7 +29,6 @@ export interface ValidatorRowProperties {
 type UseValidatorRowProperties = Omit<ValidatorRowProperties, "isLoading">;
 
 export enum ValidatorStatusEnum {
-	Changed = "changed",
 	Voted = "voted",
 	Unvoted = "unvoted",
 	Selected = "selected",
@@ -68,19 +67,7 @@ export const useValidatorRow = ({
 		return false;
 	}, [validator, selectedWallet]);
 
-	const isChanged = useMemo(() => {
-		const alreadyExistsInVotes = !!validatorExistsInVotes(selectedVotes, validator?.address?.());
-		const alreadyExistsInUnvotes =
-			!!validatorExistsInVotes(selectedUnvotes, validator?.address?.()) && !isSelectedUnvote;
-
-		return !!voted && (alreadyExistsInVotes || alreadyExistsInUnvotes);
-	}, [selectedVotes, selectedUnvotes, isSelectedUnvote, voted, validator]);
-
 	const status = useMemo<ValidatorStatusEnum>(() => {
-		if (isChanged) {
-			return ValidatorStatusEnum.Changed;
-		}
-
 		if (voted) {
 			return isSelectedUnvote ? ValidatorStatusEnum.Unvoted : ValidatorStatusEnum.Voted;
 		}
@@ -94,13 +81,9 @@ export const useValidatorRow = ({
 		}
 
 		return ValidatorStatusEnum.Active;
-	}, [isChanged, voted, isSelectedVote, isSelectedUnvote, isVoteDisabled]);
+	}, [voted, isSelectedVote, isSelectedUnvote, isVoteDisabled]);
 
 	const rowColor = useMemo(() => {
-		if (status === ValidatorStatusEnum.Changed) {
-			return "bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 dim:border-theme-warning-600";
-		}
-
 		if (status === ValidatorStatusEnum.Selected) {
 			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600 dim:border-theme-success-600";
 		}
@@ -115,25 +98,6 @@ export const useValidatorRow = ({
 	}, [status]);
 
 	const renderButton = () => {
-		if (status === ValidatorStatusEnum.Changed) {
-			return (
-				<ValidatorVoteButton
-					index={index}
-					variant="warning"
-					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
-					onClick={() => {
-						if (validatorExistsInVotes(selectedVotes, validator?.address?.())) {
-							toggleVotesSelected?.(validator.address());
-						}
-
-						toggleUnvotesSelected?.(validator.address(), voted!.amount);
-					}}
-				>
-					{t("COMMON.CHANGED")}
-				</ValidatorVoteButton>
-			);
-		}
-
 		if (status === ValidatorStatusEnum.Selected) {
 			return (
 				<ValidatorVoteButton
@@ -226,7 +190,6 @@ export const useValidatorRow = ({
 
 	return {
 		isActive,
-		isChanged,
 		isSelectedUnvote,
 		isSelectedVote,
 		renderButton,
