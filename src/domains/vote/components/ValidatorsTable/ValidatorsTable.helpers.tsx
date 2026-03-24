@@ -51,7 +51,7 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 				headerClassName: "no-border",
 				id: "onSelect",
 				noRoundedBorders: true,
-			}
+			},
 		];
 
 		return templateColumns;
