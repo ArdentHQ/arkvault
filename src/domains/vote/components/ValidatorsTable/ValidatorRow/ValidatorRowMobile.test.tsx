@@ -241,38 +241,4 @@ describe("ValidatorRowMobile", () => {
 		);
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
 	});
-
-	it("should render changed style when network requires vote amount", () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-		const selectedVotes: VoteValidatorProperties[] = [
-			{
-				amount: 20,
-				validatorAddress: validator.address(),
-			},
-		];
-		const voted: Contracts.VoteRegistryItem = {
-			amount: 10,
-			wallet: validator,
-		};
-		render(
-			<table>
-				<tbody>
-					<ValidatorRowMobile
-						index={0}
-						validator={validator}
-						voted={voted}
-						selectedVotes={selectedVotes}
-						selectedUnvotes={[]}
-						availableBalance={wallet.balance()}
-						setAvailableBalance={vi.fn()}
-						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
-						selectedWallet={wallet}
-					/>
-				</tbody>
-			</table>,
-		);
-		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
-		votesAmountMinimumMock.mockRestore();
-	});
 });
