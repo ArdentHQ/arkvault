@@ -138,7 +138,7 @@ describe("AddressTable", () => {
 	});
 
 	it("should return wallet alias or address", () => {
-		expect(getNameAccessor(wallet)).toBe("Mainsail Wallet 1")
+		expect(getNameAccessor(wallet)).toBe("Mainsail Wallet 1");
 
 		const walletAliasMock = vi.spyOn(wallet, "alias").mockReturnValue(undefined);
 
