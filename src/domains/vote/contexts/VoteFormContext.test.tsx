@@ -16,7 +16,7 @@ import userEvent from "@testing-library/user-event";
 import { waitFor } from "@testing-library/react";
 
 const Component = () => {
-	const { isLoading, votes, unvotes, showSendVotePanel, setShowSendVotePanel } = useVoteFormContext();
+	const { isLoading, votes, unvotes, showSendVotePanel, setShowSendVotePanel, openSendVotePanel } = useVoteFormContext();
 
 	return (
 		<>
@@ -38,6 +38,12 @@ const Component = () => {
 
 			<button data-testid="toggle-vote-panel" onClick={() => setShowSendVotePanel(!showSendVotePanel)}>
 				toggle vote panel
+			</button>
+
+			<button data-testid="open-vote-panel" onClick={() => {
+				setShowSendVotePanel(true);
+			}}>
+				open send vote panel
 			</button>
 
 			{showSendVotePanel && <div>vote panel</div>}
@@ -152,5 +158,19 @@ describe("VoteFormContext", () => {
 
 		expect(deleteSearchParamMock).toHaveBeenCalledWith("method");
 		expect(setSearchParamsFn).toHaveBeenCalled();
+	});
+
+	it("should open vote panel", async () => {
+		render(
+			<VoteFormProvider profile={profile} wallet={wallet} network={profile.activeNetwork()}>
+				<Component />
+			</VoteFormProvider>,
+		);
+
+		expect(screen.queryByTestId("votes")).not.toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("open-vote-panel"));
+
+		await expect(screen.findByText("vote panel")).resolves.toBeVisible();
 	});
 });
