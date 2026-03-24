@@ -201,7 +201,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 		const selectVoteButton = screen.getByTestId("ValidatorRow__toggle-1");
@@ -229,7 +228,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 		const selectVoteButton = screen.getByTestId("ValidatorRow__toggle-1");
@@ -246,33 +244,9 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select multiple validators to unvote/vote", async () => {
-		const { asFragment } = render(
-			<ValidatorsTable
-				validators={validators}
-				votes={votes}
-				voteValidators={[]}
-				unvoteValidators={[]}
-				selectedWallet={wallet}
-				maxVotes={10}
-			/>,
-		);
-		const selectButtons = [0, 1, 2].map((index) => screen.getByTestId(`ValidatorRow__toggle-${index}`));
-
-		await userEvent.click(selectButtons[0]);
-		await userEvent.click(selectButtons[1]);
-		await userEvent.click(selectButtons[2]);
-
-		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-		expect(footerVotes()).toHaveTextContent("2");
-		expect(footerUnvotes()).toHaveTextContent("1");
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should emit action on continue button to vote", async () => {
 		const voteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validators[0].address(),
 			},
 		];
@@ -286,7 +260,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -304,13 +277,11 @@ describe("ValidatorsTable", () => {
 	it("should add resigned validator to the unvote list", () => {
 		const resignedValidators: Contracts.VoteRegistryItem[] = [
 			{
-				amount: 0,
 				wallet: validators[1],
 			},
 		];
 		const unvoteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validators[1].address(),
 			},
 		];
@@ -325,7 +296,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -341,7 +311,6 @@ describe("ValidatorsTable", () => {
 	it("should render with a validator to vote", async () => {
 		const voteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validators[0].address(),
 			},
 		];
@@ -355,7 +324,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -385,7 +353,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -421,7 +388,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -439,7 +405,6 @@ describe("ValidatorsTable", () => {
 	it("should emit action on continue button to unvote", async () => {
 		const voteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: votes[0].wallet!.address(),
 			},
 		];
@@ -453,7 +418,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -478,7 +442,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -507,7 +470,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -534,7 +496,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
