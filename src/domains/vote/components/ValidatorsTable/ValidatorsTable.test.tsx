@@ -84,7 +84,6 @@ describe("ValidatorsTable", () => {
 		expect(screen.getAllByTestId("ValidatorRowMobile")[0]).toBeInTheDocument();
 	});
 
-
 	it("should render with empty list", () => {
 		const { container, asFragment } = render(
 			<ValidatorsTable
@@ -184,7 +183,6 @@ describe("ValidatorsTable", () => {
 		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(asFragment()).toMatchSnapshot();
 	});
-
 
 	it("should unselect a validator to unvote", async () => {
 		const { asFragment } = render(
