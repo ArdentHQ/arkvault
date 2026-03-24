@@ -7,7 +7,8 @@ import {
 	getMainsailProfileId,
 	render,
 	renderWithoutRouter,
-	screen, syncValidators,
+	screen,
+	syncValidators,
 } from "@/utils/testing-library";
 import { useVoteFormContext, VoteFormProvider } from "./VoteFormContext";
 import * as ReactRouter from "react-router";
@@ -54,9 +55,7 @@ describe("VoteFormContext", () => {
 
 	beforeEach(() => {
 		// const _useSearchParamsMock = vi
-		vi
-			.spyOn(ReactRouter, "useSearchParams")
-			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
 	});
 
 	it("should throw without provider", () => {
@@ -74,7 +73,8 @@ describe("VoteFormContext", () => {
 	});
 
 	it("should fetch validators", async () => {
-		const route = "?method=vote&coin=Mainsail&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&unvote=0xAa6d78a89706b744eDD2894CE30BeCE77Ab0F753";
+		const route =
+			"?method=vote&coin=Mainsail&validator=test&vote=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&unvote=0xAa6d78a89706b744eDD2894CE30BeCE77Ab0F753";
 
 		render(
 			<VoteFormProvider profile={profile} wallet={wallet} network={profile.activeNetwork()}>
@@ -82,7 +82,7 @@ describe("VoteFormContext", () => {
 			</VoteFormProvider>,
 			{
 				route,
-			}
+			},
 		);
 
 		await expect(screen.findByTestId("votes")).resolves.toBeVisible();
