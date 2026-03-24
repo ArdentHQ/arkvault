@@ -47,6 +47,8 @@ const Component = () => {
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+const setSearchParamsFn = vi.fn();
+let deleteSearchParamMock;
 
 describe("VoteFormContext", () => {
 	beforeAll(async () => {
@@ -61,7 +63,12 @@ describe("VoteFormContext", () => {
 	});
 
 	beforeEach(() => {
-		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([new URLSearchParams(), vi.fn()]);
+		const searchParams = new URLSearchParams();
+
+		vi.spyOn(searchParams, "has").mockReturnValue(true);
+		deleteSearchParamMock = vi.spyOn(searchParams, "delete");
+
+		vi.spyOn(ReactRouter, "useSearchParams").mockReturnValue([searchParams, setSearchParamsFn]);
 	});
 
 	it("should throw without provider", () => {
@@ -118,5 +125,8 @@ describe("VoteFormContext", () => {
 		});
 
 		expect(screen.queryByTestId("unvotes")).not.toBeInTheDocument();
+
+		expect(deleteSearchParamMock).toHaveBeenCalledWith("method");
+		expect(setSearchParamsFn).toHaveBeenCalled();
 	});
 });
