@@ -95,7 +95,7 @@ export const ContactForm = ({
 								);
 							},
 							validAddress: (address?: string) => {
-								if (!address) {
+								if (!address?.trim()) {
 									return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 										field: t("COMMON.ADDRESS"),
 									}).toString();

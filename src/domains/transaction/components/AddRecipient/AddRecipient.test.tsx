@@ -229,11 +229,23 @@ describe("AddRecipient", () => {
 				tokens={profile.tokens().selected().items()}
 				profile={profile}
 				wallet={wallet}
-				recipients={[]}
+				recipients={[
+					{
+						address: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+						amount: 1,
+					},
+					{
+						address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
+						amount: 1,
+					},
+				]}
 				onChange={vi.fn()}
 				isTokenTransfer
 				onTokenChange={onChange}
 			/>,
+			{
+				tokenContractAddress: profile.tokens().selected().items().at(0).token().address(),
+			},
 		);
 
 		await setupTokenSelection(index, "DARK2");
@@ -862,5 +874,15 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(addRecipientButton()).toBeDisabled());
 
 		mockMultiPaymentRecipients.mockRestore();
+	});
+
+	it("should render without wallet and show zero balance", async () => {
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} recipients={[]} onChange={vi.fn()} />,
+		);
+
+		await waitFor(() => expect(container).toBeInTheDocument());
+
+		expect(screen.getByTestId("AddRecipient__amount")).toBeInTheDocument();
 	});
 });

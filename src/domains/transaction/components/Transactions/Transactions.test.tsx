@@ -465,4 +465,20 @@ describe("Transactions", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should show loading state", async () => {
+		render(<Transactions isLoadingTransactions={true} profile={profile} wallets={[profile.wallets().first()]} />, {
+			route: dashboardURL,
+		});
+
+		expect(await screen.findByText(/Showing/)).toBeInTheDocument();
+	});
+
+	it("should show filter when hasMore is true", async () => {
+		render(<Transactions hasMore={true} profile={profile} wallets={[profile.wallets().first()]} />, {
+			route: dashboardURL,
+		});
+
+		expect(await screen.findByTestId("FilterTransactions")).toBeInTheDocument();
+	});
 });

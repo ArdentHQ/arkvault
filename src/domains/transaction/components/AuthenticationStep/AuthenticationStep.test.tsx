@@ -140,6 +140,14 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
+	test("should use default subject when not provided", async () => {
+		const wallet = profile.wallets().first();
+
+		renderWithForm(<AuthenticationStep wallet={wallet} />, { withProviders: true });
+
+		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
+	});
+
 	test("should specify ledger supported model", async ({ defaultWallet }) => {
 		mockNanoXTransport();
 		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
@@ -321,6 +329,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+
 		renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
 
 		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();

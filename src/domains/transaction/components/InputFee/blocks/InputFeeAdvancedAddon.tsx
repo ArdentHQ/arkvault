@@ -60,7 +60,6 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 			)}
 		>
 			<ArrowButtonStyled
-				type="button"
 				onClick={onClickUp}
 				disabled={disabled}
 				data-testid={`${name}__up`}
@@ -69,7 +68,6 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 				<Icon name="ChevronUpSmall" size="sm" />
 			</ArrowButtonStyled>
 			<ArrowButtonStyled
-				type="button"
 				onClick={onClickDown}
 				disabled={disabled || isDownDisabled}
 				isDownArrow

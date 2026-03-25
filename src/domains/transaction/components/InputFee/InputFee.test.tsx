@@ -372,6 +372,73 @@ describe("InputFee", () => {
 			networkIsLive.mockRestore();
 			getFiatCurrency.mockRestore();
 		});
+
+		it("should show convertted value in addon when gasPrice is zero and no error", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasPrice = BigNumber.make(0);
+
+			const networkIsLive = vi.spyOn(network, "isLive").mockReturnValue(true);
+			vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+
+			render(<InputFee {...defaultProps} network={network} showConvertedValue />);
+
+			expect(screen.getByTestId("InputFeeAdvanced__convertedGasFee")).toBeInTheDocument();
+
+			networkIsLive.mockRestore();
+		});
+
+		it("should handle undefined gasPrice and gasLimit", () => {
+			const { asFragment } = render(<InputFee {...defaultProps} gasPrice={undefined} gasLimit={undefined} />);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should set gasPrice to maxGasPrice when increment exceeds max", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasPrice = BigNumber.make(10000);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
+
+			expect(getOnChangeGasPriceLastCallArg()).toBe("10000");
+		});
+
+		it("should set gasLimit to minGasLimit when decrement goes below min", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasLimit = BigNumber.make(21100);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__gasLimit__down"));
+
+			expect(getOnChangeGasLimitLastCallArg()).toBe("21000");
+		});
+
+		it("should clamp gasLimit to maxGasLimit when increment exceeds max", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasLimit = BigNumber.make(1999900);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__gasLimit__up"));
+
+			expect(getOnChangeGasLimitLastCallArg()).toBe("2000000");
+		});
+
+		it("should use default viewType and selectedFeeOption when undefined", () => {
+			const { asFragment } = render(
+				<InputFee
+					{...defaultProps}
+					viewType={undefined}
+					selectedFeeOption={undefined}
+					gasPrice={defaultProps.gasPrice}
+					gasLimit={defaultProps.gasLimit}
+				/>,
+			);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
 	});
 });
 

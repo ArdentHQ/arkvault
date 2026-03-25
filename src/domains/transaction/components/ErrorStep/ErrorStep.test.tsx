@@ -52,4 +52,10 @@ describe("ErrorStep", () => {
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
+
+	it("should render with copy error button", () => {
+		const { asFragment } = render(<ErrorStep errorMessage="Test error" withCopyErrorButton={true} />);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
 });

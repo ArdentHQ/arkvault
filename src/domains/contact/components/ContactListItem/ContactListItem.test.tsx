@@ -149,4 +149,23 @@ describe("ContactListItem", () => {
 
 		expect(onSend).toHaveBeenCalledWith(contact);
 	});
+
+	it("should render with no balance and disable send", () => {
+		const { asFragment } = render(
+			<table>
+				<tbody>
+					<ContactListItem
+						profile={profile}
+						options={options}
+						onAction={vi.fn()}
+						onSend={vi.fn()}
+						item={contact}
+						hasBalance={false}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
 });
