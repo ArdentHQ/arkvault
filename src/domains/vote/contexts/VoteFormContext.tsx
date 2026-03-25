@@ -58,7 +58,6 @@ export const VoteFormProvider = ({ profile, network, children, wallet }: Propert
 
 			if (unvoteValidators.length > 0 && unvotes.length === 0) {
 				const unvotesList: Contracts.VoteRegistryItem[] = unvoteValidators?.map((unvote) => ({
-					amount: unvote.amount,
 					wallet: profile.validators().findByAddress(network.id(), unvote.validatorAddress),
 				}));
 
@@ -67,7 +66,6 @@ export const VoteFormProvider = ({ profile, network, children, wallet }: Propert
 
 			if (voteValidators.length > 0 && votes.length === 0) {
 				const votesList: Contracts.VoteRegistryItem[] = voteValidators?.map((vote) => ({
-					amount: vote.amount,
 					wallet: profile.validators().findByAddress(network.id(), vote.validatorAddress),
 				}));
 
