@@ -27,6 +27,8 @@ const getNextUpdateDelay = (isoDate: string): number | null => {
 	const hour = 60 * minute;
 	const day = 24 * hour;
 
+	// To resolve timeout overflow warning in tests
+	// Prevents issues when now < isoDate
 	if (elapsed < 0) {
 		return 90000; // retry in 90s
 	}
