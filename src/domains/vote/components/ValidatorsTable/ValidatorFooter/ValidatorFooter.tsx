@@ -10,7 +10,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
 import { twMerge } from "tailwind-merge";
-import { BigNumber } from "@/app/lib/helpers";
 
 interface FooterContentProperties {
 	label: string;
@@ -34,10 +33,8 @@ const FooterContent = ({ label, value, disabled, className }: FooterContentPrope
 
 interface ValidatorFooterProperties {
 	selectedWallet: Contracts.IReadWriteWallet;
-	availableBalance: BigNumber;
 	selectedVotes: VoteValidatorProperties[];
 	selectedUnvotes: VoteValidatorProperties[];
-	maxVotes: number;
 	onContinue?: (unvotes: VoteValidatorProperties[], votes: VoteValidatorProperties[]) => void;
 }
 
@@ -45,7 +42,6 @@ export const ValidatorFooter = ({
 	selectedWallet,
 	selectedVotes,
 	selectedUnvotes,
-	maxVotes,
 	onContinue,
 }: ValidatorFooterProperties) => {
 	const { t } = useTranslation();
@@ -55,16 +51,12 @@ export const ValidatorFooter = ({
 	const { setHasFixedFormButtons } = useNavigationContext();
 
 	const totalVotes = useMemo(() => {
-		if (maxVotes === 1) {
-			if (selectedVotes.length > 0) {
-				return selectedVotes.length;
-			}
-
-			return selectedUnvotes.length;
+		if (selectedVotes.length > 0) {
+			return selectedVotes.length;
 		}
 
-		return selectedVotes.length + selectedUnvotes.length;
-	}, [maxVotes, selectedUnvotes, selectedVotes]);
+		return selectedUnvotes.length;
+	}, [selectedUnvotes, selectedVotes]);
 
 	useEffect(() => {
 		if (totalVotes < 1) {
@@ -135,7 +127,7 @@ export const ValidatorFooter = ({
 							<FooterContent
 								className="flex md:hidden lg:flex"
 								label={t("VOTE.VALIDATOR_TABLE.TOTAL")}
-								value={`${totalVotes}/${maxVotes}`}
+								value={`${totalVotes}/1`}
 							/>
 						</div>
 

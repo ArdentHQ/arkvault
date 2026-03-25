@@ -361,14 +361,12 @@ describe("SendVote", () => {
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
-				amount: 10,
 				validatorAddress: validatorData[1].address,
 			},
 		];
 
 		const votes: VoteValidatorProperties[] = [
 			{
-				amount: 10,
 				validatorAddress: validatorData[0].address,
 			},
 		];
@@ -447,7 +445,6 @@ describe("SendVote", () => {
 				data: {
 					unvotes: [
 						{
-							amount: 10,
 							id: validatorData[1].address,
 						},
 					],
@@ -465,7 +462,6 @@ describe("SendVote", () => {
 				data: {
 					votes: [
 						{
-							amount: 10,
 							id: validatorData[0].address,
 						},
 					],

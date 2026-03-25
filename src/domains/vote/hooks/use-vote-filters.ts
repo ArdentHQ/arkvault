@@ -18,16 +18,11 @@ export const useVoteFilters = ({
 }) => {
 	const { getWalletAlias } = useWalletAlias();
 	const walletAddress = useMemo(() => (hasWalletId ? wallet!.address() : ""), [hasWalletId, wallet]);
-	const walletMaxVotes = useMemo(
-		() => (hasWalletId ? wallet!.network().maximumVotesPerWallet() : undefined),
-		[hasWalletId, wallet],
-	);
 	const { activeNetwork } = useActiveNetwork({ profile });
 
 	const [voteFilter, setVoteFilter] = useState<FilterOption>(filter);
 	const [selectedAddress, setSelectedAddress] = useState(walletAddress);
 	const [searchQuery, setSearchQuery] = useState("");
-	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
 
 	const walletsCount = profile.wallets().count();
 
@@ -65,10 +60,8 @@ export const useVoteFilters = ({
 		filteredWallets,
 		hasEmptyResults,
 		hasWallets,
-		maxVotes,
 		searchQuery,
 		selectedAddress,
-		setMaxVotes,
 		setSearchQuery,
 		setSelectedAddress,
 		setVoteFilter,

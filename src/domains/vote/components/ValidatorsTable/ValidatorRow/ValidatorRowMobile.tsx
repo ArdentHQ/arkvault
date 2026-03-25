@@ -34,10 +34,6 @@ export const ValidatorRowMobile = (properties: ValidatorRowProperties) => {
 		if (status === ValidatorStatusEnum.Selected) {
 			return MobileTableElementVariant.success;
 		}
-
-		if (status === ValidatorStatusEnum.Changed) {
-			return MobileTableElementVariant.warning;
-		}
 	}, [status]);
 
 	if (isLoading) {

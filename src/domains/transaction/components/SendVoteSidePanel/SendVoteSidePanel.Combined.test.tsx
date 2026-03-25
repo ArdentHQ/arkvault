@@ -226,14 +226,12 @@ describe("SendVoteSidePanel Combined", () => {
 
 		const unvotes: VoteValidatorProperties[] = [
 			{
-				amount: 10,
 				validatorAddress: validatorData[1].address,
 			},
 		];
 
 		const votes: VoteValidatorProperties[] = [
 			{
-				amount: 10,
 				validatorAddress: validatorData[0].address,
 			},
 		];
@@ -312,7 +310,6 @@ describe("SendVoteSidePanel Combined", () => {
 				data: {
 					unvotes: [
 						{
-							amount: 10,
 							id: validatorData[1].address,
 						},
 					],
@@ -330,7 +327,6 @@ describe("SendVoteSidePanel Combined", () => {
 				data: {
 					votes: [
 						{
-							amount: 10,
 							id: validatorData[0].address,
 						},
 					],

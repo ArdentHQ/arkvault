@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
 import { ValidatorsTableColumnsProperties, VoteValidatorProperties } from "./ValidatorsTable.contracts";
-import { Icon } from "@/app/components/Icon";
-import { Tooltip } from "@/app/components/Tooltip";
 
 export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTableColumnsProperties) => {
 	const { t } = useTranslation();
@@ -46,40 +44,15 @@ export const useValidatorsTableColumns = ({ network, isLoading }: ValidatorsTabl
 				headerClassName: "hidden sm:table-cell no-border",
 				minimumWidth: true,
 			},
-		];
-
-		if (network.votesAmountMinimum() > 0) {
-			templateColumns.push({
-				Header: (
-					<div className="flex items-center space-x-3 px-3">
-						<p>{t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.TITLE")}</p>
-						<Tooltip
-							content={t("VOTE.VALIDATOR_TABLE.VOTE_AMOUNT.TOOLTIP", {
-								coinId: network.coin(),
-							})}
-						>
-							<span className="bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-200 rounded-full p-1">
-								<Icon name="QuestionMarkSmall" size="sm" />
-							</span>
-						</Tooltip>
-					</div>
-				),
-				accessor: () => "voteAmount",
+			{
+				accessor: () => "onSelect",
 				className: "justify-end",
 				disableSortBy: true,
 				headerClassName: "no-border",
-				id: "voteAmount",
-			} as Column<Contracts.IReadOnlyWallet>);
-		}
-
-		templateColumns.push({
-			accessor: () => "onSelect",
-			className: "justify-end",
-			disableSortBy: true,
-			headerClassName: "no-border",
-			id: "onSelect",
-			noRoundedBorders: true,
-		});
+				id: "onSelect",
+				noRoundedBorders: true,
+			},
+		];
 
 		return templateColumns;
 	}, [t, network, isLoading]);
