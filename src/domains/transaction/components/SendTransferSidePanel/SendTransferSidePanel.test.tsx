@@ -84,7 +84,7 @@ const signedTransactionMock = {
 		},
 	],
 	setMeta: () => {},
-	timestamp: () => DateTime.make(Math.floor(transactionFixture.data.timestamp/1000)),
+	timestamp: () => DateTime.make(transactionFixture.data.timestamp),
 	to: () => transactionFixture.data.to,
 	total: () => {
 		const value = BigNumber.make(transactionFixture.data.value);
