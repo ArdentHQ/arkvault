@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { JSX } from "react";
+import React, { JSX, useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -13,10 +13,12 @@ const Mnemonic = ({ wallet }: { wallet: Contracts.IReadWriteWallet }): JSX.Eleme
 	const { register } = useFormContext();
 	const { authentication } = useValidation();
 
+	const validationTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
 	return (
 		<FormField name="mnemonicValue">
 			<FormLabel label={t(`COMMON.MNEMONIC_TYPE.BIP44`)} />
-			<InputPassword ref={register(authentication.mnemonic(wallet))} />
+			<InputPassword ref={register(authentication.mnemonic(wallet, validationTimer))} />
 		</FormField>
 	);
 };
