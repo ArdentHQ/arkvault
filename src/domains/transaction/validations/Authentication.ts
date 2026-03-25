@@ -52,16 +52,16 @@ export const authentication = (t: any) => {
 				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_ADDRESS");
 			},
 		}),
-		mnemonic: (wallet: Contracts.IReadWriteWallet, validationTimer: RefObject<NodeJS.Timeout | undefined>) => ({
+		mnemonic: (wallet: Contracts.IReadWriteWallet, validationTimer?: RefObject<NodeJS.Timeout | undefined>) => ({
 			required: t(requiredFieldMessage, {
 				field: t("COMMON.MNEMONIC"),
 			}),
 			validate: {
 				matchSenderAddress: (mnemonic: string) =>
 					new Promise((resolve) => {
-						clearTimeout(validationTimer.current);
+						clearTimeout(validationTimer?.current);
 
-						validationTimer.current = setTimeout(() => {
+						const timeoutId = setTimeout(() => {
 							try {
 								let address: string;
 
@@ -84,6 +84,10 @@ export const authentication = (t: any) => {
 								resolve(t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS"));
 							}
 						}, 500);
+
+						if (validationTimer) {
+							validationTimer.current = timeoutId;
+						}
 					}),
 			},
 		}),
