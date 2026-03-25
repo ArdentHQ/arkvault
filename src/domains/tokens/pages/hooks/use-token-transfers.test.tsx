@@ -58,7 +58,7 @@ describe("useTokenTransfers", () => {
 					amount: () => 5,
 					from: () => wallets[0].address(),
 					hash: () => "hash1",
-					timestamp: () => ({ toUNIX: () => 1769010139522 }),
+					timestamp: () => ({ toUNIX: () => 1593475200000 }),
 					to: () => "0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5",
 				},
 			],

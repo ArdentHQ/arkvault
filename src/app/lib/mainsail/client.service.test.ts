@@ -648,7 +648,7 @@ describe("ClientService", () => {
 			blockNumber: "22773025",
 			from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
 			functionSig: "0xa9059cbb",
-			timestamp: "1769010139522",
+			timestamp: "1593475200000",
 			to: "0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5",
 			token: {
 				address: "0x180a864a755fed0144c622df49b83db577befefb",
