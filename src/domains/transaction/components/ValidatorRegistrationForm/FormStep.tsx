@@ -12,6 +12,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -47,20 +48,17 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			<FormField name="senderAddress">
 				<FormLabel label={t("COMMON.SENDER")} />
 
-				<SelectAddress
-					wallet={
-						wallet
-							? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
-							: undefined
-					}
-					wallets={profile.wallets().values()}
-					profile={profile}
+				<SelectAddressDropdown
 					disabled={profile.wallets().count() === 0}
-					onChange={handleSelectSender}
+					profile={profile}
+					onChange={(wallet) => {
+						handleSelectSender(wallet?.address() ?? "");
+					}}
+					wallets={profile.wallets().values()}
+					wallet={wallet}
+					defaultNetwork={profile.activeNetwork()}
 					disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorRegistration()}
+					showBalance
 				/>
 			</FormField>
 

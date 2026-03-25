@@ -14,6 +14,7 @@ import { NetworkOption } from "@/app/components/NavigationBar/components/SelectN
 import { Tooltip } from "@/app/components/Tooltip";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
+import { getTooltipContent } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
 type SelectAddressDropdownProperties = {
 	wallet?: Contracts.IReadWriteWallet;
@@ -62,7 +63,7 @@ export const OptionLabel = ({
 	);
 
 	return (
-		<Tooltip content={t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE")} disabled={!option.isDisabled}>
+		<Tooltip content={getTooltipContent(wallet!, t)} disabled={!option.isDisabled}>
 			<div
 				className={cn("flex flex-col sm:flex-row", {
 					"cursor-not-allowed": option.isDisabled,
