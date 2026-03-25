@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -198,6 +198,8 @@ export const AuthenticationStep = ({
 	const { register, errors, getValues } = useFormContext();
 	const { authentication } = useValidation();
 
+	const validationTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
 	if (wallet.isLedger()) {
 		return (
 			<LedgerAuthentication
@@ -322,7 +324,7 @@ export const AuthenticationStep = ({
 						<FormLabel>{t("TRANSACTION.MNEMONIC")}</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__mnemonic"
-							ref={register(authentication.mnemonic(wallet))}
+							ref={register(authentication.mnemonic(wallet, validationTimer))}
 						/>
 					</FormField>
 				</>

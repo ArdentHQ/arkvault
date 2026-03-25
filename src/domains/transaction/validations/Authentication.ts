@@ -5,6 +5,7 @@ import { debounceAsync } from "@/utils/debounce";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 import { WalletData } from "@/app/lib/profiles/wallet.enum";
+import { RefObject } from "react";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 
@@ -51,34 +52,39 @@ export const authentication = (t: any) => {
 				return t("COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_ADDRESS");
 			},
 		}),
-		mnemonic: (wallet: Contracts.IReadWriteWallet) => ({
+		mnemonic: (wallet: Contracts.IReadWriteWallet, validationTimer: RefObject<NodeJS.Timeout | undefined>) => ({
 			required: t(requiredFieldMessage, {
 				field: t("COMMON.MNEMONIC"),
 			}),
 			validate: {
-				matchSenderAddress: (mnemonic: string) => {
-					try {
-						let address: string;
+				matchSenderAddress: (mnemonic: string) =>
+					new Promise((resolve) => {
+						clearTimeout(validationTimer.current);
 
-						if (wallet.isHDWallet()) {
-							const account = HDWalletService.getAccount(
-								mnemonic,
-								wallet.data().get(WalletData.DerivationPath) as string,
-							);
-							address = account.address;
-						} else {
-							address = new AddressService().fromMnemonic(mnemonic).address;
-						}
+						validationTimer.current = setTimeout(() => {
+							try {
+								let address: string;
 
-						if (address === wallet.address()) {
-							return true;
-						}
+								if (wallet.isHDWallet()) {
+									const account = HDWalletService.getAccount(
+										mnemonic,
+										wallet.data().get(WalletData.DerivationPath) as string,
+									);
+									address = account.address;
+								} else {
+									address = new AddressService().fromMnemonic(mnemonic).address;
+								}
 
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
-					} catch {
-						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
-					}
-				},
+								if (address === wallet.address()) {
+									resolve(true);
+								} else {
+									resolve(t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS"));
+								}
+							} catch {
+								resolve(t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS"));
+							}
+						}, 500);
+					}),
 			},
 		}),
 		privateKey: (wallet: Contracts.IReadWriteWallet) => ({
