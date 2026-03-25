@@ -63,7 +63,7 @@ export const OptionLabel = ({
 	);
 
 	return (
-		<Tooltip content={getTooltipContent(wallet!, t)} disabled={!option.isDisabled}>
+		<Tooltip content={wallet && getTooltipContent(wallet, t)} disabled={!option.isDisabled}>
 			<div
 				className={cn("flex flex-col sm:flex-row", {
 					"cursor-not-allowed": option.isDisabled,
