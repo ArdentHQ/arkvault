@@ -21,107 +21,161 @@ exports[`ValidatorRegistrationForm > should render form step 1`] = `
           >
             Sender
           </label>
-          <button
-            class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
-            data-testid="SelectAddress__wrapper"
-            type="button"
-          >
-            <span
-              class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-sm sm:text-base"
-                  data-testid="Address__alias"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        Mainsail Wallet …
-                      </span>
-                    </span>
-                  </span>
-                </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </span>
+          <div>
             <div
-              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+              class="relative flex w-full items-center text-left"
+              data-testid="SelectAddressDropdown__wrapper"
             >
               <div
-                class="relative flex h-full flex-1 invisible"
-              >
-                <input
-                  autocomplete="off"
-                  class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
-                  data-testid="SelectAddress__input"
-                  name="senderAddress"
-                  readonly=""
-                  type="text"
-                  value="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
-                />
-              </div>
-              <div
-                class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
-                data-testid="Input__addon-end"
+                class="relative w-full"
+                data-testid="SelectDropdown"
               >
                 <div
-                  class=""
+                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
                 >
                   <div
-                    class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                    class="relative flex h-full flex-1"
                   >
-                    <div>
-                      <div
-                        style="height: 20px; width: 20px;"
-                      >
-                        <svg
-                          id="user"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                    <input
+                      aria-invalid="false"
+                      autocomplete="off"
+                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+                      data-testid="select-list__input"
+                      name="senderAddress"
+                      readonly=""
+                      tabindex="-1"
+                      type="text"
+                      value="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="w-full"
+                >
+                  <div
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-owns="SelectAddressDropdown__dropdown-menu"
+                    class="w-full"
+                    role="combobox"
+                  >
+                    <span>
+                      <span>
+                        <div>
+                          <label
+                            for="SelectAddressDropdown__dropdown-input"
+                            id="SelectAddressDropdown__dropdown-label"
+                          />
+                          <div
+                            class="invisible fixed w-auto whitespace-nowrap"
                           >
-                            <circle
-                              cx="10"
-                              cy="5"
-                              r="4"
-                            />
-                            <path
-                              d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6…
+                          </div>
+                          <div
+                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                          >
+                            <div
+                              class="flex items-center"
+                            >
+                              <span>
+                                <span>
+                                  <span
+                                    class="no-ligatures transition-colors duration-200"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    Mainsail Wallet …
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
+                            <div
+                              class="relative flex h-full flex-1"
+                            >
+                              <input
+                                aria-autocomplete="list"
+                                aria-controls="SelectAddressDropdown__dropdown-menu"
+                                aria-invalid="false"
+                                aria-labelledby="SelectAddressDropdown__dropdown-label"
+                                autocomplete="off"
+                                class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="SelectDropdown__input"
+                                id="SelectAddressDropdown__dropdown-input"
+                                name="senderAddress"
+                                placeholder="Address"
+                                type="text"
+                                value="0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6"
+                              />
+                              <span
+                                class="no-ligatures pointer-events-none absolute inset-y-0 flex w-full items-center text-sm font-normal opacity-50 sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
+                                data-testid="Input__suggestion"
+                              >
+                                <span
+                                  class="truncate"
+                                >
+                                  0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                                </span>
+                              </span>
+                            </div>
+                            <div
+                              class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
+                            >
+                              <div
+                                class=""
+                              >
+                                <div
+                                  class="flex items-center text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+                                  data-testid="SelectRecipient__select-recipient"
+                                >
+                                  <div>
+                                    <div
+                                      style="height: 20px; width: 20px;"
+                                    >
+                                      <svg
+                                        id="user"
+                                        style="height: 100%; width: 100%;"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="5"
+                                            r="4"
+                                          />
+                                          <path
+                                            d="M2 19c0-4.899 3.544-9 8-9 4.354 0 8 3.987 8 9"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          aria-labelledby="SelectAddressDropdown__dropdown-label"
+                          id="SelectAddressDropdown__dropdown-menu"
+                          role="listbox"
+                        />
+                      </span>
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-          </button>
+          </div>
         </fieldset>
         <div
           class="mt-3 space-y-4 sm:mt-4"
