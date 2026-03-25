@@ -467,23 +467,17 @@ describe("Transactions", () => {
 	});
 
 	it("should show loading state", async () => {
-		const { asFragment } = render(
-			<Transactions isLoadingTransactions={true} profile={profile} wallets={[profile.wallets().first()]} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<Transactions isLoadingTransactions={true} profile={profile} wallets={[profile.wallets().first()]} />, {
+			route: dashboardURL,
+		});
 
 		expect(await screen.findByText(/Showing/)).toBeInTheDocument();
 	});
 
 	it("should show filter when hasMore is true", async () => {
-		const { asFragment } = render(
-			<Transactions hasMore={true} profile={profile} wallets={[profile.wallets().first()]} />,
-			{
-				route: dashboardURL,
-			},
-		);
+		render(<Transactions hasMore={true} profile={profile} wallets={[profile.wallets().first()]} />, {
+			route: dashboardURL,
+		});
 
 		expect(await screen.findByTestId("FilterTransactions")).toBeInTheDocument();
 	});
