@@ -5,7 +5,6 @@ import { Alert } from "@/app/components/Alert";
 import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { Link } from "@/app/components/Link";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";

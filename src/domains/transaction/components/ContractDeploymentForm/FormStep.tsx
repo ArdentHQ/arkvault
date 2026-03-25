@@ -5,7 +5,6 @@ import { FormStepProperties } from "@/domains/transaction/components/SendRegistr
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { Icon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
