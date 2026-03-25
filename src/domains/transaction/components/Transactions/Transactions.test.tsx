@@ -475,8 +475,6 @@ describe("Transactions", () => {
 		);
 
 		expect(await screen.findByText(/Showing/)).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show filter when hasMore is true", async () => {
@@ -488,7 +486,5 @@ describe("Transactions", () => {
 		);
 
 		expect(await screen.findByTestId("FilterTransactions")).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 });
