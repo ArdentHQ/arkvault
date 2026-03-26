@@ -63,7 +63,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
@@ -379,7 +379,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
@@ -695,7 +695,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
@@ -1013,7 +1013,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
