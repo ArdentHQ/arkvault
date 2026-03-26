@@ -282,7 +282,7 @@ describe("TransactionEncoder", () => {
 
 	it("should handle contractDeployment type in byType", async () => {
 		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
-		const bytecode = "0x1234" as Hex;
+		const bytecode = "0x1234";
 
 		const result = encoder.byType(
 			{
