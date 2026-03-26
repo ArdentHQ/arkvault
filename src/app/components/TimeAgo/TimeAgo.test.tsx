@@ -15,11 +15,11 @@ describe("TimeAgo", () => {
 	});
 
 	it.each([
-		["years", "2019-07-01T00:00:00.000Z", "YEARS_AGO"],
-		["months", "2020-06-01T00:00:00.000Z", "MONTHS_AGO"],
-		["days", "2020-06-30T00:00:00.000Z", "DAYS_AGO"],
-		["hours", "2020-06-30T23:00:00.000Z", "HOURS_AGO"],
-		["minutes", "2020-06-30T23:59:00.000Z", "MINUTES_AGO"],
+		["years", "2025-02-01T00:00:00.000Z", "YEARS_AGO"],
+		["months", "2026-02-01T00:00:00.000Z", "MONTHS_AGO"],
+		["days", "2026-03-25T00:00:00.000Z", "DAYS_AGO"],
+		["hours", "2026-03-25T23:00:00.000Z", "HOURS_AGO"],
+		["minutes", "2026-03-25T23:59:00.000Z", "MINUTES_AGO"],
 	])("should render the difference in %s", (unit, date, key) => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
@@ -33,7 +33,7 @@ describe("TimeAgo", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const date = "2020-06-30T23:59:59.000Z";
+		const date = "2026-03-25T23:59:59.000Z";
 
 		render(<TimeAgo date={date} />);
 

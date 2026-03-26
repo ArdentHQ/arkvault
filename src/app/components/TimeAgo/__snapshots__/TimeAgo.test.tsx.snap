@@ -5,7 +5,7 @@ exports[`TimeAgo > should render 1`] = `
   <span
     data-testid="TimeAgo"
   >
-    11 days ago
+    5 years ago
   </span>
 </DocumentFragment>
 `;

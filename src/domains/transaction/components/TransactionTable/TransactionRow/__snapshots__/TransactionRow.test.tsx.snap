@@ -55,7 +55,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  5 years ago
                 </span>
               </span>
             </div>
@@ -71,7 +71,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              5 years ago
             </span>
           </div>
         </td>
@@ -581,7 +581,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  5 years ago
                 </span>
               </span>
             </div>
@@ -597,7 +597,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              5 years ago
             </span>
           </div>
         </td>
@@ -1126,7 +1126,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  5 years ago
                 </span>
               </span>
             </div>
@@ -1142,7 +1142,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              5 years ago
             </span>
           </div>
         </td>
@@ -1679,7 +1679,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
@@ -1987,7 +1987,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  5 years ago
                 </span>
               </span>
             </div>
@@ -2003,7 +2003,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              5 years ago
             </span>
           </div>
         </td>
@@ -2521,7 +2521,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
@@ -2837,7 +2837,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
@@ -3153,7 +3153,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
               </div>
@@ -3461,7 +3461,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  5 years ago
                 </span>
               </span>
             </div>
@@ -3477,7 +3477,7 @@ exports[`TransactionRow > should render with currency 1`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              5 years ago
             </span>
           </div>
         </td>

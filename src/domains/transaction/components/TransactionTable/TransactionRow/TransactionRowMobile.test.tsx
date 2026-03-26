@@ -122,7 +122,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		);
 
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getByText("A few seconds ago")).toBeInTheDocument();
+		expect(screen.getByText("5 years ago")).toBeInTheDocument();
 	});
 
 	it("should not hide sender when hideSender is false", () => {

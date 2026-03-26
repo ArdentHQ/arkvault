@@ -3499,7 +3499,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -3841,7 +3841,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -4168,7 +4168,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -4495,7 +4495,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -4822,7 +4822,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -5149,7 +5149,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -5476,7 +5476,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -5803,7 +5803,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -6145,7 +6145,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -6418,7 +6418,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -6784,7 +6784,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -7126,7 +7126,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -7453,7 +7453,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -7780,7 +7780,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -8107,7 +8107,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -8434,7 +8434,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -8761,7 +8761,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -9088,7 +9088,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -9430,7 +9430,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -9703,7 +9703,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <span
                         data-testid="TimeAgo"
                       >
-                        A few seconds ago
+                        A year ago
                       </span>
                     </span>
                   </div>
@@ -10212,7 +10212,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -10228,7 +10228,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -10785,7 +10785,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -10801,7 +10801,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -11315,7 +11315,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -11331,7 +11331,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -11845,7 +11845,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -11861,7 +11861,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -12375,7 +12375,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -12391,7 +12391,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -12905,7 +12905,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -12921,7 +12921,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -13435,7 +13435,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -13451,7 +13451,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -13965,7 +13965,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -13981,7 +13981,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -14540,7 +14540,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -14556,7 +14556,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -14908,7 +14908,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -14924,7 +14924,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -15656,7 +15656,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -15672,7 +15672,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -16229,7 +16229,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -16245,7 +16245,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -16759,7 +16759,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -16775,7 +16775,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -17289,7 +17289,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -17305,7 +17305,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -17819,7 +17819,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -17835,7 +17835,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -18349,7 +18349,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -18365,7 +18365,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -18879,7 +18879,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -18895,7 +18895,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -19409,7 +19409,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -19425,7 +19425,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -19984,7 +19984,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -20000,7 +20000,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -20352,7 +20352,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -20368,7 +20368,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -21100,7 +21100,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -21116,7 +21116,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -21654,7 +21654,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -21670,7 +21670,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -22165,7 +22165,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -22181,7 +22181,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -22676,7 +22676,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -22692,7 +22692,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -23187,7 +23187,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -23203,7 +23203,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -23698,7 +23698,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -23714,7 +23714,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -24209,7 +24209,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -24225,7 +24225,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -24720,7 +24720,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -24736,7 +24736,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -25276,7 +25276,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -25292,7 +25292,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>
@@ -25625,7 +25625,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      A year ago
                     </span>
                   </span>
                 </div>
@@ -25641,7 +25641,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <span
                   data-testid="TimeAgo"
                 >
-                  A few seconds ago
+                  A year ago
                 </span>
               </div>
             </td>

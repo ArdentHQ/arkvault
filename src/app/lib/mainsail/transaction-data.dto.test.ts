@@ -352,7 +352,7 @@ describe("TransactionData", () => {
 
 	it("#timestamp", () => {
 		transaction.configure(commonData);
-		expect(transaction.timestamp()?.toISOString()).toBe("2020-07-01T00:00:00.000Z");
+		expect(transaction.timestamp()?.toISOString()).toBe("2026-03-26T00:00:00.000Z");
 	});
 
 	it("#from", () => {
