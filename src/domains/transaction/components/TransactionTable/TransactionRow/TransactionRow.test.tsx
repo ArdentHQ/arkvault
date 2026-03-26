@@ -178,7 +178,7 @@ describe("TransactionRow", () => {
 		);
 
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByText("A few seconds ago")).toHaveLength(2);
+		expect(screen.getAllByText("5 years ago")).toHaveLength(2);
 	});
 
 	it("should render N/A if timestamp is not available", () => {
