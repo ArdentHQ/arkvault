@@ -30,7 +30,7 @@ const getNextUpdateDelay = (isoDate: string): number | null => {
 	// To resolve timeout overflow warning in tests
 	// Prevents issues when now < isoDate
 	if (elapsed < 0) {
-		return 90000; // retry in 90s
+		return null;
 	}
 
 	// If less than 1 minute old: wait until exactly 1 minute has passed
