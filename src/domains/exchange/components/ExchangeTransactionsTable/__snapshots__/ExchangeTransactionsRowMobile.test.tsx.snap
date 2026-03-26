@@ -39,7 +39,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
                 <div
@@ -156,7 +156,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </div>
@@ -276,7 +276,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
                 <div
@@ -384,7 +384,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </div>
@@ -504,7 +504,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
                 <div
@@ -612,7 +612,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </div>
@@ -732,7 +732,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
                 <div
@@ -841,7 +841,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </div>
@@ -1002,7 +1002,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
                 <div
@@ -1115,7 +1115,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </div>
@@ -1235,7 +1235,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </span>
                 <div
@@ -1348,7 +1348,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </div>
@@ -1461,7 +1461,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               <span
                 data-testid="TimeAgo"
               >
-                A few seconds ago
+                5 years ago
               </span>
             </span>
             <div
@@ -1569,7 +1569,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               <span
                 data-testid="TimeAgo"
               >
-                A few seconds ago
+                5 years ago
               </span>
             </div>
           </div>
@@ -1685,7 +1685,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               <span
                 data-testid="TimeAgo"
               >
-                A few seconds ago
+                5 years ago
               </span>
             </span>
             <div
@@ -1793,7 +1793,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               <span
                 data-testid="TimeAgo"
               >
-                A few seconds ago
+                5 years ago
               </span>
             </div>
           </div>
