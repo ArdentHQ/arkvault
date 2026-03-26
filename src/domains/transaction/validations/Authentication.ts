@@ -84,7 +84,7 @@ export const authentication = (t: any) => {
 							} catch {
 								resolve(t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS"));
 							}
-						}, 500);
+						}, 1000);
 					}) as Promise<ValidateResult>,
 			},
 		}),
