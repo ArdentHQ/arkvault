@@ -363,7 +363,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -377,7 +377,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -570,7 +570,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -584,7 +584,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -777,7 +777,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -791,7 +791,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -1311,7 +1311,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -1325,7 +1325,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -1518,7 +1518,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -1532,7 +1532,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -1725,7 +1725,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -1739,7 +1739,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -2259,7 +2259,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -2273,7 +2273,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -2466,7 +2466,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -2480,7 +2480,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -2673,7 +2673,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -2687,7 +2687,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -3207,7 +3207,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -3221,7 +3221,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -3414,7 +3414,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -3428,7 +3428,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -3621,7 +3621,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -3635,7 +3635,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -4155,7 +4155,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -4169,7 +4169,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -4362,7 +4362,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -4376,7 +4376,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -4569,7 +4569,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     <span
                       data-testid="TimeAgo"
                     >
-                      A few seconds ago
+                      5 years ago
                     </span>
                   </div>
                 </div>
@@ -4583,7 +4583,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   <span
                     data-testid="TimeAgo"
                   >
-                    A few seconds ago
+                    5 years ago
                   </span>
                 </div>
               </td>
@@ -4795,7 +4795,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </span>
                       <div
@@ -4904,7 +4904,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </div>
                     </div>
@@ -5056,7 +5056,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </span>
                       <div
@@ -5165,7 +5165,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </div>
                     </div>
@@ -5317,7 +5317,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </span>
                       <div
@@ -5426,7 +5426,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </div>
                     </div>
@@ -5606,7 +5606,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </span>
                       <div
@@ -5715,7 +5715,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </div>
                     </div>
@@ -5867,7 +5867,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </span>
                       <div
@@ -5976,7 +5976,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </div>
                     </div>
@@ -6128,7 +6128,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </span>
                       <div
@@ -6237,7 +6237,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         <span
                           data-testid="TimeAgo"
                         >
-                          A few seconds ago
+                          5 years ago
                         </span>
                       </div>
                     </div>

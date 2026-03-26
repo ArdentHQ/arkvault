@@ -233,7 +233,7 @@ exports[`Notifications > should render in xs 3`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              A year ago
             </span>
           </div>
         </td>
@@ -334,7 +334,7 @@ exports[`Notifications > should render in xs 4`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              A year ago
             </span>
           </div>
         </td>
@@ -435,7 +435,7 @@ exports[`Notifications > should render in xs 5`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              A year ago
             </span>
           </div>
         </td>
@@ -536,7 +536,7 @@ exports[`Notifications > should render notification item 1`] = `
             <span
               data-testid="TimeAgo"
             >
-              A few seconds ago
+              A year ago
             </span>
           </div>
         </td>
