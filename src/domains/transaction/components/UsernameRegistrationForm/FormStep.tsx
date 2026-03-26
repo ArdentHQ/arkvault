@@ -7,10 +7,10 @@ import { InputDefault } from "@/app/components/Input";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useEnvironmentContext } from "@/app/contexts";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -78,20 +78,17 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				<FormField name="senderAddress">
 					<FormLabel label={t("TRANSACTION.SENDER")} />
 
-					<SelectAddress
-						wallet={
-							wallet
-								? {
-										address: wallet.address(),
-										network: wallet.network(),
-									}
-								: undefined
-						}
-						wallets={profile.wallets().values()}
-						profile={profile}
+					<SelectAddressDropdown
 						disabled={profile.wallets().count() === 0}
-						onChange={handleSelectSender}
+						profile={profile}
+						onChange={(wallet) => {
+							handleSelectSender(wallet?.address() ?? "");
+						}}
+						wallets={profile.wallets().values()}
+						wallet={wallet}
+						defaultNetwork={profile.activeNetwork()}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendUsernameRegistration()}
+						showBalance
 					/>
 				</FormField>
 

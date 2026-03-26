@@ -7,13 +7,13 @@ import { FormField } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Amount } from "@/app/components/Amount";
 import { useValidatorResignationLockedFee } from "./hooks/useValidatorResignationLockedFee";
 import { BigNumber } from "@/app/lib/helpers";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 
 interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
@@ -71,21 +71,17 @@ export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = f
 
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">
-					<SelectAddress
-						wallet={
-							senderWallet
-								? {
-										address: senderWallet.address(),
-										network: senderWallet.network(),
-									}
-								: undefined
-						}
-						wallets={profile.wallets().values()}
-						profile={profile}
+					<SelectAddressDropdown
 						disabled={profile.wallets().count() === 0}
-						onChange={handleSelectSender}
+						profile={profile}
+						onChange={(wallet) => {
+							handleSelectSender(wallet?.address() ?? "");
+						}}
+						wallets={profile.wallets().values()}
+						wallet={senderWallet}
+						defaultNetwork={profile.activeNetwork()}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorResignation()}
-						variant="modern"
+						showBalance
 					/>
 				</FormField>
 
