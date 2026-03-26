@@ -286,8 +286,8 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
 				bytecode,
+				senderAddress: "0x1234",
 			},
 			"contractDeployment",
 		);
@@ -317,11 +317,11 @@ describe("TransactionEncoder", () => {
 
 		const result = encoder.byType(
 			{
-				senderAddress: "0x1234",
 				recipients: [
 					{ address, amount: 100 },
 					{ address, amount: 200 },
 				],
+				senderAddress: "0x1234",
 			},
 			"multiPayment",
 		);
