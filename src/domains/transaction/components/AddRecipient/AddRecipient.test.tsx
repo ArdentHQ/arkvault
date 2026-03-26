@@ -251,13 +251,13 @@ describe("AddRecipient", () => {
 		await setupTokenSelection(index, "DARK2");
 
 		const amount = 1;
-		const amoutInput = screen.getByTestId("AddRecipient__amount");
+		const amountInput = screen.getByTestId("AddRecipient__amount");
 		const addressInput = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		await userEvent.clear(amoutInput);
-		await userEvent.type(amoutInput, String(amount));
+		await userEvent.clear(amountInput);
+		await userEvent.type(amountInput, String(amount));
 
-		await waitFor(() => expect(amoutInput).toHaveValue(String(amount)));
+		await waitFor(() => expect(amountInput).toHaveValue(String(amount)));
 
 		await userEvent.clear(addressInput);
 		await userEvent.type(addressInput, wallet.address());
@@ -324,14 +324,13 @@ describe("AddRecipient", () => {
 		const emptyProfile = await env.profiles().create("Empty");
 
 		const emptyWallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MNEMONICS[0],
 			network: "mainsail.devnet",
 		});
 
 		emptyWallet.network().config().set("height", 1);
 		emptyWallet.network().config().set("crypto", CryptoConfigurationFixture.data);
-		vi.spyOn(emptyWallet, "balance").mockReturnValue(0);
+		vi.spyOn(emptyWallet, "balance").mockReturnValue(BigNumber.make(0));
 		vi.spyOn(emptyWallet.network(), "isTest").mockReturnValue(false);
 
 		emptyProfile.wallets().push(emptyWallet);
@@ -348,7 +347,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should hide available balance if fee > balance", async () => {
-		vi.spyOn(wallet, "balance").mockReturnValue(12);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(12));
 		vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 
 		const { container } = renderWithFormProvider(
@@ -669,7 +668,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for zero balance", async () => {
-		const mockWalletBalance = vi.spyOn(wallet, "balance").mockReturnValue(0);
+		const mockWalletBalance = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(0));
 
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
 

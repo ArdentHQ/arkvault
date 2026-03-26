@@ -1,5 +1,6 @@
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 
 import {
 	createMainsailTransactionMock,
@@ -166,7 +167,7 @@ describe("SendExchangeTransfer", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const selectedWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0.04);
+		const selectedWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(0.04));
 
 		renderComponent();
 
