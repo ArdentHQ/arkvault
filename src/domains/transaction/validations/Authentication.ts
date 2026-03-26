@@ -58,34 +58,29 @@ export const authentication = (t: any) => {
 				field: t("COMMON.MNEMONIC"),
 			}),
 			validate: {
-				matchSenderAddress: (mnemonic: string) =>
-					new Promise((resolve) => {
-						clearTimeout(validationTimer.current);
+				matchSenderAddress: (mnemonic: string) => {
+					try {
+						let address: string;
 
-						validationTimer.current = setTimeout(() => {
-							try {
-								let address: string;
+						if (wallet.isHDWallet()) {
+							const account = HDWalletService.getAccount(
+								mnemonic,
+								wallet.data().get(WalletData.DerivationPath) as string,
+							);
+							address = account.address;
+						} else {
+							address = new AddressService().fromMnemonic(mnemonic).address;
+						}
 
-								if (wallet.isHDWallet()) {
-									const account = HDWalletService.getAccount(
-										mnemonic,
-										wallet.data().get(WalletData.DerivationPath) as string,
-									);
-									address = account.address;
-								} else {
-									address = new AddressService().fromMnemonic(mnemonic).address;
-								}
+						if (address === wallet.address()) {
+							return true;
+						}
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
+					} catch {
+						return t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS");
+					}
+				}
 
-								if (address === wallet.address()) {
-									resolve(true);
-								} else {
-									resolve(t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS"));
-								}
-							} catch {
-								resolve(t("COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS"));
-							}
-						}, 1000);
-					}) as Promise<ValidateResult>,
 			},
 		}),
 		privateKey: (wallet: Contracts.IReadWriteWallet) => ({
