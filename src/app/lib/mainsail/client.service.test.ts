@@ -873,4 +873,179 @@ describe("ClientService", () => {
 			expect(result.isEmpty()).toBe(true);
 		});
 	});
+
+	describe("tokens", () => {
+		it("should fetch all tokens", async () => {
+			const mockResponse = {
+				data: [
+					{
+						address: "0x0",
+						decimals: 18,
+						name: "Token 1",
+						symbol: "TK1",
+						totalSupply: "1000000000000000000000",
+					},
+					{
+						address: "0x1",
+						decimals: 6,
+						name: "Token 2",
+						symbol: "TK2",
+						totalSupply: "1000000000",
+					},
+				],
+			};
+
+			server.use(requestMock("http://localhost/tokens", mockResponse));
+
+			const result = await clientService.tokens();
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(2);
+			expect(result.values()).toHaveLength(2);
+		});
+
+		it("should handle empty tokens response", async () => {
+			const mockResponse = {
+				data: [],
+			};
+
+			server.use(requestMock("http://localhost/tokens", mockResponse));
+
+			const result = await clientService.tokens();
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(0);
+		});
+	});
+
+	describe("walletTokens", () => {
+		it("should fetch wallet tokens for an address", async () => {
+			const walletAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				data: [
+					{
+						address: walletAddress,
+						balance: "1000000000000000000",
+						tokenAddress: "0xtoken1",
+					},
+					{
+						address: walletAddress,
+						balance: "500000000",
+						tokenAddress: "0xtoken2",
+					},
+				],
+			};
+
+			server.use(requestMock(`http://localhost/wallets/${walletAddress}/tokens`, mockResponse));
+
+			const result = await clientService.walletTokens(walletAddress);
+
+			expect(result).toBeDefined();
+			expect(result).toHaveLength(2);
+			expect(result[0].address()).toBe(walletAddress);
+			expect(result[0].tokenAddress()).toBe("0xtoken1");
+			expect(result[1].tokenAddress()).toBe("0xtoken2");
+		});
+
+		it("should handle empty wallet tokens response", async () => {
+			const walletAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				data: [],
+			};
+
+			server.use(requestMock(`http://localhost/wallets/${walletAddress}/tokens`, mockResponse));
+
+			const result = await clientService.walletTokens(walletAddress);
+
+			expect(result).toBeDefined();
+			expect(result).toHaveLength(0);
+		});
+	});
+
+	describe("tokenHolders", () => {
+		it("should fetch token holders for a contract address", async () => {
+			const contractAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				results: [
+					{
+						address: "0x1",
+						balance: "1000000000000000000",
+					},
+					{
+						address: "0x2",
+						balance: "2000000000000000000",
+					},
+				],
+			};
+
+			server.use(requestMock(`http://localhost/tokens/${contractAddress}/holders`, mockResponse));
+
+			const result = await clientService.tokenHolders(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(2);
+			expect(result.values()[0].address()).toBe("0x1");
+			expect(result.values()[1].address()).toBe("0x2");
+		});
+
+		it("should handle empty token holders response", async () => {
+			const contractAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				results: [],
+			};
+
+			server.use(requestMock(`http://localhost/tokens/${contractAddress}/holders`, mockResponse));
+
+			const result = await clientService.tokenHolders(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(0);
+		});
+	});
+
+	describe("tokenByContractAddress", () => {
+		it("should fetch token by contract address", async () => {
+			const contractAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				data: {
+					address: contractAddress,
+					decimals: 18,
+					name: "Token",
+					symbol: "TK1",
+					totalSupply: "1000000000000000000000",
+				},
+			};
+
+			server.use(http.get(/http:\/\/localhost\/tokens\/whitelist.*/, () => HttpResponse.json(mockResponse)));
+
+			const result = await clientService.tokenByContractAddress(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.address()).toBe(contractAddress);
+			expect(result.name()).toBe("Token");
+			expect(result.symbol()).toBe("TK1");
+			expect(result.decimals()).toBe(18);
+		});
+
+		it("should handle token by contract address with minimal data", async () => {
+			const contractAddress = `0x${"b".repeat(40)}`;
+			const mockResponse = {
+				data: {
+					address: contractAddress,
+					decimals: 8,
+					name: "Token",
+					symbol: "TK1",
+					totalSupply: "10000000000",
+				},
+			};
+
+			server.use(http.get(/http:\/\/localhost\/tokens\/whitelist.*/, () => HttpResponse.json(mockResponse)));
+
+			const result = await clientService.tokenByContractAddress(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.address()).toBe(contractAddress);
+			expect(result.decimals()).toBe(8);
+		});
+	});
 });
