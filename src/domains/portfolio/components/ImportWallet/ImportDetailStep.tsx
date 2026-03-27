@@ -12,6 +12,9 @@ import { truncate } from "@/app/lib/helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { Rules } from "@/app/components/PasswordValidation";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
+import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
 
 const validateAddress = async ({
 	findAddress,
@@ -166,6 +169,8 @@ const ImportInputField = ({
 }) => {
 	const { t } = useTranslation();
 
+	const { getValues } = useFormContext();
+
 	if (type.startsWith("bip")) {
 		const findAddress = async (mnemonic: string) => {
 			if (type === OptionsValue.BIP44) {
@@ -215,6 +220,9 @@ const ImportInputField = ({
 					findAddress={findAddress}
 					network={network}
 				/>
+
+				<MnemonicRules mnemonic={getValues('value')}/>
+
 				<Alert
 					title={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.TITLE")}
 					variant="info"
