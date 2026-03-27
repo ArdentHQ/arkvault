@@ -6,6 +6,14 @@ import { getDefaultMainsailWalletMnemonic } from "@/utils/testing-library";
 const path = "m/44'/111'/0'/0/0";
 const mnemonic = getDefaultMainsailWalletMnemonic();
 
+const data = {
+	gasLimit: "21000",
+	gasPrice: "20000000000",
+	nonce: 1,
+	to: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
+	value: "1000000000000000000",
+};
+
 describe("MnemonicWithDerivationPathService", () => {
 	let service: HDWalletService;
 	let mockConfig: ConfigRepository;
@@ -39,14 +47,6 @@ describe("MnemonicWithDerivationPathService", () => {
 	});
 
 	it("should sign transaction with correct parameters", async () => {
-		const data = {
-			gasLimit: "21000",
-			gasPrice: "20000000000",
-			nonce: 1,
-			to: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
-			value: "1000000000000000000",
-		};
-
 		const result = await service.sign(mnemonic, path, data);
 
 		expect(result).toBeDefined();
@@ -62,32 +62,22 @@ describe("MnemonicWithDerivationPathService", () => {
 		const chainId = 11812;
 		mockConfig.get = vi.fn().mockReturnValue(chainId);
 
-		const data = {
-			gasLimit: "21000",
-			gasPrice: "20000000000",
-			nonce: 1,
-			to: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
-			value: "1000000000000000000",
-		};
-
 		await service.sign(mnemonic, path, data);
 
 		expect(mockConfig.get).toHaveBeenCalledWith("crypto.network.chainId");
 	});
 
 	it("should return signature without 0x prefix", async () => {
-		const data = {
-			gasLimit: "21000",
-			gasPrice: "20000000000",
-			nonce: 1,
-			to: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
-			value: "1000000000000000000",
-		};
-
 		const result = await service.sign(mnemonic, path, data);
 
 		expect(result.r).not.toMatch(/^0x/);
 		expect(result.s).not.toMatch(/^0x/);
+	});
+
+	it("should throw error when account has no signTransaction", async () => {
+		vi.spyOn(HDWalletService, "getAccount").mockReturnValue({} as any);
+
+		await expect(service.sign(mnemonic, path, data)).rejects.toThrow("Failed to create account!");
 	});
 
 	it("should return consistent results for same inputs", () => {
