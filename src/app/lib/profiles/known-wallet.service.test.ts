@@ -3,6 +3,7 @@ import { KnownWalletService } from "./known-wallet.service";
 
 describe("KnownWalletService", () => {
 	let service: KnownWalletService;
+	const networkName = "mainsail.devnet";
 
 	beforeEach(() => {
 		service = new KnownWalletService();
@@ -15,7 +16,7 @@ describe("KnownWalletService", () => {
 				config: () => ({
 					get: vi.fn().mockReturnValue("https://example.com/known-wallets.json"),
 				}),
-				id: () => "mainsail.devnet",
+				id: () => networkName,
 			} as any;
 
 			await expect(service.sync(mockProfile, mockNetwork)).resolves.not.toThrow();
@@ -27,7 +28,7 @@ describe("KnownWalletService", () => {
 				config: () => ({
 					get: vi.fn().mockReturnValue(undefined),
 				}),
-				id: () => "mainsail.devnet",
+				id: () => networkName,
 			} as any;
 
 			await expect(service.sync(mockProfile, mockNetwork)).resolves.not.toThrow();
@@ -40,7 +41,7 @@ describe("KnownWalletService", () => {
 		});
 
 		it("should return undefined when no wallets in registry", () => {
-			expect(service.name("mainsail.devnet", "wallet1")).toBeUndefined();
+			expect(service.name(networkName, "wallet1")).toBeUndefined();
 		});
 	});
 
@@ -50,7 +51,7 @@ describe("KnownWalletService", () => {
 		});
 
 		it("should return false when no wallets exist", () => {
-			expect(service.is("mainsail.devnet", "wallet1")).toBe(false);
+			expect(service.is(networkName, "wallet1")).toBe(false);
 		});
 	});
 
@@ -60,7 +61,7 @@ describe("KnownWalletService", () => {
 		});
 
 		it("should return false when no wallets exist", () => {
-			expect(service.isExchange("mainsail.devnet", "wallet1")).toBe(false);
+			expect(service.isExchange(networkName, "wallet1")).toBe(false);
 		});
 	});
 
@@ -70,7 +71,7 @@ describe("KnownWalletService", () => {
 		});
 
 		it("should return false when there are no wallets", () => {
-			expect(service.isTeam("mainsail.devnet", "wallet1")).toBe(false);
+			expect(service.isTeam(networkName, "wallet1")).toBe(false);
 		});
 	});
 });

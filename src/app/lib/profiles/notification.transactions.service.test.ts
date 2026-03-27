@@ -3,22 +3,32 @@ import { ProfileTransactionNotificationService } from "./notification.transactio
 import { NotificationRepository } from "./notification.repository";
 import { INotificationTypes } from "./notification.repository.contract";
 
+const mockTransaction = (hash: string, overrides: Record<string, any> = {}) => ({
+	confirmations: () => ({ isGreaterThan: () => false }),
+	hash: () => hash,
+	isSuccess: () => true,
+	recipients: () => [],
+	timestamp: () => ({ toUNIX: () => 1000 }),
+	to: () => "address1",
+	type: () => "transfer",
+	wallet: () => ({ networkId: () => "network1" }),
+	...overrides,
+});
+
 describe("ProfileTransactionNotificationService", () => {
 	let service: ProfileTransactionNotificationService;
 	let notificationRepository: NotificationRepository;
-	let mockProfile;
-	let markAsDirtySpy;
+
+	let markAsDirtySpy = vi.fn();
+	let mockProfile = {
+		id: () => "test-profile",
+		status: () => ({ markAsDirty: markAsDirtySpy }),
+		wallets: () => ({
+			values: () => [],
+		}),
+	};
 
 	beforeEach(() => {
-		markAsDirtySpy = vi.fn();
-		mockProfile = {
-			id: () => "test-profile",
-			status: () => ({ markAsDirty: markAsDirtySpy }),
-			wallets: () => ({
-				values: () => [],
-			}),
-		};
-
 		notificationRepository = new NotificationRepository(mockProfile);
 		vi.spyOn(notificationRepository, "markAsRead");
 		vi.spyOn(notificationRepository, "markAsRemoved");
@@ -174,11 +184,11 @@ describe("ProfileTransactionNotificationService", () => {
 		let syncingDuringSync = false;
 
 		mockProfile.transactionAggregate = () => ({
-			flush: vi.fn(),
 			all: vi.fn().mockImplementation(async () => {
 				syncingDuringSync = service.isSyncing();
 				return { items: () => [] };
 			}),
+			flush: vi.fn(),
 		});
 
 		mockProfile.wallets = () => ({
@@ -197,42 +207,30 @@ describe("ProfileTransactionNotificationService", () => {
 		expect(service.transactions()).toEqual([]);
 	});
 
-	describe("#active", () => {
-		const mockTransaction = (hash: string, overrides: Record<string, any> = {}) => ({
-			hash: () => hash,
-			to: () => "address1",
-			recipients: () => [],
-			timestamp: () => ({ toUNIX: () => 1000 }),
-			type: () => "transfer",
-			isSuccess: () => true,
-			confirmations: () => ({ isGreaterThan: () => false }),
-			wallet: () => ({ networkId: () => "network1" }),
-			...overrides,
-		});
-
-		const setupForSync = () => {
-			const mockWallet = {
-				address: () => "address1",
-				network: () => ({ id: () => "network1" }),
-			};
-
-			mockProfile.wallets = () => ({
-				findByAddressWithNetwork: vi.fn().mockReturnValue(true),
-				selected: () => [mockWallet],
-				values: () => [mockWallet],
-			});
-
-			mockProfile.transactionAggregate = () => ({
-				flush: vi.fn(),
-				all: vi.fn().mockResolvedValue({ items: () => [] }),
-			});
+	const setupForSync = () => {
+		const mockWallet = {
+			address: () => "address1",
+			network: () => ({ id: () => "network1" }),
 		};
 
+		mockProfile.wallets = () => ({
+			findByAddressWithNetwork: vi.fn().mockReturnValue(true),
+			selected: () => [mockWallet],
+			values: () => [mockWallet],
+		});
+
+		mockProfile.transactionAggregate = () => ({
+			all: vi.fn().mockResolvedValue({ items: () => [] }),
+			flush: vi.fn(),
+		});
+	};
+
+	describe("#active", () => {
 		it("should return synced transactions", async () => {
 			setupForSync();
 			mockProfile.transactionAggregate = () => ({
-				flush: vi.fn(),
 				all: vi.fn().mockResolvedValue({ items: () => [mockTransaction("tx-1")] }),
+				flush: vi.fn(),
 			});
 
 			await service.sync();
@@ -246,13 +244,13 @@ describe("ProfileTransactionNotificationService", () => {
 			setupForSync();
 
 			notificationRepository.push({
-				type: INotificationTypes.Transaction,
 				meta: { transactionId: "tx-seen" },
+				type: INotificationTypes.Transaction,
 			});
 
 			mockProfile.transactionAggregate = () => ({
-				flush: vi.fn(),
 				all: vi.fn().mockResolvedValue({ items: () => [mockTransaction("tx-seen")] }),
+				flush: vi.fn(),
 			});
 
 			await service.sync();
@@ -263,10 +261,10 @@ describe("ProfileTransactionNotificationService", () => {
 		it("should skip not allowed transaction types", async () => {
 			setupForSync();
 			mockProfile.transactionAggregate = () => ({
-				flush: vi.fn(),
 				all: vi.fn().mockResolvedValue({
 					items: () => [mockTransaction("tx-vote", { type: () => "vote" })],
 				}),
+				flush: vi.fn(),
 			});
 
 			await service.sync();
@@ -282,10 +280,10 @@ describe("ProfileTransactionNotificationService", () => {
 				values: () => [],
 			});
 			mockProfile.transactionAggregate = () => ({
-				flush: vi.fn(),
 				all: vi.fn().mockResolvedValue({
 					items: () => [mockTransaction("tx-other")],
 				}),
+				flush: vi.fn(),
 			});
 
 			await service.sync();

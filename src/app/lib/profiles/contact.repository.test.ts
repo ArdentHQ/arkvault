@@ -1,5 +1,5 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
-import { IProfile, IContact, IContactData, IContactAddressInput } from "./contracts";
+import { IProfile, IContactData, IContactAddressInput } from "./contracts";
 import { env } from "@/utils/testing-library";
 import { ContactRepository } from "./contact.repository";
 
@@ -7,6 +7,7 @@ let profile: IProfile;
 let repository: ContactRepository;
 
 describe("ContactRepository", () => {
+	const contactName = "test contact";
 	beforeEach(async () => {
 		profile = await env.profiles().create("test profile");
 		repository = new ContactRepository(profile);
@@ -39,10 +40,10 @@ describe("ContactRepository", () => {
 	it("should create a new contact", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
-		const result = repository.create("test contact", addresses);
+		const result = repository.create(contactName, addresses);
 
 		expect(result).toBeDefined();
-		expect(result.name()).toBe("test contact");
+		expect(result.name()).toBe(contactName);
 		expect(result.addresses().count()).toBe(1);
 	});
 
@@ -57,7 +58,7 @@ describe("ContactRepository", () => {
 	it("should find contact by id", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
-		const created = repository.create("test contact", addresses);
+		const created = repository.create(contactName, addresses);
 
 		expect(repository.findById(created.id()).id()).toBe(created.id());
 	});
@@ -69,7 +70,7 @@ describe("ContactRepository", () => {
 	it("should update contact name", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
-		const created = repository.create("test contact", addresses);
+		const created = repository.create(contactName, addresses);
 		const statusSpy = vi.spyOn(profile.status(), "markAsDirty");
 
 		repository.update(created.id(), { name: "updated name" });
@@ -81,7 +82,7 @@ describe("ContactRepository", () => {
 	it("should update contact address", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
-		const created = repository.create("test contact", addresses);
+		const created = repository.create(contactName, addresses);
 
 		repository.update(created.id(), { addresses: [{ address: "0x5678" }] });
 
@@ -103,7 +104,7 @@ describe("ContactRepository", () => {
 	it("should forget contact", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
-		const created = repository.create("test contact", addresses);
+		const created = repository.create(contactName, addresses);
 		const statusSpy = vi.spyOn(profile.status(), "markAsDirty");
 
 		repository.forget(created.id());
@@ -119,7 +120,7 @@ describe("ContactRepository", () => {
 	it("should flush all contacts", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
-		repository.create("test contact", addresses);
+		repository.create(contactName, addresses);
 		const statusSpy = vi.spyOn(profile.status(), "markAsDirty");
 
 		repository.flush();
@@ -157,12 +158,12 @@ describe("ContactRepository", () => {
 	it("#toObject", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
-		const created = repository.create("test contact", addresses);
+		const created = repository.create(contactName, addresses);
 
 		const result = repository.toObject();
 
 		expect(result).toHaveProperty(created.id());
-		expect(result[created.id()].name).toBe("test contact");
+		expect(result[created.id()].name).toBe(contactName);
 	});
 
 	it("should fill contacts from data", () => {
