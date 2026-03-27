@@ -362,6 +362,29 @@ describe("Signatory", () => {
 		});
 	});
 
+	describe("actsWithBip44Mnemonic", () => {
+		it("should return true for bip44 mnemonic signatory", () => {
+			const bip44Signatory = new Bip44MnemonicSignatory({
+				path: "m/44'/60'/0'/0/0",
+				signingKey: MAINSAIL_MNEMONICS[0],
+			});
+			const signatory = new Signatory(bip44Signatory);
+
+			expect(signatory.actsWithBip44Mnemonic()).toBe(true);
+		});
+
+		it("should return false for other signatory types", () => {
+			const mnemonicSignatory = new MnemonicSignatory({
+				address: "0x123",
+				publicKey: "pubkey123",
+				signingKey: MAINSAIL_MNEMONICS[0],
+			});
+			const signatory = new Signatory(mnemonicSignatory);
+
+			expect(signatory.actsWithBip44Mnemonic()).toBe(false);
+		});
+	});
+
 	describe("actsWithConfirmationMnemonic", () => {
 		it("should return true for confirmation mnemonic signatory", () => {
 			const confirmationMnemonicSignatory = new ConfirmationMnemonicSignatory({
