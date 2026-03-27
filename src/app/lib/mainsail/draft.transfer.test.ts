@@ -197,4 +197,43 @@ describe("DraftTransfer", () => {
 		const transaction = await draftTransfer.broadcast(signedTransaction);
 		expect(transaction).toBeInstanceOf(ExtendedSignedTransactionData);
 	});
+
+	it("should return fee amount", async () => {
+		draftTransfer.setSender(profile.wallets().first());
+		draftTransfer.addRecipientWallet(profile.wallets().first());
+		draftTransfer.setAmount(100);
+		draftTransfer.selectFee("avg");
+		await draftTransfer.calculateFees();
+
+		const fee = draftTransfer.fee();
+		expect(typeof fee).toBe("number");
+		expect(fee).toBeGreaterThan(0);
+	});
+
+	it("should set sender max amount", async () => {
+		draftTransfer.setSender(profile.wallets().first());
+		draftTransfer.addRecipientWallet(profile.wallets().first());
+		draftTransfer.selectFee("avg");
+		await draftTransfer.calculateFees();
+
+		draftTransfer.setSenderMaxAmount();
+		expect(draftTransfer.amount()).toBeGreaterThan(0);
+	});
+
+	it("should sign and broadcast", async () => {
+		draftTransfer.setSender(profile.wallets().first());
+		draftTransfer.addRecipientWallet(profile.wallets().first());
+		draftTransfer.setAmount(100);
+		draftTransfer.selectFee("avg");
+		await draftTransfer.calculateFees();
+
+		vi.spyOn(profile.wallets().first().transaction(), "broadcast").mockResolvedValue({
+			accepted: ["1"],
+			errors: {},
+			rejected: [],
+		});
+
+		const transaction = await draftTransfer.signAndBroadcast({ key: MAINSAIL_MNEMONICS[0] });
+		expect(transaction).toBeInstanceOf(ExtendedSignedTransactionData);
+	});
 });
