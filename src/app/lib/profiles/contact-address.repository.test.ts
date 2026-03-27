@@ -52,12 +52,12 @@ describe("ContactAddressRepository", () => {
 	it("should fill contact addresses from data", () => {
 		const addresses: IContactAddressData[] = [
 			{
-				id: "1",
 				address: "0x1111",
+				id: "1",
 			},
 			{
-				id: "2",
 				address: "0x2222",
+				id: "2",
 			},
 		];
 
