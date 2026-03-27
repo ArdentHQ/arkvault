@@ -16,8 +16,8 @@ describe("ContactAddress", () => {
 
 	it("should return id", () => {
 		const data: IContactAddressData = {
-			id: "test-id",
 			address: "0x1234",
+			id: "test-id",
 		};
 
 		const contactAddress = new ContactAddress(data, profile);
@@ -27,8 +27,8 @@ describe("ContactAddress", () => {
 
 	it("should return address", () => {
 		const data: IContactAddressData = {
-			id: "test-id",
 			address: "0x1234",
+			id: "test-id",
 		};
 
 		const contactAddress = new ContactAddress(data, profile);
@@ -38,8 +38,8 @@ describe("ContactAddress", () => {
 
 	it("should return avatar", () => {
 		const data: IContactAddressData = {
-			id: "test-id",
 			address: "0x1234",
+			id: "test-id",
 		};
 
 		const contactAddress = new ContactAddress(data, profile);
@@ -50,23 +50,23 @@ describe("ContactAddress", () => {
 
 	it("#toObject", () => {
 		const data: IContactAddressData = {
-			id: "test-id",
 			address: "0x1234",
+			id: "test-id",
 		};
 
 		const contactAddress = new ContactAddress(data, profile);
 		const result = contactAddress.toObject();
 
 		expect(result).toEqual({
-			id: "test-id",
 			address: "0x1234",
+			id: "test-id",
 		});
 	});
 
 	it("should set address and mark as dirty", () => {
 		const data: IContactAddressData = {
-			id: "test-id",
 			address: "0x1234",
+			id: "test-id",
 		};
 
 		const contactAddress = new ContactAddress(data, profile);

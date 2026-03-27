@@ -6,10 +6,10 @@ import { Contact } from "./contact";
 let profile: IProfile;
 
 const baseData: IContactData = {
+	addresses: [],
 	id: "test-id",
 	name: "Test Contact",
 	starred: false,
-	addresses: [],
 };
 
 describe("Contact", () => {

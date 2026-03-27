@@ -23,7 +23,7 @@ describe("UsernamesService", () => {
 			if (address === "0x123") {
 				return "testuser1";
 			}
-			return undefined;
+			return;
 		});
 
 		const networkId = profile.activeNetwork().id();

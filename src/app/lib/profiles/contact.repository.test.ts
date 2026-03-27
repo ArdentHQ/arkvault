@@ -168,10 +168,10 @@ describe("ContactRepository", () => {
 	it("should fill contacts from data", () => {
 		const contactData: Record<string, IContactData> = {
 			"1": {
+				addresses: [{ address: "0x1111", id: "0x2" }],
 				id: "1",
 				name: "contact 1",
 				starred: false,
-				addresses: [{ id: "0x2", address: "0x1111" }],
 			},
 		};
 

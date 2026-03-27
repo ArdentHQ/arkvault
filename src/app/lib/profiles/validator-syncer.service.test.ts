@@ -6,11 +6,11 @@ import { ClientService } from "@/app/lib/mainsail/client.service";
 describe("ParallelValidatorSyncer", () => {
 	const mockClientService = {
 		validators: vi.fn().mockResolvedValue({
+			currentPage: () => "1",
 			items: () => [
 				{ address: () => "validator1", publicKey: () => "pk1" },
 				{ address: () => "validator2", publicKey: () => "pk2" },
 			],
-			currentPage: () => "1",
 			lastPage: () => "1",
 		}),
 	} as unknown as ClientService;
@@ -42,9 +42,9 @@ describe("ParallelValidatorSyncer", () => {
 describe("SerialValidatorSyncer", () => {
 	const mockClientService = {
 		validators: vi.fn().mockResolvedValue({
-			items: () => [{ address: () => "validator1", publicKey: () => "pk1" }],
 			hasMorePages: () => false,
-			nextPage: () => undefined,
+			items: () => [{ address: () => "validator1", publicKey: () => "pk1" }],
+			nextPage: () => {},
 		}),
 	} as unknown as ClientService;
 
@@ -60,14 +60,14 @@ describe("SerialValidatorSyncer", () => {
 			validators: vi
 				.fn()
 				.mockResolvedValueOnce({
-					items: () => [{ address: () => "validator1", publicKey: () => "pk1" }],
 					hasMorePages: () => true,
+					items: () => [{ address: () => "validator1", publicKey: () => "pk1" }],
 					nextPage: () => "2",
 				})
 				.mockResolvedValueOnce({
-					items: () => [{ address: () => "validator2", publicKey: () => "pk2" }],
 					hasMorePages: () => false,
-					nextPage: () => undefined,
+					items: () => [{ address: () => "validator2", publicKey: () => "pk2" }],
+					nextPage: () => {},
 				}),
 		} as unknown as ClientService;
 

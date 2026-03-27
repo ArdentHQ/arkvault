@@ -13,8 +13,8 @@ vi.mock("@/app/lib/markets", () => ({
 		make: vi.fn().mockReturnValue({
 			dailyAverage: vi.fn().mockResolvedValue(100),
 			historicalPrice: vi.fn().mockResolvedValue({
-				labels: ["2024-01-01", "2024-01-02"],
 				datasets: [100, 200],
+				labels: ["2024-01-01", "2024-01-02"],
 			}),
 		}),
 	},
@@ -70,11 +70,11 @@ describe("ExchangeRateService", () => {
 
 	it("should sync all without wallets", async () => {
 		const mockProfile = {
-			wallets: () => ({
-				values: () => [],
-			}),
 			settings: () => ({
 				get: () => "USD",
+			}),
+			wallets: () => ({
+				values: () => [],
 			}),
 		};
 

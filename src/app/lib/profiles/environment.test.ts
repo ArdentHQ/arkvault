@@ -3,11 +3,11 @@ import { Environment } from "./environment";
 
 describe("Environment", () => {
 	vi.mock("@/app/lib/mainsail", () => ({
-		Networks: {},
-		Services: {},
 		Http: {
 			HttpClient: vi.fn(),
 		},
+		Networks: {},
+		Services: {},
 	}));
 
 	it("should create environment instance", () => {
@@ -43,9 +43,9 @@ describe("Environment", () => {
 	it("should return storage when storage is provided", () => {
 		const mockStorage = {
 			all: vi.fn().mockResolvedValue({}),
+			forget: vi.fn().mockResolvedValue(undefined),
 			get: vi.fn().mockResolvedValue(undefined),
 			set: vi.fn().mockResolvedValue(undefined),
-			forget: vi.fn().mockResolvedValue(undefined),
 		};
 		const environment = new Environment({ storage: mockStorage } as any);
 		expect(environment.storage()).toBeDefined();
