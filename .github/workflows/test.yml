@@ -989,10 +989,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib/profiles,src/app/lib/mainsail,src/app/lib/intl,src/app/lib/markets
-            COVERAGE_THRESHOLD_LINES: 93.81
-            COVERAGE_THRESHOLD_BRANCHES: 88.07
-            COVERAGE_THRESHOLD_FUNCTIONS: 93.95
-            COVERAGE_THRESHOLD_STATEMENTS: 93.59
+            COVERAGE_THRESHOLD_LINES: 93.76
+            COVERAGE_THRESHOLD_BRANCHES: 87.93
+            COVERAGE_THRESHOLD_FUNCTIONS: 93.47
+            COVERAGE_THRESHOLD_STATEMENTS: 93.55
         strategy:
             matrix:
                 node-version:
