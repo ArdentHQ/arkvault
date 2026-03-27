@@ -744,6 +744,38 @@ describe("ClientService", () => {
 			expect(transfer.from()).toBe(tokenTransferMockData.from);
 			expect(transfer.to()).toBe(tokenTransferMockData.to);
 		});
+
+		it("should set to as undefined for non-TokenTransfer functionSig", async () => {
+			const nonTokenTransferData = {
+				...tokenTransferMockData,
+				functionSig: "0x12345678",
+			};
+
+			const mockResponse = {
+				data: [nonTokenTransferData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [nonTokenTransferData.from],
+			});
+
+			const transfer = result.items()[0];
+			expect(transfer.hash()).toBe(nonTokenTransferData.transactionHash);
+			expect(transfer.to()).toBeUndefined();
+		});
 	});
 
 	describe("tokenAddresses", () => {

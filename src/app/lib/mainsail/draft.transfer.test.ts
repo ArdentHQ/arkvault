@@ -139,6 +139,20 @@ describe("DraftTransfer", () => {
 		expect(draftTransfer.isPending()).toBe(false);
 	});
 
+	it("should not mark as complete if signed transaction is confirmed", async () => {
+		draftTransfer.setSender(profile.wallets().first());
+		draftTransfer.addRecipientWallet(profile.wallets().first());
+		draftTransfer.setAmount(100);
+		draftTransfer.selectFee("avg");
+		await draftTransfer.calculateFees();
+
+		const signedTransaction = await draftTransfer.sign({ key: MAINSAIL_MNEMONICS[0] });
+		vi.spyOn(signedTransaction, "isConfirmed").mockReturnValue(true);
+
+		expect(draftTransfer.isCompleted()).toBe(false);
+		expect(draftTransfer.isPending()).toBe(false);
+	});
+
 	it("should throw when signing and recipient is not set", async () => {
 		draftTransfer.setSender(profile.wallets().first());
 		draftTransfer.setAmount(100);
