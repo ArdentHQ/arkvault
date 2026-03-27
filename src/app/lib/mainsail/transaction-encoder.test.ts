@@ -302,7 +302,7 @@ describe("TransactionEncoder", () => {
 		const result = encoder.byType(
 			{
 				senderAddress: "0x1234",
-				validatorPublicKey: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+				validatorPublicKey,
 			},
 			"updateValidator",
 		);
