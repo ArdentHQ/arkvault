@@ -4,7 +4,6 @@ import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-op
 import { Input, InputAddress, InputPassword } from "@/app/components/Input";
 import React, { useEffect } from "react";
 
-import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "i18next";
 import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryptionBanner.tsx/WalletEncryptionBanner";
@@ -220,20 +219,6 @@ const ImportInputField = ({
 				/>
 
 				<MnemonicRules mnemonic={getValues('value')}/>
-
-				<Alert
-					title={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.TITLE")}
-					variant="info"
-					collapsible={false}
-				>
-					<p>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}</p>
-					<ol className="list-disc pl-5">
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_1")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_2")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_3")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_4")}</li>
-					</ol>
-				</Alert>
 			</>
 		);
 	}
