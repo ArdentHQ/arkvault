@@ -61,9 +61,7 @@ export const authentication = (t: any) => {
 					try {
 						validateMnemonic(mnemonic, t);
 					} catch (e) {
-						if (e instanceof Error) {
-							return e.message;
-						}
+						return e.message;
 					}
 
 					try {
