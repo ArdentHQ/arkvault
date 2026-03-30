@@ -163,6 +163,7 @@ module.exports = {
 			"theme-dark-navy-700": "var(--theme-color-dark-navy-700)",
 			"theme-dark-navy-800": "var(--theme-color-dark-navy-800)",
 			"theme-dark-navy-900": "var(--theme-color-dark-navy-900)",
+			"theme-dark-navy-950": "var(--theme-color-dark-navy-950)",
 
 			"theme-dim-50": "var(--theme-color-dim-50)",
 			"theme-dim-100": "var(--theme-color-dim-100)",

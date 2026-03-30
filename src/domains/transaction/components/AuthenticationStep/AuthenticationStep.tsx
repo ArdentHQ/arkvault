@@ -18,6 +18,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
 import { Icon } from "@/app/components/Icon";
 import { Loader } from "@/app/components/Loader";
+import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
@@ -324,6 +325,7 @@ export const AuthenticationStep = ({
 							data-testid="AuthenticationStep__mnemonic"
 							ref={register(authentication.mnemonic(wallet))}
 						/>
+						<MnemonicRules mnemonic={getValues('mnemonic')} wrapperClass="mt-0"/>
 					</FormField>
 				</>
 			)}

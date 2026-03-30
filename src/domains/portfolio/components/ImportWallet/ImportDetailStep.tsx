@@ -12,6 +12,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 const validateAddress = async ({
 	findAddress,
@@ -26,6 +27,17 @@ const validateAddress = async ({
 	value: string;
 	network: Networks.Network;
 }) => {
+	const matchErrorKeyword = "Unknown letter";
+
+	try {
+		BIP39.validateOrThrow(value);
+	} catch (e) {
+		if (e instanceof Error && e.message.includes(matchErrorKeyword)) {
+			const errorWord = new RegExp(`${matchErrorKeyword}: "([^"]+)"`).exec(e.message)?.[1] ?? "";
+			return "Invalid word: " + errorWord;
+		}
+	}
+
 	try {
 		const address = await findAddress(value);
 

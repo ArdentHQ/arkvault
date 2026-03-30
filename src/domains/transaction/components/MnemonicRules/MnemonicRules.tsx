@@ -1,8 +1,8 @@
-import { BIP39 } from "@ardenthq/arkvault-crypto";
 import React, { useMemo } from "react";
 import cn from "classnames";
 import { Icon } from "@/app/components/Icon";
 import { t } from "i18next";
+import { twMerge } from "tailwind-merge";
 
 enum ValidationRule {
 	HasValidWordCount = "HAS_VALID_WORD_COUNT",
@@ -21,8 +21,7 @@ const validators: Record<ValidationRule, Function> = {
 	[ValidationRule.NoTrailingSpace]: (value: string) => value === value.trim(),
 };
 
-export const MnemonicRules = ({ mnemonic }: { mnemonic: string }) => {
-
+export const MnemonicRules = ({ mnemonic, wrapperClass }: { mnemonic: string; wrapperClass?: string }) => {
 	const result = useMemo(() => {
 		const result = new Map<ValidationRule, boolean>();
 
@@ -34,7 +33,7 @@ export const MnemonicRules = ({ mnemonic }: { mnemonic: string }) => {
 	}, [mnemonic]);
 
 	return (
-		<div className="bg-theme-secondary-100 border-theme-secondary-300 -mt-4.5 rounded-b border-t-0 p-4">
+		<div className={twMerge("bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mt-4.5 rounded-b border border-t-0 p-4", wrapperClass)}>
 			<Rules validationState={result} />
 		</div>
 	);
@@ -45,15 +44,17 @@ export const Rules = ({ validationState }: {validationState: Map<ValidationRule,
 		<div key={rule} className="flex items-center space-x-2">
 			<span
 				className={cn(
-					"text-theme-primary-500 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
-					isValid ? "bg-theme-primary-200 dark:bg-theme-primary-900" : "border-theme-secondary-600 border-2",
+					"text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",{
+						"bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950" : isValid,
+						"border-theme-secondary-700 dark:border-theme-dark-500 dim:border-theme-dim-500 border-2": !isValid,
+					}
 				)}
 			>
 				{isValid && <Icon name="CheckmarkSmall" size="xs" />}
 			</span>
 
 			<span
-				className={cn("text-sm font-semibold", isValid ? "text-theme-primary-600" : "text-theme-secondary-600")}
+				className={cn("text-sm font-semibold", isValid ? "text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600" : "text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200")}
 			>
 				<>{t(`COMMON.VALIDATION.MNEMONIC_RULES.${rule}`)}</>
 			</span>
