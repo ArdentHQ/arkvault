@@ -46,7 +46,7 @@ export const MnemonicRules = ({ mnemonic, wrapperClass }: { mnemonic: string; wr
 
 export const Rules = ({ validationState }: { validationState: Map<ValidationRule, boolean> }) => {
 	const renderRule = (rule: ValidationRule, isValid: boolean) => (
-		<div key={rule} className="flex items-center space-x-2">
+		<div key={rule} data-testid={`MnemonicRule-${rule}-${+isValid}`} className="flex items-center space-x-2">
 			<span
 				className={cn(
 					"text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",

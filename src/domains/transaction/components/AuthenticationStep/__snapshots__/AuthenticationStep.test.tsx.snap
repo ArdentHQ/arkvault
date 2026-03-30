@@ -169,6 +169,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         >
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-0"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-theme-secondary-700 dark:border-theme-dark-500 dim:border-theme-dim-500 border-2"
@@ -181,6 +182,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -218,6 +220,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -255,6 +258,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -412,6 +416,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         >
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -449,6 +454,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -486,6 +492,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -523,6 +530,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -1303,6 +1311,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         >
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-0"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-theme-secondary-700 dark:border-theme-dark-500 dim:border-theme-dim-500 border-2"
@@ -1315,6 +1324,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -1352,6 +1362,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -1389,6 +1400,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -1546,6 +1558,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         >
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -1583,6 +1596,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -1620,6 +1634,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
@@ -1657,6 +1672,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           </div>
           <div
             class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
           >
             <span
               class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
