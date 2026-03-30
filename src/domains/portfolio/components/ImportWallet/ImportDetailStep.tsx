@@ -230,7 +230,7 @@ const ImportInputField = ({
 					network={network}
 				/>
 
-				<MnemonicRules mnemonic={getValues('value')}/>
+				<MnemonicRules mnemonic={getValues("value")} />
 			</>
 		);
 	}
