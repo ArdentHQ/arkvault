@@ -60,7 +60,9 @@ describe("Authentication", () => {
 
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 
-		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe("COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD");
+		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe(
+			"COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD",
+		);
 
 		bip39ValidateOrThrowMock.mockRestore();
 	});
