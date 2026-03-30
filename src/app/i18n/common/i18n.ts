@@ -578,7 +578,7 @@ export const translations = {
 			LOWERCASE: "Lowercase characters only",
 			NO_TRAILING_SPACE: "No trailing spaces",
 		},
-		MNEMONIC_UNEXPECTED_WORD: "Unexpected word: {{word}}, please recheck",
+		MNEMONIC_UNEXPECTED_WORD: "Unexpected word: \"{{word}}\", please recheck.",
 		MULTIPLE_UNDERSCORES: "A username cannot contain two or more consecutive underscores.",
 		OPTIONAL: "This field is optional.",
 		PASSWORD_GENERIC_ERROR: "Please follow the hints below to strengthen your password.",

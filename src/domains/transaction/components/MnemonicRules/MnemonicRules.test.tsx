@@ -37,7 +37,7 @@ describe("validateMnemonic", () => {
 
 		expect(() => {
 			validateMnemonic(getDefaultWalletMnemonic(), t);
-		}).toThrowError("Unexpected word: lubble");
+		}).toThrowError('Unexpected word: "lubble"');
 
 		bip39ValidateOrThrowMock.mockRestore();
 	});
