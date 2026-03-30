@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 describe("MnemonicRules", () => {
 	it("should render invalid state for all rules when mnemonic is empty", () => {
-		render(<MnemonicRules mnemonic=""/>);
+		render(<MnemonicRules mnemonic="" />);
 
 		expect(screen.queryByTestId("")).not.toBeInTheDocument();
 	});
@@ -20,7 +20,7 @@ describe("MnemonicRules", () => {
 		["fail when spacing is not correct", "apple  hello", "HAS_VALID_SPACING-0"],
 		["fail when there is a trailing space", "apple hello ", "NO_TRAILING_SPACE-0"],
 	])("should %s", (_description, mnemonic, testId) => {
-		render(<MnemonicRules mnemonic={mnemonic}/>);
+		render(<MnemonicRules mnemonic={mnemonic} />);
 
 		expect(screen.getByTestId(`MnemonicRule-${testId}`)).toBeInTheDocument();
 	});
