@@ -119,6 +119,23 @@ describe("FeeService", () => {
 		});
 	});
 
+	describe("confirmationTime", () => {
+		it("should return Average time when feeType is undefined", () => {
+			const result = feeService.confirmationTime(undefined);
+			expect(result).toBe(8);
+		});
+
+		it("should return Average time as default for unknown feeType", () => {
+			const result = feeService.confirmationTime("max");
+			expect(result).toBe(8);
+		});
+
+		it("should use custom block time", () => {
+			const result = feeService.confirmationTime("avg", 4000);
+			expect(result).toBe(4);
+		});
+	});
+
 	describe("calculate", () => {
 		it("should return BigNumber.ZERO", async () => {
 			const mockTransaction = {

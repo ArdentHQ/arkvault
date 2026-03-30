@@ -273,4 +273,143 @@ describe("LedgerMigrator", () => {
 		transactionSpy1.restoreAll();
 		transactionSpy2.restoreAll();
 	});
+
+	it("should flush transactions", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+		const transactionSpy1 = await createTransactionMocks(wallet);
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+		]);
+
+		expect(migrator.transactions().length).toBe(1);
+
+		migrator.flushTransactions();
+		expect(migrator.transactions().length).toBe(0);
+
+		transactionSpy1.restoreAll();
+	});
+
+	it("should return empty when there is no next transaction", async () => {
+		const migrator = new LedgerMigrator({ env, profile });
+		expect(migrator.nextTransaction()).toBeUndefined();
+	});
+
+	it("should create transaction with empty addresses", async () => {
+		mockNanoSTransport();
+		const migrator = new LedgerMigrator({ env, profile });
+
+		await migrator.createTransactions([]);
+		expect(migrator.transactions().length).toBe(0);
+	});
+
+	it("should create two migration transactions", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+
+		await migrator.createTransactions(
+			[
+				{
+					address: wallet.address(),
+					path: senderPath,
+				},
+				{
+					address: profile.wallets().last().address(),
+					path: recipientPath,
+				},
+			],
+			true,
+		);
+
+		expect(migrator.transactions().length).toBe(2);
+	});
+
+	it("should import migrated wallets", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+		const transactionSpy1 = await createTransactionMocks(wallet);
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+		]);
+
+		migrator.nextTransaction();
+		const currentTransaction = migrator.currentTransaction();
+
+		await currentTransaction?.calculateFees();
+		currentTransaction?.selectFee("avg");
+		currentTransaction?.setSenderMaxAmount();
+		currentTransaction?.setIsPending(true);
+		await currentTransaction?.signAndBroadcast();
+		currentTransaction?.setIsCompleted(true);
+
+		await migrator.importMigratedWallets();
+		expect(migrator.completedTransactions().length).toBe(1);
+
+		transactionSpy1.restoreAll();
+	});
+
+	it("should not import if wallet already exists", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+		const transactionSpy1 = await createTransactionMocks(wallet);
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+		]);
+
+		migrator.nextTransaction();
+		const currentTransaction = migrator.currentTransaction();
+
+		await currentTransaction?.calculateFees();
+		currentTransaction?.selectFee("avg");
+		currentTransaction?.setSenderMaxAmount();
+		currentTransaction?.setIsPending(true);
+		await currentTransaction?.signAndBroadcast();
+		currentTransaction?.setIsCompleted(true);
+
+		await migrator.importMigratedWallets();
+		const walletCountBefore = profile.wallets().count();
+
+		await migrator.importMigratedWallets();
+		expect(profile.wallets().count()).toBe(walletCountBefore);
+
+		transactionSpy1.restoreAll();
+	});
+
+	it("should calculate current transaction index", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+			{
+				address: profile.wallets().last().address(),
+				path: recipientPath,
+			},
+		]);
+
+		expect(migrator.currentTransactionIndex()).toBe(-1);
+
+		migrator.nextTransaction();
+		expect(migrator.currentTransactionIndex()).toBe(0);
+	});
 });

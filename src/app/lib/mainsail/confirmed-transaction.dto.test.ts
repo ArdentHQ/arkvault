@@ -427,6 +427,13 @@ describe("ConfirmedTransactionData", () => {
 		expect(transaction.gasUsed()).toBe(0.01);
 	});
 
+	it("#receipt", () => {
+		transaction.configure(commonData);
+		const receiptInstance = transaction.receipt();
+		expect(receiptInstance).toBeDefined();
+		expect(receiptInstance.isSuccess()).toBe(true);
+	});
+
 	it("#isApprove", () => {
 		transaction.configure({ ...commonData, data: "0x000000" });
 		expect(transaction.isApprove()).toBe(false);
