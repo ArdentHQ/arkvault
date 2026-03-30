@@ -88,7 +88,7 @@ export const validateMnemonic = (mnemonic: string, t: any) => {
 		BIP39.validateOrThrow(mnemonic);
 	} catch (e) {
 		if (e instanceof Error && e.message.includes(matchErrorKeyword)) {
-			const errorWord = new RegExp(`${matchErrorKeyword}: "([^"]+)"`).exec(e.message)?.[1] ?? "";
+			const errorWord = new RegExp(`${matchErrorKeyword}: "([^"]+)"`).exec(e.message)?.[1];
 			throw new Error(t("COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD", { word: errorWord }));
 		}
 	}
