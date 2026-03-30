@@ -946,20 +946,20 @@ jobs:
                   timeout_minutes: 10
                   max_attempts: 1
                   command: pnpm test:coverage src/utils
-    libs:
+    libs-helpers:
         runs-on: ubuntu-latest
         env:
-            COVERAGE_INCLUDE_PATH: src/app/lib
-            COVERAGE_THRESHOLD_LINES: 85.07
-            COVERAGE_THRESHOLD_BRANCHES: 80.03
-            COVERAGE_THRESHOLD_FUNCTIONS: 85.33
-            COVERAGE_THRESHOLD_STATEMENTS: 85.04
+            COVERAGE_INCLUDE_PATH: src/app/lib/helpers
+            COVERAGE_THRESHOLD_LINES: 100
+            COVERAGE_THRESHOLD_BRANCHES: 100
+            COVERAGE_THRESHOLD_FUNCTIONS: 100
+            COVERAGE_THRESHOLD_STATEMENTS: 100
         strategy:
             matrix:
                 node-version:
                     - 22
         concurrency:
-            group: ${{ github.head_ref }}-test-libs
+            group: ${{ github.head_ref }}-test-libs-helpers
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v4
@@ -983,4 +983,43 @@ jobs:
               with:
                   timeout_minutes: 10
                   max_attempts: 1
-                  command: pnpm test:coverage src/app/lib
+                  command: pnpm test:coverage src/app/lib/helpers
+
+    libs-core:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/app/lib/profiles,src/app/lib/mainsail,src/app/lib/intl,src/app/lib/markets
+            COVERAGE_THRESHOLD_LINES: 93.76
+            COVERAGE_THRESHOLD_BRANCHES: 87.93
+            COVERAGE_THRESHOLD_FUNCTIONS: 93.47
+            COVERAGE_THRESHOLD_STATEMENTS: 93.55
+        strategy:
+            matrix:
+                node-version:
+                    - 22
+        concurrency:
+            group: ${{ github.head_ref }}-test-libs-core
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 10
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/lib/profiles src/app/lib/mainsail src/app/lib/intl src/app/lib/markets

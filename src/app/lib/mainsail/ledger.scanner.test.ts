@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi, beforeAll } from "vitest";
 import { mockNanoSTransport } from "@/utils/testing-library";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
@@ -107,5 +107,18 @@ describe("LedgerScannerTest", () => {
 		const result = await scanner.scan({ isLoadingMore: true, pageSize: 3 });
 
 		expect(result).toHaveLength(3);
+	});
+
+	it("should skip when no more wallets found", async () => {
+		vi.spyOn(profile.ledger(), "scan").mockResolvedValueOnce({});
+		vi.spyOn(profile.ledger(), "scanLegacy").mockResolvedValueOnce({});
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanAllWithBalance({
+			isLegacy: false,
+			slip44: 111,
+		});
+
+		expect(result).toHaveLength(0);
 	});
 });

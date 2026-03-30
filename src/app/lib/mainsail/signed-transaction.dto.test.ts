@@ -599,6 +599,11 @@ describe("SignedTransactionData", () => {
 			transaction.configure(mockSignedData, mockSerialized);
 		});
 
+		it("should return transfer when isTokenTransfer is true", () => {
+			vi.spyOn(transaction, "isTokenTransfer").mockReturnValue(true);
+			expect(transaction.type()).toBe("transfer");
+		});
+
 		it("should return transfer when isTransfer is true", () => {
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
 			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);

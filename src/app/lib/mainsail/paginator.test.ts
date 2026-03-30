@@ -98,6 +98,20 @@ describe("Paginator", () => {
 		expect(paginator.items()).toEqual([2, 4, 6]);
 	});
 
+	it("should return totalCount when defined", () => {
+		const data = [1, 2];
+		const pagination = { last: 3, next: 2, prev: undefined, self: 1, totalCount: 100 };
+		const paginator = newPaginator(data, pagination);
+		expect(paginator.totalCount()).toBe(100);
+	});
+
+	it("should return 0 for totalCount when not defined", () => {
+		const data = [1, 2];
+		const pagination = { last: 3, next: 2, prev: undefined, self: 1 };
+		const paginator = newPaginator(data, pagination);
+		expect(paginator.totalCount()).toBe(0);
+	});
+
 	it("should return the full pagination object", () => {
 		const data = [1];
 		const pagination = { last: 5, next: 3, prev: 1, self: 2 };
