@@ -320,4 +320,45 @@ describe("Network", () => {
 
 		expect(() => networkInstance.milestone()).toThrow("The [height] is an unknown configuration value.");
 	});
+
+	describe("#isSynced", () => {
+		it("should return true when both height and crypto are set", () => {
+			networkInstance.config().set("height", 100);
+			networkInstance.config().set("crypto", { milestones: [] });
+
+			expect(networkInstance.isSynced()).toBe(true);
+		});
+
+		it("should return false when height is missing", () => {
+			networkInstance.config().forget("height");
+
+			expect(networkInstance.isSynced()).toBe(false);
+		});
+
+		it("should return false when crypto is missing", () => {
+			networkInstance.config().forget("crypto");
+
+			expect(networkInstance.isSynced()).toBe(false);
+		});
+	});
+
+	describe("#fees", () => {
+		it("should return fee service", () => {
+			expect(networkInstance.fees()).toBeDefined();
+		});
+	});
+
+	describe("#blockTime", () => {
+		it("should return block time from milestone", () => {
+			const milestones = [
+				{ data: "first", height: 1, timeouts: { blockTime: 8000 } },
+				{ data: "second", height: 10, timeouts: { blockTime: 4000 } },
+			];
+			networkInstance.config().set("height", 5);
+			networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+			const result = networkInstance.blockTime();
+			expect(result).toBe(8000);
+		});
+	});
 });

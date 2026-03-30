@@ -1,5 +1,4 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-
 import { BigNumber } from "./bignumber";
 
 describe("BigNumber", () => {
@@ -232,5 +231,9 @@ describe("BigNumber", () => {
 
 	it("#valueOf", () => {
 		expect(subject.valueOf()).toBe("1");
+	});
+
+	it("#integerValue", () => {
+		expect(BigNumber.make("1.7").integerValue().toString()).toBe("1");
 	});
 });

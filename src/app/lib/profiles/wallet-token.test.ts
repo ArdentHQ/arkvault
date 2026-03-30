@@ -47,6 +47,10 @@ describe("WalletToken", () => {
 		);
 	});
 
+	it("#walletTokenDTO toJSON", () => {
+		expect(walletTokenDTO.toJSON()).toEqual(walletTokenData);
+	});
+
 	describe("TokenDTO", () => {
 		it("#address", () => {
 			expect(tokenDTO.address()).toBe(fixtureData.address);

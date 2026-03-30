@@ -46,6 +46,20 @@ describe("SignatoryService", () => {
 		});
 	});
 
+	describe("#bip44Mnemonic", () => {
+		it("should create a bip44 mnemonic signatory", async () => {
+			const mnemonic = MAINSAIL_MNEMONICS[0];
+			const path = "m/44'/60'/0'/0/0";
+
+			const result = await signatoryService.bip44Mnemonic(mnemonic, path);
+
+			expect(result).toBeDefined();
+			expect(result.actsWithBip44Mnemonic()).toBe(true);
+			expect(result.signingKey()).toBe(mnemonic);
+			expect(result.path()).toBe(path);
+		});
+	});
+
 	describe("ledger", () => {
 		it("should create a ledger signatory", async () => {
 			const path = "m/44'/60'/0'/0/0";
