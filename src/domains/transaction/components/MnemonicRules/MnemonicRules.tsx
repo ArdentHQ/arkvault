@@ -81,7 +81,7 @@ export const Rules = ({ validationState }: { validationState: Map<ValidationRule
 	);
 };
 
-export const validateMnemonic = (mnemonic: string, t:any) => {
+export const validateMnemonic = (mnemonic: string, t: any) => {
 	const matchErrorKeyword = "Unknown letter";
 
 	try {
@@ -89,7 +89,7 @@ export const validateMnemonic = (mnemonic: string, t:any) => {
 	} catch (e) {
 		if (e instanceof Error && e.message.includes(matchErrorKeyword)) {
 			const errorWord = new RegExp(`${matchErrorKeyword}: "([^"]+)"`).exec(e.message)?.[1] ?? "";
-			throw new Error(t("COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD", {word: errorWord}));
+			throw new Error(t("COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD", { word: errorWord }));
 		}
 	}
-}
+};

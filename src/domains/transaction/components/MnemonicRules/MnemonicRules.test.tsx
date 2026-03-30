@@ -32,20 +32,24 @@ describe("validateMnemonic", () => {
 		const { t } = result.current;
 
 		const bip39ValidateOrThrowMock = vi.spyOn(BIP39, "validateOrThrow").mockImplementation(() => {
-			throw new Error('Error: Unknown letter: "lubble". Allowed: x, y, z')
+			throw new Error('Error: Unknown letter: "lubble". Allowed: x, y, z');
 		});
 
-		expect(() => {validateMnemonic(getDefaultWalletMnemonic(), t)}).toThrowError("Unexpected word: lubble")
+		expect(() => {
+			validateMnemonic(getDefaultWalletMnemonic(), t);
+		}).toThrowError("Unexpected word: lubble");
 
 		bip39ValidateOrThrowMock.mockRestore();
 	});
 
 	it("should suppress irrelevant errors", () => {
 		const bip39ValidateOrThrowMock = vi.spyOn(BIP39, "validateOrThrow").mockImplementation(() => {
-			throw new Error('Invalid words')
+			throw new Error("Invalid words");
 		});
 
-		expect(() => {validateMnemonic(getDefaultWalletMnemonic(), vi.fn())}).not.toThrowError();
+		expect(() => {
+			validateMnemonic(getDefaultWalletMnemonic(), vi.fn());
+		}).not.toThrowError();
 
 		bip39ValidateOrThrowMock.mockRestore();
 	});
