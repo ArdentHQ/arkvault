@@ -325,7 +325,7 @@ export const AuthenticationStep = ({
 							data-testid="AuthenticationStep__mnemonic"
 							ref={register(authentication.mnemonic(wallet))}
 						/>
-						<MnemonicRules mnemonic={getValues('mnemonic')} wrapperClass="mt-0"/>
+						<MnemonicRules mnemonic={getValues("mnemonic")} wrapperClass="mt-0" />
 					</FormField>
 				</>
 			)}
