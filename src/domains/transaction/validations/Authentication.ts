@@ -5,6 +5,7 @@ import { debounceAsync } from "@/utils/debounce";
 import { AddressService } from "@/app/lib/mainsail/address.service";
 import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 import { WalletData } from "@/app/lib/profiles/wallet.enum";
+import { validateMnemonic } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 
@@ -57,6 +58,14 @@ export const authentication = (t: any) => {
 			}),
 			validate: {
 				matchSenderAddress: (mnemonic: string) => {
+					try {
+						validateMnemonic(mnemonic, t);
+					} catch (e) {
+						if (e instanceof Error) {
+							return e.message;
+						}
+					}
+
 					try {
 						let address: string;
 

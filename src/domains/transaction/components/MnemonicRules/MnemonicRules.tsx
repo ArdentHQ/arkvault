@@ -3,6 +3,7 @@ import cn from "classnames";
 import { Icon } from "@/app/components/Icon";
 import { t } from "i18next";
 import { twMerge } from "tailwind-merge";
+import { BIP39 } from "@ardenthq/arkvault-crypto";
 
 enum ValidationRule {
 	HasValidWordCount = "HAS_VALID_WORD_COUNT",
@@ -79,3 +80,16 @@ export const Rules = ({ validationState }: { validationState: Map<ValidationRule
 		</div>
 	);
 };
+
+export const validateMnemonic = (mnemonic: string, t:any) => {
+	const matchErrorKeyword = "Unknown letter";
+
+	try {
+		BIP39.validateOrThrow(mnemonic);
+	} catch (e) {
+		if (e instanceof Error && e.message.includes(matchErrorKeyword)) {
+			const errorWord = new RegExp(`${matchErrorKeyword}: "([^"]+)"`).exec(e.message)?.[1] ?? "";
+			throw new Error(t("COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD", {word: errorWord}));
+		}
+	}
+}
