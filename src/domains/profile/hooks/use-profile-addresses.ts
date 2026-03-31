@@ -13,35 +13,19 @@ export interface AddressProperties {
 
 interface ProfileAddressesProperties {
 	profile: Contracts.IProfile;
-	network?: Networks.Network;
 }
 
 export const useProfileAddresses = (
-	{ profile, network }: ProfileAddressesProperties,
+	{ profile }: ProfileAddressesProperties,
 	exceptMultiSignature?: boolean,
 ) => {
 	const contacts = profile.contacts().values();
 	const profileWallets = profile.wallets().values();
 
-	const isNetworkSelected = useCallback(
-		(addressNetwork: string) => {
-			if (!network) {
-				return true;
-			}
-
-			return addressNetwork === network.id();
-		},
-		[network],
-	);
-
 	const profileAddresses = useMemo(() => {
 		const profileAddresses: AddressProperties[] = [];
 
 		for (const wallet of profileWallets) {
-			if (!isNetworkSelected(wallet.network().id())) {
-				continue;
-			}
-
 			const address = {
 				address: wallet.address(),
 				alias: wallet.alias(),
@@ -55,7 +39,7 @@ export const useProfileAddresses = (
 		}
 
 		return profileAddresses;
-	}, [exceptMultiSignature, isNetworkSelected, profileWallets]);
+	}, [exceptMultiSignature, profileWallets]);
 
 	const getContactAddresses = useCallback(
 		(profileAddresses: AddressProperties[]) => {
@@ -88,7 +72,7 @@ export const useProfileAddresses = (
 
 			return contactAddresses;
 		},
-		[contacts, exceptMultiSignature, isNetworkSelected],
+		[contacts, exceptMultiSignature],
 	);
 
 	return useMemo(() => {

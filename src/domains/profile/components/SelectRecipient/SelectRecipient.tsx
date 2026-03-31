@@ -95,7 +95,7 @@ export const SelectRecipient = ({
 		}
 	}, [selectedAddress]);
 
-	const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
+	const { allAddresses } = useProfileAddresses({ profile }, exceptMultiSignature);
 
 	const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
 		label: address,

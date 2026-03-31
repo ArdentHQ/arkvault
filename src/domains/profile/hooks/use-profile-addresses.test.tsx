@@ -16,8 +16,6 @@ describe("useProfileAddresses", () => {
 			.setAddresses([
 				{
 					address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
-					coin: "Mainsail",
-					network: "mainsail.devnet",
 				},
 			]);
 
@@ -57,8 +55,6 @@ describe("useProfileAddresses", () => {
 		profile.contacts().create("New name", [
 			{
 				address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
-				coin: "Mainsail",
-				network: "mainsail.devnet",
 			},
 		]);
 
