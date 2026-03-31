@@ -18,7 +18,7 @@ enum Step {
 }
 
 export const ImportProfile = () => {
-	const { env, persist } = useEnvironmentContext();
+	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const navigate = useNavigate();
 
