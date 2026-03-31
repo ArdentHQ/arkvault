@@ -17,7 +17,7 @@ const showSelectAddressModal = async () => {
 	expect(selectRecipient).toBeInTheDocument();
 
 	await userEvent.click(selectRecipient);
-}
+};
 
 const selectSenderModalTitle = "Select Sender";
 
