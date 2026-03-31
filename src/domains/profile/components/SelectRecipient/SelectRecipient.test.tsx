@@ -4,7 +4,6 @@ import React from "react";
 
 import { SelectRecipient } from "./SelectRecipient";
 import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
-import * as useWalletAliasHook from "@/app/hooks/use-wallet-alias";
 
 let profile: Contracts.IProfile;
 
