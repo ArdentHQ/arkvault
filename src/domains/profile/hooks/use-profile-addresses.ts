@@ -14,9 +14,7 @@ interface ProfileAddressesProperties {
 	profile: Contracts.IProfile;
 }
 
-export const useProfileAddresses = (
-	{ profile }: ProfileAddressesProperties,
-) => {
+export const useProfileAddresses = ({ profile }: ProfileAddressesProperties) => {
 	const contacts = profile.contacts().values();
 	const profileWallets = profile.wallets().values();
 
