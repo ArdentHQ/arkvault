@@ -173,7 +173,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 		const isInvalidValue = isInvalid || fieldContext?.isInvalid;
 
 		const recipientOptions =
-			wallets?.map((wallet: Contracts.IReadWriteWallet) => ({
+			wallets.map((wallet: Contracts.IReadWriteWallet) => ({
 				isDisabled: disableAction(wallet),
 				label: wallet.address(),
 				value: wallet.address(),
@@ -191,8 +191,8 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 			}
 
 			return getWalletAlias({
-				address: wallet?.address() ?? "",
-				network: wallet?.network() ?? defaultNetwork,
+				address: wallet.address(),
+				network: wallet.network(),
 				profile,
 			});
 		}, [wallet, profile, defaultNetwork]);
