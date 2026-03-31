@@ -57,12 +57,12 @@ describe("useProfileAddresses", () => {
 		profile.contacts().create("Test contact", [
 			{
 				address: firstWalletAddress,
-			}
+			},
 		]);
 
 		const { result } = renderHook(() => useProfileAddresses({ profile }));
 
-		const contactAddresses = result.current.contactAddresses.map(d => d.address);
+		const contactAddresses = result.current.contactAddresses.map((d) => d.address);
 
 		expect(contactAddresses.includes(firstWalletAddress)).toBeFalsy();
 	});
