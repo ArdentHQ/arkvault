@@ -24,6 +24,15 @@ import { renderHook } from "@testing-library/react";
 import { truncate } from "@/app/lib/helpers";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import userEvent from "@testing-library/user-event";
+import { useLocation } from "react-router-dom";
+
+vi.mock("react-router-dom", async () => {
+	const actual = await vi.importActual("react-router-dom");
+	return {
+		...actual,
+		useLocation: vi.fn(),
+	};
+});
 
 const fixtureProfileId = getMainsailProfileId();
 const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052";
@@ -757,6 +766,29 @@ describe("Welcome", () => {
 		await userEvent.click(screen.getByText(commonTranslations.CREATE));
 
 		expect(router.state.location.pathname).toBe("/profiles/create");
+	});
+
+	it("should switch theme based on profile settings", async () => {
+		// eslint-disable-next-line testing-library/no-node-access
+		const spy = vi.spyOn(document.querySelector("html").classList, "add");
+
+		vi.mocked(useLocation).mockReturnValue({
+			hash: "",
+			key: "default",
+			pathname: "",
+			search: "",
+			state: { from: "/profiles/" + mockedProfileId },
+		});
+
+		render(<Welcome />);
+
+		await expect(screen.findByTestId(passwordTestID)).resolves.toBeVisible();
+
+		await submitPassword();
+
+		await waitFor(() => {
+			expect(spy).toHaveBeenNthCalledWith(1, "light");
+		});
 	});
 
 	it("should render without profiles", async () => {
