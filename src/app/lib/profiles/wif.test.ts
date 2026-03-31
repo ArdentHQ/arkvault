@@ -6,9 +6,9 @@ describe("WalletImportFormat", () => {
 
 	const mockWallet = {
 		data: () => ({
+			forget: (key: string) => mockData.delete(key),
 			get: (key: string) => mockData.get(key),
 			has: (key: string) => mockData.has(key),
-			forget: (key: string) => mockData.delete(key),
 			set: (key: string, value: any) => mockData.set(key, value),
 		}),
 		profile: () => ({

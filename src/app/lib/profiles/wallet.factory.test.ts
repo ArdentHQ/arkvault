@@ -423,4 +423,13 @@ describe("WalletFactory", () => {
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.SECRET_WITH_ENCRYPTION);
 		});
 	});
+
+	describe("generateAlias", () => {
+		it("should generate an alias for a wallet", async () => {
+			const wallet = await subject.fromMnemonicWithBIP39({ mnemonic });
+			const alias = subject.generateAlias(wallet);
+			expect(typeof alias).toBe("string");
+			expect(alias.length).toBeGreaterThan(0);
+		});
+	});
 });

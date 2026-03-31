@@ -68,7 +68,7 @@ describe("WalletSerialiser", () => {
 					locked: "200",
 				};
 			}
-			return undefined;
+			return;
 		});
 
 		const result = new WalletSerialiser(wallet).toJSON();
@@ -86,7 +86,7 @@ describe("WalletSerialiser", () => {
 					lockedVotes: "300",
 				};
 			}
-			return undefined;
+			return;
 		});
 
 		const result = new WalletSerialiser(wallet).toJSON();
@@ -104,7 +104,7 @@ describe("WalletSerialiser", () => {
 					lockedUnvotes: "150",
 				};
 			}
-			return undefined;
+			return;
 		});
 
 		const result = new WalletSerialiser(wallet).toJSON();
@@ -118,7 +118,7 @@ describe("WalletSerialiser", () => {
 			if (key === WalletData.Balance) {
 				return { available: undefined, fees: undefined };
 			}
-			return undefined;
+			return;
 		});
 
 		const result = new WalletSerialiser(wallet).toJSON();
@@ -140,7 +140,7 @@ describe("WalletSerialiser", () => {
 					},
 				};
 			}
-			return undefined;
+			return;
 		});
 
 		const result = new WalletSerialiser(wallet).toJSON();

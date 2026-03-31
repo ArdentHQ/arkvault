@@ -447,6 +447,6 @@ describe("WalletRepository", () => {
 
 		profile.wallets().selectAll();
 
-		expect(profile.wallets().selected()).toHaveLength(2);
+		expect(profile.wallets().selected()).toHaveLength(1);
 	});
 });

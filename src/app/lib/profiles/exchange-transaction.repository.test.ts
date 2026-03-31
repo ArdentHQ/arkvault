@@ -158,4 +158,28 @@ describe("ExchangeTransactionRepository", () => {
 		expect(repository.count()).toBe(1);
 		expect(repository.findById("test-id").orderId()).toBe("order-1");
 	});
+
+	test("should update input and output", ({ profile }) => {
+		const repository = profile.exchangeTransactions();
+
+		repository.fill({
+			"test-id": {
+				id: "test-id",
+				input: { address: "input-address", amount: "100", ticker: "BTC" },
+				orderId: "order-1",
+				output: { address: "output-address", amount: "200", ticker: "ETH" },
+				provider: "test-provider",
+				status: ExchangeTransactionStatus.New,
+			},
+		});
+
+		(repository as any).update("test-id", {
+			input: { address: "new-input", amount: "50", ticker: "BTC" },
+			output: { address: "new-output", amount: "75", ticker: "ETH" },
+		});
+
+		const updated = repository.findById("test-id");
+		expect(updated.input().address).toBe("new-input");
+		expect(updated.output().address).toBe("new-output");
+	});
 });

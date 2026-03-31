@@ -276,7 +276,7 @@ describe("TransactionAggregate", () => {
 				.spyOn(wallet.transactionIndex(), "unconfirmed")
 				.mockResolvedValue(new UnconfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
 
-			await subject.unconfirmed({ orderBy: "timestamp:desc", limit: 10 });
+			await subject.unconfirmed({ limit: 10, orderBy: "timestamp:desc" });
 			expect(unconfirmedSpy).toHaveBeenCalled();
 		});
 

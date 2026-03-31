@@ -284,12 +284,12 @@ describe("ExtendedConfirmedTransactionData", () => {
 		});
 
 		it("should call approveDetails", () => {
-			const mockApproveDetails = vi.fn().mockReturnValue({ spender: "0x123", amount: "100" });
+			const mockApproveDetails = vi.fn().mockReturnValue({ amount: "100", spender: "0x123" });
 			const dataWithApprove = { ...dataMock, approveDetails: mockApproveDetails };
 			const subject = new ExtendedConfirmedTransactionData(wallet, dataWithApprove as any);
 			const result = subject.approveDetails();
 			expect(mockApproveDetails).toHaveBeenCalled();
-			expect(result).toEqual({ spender: "0x123", amount: "100" });
+			expect(result).toEqual({ amount: "100", spender: "0x123" });
 		});
 
 		it("should call tokens", () => {

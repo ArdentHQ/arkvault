@@ -7,12 +7,12 @@ describe("AppearanceService", () => {
 
 	beforeEach(() => {
 		mockProfile = {
-			settings: () => ({
-				missing: vi.fn().mockReturnValue(true),
-				get: vi.fn(),
-			}),
 			getAttributes: () => ({
 				get: vi.fn().mockReturnValue(undefined),
+			}),
+			settings: () => ({
+				get: vi.fn(),
+				missing: vi.fn().mockReturnValue(true),
 			}),
 		};
 		service = new AppearanceService(mockProfile);
@@ -40,8 +40,8 @@ describe("AppearanceService", () => {
 
 	it("should get setting from profile settings when available", () => {
 		mockProfile.settings = () => ({
-			missing: vi.fn().mockReturnValue(false),
 			get: vi.fn().mockReturnValue("dark"),
+			missing: vi.fn().mockReturnValue(false),
 		});
 		service = new AppearanceService(mockProfile);
 		expect(service.get("theme")).toBe("dark");

@@ -423,31 +423,31 @@ describe("MigrationTransaction", () => {
 	});
 
 	it("should return false for isPending when isCompleted is true", () => {
-		const tx = new MigrationTransaction({ profile, env });
+		const tx = new MigrationTransaction({ env, profile });
 		tx.setIsPending(true);
 		tx.setIsCompleted(true);
 		expect(tx.isPending()).toBe(false);
 	});
 
 	it("should return true for isPending when isCompleted is false and isPending is true", () => {
-		const tx = new MigrationTransaction({ profile, env });
+		const tx = new MigrationTransaction({ env, profile });
 		tx.setIsPending(true);
 		expect(tx.isPending()).toBe(true);
 	});
 
 	it("should return false for isPendingConfirmation when isCompleted is true", () => {
-		const tx = new MigrationTransaction({ profile, env });
+		const tx = new MigrationTransaction({ env, profile });
 		tx.setIsCompleted(true);
 		expect(tx.isPendingConfirmation()).toBe(false);
 	});
 
 	it("should return false for isPendingConfirmation when no signed transaction", () => {
-		const tx = new MigrationTransaction({ profile, env });
+		const tx = new MigrationTransaction({ env, profile });
 		expect(tx.isPendingConfirmation()).toBe(false);
 	});
 
 	it("should return correct isCompleted state", () => {
-		const tx = new MigrationTransaction({ profile, env });
+		const tx = new MigrationTransaction({ env, profile });
 		expect(tx.isCompleted()).toBe(false);
 		tx.setIsCompleted(true);
 		expect(tx.isCompleted()).toBe(true);
