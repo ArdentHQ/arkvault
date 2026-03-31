@@ -211,7 +211,7 @@ describe("TransactionEncoder", () => {
 		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
 
 		const result = encoder.tokenTransfer(address, {
-			recipients: [{ address }]
+			recipients: [{ address }],
 			senderAddress: address,
 			tokenContractAddress: address,
 		});
