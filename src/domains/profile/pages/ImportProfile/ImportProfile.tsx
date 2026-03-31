@@ -34,14 +34,6 @@ export const ImportProfile = () => {
 	};
 
 	const handleProfileSave = async (submittedProfile) => {
-		// If imported profile doesn't have selected addresses, mark them all as selected.
-		if (submittedProfile.wallets().selected().length === 0) {
-			for (const wallet of submittedProfile.wallets().values()) {
-				wallet.mutator().isSelected(true);
-			}
-		}
-
-		await persist();
 		navigate("/");
 	};
 
