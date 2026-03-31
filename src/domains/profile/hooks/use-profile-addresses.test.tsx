@@ -51,9 +51,7 @@ describe("useProfileAddresses", () => {
 		expect(result.current.allAddresses).toHaveLength(5);
 	});
 
-	it("should ignore profile wallet addresses for returned contact addresses", () => {
-		const { result } = renderHook(() => useProfileAddresses({ profile }));
-
+	it("should ignore profile wallet addresses for returned contact addresses", async () => {
 		const firstWalletAddress = profile.wallets().first().address();
 
 		profile.contacts().create("Test contact", [
@@ -61,6 +59,8 @@ describe("useProfileAddresses", () => {
 				address: firstWalletAddress,
 			}
 		]);
+
+		const { result } = renderHook(() => useProfileAddresses({ profile }));
 
 		const contactAddresses = result.current.contactAddresses.map(d => d.address);
 
