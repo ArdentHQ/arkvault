@@ -776,7 +776,7 @@ describe("Welcome", () => {
 		expect(router.state.location.pathname).toBe("/profiles/create");
 	});
 
-	it("should switch theme based on profile settings", async () => {
+	it("should switch theme when `from` is present", async () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		const spy = vi.spyOn(document.querySelector("html").classList, "add");
 
@@ -796,6 +796,21 @@ describe("Welcome", () => {
 		});
 
 		spy.mockRestore();
+		useLocationMock.mockRestore();
+	});
+
+	it("should not display Sign In modal if `from` is invalid", async () => {
+		const useLocationMock = vi.mocked(useLocation).mockReturnValue({
+			...defaultUseLocationValue(),
+			state: { from: "/profiles/invalid-profile-id"},
+		});
+
+		render(<Welcome />);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId(passwordTestID)).not.toBeInTheDocument();
+		});
+
 		useLocationMock.mockRestore();
 	});
 
