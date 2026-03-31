@@ -46,6 +46,7 @@ export const useProfileAddresses = ({ profile }: ProfileAddressesProperties) => 
 					const addressAlreadyExist = profileAddresses.some(
 						({ address }) => address === contactAddress.address(),
 					);
+
 					if (addressAlreadyExist) {
 						continue;
 					}

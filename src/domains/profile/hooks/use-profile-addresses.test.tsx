@@ -50,4 +50,20 @@ describe("useProfileAddresses", () => {
 
 		expect(result.current.allAddresses).toHaveLength(5);
 	});
+
+	it("should ignore profile wallet addresses for returned contact addresses", () => {
+		const { result } = renderHook(() => useProfileAddresses({ profile }));
+
+		const firstWalletAddress = profile.wallets().first().address();
+
+		profile.contacts().create("Test contact", [
+			{
+				address: firstWalletAddress,
+			}
+		]);
+
+		const contactAddresses = result.current.contactAddresses.map(d => d.address);
+
+		expect(contactAddresses.includes(firstWalletAddress)).toBeFalsy();
+	});
 });
