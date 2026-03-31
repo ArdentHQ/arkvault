@@ -68,4 +68,9 @@ describe("Validator Service", () => {
 		const mapped = profile.validators().mapByIdentifier(defaultWallet, address);
 		expect(mapped?.address()).toBe(address);
 	});
+
+	test("#publicKeyExists with empty string", async ({ profile }) => {
+		const exists = await profile.validators().publicKeyExists("", profile.activeNetwork());
+		expect(exists).toBe(false);
+	});
 });
