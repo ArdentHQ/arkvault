@@ -34,8 +34,8 @@ vi.mock("react-router-dom", async () => {
 	};
 });
 
-function defaultUseLocationValue(){
-	return {hash: "", key: "default", pathname: "", search: "", state: undefined}
+function defaultUseLocationValue() {
+	return { hash: "", key: "default", pathname: "", search: "", state: undefined };
 }
 
 const fixtureProfileId = getMainsailProfileId();
