@@ -77,6 +77,16 @@ describe("SelectAddressDropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should not show dropdown options", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} showOptions={false} />);
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+		await waitFor(() => {
+			expect(screen.queryByText(firstOptionTestId)).not.toBeInTheDocument();
+		});
+	});
+
 	it("should open and close wallets modal", async () => {
 		render(<SelectAddressDropdown wallets={wallets} wallet={wallet} profile={profile} />);
 
