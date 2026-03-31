@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ardenthq/arkvault-crypto':
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.0.8
+        version: 0.0.8
       '@ardenthq/arkvault-url':
         specifier: ^1.2.0
         version: 1.2.0
@@ -416,8 +416,8 @@ packages:
     peerDependencies:
       ajv: '>=8'
 
-  '@ardenthq/arkvault-crypto@0.0.7':
-    resolution: {integrity: sha512-l+akr+TVs1QuJp5lCn2+6F4gcC6G6NG0NjeEcMeTH+z9D73AgVtENikxPoohyAXFgziu9OUKRxxt0uzMFMObzw==}
+  '@ardenthq/arkvault-crypto@0.0.8':
+    resolution: {integrity: sha512-YIz3q7yd8bjLM/P3T35LpfRLxtZ8DfadLoBnGAJEmbSMK5x1E+XVvCBuZTAMmIXq0VdDhe6nFNfaquih+LxECA==}
 
   '@ardenthq/arkvault-url@1.2.0':
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
@@ -2596,8 +2596,8 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  bcryptjs@3.0.2:
-    resolution: {integrity: sha512-k38b3XOZKv60C4E2hVsXTolJWfkGRMbILBIe2IBITXciy5bOsTKot5kDrf3ZfufQtQOUN5mXceUEpU1rTl9Uog==}
+  bcryptjs@3.0.3:
+    resolution: {integrity: sha512-GlF5wPWnSa/X5LKM1o0wz0suXIINz1iHRLvTS+sLyi7XPbe5ycmYI3DlZqVGZZtDgl4DmasFg7gOB3JYbphV5g==}
     hasBin: true
 
   bignumber.js@9.3.1:
@@ -6603,7 +6603,7 @@ snapshots:
       jsonpointer: 5.0.1
       leven: 3.1.0
 
-  '@ardenthq/arkvault-crypto@0.0.7':
+  '@ardenthq/arkvault-crypto@0.0.8':
     dependencies:
       '@noble/curves': 1.9.2
       '@noble/hashes': 1.8.0
@@ -6611,7 +6611,7 @@ snapshots:
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
       '@types/node': 22.15.32
-      bcryptjs: 3.0.2
+      bcryptjs: 3.0.3
       bn.js: 5.2.2
       create-xpub: 2.1.0
       hdkey: 2.1.0
@@ -9236,7 +9236,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  bcryptjs@3.0.2: {}
+  bcryptjs@3.0.3: {}
 
   bignumber.js@9.3.1: {}
 
@@ -12829,7 +12829,7 @@ snapshots:
       resolve-cwd: 1.0.0
       resolve-from: 4.0.0
       sanitize-filename: 1.6.3
-      semver: 7.7.2
+      semver: 7.7.3
       set-cookie-parser: 2.7.1
       source-map-support: 0.5.21
       strip-bom: 2.0.0
