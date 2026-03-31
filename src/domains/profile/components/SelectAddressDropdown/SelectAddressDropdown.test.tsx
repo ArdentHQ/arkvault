@@ -4,6 +4,7 @@ import React from "react";
 
 import { SelectAddressDropdown } from "./SelectAddressDropdown";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -115,5 +116,24 @@ describe("SelectAddressDropdown", () => {
 		});
 
 		expect(onChange).toHaveBeenCalledWith(wallets[0]);
+	});
+
+	it("should close search wallet modal", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} />);
+
+		const selectRecipient = screen.getByTestId("SelectRecipient__select-recipient");
+		expect(selectRecipient).toBeInTheDocument();
+
+		await userEvent.click(selectRecipient);
+
+		await expect(screen.findByText("Select Sender")).resolves.toBeVisible();
+
+		const closeButton = screen.getByTestId("Modal__close-button");
+
+		await userEvent.click(closeButton);
+
+		await waitFor(() => {
+			expect(screen.queryByText("Select Sender")).not.toBeInTheDocument();
+		});
 	});
 });
