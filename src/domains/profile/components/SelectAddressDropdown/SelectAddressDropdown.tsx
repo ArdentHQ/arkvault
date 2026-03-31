@@ -62,6 +62,8 @@ export const OptionLabel = ({
 		[address, getWalletAlias, network, profile],
 	);
 
+	const displayBalance = showBalance && !!wallet;
+
 	return (
 		<Tooltip content={wallet && getTooltipContent(wallet, t)} disabled={!option.isDisabled}>
 			<div
@@ -97,10 +99,10 @@ export const OptionLabel = ({
 						showTooltip={!option.isDisabled}
 					/>
 
-					{showBalance && (
+					{displayBalance && (
 						<Amount
-							value={wallet?.balance() ?? 0}
-							ticker={wallet?.network().ticker() ?? ""}
+							value={wallet.balance()}
+							ticker={wallet.network().ticker()}
 							className={cn("hidden flex-1 text-right font-semibold sm:inline-block", {
 								"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
 									option.isDisabled,
@@ -126,10 +128,10 @@ export const OptionLabel = ({
 					</div>
 				</div>
 
-				{showBalance && (
+				{displayBalance && (
 					<Amount
-						value={wallet?.balance() ?? 0}
-						ticker={wallet?.network().ticker() ?? ""}
+						value={wallet.balance()}
+						ticker={wallet.network().ticker()}
 						className={cn("mt-2 flex-1 text-sm font-semibold sm:hidden", {
 							"text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500":
 								option.isDisabled,
