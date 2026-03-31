@@ -131,4 +131,29 @@ describe("Notifications", () => {
 		expect(statusSpy).toHaveBeenCalled();
 		statusSpy.mockRestore();
 	});
+
+	test("should return first notification", ({ profile }) => {
+		profile.notifications().fill({
+			a: { ...notification, id: "a" },
+			b: { ...notification, id: "b" },
+		});
+
+		expect(profile.notifications().first()).toBeDefined();
+	});
+
+	test("should return last notification", ({ profile }) => {
+		profile.notifications().fill({
+			a: { ...notification, id: "a" },
+			b: { ...notification, id: "b" },
+		});
+
+		expect(profile.notifications().last()).toBeDefined();
+	});
+
+	test("should check if notification exists", ({ profile }) => {
+		profile.notifications().fill({ a: notification });
+
+		expect(profile.notifications().has("a")).toBe(true);
+		expect(profile.notifications().has("nonexistent")).toBe(false);
+	});
 });
