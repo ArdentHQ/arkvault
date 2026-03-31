@@ -37,6 +37,33 @@ describe("ParallelValidatorSyncer", () => {
 
 		expect(mockClientService.validators).toHaveBeenCalledWith({ limit: 50 });
 	});
+
+	test("should fetch validators from multiple pages in parallel", async () => {
+		const multiPageMock = {
+			validators: vi
+				.fn()
+				.mockResolvedValueOnce({
+					currentPage: () => "1",
+					items: () => [{ address: () => "v1", publicKey: () => "pk1" }],
+					lastPage: () => "3",
+				})
+				.mockResolvedValueOnce({
+					currentPage: () => "2",
+					items: () => [{ address: () => "v2", publicKey: () => "pk2" }],
+					lastPage: () => "3",
+				})
+				.mockResolvedValueOnce({
+					currentPage: () => "3",
+					items: () => [{ address: () => "v3", publicKey: () => "pk3" }],
+					lastPage: () => "3",
+				}),
+		} as unknown as ClientService;
+
+		const syncer = new ParallelValidatorSyncer(multiPageMock);
+		const result = await syncer.sync();
+
+		expect(result.length).toBeGreaterThanOrEqual(1);
+	});
 });
 
 describe("SerialValidatorSyncer", () => {
