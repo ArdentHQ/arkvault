@@ -33,7 +33,7 @@ export const ImportProfile = () => {
 		setActiveTab(Step.ProcessingStep);
 	};
 
-	const handleProfileSave = async (submittedProfile) => {
+	const handleProfileSave = async () => {
 		navigate("/");
 	};
 
