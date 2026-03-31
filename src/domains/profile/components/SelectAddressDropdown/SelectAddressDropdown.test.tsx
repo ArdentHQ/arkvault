@@ -127,7 +127,7 @@ describe("SelectAddressDropdown", () => {
 		expect(onChange).toHaveBeenCalledWith(wallets[0]);
 	});
 
-	it("should close search wallet modal", async () => {
+	it("should close search address modal", async () => {
 		render(<SelectAddressDropdown wallets={wallets} profile={profile} />);
 
 		await showSelectAddressModal();
@@ -143,7 +143,7 @@ describe("SelectAddressDropdown", () => {
 		});
 	});
 
-	it("should not open up search wallet modal if disabled", async () => {
+	it("should not open up search address modal if disabled", async () => {
 		render(<SelectAddressDropdown wallets={wallets} profile={profile} disabled />);
 
 		await showSelectAddressModal();
@@ -153,7 +153,7 @@ describe("SelectAddressDropdown", () => {
 		});
 	});
 
-	it("should select wallet from select recipient modal", async () => {
+	it("should select wallet from select address modal", async () => {
 		const onChange = vi.fn();
 
 		render(<SelectAddressDropdown wallets={wallets} profile={profile} onChange={onChange} />);
@@ -167,17 +167,21 @@ describe("SelectAddressDropdown", () => {
 		expect(onChange).toHaveBeenCalledWith(wallets[0]);
 	});
 
-	it("should hide select dropdown when select recipients modal is open", async () => {
+	it("should hide select dropdown when select address modal is open", async () => {
 		const onChange = vi.fn();
 
 		render(<SelectAddressDropdown wallets={wallets} profile={profile} onChange={onChange} />);
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+		expect(screen.getByTestId(firstOptionTestId)).toBeInTheDocument();
 
 		await showSelectAddressModal();
 
 		await expect(screen.findByText(selectSenderModalTitle)).resolves.toBeVisible();
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+			expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 		});
 	});
 });
