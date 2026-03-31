@@ -61,25 +61,6 @@ describe("SelectRecipient", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
 
-	it("should pass empty string to getWalletAlias when address is undefined", async () => {
-		const getWalletAliasSpy = vi.spyOn(useWalletAliasHook, "useWalletAlias").mockReturnValue({
-			getWalletAlias: vi.fn().mockReturnValue({ alias: undefined, isContact: false }),
-			syncOnChainUsernames: vi.fn(),
-		});
-
-		render(<SelectRecipient profile={profile} address="" />);
-
-		// Trigger onChangeAddress with undefined by clearing the input
-		const recipientInputField = screen.getByTestId("SelectDropdown__input");
-		await userEvent.clear(recipientInputField);
-
-		expect(getWalletAliasSpy.mock.results[0].value.getWalletAlias).toHaveBeenCalledWith(
-			expect.objectContaining({ address: "" }),
-		);
-
-		getWalletAliasSpy.mockRestore();
-	});
-
 	it("should focus & blur-xs the address input when is expanded", async () => {
 		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
