@@ -83,8 +83,18 @@ describe("SelectAddressDropdown", () => {
 		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
 		await waitFor(() => {
-			expect(screen.queryByText(firstOptionTestId)).not.toBeInTheDocument();
+			expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 		});
+	});
+
+	it("should display given wallets as options", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} />);
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+		for (const wallet of wallets) {
+			expect(screen.getByText(wallet.address())).toBeInTheDocument();
+		}
 	});
 
 	it("should open and close wallets modal", async () => {
