@@ -31,20 +31,6 @@ describe("useProfileAddresses", () => {
 		expect(result.current.profileAddresses).toHaveLength(2);
 	});
 
-	it.skip("should return all available addresses except MultiSignature", () => {
-		const walletMultiSignatureSpy = vi
-			.spyOn(profile.wallets().first(), "isMultiSignature")
-			.mockImplementation(() => true);
-
-		const { result } = renderHook(() => useProfileAddresses({ profile }, true));
-
-		expect(result.current.allAddresses).toHaveLength(1);
-		expect(result.current.contactAddresses).toHaveLength(0);
-		expect(result.current.profileAddresses).toHaveLength(1);
-
-		walletMultiSignatureSpy.mockRestore();
-	});
-
 	it("should return unique addresses", () => {
 		const { result, rerender } = renderHook(() => useProfileAddresses({ profile }));
 

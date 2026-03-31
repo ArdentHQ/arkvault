@@ -1,4 +1,3 @@
-import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback, useMemo } from "react";
 
@@ -17,7 +16,6 @@ interface ProfileAddressesProperties {
 
 export const useProfileAddresses = (
 	{ profile }: ProfileAddressesProperties,
-	exceptMultiSignature?: boolean,
 ) => {
 	const contacts = profile.contacts().values();
 	const profileWallets = profile.wallets().values();
@@ -39,7 +37,7 @@ export const useProfileAddresses = (
 		}
 
 		return profileAddresses;
-	}, [exceptMultiSignature, profileWallets]);
+	}, [profileWallets]);
 
 	const getContactAddresses = useCallback(
 		(profileAddresses: AddressProperties[]) => {
@@ -47,10 +45,6 @@ export const useProfileAddresses = (
 
 			for (const contact of contacts) {
 				for (const contactAddress of contact.addresses().values()) {
-					if (exceptMultiSignature) {
-						continue;
-					}
-
 					const addressAlreadyExist = profileAddresses.some(
 						({ address }) => address === contactAddress.address(),
 					);
@@ -72,7 +66,7 @@ export const useProfileAddresses = (
 
 			return contactAddresses;
 		},
-		[contacts, exceptMultiSignature],
+		[contacts],
 	);
 
 	return useMemo(() => {

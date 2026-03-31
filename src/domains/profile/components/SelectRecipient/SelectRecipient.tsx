@@ -37,7 +37,6 @@ export const SelectRecipient = ({
 	showOptions = true,
 	network,
 	placeholder,
-	exceptMultiSignature,
 	onChange,
 	contactSearchTitle,
 	contactSearchDescription,
@@ -95,7 +94,7 @@ export const SelectRecipient = ({
 		}
 	}, [selectedAddress]);
 
-	const { allAddresses } = useProfileAddresses({ profile }, exceptMultiSignature);
+	const { allAddresses } = useProfileAddresses({ profile });
 
 	const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
 		label: address,
