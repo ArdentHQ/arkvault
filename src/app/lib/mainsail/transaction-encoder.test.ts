@@ -1,4 +1,4 @@
-import { describe, beforeAll, it } from "vitest";
+import { describe, beforeAll, it, vi } from "vitest";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
 import { TransactionEncoder } from "./transaction-encoder";
@@ -203,6 +203,21 @@ describe("TransactionEncoder", () => {
 				tokenContractAddress: address,
 			}),
 		).toThrow();
+	});
+
+	it("should handle tokenTransfer with recipient missing amount", async () => {
+		const encoder = new TransactionEncoder(profile, profile.activeNetwork());
+		const address = walletToken.token().address();
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
+
+		const result = encoder.tokenTransfer(address, {
+			recipients: [{ address }]
+			senderAddress: address,
+			tokenContractAddress: address,
+		});
+
+		expect(result.to).toBe(address);
+		expect(result.data).toBeDefined();
 	});
 
 	it("should handle vote type in byType", async () => {

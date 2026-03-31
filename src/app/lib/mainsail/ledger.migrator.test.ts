@@ -4,7 +4,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { minVersionList } from "@/app/contexts";
 import { WalletData } from "@/app/lib/mainsail/wallet.dto";
 import { BigNumber } from "@/app/lib/helpers";
-import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
+import { LedgerMigrator, MigrationTransaction } from "@/app/lib/mainsail/ledger.migrator";
 
 export const createLedgerMocks = (wallet: Contracts.IReadWriteWallet, publicKeyPaths: Map<string, string>) => {
 	const isEthBasedAppSpy = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockResolvedValue(true);
@@ -411,5 +411,45 @@ describe("LedgerMigrator", () => {
 
 		migrator.nextTransaction();
 		expect(migrator.currentTransactionIndex()).toBe(0);
+	});
+});
+
+describe("MigrationTransaction", () => {
+	let profile: Contracts.IProfile;
+
+	beforeEach(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(profile);
+	});
+
+	it("should return false for isPending when isCompleted is true", () => {
+		const tx = new MigrationTransaction({ profile, env });
+		tx.setIsPending(true);
+		tx.setIsCompleted(true);
+		expect(tx.isPending()).toBe(false);
+	});
+
+	it("should return true for isPending when isCompleted is false and isPending is true", () => {
+		const tx = new MigrationTransaction({ profile, env });
+		tx.setIsPending(true);
+		expect(tx.isPending()).toBe(true);
+	});
+
+	it("should return false for isPendingConfirmation when isCompleted is true", () => {
+		const tx = new MigrationTransaction({ profile, env });
+		tx.setIsCompleted(true);
+		expect(tx.isPendingConfirmation()).toBe(false);
+	});
+
+	it("should return false for isPendingConfirmation when no signed transaction", () => {
+		const tx = new MigrationTransaction({ profile, env });
+		expect(tx.isPendingConfirmation()).toBe(false);
+	});
+
+	it("should return correct isCompleted state", () => {
+		const tx = new MigrationTransaction({ profile, env });
+		expect(tx.isCompleted()).toBe(false);
+		tx.setIsCompleted(true);
+		expect(tx.isCompleted()).toBe(true);
 	});
 });

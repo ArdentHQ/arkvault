@@ -83,6 +83,18 @@ describe("VoteRegistry", () => {
 				"The voting data has not been synced. Please call [synchroniser().votes()] before accessing votes.",
 			);
 		});
+
+		test("should return used votes count", ({ defaultWallet }) => {
+			const voteRegistry = new VoteRegistry(defaultWallet, mockAttributes, defaultWallet);
+			vi.spyOn(defaultWallet.data(), "get").mockImplementation((key) => {
+				if (key === WalletData.VotesUsed) {
+					return 30;
+				}
+				return;
+			});
+
+			expect(voteRegistry.used()).toBe(30);
+		});
 	});
 
 	describe("available", () => {

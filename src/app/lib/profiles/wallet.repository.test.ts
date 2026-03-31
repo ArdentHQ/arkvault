@@ -434,4 +434,19 @@ describe("WalletRepository", () => {
 		consoleSpy.mockRestore();
 		pqueueSpy.mockRestore();
 	});
+
+	it("should select all wallets", async () => {
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[1],
+		});
+		profile.wallets().push(wallet2);
+
+		profile.wallets().selectOnly([]);
+
+		expect(profile.wallets().selected()).toHaveLength(0);
+
+		profile.wallets().selectAll();
+
+		expect(profile.wallets().selected()).toHaveLength(2);
+	});
 });

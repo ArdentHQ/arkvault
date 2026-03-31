@@ -76,6 +76,11 @@ describe("ReadOnlyWallet", () => {
 		expect(wallet.avatar()).toBe(avatar);
 	});
 
+	it("should return the correct alias", () => {
+		const wallet = new ReadOnlyWallet(mockWalletData, profile);
+		expect(wallet.alias()).toBeDefined();
+	});
+
 	it("should return the correct explorer link", () => {
 		const wallet = new ReadOnlyWallet(mockWalletData, profile);
 		expect(wallet.explorerLink()).toBe(mockWalletData.explorerLink);

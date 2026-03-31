@@ -1,7 +1,8 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { WalletSerialiser } from "./serialiser";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { IReadWriteWallet } from "./wallet.contract";
+import { WalletData } from "./contracts";
 
 describe("WalletSerialiser", () => {
 	let serialiser: WalletSerialiser;
@@ -56,5 +57,98 @@ describe("WalletSerialiser", () => {
 			  },
 			}
 		`);
+	});
+
+	it("should serialize balance with locked field", () => {
+		const dataSpy = vi.spyOn(wallet.data(), "get").mockImplementation((key?: string) => {
+			if (key === WalletData.Balance) {
+				return {
+					available: "1000",
+					fees: "500",
+					locked: "200",
+				};
+			}
+			return undefined;
+		});
+
+		const result = new WalletSerialiser(wallet).toJSON();
+		expect(result.data.BALANCE.locked).toBe("200");
+
+		dataSpy.mockRestore();
+	});
+
+	it("should serialize balance with lockedVotes field", () => {
+		const dataSpy = vi.spyOn(wallet.data(), "get").mockImplementation((key?: string) => {
+			if (key === WalletData.Balance) {
+				return {
+					available: "1000",
+					fees: "500",
+					lockedVotes: "300",
+				};
+			}
+			return undefined;
+		});
+
+		const result = new WalletSerialiser(wallet).toJSON();
+		expect(result.data.BALANCE.lockedVotes).toBe("300");
+
+		dataSpy.mockRestore();
+	});
+
+	it("should serialize balance with lockedUnvotes field", () => {
+		const dataSpy = vi.spyOn(wallet.data(), "get").mockImplementation((key?: string) => {
+			if (key === WalletData.Balance) {
+				return {
+					available: "1000",
+					fees: "500",
+					lockedUnvotes: "150",
+				};
+			}
+			return undefined;
+		});
+
+		const result = new WalletSerialiser(wallet).toJSON();
+		expect(result.data.BALANCE.lockedUnvotes).toBe("150");
+
+		dataSpy.mockRestore();
+	});
+
+	it("should default available and fees to 0 when undefined", () => {
+		const dataSpy = vi.spyOn(wallet.data(), "get").mockImplementation((key?: string) => {
+			if (key === WalletData.Balance) {
+				return { available: undefined, fees: undefined };
+			}
+			return undefined;
+		});
+
+		const result = new WalletSerialiser(wallet).toJSON();
+		expect(result.data.BALANCE.available).toBe("0");
+		expect(result.data.BALANCE.fees).toBe("0");
+
+		dataSpy.mockRestore();
+	});
+
+	it("should serialize balance with tokens field", () => {
+		const dataSpy = vi.spyOn(wallet.data(), "get").mockImplementation((key?: string) => {
+			if (key === WalletData.Balance) {
+				return {
+					available: "1000",
+					fees: "500",
+					tokens: {
+						"0xTokenA": "5000",
+						"0xTokenB": "10000",
+					},
+				};
+			}
+			return undefined;
+		});
+
+		const result = new WalletSerialiser(wallet).toJSON();
+		expect(result.data.BALANCE.tokens).toEqual({
+			"0xTokenA": "5000",
+			"0xTokenB": "10000",
+		});
+
+		dataSpy.mockRestore();
 	});
 });

@@ -41,6 +41,10 @@ describe("WalletToken", () => {
 		expect(walletToken.token()).toBe(tokenDTO);
 	});
 
+	it("#balanceRaw", () => {
+		expect(walletToken.balanceRaw()).toBe(walletTokenData.balance);
+	});
+
 	it("#contractExplorerLink", () => {
 		expect(walletToken.contractExplorerLink()).toBe(
 			"https://explorer-demo.mainsailhq.com/addresses/0xdeb478251073157e400c3d8d2ed92a85c958f9fa",

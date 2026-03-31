@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { Environment } from "./environment";
+import { StubStorage } from "@/tests/mocks";
 
 describe("Environment", () => {
 	vi.mock("@/app/lib/mainsail", () => ({
@@ -61,5 +62,40 @@ describe("Environment", () => {
 		const environment = new Environment({} as any);
 		environment.setMigrations({ schema: {} }, "1.0.0");
 		expect(environment.migrationSchemas()).toEqual({ schema: {} });
+	});
+
+	it("should reset with indexeddb storage when no options", () => {
+		const environment = new Environment({} as any);
+		environment.reset();
+		expect(environment.storage()).toBeDefined();
+	});
+
+	it("should reset with string storage option", () => {
+		const environment = new Environment({} as any);
+		environment.reset({ storage: "localstorage" } as any);
+		expect(environment.storage()).toBeDefined();
+	});
+
+	it("should throw when verifying with corrupted data", async () => {
+		const mockStorage = {
+			all: vi.fn().mockResolvedValue({ data: 123, profiles: 456 }),
+			forget: vi.fn().mockResolvedValue(undefined),
+			get: vi.fn().mockResolvedValue(undefined),
+			set: vi.fn().mockResolvedValue(undefined),
+		};
+		const environment = new Environment({ storage: mockStorage } as any);
+		await expect(environment.verify()).rejects.toThrow("Terminating due to corrupted state:");
+	});
+
+	it("should verify with valid storage data", async () => {
+		const mockStorage = new StubStorage();
+		const environment = new Environment({ storage: mockStorage } as any);
+		await expect(environment.verify({ data: {}, profiles: {} })).resolves.toBeUndefined();
+	});
+
+	it("should throw when booting without storage", async () => {
+		const environment = new Environment({} as any);
+		(environment as any)["#storage"] = undefined;
+		await expect(environment.boot()).rejects.toThrow("Please call [verify] before booting the environment.");
 	});
 });

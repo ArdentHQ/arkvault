@@ -76,6 +76,12 @@ describe("Wallet", () => {
 		}
 	});
 
+	it("should have an account name", () => {
+		const spy = vi.spyOn(wallet.settings(), "get").mockReturnValue("MyAccount");
+		expect(wallet.accountName()).toBe("MyAccount");
+		spy.mockRestore();
+	});
+
 	it("should have a tokenCount", () => {
 		expect(wallet.tokenCount()).toBe(0);
 	});
@@ -504,6 +510,10 @@ describe("Wallet", () => {
 		expect(wallet.transaction()).toBeInstanceOf(WalletTransactionService);
 	});
 
+	it("should have a tokens repository", () => {
+		expect(wallet.tokens()).toBeDefined();
+	});
+
 	it("should have a transaction service", () => {
 		expect(wallet.transactionService()).toBeInstanceOf(TransactionService);
 	});
@@ -667,6 +677,12 @@ describe("Wallet", () => {
 	it("should check if acts with mnemonic with encryption", () => {
 		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue(WalletImportMethod.BIP39.MNEMONIC_WITH_ENCRYPTION);
 		expect(wallet.actsWithMnemonicWithEncryption()).toBe(true);
+		spy.mockRestore();
+	});
+
+	it("should check if acts with bip44 mnemonic with encryption", () => {
+		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue(WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
+		expect(wallet.actsWithBip44MnemonicWithEncryption()).toBe(true);
 		spy.mockRestore();
 	});
 

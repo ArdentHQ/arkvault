@@ -1,5 +1,5 @@
 import { HttpResponse, http } from "msw";
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { UnconfirmedTransactionsService } from "@/app/lib/mainsail/unconfirmed-transactions.service";
 import { server } from "@/tests/mocks/server";
@@ -158,5 +158,12 @@ describe("UnconfirmedTransactionsService", () => {
 		});
 
 		expect(res.results.length).toEqual(4);
+	});
+
+	it("should return empty array when response has no items", async () => {
+		server.use(http.get(UNCONFIRMED_ENDPOINT, () => HttpResponse.json({ data: [], meta: {} })));
+
+		const res = await service.listUnconfirmed();
+		expect(res.results).toEqual([]);
 	});
 });
