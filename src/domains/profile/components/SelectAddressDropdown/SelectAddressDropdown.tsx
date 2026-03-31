@@ -174,12 +174,11 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 
 		const isInvalidValue = isInvalid || fieldContext?.isInvalid;
 
-		const recipientOptions =
-			wallets.map((wallet: Contracts.IReadWriteWallet) => ({
-				isDisabled: disableAction(wallet),
-				label: wallet.address(),
-				value: wallet.address(),
-			}));
+		const recipientOptions = wallets.map((wallet: Contracts.IReadWriteWallet) => ({
+			isDisabled: disableAction(wallet),
+			label: wallet.address(),
+			value: wallet.address(),
+		}));
 
 		const changeHandler = (option: any) => {
 			const wallet = wallets.find((wallet: Contracts.IReadWriteWallet) => wallet.address() === option.value);
