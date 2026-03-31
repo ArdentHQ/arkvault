@@ -802,7 +802,7 @@ describe("Welcome", () => {
 	it("should not display Sign In modal if `from` is invalid", async () => {
 		const useLocationMock = vi.mocked(useLocation).mockReturnValue({
 			...defaultUseLocationValue(),
-			state: { from: "/profiles/invalid-profile-id" },
+			state: { from: "/invalid/profile-id" },
 		});
 
 		render(<Welcome />);
