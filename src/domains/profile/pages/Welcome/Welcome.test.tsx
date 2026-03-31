@@ -9,7 +9,7 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { afterAll, vi } from "vitest";
+import { afterAll, beforeAll, beforeEach, vi } from "vitest";
 import { httpClient, toasts } from "@/app/services";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -30,9 +30,13 @@ vi.mock("react-router-dom", async () => {
 	const actual = await vi.importActual("react-router-dom");
 	return {
 		...actual,
-		useLocation: vi.fn(),
+		useLocation: vi.fn().mockReturnValue(defaultUseLocationValue()),
 	};
 });
+
+function defaultUseLocationValue(){
+	return {hash: "", key: "default", pathname: "", search: "", state: undefined}
+}
 
 const fixtureProfileId = getMainsailProfileId();
 const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052";
@@ -458,6 +462,10 @@ describe("Welcome with deeplink", () => {
 });
 
 describe("Welcome", () => {
+	beforeEach(() => {
+		vi.mocked(useLocation).mockReturnValue(defaultUseLocationValue());
+	});
+
 	it("should navigate to profile dashboard", async () => {
 		const { container, router } = render(<Welcome />);
 
@@ -772,11 +780,8 @@ describe("Welcome", () => {
 		// eslint-disable-next-line testing-library/no-node-access
 		const spy = vi.spyOn(document.querySelector("html").classList, "add");
 
-		vi.mocked(useLocation).mockReturnValue({
-			hash: "",
-			key: "default",
-			pathname: "",
-			search: "",
+		const useLocationMock = vi.mocked(useLocation).mockReturnValue({
+			...defaultUseLocationValue(),
 			state: { from: "/profiles/" + mockedProfileId },
 		});
 
@@ -789,6 +794,9 @@ describe("Welcome", () => {
 		await waitFor(() => {
 			expect(spy).toHaveBeenNthCalledWith(1, "light");
 		});
+
+		spy.mockRestore();
+		useLocationMock.mockRestore();
 	});
 
 	it("should render without profiles", async () => {
