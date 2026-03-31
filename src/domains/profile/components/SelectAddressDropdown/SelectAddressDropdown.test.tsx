@@ -12,6 +12,15 @@ let wallets: Contracts.IReadWriteWallet[];
 
 const firstOptionTestId = "SelectDropdown__option--0";
 
+const showSelectAddressModal = async () => {
+	const selectRecipient = screen.getByTestId("SelectRecipient__select-recipient");
+	expect(selectRecipient).toBeInTheDocument();
+
+	await userEvent.click(selectRecipient);
+}
+
+const selectSenderModalTitle = "Select Sender";
+
 describe("SelectAddressDropdown", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
@@ -121,36 +130,54 @@ describe("SelectAddressDropdown", () => {
 	it("should close search wallet modal", async () => {
 		render(<SelectAddressDropdown wallets={wallets} profile={profile} />);
 
-		const selectRecipient = screen.getByTestId("SelectRecipient__select-recipient");
-		expect(selectRecipient).toBeInTheDocument();
+		await showSelectAddressModal();
 
-		await userEvent.click(selectRecipient);
-
-		await expect(screen.findByText("Select Sender")).resolves.toBeVisible();
+		await expect(screen.findByText(selectSenderModalTitle)).resolves.toBeVisible();
 
 		const closeButton = screen.getByTestId("Modal__close-button");
 
 		await userEvent.click(closeButton);
 
 		await waitFor(() => {
-			expect(screen.queryByText("Select Sender")).not.toBeInTheDocument();
+			expect(screen.queryByText(selectSenderModalTitle)).not.toBeInTheDocument();
 		});
 	});
 
-	it("should select wallet from search wallet modal", async () => {
+	it("should not open up search wallet modal if disabled", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} disabled />);
+
+		await showSelectAddressModal();
+
+		await waitFor(() => {
+			expect(screen.queryByText(selectSenderModalTitle)).not.toBeInTheDocument();
+		});
+	});
+
+	it("should select wallet from select recipient modal", async () => {
 		const onChange = vi.fn();
 
 		render(<SelectAddressDropdown wallets={wallets} profile={profile} onChange={onChange} />);
 
-		const selectRecipient = screen.getByTestId("SelectRecipient__select-recipient");
-		expect(selectRecipient).toBeInTheDocument();
+		await showSelectAddressModal();
 
-		await userEvent.click(selectRecipient);
-
-		await expect(screen.findByText("Select Sender")).resolves.toBeVisible();
+		await expect(screen.findByText(selectSenderModalTitle)).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 
 		expect(onChange).toHaveBeenCalledWith(wallets[0]);
+	});
+
+	it("should hide select dropdown when select recipients modal is open", async () => {
+		const onChange = vi.fn();
+
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} onChange={onChange} />);
+
+		await showSelectAddressModal();
+
+		await expect(screen.findByText(selectSenderModalTitle)).resolves.toBeVisible();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+		});
 	});
 });
