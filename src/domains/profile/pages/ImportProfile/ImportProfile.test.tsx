@@ -15,7 +15,6 @@ const importProfileURL = "/profiles/import";
 
 const browseFiles = () => screen.getByTestId("SelectFile__browse-files");
 
-const changeFileID = "SelectFileStep__change-file";
 const importTitle = "Import Profile";
 const submitID = "PasswordModal__submit-button";
 const validPassword = "S3cUrePa$sword";
