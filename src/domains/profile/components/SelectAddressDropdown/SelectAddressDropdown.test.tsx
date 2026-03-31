@@ -136,4 +136,21 @@ describe("SelectAddressDropdown", () => {
 			expect(screen.queryByText("Select Sender")).not.toBeInTheDocument();
 		});
 	});
+
+	it("should select wallet from search wallet modal", async () => {
+		const onChange = vi.fn();
+
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} onChange={onChange} />);
+
+		const selectRecipient = screen.getByTestId("SelectRecipient__select-recipient");
+		expect(selectRecipient).toBeInTheDocument();
+
+		await userEvent.click(selectRecipient);
+
+		await expect(screen.findByText("Select Sender")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+
+		expect(onChange).toHaveBeenCalledWith(wallets[0]);
+	});
 });
