@@ -1,4 +1,4 @@
-import { describe, vi } from "vitest";
+import { describe } from "vitest";
 import { test } from "@/utils/testing-library";
 import { http, HttpResponse } from "msw";
 import { server } from "@/tests/mocks/server";
