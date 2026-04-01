@@ -536,8 +536,8 @@ describe("TransactionService", () => {
 
 	it("should sign with HDWallet for BIP44 mnemonic signatory", async () => {
 		const bip44Signatory = new Bip44MnemonicSignatory({
-			signingKey: MAINSAIL_MNEMONICS[0],
 			path: "m/44'/60'/0'/0/0",
+			signingKey: MAINSAIL_MNEMONICS[0],
 		});
 		const signatory = new Signatory(bip44Signatory);
 
