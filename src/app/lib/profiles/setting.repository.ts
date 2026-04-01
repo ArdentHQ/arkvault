@@ -24,9 +24,7 @@ export class SettingRepository implements ISettingRepository {
 
 	/** {@inheritDoc ISettingRepository.get} */
 	public get<T>(key: string, defaultValue?: T): T | undefined {
-		/* istanbul ignore next */
 		if (this.#isUnknownKey(key)) {
-			/* istanbul ignore next */
 			return;
 		}
 
@@ -35,9 +33,7 @@ export class SettingRepository implements ISettingRepository {
 
 	/** {@inheritDoc ISettingRepository.set} */
 	public set(key: string, value: string | number | boolean | object): void {
-		/* istanbul ignore next */
 		if (this.#isUnknownKey(key)) {
-			/* istanbul ignore next */
 			return;
 		}
 
@@ -55,9 +51,7 @@ export class SettingRepository implements ISettingRepository {
 
 	/** {@inheritDoc ISettingRepository.has} */
 	public has(key: string): boolean {
-		/* istanbul ignore next */
 		if (this.#isUnknownKey(key)) {
-			/* istanbul ignore next */
 			return false;
 		}
 
@@ -71,9 +65,7 @@ export class SettingRepository implements ISettingRepository {
 
 	/** {@inheritDoc ISettingRepository.forget} */
 	public forget(key: string): void {
-		/* istanbul ignore next */
 		if (this.#isUnknownKey(key)) {
-			/* istanbul ignore next */
 			return;
 		}
 
@@ -90,18 +82,14 @@ export class SettingRepository implements ISettingRepository {
 	}
 
 	#isUnknownKey(key: string): boolean {
-		/* istanbul ignore next */
 		if (this.#allowedKeys.includes(key)) {
 			return false;
 		}
 
-		/* istanbul ignore next */
 		if (this.#data.has(key)) {
-			/* istanbul ignore next */
 			this.#data.forget(key);
 		}
 
-		/* istanbul ignore next */
 		return true;
 	}
 }
