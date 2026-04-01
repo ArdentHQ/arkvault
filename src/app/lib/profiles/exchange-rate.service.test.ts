@@ -1,4 +1,4 @@
-import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
+import { describe, expect, it, beforeEach, afterEach } from "vitest";
 import { DateTime } from "@/app/lib/intl";
 import { ExchangeRateService } from "./exchange-rate.service";
 import { MarketService } from "@/app/lib/markets";

@@ -14,6 +14,8 @@ const notification = {
 	type: INotificationTypes.Transaction,
 };
 
+const nonExistent = "non-existent";
+
 describe("Notifications", () => {
 	test("should return all notifications", ({ profile }) => {
 		expect(profile.notifications().all()).toBeDefined();
@@ -76,7 +78,7 @@ describe("Notifications", () => {
 	});
 
 	test("#get should throw if not found", ({ profile }) => {
-		expect(() => profile.notifications().get("non-existent")).toThrow(
+		expect(() => profile.notifications().get(nonExistent)).toThrow(
 			"Failed to find a notification that matches [non-existent].",
 		);
 	});
@@ -171,7 +173,7 @@ describe("Notifications", () => {
 		});
 
 		test("#forget should throw if not found", () => {
-			expect(() => repository.forget("non-existent")).toThrow(
+			expect(() => repository.forget(nonExistent)).toThrow(
 				"Failed to find a notification that matches [non-existent].",
 			);
 		});
@@ -215,7 +217,7 @@ describe("Notifications", () => {
 		});
 
 		test("#has should return false for non-existing key", () => {
-			expect(repository.has("non-existent")).toBe(false);
+			expect(repository.has(nonExistent)).toBe(false);
 		});
 
 		test("#keys should return all keys", () => {
@@ -256,13 +258,13 @@ describe("Notifications", () => {
 		});
 
 		test("#markAsRead should throw if not found", () => {
-			expect(() => repository.markAsRead("non-existent")).toThrow(
+			expect(() => repository.markAsRead(nonExistent)).toThrow(
 				"Failed to find a notification that matches [non-existent].",
 			);
 		});
 
 		test("#markAsRemoved should throw if not found", () => {
-			expect(() => repository.markAsRemoved("non-existent")).toThrow(
+			expect(() => repository.markAsRemoved(nonExistent)).toThrow(
 				"Failed to find a notification that matches [non-existent].",
 			);
 		});
