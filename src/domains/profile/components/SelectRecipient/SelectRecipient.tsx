@@ -66,7 +66,7 @@ export const SelectRecipient = ({
 			}
 
 			const alias = getWalletAlias({
-				address: addressValue ?? "",
+				address: addressValue!,
 				network,
 				profile,
 			});
