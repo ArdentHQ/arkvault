@@ -77,6 +77,40 @@ describe("Environment", () => {
 		expect(environment.storage()).toBeDefined();
 	});
 
+	it("should reset with empty string storage option falling back to indexeddb", () => {
+		const environment = new Environment({} as any);
+		environment.reset({ storage: "" } as any);
+		expect(environment.storage()).toBeDefined();
+	});
+
+	it("should verify with storage data that doesn't have data or profiles properties", async () => {
+		const mockStorage = {
+			all: vi.fn().mockResolvedValue({}),
+			forget: vi.fn().mockResolvedValue(undefined),
+			get: vi.fn().mockResolvedValue(undefined),
+			set: vi.fn().mockResolvedValue(undefined),
+		};
+		const environment = new Environment({ storage: mockStorage } as any);
+		await expect(environment.verify()).resolves.toBeUndefined();
+	});
+
+	it("should boot when version already matches APP_VERSION", async () => {
+		const mockStorage = {
+			all: vi.fn().mockResolvedValue({ data: {}, profiles: {} }),
+			forget: vi.fn().mockResolvedValue(undefined),
+			get: vi.fn().mockResolvedValue(undefined),
+			set: vi.fn().mockResolvedValue(undefined),
+		};
+		const environment = new Environment({ storage: mockStorage } as any);
+		await environment.verify();
+
+		vi.spyOn(environment.data(), "has").mockReturnValue(true);
+		vi.spyOn(environment.data(), "get").mockReturnValue(process.env.APP_VERSION);
+		vi.spyOn(environment, "persist").mockResolvedValue(undefined);
+
+		await expect(environment.boot()).resolves.toBeUndefined();
+	});
+
 	it("should throw when verifying with corrupted data", async () => {
 		const mockStorage = {
 			all: vi.fn().mockResolvedValue({ data: 123, profiles: 456 }),
