@@ -215,7 +215,7 @@ describe("OptionLabel", () => {
 		wallet = profile.wallets().first();
 	});
 
-	it("should render amount in screen >= sm", () => {
+	it("should render amount", () => {
 		render(
 			<OptionLabel
 				option={{ value: wallet.address() }}
