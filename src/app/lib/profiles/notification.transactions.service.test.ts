@@ -372,6 +372,29 @@ describe("ProfileTransactionNotificationService", () => {
 			expect(result).toHaveLength(1);
 			expect(result[0].hash()).toBe("tx-failed");
 		});
+
+		it("should include transactions when notification is forgotten", async () => {
+			setupForSync();
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [mockTransaction("tx-forget")],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
+
+			await service.sync();
+
+			expect(service.active()).toHaveLength(1);
+
+			service.forget("tx-forget");
+
+			const result = service.active();
+			expect(result).toHaveLength(1);
+			expect(result[0].hash()).toBe("tx-forget");
+		});
 	});
 
 	describe("#markAsRead and #markAsRemoved edge cases", () => {
