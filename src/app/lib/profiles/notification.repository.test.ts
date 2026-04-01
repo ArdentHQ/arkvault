@@ -2,6 +2,8 @@ import { describe, vi } from "vitest";
 import { test } from "@/utils/testing-library";
 import { expect } from "vitest";
 import { INotificationTypes } from "./notification.repository.contract.js";
+import { NotificationRepository } from "./notification.repository.js";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 const notification = {
 	body: "test",
@@ -136,5 +138,133 @@ describe("Notifications", () => {
 		profile.notifications().fill({ a: notification });
 
 		expect(profile.notifications().hasUnread()).toBe(false);
+	});
+
+	describe("NotificationRepository", () => {
+		let profile: any;
+		let repository: NotificationRepository;
+
+		beforeEach(() => {
+			profile = env.profiles().findById(getDefaultProfileId());
+			vi.spyOn(profile.status(), "markAsDirty").mockReturnValue(undefined);
+			repository = new NotificationRepository(profile);
+		});
+
+		test("#first", () => {
+			repository.fill({
+				a: { ...notification, id: "a" },
+				b: { ...notification, id: "b" },
+			});
+
+			const first = repository.first();
+			expect(first.id).toBe("a");
+		});
+
+		test("#last", () => {
+			repository.fill({
+				a: { ...notification, id: "a" },
+				b: { ...notification, id: "b" },
+			});
+
+			const last = repository.last();
+			expect(last.id).toBe("b");
+		});
+
+		test("#forget should throw if not found", () => {
+			expect(() => repository.forget("non-existent")).toThrow(
+				"Failed to find a notification that matches [non-existent].",
+			);
+		});
+
+		test("#forget should remove notification", () => {
+			repository.fill({
+				a: notification,
+			});
+
+			repository.forget("a");
+
+			expect(repository.count()).toBe(0);
+		});
+
+		test("#read should return only read notifications", () => {
+			repository.fill({
+				a: { ...notification, id: "a", read_at: new Date().getTime() },
+				b: { ...notification, id: "b", read_at: undefined },
+			});
+
+			const read = repository.read();
+			expect(read).toHaveLength(1);
+			expect(read[0].id).toBe("a");
+		});
+
+		test("#unread should return only unread notifications", () => {
+			repository.fill({
+				a: { ...notification, id: "a", read_at: new Date().getTime() },
+				b: { ...notification, id: "b", read_at: undefined },
+			});
+
+			const unread = repository.unread();
+			expect(unread).toHaveLength(1);
+			expect(unread[0].id).toBe("b");
+		});
+
+		test("#has should return true for existing key", () => {
+			repository.fill({ a: notification });
+
+			expect(repository.has("a")).toBe(true);
+		});
+
+		test("#has should return false for non-existing key", () => {
+			expect(repository.has("non-existent")).toBe(false);
+		});
+
+		test("#keys should return all keys", () => {
+			repository.fill({
+				a: notification,
+				b: { ...notification, id: "b" },
+			});
+
+			expect(repository.keys()).toEqual(["a", "b"]);
+		});
+
+		test("#values should return all values", () => {
+			repository.fill({
+				a: notification,
+				b: { ...notification, id: "b" },
+			});
+
+			expect(repository.values()).toHaveLength(2);
+		});
+
+		test("#findByTransactionId should return undefined when not found", () => {
+			repository.fill({
+				a: { ...notification, meta: { transactionId: "tx-123" } },
+			});
+
+			const result = repository.findByTransactionId("tx-456");
+			expect(result).toBeUndefined();
+		});
+
+		test("#push should create notification", () => {
+			const result = repository.push({
+				body: "test notification",
+				type: INotificationTypes.Transaction,
+			});
+
+			expect(result.body).toBe("test notification");
+			expect(result.meta).toBeDefined();
+		});
+
+		test("#markAsRead should throw if not found", () => {
+			expect(() => repository.markAsRead("non-existent")).toThrow(
+				"Failed to find a notification that matches [non-existent].",
+			);
+		});
+
+		test("#markAsRemoved should throw if not found", () => {
+			expect(() => repository.markAsRemoved("non-existent")).toThrow(
+				"Failed to find a notification that matches [non-existent].",
+			);
+		});
 	});
 });
