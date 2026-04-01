@@ -2,6 +2,7 @@ import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import { SignatoryFactory } from "./signatory.factory";
 import { IReadWriteWallet } from "./contracts";
 
+const signingKey = "signing-key";
 const createMockWallet = (overrides: Partial<IReadWriteWallet> = {}): IReadWriteWallet =>
 	({
 		actsWithBip44Mnemonic: vi.fn().mockReturnValue(false),
@@ -23,7 +24,7 @@ const createMockWallet = (overrides: Partial<IReadWriteWallet> = {}): IReadWrite
 			mnemonic: vi.fn().mockResolvedValue("mnemonic-signatory"),
 			secret: vi.fn().mockResolvedValue("secret-signatory"),
 		}),
-		signingKey: vi.fn().mockReturnValue({ get: vi.fn().mockResolvedValue("signing-key") }),
+		signingKey: vi.fn().mockReturnValue({ get: vi.fn().mockResolvedValue(signingKey) }),
 		...overrides,
 	}) as any;
 
@@ -84,7 +85,7 @@ describe("SignatoryFactory", () => {
 
 			const result = await factory.make({ encryptionPassword: "password" });
 
-			expect(mockWallet.signatory().bip44Mnemonic).toHaveBeenCalledWith("signing-key", "m/44'/1'/0'/0/0");
+			expect(mockWallet.signatory().bip44Mnemonic).toHaveBeenCalledWith(signingKey, "m/44'/1'/0'/0/0");
 			expect(result).toBe("bip44-signatory");
 		});
 
@@ -120,7 +121,7 @@ describe("SignatoryFactory", () => {
 
 			const result = await factory.make({ encryptionPassword: "password" });
 
-			expect(mockWallet.signatory().confirmationSecret).toHaveBeenCalledWith("signing-key", "confirm-key");
+			expect(mockWallet.signatory().confirmationSecret).toHaveBeenCalledWith(signingKey, "confirm-key");
 			expect(result).toBe("confirmation-secret-signatory");
 		});
 
@@ -134,7 +135,7 @@ describe("SignatoryFactory", () => {
 
 			const result = await factory.make({ encryptionPassword: "password" });
 
-			expect(mockWallet.signatory().confirmationMnemonic).toHaveBeenCalledWith("signing-key", "confirm-key");
+			expect(mockWallet.signatory().confirmationMnemonic).toHaveBeenCalledWith(signingKey, "confirm-key");
 			expect(result).toBe("confirmation-mnemonic-signatory");
 		});
 
@@ -148,7 +149,7 @@ describe("SignatoryFactory", () => {
 
 			const result = await factory.make({ encryptionPassword: "password" });
 
-			expect(mockWallet.signatory().secret).toHaveBeenCalledWith("signing-key");
+			expect(mockWallet.signatory().secret).toHaveBeenCalledWith(signingKey);
 			expect(result).toBe("secret-signatory");
 		});
 
@@ -162,7 +163,7 @@ describe("SignatoryFactory", () => {
 
 			const result = await factory.make({ encryptionPassword: "password" });
 
-			expect(mockWallet.signatory().mnemonic).toHaveBeenCalledWith("signing-key");
+			expect(mockWallet.signatory().mnemonic).toHaveBeenCalledWith(signingKey);
 			expect(result).toBe("mnemonic-signatory");
 		});
 

@@ -11,6 +11,8 @@ import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 import { TokenDTO } from "@/app/lib/profiles/token.dto";
 import { Signatory } from "./signatory";
 import { LedgerSignatory } from "./ledger.signatory";
+import { Bip44MnemonicSignatory } from "./bip44-mnemonic.signatory";
+import { HDWalletService } from "./hd-wallet.service";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
@@ -527,6 +529,76 @@ describe("TransactionService", () => {
 		} as any;
 
 		const result = await transactionService.tokenTransfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should sign with HDWallet for BIP44 mnemonic signatory", async () => {
+		const bip44Signatory = new Bip44MnemonicSignatory({
+			signingKey: MAINSAIL_MNEMONICS[0],
+			path: "m/44'/60'/0'/0/0",
+		});
+		const signatory = new Signatory(bip44Signatory);
+
+		const addressMock = "0x1";
+		vi.spyOn(HDWalletService.prototype, "getAddress").mockReturnValue(addressMock);
+		vi.spyOn(HDWalletService.prototype, "sign").mockResolvedValue({
+			r: "a".repeat(64),
+			s: "b".repeat(64),
+			v: 0,
+		});
+
+		transactionService = new TransactionService({ config, profile });
+
+		server.use(
+			requestMock(`https://test1.com/wallets/${addressMock}`, {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+
+		vi.restoreAllMocks();
+	});
+
+	it("should call tokenTransfer when transfer input has token", async () => {
+		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
+		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
+		const walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
+
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		const result = await transactionService.transfer(input);
 		expect(result).toBeDefined();
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
