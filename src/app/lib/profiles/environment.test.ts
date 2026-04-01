@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { Environment } from "./environment";
 import { StubStorage } from "@/tests/mocks";
+import { DataRepository } from "./data.repository";
 
 describe("Environment", () => {
 	vi.mock("@/app/lib/mainsail", () => ({
@@ -97,5 +98,34 @@ describe("Environment", () => {
 		const environment = new Environment({} as any);
 		(environment as any)["#storage"] = undefined;
 		await expect(environment.boot()).rejects.toThrow("Please call [verify] before booting the environment.");
+	});
+
+	it("should call reset when DELETE_OLD_PROFILES env var is set and version is missing", async () => {
+		const originalEnv = process.env.DELETE_OLD_PROFILES;
+		process.env.DELETE_OLD_PROFILES = "true";
+
+		const mockStorage = {
+			all: vi.fn().mockResolvedValue({ data: {}, profiles: {} }),
+			forget: vi.fn().mockResolvedValue(undefined),
+			get: vi.fn().mockResolvedValue(undefined),
+			set: vi.fn().mockResolvedValue(undefined),
+		};
+		const environment = new Environment({ storage: mockStorage } as any);
+		await environment.verify();
+
+		vi.spyOn(environment.data(), "has").mockReturnValue(false);
+		vi.spyOn(environment.data(), "get").mockReturnValue(undefined);
+		vi.spyOn(environment.data(), "set").mockImplementation(() => {});
+		vi.spyOn(environment, "persist").mockResolvedValue(undefined);
+
+		const resetSpy = vi.spyOn(environment, "reset").mockImplementation(() => {
+			(environment as any)["#data"] = new DataRepository();
+		});
+
+		await environment.boot();
+
+		expect(resetSpy).toHaveBeenCalled();
+
+		process.env.DELETE_OLD_PROFILES = originalEnv;
 	});
 });
