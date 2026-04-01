@@ -391,6 +391,36 @@ describe("LedgerMigrator", () => {
 		transactionSpy1.restoreAll();
 	});
 
+	it("should skip import when recipient wallet is undefined", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+		const transactionSpy1 = await createTransactionMocks(wallet);
+
+		await migrator.createTransactions([
+			{
+				address: wallet.address(),
+				path: senderPath,
+			},
+		]);
+
+		migrator.nextTransaction();
+		const currentTransaction = migrator.currentTransaction();
+
+		await currentTransaction?.calculateFees();
+		currentTransaction?.selectFee("avg");
+		currentTransaction?.setSenderMaxAmount();
+		currentTransaction?.setIsPending(true);
+		await currentTransaction?.signAndBroadcast();
+		currentTransaction?.setIsCompleted(true);
+
+		const walletCountBefore = profile.wallets().count();
+		await migrator.importMigratedWallets();
+		expect(profile.wallets().count()).toBe(walletCountBefore);
+
+		transactionSpy1.restoreAll();
+	});
+
 	it("should calculate current transaction index", async () => {
 		mockNanoSTransport();
 		const wallet = profile.wallets().first();
