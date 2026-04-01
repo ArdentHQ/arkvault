@@ -329,9 +329,9 @@ describe("ProfileTransactionNotificationService", () => {
 			setupForSync();
 
 			notificationRepository.push({
+				isRemoved: true,
 				meta: { transactionId: "tx-removed" },
 				type: INotificationTypes.Transaction,
-				isRemoved: true,
 			});
 
 			vi.spyOn(profile, "transactionAggregate").mockImplementation(
@@ -357,8 +357,8 @@ describe("ProfileTransactionNotificationService", () => {
 						all: vi.fn().mockResolvedValue({
 							items: () => [
 								mockTransaction("tx-failed", {
-									isSuccess: () => false,
 									confirmations: () => ({ isGreaterThan: () => true }),
+									isSuccess: () => false,
 								}),
 							],
 						}),

@@ -1,5 +1,7 @@
-import { describe } from "vitest";
+import { describe, vi } from "vitest";
 import { test } from "@/utils/testing-library";
+import { http, HttpResponse } from "msw";
+import { server } from "@/tests/mocks/server";
 
 describe("Validator Service", () => {
 	test("#all", async ({ profile }) => {
@@ -71,6 +73,22 @@ describe("Validator Service", () => {
 
 	test("#publicKeyExists with empty string", async ({ profile }) => {
 		const exists = await profile.validators().publicKeyExists("", profile.activeNetwork());
+		expect(exists).toBe(false);
+	});
+
+	test("#mapByIdentifier returns undefined when both findByPublicKey and findByAddress fail", async ({
+		profile,
+		defaultWallet,
+	}) => {
+		await profile.validators().syncAll();
+		const mapped = profile.validators().mapByIdentifier(defaultWallet, "non-existent-identifier");
+		expect(mapped).toBeUndefined();
+	});
+
+	test("#publicKeyExists returns false when API returns 404", async ({ profile }) => {
+		server.use(http.get(/.*\/wallets.*/, () => new HttpResponse(null, { status: 404 })));
+
+		const exists = await profile.validators().publicKeyExists("03nonexistent", profile.activeNetwork());
 		expect(exists).toBe(false);
 	});
 });

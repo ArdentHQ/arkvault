@@ -17,7 +17,7 @@ export class HostRepository implements IHostRepository {
 
 	/** {@inheritDoc HostRepository.get} */
 	public allByNetwork(network: string): HostSet {
-		return this.#data.get(network, []) ?? [];
+		return this.#data.get(network, []) as HostSet;
 	}
 
 	/** {@inheritDoc HostRepository.push} */

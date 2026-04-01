@@ -236,6 +236,17 @@ describe("WalletFactory", () => {
 			expect(wallet2.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 0, 0, 1));
 		});
 
+		it("should create a wallet from a mnemonic with password encryption", async () => {
+			const wallet = await subject.fromMnemonicWithBIP44({
+				levels: { account: 0 },
+				mnemonic,
+				password,
+			});
+
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
+		});
+
 		it("should generate same address for same mnemonic and derivation path", async () => {
 			const wallet1 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 1, addressIndex: 2, change: 0 },

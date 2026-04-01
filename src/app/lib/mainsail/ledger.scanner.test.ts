@@ -121,4 +121,33 @@ describe("LedgerScannerTest", () => {
 
 		expect(result).toHaveLength(0);
 	});
+
+	it("should continue scanning when wallet has not synced and pre-scan finds synced wallets", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "hasSyncedWithNetwork").mockReturnValue(false);
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+
+		const fromAddressSpy = vi.spyOn(profile.walletFactory(), "fromAddress");
+		fromAddressSpy.mockResolvedValue(syncedWallet);
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanAllWithBalance({
+			isLegacy: false,
+			slip44: 111,
+		});
+
+		expect(result).toHaveLength(0);
+		fromAddressSpy.mockRestore();
+	});
+
+	it("should compute last path with legacy sorting when profile has ledger wallets", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+		vi.spyOn(profile.walletFactory(), "fromAddress").mockResolvedValue(syncedWallet);
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanWithBalancePriority({ pageSize: 5 });
+
+		expect(result.length).toBeGreaterThan(0);
+	});
 });
