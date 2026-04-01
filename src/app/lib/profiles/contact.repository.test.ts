@@ -112,6 +112,16 @@ describe("ContactRepository", () => {
 		);
 	});
 
+	it("should not throw when updating with a unique name among multiple contacts", () => {
+		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
+
+		const created1 = repository.create("contact 1", addresses);
+		repository.create("contact 2", addresses);
+
+		expect(() => repository.update(created1.id(), { name: "unique name" })).not.toThrow();
+		expect(repository.findById(created1.id()).name()).toBe("unique name");
+	});
+
 	it("should forget contact", () => {
 		const addresses: IContactAddressInput[] = [{ address: "0x1234" }];
 
