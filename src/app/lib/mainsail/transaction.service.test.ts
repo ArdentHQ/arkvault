@@ -13,6 +13,7 @@ import { Signatory } from "./signatory";
 import { LedgerSignatory } from "./ledger.signatory";
 import { Bip44MnemonicSignatory } from "./bip44-mnemonic.signatory";
 import { HDWalletService } from "./hd-wallet.service";
+import { LedgerService } from "./ledger.service";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
@@ -602,5 +603,48 @@ describe("TransactionService", () => {
 		expect(result).toBeDefined();
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should sign with Ledger signatory that has address", async () => {
+		mockNanoSTransport();
+
+		const ledgerSignatory = new LedgerSignatory({
+			options: { address: "0xLedgerAddress" },
+			signingKey: "m/44'/60'/0'/0/0",
+		});
+		const sign = new Signatory(ledgerSignatory);
+
+		server.use(
+			requestMock("https://test1.com/wallets/0xLedgerAddress", {
+				data: {},
+			}),
+		);
+
+		vi.spyOn(HDWalletService.prototype, "sign").mockResolvedValue({
+			r: "a".repeat(64),
+			s: "b".repeat(64),
+			v: 0,
+		});
+
+		vi.spyOn(LedgerService.prototype as any, "accessLedgerApp").mockResolvedValue(undefined);
+		vi.spyOn(LedgerService.prototype as any, "sign").mockResolvedValue({
+			r: "a".repeat(64),
+			s: "b".repeat(64),
+			v: 0,
+		});
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory: sign,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+
+		vi.restoreAllMocks();
 	});
 });
