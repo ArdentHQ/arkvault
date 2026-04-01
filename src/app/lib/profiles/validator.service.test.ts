@@ -91,4 +91,23 @@ describe("Validator Service", () => {
 		const exists = await profile.validators().publicKeyExists("03nonexistent", profile.activeNetwork());
 		expect(exists).toBe(false);
 	});
+
+	test("#publicKeyExists returns true when API returns data with count > 0", async ({ profile }) => {
+		server.use(
+			http.get(/.*\/wallets.*/, () =>
+				HttpResponse.json({
+					data: [{ address: "0xTest" }],
+					meta: { count: 1 },
+				}),
+			),
+		);
+
+		const exists = await profile
+			.validators()
+			.publicKeyExists(
+				"0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
+				profile.activeNetwork(),
+			);
+		expect(exists).toBe(true);
+	});
 });
