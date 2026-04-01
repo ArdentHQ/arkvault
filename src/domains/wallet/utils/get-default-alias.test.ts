@@ -135,6 +135,15 @@ describe("getLedgerDefaultAlias", () => {
 		expect(result).toBe("Ledger #1");
 	});
 
+	it("should handle when an invalid path provided", async () => {
+		const result = getLedgerDefaultAlias({
+			path: "",
+			profile,
+		});
+
+		expect(result).toBe("Ledger #1");
+	});
+
 	it("should return a default alias when ledger wallets exist", async () => {
 		const wallet1 = await profile.walletFactory().fromAddressWithDerivationPath({
 			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
