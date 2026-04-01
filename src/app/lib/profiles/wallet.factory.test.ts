@@ -416,6 +416,21 @@ describe("WalletFactory", () => {
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP84.DERIVATION_PATH);
 			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
 		});
+
+		it("should handle network with extended public key", async () => {
+			const { wallet: tempWallet } = await subject.generate({
+				locale: "english",
+				wordCount: 12,
+			});
+			const address = tempWallet.address();
+			const path = "m/44'/0'/0'/0/0";
+
+			vi.spyOn(tempWallet.network(), "usesExtendedPublicKey").mockReturnValue(true);
+
+			const wallet = await subject.fromAddressWithDerivationPath({ address, path });
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
+		});
 	});
 
 	describe("fromSecret", () => {
