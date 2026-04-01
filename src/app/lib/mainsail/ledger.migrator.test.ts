@@ -359,6 +359,39 @@ describe("LedgerMigrator", () => {
 		transactionSpy1.restoreAll();
 	});
 
+	it("should set alias, forget old wallet and push new wallet during import", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+
+		const uniqueAddress = "0xABCDEF1234567890ABCDEF1234567890ABCDEF12";
+
+		const mockRecipient = {
+			address: () => uniqueAddress,
+			generateAlias: () => "Migrated",
+			mutator: () => ({ alias: vi.fn() }),
+		};
+
+		const pushSpy = vi.spyOn(profile.wallets(), "push").mockImplementation(() => {});
+		const forgetSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
+		vi.spyOn(profile.wallets(), "has").mockReturnValue(true);
+
+		const transaction = new MigrationTransaction({ env, profile });
+		transaction.setSender(wallet);
+		vi.spyOn(transaction, "recipient").mockReturnValue(mockRecipient as any);
+		transaction.setIsCompleted(true);
+
+		migrator.addTransaction(transaction);
+
+		await migrator.importMigratedWallets();
+
+		expect(pushSpy).toHaveBeenCalled();
+		expect(forgetSpy).toHaveBeenCalled();
+
+		pushSpy.mockRestore();
+		forgetSpy.mockRestore();
+	});
+
 	it("should not import if wallet already exists", async () => {
 		mockNanoSTransport();
 		const wallet = profile.wallets().first();
