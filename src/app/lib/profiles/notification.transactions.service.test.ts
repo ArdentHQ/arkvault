@@ -1,7 +1,9 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { ProfileTransactionNotificationService } from "./notification.transactions.service";
 import { NotificationRepository } from "./notification.repository";
 import { INotificationTypes } from "./notification.repository.contract";
+import { IProfile } from "./contracts";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 const mockTransaction = (hash: string, overrides: Record<string, any> = {}) => ({
 	confirmations: () => ({ isGreaterThan: () => false }),
@@ -16,24 +18,24 @@ const mockTransaction = (hash: string, overrides: Record<string, any> = {}) => (
 });
 
 describe("ProfileTransactionNotificationService", () => {
+	let profile: IProfile;
 	let service: ProfileTransactionNotificationService;
 	let notificationRepository: NotificationRepository;
 
-	let markAsDirtySpy = vi.fn();
-	let mockProfile = {
-		id: () => "test-profile",
-		status: () => ({ markAsDirty: markAsDirtySpy }),
-		wallets: () => ({
-			values: () => [],
-		}),
-	};
-
 	beforeEach(() => {
-		notificationRepository = new NotificationRepository(mockProfile);
+		profile = env.profiles().findById(getDefaultProfileId());
+		vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
+		vi.spyOn(profile.status(), "markAsDirty").mockReturnValue(undefined);
+
+		notificationRepository = new NotificationRepository(profile);
 		vi.spyOn(notificationRepository, "markAsRead");
 		vi.spyOn(notificationRepository, "markAsRemoved");
 
-		service = new ProfileTransactionNotificationService(mockProfile, notificationRepository);
+		service = new ProfileTransactionNotificationService(profile, notificationRepository);
+	});
+
+	afterEach(() => {
+		vi.restoreAllMocks();
 	});
 
 	it("should return notification from repository", () => {
@@ -183,18 +185,24 @@ describe("ProfileTransactionNotificationService", () => {
 	it("should return true during sync", async () => {
 		let syncingDuringSync = false;
 
-		mockProfile.transactionAggregate = () => ({
-			all: vi.fn().mockImplementation(async () => {
-				syncingDuringSync = service.isSyncing();
-				return { items: () => [] };
-			}),
-			flush: vi.fn(),
-		});
+		vi.spyOn(profile, "transactionAggregate").mockImplementation(
+			() =>
+				({
+					all: vi.fn().mockImplementation(async () => {
+						syncingDuringSync = service.isSyncing();
+						return { items: () => [] };
+					}),
+					flush: vi.fn(),
+				}) as any,
+		);
 
-		mockProfile.wallets = () => ({
-			selected: () => [],
-			values: () => [],
-		});
+		vi.spyOn(profile, "wallets").mockImplementation(
+			() =>
+				({
+					selected: () => [],
+					values: () => [],
+				}) as any,
+		);
 
 		await service.sync();
 
@@ -208,30 +216,36 @@ describe("ProfileTransactionNotificationService", () => {
 	});
 
 	const setupForSync = () => {
-		const mockWallet = {
-			address: () => "address1",
-			network: () => ({ id: () => "network1" }),
-		};
+		const wallet = profile.wallets().first();
 
-		mockProfile.wallets = () => ({
-			findByAddressWithNetwork: vi.fn().mockReturnValue(true),
-			selected: () => [mockWallet],
-			values: () => [mockWallet],
-		});
+		vi.spyOn(profile, "wallets").mockImplementation(
+			() =>
+				({
+					findByAddressWithNetwork: vi.fn().mockReturnValue(true),
+					selected: () => [wallet],
+					values: () => [wallet],
+				}) as any,
+		);
 
-		mockProfile.transactionAggregate = () => ({
-			all: vi.fn().mockResolvedValue({ items: () => [] }),
-			flush: vi.fn(),
-		});
+		vi.spyOn(profile, "transactionAggregate").mockImplementation(
+			() =>
+				({
+					all: vi.fn().mockResolvedValue({ items: () => [] }),
+					flush: vi.fn(),
+				}) as any,
+		);
 	};
 
 	describe("#active", () => {
 		it("should return synced transactions", async () => {
 			setupForSync();
-			mockProfile.transactionAggregate = () => ({
-				all: vi.fn().mockResolvedValue({ items: () => [mockTransaction("tx-1")] }),
-				flush: vi.fn(),
-			});
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({ items: () => [mockTransaction("tx-1")] }),
+						flush: vi.fn(),
+					}) as any,
+			);
 
 			await service.sync();
 
@@ -248,10 +262,13 @@ describe("ProfileTransactionNotificationService", () => {
 				type: INotificationTypes.Transaction,
 			});
 
-			mockProfile.transactionAggregate = () => ({
-				all: vi.fn().mockResolvedValue({ items: () => [mockTransaction("tx-seen")] }),
-				flush: vi.fn(),
-			});
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({ items: () => [mockTransaction("tx-seen")] }),
+						flush: vi.fn(),
+					}) as any,
+			);
 
 			await service.sync();
 
@@ -260,12 +277,15 @@ describe("ProfileTransactionNotificationService", () => {
 
 		it("should skip not allowed transaction types", async () => {
 			setupForSync();
-			mockProfile.transactionAggregate = () => ({
-				all: vi.fn().mockResolvedValue({
-					items: () => [mockTransaction("tx-vote", { type: () => "vote" })],
-				}),
-				flush: vi.fn(),
-			});
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [mockTransaction("tx-vote", { type: () => "vote" })],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
 
 			await service.sync();
 
@@ -274,17 +294,23 @@ describe("ProfileTransactionNotificationService", () => {
 
 		it("should skip transactions where user is not a recipient", async () => {
 			setupForSync();
-			mockProfile.wallets = () => ({
-				findByAddressWithNetwork: vi.fn().mockReturnValue(false),
-				selected: () => [],
-				values: () => [],
-			});
-			mockProfile.transactionAggregate = () => ({
-				all: vi.fn().mockResolvedValue({
-					items: () => [mockTransaction("tx-other")],
-				}),
-				flush: vi.fn(),
-			});
+			vi.spyOn(profile, "wallets").mockImplementation(
+				() =>
+					({
+						findByAddressWithNetwork: vi.fn().mockReturnValue(false),
+						selected: () => [],
+						values: () => [],
+					}) as any,
+			);
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [mockTransaction("tx-other")],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
 
 			await service.sync();
 
@@ -297,6 +323,149 @@ describe("ProfileTransactionNotificationService", () => {
 			await service.sync();
 
 			expect(service.active()).toEqual([]);
+		});
+
+		it("should skip removed notifications in filterUnseen", async () => {
+			setupForSync();
+
+			notificationRepository.push({
+				meta: { transactionId: "tx-removed" },
+				type: INotificationTypes.Transaction,
+				isRemoved: true,
+			});
+
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [mockTransaction("tx-removed")],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
+
+			await service.sync();
+
+			expect(service.active()).toEqual([]);
+		});
+
+		it("should include unsuccessful transactions with confirmations", async () => {
+			setupForSync();
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [
+								mockTransaction("tx-failed", {
+									isSuccess: () => false,
+									confirmations: () => ({ isGreaterThan: () => true }),
+								}),
+							],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
+
+			await service.sync();
+
+			const result = service.active();
+			expect(result).toHaveLength(1);
+			expect(result[0].hash()).toBe("tx-failed");
+		});
+	});
+
+	describe("#markAsRead and #markAsRemoved edge cases", () => {
+		it("should do nothing when non-existent notification is marked as read", () => {
+			expect(() => service.markAsRead("non-existent")).not.toThrow();
+		});
+
+		it("should do nothing when marking non-existent notification as removed", () => {
+			expect(() => service.markAsRemoved("non-existent")).not.toThrow();
+		});
+	});
+
+	describe("#hydrateFromCache with data", () => {
+		it("should hydrate transactions from cache", async () => {
+			setupForSync();
+
+			notificationRepository.push({
+				meta: { transactionId: "tx-cached" },
+				type: INotificationTypes.Transaction,
+			});
+
+			await service.hydrateFromCache();
+
+			expect(service.transactions()).toEqual([]);
+		});
+
+		it("should store transactions from cache when cache has data", async () => {
+			setupForSync();
+
+			const mockTx = mockTransaction("tx-from-cache");
+
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [mockTx],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
+
+			await service.sync();
+
+			await service.hydrateFromCache();
+
+			expect(service.transactions()).toHaveLength(1);
+			expect(service.transactions()[0].hash()).toBe("tx-from-cache");
+		});
+	});
+
+	describe("#active with transactions that have no notification", () => {
+		it("should return transactions that have no notification", async () => {
+			setupForSync();
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [
+								mockTransaction("tx-no-notif", {
+									recipients: () => [{ address: "address1" }],
+								}),
+							],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
+
+			await service.sync();
+
+			const result = service.active();
+			expect(result).toHaveLength(1);
+			expect(result[0].hash()).toBe("tx-no-notif");
+		});
+
+		it("should include non-removed transactions with recipients", async () => {
+			setupForSync();
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [
+								mockTransaction("tx-with-recipients", {
+									recipients: () => [{ address: "0xother" }],
+								}),
+							],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
+
+			await service.sync();
+
+			const result = service.active();
+			expect(result).toHaveLength(1);
 		});
 	});
 });
