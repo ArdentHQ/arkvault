@@ -131,6 +131,15 @@ describe("LedgerService", () => {
 			expect(wallet.balance()).toBeDefined();
 		});
 
+		it("should scan legacy path with default page size when not provided", async () => {
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
+
+			const result = await ledgerService.scanLegacy({});
+
+			expect(result).toBeDefined();
+			expect(Object.keys(result)).toHaveLength(5);
+		});
+
 		it("should handle busy error and retry getExtendedPublicKey until success", async () => {
 			let callCount = 0;
 			const expectedKey = "pubkey123";
