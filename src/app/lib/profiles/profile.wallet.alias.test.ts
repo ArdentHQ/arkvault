@@ -64,6 +64,29 @@ describe("WalletAliasProvider", () => {
 		expect(result).toBeUndefined();
 	});
 
+	it("should use network wallet names ordering when useNetworkWalletNames is true", () => {
+		const wallet = profile.wallets().first();
+		vi.spyOn(profile.knownWallets(), "is").mockReturnValue(false);
+		vi.spyOn(profile.appearance(), "get").mockReturnValue(true);
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(wallet);
+		vi.spyOn(wallet, "displayName").mockReturnValue("My Wallet");
+		vi.spyOn(wallet, "username").mockReturnValue("my_username");
+
+		const result = provider.findAliasByAddress(wallet.address());
+		expect(result).toBeDefined();
+	});
+
+	it("should use default ordering when useNetworkWalletNames is false", () => {
+		const wallet = profile.wallets().first();
+		vi.spyOn(profile.knownWallets(), "is").mockReturnValue(false);
+		vi.spyOn(profile.appearance(), "get").mockReturnValue(false);
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(wallet);
+		vi.spyOn(wallet, "displayName").mockReturnValue("My Wallet");
+
+		const result = provider.findAliasByAddress(wallet.address());
+		expect(result).toBeDefined();
+	});
+
 	it("should generate default alias for non-ledger wallet", () => {
 		const wallet = profile.wallets().first();
 		vi.spyOn(wallet, "isLedger").mockReturnValue(false);

@@ -98,6 +98,30 @@ describe("TokenService", () => {
 		expect(transfers.items()[0].wallet().address()).toBe(walletAddress);
 	});
 
+	it("should set transaction metadata when wallet is found", async () => {
+		const walletAddress = profile.wallets().first().address();
+
+		server.use(
+			http.get(/\/tokens\/transfers.*/, () =>
+				HttpResponse.json({
+					data: [
+						createTransferData(walletAddress),
+						{
+							...createTransferData("0x1000000"),
+							from: walletAddress,
+						},
+					],
+					meta: { next: null, self: "/tokens/transfers?page=1" },
+				}),
+			),
+		);
+
+		const transfers = await profile.tokens().transfers();
+
+		expect(transfers).toBeInstanceOf(ExtendedConfirmedTransactionDataCollection);
+		expect(transfers.items()).toHaveLength(2);
+	});
+
 	it("should return selected count", () => {
 		const count = profile.tokens().selectedCount();
 

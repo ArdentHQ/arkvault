@@ -46,18 +46,38 @@ describe("KnownWalletService", () => {
 
 			vi.spyOn(Http.HttpClient.prototype, "get").mockResolvedValue({
 				json: () => [
-					{ address: "0xWallet1", name: "Known Wallet 1", type: "team" },
-					{ address: "0xWallet2", name: "Known Wallet 2", type: "exchange" },
+					{ address: "0x1", name: "Known Wallet 1", type: "team" },
+					{ address: "0x2", name: "Known Wallet 2", type: "exchange" },
 				],
 			});
 
 			await service.sync(mockProfile, mockNetwork);
 
-			expect(service.name(networkName, "0xWallet1")).toBe("Known Wallet 1");
-			expect(service.is(networkName, "0xWallet1")).toBe(true);
-			expect(service.isTeam(networkName, "0xWallet1")).toBe(true);
-			expect(service.isExchange(networkName, "0xWallet2")).toBe(true);
-			expect(service.is(networkName, "0xUnknown")).toBe(false);
+			expect(service.name(networkName, "0x1")).toBe("Known Wallet 1");
+			expect(service.is(networkName, "0x1")).toBe(true);
+			expect(service.isTeam(networkName, "0x1")).toBe(true);
+			expect(service.isExchange(networkName, "0x2")).toBe(true);
+			expect(service.is(networkName, "0x10")).toBe(false);
+
+			vi.restoreAllMocks();
+		});
+
+		it("should not store when response is not an array", async () => {
+			const mockProfile = {} as any;
+			const mockNetwork = {
+				config: () => ({
+					get: vi.fn().mockReturnValue("https://example.com/known-wallets.json"),
+				}),
+				id: () => networkName,
+			} as any;
+
+			vi.spyOn(Http.HttpClient.prototype, "get").mockResolvedValue({
+				json: () => ({ error: "not found" }),
+			});
+
+			await service.sync(mockProfile, mockNetwork);
+
+			expect(service.is(networkName, "0xWallet1")).toBe(false);
 
 			vi.restoreAllMocks();
 		});

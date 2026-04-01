@@ -50,6 +50,20 @@ describe("ExchangeTransactionRepository", () => {
 		);
 	});
 
+	test("#create should not throw for different orderId", ({ profile }) => {
+		const repository = new ExchangeTransactionRepository(profile);
+
+		repository.create(exchangeTransactionData);
+
+		expect(() =>
+			repository.create({
+				...exchangeTransactionData,
+				orderId: "order-2",
+			}),
+		).not.toThrow();
+		expect(repository.count()).toBe(2);
+	});
+
 	test("#findById", ({ profile }) => {
 		const repository = new ExchangeTransactionRepository(profile);
 
