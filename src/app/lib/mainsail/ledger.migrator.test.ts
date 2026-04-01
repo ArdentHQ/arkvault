@@ -421,6 +421,20 @@ describe("LedgerMigrator", () => {
 		transactionSpy1.restoreAll();
 	});
 
+	it("should skip completed transactions with undefined recipient", async () => {
+		const migrator = new LedgerMigrator({ env, profile });
+		const transaction = new MigrationTransaction({ env, profile });
+		transaction.setIsCompleted(true);
+
+		vi.spyOn(transaction, "recipient").mockReturnValue(undefined);
+
+		migrator.addTransaction(transaction);
+
+		const walletCountBefore = profile.wallets().count();
+		await migrator.importMigratedWallets();
+		expect(profile.wallets().count()).toBe(walletCountBefore);
+	});
+
 	it("should calculate current transaction index", async () => {
 		mockNanoSTransport();
 		const wallet = profile.wallets().first();
