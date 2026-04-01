@@ -15,6 +15,7 @@ describe("ExchangeRateService", () => {
 	let exchangeRateService: ExchangeRateService;
 	let mockStorage;
 	let profile: IProfile;
+	const defaultDate = "2024-01-01";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -26,7 +27,7 @@ describe("ExchangeRateService", () => {
 			dailyAverage: vi.fn().mockResolvedValue(100),
 			historicalPrice: vi.fn().mockResolvedValue({
 				datasets: [2, 200],
-				labels: ["2024-01-01", "2024-01-02"],
+				labels: [defaultDate, "2024-01-02"],
 			}),
 		});
 		exchangeRateService = new ExchangeRateService({ storage: mockStorage });
@@ -41,7 +42,7 @@ describe("ExchangeRateService", () => {
 	});
 
 	it("should return 0 for exchange when rate is 0", () => {
-		const date = DateTime.make("2024-01-01");
+		const date = DateTime.make(defaultDate);
 		const result = exchangeRateService.exchange("ARK", "USD", date, 100);
 		expect(result).toBe(0);
 	});
@@ -67,7 +68,7 @@ describe("ExchangeRateService", () => {
 	});
 
 	it("should exchange value with rate", () => {
-		const date = DateTime.make("2024-01-01");
+		const date = DateTime.make(defaultDate);
 		exchangeRateService.exchange("ARK", "USD", date, 100);
 	});
 
@@ -82,13 +83,13 @@ describe("ExchangeRateService", () => {
 		mockStorage.get.mockResolvedValue({ "ARK.USD.2024-01-01": 2 });
 		await exchangeRateService.restore();
 
-		const date = DateTime.make("2024-01-01");
+		const date = DateTime.make(defaultDate);
 		const result = exchangeRateService.exchange("ARK", "USD", date, 100);
 		expect(result).toBe(200);
 	});
 
 	it("should return 0 when rate does not exist for date", () => {
-		const date = DateTime.make("2024-01-01");
+		const date = DateTime.make(defaultDate);
 		const result = exchangeRateService.exchange("ARK", "EUR", date, 100);
 		expect(result).toBe(0);
 	});
@@ -118,7 +119,7 @@ describe("ExchangeRateService", () => {
 	});
 
 	it("should exchange value using string value", () => {
-		const date = DateTime.make("2024-01-01");
+		const date = DateTime.make(defaultDate);
 		const result = exchangeRateService.exchange("ARK", "USD", date, "100");
 		expect(result).toBe(0);
 	});
@@ -166,7 +167,7 @@ describe("ExchangeRateService", () => {
 
 		await exchangeRateService.syncAll(profile, "ARK");
 
-		const date = DateTime.make("2024-01-01");
+		const date = DateTime.make(defaultDate);
 		const result = exchangeRateService.exchange("ARK", "USD", date, 100);
 		expect(result).toBe(200);
 	});
