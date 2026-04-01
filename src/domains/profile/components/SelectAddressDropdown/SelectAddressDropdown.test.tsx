@@ -216,7 +216,14 @@ describe("OptionLabel", () => {
 	});
 
 	it("should render amount in screen >= sm", () => {
-		render(<OptionLabel option={{value: wallet.address()}} network={profile.activeNetwork()} profile={profile} showBalance={true} />);
+		render(
+			<OptionLabel
+				option={{ value: wallet.address() }}
+				network={profile.activeNetwork()}
+				profile={profile}
+				showBalance={true}
+			/>,
+		);
 
 		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 		expect(screen.getAllByText("95.276532523250678785 ARK").length).toBe(2);
