@@ -37,6 +37,8 @@ describe("Validator Service", () => {
 	});
 
 	test("#publiKeyExists", async ({ profile }) => {
+		server.use(http.get(/.*\/wallets.*/, () => new HttpResponse(null, { status: 404 })));
+
 		await profile.validators().syncAll();
 		const exists = await profile.validators().publicKeyExists("123", profile.activeNetwork());
 		expect(exists).toBe(false);

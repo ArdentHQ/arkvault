@@ -155,6 +155,10 @@ describe("ProfileTransactionNotificationService", () => {
 			type: INotificationTypes.Transaction,
 		});
 
+		notificationRepository.push({
+			type: INotificationTypes.Plugin,
+		});
+
 		service.markAllAsRead();
 
 		expect(notificationRepository.get(transactionNotif.id).read_at).toBeDefined();
@@ -163,6 +167,10 @@ describe("ProfileTransactionNotificationService", () => {
 	it("should mark all transaction notifications as removed", () => {
 		const transactionNotif = notificationRepository.push({
 			type: INotificationTypes.Transaction,
+		});
+
+		notificationRepository.push({
+			type: INotificationTypes.Plugin,
 		});
 
 		service.markAllAsRemoved();
