@@ -140,6 +140,44 @@ describe("LedgerScannerTest", () => {
 		fromAddressSpy.mockRestore();
 	});
 
+	it("should continue scanning when wallet has not synced with some consecutive empty", async () => {
+		const syncedWallet = profile.wallets().first();
+		vi.spyOn(syncedWallet, "hasSyncedWithNetwork").mockReturnValue(false);
+		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
+
+		const fromAddressSpy = vi.spyOn(profile.walletFactory(), "fromAddress");
+		fromAddressSpy.mockResolvedValue(syncedWallet);
+
+		const scanSpy = vi.spyOn(profile.ledger(), "scan");
+		let callCount = 0;
+		scanSpy.mockImplementation(async () => {
+			callCount++;
+			if (callCount <= 2) {
+				const { WalletData: WD } = await import("@/app/lib/mainsail/wallet.dto");
+				return {
+					"m/44'/111'/0'/0/0": new WD({
+						config: profile.wallets().first().network().config(),
+					}).fill({
+						address: profile.wallets().first().address(),
+						balance: 10,
+						publicKey: profile.wallets().first().publicKey(),
+					}),
+				} as any;
+			}
+			return {} as any;
+		});
+
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanAllWithBalance({
+			isLegacy: false,
+			slip44: 111,
+		});
+
+		expect(result).toHaveLength(0);
+		fromAddressSpy.mockRestore();
+		scanSpy.mockRestore();
+	});
+
 	it("should compute last path with legacy sorting when profile has ledger wallets", async () => {
 		const syncedWallet = profile.wallets().first();
 		vi.spyOn(syncedWallet, "synchroniser").mockReturnValue({ identity: vi.fn() } as any);
