@@ -423,7 +423,9 @@ describe("LedgerMigrator", () => {
 
 	it("should skip completed transactions with undefined recipient", async () => {
 		const migrator = new LedgerMigrator({ env, profile });
+		const wallet = profile.wallets().first();
 		const transaction = new MigrationTransaction({ env, profile });
+		transaction.setSender(wallet);
 		transaction.setIsCompleted(true);
 
 		vi.spyOn(transaction, "recipient").mockReturnValue(undefined);
