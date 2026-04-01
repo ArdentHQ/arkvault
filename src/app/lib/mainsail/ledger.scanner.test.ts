@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi, beforeAll } from "vite
 import { mockNanoSTransport } from "@/utils/testing-library";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { Contracts } from "@/app/lib/profiles";
+import { WalletData } from "@/app/lib/mainsail/wallet.dto";
 
 let profile: Contracts.IProfile;
 
@@ -150,12 +151,11 @@ describe("LedgerScannerTest", () => {
 
 		const scanSpy = vi.spyOn(profile.ledger(), "scan");
 		let callCount = 0;
-		scanSpy.mockImplementation(async () => {
+		scanSpy.mockImplementation(() => {
 			callCount++;
 			if (callCount <= 2) {
-				const { WalletData: WD } = await import("@/app/lib/mainsail/wallet.dto");
 				return {
-					"m/44'/111'/0'/0/0": new WD({
+					"m/44'/111'/0'/0/0": new WalletData({
 						config: profile.wallets().first().network().config(),
 					}).fill({
 						address: profile.wallets().first().address(),
