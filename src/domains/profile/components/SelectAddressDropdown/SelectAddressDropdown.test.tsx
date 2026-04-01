@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { SelectAddressDropdown } from "./SelectAddressDropdown";
+import { OptionLabel, SelectAddressDropdown } from "./SelectAddressDropdown";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 import { expect } from "vitest";
 
@@ -203,5 +203,22 @@ describe("SelectAddressDropdown", () => {
 		await waitFor(() => {
 			expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
 		});
+	});
+});
+
+describe("OptionLabel", () => {
+	let wallet: Contracts.IReadWriteWallet;
+
+	beforeAll(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
+
+		wallet = profile.wallets().first();
+	});
+
+	it("should render amount in screen >= sm", () => {
+		render(<OptionLabel option={{value: wallet.address()}} network={profile.activeNetwork()} profile={profile} showBalance={true} />);
+
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
+		expect(screen.getAllByText("95.276532523250678785 ARK").length).toBe(2);
 	});
 });
