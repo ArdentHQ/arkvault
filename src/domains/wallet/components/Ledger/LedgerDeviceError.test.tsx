@@ -2,7 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { LedgerDeviceError } from "./LedgerDeviceError";
+import { LedgerDeviceError, LedgerDeviceErrorContent } from "./LedgerDeviceError";
 import { render, screen } from "@/utils/testing-library";
 
 describe("LedgerDeviceError", () => {
@@ -35,5 +35,20 @@ describe("LedgerDeviceError", () => {
 		);
 
 		expect(screen.getByText(subtitle)).toBeInTheDocument();
+	});
+});
+
+describe("LedgerDeviceErrorContent", () => {
+	it("should display loading indicator", () => {
+		render(
+			<LedgerDeviceErrorContent
+				supportedModel={Contracts.WalletLedgerModel.NanoX}
+				connectedModel={Contracts.WalletLedgerModel.NanoS}
+				subtitle="Connect your Ledger Nano S and confirm input"
+				subject="message"
+			/>,
+		);
+
+		expect(screen.getByTestId("LedgerWaitingDevice-loading_message")).toBeInTheDocument();
 	});
 });
