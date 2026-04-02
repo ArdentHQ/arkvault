@@ -24,9 +24,6 @@
 		}
 	},
 	"exclude": [
-		"**/*.test.ts",
-		"**/*.test.tsx",
-		"**/tests/**",
 		"**/e2e/**",
 		"**/cucumber/**",
 		"src/utils/testing-library.tsx",

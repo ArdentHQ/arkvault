@@ -87,6 +87,18 @@ describe("WalletAliasProvider", () => {
 		expect(result).toBeDefined();
 	});
 
+	it("should use localName when username is undefined and useNetworkWalletNames is true", () => {
+		const wallet = profile.wallets().first();
+		vi.spyOn(profile.knownWallets(), "is").mockReturnValue(false);
+		vi.spyOn(profile.appearance(), "get").mockReturnValue(true);
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(wallet);
+		vi.spyOn(wallet, "displayName").mockReturnValue("My Wallet");
+		vi.spyOn(wallet, "username").mockReturnValue(undefined);
+
+		const result = provider.findAliasByAddress(wallet.address());
+		expect(result).toBeDefined();
+	});
+
 	it("should generate default alias for non-ledger wallet", () => {
 		const wallet = profile.wallets().first();
 		vi.spyOn(wallet, "isLedger").mockReturnValue(false);

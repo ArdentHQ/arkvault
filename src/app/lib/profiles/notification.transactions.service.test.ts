@@ -494,5 +494,28 @@ describe("ProfileTransactionNotificationService", () => {
 			const result = service.active();
 			expect(result).toHaveLength(1);
 		});
+
+		it("should return transaction when notification is deleted after sync", async () => {
+			setupForSync();
+			vi.spyOn(profile, "transactionAggregate").mockImplementation(
+				() =>
+					({
+						all: vi.fn().mockResolvedValue({
+							items: () => [mockTransaction("tx-deleted-notification")],
+						}),
+						flush: vi.fn(),
+					}) as any,
+			);
+
+			await service.sync();
+
+			expect(service.transactions()).toHaveLength(1);
+
+			vi.spyOn(service, "has").mockReturnValue(false);
+
+			const result = service.active();
+			expect(result).toHaveLength(1);
+			expect(result[0].hash()).toBe("tx-deleted-notification");
+		});
 	});
 });
