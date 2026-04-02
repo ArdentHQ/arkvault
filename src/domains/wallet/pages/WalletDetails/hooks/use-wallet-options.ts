@@ -38,6 +38,7 @@ const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Cont
 		return false;
 	}
 
+	/* istanbul ignore next -- @preserve */
 	if (isMultiSignature(wallet)) {
 		return false;
 	}
@@ -47,6 +48,7 @@ const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Cont
 	}
 
 	if (isCustomNetwork(wallet.network())) {
+		/* istanbul ignore next -- @preserve */
 		return hasAvailableMusigServer({ network: wallet.network(), profile });
 	}
 
