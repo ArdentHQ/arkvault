@@ -2,6 +2,7 @@ import React from "react";
 
 import { MnemonicList } from "./MnemonicList";
 import { render, screen } from "@/utils/testing-library";
+import { expect } from "vitest";
 
 describe("MnemonicList", () => {
 	it("should render", () => {
@@ -37,5 +38,10 @@ describe("MnemonicList", () => {
 		}
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should not render mnemonic list when mnemonic is falsy", () => {
+		render(<MnemonicList mnemonic={""} />);
+		expect(screen.queryByTestId("MnemonicList__item")).not.toBeInTheDocument();
 	});
 });
