@@ -223,4 +223,14 @@ describe("Wallet Options Hook", () => {
 			options: [],
 		});
 	});
+
+	it("should render HD account name option", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet, "accountName").mockReturnValue("accountName");
+
+		const { result } = renderHook(() => useWalletOptions([wallet, profile.wallets().last()]));
+
+		expect(result.current.primaryOptions.options.some((opt) => opt.value === "hd-account-name")).toBe(false);
+	});
 });
