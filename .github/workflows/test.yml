@@ -990,8 +990,8 @@ jobs:
         env:
             COVERAGE_INCLUDE_PATH: src/app/lib/profiles,src/app/lib/mainsail,src/app/lib/intl,src/app/lib/markets
             COVERAGE_THRESHOLD_LINES: 99.85
-            COVERAGE_THRESHOLD_FUNCTIONS: 99.69
             COVERAGE_THRESHOLD_BRANCHES: 99.78
+            COVERAGE_THRESHOLD_FUNCTIONS: 99.69
             COVERAGE_THRESHOLD_STATEMENTS: 98.6
         strategy:
             matrix:
