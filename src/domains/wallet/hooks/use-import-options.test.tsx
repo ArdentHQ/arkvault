@@ -3,6 +3,7 @@ import { renderHook } from "@testing-library/react";
 import { Contracts } from "@/app/lib/profiles";
 import { OptionsValue, useImportOptions } from "./use-import-options";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
+import { useEffect } from "react";
 
 describe("useImportOptions", () => {
 	let profile: Contracts.IProfile;
@@ -29,6 +30,24 @@ describe("useImportOptions", () => {
 		expect(current.options).toHaveLength(2);
 		expect(current.options[1].value).toBe(OptionsValue.ADDRESS);
 		expect(current.defaultOption).contains({ label: "Address", value: OptionsValue.ADDRESS });
+	});
+
+	it("should return advanced options when profile uses HD wallet", () => {
+		const usesHDWallets = vi.spyOn(profile, "usesHDWallets").mockReturnValue(true);
+
+		const {
+			result: { current },
+		} = renderHook(() =>
+			useImportOptions(
+				{},
+				profile,
+			),
+		);
+
+		expect(current.advancedOptions).toHaveLength(1);
+		expect(current.advancedOptions[0].value).toBe(OptionsValue.BIP44);
+
+		usesHDWallets.mockRestore();
 	});
 
 	it("should return options from the available options", () => {
