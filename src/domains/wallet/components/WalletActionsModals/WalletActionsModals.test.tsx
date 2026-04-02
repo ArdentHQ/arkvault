@@ -112,7 +112,7 @@ describe("WalletActionsModals", () => {
 			handleSend: vi.fn(),
 			handleToggleStar: vi.fn(),
 			handleTokenSend: vi.fn(),
-			setActiveModal: vi.fn()
+			setActiveModal: vi.fn(),
 		});
 
 		const setActiveModalMock = vi.fn();
