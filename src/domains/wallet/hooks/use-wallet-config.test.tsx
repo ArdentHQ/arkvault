@@ -23,7 +23,6 @@ describe("useWalletConfig", () => {
 
 	it("should render with ledger wallet display type", async () => {
 		const walletIsLedgerSpy = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
-		profile.wallets().first().toggleStarred();
 
 		const { result } = renderHook(
 			() =>
@@ -50,7 +49,7 @@ describe("useWalletConfig", () => {
 		profile.wallets().first().toggleStarred();
 
 		const { result } = renderHook(
-			() => useWalletConfig({ defaults: { selectedNetworkIds: [], walletsDisplayType: "starred" }, profile }),
+			() => useWalletConfig({ defaults: { selectedNetworkIds: ["mainsail.devnet"], walletsDisplayType: "starred" }, profile }),
 			{
 				wrapper,
 			},
@@ -59,11 +58,12 @@ describe("useWalletConfig", () => {
 		await waitFor(() => {
 			expect(result.current.walletsDisplayType).toBe("starred");
 		});
+
+		expect(result.current.selectedWallets).toHaveLength(1);
+		expect(result.current.selectedWallets[0].address()).toBe(profile.wallets().first().address());
 	});
 
 	it.each([undefined, []])("should render with no networks selected (%s)", async (selectedNetworkIds) => {
-		profile.wallets().first().toggleStarred();
-
 		const { result } = renderHook(() => useWalletConfig({ defaults: { selectedNetworkIds } as any, profile }), {
 			wrapper,
 		});
@@ -74,8 +74,6 @@ describe("useWalletConfig", () => {
 	});
 
 	it("should set value", async () => {
-		profile.wallets().first().toggleStarred();
-
 		const { result } = renderHook(
 			() => useWalletConfig({ defaults: { selectedNetworkIds: [], walletsDisplayType: "all" }, profile }),
 			{
