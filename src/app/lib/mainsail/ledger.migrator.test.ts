@@ -454,6 +454,40 @@ describe("LedgerMigrator", () => {
 		transactionSpy1.restoreAll();
 	});
 
+	it("should not forget old wallet when it is not in profile", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+
+		const uniqueAddress = "0x0000001";
+
+		const mockRecipient = {
+			address: () => uniqueAddress,
+			generateAlias: () => "Migrated",
+			mutator: () => ({ alias: vi.fn() }),
+		};
+
+		const pushSpy = vi.spyOn(profile.wallets(), "push").mockImplementation(() => {});
+		const forgetSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
+		vi.spyOn(profile.wallets(), "has").mockReturnValue(false);
+
+		const transaction = new MigrationTransaction({ env, profile });
+		transaction.setSender(wallet);
+		const recipientSpy = vi.spyOn(transaction, "recipient").mockReturnValue(mockRecipient as any);
+		transaction.setIsCompleted(true);
+
+		migrator.addTransaction(transaction);
+
+		await migrator.importMigratedWallets();
+
+		expect(forgetSpy).not.toHaveBeenCalled();
+		expect(pushSpy).toHaveBeenCalled();
+
+		pushSpy.mockRestore();
+		forgetSpy.mockRestore();
+		recipientSpy.mockRestore();
+	});
+
 	it("should skip completed transactions with undefined recipient", async () => {
 		const migrator = new LedgerMigrator({ env, profile });
 		const wallet = profile.wallets().first();
@@ -468,6 +502,35 @@ describe("LedgerMigrator", () => {
 		const walletCountBefore = profile.wallets().count();
 		await migrator.importMigratedWallets();
 		expect(profile.wallets().count()).toBe(walletCountBefore);
+	});
+
+	it("should create migration transaction with unique address", async () => {
+		mockNanoSTransport();
+		const wallet = profile.wallets().first();
+		const migrator = new LedgerMigrator({ env, profile });
+
+		const uniqueSenderAddress = "0x0000001";
+		const mockSenderWallet = {
+			...wallet,
+			address: () => uniqueSenderAddress,
+		};
+
+		const originalMethod = profile.walletFactory().fromAddressWithDerivationPath.bind(profile.walletFactory());
+		const fromAddressWithDerivationPathSpy = vi
+			.spyOn(profile.walletFactory(), "fromAddressWithDerivationPath")
+			.mockImplementation(async (options: any) => {
+				if (options.address === uniqueSenderAddress) {
+					return mockSenderWallet as any;
+				}
+				return originalMethod(options);
+			});
+
+		const transaction = await migrator.createTransaction(uniqueSenderAddress, senderPath, recipientPath);
+
+		expect(transaction).toBeDefined();
+		expect(fromAddressWithDerivationPathSpy).toHaveBeenCalled();
+
+		fromAddressWithDerivationPathSpy.mockRestore();
 	});
 
 	it("should calculate current transaction index", async () => {
@@ -523,6 +586,12 @@ describe("MigrationTransaction", () => {
 	it("should return false for isPendingConfirmation when no signed transaction", () => {
 		const tx = new MigrationTransaction({ env, profile });
 		expect(tx.isPendingConfirmation()).toBe(false);
+	});
+
+	it("should return true for isPendingConfirmation when signed transaction exists and is not confirmed", () => {
+		const tx = new MigrationTransaction({ env, profile });
+		vi.spyOn(tx, "signedTransaction").mockReturnValue({ isConfirmed: () => false } as any);
+		expect(tx.isPendingConfirmation()).toBe(true);
 	});
 
 	it("should return correct isCompleted state", () => {
