@@ -6,6 +6,7 @@ import * as envHooks from "@/app/hooks/env";
 import { env, getMainsailProfileId, render, syncValidators } from "@/utils/testing-library";
 import userEvent from "@testing-library/user-event";
 import { expect } from "vitest";
+import * as useWalletActionsHook from "@/domains/wallet/hooks/use-wallet-actions";
 
 describe("WalletActionsModals", () => {
 	let profile: Contracts.IProfile;
@@ -102,7 +103,36 @@ describe("WalletActionsModals", () => {
 		expect(setActiveModalMock).toHaveBeenCalled();
 	});
 
-	it("should delete a wallet", async () => {
+	it("should not hide `delete wallet` when deletion fails", async () => {
+		const useWalletActionMock = vi.spyOn(useWalletActionsHook, "useWalletActions").mockReturnValue({
+			activeModal: undefined,
+			handleDelete: () => Promise.resolve(undefined),
+			handleOpen: vi.fn(),
+			handleSelectOption: vi.fn(),
+			handleSend: vi.fn(),
+			handleToggleStar: vi.fn(),
+			handleTokenSend: vi.fn(),
+			setActiveModal: vi.fn()
+		});
+
+		const setActiveModalMock = vi.fn();
+
+		render(
+			<WalletActionsModals
+				wallets={[wallet]}
+				activeModal={"delete-wallet"}
+				onUpdateWallet={vi.fn()}
+				setActiveModal={setActiveModalMock}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		expect(setActiveModalMock).not.toHaveBeenCalled();
+
+		useWalletActionMock.mockRestore();
+	});
+
+	it("should handle wallet deletion", async () => {
 		const setActiveModalMock = vi.fn();
 		const profileWalletsCount = wallet.profile().wallets().count();
 
