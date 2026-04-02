@@ -50,6 +50,6 @@ describe("MnemonicListSkeleton", () => {
 	it("should render", () => {
 		render(<MnemonicListSkeleton />);
 
-		expect(screen.queryByTestId("MnemonicList__item_skeleton")).not.toBeInTheDocument();
+		expect(screen.getAllByTestId("MnemonicList__item_skeleton").length).toBe(24);
 	});
 });
