@@ -68,7 +68,7 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should valdiate second mnemonic", async () => {
+	it("should validate second mnemonic", async () => {
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
 		const fromMnemonicMock = vi
