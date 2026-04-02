@@ -4,10 +4,9 @@ import React from "react";
 
 import { useWalletConfig } from "./use-wallet-config";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, waitFor, mockProfileWithPublicAndTestNetworks, getMainsailProfileId } from "@/utils/testing-library";
+import { env, waitFor, getMainsailProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
-let resetProfileNetworksMock: () => void;
 
 const wrapper = ({ children }) => (
 	<EnvironmentProvider env={env}>
@@ -20,14 +19,6 @@ describe("useWalletConfig", () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 
 		profile.settings().set(Contracts.ProfileSetting.DashboardConfiguration, undefined);
-	});
-
-	beforeEach(() => {
-		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-	});
-
-	afterEach(() => {
-		resetProfileNetworksMock();
 	});
 
 	it("should render with ledger wallet display type", async () => {
@@ -99,5 +90,29 @@ describe("useWalletConfig", () => {
 		await waitFor(() => {
 			expect(result.current.selectedNetworkIds).toStrictEqual(["mainsail.devnet"]);
 		});
+	});
+
+	it("should exclude wallet if its network is not present in profile available networks", async () => {
+		const mockNetwork = {
+			id: () => "test-network",
+			meta: () => ({ enabled: true }),
+		};
+
+		const availableNetworksSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([mockNetwork as any]);
+
+		const { result } = renderHook(
+			() =>
+				useWalletConfig({
+					defaults: { selectedNetworkIds: ["test-network"], walletsDisplayType: "all" },
+					profile,
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		expect(result.current.selectedWallets).toHaveLength(0);
+
+		availableNetworksSpy.mockRestore();
 	});
 });
