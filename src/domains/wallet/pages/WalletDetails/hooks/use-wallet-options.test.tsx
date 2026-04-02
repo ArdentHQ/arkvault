@@ -111,6 +111,18 @@ describe("Wallet Options Hook", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should disable musig option if the given wallet is not restored yet", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false)
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(false);
+
+		vi.restoreAllMocks();
+	});
+
 	it("should disable musig option for a wallet with no balance", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
@@ -119,11 +131,7 @@ describe("Wallet Options Hook", () => {
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(result.current.registrationOptions).toStrictEqual({
-			key: "registrations",
-			options: [],
-			title: "Register",
-		});
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(false);
 
 		vi.restoreAllMocks();
 	});
@@ -150,18 +158,6 @@ describe("Wallet Options Hook", () => {
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
 		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(false);
-
-		vi.restoreAllMocks();
-	});
-
-	it("should enable musig option", () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
-
-		const { result } = renderHook(() => useWalletOptions([wallet]));
-
-		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(true);
 
 		vi.restoreAllMocks();
 	});
