@@ -5,6 +5,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import { useWalletOptions } from "./use-wallet-options";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
+import { BigNumber } from "@/app/lib/helpers";
 
 describe("Wallet Options Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;
@@ -104,6 +105,22 @@ describe("Wallet Options Hook", () => {
 				{ label: "Username", value: "username-registration" },
 				{ label: "Resign Username", value: "username-resignation" },
 			],
+			title: "Register",
+		});
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render options for wallet with 0 balance and disable musig option", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptionsoptions).toStrictEqual({
+			key: "registrations",
+			options: [],
 			title: "Register",
 		});
 
