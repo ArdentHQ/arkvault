@@ -68,7 +68,7 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should display second signature input", async () => {
+	it("should display second mnemonic input", async () => {
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
 		const fromMnemonicMock = vi
@@ -90,5 +90,31 @@ describe("EncryptPasswordStep", () => {
 		unmount();
 
 		fromMnemonicMock.mockRestore();
+	});
+
+	it("should display second secret input", async () => {
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+
+		const fromSecretMock = vi
+			.spyOn(AddressService.prototype, "fromSecret")
+			.mockReturnValue({ address: wallet.address(), type: "bip39" });
+
+		const { unmount, asFragment } = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
+
+		const secondSecretInput = screen.getByTestId("EncryptPassword__second-secret");
+		expect(secondSecretInput).toBeInTheDocument();
+
+		await userEvent.clear(secondSecretInput);
+		await userEvent.paste("valid secret");
+
+		await fillPasswordFields();
+
+		expect(asFragment()).toMatchSnapshot();
+
+		unmount();
+
+		fromSecretMock.mockRestore();
 	});
 });
