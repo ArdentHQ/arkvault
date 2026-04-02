@@ -53,6 +53,20 @@ describe("Authentication", () => {
 		fromMnemonicMock.mockRestore();
 	});
 
+	it("should throw user-friendly error", async () => {
+		const bip39ValidateOrThrowMock = vi.spyOn(BIP39, "validateOrThrow").mockImplementation(() => {
+			throw new Error('Error: Unknown letter: "lubble". Allowed: x, y, z');
+		});
+
+		const mnemonic = authentication(translationMock).mnemonic(wallet);
+
+		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe(
+			"COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD",
+		);
+
+		bip39ValidateOrThrowMock.mockRestore();
+	});
+
 	it("should validate BIP44 mnemonic", async () => {
 		const hdWalletMock = vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
 

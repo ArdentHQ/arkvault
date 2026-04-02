@@ -572,6 +572,13 @@ export const translations = {
 		MIN: "{{field}} should be least {{min}}.",
 		MIN_LENGTH: "{{field}} should have at least {{minLength}} characters.",
 		MIN_RECIPIENTS: "At least one recipient is required.",
+		MNEMONIC_RULES: {
+			HAS_VALID_SPACING: "Spaces between words",
+			HAS_VALID_WORD_COUNT: "12 or 24 words",
+			LOWERCASE: "Lowercase characters only",
+			NO_TRAILING_SPACE: "No trailing spaces",
+		},
+		MNEMONIC_UNEXPECTED_WORD: 'Unexpected word: "{{word}}", please recheck.',
 		MULTIPLE_UNDERSCORES: "A username cannot contain two or more consecutive underscores.",
 		OPTIONAL: "This field is optional.",
 		PASSWORD_GENERIC_ERROR: "Please follow the hints below to strengthen your password.",
