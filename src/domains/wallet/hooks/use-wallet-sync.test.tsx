@@ -29,4 +29,23 @@ describe("useWalletSync", () => {
 			await expect(current.syncAll(wallet)).resolves.toBeTruthy();
 		});
 	});
+
+	it("#syncAll - voting enabled", async () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletSync({ env, profile }));
+
+		const wallet = profile.wallets().first();
+		const network = wallet.network();
+
+		vi.spyOn(network, "allowsVoting").mockReturnValueOnce(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(true);
+		const voteSynchronizerSpy = vi.spyOn(wallet.synchroniser(), "votes");
+
+		await act(async () => {
+			await expect(current.syncAll(wallet)).resolves.toBeTruthy();
+		});
+
+		expect(voteSynchronizerSpy).toHaveBeenCalled();
+	});
 });
