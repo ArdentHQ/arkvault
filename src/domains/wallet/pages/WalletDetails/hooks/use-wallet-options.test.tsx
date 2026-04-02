@@ -114,7 +114,7 @@ describe("Wallet Options Hook", () => {
 	it("should disable musig option if the given wallet is not restored yet", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false)
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
