@@ -342,6 +342,19 @@ describe("Network", () => {
 		expect(() => networkInstance.milestone()).toThrow("The [height] is an unknown configuration value.");
 	});
 
+	it("should handle milestone traversal edge cases", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", null);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(15);
+		expect(result.data).toBe("second");
+	});
+
 	describe("#isSynced", () => {
 		it("should return true when both height and crypto are set", () => {
 			networkInstance.config().set("height", 100);

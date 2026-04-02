@@ -58,6 +58,14 @@ describe("SettingRepository", () => {
 		expect(repository.get("ALLOWED_KEY")).toBe("updated");
 	});
 
+	it("should remove unknown key from data store when isUnknownKey is called", () => {
+		repository.set("UNKNOWN_KEY", "should-be-removed");
+
+		const result = repository.get("ALLOWED_KEY");
+
+		expect(repository.has("UNKNOWN_KEY")).toBe(false);
+	});
+
 	it("should remove unknown existing key when set is called", () => {
 		repository.set("ALLOWED_KEY", "value1");
 		repository.set("UNKNOWN_KEY", "should-not-set");

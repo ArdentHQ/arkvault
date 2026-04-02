@@ -188,4 +188,14 @@ describe("LedgerScannerTest", () => {
 
 		expect(result.length).toBeGreaterThan(0);
 	});
+
+	it("should compute last path with legacy slip44", async () => {
+		const scanner = profile.ledger().scanner({ scannedWallets: [] });
+		const result = await scanner.scanAllWithBalance({
+			isLegacy: true,
+			slip44: 1,
+		});
+
+		expect(result).toHaveLength(0);
+	});
 });
