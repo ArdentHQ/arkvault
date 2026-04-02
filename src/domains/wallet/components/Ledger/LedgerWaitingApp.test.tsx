@@ -28,7 +28,7 @@ describe("LedgerWaitingApp", () => {
 	});
 });
 
-describe("LedgerDeviceErrorContent", () => {
+describe("LedgerWaitingAppContent", () => {
 	it("should display loading indicator", () => {
 		render(<LedgerWaitingAppContent coinName="ARK" subject="message" />);
 
