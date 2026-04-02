@@ -115,6 +115,7 @@ describe("Wallet Options Hook", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
