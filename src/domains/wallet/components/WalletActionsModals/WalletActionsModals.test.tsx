@@ -102,6 +102,24 @@ describe("WalletActionsModals", () => {
 		expect(setActiveModalMock).toHaveBeenCalled();
 	});
 
+	it("should delete a wallet", async () => {
+		const setActiveModalMock = vi.fn();
+		const profileWalletsCount = wallet.profile().wallets().count();
+
+		render(
+			<WalletActionsModals
+				wallets={[wallet]}
+				activeModal={"delete-wallet"}
+				onUpdateWallet={vi.fn()}
+				setActiveModal={setActiveModalMock}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		expect(wallet.profile().wallets().count()).toBe(profileWalletsCount - 1);
+		expect(setActiveModalMock).toHaveBeenCalledWith(undefined);
+	});
+
 	it("should render `delete-wallet` modal", async () => {
 		const { asFragment } = render(
 			<WalletActionsModals wallets={[wallet]} activeModal={"delete-wallet"} setActiveModal={setActiveModal} />,
