@@ -118,7 +118,7 @@ describe("Wallet Options Hook", () => {
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(result.current.registrationOptionsoptions).toStrictEqual({
+		expect(result.current.registrationOptions).toStrictEqual({
 			key: "registrations",
 			options: [],
 			title: "Register",
