@@ -229,8 +229,8 @@ describe("Wallet Options Hook", () => {
 
 		vi.spyOn(wallet, "accountName").mockReturnValue("accountName");
 
-		const { result } = renderHook(() => useWalletOptions([wallet, profile.wallets().last()]));
+		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(result.current.primaryOptions.options.some((opt) => opt.value === "hd-account-name")).toBe(false);
+		expect(result.current.primaryOptions.options.some((opt) => opt.value === "hd-account-name")).toBe(true);
 	});
 });
