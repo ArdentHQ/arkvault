@@ -292,7 +292,7 @@ describe("Network", () => {
 
 	it("should throw error when milestone is not found", () => {
 		networkInstance.config().set("height", 5);
-		networkInstance.config().set("crypto", { milestones: null });
+		networkInstance.config().set("crypto", { milestones: [] });
 
 		expect(() => networkInstance.milestone()).toThrow();
 	});
