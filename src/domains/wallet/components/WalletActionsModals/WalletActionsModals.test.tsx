@@ -1,5 +1,5 @@
 import { Contracts } from "@/app/lib/profiles";
-import { screen, waitFor } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import React from "react";
 import { WalletActionsModals } from "./WalletActionsModals";
 import * as envHooks from "@/app/hooks/env";
