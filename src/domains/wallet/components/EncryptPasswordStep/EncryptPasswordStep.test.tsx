@@ -5,12 +5,29 @@ import { EncryptPasswordStep } from "./EncryptPasswordStep";
 import { env, getMainsailProfileId, renderWithForm, screen, waitFor } from "@/utils/testing-library";
 import { beforeAll, expect } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
+import { AddressService } from "@/app/lib/mainsail/address.service";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
 describe("EncryptPasswordStep", () => {
 	const passwordValue = "123";
+
+	const fillPasswordFields = async () => {
+		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
+		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
+
+		await userEvent.clear(passwordInput);
+		await userEvent.paste(passwordValue);
+
+		await waitFor(() => expect(passwordInput).toHaveValue(passwordValue));
+
+		await userEvent.clear(confirmPassword);
+		await userEvent.paste(passwordValue);
+
+		await waitFor(() => expect(confirmPassword).toHaveValue(passwordValue));
+	}
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().first();
@@ -46,29 +63,32 @@ describe("EncryptPasswordStep", () => {
 			defaultValues: { confirmEncryptionPassword: "123" },
 		});
 
-		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
-		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
-
-		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, passwordValue, { delay: 100 });
-
-		await waitFor(() => expect(passwordInput).toHaveValue(passwordValue));
-
-		await userEvent.clear(confirmPassword);
-		await userEvent.type(confirmPassword, passwordValue, { delay: 100 });
-
-		await waitFor(() => expect(confirmPassword).toHaveValue(passwordValue));
+		await fillPasswordFields();
 
 		expect(asFragment()).toMatchSnapshot();
-	}, 10_000);
+	});
 
 	it("should display second signature input", async () => {
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
-		const {unmount} = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
+		const fromMnemonicMock = vi
+			.spyOn(AddressService.prototype, "fromMnemonic")
+			.mockReturnValue({ address: wallet.address(), type: "bip39" });
 
-		expect(screen.getByTestId("EncryptPassword__second-mnemonic")).toBeInTheDocument();
+		const { unmount, asFragment } = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
+
+		const secondMnemonicInput = screen.getByTestId("EncryptPassword__second-mnemonic");
+		expect(secondMnemonicInput).toBeInTheDocument();
+
+		await userEvent.clear(secondMnemonicInput);
+		await userEvent.paste("valid mnemonic");
+
+		await fillPasswordFields();
+
+		expect(asFragment()).toMatchSnapshot();
 
 		unmount();
+
+		fromMnemonicMock.mockRestore();
 	});
 });
