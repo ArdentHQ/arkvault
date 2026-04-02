@@ -78,6 +78,23 @@ describe("useImportOptions", () => {
 		expect(current.options[2].canBeEncrypted).toBeDefined();
 	});
 
+	it("should skip ledger import option when `VITE_LEDGER_DISABLED` is enabled", () => {
+		process.env.VITE_LEDGER_DISABLED = "true";
+
+		const {
+			result: { current },
+		} = renderHook(() =>
+			useImportOptions(
+				{},
+				profile,
+			),
+		);
+
+		expect(current.options.length).toBe(0);
+
+		process.env.VITE_LEDGER_DISABLED = "false";
+	});
+
 	it("should convert method name", () => {
 		const {
 			result: { current },
