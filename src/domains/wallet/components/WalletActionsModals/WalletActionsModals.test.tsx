@@ -44,7 +44,7 @@ describe("WalletActionsModals", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should trigger `onUpdateWallet`", async () => {
+	it("should trigger `onUpdateWallet` and `setActiveModal` for `wallet-name` modal", async () => {
 		const onUpdateWalletMock = vi.fn();
 		const setActiveModalMock = vi.fn();
 
@@ -58,6 +58,35 @@ describe("WalletActionsModals", () => {
 		);
 
 		const walletInputName = "UpdateWalletName__input";
+
+		const getInput = screen.getByTestId(walletInputName);
+
+		expect(getInput).toBeInTheDocument();
+
+		const user = userEvent.setup();
+		await user.clear(getInput);
+		await user.paste("hello-123");
+
+		await user.click(screen.getByTestId("UpdateWalletName__submit"));
+
+		expect(onUpdateWalletMock).toHaveBeenCalled();
+		expect(setActiveModalMock).toHaveBeenCalled();
+	});
+
+	it("should trigger `onUpdateWallet` and `setActiveModal` for `hd-account-name` modal", async () => {
+		const onUpdateWalletMock = vi.fn();
+		const setActiveModalMock = vi.fn();
+
+		render(
+			<WalletActionsModals
+				wallets={[wallet]}
+				activeModal={"hd-account-name"}
+				onUpdateWallet={onUpdateWalletMock}
+				setActiveModal={setActiveModalMock}
+			/>,
+		);
+
+		const walletInputName = "UpdateWalletAccountName__input";
 
 		const getInput = screen.getByTestId(walletInputName);
 
