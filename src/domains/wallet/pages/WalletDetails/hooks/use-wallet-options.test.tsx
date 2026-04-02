@@ -145,6 +145,23 @@ describe("Wallet Options Hook", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should disable musig option for a wallet with a custom network", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+		vi.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(
+			result.current.registrationOptions.options.some(
+				(opt) => opt.value === "multi-signature"
+			)
+		).toBe(false);
+
+		vi.restoreAllMocks();
+	});
+
 	it("should render options for wallet of custom network and disable musig option", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
