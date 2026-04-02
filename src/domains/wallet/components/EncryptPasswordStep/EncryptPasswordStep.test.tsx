@@ -68,7 +68,7 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should display second mnemonic input", async () => {
+	it("should valdiate second mnemonic", async () => {
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
 		const fromMnemonicMock = vi
@@ -88,11 +88,35 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		unmount();
-
 		fromMnemonicMock.mockRestore();
 	});
 
-	it("should display second secret input", async () => {
+	it("should display error when second mnemonic is invalid", async () => {
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+
+		const fromMnemonicMock = vi
+			.spyOn(AddressService.prototype, "fromMnemonic")
+			.mockImplementation(() => {
+				throw new Error("invalid mnemonic")
+			});
+
+		const { unmount, } = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
+
+		const secondMnemonicInput = screen.getByTestId("EncryptPassword__second-mnemonic");
+		expect(secondMnemonicInput).toBeInTheDocument();
+
+		await userEvent.clear(secondMnemonicInput);
+		await userEvent.paste("invalid mnemonic");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+		});
+
+		unmount();
+		fromMnemonicMock.mockRestore();
+	});
+
+	it("should validate second secret", async () => {
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
@@ -114,7 +138,29 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		unmount();
+		fromSecretMock.mockRestore();
+	});
 
+	it("should display error when second secret is invalid", async () => {
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+
+		const fromSecretMock = vi
+			.spyOn(AddressService.prototype, "fromSecret")
+			.mockImplementation(() => {
+				throw new Error("invalid secret")
+			});
+
+		const { unmount } = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
+
+		const secondSecretInput = screen.getByTestId("EncryptPassword__second-secret");
+		expect(secondSecretInput).toBeInTheDocument();
+
+		await userEvent.clear(secondSecretInput);
+		await userEvent.paste("invalid secret");
+
+		unmount();
 		fromSecretMock.mockRestore();
 	});
 });
