@@ -136,11 +136,7 @@ describe("Wallet Options Hook", () => {
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(
-			result.current.registrationOptions.options.some(
-				(opt) => opt.value === "multi-signature"
-			)
-		).toBe(false);
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(false);
 
 		vi.restoreAllMocks();
 	});
@@ -153,11 +149,7 @@ describe("Wallet Options Hook", () => {
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(
-			result.current.registrationOptions.options.some(
-				(opt) => opt.value === "multi-signature"
-			)
-		).toBe(false);
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(false);
 
 		vi.restoreAllMocks();
 	});
