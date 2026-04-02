@@ -61,8 +61,6 @@ describe("SettingRepository", () => {
 	it("should remove unknown key from data store when isUnknownKey is called", () => {
 		repository.set("UNKNOWN_KEY", "should-be-removed");
 
-		const result = repository.get("ALLOWED_KEY");
-
 		expect(repository.has("UNKNOWN_KEY")).toBe(false);
 	});
 
