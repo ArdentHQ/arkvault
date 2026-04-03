@@ -36,12 +36,7 @@ describe("useImportOptions", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() =>
-			useImportOptions(
-				{},
-				profile,
-			),
-		);
+		} = renderHook(() => useImportOptions({}, profile));
 
 		expect(current.advancedOptions).toHaveLength(1);
 		expect(current.advancedOptions[0].value).toBe(OptionsValue.BIP44);
@@ -82,12 +77,7 @@ describe("useImportOptions", () => {
 
 		const {
 			result: { current },
-		} = renderHook(() =>
-			useImportOptions(
-				{},
-				profile,
-			),
-		);
+		} = renderHook(() => useImportOptions({}, profile));
 
 		expect(current.options.length).toBe(0);
 
