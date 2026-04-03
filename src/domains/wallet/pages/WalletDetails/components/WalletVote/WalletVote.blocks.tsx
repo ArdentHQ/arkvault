@@ -64,8 +64,6 @@ export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatus
 			</div>
 		);
 	}
-
-	return;
 };
 
 export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProperties) => {
