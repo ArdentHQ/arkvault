@@ -3,8 +3,7 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { MnemonicVerification } from "./MnemonicVerification";
 import * as randomWordPositionsMock from "./utils/randomWordPositions";
-import { render, screen, fireEvent } from "@/utils/testing-library";
-import { waitFor } from "../../../../utils/testing-library";
+import { render, screen, fireEvent, waitFor } from "@/utils/testing-library";
 const mnemonic = "ark btc usd bnb eth ltc";
 const handleComplete = vi.fn();
 

@@ -3,7 +3,6 @@ import { renderHook } from "@testing-library/react";
 import { Contracts } from "@/app/lib/profiles";
 import { OptionsValue, useImportOptions } from "./use-import-options";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
-import { useEffect } from "react";
 
 describe("useImportOptions", () => {
 	let profile: Contracts.IProfile;
