@@ -9,6 +9,7 @@ import { env, getMainsailProfileId, MAINSAIL_MNEMONICS } from "@/utils/testing-l
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { expect } from "vitest";
 import * as useWalletSyncHook from "@/domains/wallet/hooks/use-wallet-sync";
+import { CoinManifest } from "../../../app/lib/mainsail/network.models";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
@@ -133,7 +134,10 @@ describe("useWalletImport", () => {
 		},
 	);
 
-	it("should sync wallet", async () => {
+	it("should not sync wallet when given network is different from active", async () => {
+		const manifest = profile.networks().get('mainsail.mainnet');
+		const mainnet = new Networks.Network({} as CoinManifest, manifest, profile);
+
 		const syncAllSpy = vi.fn();
 
 		const syncWalletHook = vi.spyOn(useWalletSyncHook, "useWalletSync").mockReturnValue({
@@ -149,13 +153,12 @@ describe("useWalletImport", () => {
 				deviceId: "nanox",
 				path: "m/44'/1'/0'/0/0",
 			},
-			network,
+			network: mainnet,
 			type: "ledger",
 			value: "0x393f3F74F0cd9e790B5192789F32E0A38159de03",
 		});
 
-		expect(syncAllSpy).toHaveBeenCalled();
-
+		expect(syncAllSpy).not.toHaveBeenCalled();
 		syncWalletHook.mockRestore();
 	});
 
