@@ -74,9 +74,26 @@ describe("#WalletVote", async () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should render with `hasToken=true`", async () => {
+		it("should render with `hasTokens=true`", async () => {
 			const { asFragment } = render(
 				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} hasTokens />,
+			);
+
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should render with `hasTokens=true` and multiple wallets", async () => {
+			const { asFragment } = render(
+				<WalletVote
+					wallets={profile.wallets().values()}
+					wallet={wallet}
+					onButtonClick={vi.fn()}
+					votes={votes}
+					isLoadingVotes={false}
+					hasTokens
+				/>,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
