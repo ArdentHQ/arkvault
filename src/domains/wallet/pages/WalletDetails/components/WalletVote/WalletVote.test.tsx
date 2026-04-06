@@ -58,6 +58,16 @@ describe("#WalletVote", async () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
+		it("should render with multiple wallets", async () => {
+			const { asFragment } = render(
+				<WalletVote wallets={profile.wallets().values()} wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+			);
+
+			await expect(screen.findByText("Manage votes for your addresses")).resolves.toBeVisible();
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
 		it("should render ledger for incompatible ledger wallet", async () => {
 			process.env.REACT_APP_IS_UNIT = undefined;
 			const ledgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
@@ -206,7 +216,6 @@ describe("#WalletVote", async () => {
 
 			usesLockedBalance.mockRestore();
 		});
-		//
 		it("doesnt shows the locked votes when does not used locked balance", async () => {
 			const votes = [
 				{
@@ -249,7 +258,6 @@ describe("#WalletVote", async () => {
 
 			usesLockedBalance.mockRestore();
 		});
-		//
 
 		describe("single vote networks", () => {
 			const { result } = renderHook(() => useTranslation());
