@@ -7,6 +7,7 @@ import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
@@ -35,7 +36,7 @@ describe("useWalletImport", () => {
 		const wallet = await current.importWallet({
 			ledgerOptions: {
 				deviceId: "nanox",
-				path: "m/44'/1'/0'/0/0"
+				path: "m/44'/1'/0'/0/0",
 			},
 			network,
 			type: "ledger",
@@ -43,6 +44,29 @@ describe("useWalletImport", () => {
 		});
 
 		expect(wallet).toBeInstanceOf(Wallet);
+	});
+
+	it("should return existing wallet if it's been imported already", async () => {
+		const walletsPushSpy = vi.spyOn(profile.wallets(), "push");
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallet = await current.importWallet({
+			ledgerOptions: {
+				deviceId: "nanox",
+				path: "m/44'/1'/0'/0/0",
+			},
+			network,
+			type: "ledger",
+			value: "0x393f3F74F0cd9e790B5192789F31E0A38159de03",
+		});
+
+		expect(walletsPushSpy).not.toBeCalled();
+		expect(wallet).toBeInstanceOf(Wallet);
+
+		walletsPushSpy.mockRestore();
 	});
 
 	it("should import wallet from mnemonic with bip39", async () => {
