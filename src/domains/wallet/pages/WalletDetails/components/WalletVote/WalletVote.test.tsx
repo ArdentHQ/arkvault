@@ -281,7 +281,9 @@ describe("#WalletVote", async () => {
 
 				expect(screen.getByText(`#${validator.wallet.rank()}`)).toBeInTheDocument();
 
-				expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 }))).toBeInTheDocument();
+				expect(
+					screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 })),
+				).toBeInTheDocument();
 
 				expect(asFragment()).toMatchSnapshot();
 			});
@@ -309,7 +311,9 @@ describe("#WalletVote", async () => {
 
 				expect(screen.getByText(`#${validator.wallet.rank()}`)).toBeInTheDocument();
 
-				expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
+				expect(
+					screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 })),
+				).toBeInTheDocument();
 
 				expect(asFragment()).toMatchSnapshot();
 			});
@@ -344,7 +348,9 @@ describe("#WalletVote", async () => {
 
 				expect(screen.getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
 
-				expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
+				expect(
+					screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 })),
+				).toBeInTheDocument();
 
 				expect(asFragment()).toMatchSnapshot();
 			});
@@ -671,5 +677,4 @@ describe("#WalletVote", async () => {
 			expect(screen.getByTestId("ValidatorStatusIcon-Active")).toBeInTheDocument();
 		});
 	});
-})
-
+});
