@@ -49,7 +49,11 @@ describe("useWalletConfig", () => {
 		profile.wallets().first().toggleStarred();
 
 		const { result } = renderHook(
-			() => useWalletConfig({ defaults: { selectedNetworkIds: ["mainsail.devnet"], walletsDisplayType: "starred" }, profile }),
+			() =>
+				useWalletConfig({
+					defaults: { selectedNetworkIds: ["mainsail.devnet"], walletsDisplayType: "starred" },
+					profile,
+				}),
 			{
 				wrapper,
 			},

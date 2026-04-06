@@ -26,14 +26,14 @@ describe("EncryptPasswordStep", () => {
 		await userEvent.paste(passwordValue);
 
 		await waitFor(() => expect(confirmPassword).toHaveValue(passwordValue));
-	}
+	};
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().first();
 
 		await env.profiles().restore(profile);
-	})
+	});
 
 	it("should render", async () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />);
@@ -94,13 +94,11 @@ describe("EncryptPasswordStep", () => {
 	it("should display error when second mnemonic is invalid", async () => {
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
-		const fromMnemonicMock = vi
-			.spyOn(AddressService.prototype, "fromMnemonic")
-			.mockImplementation(() => {
-				throw new Error("invalid mnemonic")
-			});
+		const fromMnemonicMock = vi.spyOn(AddressService.prototype, "fromMnemonic").mockImplementation(() => {
+			throw new Error("invalid mnemonic");
+		});
 
-		const { unmount, } = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
+		const { unmount } = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
 
 		const secondMnemonicInput = screen.getByTestId("EncryptPassword__second-mnemonic");
 		expect(secondMnemonicInput).toBeInTheDocument();
@@ -146,11 +144,9 @@ describe("EncryptPasswordStep", () => {
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
 
-		const fromSecretMock = vi
-			.spyOn(AddressService.prototype, "fromSecret")
-			.mockImplementation(() => {
-				throw new Error("invalid secret")
-			});
+		const fromSecretMock = vi.spyOn(AddressService.prototype, "fromSecret").mockImplementation(() => {
+			throw new Error("invalid secret");
+		});
 
 		const { unmount } = renderWithForm(<EncryptPasswordStep importedWallet={wallet} />);
 
