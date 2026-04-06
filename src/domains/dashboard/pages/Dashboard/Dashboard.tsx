@@ -65,6 +65,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const networkAllowsVoting = useMemo(() => selectedWallet?.network().allowsVoting(), [selectedWallet]);
+	const hasTokens = useMemo(() => activeProfile.tokens().selectedCount() > 0, [activeProfile]);
 
 	const selectedWalletsUniqueKeys = useMemo<string>(
 		() => selectedWallets.map((wallet) => wallet.id()).join(","),
@@ -175,6 +176,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 						onViewTokens={() =>
 							navigate(generatePath(ProfilePaths.Tokens, { profileId: activeProfile.id() }))
 						}
+						hasTokens={hasTokens}
 					/>
 				</Section>
 			)}

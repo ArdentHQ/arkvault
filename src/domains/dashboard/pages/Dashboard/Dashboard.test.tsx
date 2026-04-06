@@ -249,6 +249,33 @@ describe("Dashboard", () => {
 		tokenCountMock.mockRestore();
 	});
 
+	it("should navigate to tokens page if network allows voting", async () => {
+		const wallet = profile.wallets().first();
+
+		const allowsVotingMock = vi.spyOn(profile.activeNetwork(), "allowsVoting").mockReturnValue(true);
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+		const tokenCountMock = vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(1);
+
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ViewTokens")[3]).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getAllByTestId("ViewTokens")[3]);
+
+		await waitFor(() => {
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/tokens`);
+		});
+
+		selectedWalletsMock.mockRestore();
+		tokenCountMock.mockRestore();
+		allowsVotingMock.mockRestore();
+	});
+
 	describe("deeplink handling", () => {
 		let usePanelsMock;
 		let openPanelSpy;
