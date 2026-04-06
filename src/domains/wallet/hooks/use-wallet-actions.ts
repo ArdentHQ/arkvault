@@ -156,7 +156,6 @@ export const useWalletActions = ({
 	return {
 		activeModal,
 		handleDelete,
-		handleOpen,
 		handleSelectOption,
 		handleSend,
 		handleTokenSend,
