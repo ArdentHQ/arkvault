@@ -35,7 +35,7 @@ describe("useWalletImport", () => {
 		const wallet = await current.importWallet({
 			ledgerOptions: {
 				deviceId: "nanox",
-				path: "m/44'/1'/0'/0/0"
+				path: "m/44'/1'/0'/0/0",
 			},
 			network,
 			type: "ledger",
