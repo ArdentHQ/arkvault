@@ -99,7 +99,13 @@ describe("#WalletVote", async () => {
 			const ledgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 			const { asFragment } = render(
-				<WalletVote wallets={[wallet]} wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote
+					wallets={[wallet]}
+					wallet={wallet}
+					onButtonClick={vi.fn()}
+					votes={votes}
+					isLoadingVotes={false}
+				/>,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
