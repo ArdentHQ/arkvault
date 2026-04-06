@@ -9,10 +9,13 @@ import {
 	env,
 	getDefaultMainsailWalletId,
 	getMainsailProfileId,
+	MAINSAIL_MNEMONICS,
 	render,
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
+import { expect } from "vitest";
+import { BIP44CoinType } from "../../../../app/lib/profiles/wallet.factory.contract";
 
 describe("UpdateAccountNameModal", () => {
 	let profile: Contracts.IProfile;
@@ -97,5 +100,37 @@ describe("UpdateAccountNameModal", () => {
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should show error message when name already exists", async () => {
+		const hdWallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			coin: BIP44CoinType.ARK,
+			levels: { account: 0 },
+			mnemonic: MAINSAIL_MNEMONICS[2],
+		});
+
+		hdWallet.mutator().accountName("hd-test")
+		profile.wallets().push(hdWallet);
+
+		render(<UpdateAccountNameModal profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
+		console.log(wallet.accountName());
+
+		const name = "hd-test";
+
+		await userEvent.clear(screen.getByTestId("UpdateWalletAccountName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletAccountName__input"), name);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletAccountName__input")).toHaveValue(name);
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				"The name 'hd-test' is already assigned.",
+			);
+		});
+
+		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 	});
 });
