@@ -76,7 +76,14 @@ describe("#WalletVote", async () => {
 
 		it("should render with `hasTokens=true`", async () => {
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} votes={[]} onButtonClick={vi.fn()} isLoadingVotes={false} hasTokens />,
+				<WalletVote
+					wallets={[wallet]}
+					wallet={wallet}
+					votes={[]}
+					onButtonClick={vi.fn()}
+					isLoadingVotes={false}
+					hasTokens
+				/>,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -86,7 +93,14 @@ describe("#WalletVote", async () => {
 
 		it("should render with `hasTokens=true` and no votes", async () => {
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[]} isLoadingVotes={false} hasTokens />,
+				<WalletVote
+					wallet={wallet}
+					wallets={[wallet]}
+					onButtonClick={vi.fn()}
+					votes={[]}
+					isLoadingVotes={false}
+					hasTokens
+				/>,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
