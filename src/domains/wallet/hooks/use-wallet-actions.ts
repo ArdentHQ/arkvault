@@ -78,18 +78,6 @@ export const useWalletActions = ({
 		[stopEventBubbling, openPanel, wallet],
 	);
 
-	const handleToggleStar = useCallback(
-		async (event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
-				return;
-			}
-			stopEventBubbling(event);
-			wallet.toggleStarred();
-			await persist();
-		},
-		[wallet, persist, stopEventBubbling],
-	);
-
 	const handleDelete = useCallback(
 		async (event?: React.MouseEvent<HTMLElement>) => {
 			if (!wallet) {
@@ -181,7 +169,6 @@ export const useWalletActions = ({
 		handleOpen,
 		handleSelectOption,
 		handleSend,
-		handleToggleStar,
 		handleTokenSend,
 		setActiveModal,
 	};
