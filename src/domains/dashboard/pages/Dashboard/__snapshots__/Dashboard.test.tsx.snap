@@ -1528,6 +1528,7 @@ exports[`Dashboard > should render 1`] = `
                         >
                           <div
                             class="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+                            data-testid="ValidatorStatusIcon-Active"
                           >
                             <div
                               class="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2"
@@ -1614,6 +1615,7 @@ exports[`Dashboard > should render 1`] = `
                             >
                               <div
                                 class="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+                                data-testid="ValidatorStatusIcon-Active"
                               >
                                 <div
                                   class="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2"
@@ -1876,6 +1878,7 @@ exports[`Dashboard > should render 1`] = `
                 >
                   <div
                     class="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+                    data-testid="ValidatorStatusIcon-Active"
                   >
                     <div
                       class="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2"
