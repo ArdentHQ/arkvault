@@ -183,6 +183,8 @@ describe("useWalletImport", () => {
 	});
 
 	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
+		const walletSelectionModeSpy = vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
+
 		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const wallets = await act(
@@ -200,5 +202,7 @@ describe("useWalletImport", () => {
 		expect(importedWallet.address()).toBeDefined();
 
 		expect(importedWallet.isSelected()).toBe(true);
+
+		walletSelectionModeSpy.mockRestore();
 	});
 });
