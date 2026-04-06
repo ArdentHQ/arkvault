@@ -60,7 +60,13 @@ describe("#WalletVote", async () => {
 
 		it("should render with multiple wallets", async () => {
 			const { asFragment } = render(
-				<WalletVote wallets={profile.wallets().values()} wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote
+					wallets={profile.wallets().values()}
+					wallet={wallet}
+					onButtonClick={vi.fn()}
+					votes={votes}
+					isLoadingVotes={false}
+				/>,
 			);
 
 			await expect(screen.findByText("Manage votes for your addresses")).resolves.toBeVisible();
