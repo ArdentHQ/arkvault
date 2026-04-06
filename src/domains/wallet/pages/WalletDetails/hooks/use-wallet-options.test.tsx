@@ -58,14 +58,18 @@ describe("Wallet Options Hook", () => {
 		networkSpy.mockRestore();
 	});
 
-	it("should not enable Sign Message when flag is disabled", () => {
+	it.each([
+		["Sign Message", Enums.FeatureFlag.MessageSign, "additionalOptions", "sign-message"],
+		["Message Verify", Enums.FeatureFlag.MessageVerify, "additionalOptions", "verify-message"],
+		["Username Registration", Enums.FeatureFlag.TransactionUsernameRegistration, "registrationOptions", "username-registration"],
+	])("should not enable `%s` when flag is disabled", (_description, flag, type, option) => {
 		const networkSpy = vi
 			.spyOn(wallet.network(), "allows")
-			.mockImplementation((key) => key !== Enums.FeatureFlag.MessageSign);
+			.mockImplementation((key) => key !== flag);
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(result.current.additionalOptions.options.some((opt) => opt.value === "sign-message")).toBe(false);
+		expect(result.current[type].options.some((opt) => opt.value === option)).toBe(false);
 
 		networkSpy.mockRestore();
 	});
