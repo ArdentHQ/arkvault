@@ -67,6 +67,18 @@ describe("Wallet Options Hook", () => {
 			"registrationOptions",
 			"username-registration",
 		],
+		[
+			"Validator Registration",
+			Enums.FeatureFlag.TransactionValidatorRegistration,
+			"registrationOptions",
+			"validator-registration",
+		],
+		[
+			"Validator Resignation",
+			Enums.FeatureFlag.TransactionValidatorResignation,
+			"registrationOptions",
+			"validator-resignation",
+		],
 	])("should not enable `%s` when flag is disabled", (_description, flag, type, option) => {
 		const networkSpy = vi.spyOn(wallet.network(), "allows").mockImplementation((key) => key !== flag);
 
