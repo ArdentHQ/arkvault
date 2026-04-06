@@ -1362,7 +1362,7 @@ exports[`#WalletVote > WalletVote > should render with \`hasTokens=true\` 1`] = 
 </DocumentFragment>
 `;
 
-exports[`#WalletVote > WalletVote > should render with \`hasTokens=true\` and multiple wallets 1`] = `
+exports[`#WalletVote > WalletVote > should render with \`hasTokens=true\` and no votes 1`] = `
 <DocumentFragment>
   <div
     class="-mt-4 flex w-full flex-col items-center justify-between md:mt-0 md:flex-row md:items-center"

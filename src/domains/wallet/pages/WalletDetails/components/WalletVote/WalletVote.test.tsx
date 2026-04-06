@@ -84,13 +84,13 @@ describe("#WalletVote", async () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		it("should render with `hasTokens=true` and multiple wallets", async () => {
+		it("should render with `hasTokens=true` and no votes", async () => {
 			const { asFragment } = render(
 				<WalletVote
 					wallets={profile.wallets().values()}
 					wallet={wallet}
 					onButtonClick={vi.fn()}
-					votes={votes}
+					votes={[]}
 					isLoadingVotes={false}
 					hasTokens
 				/>,
