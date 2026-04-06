@@ -109,7 +109,7 @@ describe("UpdateAccountNameModal", () => {
 			mnemonic: MAINSAIL_MNEMONICS[2],
 		});
 
-		hdWallet.mutator().accountName("hd-test")
+		hdWallet.mutator().accountName("hd-test");
 		profile.wallets().push(hdWallet);
 
 		render(<UpdateAccountNameModal profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />);
