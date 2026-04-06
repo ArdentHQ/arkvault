@@ -209,6 +209,28 @@ describe("useWalletImport", () => {
 		walletSelectionModeSpy.mockRestore();
 	});
 
+	it("should not set imported wallet when `disableAddressSelection=true`", async () => {
+		const walletSelectionModeSpy = vi.spyOn(profile, "walletSelectionMode").mockReturnValue("single");
+
+		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallets = await act(
+			async () =>
+				await walletImport.current.importWallets({
+					disableAddressSelection: true,
+					type: OptionsValue.BIP39,
+					value: MAINSAIL_MNEMONICS[3],
+				}),
+		);
+
+		expect(wallets).toHaveLength(1);
+		const importedWallet = wallets[0];
+
+		expect(importedWallet.isSelected()).toBe(false);
+
+		walletSelectionModeSpy.mockRestore();
+	});
+
 	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
 		const walletSelectionModeSpy = vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
 
