@@ -9,7 +9,7 @@ import { env, getMainsailProfileId, MAINSAIL_MNEMONICS } from "@/utils/testing-l
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { expect } from "vitest";
 import * as useWalletSyncHook from "@/domains/wallet/hooks/use-wallet-sync";
-import { CoinManifest } from "../../../app/lib/mainsail/network.models";
+import { CoinManifest } from "@/app/lib/mainsail/network.models";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
