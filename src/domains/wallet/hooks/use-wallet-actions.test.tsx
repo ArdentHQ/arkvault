@@ -310,7 +310,11 @@ describe("useWalletActions", () => {
 		useLinkSpy.mockRestore();
 	});
 
-	it("should call handleSelectOption with `ledger-migration` action", () => {
+	it.each([
+		["ledger-migration", PanelsMock.Panel.LedgerMigration],
+		["sign-message", PanelsMock.Panel.SignMessage],
+		["verify-message", PanelsMock.Panel.VerifyMessage],
+	])("should call handleSelectOption with `%s` action", (action, panel) => {
 		const {
 			result: { current },
 		} = renderHook(
@@ -324,9 +328,42 @@ describe("useWalletActions", () => {
 		);
 
 		act(() => {
-			current.handleSelectOption({ value: "ledger-migration" } as DropdownOption);
+			current.handleSelectOption({ value: action } as DropdownOption);
 		});
 
-		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.LedgerMigration);
+		expect(openPanelSpy).toHaveBeenCalledWith(panel);
+	});
+
+	it("should handle `multi-signature` action", () => {
+		let currentLocation = { pathname: "/" };
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet, profile.wallets().last()],
+				}),
+			{
+				wrapper: ({ children }) => (
+					<Providers>
+						<LocationTracker
+							onLocationChange={(location) => {
+								currentLocation = location;
+							}}
+						/>
+						{children}
+					</Providers>
+				),
+			},
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "multi-signature" } as DropdownOption);
+		});
+
+		expect(currentLocation.pathname).toBe(
+			"/profiles/877b7695-8a55-4e16-a7ff-412113131856/wallets/ee02b13f-8dbf-4191-a9dc-08d2ab72ec28/send-registration/multiSignature",
+		);
 	});
 });
