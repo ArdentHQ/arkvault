@@ -1,5 +1,86 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`#WalletVote > Votes > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex w-full flex-col items-start justify-between gap-0 overflow-hidden rounded border md:mb-0 md:flex-row md:items-center md:gap-2 md:rounded-none md:border-none"
+  >
+    <div
+      class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 md:dim:bg-transparent flex w-full flex-1 flex-row items-center gap-2 p-3 text-sm leading-[17px] font-semibold md:w-auto md:bg-transparent md:p-0 md:text-base md:leading-5 md:dark:bg-transparent"
+    >
+      <p
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm whitespace-nowrap md:text-base md:leading-5"
+      >
+        Voting for
+      </p>
+      <div
+        class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
+      >
+        <div
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        >
+          <span>
+            <span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
+                data-testid="Address__address"
+              >
+                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 md-lg:flex mr-1 ml-1 hidden h-5 p-0"
+    />
+    <div
+      class="flex-col gap-2 px-4 py-3 text-base leading-5 font-semibold md:flex-row md:items-center md:px-0 md:py-0 flex"
+    >
+      <p
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:text-base md:leading-5"
+      >
+        Rank
+      </p>
+      <p
+        class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 mb-2 text-sm font-semibold md:mb-0 md:text-base md:leading-5"
+      >
+        N/A
+      </p>
+      <p
+        class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm md:hidden"
+      >
+        Validator Status
+      </p>
+      <div
+        class="font-semibold overflow-hidden no-ligatures px-1 border-2 rounded text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700 dim:border-solid flex h-fit w-fit items-center justify-center border-none py-0.5 text-xs dark:border-solid"
+      >
+        Standby
+      </div>
+      <div
+        class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-3 ml-1 hidden h-5 p-0 md:flex"
+      />
+    </div>
+    <div
+      class="status hidden"
+    >
+      <div
+        class="bg-theme-warning-100 dark:border-theme-warning-800 dim:border-theme-warning-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+        data-testid="ValidatorStatusIcon-StandBy"
+      >
+        <div
+          class="bg-theme-warning-700 border-theme-warning-200 dark:bg-theme-warning-400 dark:border-theme-warning-700 dim:bg-theme-warning-400 dim:border-theme-warning-700 h-2 w-2 rounded-full border-2"
+        />
+      </div>
+      <div
+        class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-s-theme-dark-700 dim:border-s-theme-dim-700 mr-1 ml-3 hidden h-5 p-0 md:flex"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`#WalletVote > WalletVote > should disable vote button when balance is less than votesAmountStep 1`] = `
 <DocumentFragment>
   <div

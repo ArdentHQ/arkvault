@@ -14,7 +14,7 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { ValidatorName, ValidatorStatus, ValidatorStatusIcon } from "./WalletVote.blocks";
+import { ValidatorName, ValidatorStatus, ValidatorStatusIcon, Votes } from "./WalletVote.blocks";
 import { renderResponsive } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
@@ -675,6 +675,16 @@ describe("#WalletVote", async () => {
 
 			render(<ValidatorStatusIcon votes={votes} activeValidators={10} />);
 			expect(screen.getByTestId("ValidatorStatusIcon-Active")).toBeInTheDocument();
+		});
+	});
+
+	describe("Votes", () => {
+		it("should render", async () => {
+			const { asFragment } = render(
+				<Votes votes={votes} activeValidators={5} withDivider />,
+			);
+
+			expect(asFragment()).toMatchSnapshot();
 		});
 	});
 });
