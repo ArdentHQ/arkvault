@@ -8,6 +8,7 @@ import { useWalletImport } from "./use-wallet-import";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { expect } from "vitest";
+import * as useWalletSyncHook from "@/domains/wallet/hooks/use-wallet-sync";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
@@ -131,6 +132,32 @@ describe("useWalletImport", () => {
 			mockEncrypted.mockRestore();
 		},
 	);
+
+	it("should sync wallet", async () => {
+		const syncAllSpy = vi.fn();
+
+		const syncWalletHook = vi.spyOn(useWalletSyncHook, "useWalletSync").mockReturnValue({
+			syncAll: syncAllSpy,
+		});
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		await current.importWallet({
+			ledgerOptions: {
+				deviceId: "nanox",
+				path: "m/44'/1'/0'/0/0",
+			},
+			network,
+			type: "ledger",
+			value: "0x393f3F74F0cd9e790B5192789F32E0A38159de03",
+		});
+
+		expect(syncAllSpy).toHaveBeenCalled();
+
+		syncWalletHook.mockRestore();
+	});
 
 	it("should import wallet from secret", async () => {
 		const {
