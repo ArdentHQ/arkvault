@@ -61,11 +61,14 @@ describe("Wallet Options Hook", () => {
 	it.each([
 		["Sign Message", Enums.FeatureFlag.MessageSign, "additionalOptions", "sign-message"],
 		["Message Verify", Enums.FeatureFlag.MessageVerify, "additionalOptions", "verify-message"],
-		["Username Registration", Enums.FeatureFlag.TransactionUsernameRegistration, "registrationOptions", "username-registration"],
+		[
+			"Username Registration",
+			Enums.FeatureFlag.TransactionUsernameRegistration,
+			"registrationOptions",
+			"username-registration",
+		],
 	])("should not enable `%s` when flag is disabled", (_description, flag, type, option) => {
-		const networkSpy = vi
-			.spyOn(wallet.network(), "allows")
-			.mockImplementation((key) => key !== flag);
+		const networkSpy = vi.spyOn(wallet.network(), "allows").mockImplementation((key) => key !== flag);
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
