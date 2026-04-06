@@ -59,7 +59,7 @@ describe("Wallet Options Hook", () => {
 	});
 
 	it("should not enable Sign Message when flag is disabled", () => {
-		const networkSpy = vi.spyOn(wallet.network(), "allows").mockReturnValue((key) => {
+		const networkSpy = vi.spyOn(wallet.network(), "allows").mockImplementation((key) => {
 			return key !== Enums.FeatureFlag.MessageSign;
 		});
 
