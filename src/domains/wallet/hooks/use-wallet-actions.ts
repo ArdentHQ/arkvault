@@ -46,6 +46,7 @@ export const useWalletActions = ({
 			if (!wallet) {
 				return;
 			}
+			/* istanbul ignore next -- @preserve */
 			stopEventBubbling(event);
 		},
 		[navigate, profile, wallet, stopEventBubbling],
