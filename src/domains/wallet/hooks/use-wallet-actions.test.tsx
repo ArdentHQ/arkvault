@@ -7,6 +7,7 @@ import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { afterEach, expect, vi } from "vitest";
 import * as PanelsMock from "@/app/contexts/Panels";
+import * as useLinkMock from "@/app/hooks/use-link";
 
 let usePanelsMock;
 let openPanelSpy;
@@ -284,5 +285,48 @@ describe("useWalletActions", () => {
 				current.handleSelectOption({ value: "contract-deployment" } as DropdownOption);
 			});
 		}).not.toThrow();
+	});
+
+	it("should call handleSelectOption with `open-explorer` action", () => {
+		const openExternalMock = vi.fn();
+		const useLinkSpy = vi.spyOn(useLinkMock, "useLink").mockReturnValue({ openExternal: openExternalMock });
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "open-explorer" } as DropdownOption);
+		});
+
+		expect(openExternalMock).toHaveBeenCalledWith(wallet.explorerLink());
+
+		useLinkSpy.mockRestore();
+	});
+
+	it("should call handleSelectOption with `ledger-migration` action", () => {
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet],
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "ledger-migration" } as DropdownOption);
+		});
+
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.LedgerMigration);
 	});
 });
