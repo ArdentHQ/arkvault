@@ -122,6 +122,42 @@ describe("useWalletActions", () => {
 		expect(mockHandleSendUsernameResignation).toHaveBeenCalledTimes(1);
 	});
 
+	it.each([
+		[
+			"handleSend",
+			PanelsMock.Panel.SendTransfer,
+			{
+				isTokenTransfer: false,
+				tokenContractAddress: "ARK",
+			},
+		],
+		[
+			"handleTokenSend",
+			PanelsMock.Panel.SendTokenTransfer,
+			{
+				isTokenTransfer: true,
+			},
+		],
+	])("should call `%s`", (action, panel, data) => {
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current[action]();
+		});
+
+		expect(openPanelSpy).toHaveBeenCalledWith(panel, {
+			...data,
+		});
+	});
+
 	it("should call handleSendRegistration callback for validator registration", () => {
 		const mockHandleSendRegistration = vi.fn();
 
