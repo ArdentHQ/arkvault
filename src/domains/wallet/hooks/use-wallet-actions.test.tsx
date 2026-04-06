@@ -158,10 +158,7 @@ describe("useWalletActions", () => {
 		});
 	});
 
-	it.each([
-			"handleSend",
-			"handleTokenSend",
-	])("should not call `%s` when wallet is not provided", (action) => {
+	it.each(["handleSend", "handleTokenSend"])("should not call `%s` when wallet is not provided", (action) => {
 		const {
 			result: { current },
 		} = renderHook(
@@ -176,7 +173,7 @@ describe("useWalletActions", () => {
 			current[action]();
 		});
 
-		expect(openPanelSpy).not.toHaveBeenCalled()
+		expect(openPanelSpy).not.toHaveBeenCalled();
 	});
 
 	it("should call handleSendRegistration callback for validator registration", () => {
