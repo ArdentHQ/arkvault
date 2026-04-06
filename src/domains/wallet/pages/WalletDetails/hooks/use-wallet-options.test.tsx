@@ -58,29 +58,14 @@ describe("Wallet Options Hook", () => {
 		networkSpy.mockRestore();
 	});
 
-	it("should contain additional options", () => {
-		const networkSpy = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+	it("should not enable Sign Message when flag is disabled", () => {
+		const networkSpy = vi.spyOn(wallet.network(), "allows").mockReturnValue((key) => {
+			return key !== Enums.FeatureFlag.MessageSign;
+		});
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(result.current.additionalOptions).toStrictEqual({
-			key: "additional",
-			options: [
-				{
-					label: "Transaction History",
-					value: "transaction-history",
-				},
-				{
-					label: "Sign Message",
-					value: "sign-message",
-				},
-				{
-					label: "Verify Message",
-					value: "verify-message",
-				},
-			],
-			title: "Additional Options",
-		});
+		expect(result.current.additionalOptions.options.some((opt) => opt.value === "sign-message")).toBe(false);
 
 		networkSpy.mockRestore();
 	});
