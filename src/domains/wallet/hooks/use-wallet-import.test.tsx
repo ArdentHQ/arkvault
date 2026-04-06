@@ -27,6 +27,24 @@ describe("useWalletImport", () => {
 		network = wallet.network();
 	});
 
+	it("should import wallet from path", async () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallet = await current.importWallet({
+			ledgerOptions: {
+				deviceId: "nanox",
+				path: "m/44'/1'/0'/0/0"
+			},
+			network,
+			type: "ledger",
+			value: "0x393f3F74F0cd9e790B5192789F31E0A38159de03",
+		});
+
+		expect(wallet).toBeInstanceOf(Wallet);
+	});
+
 	it("should import wallet from mnemonic with bip39", async () => {
 		const {
 			result: { current },

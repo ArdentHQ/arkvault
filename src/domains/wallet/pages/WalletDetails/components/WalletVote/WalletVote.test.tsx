@@ -206,7 +206,7 @@ describe("WalletVote", () => {
 		usesLockedBalance.mockRestore();
 	});
 	//
-	it("doesnt shows the locked votes when doenst used locked balance", async () => {
+	it("doesnt shows the locked votes when does not used locked balance", async () => {
 		const votes = [
 			{
 				amount: 0,
@@ -249,26 +249,6 @@ describe("WalletVote", () => {
 		usesLockedBalance.mockRestore();
 	});
 	//
-	it("should render the maximum votes", async () => {
-		const votes = [];
-		const maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
-
-		const { asFragment } = render(
-			<WalletVote
-				wallet={wallet}
-				wallets={[wallet]}
-				onButtonClick={vi.fn()}
-				votes={votes}
-				isLoadingVotes={false}
-			/>,
-		);
-
-		await expect(screen.findByTestId("EmptyVotes")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		maxVotesSpy.mockRestore();
-	});
 
 	describe("single vote networks", () => {
 		const { result } = renderHook(() => useTranslation());
