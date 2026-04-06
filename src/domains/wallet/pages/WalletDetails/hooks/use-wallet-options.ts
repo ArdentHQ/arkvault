@@ -47,8 +47,8 @@ const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Cont
 		return false;
 	}
 
+	/* istanbul ignore next -- @preserve */
 	if (isCustomNetwork(wallet.network())) {
-		/* istanbul ignore next -- @preserve */
 		return hasAvailableMusigServer({ network: wallet.network(), profile });
 	}
 
