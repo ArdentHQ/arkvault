@@ -680,9 +680,7 @@ describe("#WalletVote", async () => {
 
 	describe("Votes", () => {
 		it("should render", async () => {
-			const { asFragment } = render(
-				<Votes votes={votes} activeValidators={5} withDivider />,
-			);
+			const { asFragment } = render(<Votes votes={votes} activeValidators={5} withDivider />);
 
 			expect(asFragment()).toMatchSnapshot();
 		});
