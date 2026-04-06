@@ -58,6 +58,33 @@ describe("Wallet Options Hook", () => {
 		networkSpy.mockRestore();
 	});
 
+	it("should contain additional options", () => {
+		const networkSpy = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.additionalOptions).toStrictEqual({
+			key: "additional",
+			options: [
+				{
+					label: "Transaction History",
+					value: "transaction-history",
+				},
+				{
+					label: "Sign Message",
+					value: "sign-message",
+				},
+				{
+					label: "Verify Message",
+					value: "verify-message",
+				},
+			],
+			title: "Additional Options",
+		});
+
+		networkSpy.mockRestore();
+	});
+
 	it("should get registration options for wallet without mnemonic", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
@@ -225,8 +252,6 @@ describe("Wallet Options Hook", () => {
 	});
 
 	it("should render HD account name option", () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
 		vi.spyOn(wallet, "accountName").mockReturnValue("accountName");
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
