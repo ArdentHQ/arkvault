@@ -158,6 +158,27 @@ describe("useWalletActions", () => {
 		});
 	});
 
+	it.each([
+			"handleSend",
+			"handleTokenSend",
+	])("should not call `%s` when wallet is not provided", (action) => {
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current[action]();
+		});
+
+		expect(openPanelSpy).not.toHaveBeenCalled()
+	});
+
 	it("should call handleSendRegistration callback for validator registration", () => {
 		const mockHandleSendRegistration = vi.fn();
 
