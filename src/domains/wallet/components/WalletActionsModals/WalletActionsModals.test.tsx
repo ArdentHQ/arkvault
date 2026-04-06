@@ -110,7 +110,6 @@ describe("WalletActionsModals", () => {
 			handleOpen: vi.fn(),
 			handleSelectOption: vi.fn(),
 			handleSend: vi.fn(),
-			handleToggleStar: vi.fn(),
 			handleTokenSend: vi.fn(),
 			setActiveModal: vi.fn(),
 		});

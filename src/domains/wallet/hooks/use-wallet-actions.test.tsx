@@ -51,7 +51,6 @@ describe("useWalletActions", () => {
 		expect(current.handleOpen()).toBeUndefined();
 		expect(current.handleSend()).toBeUndefined();
 
-		await expect(current.handleToggleStar()).resolves.toBeUndefined();
 		await expect(current.handleDelete()).resolves.toBeUndefined();
 		expect(current.handleSelectOption({} as DropdownOption)).toBeUndefined();
 	});
