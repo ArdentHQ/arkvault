@@ -60,7 +60,13 @@ describe("#WalletVote", async () => {
 
 		it("should render with multiple wallets", async () => {
 			const { asFragment } = render(
-				<WalletVote wallets={profile.wallets().values()} wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote
+					wallets={profile.wallets().values()}
+					wallet={wallet}
+					onButtonClick={vi.fn()}
+					votes={votes}
+					isLoadingVotes={false}
+				/>,
 			);
 
 			await expect(screen.findByText("Manage votes for your addresses")).resolves.toBeVisible();
@@ -390,6 +396,26 @@ describe("#WalletVote", async () => {
 			await waitFor(() => expect(screen.queryAllByTestId("WalletVote")[0]).not.toBeDisabled());
 
 			await userEvent.click(screen.queryAllByText(t("COMMON.VOTE"))[0]);
+
+			expect(onButtonClick).toHaveBeenCalledWith();
+		});
+
+		it("should emit action on button click for multiple wallets", async () => {
+			const onButtonClick = vi.fn();
+
+			render(
+				<WalletVote
+					wallets={profile.wallets().values()}
+					wallet={wallet}
+					onButtonClick={onButtonClick}
+					votes={[]}
+					isLoadingVotes={false}
+				/>,
+			);
+
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByTestId("WalletMyVotes__button"));
 
 			expect(onButtonClick).toHaveBeenCalledWith();
 		});
