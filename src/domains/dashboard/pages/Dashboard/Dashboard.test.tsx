@@ -9,6 +9,8 @@ import {
 	syncValidators,
 	waitFor,
 	within,
+	renderResponsiveWithRoute,
+	mockNanoXTransport,
 } from "@/utils/testing-library";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -70,6 +72,53 @@ describe("Dashboard", () => {
 	it("should render", async () => {
 		const { asFragment } = render(<Dashboard />, {
 			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with ledger wallet", async () => {
+		mockNanoXTransport();
+
+		const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
+			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
+			path: "m/44'/1'/0'/0/3",
+		});
+
+		const selectedWalletMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+
+		const { asFragment } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+
+		selectedWalletMock.mockRestore();
+	});
+
+	it.each(["xs", "sm", "md", "lg", "xl"])("render in %s", async (breakpoint: string) => {
+		const { asFragment } = renderResponsiveWithRoute(<Dashboard />, breakpoint, {
+			route: `/profiles/${profile.id()}/settings/servers`,
 			withProfileSynchronizer: true,
 		});
 
