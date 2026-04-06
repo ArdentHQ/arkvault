@@ -251,4 +251,38 @@ describe("useWalletActions", () => {
 			});
 		}).not.toThrow();
 	});
+
+	it("should call handleSendContractDeployment callback when provided", () => {
+		const mockHandleSendContractDeployment = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendContractDeployment: mockHandleSendContractDeployment,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "contract-deployment" } as DropdownOption);
+		});
+
+		expect(mockHandleSendContractDeployment).toHaveBeenCalledTimes(1);
+	});
+
+	it("should not call handleSendContractDeployment callback when not provided", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions({ wallets: [wallet] }), { wrapper });
+
+		// Should not throw error when callback is not provided
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "contract-deployment" } as DropdownOption);
+			});
+		}).not.toThrow();
+	});
 });
