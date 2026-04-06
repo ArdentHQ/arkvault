@@ -74,6 +74,16 @@ describe("#WalletVote", async () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
+		it("should render with `hasToken=true`", async () => {
+			const { asFragment } = render(
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} hasTokens />,
+			);
+
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
 		it("should render ledger for incompatible ledger wallet", async () => {
 			process.env.REACT_APP_IS_UNIT = undefined;
 			const ledgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
