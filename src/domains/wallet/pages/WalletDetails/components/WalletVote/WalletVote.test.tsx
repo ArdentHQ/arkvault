@@ -222,6 +222,7 @@ describe("#WalletVote", async () => {
 
 			usesLockedBalance.mockRestore();
 		});
+
 		it("doesnt shows the locked votes when does not used locked balance", async () => {
 			const votes = [
 				{
@@ -480,6 +481,26 @@ describe("#WalletVote", async () => {
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			await userEvent.click(screen.queryAllByTestId("WalletVote__button_mobile")[0]);
+
+			expect(onButtonClick).toHaveBeenCalledWith();
+		});
+
+		it("should handle click on vote button in mobile view for multiple wallets", async () => {
+			const onButtonClick = vi.fn();
+
+			renderResponsive(
+				<WalletVote
+					wallets={profile.wallets().values()}
+					wallet={wallet}
+					onButtonClick={onButtonClick}
+					votes={[]}
+					isLoadingVotes={false}
+				/>,
+				"xs",
+			);
+
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+			await userEvent.click(screen.getByTestId("WalletMyVotes__button_mobile"));
 
 			expect(onButtonClick).toHaveBeenCalledWith();
 		});
