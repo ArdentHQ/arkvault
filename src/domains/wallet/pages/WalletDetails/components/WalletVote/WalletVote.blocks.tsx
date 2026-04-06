@@ -63,16 +63,14 @@ export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatus
 		);
 	}
 
-	if (resignedCount === votes.length) {
-		return (
-			<div
-				data-testid="ValidatorStatusIcon-Resigned"
-				className="bg-theme-danger-100 dark:border-theme-danger-800 dim:border-theme-danger-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
-			>
-				<div className="bg-theme-danger-700 border-theme-danger-200 dark:bg-theme-danger-400 dark:border-theme-danger-700 dim:bg-theme-danger-400 dim:border-theme-danger-700 h-2 w-2 rounded-full border-2" />
-			</div>
-		);
-	}
+	return (
+		<div
+			data-testid="ValidatorStatusIcon-Resigned"
+			className="bg-theme-danger-100 dark:border-theme-danger-800 dim:border-theme-danger-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+		>
+			<div className="bg-theme-danger-700 border-theme-danger-200 dark:bg-theme-danger-400 dark:border-theme-danger-700 dim:bg-theme-danger-400 dim:border-theme-danger-700 h-2 w-2 rounded-full border-2" />
+		</div>
+	);
 };
 
 export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProperties) => {
