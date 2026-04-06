@@ -107,7 +107,6 @@ describe("WalletActionsModals", () => {
 		const useWalletActionMock = vi.spyOn(useWalletActionsHook, "useWalletActions").mockReturnValue({
 			activeModal: undefined,
 			handleDelete: () => Promise.resolve(undefined),
-			handleOpen: vi.fn(),
 			handleSelectOption: vi.fn(),
 			handleSend: vi.fn(),
 			handleTokenSend: vi.fn(),

@@ -48,7 +48,6 @@ describe("useWalletActions", () => {
 			{ wrapper },
 		);
 
-		expect(current.handleOpen()).toBeUndefined();
 		expect(current.handleSend()).toBeUndefined();
 
 		await expect(current.handleDelete()).resolves.toBeUndefined();

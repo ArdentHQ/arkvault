@@ -41,17 +41,6 @@ export const useWalletActions = ({
 		event?.stopPropagation();
 	}, []);
 
-	const handleOpen = useCallback(
-		(event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
-				return;
-			}
-			/* istanbul ignore next -- @preserve */
-			stopEventBubbling(event);
-		},
-		[navigate, profile, wallet, stopEventBubbling],
-	);
-
 	const handleSend = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
 			if (!wallet) {
