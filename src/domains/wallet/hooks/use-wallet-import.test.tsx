@@ -135,7 +135,7 @@ describe("useWalletImport", () => {
 	);
 
 	it("should not sync wallet when given network is different from active", async () => {
-		const manifest = profile.networks().get('mainsail.mainnet');
+		const manifest = profile.networks().get("mainsail.mainnet");
 		const mainnet = new Networks.Network({} as CoinManifest, manifest, profile);
 
 		const syncAllSpy = vi.fn();

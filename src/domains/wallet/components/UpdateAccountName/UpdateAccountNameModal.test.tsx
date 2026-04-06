@@ -15,7 +15,7 @@ import {
 	waitFor,
 } from "@/utils/testing-library";
 import { expect } from "vitest";
-import { BIP44CoinType } from "../../../../app/lib/profiles/wallet.factory.contract";
+import { BIP44CoinType } from "@/app/lib/profiles/wallet.factory.contract";
 
 describe("UpdateAccountNameModal", () => {
 	let profile: Contracts.IProfile;
