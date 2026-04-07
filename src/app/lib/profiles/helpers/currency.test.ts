@@ -61,4 +61,12 @@ describe("Helpers.Currency", () => {
 		expect(Currency.formatCompact(1550, "USD", { withTicker: true })).toBe("1.55K USD");
 		expect(Currency.formatCompact(1556, "USD", { compactDecimals: 2, withTicker: false })).toBe("1.56K");
 	});
+
+	it("should format negative crypto values", () => {
+		expect(Currency.format(-10, "BTC")).toBe("10 BTC");
+	});
+
+	it("should format negative fiat values", () => {
+		expect(Currency.format(-10, "USD")).toBe("$10.00");
+	});
 });

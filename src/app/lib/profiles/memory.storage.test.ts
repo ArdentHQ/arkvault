@@ -49,4 +49,12 @@ describe("MemoryStorage", () => {
 		await storage.flush();
 		expect(await storage.count()).toBe(0);
 	});
+
+	it("#snapshot", async () => {
+		await expect(storage.snapshot()).resolves.toBeUndefined();
+	});
+
+	it("#restore", async () => {
+		await expect(storage.restore()).resolves.toBeUndefined();
+	});
 });

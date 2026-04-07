@@ -271,6 +271,15 @@ describe("TransactionAggregate", () => {
 			expect(unconfirmedSpy).toHaveBeenCalled();
 		});
 
+		it("should create a history key with orderBy and limit", async () => {
+			const unconfirmedSpy = vi
+				.spyOn(wallet.transactionIndex(), "unconfirmed")
+				.mockResolvedValue(new UnconfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
+
+			await subject.unconfirmed({ limit: 10, orderBy: "timestamp:desc" });
+			expect(unconfirmedSpy).toHaveBeenCalled();
+		});
+
 		it("should handle transaction index errors gracefully", async () => {
 			vi.spyOn(wallet.transactionIndex(), "unconfirmed").mockRejectedValue(new Error("test error"));
 			const result = await subject.unconfirmed();

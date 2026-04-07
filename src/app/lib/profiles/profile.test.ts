@@ -64,6 +64,18 @@ describe("Profile", () => {
 		spy.mockRestore();
 	});
 
+	it("should calculate total balance from wallets", () => {
+		const result = profile.totalBalance();
+		expect(result).toBeDefined();
+		expect(typeof result.toString()).toBe("string");
+	});
+
+	it("should calculate total converted balance from wallets", () => {
+		const result = profile.totalBalanceConverted();
+		expect(result).toBeDefined();
+		expect(typeof result.toString()).toBe("string");
+	});
+
 	it("should flush the profile", () => {
 		const spy = vi.spyOn(ProfileInitialiserModule, "ProfileInitialiser").mockImplementation(
 			() =>

@@ -159,4 +159,11 @@ describe("UnconfirmedTransactionsService", () => {
 
 		expect(res.results.length).toEqual(4);
 	});
+
+	it("should return empty array when response has no items", async () => {
+		server.use(http.get(UNCONFIRMED_ENDPOINT, () => HttpResponse.json({ data: [], meta: {} })));
+
+		const res = await service.listUnconfirmed();
+		expect(res.results).toEqual([]);
+	});
 });

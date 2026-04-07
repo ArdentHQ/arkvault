@@ -98,6 +98,30 @@ describe("TokenService", () => {
 		expect(transfers.items()[0].wallet().address()).toBe(walletAddress);
 	});
 
+	it("should set transaction metadata when wallet is found", async () => {
+		const walletAddress = profile.wallets().first().address();
+
+		server.use(
+			http.get(/\/tokens\/transfers.*/, () =>
+				HttpResponse.json({
+					data: [
+						createTransferData(walletAddress),
+						{
+							...createTransferData("0x1000000"),
+							from: walletAddress,
+						},
+					],
+					meta: { next: null, self: "/tokens/transfers?page=1" },
+				}),
+			),
+		);
+
+		const transfers = await profile.tokens().transfers();
+
+		expect(transfers).toBeInstanceOf(ExtendedConfirmedTransactionDataCollection);
+		expect(transfers.items()).toHaveLength(2);
+	});
+
 	it("should return selected count", () => {
 		const count = profile.tokens().selectedCount();
 
@@ -110,5 +134,77 @@ describe("TokenService", () => {
 
 		expect(totalBalance).toBeInstanceOf(BigNumber);
 		expect(totalBalance.toNumber()).toBeGreaterThan(0);
+	});
+
+	it("should return aggregated tokens", async () => {
+		await profile.tokens().sync();
+		const aggregated = profile.tokens().aggregated();
+
+		expect(aggregated).toBeInstanceOf(WalletTokenCollection);
+	});
+
+	it("should aggregate tokens with duplicate addresses by calculating total balance", async () => {
+		const tokenAddress = "0xdeb478251073157e400c3d8d2ed92a85c958f9fa";
+
+		server.use(
+			http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", () =>
+				HttpResponse.json({
+					data: [
+						{
+							addresses: {
+								"0xWallet1": "100",
+								"0xWallet2": "200",
+							},
+							decimals: 18,
+							name: "DARK20",
+							supply: "100000000000000000000000000",
+							symbol: "DARK20",
+							token: tokenAddress,
+						},
+					],
+					meta: { next: null, self: "/wallets/tokens?page=1" },
+				}),
+			),
+		);
+
+		const { TokenService } = await import("./token.service");
+		const tokenService = new TokenService({
+			network: profile.activeNetwork(),
+			profile,
+		});
+
+		await tokenService.sync();
+		const aggregated = tokenService.aggregated();
+
+		expect(aggregated).toBeInstanceOf(WalletTokenCollection);
+		expect(aggregated.items()).toHaveLength(1);
+	});
+
+	it("should return empty collection on sync error", async () => {
+		server.use(
+			http.get("https://dwallets-evm.mainsailhq.com/api/wallets/tokens", () =>
+				HttpResponse.json(null, { status: 500 }),
+			),
+		);
+
+		const { TokenService } = await import("./token.service");
+		const tokenService = new TokenService({
+			network: profile.activeNetwork(),
+			profile,
+		});
+
+		await tokenService.sync();
+		const tokens = tokenService.selected();
+
+		expect(tokens.items()).toHaveLength(0);
+	});
+
+	it("should return empty collection on transfers error", async () => {
+		server.use(http.get(/\/tokens\/transfers.*/, () => HttpResponse.json(null, { status: 500 })));
+
+		const transfers = await profile.tokens().transfers();
+
+		expect(transfers).toBeInstanceOf(ExtendedConfirmedTransactionDataCollection);
+		expect(transfers.items()).toHaveLength(0);
 	});
 });

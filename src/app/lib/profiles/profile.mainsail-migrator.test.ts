@@ -9,6 +9,7 @@ import { server } from "@/tests/mocks/server";
 describe("ProfileMainsailMigrator", () => {
 	let migrator: ProfileMainsailMigrator;
 	let profile: IProfile;
+	let defaultAddress = "0xAdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4";
 
 	beforeAll(async () => {
 		server.listen();
@@ -21,7 +22,7 @@ describe("ProfileMainsailMigrator", () => {
 			http.get("https://ark-live.arkvault.io/api/wallets/:address", ({ params }) => {
 				const address = params.address as string;
 
-				if (address === "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4") {
+				if (address === defaultAddress) {
 					return HttpResponse.json({
 						data: {
 							publicKey: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
@@ -112,7 +113,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -140,7 +141,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -167,7 +168,7 @@ describe("ProfileMainsailMigrator", () => {
 
 		it("should preserve other wallet data during migration", async () => {
 			const originalWalletData = {
-				ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+				ADDRESS: defaultAddress,
 				BALANCE: {
 					available: "1000000000",
 					fees: "1000000000",
@@ -225,7 +226,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -315,7 +316,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -362,7 +363,7 @@ describe("ProfileMainsailMigrator", () => {
 	describe("wallet address migration", () => {
 		it("should migrate wallet address using public key", async () => {
 			const walletData = {
-				ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+				ADDRESS: defaultAddress,
 				NETWORK: "ark.mainnet",
 				PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 			};
@@ -409,7 +410,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -435,7 +436,7 @@ describe("ProfileMainsailMigrator", () => {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -468,7 +469,7 @@ describe("ProfileMainsailMigrator", () => {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -512,7 +513,7 @@ describe("ProfileMainsailMigrator", () => {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -557,7 +558,7 @@ describe("ProfileMainsailMigrator", () => {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -594,7 +595,7 @@ describe("ProfileMainsailMigrator", () => {
 					[originalId]: {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -642,7 +643,7 @@ describe("ProfileMainsailMigrator", () => {
 					[originalId]: {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -695,7 +696,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet", // This triggers migration
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -725,7 +726,7 @@ describe("ProfileMainsailMigrator", () => {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -745,7 +746,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -778,7 +779,7 @@ describe("ProfileMainsailMigrator", () => {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -798,7 +799,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -833,7 +834,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -870,7 +871,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -898,7 +899,7 @@ describe("ProfileMainsailMigrator", () => {
 					"contact-1": {
 						addresses: [
 							{
-								address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+								address: defaultAddress,
 								id: "addr-1",
 								network: "ark.mainnet",
 							},
@@ -918,7 +919,7 @@ describe("ProfileMainsailMigrator", () => {
 				wallets: {
 					"wallet-1": {
 						data: {
-							ADDRESS: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							ADDRESS: defaultAddress,
 							NETWORK: "ark.mainnet",
 							PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
 						},
@@ -929,7 +930,7 @@ describe("ProfileMainsailMigrator", () => {
 			};
 
 			await expect(migrator.migrate(profile, data)).rejects.toThrow(
-				"Failed to fetch public key for address AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4: HTTP request failed with status 500",
+				"Failed to fetch public key for address 0xAdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4: HTTP request failed with status 500",
 			);
 		});
 	});
@@ -955,7 +956,7 @@ describe("ProfileMainsailMigrator", () => {
 				"contact-1": {
 					addresses: [
 						{
-							address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							address: defaultAddress,
 							id: "addr-dup-1",
 							network: "ark.mainnet",
 						},
@@ -1020,7 +1021,7 @@ describe("ProfileMainsailMigrator", () => {
 				"contact-1": {
 					addresses: [
 						{
-							address: "AdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4",
+							address: defaultAddress,
 							id: "addr-dup-1",
 							network: "ark.mainnet",
 						},
@@ -1062,5 +1063,75 @@ describe("ProfileMainsailMigrator", () => {
 		expect(merged.starred).toBe(true);
 		expect(merged.addresses).toHaveLength(1);
 		expect(merged.addresses[0].address).toMatch(/^0x[a-fA-F0-9]{40}$/);
+	});
+
+	it("should skip cold wallets (without public key)", async () => {
+		const data: IProfileData = {
+			contacts: {},
+			data: {},
+			exchangeTransactions: {},
+			hosts: {},
+			id: "test-profile",
+			networks: {},
+			notifications: {},
+			settings: {},
+			wallets: {
+				"wallet-1": {
+					data: {
+						ADDRESS: "0x123456",
+						NETWORK: "ark.mainnet",
+						// No PUBLIC_KEY - cold wallet
+					},
+					id: "wallet-1",
+					settings: {},
+				},
+			},
+		};
+
+		const result = await migrator.migrate(profile, data);
+
+		expect(result.wallets["wallet-1"]).toBeUndefined();
+	});
+
+	it("should skip wallet without public key in multi-wallet migration", async () => {
+		const data: IProfileData = {
+			contacts: {},
+			data: {},
+			exchangeTransactions: {},
+			hosts: {},
+			id: "test-profile",
+			networks: {},
+			notifications: {},
+			settings: {},
+			wallets: {
+				"wallet-1": {
+					data: {
+						ADDRESS: defaultAddress,
+						NETWORK: "ark.mainnet",
+						PUBLIC_KEY: "03300acecfd7cfc5987ad8cc70bf51c5e93749f76103a02eaf4a1d143729b86a00",
+					},
+					id: "wallet-1",
+					settings: {},
+				},
+				"wallet-2": {
+					data: {
+						ADDRESS: "0x1234567890abcdef",
+						NETWORK: "ark.devnet",
+						// No PUBLIC_KEY - cold wallet
+					},
+					id: "wallet-2",
+					settings: {},
+				},
+			},
+		};
+
+		const result = await migrator.migrate(profile, data);
+
+		// First wallet should be migrated
+		expect(result.wallets["wallet-1"]).toBeDefined();
+		expect(result.wallets["wallet-1"].data.ADDRESS).toEqual("0xA471E0a5a70211c7929f7d0b2079C424642E2924");
+
+		// Second wallet (cold) should be skipped
+		expect(result.wallets["wallet-2"]).toBeUndefined();
 	});
 });
