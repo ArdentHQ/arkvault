@@ -109,7 +109,9 @@ const fillServerForm = async ({
 
 	const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-	expect(firstOption).toBeVisible();
+	await waitFor(() => {
+		expect(firstOption).toBeVisible();
+	});
 
 	await userEvent.click(firstOption);
 
@@ -731,7 +733,9 @@ describe("Servers Settings", () => {
 
 			const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-			expect(firstOption).toBeVisible();
+			await waitFor(() => {
+				expect(firstOption).toBeVisible();
+			});
 
 			await userEvent.click(firstOption);
 
