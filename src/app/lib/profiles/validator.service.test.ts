@@ -1,5 +1,7 @@
 import { describe } from "vitest";
 import { test } from "@/utils/testing-library";
+import { http, HttpResponse } from "msw";
+import { server } from "@/tests/mocks/server";
 
 describe("Validator Service", () => {
 	test("#all", async ({ profile }) => {
@@ -35,6 +37,8 @@ describe("Validator Service", () => {
 	});
 
 	test("#publiKeyExists", async ({ profile }) => {
+		server.use(http.get(/.*\/wallets.*/, () => new HttpResponse(null, { status: 404 })));
+
 		await profile.validators().syncAll();
 		const exists = await profile.validators().publicKeyExists("123", profile.activeNetwork());
 		expect(exists).toBe(false);
@@ -67,5 +71,45 @@ describe("Validator Service", () => {
 		const address = defaultWallet.address();
 		const mapped = profile.validators().mapByIdentifier(defaultWallet, address);
 		expect(mapped?.address()).toBe(address);
+	});
+
+	test("#publicKeyExists with empty string", async ({ profile }) => {
+		const exists = await profile.validators().publicKeyExists("", profile.activeNetwork());
+		expect(exists).toBe(false);
+	});
+
+	test("#mapByIdentifier returns undefined when both findByPublicKey and findByAddress fail", async ({
+		profile,
+		defaultWallet,
+	}) => {
+		await profile.validators().syncAll();
+		const mapped = profile.validators().mapByIdentifier(defaultWallet, "non-existent-identifier");
+		expect(mapped).toBeUndefined();
+	});
+
+	test("#publicKeyExists returns false when API returns 404", async ({ profile }) => {
+		server.use(http.get(/.*\/wallets.*/, () => new HttpResponse(null, { status: 404 })));
+
+		const exists = await profile.validators().publicKeyExists("03nonexistent", profile.activeNetwork());
+		expect(exists).toBe(false);
+	});
+
+	test("#publicKeyExists returns true when API returns data with count > 0", async ({ profile }) => {
+		server.use(
+			http.get(/.*\/wallets.*/, () =>
+				HttpResponse.json({
+					data: [{ address: "0xTest" }],
+					meta: { count: 1 },
+				}),
+			),
+		);
+
+		const exists = await profile
+			.validators()
+			.publicKeyExists(
+				"0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
+				profile.activeNetwork(),
+			);
+		expect(exists).toBe(true);
 	});
 });

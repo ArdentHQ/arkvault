@@ -92,5 +92,20 @@ describe("Migrator", () => {
 
 			expect(migrations["1.0.0"]).toHaveBeenCalled();
 		});
+
+		it("should skip range format versions that are already migrated", async () => {
+			mockProfile.data.mockReturnValue({
+				...mockData,
+				get: vi.fn().mockReturnValue("1.5.0"),
+			});
+
+			const migrations = {
+				">=1.0.0": vi.fn().mockResolvedValue(undefined),
+			};
+
+			await migrator.migrate(migrations, "2.0.0");
+
+			expect(migrations[">=1.0.0"]).not.toHaveBeenCalled();
+		});
 	});
 });

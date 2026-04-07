@@ -59,7 +59,7 @@ export class ValidatorService implements IValidatorService {
 				config: this.#profile.activeNetwork().config(),
 				profile: this.#profile,
 			});
-			const syncer: IValidatorSyncer = this.#profile.activeNetwork().meta().fastValidatorSync
+			const syncer: IValidatorSyncer = this.#profile.activeNetwork().meta().fastDelegateSync
 				? new ParallelValidatorSyncer(clientService)
 				: new SerialValidatorSyncer(clientService);
 

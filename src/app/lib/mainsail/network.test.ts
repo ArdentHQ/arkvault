@@ -290,6 +290,27 @@ describe("Network", () => {
 		expect(result.data).toBe("first");
 	});
 
+	it("should throw error when milestone is not found", () => {
+		networkInstance.config().set("height", 5);
+		networkInstance.config().set("crypto", { milestones: [] });
+
+		expect(() => networkInstance.milestone()).toThrow();
+	});
+
+	it("should move backward through milestones when height is low", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+			{ data: "fourth", height: 30 },
+		];
+		networkInstance.config().set("height", 35);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(5);
+		expect(result.data).toBe("first");
+	});
+
 	it("should use current height from config when no height is provided", () => {
 		const milestones = [
 			{ data: "first", height: 1 },
@@ -319,6 +340,19 @@ describe("Network", () => {
 		networkInstance.config().set("crypto", {});
 
 		expect(() => networkInstance.milestone()).toThrow("The [height] is an unknown configuration value.");
+	});
+
+	it("should handle milestone traversal edge cases", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", null);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(15);
+		expect(result.data).toBe("second");
 	});
 
 	describe("#isSynced", () => {

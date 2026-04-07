@@ -3,6 +3,7 @@ import { IProfile, IProfileEncrypter } from "./contracts";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
 import { PBKDF2, Base64 } from "@ardenthq/arkvault-crypto";
+import AES from "crypto-js/aes";
 
 describe("ProfileEncrypter", () => {
 	let profile: IProfile;
@@ -57,6 +58,17 @@ describe("ProfileEncrypter", () => {
 			await expect(subject.decrypt("any-password")).rejects.toThrow(
 				"This profile does not use a password but password was passed for decryption",
 			);
+		});
+
+		it("should fallback to AES decryption for legacy data", async () => {
+			const profileData = { data: { wallets: { legacy: true } } };
+			const aesEncrypted = AES.encrypt(JSON.stringify(profileData), password).toString();
+			const base64 = Base64.encode(aesEncrypted);
+
+			profile.getAttributes().set("data", base64);
+
+			const decrypted = await subject.decrypt(password);
+			expect(decrypted).toEqual({ wallets: { legacy: true } });
 		});
 	});
 });

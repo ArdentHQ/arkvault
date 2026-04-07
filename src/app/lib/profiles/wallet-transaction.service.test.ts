@@ -16,6 +16,7 @@ const mockMainsailTransactionService = {
 	delegateResignation: mockTransactionMethod,
 	multiPayment: mockTransactionMethod,
 	secondSignature: mockTransactionMethod,
+	tokenTransfer: mockTransactionMethod,
 	transfer: mockTransactionMethod,
 	updateValidator: mockTransactionMethod,
 	usernameRegistration: mockTransactionMethod,
@@ -83,6 +84,12 @@ describe("TransactionService", () => {
 
 	it("should sign a transfer", async () => {
 		const result = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
+		expect(result).toBe(TransactionFixture.hash());
+		expect(mockTransactionMethod).toHaveBeenCalledWith(DUMMY_TRANSFER_INPUT);
+	});
+
+	it("should sign a token transfer", async () => {
+		const result = await subject.signTransferToken(DUMMY_TRANSFER_INPUT);
 		expect(result).toBe(TransactionFixture.hash());
 		expect(mockTransactionMethod).toHaveBeenCalledWith(DUMMY_TRANSFER_INPUT);
 	});

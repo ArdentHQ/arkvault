@@ -414,18 +414,14 @@ export class Profile implements IProfile {
 		const activeNetwork = this.networks()
 			.availableNetworks()
 			.find((network) => {
-				if (!network) {
-					return;
-				}
-
 				/* istanbul ignore next -- @preserve */
-				if (activeNetworkId === network.id()) {
+				if (activeNetworkId === network?.id()) {
 					/* istanbul ignore next -- @preserve */
 					return network;
 				}
 
 				// @TODO: Return mainnet as the default network once it will be available.
-				return network.isTest();
+				return network?.isTest();
 			});
 
 		if (!activeNetwork) {
