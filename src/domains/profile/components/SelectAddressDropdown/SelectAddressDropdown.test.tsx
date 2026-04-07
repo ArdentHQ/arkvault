@@ -2,14 +2,24 @@ import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { SelectAddressDropdown } from "./SelectAddressDropdown";
+import { OptionLabel, SelectAddressDropdown } from "./SelectAddressDropdown";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+import { expect } from "vitest";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallets: Contracts.IReadWriteWallet[];
 
 const firstOptionTestId = "SelectDropdown__option--0";
+
+const showSelectAddressModal = async () => {
+	const selectRecipient = screen.getByTestId("SelectRecipient__select-recipient");
+	expect(selectRecipient).toBeInTheDocument();
+
+	await userEvent.click(selectRecipient);
+};
+
+const selectSenderModalTitle = "Select Sender";
 
 describe("SelectAddressDropdown", () => {
 	beforeAll(async () => {
@@ -67,6 +77,26 @@ describe("SelectAddressDropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should not show dropdown options", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} showOptions={false} />);
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
+		});
+	});
+
+	it("should display given wallets as options", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} />);
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+		for (const wallet of wallets) {
+			expect(screen.getByText(wallet.address())).toBeInTheDocument();
+		}
+	});
+
 	it("should open and close wallets modal", async () => {
 		render(<SelectAddressDropdown wallets={wallets} wallet={wallet} profile={profile} />);
 
@@ -115,5 +145,87 @@ describe("SelectAddressDropdown", () => {
 		});
 
 		expect(onChange).toHaveBeenCalledWith(wallets[0]);
+	});
+
+	it("should close search address modal", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} />);
+
+		await showSelectAddressModal();
+
+		await expect(screen.findByText(selectSenderModalTitle)).resolves.toBeVisible();
+
+		const closeButton = screen.getByTestId("Modal__close-button");
+
+		await userEvent.click(closeButton);
+
+		await waitFor(() => {
+			expect(screen.queryByText(selectSenderModalTitle)).not.toBeInTheDocument();
+		});
+	});
+
+	it("should not open up search address modal if disabled", async () => {
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} disabled />);
+
+		await showSelectAddressModal();
+
+		await waitFor(() => {
+			expect(screen.queryByText(selectSenderModalTitle)).not.toBeInTheDocument();
+		});
+	});
+
+	it("should select wallet from select address modal", async () => {
+		const onChange = vi.fn();
+
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} onChange={onChange} />);
+
+		await showSelectAddressModal();
+
+		await expect(screen.findByText(selectSenderModalTitle)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+
+		expect(onChange).toHaveBeenCalledWith(wallets[0]);
+	});
+
+	it("should hide select dropdown when select address modal is open", async () => {
+		const onChange = vi.fn();
+
+		render(<SelectAddressDropdown wallets={wallets} profile={profile} onChange={onChange} />);
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+		expect(screen.getByTestId(firstOptionTestId)).toBeInTheDocument();
+
+		await showSelectAddressModal();
+
+		await expect(screen.findByText(selectSenderModalTitle)).resolves.toBeVisible();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId(firstOptionTestId)).not.toBeInTheDocument();
+		});
+	});
+});
+
+describe("OptionLabel", () => {
+	let wallet: Contracts.IReadWriteWallet;
+
+	beforeAll(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
+
+		wallet = profile.wallets().first();
+	});
+
+	it("should render amount", () => {
+		render(
+			<OptionLabel
+				option={{ value: wallet.address() }}
+				network={profile.activeNetwork()}
+				profile={profile}
+				showBalance={true}
+			/>,
+		);
+
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
+		expect(screen.getAllByText("95.276532523250678785 ARK").length).toBe(2);
 	});
 });

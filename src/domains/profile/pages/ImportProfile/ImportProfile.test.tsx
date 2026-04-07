@@ -15,7 +15,6 @@ const importProfileURL = "/profiles/import";
 
 const browseFiles = () => screen.getByTestId("SelectFile__browse-files");
 
-const changeFileID = "SelectFileStep__change-file";
 const importTitle = "Import Profile";
 const submitID = "PasswordModal__submit-button";
 const validPassword = "S3cUrePa$sword";
@@ -58,11 +57,9 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 	});
 
-	//// @TODO https://app.clickup.com/t/86dwq8wy3
-	it.skip("should request and set password for importing password protected profile", async () => {
+	it("should request and set password for importing password protected profile", async () => {
 		render(<ImportProfile />, { route: importProfileURL });
 
-		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
 		fireEvent.drop(browseFiles(), {
@@ -106,11 +103,9 @@ describe("ImportProfile", () => {
 		await expect(screen.findByText(importTitle)).resolves.toBeVisible();
 	});
 
-	// @TODO https://app.clickup.com/t/86dwq8wy3
-	it.skip("should successfully import profile and return to home screen", async () => {
+	it("should successfully import profile and return to home screen", async () => {
 		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
-		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
 		fireEvent.drop(browseFiles(), {
@@ -145,11 +140,9 @@ describe("ImportProfile", () => {
 		await waitFor(() => expect(router.state.location.pathname).toBe("/"));
 	});
 
-	// @TODO https://app.clickup.com/t/86dwq8wy3
-	it.skip("should not set selected addresses if profile has already", async () => {
+	it("should not set selected addresses if profile has already", async () => {
 		const { router } = render(<ImportProfile />, { route: importProfileURL });
 
-		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
 		fireEvent.drop(browseFiles(), {
@@ -217,11 +210,9 @@ describe("ImportProfile", () => {
 		}
 	});
 
-	// @TODO https://app.clickup.com/t/86dwq8wy3
-	it.skip("should go to step 3 and back", async () => {
+	it("should go to step 3 and back", async () => {
 		render(<ImportProfile />, { route: importProfileURL });
 
-		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
 		fireEvent.drop(browseFiles(), {
@@ -248,14 +239,12 @@ describe("ImportProfile", () => {
 
 		await userEvent.click(screen.getByTestId("ProfileForm__back-button"));
 
-		await expect(screen.findByTestId(changeFileID)).resolves.toBeVisible();
+		await expect(screen.findByTestId("SelectFile")).resolves.toBeVisible();
 	});
 
-	// @TODO https://app.clickup.com/t/86dwq8wy3
-	it.skip("should fail profile import and show error", async () => {
+	it("should fail profile import and show error", async () => {
 		render(<ImportProfile />, { route: importProfileURL });
 
-		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
 		fireEvent.drop(browseFiles(), {
@@ -265,16 +254,6 @@ describe("ImportProfile", () => {
 		});
 
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		await userEvent.type(screen.getByTestId("PasswordModal__input"), wrongPassword);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(wrongPassword);
-		});
-
-		await userEvent.click(screen.getByTestId(submitID));
-
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 	});
 
