@@ -73,7 +73,9 @@ export const WalletVote = ({
 			return t("COMMON.DISABLED_DUE_INSUFFICIENT_BALANCE");
 		}
 
-		return isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR");
+		if (!isLedgerWalletCompatible(wallet)) {
+			return t("COMMON.LEDGER_COMPATIBILITY_ERROR");
+		}
 	};
 
 	return (

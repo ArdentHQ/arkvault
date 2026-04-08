@@ -7,6 +7,9 @@ import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
+import { expect } from "vitest";
+import * as useWalletSyncHook from "@/domains/wallet/hooks/use-wallet-sync";
+import { CoinManifest } from "@/app/lib/mainsail/network.models";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
@@ -25,6 +28,47 @@ describe("useWalletImport", () => {
 
 		wallet = profile.wallets().first();
 		network = wallet.network();
+	});
+
+	it("should import wallet from path", async () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallet = await current.importWallet({
+			ledgerOptions: {
+				deviceId: "nanox",
+				path: "m/44'/1'/0'/0/0",
+			},
+			network,
+			type: "ledger",
+			value: "0x393f3F74F0cd9e790B5192789F31E0A38159de03",
+		});
+
+		expect(wallet).toBeInstanceOf(Wallet);
+	});
+
+	it("should return existing wallet if it's been imported already", async () => {
+		const walletsPushSpy = vi.spyOn(profile.wallets(), "push");
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallet = await current.importWallet({
+			ledgerOptions: {
+				deviceId: "nanox",
+				path: "m/44'/1'/0'/0/0",
+			},
+			network,
+			type: "ledger",
+			value: "0x393f3F74F0cd9e790B5192789F31E0A38159de03",
+		});
+
+		expect(walletsPushSpy).not.toBeCalled();
+		expect(wallet).toBeInstanceOf(Wallet);
+
+		walletsPushSpy.mockRestore();
 	});
 
 	it("should import wallet from mnemonic with bip39", async () => {
@@ -90,6 +134,34 @@ describe("useWalletImport", () => {
 		},
 	);
 
+	it("should not sync wallet when given network is different from active", async () => {
+		const manifest = profile.networks().get("mainsail.mainnet");
+		const mainnet = new Networks.Network({} as CoinManifest, manifest, profile);
+
+		const syncAllSpy = vi.fn();
+
+		const syncWalletHook = vi.spyOn(useWalletSyncHook, "useWalletSync").mockReturnValue({
+			syncAll: syncAllSpy,
+		});
+
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		await current.importWallet({
+			ledgerOptions: {
+				deviceId: "nanox",
+				path: "m/44'/1'/0'/0/0",
+			},
+			network: mainnet,
+			type: "ledger",
+			value: "0x393f3F74F0cd9e790B5192789F32E0A38159de03",
+		});
+
+		expect(syncAllSpy).not.toHaveBeenCalled();
+		syncWalletHook.mockRestore();
+	});
+
 	it("should import wallet from secret", async () => {
 		const {
 			result: { current },
@@ -117,12 +189,13 @@ describe("useWalletImport", () => {
 	});
 
 	it("should set imported wallet as the only selected wallet when view preference is set to single", async () => {
+		const walletSelectionModeSpy = vi.spyOn(profile, "walletSelectionMode").mockReturnValue("single");
+
 		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const wallets = await act(
 			async () =>
 				await walletImport.current.importWallets({
-					networks: [network],
 					type: OptionsValue.BIP39,
 					value: MAINSAIL_MNEMONICS[1],
 				}),
@@ -135,15 +208,40 @@ describe("useWalletImport", () => {
 		expect(importedWallet.address()).toBeDefined();
 
 		expect(importedWallet.isSelected()).toBe(true);
+
+		walletSelectionModeSpy.mockRestore();
 	});
 
-	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
+	it("should not set imported wallet when `disableAddressSelection=true`", async () => {
+		const walletSelectionModeSpy = vi.spyOn(profile, "walletSelectionMode").mockReturnValue("single");
+
 		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
 
 		const wallets = await act(
 			async () =>
 				await walletImport.current.importWallets({
-					networks: [network],
+					disableAddressSelection: true,
+					type: OptionsValue.BIP39,
+					value: MAINSAIL_MNEMONICS[3],
+				}),
+		);
+
+		expect(wallets).toHaveLength(1);
+		const importedWallet = wallets[0];
+
+		expect(importedWallet.isSelected()).toBe(false);
+
+		walletSelectionModeSpy.mockRestore();
+	});
+
+	it("should append imported wallet to the selected addresses when view preference is set to multiple", async () => {
+		const walletSelectionModeSpy = vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
+
+		const { result: walletImport } = renderHook(() => useWalletImport({ profile }), { wrapper });
+
+		const wallets = await act(
+			async () =>
+				await walletImport.current.importWallets({
 					type: OptionsValue.BIP39,
 					value: MAINSAIL_MNEMONICS[2],
 				}),
@@ -156,5 +254,7 @@ describe("useWalletImport", () => {
 		expect(importedWallet.address()).toBeDefined();
 
 		expect(importedWallet.isSelected()).toBe(true);
+
+		walletSelectionModeSpy.mockRestore();
 	});
 });

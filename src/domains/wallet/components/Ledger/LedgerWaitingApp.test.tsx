@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { LedgerWaitingApp } from "./LedgerWaitingApp";
+import { LedgerWaitingApp, LedgerWaitingAppContent } from "./LedgerWaitingApp";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("LedgerWaitingApp", () => {
@@ -25,5 +25,13 @@ describe("LedgerWaitingApp", () => {
 		render(<LedgerWaitingApp isOpen={true} coinName="ARK" subtitle={subtitle} />);
 
 		expect(screen.getByText(subtitle)).toBeInTheDocument();
+	});
+});
+
+describe("LedgerWaitingAppContent", () => {
+	it("should display loading indicator", () => {
+		render(<LedgerWaitingAppContent coinName="ARK" subject="message" />);
+
+		expect(screen.getByTestId("LedgerWaitingApp-loading_message")).toBeInTheDocument();
 	});
 });

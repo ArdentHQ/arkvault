@@ -5,7 +5,7 @@ type TransactionType = "sent" | "received";
 
 const fetchTransactionsCount = async (
 	wallet: Contracts.IReadWriteWallet,
-	type: TransactionType = "sent",
+	type: TransactionType,
 ): Promise<{ count: number }> => {
 	const response = await wallet.transactionIndex()[type]({ limit: 1 });
 	const pagination = response.getPagination();

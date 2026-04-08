@@ -31,6 +31,19 @@ describe("useImportOptions", () => {
 		expect(current.defaultOption).contains({ label: "Address", value: OptionsValue.ADDRESS });
 	});
 
+	it("should return advanced options when profile uses HD wallet", () => {
+		const usesHDWallets = vi.spyOn(profile, "usesHDWallets").mockReturnValue(true);
+
+		const {
+			result: { current },
+		} = renderHook(() => useImportOptions({}, profile));
+
+		expect(current.advancedOptions).toHaveLength(1);
+		expect(current.advancedOptions[0].value).toBe(OptionsValue.BIP44);
+
+		usesHDWallets.mockRestore();
+	});
+
 	it("should return options from the available options", () => {
 		const {
 			result: { current },
@@ -57,6 +70,18 @@ describe("useImportOptions", () => {
 		expect(current.options[1].canBeEncrypted).toBeDefined();
 		expect(current.options[2].value).toBe(OptionsValue.ADDRESS);
 		expect(current.options[2].canBeEncrypted).toBeDefined();
+	});
+
+	it("should skip ledger import option when `VITE_LEDGER_DISABLED` is enabled", () => {
+		process.env.VITE_LEDGER_DISABLED = "true";
+
+		const {
+			result: { current },
+		} = renderHook(() => useImportOptions({}, profile));
+
+		expect(current.options.length).toBe(0);
+
+		process.env.VITE_LEDGER_DISABLED = "false";
 	});
 
 	it("should convert method name", () => {
