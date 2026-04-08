@@ -163,6 +163,23 @@ describe("SendExchangeTransfer", () => {
 		transactionMock.mockRestore();
 	});
 
+	it("should unset selected wallet when `SelectAddressDropdown` receives invalid address", async () => {
+		renderComponent();
+
+		await selectSender();
+
+		const user = userEvent.setup();
+
+		await userEvent.click(within(screen.getByTestId("sender-address")).getAllByTestId("SelectDropdown__input")[0]);
+
+		await user.clear(screen.getByTestId("SelectDropdown__input"));
+		await user.paste("Invalid");
+
+		await waitFor(() => {
+			expect(screen.queryByText(profile.wallets().first().address())).not.toBeInTheDocument();
+		});
+	});
+
 	it("should show an error if wallet does not have enough funds", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
