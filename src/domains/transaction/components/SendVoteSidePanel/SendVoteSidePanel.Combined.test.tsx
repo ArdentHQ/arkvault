@@ -200,7 +200,6 @@ describe("SendVoteSidePanel Combined", () => {
 				"https://dwallets-evm.mainsailhq.com/api/blocks/f7054cf37ce49e17cf2b06a0a868cac183bf78e2f1b4a6fe675f2412364fe0ae",
 				{ data: {} },
 			),
-			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
 		vi.useFakeTimers({
