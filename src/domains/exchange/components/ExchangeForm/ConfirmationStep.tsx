@@ -14,7 +14,7 @@ interface ConfirmationStepProperties {
 	profile: Contracts.IProfile;
 }
 
-const explorerUrl = (value: string, explorerMask: string) => explorerMask.replace("{}", value);
+const explorerUrl = (value?: string, explorerMask?: string) => (explorerMask ?? "").replace("{}", value ?? "");
 
 export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }: ConfirmationStepProperties) => {
 	const { t } = useTranslation();
@@ -28,14 +28,14 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 
 	const inputTransaction = exchangeTransaction.input();
 	const inputTransactionData: Pick<ExtendedTransactionData, "explorerLink" | "hash" | "isConfirmed"> = {
-		explorerLink: () => explorerUrl(inputTransaction.hash ?? "", fromCurrency?.transactionExplorerMask ?? ""),
+		explorerLink: () => explorerUrl(inputTransaction.hash, fromCurrency?.transactionExplorerMask),
 		hash: () => inputTransaction.hash ?? "",
 		isConfirmed: () => true,
 	};
 
 	const outputTransaction = exchangeTransaction.output();
 	const outputTransactionData: Pick<ExtendedTransactionData, "explorerLink" | "hash" | "isConfirmed"> = {
-		explorerLink: () => explorerUrl(outputTransaction.hash ?? "", toCurrency?.transactionExplorerMask ?? ""),
+		explorerLink: () => explorerUrl(outputTransaction.hash, toCurrency?.transactionExplorerMask),
 		hash: () => outputTransaction.hash ?? "",
 		isConfirmed: () => true,
 	};
