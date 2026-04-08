@@ -639,6 +639,27 @@ describe("Servers Settings", () => {
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
 			});
 
+			it("shows an error if the transaction API endpoint is unreachable", async () => {
+				server.use(requestMock(txApiUrlConfiguration, undefined, { status: 500 }));
+
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId("Input__error")).toHaveAttribute(
+					"data-errortext",
+					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
+				);
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
 			it("should show an error if the EVM endpoint is unreachable", async () => {
 				server.use(requestMock(evmApiUrl, undefined, { status: 500 }));
 
@@ -658,6 +679,34 @@ describe("Servers Settings", () => {
 				);
 
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
+			it("should select network from dropdown", async () => {
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId(
+					"SelectDropdown__input",
+				);
+
+				await userEvent.click(networkSelect);
+
+				const firstOption = screen.getByTestId("SelectDropdown__option--0");
+
+				await waitFor(() => {
+					expect(firstOption).toBeVisible();
+				});
+
+				await userEvent.click(firstOption);
+
+				const nameField = screen.getByTestId("ServerFormModal--name");
+
+				await waitFor(() => {
+					expect(nameField).toHaveValue();
+				});
 			});
 
 			it.each([
