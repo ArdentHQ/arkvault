@@ -161,13 +161,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				return;
 			}
 
-			/* istanbul ignore else -- @preserve */
 			if (!isLedgerTransportSupported()) {
 				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
 				return;
 			}
 
-			/* istanbul ignore else -- @preserve */
 			await connect(profile);
 			handleSubmit(() => submit())();
 		};
