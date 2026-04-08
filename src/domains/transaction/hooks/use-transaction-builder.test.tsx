@@ -6,7 +6,6 @@ import {
 	triggerMessageSignOnce,
 } from "@/utils/testing-library";
 import { act as actHook, renderHook } from "@testing-library/react";
-import { requestMock, server } from "@/tests/mocks/server";
 
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";

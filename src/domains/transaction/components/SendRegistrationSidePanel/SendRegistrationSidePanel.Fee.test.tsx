@@ -18,7 +18,6 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0x8A3117649655714c296cd816691e01C5148922ed.json";
 import * as ReactRouter from "react-router";
 import { afterAll, vi } from "vitest";
 let profile: Contracts.IProfile;
