@@ -1865,7 +1865,7 @@ describe("ConfirmationStep", () => {
 		useLinkSpy.mockRestore();
 	});
 
-	it("should not crash when `transactionExplorerMask` or transaction `hash` is undefined", async () => {
+	it("should not crash when `transactionExplorerMask` or transaction `hash` is `undefined`", async () => {
 		const openExternalMock = vi.fn();
 		const useLinkSpy = vi.spyOn(useLinkMock, "useLink").mockReturnValue({ openExternal: openExternalMock });
 
