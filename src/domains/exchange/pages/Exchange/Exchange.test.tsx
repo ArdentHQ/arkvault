@@ -9,6 +9,15 @@ import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/context
 import { translations } from "@/domains/exchange/i18n";
 import { env, getMainsailProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
+import { useSearchParams } from 'react-router-dom'
+
+vi.mock('react-router-dom', async () => {
+	const actual = await vi.importActual('react-router-dom')
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams)
+	}
+})
 
 let profile: Contracts.IProfile;
 
@@ -187,6 +196,48 @@ describe("Exchange", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeSidePanel")).toBeInTheDocument();
 		});
+	});
+
+	it("should close exchange side panel", async () => {
+		const mockSetSearchParams = vi.fn()
+		const mockDelete = vi.fn()
+
+		vi.mocked(useSearchParams).mockReturnValue([
+			{ delete: mockDelete, get: vi.fn() },
+			mockSetSearchParams
+		]);
+
+		render(
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
+			{
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("Card")).toHaveLength(2);
+		});
+
+		await userEvent.click(screen.getByText("ChangeNOW"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeSidePanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("ExchangeSidePanel")).not.toBeInTheDocument();
+		});
+
+		expect(mockDelete).toHaveBeenCalledWith("orderId");
+		expect(mockSetSearchParams).toHaveBeenCalled();
 	});
 
 	it("should navigate to history tab", async () => {
