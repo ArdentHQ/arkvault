@@ -643,4 +643,48 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument());
 	});
+
+	it("should use network wallet names when enabled", async () => {
+		const initialValue = profile.settings().get(ProfileSetting.UseNetworkWalletNames);
+
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await expect(screen.findByTestId("AppearanceToggle__toggle-useNetworkWalletNames")).resolves.toBeVisible();
+
+		const toggle = screen.getByTestId("AppearanceToggle__toggle-useNetworkWalletNames");
+
+		if (!initialValue) {
+			await userEvent.click(toggle);
+		}
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		expect(profile.settings().get(ProfileSetting.UseNetworkWalletNames)).toBe(true);
+	});
+
+	it("should show development network when enabled", async () => {
+		profile.flushSettings();
+
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await expect(screen.findByTestId("AppearanceToggle__toggle-showDevelopmentNetwork")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("AppearanceToggle__toggle-showDevelopmentNetwork"));
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		expect(profile.settings().get(ProfileSetting.UseTestNetworks)).toBe(true);
+	});
 });
