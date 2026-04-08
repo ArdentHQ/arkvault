@@ -9,9 +9,7 @@ vi.mock("@/utils/peers", () => ({
 
 vi.mock("@/utils/server-utils", () => ({
 	customNetworks: vi.fn(() => []),
-	sortByName: vi.fn((networks) => {
-		return [...networks].sort((a, b) => a.name.localeCompare(b.name));
-	}),
+	sortByName: vi.fn((networks) => [...networks].sort((a, b) => a.name.localeCompare(b.name))),
 }));
 
 describe("useCustomNetworks", () => {
