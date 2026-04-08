@@ -251,7 +251,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 									<TotalAmountBox
 										detailWrapperClassName="sm:min-w-20"
 										amount={exchangeInput.amount}
-										fee={fee || 0}
+										fee={fee}
 										ticker={senderWallet.currency()}
 										convertValues={!senderWallet.network().isTest()}
 									/>
