@@ -9,15 +9,15 @@ import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/context
 import { translations } from "@/domains/exchange/i18n";
 import { env, getMainsailProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams } from "react-router-dom";
 
-vi.mock('react-router-dom', async () => {
-	const actual = await vi.importActual('react-router-dom')
+vi.mock("react-router-dom", async () => {
+	const actual = await vi.importActual("react-router-dom");
 	return {
 		...actual,
-		useSearchParams: vi.fn(actual.useSearchParams)
-	}
-})
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
 
 let profile: Contracts.IProfile;
 
@@ -199,13 +199,10 @@ describe("Exchange", () => {
 	});
 
 	it("should close exchange side panel", async () => {
-		const mockSetSearchParams = vi.fn()
-		const mockDelete = vi.fn()
+		const mockSetSearchParams = vi.fn();
+		const mockDelete = vi.fn();
 
-		vi.mocked(useSearchParams).mockReturnValue([
-			{ delete: mockDelete, get: vi.fn() },
-			mockSetSearchParams
-		]);
+		vi.mocked(useSearchParams).mockReturnValue([{ delete: mockDelete, get: vi.fn() }, mockSetSearchParams]);
 
 		render(
 			<ExchangeProvider>
