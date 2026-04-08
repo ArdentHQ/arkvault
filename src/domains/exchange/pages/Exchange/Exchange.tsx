@@ -173,12 +173,10 @@ export const Exchange = () => {
 					{selectedExchange && (
 						<ExchangeSidePanel
 							exchangeId={selectedExchange}
-							onOpenChange={(open) => {
-								if (!open) {
-									setSelectedExchange(undefined);
-									searchParams.delete("orderId");
-									setSearchParams(searchParams);
-								}
+							onOpenChange={() => {
+								setSelectedExchange(undefined);
+								searchParams.delete("orderId");
+								setSearchParams(searchParams);
 							}}
 						/>
 					)}
