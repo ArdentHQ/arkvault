@@ -1865,6 +1865,72 @@ describe("ConfirmationStep", () => {
 		useLinkSpy.mockRestore();
 	});
 
+	it("should not crash when `transactionExplorerMask` or transaction `hash` is undefined", async () => {
+		const openExternalMock = vi.fn();
+		const useLinkSpy = vi.spyOn(useLinkMock, "useLink").mockReturnValue({ openExternal: openExternalMock });
+
+		const { result: form } = renderHook(() =>
+			useForm({
+				defaultValues: {
+					fromCurrency: {
+						addressExplorerMask: "https://blockchair.com/bitcoin/address/{}",
+						coin: "btc",
+						hasExternalId: false,
+						name: "Bitcoin",
+					},
+					toCurrency: {
+						addressExplorerMask: "https://live.arkscan.io/wallets/{}",
+						coin: "ark",
+						hasExternalId: false,
+						name: "Ark",
+					},
+				},
+				mode: "onChange",
+			}),
+		);
+
+		const exchangeTransaction = profile.exchangeTransactions().create({
+			input: {
+				address: "payinAddress",
+				amount: "1",
+				ticker: "btc",
+			},
+			orderId: "changenow",
+			output: {
+				address: "payoutAddress",
+				amount: "100",
+				ticker: "ark",
+			},
+			provider: "changenow",
+		});
+
+		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Finished);
+
+		render(
+			<ExchangeProvider>
+				<Wrapper>
+					<FormProvider {...form.current}>
+						<ConfirmationStep exchangeTransaction={exchangeTransaction} profile={profile} />
+					</FormProvider>
+				</Wrapper>
+			</ExchangeProvider>,
+		);
+
+		await waitFor(() => {
+			expect(confirmationStep()).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("explorer-link")).toHaveLength(2);
+		});
+
+		await userEvent.click(screen.getAllByTestId("explorer-link")[0]);
+
+		expect(openExternalMock).toHaveBeenCalledWith("");
+
+		useLinkSpy.mockRestore();
+	});
+
 	it("should not render without exchange transaction", async () => {
 		const { result: form } = renderHook(() => useForm());
 
