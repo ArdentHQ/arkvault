@@ -198,7 +198,7 @@ describe("Exchange", () => {
 		});
 	});
 
-	it("should close exchange side panel", async () => {
+	it("should close the exchange side panel", async () => {
 		const mockSetSearchParams = vi.fn();
 		const mockDelete = vi.fn();
 
