@@ -168,13 +168,6 @@ export const ExchangeSidePanel = ({
 		setIsReady(true);
 	}, [setIsReady]);
 
-	const onMountChange = (mounted: boolean) => {
-		if (!mounted) {
-			/* istanbul ignore else -- @preserve */
-			reset();
-		}
-	};
-
 	useEffect(() => {
 		if (!exchangeService) {
 			return;
@@ -431,7 +424,6 @@ export const ExchangeSidePanel = ({
 			minimizeable={!isLastStep}
 			open={exchangeId !== undefined}
 			onOpenChange={onOpenChange}
-			onMountChange={onMountChange}
 			title={
 				<div className="flex items-center">
 					<span>{t("COMMON.EXCHANGE_VIA")}</span>
