@@ -7,6 +7,7 @@ import * as useActiveProfileModule from "@/app/hooks/env";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 import { afterEach, expect, vi } from "vitest";
 import * as PanelsMock from "@/app/contexts/Panels";
+import * as useLinkMock from "@/app/hooks/use-link";
 
 let usePanelsMock;
 let openPanelSpy;
@@ -47,10 +48,8 @@ describe("useWalletActions", () => {
 			{ wrapper },
 		);
 
-		expect(current.handleOpen()).toBeUndefined();
 		expect(current.handleSend()).toBeUndefined();
 
-		await expect(current.handleToggleStar()).resolves.toBeUndefined();
 		await expect(current.handleDelete()).resolves.toBeUndefined();
 		expect(current.handleSelectOption({} as DropdownOption)).toBeUndefined();
 	});
@@ -119,6 +118,60 @@ describe("useWalletActions", () => {
 		});
 
 		expect(mockHandleSendUsernameResignation).toHaveBeenCalledTimes(1);
+	});
+
+	it.each([
+		[
+			"handleSend",
+			PanelsMock.Panel.SendTransfer,
+			{
+				isTokenTransfer: false,
+				tokenContractAddress: "ARK",
+			},
+		],
+		[
+			"handleTokenSend",
+			PanelsMock.Panel.SendTokenTransfer,
+			{
+				isTokenTransfer: true,
+			},
+		],
+	])("should call `%s`", (action, panel, data) => {
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current[action]();
+		});
+
+		expect(openPanelSpy).toHaveBeenCalledWith(panel, {
+			...data,
+		});
+	});
+
+	it.each(["handleSend", "handleTokenSend"])("should not call `%s` when wallet is not provided", (action) => {
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current[action]();
+		});
+
+		expect(openPanelSpy).not.toHaveBeenCalled();
 	});
 
 	it("should call handleSendRegistration callback for validator registration", () => {
@@ -250,5 +303,119 @@ describe("useWalletActions", () => {
 				current.handleSelectOption({ value: "validator-resignation" } as DropdownOption);
 			});
 		}).not.toThrow();
+	});
+
+	it("should call handleSendContractDeployment callback when provided", () => {
+		const mockHandleSendContractDeployment = vi.fn();
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					handleSendContractDeployment: mockHandleSendContractDeployment,
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "contract-deployment" } as DropdownOption);
+		});
+
+		expect(mockHandleSendContractDeployment).toHaveBeenCalledTimes(1);
+	});
+
+	it("should not call handleSendContractDeployment callback when not provided", () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletActions({ wallets: [wallet] }), { wrapper });
+
+		// Should not throw error when callback is not provided
+		expect(() => {
+			act(() => {
+				current.handleSelectOption({ value: "contract-deployment" } as DropdownOption);
+			});
+		}).not.toThrow();
+	});
+
+	it("should call handleSelectOption with `open-explorer` action", () => {
+		const openExternalMock = vi.fn();
+		const useLinkSpy = vi.spyOn(useLinkMock, "useLink").mockReturnValue({ openExternal: openExternalMock });
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet],
+				}),
+			{ wrapper },
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "open-explorer" } as DropdownOption);
+		});
+
+		expect(openExternalMock).toHaveBeenCalledWith(wallet.explorerLink());
+
+		useLinkSpy.mockRestore();
+	});
+
+	it.each([
+		["ledger-migration", PanelsMock.Panel.LedgerMigration],
+		["sign-message", PanelsMock.Panel.SignMessage],
+		["verify-message", PanelsMock.Panel.VerifyMessage],
+	])("should call handleSelectOption with `%s` action", (action, panel) => {
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet],
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: action } as DropdownOption);
+		});
+
+		expect(openPanelSpy).toHaveBeenCalledWith(panel);
+	});
+
+	it("should handle `multi-signature` action", () => {
+		let currentLocation = { pathname: "/" };
+
+		const {
+			result: { current },
+		} = renderHook(
+			() =>
+				useWalletActions({
+					wallets: [wallet, profile.wallets().last()],
+				}),
+			{
+				wrapper: ({ children }) => (
+					<Providers>
+						<LocationTracker
+							onLocationChange={(location) => {
+								currentLocation = location;
+							}}
+						/>
+						{children}
+					</Providers>
+				),
+			},
+		);
+
+		act(() => {
+			current.handleSelectOption({ value: "multi-signature" } as DropdownOption);
+		});
+
+		expect(currentLocation.pathname).toBe(
+			"/profiles/877b7695-8a55-4e16-a7ff-412113131856/wallets/ee02b13f-8dbf-4191-a9dc-08d2ab72ec28/send-registration/multiSignature",
+		);
 	});
 });

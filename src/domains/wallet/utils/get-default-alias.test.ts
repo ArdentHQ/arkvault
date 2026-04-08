@@ -1,6 +1,6 @@
 import { Contracts } from "@/app/lib/profiles";
 
-import { getDefaultAlias } from "./get-default-alias";
+import { getDefaultAlias, getLedgerDefaultAlias } from "./get-default-alias";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
 const address1 = "Address #1";
@@ -22,7 +22,6 @@ describe("getDefaultAlias", () => {
 	it("should return a default alias when wallet already exists", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[0],
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -37,7 +36,6 @@ describe("getDefaultAlias", () => {
 	it("should not return alias that already exist", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[0],
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -54,7 +52,6 @@ describe("getDefaultAlias", () => {
 	it("should increase the alias number regardless of the network", async () => {
 		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[0],
-			network: "mainsail.devnet",
 		});
 
 		profile.wallets().push(wallet);
@@ -67,7 +64,6 @@ describe("getDefaultAlias", () => {
 
 		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[1],
-			network: "mainsail.mainnet",
 		});
 
 		profile.wallets().push(wallet2);
@@ -106,5 +102,62 @@ describe("getDefaultAlias", () => {
 		});
 
 		expect(result2).toBe(address2);
+	});
+
+	it("should handle when there are no wallets in profile", async () => {
+		const result = getDefaultAlias({
+			profile,
+		});
+
+		expect(result).toBe(address1);
+	});
+});
+
+describe("getLedgerDefaultAlias", () => {
+	let profile: Contracts.IProfile;
+
+	beforeEach(async () => {
+		profile = await env.profiles().create("empty profile");
+
+		await env.profiles().restore(profile);
+	});
+
+	afterEach(() => {
+		env.profiles().forget(profile.id());
+	});
+
+	it("should return a default alias when no ledger wallets exist", async () => {
+		const result = getLedgerDefaultAlias({
+			path: "m/44'/1'/0'/0/0",
+			profile,
+		});
+
+		expect(result).toBe("Ledger #1");
+	});
+
+	it("should handle when an invalid path provided", async () => {
+		const result = getLedgerDefaultAlias({
+			path: "",
+			profile,
+		});
+
+		expect(result).toBe("Ledger #1");
+	});
+
+	it("should return a default alias when ledger wallets exist", async () => {
+		const wallet1 = await profile.walletFactory().fromAddressWithDerivationPath({
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			path: "m/44'/1'/0'/0/0",
+		});
+
+		profile.wallets().push(wallet1);
+		wallet1.mutator().alias("Ledger #1");
+
+		const result = getLedgerDefaultAlias({
+			path: "m/111'/1'/0'/0/0",
+			profile,
+		});
+
+		expect(result).toBe("Ledger #2");
 	});
 });

@@ -236,6 +236,17 @@ describe("WalletFactory", () => {
 			expect(wallet2.data().get(WalletData.DerivationPath)).toBe(createBIP44Path(BIP44CoinType.ARK, 0, 0, 1));
 		});
 
+		it("should create a wallet from a mnemonic with password encryption", async () => {
+			const wallet = await subject.fromMnemonicWithBIP44({
+				levels: { account: 0 },
+				mnemonic,
+				password,
+			});
+
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
+		});
+
 		it("should generate same address for same mnemonic and derivation path", async () => {
 			const wallet1 = await subject.fromMnemonicWithBIP44({
 				levels: { account: 1, addressIndex: 2, change: 0 },
@@ -405,6 +416,21 @@ describe("WalletFactory", () => {
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.BIP84.DERIVATION_PATH);
 			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
 		});
+
+		it("should handle network with extended public key", async () => {
+			const { wallet: tempWallet } = await subject.generate({
+				locale: "english",
+				wordCount: 12,
+			});
+			const address = tempWallet.address();
+			const path = "m/44'/0'/0'/0/0";
+
+			vi.spyOn(tempWallet.network(), "usesExtendedPublicKey").mockReturnValue(true);
+
+			const wallet = await subject.fromAddressWithDerivationPath({ address, path });
+			expect(wallet).toBeInstanceOf(Wallet);
+			expect(wallet.data().get(WalletData.Status)).toBe(WalletFlag.Cold);
+		});
 	});
 
 	describe("fromSecret", () => {
@@ -421,6 +447,15 @@ describe("WalletFactory", () => {
 			expect(wallet).toBeInstanceOf(Wallet);
 			expect(wallet.address()).toBeTruthy();
 			expect(wallet.data().get(WalletData.ImportMethod)).toBe(WalletImportMethod.SECRET_WITH_ENCRYPTION);
+		});
+	});
+
+	describe("generateAlias", () => {
+		it("should generate an alias for a wallet", async () => {
+			const wallet = await subject.fromMnemonicWithBIP39({ mnemonic });
+			const alias = subject.generateAlias(wallet);
+			expect(typeof alias).toBe("string");
+			expect(alias.length).toBeGreaterThan(0);
 		});
 	});
 });

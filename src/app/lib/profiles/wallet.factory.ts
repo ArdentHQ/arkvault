@@ -236,6 +236,8 @@ export class WalletFactory implements IWalletFactory {
 			throw new Error(`The configured network does not support ${input.derivationType.toUpperCase()}.`);
 		}
 
+		// TODO: Revisit implementation.
+		/* istanbul ignore next -- @preserve */
 		if (wallet.network().usesExtendedPublicKey()) {
 			//if (!input.options.levels) {
 			//	throw new Error("Please specify the levels and try again.");

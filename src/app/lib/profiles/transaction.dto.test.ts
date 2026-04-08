@@ -282,5 +282,23 @@ describe("ExtendedConfirmedTransactionData", () => {
 			subject.isContractDeployment();
 			expect(spy).toHaveBeenCalled();
 		});
+
+		it("should call approveDetails", () => {
+			const mockApproveDetails = vi.fn().mockReturnValue({ amount: "100", spender: "0x123" });
+			const dataWithApprove = { ...dataMock, approveDetails: mockApproveDetails };
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataWithApprove as any);
+			const result = subject.approveDetails();
+			expect(mockApproveDetails).toHaveBeenCalled();
+			expect(result).toEqual({ amount: "100", spender: "0x123" });
+		});
+
+		it("should call tokens", () => {
+			const mockTokens = vi.fn().mockReturnValue([{ address: "0x123" }]);
+			const dataWithTokens = { ...dataMock, tokens: mockTokens };
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataWithTokens as any);
+			const result = subject.tokens();
+			expect(mockTokens).toHaveBeenCalled();
+			expect(result).toEqual([{ address: "0x123" }]);
+		});
 	});
 });

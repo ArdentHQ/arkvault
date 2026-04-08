@@ -72,6 +72,36 @@ describe("VoteRegistry", () => {
 			const result = voteRegistry.current();
 			expect(result).toEqual([{ amount: 0, wallet: undefined }]);
 		});
+
+		test("should return current votes with found validator wallet", ({ defaultWallet }) => {
+			const voteRegistry = new VoteRegistry(
+				defaultWallet,
+				new AttributeBag({
+					wallet: {
+						data: {
+							attributes: {
+								vote: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+							},
+						},
+					},
+				}),
+				defaultWallet,
+			);
+
+			vi.spyOn(defaultWallet.data(), "get").mockImplementation((key) => {
+				if (key === VOTES) {
+					return [{ amount: 100, id: "validator1" }];
+				}
+				return;
+			});
+
+			const mockValidatorWallet = { address: () => "0xValidatorAddress" };
+			vi.spyOn(defaultWallet.validators(), "mapByIdentifier").mockReturnValue(mockValidatorWallet as any);
+
+			const result = voteRegistry.current();
+			expect(result[0].wallet).toBe(mockValidatorWallet);
+			expect(result[0].amount).toBe(100);
+		});
 	});
 
 	describe("used", () => {
@@ -82,6 +112,18 @@ describe("VoteRegistry", () => {
 			expect(() => voteRegistry.used()).toThrow(
 				"The voting data has not been synced. Please call [synchroniser().votes()] before accessing votes.",
 			);
+		});
+
+		test("should return used votes count", ({ defaultWallet }) => {
+			const voteRegistry = new VoteRegistry(defaultWallet, mockAttributes, defaultWallet);
+			vi.spyOn(defaultWallet.data(), "get").mockImplementation((key) => {
+				if (key === WalletData.VotesUsed) {
+					return 30;
+				}
+				return;
+			});
+
+			expect(voteRegistry.used()).toBe(30);
 		});
 	});
 

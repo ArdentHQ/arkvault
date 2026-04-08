@@ -430,7 +430,7 @@ export class Network {
 			index: 0,
 		};
 
-		if (!milestone || !milestones) {
+		if (!milestone.data) {
 			throw new Error("Milestone not found.");
 		}
 

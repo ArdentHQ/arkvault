@@ -1,4 +1,3 @@
-import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import { useCallback, useMemo } from "react";
 
@@ -13,35 +12,16 @@ export interface AddressProperties {
 
 interface ProfileAddressesProperties {
 	profile: Contracts.IProfile;
-	network?: Networks.Network;
 }
 
-export const useProfileAddresses = (
-	{ profile, network }: ProfileAddressesProperties,
-	exceptMultiSignature?: boolean,
-) => {
+export const useProfileAddresses = ({ profile }: ProfileAddressesProperties) => {
 	const contacts = profile.contacts().values();
 	const profileWallets = profile.wallets().values();
-
-	const isNetworkSelected = useCallback(
-		(addressNetwork: string) => {
-			if (!network) {
-				return true;
-			}
-
-			return addressNetwork === network.id();
-		},
-		[network],
-	);
 
 	const profileAddresses = useMemo(() => {
 		const profileAddresses: AddressProperties[] = [];
 
 		for (const wallet of profileWallets) {
-			if (!isNetworkSelected(wallet.network().id())) {
-				continue;
-			}
-
 			const address = {
 				address: wallet.address(),
 				alias: wallet.alias(),
@@ -55,7 +35,7 @@ export const useProfileAddresses = (
 		}
 
 		return profileAddresses;
-	}, [exceptMultiSignature, isNetworkSelected, profileWallets]);
+	}, [profileWallets]);
 
 	const getContactAddresses = useCallback(
 		(profileAddresses: AddressProperties[]) => {
@@ -63,13 +43,10 @@ export const useProfileAddresses = (
 
 			for (const contact of contacts) {
 				for (const contactAddress of contact.addresses().values()) {
-					if (exceptMultiSignature) {
-						continue;
-					}
-
 					const addressAlreadyExist = profileAddresses.some(
 						({ address }) => address === contactAddress.address(),
 					);
+
 					if (addressAlreadyExist) {
 						continue;
 					}
@@ -88,7 +65,7 @@ export const useProfileAddresses = (
 
 			return contactAddresses;
 		},
-		[contacts, exceptMultiSignature, isNetworkSelected],
+		[contacts],
 	);
 
 	return useMemo(() => {

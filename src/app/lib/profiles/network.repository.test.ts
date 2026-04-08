@@ -31,6 +31,14 @@ describe("NetworkRepository", () => {
 		expect(result).toHaveLength(1);
 	});
 
+	test("#allByCoin - should return empty for non-existent coin", ({ profile }) => {
+		const repository = new NetworkRepository(profile);
+		repository.fill(networkItem);
+
+		const result = repository.allByCoin("nonexistent");
+		expect(result).toEqual([]);
+	});
+
 	test("#get", ({ profile }) => {
 		const repository = new NetworkRepository(profile);
 		repository.fill({ mainnet: { coin: "ARK", id: "mainnet", name: "Mainnet" } });

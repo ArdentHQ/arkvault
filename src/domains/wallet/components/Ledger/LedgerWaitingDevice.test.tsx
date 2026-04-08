@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
+import { LedgerWaitingDevice, LedgerWaitingDeviceContent } from "./LedgerWaitingDevice";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { mockNanoXTransport, render, screen, waitFor } from "@/utils/testing-library";
 
@@ -43,5 +43,13 @@ describe("LedgerWaitingDevice", () => {
 		render(<LedgerWaitingDevice isOpen={true} subtitle={subtitle} />);
 
 		expect(screen.getByText(subtitle)).toBeInTheDocument();
+	});
+});
+
+describe("LedgerWaitingDeviceContent", () => {
+	it("should display loading indicator", () => {
+		render(<LedgerWaitingDeviceContent subject="message" />);
+
+		expect(screen.getByTestId("LedgerWaitingDevice-loading_message")).toBeInTheDocument();
 	});
 });

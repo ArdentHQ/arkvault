@@ -139,6 +139,23 @@ describe("ClientService", () => {
 		expect(txs.items()).toHaveLength(1);
 	});
 
+	it("should handle extra parameters in query", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/transactions\/unconfirmed.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "1" && url.searchParams.get("limit") === "10") {
+					return HttpResponse.json({
+						data: [transactionMockData],
+						meta: { last: "page=1", next: null, previous: null, self: "page=1" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const txs = await clientService.unconfirmedTransactions({ extraParam: "test" } as any);
+		expect(txs).toBeDefined();
+	});
+
 	it("should fetch a wallet", async () => {
 		server.use(requestMock("http://localhost/wallets/walletid", { data: walletMockData }));
 		const wallet = await clientService.wallet({ value: "walletid" });

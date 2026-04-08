@@ -43,7 +43,10 @@ export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatus
 
 	if (activeCount === votes.length) {
 		return (
-			<div className="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent">
+			<div
+				data-testid="ValidatorStatusIcon-Active"
+				className="bg-theme-success-100 dark:border-theme-success-800 dim:border-theme-success-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+			>
 				<div className="bg-theme-success-700 border-theme-success-200 dark:bg-theme-success-400 dark:border-theme-success-700 dim:bg-theme-success-400 dim:border-theme-success-700 h-2 w-2 rounded-full border-2" />
 			</div>
 		);
@@ -51,21 +54,23 @@ export const ValidatorStatusIcon = ({ votes, activeValidators }: ValidatorStatus
 
 	if (standbyCount === votes.length) {
 		return (
-			<div className="bg-theme-warning-100 dark:border-theme-warning-800 dim:border-theme-warning-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent">
+			<div
+				data-testid="ValidatorStatusIcon-StandBy"
+				className="bg-theme-warning-100 dark:border-theme-warning-800 dim:border-theme-warning-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+			>
 				<div className="bg-theme-warning-700 border-theme-warning-200 dark:bg-theme-warning-400 dark:border-theme-warning-700 dim:bg-theme-warning-400 dim:border-theme-warning-700 h-2 w-2 rounded-full border-2" />
 			</div>
 		);
 	}
 
-	if (resignedCount === votes.length) {
-		return (
-			<div className="bg-theme-danger-100 dark:border-theme-danger-800 dim:border-theme-danger-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent">
-				<div className="bg-theme-danger-700 border-theme-danger-200 dark:bg-theme-danger-400 dark:border-theme-danger-700 dim:bg-theme-danger-400 dim:border-theme-danger-700 h-2 w-2 rounded-full border-2" />
-			</div>
-		);
-	}
-
-	return;
+	return (
+		<div
+			data-testid="ValidatorStatusIcon-Resigned"
+			className="bg-theme-danger-100 dark:border-theme-danger-800 dim:border-theme-danger-800 flex h-5 w-5 items-center justify-center rounded-sm border border-transparent dark:bg-transparent"
+		>
+			<div className="bg-theme-danger-700 border-theme-danger-200 dark:bg-theme-danger-400 dark:border-theme-danger-700 dim:bg-theme-danger-400 dim:border-theme-danger-700 h-2 w-2 rounded-full border-2" />
+		</div>
+	);
 };
 
 export const ValidatorStatus = ({ votes, activeValidators }: ValidatorStatusProperties) => {

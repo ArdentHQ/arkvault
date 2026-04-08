@@ -37,7 +37,7 @@ export const getDefaultAlias = ({ profile, addressIndex }: GetDefaultAliasInput)
 };
 
 export const getLedgerDefaultAlias = ({ profile, path }: GetLedgerDefaultAliasInput): string => {
-	const pathCounter = path.slice(-1) ?? 0;
+	const pathCounter = path.slice(-1);
 	let counter = Number(pathCounter) + 1;
 
 	const wallets = profile
