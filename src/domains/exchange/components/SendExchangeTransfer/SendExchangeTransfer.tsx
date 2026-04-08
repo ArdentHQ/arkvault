@@ -145,11 +145,9 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 
-		/* istanbul ignore else -- @preserve */
 		const isFullyRestoredAndSynced =
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
-		/* istanbul ignore else -- @preserve */
 		if (!isFullyRestoredAndSynced) {
 			newSenderWallet?.synchroniser().identity();
 		}
@@ -163,16 +161,18 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				return;
 			}
 
+			/* istanbul ignore else -- @preserve */
 			if (!isLedgerTransportSupported()) {
 				setErrorMessage(t("WALLETS.MODAL_LEDGER_WALLET.COMPATIBILITY_ERROR"));
 				return;
 			}
 
+			/* istanbul ignore else -- @preserve */
 			await connect(profile);
 			handleSubmit(() => submit())();
 		};
 
-		connectLedgerAndSubmit();
+		void connectLedgerAndSubmit();
 	}, [senderWallet, isConnected, transaction]);
 
 	if (transaction) {
