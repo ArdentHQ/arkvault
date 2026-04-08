@@ -1791,7 +1791,7 @@ describe("ConfirmationStep", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should open transaction address explorer link", async () => {
+	it("should load explorer link", async () => {
 		const openExternalMock = vi.fn();
 		const useLinkSpy = vi.spyOn(useLinkMock, "useLink").mockReturnValue({ openExternal: openExternalMock });
 

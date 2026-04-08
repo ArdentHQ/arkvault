@@ -163,7 +163,7 @@ describe("SendExchangeTransfer", () => {
 		transactionMock.mockRestore();
 	});
 
-	it("should unset selected wallet when `SelectAddressDropdown` receives invalid address", async () => {
+	it("should unset selected wallet when `SelectAddressDropdown` receives invalid value", async () => {
 		renderComponent();
 
 		await selectSender();

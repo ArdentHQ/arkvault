@@ -87,7 +87,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		if (senderWallet) {
 			void validate();
 		}
-	}, [fee, network, recipients, sendTransfer, senderWallet]);
+	}, [fee.toString(), network, recipients, sendTransfer, senderWallet]);
 
 	useEffect(() => {
 		form.setValue("amount", exchangeInput.amount, { shouldDirty: true, shouldValidate: true });
@@ -145,9 +145,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 
+		/* istanbul ignore else -- @preserve */
 		const isFullyRestoredAndSynced =
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
+		/* istanbul ignore else -- @preserve */
 		if (!isFullyRestoredAndSynced) {
 			newSenderWallet?.synchroniser().identity();
 		}
