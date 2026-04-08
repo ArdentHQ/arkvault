@@ -169,8 +169,8 @@ export const ExchangeSidePanel = ({
 	}, [setIsReady]);
 
 	const onMountChange = (mounted: boolean) => {
-		/* istanbul ignore else -- @preserve */
 		if (!mounted) {
+			/* istanbul ignore else -- @preserve */
 			reset();
 		}
 	};
