@@ -1805,6 +1805,13 @@ describe("ConfirmationStep", () => {
 						name: "Bitcoin",
 						transactionExplorerMask: "https://blockchair.com/bitcoin/transaction/{}",
 					},
+					toCurrency: {
+						addressExplorerMask: "https://live.arkscan.io/wallets/{}",
+						coin: "ark",
+						hasExternalId: false,
+						name: "Ark",
+						transactionExplorerMask: "https://live.arkscan.io/transaction/{}",
+					},
 				},
 				mode: "onChange",
 			}),
@@ -1821,6 +1828,7 @@ describe("ConfirmationStep", () => {
 			output: {
 				address: "payoutAddress",
 				amount: "100",
+				hash: "payoutHash",
 				ticker: "ark",
 			},
 			provider: "changenow",
@@ -1849,6 +1857,10 @@ describe("ConfirmationStep", () => {
 		await userEvent.click(screen.getAllByTestId("explorer-link")[0]);
 
 		expect(openExternalMock).toHaveBeenCalledWith("https://blockchair.com/bitcoin/transaction/payinHash");
+
+		await userEvent.click(screen.getAllByTestId("explorer-link")[1]);
+
+		expect(openExternalMock).toHaveBeenCalledWith("https://live.arkscan.io/transaction/payoutHash");
 
 		useLinkSpy.mockRestore();
 	});
