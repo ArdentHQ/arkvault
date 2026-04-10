@@ -765,4 +765,40 @@ describe("General Settings", () => {
 
 		expect(profile.settings().get(ProfileSetting.Theme)).toBe("dark");
 	});
+
+	it("should restore support chat after form submission if chat was open", async () => {
+		const { showSupportChat: showSupportChatMock, isSupportChatOpen } = vi.hoisted(() => ({
+			hideSupportChat: vi.fn(),
+			isSupportChatOpen: vi.fn().mockReturnValue(true),
+			showSupportChat: vi.fn(),
+		}));
+
+		vi.mock("@/app/contexts/Zendesk", () => ({
+			useZendesk: () => ({
+				hideSupportChat: vi.fn(),
+				isSupportChatOpen,
+				showSupportChat: showSupportChatMock,
+			}),
+		}));
+
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
+		await userEvent.type(nameInput(), " updated");
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		await waitFor(() => {
+			expect(showSupportChatMock).toHaveBeenCalled();
+		});
+
+		expect(isSupportChatOpen()).toBe(true);
+	});
 });

@@ -2,7 +2,7 @@ import React from "react";
 import { Networks } from "@/app/lib/mainsail";
 import { expect, vi } from "vitest";
 import ServerFormModal from "@/domains/setting/pages/Servers/blocks/ServerFormModal";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import userEvent from "@testing-library/user-event";
 
