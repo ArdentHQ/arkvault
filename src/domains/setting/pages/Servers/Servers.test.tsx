@@ -15,6 +15,7 @@ import {
 	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
+import { http } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
 import { act } from "@testing-library/react";
 
@@ -29,6 +30,8 @@ const txApiUrlConfiguration = "https://dwallets-evm.mainsailhq.com/tx/api/config
 const evmApiUrl = "https://dwallets-evm.mainsailhq.com/evm/api";
 
 const customServerName = 'Mainsail Devnet "Peer" #1';
+const inputError = "Input__error";
+const dataErrorTest = "data-errortext";
 
 const networksStub: any = {
 	mainsail: {
@@ -109,7 +112,9 @@ const fillServerForm = async ({
 
 	const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-	expect(firstOption).toBeVisible();
+	await waitFor(() => {
+		expect(firstOption).toBeVisible();
+	});
 
 	await userEvent.click(firstOption);
 
@@ -461,8 +466,8 @@ describe("Servers Settings", () => {
 
 			await fillServerForm({ evmApiEndpoint: null, txApiEndpoint: null });
 
-			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-			expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Address already exists.");
+			await expect(screen.findByTestId(inputError)).resolves.toBeVisible();
+			expect(screen.getByTestId(inputError)).toHaveAttribute(dataErrorTest, "Address already exists.");
 
 			profileHostsSpy.mockRestore();
 		});
@@ -637,6 +642,48 @@ describe("Servers Settings", () => {
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
 			});
 
+			it("shows an error if the transaction API endpoint is unreachable", async () => {
+				server.use(requestMock(txApiUrlConfiguration, undefined, { status: 500 }));
+
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
+					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
+				);
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
+			it("should show an error if the transaction API response has no blockNumber", async () => {
+				server.use(requestMock(`${txApiUrl}/configuration`, { data: {} }));
+
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
+					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
+				);
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
 			it("should show an error if the EVM endpoint is unreachable", async () => {
 				server.use(requestMock(evmApiUrl, undefined, { status: 500 }));
 
@@ -650,12 +697,71 @@ describe("Servers Settings", () => {
 
 				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
 
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
 					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
 				);
 
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
+			it("should show an error if the EVM API request throws an exception", async () => {
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({
+					mainsail: [],
+				});
+
+				server.use(
+					http.post(evmApiUrl, () => {
+						throw new Error("Network error");
+					}),
+				);
+
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
+					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
+				);
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+
+				hostsSpy.mockRestore();
+			});
+
+			it("should select network from dropdown", async () => {
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId(
+					"SelectDropdown__input",
+				);
+
+				await userEvent.click(networkSelect);
+
+				const firstOption = screen.getByTestId("SelectDropdown__option--0");
+
+				await waitFor(() => {
+					expect(firstOption).toBeVisible();
+				});
+
+				await userEvent.click(firstOption);
+
+				const nameField = screen.getByTestId("ServerFormModal--name");
+
+				await waitFor(() => {
+					expect(nameField).toHaveValue();
+				});
 			});
 
 			it.each([
@@ -673,10 +779,10 @@ describe("Servers Settings", () => {
 					publicApiEndpoint: address,
 				});
 
-				await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+				await expect(screen.findByTestId(inputError)).resolves.toBeVisible();
 
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
 					translations.VALIDATION.HOST_FORMAT,
 				);
 			});
@@ -731,7 +837,9 @@ describe("Servers Settings", () => {
 
 			const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-			expect(firstOption).toBeVisible();
+			await waitFor(() => {
+				expect(firstOption).toBeVisible();
+			});
 
 			await userEvent.click(firstOption);
 

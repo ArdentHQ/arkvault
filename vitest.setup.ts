@@ -86,13 +86,40 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
-const originalLocalStorageGetItem = localStorage.getItem;
-let localstorageSpy;
+const createLocalStorageMock = () => {
+	const store: Record<string, string> = {};
+	return {
+		getItem: (key: string) => store[key] ?? null,
+		setItem: (key: string, value: string) => {
+			store[key] = value;
+		},
+		removeItem: (key: string) => {
+			delete store[key];
+		},
+		clear: () => {
+			Object.keys(store).forEach((key) => delete store[key]);
+		},
+		get length() {
+			return Object.keys(store).length;
+		},
+		key: (index: number) => Object.keys(store)[index] ?? null,
+	};
+};
+
+let localStorageMock: ReturnType<typeof createLocalStorageMock>;
 
 // Treat act warnings as errors.
 actWarningsAsErrors();
 
 beforeAll(async () => {
+	if (typeof localStorage.getItem !== "function") {
+		localStorageMock = createLocalStorageMock();
+		Object.defineProperty(globalThis, "localStorage", {
+			value: localStorageMock,
+			writable: true,
+		});
+	}
+
 	// Fixes "URL.createObjectURL is not a function" in /src/app/hooks/use-files.test.tsx
 	global.URL.createObjectURL = vi.fn(() => "blob:mock-url");
 
@@ -110,10 +137,6 @@ beforeAll(async () => {
 });
 
 beforeEach(() => {
-	localstorageSpy = vi
-		.spyOn(Storage.prototype, "getItem")
-		.mockImplementation((key) => originalLocalStorageGetItem.call(localStorage, key));
-
 	if (process.env.MOCK_AVAILABLE_NETWORKS !== "false") {
 		try {
 			const profileId = getMainsailProfileId();
@@ -135,8 +158,6 @@ beforeEach(() => {
 
 afterEach(() => {
 	server.resetHandlers();
-
-	localstorageSpy.mockRestore();
 });
 
 afterAll(() => {
