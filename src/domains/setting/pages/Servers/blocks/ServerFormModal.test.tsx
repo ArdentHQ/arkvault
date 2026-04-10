@@ -88,10 +88,7 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => {
-			screen.getByTestId("ServerFormModal").toBeInTheDocument();
-		});
-
+		await expect(screen.findByTestId("ServerFormModal")).resolves.toBeVisible();
 		expect(screen.getByTestId("ServerFormModal--network")).toBeInTheDocument();
 	});
 
@@ -117,9 +114,7 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => {
-			screen.getByTestId("ServerFormModal").toBeInTheDocument();
-		});
+		await expect(screen.findByTestId("ServerFormModal")).resolves.toBeVisible();
 		expect(screen.getByTestId("ServerFormModal--name")).toBeInTheDocument();
 	});
 
@@ -135,9 +130,7 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => {
-			screen.getByTestId("ServerFormModal").toBeInTheDocument();
-		});
+		await expect(screen.findByTestId("ServerFormModal")).resolves.toBeVisible();
 
 		const selectButton = screen.getByTestId("select-network");
 		await userEvent.click(selectButton);
@@ -157,9 +150,7 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => {
-			screen.getByTestId("ServerFormModal").toBeInTheDocument();
-		});
+		await expect(screen.findByTestId("ServerFormModal")).resolves.toBeVisible();
 
 		const deselectButton = screen.getByTestId("deselect-network");
 		await userEvent.click(deselectButton);
