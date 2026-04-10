@@ -68,8 +68,6 @@ describe("CustomPeers", () => {
 
 		serverStatusMock = createServerStatusMock(true);
 
-		const parentClickHandler = vi.fn();
-
 		render(
 			<CustomPeers
 				addNewServerHandler={() => {}}
@@ -90,10 +88,10 @@ describe("CustomPeers", () => {
 
 		const statusIcons = screen.getAllByTestId("CustomPeersPeer--statusok");
 		const statusIcon = statusIcons[0];
-		const clickEvent = new MouseEvent("click", { bubbles: true });
+
+		const clickEvent = new MouseEvent("click", { bubbles: true, cancelable: true });
 		const stopPropagationSpy = vi.spyOn(clickEvent, "stopPropagation");
 
-		statusIcon.parentElement?.addEventListener("click", parentClickHandler);
 		statusIcon.dispatchEvent(clickEvent);
 
 		expect(stopPropagationSpy).toHaveBeenCalled();
