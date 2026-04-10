@@ -80,11 +80,12 @@ describe("NodesStatus", () => {
 			}),
 		} as unknown as Networks.Network;
 
+		render(<NodesStatus networks={[networkWithMissingHost, completeNetwork]} />);
+
 		await waitFor(() => {
-			render(<NodesStatus networks={[networkWithMissingHost, completeNetwork]} />);
+			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 		const nodes = screen.getAllByTestId("NodesStatus--node");
 		expect(nodes).toHaveLength(1);
 	});
