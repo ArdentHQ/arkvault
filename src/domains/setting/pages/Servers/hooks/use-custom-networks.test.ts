@@ -103,7 +103,7 @@ describe("useCustomNetworks", () => {
 			expect(result.current.allCustomNetworks).toContainEqual(existingNetwork);
 		});
 
-		const nonExistentNetwork = { name: "Non Existent Network", height: 100 };
+		const nonExistentNetwork = { height: 100, name: "Non Existent Network" };
 
 		act(() => {
 			result.current.updateNetwork(nonExistentNetwork);

@@ -16,7 +16,6 @@ import {
 	getMainsailProfileId,
 	render,
 	renderResponsive,
-	renderResponsiveWithRoute,
 	screen,
 	waitFor,
 	within,
@@ -42,6 +41,7 @@ const nameInput = () => screen.getByTestId("General-settings__input--name");
 const avatarImage = () => screen.getByTestId("SelectProfileImage__avatar-image");
 
 const resetSubmitID = "ResetProfile__submit-button";
+const selectListInputTestId = "select-list__input";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -214,7 +214,7 @@ describe("General Settings", () => {
 		await userEvent.type(nameInput(), "test profile");
 
 		// change auto signout period
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("15");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("15");
 
 		await userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
 
@@ -224,7 +224,7 @@ describe("General Settings", () => {
 
 		await userEvent.click(firstOption);
 
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("1");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("1");
 
 		expect(submitButton()).toBeEnabled();
 
@@ -609,7 +609,7 @@ describe("General Settings", () => {
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
 		// change auto signout period
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("15");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("15");
 
 		await userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
 
@@ -619,7 +619,7 @@ describe("General Settings", () => {
 
 		await userEvent.click(firstOption);
 
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("1");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("1");
 
 		// change navigation
 		act(() => {
@@ -632,7 +632,7 @@ describe("General Settings", () => {
 	it("should render viewing mode as button group on desktop", async () => {
 		const onChange = vi.fn();
 
-		const { container } = render(<ViewingMode viewingMode="light" onChange={onChange} />);
+		render(<ViewingMode viewingMode="light" onChange={onChange} />);
 
 		expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
 
@@ -744,5 +744,25 @@ describe("General Settings", () => {
 		await userEvent.click(submitButton());
 
 		expect(profile.settings().get(ProfileSetting.UseTestNetworks)).toBe(true);
+	});
+
+	it("should update viewing mode", async () => {
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
+		const viewingModeButtons = await screen.findAllByTestId("ButtonGroupOption");
+
+		await userEvent.click(viewingModeButtons[1]);
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		expect(profile.settings().get(ProfileSetting.Theme)).toBe("dark");
 	});
 });

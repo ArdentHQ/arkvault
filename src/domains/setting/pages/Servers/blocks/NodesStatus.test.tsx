@@ -6,10 +6,10 @@ import { render, screen } from "@/utils/testing-library";
 
 vi.mock("@/app/contexts", () => ({
 	useConfiguration: () => ({
-		setConfiguration: vi.fn(),
 		getProfileConfiguration: () => ({
 			serverStatus: {},
 		}),
+		setConfiguration: vi.fn(),
 	}),
 }));
 
@@ -44,9 +44,9 @@ describe("NodesStatus", () => {
 			id: () => "devnet",
 			toObject: () => ({
 				hosts: [
-					{ type: "full", host: "https://full.host", name: "Full Host" },
-					{ type: "tx", host: "https://tx.host", name: "TX Host" },
-					{ type: "evm", host: "https://evm.host", name: "EVM Host" },
+					{ host: "https://full.host", name: "Full Host", type: "full" },
+					{ host: "https://tx.host", name: "TX Host", type: "tx" },
+					{ host: "https://evm.host", name: "EVM Host", type: "evm" },
 				],
 			}),
 		} as unknown as Networks.Network;
@@ -61,8 +61,8 @@ describe("NodesStatus", () => {
 			id: () => "devnet",
 			toObject: () => ({
 				hosts: [
-					{ type: "full", host: "https://full.host", name: "Full Host" },
-					{ type: "tx", host: "https://tx.host", name: "TX Host" },
+					{ host: "https://full.host", name: "Full Host", type: "full" },
+					{ host: "https://tx.host", name: "TX Host", type: "tx" },
 				],
 			}),
 		} as unknown as Networks.Network;
@@ -71,9 +71,9 @@ describe("NodesStatus", () => {
 			id: () => "mainnet",
 			toObject: () => ({
 				hosts: [
-					{ type: "full", host: "https://full.host", name: "Full Host" },
-					{ type: "tx", host: "https://tx.host", name: "TX Host" },
-					{ type: "evm", host: "https://evm.host", name: "EVM Host" },
+					{ host: "https://full.host", name: "Full Host", type: "full" },
+					{ host: "https://tx.host", name: "TX Host", type: "tx" },
+					{ host: "https://evm.host", name: "EVM Host", type: "evm" },
 				],
 			}),
 		} as unknown as Networks.Network;
@@ -90,9 +90,9 @@ describe("NodesStatus", () => {
 			id: () => "devnet",
 			toObject: () => ({
 				hosts: [
-					{ type: "full", host: "https://full.host", name: "Full Host" },
-					{ type: "tx", host: "https://tx.host", name: "TX Host" },
-					{ type: "other", host: "https://other.host", name: "Other Host" },
+					{ host: "https://full.host", name: "Full Host", type: "full" },
+					{ host: "https://tx.host", name: "TX Host", type: "tx" },
+					{ host: "https://other.host", name: "Other Host", type: "other" },
 				],
 			}),
 		} as unknown as Networks.Network;

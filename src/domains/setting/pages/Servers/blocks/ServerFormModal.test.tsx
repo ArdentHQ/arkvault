@@ -10,14 +10,14 @@ const setValueMock = vi.fn();
 
 vi.mock("react-hook-form", () => ({
 	useForm: () => ({
-		handleSubmit: vi.fn(),
-		formState: { isValid: true, errors: {}, dirtyFields: {} },
-		setValue: setValueMock,
-		register: () => ({}),
-		watch: () => ({}),
-		trigger: vi.fn(),
-		setError: vi.fn(),
 		clearErrors: vi.fn(),
+		formState: { dirtyFields: {}, errors: {}, isValid: true },
+		handleSubmit: vi.fn(),
+		register: () => ({}),
+		setError: vi.fn(),
+		setValue: setValueMock,
+		trigger: vi.fn(),
+		watch: () => ({}),
 	}),
 }));
 
@@ -32,9 +32,9 @@ vi.mock("@/app/hooks", () => ({
 	}),
 	useValidation: () => ({
 		server: {
-			network: () => ({ required: true }),
-			name: () => ({ required: true }),
 			address: () => ({ required: true }),
+			name: () => ({ required: true }),
+			network: () => ({ required: true }),
 		},
 	}),
 }));
@@ -88,19 +88,22 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument());
+		await waitFor(() => {
+			screen.getByTestId("ServerFormModal").toBeInTheDocument();
+		});
+
 		expect(screen.getByTestId("ServerFormModal--network")).toBeInTheDocument();
 	});
 
 	it("should render edit server modal when networkToUpdate is provided", async () => {
 		const networkToUpdate: NormalizedNetwork = {
+			enabled: true,
+			evmApiEndpoint: "https://evm.example.com",
+			height: 100,
 			name: "Test Server",
 			network: { id: () => "devnet", name: "Devnet" } as unknown as Networks.Network,
 			publicApiEndpoint: "https://api.example.com",
 			transactionApiEndpoint: "https://tx.example.com",
-			evmApiEndpoint: "https://evm.example.com",
-			height: 100,
-			enabled: true,
 		};
 
 		render(
@@ -114,7 +117,9 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument());
+		await waitFor(() => {
+			screen.getByTestId("ServerFormModal").toBeInTheDocument();
+		});
 		expect(screen.getByTestId("ServerFormModal--name")).toBeInTheDocument();
 	});
 
@@ -130,7 +135,9 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument());
+		await waitFor(() => {
+			screen.getByTestId("ServerFormModal").toBeInTheDocument();
+		});
 
 		const selectButton = screen.getByTestId("select-network");
 		await userEvent.click(selectButton);
@@ -150,7 +157,9 @@ describe("ServerFormModal", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument());
+		await waitFor(() => {
+			screen.getByTestId("ServerFormModal").toBeInTheDocument();
+		});
 
 		const deselectButton = screen.getByTestId("deselect-network");
 		await userEvent.click(deselectButton);

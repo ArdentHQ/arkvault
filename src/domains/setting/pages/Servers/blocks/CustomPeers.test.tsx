@@ -14,10 +14,10 @@ let serverStatusMock: {
 };
 
 const createServerStatusMock = (status: boolean | undefined) => ({
-	publicApiStatus: status,
-	txApiStatus: status,
 	evmApiStatus: status,
+	publicApiStatus: status,
 	syncStatus: vi.fn(),
+	txApiStatus: status,
 });
 
 vi.mock("@/utils/network-utils", async (importOriginal) => {
@@ -56,13 +56,13 @@ describe("CustomPeers", () => {
 	it("should stop propagation when clicking on status icon", async () => {
 		const networksStub = [
 			{
-				name: "Test Peer Status Ok",
-				publicApiEndpoint: "https://dwallets-evm.mainsailhq.com/api",
-				transactionApiEndpoint: "https://dwallets-evm.mainsailhq.com/tx/api",
+				enabled: true,
 				evmApiEndpoint: "https://dwallets-evm.mainsailhq.com/evm/api",
 				height: 174_400,
-				enabled: true,
+				name: "Test Peer Status Ok",
 				network: { id: () => "mainsail.devnet" },
+				publicApiEndpoint: "https://dwallets-evm.mainsailhq.com/api",
+				transactionApiEndpoint: "https://dwallets-evm.mainsailhq.com/tx/api",
 			} as unknown as NormalizedNetwork,
 		];
 

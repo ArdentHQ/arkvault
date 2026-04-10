@@ -30,6 +30,8 @@ const txApiUrlConfiguration = "https://dwallets-evm.mainsailhq.com/tx/api/config
 const evmApiUrl = "https://dwallets-evm.mainsailhq.com/evm/api";
 
 const customServerName = 'Mainsail Devnet "Peer" #1';
+const inputError = "Input__error";
+const dataErrorTest = "data-errortext";
 
 const networksStub: any = {
 	mainsail: {
@@ -464,8 +466,8 @@ describe("Servers Settings", () => {
 
 			await fillServerForm({ evmApiEndpoint: null, txApiEndpoint: null });
 
-			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
-			expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Address already exists.");
+			await expect(screen.findByTestId(inputError)).resolves.toBeVisible();
+			expect(screen.getByTestId(inputError)).toHaveAttribute(dataErrorTest, "Address already exists.");
 
 			profileHostsSpy.mockRestore();
 		});
@@ -653,8 +655,8 @@ describe("Servers Settings", () => {
 
 				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
 
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
 					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
 				);
 
@@ -674,8 +676,8 @@ describe("Servers Settings", () => {
 
 				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
 
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
 					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
 				);
 
@@ -695,8 +697,8 @@ describe("Servers Settings", () => {
 
 				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
 
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
 					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
 				);
 
@@ -724,8 +726,8 @@ describe("Servers Settings", () => {
 
 				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
 
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
 					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
 				);
 
@@ -777,10 +779,10 @@ describe("Servers Settings", () => {
 					publicApiEndpoint: address,
 				});
 
-				await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+				await expect(screen.findByTestId(inputError)).resolves.toBeVisible();
 
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
+				expect(screen.getByTestId(inputError)).toHaveAttribute(
+					dataErrorTest,
 					translations.VALIDATION.HOST_FORMAT,
 				);
 			});
