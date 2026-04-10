@@ -2,7 +2,7 @@ import React from "react";
 import { Networks } from "@/app/lib/mainsail";
 import { expect, vi } from "vitest";
 import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 vi.mock("@/app/contexts", () => ({
 	useConfiguration: () => ({
@@ -39,7 +39,7 @@ vi.mock("@/app/components/NetworkIcon", () => ({
 }));
 
 describe("NodesStatus", () => {
-	it("should render nodes when all hosts are present", () => {
+	it("should render nodes when all hosts are present", async () => {
 		const mockNetwork = {
 			id: () => "devnet",
 			toObject: () => ({
@@ -53,10 +53,12 @@ describe("NodesStatus", () => {
 
 		render(<NodesStatus networks={[mockNetwork]} />);
 
-		expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+		});
 	});
 
-	it("should skip nodes when any host is missing", () => {
+	it("should skip nodes when any host is missing", async () => {
 		const networkWithMissingHost = {
 			id: () => "devnet",
 			toObject: () => ({
@@ -78,14 +80,16 @@ describe("NodesStatus", () => {
 			}),
 		} as unknown as Networks.Network;
 
-		render(<NodesStatus networks={[networkWithMissingHost, completeNetwork]} />);
+		await waitFor(() => {
+			render(<NodesStatus networks={[networkWithMissingHost, completeNetwork]} />);
+		});
 
 		expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 		const nodes = screen.getAllByTestId("NodesStatus--node");
 		expect(nodes).toHaveLength(1);
 	});
 
-	it("should skip nodes when evm host is missing", () => {
+	it("should skip nodes when evm host is missing", async () => {
 		const network = {
 			id: () => "devnet",
 			toObject: () => ({
@@ -98,8 +102,9 @@ describe("NodesStatus", () => {
 		} as unknown as Networks.Network;
 
 		render(<NodesStatus networks={[network]} />);
-
-		expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
+		});
 		const nodes = screen.queryAllByTestId("NodesStatus--node");
 		expect(nodes).toHaveLength(0);
 	});
