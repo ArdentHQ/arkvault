@@ -89,4 +89,28 @@ describe("useCustomNetworks", () => {
 			expect(result.current.allCustomNetworks).toContainEqual(updatedNetwork);
 		});
 	});
+
+	it("should not update any network when updateNetwork is called for non-existent network", async () => {
+		const { result } = renderHook(() => useCustomNetworks(profile));
+
+		const existingNetwork = { name: "Existing Network" };
+
+		act(() => {
+			result.current.addNetwork(existingNetwork);
+		});
+
+		await waitFor(() => {
+			expect(result.current.allCustomNetworks).toContainEqual(existingNetwork);
+		});
+
+		const nonExistentNetwork = { name: "Non Existent Network", height: 100 };
+
+		act(() => {
+			result.current.updateNetwork(nonExistentNetwork);
+		});
+
+		await waitFor(() => {
+			expect(result.current.allCustomNetworks).toEqual([existingNetwork]);
+		});
+	});
 });

@@ -30,7 +30,6 @@ interface PeerRowProperties {
 	name: string;
 	checked: boolean;
 	height: number | undefined;
-	serverStatus?: boolean;
 	onToggle: (isEnabled: boolean) => void;
 	networkName: string;
 	onSelectOption: ({ value }: DropdownOption) => void;
@@ -48,7 +47,6 @@ const PeerRow = ({
 	checked,
 	height,
 	networkName,
-	serverStatus,
 	onToggle,
 	onSelectOption,
 	dropdownOptions,
@@ -61,13 +59,9 @@ const PeerRow = ({
 
 	const rowColor = useMemo(() => {
 		if (checked) {
-			if (serverStatus === false) {
-				return "bg-theme-danger-50 dark:bg-transparent dark:border-theme-danger-400 dim:bg-transparent dim:border-theme-danger-400";
-			} else {
-				return "bg-theme-primary-50 dark:bg-transparent dark:border-theme-primary-600 dim:bg-transparent dim:border-theme-navy-600";
-			}
+			return "bg-theme-primary-50 dark:bg-transparent dark:border-theme-primary-600 dim:bg-transparent dim:border-theme-navy-600";
 		}
-	}, [checked, serverStatus]);
+	}, [checked]);
 
 	const tdClasses = cn(rowColor, "flex flex-col items-start min-h-20 justify-center py-2.5 my-[2px]");
 

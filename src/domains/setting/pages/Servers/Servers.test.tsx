@@ -15,6 +15,7 @@ import {
 	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
+import { http } from "msw";
 import { server, requestMock } from "@/tests/mocks/server";
 import { act } from "@testing-library/react";
 
@@ -660,6 +661,27 @@ describe("Servers Settings", () => {
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
 			});
 
+			it("should show an error if the transaction API response has no blockNumber", async () => {
+				server.use(requestMock(`${txApiUrl}/configuration`, { data: {} }));
+
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId("Input__error")).toHaveAttribute(
+					"data-errortext",
+					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
+				);
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
 			it("should show an error if the EVM endpoint is unreachable", async () => {
 				server.use(requestMock(evmApiUrl, undefined, { status: 500 }));
 
@@ -679,6 +701,37 @@ describe("Servers Settings", () => {
 				);
 
 				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+			});
+
+			it("should show an error if the EVM API request throws an exception", async () => {
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({
+					mainsail: [],
+				});
+
+				server.use(
+					http.post(evmApiUrl, () => {
+						throw new Error("Network error");
+					}),
+				);
+
+				render(<ServersSettings />, {
+					route: `/profiles/${profile.id()}/settings/servers`,
+				});
+
+				await userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
+
+				await fillServerForm({});
+
+				await expect(screen.findByTestId(modalAlertTestId)).resolves.toBeVisible();
+
+				expect(screen.getByTestId("Input__error")).toHaveAttribute(
+					"data-errortext",
+					"Either failed to connect to the endpoint or it doesn't contain the expected information.",
+				);
+
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeDisabled();
+
+				hostsSpy.mockRestore();
 			});
 
 			it("should select network from dropdown", async () => {

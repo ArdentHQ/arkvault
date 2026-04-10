@@ -8,13 +8,14 @@ import * as browserAccess from "browser-fs-access";
 import { useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
-import GeneralSettings from "@/domains/setting/pages/General";
+import GeneralSettings, { SettingsGroup, SettingsButtonGroup, ViewingMode } from "@/domains/setting/pages/General";
 import {
 	act,
 	env,
 	fireEvent,
 	getMainsailProfileId,
 	render,
+	renderResponsive,
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
@@ -629,19 +630,76 @@ describe("General Settings", () => {
 	});
 
 	it("should render viewing mode as button group on desktop", async () => {
-		render(<GeneralSettings />, {
-			route: `/profiles/${profile.id()}/settings`,
-		});
+		const onChange = vi.fn();
 
-		expect(await screen.findByTestId("ButtonGroup")).toBeInTheDocument();
+		const { container } = render(<ViewingMode viewingMode="light" onChange={onChange} />);
+
+		expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
+
+		const buttons = screen.getAllByTestId("ButtonGroupOption");
+
+		await userEvent.click(buttons[0]);
+
+		expect(onChange).toHaveBeenCalledWith("light");
 	});
 
 	it("should render viewing mode as select on mobile", async () => {
-		renderResponsiveWithRoute(<GeneralSettings />, "xs", {
-			route: `/profiles/${profile.id()}/settings`,
-		});
+		const onChange = vi.fn();
 
-		await waitFor(() => expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument());
+		renderResponsive(<ViewingMode viewingMode="light" onChange={onChange} />, "xs");
+
+		expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument();
+
+		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+
+		expect(onChange).toHaveBeenCalledWith("light");
+
+		onChange.mockClear();
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+
+		await userEvent.click(document.body);
+
+		expect(onChange).not.toHaveBeenCalled();
+	});
+
+	it("should render SettingsGroup with description", () => {
+		const { asFragment } = render(
+			<SettingsGroup title="Test Title" description="Test Description">
+				<div>Content</div>
+			</SettingsGroup>,
+		);
+
+		expect(screen.getByText("Test Title")).toBeInTheDocument();
+		expect(screen.getByText("Test Description")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render SettingsGroup without description", () => {
+		const { asFragment } = render(
+			<SettingsGroup title="Test Title">
+				<div>Content</div>
+			</SettingsGroup>,
+		);
+
+		expect(screen.getByText("Test Title")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render SettingsButtonGroup", () => {
+		const { asFragment } = render(
+			<SettingsButtonGroup>
+				<div>Content</div>
+			</SettingsButtonGroup>,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should use network wallet names when enabled", async () => {
