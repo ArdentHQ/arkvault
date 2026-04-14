@@ -9,7 +9,7 @@ describe("SendTransfer.helpers", () => {
 			});
 
 			expect(result).toEqual({
-				amount: 10,
+				amount: "10",
 				to: "test-address",
 			});
 		});
@@ -69,7 +69,7 @@ describe("SendTransfer.helpers", () => {
 			});
 
 			expect(result).toEqual({
-				amount: "0",
+				amount: 0,
 				to: "test-address",
 			});
 		});
@@ -82,8 +82,8 @@ describe("SendTransfer.helpers", () => {
 
 			expect(result).toEqual({
 				payments: [
-					{ amount: "0", to: "address-1" },
-					{ amount: "0", to: "address-2" },
+					{ amount: 0, to: "address-1" },
+					{ amount: 0, to: "address-2" },
 				],
 			});
 		});
