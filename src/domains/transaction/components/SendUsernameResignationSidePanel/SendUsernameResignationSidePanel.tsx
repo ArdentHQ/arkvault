@@ -161,17 +161,14 @@ export const SendUsernameResignationSidePanel = ({
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
-			setMounted(mounted);
-
-			if (!mounted) {
-				resetForm(() => {
-					setActiveTab(Step.FormStep);
-
-					setErrorMessage(undefined);
-				});
-			}
+			handleOnMountChange({
+				mounted,
+				setMounted,
+				setActiveTab: (step) => setActiveTab(step as unknown as Step),
+				setErrorMessage,
+			});
 		},
-		[resetForm],
+		[setMounted, setActiveTab, setErrorMessage],
 	);
 
 	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
@@ -236,13 +233,17 @@ export const SendUsernameResignationSidePanel = ({
 		}
 
 		if (activeTab === Step.AuthenticationStep) {
-			if (activeWallet?.isLedger()) {
+			const ledgerIcon = getAuthenticationStepTitleIcon({
+				wallet: activeWallet,
+				isLedger: !!activeWallet?.isLedger(),
+			});
+			if (ledgerIcon) {
 				return (
 					<ThemeIcon
-						lightIcon="LedgerLight"
-						darkIcon="LedgerDark"
-						dimIcon="LedgerDim"
-						dimensions={[24, 24]}
+						lightIcon={ledgerIcon.lightIcon}
+						darkIcon={ledgerIcon.darkIcon}
+						dimIcon={ledgerIcon.dimIcon}
+						dimensions={ledgerIcon.dimensions}
 					/>
 				);
 			}

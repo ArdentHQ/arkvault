@@ -12,6 +12,7 @@ import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities"
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { getRecipientsFromDeeplink } from "./utils";
 
 export const FormStep = ({
 	network,
@@ -44,23 +45,8 @@ export const FormStep = ({
 
 	const { recipients } = getValues();
 
-	const getRecipients = (): RecipientItem[] => {
-		if (deeplinkProps.recipient && deeplinkProps.amount) {
-			return [
-				{
-					address: deeplinkProps.recipient,
-					// TODO: Converting to number leads to floating point arithmetic overflow for small numbers.
-					//		 As the convertion is not necessary with deeplinks, this needs to be handled to be compliant
-					//       with RecipientItem type because it only accepts number, and changing RecipientItem will affect many forms.
-					amount: deeplinkProps.amount as any,
-				},
-			];
-		}
-
-		return recipients;
-	};
-
-	const handleSelectSender = async (address: any) => {
+	const handleSelectSender = async (address: string) => {
+		console.log("handleSelectSender", address);
 		const sender = profile.wallets().findByAddressWithNetwork(address, network.id());
 		const isFullyRestoredAndSynced = sender?.hasBeenFullyRestored() && sender.hasSyncedWithNetwork();
 
@@ -120,7 +106,7 @@ export const FormStep = ({
 							setValue("recipients", value, { shouldDirty: true, shouldValidate: true });
 						}}
 						profile={profile}
-						recipients={getRecipients()}
+						recipients={getRecipientsFromDeeplink(recipients, deeplinkProps)}
 						wallet={senderWallet}
 					/>
 				</div>

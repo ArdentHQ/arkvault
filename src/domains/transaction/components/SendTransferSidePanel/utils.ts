@@ -4,6 +4,7 @@ import { isValidUrl } from "@/utils/url-validation";
 import { urlSearchParameters } from "@/domains/transaction/hooks/use-transaction-url";
 import { SendTransferStep } from "./SendTransfer.contracts";
 import { toasts } from "@/app/services";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const getFeeType = (numberOfRecipients: number): "multiPayment" | "transfer" =>
 	numberOfRecipients > 1 ? "multiPayment" : "transfer";
@@ -44,4 +45,23 @@ export const isSendTransferNextDisabled = ({
 
 export const handleQRCodeReadError = (t: (key: string, options?: Record<string, any>) => string): void => {
 	toasts.error(t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }));
+};
+
+export const getRecipientsFromDeeplink = (
+	recipients: RecipientItem[],
+	deeplinkProps: Record<string, string>,
+): RecipientItem[] => {
+	if (deeplinkProps.recipient && deeplinkProps.amount) {
+		return [
+			{
+				address: deeplinkProps.recipient,
+				// TODO: Converting to number leads to floating point arithmetic overflow for small numbers.
+				//		 As the convertion is not necessary with deeplinks, this needs to be handled to be compliant
+				//       with RecipientItem type because it only accepts number, and changing RecipientItem will affect many forms.
+				amount: deeplinkProps.amount as any,
+			},
+		];
+	}
+
+	return recipients;
 };

@@ -72,3 +72,39 @@ export const getAuthenticationStepSubtitle = ({ wallet, t }: { wallet?: Contract
 		? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
 		: t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC");
 };
+
+export const handleOnMountChange = ({
+	mounted,
+	setMounted,
+	setActiveTab,
+	setErrorMessage,
+}: {
+	mounted: boolean;
+	setMounted: (value: boolean) => void;
+	setActiveTab: (step: number) => void;
+	setErrorMessage: (error: string | undefined) => void;
+}) => {
+	setMounted(mounted);
+
+	if (!mounted) {
+		setActiveTab(1);
+		setErrorMessage(undefined);
+	}
+};
+
+export const getAuthenticationStepTitleIcon = ({
+	wallet,
+}: {
+	wallet?: Contracts.IReadWriteWallet;
+}): { lightIcon: string; darkIcon: string; dimIcon: string; dimensions: number[] } | null => {
+	if (!wallet?.isLedger()) {
+		return null;
+	}
+
+	return {
+		lightIcon: "LedgerLight",
+		darkIcon: "LedgerDark",
+		dimIcon: "LedgerDim",
+		dimensions: [24, 24],
+	};
+};

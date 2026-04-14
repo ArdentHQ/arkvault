@@ -1,4 +1,10 @@
-import { getFeeType, isSendTransferNextDisabled, parseQRCodeUrl, handleQRCodeReadError } from "./utils";
+import {
+	getFeeType,
+	isSendTransferNextDisabled,
+	parseQRCodeUrl,
+	handleQRCodeReadError,
+	getRecipientsFromDeeplink,
+} from "./utils";
 import { SendTransferStep } from "./SendTransfer.contracts";
 import * as toastModule from "@/app/services";
 
@@ -95,6 +101,14 @@ describe("SendTransfer utils", () => {
 			handleQRCodeReadError(t);
 
 			expect(toastModule.toasts.error).toHaveBeenCalled();
+		});
+	});
+
+	describe("getRecipientsFromDeeplink", () => {
+		it("should get recipients from deeplink if provided", () => {
+			const result = getRecipientsFromDeeplink([], { recipient: "0x1", amount: "10" });
+
+			expect(result[0]).toStrictEqual({ address: "0x1", amount: "10" });
 		});
 	});
 });
