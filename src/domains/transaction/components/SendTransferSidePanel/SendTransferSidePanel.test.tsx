@@ -202,6 +202,25 @@ describe("SendTransferSidePanel", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should handle wallet change event with undefined value", async () => {
+		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
+
+		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		const undefinedAddressMock = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
+		await selectFirstSenderAddress();
+
+		await selectRecipient();
+		undefinedAddressMock.mockRestore();
+
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(""));
+		walletSyncedMock.mockRestore();
+	});
+
 	it("should send a single transfer via side panel", async () => {
 		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
 
