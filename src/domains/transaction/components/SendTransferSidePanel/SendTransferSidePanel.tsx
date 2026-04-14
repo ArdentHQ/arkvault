@@ -514,7 +514,7 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
+							<ReviewStep wallet={wallet!} network={activeNetwork} />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
@@ -546,7 +546,7 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>
-							<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
+							<ErrorStep errorMessage={errorMessage} withCopyErrorButton hideFooter />
 						</TabPanel>
 
 						{!hideStepNavigation && (

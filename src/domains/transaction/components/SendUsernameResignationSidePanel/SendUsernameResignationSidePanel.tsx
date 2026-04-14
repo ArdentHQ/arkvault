@@ -164,7 +164,7 @@ export const SendUsernameResignationSidePanel = ({
 			handleOnMountChange({
 				mounted,
 				setMounted,
-				setActiveTab: (step) => setActiveTab(step as unknown as Step),
+				setActiveTab,
 				setErrorMessage,
 			});
 		},
