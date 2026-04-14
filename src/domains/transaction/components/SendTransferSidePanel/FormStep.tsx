@@ -46,7 +46,6 @@ export const FormStep = ({
 	const { recipients } = getValues();
 
 	const handleSelectSender = async (address: string) => {
-		console.log("handleSelectSender", address);
 		const sender = profile.wallets().findByAddressWithNetwork(address, network.id());
 		const isFullyRestoredAndSynced = sender?.hasBeenFullyRestored() && sender.hasSyncedWithNetwork();
 

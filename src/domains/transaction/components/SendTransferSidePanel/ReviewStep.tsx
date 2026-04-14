@@ -4,7 +4,6 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
-import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
@@ -18,18 +17,16 @@ import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { Tooltip } from "@/app/components/Tooltip";
-import cn from "classnames";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 	network: Networks.Network;
-	hideHeader?: boolean;
 }
 
 // This is to prevent Insufficient balance error when sending all
 const DUST_AMOUNT = 0.00015;
 
-export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepProperties) => {
+export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch, register, getValues, setError, errors, clearErrors, setValue } = useFormContext();
@@ -45,13 +42,12 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
 
-	const token = tokenContractAddress
-		? profile
-				.tokens()
-				.selected()
-				.items()
-				.find((token) => token.token().address() === tokenContractAddress)
-		: undefined;
+	const token = profile
+		.tokens()
+		.selected()
+		.items()
+		.find((token) => token.token().address() === tokenContractAddress);
+
 	const ticker = token ? token.token().displaySymbol() : wallet.currency();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
@@ -122,27 +118,11 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 	const isTestnet = wallet.network().isTest();
 	const convertedAmount = isTestnet ? 0 : convert(amount.toFixed());
 
+	console.log({ recipients, isTestnet, convertedAmount, exchangeTicker });
+
 	return (
 		<section data-testid="SendTransfer__review-step">
-			{!hideHeader && (
-				<StepHeader
-					titleIcon={
-						<Icon
-							dimensions={[24, 24]}
-							name="DocumentView"
-							data-testid="icon-DocumentView"
-							className="text-theme-primary-600"
-						/>
-					}
-					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-				/>
-			)}
-			<div
-				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
-					"mt-4": !hideHeader,
-				})}
-			>
+			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					senderAddress={wallet.address()}
 					recipients={recipients}
@@ -220,7 +200,7 @@ export const ReviewStep = ({ wallet, network, hideHeader = false }: ReviewStepPr
 									type={getFeeType(recipients?.length)}
 									data={{
 										...feeTransactionData,
-										recipientsCount: recipients.length ?? 1,
+										recipientsCount: recipients.length,
 									}}
 									network={network}
 									profile={profile}
