@@ -1,11 +1,8 @@
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { FormField } from "@/app/components/Form";
-import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { ThemeIcon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
@@ -14,10 +11,9 @@ interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
 	onWalletChange: (wallet: ProfilesContracts.IReadWriteWallet) => void;
-	hideHeader?: boolean;
 }
 
-export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = false }: FormStepProperties) => {
+export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
@@ -38,21 +34,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = f
 
 	return (
 		<section data-testid="SendUsernameResignation__form-step" className="space-y-6 sm:space-y-4">
-			{!hideHeader && (
-				<StepHeader
-					title={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.TITLE")}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-					subtitle={t("TRANSACTION.PAGE_USERNAME_RESIGNATION.FORM_STEP.DESCRIPTION")}
-				/>
-			)}
-
 			<div className="space-y-3 sm:space-y-4">
 				<FormField name="senderAddress">
 					<SelectAddressDropdown

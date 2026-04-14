@@ -17,7 +17,6 @@ interface Properties {
 	onClose?: () => void;
 	onBack?: () => void;
 	errorMessage?: string;
-	hideHeader?: boolean;
 	hideFooter?: boolean;
 	withCopyErrorButton?: boolean;
 }
@@ -29,7 +28,6 @@ export const ErrorStep = ({
 	onClose,
 	isBackDisabled = false,
 	errorMessage,
-	hideHeader = false,
 	hideFooter = false,
 	withCopyErrorButton,
 }: Properties) => {
@@ -40,24 +38,6 @@ export const ErrorStep = ({
 	return (
 		<div data-testid="ErrorStep">
 			<div className="space-y-2">
-				{!hideHeader && (
-					<div className="flex flex-row items-center justify-start gap-3">
-						<StepHeader
-							title={
-								title ||
-								(deniedByUser ? t("TRANSACTION.REJECTED_ERROR.TITLE") : t("TRANSACTION.ERROR.TITLE"))
-							}
-							titleIcon={
-								<Image
-									name="ErrorHeaderIcon"
-									domain="transaction"
-									className="block h-[22px] w-[22px]"
-								/>
-							}
-						/>
-					</div>
-				)}
-
 				<div className="space-y-4">
 					<p className="text-theme-secondary-text hidden md:block">
 						{description ||

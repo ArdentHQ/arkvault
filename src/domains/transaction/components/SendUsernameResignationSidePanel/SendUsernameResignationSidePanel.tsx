@@ -337,12 +337,11 @@ export const SendUsernameResignationSidePanel = ({
 							senderWallet={activeWallet}
 							profile={activeProfile}
 							onWalletChange={setActiveWallet}
-							hideHeader
 						/>
 					</TabPanel>
 
 					<TabPanel tabId={Step.ReviewStep}>
-						<ReviewStep senderWallet={activeWallet!} profile={activeProfile} hideHeader />
+						<ReviewStep senderWallet={activeWallet!} profile={activeProfile} />
 					</TabPanel>
 
 					<TabPanel tabId={Step.AuthenticationStep}>
@@ -359,7 +358,7 @@ export const SendUsernameResignationSidePanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>
-						<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
+						<ErrorStep errorMessage={errorMessage} withCopyErrorButton hideFooter />
 					</TabPanel>
 				</Tabs>
 			</Form>
