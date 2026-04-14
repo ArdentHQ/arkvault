@@ -15,3 +15,5 @@ export const useTransactionURL = () => ({
 	generateSendTransferPath,
 	urlSearchParameters,
 });
+
+export { urlSearchParameters };
