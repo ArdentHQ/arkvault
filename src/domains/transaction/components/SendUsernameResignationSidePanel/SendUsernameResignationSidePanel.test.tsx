@@ -175,6 +175,14 @@ describe("SendUsernameResignationSidePanel", () => {
 			transaction: vi.fn().mockReturnValue(signedTransactionMock),
 		}));
 
+		const findWalletMock = vi
+			.spyOn(profile.wallets(), "findByAddressWithNetwork")
+			.mockReturnValue(profile.wallets().first());
+		const syncedWithNetworkMock = vi
+			.spyOn(profile.wallets().first(), "hasSyncedWithNetwork")
+			.mockReturnValue(false);
+		const fullyRestoredMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
+
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPanel();
 
@@ -253,6 +261,9 @@ describe("SendUsernameResignationSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SendUsernameResignation__close-button"));
 
 		nanoXTransportMock.mockRestore();
+		findWalletMock.mockRestore();
+		syncedWithNetworkMock.mockRestore();
+		fullyRestoredMock.mockRestore();
 	});
 
 	it("should handle transaction error and go back", async () => {
