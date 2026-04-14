@@ -18,7 +18,7 @@ export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProp
 
 	const { activeNetwork: network } = useActiveNetwork({ profile });
 
-	const handleSelectSender = (address: any) => {
+	const handleSelectSender = (address: string) => {
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 		const isFullyRestoredAndSynced =
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();

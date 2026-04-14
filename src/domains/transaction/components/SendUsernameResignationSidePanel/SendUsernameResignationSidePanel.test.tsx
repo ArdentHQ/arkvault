@@ -307,6 +307,50 @@ describe("SendUsernameResignationSidePanel", () => {
 		nanoXTransportMock.mockRestore();
 	});
 
+	it("should not trigger wallet change if wallet is not found in profile store", async () => {
+		const findWalletMock = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(undefined);
+
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
+			throw new Error("broadcast error");
+		});
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+
+		// Go back to form step
+		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+		findWalletMock.mockRestore();
+	});
+
 	it("should close the side panel when clicking back on form step", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const { mockOnOpenChange } = await renderPanel();

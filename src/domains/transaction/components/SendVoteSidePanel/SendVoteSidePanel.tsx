@@ -658,7 +658,6 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 							votes={votes}
 							wallet={activeWallet}
 							network={activeNetwork}
-							hideHeader
 						/>
 					</TabPanel>
 
@@ -670,7 +669,6 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 								votes={votes}
 								wallet={activeWallet}
 								profile={activeProfile}
-								hideHeader
 							/>
 						)}
 					</TabPanel>
