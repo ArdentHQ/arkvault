@@ -13,7 +13,12 @@ import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/transaction/utils";
+import {
+	getAuthenticationStepSubtitle,
+	getAuthenticationStepTitleIcon,
+	handleBroadcastError,
+	handleOnMountChange,
+} from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
