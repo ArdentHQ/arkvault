@@ -234,7 +234,6 @@ export const SendUsernameResignationSidePanel = ({
 
 		if (activeTab === Step.AuthenticationStep) {
 			const ledgerIcon = getAuthenticationStepTitleIcon({
-				isLedger: !!activeWallet?.isLedger(),
 				wallet: activeWallet,
 			});
 			if (ledgerIcon) {

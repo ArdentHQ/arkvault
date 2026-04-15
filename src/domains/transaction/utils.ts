@@ -96,7 +96,7 @@ export const getAuthenticationStepTitleIcon = ({
 	wallet,
 }: {
 	wallet?: Contracts.IReadWriteWallet;
-}): { lightIcon: string; darkIcon: string; dimIcon: string; dimensions: number[] } | null => {
+}): { lightIcon: string; darkIcon: string; dimIcon: string; dimensions: [number, number] } | null => {
 	if (!wallet?.isLedger()) {
 		return null;
 	}
