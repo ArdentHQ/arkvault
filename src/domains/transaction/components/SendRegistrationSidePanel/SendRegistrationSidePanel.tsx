@@ -447,7 +447,7 @@ export const SendRegistrationSidePanel = ({
 				<Form data-testid="Registration__form" context={form} onSubmit={handleSubmit}>
 					<Tabs activeId={activeTab}>
 						<TabPanel tabId={ERROR_STEP}>
-							<ErrorStep errorMessage={errorMessage} hideHeader hideFooter withCopyErrorButton />
+							<ErrorStep errorMessage={errorMessage} hideFooter withCopyErrorButton />
 						</TabPanel>
 
 						{registrationForm && (

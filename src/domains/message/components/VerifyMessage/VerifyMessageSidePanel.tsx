@@ -268,7 +268,6 @@ export const VerifyMessageSidePanel = ({
 								<ErrorStep
 									description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
 									errorMessage={errorMessage}
-									hideHeader
 									hideFooter
 								/>
 								<div className="mt-2 flex justify-end">
