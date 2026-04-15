@@ -17,6 +17,7 @@ import { Amount } from "@/app/components/Amount";
 import { BigNumber } from "@/app/lib/helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { Tooltip } from "@/app/components/Tooltip";
+import { ExchangeCurrencyAmount } from "./SendTransferSidepanel.blocks";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -149,17 +150,11 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 											decimals={token?.token().decimals()}
 											className="text-sm font-semibold break-all whitespace-normal md:text-base"
 										/>
-										{!isTestnet && !!convertedAmount && !!exchangeTicker && (
-											<div className="text-theme-secondary-700 font-semibold">
-												(~
-												<Amount
-													ticker={exchangeTicker}
-													value={convertedAmount}
-													className="text-sm break-all whitespace-normal md:text-base"
-												/>
-												)
-											</div>
-										)}
+										<ExchangeCurrencyAmount
+											isTestnet={isTestnet}
+											convertedAmount={convertedAmount}
+											exchangeTicker={exchangeTicker}
+										/>
 									</div>
 
 									{errors.amount && (
