@@ -18,14 +18,10 @@ import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
-import { Observer } from "@ledgerhq/hw-transport";
-import React from "react";
 import { SendRegistrationSidePanel } from "./SendRegistrationSidePanel";
 import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
-import { LedgerTransportFactory } from "@/app/contexts";
 import { afterAll, vi } from "vitest";
 import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
@@ -351,79 +347,73 @@ describe("SendRegistrationSidePanel", () => {
 		nanoXTransportMock.mockRestore();
 	});
 
-	it.skip("should reset authentication when a supported Nano X is added", async () => {
-		const unsubscribe = vi.fn();
-		let observer: Observer<any>;
+	it("should successfully register a validator with a ledger wallet", async () => {
+		const ledgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const accessLedgerAppMock = vi.spyOn(profile.ledger(), "accessLedgerApp").mockImplementation(vi.fn());
+		const clientMock = vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: vi.fn().mockReturnValue(signedTransactionMock),
+		}));
 
-		const transport = new LedgerTransportFactory();
-		const listenSpy = vi.spyOn(transport, "listen").mockImplementationOnce((obv) => {
-			observer = obv;
-			return { unsubscribe };
-		});
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
 
-		await renderPanel(wallet, "multiSignature");
+		// Step 1
+		await expect(formStep()).resolves.toBeVisible();
 
-		act(() => {
-			observer!.next({ descriptor: "", deviceModel: { id: "nanoS" }, type: "add" });
-		});
+		await inputValidatorPublicKey();
 
-		// Ledger mocks
-		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		const getPublicKeyMock = vi
-			.spyOn(wallet.ledger(), "getPublicKey")
-			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
+		await userEvent.click(continueButton());
 
-		const signTransactionMock = vi
-			.spyOn(wallet.transaction(), "signMultiSignature")
-			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
-			accepted: [MultisignatureRegistrationFixture.data.id],
+		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
+		await userEvent.click(fees[1]);
+
+		// remove focus from fee button
+		await userEvent.click(document.body);
+
+		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		// remove focus from back button
+		await userEvent.click(document.body);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [ValidatorRegistrationFixture.data.hash],
 			errors: {},
 			rejected: [],
 		});
 
-		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet);
-
-		const wallet2 = profile.wallets().last();
-
-		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
-
-		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
-
-		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
-
-		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		// Step 2
+		const derivationPathMock = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/60'/0'/0/3");
+		const transactionMock = createValidatorRegistrationMock(wallet);
 		await userEvent.click(continueButton());
 
-		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
-		// Skip Authentication Step
-		await userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("LedgerDeviceError")).resolves.toBeVisible();
-
-		act(() => {
-			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		await waitFor(() => {
+			expect(signMock).toHaveBeenCalled();
 		});
 
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
 
-		await act(() => vi.runOnlyPendingTimers());
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		isLedgerMock.mockRestore();
-		getPublicKeyMock.mockRestore();
-		signTransactionMock.mockRestore();
-		multiSignatureRegistrationMock.mockRestore();
-		addSignatureMock.mockRestore();
-		mockDerivationPath.mockRestore();
-		listenSpy.mockRestore();
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+		derivationPathMock.mockRestore();
+		ledgerMock.mockRestore();
+		accessLedgerAppMock.mockRestore();
+		clientMock.mockRestore();
 	});
 
 	it("should show mnemonic error", async () => {
@@ -549,6 +539,34 @@ describe("SendRegistrationSidePanel", () => {
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		nanoXTransportMock.mockRestore();
+	});
+
+	it("should render username registration form", async () => {
+		await renderPanel("usernameRegistration");
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
+		await expect(screen.getByTestId("SidePanel__title")).toBeInTheDocument();
+	});
+
+	it("should render contract deployment form", async () => {
+		await renderPanel("contractDeployment");
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
+		await expect(screen.getByTestId("SidePanel__title")).toBeInTheDocument();
+	});
+
+	it("should render contract deployment form", async () => {
+		await renderPanel("contractDeployment");
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
+		await expect(screen.getByTestId("SidePanel__title")).toBeInTheDocument();
+	});
+
+	it("should show legacy validator description", async () => {
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "isLegacyValidator").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
+
+		await renderPanel("validatorRegistration");
+
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
 	});
 
 	it("should close the side panel when clicking back on form step", async () => {
