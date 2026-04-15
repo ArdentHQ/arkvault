@@ -88,7 +88,7 @@ describe("SendRegistrationSidePanel Fee", () => {
 				"https://ark-test-musig.arkvault.io/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
 				walletFixture,
 			),
-			requestMock("https://dwallets-evm.mainsailhq.com/api?attributes.validatorPublicKey=*", {
+			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets?attributes.validatorPublicKey=*", {
 				result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" },
 			}),
 			requestMock(
