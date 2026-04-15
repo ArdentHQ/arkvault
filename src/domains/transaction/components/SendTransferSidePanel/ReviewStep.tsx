@@ -118,8 +118,6 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 	const isTestnet = wallet.network().isTest();
 	const convertedAmount = isTestnet ? 0 : convert(amount.toFixed());
 
-	console.log({ recipients, isTestnet, convertedAmount, exchangeTicker });
-
 	return (
 		<section data-testid="SendTransfer__review-step">
 			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
