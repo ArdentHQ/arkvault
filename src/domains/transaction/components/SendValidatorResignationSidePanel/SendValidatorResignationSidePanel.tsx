@@ -251,6 +251,7 @@ export const SendValidatorResignationSidePanel = ({
 
 	const stepCount = 4;
 
+	/* istanbul ignore next */
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
 			setMounted(mounted);

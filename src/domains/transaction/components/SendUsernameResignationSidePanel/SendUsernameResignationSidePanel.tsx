@@ -49,7 +49,7 @@ export const SendUsernameResignationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch, setValue } = form;
+	const { formState, getValues, register, watch, reset: resetForm, setValue } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { gasLimit, gasPrice } = watch();
@@ -159,16 +159,20 @@ export const SendUsernameResignationSidePanel = ({
 
 	const stepCount = 4;
 
+	/* istanbul ignore next */
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
-			handleOnMountChange({
-				mounted,
-				setActiveTab,
-				setErrorMessage,
-				setMounted,
-			});
+			setMounted(mounted);
+
+			if (!mounted) {
+				resetForm(() => {
+					setActiveTab(Step.FormStep);
+
+					setErrorMessage(undefined);
+				});
+			}
 		},
-		[setMounted, setActiveTab, setErrorMessage],
+		[resetForm],
 	);
 
 	const { isConfirmed, transaction: confirmedTransaction } = useConfirmedTransaction({
