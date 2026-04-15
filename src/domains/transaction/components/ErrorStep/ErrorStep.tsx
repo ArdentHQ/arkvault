@@ -6,7 +6,6 @@ import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
-import { StepHeader } from "@/app/components/StepHeader";
 import { FormButtons } from "@/app/components/Form";
 import { TextArea } from "@/app/components/TextArea";
 
@@ -22,7 +21,6 @@ interface Properties {
 }
 
 export const ErrorStep = ({
-	title,
 	description,
 	onBack,
 	onClose,

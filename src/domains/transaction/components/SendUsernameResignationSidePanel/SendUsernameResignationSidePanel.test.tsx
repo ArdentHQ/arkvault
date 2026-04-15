@@ -28,6 +28,9 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const passphrase = getDefaultMainsailWalletMnemonic();
 
+const backButtonTestId = "SendUsernameResignation__back-button";
+const broadcastError = "broadcast error";
+
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
@@ -198,7 +201,7 @@ describe("SendUsernameResignationSidePanel", () => {
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Navigate back to form step
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 		await expect(formStep()).resolves.toBeVisible();
 
 		// Continue to review step again
@@ -291,17 +294,17 @@ describe("SendUsernameResignationSidePanel", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
-			throw new Error("broadcast error");
+			throw new Error(broadcastError);
 		});
 
 		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(broadcastError);
 
 		// Go back to form step
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -333,17 +336,17 @@ describe("SendUsernameResignationSidePanel", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
-			throw new Error("broadcast error");
+			throw new Error(broadcastError);
 		});
 
 		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(broadcastError);
 
 		// Go back to form step
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -376,17 +379,17 @@ describe("SendUsernameResignationSidePanel", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
-			throw new Error("broadcast error");
+			throw new Error(broadcastError);
 		});
 
 		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(broadcastError);
 
 		// Go back to form step
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -401,7 +404,7 @@ describe("SendUsernameResignationSidePanel", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 
 		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
 

@@ -49,7 +49,7 @@ export const SendUsernameResignationSidePanel = ({
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, getValues, register, watch, reset: resetForm, setValue } = form;
+	const { formState, getValues, register, watch, setValue } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { gasLimit, gasPrice } = watch();
@@ -163,9 +163,9 @@ export const SendUsernameResignationSidePanel = ({
 		(mounted: boolean) => {
 			handleOnMountChange({
 				mounted,
-				setMounted,
 				setActiveTab,
 				setErrorMessage,
+				setMounted,
 			});
 		},
 		[setMounted, setActiveTab, setErrorMessage],
@@ -234,8 +234,8 @@ export const SendUsernameResignationSidePanel = ({
 
 		if (activeTab === Step.AuthenticationStep) {
 			const ledgerIcon = getAuthenticationStepTitleIcon({
-				wallet: activeWallet,
 				isLedger: !!activeWallet?.isLedger(),
+				wallet: activeWallet,
 			});
 			if (ledgerIcon) {
 				return (

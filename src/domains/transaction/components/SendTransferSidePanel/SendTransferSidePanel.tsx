@@ -18,11 +18,9 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
-import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
-import { isValidUrl } from "@/utils/url-validation";
 import cn from "classnames";
 import {
 	TransferFormData,
@@ -90,7 +88,6 @@ export const SendTransferSidePanel = ({
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
-	const { urlSearchParameters } = useTransactionURL();
 	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
@@ -261,9 +258,9 @@ export const SendTransferSidePanel = ({
 
 		return isSendTransferNextDisabled({
 			activeTab,
-			network,
 			isDirty,
 			isValid,
+			network,
 		});
 	}, [activeTab, getValues, isDirty, isValid]);
 

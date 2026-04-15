@@ -46,9 +46,9 @@ describe("SendTransfer utils", () => {
 			const mockNetwork = { isLive: () => true } as any;
 			const result = isSendTransferNextDisabled({
 				activeTab: SendTransferStep.NetworkStep,
-				network: mockNetwork,
 				isDirty: false,
 				isValid: false,
+				network: mockNetwork,
 			});
 			expect(result).toBe(false);
 		});
@@ -56,9 +56,9 @@ describe("SendTransfer utils", () => {
 		it("should return true when not dirty", () => {
 			const result = isSendTransferNextDisabled({
 				activeTab: SendTransferStep.FormStep,
-				network: undefined,
 				isDirty: false,
 				isValid: true,
+				network: undefined,
 			});
 			expect(result).toBe(true);
 		});
@@ -66,9 +66,9 @@ describe("SendTransfer utils", () => {
 		it("should return true when dirty and invalid", () => {
 			const result = isSendTransferNextDisabled({
 				activeTab: SendTransferStep.FormStep,
-				network: undefined,
 				isDirty: true,
 				isValid: false,
+				network: undefined,
 			});
 			expect(result).toBe(true);
 		});
@@ -76,9 +76,9 @@ describe("SendTransfer utils", () => {
 		it("should return false when dirty and valid", () => {
 			const result = isSendTransferNextDisabled({
 				activeTab: SendTransferStep.FormStep,
-				network: undefined,
 				isDirty: true,
 				isValid: true,
+				network: undefined,
 			});
 			expect(result).toBe(false);
 		});
@@ -86,9 +86,9 @@ describe("SendTransfer utils", () => {
 		it("should return true for NetworkStep without isLive function", () => {
 			const result = isSendTransferNextDisabled({
 				activeTab: SendTransferStep.NetworkStep,
-				network: {} as any,
 				isDirty: false,
 				isValid: false,
+				network: {} as any,
 			});
 			expect(result).toBe(true);
 		});
@@ -106,7 +106,7 @@ describe("SendTransfer utils", () => {
 
 	describe("getRecipientsFromDeeplink", () => {
 		it("should get recipients from deeplink if provided", () => {
-			const result = getRecipientsFromDeeplink([], { recipient: "0x1", amount: "10" });
+			const result = getRecipientsFromDeeplink([], { amount: "10", recipient: "0x1" });
 
 			expect(result[0]).toStrictEqual({ address: "0x1", amount: "10" });
 		});

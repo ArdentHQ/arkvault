@@ -102,9 +102,9 @@ export const getAuthenticationStepTitleIcon = ({
 	}
 
 	return {
-		lightIcon: "LedgerLight",
 		darkIcon: "LedgerDark",
 		dimIcon: "LedgerDim",
 		dimensions: [24, 24],
+		lightIcon: "LedgerLight",
 	};
 };

@@ -4,9 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { FormField } from "@/app/components/Form";
-import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { Tooltip } from "@/app/components/Tooltip";

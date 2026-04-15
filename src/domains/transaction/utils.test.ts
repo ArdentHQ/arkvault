@@ -230,9 +230,9 @@ describe("handleOnMountChange", () => {
 
 		handleOnMountChange({
 			mounted: true,
-			setMounted,
 			setActiveTab,
 			setErrorMessage,
+			setMounted,
 		});
 
 		expect(setMounted).toHaveBeenCalledWith(true);
@@ -247,9 +247,9 @@ describe("handleOnMountChange", () => {
 
 		handleOnMountChange({
 			mounted: false,
-			setMounted,
 			setActiveTab,
 			setErrorMessage,
+			setMounted,
 		});
 
 		expect(setMounted).toHaveBeenCalledWith(false);
@@ -264,7 +264,7 @@ describe("getAuthenticationStepTitleIcon", () => {
 		const wallet = profile.wallets().first();
 		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
 
-		const result = getAuthenticationStepTitleIcon({ wallet, isLedger: false });
+		const result = getAuthenticationStepTitleIcon({ isLedger: false, wallet });
 
 		expect(result).toBeNull();
 	});
@@ -274,18 +274,18 @@ describe("getAuthenticationStepTitleIcon", () => {
 		const wallet = profile.wallets().first();
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
-		const result = getAuthenticationStepTitleIcon({ wallet, isLedger: true });
+		const result = getAuthenticationStepTitleIcon({ isLedger: true, wallet });
 
 		expect(result).toEqual({
-			lightIcon: "LedgerLight",
 			darkIcon: "LedgerDark",
 			dimIcon: "LedgerDim",
 			dimensions: [24, 24],
+			lightIcon: "LedgerLight",
 		});
 	});
 
 	it("should return null when wallet is undefined", () => {
-		const result = getAuthenticationStepTitleIcon({ wallet: undefined, isLedger: false });
+		const result = getAuthenticationStepTitleIcon({ isLedger: false, wallet: undefined });
 
 		expect(result).toBeNull();
 	});
