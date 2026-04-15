@@ -114,4 +114,30 @@ describe("useWalletSelection", () => {
 			expect(result.current.selectedAddresses).toEqual([profile.wallets().last().address()]);
 		});
 	});
+
+	it("should toggle selection when all are deselected", async () => {
+		const { result } = renderHook(() => useWalletSelection(profile), {
+			wrapper,
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([profile.wallets().first().address()]);
+		});
+
+		act(() => {
+			result.current.setSelectedAddresses([]);
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([]);
+		});
+
+		act(() => {
+			result.current.toggleSelection(profile.wallets().first());
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([profile.wallets().first().address()]);
+		});
+	});
 });

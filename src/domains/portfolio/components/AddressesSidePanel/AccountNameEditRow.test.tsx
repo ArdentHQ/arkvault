@@ -53,4 +53,37 @@ describe("AccountNameEditRow", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("UpdateWalletName__submit")).not.toBeInTheDocument());
 	});
+
+	it("should call onDelete when delete button clicked", async () => {
+		const onDelete = vi.fn();
+		render(
+			<AccountNameEditRow
+				profile={profile}
+				wallets={profile.wallets().values()}
+				accountName="Test Account"
+				onDelete={onDelete}
+			/>,
+		);
+
+		const buttons = await screen.findAllByRole("button");
+		await userEvent.click(buttons[1]);
+		expect(onDelete).toHaveBeenCalled();
+	});
+
+	it("should render delete confirmation when isDeleting is true", async () => {
+		const onConfirmDelete = vi.fn();
+		const onCancelDelete = vi.fn();
+		render(
+			<AccountNameEditRow
+				profile={profile}
+				wallets={profile.wallets().values()}
+				accountName="Test Account"
+				isDeleting={true}
+				onConfirmDelete={onConfirmDelete}
+				onCancelDelete={onCancelDelete}
+			/>,
+		);
+
+		expect(screen.getByTestId("DeleteAddressMessage")).toBeInTheDocument();
+	});
 });
