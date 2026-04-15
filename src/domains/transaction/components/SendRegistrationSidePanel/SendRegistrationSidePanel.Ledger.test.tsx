@@ -33,9 +33,7 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 vi.mock("@/app/hooks/use-ledger-model-status", () => ({
-	useLedgerModelStatus: () => {
-		return { isLedgerModelSupported: true };
-	},
+	useLedgerModelStatus: () => ({ isLedgerModelSupported: true }),
 }));
 
 const renderPanel = async (
@@ -54,67 +52,6 @@ const renderPanel = async (
 	await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
 
 	return { ...view, mockOnOpenChange };
-};
-
-const signedTransactionMock = {
-	blockHash: () => {},
-	confirmations: () => BigNumber.make(154_178),
-	convertedAmount: () => BigNumber.make(10),
-	convertedFee: () => {
-		const fee = BigNumber.make(ValidatorRegistrationFixture.data.gasPrice)
-			.times(ValidatorRegistrationFixture.data.gas)
-			.dividedBy(1e8);
-		return fee.toNumber();
-	},
-	convertedTotal: () => BigNumber.ZERO,
-	data: () => ValidatorRegistrationFixture.data,
-	explorerLink: () => `https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.hash}`,
-	explorerLinkForBlock: () =>
-		`https://mainsail-explorer.ihost.org/transactions/${ValidatorRegistrationFixture.data.hash}`,
-	fee: () => BigNumber.make(107),
-	from: () => ValidatorRegistrationFixture.data.from,
-	gasLimit: () => ValidatorRegistrationFixture.data.gasLimit,
-	gasUsed: () => ValidatorRegistrationFixture.data.gas,
-	hash: () => ValidatorRegistrationFixture.data.hash,
-	isApprove: () => false,
-	isConfirmed: () => false,
-	isContractDeployment: () => false,
-	isContractTransaction: () => true,
-	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
-	isReturn: () => false,
-	isRevoke: () => false,
-	isSecondSignature: () => false,
-	isSent: () => true,
-	isSuccess: () => true,
-	isTokenTransfer: () => false,
-	isTransfer: () => false,
-	isUnvote: () => false,
-	isUpdateValidator: () => false,
-	isUsernameRegistration: () => false,
-	isUsernameResignation: () => false,
-	isValidatorRegistration: () => false,
-	isValidatorResignation: () => false,
-	isVote: () => false,
-	memo: () => ValidatorRegistrationFixture.data.memo || undefined,
-	nonce: () => BigNumber.make(ValidatorRegistrationFixture.data.nonce),
-	payments: () => [],
-	recipients: () => [],
-	setMeta: () => {},
-	timestamp: () => DateTime.make(ValidatorRegistrationFixture.data.timestamp),
-	to: () => ValidatorRegistrationFixture.data.to,
-	token: () => {},
-	total: () => {
-		const value = BigNumber.make(ValidatorRegistrationFixture.data.value);
-		const feeVal = BigNumber.make(ValidatorRegistrationFixture.data.gasPrice).times(
-			ValidatorRegistrationFixture.data.gas,
-		);
-		return value.plus(feeVal);
-	},
-	type: () => "transfer",
-	usesMultiSignature: () => false,
-	value: () => BigNumber.make(0),
-	wallet: () => wallet,
 };
 
 const continueButton = () => screen.getByTestId("SendRegistration__continue-button");

@@ -159,19 +159,15 @@ export const SendUsernameResignationSidePanel = ({
 
 	const stepCount = 4;
 
-	/* istanbul ignore next */
 	const onMountChange = useCallback(
-		(mounted: boolean) => {
-			setMounted(mounted);
-
-			if (!mounted) {
-				resetForm(() => {
-					setActiveTab(Step.FormStep);
-
-					setErrorMessage(undefined);
-				});
-			}
-		},
+		(mounted: boolean) =>
+			handleOnMountChange({
+				mounted,
+				setMounted,
+				setActiveTab,
+				setErrorMessage,
+				resetForm,
+			}),
 		[resetForm],
 	);
 

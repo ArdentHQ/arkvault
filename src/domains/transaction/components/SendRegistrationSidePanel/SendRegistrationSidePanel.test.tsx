@@ -120,49 +120,11 @@ const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	});
 // @ts-ignore
 
-const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => 0,
-		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
-		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
-		get: (attribute: string) => {
-			if (attribute === "multiSignature") {
-				return {
-					min: 2,
-					publicKeys: [
-						"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
-						"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-					],
-				};
-			}
-		},
-		id: () => MultisignatureRegistrationFixture.data.id,
-		isConfirmed: () => true,
-		isContractDeployment: () => false,
-		isContractTransaction: () => true,
-		isIpfs: () => false,
-		isMultiSignatureRegistration: () => true,
-		isValidatorRegistration: () => false,
-		isValidatorResignation: () => false,
-		isVote: () => false,
-		nonce: () => BigNumber.make(1),
-		recipient: () => MultisignatureRegistrationFixture.data.recipient,
-		sender: () => MultisignatureRegistrationFixture.data.sender,
-		type: () => "multiSignature",
-		username: () => "username",
-		usesMultiSignature: () => false,
-		wallet: () => ({
-			username: () => "username",
-		}),
-	} as any);
-
 const continueButton = () => screen.getByTestId("SendRegistration__continue-button");
 const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");
 const sendButton = () => screen.getByTestId("SendRegistration__send-button");
 
 const reviewStepID = "ValidatorRegistrationForm__review-step";
-const multisignatureTitle = "Multisignature Registration";
 const withKeyboard = "with keyboard";
 
 describe("SendRegistrationSidePanel", () => {
