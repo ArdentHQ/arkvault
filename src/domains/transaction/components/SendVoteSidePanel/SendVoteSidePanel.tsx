@@ -32,6 +32,7 @@ import { useVoteFormContext } from "@/domains/vote/contexts/VoteFormContext";
 import { useConfirmedTransaction } from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 import classNames from "classnames";
 import { Image } from "@/app/components/Image";
+import { confirmSendVote } from "./SendVoteSidePanel.blocks";
 
 enum Step {
 	FormStep = 1,
@@ -274,42 +275,6 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		}
 	};
 
-	const confirmSendVote = (wallet: Contracts.IReadWriteWallet, type: "unvote" | "vote" | "combined") =>
-		new Promise((resolve) => {
-			const interval = setInterval(async () => {
-				let isConfirmed = false;
-
-				await wallet.synchroniser().votes();
-				const walletVotes = wallet.voting().current();
-
-				if (type === "vote") {
-					isConfirmed = walletVotes.some(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
-				}
-
-				if (type === "unvote") {
-					isConfirmed = !walletVotes.some(({ wallet }) => wallet?.address() === unvotes[0].wallet?.address());
-				}
-
-				if (type === "combined") {
-					const voteConfirmed = walletVotes.some(
-						({ wallet }) => wallet?.address() === votes[0].wallet?.address(),
-					);
-
-					const unvoteConfirmed = !walletVotes.some(
-						({ wallet }) => wallet?.address() === unvotes[0].wallet?.address(),
-					);
-
-					isConfirmed = voteConfirmed && unvoteConfirmed;
-				}
-
-				/* istanbul ignore else -- @preserve */
-				if (isConfirmed) {
-					clearInterval(interval);
-					resolve("");
-				}
-			}, 1000);
-		});
-
 	const submitForm = async () => {
 		clearErrors("mnemonic");
 		const {
@@ -380,7 +345,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					setActiveTab(Step.SummaryStep);
 
-					await confirmSendVote(activeWallet, "combined");
+					await confirmSendVote(activeWallet, "combined", votes, unvotes);
 				}
 
 				if (senderWallet.network().votingMethod() === "split") {
@@ -405,7 +370,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					await persist();
 
-					await confirmSendVote(activeWallet, "unvote");
+					await confirmSendVote(activeWallet, "unvote", votes, unvotes);
 
 					const voteResult = await transactionBuilder.build(
 						"vote",
@@ -434,7 +399,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 					setActiveTab(Step.SummaryStep);
 
-					await confirmSendVote(activeWallet, "vote");
+					await confirmSendVote(activeWallet, "vote", votes, unvotes);
 				}
 			} else {
 				const isUnvote = unvotes.length > 0;
@@ -472,7 +437,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 
 				setActiveTab(Step.SummaryStep);
 
-				await confirmSendVote(activeWallet, isUnvote ? "unvote" : "vote");
+				await confirmSendVote(activeWallet, isUnvote ? "unvote" : "vote", votes, unvotes);
 			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
