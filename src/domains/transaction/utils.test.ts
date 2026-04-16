@@ -227,12 +227,14 @@ describe("handleOnMountChange", () => {
 		const setMounted = vi.fn();
 		const setActiveTab = vi.fn();
 		const setErrorMessage = vi.fn();
+		const resetForm = vi.fn();
 
 		handleOnMountChange({
 			mounted: true,
 			setActiveTab,
 			setErrorMessage,
 			setMounted,
+			resetForm,
 		});
 
 		expect(setMounted).toHaveBeenCalledWith(true);
@@ -244,12 +246,14 @@ describe("handleOnMountChange", () => {
 		const setMounted = vi.fn();
 		const setActiveTab = vi.fn();
 		const setErrorMessage = vi.fn();
+		const resetForm = vi.fn();
 
 		handleOnMountChange({
 			mounted: false,
 			setActiveTab,
 			setErrorMessage,
 			setMounted,
+			resetForm,
 		});
 
 		expect(setMounted).toHaveBeenCalledWith(false);
