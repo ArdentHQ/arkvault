@@ -163,10 +163,10 @@ export const SendUsernameResignationSidePanel = ({
 		(mounted: boolean) =>
 			handleOnMountChange({
 				mounted,
-				setMounted,
+				resetForm,
 				setActiveTab,
 				setErrorMessage,
-				resetForm,
+				setMounted,
 			}),
 		[resetForm],
 	);

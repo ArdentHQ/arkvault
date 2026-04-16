@@ -17,7 +17,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { SendRegistrationSidePanel } from "./SendRegistrationSidePanel";
 import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import userEvent from "@testing-library/user-event";
