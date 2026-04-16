@@ -4,9 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
 import { FormField } from "@/app/components/Form";
-import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -19,10 +18,9 @@ interface FormStepProperties {
 	senderWallet?: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
 	onWalletChange: (wallet: ProfilesContracts.IReadWriteWallet) => void;
-	hideHeader?: boolean;
 }
 
-export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = false }: FormStepProperties) => {
+export const FormStep = ({ senderWallet, profile, onWalletChange }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { activeNetwork: network } = useActiveNetwork({ profile });
 
@@ -52,21 +50,6 @@ export const FormStep = ({ senderWallet, profile, onWalletChange, hideHeader = f
 
 	return (
 		<section data-testid="SendValidatorResignation__form-step" className="space-y-6 sm:space-y-4">
-			{!hideHeader && (
-				<StepHeader
-					title={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.TITLE")}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-					subtitle={t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.DESCRIPTION")}
-				/>
-			)}
-
 			<Alert>{t("TRANSACTION.PAGE_VALIDATOR_RESIGNATION.FORM_STEP.WARNING")}</Alert>
 
 			<div className="space-y-3 sm:space-y-4">

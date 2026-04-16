@@ -2,16 +2,14 @@ import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { SendVoteStepProperties } from "./SendVote.contracts";
-import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
-import { ThemeIcon } from "@/app/components/Icon";
 import { getVoteCategory, VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import cn from "classnames";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 
-export const ReviewStep = ({ unvotes, votes, wallet, profile, hideHeader = false }: SendVoteStepProperties) => {
+export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProperties) => {
 	const { t } = useTranslation();
 	const { unregister } = useFormContext();
 
@@ -39,26 +37,7 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile, hideHeader = false
 
 	return (
 		<section data-testid="SendVote__review-step">
-			{!hideHeader && (
-				<StepHeader
-					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-				/>
-			)}
-
-			<div
-				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
-					"mt-4": !hideHeader,
-				})}
-			>
+			<div className="-mx-3 mt-4 space-y-3 sm:mx-0 sm:space-y-4">
 				<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 					<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:gap-0 sm:space-x-0">
 						<DetailTitle

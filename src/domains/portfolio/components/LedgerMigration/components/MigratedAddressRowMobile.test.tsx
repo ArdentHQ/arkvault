@@ -1,5 +1,6 @@
 import { env, getMainsailProfileId, mockNanoSTransport, render, screen } from "@/utils/testing-library";
 import { expect, it, describe, beforeEach } from "vitest";
+import userEvent from "@testing-library/user-event";
 import { Contracts } from "@/app/lib/profiles";
 import { MigratedAddressRowMobile } from "./MigratedAddressRowMobile";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
@@ -33,6 +34,29 @@ describe("MigratedAddressRow", () => {
 
 		render(<MigratedAddressRowMobile profile={profile} transaction={migrator.transactions().at(0)!} />, { route });
 		expect(screen.getByTestId("MigratedAddressRowMobile")).toBeInTheDocument();
+
+		ledgerMocks.restoreAll();
+	});
+
+	it("should render in edit mode", async () => {
+		mockNanoSTransport();
+		const migrator = new LedgerMigrator({ env, profile: env.profiles().first() });
+		const publicKeyPaths = new Map([["m/44'/1'/1'/0/0", profile.wallets().first().publicKey()!]]);
+
+		const ledgerMocks = createLedgerMocks(profile.wallets().first(), publicKeyPaths);
+
+		await migrator.createTransactions([
+			{
+				address: profile.wallets().first().address(),
+				path: "m/44'/1'/1'/0/0",
+			},
+		]);
+
+		render(<MigratedAddressRowMobile profile={profile} transaction={migrator.transactions().at(0)!} />, {
+			route,
+		});
+		await userEvent.click(screen.getByText("Edit"));
+		expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
 
 		ledgerMocks.restoreAll();
 	});

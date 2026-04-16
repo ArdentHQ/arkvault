@@ -363,7 +363,6 @@ export const SignMessageSidePanel = ({
 							<ErrorStep
 								description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
 								errorMessage={errorMessage}
-								hideHeader
 								hideFooter
 								withCopyErrorButton
 							/>

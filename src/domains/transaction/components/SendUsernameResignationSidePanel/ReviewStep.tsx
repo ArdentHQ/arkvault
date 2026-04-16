@@ -4,20 +4,16 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
-import { StepHeader } from "@/app/components/StepHeader";
-import { ThemeIcon } from "@/app/components/Icon";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import cn from "classnames";
+
 export const ReviewStep = ({
 	senderWallet,
 	profile,
-	hideHeader = false,
 }: {
 	senderWallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
-	hideHeader?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -29,26 +25,7 @@ export const ReviewStep = ({
 
 	return (
 		<section data-testid="SendUsernameResignation__review-step">
-			{!hideHeader && (
-				<StepHeader
-					title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-					subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-					titleIcon={
-						<ThemeIcon
-							dimensions={[24, 24]}
-							lightIcon="SendTransactionLight"
-							darkIcon="SendTransactionDark"
-							dimIcon="SendTransactionDim"
-						/>
-					}
-				/>
-			)}
-
-			<div
-				className={cn("-mx-3 space-y-3 sm:mx-0 sm:space-y-4", {
-					"mt-6 sm:mt-4": !hideHeader,
-				})}
-			>
+			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-[87px]"
 					senderAddress={senderWallet.address()}
