@@ -231,10 +231,10 @@ describe("handleOnMountChange", () => {
 
 		handleOnMountChange({
 			mounted: true,
+			resetForm,
 			setActiveTab,
 			setErrorMessage,
 			setMounted,
-			resetForm,
 		});
 
 		expect(setMounted).toHaveBeenCalledWith(true);
@@ -250,10 +250,10 @@ describe("handleOnMountChange", () => {
 
 		handleOnMountChange({
 			mounted: false,
+			resetForm,
 			setActiveTab,
 			setErrorMessage,
 			setMounted,
-			resetForm,
 		});
 
 		expect(setMounted).toHaveBeenCalledWith(false);
