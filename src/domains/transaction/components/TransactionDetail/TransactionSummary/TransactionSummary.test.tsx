@@ -148,4 +148,20 @@ describe("TransactionSummary", () => {
 
 		validatorFeeMock.mockRestore();
 	});
+
+	it("should not show amount if it is a token transfer", () => {
+		const wallet = profile.wallets().first();
+
+		const transaction = {
+			...TransactionFixture,
+			isTokenTransfer: () => true,
+			isValidatorRegistration: () => false,
+			value: () => BigNumber.make(10),
+			wallet: () => wallet,
+		} as DTO.ExtendedSignedTransactionData;
+
+		render(<TransactionSummary transaction={transaction} senderWallet={wallet} profile={profile} />);
+
+		expect(screen.queryByTestId("TransactionSummary__Amount")).not.toBeInTheDocument();
+	});
 });
