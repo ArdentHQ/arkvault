@@ -2,6 +2,7 @@ import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { env, getDefaultProfileId, screen, renderResponsive, render } from "@/utils/testing-library";
 import { TransactionAddresses } from "./TransactionAddresses";
+import { ContractLabel } from "./TransactionRecipient";
 import { translations } from "@/app/i18n/common/i18n";
 import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
@@ -81,5 +82,27 @@ describe("TransactionAddresses", () => {
 
 		await userEvent.click(screen.getByTestId("Modal__close-button"));
 		expect(screen.queryByTestId("RecipientsModal")).not.toBeInTheDocument();
+	});
+
+	it("should show contract address when interactedWith is provided", () => {
+		render(
+			<TransactionAddresses
+				senderAddress={wallet.address()}
+				network={wallet.network()}
+				profile={profile}
+				interactedWith="0xcontract123"
+			/>,
+		);
+
+		expect(screen.getByText("0xcontract123")).toBeInTheDocument();
+	});
+});
+
+describe("ContractLabel", () => {
+	it("should render contract label", () => {
+		render(<ContractLabel />);
+
+		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
+		expect(screen.getByText("Contract")).toBeInTheDocument();
 	});
 });
