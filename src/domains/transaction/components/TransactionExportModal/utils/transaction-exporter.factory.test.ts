@@ -9,15 +9,15 @@ describe("filterTransactions", () => {
 	it("should filter out transfers where from equals to", () => {
 		const transactions = [
 			{
-				isTransfer: () => true,
-				isMultiPayment: () => false,
 				from: () => "0xabc",
+				isMultiPayment: () => false,
+				isTransfer: () => true,
 				to: () => "0xabc",
 			},
 			{
-				isTransfer: () => true,
-				isMultiPayment: () => false,
 				from: () => "0xabc",
+				isMultiPayment: () => false,
+				isTransfer: () => true,
 				to: () => "0xdef",
 			},
 		];
@@ -29,14 +29,14 @@ describe("filterTransactions", () => {
 	it("should filter multipayment with zero amount after subtracting sender", () => {
 		const transactions = [
 			{
-				isTransfer: () => false,
-				isMultiPayment: () => true,
-				value: () => "100",
 				from: () => "0xabc",
+				isMultiPayment: () => true,
+				isTransfer: () => false,
 				recipients: () => [
 					{ address: "0xabc", amount: "100" },
 					{ address: "0xdef", amount: "50" },
 				],
+				value: () => "100",
 			},
 		];
 
@@ -47,14 +47,14 @@ describe("filterTransactions", () => {
 	it("should keep multipayment with non-zero amount", () => {
 		const transactions = [
 			{
-				isTransfer: () => false,
-				isMultiPayment: () => true,
-				value: () => "200",
 				from: () => "0xabc",
+				isMultiPayment: () => true,
+				isTransfer: () => false,
 				recipients: () => [
 					{ address: "0xabc", amount: "100" },
 					{ address: "0xdef", amount: "50" },
 				],
+				value: () => "200",
 			},
 		];
 
@@ -65,8 +65,8 @@ describe("filterTransactions", () => {
 	it("should return empty for non transfer and non multiPayment types", () => {
 		const transactions = [
 			{
-				isTransfer: () => false,
 				isMultiPayment: () => false,
+				isTransfer: () => false,
 			},
 		];
 

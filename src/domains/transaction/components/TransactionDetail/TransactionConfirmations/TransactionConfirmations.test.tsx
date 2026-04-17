@@ -129,7 +129,7 @@ describe("TransactionConfirmations", () => {
 						receipt: () => ({
 							error: () => "Regular error",
 							hasUnknownError: () => true,
-							prettyError: () => undefined,
+							prettyError: () => {},
 						}),
 					}),
 					isSuccess: () => false,
