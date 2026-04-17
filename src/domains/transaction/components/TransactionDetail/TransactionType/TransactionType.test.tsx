@@ -284,7 +284,7 @@ describe("TransactionType", () => {
 						...TransactionFixture,
 						approveDetails: () => ({ address: "0x1", amount: 500000000000 }),
 						isApprove: () => true,
-						token: () => undefined,
+						token: () => {},
 						wallet: () => profile.wallets().first(),
 					} as DTO.ExtendedSignedTransactionData
 				}
@@ -295,5 +295,85 @@ describe("TransactionType", () => {
 		);
 
 		expect(container.firstChild).toBeNull();
+	});
+
+	it("should render Approve with Address component inside Trans and external icon", async () => {
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						approveDetails: () => ({ address: "0xabd", amount: 500000000000 }),
+						data: () => ({
+							data: {
+								data: "0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000",
+							},
+						}),
+						from: () => "0xabd",
+						isApprove: () => true,
+						isConfirmed: () => true,
+						to: () => "0xabc",
+						token: () => new TransactionToken(tokenData),
+						tokens: [new TransactionToken(tokenData)],
+						wallet: () => profile.wallets().first(),
+					} as DTO.ExtendedConfirmedTransactionData
+				}
+			/>,
+			{
+				route: `/profiles/${profile.id()}/dashboard`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(container).toHaveTextContent("Approve");
+		});
+
+		await waitFor(() => {
+			expect(container).toHaveTextContent("0.0000005 ABC for use by 0xabd on behalf of 0xabd");
+		});
+
+		const links = screen.getAllByTestId("Link");
+		expect(links.length).toBe(2);
+
+		const externalIcon = screen.getAllByTestId("Link__external");
+		expect(externalIcon.length).toBe(2);
+	});
+
+	it("should render unlimited approve amount", async () => {
+		const maxUint256 = BigInt(2) ** BigInt(256) - BigInt(1);
+
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						approveDetails: () => ({ address: "0xabd", amount: maxUint256 }),
+						data: () => ({
+							data: {
+								data: "0x095ea7b30000000000000000000000000fdab71f04adadf40964c5fd9c95886740f0591c00000000000000000000000000000000000000000000d3c21bcecceda0000000",
+							},
+						}),
+						from: () => "0xabd",
+						isApprove: () => true,
+						isConfirmed: () => true,
+						to: () => "0xabc",
+						token: () => new TransactionToken(tokenData),
+						tokens: [new TransactionToken(tokenData)],
+						wallet: () => profile.wallets().first(),
+					} as DTO.ExtendedConfirmedTransactionData
+				}
+			/>,
+			{
+				route: `/profiles/${profile.id()}/dashboard`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(container).toHaveTextContent("Unlimited");
+		});
+
+		await waitFor(() => {
+			expect(container).toHaveTextContent("ABC");
+		});
 	});
 });
