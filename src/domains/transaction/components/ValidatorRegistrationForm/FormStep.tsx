@@ -12,6 +12,23 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
+import { Contracts } from "@/app/lib/profiles";
+
+export const handleSelectSender = (
+	address: string,
+	setValue: (name: string, value: any, options?: any) => void,
+	profile: Contracts.IProfile,
+	networkId: string,
+) => {
+	setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
+
+	const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, networkId);
+	const isFullyRestoredAndSynced = newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+	if (!isFullyRestoredAndSynced) {
+		newSenderWallet?.synchroniser().identity();
+	}
+};
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -28,16 +45,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		register("validatorPublicKey", validatorRegistration.validatorPublicKey(profile, network));
 	}, [register, validatorRegistration, profile, network.id(), env]);
 
-	const handleSelectSender = (address: any) => {
-		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
-
-		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-		const isFullyRestoredAndSynced =
-			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
-
-		if (!isFullyRestoredAndSynced) {
-			newSenderWallet?.synchroniser().identity();
-		}
+	const onSelectSender = (address: any) => {
+		handleSelectSender(address, setValue, profile, network.id());
 	};
 
 	return (
@@ -51,7 +60,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					disabled={profile.wallets().count() === 0}
 					profile={profile}
 					onChange={(wallet) => {
-						handleSelectSender(wallet?.address() ?? "");
+						onSelectSender(wallet?.address() ?? "");
 					}}
 					wallets={profile.wallets().values()}
 					wallet={wallet}

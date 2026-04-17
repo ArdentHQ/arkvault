@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
-import { ValidatorRegistrationForm, signValidatorRegistration } from "./ValidatorRegistrationForm";
+import { ValidatorRegistrationForm, signValidatorRegistration, handleSelectSender } from "./ValidatorRegistrationForm";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import validatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -327,5 +327,63 @@ describe("ValidatorRegistrationForm", () => {
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
 		isValidatorMock.mockRestore();
+	});
+
+	it("should set sender address and sync wallet if it is not yet fully synced", async () => {
+		const setValueMock = vi.fn();
+
+		const identityMock = vi.fn();
+		const synchroniserMock = vi.fn().mockReturnValue({ identity: identityMock });
+
+		const mockWallet = {
+			...wallet,
+			hasBeenFullyRestored: () => false,
+			hasSyncedWithNetwork: () => false,
+			synchroniser: synchroniserMock,
+		};
+
+		const mockProfile = {
+			...profile,
+			wallets: () => ({
+				findByAddressWithNetwork: () => mockWallet,
+			}),
+		};
+
+		handleSelectSender(wallet.address(), setValueMock, mockProfile, wallet.network().id());
+
+		expect(setValueMock).toHaveBeenCalledWith("senderAddress", wallet.address(), {
+			shouldDirty: true,
+			shouldValidate: false,
+		});
+		expect(synchroniserMock).toHaveBeenCalled();
+		expect(identityMock).toHaveBeenCalled();
+	});
+
+	it("should not sync wallet when already fully restored and synced", async () => {
+		const setValueMock = vi.fn();
+
+		const synchroniserMock = vi.fn();
+
+		const mockWallet = {
+			...wallet,
+			hasBeenFullyRestored: () => true,
+			hasSyncedWithNetwork: () => true,
+			synchroniser: synchroniserMock,
+		};
+
+		const mockProfile = {
+			...profile,
+			wallets: () => ({
+				findByAddressWithNetwork: () => mockWallet,
+			}),
+		};
+
+		handleSelectSender(wallet.address(), setValueMock, mockProfile, wallet.network().id());
+
+		expect(setValueMock).toHaveBeenCalledWith("senderAddress", wallet.address(), {
+			shouldDirty: true,
+			shouldValidate: false,
+		});
+		expect(synchroniserMock).not.toHaveBeenCalled();
 	});
 });
