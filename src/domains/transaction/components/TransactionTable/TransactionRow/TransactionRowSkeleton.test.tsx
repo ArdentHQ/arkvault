@@ -10,20 +10,22 @@ describe("TransactionRowSkeleton", () => {
 				<TransactionRowSkeleton hideSender={false} />
 			</TableRow>,
 		);
-		expect(container.firstChild).toBeInTheDocument();
+		expect(container).toBeInTheDocument();
 	});
 
 	it("should render skeleton with hideSender true", () => {
-		const { container } = render(
+		render(
 			<TableRow>
 				<TransactionRowSkeleton hideSender={true} />
 			</TableRow>,
 		);
-		expect(container.firstChild).toBeInTheDocument();
+
+		expect(screen.queryByTestId("TransactionRowSkeleton__recipient-mobile")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("TransactionRowSkeleton__sender-desktop")).not.toBeInTheDocument();
 	});
 
 	it("should render sender and recipient columns when hideSender is false", () => {
-		const { container } = render(
+		render(
 			<TableRow>
 				<TransactionRowSkeleton hideSender={false} />
 			</TableRow>,
@@ -33,7 +35,7 @@ describe("TransactionRowSkeleton", () => {
 	});
 
 	it("should not render sender column when hideSender is true", () => {
-		const { container } = render(
+		render(
 			<TableRow>
 				<TransactionRowSkeleton hideSender={true} />
 			</TableRow>,

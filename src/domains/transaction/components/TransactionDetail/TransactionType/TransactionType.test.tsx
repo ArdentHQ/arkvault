@@ -294,7 +294,7 @@ describe("TransactionType", () => {
 			},
 		);
 
-		expect(container.firstChild).toBeNull();
+		expect(container).toBeEmptyDOMElement();
 	});
 
 	it("should render Approve with Address component inside Trans and external icon", async () => {

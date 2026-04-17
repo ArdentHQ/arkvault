@@ -467,7 +467,7 @@ describe("Transactions", () => {
 	});
 
 	it("should update wallet filters", async () => {
-		const { asFragment } = render(<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />, {
+		render(<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />, {
 			route: dashboardURL,
 		});
 

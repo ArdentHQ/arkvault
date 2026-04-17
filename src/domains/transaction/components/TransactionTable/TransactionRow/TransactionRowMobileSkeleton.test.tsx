@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@/utils/testing-library";
+import { render } from "@/utils/testing-library";
 import { TransactionRowMobileSkeleton } from "./TransactionRowMobileSkeleton";
 
 describe("TransactionRowMobileSkeleton", () => {

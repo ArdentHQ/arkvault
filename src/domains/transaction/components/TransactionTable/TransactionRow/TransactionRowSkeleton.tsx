@@ -9,6 +9,7 @@ export const TransactionRowSkeleton = ({ hideSender = false }: { hideSender?: bo
 	const senderWidth = useRandomNumber(120, 150);
 	const amountWidth = useRandomNumber(100, 120);
 	const currencyWidth = Math.floor(amountWidth * 0.45);
+	console.log({ hideSender });
 
 	return (
 		<TableRow className="max-xl:h-[4.25rem]">
