@@ -386,4 +386,29 @@ describe("ValidatorRegistrationForm", () => {
 		});
 		expect(synchroniserMock).not.toHaveBeenCalled();
 	});
+
+	it("should render lockedFee error alert when error is present", async () => {
+		let hasSetError = false;
+
+		const TestWrapper = () => {
+			const form = useForm({ defaultValues: { fee: "2" } });
+
+			useEffect(() => {
+				if (!hasSetError) {
+					hasSetError = true;
+					form.setError("lockedFee", { type: "manual", message: "Locked fee error" });
+				}
+			}, [form]);
+
+			return (
+				<FormProvider {...form}>
+					<ValidatorRegistrationForm.component activeTab={1} profile={profile} wallet={wallet} />
+				</FormProvider>
+			);
+		};
+
+		render(<TestWrapper />, { route: `/profiles/${profile.id()}` });
+
+		await waitFor(() => expect(screen.getByText("Locked fee error")).toBeInTheDocument());
+	});
 });

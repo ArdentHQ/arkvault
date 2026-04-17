@@ -64,6 +64,32 @@ describe("TransactionAmount.blocks", () => {
 		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
 	});
 
+	it("should use token for TransactionAmountLabel when token is present", () => {
+		const tokenFixture = {
+			...fixture,
+			isMultiPayment: () => false,
+			isReturn: () => false,
+			isSent: () => true,
+			token: () => ({
+				token: () => ({
+					displaySymbol: () => "USDC",
+					value: () => 100,
+				}),
+				value: () => 100,
+			}),
+			value: () => 50,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				currency: () => "ARK",
+				profile: () => profile,
+			}),
+		};
+
+		render(<TransactionAmountLabel transaction={tokenFixture as any} />);
+
+		expect(screen.getByText(/100 USDC/)).toBeInTheDocument();
+	});
+
 	it("should show fiat value for multiPayment transaction", () => {
 		const exchangeMock = vi.spyOn(profile.exchangeRates(), "exchange").mockReturnValue(5);
 
@@ -133,6 +159,12 @@ describe("TransactionAmount.blocks", () => {
 		render(<TransactionTotalLabel transaction={fixture} hideStyles={true} profile={profile} />);
 
 		expect(screen.getByText(/DARK/)).toBeInTheDocument();
+	});
+
+	it("should show hint in TransactionTotalLabel when returnedAmount is greater than 0", () => {
+		render(<TransactionTotalLabel transaction={fixture} profile={profile} />);
+
+		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 	});
 });
 
