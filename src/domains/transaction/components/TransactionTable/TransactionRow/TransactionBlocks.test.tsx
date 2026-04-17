@@ -106,8 +106,8 @@ describe("TransactionAmount.blocks", () => {
 	it("should handle validator resignation with isSuccess", () => {
 		const validatorResignationFixture = {
 			...TransactionFixture,
-			isValidatorResignation: () => true,
 			isSent: () => false,
+			isValidatorResignation: () => true,
 			wallet: () => ({
 				...TransactionFixture.wallet(),
 				validatorFee: () => 0,

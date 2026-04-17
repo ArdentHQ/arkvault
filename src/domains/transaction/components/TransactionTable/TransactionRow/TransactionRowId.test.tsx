@@ -7,10 +7,10 @@ describe("TransactionRowId", () => {
 	it("should render pending transaction without block hash", () => {
 		const transaction = {
 			...TransactionFixture,
-			isSuccess: () => false,
 			blockHash: () => "",
-			hash: () => "0xabc123",
 			explorerLink: () => "https://explorer.test/tx/0x123",
+			hash: () => "0xabc123",
+			isSuccess: () => false,
 		} as any;
 
 		render(<TransactionRowId transaction={transaction} />);

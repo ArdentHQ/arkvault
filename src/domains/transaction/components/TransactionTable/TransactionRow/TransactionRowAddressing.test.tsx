@@ -203,7 +203,6 @@ describe("TransactionRowAddressing", () => {
 	it("should render contract deployment address when confirmations > 0", () => {
 		const contractDeploymentFixture = {
 			...fixture,
-			isContractDeployment: () => true,
 			confirmations: () => 1,
 			data: () => ({
 				data: {
@@ -212,6 +211,7 @@ describe("TransactionRowAddressing", () => {
 					},
 				},
 			}),
+			isContractDeployment: () => true,
 			to: () => "0xOriginalTo",
 		};
 		render(<TransactionRowAddressing transaction={contractDeploymentFixture as any} profile={profile} />);
@@ -223,10 +223,10 @@ describe("TransactionRowAddressing", () => {
 	it("should render multipayment received direction", () => {
 		const multiPaymentReceivedFixture = {
 			...fixture,
+			from: () => "0xFromAddress",
 			isMultiPayment: () => true,
 			isSent: () => false,
 			recipients: () => [{ address: "0x2", amount: "100" }],
-			from: () => "0xFromAddress",
 		};
 		render(<TransactionRowAddressing transaction={multiPaymentReceivedFixture as any} profile={profile} />);
 

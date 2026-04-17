@@ -65,11 +65,11 @@ describe("TransactionRowAmount", () => {
 			<TransactionRowAmount
 				transaction={{
 					...TransactionFixture,
+					convertedTotal: () => 1234.56,
 					wallet: () => ({
 						currency: () => "ARK",
 						network: () => ({ isTest: () => false }),
 					}),
-					convertedTotal: () => 1234.56,
 				}}
 				exchangeCurrency="USD"
 				exchangeTooltip

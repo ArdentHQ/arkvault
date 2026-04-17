@@ -137,7 +137,7 @@ describe("TransactionExportModal", () => {
 
 		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileSave")
-			.mockResolvedValue({ name: "test.csv", kind: "file" } as any);
+			.mockResolvedValue({ kind: "file", name: "test.csv" } as any);
 
 		render(<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />, {
 			route: dashboardURL,

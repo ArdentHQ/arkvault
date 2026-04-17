@@ -1,9 +1,79 @@
 import { Contracts } from "@/app/lib/profiles";
-import { TransactionExporter } from "./transaction-exporter.factory";
+import { TransactionExporter, filterTransactions } from "./transaction-exporter.factory";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
+
+describe("filterTransactions", () => {
+	it("should filter out transfers where from equals to", () => {
+		const transactions = [
+			{
+				isTransfer: () => true,
+				isMultiPayment: () => false,
+				from: () => "0xabc",
+				to: () => "0xabc",
+			},
+			{
+				isTransfer: () => true,
+				isMultiPayment: () => false,
+				from: () => "0xabc",
+				to: () => "0xdef",
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(1);
+	});
+
+	it("should filter multipayment with zero amount after subtracting sender", () => {
+		const transactions = [
+			{
+				isTransfer: () => false,
+				isMultiPayment: () => true,
+				value: () => "100",
+				from: () => "0xabc",
+				recipients: () => [
+					{ address: "0xabc", amount: "100" },
+					{ address: "0xdef", amount: "50" },
+				],
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(0);
+	});
+
+	it("should keep multipayment with non-zero amount", () => {
+		const transactions = [
+			{
+				isTransfer: () => false,
+				isMultiPayment: () => true,
+				value: () => "200",
+				from: () => "0xabc",
+				recipients: () => [
+					{ address: "0xabc", amount: "100" },
+					{ address: "0xdef", amount: "50" },
+				],
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(1);
+	});
+
+	it("should return empty for non transfer and non multiPayment types", () => {
+		const transactions = [
+			{
+				isTransfer: () => false,
+				isMultiPayment: () => false,
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(0);
+	});
+});
 
 describe("CsvFormatter", () => {
 	let profile: Contracts.IProfile;

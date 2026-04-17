@@ -236,8 +236,6 @@ describe("TransactionDetailModal", () => {
 		const contractDeploymentFixture = {
 			...TransactionFixture,
 			blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-			isContractDeployment: () => true,
-			isConfirmed: () => true,
 			confirmations: () => ({ toNumber: () => 10 }),
 			data: () => ({
 				data: {
@@ -246,6 +244,8 @@ describe("TransactionDetailModal", () => {
 					},
 				},
 			}),
+			isConfirmed: () => true,
+			isContractDeployment: () => true,
 			type: () => "contractDeployment",
 			wallet: () => wallet,
 		};

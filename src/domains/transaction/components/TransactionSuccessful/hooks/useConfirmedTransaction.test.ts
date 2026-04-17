@@ -90,4 +90,26 @@ describe("useConfirmedTransaction", () => {
 
 		expect(result.current.isConfirmed).toBe(false);
 	});
+
+	it("should ignore errors when transaction is not confirmed", async () => {
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: () => {
+				throw new Error("Transaction not found");
+			},
+		}));
+
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				transactionId: "123",
+				wallet: wallet,
+			}),
+		);
+
+		await waitFor(
+			() => {
+				expect(result.current.isConfirmed).toBe(false);
+			},
+			{ timeout: 3000 },
+		);
+	});
 });
