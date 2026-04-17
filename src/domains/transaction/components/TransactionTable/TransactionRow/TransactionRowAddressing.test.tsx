@@ -208,7 +208,7 @@ describe("TransactionRowAddressing", () => {
 			data: () => ({
 				data: {
 					receipt: {
-						deployedContractAddress: "0xDeployedContract123",
+						deployedContractAddress: "0x123",
 					},
 				},
 			}),
@@ -225,7 +225,7 @@ describe("TransactionRowAddressing", () => {
 			...fixture,
 			isMultiPayment: () => true,
 			isSent: () => false,
-			recipients: () => [{ address: "0xRecipient1", amount: "100" }],
+			recipients: () => [{ address: "0x2", amount: "100" }],
 			from: () => "0xFromAddress",
 		};
 		render(<TransactionRowAddressing transaction={multiPaymentReceivedFixture as any} profile={profile} />);
