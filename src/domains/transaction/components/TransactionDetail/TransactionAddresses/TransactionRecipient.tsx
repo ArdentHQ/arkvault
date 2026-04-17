@@ -11,7 +11,7 @@ import { RecipientsModal } from "@/domains/transaction/components/RecipientsModa
 import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
 
-const ContractLabel = () => {
+export const ContractLabel = () => {
 	const { t } = useTranslation();
 
 	return (
