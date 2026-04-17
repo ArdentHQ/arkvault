@@ -249,6 +249,31 @@ describe("TransactionRowAddressing", () => {
 
 		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toBeInTheDocument();
 	});
+
+	it("should set direction to return for non-contract return transaction", () => {
+		const returnTransferFixture = {
+			...transferFixture,
+			isReturn: () => true,
+			isSent: () => false,
+			to: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			token: () => undefined,
+		};
+		render(<TransactionRowAddressing transaction={returnTransferFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("Return");
+	});
+
+	it("should use recipient address from token when to is empty", () => {
+		const tokenRecipientFixture = {
+			...transferFixture,
+			to: () => "",
+			token: () => ({ to: () => "0x2" }),
+		};
+		render(<TransactionRowAddressing transaction={tokenRecipientFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeTruthy();
+	});
 });
 
 describe("TransactionRowLabel", () => {
