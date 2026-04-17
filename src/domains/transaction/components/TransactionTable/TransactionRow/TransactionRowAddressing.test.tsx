@@ -253,11 +253,11 @@ describe("TransactionRowAddressing", () => {
 	it("should set direction to return for non-contract return transaction", () => {
 		const returnTransferFixture = {
 			...transferFixture,
+			from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
 			isReturn: () => true,
 			isSent: () => false,
 			to: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-			from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
-			token: () => undefined,
+			token: () => {},
 		};
 		render(<TransactionRowAddressing transaction={returnTransferFixture as any} profile={profile} />);
 
