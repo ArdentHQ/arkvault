@@ -2,7 +2,7 @@ import React from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { env, getDefaultProfileId, screen, renderResponsive, render } from "@/utils/testing-library";
 import { TransactionAddresses } from "./TransactionAddresses";
-import { ContractLabel } from "./TransactionRecipient";
+import { ContractLabel, TransactionRecipient } from "./TransactionRecipient";
 import { translations } from "@/app/i18n/common/i18n";
 import { expect } from "vitest";
 import userEvent from "@testing-library/user-event";
@@ -104,5 +104,50 @@ describe("ContractLabel", () => {
 
 		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
 		expect(screen.getByText("Contract")).toBeInTheDocument();
+	});
+});
+
+describe("TransactionRecipient", () => {
+	it("should render with contract label when recipient is a contract", () => {
+		const recipient: RecipientItem = {
+			address: "0x1234567890123456789012345678901234567890",
+			alias: "TestContract",
+			amount: 100,
+			isContract: true,
+			isValidator: false,
+		};
+
+		render(<TransactionRecipient recipient={recipient} showLabel />);
+
+		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
+		expect(screen.getByText("Contract")).toBeInTheDocument();
+	});
+
+	it("should render without contract label when recipient is not a contract", () => {
+		const recipient: RecipientItem = {
+			address: "0x1234567890123456789012345678901234567890",
+			alias: "TestUser",
+			amount: 100,
+			isContract: false,
+			isValidator: false,
+		};
+
+		render(<TransactionRecipient recipient={recipient} showLabel />);
+
+		expect(screen.queryByTestId("TransactionRow__type")).not.toBeInTheDocument();
+	});
+
+	it("should hide label when showLabel is false", () => {
+		const recipient: RecipientItem = {
+			address: "0x1234567890123456789012345678901234567890",
+			alias: "TestUser",
+			amount: 100,
+			isContract: false,
+			isValidator: false,
+		};
+
+		render(<TransactionRecipient recipient={recipient} showLabel={false} />);
+
+		expect(screen.queryByText("To")).toHaveClass("invisible");
 	});
 });
