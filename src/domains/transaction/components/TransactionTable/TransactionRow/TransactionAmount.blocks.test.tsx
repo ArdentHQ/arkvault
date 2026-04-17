@@ -128,6 +128,12 @@ describe("TransactionAmount.blocks", () => {
 
 		expect(container).toBeInTheDocument();
 	});
+
+	it("should render without styles when hideStyles is true", () => {
+		render(<TransactionTotalLabel transaction={fixture} hideStyles={true} profile={profile} />);
+
+		expect(screen.getByText(/DARK/)).toBeInTheDocument();
+	});
 });
 
 describe("TransactionTypeLabel", () => {
@@ -168,6 +174,9 @@ describe("TransactionTypeLabel", () => {
 	});
 
 	it("should render tooltip when text is truncated and tooltipContent is provided", async () => {
+		const scrollWidthSpy = vi.spyOn(HTMLElement.prototype, "scrollWidth", "get").mockReturnValue(300);
+		const clientWidthSpy = vi.spyOn(HTMLElement.prototype, "clientWidth", "get").mockReturnValue(40);
+
 		renderResponsive(
 			<TransactionTypeLabel tooltipContent="Very Long Transaction Type Name" props={defaultProps}>
 				Very Long Transaction Type Name
@@ -177,9 +186,13 @@ describe("TransactionTypeLabel", () => {
 
 		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
 
-		await userEvent.hover(screen.getByTestId("TransactionRow__type"));
+		const span = screen.getByText("Very Long Transaction Type Name");
+		await userEvent.hover(span);
 
-		expect(screen.getByText("Very Long Transaction Type Name")).toBeInTheDocument();
+		expect(screen.getByRole("tooltip")).toBeInTheDocument();
+
+		scrollWidthSpy.mockRestore();
+		clientWidthSpy.mockRestore();
 	});
 
 	it("should pass through label properties correctly", () => {
