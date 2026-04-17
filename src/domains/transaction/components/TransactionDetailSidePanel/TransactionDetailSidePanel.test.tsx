@@ -114,8 +114,8 @@ describe("TransactionDetailModal", () => {
 					isMultiPayment: () => true,
 					isTransfer: () => false,
 					recipients: () => [
-						{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
-						{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
+						{ address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", amount: 1 },
+						{ address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", amount: 1 },
 					],
 					type: () => "multiPayment",
 					wallet: () => wallet,
@@ -230,5 +230,63 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("Resignation");
+	});
+
+	it("should render contract deployment with deployed contract address", () => {
+		const contractDeploymentFixture = {
+			...TransactionFixture,
+			blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+			isContractDeployment: () => true,
+			isConfirmed: () => true,
+			confirmations: () => ({ toNumber: () => 10 }),
+			data: () => ({
+				data: {
+					receipt: {
+						deployedContractAddress: "0x123",
+					},
+				},
+			}),
+			type: () => "contractDeployment",
+			wallet: () => wallet,
+		};
+
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				transactionItem={contractDeploymentFixture as any}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should find wallet when transaction from/to matches wallet address", () => {
+		const fromAddress = wallet.address();
+		const toAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				wallets={[wallet]}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					from: () => fromAddress,
+					to: () => toAddress,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
 	});
 });

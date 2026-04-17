@@ -275,4 +275,25 @@ describe("TransactionType", () => {
 
 		expect(container).toHaveTextContent("Public Key");
 	});
+
+	it("should not render ActionType when token is not present", () => {
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						...TransactionFixture,
+						approveDetails: () => ({ address: "0x1", amount: 500000000000 }),
+						isApprove: () => true,
+						token: () => undefined,
+						wallet: () => profile.wallets().first(),
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+			{
+				route: `/profiles/${profile.id()}/dashboard`,
+			},
+		);
+
+		expect(container.firstChild).toBeNull();
+	});
 });

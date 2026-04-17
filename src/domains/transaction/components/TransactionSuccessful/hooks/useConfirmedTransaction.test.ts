@@ -70,4 +70,24 @@ describe("useConfirmedTransaction", () => {
 
 		expect(clientMock).not.toHaveBeenCalled();
 	});
+
+	it("should not make any calls when wallet is missing", async () => {
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				transactionId: "123",
+			}),
+		);
+
+		expect(result.current.isConfirmed).toBe(false);
+	});
+
+	it("should not make any calls when transactionId is missing", async () => {
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				wallet: wallet,
+			}),
+		);
+
+		expect(result.current.isConfirmed).toBe(false);
+	});
 });

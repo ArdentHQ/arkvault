@@ -273,4 +273,59 @@ describe("ValidatorRegistrationForm", () => {
 		walletWifMock.mockRestore();
 		getMilestoneMock.mockRestore();
 	});
+
+	it("should sign update validator when wallet is already a validator", async () => {
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
+
+		const isValidatorMock = vi.spyOn(wallet, "isValidator").mockReturnValue(true);
+
+		const form = {
+			clearErrors: vi.fn(),
+			getValues: () => ({
+				encryptionPassword: "password",
+				gasLimit: "1",
+				gasPrice: "1",
+				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
+				senderAddress: wallet.address(),
+				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+			}),
+			setError: vi.fn(),
+			setValue: vi.fn(),
+		};
+		const signUpdateValidatorMock = vi
+			.spyOn(wallet.transaction(), "signUpdateValidator")
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [validatorRegistrationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createTransactionMock(wallet);
+
+		await signValidatorRegistration({
+			env,
+			form,
+			profile,
+		});
+
+		expect(signUpdateValidatorMock).toHaveBeenCalledWith({
+			data: {
+				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+			},
+			gasLimit: "1",
+			gasPrice: "1",
+			signatory: undefined,
+		});
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+
+		signUpdateValidatorMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+		isValidatorMock.mockRestore();
+	});
 });

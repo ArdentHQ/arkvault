@@ -62,4 +62,23 @@ describe("TransactionRowAmount", () => {
 
 		expect(screen.getByTestId("TransactionAmount__tooltip")).toBeInTheDocument();
 	});
+
+	it("should render exchange tooltip with formatted currency on main network", () => {
+		render(
+			<TransactionRowAmount
+				transaction={{
+					...TransactionFixture,
+					wallet: () => ({
+						currency: () => "ARK",
+						network: () => ({ isTest: () => false }),
+					}),
+					convertedTotal: () => 1234.56,
+				}}
+				exchangeCurrency="USD"
+				exchangeTooltip
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionAmount__tooltip")).toBeInTheDocument();
+	});
 });

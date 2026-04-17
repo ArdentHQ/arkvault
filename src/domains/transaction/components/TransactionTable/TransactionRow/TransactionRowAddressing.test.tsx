@@ -199,6 +199,56 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.getByTestId("TransactionRowAddressing__vote_advanced_recipient")).toBeInTheDocument();
 		expect(screen.getByText("Contract")).toBeInTheDocument();
 	});
+
+	it("should render contract deployment address when confirmations > 0", () => {
+		const contractDeploymentFixture = {
+			...fixture,
+			isContractDeployment: () => true,
+			confirmations: () => 1,
+			data: () => ({
+				data: {
+					receipt: {
+						deployedContractAddress: "0xDeployedContract123",
+					},
+				},
+			}),
+			to: () => "0xOriginalTo",
+		};
+		render(<TransactionRowAddressing transaction={contractDeploymentFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__vote")).toBeInTheDocument();
+		expect(screen.getByText("Contract")).toBeInTheDocument();
+	});
+
+	it("should render multipayment received direction", () => {
+		const multiPaymentReceivedFixture = {
+			...fixture,
+			isMultiPayment: () => true,
+			isSent: () => false,
+			recipients: () => [{ address: "0xRecipient1", amount: "100" }],
+			from: () => "0xFromAddress",
+		};
+		render(<TransactionRowAddressing transaction={multiPaymentReceivedFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__multipayment")).toBeInTheDocument();
+	});
+
+	it("should render advanced sender with sender alias", () => {
+		const senderFixture = {
+			...transferFixture,
+			from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		};
+		render(
+			<TransactionRowAddressing
+				transaction={senderFixture as any}
+				profile={profile}
+				isAdvanced={true}
+				variant="sender"
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toBeInTheDocument();
+	});
 });
 
 describe("TransactionRowLabel", () => {

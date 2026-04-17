@@ -102,6 +102,32 @@ describe("TransactionAmount.blocks", () => {
 
 		expect(screen.getByText(/ARK/)).toBeInTheDocument();
 	});
+
+	it("should handle validator resignation with isSuccess", () => {
+		const validatorResignationFixture = {
+			...TransactionFixture,
+			isValidatorResignation: () => true,
+			isSent: () => false,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				validatorFee: () => 0,
+			}),
+		};
+
+		const { container } = render(
+			<TransactionTotalLabel
+				transaction={
+					{
+						...validatorResignationFixture,
+						isSuccess: () => true,
+					} as any
+				}
+				profile={profile}
+			/>,
+		);
+
+		expect(container).toBeInTheDocument();
+	});
 });
 
 describe("TransactionTypeLabel", () => {

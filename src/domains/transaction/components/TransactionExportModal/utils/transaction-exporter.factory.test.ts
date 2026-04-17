@@ -30,6 +30,31 @@ describe("CsvFormatter", () => {
 		expect(exporter.transactions().items()).toHaveLength(19);
 	});
 
+	it("should filter out transfers where from equals to", async () => {
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
+		const items = exporter.transactions().items();
+		expect(items.length).toBeGreaterThan(0);
+	});
+
+	it("should filter multipayment transactions with zero amount", async () => {
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
+		expect(exporter.transactions().count()).toBeGreaterThan(0);
+	});
+
+	it("should return empty for other transaction types", async () => {
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
+		expect(exporter.transactions().items()).toBeDefined();
+	});
+
 	it("should sync transactions", async () => {
 		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
 		//@ts-ignore

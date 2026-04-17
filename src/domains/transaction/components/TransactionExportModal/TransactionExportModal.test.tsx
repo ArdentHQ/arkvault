@@ -129,6 +129,32 @@ describe("TransactionExportModal", () => {
 		transactionIndexMock.mockRestore();
 	});
 
+	it("should download and close on error tab", async () => {
+		const onClose = vi.fn();
+		const transactionIndexMock = vi.spyOn(profile.transactionAggregate(), "received").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		const browserAccessMock = vi
+			.spyOn(browserAccess, "fileSave")
+			.mockResolvedValue({ name: "test.csv", kind: "file" } as any);
+
+		render(<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />, {
+			route: dashboardURL,
+		});
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(exportButton());
+
+		await expect(screen.findByTestId("TransactionExportError__back-button")).resolves.toBeInTheDocument();
+
+		browserAccessMock.mockRestore();
+		transactionIndexMock.mockRestore();
+	});
+
 	it("should render success status", async () => {
 		const { asFragment } = render(
 			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,

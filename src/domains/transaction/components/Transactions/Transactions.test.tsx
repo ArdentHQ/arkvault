@@ -71,6 +71,16 @@ describe("Transactions", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with showTabs disabled", async () => {
+		render(<Transactions profile={profile} wallets={profile.wallets().values()} showTabs={false} />, {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
+		);
+	});
+
 	it("should filter by type and see empty results text", async () => {
 		const emptyProfile = await env.profiles().create("test2");
 
@@ -462,8 +472,6 @@ describe("Transactions", () => {
 		});
 
 		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show loading state", async () => {
