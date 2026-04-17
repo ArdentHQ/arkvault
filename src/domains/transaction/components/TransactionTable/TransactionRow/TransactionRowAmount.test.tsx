@@ -27,14 +27,14 @@ describe("TransactionRowAmount", () => {
 	});
 
 	it("should show exchange as tooltip", () => {
-		// on test network
+		// on test network - should show NOT_AVAILABLE
 		const { rerender } = render(
 			<TransactionRowAmount transaction={{ ...TransactionFixture }} exchangeCurrency="BTC" exchangeTooltip />,
 		);
 
 		expect(screen.getByTestId("TransactionAmount__tooltip")).toBeInTheDocument();
 
-		// on main network (Crypto)
+		// on main network - should format currency
 		rerender(
 			<TransactionRowAmount
 				transaction={{
@@ -48,7 +48,7 @@ describe("TransactionRowAmount", () => {
 
 		expect(screen.getByTestId("TransactionAmount__tooltip")).toBeInTheDocument();
 
-		// on main network (Fiat)
+		// on main network with fiat currency - should format currency
 		rerender(
 			<TransactionRowAmount
 				transaction={{
