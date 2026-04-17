@@ -43,4 +43,14 @@ describe("TransactionRowSkeleton", () => {
 		expect(screen.queryByTestId("TransactionRowSkeleton__recipient-mobile")).toBeNull();
 		expect(screen.queryByTestId("TransactionRowSkeleton__sender-desktop")).toBeNull();
 	});
+
+	it("should render with default hideSender (undefined)", () => {
+		render(
+			<TableRow>
+				<TransactionRowSkeleton />
+			</TableRow>,
+		);
+		expect(screen.getByTestId("TransactionRowSkeleton__recipient-mobile")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowSkeleton__sender-desktop")).toBeInTheDocument();
+	});
 });
