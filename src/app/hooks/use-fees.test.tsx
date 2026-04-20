@@ -1,4 +1,4 @@
-import { env, getMainsailProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 import * as Mainsail from "@/app/lib/mainsail";
 import { BigNumber } from "@/app/lib/helpers";
