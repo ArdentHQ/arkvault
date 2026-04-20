@@ -6,8 +6,6 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { Transactions } from "./Transactions";
-import { TransactionTable } from "@/domains/transaction/components/TransactionTable/TransactionTable";
-import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
 	env,
@@ -510,9 +508,9 @@ describe("Transactions", () => {
 			isLoadingTransactions: false,
 			selectedTransactionTypes: [],
 			setSortBy: setSortByMock,
-			updateFilters: vi.fn(),
 			sortBy: { column: "timestamp", desc: true },
 			transactions: [],
+			updateFilters: vi.fn(),
 		} as any);
 
 		const originalTable = await import("@/domains/transaction/components/TransactionTable/TransactionTable");

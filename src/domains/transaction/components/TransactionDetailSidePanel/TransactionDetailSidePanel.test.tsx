@@ -295,11 +295,11 @@ describe("TransactionDetailModal", () => {
 		const tokenAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
 
 		const mockTransactionToken = {
+			to: () => tokenAddress,
 			token: () => ({
 				address: () => tokenAddress,
 				displaySymbol: () => "TEST",
 			}),
-			to: () => tokenAddress,
 			value: () => BigNumber.make(100),
 		};
 
@@ -311,8 +311,8 @@ describe("TransactionDetailModal", () => {
 					...TransactionFixture,
 					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 					isTokenTransfer: () => true,
-					token: () => mockTransactionToken,
 					to: () => tokenAddress,
+					token: () => mockTransactionToken,
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}

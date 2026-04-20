@@ -237,11 +237,11 @@ describe("TransactionRowAddressing", () => {
 		const multiPaymentSentFixture = {
 			...fixture,
 			from: () => "0xFromAddress",
-			to: () => "0xToAddress",
 			isMultiPayment: () => true,
-			isSent: () => true,
 			isReturn: () => false,
+			isSent: () => true,
 			recipients: () => [{ address: "0x2", amount: "100" }],
+			to: () => "0xToAddress",
 		};
 		render(<TransactionRowAddressing transaction={multiPaymentSentFixture as any} profile={profile} />);
 

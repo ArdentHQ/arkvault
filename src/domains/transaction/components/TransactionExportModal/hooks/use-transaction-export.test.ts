@@ -255,7 +255,7 @@ describe("useTransactionExport hook", () => {
 				abortSync: () => {},
 				count: () => 0,
 				items: () => [],
-				sync: async () => undefined,
+				sync: async () => {},
 				toCsv: () => "",
 			}),
 		} as any);

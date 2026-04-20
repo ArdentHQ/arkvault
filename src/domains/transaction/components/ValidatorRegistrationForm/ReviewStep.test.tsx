@@ -5,11 +5,13 @@ import { FormProvider, useForm } from "react-hook-form";
 import { ReviewStep } from "./ReviewStep";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { BigNumber } from "@/app/lib/helpers";
-import { env, getDefaultProfileId, render, screen, syncValidators, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncValidators } from "@/utils/testing-library";
 import { vi } from "vitest";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+
+const reviewStepTestId = "ValidatorRegistrationForm__review-step";
 
 const renderComponent = (properties?: any) => {
 	const defaultValues = properties?.defaultValues ?? {
@@ -69,7 +71,7 @@ describe("ReviewStep", () => {
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent();
 
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepTestId)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -104,7 +106,7 @@ describe("ReviewStep", () => {
 
 		render(<TestWrapper />, { route: `/profiles/${profile.id()}` });
 
-		await screen.findByText("Locked fee error");
+		await expect(screen.findByText("Locked fee error")).resolves.toBeVisible();
 	});
 
 	it("should show locked amount when wallet is not a validator", async () => {
@@ -112,19 +114,19 @@ describe("ReviewStep", () => {
 
 		renderComponent();
 
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepTestId)).resolves.toBeVisible();
 
 		expect(screen.getByText(/Locked Amount|LOCKED_AMOUNT/)).toBeInTheDocument();
 	});
 
-	it("should show validator registration method when wallet is not a validator", async () => {
+	it(reviewStepTestId, async () => {
 		vi.spyOn(wallet, "isValidator").mockReturnValue(false);
 
 		renderComponent();
 
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepTestId)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ValidatorRegistrationForm__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepTestId)).toBeInTheDocument();
 	});
 
 	it("should show update validator method when wallet is a validator", async () => {
@@ -132,9 +134,9 @@ describe("ReviewStep", () => {
 
 		renderComponent();
 
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepTestId)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ValidatorRegistrationForm__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepTestId)).toBeInTheDocument();
 	});
 
 	it("should show fiat amount when not on testnet", async () => {
@@ -146,9 +148,9 @@ describe("ReviewStep", () => {
 
 		renderComponent();
 
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepTestId)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ValidatorRegistrationForm__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepTestId)).toBeInTheDocument();
 
 		exchangeMock.mockRestore();
 		networkMock.mockRestore();
@@ -159,7 +161,7 @@ describe("ReviewStep", () => {
 
 		renderComponent();
 
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepTestId)).resolves.toBeVisible();
 
 		expect(screen.getByText("Transaction Fee")).toBeInTheDocument();
 	});
@@ -169,7 +171,7 @@ describe("ReviewStep", () => {
 
 		renderComponent();
 
-		await expect(screen.findByTestId("ValidatorRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepTestId)).resolves.toBeVisible();
 
 		expect(screen.getByText("Transaction Fee")).toBeInTheDocument();
 	});

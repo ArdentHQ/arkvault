@@ -409,6 +409,6 @@ describe("ValidatorRegistrationForm", () => {
 
 		render(<TestWrapper />, { route: `/profiles/${profile.id()}` });
 
-		await screen.findByText("Locked fee error");
+		await expect(screen.findByText("Locked fee error")).resolves.toBeVisible();
 	});
 });

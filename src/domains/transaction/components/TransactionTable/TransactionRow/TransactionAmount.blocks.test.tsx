@@ -189,11 +189,11 @@ describe("TransactionAmount.blocks", () => {
 	it("should use wallet currency when token property is not present", () => {
 		const baseFixture = {
 			...TransactionFixture,
+			fee: () => 21,
 			isMultiPayment: () => false,
 			isReturn: () => false,
 			isSent: () => false,
 			value: () => 50,
-			fee: () => 21,
 			wallet: () => ({
 				...TransactionFixture.wallet(),
 				currency: () => "ARK",
