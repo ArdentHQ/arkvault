@@ -9,6 +9,7 @@ import {
 	TransactionFiatAmount,
 	TransactionTotalLabel,
 	TransactionTypeLabel,
+	isOverflowing,
 } from "./TransactionAmount.blocks";
 import { render, renderResponsive, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 
@@ -37,6 +38,18 @@ describe("TransactionAmount.blocks", () => {
 				profile: () => profile,
 			}),
 		};
+	});
+
+	it("should return true if element is overflowing", async () => {
+		expect(isOverflowing({ scrollWidth: 15, clientWidth: 10 } as HTMLSpanElement)).toBe(true);
+	});
+
+	it("should return false if element is not overflowing", async () => {
+		expect(isOverflowing({ scrollWidth: 5, clientWidth: 10 } as HTMLSpanElement)).toBe(false);
+	});
+
+	it("should return false if element is not provided", async () => {
+		expect(isOverflowing()).toBe(false);
 	});
 
 	it("should show hint and amount for multiPayment transaction", async () => {
