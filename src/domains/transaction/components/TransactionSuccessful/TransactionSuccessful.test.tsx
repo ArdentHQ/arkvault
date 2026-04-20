@@ -8,9 +8,7 @@ import { server, requestMock } from "@/tests/mocks/server";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { BigNumber } from "@/app/lib/helpers";
 
-const transactionMockImplementation = (attribute, transaction) => {
-	return transaction[attribute]();
-};
+const transactionMockImplementation = (attribute, transaction) => transaction[attribute]();
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
