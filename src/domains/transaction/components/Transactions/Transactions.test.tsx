@@ -500,19 +500,19 @@ describe("Transactions", () => {
 		const useProfileTransactionsSpy = vi.spyOn(originalHook, "useProfileTransactions");
 
 		useProfileTransactionsSpy.mockReturnValue({
-			updateFilters: vi.fn(),
-			isLoadingTransactions: false,
-			isLoadingMore: false,
-			transactions: [],
 			activeMode: "all",
 			activeTransactionType: undefined,
-			selectedTransactionTypes: [],
 			fetchMore: vi.fn(),
 			hasEmptyResults: false,
 			hasFilter: false,
 			hasMore: false,
+			isLoadingMore: false,
+			isLoadingTransactions: false,
+			selectedTransactionTypes: [],
 			setSortBy: setSortByMock,
+			updateFilters: vi.fn(),
 			sortBy: { column: "timestamp", desc: true },
+			transactions: [],
 		} as any);
 
 		const originalTable = await import("@/domains/transaction/components/TransactionTable/TransactionTable");

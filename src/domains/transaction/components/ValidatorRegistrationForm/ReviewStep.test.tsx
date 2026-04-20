@@ -14,8 +14,8 @@ let wallet: Contracts.IReadWriteWallet;
 const renderComponent = (properties?: any) => {
 	const defaultValues = properties?.defaultValues ?? {
 		fee: "2",
-		gasPrice: "1",
 		gasLimit: "1",
+		gasPrice: "1",
 		validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 	};
 
@@ -81,8 +81,8 @@ describe("ReviewStep", () => {
 			const form = useForm<any>({
 				defaultValues: {
 					fee: "2",
-					gasPrice: "1",
 					gasLimit: "1",
+					gasPrice: "1",
 					validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
 				},
 				mode: "onChange",
@@ -91,7 +91,7 @@ describe("ReviewStep", () => {
 			useEffect(() => {
 				if (!hasSetError) {
 					hasSetError = true;
-					form.setError("lockedFee", { type: "manual", message: "Locked fee error" });
+					form.setError("lockedFee", { message: "Locked fee error", type: "manual" });
 				}
 			}, [form]);
 
@@ -104,7 +104,7 @@ describe("ReviewStep", () => {
 
 		render(<TestWrapper />, { route: `/profiles/${profile.id()}` });
 
-		await waitFor(() => expect(screen.getByText("Locked fee error")).toBeInTheDocument());
+		await screen.findByText("Locked fee error");
 	});
 
 	it("should show locked amount when wallet is not a validator", async () => {

@@ -233,6 +233,22 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.getByTestId("TransactionRowAddressing__multipayment")).toBeInTheDocument();
 	});
 
+	it("should render multipayment with sent direction when isSent is true", () => {
+		const multiPaymentSentFixture = {
+			...fixture,
+			from: () => "0xFromAddress",
+			to: () => "0xToAddress",
+			isMultiPayment: () => true,
+			isSent: () => true,
+			isReturn: () => false,
+			recipients: () => [{ address: "0x2", amount: "100" }],
+		};
+		render(<TransactionRowAddressing transaction={multiPaymentSentFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__multipayment")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
+	});
+
 	it("should render advanced sender with sender alias", () => {
 		const senderFixture = {
 			...transferFixture,

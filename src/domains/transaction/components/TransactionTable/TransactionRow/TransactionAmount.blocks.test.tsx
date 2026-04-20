@@ -100,6 +100,25 @@ describe("TransactionAmount.blocks", () => {
 		exchangeMock.mockRestore();
 	});
 
+	it("should show fiat amount without hint when returnedAmount is zero", () => {
+		const fixtureWithZeroReturned = {
+			...fixture,
+			recipients: () => [
+				{ address: "address-1", amount: 10 },
+				{ address: "address-2", amount: 20 },
+			],
+		};
+
+		const exchangeMock = vi.spyOn(profile.exchangeRates(), "exchange").mockReturnValue(5);
+
+		render(<TransactionFiatAmount transaction={fixtureWithZeroReturned as any} exchangeCurrency="USD" />);
+
+		expect(screen.getByText("$5.00")).toBeInTheDocument();
+		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
+
+		exchangeMock.mockRestore();
+	});
+
 	it("should use token symbol for token transfers", () => {
 		const tokenTransferFixture = {
 			...TransactionFixture,
@@ -165,6 +184,30 @@ describe("TransactionAmount.blocks", () => {
 		render(<TransactionTotalLabel transaction={fixture} profile={profile} />);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
+	});
+
+	it("should use wallet currency when token property is not present", () => {
+		const baseFixture = {
+			...TransactionFixture,
+			isMultiPayment: () => false,
+			isReturn: () => false,
+			isSent: () => false,
+			value: () => 50,
+			fee: () => 21,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				currency: () => "ARK",
+				profile: () => profile,
+			}),
+		};
+
+		const fixtureWithoutToken = Object.fromEntries(
+			Object.entries(baseFixture).filter(([key]) => key !== "token"),
+		) as any;
+
+		render(<TransactionAmountLabel transaction={fixtureWithoutToken} />);
+
+		expect(screen.getByText(/50 ARK/)).toBeInTheDocument();
 	});
 });
 

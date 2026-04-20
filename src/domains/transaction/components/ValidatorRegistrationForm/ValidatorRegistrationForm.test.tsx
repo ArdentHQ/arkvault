@@ -396,7 +396,7 @@ describe("ValidatorRegistrationForm", () => {
 			useEffect(() => {
 				if (!hasSetError) {
 					hasSetError = true;
-					form.setError("lockedFee", { type: "manual", message: "Locked fee error" });
+					form.setError("lockedFee", { message: "Locked fee error", type: "manual" });
 				}
 			}, [form]);
 
@@ -409,6 +409,6 @@ describe("ValidatorRegistrationForm", () => {
 
 		render(<TestWrapper />, { route: `/profiles/${profile.id()}` });
 
-		await waitFor(() => expect(screen.getByText("Locked fee error")).toBeInTheDocument());
+		await screen.findByText("Locked fee error");
 	});
 });

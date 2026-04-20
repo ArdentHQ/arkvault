@@ -16,7 +16,7 @@ describe("useValidatorRegistrationLockedFee", () => {
 	it("should return fee values for wallet", () => {
 		const wallet = profile.wallets().first();
 
-		const { result } = testRenderHook(() => useValidatorRegistrationLockedFee({ wallet, profile }), {
+		const { result } = testRenderHook(() => useValidatorRegistrationLockedFee({ profile, wallet }), {
 			wrapper: ({ children }) => children,
 		});
 
@@ -26,13 +26,13 @@ describe("useValidatorRegistrationLockedFee", () => {
 
 	it("should return null fiat for testnet wallet", () => {
 		const mockWallet = {
+			currency: () => "TEST",
 			network: () => ({
 				isTest: () => true,
 			}),
-			currency: () => "TEST",
 		};
 
-		const { result } = testRenderHook(() => useValidatorRegistrationLockedFee({ wallet: mockWallet, profile }), {
+		const { result } = testRenderHook(() => useValidatorRegistrationLockedFee({ profile, wallet: mockWallet }), {
 			wrapper: ({ children }) => children,
 		});
 
@@ -41,7 +41,7 @@ describe("useValidatorRegistrationLockedFee", () => {
 	});
 
 	it("should return default ticker when wallet is undefined", () => {
-		const { result } = testRenderHook(() => useValidatorRegistrationLockedFee({ wallet: undefined, profile }), {
+		const { result } = testRenderHook(() => useValidatorRegistrationLockedFee({ profile, wallet: undefined }), {
 			wrapper: ({ children }) => children,
 		});
 
@@ -50,10 +50,10 @@ describe("useValidatorRegistrationLockedFee", () => {
 
 	it("should return zero fee when network is not synced", () => {
 		const mockWallet = {
+			currency: () => "ARK",
 			network: () => ({
 				isTest: () => false,
 			}),
-			currency: () => "ARK",
 		};
 
 		const mockProfile = {
@@ -68,7 +68,7 @@ describe("useValidatorRegistrationLockedFee", () => {
 		};
 
 		const { result } = testRenderHook(
-			() => useValidatorRegistrationLockedFee({ wallet: mockWallet, profile: mockProfile }),
+			() => useValidatorRegistrationLockedFee({ profile: mockProfile, wallet: mockWallet }),
 			{
 				wrapper: ({ children }) => children,
 			},
