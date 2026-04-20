@@ -1,7 +1,12 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import { requestMock, server } from "@/tests/mocks/server";
-import { TransactionDetailSidePanel } from "./TransactionDetailSidePanel";
+import {
+	getConfirmationsValue,
+	getConfirmationsCount,
+	getInteractedWith,
+	TransactionDetailSidePanel,
+} from "./TransactionDetailSidePanel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { act, env, getDefaultProfileId, render, screen, syncValidators, waitFor } from "@/utils/testing-library";
@@ -254,11 +259,7 @@ describe("TransactionDetailModal", () => {
 		};
 
 		render(
-			<TransactionDetailSidePanel
-				profile={profile}
-				isOpen={true}
-				transactionItem={contractDeploymentFixture as any}
-			/>,
+			<TransactionDetailSidePanel profile={profile} isOpen={true} transactionItem={contractDeploymentFixture} />,
 			{
 				route: dashboardURL,
 			},
@@ -393,16 +394,80 @@ describe("TransactionDetailModal", () => {
 		};
 
 		render(
-			<TransactionDetailSidePanel
-				profile={profile}
-				isOpen={true}
-				transactionItem={contractDeploymentFixture as any}
-			/>,
+			<TransactionDetailSidePanel profile={profile} isOpen={true} transactionItem={contractDeploymentFixture} />,
 			{
 				route: dashboardURL,
 			},
 		);
 
 		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+});
+
+describe("getInteractedWith", () => {
+	it("should return deployed contract address when contract deployment has confirmations", () => {
+		const mockTransaction = {
+			confirmations: () => 10,
+			data: () => ({ data: { receipt: { deployedContractAddress: "0x123" } } }),
+			isContractDeployment: () => true,
+			isTokenTransfer: () => false,
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBe("0x123");
+	});
+
+	it("should return token address when token transfer has token", () => {
+		const mockTransaction = {
+			isContractDeployment: () => false,
+			isTokenTransfer: () => true,
+			to: () => "0xTo",
+			token: () => ({ token: () => ({ address: () => "0xToken" }) }),
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBe("0xToken");
+	});
+
+	it("should return to address when token transfer has no token", () => {
+		const mockTransaction = {
+			isContractDeployment: () => false,
+			isTokenTransfer: () => true,
+			to: () => "0xTo",
+			token: () => null,
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBe("0xTo");
+	});
+
+	it("should return undefined when not contract deployment or token transfer", () => {
+		const mockTransaction = {
+			isContractDeployment: () => false,
+			isTokenTransfer: () => false,
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBeUndefined();
+	});
+});
+
+describe("getConfirmationsValue", () => {
+	it("should use passed isConfirmed value when provided", () => {
+		const mockTransaction = { isConfirmed: () => false };
+		expect(getConfirmationsValue(true, mockTransaction)).toBe(true);
+	});
+
+	it("should use transaction isConfirmed when isConfirmed is not provided", () => {
+		const mockTransaction = { isConfirmed: () => true };
+		expect(getConfirmationsValue(undefined, mockTransaction)).toBe(true);
+	});
+});
+
+describe("getConfirmationsCount", () => {
+	it("should use passed confirmations value when provided", () => {
+		const mockTransaction = { confirmations: () => ({ toNumber: () => 5 }) };
+		expect(getConfirmationsCount(10, mockTransaction)).toBe(10);
+	});
+
+	it("should use transaction confirmations when not provided", () => {
+		const mockTransaction = { confirmations: () => ({ toNumber: () => 5 }) };
+		expect(getConfirmationsCount(undefined, mockTransaction)).toBe(5);
 	});
 });
