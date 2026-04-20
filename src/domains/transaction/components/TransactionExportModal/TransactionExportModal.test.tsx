@@ -155,6 +155,42 @@ describe("TransactionExportModal", () => {
 		transactionIndexMock.mockRestore();
 	});
 
+	it("should download file and close from error tab", async () => {
+		const onClose = vi.fn();
+		const realResult = await profile.transactionAggregate().all({ limit: 1 });
+		const realItem = realResult.items()[0];
+
+		const receivedMock = vi.spyOn(profile.transactionAggregate(), "received");
+		receivedMock
+			.mockResolvedValueOnce({
+				items: () => Array.from({ length: 100 }, () => realItem),
+			} as any)
+			.mockRejectedValueOnce(new Error("Network error"));
+
+		const browserAccessMock = vi
+			.spyOn(browserAccess, "fileSave")
+			.mockResolvedValue({ kind: "file", name: "test.csv" } as any);
+
+		render(<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={onClose} />, {
+			route: dashboardURL,
+		});
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		await userEvent.click(exportButton());
+
+		await expect(screen.findByTestId("TransactionExportError__back-button")).resolves.toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("TransactionExportError__download"));
+
+		await waitFor(() => expect(onClose).toHaveBeenCalled());
+
+		browserAccessMock.mockRestore();
+		receivedMock.mockRestore();
+	});
+
 	it("should render success status", async () => {
 		const { asFragment } = render(
 			<TransactionExportModal isOpen wallets={[profile.wallets().first()]} onClose={vi.fn()} />,
