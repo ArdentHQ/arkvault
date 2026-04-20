@@ -57,6 +57,9 @@ const renderComponent = (properties?: any) => {
 	return { ...utils, form };
 };
 
+const validatorPublicKey =
+	"a4dc0d9080e2542b4e5347af8cebe6327d8814dabda373fbee570165661f2e39b100723009e0fad9da6f207de81cea12";
+
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
@@ -128,8 +131,6 @@ describe("ValidatorRegistrationForm", () => {
 	it("should set public key", async () => {
 		const { form } = renderComponent();
 
-		const validatorPublicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
-
 		await userEvent.type(screen.getByTestId("Input__validator_public_key"), validatorPublicKey);
 
 		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
@@ -149,7 +150,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -173,7 +174,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 				value: 250_000_000_000_000_000_000,
 			},
 			gasLimit: "1",
@@ -233,7 +234,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -256,8 +257,64 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 				value: 250_000_000_000_000_000_000,
+			},
+			gasLimit: "1",
+			gasPrice: "1",
+			signatory: undefined,
+		});
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+		getMilestoneMock.mockRestore();
+	});
+
+	it("should sign transaction with default fee when milestone does not have validatorRegistrationFee", async () => {
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
+
+		const getMilestoneMock = vi.spyOn(wallet.network(), "milestone").mockReturnValue({});
+
+		const form = {
+			clearErrors: vi.fn(),
+			getValues: () => ({
+				encryptionPassword: "password",
+				gasLimit: "1",
+				gasPrice: "1",
+				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
+				senderAddress: wallet.address(),
+				validatorPublicKey,
+			}),
+			setError: vi.fn(),
+			setValue: vi.fn(),
+		};
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [validatorRegistrationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createTransactionMock(wallet);
+
+		await signValidatorRegistration({
+			env,
+			form,
+			profile,
+		});
+
+		expect(signMock).toHaveBeenCalledWith({
+			data: {
+				validatorPublicKey,
+				value: 0,
 			},
 			gasLimit: "1",
 			gasPrice: "1",
@@ -289,7 +346,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -312,7 +369,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signUpdateValidatorMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 			},
 			gasLimit: "1",
 			gasPrice: "1",

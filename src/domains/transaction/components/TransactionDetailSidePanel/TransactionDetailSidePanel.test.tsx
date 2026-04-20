@@ -10,6 +10,8 @@ import userEvent from "@testing-library/user-event";
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
+const blockHash = "bbe10cb07743e41a9ac3b6c7801a31ca00ce1c250d79b9ec3b885289e3c66a68";
+
 describe("TransactionDetailModal", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -40,7 +42,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={false}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}
@@ -62,7 +64,7 @@ describe("TransactionDetailModal", () => {
 				onClose={onCloseMock}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}
@@ -89,7 +91,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					isTransfer: () => true,
 					memo: () => {},
 					type: () => "transfer",
@@ -111,7 +113,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					isMultiPayment: () => true,
 					isTransfer: () => false,
 					recipients: () => [
@@ -153,11 +155,11 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					data: () => ({
 						data: {
 							asset: {},
-							blockHash: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+							blockHash: blockHash,
 						},
 					}),
 					isConfirmed: () => true,
@@ -199,7 +201,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "validatorRegistration",
 					username: () => "ARK Wallet",
 					wallet: () => wallet,
@@ -220,7 +222,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "validatorResignation",
 					wallet: () => wallet,
 				}}
@@ -236,7 +238,7 @@ describe("TransactionDetailModal", () => {
 	it("should render contract deployment with deployed contract address", () => {
 		const contractDeploymentFixture = {
 			...TransactionFixture,
-			blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+			blockHash: () => blockHash,
 			confirmations: () => ({ toNumber: () => 10, valueOf: () => 10 }),
 			data: () => ({
 				data: {
@@ -276,7 +278,7 @@ describe("TransactionDetailModal", () => {
 				wallets={[wallet]}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					from: () => fromAddress,
 					to: () => toAddress,
 					type: () => "transfer",
@@ -309,13 +311,92 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					isTokenTransfer: () => true,
 					to: () => tokenAddress,
 					token: () => mockTransactionToken,
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render with confirmations passed directly", () => {
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				confirmations={15}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => blockHash,
+					confirmations: () => ({ toNumber: () => 10 }),
+					isConfirmed: () => true,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render with isConfirmed passed directly", () => {
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				isConfirmed={true}
+				confirmations={20}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => blockHash,
+					confirmations: () => ({ toNumber: () => 10 }),
+					isConfirmed: () => false,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render contract deployment with confirmations > 0", () => {
+		const contractDeploymentFixture = {
+			...TransactionFixture,
+			blockHash: () => blockHash,
+			confirmations: () => ({ toNumber: () => 10, valueOf: () => 10 }),
+			data: () => ({
+				data: {
+					receipt: {
+						deployedContractAddress: "0x123",
+					},
+				},
+			}),
+			isConfirmed: () => true,
+			isContractDeployment: () => true,
+			type: () => "contractDeployment",
+			wallet: () => wallet,
+		};
+
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				transactionItem={contractDeploymentFixture as any}
 			/>,
 			{
 				route: dashboardURL,
