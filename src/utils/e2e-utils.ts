@@ -74,17 +74,11 @@ const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...mockedAddresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(
-			`${E2E_PUBLIC_API_URL}wallets/${identifier}`,
-			`coins/mainsail/devnet/wallets/${identifier}`,
-		),
+		mockRequest(`${E2E_PUBLIC_API_URL}wallets/${identifier}`, `coins/mainsail/devnet/wallets/${identifier}`),
 	);
 
 	const mainnetMocks = ["0xb0E6c955a0Df13220C36Ea9c95bE471249247E57"].map((identifier: string) =>
-		mockRequest(
-			`${E2E_PUBLIC_API_URL}/wallets/${identifier}`,
-			`coins/mainsail/mainnet/wallets/${identifier}`,
-		),
+		mockRequest(`${E2E_PUBLIC_API_URL}/wallets/${identifier}`, `coins/mainsail/mainnet/wallets/${identifier}`),
 	);
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
@@ -125,8 +119,7 @@ const searchAddressesMocks = () => {
 					(request: any) =>
 						request.url ===
 							`${E2E_PUBLIC_API_URL}transactions?address=${address}&limit=${limit}&page=${page}` ||
-						request.url ===
-							`${E2E_PUBLIC_API_URL}transactions?limit=${limit}&address=${address}` ||
+						request.url === `${E2E_PUBLIC_API_URL}transactions?limit=${limit}&address=${address}` ||
 						request.url ===
 							`${E2E_PUBLIC_API_URL}transactions?orderBy=timestamp:desc&address=${address}&limit=${limit}&page=${page}`,
 					`coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`,
@@ -176,14 +169,8 @@ export const requestMocks = {
 	configuration: [
 		// devnet
 		mockRequest(`${E2E_PUBLIC_API_URL}blockchain`, "coins/mainsail/devnet/blockchain"),
-		mockRequest(
-			`${E2E_PUBLIC_API_URL}node/configuration`,
-			"coins/mainsail/devnet/configuration",
-		),
-		mockRequest(
-			`${E2E_PUBLIC_API_URL}node/configuration/crypto`,
-			"coins/mainsail/devnet/cryptoConfiguration",
-		),
+		mockRequest(`${E2E_PUBLIC_API_URL}node/configuration`, "coins/mainsail/devnet/configuration"),
+		mockRequest(`${E2E_PUBLIC_API_URL}node/configuration/crypto`, "coins/mainsail/devnet/cryptoConfiguration"),
 		mockRequest(`${E2E_PUBLIC_API_URL}node/fees`, "coins/mainsail/devnet/node-fees"),
 		mockRequest(`${E2E_PUBLIC_API_URL}node/syncing`, "coins/mainsail/devnet/syncing"),
 		mockRequest(`${E2E_PUBLIC_API_URL}peers`, "coins/mainsail/devnet/peers"),
@@ -314,10 +301,7 @@ export const requestMocks = {
 		),
 
 		// block call
-		mockRequest(
-			`${E2E_PUBLIC_API_URL}blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002`,
-			{},
-		),
+		mockRequest(`${E2E_PUBLIC_API_URL}blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002`, {}),
 
 		// unconfirmed transactions call
 		mockRequest(
