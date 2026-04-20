@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
 import { ValidatorRegistrationForm, signValidatorRegistration, handleSelectSender } from "./ValidatorRegistrationForm";
+import { getWalletAddress } from "./FormStep";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import validatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -467,5 +468,20 @@ describe("ValidatorRegistrationForm", () => {
 		render(<TestWrapper />, { route: `/profiles/${profile.id()}` });
 
 		await expect(screen.findByText("Locked fee error")).resolves.toBeVisible();
+	});
+});
+
+describe("getWalletAddress", () => {
+	it("should return address when wallet is provided", () => {
+		const mockWallet = { address: () => "0x123" };
+		expect(getWalletAddress(mockWallet)).toBe("0x123");
+	});
+
+	it("should return empty string when wallet is null", () => {
+		expect(getWalletAddress(null)).toBe("");
+	});
+
+	it("should return empty string when wallet is undefined", () => {
+		expect(getWalletAddress(undefined)).toBe("");
 	});
 });

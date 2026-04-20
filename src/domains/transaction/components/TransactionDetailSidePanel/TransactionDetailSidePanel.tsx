@@ -23,6 +23,29 @@ import { useTranslation } from "react-i18next";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { TokensTransferred } from "@/domains/transaction/components/TransactionDetail/TokensTransferred";
 
+export const getInteractedWith = (transaction: DTO.RawTransactionData): string | undefined => {
+	if (transaction.isContractDeployment() && transaction.confirmations() > 0) {
+		return transaction.data().data.receipt.deployedContractAddress;
+	}
+
+	if (transaction.isTokenTransfer()) {
+		if (transaction.token()) {
+			return transaction.token().token().address();
+		}
+		return transaction.to();
+	}
+};
+
+export const getConfirmationsValue = (
+	isConfirmed: boolean | undefined,
+	transaction: { isConfirmed: () => boolean },
+): boolean => isConfirmed ?? transaction.isConfirmed();
+
+export const getConfirmationsCount = (
+	confirmations: number | undefined,
+	transaction: { confirmations: () => { toNumber: () => number } },
+): number => confirmations ?? transaction.confirmations().toNumber();
+
 export const TransactionDetailContent = ({
 	transactionItem: transaction,
 	profile,
@@ -61,16 +84,6 @@ export const TransactionDetailContent = ({
 		"min-w-[138px]": isValidatorRegistrationOrResignation,
 	});
 
-	const interactedWith: string | undefined = useMemo(() => {
-		if (transaction.isContractDeployment() && transaction.confirmations() > 0) {
-			return transaction.data().data.receipt.deployedContractAddress;
-		}
-
-		if (transaction.isTokenTransfer()) {
-			return transaction.token() ? transaction.token().token().address() : transaction.to();
-		}
-	}, [transaction]);
-
 	return (
 		<DetailsCondensed>
 			<TransactionId transaction={transaction} isConfirmed={isConfirmed} />
@@ -85,7 +98,7 @@ export const TransactionDetailContent = ({
 						isMultiPayment={transaction.isMultiPayment()}
 						recipients={recipients}
 						labelClassName={labelClassName}
-						interactedWith={interactedWith}
+						interactedWith={getInteractedWith(transaction)}
 					/>
 				</DetailPadded>
 
@@ -133,9 +146,9 @@ export const TransactionDetailContent = ({
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 					<div className="mt-2 px-3 sm:px-0">
 						<TransactionConfirmations
-							isConfirmed={isConfirmed ?? transaction.isConfirmed()}
-							confirmations={confirmations ?? transaction.confirmations().toNumber()}
-							transaction={transaction}
+							isConfirmed={getConfirmationsValue(isConfirmed, transaction)}
+							confirmations={getConfirmationsCount(confirmations, transaction)}
+							transaction={transaction as any}
 						/>
 					</div>
 				</DetailPadded>

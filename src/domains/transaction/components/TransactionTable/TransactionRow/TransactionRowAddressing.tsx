@@ -149,6 +149,31 @@ const MultiPaymentAddressing = ({
 	);
 };
 
+interface TransactionDirectionProperties {
+	isSent: boolean;
+	isReturn: boolean;
+	fromAddress: string;
+	toAddress: string;
+	isMusigTransfer: boolean;
+}
+
+export const getTransactionDirection = ({
+	isSent,
+	isReturn,
+	fromAddress,
+	toAddress,
+	isMusigTransfer,
+}: TransactionDirectionProperties): Direction => {
+	const isNegative = isSent;
+
+	let direction: Direction = isNegative ? "sent" : "received";
+	if (isReturn || (isMusigTransfer && fromAddress === toAddress)) {
+		direction = "return";
+	}
+
+	return direction;
+};
+
 export const TransactionRowAddressing = ({
 	transaction,
 	profile,
@@ -168,10 +193,13 @@ export const TransactionRowAddressing = ({
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
 	const isContract = transaction.isContractTransaction();
 
-	let direction: Direction = isNegative ? "sent" : "received";
-	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {
-		direction = "return";
-	}
+	let direction: Direction = getTransactionDirection({
+		fromAddress: transaction.from(),
+		isMusigTransfer,
+		isReturn: transaction.isReturn(),
+		isSent: transaction.isSent(),
+		toAddress: transaction.to(),
+	});
 
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 

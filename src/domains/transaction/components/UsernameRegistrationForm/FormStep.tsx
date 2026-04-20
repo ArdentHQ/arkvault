@@ -13,6 +13,9 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 import { Contracts } from "@/app/lib/profiles";
 
+export const getWalletAddress = (wallet: { address: () => string } | null | undefined): string =>
+	wallet?.address() ?? "";
+
 export const handleSelectSender = (
 	address: string,
 	setValue: (name: string, value: any, options?: any) => void,
@@ -91,7 +94,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 						disabled={profile.wallets().count() === 0}
 						profile={profile}
 						onChange={(wallet) => {
-							onSelectSender(wallet?.address() ?? "");
+							onSelectSender(getWalletAddress(wallet));
 						}}
 						wallets={profile.wallets().values()}
 						wallet={wallet}

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
 import { UsernameRegistrationForm, signUsernameRegistration, handleSelectSender } from "./UsernameRegistrationForm";
+import { getWalletAddress } from "./FormStep";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import usernameResignationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/username-resignation.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -306,5 +307,20 @@ describe("UsernameRegistrationForm", () => {
 			shouldValidate: false,
 		});
 		expect(synchroniserMock).not.toHaveBeenCalled();
+	});
+});
+
+describe("getWalletAddress", () => {
+	it("should return address when wallet is provided", () => {
+		const mockWallet = { address: () => "0x123" };
+		expect(getWalletAddress(mockWallet)).toBe("0x123");
+	});
+
+	it("should return empty string when wallet is null", () => {
+		expect(getWalletAddress(null)).toBe("");
+	});
+
+	it("should return empty string when wallet is undefined", () => {
+		expect(getWalletAddress(undefined)).toBe("");
 	});
 });
