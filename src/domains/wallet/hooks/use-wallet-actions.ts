@@ -106,12 +106,6 @@ export const useWalletActions = ({
 				openPanel(Panel.VerifyMessage);
 			}
 
-			if (option.value === "multi-signature") {
-				navigate(
-					generatePath(ProfilePaths.SendMultiSignature, { profileId: profile.id(), walletId: wallet.id() }),
-				);
-			}
-
 			if (option.value === "validator-registration") {
 				handleSendRegistration?.("validatorRegistration");
 			}

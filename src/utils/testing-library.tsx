@@ -441,7 +441,6 @@ export const createTransactionMock = (
 		isContractTransaction: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
 		isReturn: () => false,
 		isSent: () => true,
 		isTransfer: () => true,

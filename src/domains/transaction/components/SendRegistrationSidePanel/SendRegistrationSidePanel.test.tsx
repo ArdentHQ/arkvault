@@ -17,7 +17,6 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
-import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/multisignature-registration.json";
 import { Observer } from "@ledgerhq/hw-transport";
 import React from "react";
 import { SendRegistrationSidePanel } from "./SendRegistrationSidePanel";
@@ -81,7 +80,6 @@ const signedTransactionMock = {
 	isContractDeployment: () => false,
 	isContractTransaction: () => true,
 	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
 	isRevoke: () => false,
 	isSecondSignature: () => false,
@@ -112,7 +110,6 @@ const signedTransactionMock = {
 		return value.plus(feeVal);
 	},
 	type: () => "transfer",
-	usesMultiSignature: () => false,
 	value: () => BigNumber.make(0),
 	wallet: () => wallet,
 };
@@ -123,43 +120,6 @@ const createValidatorRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		confirmations: () => BigNumber.make(0),
 	});
 // @ts-ignore
-
-const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => 0,
-		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
-		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
-		get: (attribute: string) => {
-			if (attribute === "multiSignature") {
-				return {
-					min: 2,
-					publicKeys: [
-						"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
-						"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-					],
-				};
-			}
-		},
-		id: () => MultisignatureRegistrationFixture.data.id,
-		isConfirmed: () => true,
-		isContractDeployment: () => false,
-		isContractTransaction: () => true,
-		isIpfs: () => false,
-		isMultiSignatureRegistration: () => true,
-		isValidatorRegistration: () => false,
-		isValidatorResignation: () => false,
-		isVote: () => false,
-		nonce: () => BigNumber.make(1),
-		recipient: () => MultisignatureRegistrationFixture.data.recipient,
-		sender: () => MultisignatureRegistrationFixture.data.sender,
-		type: () => "multiSignature",
-		username: () => "username",
-		usesMultiSignature: () => false,
-		wallet: () => ({
-			username: () => "username",
-		}),
-	} as any);
 
 const continueButton = () => screen.getByTestId("SendRegistration__continue-button");
 const formStep = () => screen.findByTestId("ValidatorRegistrationForm_form-step");

@@ -12,17 +12,6 @@ export interface WalletBalance {
 	tokens?: Record<string, BigNumber>;
 }
 
-export interface WalletMultiSignature {
-	// Standard
-	min?: number;
-	publicKeys?: string[];
-	limit?: number;
-	// Advanced
-	mandatoryKeys?: string[];
-	numberOfSignatures?: number;
-	optionalKeys?: string[];
-}
-
 export interface WalletData {
 	fill(data: any): WalletData;
 

@@ -369,7 +369,6 @@ describe("TransactionService", () => {
 		subject.dump();
 		expect(wallet.data().get(WalletData.SignedTransactions)).toEqual({});
 		expect(wallet.data().get(WalletData.BroadcastedTransactions)).toEqual({});
-		expect(wallet.data().get(WalletData.PendingMultiSignatures)).toEqual({});
 
 		// Sign a transaction and dump
 		const id = await subject.signTransfer(DUMMY_TRANSFER_INPUT);
