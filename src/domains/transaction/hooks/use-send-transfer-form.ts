@@ -109,7 +109,6 @@ export const useSendTransferForm = ({
 			});
 
 			const data = buildTransferData({
-				isMultiSignature: false,
 				memo,
 				recipients,
 			});

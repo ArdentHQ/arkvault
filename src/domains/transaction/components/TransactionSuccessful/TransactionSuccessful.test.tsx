@@ -32,13 +32,6 @@ describe("TransactionSuccessful", () => {
 	});
 
 	const transactionMockImplementation = (attribute, transaction) => {
-		if (attribute === "multiSignature") {
-			return {
-				min: 2,
-				publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()],
-			};
-		}
-
 		return transaction[attribute]();
 	};
 
