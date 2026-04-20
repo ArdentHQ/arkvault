@@ -2,7 +2,13 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { E2E_PUBLIC_API_URL, cucumber, mockedAddresses, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import {
+	E2E_PUBLIC_API_URL,
+	cucumber,
+	mockedAddresses,
+	mockRequest,
+	visitWelcomeScreen,
+} from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
@@ -28,7 +34,9 @@ const mocks = [
 	),
 	mockRequest(
 		(request: any) =>
-			!!new RegExp(E2E_PUBLIC_API_URL + "transactions\\?page=1&limit=15&address=([-0-9a-zA-Z]{1,34})").test(request.url),
+			!!new RegExp(E2E_PUBLIC_API_URL + "transactions\\?page=1&limit=15&address=([-0-9a-zA-Z]{1,34})").test(
+				request.url,
+			),
 		{
 			data: [],
 			meta: {
