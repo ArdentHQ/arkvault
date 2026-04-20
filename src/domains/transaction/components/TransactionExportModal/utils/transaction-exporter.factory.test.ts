@@ -2,6 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { TransactionExporter, filterTransactions } from "./transaction-exporter.factory";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { http, HttpResponse } from "msw";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
 
@@ -234,5 +235,46 @@ describe("CsvFormatter", () => {
 
 		expect(exporter.transactions().items()).toHaveLength(10);
 		expect(exporter.transactions().toCsv({}).length).toBeGreaterThan(0);
+	});
+
+	it("should preserve from date during pagination", async () => {
+		let callCount = 0;
+		const fromTimestamp = Date.now();
+
+		const handler = http.get(`https://dwallets-evm.mainsailhq.com/api/transactions`, ({ request }) => {
+			callCount++;
+			const url = new URL(request.url);
+
+			if (callCount === 1) {
+				return HttpResponse.json({
+					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
+					meta: {
+						...transactionsFixture.meta,
+						pageCount: 2,
+					},
+				});
+			}
+
+			const fromDate = url.searchParams.get("timestamp.from");
+			expect(fromDate).not.toBeNull();
+
+			return HttpResponse.json({
+				data: Array.from({ length: 5 }).fill(transactionsFixture.data[0]),
+				meta: {
+					...transactionsFixture.meta,
+					pageCount: 1,
+				},
+			});
+		});
+
+		server.use(handler);
+
+		const exporter = TransactionExporter({ limit: 100, profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: fromTimestamp, to: Date.now() } });
+
+		expect(exporter.transactions().items()).toHaveLength(105);
+
+		server.resetHandlers();
 	});
 });
