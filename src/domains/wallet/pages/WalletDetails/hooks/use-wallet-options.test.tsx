@@ -64,7 +64,9 @@ describe("Wallet Options Hook", () => {
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(result.current.registrationOptions.options.some((opt) => opt.value === "validator-registration")).toBe(false);
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "validator-registration")).toBe(
+			false,
+		);
 
 		vi.restoreAllMocks();
 	});
@@ -77,7 +79,9 @@ describe("Wallet Options Hook", () => {
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
-		expect(result.current.registrationOptions.options.some((opt) => opt.value === "validator-registration")).toBe(false);
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "validator-registration")).toBe(
+			false,
+		);
 
 		vi.restoreAllMocks();
 	});
