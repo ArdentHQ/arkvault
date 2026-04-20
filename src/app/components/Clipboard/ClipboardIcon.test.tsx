@@ -17,15 +17,14 @@ describe("ClipboardIcon", () => {
 	});
 
 	it("should render with tooltip in the dark mode", async () => {
-		render(
-			<Clipboard variant="icon" data="" tooltipDarkTheme>
+		const { asFragment } = render(
+			<Clipboard variant="icon" data="">
 				<span>Hello!</span>
 			</Clipboard>,
 		);
 
 		await userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
-
-		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should change the tooltip content when clicked", async () => {

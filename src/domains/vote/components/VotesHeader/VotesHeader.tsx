@@ -31,6 +31,16 @@ export const VotesHeader = ({ isSelectValidatorStep }: VotesHeaderProperties) =>
 					<ThemeIcon dimensions={[54, 55]} lightIcon="VotesLight" darkIcon="VotesDark" dimIcon="VotesDim" />
 				)
 			}
+			mobileTitleIcon={
+				isSelectValidatorStep ? undefined : (
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="MobileVotesLight"
+						darkIcon="MobileVotesDark"
+						dimIcon="MobileVotesDim"
+					/>
+				)
+			}
 		/>
 	);
 };

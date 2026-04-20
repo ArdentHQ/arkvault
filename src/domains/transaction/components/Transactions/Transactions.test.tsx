@@ -219,7 +219,7 @@ describe("Transactions", () => {
 		expect(button).not.toBeDisabled();
 	});
 
-	it("should open detail modal on transaction row click", async () => {
+	it("should open detail side panel on transaction row click", async () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -234,12 +234,48 @@ describe("Transactions", () => {
 		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+			expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should maximize and update side panel on transaction row click", async () => {
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		render(<Transactions profile={profile} wallets={profile.wallets().values()} />, {
+			route: dashboardURL,
+			withProviders: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
+		);
+
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+		});
+
+		expect(
+			within(screen.getByTestId("TransactionId")).getByText(/2dc489ca6683b7c2bc380165204/),
+		).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("SidePanel__minimize-button"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MinimizedSidePanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[1]);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("MaximizedSidePanel")).toBeInTheDocument();
+		});
 	});
 
 	it("should fetch more transactions", async () => {
@@ -428,5 +464,21 @@ describe("Transactions", () => {
 		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should show loading state", async () => {
+		render(<Transactions isLoadingTransactions={true} profile={profile} wallets={[profile.wallets().first()]} />, {
+			route: dashboardURL,
+		});
+
+		expect(await screen.findByText(/Showing/)).toBeInTheDocument();
+	});
+
+	it("should show filter when hasMore is true", async () => {
+		render(<Transactions hasMore={true} profile={profile} wallets={[profile.wallets().first()]} />, {
+			route: dashboardURL,
+		});
+
+		expect(await screen.findByTestId("FilterTransactions")).toBeInTheDocument();
 	});
 });

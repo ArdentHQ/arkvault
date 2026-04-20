@@ -13,12 +13,15 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	getMainsailProfileId,
 } from "@/utils/testing-library";
-
+import { vi } from "vitest";
+import { afterAll } from "vitest";
+import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
 const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
+let useSearchParamsMock;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -26,6 +29,10 @@ vi.mock("@/utils/delay", () => ({
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await syncValidators(profile);
@@ -42,6 +49,10 @@ describe("Dashboard", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		useSearchParamsMock.mockRestore();
 	});
 
 	it("should render loading state when profile is syncing", async () => {
@@ -77,7 +88,7 @@ describe("Dashboard", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should open modal when click on a transaction", async () => {
+	it("should open side panel when click on a transaction", async () => {
 		const all = await profile.transactionAggregate().all({ limit: 10 });
 		const transactions = all.items();
 
@@ -98,11 +109,13 @@ describe("Dashboard", () => {
 
 		await userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+		await expect(screen.findByTestId("SidePanel__content")).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.queryByTestId("SidePanel__content")).not.toBeInTheDocument();
+		});
 
 		mockTransactionsAggregate.mockRestore();
 	});

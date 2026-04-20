@@ -6,13 +6,14 @@ import { ValidateResult } from "react-hook-form";
 import { Contracts, Helpers } from "@/app/lib/profiles";
 import { BigNumber } from "@/app/lib/helpers";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
+
 export const validatorRegistration = (t: any) => ({
 	lockedFee: (wallet: Contracts.IReadWriteWallet | undefined, getValues: () => object) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.LOCKED_FEE"),
 		}),
 		validate: {
-			insufficientBalance: (lockedFee: number) => {
+			insufficientBalance: (lockedFee: string) => {
 				// If the wallet is a validator, we can only update the public key
 				// that does not require a fee.
 				if (wallet?.isValidator()) {
@@ -29,8 +30,12 @@ export const validatorRegistration = (t: any) => ({
 					"gwei",
 				);
 
-				if (lockedFee + fees > (wallet?.balance() ?? 0)) {
-					if (fees === 0) {
+				if (
+					BigNumber.make(lockedFee)
+						.plus(fees)
+						.isGreaterThan(wallet?.balance() ?? 0)
+				) {
+					if (fees.isZero()) {
 						return t(
 							"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_LOCKED_FEE",
 							{
@@ -47,7 +52,7 @@ export const validatorRegistration = (t: any) => ({
 					return t(
 						"TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.INSUFFICIENT_BALANCE_FOR_FEE_AND_LOCKED_FEE",
 						{
-							fee: Helpers.Currency.format(fees, wallet?.currency() ?? "ARK", {
+							fee: Helpers.Currency.format(fees.toString(), wallet?.currency() ?? "ARK", {
 								withTicker: true,
 							}),
 							lockedFee: Helpers.Currency.format(lockedFee, wallet?.currency() ?? "ARK", {
@@ -85,7 +90,11 @@ export const validatorRegistration = (t: any) => ({
 			},
 			unique: debounceAsync(async (publicKey: string) => {
 				try {
-					await publicKeyExists(network, profile, publicKey);
+					const exists = await profile.validators().publicKeyExists(publicKey, network);
+
+					if (exists) {
+						return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
+					}
 				} catch {
 					return t("COMMON.INPUT_PUBLIC_KEY.VALIDATION.PUBLIC_KEY_ALREADY_EXISTS", { publicKey });
 				}
@@ -93,22 +102,3 @@ export const validatorRegistration = (t: any) => ({
 		},
 	}),
 });
-
-const publicKeyExists = async (network: Networks.Network, profile: IProfile, publicKey: string) => {
-	if (publicKey.length === 0) {
-		return;
-	}
-
-	const publicApiEndpoint = network.config().host("full", profile);
-	const response = await fetch(`${publicApiEndpoint}?attributes.validatorPublicKey=${publicKey}`);
-
-	if (response.status !== 404) {
-		const data = await response.json();
-
-		if (data.meta?.count > 0) {
-			throw new Error("Public key has been used already!");
-		}
-	}
-
-	return true;
-};

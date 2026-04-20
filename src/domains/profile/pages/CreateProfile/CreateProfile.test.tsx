@@ -19,11 +19,13 @@ const baseSettings = {
 	DO_NOT_SHOW_FEE_WARNING: false,
 	EXCHANGE_CURRENCY: "BTC",
 	FALLBACK_TO_DEFAULT_NODES: true,
+	HIDE_DUST_TOKEN: false,
 	LOCALE: "en-US",
 	MARKET_PROVIDER: "cryptocompare",
 	NAME: profileName,
 	THEME: "light",
 	TIME_FORMAT: "h:mm A",
+	USE_HD_WALLETS: false,
 	USE_NETWORK_WALLET_NAMES: false,
 	USE_TEST_NETWORKS: false,
 	WALLET_SELECTION_MODE: "single",
@@ -47,6 +49,10 @@ const renderComponent = async () => {
 
 	return utils;
 };
+
+vi.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
 
 describe("CreateProfile", () => {
 	beforeAll(() => {

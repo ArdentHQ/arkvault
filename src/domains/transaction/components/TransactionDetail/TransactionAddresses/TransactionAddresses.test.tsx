@@ -50,13 +50,14 @@ describe("TransactionAddresses", () => {
 		expect(screen.queryByTestId(recipients[0].address)).not.toBeInTheDocument();
 	});
 
-	it("should render `View recipients list` if there are more than 1 recipient", () => {
+	it("should render `View recipients list` if is multi payment", () => {
 		render(
 			<TransactionAddresses
 				senderAddress={wallet.address()}
 				network={wallet.network()}
 				profile={profile}
 				recipients={recipients}
+				isMultiPayment={recipients.length > 1}
 			/>,
 		);
 
@@ -71,6 +72,7 @@ describe("TransactionAddresses", () => {
 				network={wallet.network()}
 				profile={profile}
 				recipients={recipients}
+				isMultiPayment={recipients.length > 1}
 			/>,
 		);
 

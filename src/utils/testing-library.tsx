@@ -1,6 +1,12 @@
 /* eslint-disable no-empty-pattern */
 /* eslint-disable testing-library/no-node-access */
-import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "@/app/contexts";
+import {
+	ConfigurationProvider,
+	EnvironmentProvider,
+	LedgerProvider,
+	NavigationProvider,
+	PanelsProvider,
+} from "@/app/contexts";
 import { Contracts, Environment } from "@/app/lib/profiles";
 import { FormProvider, UseFormMethods, useForm } from "react-hook-form";
 import { RenderResult, render, renderHook } from "@testing-library/react";
@@ -26,6 +32,7 @@ import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transacti
 import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 import { test as baseTest } from "vitest";
 import { bootEnvironmentWithProfileFixtures } from "./test-helpers";
+import { BIP44CoinType } from "@/app/lib/profiles/wallet.factory.contract";
 
 export {
 	mockNanoSTransport,
@@ -54,7 +61,9 @@ export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 		<EnvironmentProvider env={env}>
 			<LedgerProvider>
 				<ConfigurationProvider>
-					<NavigationProvider>{children}</NavigationProvider>
+					<NavigationProvider>
+						<PanelsProvider>{children}</PanelsProvider>
+					</NavigationProvider>
 				</ConfigurationProvider>
 			</LedgerProvider>
 		</EnvironmentProvider>
@@ -279,6 +288,13 @@ export const MAINSAIL_MNEMONICS = [
 	"trust anchor salmon annual control split globe conduct myself van ice resist blast hybrid track echo impose virus filter mystery harsh galaxy desk pitch",
 ];
 
+export const createBIP44Path = (
+	coinType: BIP44CoinType,
+	account: number = 0,
+	change: number = 0,
+	addressIndex: number = 0,
+): string => `m/44'/${coinType}/${account}'/${change}/${addressIndex}`;
+
 export const breakpoints: {
 	[key in LayoutBreakpoint | "xs"]: number;
 } = {
@@ -421,6 +437,8 @@ export const createTransactionMock = (
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
 		isConfirmed: () => true,
+		isContractDeployment: () => false,
+		isContractTransaction: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
 		isMultiSignatureRegistration: () => false,
@@ -431,7 +449,6 @@ export const createTransactionMock = (
 		isValidatorRegistration: () => false,
 		isValidatorResignation: () => false,
 		isVote: () => false,
-		isVoteCombination: () => false,
 		memo: () => null,
 		nonce: () => BigNumber.make(1),
 		recipient: () => transactionFixture.data.recipient,
@@ -464,6 +481,8 @@ export const createMainsailTransactionMock = (
 		from: () => mainsailTransactionFixture.data.from,
 		hash: () => mainsailTransactionFixture.data.hash,
 		isConfirmed: () => true,
+		isContractDeployment: () => false,
+		isContractTransaction: () => true,
 		isMultiPayment: () => false,
 		isSuccess: () => true,
 		isTransfer: () => true,
@@ -473,7 +492,6 @@ export const createMainsailTransactionMock = (
 		isValidatorRegistration: () => false,
 		isValidatorResignation: () => false,
 		isVote: () => false,
-		isVoteCombination: () => false,
 		memo: () => null,
 		nonce: () => BigNumber.make(1),
 		timestamp: () => DateTime.make(),

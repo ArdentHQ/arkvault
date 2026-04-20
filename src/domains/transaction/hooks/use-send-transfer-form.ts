@@ -1,6 +1,6 @@
 import { Networks, Services } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
+import { MutableRefObject, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";
 import { assertWallet } from "@/utils/assertions";
@@ -8,15 +8,24 @@ import { lowerCaseEquals } from "@/utils/equals";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
 import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
-import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { SendTransferForm } from "@/domains/transaction/components/SendTransferSidePanel";
+import { buildTransferData } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.helpers";
 import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
-import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { BigNumber } from "@/app/lib/helpers";
 
-export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
+export const useSendTransferForm = ({
+	wallet,
+	tokenContractAddress,
+	tokens,
+}: {
+	wallet?: Contracts.IReadWriteWallet;
+	tokenContractAddress?: string;
+	tokens?: WalletToken[];
+}) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
@@ -39,12 +48,15 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		() => ({
 			amount: "",
 			recipients: [],
-			remainingBalance: wallet?.balance(),
+			remainingBalance: wallet?.balance() ?? BigNumber.ZERO,
 			senderAddress: undefined,
+			tokenContractAddress: tokenContractAddress,
+			tokens,
 		}),
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+
 		[],
 	);
+
 	const form = useForm<SendTransferForm>({
 		defaultValues: formDefaultValues,
 		mode: "onChange",
@@ -85,6 +97,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secondSecret,
 				gasLimit,
 				gasPrice,
+				tokenContractAddress,
 			} = getValues();
 
 			const signatory = await wallet.signatoryFactory().make({
@@ -103,7 +116,15 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			setLastEstimatedExpiration(data.expiration);
 
-			const transactionInput: Services.TransactionInputs = { data, gasLimit, gasPrice, signatory };
+			const token = tokens?.find((token) => token.token().address() === tokenContractAddress);
+
+			const transactionInput: Services.TransactionInputs = {
+				data,
+				gasLimit,
+				gasPrice,
+				signatory,
+				token,
+			};
 
 			const abortSignal = abortReference.current.signal;
 
@@ -124,7 +145,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 			return transaction;
 		},
-		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet],
+		[clearErrors, gasLimitStr, gasPriceStr, getValues, persist, transactionBuilder, wallet, tokens],
 	);
 
 	const walletBalance = wallet?.balance();
@@ -143,6 +164,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("inputFeeSettings");
 
 		register("suppressWarning");
+
+		register("tokenContractAddress", sendTransferValidation.tokenContractAddress());
 
 		if (networks.length === 1) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
@@ -205,15 +228,19 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			return;
 		}
 		const fee = calculateGasFee(gasPrice, gasLimit);
-
-		const remaining = remainingBalance - fee;
-
-		// Using `18` for precision because is the maximum number of decimals
-		// that the amount field supports.
-		setValue("amount", precisionRound(remaining, 18));
-
+		setValue("amount", remainingBalance.minus(fee).toFixed());
 		void trigger(["gasPrice", "gasLimit", "amount"]);
-	}, [gasLimitStr, gasPriceStr]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [gasLimitStr, gasPriceStr]);
+
+	const previousTokenContractAddress = useRef<string | undefined>(tokenContractAddress);
+
+	useEffect(() => {
+		// Update initial default value if changed from parent component (e.g lazy field update).
+		if (previousTokenContractAddress.current !== tokenContractAddress) {
+			previousTokenContractAddress.current = tokenContractAddress;
+			setValue("tokenContractAddress", tokenContractAddress, { shouldDirty: false, shouldValidate: false });
+		}
+	}, [tokenContractAddress, setValue, wallet]);
 
 	return {
 		form,

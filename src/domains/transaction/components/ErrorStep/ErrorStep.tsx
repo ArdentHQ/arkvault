@@ -6,7 +6,6 @@ import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
-import { StepHeader } from "@/app/components/StepHeader";
 import { FormButtons } from "@/app/components/Form";
 import { TextArea } from "@/app/components/TextArea";
 
@@ -17,17 +16,18 @@ interface Properties {
 	onClose?: () => void;
 	onBack?: () => void;
 	errorMessage?: string;
-	hideHeader?: boolean;
+	hideFooter?: boolean;
+	withCopyErrorButton?: boolean;
 }
 
 export const ErrorStep = ({
-	title,
 	description,
 	onBack,
 	onClose,
 	isBackDisabled = false,
 	errorMessage,
-	hideHeader = false,
+	hideFooter = false,
+	withCopyErrorButton,
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef(null);
@@ -36,24 +36,6 @@ export const ErrorStep = ({
 	return (
 		<div data-testid="ErrorStep">
 			<div className="space-y-2">
-				{!hideHeader && (
-					<div className="flex flex-row items-center justify-start gap-3">
-						<StepHeader
-							title={
-								title ||
-								(deniedByUser ? t("TRANSACTION.REJECTED_ERROR.TITLE") : t("TRANSACTION.ERROR.TITLE"))
-							}
-							titleIcon={
-								<Image
-									name="ErrorHeaderIcon"
-									domain="transaction"
-									className="block h-[22px] w-[22px]"
-								/>
-							}
-						/>
-					</div>
-				)}
-
 				<div className="space-y-4">
 					<p className="text-theme-secondary-text hidden md:block">
 						{description ||
@@ -88,28 +70,43 @@ export const ErrorStep = ({
 				</div>
 			</div>
 
-			<FormButtons>
-				{errorMessage && (
-					<div className="mr-auto">
-						<Clipboard variant="button" data={errorMessage}>
-							<Icon name="Copy" size="lg" />
-							<span className="hidden sm:block">{t("COMMON.COPY_ERROR")}</span>
-						</Clipboard>
-					</div>
-				)}
+			{!hideFooter && (
+				<FormButtons className="sm:pt-4">
+					{errorMessage && (
+						<div className="mr-auto">
+							<Clipboard variant="button" data={errorMessage}>
+								<Icon name="Copy" size="lg" />
+								<span className="hidden sm:block">{t("COMMON.COPY_ERROR")}</span>
+							</Clipboard>
+						</div>
+					)}
 
-				{!!onClose && (
-					<Button onClick={() => onClose()} data-testid="ErrorStep__close-button" variant="secondary">
-						<div className="whitespace-nowrap">{t("COMMON.CLOSE")}</div>
-					</Button>
-				)}
+					{!!onClose && (
+						<Button onClick={() => onClose()} data-testid="ErrorStep__close-button" variant="secondary">
+							<div className="whitespace-nowrap">{t("COMMON.CLOSE")}</div>
+						</Button>
+					)}
 
-				{!!onBack && (
-					<Button data-testid="ErrorStep__back-button" disabled={isBackDisabled} onClick={() => onBack()}>
-						<div className="whitespace-nowrap">{t("COMMON.BACK")}</div>
-					</Button>
-				)}
-			</FormButtons>
+					{!!onBack && (
+						<Button data-testid="ErrorStep__back-button" disabled={isBackDisabled} onClick={() => onBack()}>
+							<div className="whitespace-nowrap">{t("COMMON.BACK")}</div>
+						</Button>
+					)}
+				</FormButtons>
+			)}
+
+			{withCopyErrorButton && (
+				<div className="mt-2 flex justify-end">
+					<Clipboard
+						variant="icon"
+						data={errorMessage!}
+						iconButtonClassName="rounded px-2 py-[3px] flex items-center transition-colors-shadow duration-100 ease-linear cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 font-semibold gap-2"
+					>
+						<Icon name="Copy" size="md" />
+						<span className="leading-5">{t("COMMON.COPY_ERROR")}</span>
+					</Clipboard>
+				</div>
+			)}
 		</div>
 	);
 };

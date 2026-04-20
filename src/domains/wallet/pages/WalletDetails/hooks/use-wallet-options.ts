@@ -34,10 +34,11 @@ const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Cont
 		return false;
 	}
 
-	if (wallet.balance() === 0) {
+	if (wallet.balance().isZero()) {
 		return false;
 	}
 
+	/* istanbul ignore next -- @preserve */
 	if (isMultiSignature(wallet)) {
 		return false;
 	}
@@ -46,6 +47,7 @@ const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Cont
 		return false;
 	}
 
+	/* istanbul ignore next -- @preserve */
 	if (isCustomNetwork(wallet.network())) {
 		return hasAvailableMusigServer({ network: wallet.network(), profile });
 	}
@@ -65,7 +67,7 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	// 	return registrationOptions;
 	// }
 
-	const walletsWithValidatorActions = wallets.filter((w) => w.balance() > 0 && isRestoredAndSynced(w));
+	const walletsWithValidatorActions = wallets.filter((w) => w.balance().isGreaterThan(0) && isRestoredAndSynced(w));
 
 	if (walletsWithValidatorActions.length > 0) {
 		if (
@@ -140,6 +142,25 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 	return registrationOptions;
 };
 
+const getContractOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
+	const validWallets = wallets.filter((w) => w.balance().isGreaterThan(0) && isRestoredAndSynced(w));
+
+	const contractOptions: DropdownOptionGroup = {
+		key: "contract",
+		options: [],
+		title: t("WALLETS.PAGE_WALLET_DETAILS.CONTRACTS"),
+	};
+
+	if (validWallets.length > 0) {
+		contractOptions.options.push({
+			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DEPLOY"),
+			value: "contract-deployment",
+		});
+	}
+
+	return contractOptions;
+};
+
 const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
 	const additionalOptions: DropdownOptionGroup = {
 		key: "additional",
@@ -147,7 +168,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 		title: t("WALLETS.PAGE_WALLET_DETAILS.ADDITIONAL_OPTIONS"),
 	};
 
-	if (wallets.some((w) => (w.balance() > 0 || w.publicKey()) && isRestoredAndSynced(w))) {
+	if (wallets.some((w) => (w.balance().isGreaterThan(0) || w.publicKey()) && isRestoredAndSynced(w))) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.TRANSACTION_HISTORY"),
 			value: "transaction-history",
@@ -199,6 +220,13 @@ export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?
 				value: "receive-funds",
 			},
 		);
+
+		if (wallets[0]?.accountName()) {
+			primaryOptions.options.push({
+				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.HD_WALLET_NAME"),
+				value: "hd-account-name",
+			});
+		}
 	}
 
 	const secondaryOptions: DropdownOptionGroup = {
@@ -232,6 +260,7 @@ export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?
 	return useMemo(
 		() => ({
 			additionalOptions: getAdditionalOptions(wallets, t),
+			contractOptions: getContractOptions(wallets, t),
 			primaryOptions,
 			registrationOptions: getRegistrationOptions(wallets, t, profile),
 			secondaryOptions,

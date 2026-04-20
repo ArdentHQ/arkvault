@@ -1,38 +1,46 @@
 import { Amount, AmountLabel } from "@/app/components/Amount";
-import React, { JSX } from "react";
+import React, { JSX, useEffect, useRef, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { ExtendedTransactionData, useTransactionTotal } from "@/domains/transaction/hooks/use-transaction-total";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Label, LabelProperties } from "@/app/components/Label";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const TransactionAmountLabel = ({
 	transaction,
 	profile,
+	allowHideBalance,
 }: {
 	transaction: ExtendedTransactionData;
 	profile?: Contracts.IProfile;
+	allowHideBalance?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
-	const currency = transaction.wallet().currency();
+	const transactionToken = "token" in transaction ? transaction.token() : undefined;
 
+	const currency = transactionToken ? transactionToken.token().displaySymbol() : transaction.wallet().currency();
+	const value = transactionToken ? transactionToken.value() : transaction.value();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
 	return (
 		<AmountLabel
-			value={transaction.value()}
+			value={value}
 			isNegative={transaction.isSent()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
-				returnedAmount
+				BigNumber.make(returnedAmount).isGreaterThan(0)
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
-			allowHideBalance
+			allowHideBalance={allowHideBalance}
 			profile={profile}
+			showCompactFormat
 		/>
 	);
 };
@@ -41,20 +49,25 @@ export const TransactionTotalLabel = ({
 	transaction,
 	hideStyles = false,
 	profile,
+	decimals,
+	showTicker,
 }: {
 	transaction: ExtendedTransactionData;
 	hideStyles?: boolean;
 	profile?: Contracts.IProfile;
+	decimals?: number;
+	showTicker?: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
-	const currency = transaction.wallet().currency();
+	const token = transaction.token();
+	const currency = token ? token.token().displaySymbol() : transaction.wallet().currency();
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
 	const getIsNegative = () => {
 		if (transaction.isValidatorResignation() && "isSuccess" in transaction && transaction.isSuccess()) {
-			return total < 0;
+			return total.isNegative();
 		}
 
 		return transaction.isSent();
@@ -63,33 +76,38 @@ export const TransactionTotalLabel = ({
 	if (hideStyles) {
 		return (
 			<Amount
+				decimals={decimals}
 				showSign={false}
-				showTicker={false}
+				showTicker={showTicker}
 				ticker={currency}
 				value={total}
 				isNegative={getIsNegative()}
 				className="text-sm font-semibold"
 				allowHideBalance
 				profile={profile}
+				showCompactFormat
 			/>
 		);
 	}
 
 	return (
 		<AmountLabel
+			decimals={decimals}
 			value={total}
 			isNegative={getIsNegative()}
 			ticker={currency}
 			hideSign={transaction.isReturn()}
 			isCompact
 			hint={
-				returnedAmount
+				returnedAmount.isGreaterThan(0)
 					? t("TRANSACTION.HINT_AMOUNT_EXCLUDING", { amount: returnedAmount, currency })
 					: undefined
 			}
 			className="h-[21px] rounded dark:border"
 			allowHideBalance
 			profile={profile}
+			showCompactFormat
+			showTicker={showTicker}
 		/>
 	);
 };
@@ -112,7 +130,54 @@ export const TransactionFiatAmount = ({
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
-	const amount = total - returnedAmount;
+	const amount = total.minus(returnedAmount);
 
 	return <Amount value={convert(amount)} ticker={exchangeCurrency || ""} allowHideBalance profile={profile} />;
+};
+
+export const TransactionTypeLabel = ({
+	tooltipContent,
+	children,
+	...props
+}: {
+	tooltipContent?: string;
+	children: React.ReactNode;
+} & LabelProperties): JSX.Element => {
+	const [isTruncated, setIsTruncated] = useState(false);
+	const textRef = useRef<HTMLSpanElement>(null);
+
+	useEffect(() => {
+		const checkTruncation = () => {
+			if (textRef.current) {
+				const isOverflowing = textRef.current.scrollWidth > textRef.current.clientWidth;
+				setIsTruncated(isOverflowing);
+			}
+		};
+
+		checkTruncation();
+
+		window.addEventListener("resize", checkTruncation);
+
+		return () => {
+			window.removeEventListener("resize", checkTruncation);
+		};
+	}, [children]);
+
+	const labelContent = (
+		<Label
+			{...props}
+			className="max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+			data-testid="TransactionRow__type"
+		>
+			<span ref={textRef} className="block truncate whitespace-nowrap">
+				{children}
+			</span>
+		</Label>
+	);
+
+	if (isTruncated && tooltipContent) {
+		return <Tooltip content={tooltipContent}>{labelContent}</Tooltip>;
+	}
+
+	return labelContent;
 };

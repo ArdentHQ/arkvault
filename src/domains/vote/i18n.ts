@@ -42,7 +42,7 @@ export const translations = {
 		NO_RESULTS: "The Validator is either unregistered or resigned. Check your search term and try again.",
 		RESIGNED_VOTE: `"<bold>{{ name }}</bold>", the Validator you are voting for has resigned. Press continue to unvote or select a new Validator below.`,
 		SEARCH_VALIDATOR_PLACEHOLDER: "Enter the validator’s name or address",
-		SEARCH_WALLET_PLACEHOLDER: "Enter the wallet’s name or address",
+		SEARCH_WALLET_PLACEHOLDER: "Enter an address or name",
 		SELECT_CRYPTOASSET_MESSAGE: "Select one of the proposed cryptoassets above to vote for a validator.",
 		SUBTITLE: "Manage your cryptoasset staking.",
 		TITLE: "Votes",

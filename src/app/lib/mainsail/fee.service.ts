@@ -5,15 +5,19 @@ import { BigNumber } from "@/app/lib/helpers";
 
 import { ArkClient } from "@arkecosystem/typescript-client";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-import { UnitConverter } from "@arkecosystem/typescript-crypto";
-import { EstimateGasPayload } from "@/app/lib/mainsail/fee.contract";
+import { EstimateGasPayload, TransactionFee } from "@/app/lib/mainsail/fee.contract";
 import { hexToBigInt } from "viem";
+import { UnitConverter } from "@arkecosystem/typescript-crypto";
 
 interface Fees {
 	min: string;
 	avg: string;
 	max: string;
 }
+
+type ConfirmationFeeType = "Slow" | "Average" | "Fast";
+
+const defaultBlockTime = 8000;
 
 export class FeeService {
 	readonly #client: ArkClient;
@@ -32,6 +36,7 @@ export class FeeService {
 		const fees = this.#transform(node.data.evmCall);
 
 		return {
+			contractDeployment: fees,
 			evmCall: fees,
 			validatorRegistration: fees,
 			validatorResignation: fees,
@@ -67,5 +72,21 @@ export class FeeService {
 			max: BigNumber.make(UnitConverter.formatUnits(fees.max ?? "0", "gwei")),
 			min: BigNumber.make(UnitConverter.formatUnits(fees.min ?? "0", "gwei")),
 		};
+	}
+
+	confirmationTime(feeType: keyof TransactionFee | undefined, blockTime?: number): number {
+		const blockTimeInSeconds = BigNumber.make(blockTime ?? defaultBlockTime).divide(1000);
+
+		const confirmationTimes: Record<ConfirmationFeeType, number> = {
+			Average: blockTimeInSeconds.toNumber(),
+			Fast: blockTimeInSeconds.toNumber(),
+			Slow: blockTimeInSeconds.times(2).toNumber(),
+		};
+
+		if (!feeType) {
+			return confirmationTimes["Average"];
+		}
+
+		return confirmationTimes[feeType] ?? confirmationTimes["Average"];
 	}
 }

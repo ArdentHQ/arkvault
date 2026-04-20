@@ -3,9 +3,11 @@ import React, { JSX } from "react";
 
 export interface OptionProperties {
 	label: string;
+	extra?: string;
 	value: string | number;
 	isSelected?: boolean;
 	isHighlighted?: boolean;
+	isDisabled?: boolean;
 }
 
 export interface OptionGroupProperties {

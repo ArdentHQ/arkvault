@@ -9,6 +9,15 @@ import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/context
 import { translations } from "@/domains/exchange/i18n";
 import { env, getMainsailProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
+import { useSearchParams } from "react-router-dom";
+
+vi.mock("react-router-dom", async () => {
+	const actual = await vi.importActual("react-router-dom");
+	return {
+		...actual,
+		useSearchParams: vi.fn(actual.useSearchParams),
+	};
+});
 
 let profile: Contracts.IProfile;
 
@@ -162,8 +171,8 @@ describe("Exchange", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should navigate to exchange", async () => {
-		const { router } = render(
+	it("should open exchange form", async () => {
+		render(
 			<ExchangeProvider>
 				<Exchange />
 			</ExchangeProvider>,
@@ -185,8 +194,47 @@ describe("Exchange", () => {
 		await userEvent.click(screen.getByText("ChangeNOW"));
 
 		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange/view`);
+			expect(screen.getByTestId("ExchangeSidePanel")).toBeInTheDocument();
 		});
+	});
+
+	it("should close the exchange side panel", async () => {
+		const mockSetSearchParams = vi.fn();
+		const mockDelete = vi.fn();
+
+		vi.mocked(useSearchParams).mockReturnValue([{ delete: mockDelete, get: vi.fn() }, mockSetSearchParams]);
+
+		render(
+			<ExchangeProvider>
+				<Exchange />
+			</ExchangeProvider>,
+			{
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("Card")).toHaveLength(2);
+		});
+
+		await userEvent.click(screen.getByText("ChangeNOW"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeSidePanel")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("ExchangeSidePanel")).not.toBeInTheDocument();
+		});
+
+		expect(mockDelete).toHaveBeenCalledWith("orderId");
+		expect(mockSetSearchParams).toHaveBeenCalled();
 	});
 
 	it("should navigate to history tab", async () => {
@@ -214,13 +262,13 @@ describe("Exchange", () => {
 		expect(screen.getByTestId("ExchangeTransactionsTable__empty-message")).toBeInTheDocument();
 	});
 
-	it("should navigate to exchange transaction", async () => {
+	it("should open up transaction detail side panel", async () => {
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 		profile
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		const { router } = render(
+		render(
 			<ExchangeProvider>
 				<Wrapper>
 					<Exchange />
@@ -244,9 +292,7 @@ describe("Exchange", () => {
 
 		await userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
-		await waitFor(() => {
-			expect(router.state.location.pathname).toBe(`/profiles/${getMainsailProfileId()}/exchange/view`);
-		});
+		await expect(screen.findByTestId("ExchangeSidePanel")).resolves.toBeVisible();
 	});
 
 	it("should delete exchange transaction", async () => {

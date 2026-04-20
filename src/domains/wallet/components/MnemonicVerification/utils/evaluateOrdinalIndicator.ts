@@ -9,4 +9,5 @@ const SUFFIXES = {
 	zero: "",
 };
 
+// eslint-disable-next-line testing-library/no-node-access
 export const getOrdinalIndicator = (number: number) => SUFFIXES[ordinalPluralizer.select(number)];

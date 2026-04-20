@@ -25,6 +25,16 @@ const getColor = (color?: ColorType, variant?: string) => {
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 		return (colors[color as keyof typeof colors] || colors.default)();
+	} else if (variant === "outline") {
+		const colors = {
+			neutral: () =>
+				`text-theme-secondary-700 border-theme-secondary-300 bg-transparent dark:border-theme-secondary-700 dark:text-theme-secondary-500 dim:border-theme-dim-700 dim:text-theme-dim-200`,
+			primary: () =>
+				`text-theme-primary-600 border-theme-primary-200 bg-transparent dark:text-theme-secondary-200 dim:text-theme-dim-100 dark:border-theme-dark-700 dim:border-theme-dim-700`,
+		};
+
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+		return (colors[color as keyof typeof colors] || colors.neutral)();
 	}
 
 	const colors = {

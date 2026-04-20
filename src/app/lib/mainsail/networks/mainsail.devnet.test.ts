@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+
 import network from "./mainsail.devnet";
 
 describe("Mainsail Devnet Network Configuration", () => {
@@ -33,7 +34,9 @@ describe("Mainsail Devnet Network Configuration", () => {
 	it("should have correct constants", () => {
 		expect(network.constants).toEqual({
 			epoch: "2023-12-21T00:00:00.000Z",
-			slip44: 111,
+			slip44: 1,
+			slip44Eth: 60,
+			slip44Legacy: 1,
 		});
 	});
 
@@ -49,7 +52,6 @@ describe("Mainsail Devnet Network Configuration", () => {
 		expect(network.meta).toEqual({
 			chainId: 11812,
 			nethash: "560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
-			slip44: 111,
 			wif: 186,
 		});
 	});
@@ -73,6 +75,7 @@ describe("Mainsail Devnet Network Configuration", () => {
 				"validatorRegistration",
 				"usernameRegistration",
 				"usernameResignation",
+				"updateValidator",
 				"validatorResignation",
 				"multiPayment",
 				"transfer",
@@ -90,6 +93,11 @@ describe("Mainsail Devnet Network Configuration", () => {
 			bip39: {
 				canBeEncrypted: true,
 				default: true,
+				permissions: ["read", "write"],
+			},
+			bip44: {
+				canBeEncrypted: true,
+				default: false,
 				permissions: ["read", "write"],
 			},
 			publicKey: {

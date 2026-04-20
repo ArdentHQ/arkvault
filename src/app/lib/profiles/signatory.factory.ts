@@ -23,6 +23,28 @@ export class SignatoryFactory implements ISignatoryFactory {
 			return this.#wallet.signatory().confirmationMnemonic(mnemonic, secondMnemonic);
 		}
 
+		if (mnemonic && this.#wallet.actsWithBip44Mnemonic()) {
+			const derivationPath = this.#wallet.data().get(WalletData.DerivationPath);
+
+			if (typeof derivationPath !== "string") {
+				throw new TypeError("[derivationPath] must be string.");
+			}
+
+			return this.#wallet.signatory().bip44Mnemonic(mnemonic, derivationPath);
+		}
+
+		if (encryptionPassword && this.#wallet.actsWithBip44MnemonicWithEncryption()) {
+			const derivationPath = this.#wallet.data().get(WalletData.DerivationPath);
+
+			if (typeof derivationPath !== "string") {
+				throw new TypeError("[derivationPath] must be string.");
+			}
+
+			const mnemonic = await this.#wallet.signingKey().get(encryptionPassword);
+
+			return this.#wallet.signatory().bip44Mnemonic(mnemonic, derivationPath);
+		}
+
 		if (mnemonic) {
 			return this.#wallet.signatory().mnemonic(mnemonic);
 		}
@@ -60,7 +82,9 @@ export class SignatoryFactory implements ISignatoryFactory {
 				throw new TypeError("[derivationPath] must be string.");
 			}
 
-			return this.#wallet.signatory().ledger(derivationPath);
+			return this.#wallet
+				.signatory()
+				.ledger(derivationPath, { senderPublicKey: this.#wallet.publicKey(), address: this.#wallet.address() });
 		}
 
 		if (secret && secondSecret) {
@@ -72,5 +96,25 @@ export class SignatoryFactory implements ISignatoryFactory {
 		}
 
 		throw new Error("No signing key provided.");
+	}
+
+	public async fromSigningKeys(input?: {
+		key?: string;
+		secondKey?: string;
+		encryptionPassword?: string;
+	}): Promise<Signatories.Signatory> {
+		const mnemonic = this.#wallet.actsWithMnemonic() ? input?.key : undefined;
+		const secret = this.#wallet.actsWithSecret() ? input?.key : undefined;
+
+		const secondMnemonic = this.#wallet.actsWithMnemonic() ? input?.secondKey : undefined;
+		const secondSecret = this.#wallet.actsWithSecret() ? input?.secondKey : undefined;
+
+		return this.make({
+			mnemonic,
+			secret,
+			secondMnemonic,
+			secondSecret,
+			encryptionPassword: input?.encryptionPassword,
+		});
 	}
 }

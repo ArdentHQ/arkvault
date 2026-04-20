@@ -408,8 +408,10 @@ describe("Contacts", () => {
 
 		await userEvent.click(sendButton());
 
-		expect(router.state.location.pathname).toBe("/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer");
-		expect(router.state.location.search).toBe("?recipient=0x0000000000000000000000000000000000000000");
+		expect(router.state.location.pathname).toBe("/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard");
+		expect(router.state.location.search).toBe(
+			"?method=transfer&recipient=0x0000000000000000000000000000000000000000",
+		);
 
 		contactsSpy.mockRestore();
 	});

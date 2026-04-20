@@ -9,7 +9,7 @@ import { FallbackToDefaultNodesToggle } from "@/domains/setting/pages/Servers/bl
 import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile, useNetworks, useProfileJobs } from "@/app/hooks";
+import { useActiveProfile, useNetworks } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
 import CustomPeers from "@/domains/setting/pages/Servers/blocks/CustomPeers";
@@ -20,6 +20,7 @@ import { DeleteResource } from "@/app/components/DeleteResource";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 import { SettingsButtonGroup, SettingsGroup } from "@/domains/setting/pages/General/General.blocks";
 import { SettingsUnsavedChangesConfirmation } from "@/domains/setting/components/SettingsUnsavedChangesConfirmation";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
@@ -156,7 +157,7 @@ export const ServersSettings = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="servers">
-			<Form id="servers__form" context={form} onSubmit={saveSettings} className="space-y-0">
+			<Form id="servers__form" context={form} onSubmit={saveSettings} className="space-y-0 pb-16 sm:pb-0">
 				<SettingsGroup title={t("SETTINGS.SERVERS.TITLE")}>
 					<ListDivided items={serverOptions} />
 				</SettingsGroup>
@@ -176,7 +177,7 @@ export const ServersSettings = () => {
 				</SettingsGroup>
 
 				<SettingsButtonGroup>
-					<FormButtons>
+					<FormButtons className="border-none">
 						<Button
 							disabled={isSaveButtonDisabled}
 							data-testid="Server-settings__submit-button"

@@ -4,7 +4,16 @@ import { server, requestMock } from "@/tests/mocks/server";
 import { TransactionService } from "./transaction.service";
 import { ConfigRepository } from "./config.repository";
 import { BigNumber } from "@/app/lib/helpers";
-import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { env, MAINSAIL_MNEMONICS, mockNanoSTransport } from "@/utils/testing-library";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { Signatory } from "./signatory";
+import { LedgerSignatory } from "./ledger.signatory";
+import { Bip44MnemonicSignatory } from "./bip44-mnemonic.signatory";
+import { HDWalletService } from "./hd-wallet.service";
+import { LedgerService } from "./ledger.service";
 
 describe("TransactionService", () => {
 	let config: ConfigRepository;
@@ -15,6 +24,11 @@ describe("TransactionService", () => {
 
 	beforeEach(async () => {
 		config = new ConfigRepository({
+			crypto: {
+				network: {
+					chainId: 11812,
+				},
+			},
 			network: {
 				currency: {
 					decimals: 8,
@@ -36,20 +50,6 @@ describe("TransactionService", () => {
 				id: "test-network",
 			},
 		});
-
-		// profile = {
-		// 	hosts: () => ({
-		// 		allByNetwork: () => [],
-		// 	}),
-		// 	ledger: () => ({
-		// 		connect: vi.fn(),
-		// 		getExtendedPublicKey: vi.fn(),
-		// 		sign: vi.fn(),
-		// 	}),
-		// 	settings: () => ({
-		// 		get: () => false,
-		// 	}),
-		// };
 
 		profile = await env.profiles().create("test profile");
 
@@ -134,6 +134,28 @@ describe("TransactionService", () => {
 		} as any;
 
 		const result = await transactionService.updateValidator(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should call builder chain and return SignedTransactionData for contractDeployment", async () => {
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: {
+				bytecode: "0x60006000F3",
+			},
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		const result = await transactionService.contractDeployment(input);
 		expect(result).toBeDefined();
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
@@ -420,22 +442,22 @@ describe("TransactionService", () => {
 	});
 
 	it("should call #signWithLedger for ledger signatory in #sign", async () => {
+		mockNanoSTransport();
 		server.use(
 			requestMock("https://test1.com/wallets/0x47ea9bAa16edd859C1792933556c4659A647749C", {
 				data: {},
 			}),
 		);
 
-		const ledgerSignatory = await wallet.signatoryFactory().make({
-			// using mnemonic to make a signatory that I can spy
-			// to emulate the ledger signatory
-			mnemonic: MAINSAIL_MNEMONICS[0],
+		const ledgerSignatory = new LedgerSignatory({
+			options: { senderPublicKey: "0xabc" },
+			signingKey: "m/44'/60'/0'/0/0",
 		});
 
-		vi.spyOn(ledgerSignatory, "actsWithMnemonic").mockReturnValue(false);
-		vi.spyOn(ledgerSignatory, "actsWithLedger").mockReturnValue(true);
+		const signatory = new Signatory(ledgerSignatory);
 
 		const profileLedgerSpy = vi.spyOn(profile, "ledger").mockReturnValue({
+			accessLedgerApp: vi.fn(),
 			connect: vi.fn(),
 			getExtendedPublicKey: vi
 				.fn()
@@ -449,7 +471,7 @@ describe("TransactionService", () => {
 			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
 			gasLimit: BigNumber.make(21000),
 			gasPrice: BigNumber.make(20000000000),
-			signatory: ledgerSignatory,
+			signatory,
 		} as any;
 
 		const result = await transactionService.transfer(input);
@@ -479,5 +501,150 @@ describe("TransactionService", () => {
 		expect(result).toBeDefined();
 		expect(result).toHaveProperty("data");
 		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should sign token transfer and return SignedTransactionData for contractDeployment", async () => {
+		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
+		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
+		const walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
+
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		const result = await transactionService.tokenTransfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should sign with HDWallet for BIP44 mnemonic signatory", async () => {
+		const bip44Signatory = new Bip44MnemonicSignatory({
+			path: "m/44'/60'/0'/0/0",
+			signingKey: MAINSAIL_MNEMONICS[0],
+		});
+		const signatory = new Signatory(bip44Signatory);
+
+		const addressMock = "0x1";
+		vi.spyOn(HDWalletService.prototype, "getAddress").mockReturnValue(addressMock);
+		vi.spyOn(HDWalletService.prototype, "sign").mockResolvedValue({
+			r: "a".repeat(64),
+			s: "b".repeat(64),
+			v: 0,
+		});
+
+		transactionService = new TransactionService({ config, profile });
+
+		server.use(
+			requestMock(`https://test1.com/wallets/${addressMock}`, {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+
+		vi.restoreAllMocks();
+	});
+
+	it("should call tokenTransfer when transfer input has token", async () => {
+		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
+		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
+		const walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+
+		vi.spyOn(profile.tokens().selected(), "items").mockReturnValue([walletToken]);
+
+		server.use(
+			requestMock("https://test1.com/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+				data: {},
+			}),
+		);
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory,
+			token: walletToken,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+	});
+
+	it("should sign with Ledger signatory that has address", async () => {
+		mockNanoSTransport();
+
+		const ledgerSignatory = new LedgerSignatory({
+			options: { address: "0xLedgerAddress" },
+			signingKey: "m/44'/60'/0'/0/0",
+		});
+		const sign = new Signatory(ledgerSignatory);
+
+		server.use(
+			requestMock("https://test1.com/wallets/0xLedgerAddress", {
+				data: {},
+			}),
+		);
+
+		vi.spyOn(HDWalletService.prototype, "sign").mockResolvedValue({
+			r: "a".repeat(64),
+			s: "b".repeat(64),
+			v: 0,
+		});
+
+		vi.spyOn(LedgerService.prototype as any, "accessLedgerApp").mockResolvedValue(undefined);
+		vi.spyOn(LedgerService.prototype as any, "sign").mockResolvedValue({
+			r: "a".repeat(64),
+			s: "b".repeat(64),
+			v: 0,
+		});
+
+		const input = {
+			data: { amount: "1", to: "0x0000000000000000000000000000000000000000" },
+			gasLimit: BigNumber.make(21000),
+			gasPrice: BigNumber.make(20000000000),
+			signatory: sign,
+		} as any;
+
+		const result = await transactionService.transfer(input);
+		expect(result).toBeDefined();
+		expect(result).toHaveProperty("data");
+		expect(result).toHaveProperty("serialized");
+
+		vi.restoreAllMocks();
 	});
 });

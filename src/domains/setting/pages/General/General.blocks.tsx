@@ -59,7 +59,7 @@ const SettingsGroupHeader = ({
 }) => (
 	<div
 		className={cn(
-			"border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-700 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6",
+			"border-theme-primary-400 bg-theme-secondary-100 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:border-theme-secondary-300 dim:border-theme-dim-700 dim:bg-theme-dim-950 -mx-3 block border-l-2 px-2.5 py-3 sm:mx-0 sm:-mt-px sm:border-t sm:border-l-0 sm:px-6",
 			className,
 		)}
 		{...properties}

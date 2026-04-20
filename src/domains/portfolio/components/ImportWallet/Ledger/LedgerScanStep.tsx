@@ -1,14 +1,13 @@
 import { Networks, Contracts } from "@/app/lib/mainsail";
 import { Contracts as ProfilesContracts } from "@/app/lib/profiles";
-import Tippy from "@tippyjs/react";
-import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
+import { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import { BIP44 } from "@ardenthq/arkvault-crypto";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
+import { Tooltip } from "@/app/components/Tooltip";
 import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
 import { Checkbox } from "@/app/components/Checkbox";
@@ -18,8 +17,9 @@ import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { Button } from "@/app/components/Button";
 import cn from "classnames";
-import { AmountWrapper, LedgerLoaderOverlay, LedgerMobileItem } from "./LedgerScanStep.blocks";
+import { AmountWrapper, AddressTableLoaderOverlay, AddressMobileItem } from "./LedgerScanStep.blocks";
 import { LedgerCancelling } from "@/domains/portfolio/components/ImportWallet/Ledger/LedgerCancelling";
+import { BigNumber } from "@/app/lib/helpers";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -31,6 +31,8 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	isScanningMore,
 	isSelected,
 	scanMore,
+	pageSize,
+	disableColdWallets = false,
 }) => {
 	const [showAll, setShowAll] = useState<boolean>(false);
 	const { t } = useTranslation();
@@ -41,14 +43,14 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		() => [
 			{
 				Header: (
-					<Tippy content={isAllSelected ? t("COMMON.UNSELECT_ALL") : t("COMMON.SELECT_ALL")}>
+					<Tooltip content={isAllSelected ? t("COMMON.UNSELECT_ALL") : t("COMMON.SELECT_ALL")}>
 						<Checkbox
 							disabled={isScanning}
 							data-testid="LedgerScanStep__select-all"
 							onChange={() => toggleSelectAll()}
 							checked={isAllSelected}
 						/>
-					</Tippy>
+					</Tooltip>
 				),
 				className: "justify-center",
 				id: "select",
@@ -74,11 +76,19 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	/* istanbul ignore next -- @preserve */
 	const showSkeleton = (isScanning || (isBusy && wallets.length === 0)) && !isScanningMore;
 
-	const length = 5;
+	const length = pageSize ?? 5;
 	const data = useMemo(() => {
 		const skeletonRows = Array.from<LedgerData>({ length }).fill({} as LedgerData);
 		return showSkeleton ? skeletonRows : wallets;
 	}, [wallets, showSkeleton]);
+
+	const isDisabled = (wallet: LedgerData): boolean => {
+		if (disableColdWallets) {
+			return BigNumber.make(wallet.balance ?? 0).isZero();
+		}
+
+		return false;
+	};
 
 	const renderTableRow = useCallback(
 		(wallet: LedgerData) => {
@@ -104,11 +114,19 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			return (
 				<TableRow isSelected={isSelected(wallet.path)} className="relative">
 					<TableCell variant="start" innerClassName="justify-center">
-						<Checkbox
-							checked={isSelected(wallet.path)}
-							onChange={() => toggleSelect(wallet.path)}
-							data-testid="LedgerScanStep__checkbox-row"
-						/>
+						<Tooltip
+							disabled={!isDisabled(wallet)}
+							content={t("COMMON.LEDGER_MIGRATION.NO_BALANCE_TO_MIGRATE")}
+						>
+							<span>
+								<Checkbox
+									disabled={isDisabled(wallet)}
+									checked={isSelected(wallet.path) && !isDisabled(wallet)}
+									onChange={() => toggleSelect(wallet.path)}
+									data-testid="LedgerScanStep__checkbox-row"
+								/>
+							</span>
+						</Tooltip>
 					</TableCell>
 
 					<TableCell className="w-2/5" innerClassName="space-x-4">
@@ -178,12 +196,12 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				)}
 
 				{isScanning && (
-					<LedgerLoaderOverlay className="rounded-xl">
+					<AddressTableLoaderOverlay className="rounded-xl">
 						<Trans
-							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_WALLETS"
+							i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADING_ADDRESSES"
 							values={{ count: length }}
 						/>
-					</LedgerLoaderOverlay>
+					</AddressTableLoaderOverlay>
 				)}
 			</div>
 
@@ -212,20 +230,21 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				<div className="flex flex-col gap-2 px-1">
 					{!showSkeleton &&
 						data.map((wallet) => (
-							<LedgerMobileItem
+							<AddressMobileItem
+								isDisabled={isDisabled(wallet)}
 								key={wallet.path}
 								isLoading={showSkeleton}
 								address={wallet.address}
 								balance={wallet.balance}
 								coin={network.ticker()}
 								handleClick={() => toggleSelect(wallet.path)}
-								isSelected={isSelected(wallet.path)}
+								isSelected={isSelected(wallet.path) && !isDisabled(wallet)}
 							/>
 						))}
 
 					{showSkeleton &&
 						Array.from({ length: 4 }).map((_, index) => (
-							<LedgerMobileItem
+							<AddressMobileItem
 								index={index}
 								key={index}
 								isLoading
@@ -258,12 +277,12 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) => {
 	if (wallets.length === 1) {
-		return <Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_WALLET" />;
+		return <Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_ADDRESS" />;
 	}
 
 	return (
 		<Trans
-			i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_WALLETS"
+			i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_ADDRESSES"
 			values={{ count: wallets.length }}
 		/>
 	);
@@ -274,32 +293,22 @@ export const LedgerScanStep = ({
 	setRetryFn,
 	profile,
 	cancelling,
+	disableColdWallets = false,
 }: {
 	network: Networks.Network;
 	profile: ProfilesContracts.IProfile;
 	cancelling: boolean;
+	disableColdWallets?: boolean;
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { register, unregister, setValue } = useFormContext();
-	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
+	const ledgerScanner = useLedgerScanner();
 
-	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
-
-	const lastPath = useMemo(() => {
-		const ledgerPaths = wallets.map(({ path }) => path);
-		const profileWalletsPaths = profile
-			.wallets()
-			.values()
-			.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath));
-
-		return [...profileWalletsPaths, ...ledgerPaths]
-			.filter(Boolean)
-			.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
-	}, [profile, wallets]);
+	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
 
 	const scanMore = useCallback(() => {
-		scan(profile, lastPath);
-	}, [scan, lastPath, profile]);
+		scan(profile);
+	}, [scan, profile]);
 
 	useEffect(() => {
 		setValue("isFinished", !isScanning, { shouldDirty: true, shouldValidate: true });
@@ -307,15 +316,15 @@ export const LedgerScanStep = ({
 
 	useEffect(() => {
 		if (canRetry) {
-			setRetryFn?.(() => scan(profile, lastPath));
+			setRetryFn?.(() => scan(profile));
 		} else {
 			setRetryFn?.(undefined);
 		}
 		return () => setRetryFn?.(undefined);
-	}, [setRetryFn, scan, canRetry, profile, lastPath]);
+	}, [setRetryFn, scan, canRetry, profile]);
 
 	useEffect(() => {
-		scan(profile, lastPath);
+		scan(profile);
 
 		return () => {
 			abortScanner();
@@ -372,7 +381,12 @@ export const LedgerScanStep = ({
 					<span data-testid="LedgerScanStep__error">{error}</span>
 				</Alert>
 			) : (
-				<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
+				<LedgerTable
+					network={network}
+					{...ledgerScanner}
+					scanMore={scanMore}
+					disableColdWallets={disableColdWallets}
+				/>
 			)}
 		</section>
 	);

@@ -112,6 +112,13 @@ export class NotificationRepository implements INotificationRepository {
 		this.#profile.status().markAsDirty();
 	}
 
+	/** {@inheritDoc INotificationRepository.markAsRemoved} */
+	public markAsRemoved(key: string): void {
+		this.get(key).isRemoved = true;
+
+		this.#profile.status().markAsDirty();
+	}
+
 	/** {@inheritDoc INotificationRepository.filterByType} */
 	public filterByType(type: INotificationType): INotification[] {
 		return this.values().filter((notification: INotification) => notification.type === type);

@@ -1,13 +1,15 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-
+import { afterAll, expect, vi, MockInstance } from "vitest";
+import * as ReactRouter from "react-router";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, render, screen, waitFor, triggerMessageSignOnce } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let useSearchParamsMock: MockInstance;
 
 const continueButton = () => screen.getByTestId("SignMessage__continue-button");
 const messageInput = () => screen.getByTestId("SignMessage__message-input");
@@ -25,6 +27,10 @@ describe("SignMessage with encrypted secret", () => {
 	beforeAll(async () => {
 		profile = await env.profiles().create("Example");
 
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
 
 		await triggerMessageSignOnce(wallet);
@@ -32,6 +38,7 @@ describe("SignMessage with encrypted secret", () => {
 
 	afterAll(() => {
 		env.profiles().forget(profile.id());
+		useSearchParamsMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -56,6 +63,8 @@ describe("SignMessage with encrypted secret", () => {
 				.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.SECRET_WITH_ENCRYPTION);
 
 			profile.wallets().push(encryptedWallet);
+
+			await env.profiles().restore(profile);
 
 			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
 				route: dashboardRoute,

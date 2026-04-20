@@ -2,12 +2,8 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
-import { StepHeader } from "@/app/components/StepHeader";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Divider } from "@/app/components/Divider";
-import { ThemeIcon } from "@/app/components/Icon";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 
@@ -31,20 +27,7 @@ export const ReviewStep = ({
 
 	return (
 		<section data-testid="UsernameRegistrationForm__review-step">
-			<StepHeader
-				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
-				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-			/>
-
-			<div className="-mx-3 mt-6 space-y-3 sm:mx-0 sm:mt-4 sm:space-y-4">
+			<div className="-mx-3 space-y-3 sm:mx-0 sm:space-y-4">
 				<TransactionAddresses
 					labelClassName="w-auto sm:min-w-[103px] sm:pr-6"
 					senderAddress={wallet.address()}
@@ -54,7 +37,7 @@ export const ReviewStep = ({
 				/>
 
 				<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-					<div className="space-y-3 sm:space-y-0">
+					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-[87px]">{t("COMMON.METHOD")}</DetailTitle>
 							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent">
@@ -62,13 +45,6 @@ export const ReviewStep = ({
 									{t("TRANSACTION.TRANSACTION_TYPES.REGISTER_USERNAME")}
 								</span>
 							</div>
-						</div>
-
-						<div className="hidden sm:block">
-							<Divider
-								dashed
-								className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-px"
-							/>
 						</div>
 
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
@@ -80,7 +56,7 @@ export const ReviewStep = ({
 					</div>
 				</DetailWrapper>
 
-				<div className="mt-2">
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
 					<FormField name="fee">
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						<FeeField

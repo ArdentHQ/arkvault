@@ -1,11 +1,18 @@
+import { renderHook } from "@testing-library/react";
 import {
+	getTransferType,
 	handleBroadcastError,
 	isNoDeviceError,
 	isRejectionError,
-	getTransferType,
-	isContractDeployment,
 	withAbortPromise,
+	getAuthenticationStepSubtitle,
+	isNullAddress,
+	handleOnMountChange,
+	getAuthenticationStepTitleIcon,
 } from "./utils";
+import { useTranslation } from "react-i18next";
+import { getMainsailProfileId } from "@/utils/testing-library";
+import { env } from "@/utils/testing-library";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {
@@ -25,6 +32,20 @@ describe("Transaction utils", () => {
 			const error = isNoDeviceError("random string");
 
 			expect(error).toBe(false);
+		});
+	});
+
+	describe("isNullAddress", () => {
+		it("should return `false`", () => {
+			const result = isNullAddress("0xabc");
+
+			expect(result).toBe(false);
+		});
+
+		it("should return `true`", () => {
+			const result = isNullAddress("0x0000000000000000000000000000000000000000");
+
+			expect(result).toBe(true);
 		});
 	});
 
@@ -69,47 +90,6 @@ describe("Transaction utils", () => {
 		});
 	});
 
-	describe("isContractDeployment", () => {
-		it("should return true for a contract deployment", () => {
-			const transaction = {
-				isUnvote: () => false,
-				isUsernameRegistration: () => false,
-				isUsernameResignation: () => false,
-				isValidatorRegistration: () => false,
-				isValidatorResignation: () => false,
-				isVote: () => false,
-				to: () => {},
-			};
-			expect(isContractDeployment(transaction as any)).toBe(true);
-		});
-
-		it("should return false for a contract transaction", () => {
-			const transaction = {
-				isUnvote: () => false,
-				isUsernameRegistration: () => false,
-				isUsernameResignation: () => false,
-				isValidatorRegistration: () => true,
-				isValidatorResignation: () => false,
-				isVote: () => false,
-				to: () => {},
-			};
-			expect(isContractDeployment(transaction as any)).toBe(false);
-		});
-
-		it("should return false for a transfer transaction", () => {
-			const transaction = {
-				isUnvote: () => false,
-				isUsernameRegistration: () => false,
-				isUsernameResignation: () => false,
-				isValidatorRegistration: () => false,
-				isValidatorResignation: () => false,
-				isVote: () => false,
-				to: () => "some-address",
-			};
-			expect(isContractDeployment(transaction as any)).toBe(false);
-		});
-	});
-
 	describe("withAbortPromise", () => {
 		it("should resolve the promise", async () => {
 			const promise = Promise.resolve("test");
@@ -144,5 +124,173 @@ describe("Transaction utils", () => {
 			const wrappedPromise = withAbortPromise()(promise);
 			await expect(wrappedPromise).rejects.toBe("original error");
 		});
+	});
+});
+
+describe("getAuthenticationStepSubtitle", () => {
+	afterEach(() => {
+		vi.clearAllMocks();
+	});
+
+	it("should return the correct subtitle for wallet with mnemonic", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Enter your mnemonic passphrase to authenticate the transaction.");
+	});
+
+	it("should return the correct subtitle for wallet with secret", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Enter your secret to authenticate the transaction.");
+	});
+
+	it("should return the correct subtitle for wallet with encryption password", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		// signing key is true
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		vi.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Enter your encryption password to authenticate the transaction.");
+	});
+
+	it("should return the correct subtitle for wallet with no wallet", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t });
+		expect(subtitle).toBe("Select an address and sign.");
+	});
+
+	it("should return the correct subtitle for wallet with ledger", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Check your Ledger device and sign the transaction.");
+	});
+
+	it("should return the correct subitlte when signing key exists", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Enter your encryption password to authenticate the transaction.");
+	});
+
+	it("should return the correct subitlte when signing key does not exist", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
+		vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
+
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
+		expect(subtitle).toBe("Enter your mnemonic passphrase to authenticate the transaction.");
+	});
+});
+
+describe("handleOnMountChange", () => {
+	it("should set mounted state when mounted is true", () => {
+		const setMounted = vi.fn();
+		const setActiveTab = vi.fn();
+		const setErrorMessage = vi.fn();
+		const resetForm = vi.fn();
+
+		handleOnMountChange({
+			mounted: true,
+			resetForm,
+			setActiveTab,
+			setErrorMessage,
+			setMounted,
+		});
+
+		expect(setMounted).toHaveBeenCalledWith(true);
+		expect(setActiveTab).not.toHaveBeenCalled();
+		expect(setErrorMessage).not.toHaveBeenCalled();
+	});
+
+	it("should reset form state when mounted is false", () => {
+		const setMounted = vi.fn();
+		const setActiveTab = vi.fn();
+		const setErrorMessage = vi.fn();
+		const resetForm = vi.fn();
+
+		handleOnMountChange({
+			mounted: false,
+			resetForm,
+			setActiveTab,
+			setErrorMessage,
+			setMounted,
+		});
+
+		expect(setMounted).toHaveBeenCalledWith(false);
+		expect(setActiveTab).toHaveBeenCalledWith(1);
+		expect(setErrorMessage).toHaveBeenCalledWith(undefined);
+	});
+});
+
+describe("getAuthenticationStepTitleIcon", () => {
+	it("should return null when wallet is not a Ledger", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+
+		const result = getAuthenticationStepTitleIcon({ isLedger: false, wallet });
+
+		expect(result).toBeNull();
+	});
+
+	it("should return Ledger icons when wallet is a Ledger", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const result = getAuthenticationStepTitleIcon({ isLedger: true, wallet });
+
+		expect(result).toEqual({
+			darkIcon: "LedgerDark",
+			dimIcon: "LedgerDim",
+			dimensions: [24, 24],
+			lightIcon: "LedgerLight",
+		});
+	});
+
+	it("should return null when wallet is undefined", () => {
+		const result = getAuthenticationStepTitleIcon({ isLedger: false, wallet: undefined });
+
+		expect(result).toBeNull();
 	});
 });

@@ -4,7 +4,6 @@ import { KeyValuePair } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { Exceptions } from ".";
-import * as TransactionTypeServiceMock from "./transaction-type.service";
 
 describe("ConfirmedTransactionData", () => {
 	let transaction: ConfirmedTransactionData;
@@ -16,26 +15,18 @@ describe("ConfirmedTransactionData", () => {
 		commonData = {
 			blockHash: "test_block_hash",
 			confirmations: 10,
-			data: "0x1234567890abcdef",
+			data: "0x12345678",
 			from: "sender_address",
 			gas: 21000,
 			gasPrice: 10000000,
 			hash: "test_hash",
 			nonce: 1,
-			receipt: { status: 1 },
+			receipt: { gasUsed: 0.01, status: 1 },
 			senderPublicKey: "somePublicKey",
 			timestamp: new Date().getTime(),
 			to: "recipient_address",
 			value: 100000000,
 		};
-	});
-
-	it("should return voteCombination type when isVoteCombination is true", () => {
-		const mockTransaction = new ConfirmedTransactionData();
-		mockTransaction.isVoteCombination = () => true;
-		mockTransaction.configure(commonData);
-
-		expect(mockTransaction.type()).toBe("voteCombination");
 	});
 
 	it("should return transfer type when isTransfer is true", () => {
@@ -47,15 +38,10 @@ describe("ConfirmedTransactionData", () => {
 	});
 
 	it("should return identifier name when TransactionTypeService returns non-null", () => {
-		const spy = vi
-			.spyOn(TransactionTypeServiceMock.TransactionTypeService, "getIdentifierName")
-			.mockReturnValue("customIdentifier");
-
 		transaction.configure(commonData);
 		const result = transaction.type();
 
-		expect(result).toBe("customIdentifier");
-		spy.mockRestore();
+		expect(result).toBe(commonData.data);
 	});
 
 	it("should return recipients for multi payment", () => {
@@ -290,7 +276,7 @@ describe("ConfirmedTransactionData", () => {
 
 	it("#timestamp", () => {
 		transaction.configure(commonData);
-		expect(transaction.timestamp()?.toISOString()).toBe("2020-07-01T00:00:00.000Z");
+		expect(transaction.timestamp()?.toISOString()).toBe("2026-03-26T00:00:00.000Z");
 	});
 
 	it("#confirmations", () => {
@@ -352,11 +338,6 @@ describe("ConfirmedTransactionData", () => {
 	it("#isTransfer", () => {
 		transaction.configure({ ...commonData, data: "0x000000" });
 		expect(transaction.isTransfer()).toBe(false);
-	});
-
-	it("#isSecondSignature", () => {
-		transaction.configure(commonData);
-		expect(transaction.isSecondSignature()).toBe(false);
 	});
 
 	it("isUsernameRegistration", () => {
@@ -434,5 +415,59 @@ describe("ConfirmedTransactionData", () => {
 		expect(transaction.isConfirmed()).toBe(true);
 		transaction.configure({ ...commonData, confirmations: 0 });
 		expect(transaction.isConfirmed()).toBe(false);
+	});
+
+	it("#gasLimit", () => {
+		transaction.configure(commonData);
+		expect(transaction.gasLimit()).toBe(21000);
+	});
+
+	it("#gasUsed", () => {
+		transaction.configure(commonData);
+		expect(transaction.gasUsed()).toBe(0.01);
+	});
+
+	it("#receipt", () => {
+		transaction.configure(commonData);
+		const receiptInstance = transaction.receipt();
+		expect(receiptInstance).toBeDefined();
+		expect(receiptInstance.isSuccess()).toBe(true);
+	});
+
+	it("#isApprove", () => {
+		transaction.configure({ ...commonData, data: "0x000000" });
+		expect(transaction.isApprove()).toBe(false);
+	});
+
+	it("#isRevoke", () => {
+		transaction.configure({ ...commonData, data: "0x000000" });
+		expect(transaction.isRevoke()).toBe(false);
+	});
+
+	it("#isBatchTransfer", () => {
+		transaction.configure({ ...commonData, data: "0x000000" });
+		expect(transaction.isBatchTransfer()).toBe(false);
+	});
+
+	describe("isContractTransaction", () => {
+		it("should return true if it is a contract transaction", () => {
+			transaction.configure(commonData);
+			vi.spyOn(transaction, "isValidatorRegistration").mockReturnValue(true);
+			vi.spyOn(transaction, "isValidatorResignation").mockReturnValue(false);
+			vi.spyOn(transaction, "isVote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUnvote").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameRegistration").mockReturnValue(false);
+			vi.spyOn(transaction, "isUsernameResignation").mockReturnValue(false);
+			expect(transaction.isContractTransaction()).toBe(true);
+		});
+	});
+
+	describe("isContractDeployment", () => {
+		it("should return true if it is not a contract transaction and has no recipient", () => {
+			transaction.configure(commonData);
+			vi.spyOn(transaction, "isContractTransaction").mockReturnValue(false);
+			vi.spyOn(transaction, "to").mockReturnValue("");
+			expect(transaction.isContractDeployment()).toBe(true);
+		});
 	});
 });

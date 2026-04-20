@@ -1,19 +1,22 @@
-import { Services } from "@/app/lib/mainsail";
 import { sortByDesc } from "@/app/lib/helpers";
 
-import { INotificationTypes, IProfile, IProfileTransactionNotificationService, ProfileSetting } from "./contracts.js";
+import { INotificationTypes, IProfile, IProfileTransactionNotificationService } from "./contracts.js";
 import { INotification, INotificationRepository } from "./notification.repository.contract.js";
 import { AggregateQuery } from "./transaction.aggregate.contract.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection.js";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
+import { Cache } from "@/app/lib/mainsail/cache.js";
 
 export class ProfileTransactionNotificationService implements IProfileTransactionNotificationService {
 	readonly #profile: IProfile;
 	readonly #allowedTypes: string[];
 	readonly #notifications: INotificationRepository;
 	readonly #defaultLimit: number;
+	readonly #cache: Cache;
 	#transactions: Record<string, ExtendedConfirmedTransactionData> = {};
 	#isSyncing: boolean;
+
+	private static readonly CACHE_TTL_SECONDS = 24 * 60 * 60;
 
 	public constructor(profile: IProfile, notificationRepository: INotificationRepository) {
 		this.#defaultLimit = 10;
@@ -21,6 +24,7 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		this.#allowedTypes = ["transfer", "multiPayment"];
 		this.#notifications = notificationRepository;
 		this.#isSyncing = false;
+		this.#cache = new Cache(ProfileTransactionNotificationService.CACHE_TTL_SECONDS);
 	}
 
 	/** {@inheritDoc IProfileTransactionNotificationService.findByTransactionId} */
@@ -41,6 +45,8 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 				delete this.#transactions[transactionId];
 			}
 		}
+
+		void this.#cache.remember(this.#cacheKey(), Object.values(this.#transactions));
 	}
 
 	/** {@inheritDoc IProfileTransactionNotificationService.forgetByRecipient} */
@@ -51,6 +57,8 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 				delete this.#transactions[meta.transactionId];
 			}
 		}
+
+		void this.#cache.remember(this.#cacheKey(), Object.values(this.#transactions));
 	}
 
 	/** {@inheritDoc IProfileTransactionNotificationService.recent} */
@@ -72,6 +80,17 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		this.#notifications.markAsRead(notification.id);
 	}
 
+	/** {@inheritDoc IProfileTransactionNotificationService.markAsRead} */
+	public markAsRemoved(transactionId: string) {
+		const notification: INotification | undefined = this.findByTransactionId(transactionId);
+
+		if (!notification) {
+			return;
+		}
+
+		this.#notifications.markAsRemoved(notification.id);
+	}
+
 	/** {@inheritDoc IProfileTransactionNotificationService.markAllAsRead} */
 	public markAllAsRead() {
 		for (const notification of this.#notifications.unread()) {
@@ -81,36 +100,60 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		}
 	}
 
+	public markAllAsRemoved() {
+		for (const notification of this.#notifications.values()) {
+			if (notification.type === INotificationTypes.Transaction) {
+				this.#notifications.markAsRemoved(notification.id);
+			}
+		}
+	}
+
+	/** {@inheritDoc IProfileTransactionNotificationService.hydrateFromCache} */
+	public async hydrateFromCache(): Promise<void> {
+		const cached = await this.#cache.remember(this.#cacheKey(), async () => Object.values(this.#transactions));
+
+		if (Array.isArray(cached) && cached.length > 0) {
+			this.#storeTransactions(cached as ExtendedConfirmedTransactionData[]);
+		}
+	}
+
 	/** {@inheritDoc IProfileTransactionNotificationService.sync} */
 	public async sync(queryInput?: AggregateQuery) {
 		this.#isSyncing = true;
 
-		this.#profile.transactionAggregate().flush("received");
+		try {
+			this.#profile.transactionAggregate().flush("all");
 
-		const transactions: ExtendedConfirmedTransactionDataCollection = await this.#profile
-			.transactionAggregate()
-			.received({
-				cursor: 1,
-				identifiers: this.#getIdentifiers(),
-				limit: this.#defaultLimit,
-				...queryInput,
-			});
+			const transactions: ExtendedConfirmedTransactionDataCollection = await this.#profile
+				.transactionAggregate()
+				.all({
+					cursor: 1,
+					identifiers: this.#getIdentifiers(),
+					limit: this.#defaultLimit,
+					...queryInput,
+				});
 
-		for (const transaction of this.#filterUnseen(transactions.items())) {
-			this.#notifications.push({
-				meta: {
-					recipients: [transaction.to(), ...transaction.recipients().map((recipient) => recipient.address)],
-					timestamp: transaction.timestamp()?.toUNIX(),
-					transactionId: transaction.hash(),
-				},
-				read_at: undefined,
-				type: INotificationTypes.Transaction,
-			});
+			for (const transaction of this.#filterUnseen(transactions.items())) {
+				this.#notifications.push({
+					meta: {
+						recipients: [
+							transaction.to(),
+							...transaction.recipients().map((recipient) => recipient.address),
+						],
+						timestamp: transaction.timestamp()?.toUNIX(),
+						transactionId: transaction.hash(),
+					},
+					read_at: undefined,
+					type: INotificationTypes.Transaction,
+				});
+			}
+
+			this.#storeTransactions(transactions.items());
+
+			await this.#cache.remember(this.#cacheKey(), Object.values(this.#transactions));
+		} finally {
+			this.#isSyncing = false;
 		}
-
-		this.#storeTransactions(transactions.items());
-
-		this.#isSyncing = false;
 	}
 
 	/** {@inheritDoc IProfileTransactionNotificationService.transactions} */
@@ -121,6 +164,19 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		);
 	}
 
+	public active(limit?: number): ExtendedConfirmedTransactionData[] {
+		const transactions = this.transactions(limit);
+		return transactions.filter((transaction) => {
+			const notification = this.#notifications.findByTransactionId(transaction.hash());
+
+			if (notification) {
+				return !notification.isRemoved;
+			}
+
+			return true;
+		});
+	}
+
 	/** {@inheritDoc IProfileTransactionNotificationService.transaction} */
 	public transaction(transactionId: string): ExtendedConfirmedTransactionData | undefined {
 		return this.#transactions[transactionId];
@@ -129,6 +185,15 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 	/** {@inheritDoc IProfileTransactionNotificationService.isSyncing} */
 	public isSyncing(): boolean {
 		return this.#isSyncing;
+	}
+
+	#cacheKey(): string {
+		const networkIds = this.#profile
+			.wallets()
+			.values()
+			.map((w) => w.network().id())
+			.join(",");
+		return `notifications.${this.#profile.id()}.transactions::${networkIds}`;
 	}
 
 	#isRecipient(transaction: ExtendedConfirmedTransactionData): boolean {
@@ -142,6 +207,16 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		const result: ExtendedConfirmedTransactionData[] = [];
 
 		for (const transaction of transactions) {
+			const existingNotification = this.#notifications.findByTransactionId(transaction.hash());
+			if (existingNotification && existingNotification.isRemoved) {
+				continue;
+			}
+
+			if (!transaction.isSuccess() && transaction.confirmations().isGreaterThan(0)) {
+				result.push(transaction);
+				continue;
+			}
+
 			if (!this.#allowedTypes.includes(transaction.type())) {
 				continue;
 			}
@@ -160,15 +235,10 @@ export class ProfileTransactionNotificationService implements IProfileTransactio
 		return result;
 	}
 
-	#getIdentifiers(): Services.WalletIdentifier[] {
-		const usesTestNetworks = this.#profile.settings().get(ProfileSetting.UseTestNetworks);
+	#getIdentifiers(): AggregateQuery["identifiers"] {
+		const wallets = this.#profile.wallets().selected();
 
-		const availableWallets = this.#profile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.network().isLive() || usesTestNetworks);
-
-		return availableWallets.map((wallet) => ({
+		return wallets.map((wallet) => ({
 			type: "address",
 			value: wallet.address(),
 		}));

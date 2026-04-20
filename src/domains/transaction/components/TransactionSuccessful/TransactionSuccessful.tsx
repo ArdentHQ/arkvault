@@ -1,53 +1,84 @@
 import cn from "classnames";
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
-import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailModal";
+import { TransactionDetailContent } from "@/domains/transaction/components/TransactionDetailSidePanel";
+import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 interface TransactionSuccessfulProperties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: ExtendedTransactionDTO;
 	senderWallet: Contracts.IReadWriteWallet;
 	children?: React.ReactNode;
+	noHeading?: boolean;
+	skipConfirmationCheck?: boolean;
 }
 
-export const TransactionSuccessful = ({ transaction, senderWallet }: TransactionSuccessfulProperties) => {
+export const TransactionSuccessful = ({
+	transaction,
+	senderWallet,
+	noHeading = false,
+	skipConfirmationCheck = false,
+}: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const { isConfirmed, confirmations } = useConfirmedTransaction({
+	const {
+		isConfirmed: confirmed,
+		isLoading,
+		transaction: confirmedTransaction,
+	} = useConfirmedTransaction({
+		disabled: skipConfirmationCheck,
 		transactionId: transaction.hash(),
 		wallet: senderWallet,
 	});
 
+	const isConfirmed = confirmed || transaction?.confirmations().isGreaterThan(0);
+
 	const titleText = isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.SUCCESS.CREATED");
+
+	const { tokens } = useProfileTokens({ profile: senderWallet.profile() });
+	const token = tokens.find((token) => token.token().address() === transaction.to());
 
 	return (
 		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>
-			<StepHeader
-				title={titleText}
-				titleIcon={
-					<Icon
-						dimensions={[24, 24]}
-						name={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
-						data-testid="icon-PendingTransaction"
-						className={cn({
-							"text-theme-primary-600": !isConfirmed,
-							"text-theme-success-600": isConfirmed,
-						})}
-					/>
-				}
-			/>
+			{!noHeading && (
+				<StepHeader
+					title={titleText}
+					titleIcon={
+						<Icon
+							dimensions={[24, 24]}
+							name={isConfirmed ? "CheckmarkDoubleCircle" : "UnconfirmedTransaction"}
+							data-testid="icon-UnconfirmedTransaction"
+							className={cn({
+								"text-theme-primary-600": !isConfirmed,
+								"text-theme-success-600": isConfirmed,
+							})}
+						/>
+					}
+				/>
+			)}
 
-			<TransactionDetailContent
-				transactionItem={transaction}
-				profile={senderWallet.profile()}
-				isConfirmed={isConfirmed}
-				confirmations={confirmations}
-				containerClassname="-mx-3 sm:mx-0"
-			/>
+			<div
+				className={cn({
+					"mt-4": !noHeading,
+				})}
+			>
+				<TransactionDetailContent
+					token={token}
+					transactionItem={confirmedTransaction ?? transaction}
+					profile={senderWallet.profile()}
+					isConfirmed={isConfirmed}
+					confirmations={
+						confirmedTransaction?.confirmations().toNumber() ?? transaction.confirmations().toNumber()
+					}
+					containerClassname="-mx-3 sm:mx-0"
+					isRefreshingTransaction={isLoading}
+				/>
+			</div>
 		</section>
 	);
 };

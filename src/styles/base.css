@@ -202,6 +202,10 @@ main {
 .select-options-list .select-list-option.is-highlighted {
 	@apply bg-theme-secondary-200 dark:bg-theme-dark-700 dim:bg-theme-dim-700 z-10;
 }
+.select-options-list .select-list-option.is-disabled {
+	/* @TODO: apply wip styles */
+	@apply cursor-not-allowed;
+}
 
 .select-options-list .select-list-option.is-highlighted .select-list-option__label {
 	@apply border-theme-secondary-100 dark:border-theme-secondary-900 dim:border-theme-dim-700 dim:text-theme-dim-50;

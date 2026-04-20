@@ -6,11 +6,10 @@ import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerifi
 import { Checkbox } from "@/app/components/Checkbox";
 import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryptionBanner.tsx";
 
-export const ConfirmPassphraseStep = () => {
+export const ConfirmPassphraseStep = ({ mnemonic }: { mnemonic: string }) => {
 	const { getValues, setValue, watch, clearErrors, register } = useFormContext();
 	const [mnemonicValidated, setMnemonicValidated] = useState(false);
 	const passphraseDisclaimer: boolean = getValues("passphraseDisclaimer");
-	const mnemonic = watch("mnemonic");
 
 	const { t } = useTranslation();
 

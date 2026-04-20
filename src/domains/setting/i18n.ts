@@ -42,6 +42,9 @@ export const translations = {
 	},
 
 	GENERAL: {
+		ADVANCED: {
+			TITLE: "Advanced",
+		},
 		APPEARANCE: {
 			TITLE: "Appearance",
 		},
@@ -60,6 +63,10 @@ export const translations = {
 				DESCRIPTION:
 					"To create or import wallets from development and test networks, you must first enable this feature.",
 				TITLE: "Development and Test Networks",
+			},
+			HD_WALLETS: {
+				DESCRIPTION: "Allows creation and import of Hierarchical Deterministic (HD) Wallets",
+				TITLE: "HD Wallets",
 			},
 			RESET_SETTINGS: {
 				DESCRIPTION: "Restore Profile settings to the default.",

@@ -5,21 +5,7 @@ export interface RecipientProperties {
 	address: string;
 	alias?: string;
 	network?: string;
-	avatar: string;
 	type: string;
-}
-
-export interface SearchRecipientListItemProperties {
-	index: number;
-	recipient: RecipientProperties;
-	onAction: (address: string) => void;
-	selectedAddress?: string;
-}
-export interface SearchRecipientListItemResponsiveProperties {
-	index: number;
-	recipient: RecipientProperties;
-	onAction: (address: string) => void;
-	selectedAddress?: string;
 }
 
 export interface SearchRecipientProperties {

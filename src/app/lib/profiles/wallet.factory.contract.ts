@@ -1,6 +1,5 @@
-import { Services } from "@/app/lib/mainsail";
-
 import { IReadWriteWallet } from "./contracts.js";
+import { Services } from "@/app/lib/mainsail";
 
 /**
  * Defines the options needed to generate a wallet.
@@ -14,6 +13,17 @@ export interface IGenerateOptions {
 }
 
 /**
+ * Defines the options needed to generate a wallet.
+ *
+ * @type IGenerateHDOptions
+ */
+export type IGenerateHDOptions = IGenerateOptions & {
+	coin?: BIP44CoinType;
+	mnemonic?: string;
+	levels: Services.IdentityLevels;
+};
+
+/**
  * Defines the options for an import with a mnemonic.
  *
  * @interface IMnemonicOptions
@@ -21,6 +31,16 @@ export interface IGenerateOptions {
 export interface IMnemonicOptions {
 	mnemonic: string;
 	password?: string;
+}
+
+export enum BIP44CoinType {
+	ARK = "1'", // 111 for mainnet, 1 for devnet (core), todo: https://app.clickup.com/t/86dxuqw2q
+	ETH = "60'",
+}
+
+export interface IMnemonicBIP44DerivativeOptions extends IMnemonicOptions {
+	levels: Services.IdentityLevels;
+	coin?: BIP44CoinType;
 }
 
 export interface IMnemonicDerivativeOptions extends IMnemonicOptions {
@@ -103,6 +123,8 @@ export interface IWalletFactory {
 	 */
 	generate(options?: IGenerateOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
 
+	generateHD(options?: IGenerateHDOptions): Promise<{ mnemonic: string; wallet: IReadWriteWallet }>;
+
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP39 proposal.
 	 *
@@ -115,11 +137,11 @@ export interface IWalletFactory {
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP44 proposal.
 	 *
-	 * @param {IMnemonicDerivativeOptions} options
+	 * @param {IMnemonicBIP44DerivativeOptions} options
 	 * @return {Promise<IReadWriteWallet>}
 	 * @memberof IWalletFactory
 	 */
-	fromMnemonicWithBIP44(options: IMnemonicDerivativeOptions): Promise<IReadWriteWallet>;
+	fromMnemonicWithBIP44(options: IMnemonicBIP44DerivativeOptions): Promise<IReadWriteWallet>;
 
 	/**
 	 * Imports a wallet from a mnemonic, using the BIP49 proposal.

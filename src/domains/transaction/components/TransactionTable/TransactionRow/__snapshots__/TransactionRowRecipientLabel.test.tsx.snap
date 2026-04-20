@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TransactionRowRecipientLabel > should render with right alignment on mobile view 1`] = `
+<DocumentFragment>
+  <div
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+  >
+    <span>
+      <span>
+        <span
+          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+          data-testid="Address__address"
+        >
+          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+        </span>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionRowRecipientLabel > should render with right alignment on mobile view 2`] = `
+<DocumentFragment>
+  <div
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+  >
+    <span>
+      <span>
+        <span
+          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+          data-testid="Address__address"
+        >
+          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+        </span>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;

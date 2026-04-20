@@ -1,6 +1,31 @@
 import { useStepMath } from "@/domains/transaction/components/InputFee/InputFee.helpers";
+import { useConfirmationTimes } from "@/domains/transaction/components/InputFee/use-confirmation-times";
 
 describe("InputFee.helpers", () => {
+	describe("useConfirmationTimes", () => {
+		it("should use default block time when not provided", () => {
+			const { byFeeType } = useConfirmationTimes({});
+
+			expect(byFeeType("Average")).toBe(8);
+			expect(byFeeType("Fast")).toBe(8);
+			expect(byFeeType("Slow")).toBe(16);
+		});
+
+		it("should use provided block time", () => {
+			const { byFeeType } = useConfirmationTimes({ blockTime: 2000 });
+
+			expect(byFeeType("Average")).toBe(2);
+			expect(byFeeType("Fast")).toBe(2);
+			expect(byFeeType("Slow")).toBe(4);
+		});
+
+		it("should return average confirmation time for unknown fee type", () => {
+			const { byFeeType } = useConfirmationTimes({ blockTime: 4000 });
+
+			expect(byFeeType("Unknown")).toBe(4);
+		});
+	});
+
 	describe("useStepMath", () => {
 		it("should correctly add step to value", () => {
 			const { increment } = useStepMath(0.01, 0.05);

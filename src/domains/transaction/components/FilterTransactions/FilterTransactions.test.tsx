@@ -12,6 +12,7 @@ describe("FilterTransactions", () => {
 		"validatorRegistration",
 		"usernameRegistration",
 		"usernameResignation",
+		"updateValidator",
 		"validatorResignation",
 		"multiPayment",
 		"transfer",
@@ -285,7 +286,13 @@ describe("FilterTransactions", () => {
 				value: expect.any(String),
 			},
 			undefined,
-			["validatorRegistration", "usernameRegistration", "usernameResignation", "validatorResignation"],
+			[
+				"validatorRegistration",
+				"usernameRegistration",
+				"usernameResignation",
+				"updateValidator",
+				"validatorResignation",
+			],
 		);
 	});
 

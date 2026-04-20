@@ -4,7 +4,6 @@ import { ImportOption, OptionsValue } from "@/domains/wallet/hooks/use-import-op
 import { Input, InputAddress, InputPassword } from "@/app/components/Input";
 import React, { useEffect } from "react";
 
-import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@/app/lib/profiles";
 import { TFunction } from "i18next";
 import { WalletEncryptionBanner } from "@/domains/wallet/components/WalletEncryptionBanner.tsx/WalletEncryptionBanner";
@@ -12,6 +11,7 @@ import { truncate } from "@/app/lib/helpers";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { MnemonicRules, validateMnemonic } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
 
 const validateAddress = async ({
 	findAddress,
@@ -27,6 +27,8 @@ const validateAddress = async ({
 	network: Networks.Network;
 }) => {
 	try {
+		validateMnemonic(value, t);
+
 		const address = await findAddress(value);
 
 		return (
@@ -73,7 +75,6 @@ const MnemonicField = ({
 							value,
 						}),
 				})}
-				preventAutofill
 				{...properties}
 			/>
 		</FormField>
@@ -167,8 +168,33 @@ const ImportInputField = ({
 }) => {
 	const { t } = useTranslation();
 
+	const { getValues } = useFormContext();
+
 	if (type.startsWith("bip")) {
 		const findAddress = async (mnemonic: string) => {
+			if (type === OptionsValue.BIP44) {
+				const profileWalletAddresses = profile
+					.wallets()
+					.values()
+					.map((w) => w.address().toLowerCase());
+
+				for (let index = 0; index < 5; index++) {
+					const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+						levels: {
+							account: 0,
+							addressIndex: index,
+						},
+						mnemonic,
+					});
+
+					if (profileWalletAddresses.includes(wallet.address().toLowerCase())) {
+						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.EXISTING_MNEMONIC"));
+					}
+				}
+
+				return "";
+			}
+
 			try {
 				const wallet = await profile.walletFactory().fromMnemonicWithBIP39({ mnemonic });
 				const isValid = new AddressService().validate(wallet.address());
@@ -193,19 +219,8 @@ const ImportInputField = ({
 					findAddress={findAddress}
 					network={network}
 				/>
-				<Alert
-					title={t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.TITLE")}
-					variant="info"
-					collapsible
-				>
-					<p>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_TITLE")}</p>
-					<ol className="list-disc pl-5">
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_1")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_2")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_3")}</li>
-						<li>{t("WALLETS.PAGE_IMPORT_WALLET.IMPORT_DETAIL_STEP.MNEMONIC_TIP.GUIDELINES_4")}</li>
-					</ol>
-				</Alert>
+
+				<MnemonicRules mnemonic={getValues("value")} />
 			</>
 		);
 	}

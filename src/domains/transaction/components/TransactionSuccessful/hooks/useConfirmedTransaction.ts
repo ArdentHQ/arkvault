@@ -1,24 +1,44 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
+import { ExtendedConfirmedTransactionData } from "@/app/lib/profiles/transaction.dto";
 
 export const useConfirmedTransaction = ({
 	wallet,
 	transactionId,
+	disabled,
 }: {
-	wallet: Contracts.IReadWriteWallet;
-	transactionId: string;
-}): { isConfirmed: boolean; confirmations: number } => {
+	wallet?: Contracts.IReadWriteWallet;
+	transactionId?: string;
+	disabled?: boolean;
+}): { isConfirmed: boolean; isLoading: boolean; transaction?: ExtendedConfirmedTransactionData } => {
+	const [isLoading, setIsLoading] = useState(false);
 	const [isConfirmed, setIsConfirmed] = useState(false);
-	const [confirmations, setConfirmations] = useState(0);
+	const [transaction, setTransaction] = useState<ExtendedConfirmedTransactionData | undefined>(undefined);
+
+	const intervalId = useRef<NodeJS.Timeout | undefined>(undefined);
 
 	useEffect(() => {
+		if (!transactionId || !wallet || disabled) {
+			return;
+		}
+
 		const checkConfirmed = (): void => {
-			const id = setInterval(async () => {
+			setIsLoading(true);
+
+			intervalId.current = setInterval(async () => {
 				try {
 					const transaction = await wallet.client().transaction(transactionId);
+
+					if (wallet) {
+						transaction.setMeta("publicKey", wallet.publicKey());
+						transaction.setMeta("address", wallet.address());
+					}
 					setIsConfirmed(true);
-					setConfirmations(transaction.confirmations().toNumber());
-					clearInterval(id);
+
+					setIsLoading(false);
+					setTransaction(new ExtendedConfirmedTransactionData(wallet, transaction));
+
+					clearInterval(intervalId.current);
 				} catch {
 					// transaction is not forged yet, ignore the error
 				}
@@ -26,7 +46,13 @@ export const useConfirmedTransaction = ({
 		};
 
 		void checkConfirmed();
-	}, [wallet.id(), transactionId]);
 
-	return { confirmations, isConfirmed };
+		return () => {
+			setIsConfirmed(false);
+			setTransaction(undefined);
+			clearInterval(intervalId.current);
+		};
+	}, [wallet?.id(), transactionId, disabled]);
+
+	return { isConfirmed, isLoading, transaction };
 };

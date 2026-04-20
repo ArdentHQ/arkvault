@@ -29,7 +29,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your mnemonic passphrase to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC
         </div>
       </div>
     </div>
@@ -50,19 +50,12 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="relative flex h-full flex-1"
         >
           <input
-            aria-hidden="true"
-            autocomplete="off"
-            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
-            tabindex="-1"
-            type="password"
-          />
-          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -72,50 +65,54 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           <div
             class="pr-3"
           >
-            <span
-              data-errortext="This mnemonic does not correspond to your wallet"
-              data-testid="Input__error"
-            >
-              <div
-                class="text-theme-danger-500"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
+            <span>
+              <span>
+                <span
+                  data-errortext="This mnemonic does not correspond to your address"
+                  data-testid="Input__error"
                 >
-                  <svg
-                    id="circle-exclamation-mark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    class="text-theme-danger-500"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+                      <svg
+                        id="circle-exclamation-mark"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="9"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 10.5v-5"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 14h0"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -163,6 +160,167 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
         </div>
       </div>
+      <div
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-b border border-t-0 p-4 mt-0"
+      >
+        <div
+          class="space-y-4"
+          data-testid="Rules"
+        >
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              12 or 24 words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Lowercase characters only
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Spaces between words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              No trailing spaces
+            </span>
+          </div>
+        </div>
+      </div>
     </fieldset>
   </div>
 </DocumentFragment>
@@ -197,7 +355,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your mnemonic passphrase to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC
         </div>
       </div>
     </div>
@@ -218,18 +376,11 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="relative flex h-full flex-1"
         >
           <input
-            aria-hidden="true"
             autocomplete="off"
-            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
-            tabindex="-1"
-            type="password"
-          />
-          <input
-            autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -281,6 +432,167 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           </div>
         </div>
       </div>
+      <div
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-b border border-t-0 p-4 mt-0"
+      >
+        <div
+          class="space-y-4"
+          data-testid="Rules"
+        >
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              12 or 24 words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Lowercase characters only
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Spaces between words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              No trailing spaces
+            </span>
+          </div>
+        </div>
+      </div>
     </fieldset>
   </div>
 </DocumentFragment>
@@ -315,7 +627,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
           data-testid="header__subtitle"
         >
-          Enter your secret to sign the message.
+          MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET
         </div>
       </div>
     </div>
@@ -336,19 +648,12 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           class="relative flex h-full flex-1"
         >
           <input
-            aria-hidden="true"
-            autocomplete="off"
-            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
-            tabindex="-1"
-            type="password"
-          />
-          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
             name="secret"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -358,50 +663,54 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           <div
             class="pr-3"
           >
-            <span
-              data-errortext="This secret does not correspond to your wallet"
-              data-testid="Input__error"
-            >
-              <div
-                class="text-theme-danger-500"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
+            <span>
+              <span>
+                <span
+                  data-errortext="This secret does not correspond to your address"
+                  data-testid="Input__error"
                 >
-                  <svg
-                    id="circle-exclamation-mark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    class="text-theme-danger-500"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+                      <svg
+                        id="circle-exclamation-mark"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="9"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 10.5v-5"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 14h0"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -480,7 +789,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -538,7 +847,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -620,7 +929,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -677,7 +986,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -734,7 +1043,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -768,7 +1077,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -829,7 +1138,7 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
           <strong>
             Ledger Nano S
           </strong>
-           is connected, but his operation requires a 
+           is connected, but this operation requires a 
           <strong>
             Ledger Nano X
           </strong>
@@ -908,19 +1217,12 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           class="relative flex h-full flex-1"
         >
           <input
-            aria-hidden="true"
-            autocomplete="off"
-            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
-            tabindex="-1"
-            type="password"
-          />
-          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -930,50 +1232,54 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           <div
             class="pr-3"
           >
-            <span
-              data-errortext="This mnemonic does not correspond to your wallet"
-              data-testid="Input__error"
-            >
-              <div
-                class="text-theme-danger-500"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
+            <span>
+              <span>
+                <span
+                  data-errortext="This mnemonic does not correspond to your address"
+                  data-testid="Input__error"
                 >
-                  <svg
-                    id="circle-exclamation-mark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    class="text-theme-danger-500"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+                      <svg
+                        id="circle-exclamation-mark"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="9"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 10.5v-5"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 14h0"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -1018,6 +1324,167 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
                 </div>
               </div>
             </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-b border border-t-0 p-4 mt-0"
+      >
+        <div
+          class="space-y-4"
+          data-testid="Rules"
+        >
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              12 or 24 words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Lowercase characters only
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Spaces between words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              No trailing spaces
+            </span>
           </div>
         </div>
       </div>
@@ -1076,18 +1543,11 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           class="relative flex h-full flex-1"
         >
           <input
-            aria-hidden="true"
             autocomplete="off"
-            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
-            tabindex="-1"
-            type="password"
-          />
-          <input
-            autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -1136,6 +1596,167 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
                 </div>
               </div>
             </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-b border border-t-0 p-4 mt-0"
+      >
+        <div
+          class="space-y-4"
+          data-testid="Rules"
+        >
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_WORD_COUNT-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              12 or 24 words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-LOWERCASE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Lowercase characters only
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-HAS_VALID_SPACING-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              Spaces between words
+            </span>
+          </div>
+          <div
+            class="flex items-center space-x-2"
+            data-testid="MnemonicRule-NO_TRAILING_SPACE-1"
+          >
+            <span
+              class="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950"
+            >
+              <div>
+                <div
+                  style="height: 8px; width: 8px;"
+                >
+                  <svg
+                    id="check-mark-small"
+                    style="height: 100%; width: 100%;"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </span>
+            <span
+              class="text-sm font-semibold text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+            >
+              No trailing spaces
+            </span>
           </div>
         </div>
       </div>
@@ -1194,19 +1815,12 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           class="relative flex h-full flex-1"
         >
           <input
-            aria-hidden="true"
-            autocomplete="off"
-            class="pointer-events-none absolute inset-0 border-0 bg-transparent p-0! font-mono ring-0 outline-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 text-sm! sm:text-base!"
-            tabindex="-1"
-            type="password"
-          />
-          <input
             aria-invalid="true"
             autocomplete="off"
-            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! caret-theme-text no-selection-style font-mono text-transparent"
+            class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
             data-testid="AuthenticationStep__secret"
             name="secret"
-            type="text"
+            type="password"
           />
         </div>
         <div
@@ -1216,50 +1830,54 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           <div
             class="pr-3"
           >
-            <span
-              data-errortext="This secret does not correspond to your wallet"
-              data-testid="Input__error"
-            >
-              <div
-                class="text-theme-danger-500"
-              >
-                <div
-                  style="height: 20px; width: 20px;"
+            <span>
+              <span>
+                <span
+                  data-errortext="This secret does not correspond to your address"
+                  data-testid="Input__error"
                 >
-                  <svg
-                    id="circle-exclamation-mark"
-                    style="height: 100%; width: 100%;"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    class="text-theme-danger-500"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
+                    <div
+                      style="height: 20px; width: 20px;"
                     >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="9"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 10.5v-5"
-                        stroke-linecap="round"
-                        stroke-miterlimit="10"
-                      />
-                      <path
-                        d="M10 14h0"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
+                      <svg
+                        id="circle-exclamation-mark"
+                        style="height: 100%; width: 100%;"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="9"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 10.5v-5"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M10 14h0"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </span>
+              </span>
             </span>
           </div>
           <div
@@ -1338,7 +1956,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -1498,7 +2116,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -1682,7 +2300,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1739,7 +2357,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1796,7 +2414,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         <p
           class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
         >
-          This transaction is pending confirmation.
+          This transaction is pending approval on your Ledger device.
         </p>
       </div>
     </div>
@@ -1830,7 +2448,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
               class="mb-0 text-lg leading-[21px] md:text-2xl md:leading-[29px]"
               data-testid="header__title"
             >
-              Ledger Wallet
+              Ledger Address
             </h1>
           </div>
           <div
@@ -1988,7 +2606,7 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
           <strong>
             Ledger Nano S
           </strong>
-           is connected, but his operation requires a 
+           is connected, but this operation requires a 
           <strong>
             Ledger Nano X
           </strong>

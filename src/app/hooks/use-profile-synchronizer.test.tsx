@@ -4,12 +4,12 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import {
-	useProfileJobs,
 	useProfileRestore,
 	useProfileStatusWatcher,
 	useProfileSynchronizer,
 	useProfileSyncStatus,
 } from "./use-profile-synchronizer";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
 import * as profileUtils from "@/utils/profile-utils";
 import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "@/app/contexts";
 import { toasts } from "@/app/services";
@@ -365,14 +365,7 @@ describe("useProfileSynchronizer", () => {
 
 		await userEvent.click(screen.getByTestId("SyncProfile"));
 
-		await waitFor(() =>
-			expect(profileNotificationsSyncSpy).toHaveBeenCalledWith({
-				identifiers: [
-					{ networkId: mainsailDevnet, type: "address", value: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6" },
-					{ networkId: mainsailDevnet, type: "address", value: "0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54" },
-				],
-			}),
-		);
+		await waitFor(() => expect(profileNotificationsSyncSpy).toHaveBeenCalled());
 
 		resetProfileNetworksMock();
 

@@ -16,6 +16,7 @@ export interface DropdownOption {
 	active?: boolean;
 	[key: string]: any;
 	disableFocus?: boolean;
+	disabled?: boolean;
 }
 
 type OnSelectProperties = (option: DropdownOption) => void;

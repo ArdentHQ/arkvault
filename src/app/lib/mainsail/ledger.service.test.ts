@@ -11,6 +11,7 @@ describe("LedgerService", () => {
 	let ledgerService: LedgerService;
 	let mockConfig: ConfigRepository;
 	let transportMock: any;
+	const publicKeyMock = "0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041";
 
 	beforeEach(() => {
 		mockConfig = { get: () => 60 } as any;
@@ -102,8 +103,7 @@ describe("LedgerService", () => {
 
 		it("should scan and create wallet data when getExtendedPublicKey works", async () => {
 			// Mock getExtendedPublicKey to return a valid public key
-			const mockPublicKey = "0293b9fd80d472bbf678404d593705268cf09324115f73103bc1477a3933350041";
-			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(mockPublicKey);
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
 
 			const result = await ledgerService.scan({ pageSize: 1, useLegacy: false });
 
@@ -114,6 +114,30 @@ describe("LedgerService", () => {
 			const wallet = result[walletPath];
 			expect(wallet.address()).toBeDefined();
 			expect(wallet.balance()).toBeDefined();
+		});
+
+		it("should scan legacy path and create wallet data when getExtendedPublicKey works", async () => {
+			// Mock getExtendedPublicKey to return a valid public key
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
+
+			const result = await ledgerService.scanLegacy({ pageSize: 1 });
+
+			expect(result).toBeDefined();
+			expect(Object.keys(result)).toHaveLength(1);
+
+			const walletPath = Object.keys(result)[0];
+			const wallet = result[walletPath];
+			expect(wallet.address()).toBeDefined();
+			expect(wallet.balance()).toBeDefined();
+		});
+
+		it("should scan legacy path with default page size when not provided", async () => {
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
+
+			const result = await ledgerService.scanLegacy({});
+
+			expect(result).toBeDefined();
+			expect(Object.keys(result)).toHaveLength(5);
 		});
 
 		it("should handle busy error and retry getExtendedPublicKey until success", async () => {
@@ -242,6 +266,99 @@ describe("LedgerService", () => {
 			expect(spyBIP44).toHaveBeenCalledWith(startPath);
 
 			spyBIP44.mockRestore();
+		});
+
+		it("should return true when isEthBasedApp can derive eth public keys", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockResolvedValue({
+				address: "0x123",
+				chainCode: undefined,
+				publicKey: publicKeyMock,
+			});
+
+			await ledgerService.connect();
+			const result = await ledgerService.isEthBasedApp();
+
+			expect(result).toBe(true);
+
+			spy.mockRestore();
+		});
+
+		it("should return false when isEthBasedApp fails to derive eth public keys", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockRejectedValue(new Error("Not eth based app"));
+
+			await ledgerService.connect();
+			const result = await ledgerService.isEthBasedApp();
+
+			expect(result).toBe(false);
+
+			spy.mockRestore();
+		});
+
+		it("should return false when both keys are empty in isEthBasedApp", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockResolvedValue({
+				address: "",
+				chainCode: undefined,
+				publicKey: "",
+			});
+
+			const HDKeyModule = await import("@ardenthq/arkvault-crypto");
+			const hdKeySpy = vi.spyOn(HDKeyModule.HDKey, "fromCompressedPublicKey").mockReturnValue({
+				derive: () => ({ publicKey: "" }),
+			});
+
+			await ledgerService.connect();
+			const result = await ledgerService.isEthBasedApp();
+
+			expect(result).toBe(false);
+
+			spy.mockRestore();
+			hdKeySpy.mockRestore();
+		});
+
+		it("should access ledger app successfully", async () => {
+			const spy = vi.spyOn(EthModule.prototype, "getAddress").mockResolvedValue({
+				address: "0x123",
+				chainCode: undefined,
+				publicKey: publicKeyMock,
+			});
+
+			await ledgerService.connect();
+			await expect(ledgerService.accessLedgerApp()).resolves.not.toThrow();
+
+			spy.mockRestore();
+		});
+
+		it("should throw INCOMPATIBLE_APP when accessLedgerApp fails on eth based check", async () => {
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
+			const spy = vi.spyOn(ledgerService, "isEthBasedApp").mockResolvedValue(false);
+
+			await ledgerService.connect();
+			await expect(ledgerService.accessLedgerApp()).rejects.toThrow("INCOMPATIBLE_APP");
+
+			spy.mockRestore();
+		});
+
+		it("should handle device already open error in accessLedgerApp", async () => {
+			vi.spyOn(ledgerService, "getExtendedPublicKey").mockResolvedValue(publicKeyMock);
+			vi.spyOn(ledgerService, "isEthBasedApp").mockResolvedValue(true);
+
+			const spy = vi
+				.spyOn(LedgerTransportFactory, "connectedTransport")
+				.mockRejectedValueOnce(new Error("The device is already open."));
+
+			await expect(ledgerService.accessLedgerApp()).resolves.not.toThrow();
+
+			spy.mockRestore();
+		});
+
+		it("should throw other errors in accessLedgerApp connect", async () => {
+			const spy = vi
+				.spyOn(LedgerTransportFactory, "connectedTransport")
+				.mockRejectedValueOnce(new Error("Some other error"));
+
+			await expect(ledgerService.accessLedgerApp()).rejects.toThrow("Some other error");
+
+			spy.mockRestore();
 		});
 	});
 });

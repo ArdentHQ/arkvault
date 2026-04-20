@@ -20,11 +20,17 @@ export const ListenLedger = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { listenDevice, hasDeviceAvailable, error: ledgerError, resetConnectionState } = useLedgerContext();
+	const {
+		listenDevice,
+		hasDeviceAvailable,
+		error: ledgerError,
+		resetConnectionState,
+		ledgerDevice,
+	} = useLedgerContext();
 
 	useEffect(() => {
 		listenDevice();
-	}, [listenDevice]);
+	}, [listenDevice, ledgerDevice?.id]);
 
 	useEffect(() => {
 		// Error messages that are treated as "device not available".
@@ -56,7 +62,7 @@ export const ListenLedger = ({
 	}, [hasDeviceAvailable, onDeviceAvailable]);
 
 	return (
-		<section data-testid="LedgerAuthStep" className="space-y-8">
+		<section data-testid="LedgerAuthStep" className="h-full space-y-8 overflow-hidden">
 			{!noHeading && <Header title={t("WALLETS.CONNECT_LEDGER.HEADER")} />}
 
 			{subject === "message" && (

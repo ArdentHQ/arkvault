@@ -43,7 +43,7 @@ export const TransactionRecipient = ({
 
 	return (
 		<>
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle
 					className={cn(labelClassName, {
 						invisible: !showLabel,
@@ -82,10 +82,12 @@ export const TransactionRecipients = ({
 	recipients,
 	explorerLink,
 	labelClassName,
+	isMultiPayment,
 }: {
 	recipients: RecipientItem[];
 	explorerLink: string;
 	labelClassName?: string;
+	isMultiPayment: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -93,13 +95,13 @@ export const TransactionRecipients = ({
 		return <></>;
 	}
 
-	if (recipients.length === 1) {
+	if (!isMultiPayment) {
 		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />;
 	}
 
 	return (
 		<>
-			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
@@ -130,10 +132,12 @@ export const TransactionRecipientsModal = ({
 	recipients,
 	labelClassName,
 	ticker,
+	isMultiPayment,
 }: {
 	recipients: RecipientItem[];
 	labelClassName?: string;
 	ticker: string;
+	isMultiPayment: boolean;
 }): JSX.Element => {
 	const { t } = useTranslation();
 
@@ -143,7 +147,7 @@ export const TransactionRecipientsModal = ({
 		return <></>;
 	}
 
-	if (recipients.length === 1) {
+	if (!isMultiPayment) {
 		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />;
 	}
 

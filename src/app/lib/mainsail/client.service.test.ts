@@ -19,7 +19,11 @@ const mockConfig = {
 	},
 	host: () => "http://localhost",
 };
-const mockProfile: any = {};
+const mockProfile: any = {
+	activeNetwork: () => ({
+		config: () => mockConfig,
+	}),
+};
 
 const transactionMockData = {
 	amount: 100,
@@ -97,6 +101,59 @@ describe("ClientService", () => {
 		const txs = await clientService.transactions({ limit: 5, page: 2 });
 		expect(txs).toBeDefined();
 		expect(txs.items()).toHaveLength(1);
+	});
+
+	it("should fetch unconfirmed transactions", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/transactions\/unconfirmed.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "1" && url.searchParams.get("limit") === "10") {
+					return HttpResponse.json({
+						data: [transactionMockData],
+						meta: { last: "page=1", next: null, previous: null, self: "page=1" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const txs = await clientService.unconfirmedTransactions();
+		expect(txs).toBeDefined();
+		expect(txs.items()).toHaveLength(1);
+	});
+
+	it("should fetch unconfirmed transactions with custom limit and page", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/transactions\/unconfirmed.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "2" && url.searchParams.get("limit") === "5") {
+					return HttpResponse.json({
+						data: [transactionMockData],
+						meta: { last: "page=2", next: null, previous: null, self: "page=2" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const txs = await clientService.unconfirmedTransactions({ limit: 5, page: 2 });
+		expect(txs).toBeDefined();
+		expect(txs.items()).toHaveLength(1);
+	});
+
+	it("should handle extra parameters in query", async () => {
+		server.use(
+			http.get(/http:\/\/localhost\/transactions\/unconfirmed.*/, ({ request }) => {
+				const url = new URL(request.url);
+				if (url.searchParams.get("page") === "1" && url.searchParams.get("limit") === "10") {
+					return HttpResponse.json({
+						data: [transactionMockData],
+						meta: { last: "page=1", next: null, previous: null, self: "page=1" },
+					});
+				}
+				return HttpResponse.json({ data: [], meta: {} });
+			}),
+		);
+		const txs = await clientService.unconfirmedTransactions({ extraParam: "test" } as any);
+		expect(txs).toBeDefined();
 	});
 
 	it("should fetch a wallet", async () => {
@@ -467,37 +524,36 @@ describe("ClientService", () => {
 
 		it("should map memo to vendorField", async () => {
 			await clientService.transactions({ memo: "test" });
-			expect(spy).toHaveBeenCalledWith(1, 10, { vendorField: "test" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1, vendorField: "test" }));
 		});
 
 		it("should handle orderBy", async () => {
 			await clientService.transactions({ orderBy: "amount:desc" });
-			expect(spy).toHaveBeenCalledWith(1, 10, { orderBy: "amount:desc" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, orderBy: "amount:desc", page: 1 }));
 		});
 
 		it("should handle identifiers", async () => {
 			await clientService.transactions({ identifiers: [{ value: "addr1" }, { value: "addr2" }] });
-			expect(spy).toHaveBeenCalledWith(1, 10, { address: "addr1,addr2" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ address: "addr1,addr2", limit: 10, page: 1 }));
 		});
 
 		it("should handle transaction types", async () => {
 			await clientService.transactions({ types: ["transfer", "vote"] });
-			// Transfer is an empty string, so we only check for the vote part
-			expect(spy).toHaveBeenCalledWith(1, 10, { data: expect.stringContaining("6dd7d8ea,3174b689") });
+			expect(spy).toHaveBeenCalledWith(
+				expect.objectContaining({ data: expect.stringContaining(",6dd7d8ea,3174b689"), limit: 10, page: 1 }),
+			);
 		});
 
 		it("should handle timestamp", async () => {
 			await clientService.transactions({ timestamp: { from: 1, to: 2 } });
 			expect(spy).toHaveBeenCalledWith(
-				1,
-				10,
-				expect.objectContaining({ "timestamp.from": 1, "timestamp.to": 2 }),
+				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": 1, "timestamp.to": 2 }),
 			);
 		});
 
 		it("should handle single transaction type", async () => {
 			await clientService.transactions({ type: "transfer" });
-			expect(spy).toHaveBeenCalledWith(1, 10, { data: "" });
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ data: "", limit: 10, page: 1 }));
 		});
 
 		it("should handle timestamp without epoch", async () => {
@@ -509,30 +565,28 @@ describe("ClientService", () => {
 
 			await serviceWithoutEpoch.transactions({ timestamp: { from: 1000, to: 2000 } });
 			expect(spy).toHaveBeenCalledWith(
-				1,
-				10,
-				expect.objectContaining({ "timestamp.from": 1000, "timestamp.to": 2000 }),
+				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": 1000, "timestamp.to": 2000 }),
 			);
 		});
 
 		it("should handle empty query", async () => {
 			await clientService.transactions({});
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle identifiers with empty addresses", async () => {
 			await clientService.transactions({ identifiers: [{ value: "" }] });
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle undefined transaction type", async () => {
 			await clientService.transactions({ type: "unknownType" as any });
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle types with undefined values", async () => {
 			await clientService.transactions({ types: ["unknownType1", "unknownType2"] as any });
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 		});
 
 		it("should handle meta pagination with null values", async () => {
@@ -553,7 +607,7 @@ describe("ClientService", () => {
 			} as any);
 
 			await clientService.transactions({ limit: undefined, page: undefined } as any);
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 
 			spy.mockRestore();
 		});
@@ -565,7 +619,7 @@ describe("ClientService", () => {
 			} as any);
 
 			await clientService.wallets({ limit: undefined, page: undefined } as any);
-			expect(spy).toHaveBeenCalledWith(1, 10);
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 
 			spy.mockRestore();
 		});
@@ -577,7 +631,7 @@ describe("ClientService", () => {
 			} as any);
 
 			await clientService.validators({ limit: undefined, page: undefined } as any);
-			expect(spy).toHaveBeenCalledWith(1, 10, {});
+			expect(spy).toHaveBeenCalledWith(expect.objectContaining({ limit: 10, page: 1 }));
 
 			spy.mockRestore();
 		});
@@ -601,13 +655,446 @@ describe("ClientService", () => {
 			await serviceWithEpoch.transactions({ timestamp: { from: futureTimestamp, to: futureTimestamp + 100 } });
 
 			expect(spy).toHaveBeenCalledWith(
-				1,
-				10,
-				expect.objectContaining({
-					"timestamp.from": 1000,
-					"timestamp.to": 1100,
-				}),
+				expect.objectContaining({ limit: 10, page: 1, "timestamp.from": 1000, "timestamp.to": 1100 }),
 			);
+		});
+	});
+
+	describe("tokenTransfers", () => {
+		const tokenTransferMockData = {
+			blockNumber: "22773025",
+			from: "0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10",
+			functionSig: "0xa9059cbb",
+			timestamp: "1769010139522",
+			to: "0xE3c31e486ccA6Eb2093c0F4883Df949d45B021C5",
+			token: {
+				address: "0x180a864a755fed0144c622df49b83db577befefb",
+				decimals: 18,
+				name: "DARK20",
+				symbol: "DARK20",
+			},
+			transactionHash: "bf060a019f9f5a036f571e2b5bc0227c6a5975ce763e790ed4e1dcf42b8f2d1d",
+			value: "5000000000000000000",
+		};
+
+		it("should fetch token transfers", async () => {
+			const mockResponse = {
+				data: [tokenTransferMockData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					last: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?from=0xA5cc0BfEB09742C5e4C610f2EBaaB82Eb142Ca10&limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [tokenTransferMockData.from],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(1);
+			expect(result.items()[0].hash()).toBe(tokenTransferMockData.transactionHash);
+			expect(result.items()[0].from()).toBe(tokenTransferMockData.from);
+			expect(result.items()[0].to()).toBe(tokenTransferMockData.to);
+			expect(result.items()[0].tokens()?.[0].to()).toBe(tokenTransferMockData.to);
+			expect(result.items()[0].tokens()?.[0].value().toString()).toBe("5");
+		});
+
+		it("should handle empty token transfers response", async () => {
+			const mockResponse = {
+				data: [],
+				meta: {
+					count: 0,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 0,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [validAddress],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(0);
+		});
+
+		it("should properly configure ConfirmedTransactionData from transfer", async () => {
+			const mockResponse = {
+				data: [tokenTransferMockData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [tokenTransferMockData.from],
+			});
+
+			const transfer = result.items()[0];
+			expect(transfer.hash()).toBe(tokenTransferMockData.transactionHash);
+			expect(transfer.from()).toBe(tokenTransferMockData.from);
+			expect(transfer.to()).toBe(tokenTransferMockData.to);
+		});
+
+		it("should set to as undefined for non-TokenTransfer functionSig", async () => {
+			const nonTokenTransferData = {
+				...tokenTransferMockData,
+				functionSig: "0x12345678",
+			};
+
+			const mockResponse = {
+				data: [nonTokenTransferData],
+				meta: {
+					count: 1,
+					first: "/tokens/transfers?limit=10&page=1",
+					last: "/tokens/transfers?limit=10&page=1",
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: "/tokens/transfers?limit=10&page=1",
+					totalCount: 1,
+					totalCountIsEstimate: false,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/tokens\/transfers.*/, mockResponse));
+
+			const result = await clientService.tokenTransfers({
+				from: [nonTokenTransferData.from],
+			});
+
+			const transfer = result.items()[0];
+			expect(transfer.hash()).toBe(nonTokenTransferData.transactionHash);
+			expect(transfer.to()).toBeUndefined();
+		});
+	});
+
+	describe("tokenAddresses", () => {
+		it("should fetch token addresses for multiple wallets", async () => {
+			const walletAddress1 = `0x${"b".repeat(40)}`;
+			const walletAddress2 = `0x${"c".repeat(40)}`;
+			const tokenAddress = `0x${"d".repeat(40)}`;
+
+			const mockResponse = {
+				data: [
+					{
+						addresses: {
+							[walletAddress1]: "1000000000000000000",
+							[walletAddress2]: "2000000000000000000",
+						},
+						decimals: 18,
+						name: "Test Token",
+						supply: "10000000000000000000000",
+						symbol: "TEST",
+						token: tokenAddress,
+					},
+				],
+				meta: {
+					last: "page=1",
+					next: null,
+					previous: null,
+					self: "page=1",
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/wallets\/tokens.*/, mockResponse));
+
+			const result = await clientService.tokenAddresses({
+				addresses: [walletAddress1, walletAddress2],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(2);
+
+			const walletToken1 = result.items()[0];
+			expect(walletToken1.address()).toBe(walletAddress1);
+			expect(walletToken1.balance().toString()).toBe("1");
+			expect(walletToken1.token().address()).toBe(tokenAddress);
+			expect(walletToken1.token().symbol()).toBe("TEST");
+			expect(walletToken1.token().name()).toBe("Test Token");
+			expect(walletToken1.token().decimals()).toBe(18);
+
+			const walletToken2 = result.items()[1];
+			expect(walletToken2.address()).toBe(walletAddress2);
+			expect(walletToken2.balance().toString()).toBe("2");
+		});
+
+		it("should handle multiple tokens across multiple wallets", async () => {
+			const walletAddress1 = `0x${"b".repeat(40)}`;
+			const walletAddress2 = `0x${"c".repeat(40)}`;
+			const tokenAddress1 = `0x${"d".repeat(40)}`;
+			const tokenAddress2 = `0x${"e".repeat(40)}`;
+
+			const mockResponse = {
+				data: [
+					{
+						addresses: {
+							[walletAddress1]: "1000000000000000000",
+							[walletAddress2]: "2000000000000000000",
+						},
+						decimals: 18,
+						name: "Test Token 1",
+						supply: "10000000000000000000000",
+						symbol: "TEST1",
+						token: tokenAddress1,
+					},
+					{
+						addresses: {
+							[walletAddress1]: "500000000000000000",
+						},
+						decimals: 6,
+						name: "Test Token 2",
+						supply: "5000000000000",
+						symbol: "TEST2",
+						token: tokenAddress2,
+					},
+				],
+				meta: {
+					last: "page=1",
+					next: null,
+					previous: null,
+					self: "page=1",
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/wallets\/tokens.*/, mockResponse));
+
+			const result = await clientService.tokenAddresses({
+				addresses: [walletAddress1, walletAddress2],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(3); // 2 wallets for token1 + 1 wallet for token2
+
+			const token1Items = result.items().filter((item) => item.token().address() === tokenAddress1);
+			expect(token1Items).toHaveLength(2);
+
+			const token2Items = result.items().filter((item) => item.token().address() === tokenAddress2);
+			expect(token2Items).toHaveLength(1);
+			expect(token2Items[0].token().decimals()).toBe(6);
+		});
+
+		it("should handle empty token addresses response", async () => {
+			const mockResponse = {
+				data: [],
+				meta: {
+					last: `wallets/tokens?addresses=${validAddress}&limit=100&page=1`,
+					next: null,
+					previous: null,
+					self: `wallets/tokens?addresses=${validAddress}&limit=100&page=1`,
+				},
+			};
+
+			server.use(requestMock(/http:\/\/localhost\/wallets\/tokens.*/, mockResponse));
+
+			const result = await clientService.tokenAddresses({
+				addresses: [validAddress],
+			});
+
+			expect(result).toBeDefined();
+			expect(result.items()).toHaveLength(0);
+			expect(result.isEmpty()).toBe(true);
+		});
+	});
+
+	describe("tokens", () => {
+		it("should fetch all tokens", async () => {
+			const mockResponse = {
+				data: [
+					{
+						address: "0x0",
+						decimals: 18,
+						name: "Token 1",
+						symbol: "TK1",
+						totalSupply: "1000000000000000000000",
+					},
+					{
+						address: "0x1",
+						decimals: 6,
+						name: "Token 2",
+						symbol: "TK2",
+						totalSupply: "1000000000",
+					},
+				],
+			};
+
+			server.use(requestMock("http://localhost/tokens", mockResponse));
+
+			const result = await clientService.tokens();
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(2);
+			expect(result.values()).toHaveLength(2);
+		});
+
+		it("should handle empty tokens response", async () => {
+			const mockResponse = {
+				data: [],
+			};
+
+			server.use(requestMock("http://localhost/tokens", mockResponse));
+
+			const result = await clientService.tokens();
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(0);
+		});
+	});
+
+	describe("walletTokens", () => {
+		it("should fetch wallet tokens for an address", async () => {
+			const walletAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				data: [
+					{
+						address: walletAddress,
+						balance: "1000000000000000000",
+						tokenAddress: "0xtoken1",
+					},
+					{
+						address: walletAddress,
+						balance: "500000000",
+						tokenAddress: "0xtoken2",
+					},
+				],
+			};
+
+			server.use(requestMock(`http://localhost/wallets/${walletAddress}/tokens`, mockResponse));
+
+			const result = await clientService.walletTokens(walletAddress);
+
+			expect(result).toBeDefined();
+			expect(result).toHaveLength(2);
+			expect(result[0].address()).toBe(walletAddress);
+			expect(result[0].tokenAddress()).toBe("0xtoken1");
+			expect(result[1].tokenAddress()).toBe("0xtoken2");
+		});
+
+		it("should handle empty wallet tokens response", async () => {
+			const walletAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				data: [],
+			};
+
+			server.use(requestMock(`http://localhost/wallets/${walletAddress}/tokens`, mockResponse));
+
+			const result = await clientService.walletTokens(walletAddress);
+
+			expect(result).toBeDefined();
+			expect(result).toHaveLength(0);
+		});
+	});
+
+	describe("tokenHolders", () => {
+		it("should fetch token holders for a contract address", async () => {
+			const contractAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				results: [
+					{
+						address: "0x1",
+						balance: "1000000000000000000",
+					},
+					{
+						address: "0x2",
+						balance: "2000000000000000000",
+					},
+				],
+			};
+
+			server.use(requestMock(`http://localhost/tokens/${contractAddress}/holders`, mockResponse));
+
+			const result = await clientService.tokenHolders(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(2);
+			expect(result.values()[0].address()).toBe("0x1");
+			expect(result.values()[1].address()).toBe("0x2");
+		});
+
+		it("should handle empty token holders response", async () => {
+			const contractAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				results: [],
+			};
+
+			server.use(requestMock(`http://localhost/tokens/${contractAddress}/holders`, mockResponse));
+
+			const result = await clientService.tokenHolders(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.count()).toBe(0);
+		});
+	});
+
+	describe("tokenByContractAddress", () => {
+		it("should fetch token by contract address", async () => {
+			const contractAddress = `0x${"a".repeat(40)}`;
+			const mockResponse = {
+				data: {
+					address: contractAddress,
+					decimals: 18,
+					name: "Token",
+					symbol: "TK1",
+					totalSupply: "1000000000000000000000",
+				},
+			};
+
+			server.use(http.get(/http:\/\/localhost\/tokens\/whitelist.*/, () => HttpResponse.json(mockResponse)));
+
+			const result = await clientService.tokenByContractAddress(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.address()).toBe(contractAddress);
+			expect(result.name()).toBe("Token");
+			expect(result.symbol()).toBe("TK1");
+			expect(result.decimals()).toBe(18);
+		});
+
+		it("should handle token by contract address with minimal data", async () => {
+			const contractAddress = `0x${"b".repeat(40)}`;
+			const mockResponse = {
+				data: {
+					address: contractAddress,
+					decimals: 8,
+					name: "Token",
+					symbol: "TK1",
+					totalSupply: "10000000000",
+				},
+			};
+
+			server.use(http.get(/http:\/\/localhost\/tokens\/whitelist.*/, () => HttpResponse.json(mockResponse)));
+
+			const result = await clientService.tokenByContractAddress(contractAddress);
+
+			expect(result).toBeDefined();
+			expect(result.address()).toBe(contractAddress);
+			expect(result.decimals()).toBe(8);
 		});
 	});
 });

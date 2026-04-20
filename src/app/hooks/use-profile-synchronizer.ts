@@ -5,126 +5,23 @@ import {
 	hasIncompatibleLedgerWallets,
 } from "@/utils/profile-utils";
 import { useLocation } from "react-router-dom";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
 import { Contracts } from "@/app/lib/profiles";
-import { ProfilePeers } from "@/utils/profile-peers";
-import { Services } from "@/app/lib/mainsail";
 import { delay } from "@/utils/delay";
 import { isEqual } from "@/app/lib/helpers";
 import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { usePrevious } from "./use-previous";
-import { useSynchronizer } from "./use-synchronizer";
 import { useTheme } from "./use-theme";
 import { useZendesk } from "@/app/contexts/Zendesk";
-
-enum Intervals {
-	VeryShort = 15_000,
-	Short = 30_000,
-	Medium = 60_000,
-	Long = 120_000,
-	VeryLong = 7_200_000,
-}
+import { useProfileJobs } from "./use-profile-background-jobs";
 
 const useProfileWatcher = () => {
 	const location = useLocation();
 	const { env } = useEnvironmentContext();
 
 	return getProfileFromUrl(env, location.pathname);
-};
-
-export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any> => {
-	const { env } = useEnvironmentContext();
-	const { setConfiguration } = useConfiguration();
-	const walletsCount = profile?.wallets().count();
-	const profileId = profile?.id();
-
-	return useMemo(() => {
-		if (!profile || !profileId) {
-			return [];
-		}
-
-		const syncProfileWallets = {
-			callback: async (reset = false) => {
-				try {
-					setConfiguration(profileId, {
-						profileIsSyncingWallets: true,
-						...(reset && { isProfileInitialSync: true }),
-					});
-					const activeNetwork = profile.activeNetwork();
-
-					await profile.sync({ networkId: activeNetwork.id(), ttl: 15_000 });
-					await env.wallets().syncByProfile(profile, activeNetwork ? [activeNetwork.id()] : undefined);
-
-					const walletIdentifiers: Services.WalletIdentifier[] = profile
-						.wallets()
-						.values()
-						.filter((wallet) =>
-							profile.availableNetworks().some((network) => wallet.networkId() === network.id()),
-						)
-						.map((wallet) => ({
-							networkId: wallet.networkId(),
-							type: "address",
-							value: wallet.address(),
-						}));
-					await profile.notifications().transactions().sync({ identifiers: walletIdentifiers });
-				} finally {
-					setConfiguration(profileId, { profileIsSyncingWallets: false });
-				}
-			},
-			interval: Intervals.VeryShort,
-		};
-
-		const syncValidators = {
-			callback: () => profile.validators().syncAll(profile),
-			interval: Intervals.Long,
-		};
-
-		const syncExchangeRates = {
-			callback: async () => {
-				setConfiguration(profileId, { profileIsSyncingExchangeRates: true });
-				const currencies = profile.availableNetworks().map((network) => network.ticker());
-				const allRates = await Promise.all(
-					currencies.map((currency) => profile.exchangeRates().syncAll(profile, currency)),
-				);
-				setConfiguration(profileId, { profileIsSyncingExchangeRates: false });
-				return allRates;
-			},
-			interval: Intervals.Long,
-		};
-
-		const syncNotifications = {
-			callback: () => profile.notifications().transactions().sync(),
-			interval: Intervals.Long,
-		};
-
-		const syncKnownWallets = {
-			callback: () => profile.knownWallets().sync(profile, profile.activeNetwork()),
-			interval: Intervals.Long,
-		};
-
-		const syncServerStatus = {
-			callback: async () => {
-				setConfiguration(profileId, { serverStatus: await ProfilePeers(env, profile).healthStatusByNetwork() });
-			},
-			interval: Intervals.Long,
-		};
-
-		return {
-			allJobs: [
-				syncExchangeRates,
-				syncNotifications,
-				syncKnownWallets,
-				syncValidators,
-				syncProfileWallets,
-				syncServerStatus,
-			],
-			syncExchangeRates: syncExchangeRates.callback,
-			syncProfileWallets: syncProfileWallets.callback,
-			syncServerStatus: syncServerStatus.callback,
-		};
-	}, [env, profile, walletsCount, setConfiguration, profileId]);
 };
 
 interface ProfileSyncState {
@@ -326,8 +223,7 @@ export const useProfileSynchronizer = ({
 		useProfileSyncStatus(profileId);
 
 	const { restoreProfile } = useProfileRestore(profileId);
-	const { allJobs, syncProfileWallets } = useProfileJobs(profile);
-	const { start, stop, runAll } = useSynchronizer(allJobs);
+	const { syncProfileWallets } = useProfileJobs(profile);
 	const { setProfileTheme, resetTheme } = useTheme();
 	const { startIdleTimer, resetIdleTimer } = useAutoSignOut(profile);
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
@@ -405,7 +301,6 @@ export const useProfileSynchronizer = ({
 			resetIdleTimer();
 			resetStatuses();
 			setConfiguration(profileId, { profileErroredNetworks: [] });
-			stop({ clearTimers: true });
 		};
 
 		const syncProfile = async (profile?: Contracts.IProfile) => {
@@ -445,9 +340,6 @@ export const useProfileSynchronizer = ({
 
 			const profileConfig = getProfileConfiguration(profileId);
 			if (shouldMarkCompleted() && profileConfig.profileIsSyncing) {
-				// for better performance no need to await
-				runAll();
-				start();
 				setStatus("completed");
 				setConfiguration(profileId, { profileHasSyncedOnce: true, profileIsSyncing: false });
 			}
@@ -458,10 +350,7 @@ export const useProfileSynchronizer = ({
 		env,
 		resetTheme,
 		setProfileTheme,
-		allJobs,
 		profile,
-		runAll,
-		start,
 		persist,
 		setConfiguration,
 		getProfileConfiguration,
@@ -481,7 +370,6 @@ export const useProfileSynchronizer = ({
 		onProfileSignOut,
 		getErroredNetworks,
 		syncProfileWallets,
-		stop,
 		profileSyncing,
 	]);
 

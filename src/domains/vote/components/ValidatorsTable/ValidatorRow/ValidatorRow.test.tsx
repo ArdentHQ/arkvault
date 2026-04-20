@@ -6,7 +6,7 @@ import { ValidatorRow } from "./ValidatorRow";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { VoteValidatorProperties } from "@/domains/vote/components/ValidatorsTable/ValidatorsTable.contracts";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, render, screen } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let validator: Contracts.IReadOnlyWallet;
@@ -14,19 +14,24 @@ let validator: Contracts.IReadOnlyWallet;
 const firstValidatorVoteButton = () => screen.getByTestId("ValidatorRow__toggle-0");
 
 describe("ValidatorRow", () => {
+	let profile: Contracts.IProfile;
+
 	beforeAll(() => {
-		const profile = env.profiles().findById(getMainsailProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
 
-		validator = new ReadOnlyWallet({
-			address: data[0].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[0].publicKey,
-			username: data[0].username,
-		});
+		validator = new ReadOnlyWallet(
+			{
+				address: data[0].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[0].publicKey,
+				username: data[0].username,
+			},
+			profile,
+		);
 	});
 
 	it("should render", () => {
@@ -79,7 +84,7 @@ describe("ValidatorRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render the selected validator", () => {
+	it("should render the selected validator", async () => {
 		const selected = [
 			{
 				amount: 0,
@@ -87,6 +92,7 @@ describe("ValidatorRow", () => {
 			},
 		];
 
+		const toggleVotesSelectedMock = vi.fn();
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
@@ -98,7 +104,7 @@ describe("ValidatorRow", () => {
 						availableBalance={wallet.balance()}
 						setAvailableBalance={vi.fn()}
 						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
+						toggleVotesSelected={toggleVotesSelectedMock}
 						selectedWallet={wallet}
 					/>
 				</tbody>
@@ -107,29 +113,42 @@ describe("ValidatorRow", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		await waitFor(() => {
+			expect(toggleVotesSelectedMock).toHaveBeenCalled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the selected vote", () => {
-		const secondValidator = new ReadOnlyWallet({
-			address: data[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[1].publicKey,
-			username: "testusernaame",
-		});
+		const secondValidator = new ReadOnlyWallet(
+			{
+				address: data[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[1].publicKey,
+				username: "testusernaame",
+			},
+			profile,
+		);
 
-		const thirdValidator = new ReadOnlyWallet({
-			address: data[2].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[2].publicKey,
-			username: data[2].username,
-		});
+		const thirdValidator = new ReadOnlyWallet(
+			{
+				address: data[2].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[2].publicKey,
+				username: data[2].username,
+			},
+			profile,
+		);
 
 		const { container, asFragment } = render(
 			<table>
@@ -187,12 +206,10 @@ describe("ValidatorRow", () => {
 	it("should render the unselected vote", () => {
 		const selectedUnvotes: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validator.address(),
 			},
 		];
 		const voted: Contracts.VoteRegistryItem = {
-			amount: 10,
 			wallet: validator,
 		};
 
@@ -219,75 +236,5 @@ describe("ValidatorRow", () => {
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.UNSELECTED);
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render when network requires vote amount", () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-
-		const { container, asFragment } = render(
-			<table>
-				<tbody>
-					<ValidatorRow
-						index={0}
-						validator={validator}
-						selectedVotes={[]}
-						selectedUnvotes={[]}
-						availableBalance={wallet.balance()}
-						setAvailableBalance={vi.fn()}
-						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
-						selectedWallet={wallet}
-					/>
-				</tbody>
-			</table>,
-		);
-
-		expect(screen.getByTestId("ValidatorVoteAmount")).toBeInTheDocument();
-
-		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-
-		votesAmountMinimumMock.mockRestore();
-	});
-
-	it("should render changed style when network requires vote amount", () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-
-		const selectedVotes: VoteValidatorProperties[] = [
-			{
-				amount: 20,
-				validatorAddress: validator.address(),
-			},
-		];
-		const voted: Contracts.VoteRegistryItem = {
-			amount: 10,
-			wallet: validator,
-		};
-
-		const { container, asFragment } = render(
-			<table>
-				<tbody>
-					<ValidatorRow
-						index={0}
-						validator={validator}
-						voted={voted}
-						selectedVotes={selectedVotes}
-						selectedUnvotes={[]}
-						availableBalance={wallet.balance()}
-						setAvailableBalance={vi.fn()}
-						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
-						selectedWallet={wallet}
-					/>
-				</tbody>
-			</table>,
-		);
-
-		expect(container).toBeInTheDocument();
-		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		votesAmountMinimumMock.mockRestore();
 	});
 });

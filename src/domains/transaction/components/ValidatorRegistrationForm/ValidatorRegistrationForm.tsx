@@ -5,10 +5,13 @@ import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
-import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { SendRegistrationForm } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { httpClient } from "@/app/services";
-import { configManager } from "@/app/lib/mainsail";
+import {
+	FORM_STEP,
+	REVIEW_STEP,
+} from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistrationSidePanel";
 
 const component = ({
 	activeTab,
@@ -20,10 +23,10 @@ const component = ({
 	profile: Contracts.IProfile;
 }) => (
 	<Tabs activeId={activeTab}>
-		<TabPanel tabId={1}>
+		<TabPanel tabId={FORM_STEP}>
 			<FormStep wallet={wallet} profile={profile} />
 		</TabPanel>
-		<TabPanel tabId={2}>
+		<TabPanel tabId={REVIEW_STEP}>
 			<ReviewStep wallet={wallet!} profile={profile} />
 		</TabPanel>
 	</Tabs>
@@ -81,7 +84,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 		transactionId = await senderWallet.transaction().signValidatorRegistration({
 			data: {
 				validatorPublicKey,
-				value: configManager.getMilestone()["validatorRegistrationFee"] ?? 0,
+				value: profile.activeNetwork().milestone()["validatorRegistrationFee"] ?? 0,
 			},
 			gasLimit,
 			gasPrice,

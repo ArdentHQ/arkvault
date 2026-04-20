@@ -2,7 +2,6 @@ import React from "react";
 import { VoteItemProperties } from "./VoteList.contracts";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 
 export const VoteItemMobile = ({
 	wallet,
@@ -25,7 +24,5 @@ export const VoteItemMobile = ({
 				walletNameClass="text-theme-text"
 			/>
 		</div>
-
-		<Avatar size="xs" address={wallet.address()} />
 	</div>
 );

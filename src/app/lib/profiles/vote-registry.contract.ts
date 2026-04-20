@@ -1,7 +1,7 @@
 import { IReadOnlyWallet } from "./contracts.js";
 
 export interface VoteRegistryItem {
-	amount: number;
+	amount?: number;
 	wallet?: IReadOnlyWallet;
 }
 

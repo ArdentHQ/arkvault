@@ -29,6 +29,7 @@ import { twMerge } from "tailwind-merge";
 import { HideBalance } from "@/app/components/NavigationBar/components/HideBalance/HideBalance";
 import { SelectNetwork } from "./components/SelectNetwork";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 
 const NavWrapper = ({
 	variant = "default",
@@ -100,7 +101,7 @@ const NavigationBarMobileWrapper = ({
 	<div
 		{...props}
 		className={twMerge(
-			"dim:bg-theme-dim-950 fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
+			"dim:bg-theme-dim-950 fixed bottom-0 left-0 z-50 flex w-full flex-col justify-center bg-white sm:hidden dark:bg-black",
 			cn({
 				"shadow-footer-smooth dark:shadow-footer-smooth-dark": !hasFixedFormButtons,
 			}),
@@ -198,14 +199,14 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const modalSize = useMemo<Size>(() => {
 		if (isLg) {
-			return "4xl";
+			return "3xl";
 		}
 
 		if (isMd) {
 			return "2xl";
 		}
 
-		return "5xl";
+		return "3xl";
 	}, [isLg, isMd]);
 
 	const { hasFixedFormButtons, showMobileNavigation } = useNavigationContext();
@@ -227,7 +228,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			.filter((wallet) => wallet.network().id() === activeNetwork.id());
 	}, [profile, isProfileRestored, activeNetwork]);
 
-	const navigationMenu = useMemo(() => getNavigationMenu(t), [t]);
+	const navigationMenu = useMemo(() => getNavigationMenu(t, location.pathname), [t, location.pathname]);
 	const handleSelectMenuItem = useCallback(
 		({ value }: DropdownOption) => {
 			navigate(String(value));
@@ -240,20 +241,46 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		[selectedWallet, profile],
 	);
 
+	const isMenuItemDisabled = (id: string) =>
+		["tokens", "votes", "exchange"].includes(id) && profile.wallets().count() === 0;
+
 	const renderNavigationMenu = () => (
 		<>
-			<ul className="hidden h-12 items-center xl:flex" data-testid="NavigationBar__menu">
-				{navigationMenu.map((menuItem, index) => (
-					<li key={index} className="flex">
-						<NavLink
-							to={menuItem.mountPath(profile.id())}
-							title={menuItem.title}
-							className="ring-focus text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden"
-						>
-							{menuItem.title}
-						</NavLink>
-					</li>
-				))}
+			<ul className="hidden h-12 items-center gap-0.5 xl:flex" data-testid="NavigationBar__menu">
+				{navigationMenu.map((menuItem, index) => {
+					if (isMenuItemDisabled(menuItem.id)) {
+						return (
+							<li key={index} className="flex">
+								<Tooltip content={menuItem.disabledMessage}>
+									<span className="text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 cursor-pointer border-transparent bg-transparent px-2 py-1 text-sm leading-[17px] font-semibold">
+										{" "}
+										{menuItem.title}{" "}
+									</span>
+								</Tooltip>
+							</li>
+						);
+					}
+
+					return (
+						<li key={index} className="flex">
+							<NavLink
+								to={menuItem.mountPath(profile.id())}
+								title={menuItem.title}
+								className={cn(
+									"ring-focus dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-secondary-200 hover:text-theme-secondary-900 dim-hover:bg-theme-dim-700 relative flex h-fit items-center rounded border px-2 py-1 text-sm leading-[17px] font-semibold transition-all duration-200 focus:outline-hidden",
+									{
+										"text-theme-primary-600 border-theme-primary-200 bg-theme-secondary-200 dim:text-theme-dim-50 dim:bg-theme-dim-950 dim:border-theme-dim-700 dark:text-theme-dark-50 dark:bg-theme-dark-950 dark:border-theme-dark-700":
+											menuItem.isActive,
+										"text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 border-transparent bg-transparent":
+											!menuItem.isActive,
+									},
+								)}
+							>
+								{menuItem.title}
+							</NavLink>
+						</li>
+					);
+				})}
 			</ul>
 			<div
 				data-testid="NavigationBar__menu-toggle"
@@ -271,6 +298,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					)}
 					onSelect={handleSelectMenuItem}
 					options={navigationMenu.map((menuItem) => ({
+						disabled: isMenuItemDisabled(menuItem.id),
 						label: menuItem.title,
 						value: menuItem.mountPath(profile.id()),
 					}))}
@@ -298,14 +326,11 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const handleCloseReceiveFunds = useCallback(() => setSelectedWallet(undefined), [setSelectedWallet]);
 
-	const sendButtonClickHandler = useCallback(() => {
-		const sendTransferPath = `/profiles/${profile.id()}/send-transfer`;
+	const { openPanel } = usePanels();
 
-		// add query param reset = 1 if already on send transfer page
-		/* istanbul ignore next: tested in e2e -- @preserve */
-		const reset = location.pathname === sendTransferPath ? 1 : 0;
-		navigate(`${sendTransferPath}?reset=${reset}`);
-	}, [location]);
+	const sendButtonClickHandler = () => {
+		openPanel(Panel.SendTransfer, { isTokenTransfer: false });
+	};
 
 	const receiveButtonClickHandler = useCallback(() => {
 		setSearchWalletIsOpen(true);
@@ -350,7 +375,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
-									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_WALLETS")}
+									content={wallets.length > 0 ? t("COMMON.RECEIVE") : t("COMMON.NOTICE_NO_ADDRESSES")}
 								>
 									<div>
 										<NavigationButtonWrapper>
@@ -371,7 +396,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6 border-r sm:flex sm:h-12" />
 							<div className="hidden items-center sm:flex">
 								<Tooltip
-									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_WALLETS")}
+									content={wallets.length > 0 ? t("COMMON.SEND") : t("COMMON.NOTICE_NO_ADDRESSES")}
 								>
 									<div>
 										<NavigationButtonWrapper>

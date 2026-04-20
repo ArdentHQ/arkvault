@@ -24,12 +24,16 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
               <div
                 class="flex items-center"
               >
-                <div
-                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent mr-3 sm:hidden"
-                  data-testid="ValidatorStatus__standby"
-                >
-                  Standby
-                </div>
+                <span>
+                  <span>
+                    <div
+                      class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent mr-3 sm:hidden"
+                      data-testid="ValidatorStatus__standby"
+                    >
+                      Standby
+                    </div>
+                  </span>
+                </span>
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
@@ -62,11 +66,15 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                      data-testid="Address__address"
-                    >
-                      0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                          data-testid="Address__address"
+                        >
+                          0xB8Be76b31E402a2D89294Aa107056484Bef94362
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -80,12 +88,16 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Status
                 </div>
                 <div>
-                  <div
-                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
-                    data-testid="ValidatorStatus__standby"
-                  >
-                    Standby
-                  </div>
+                  <span>
+                    <span>
+                      <div
+                        class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
+                        data-testid="ValidatorStatus__standby"
+                      >
+                        Standby
+                      </div>
+                    </span>
+                  </span>
                 </div>
               </div>
               <div
@@ -97,50 +109,54 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Explorer
                 </div>
                 <div>
-                  <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                    data-ring-focus-margin="-m-1"
-                    data-testid="Link"
-                    href=""
-                    rel="noopener noreferrer"
-                  >
-                    <span
-                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                    >
-                      <span
-                        class="pr-2 text-sm sm:text-base"
+                  <span>
+                    <span>
+                      <a
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href=""
+                        rel="noopener noreferrer"
                       >
-                        View
-                      </span>
-                    </span>
-                    <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                      data-testid="Link__external"
-                    >
-                      <div
-                        style="height: 12px; width: 12px;"
-                      >
-                        <svg
-                          id="arrow-external"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <span
+                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
-                          <path
-                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
+                          <span
+                            class="pr-2 text-sm sm:text-base"
+                          >
+                            View
+                          </span>
+                        </span>
+                        <div
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                        >
+                          <div
+                            style="height: 12px; width: 12px;"
+                          >
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -167,12 +183,16 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
               <div
                 class="flex items-center"
               >
-                <div
-                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent mr-3 sm:hidden"
-                  data-testid="ValidatorStatus__standby"
-                >
-                  Standby
-                </div>
+                <span>
+                  <span>
+                    <div
+                      class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent mr-3 sm:hidden"
+                      data-testid="ValidatorStatus__standby"
+                    >
+                      Standby
+                    </div>
+                  </span>
+                </span>
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
@@ -205,11 +225,15 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                      data-testid="Address__address"
-                    >
-                      0x03BC306C369A55c0336EB003bB07F29E5c150F36
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                          data-testid="Address__address"
+                        >
+                          0x03BC306C369A55c0336EB003bB07F29E5c150F36
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -223,12 +247,16 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Status
                 </div>
                 <div>
-                  <div
-                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
-                    data-testid="ValidatorStatus__standby"
-                  >
-                    Standby
-                  </div>
+                  <span>
+                    <span>
+                      <div
+                        class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
+                        data-testid="ValidatorStatus__standby"
+                      >
+                        Standby
+                      </div>
+                    </span>
+                  </span>
                 </div>
               </div>
               <div
@@ -240,50 +268,54 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Explorer
                 </div>
                 <div>
-                  <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                    data-ring-focus-margin="-m-1"
-                    data-testid="Link"
-                    href=""
-                    rel="noopener noreferrer"
-                  >
-                    <span
-                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                    >
-                      <span
-                        class="pr-2 text-sm sm:text-base"
+                  <span>
+                    <span>
+                      <a
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href=""
+                        rel="noopener noreferrer"
                       >
-                        View
-                      </span>
-                    </span>
-                    <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                      data-testid="Link__external"
-                    >
-                      <div
-                        style="height: 12px; width: 12px;"
-                      >
-                        <svg
-                          id="arrow-external"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <span
+                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
-                          <path
-                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
+                          <span
+                            class="pr-2 text-sm sm:text-base"
+                          >
+                            View
+                          </span>
+                        </span>
+                        <div
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                        >
+                          <div
+                            style="height: 12px; width: 12px;"
+                          >
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -310,30 +342,38 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
               <div
                 class="flex items-center"
               >
-                <div
-                  class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent mr-3 sm:hidden"
-                  data-testid="ValidatorStatus__standby"
-                >
-                  Standby
-                </div>
+                <span>
+                  <span>
+                    <div
+                      class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent mr-3 sm:hidden"
+                      data-testid="ValidatorStatus__standby"
+                    >
+                      Standby
+                    </div>
+                  </span>
+                </span>
                 <span
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden"
                 />
-                <span
-                  class="w-full sm:w-auto"
-                >
-                  <button
-                    class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-black dark:text-theme-black dim:text-theme-dim-500"
-                    data-testid="ValidatorRow__toggle-2"
-                    disabled=""
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center gap-2"
+                <span>
+                  <span>
+                    <span
+                      class="w-full sm:w-auto"
                     >
-                      Select
-                    </div>
-                  </button>
+                      <button
+                        class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 hover:text-theme-primary-700 dark:hover:text-theme-primary-500 -mr-3 w-auto rounded py-0 text-sm leading-[17px] hover:underline relative bg-transparent dark:bg-transparent text-black dark:text-theme-black dim:text-theme-dim-500"
+                        data-testid="ValidatorRow__toggle-2"
+                        disabled=""
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          Select
+                        </div>
+                      </button>
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>
@@ -353,11 +393,15 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                      data-testid="Address__address"
-                    >
-                      0x56F925416Ef2725646442D5E0150088bd7202aCd
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
+                          data-testid="Address__address"
+                        >
+                          0x56F925416Ef2725646442D5E0150088bd7202aCd
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -371,12 +415,16 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Status
                 </div>
                 <div>
-                  <div
-                    class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
-                    data-testid="ValidatorStatus__standby"
-                  >
-                    Standby
-                  </div>
+                  <span>
+                    <span>
+                      <div
+                        class="bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent"
+                        data-testid="ValidatorStatus__standby"
+                      >
+                        Standby
+                      </div>
+                    </span>
+                  </span>
                 </div>
               </div>
               <div
@@ -388,50 +436,54 @@ exports[`ValidatorRowMobile > should render the selected vote 1`] = `
                   Explorer
                 </div>
                 <div>
-                  <a
-                    class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
-                    data-ring-focus-margin="-m-1"
-                    data-testid="Link"
-                    href=""
-                    rel="noopener noreferrer"
-                  >
-                    <span
-                      class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
-                    >
-                      <span
-                        class="pr-2 text-sm sm:text-base"
+                  <span>
+                    <span>
+                      <a
+                        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href=""
+                        rel="noopener noreferrer"
                       >
-                        View
-                      </span>
-                    </span>
-                    <div
-                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
-                      data-testid="Link__external"
-                    >
-                      <div
-                        style="height: 12px; width: 12px;"
-                      >
-                        <svg
-                          id="arrow-external"
-                          style="height: 100%; width: 100%;"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <span
+                          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
                         >
-                          <path
-                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
+                          <span
+                            class="pr-2 text-sm sm:text-base"
+                          >
+                            View
+                          </span>
+                        </span>
+                        <div
+                          class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                        >
+                          <div
+                            style="height: 12px; width: 12px;"
+                          >
+                            <svg
+                              id="arrow-external"
+                              style="height: 100%; width: 100%;"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>

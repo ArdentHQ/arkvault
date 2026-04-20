@@ -166,18 +166,26 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        Mainsail Wallet …
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -438,18 +446,26 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        Mainsail Wallet …
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -590,18 +606,26 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                         class="font-semibold text-base text-theme-text"
                         data-testid="Address__alias"
                       >
-                        <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
-                        >
-                          Mainsail Wallet …
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
+                            >
+                              Mainsail Wallet …
+                            </span>
+                          </span>
                         </span>
                       </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -906,18 +930,26 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                       class="font-semibold text-base text-theme-text"
                       data-testid="Address__alias"
                     >
-                      <span
-                        class="no-ligatures transition-colors duration-200"
-                        data-testid="TruncateEnd"
-                      >
-                        Mainsail Wallet …
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures transition-colors duration-200"
+                            data-testid="TruncateEnd"
+                          >
+                            Mainsail Wallet …
+                          </span>
+                        </span>
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                    <span>
+                      <span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                        </span>
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -1058,18 +1090,26 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                         class="font-semibold text-base text-theme-text"
                         data-testid="Address__alias"
                       >
-                        <span
-                          class="no-ligatures transition-colors duration-200"
-                          data-testid="TruncateEnd"
-                        >
-                          Mainsail Wallet …
+                        <span>
+                          <span>
+                            <span
+                              class="no-ligatures transition-colors duration-200"
+                              data-testid="TruncateEnd"
+                            >
+                              Mainsail Wallet …
+                            </span>
+                          </span>
                         </span>
                       </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      <span>
+                        <span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                          </span>
+                        </span>
                       </span>
                     </div>
                   </div>

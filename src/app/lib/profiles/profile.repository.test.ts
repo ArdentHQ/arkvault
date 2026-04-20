@@ -58,6 +58,19 @@ describe("ProfileRepository", () => {
 		expect(spy).toHaveBeenCalled();
 	});
 
+	it("should restore a profile and select first wallet when none selected", async () => {
+		const profile = await subject.create("John Doe");
+		profile.status().markAsClean();
+
+		vi.spyOn(profile.wallets(), "selected").mockReturnValue([]);
+		vi.spyOn(profile.wallets(), "first").mockReturnValue({} as any);
+		const selectOneSpy = vi.spyOn(profile.wallets(), "selectOne");
+
+		await subject.restore(profile);
+
+		expect(selectOneSpy).toHaveBeenCalled();
+	});
+
 	it("should dump a profile", async () => {
 		const profile = await subject.create("John Doe");
 		const dumped = subject.dump(profile);

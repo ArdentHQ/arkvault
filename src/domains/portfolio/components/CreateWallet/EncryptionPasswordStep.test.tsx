@@ -184,13 +184,27 @@ describe("EncryptionPasswordStep", () => {
 			expect(screen.getByTestId("CreateWallet__continue-encryption-button")).toBeEnabled();
 		});
 
-		const walletSpy = vi.spyOn(profile.walletFactory(), "fromMnemonicWithBIP39").mockImplementation(() => {
-			throw new Error("Test");
-		});
+		const originalFromMnemonic = profile.walletFactory().fromMnemonicWithBIP39.bind(profile.walletFactory());
+		const walletSpy = vi
+			.spyOn(profile.walletFactory(), "fromMnemonicWithBIP39")
+			.mockImplementation(async (parameters) => {
+				const wallet = await originalFromMnemonic(parameters);
+				const mockSigningKey = {
+					set: vi.fn().mockRejectedValue(new Error("Encryption failed")),
+				};
+				vi.spyOn(wallet, "signingKey").mockReturnValue(mockSigningKey as any);
+				return wallet;
+			});
 
 		await userEvent.click(screen.getByTestId("CreateWallet__continue-encryption-button"));
 
-		expect(screen.queryByTestId("CreateWallet__SuccessStep")).not.toBeInTheDocument();
+		await waitFor(
+			() => {
+				expect(screen.queryByTestId("CreateWallet__SuccessStep")).not.toBeInTheDocument();
+			},
+			{ timeout: 3000 },
+		);
+
 		walletSpy.mockRestore();
 	});
 });

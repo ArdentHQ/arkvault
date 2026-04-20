@@ -1,16 +1,20 @@
 import "@testing-library/jest-dom";
 import MockDate from "mockdate";
 import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
-import { env, getDefaultProfileId, getMainsailProfileId } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
-import Tippy from "@tippyjs/react";
 import crypto from "crypto";
 import "jest-styled-components";
 import { server } from "./src/tests/mocks/server";
+import { pwnedMock } from "./src/tests/mocks/handlers/pwned";
 import { actWarningsAsErrors } from "./src/utils/test-plugins";
 import * as matchers from "jest-extended";
 
 expect.extend(matchers);
+
+vi.mock("@faustbrian/node-haveibeenpwned", () => ({
+	pwned: async () => pwnedMock(),
+}));
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
@@ -82,20 +86,44 @@ vi.mock("p-retry", async () => {
 
 vi.mock("browser-fs-access");
 
-const originalTippyRender = Tippy.render;
-let tippyMock;
+const createLocalStorageMock = () => {
+	const store: Record<string, string> = {};
+	return {
+		getItem: (key: string) => store[key] ?? null,
+		setItem: (key: string, value: string) => {
+			store[key] = value;
+		},
+		removeItem: (key: string) => {
+			delete store[key];
+		},
+		clear: () => {
+			Object.keys(store).forEach((key) => delete store[key]);
+		},
+		get length() {
+			return Object.keys(store).length;
+		},
+		key: (index: number) => Object.keys(store)[index] ?? null,
+	};
+};
 
-const originalLocalStorageGetItem = localStorage.getItem;
-let localstorageSpy;
+let localStorageMock: ReturnType<typeof createLocalStorageMock>;
 
 // Treat act warnings as errors.
 actWarningsAsErrors();
 
 beforeAll(async () => {
+	if (typeof localStorage.getItem !== "function") {
+		localStorageMock = createLocalStorageMock();
+		Object.defineProperty(globalThis, "localStorage", {
+			value: localStorageMock,
+			writable: true,
+		});
+	}
+
 	// Fixes "URL.createObjectURL is not a function" in /src/app/hooks/use-files.test.tsx
 	global.URL.createObjectURL = vi.fn(() => "blob:mock-url");
 
-	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
+	MockDate.set(new Date("2026-03-26T00:00:00.000Z"));
 
 	process.env.REACT_APP_IS_UNIT = "1";
 	server.listen({ onUnhandledRequest: "warn" });
@@ -109,20 +137,6 @@ beforeAll(async () => {
 });
 
 beforeEach(() => {
-	localstorageSpy = vi
-		.spyOn(Storage.prototype, "getItem")
-		.mockImplementation((key) => originalLocalStorageGetItem.call(localStorage, key));
-
-	tippyMock = vi.spyOn(Tippy, "render").mockImplementation((context) => {
-		if (context?.render?.name === "renderDropdownContent") {
-			return context.render({
-				className: "absolute z-10 w-full",
-			});
-		}
-
-		return originalTippyRender(context);
-	});
-
 	if (process.env.MOCK_AVAILABLE_NETWORKS !== "false") {
 		try {
 			const profileId = getMainsailProfileId();
@@ -144,10 +158,6 @@ beforeEach(() => {
 
 afterEach(() => {
 	server.resetHandlers();
-
-	tippyMock.mockRestore();
-
-	localstorageSpy.mockRestore();
 });
 
 afterAll(() => {

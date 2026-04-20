@@ -1,4 +1,4 @@
-import { IProfile, IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
+import { IReadOnlyWallet, IReadWriteWallet } from "./contracts.js";
 
 /**
  * Defines the implementation contract for the delegate service.
@@ -49,21 +49,19 @@ export interface IValidatorService {
 	/**
 	 * Synchronise validators for the given and network.
 	 *
-	 * @param {IProfile} profile
 	 * @param {string} network
 	 * @return {Promise<void>}
 	 * @memberof IValidatorService
 	 */
-	sync(profile: IProfile, network: string): Promise<void>;
+	sync(network: string): Promise<void>;
 
 	/**
 	 * Synchronise validators for all networks.
 	 *
-	 * @param {IProfile} profile
 	 * @return {Promise<void>}
 	 * @memberof IValidatorService
 	 */
-	syncAll(profile: IProfile): Promise<void>;
+	syncAll(): Promise<void>;
 
 	/**
 	 * Map the given public keys to delegates of the network of the given wallet.

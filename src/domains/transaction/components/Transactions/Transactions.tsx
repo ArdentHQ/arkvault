@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
 import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { Trans, useTranslation } from "react-i18next";
@@ -9,11 +9,12 @@ import { FilterTransactions } from "@/domains/transaction/components/FilterTrans
 import { Icon } from "@/app/components/Icon";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
-import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
-import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
+import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
+import { ExtendedTransactionDTO, TransactionTable } from "@/domains/transaction/components/TransactionTable";
 import cn from "classnames";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 import { Skeleton } from "@/app/components/Skeleton";
+import { Panel, usePanels } from "@/app/contexts";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -25,6 +26,7 @@ interface TransactionsProperties {
 	onLoading?: (status: boolean) => void;
 	isUpdatingWallet?: boolean;
 	selectedWallets?: number;
+	showTabs?: boolean;
 }
 
 export const Transactions = memo(function Transactions({
@@ -37,12 +39,13 @@ export const Transactions = memo(function Transactions({
 	isUpdatingWallet,
 	onLoading,
 	selectedWallets,
+	showTabs,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
 
-	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
-		undefined,
-	);
+	const { setIsMinimized, currentOpenedPanel, closePanel, openPanel } = usePanels();
+
+	const [transactionModalItem, setTransactionModalItem] = useState<ExtendedTransactionDTO | undefined>(undefined);
 
 	const [activeTransactionTypeLabel, setActiveTransactionTypeLabel] = useState("");
 
@@ -137,7 +140,12 @@ export const Transactions = memo(function Transactions({
 		[activeMode],
 	);
 
-	const showTabs = useMemo(() => {
+	const showTransactionTabs = useMemo(() => {
+		// Explicitly disabled by props
+		if (showTabs === false) {
+			return false;
+		}
+
 		if (isLoadingTransactions) {
 			return true;
 		}
@@ -176,7 +184,7 @@ export const Transactions = memo(function Transactions({
 				</div>
 			)}
 
-			{showTabs && (
+			{showTransactionTabs && (
 				<>
 					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
 						<TabList className="h-10">
@@ -188,7 +196,7 @@ export const Transactions = memo(function Transactions({
 						</TabList>
 					</Tabs>
 
-					<div className="my-3 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3 md:hidden">
+					<div className="my-3 flex flex-col sm:flex-row sm:space-x-3 md:hidden">
 						<div className="flex-1">
 							<Dropdown
 								data-testid="Transactions--filter-dropdown"
@@ -196,7 +204,7 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 dim:border-theme-dim-200 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3">
+									<div className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-dark-700 dark:text-theme-dark-50 dim:border-theme-dim-500 flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded border p-3 sm:px-4 sm:py-3">
 										<span className="text-base leading-tight font-semibold">
 											{selectedFilterLabel}
 										</span>
@@ -253,11 +261,20 @@ export const Transactions = memo(function Transactions({
 				</div>
 
 				<TransactionTable
+					coinName={profile.activeNetwork().ticker()}
 					transactions={transactions}
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					isLoading={isLoadingTransactions}
 					skeletonRowsLimit={8}
-					onRowClick={setTransactionModalItem}
+					onRowClick={(transaction) => {
+						if (currentOpenedPanel?.name === Panel.TransactionDetails) {
+							setIsMinimized(false);
+						} else {
+							openPanel(Panel.TransactionDetails);
+						}
+
+						setTransactionModalItem(transaction);
+					}}
 					profile={profile}
 					hideSender={selectedWallets === 1}
 					sortBy={sortBy}
@@ -290,12 +307,17 @@ export const Transactions = memo(function Transactions({
 					</>
 				)}
 
-				{transactionModalItem && (
-					<TransactionDetailModal
+				{transactionModalItem && currentOpenedPanel?.name === Panel.TransactionDetails && (
+					<TransactionDetailSidePanel
 						isOpen={!!transactionModalItem}
 						transactionItem={transactionModalItem}
 						profile={profile}
-						onClose={() => setTransactionModalItem(undefined)}
+						onClose={() => {
+							/* istanbul ignore next -- @preserve */
+							closePanel().then(() => {
+								setTransactionModalItem(undefined);
+							});
+						}}
 					/>
 				)}
 			</TableWrapper>

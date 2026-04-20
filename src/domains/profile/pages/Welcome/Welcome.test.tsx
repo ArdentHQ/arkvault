@@ -9,7 +9,7 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-import { afterAll, vi } from "vitest";
+import { afterAll, beforeAll, beforeEach, vi } from "vitest";
 import { httpClient, toasts } from "@/app/services";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -24,6 +24,19 @@ import { renderHook } from "@testing-library/react";
 import { truncate } from "@/app/lib/helpers";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import userEvent from "@testing-library/user-event";
+import { useLocation } from "react-router-dom";
+
+vi.mock("react-router-dom", async () => {
+	const actual = await vi.importActual("react-router-dom");
+	return {
+		...actual,
+		useLocation: vi.fn().mockReturnValue(defaultUseLocationValue()),
+	};
+});
+
+function defaultUseLocationValue() {
+	return { hash: "", key: "default", pathname: "", search: "", state: undefined };
+}
 
 const fixtureProfileId = getMainsailProfileId();
 const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052";
@@ -299,7 +312,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`));
 		await waitFor(() => expect(router.state.location.search).toBe(route));
 
 		toastWarningSpy.mockRestore();
@@ -322,7 +335,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`));
 		await waitFor(() => expect(router.state.location.search).toBe(route));
 
 		toastWarningSpy.mockRestore();
@@ -358,7 +371,7 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 
 		// Automatically redirects to transfer page
-		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		await waitFor(() => expect(router.state.location.pathname).toBe(`/profiles/${fixtureProfileId}/dashboard`));
 
 		toastWarningSpy.mockRestore();
 		profilesSpy.mockRestore();
@@ -449,6 +462,10 @@ describe("Welcome with deeplink", () => {
 });
 
 describe("Welcome", () => {
+	beforeEach(() => {
+		vi.mocked(useLocation).mockReturnValue(defaultUseLocationValue());
+	});
+
 	it("should navigate to profile dashboard", async () => {
 		const { container, router } = render(<Welcome />);
 
@@ -757,6 +774,44 @@ describe("Welcome", () => {
 		await userEvent.click(screen.getByText(commonTranslations.CREATE));
 
 		expect(router.state.location.pathname).toBe("/profiles/create");
+	});
+
+	it("should switch theme when `from` is present", async () => {
+		// eslint-disable-next-line testing-library/no-node-access
+		const spy = vi.spyOn(document.querySelector("html").classList, "add");
+
+		const useLocationMock = vi.mocked(useLocation).mockReturnValue({
+			...defaultUseLocationValue(),
+			state: { from: "/profiles/" + mockedProfileId },
+		});
+
+		render(<Welcome />);
+
+		await expect(screen.findByTestId(passwordTestID)).resolves.toBeVisible();
+
+		await submitPassword();
+
+		await waitFor(() => {
+			expect(spy).toHaveBeenNthCalledWith(1, "light");
+		});
+
+		spy.mockRestore();
+		useLocationMock.mockRestore();
+	});
+
+	it("should not display Sign In modal if `from` is invalid", async () => {
+		const useLocationMock = vi.mocked(useLocation).mockReturnValue({
+			...defaultUseLocationValue(),
+			state: { from: "/invalid/profile-id" },
+		});
+
+		render(<Welcome />);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId(passwordTestID)).not.toBeInTheDocument();
+		});
+
+		useLocationMock.mockRestore();
 	});
 
 	it("should render without profiles", async () => {

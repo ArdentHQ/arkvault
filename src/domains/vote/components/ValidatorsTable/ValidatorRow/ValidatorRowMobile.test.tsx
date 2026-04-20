@@ -12,18 +12,23 @@ let validator: Contracts.IReadOnlyWallet;
 const firstValidatorVoteButton = () => screen.getByTestId("ValidatorRow__toggle-0");
 
 describe("ValidatorRowMobile", () => {
+	let profile: Contracts.IProfile;
+
 	beforeAll(() => {
-		const profile = env.profiles().findById(getMainsailProfileId());
+		profile = env.profiles().findById(getMainsailProfileId());
 		wallet = profile.wallets().values()[0];
-		validator = new ReadOnlyWallet({
-			address: data[0].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[0].publicKey,
-			username: data[0].username,
-		});
+		validator = new ReadOnlyWallet(
+			{
+				address: data[0].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[0].publicKey,
+				username: data[0].username,
+			},
+			profile,
+		);
 	});
 
 	it("should render", () => {
@@ -131,25 +136,31 @@ describe("ValidatorRowMobile", () => {
 	});
 
 	it("should render the selected vote", () => {
-		const secondValidator = new ReadOnlyWallet({
-			address: data[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[1].publicKey,
-			username: data[1].username,
-		});
+		const secondValidator = new ReadOnlyWallet(
+			{
+				address: data[1].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[1].publicKey,
+				username: data[1].username,
+			},
+			profile,
+		);
 
-		const thirdValidator = new ReadOnlyWallet({
-			address: data[2].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[2].publicKey,
-			username: data[2].username,
-		});
+		const thirdValidator = new ReadOnlyWallet(
+			{
+				address: data[2].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[2].publicKey,
+				username: data[2].username,
+			},
+			profile,
+		);
 
 		const { container, asFragment } = render(
 			<table>
@@ -229,39 +240,5 @@ describe("ValidatorRowMobile", () => {
 			</table>,
 		);
 		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
-	});
-
-	it("should render changed style when network requires vote amount", () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-		const selectedVotes: VoteValidatorProperties[] = [
-			{
-				amount: 20,
-				validatorAddress: validator.address(),
-			},
-		];
-		const voted: Contracts.VoteRegistryItem = {
-			amount: 10,
-			wallet: validator,
-		};
-		render(
-			<table>
-				<tbody>
-					<ValidatorRowMobile
-						index={0}
-						validator={validator}
-						voted={voted}
-						selectedVotes={selectedVotes}
-						selectedUnvotes={[]}
-						availableBalance={wallet.balance()}
-						setAvailableBalance={vi.fn()}
-						toggleUnvotesSelected={vi.fn()}
-						toggleVotesSelected={vi.fn()}
-						selectedWallet={wallet}
-					/>
-				</tbody>
-			</table>,
-		);
-		expect(firstValidatorVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
-		votesAmountMinimumMock.mockRestore();
 	});
 });

@@ -4,9 +4,13 @@ import ARKVaultLogo from "./arkvault-logo.svg?react";
 import ARKVaultLogoAlphaLight from "./arkvault-logo-alpha-light.svg?react";
 import ARKVaultLogoAlphaDark from "./arkvault-logo-alpha-dark.svg?react";
 import ARKVaultLogoAlphaDim from "./arkvault-logo-alpha-dim.svg?react";
+import ContractAddressDark from "./contract-address-dark.svg?react";
+import ContractAddressDim from "./contract-address-dim.svg?react";
+import ContractAddressLight from "./contract-address-light.svg?react";
 import DeleteBannerDark from "./delete-banner-dark.svg?react";
 import DeleteBannerLight from "./delete-banner-light.svg?react";
 import EmptyNotificationsDark from "./empty-notifications-dark.svg?react";
+import EmptyNotificationsDim from "./empty-notifications-dim.svg?react";
 import EmptyNotificationsLight from "./empty-notifications-light.svg?react";
 import ErrorDark from "./error-dark.svg?react";
 import ErrorLight from "./error-light.svg?react";
@@ -32,6 +36,7 @@ import InfoLight from "./info-light.svg?react";
 import InfoDark from "./info-dark.svg?react";
 import WarningLight from "./warning-light.svg?react";
 import WarningDark from "./warning-dark.svg?react";
+import WarningDim from "./warning-dim.svg?react";
 import WorldMap from "./world-map.svg?react";
 import CreateAddressDark from "./create-address-dark.svg?react";
 import ImportAddressDark from "./import-address-dark.svg?react";
@@ -57,12 +62,16 @@ export const images = {
 		ARKVaultLogoAlphaDark,
 		ARKVaultLogoAlphaDim,
 		ARKVaultLogoAlphaLight,
+		ContractAddressDark,
+		ContractAddressDim,
+		ContractAddressLight,
 		CreateAddressDark,
 		CreateAddressDim,
 		CreateAddressLight,
 		DeleteBannerDark,
 		DeleteBannerLight,
 		EmptyNotificationsDark,
+		EmptyNotificationsDim,
 		EmptyNotificationsLight,
 		ErrorDark,
 		ErrorLight,
@@ -94,6 +103,7 @@ export const images = {
 		TrashDim,
 		TrashLight,
 		WarningDark,
+		WarningDim,
 		WarningLight,
 		WelcomeBannerDark,
 		WelcomeBannerLight,

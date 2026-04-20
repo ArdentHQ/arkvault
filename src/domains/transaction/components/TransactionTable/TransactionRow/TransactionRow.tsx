@@ -9,11 +9,10 @@ import { useBreakpoint } from "@/app/hooks";
 import { twMerge } from "tailwind-merge";
 import { TimeAgo } from "@/app/components/TimeAgo";
 import { DateTime } from "@/app/lib/intl";
-import { Label } from "@/app/components/Label";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount } from "@/app/components/Amount";
-import { TransactionTotalLabel, TransactionFiatAmount } from "./TransactionAmount.blocks";
+import { TransactionTotalLabel, TransactionFiatAmount, TransactionTypeLabel } from "./TransactionAmount.blocks";
 import { TransactionRowId } from "./TransactionRowId";
 import cn from "classnames";
 
@@ -26,6 +25,8 @@ export const TransactionRow = memo(
 		isLoading = false,
 		profile,
 		hideSender = false,
+		decimals = 8,
+		coinName,
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
@@ -35,6 +36,8 @@ export const TransactionRow = memo(
 		if (isXs || isSm) {
 			return (
 				<TransactionRowMobile
+					coinName={coinName}
+					decimals={decimals}
 					isLoading={isLoading}
 					onClick={onClick}
 					transaction={transaction}
@@ -55,10 +58,13 @@ export const TransactionRow = memo(
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
 				<TableCell
 					variant="start"
-					innerClassName={cn("items-start pr-0 lg:pr-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36", {
-						"min-h-14 my-1 pt-1": hideSender,
-						"min-h-[66px] py-1 my-0 md-lg:min-h-14": !hideSender,
-					})}
+					innerClassName={cn(
+						"items-start pr-0 lg:px-0 lg:pl-3 xl:min-h-11 xl:max-h-11 xl:pt-2.5 lg:min-w-36",
+						{
+							"min-h-14 my-1 pt-1": hideSender,
+							"min-h-[66px] py-1 my-0 md-lg:min-h-14": !hideSender,
+						},
+					)}
 				>
 					<div className="flex flex-col gap-1 font-semibold">
 						<TransactionRowId transaction={transaction} />
@@ -97,15 +103,9 @@ export const TransactionRow = memo(
 							!hideSender,
 					})}
 				>
-					<Label
-						color="secondary"
-						size="xs"
-						noBorder
-						className="max-w-40 truncate rounded px-1 py-[3px] whitespace-nowrap dark:border"
-						data-testid="TransactionRow__type"
-					>
-						{getLabel(transaction.type())}
-					</Label>
+					<TransactionTypeLabel color="secondary" noBorder size="xs" tooltipContent={getLabel(transaction)}>
+						{getLabel(transaction)}
+					</TransactionTypeLabel>
 				</TableCell>
 
 				<TableCell
@@ -167,7 +167,13 @@ export const TransactionRow = memo(
 					})}
 				>
 					<div className="flex flex-col items-end gap-1">
-						<TransactionTotalLabel transaction={transaction} hideStyles={!hideSender} profile={profile} />
+						<TransactionTotalLabel
+							showTicker={!coinName}
+							transaction={transaction}
+							hideStyles={!hideSender}
+							profile={profile}
+							decimals={decimals}
+						/>
 						<span
 							className="text-theme-secondary-700 text-xs font-semibold lg:hidden"
 							data-testid="TransactionRow__exchange-currency"
@@ -193,6 +199,7 @@ export const TransactionRow = memo(
 				>
 					{isXl ? (
 						<Amount
+							decimals={decimals}
 							value={transaction.convertedTotal()}
 							ticker={exchangeCurrency || ""}
 							allowHideBalance
@@ -201,6 +208,8 @@ export const TransactionRow = memo(
 					) : (
 						<div className="flex w-40 flex-col items-end gap-1">
 							<TransactionTotalLabel
+								showTicker={!coinName}
+								decimals={decimals}
 								transaction={transaction}
 								hideStyles={!hideSender}
 								profile={profile}

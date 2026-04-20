@@ -22,6 +22,8 @@ export const TransactionRowMobile = memo(
 		profile,
 		exchangeCurrency,
 		hideSender = false,
+		decimals,
+		coinName,
 		...properties
 	}: TransactionRowProperties) => {
 		const { t } = useTranslation();
@@ -33,12 +35,14 @@ export const TransactionRowMobile = memo(
 
 		const timeStamp = transaction.timestamp();
 
+		const amountLabel = coinName ? `${t("COMMON.AMOUNT")} (${coinName})` : t("COMMON.AMOUNT");
+
 		return (
 			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black">
-							<div className="max-w-32">
+							<div>
 								<TransactionRowId transaction={transaction} />
 							</div>
 							<div className="flex flex-row items-center">
@@ -57,7 +61,7 @@ export const TransactionRowMobile = memo(
 
 						<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
 							<MobileSection
-								title={getLabel(transaction.type())}
+								title={getLabel(transaction)}
 								className="w-full"
 								data-testid="TransactionRowMobile__label"
 							>
@@ -81,14 +85,13 @@ export const TransactionRowMobile = memo(
 								)}
 							</MobileSection>
 
-							<MobileSection
-								title={`${t("COMMON.AMOUNT")} (${transaction.wallet().currency()})`}
-								className="w-full"
-							>
+							<MobileSection title={amountLabel} className="w-full">
 								<TransactionTotalLabel
+									decimals={decimals}
 									transaction={transaction}
 									hideStyles={!hideSender}
 									profile={profile}
+									showTicker={!coinName}
 								/>
 							</MobileSection>
 

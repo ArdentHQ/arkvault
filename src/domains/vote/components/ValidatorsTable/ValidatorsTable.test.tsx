@@ -7,7 +7,7 @@ import { VoteValidatorProperties } from "./ValidatorsTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
-import { env, getMainsailProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
@@ -29,20 +29,22 @@ describe("ValidatorsTable", () => {
 
 		validators = [0, 1, 2].map(
 			(index) =>
-				new ReadOnlyWallet({
-					address: data[index].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[index].publicKey,
-					username: data[index].attributes.username,
-				}),
+				new ReadOnlyWallet(
+					{
+						address: data[index].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[index].publicKey,
+						username: data[index].attributes.username,
+					},
+					profile,
+				),
 		);
 
 		votes = [
 			{
-				amount: 0,
 				wallet: validators[0],
 			},
 		];
@@ -52,257 +54,125 @@ describe("ValidatorsTable", () => {
 		useRandomNumberSpy.mockRestore();
 	});
 
-	//it("should render", () => {
-	//	const { container, asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	expect(container).toBeInTheDocument();
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should render mobile view in XS screen", () => {
-	//	renderResponsive(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//		"xs",
-	//	);
-	//
-	//	expect(screen.getAllByTestId("ValidatorRowMobile")[0]).toBeInTheDocument();
-	//});
-	//
-	//it("should render vote amount column", () => {
-	//	const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-	//
-	//	const { container, asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	expect(container).toBeInTheDocument();
-	//	expect(asFragment()).toMatchSnapshot();
-	//
-	//	votesAmountMinimumMock.mockRestore();
-	//});
-	//
-	//describe.each(["base", "requiresAmount"])("loading state for %s", (voteType) => {
-	//	it("should render when isCompact = %s", () => {
-	//		const votesAmountMinimumMock = vi
-	//			.spyOn(wallet.network(), "votesAmountMinimum")
-	//			.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
-	//
-	//		const { container, asFragment } = render(
-	//			<ValidatorsTable
-	//				validators={[]}
-	//				votes={[]}
-	//				isLoading={true}
-	//				voteValidators={[]}
-	//				unvoteValidators={[]}
-	//				selectedWallet={wallet}
-	//				maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//			/>,
-	//		);
-	//
-	//		expect(container).toBeInTheDocument();
-	//		expect(asFragment()).toMatchSnapshot();
-	//
-	//		votesAmountMinimumMock.mockRestore();
-	//	});
-	//});
-	//
-	//it("should render with empty list", () => {
-	//	const { container, asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={[]}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	expect(container).toBeInTheDocument();
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should render with subtitle", () => {
-	//	const { container, asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//			subtitle={<p>test</p>}
-	//		/>,
-	//	);
-	//
-	//	expect(container).toBeInTheDocument();
-	//	expect(screen.getByText("test")).toBeInTheDocument();
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should select a validator to vote", async () => {
-	//	const { asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={[]}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-	//	expect(footerVotes()).toHaveTextContent("1");
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(firstValidatorVoteButton()).toHaveTextContent(translations.SELECT);
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should unselect a validator to vote", async () => {
-	//	const { asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={votes}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//	const selectButton = screen.getByTestId("ValidatorRow__toggle-1");
-	//
-	//	await userEvent.click(selectButton);
-	//
-	//	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-	//	expect(footerVotes()).toHaveTextContent("1");
-	//
-	//	await userEvent.click(selectButton);
-	//
-	//	expect(selectButton).toHaveTextContent(translations.SELECTED);
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should select a validator to unvote", async () => {
-	//	const { asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={votes}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-	//	expect(footerUnvotes()).toHaveTextContent("1");
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
-	//	expect(asFragment()).toMatchSnapshot();
-	//});
-	//
-	//it("should select a validator with vote amount and make it unvote", async () => {
-	//	const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-	//
-	//	const votes: Contracts.VoteRegistryItem[] = [
-	//		{
-	//			amount: 10,
-	//			wallet: validators[0],
-	//		},
-	//	];
-	//
-	//	const { asFragment } = render(
-	//		<ValidatorsTable
-	//			validators={validators}
-	//			votes={votes}
-	//			voteValidators={[]}
-	//			unvoteValidators={[]}
-	//			selectedWallet={wallet}
-	//			maxVotes={wallet.network().maximumVotesPerTransaction()}
-	//		/>,
-	//	);
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-	//	expect(footerUnvotes()).toHaveTextContent("1");
-	//
-	//	await userEvent.click(firstValidatorVoteButton());
-	//
-	//	expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
-	//	expect(asFragment()).toMatchSnapshot();
-	//
-	//	votesAmountMinimumMock.mockRestore();
-	//});
+	it("should render", () => {
+		const { container, asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+		);
 
-	it("should select a changed validator to unvote", async () => {
-		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-		const votesAmountStepMock = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
 
-		const votes: Contracts.VoteRegistryItem[] = [
-			{
-				amount: 20,
-				wallet: validators[0],
-			},
-		];
+	it("should render mobile view in XS screen", () => {
+		renderResponsive(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+			"xs",
+		);
 
-		const Table = () => (
+		expect(screen.getAllByTestId("ValidatorRowMobile")[0]).toBeInTheDocument();
+	});
+
+	it("should render with empty list", () => {
+		const { container, asFragment } = render(
+			<ValidatorsTable
+				validators={[]}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with subtitle", () => {
+		const { container, asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+				subtitle={<p>test</p>}
+			/>,
+		);
+
+		expect(container).toBeInTheDocument();
+		expect(screen.getByText("test")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should select a validator to vote", async () => {
+		const { asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={[]}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(footerVotes()).toHaveTextContent("1");
+
+		await userEvent.click(firstValidatorVoteButton());
+
+		expect(firstValidatorVoteButton()).toHaveTextContent(translations.SELECT);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should unselect a validator to vote", async () => {
+		const { asFragment } = render(
 			<ValidatorsTable
 				validators={validators}
 				votes={votes}
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>
+			/>,
+		);
+		const selectButton = screen.getByTestId("ValidatorRow__toggle-1");
+
+		await userEvent.click(selectButton);
+
+		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
+		expect(footerVotes()).toHaveTextContent("1");
+
+		await userEvent.click(selectButton);
+
+		expect(selectButton).toHaveTextContent(translations.SELECTED);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should select a validator to unvote", async () => {
+		const { asFragment } = render(
+			<ValidatorsTable
+				validators={validators}
+				votes={votes}
+				voteValidators={[]}
+				unvoteValidators={[]}
+				selectedWallet={wallet}
+			/>,
 		);
 
-		const { asFragment, rerender } = render(<Table />);
-		const amountField = screen.getAllByTestId("InputCurrency")[0];
-
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "30");
-
-		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-
-		await waitFor(() => {
-			expect(footerVotes()).toHaveTextContent("1");
-		});
-
-		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
-
 		await userEvent.click(firstValidatorVoteButton());
 
 		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
@@ -311,33 +181,7 @@ describe("ValidatorsTable", () => {
 		await userEvent.click(firstValidatorVoteButton());
 
 		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
-		expect(amountField).toHaveValue("20");
-
-		rerender();
-
-		const amountInput = screen.getAllByTestId("InputCurrency")[0];
-		await userEvent.clear(amountInput);
-		await userEvent.type(amountInput, "10");
-
-		await waitFor(() => {
-			expect(footerUnvotes()).toHaveTextContent("1");
-		});
-
-		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CHANGED);
-
-		await userEvent.click(firstValidatorVoteButton());
-
-		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-		expect(footerUnvotes()).toHaveTextContent("1");
-
-		await userEvent.click(firstValidatorVoteButton());
-
-		expect(firstValidatorVoteButton()).toHaveTextContent(translations.CURRENT);
-		expect(amountField).toHaveValue("20");
 		expect(asFragment()).toMatchSnapshot();
-
-		votesAmountMinimumMock.mockRestore();
-		votesAmountStepMock.mockRestore();
 	});
 
 	it("should unselect a validator to unvote", async () => {
@@ -348,7 +192,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 		const selectVoteButton = screen.getByTestId("ValidatorRow__toggle-1");
@@ -376,7 +219,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 		const selectVoteButton = screen.getByTestId("ValidatorRow__toggle-1");
@@ -393,33 +235,9 @@ describe("ValidatorsTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select multiple validators to unvote/vote", async () => {
-		const { asFragment } = render(
-			<ValidatorsTable
-				validators={validators}
-				votes={votes}
-				voteValidators={[]}
-				unvoteValidators={[]}
-				selectedWallet={wallet}
-				maxVotes={10}
-			/>,
-		);
-		const selectButtons = [0, 1, 2].map((index) => screen.getByTestId(`ValidatorRow__toggle-${index}`));
-
-		await userEvent.click(selectButtons[0]);
-		await userEvent.click(selectButtons[1]);
-		await userEvent.click(selectButtons[2]);
-
-		expect(screen.getByTestId("ValidatorTable__footer")).toBeInTheDocument();
-		expect(footerVotes()).toHaveTextContent("2");
-		expect(footerUnvotes()).toHaveTextContent("1");
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should emit action on continue button to vote", async () => {
 		const voteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validators[0].address(),
 			},
 		];
@@ -433,7 +251,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -451,13 +268,11 @@ describe("ValidatorsTable", () => {
 	it("should add resigned validator to the unvote list", () => {
 		const resignedValidators: Contracts.VoteRegistryItem[] = [
 			{
-				amount: 0,
 				wallet: validators[1],
 			},
 		];
 		const unvoteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validators[1].address(),
 			},
 		];
@@ -472,7 +287,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -488,7 +302,6 @@ describe("ValidatorsTable", () => {
 	it("should render with a validator to vote", async () => {
 		const voteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: validators[0].address(),
 			},
 		];
@@ -502,7 +315,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -532,7 +344,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -568,7 +379,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={unvoteValidators}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -586,7 +396,6 @@ describe("ValidatorsTable", () => {
 	it("should emit action on continue button to unvote", async () => {
 		const voteValidators: VoteValidatorProperties[] = [
 			{
-				amount: 0,
 				validatorAddress: votes[0].wallet!.address(),
 			},
 		];
@@ -600,7 +409,6 @@ describe("ValidatorsTable", () => {
 				unvoteValidators={[]}
 				onContinue={onContinue}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -625,7 +433,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -654,7 +461,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -681,7 +487,6 @@ describe("ValidatorsTable", () => {
 				voteValidators={[]}
 				unvoteValidators={[]}
 				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 

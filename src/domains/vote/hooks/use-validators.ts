@@ -27,7 +27,7 @@ export const useValidators = ({
 	const fetchValidators = useCallback(
 		async (wallet) => {
 			setIsLoadingValidators(true);
-			await profile.validators().sync(profile, wallet.networkId());
+			await profile.validators().sync(wallet.networkId());
 			const validators = profile.validators().all(wallet.networkId());
 			await profile.usernames().syncUsernames(validators.map((validator) => validator.address()));
 

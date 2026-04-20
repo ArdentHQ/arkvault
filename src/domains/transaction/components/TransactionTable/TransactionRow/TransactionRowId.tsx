@@ -1,13 +1,13 @@
 import React from "react";
-import { DTO } from "@/app/lib/profiles";
 
 import { Link } from "@/app/components/Link";
 import { useBreakpoint } from "@/app/hooks";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
-export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedConfirmedTransactionData }) => {
+export const TransactionRowId = ({ transaction }: { transaction: ExtendedTransactionDTO }) => {
 	const { isLgAndAbove, isMdAndAbove, isXl, isSmAndAbove } = useBreakpoint();
 
 	const maxCharacters = () => {
@@ -15,12 +15,8 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 			return 14;
 		}
 
-		if (isLgAndAbove) {
-			return 10;
-		}
-
 		if (isMdAndAbove) {
-			return 8;
+			return 12;
 		}
 
 		if (isSmAndAbove) {
@@ -44,10 +40,10 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 					</span>
 				</Link>
 			)}
-			{!transaction.isSuccess() && (
-				<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
-					<Tooltip content={transaction.hash()}>
-						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
+			{!transaction.isSuccess() && transaction.blockHash() && (
+				<Tooltip content={transaction.hash()}>
+					<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
+						<span className="bg-theme-danger-50 dark:border-theme-danger-info-border dim:bg-transparent dim:border dim:border-theme-danger-info-border flex h-[21px] items-center justify-between space-x-2 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
 							<TruncateMiddle
 								className="text-theme-danger-700 dark:text-theme-danger-info-border dark:hover:border-theme-danger-info-border hover:border-theme-danger-700 dim:text-theme-danger-info-border dim-hover:border-theme-danger-info-border cursor-pointer border-b border-b-transparent leading-[17px]"
 								text={transaction.hash()}
@@ -56,14 +52,35 @@ export const TransactionRowId = ({ transaction }: { transaction: DTO.ExtendedCon
 							/>
 
 							<Icon
-								name="CircleMinus"
+								name="CrossSmall"
 								className="text-theme-danger-700 dark:text-theme-danger-info-border dim:text-theme-danger-info-border"
 								width={12}
 								height={12}
 							/>
 						</span>
-					</Tooltip>
-				</Link>
+					</Link>
+				</Tooltip>
+			)}
+			{!transaction.isSuccess() && !transaction.blockHash() && (
+				<Tooltip content={transaction.hash()}>
+					<Link to={transaction.explorerLink()} showExternalIcon={false} isExternal>
+						<span className="bg-theme-secondary-200 dark:border-theme-dark-700 dim:bg-transparent dim:border dim:border-theme-dim-700 flex h-[21px] items-center justify-between space-x-1 rounded px-1.5 py-[2px] text-sm dark:border dark:bg-transparent">
+							<TruncateMiddle
+								className="text-theme-primary-600 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-500 hover:border-theme-primary-600 dim:text-theme-dim-200 dim-hover:border-theme-dim-200 cursor-pointer border-b border-b-transparent leading-[17px]"
+								text={transaction.hash()}
+								maxChars={maxCharacters()}
+								data-testid="TransactionRow__id"
+							/>
+
+							<Icon
+								name="Hourglass"
+								className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200"
+								width={12}
+								height={12}
+							/>
+						</span>
+					</Link>
+				</Tooltip>
 			)}
 		</div>
 	);

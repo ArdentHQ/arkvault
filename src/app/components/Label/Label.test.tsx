@@ -2,6 +2,7 @@ import React from "react";
 
 import { Label } from "./Label";
 import { render } from "@/utils/testing-library";
+import { ColorType } from "./Label.styles";
 
 describe("Label", () => {
 	it("should render", () => {
@@ -81,4 +82,12 @@ describe("Label", () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	for (const color of ["primary", "neutral"]) {
+		it(`should render as outline and ${color}`, () => {
+			const { container } = render(<Label variant="outline" color={color as ColorType} />);
+
+			expect(container).toMatchSnapshot();
+		});
+	}
 });

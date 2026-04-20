@@ -107,7 +107,7 @@ describe("useDeeplink hook", () => {
 		await userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
 		expect(router.state.location.pathname + router.state.location.search).toBe(
-			"/profiles/877b7695-8a55-4e16-a7ff-412113131856/send-transfer?method=transfer&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
+			"/profiles/877b7695-8a55-4e16-a7ff-412113131856/dashboard?method=transfer&network=mainsail.devnet&recipient=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&amount=1.2&memo=ARK",
 		);
 	});
 });

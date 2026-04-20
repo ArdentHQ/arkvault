@@ -1,15 +1,18 @@
 import { MAINSAIL_MNEMONICS, env, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
-import { afterAll, expect, vi } from "vitest";
+import { afterAll, expect, vi, MockInstance } from "vitest";
 
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import userEvent from "@testing-library/user-event";
+import * as ReactRouter from "react-router";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallet2: Contracts.IReadWriteWallet;
+
+let useSearchParamsMock: MockInstance;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
 const secondMnemonic = MAINSAIL_MNEMONICS[1];
@@ -55,6 +58,10 @@ describe("SignMessageSidePanel", () => {
 	let dashboardRoute: string | undefined;
 
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = await env.profiles().create("Example");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -68,13 +75,12 @@ describe("SignMessageSidePanel", () => {
 		profile.wallets().push(wallet);
 		profile.wallets().push(wallet2);
 
-		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
-
 		await triggerMessageSignOnce(wallet);
 	});
 
 	afterAll(() => {
 		env.profiles().forget(profile.id());
+		useSearchParamsMock.mockRestore();
 	});
 
 	describe("Sign with Wallet", () => {
@@ -113,10 +119,6 @@ describe("SignMessageSidePanel", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET),
-			).toBeInTheDocument();
-
 			await selectFirstAddress();
 
 			expect(
@@ -146,18 +148,14 @@ describe("SignMessageSidePanel", () => {
 
 			expect(screen.getByTestId("SignMessage__signature-json")).toBeInTheDocument();
 
-			const writeTextMock = vi.fn();
-			vi.stubGlobal("navigator", {
-				clipboard: { writeText: writeTextMock },
-			});
+			const clipboardSpy = vi.spyOn(navigator.clipboard, "writeText").mockResolvedValue();
 
 			await waitFor(() => {
 				expect(screen.getByTestId("SignMessage__copy-button")).toBeInTheDocument();
 			});
 
 			await userEvent.click(screen.getByTestId("SignMessage__copy-button"));
-
-			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
+			await waitFor(() => expect(clipboardSpy).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
 		});
 
 		it("should sign message with secret", async () => {
@@ -170,10 +168,6 @@ describe("SignMessageSidePanel", () => {
 			await selectNthAddress(2);
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
-			).toBeInTheDocument();
 
 			await userEvent.type(messageInput(), signMessage);
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
@@ -202,10 +196,6 @@ describe("SignMessageSidePanel", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
-			).toBeInTheDocument();
-
 			await userEvent.type(messageInput(), signMessage);
 			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "123");
 
@@ -220,12 +210,105 @@ describe("SignMessageSidePanel", () => {
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 			await userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("ErrorStep__back-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId("SignMessage__back-button")).resolves.toBeVisible();
 
-			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 			profile.wallets().forget(walletWithSecret.id());
+		});
+
+		it("should close the side panel when `Back` is clicked on `Form` step", async () => {
+			const onOpenChangeMock = vi.fn();
+
+			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
+
+			await expect(screen.findByTestId("SignMessage__back-button")).resolves.toBeVisible();
+
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
+
+			expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+		});
+
+		it("should unset the wallet when no wallet is found for the given address", async () => {
+			const onOpenChangeMock = vi.fn();
+
+			render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+				route: dashboardRoute,
+			});
+
+			const user = userEvent.setup();
+
+			await user.clear(screen.getByTestId("SelectDropdown__input"));
+			await user.paste("0xabc");
+
+			await waitFor(() => {
+				expect(screen.queryByTestId("TruncateEnd")).not.toBeInTheDocument();
+			});
+		});
+
+		const Component = () => {
+			const [isOpen, setIsOpen] = React.useState(false);
+
+			return (
+				<div>
+					<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
+					<SignMessageSidePanel open={isOpen} onOpenChange={setIsOpen} onMountChange={vi.fn()} />
+				</div>
+			);
+		};
+
+		it("should reset the form when unmounted", async () => {
+			// render the wrapper
+			render(<Component />, {
+				route: dashboardRoute,
+			});
+
+			const user = userEvent.setup();
+
+			// open up the side panel
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await user.clear(messageInput());
+			await user.paste(signMessage);
+
+			// close the side panel
+			await user.click(screen.getByText("Toggle"));
+
+			await waitFor(() => {
+				expect(
+					screen.queryByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE),
+				).not.toBeInTheDocument();
+			});
+
+			// re-open the side panel
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await waitFor(() => {
+				expect(messageInput().value).toBe("");
+			});
+		});
+
+		it("should prefill message field when it exists in query string", async () => {
+			render(<Component />, {
+				route: `${dashboardRoute}?message=hello+world`,
+			});
+
+			const user = userEvent.setup();
+
+			await user.click(screen.getByText("Toggle"));
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			await waitFor(() => {
+				expect(messageInput().value).toBe("hello world");
+			});
 		});
 	});
 });

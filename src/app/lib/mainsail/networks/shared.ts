@@ -14,6 +14,7 @@ export const transactions: Networks.NetworkManifestTransactions = {
 		"validatorRegistration",
 		"usernameRegistration",
 		"usernameResignation",
+		"updateValidator",
 		"validatorResignation",
 		"multiPayment",
 		"transfer",
@@ -29,6 +30,11 @@ export const importMethods: Networks.NetworkManifestImportMethods = {
 	bip39: {
 		canBeEncrypted: true,
 		default: true,
+		permissions: ["read", "write"],
+	},
+	bip44: {
+		canBeEncrypted: true,
+		default: false,
 		permissions: ["read", "write"],
 	},
 	publicKey: {

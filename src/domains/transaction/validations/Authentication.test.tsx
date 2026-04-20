@@ -1,5 +1,5 @@
 import { BIP39 } from "@ardenthq/arkvault-crypto";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@/app/lib/profiles";
 
 import { authentication } from "./Authentication";
 import { env, MNEMONICS } from "@/utils/testing-library";
@@ -9,29 +9,28 @@ let wallet: Contracts.IReadWriteWallet;
 let walletWithPassword: Contracts.IReadWriteWallet;
 
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { HDWalletService } from "@/app/lib/mainsail/hd-wallet.service";
 
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise: Promise<any>) => promise,
 }));
 
 describe("Authentication", () => {
+	let profile: Contracts.IProfile;
+
 	beforeAll(async () => {
 		translationMock = vi.fn((index18nString: string) => index18nString);
 
-		const profile = env.profiles().first();
+		profile = env.profiles().first();
 		await env.profiles().restore(profile);
 		await profile.sync();
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MNEMONICS[0],
-			network: "mainsail.devnet",
 		});
 
 		walletWithPassword = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "Mainsail",
 			mnemonic: MNEMONICS[1],
-			network: "mainsail.devnet",
 			password: "password",
 		});
 
@@ -54,11 +53,51 @@ describe("Authentication", () => {
 		fromMnemonicMock.mockRestore();
 	});
 
+	it("should throw user-friendly error", async () => {
+		const bip39ValidateOrThrowMock = vi.spyOn(BIP39, "validateOrThrow").mockImplementation(() => {
+			throw new Error('Error: Unknown letter: "lubble". Allowed: x, y, z');
+		});
+
+		const mnemonic = authentication(translationMock).mnemonic(wallet);
+
+		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe(
+			"COMMON.VALIDATION.MNEMONIC_UNEXPECTED_WORD",
+		);
+
+		bip39ValidateOrThrowMock.mockRestore();
+	});
+
+	it("should validate BIP44 mnemonic", async () => {
+		const hdWalletMock = vi.spyOn(wallet, "isHDWallet").mockReturnValue(true);
+
+		const fromMnemonicMock = vi.spyOn(HDWalletService, "getAccount").mockReturnValue({ address: wallet.address() });
+
+		const mnemonic = authentication(translationMock).mnemonic(wallet);
+
+		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[0])).toBe(true);
+
+		fromMnemonicMock.mockRestore();
+		hdWalletMock.mockRestore();
+	});
+
+	it("should validate BIP44 mnemonic with encryption", async () => {
+		const bip44Wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic: MNEMONICS[1],
+			password: "password",
+		});
+
+		const mnemonic = authentication(translationMock).encryptionPassword(bip44Wallet);
+
+		const result = await mnemonic.validate("password");
+		expect(result).toBe(true);
+	});
+
 	it("should fail mnemonic validation", async () => {
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 
 		await expect(mnemonic.validate.matchSenderAddress(MNEMONICS[1])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 	});
 
@@ -70,7 +109,7 @@ describe("Authentication", () => {
 		const mnemonic = authentication(translationMock).mnemonic(wallet);
 
 		await expect(mnemonic.validate.matchSenderAddress("invalid mnemonic")).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 
 		fromMnemonicMock.mockRestore();
@@ -91,13 +130,13 @@ describe("Authentication", () => {
 	it("should fail secret validation if the secret belongs to another address", async () => {
 		const secret = authentication(translationMock).secret(wallet);
 
-		await expect(secret.validate("secret1")).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+		await expect(secret.validate("secret1")).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 	});
 
 	it("should fail secret validation if a mnemonic is used", async () => {
 		const secret = authentication(translationMock).secret(wallet);
 
-		await expect(secret.validate(MNEMONICS[0])).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET");
+		await expect(secret.validate(MNEMONICS[0])).toBe("COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS");
 	});
 
 	it("should validate encryption password with BIP39", async () => {
@@ -147,7 +186,7 @@ describe("Authentication", () => {
 		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
 
 		await expect(authPrivateKey.validate(privateKey)).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.PRIVATE_KEY_NOT_MATCH_ADDRESS",
 		);
 	});
 
@@ -155,11 +194,11 @@ describe("Authentication", () => {
 		const encryptionPassword = authentication(translationMock).encryptionPassword(walletWithPassword);
 
 		await expect(encryptionPassword.validate(walletWithPassword.address())).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_ADDRESS",
 		);
 
 		await expect(encryptionPassword.validate("wrong password")).resolves.toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.PASSWORD_NOT_MATCH_ADDRESS",
 		);
 	});
 
@@ -179,7 +218,7 @@ describe("Authentication", () => {
 		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet);
 
 		expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 
 		secondMnemonicMock.mockRestore();
@@ -192,7 +231,7 @@ describe("Authentication", () => {
 		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet);
 
 		expect(secondMnemonic.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_ADDRESS",
 		);
 
 		secondMnemonicMock.mockRestore();
@@ -214,7 +253,7 @@ describe("Authentication", () => {
 		const secondSecret = authentication(translationMock).secondSecret(wallet);
 
 		expect(secondSecret.validate.matchSenderPublicKey("secret")).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS",
 		);
 
 		secondSecretMock.mockRestore();
@@ -227,7 +266,7 @@ describe("Authentication", () => {
 		const secondSecret = authentication(translationMock).secondSecret(wallet);
 
 		expect(secondSecret.validate.matchSenderPublicKey(MNEMONICS[0])).toBe(
-			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_WALLET",
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.SECRET_NOT_MATCH_ADDRESS",
 		);
 
 		secondSecretMock.mockRestore();

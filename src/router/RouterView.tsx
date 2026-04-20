@@ -5,6 +5,8 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { RouteItem, Middleware } from "@/router/router.types";
 import { RouteSuspense } from "@/router/RouteSuspense";
 import { PreloadableComponent } from "@/utils/preload-lazy";
+import { PanelsProvider } from "@/app/contexts/Panels";
+import { AppPanels } from "@/app/Panels.blocks";
 
 interface Properties {
 	routes: RouteItem[];
@@ -41,28 +43,32 @@ export const RouterView = ({ routes, middlewares = [] }: Properties) => {
 	}, [location, middlewares, env]);
 
 	return (
-		<Routes>
-			{routes.map((route, index) => {
-				const elementToRender = canActivate ? (
-					<div data-testid="RouterView__wrapper">
-						{React.createElement(route.component as PreloadableComponent<FC<unknown>>)}
-					</div>
-				) : (
-					<Navigate to={redirectUrl ?? "/"} replace />
-				);
+		<PanelsProvider>
+			<Routes>
+				{routes.map((route, index) => {
+					const elementToRender = canActivate ? (
+						<div data-testid="RouterView__wrapper">
+							{React.createElement(route.component as PreloadableComponent<FC<unknown>>)}
+						</div>
+					) : (
+						<Navigate to={redirectUrl ?? "/"} replace />
+					);
 
-				return (
-					<Route
-						key={index}
-						path={route.path}
-						element={
-							<RouteSuspense skeleton={route.skeleton} path={route.path}>
-								{elementToRender}
-							</RouteSuspense>
-						}
-					/>
-				);
-			})}
-		</Routes>
+					return (
+						<Route
+							key={index}
+							path={route.path}
+							element={
+								<RouteSuspense skeleton={route.skeleton} path={route.path}>
+									{elementToRender}
+								</RouteSuspense>
+							}
+						/>
+					);
+				})}
+			</Routes>
+
+			<AppPanels />
+		</PanelsProvider>
 	);
 };

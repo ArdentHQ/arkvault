@@ -1,44 +1,72 @@
+import { useEnvironmentContext } from "@/app/contexts";
 import { Contracts, DTO } from "@/app/lib/profiles";
-import { useMemo } from "react";
+import { useEffect, useCallback, useState } from "react";
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
+	const transactions = profile.notifications().transactions().active();
+	const [liveNotifications, setLiveNotifications] = useState(Object.values(profile.notifications().all()));
+	const { persist } = useEnvironmentContext();
+
+	useEffect(() => {
+		void profile.notifications().transactions().hydrateFromCache();
+	}, [profile]);
+
+	const triggerInitialSync = useCallback(async () => {
+		const hasLiveData = transactions.length > 0;
+
+		if (!hasLiveData && !isSyncing) {
+			try {
+				await profile.notifications().transactions().sync();
+			} catch (error) {
+				/* istanbul ignore next -- @preserve */
+				console.error("Failed to sync notifications on initialization:", error);
+			}
+		}
+	}, [profile, isSyncing, transactions.length, liveNotifications]);
+
+	useEffect(() => {
+		triggerInitialSync();
+	}, [triggerInitialSync]);
 
 	const isNotificationUnread = (transaction: DTO.ExtendedConfirmedTransactionData) =>
-		Object.values(profile.notifications().all()).some((notification) => {
+		liveNotifications.some((notification) => {
 			const isUnread = notification.read_at === undefined;
-			return notification.meta.transactionId === transaction.hash() && isUnread;
+			return notification.meta?.transactionId === transaction.hash() && isUnread;
 		});
 
-	const { markAllTransactionsAsRead, markAsRead, transactions } = useMemo(() => {
-		const markAllTransactionsAsRead = (isVisible: boolean) => {
-			if (!isVisible) {
-				return;
-			}
+	const markAllAsRead = async () => {
+		profile.notifications().transactions().markAllAsRead();
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
-			profile.notifications().transactions().markAllAsRead();
-		};
+	const markAsRead = async (transactionId: string) => {
+		profile.notifications().transactions().markAsRead(transactionId);
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
-		const markAsRead = (isVisible: boolean, id: string) => {
-			if (!isVisible) {
-				return;
-			}
+	const markAsRemoved = async (transactionId: string) => {
+		profile.notifications().transactions().markAsRemoved(transactionId);
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
-			profile.notifications().markAsRead(id);
-		};
-
-		return {
-			markAllTransactionsAsRead,
-			markAsRead,
-			transactions: profile.notifications().transactions().transactions(),
-		};
-	}, [profile, isSyncing]);
+	const markAllAsRemoved = async () => {
+		profile.notifications().transactions().markAllAsRemoved();
+		setLiveNotifications(Object.values(profile.notifications().all()));
+		await persist();
+	};
 
 	return {
 		hasUnread: transactions.length > 0 && profile.notifications().hasUnread(),
 		isNotificationUnread,
-		markAllTransactionsAsRead,
+		isSyncing,
+		markAllAsRead,
+		markAllAsRemoved,
 		markAsRead,
+		markAsRemoved,
 		transactions,
 	};
 };

@@ -1,9 +1,33 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Tooltip > should render 1`] = `<DocumentFragment />`;
+exports[`Tooltip > should render 1`] = `
+<DocumentFragment>
+  <span>
+    <span />
+  </span>
+</DocumentFragment>
+`;
 
-exports[`Tooltip > should render small 1`] = `<DocumentFragment />`;
+exports[`Tooltip > should render small 1`] = `
+<DocumentFragment>
+  <span>
+    <span />
+  </span>
+</DocumentFragment>
+`;
 
-exports[`Tooltip > should render with extend class 1`] = `<DocumentFragment />`;
+exports[`Tooltip > should render with extend class 1`] = `
+<DocumentFragment>
+  <span>
+    <span />
+  </span>
+</DocumentFragment>
+`;
 
-exports[`Tooltip > should render with theme 1`] = `<DocumentFragment />`;
+exports[`Tooltip > should render with theme 1`] = `
+<DocumentFragment>
+  <span>
+    <span />
+  </span>
+</DocumentFragment>
+`;

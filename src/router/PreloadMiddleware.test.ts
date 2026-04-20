@@ -22,10 +22,6 @@ vi.mock("@/domains/vote/routing", () => ({
 	VoteRoutes: [{ component: { preload: vi.fn() } }],
 }));
 
-vi.mock("@/domains/transaction/routing", () => ({
-	TransactionRoutes: [{ component: { preload: vi.fn() } }],
-}));
-
 vi.mock("@/domains/message/routing", () => ({
 	MessageRoutes: [{ component: { preload: vi.fn() } }],
 }));
@@ -36,9 +32,7 @@ import { ProfileRoutes } from "@/domains/profile/routing";
 import { SettingRoutes } from "@/domains/setting/routing";
 import { ContactRoutes } from "@/domains/contact/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
-import { MessageRoutes } from "@/domains/message/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
-import { TransactionRoutes } from "@/domains/transaction/routing";
 
 describe("PreloadMiddleware", () => {
 	let subject: PreloadMiddleware;
@@ -68,15 +62,11 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
-			vi.spyOn(route.component as any, "preload"),
-		);
-
 		const canActivate = subject.handler({ location: { pathname: "/" } } as any);
 
 		expect(canActivate).toBe(true);
 
-		for (const spy of [...rootSpies, ...commonSpies]) {
+		for (const spy of [...rootSpies]) {
 			expect(spy).toHaveBeenCalledWith();
 		}
 
@@ -84,7 +74,7 @@ describe("PreloadMiddleware", () => {
 			expect(spy).not.toHaveBeenCalled();
 		}
 
-		for (const spy of [...rootSpies, ...profileSpies, ...commonSpies]) {
+		for (const spy of [...rootSpies, ...profileSpies]) {
 			spy.mockRestore();
 		}
 	});
@@ -98,10 +88,6 @@ describe("PreloadMiddleware", () => {
 			vi.spyOn(route.component as any, "preload"),
 		);
 
-		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
-			vi.spyOn(route.component as any, "preload"),
-		);
-
 		const canActivate = subject.handler({ location: { pathname: "/profiles" } } as any);
 
 		expect(canActivate).toBe(true);
@@ -110,11 +96,11 @@ describe("PreloadMiddleware", () => {
 			expect(spy).not.toHaveBeenCalled();
 		}
 
-		for (const spy of [...profileSpies, ...commonSpies]) {
+		for (const spy of [...profileSpies]) {
 			expect(spy).toHaveBeenCalledWith();
 		}
 
-		for (const spy of [...rootSpies, ...profileSpies, ...commonSpies]) {
+		for (const spy of [...rootSpies, ...profileSpies]) {
 			spy.mockRestore();
 		}
 	});

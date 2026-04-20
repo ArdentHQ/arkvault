@@ -26,7 +26,7 @@ export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: Ledg
 					<Spinner color="warning-alt" size="sm" width={3} />
 					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
 					<p className="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold">
-						{t("TRANSACTION.PENDING.STATUS_TEXT")}
+						{t("TRANSACTION.PENDING.APPROVAL")}
 					</p>
 				</div>
 			</div>

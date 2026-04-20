@@ -18,6 +18,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
 import { Icon } from "@/app/components/Icon";
 import { Loader } from "@/app/components/Loader";
+import { MnemonicRules } from "@/domains/transaction/components/MnemonicRules/MnemonicRules";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
@@ -217,8 +218,16 @@ export const AuthenticationStep = ({
 
 	const title = t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 
-	const requireMnemonic = wallet.actsWithMnemonic() || wallet.actsWithAddress() || wallet.actsWithPublicKey();
-	const requireEncryptionPassword = wallet.actsWithMnemonicWithEncryption() || wallet.actsWithSecretWithEncryption();
+	const requireMnemonic =
+		wallet.actsWithMnemonic() ||
+		wallet.actsWithAddress() ||
+		wallet.actsWithPublicKey() ||
+		wallet.actsWithBip44Mnemonic();
+
+	const requireEncryptionPassword =
+		wallet.actsWithMnemonicWithEncryption() ||
+		wallet.actsWithSecretWithEncryption() ||
+		wallet.actsWithBip44MnemonicWithEncryption();
 
 	const isTransaction = subject === "transaction";
 
@@ -253,7 +262,6 @@ export const AuthenticationStep = ({
 						<InputPassword
 							data-testid="AuthenticationStep__secret"
 							ref={register(authentication.secret(wallet))}
-							preventAutofill
 						/>
 					</FormField>
 				</>
@@ -316,8 +324,8 @@ export const AuthenticationStep = ({
 						<InputPassword
 							data-testid="AuthenticationStep__mnemonic"
 							ref={register(authentication.mnemonic(wallet))}
-							preventAutofill
 						/>
+						<MnemonicRules mnemonic={getValues("mnemonic")} wrapperClass="mt-0" />
 					</FormField>
 				</>
 			)}

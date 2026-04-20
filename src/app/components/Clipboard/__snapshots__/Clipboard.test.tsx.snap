@@ -28,15 +28,19 @@ exports[`Clipboard > should render with children in variant type 'button' 1`] = 
 
 exports[`Clipboard > should render with children in variant type 'icon' 1`] = `
 <DocumentFragment>
-  <button
-    class="ring-focus relative cursor-pointer focus:outline-hidden"
-    data-ring-focus-margin="-m-1"
-    data-testid="clipboard-icon__wrapper"
-    type="button"
-  >
+  <span>
     <span>
-      Hello!
+      <button
+        class="ring-focus relative cursor-pointer focus:outline-hidden"
+        data-ring-focus-margin="-m-1"
+        data-testid="clipboard-icon__wrapper"
+        type="button"
+      >
+        <span>
+          Hello!
+        </span>
+      </button>
     </span>
-  </button>
+  </span>
 </DocumentFragment>
 `;

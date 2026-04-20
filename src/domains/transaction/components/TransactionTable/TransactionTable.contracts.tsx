@@ -1,17 +1,20 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import { SortBy } from "@/app/components/Table";
 
+export type ExtendedTransactionDTO = DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
+
 export interface TransactionTableProperties {
-	transactions: DTO.ExtendedConfirmedTransactionData[];
+	transactions: ExtendedTransactionDTO[];
 	exchangeCurrency?: string;
 	hideHeader?: boolean;
-	onRowClick?: (row: DTO.ExtendedConfirmedTransactionData) => void;
+	onRowClick?: (row: ExtendedTransactionDTO) => void;
 	isLoading?: boolean;
 	skeletonRowsLimit?: number;
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
 	sortBy: SortBy;
 	onSortChange: (column: string, desc: boolean) => void;
+	coinName?: string;
 }
 
 export interface Transaction {

@@ -15,10 +15,13 @@ describe("TransactionRowRecipientLabel", () => {
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore
-					new ReadOnlyWallet({
-						address: vote,
-						username: `validator-${index}`,
-					}),
+					new ReadOnlyWallet(
+						{
+							address: vote,
+							username: `validator-${index}`,
+						},
+						profile,
+					),
 			),
 		);
 	});
@@ -55,7 +58,7 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	it.each(["xs", "sm"])("should render with right alignment on mobile view", (breakpoint) => {
-		renderResponsive(
+		const { asFragment } = renderResponsive(
 			<TransactionRowRecipientLabel
 				transaction={{
 					...TransactionFixture,
@@ -66,7 +69,7 @@ describe("TransactionRowRecipientLabel", () => {
 		);
 
 		// eslint-disable-next-line testing-library/no-node-access
-		expect(screen.getByTestId("Address__address").parentElement).toHaveClass("justify-end");
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	describe("Votes", () => {
@@ -162,34 +165,6 @@ describe("TransactionRowRecipientLabel", () => {
 			);
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("validator-0");
 			expect(screen.getByTestId("TransactionRowVoteLabel")).toHaveTextContent("+1");
-		});
-
-		it("should show a vote combination label with counter", () => {
-			render(
-				<TransactionRowRecipientLabel
-					transaction={{
-						...TransactionFixture,
-						isTransfer: () => false,
-						isUnvote: () => true,
-						isVote: () => true,
-						isVoteCombination: () => true,
-						type: () => "voteCombination",
-						unvotes: () => ["-vote-1", "-vote-2"],
-						votes: () => ["+vote-1", "+vote-2"],
-						wallet: () => ({
-							profile: () => profile,
-							validators: () => profile.validators(),
-						}),
-					}}
-				/>,
-			);
-
-			expect(screen.getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
-				`${translations.TRANSACTION_TYPES.VOTE}2`,
-			);
-			expect(screen.getByTestId("TransactionRowVoteCombinationLabel")).toHaveTextContent(
-				`${translations.TRANSACTION_TYPES.UNVOTE}2`,
-			);
 		});
 	});
 });

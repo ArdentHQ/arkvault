@@ -4,7 +4,7 @@ import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@/app/lib/profiles";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
-import { AddressViewSelection, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
+import { AddressViewSelection, AddressViewType } from "@/app/lib/profiles/wallet.enum";
 
 export const ViewingAddressInfo = ({
 	profile,
@@ -21,8 +21,9 @@ export const ViewingAddressInfo = ({
 	const { getWalletAlias } = useWalletAlias();
 
 	const lastWallet = wallets[wallets.length - 1];
+	const isSingle = mode === AddressViewSelection.single || wallets.length === 1;
 
-	if (mode === AddressViewSelection.single && lastWallet) {
+	if (isSingle && lastWallet) {
 		const { alias } = getWalletAlias({
 			address: lastWallet.address(),
 			network: lastWallet.network(),

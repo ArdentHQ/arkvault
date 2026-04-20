@@ -1,16 +1,20 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { Network } from "./network";
-import { configManager } from "./config.manager";
 import networkManifest from "./networks/mainsail.devnet";
 import { manifest as manifest } from "./manifest";
 import { ConfigRepository } from "./config.repository";
 import { server, requestMock } from "@/tests/mocks/server";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 describe("Network", () => {
 	let networkInstance: Network;
+	let profile;
 
-	beforeEach(() => {
-		networkInstance = new Network(manifest, networkManifest);
+	beforeEach(async () => {
+		profile = env.profiles().findById(getMainsailProfileId());
+		await env.profiles().restore(profile);
+
+		networkInstance = new Network(manifest, networkManifest, profile);
 	});
 
 	afterEach(() => {
@@ -39,7 +43,7 @@ describe("Network", () => {
 
 	it("should return the correct display name for test network", () => {
 		networkManifest.type = "test";
-		const testNetworkInstance = new Network(manifest, networkManifest);
+		const testNetworkInstance = new Network(manifest, networkManifest, profile);
 		expect(testNetworkInstance.displayName()).toBe(`${networkManifest.coin} ${networkManifest.name}`);
 	});
 
@@ -62,7 +66,7 @@ describe("Network", () => {
 
 	it("should identify as a test network", () => {
 		networkManifest.type = "test";
-		const testNetworkInstance = new Network(manifest, networkManifest);
+		const testNetworkInstance = new Network(manifest, networkManifest, profile);
 		expect(testNetworkInstance.isTest()).toBe(true);
 	});
 
@@ -75,7 +79,7 @@ describe("Network", () => {
 	});
 
 	it("should not allow voting if governance is not defined", () => {
-		const noGovernanceNetwork = new Network(manifest, { ...networkManifest, governance: undefined });
+		const noGovernanceNetwork = new Network(manifest, { ...networkManifest, governance: undefined }, profile);
 		expect(noGovernanceNetwork.allowsVoting()).toBe(false);
 	});
 
@@ -84,7 +88,7 @@ describe("Network", () => {
 	});
 
 	it("should return default voting method if not defined", () => {
-		const noMethodNetwork = new Network(manifest, { ...networkManifest, governance: undefined });
+		const noMethodNetwork = new Network(manifest, { ...networkManifest, governance: undefined }, profile);
 		expect(noMethodNetwork.votingMethod()).toBe("simple");
 	});
 
@@ -117,12 +121,20 @@ describe("Network", () => {
 	});
 
 	it("should use extended public key if meta.extendedPublicKey is true", () => {
-		const withExtendedPublicKey = new Network(manifest, { ...networkManifest, meta: { extendedPublicKey: true } });
+		const withExtendedPublicKey = new Network(
+			manifest,
+			{ ...networkManifest, meta: { extendedPublicKey: true } },
+			profile,
+		);
 		expect(withExtendedPublicKey.usesExtendedPublicKey()).toBe(true);
 	});
 
 	it("should not use extended public key if meta.extendedPublicKey is false or undefined", () => {
-		const noExtendedPkNetwork = new Network(manifest, { ...networkManifest, meta: { extendedPublicKey: false } });
+		const noExtendedPkNetwork = new Network(
+			manifest,
+			{ ...networkManifest, meta: { extendedPublicKey: false } },
+			profile,
+		);
 		expect(noExtendedPkNetwork.usesExtendedPublicKey()).toBe(false);
 	});
 
@@ -145,10 +157,10 @@ describe("Network", () => {
 	});
 
 	it("should correctly determine if it charges zero fees", () => {
-		const nonFreeNetwork = new Network(manifest, { ...networkManifest, fees: { type: undefined } });
+		const nonFreeNetwork = new Network(manifest, { ...networkManifest, fees: { type: undefined } }, profile);
 		expect(nonFreeNetwork.chargesZeroFees()).toBe(false);
 
-		const freeFeeNetwork = new Network(manifest, { ...networkManifest, fees: { type: "free" } });
+		const freeFeeNetwork = new Network(manifest, { ...networkManifest, fees: { type: "free" } }, profile);
 		expect(freeFeeNetwork.chargesZeroFees()).toBe(true);
 	});
 
@@ -165,7 +177,7 @@ describe("Network", () => {
 	});
 
 	it("should return true for usesMemo if transactions.memo is true", () => {
-		const networkWithMemo = new Network(manifest, { ...networkManifest, transactions: { memo: true } });
+		const networkWithMemo = new Network(manifest, { ...networkManifest, transactions: { memo: true } }, profile);
 		expect(networkWithMemo.usesMemo()).toBe(true);
 	});
 
@@ -187,7 +199,7 @@ describe("Network", () => {
 
 	it("should return empty object for meta if not defined", () => {
 		delete networkManifest.meta;
-		const noMetaNetwork = new Network(manifest, networkManifest);
+		const noMetaNetwork = new Network(manifest, networkManifest, profile);
 		expect(noMetaNetwork.meta()).toEqual({});
 	});
 
@@ -212,7 +224,7 @@ describe("Network", () => {
 	});
 
 	it("should return an empty array if no tokens are defined", () => {
-		const noTokensNetwork = new Network(manifest, { ...networkManifest, tokens: undefined });
+		const noTokensNetwork = new Network(manifest, { ...networkManifest, tokens: undefined }, profile);
 		expect(noTokensNetwork.tokens()).toEqual([]);
 	});
 
@@ -225,7 +237,7 @@ describe("Network", () => {
 	});
 
 	it("should not allow Ledger if feature flag is not present or empty", () => {
-		const noLedgerNetwork = new Network(manifest, { ...networkManifest, featureFlags: { Ledger: [] } });
+		const noLedgerNetwork = new Network(manifest, { ...networkManifest, featureFlags: { Ledger: [] } }, profile);
 		expect(noLedgerNetwork.allowsLedger()).toBe(false);
 	});
 
@@ -235,15 +247,152 @@ describe("Network", () => {
 
 	it("should sync network data", async () => {
 		await networkInstance.sync();
-		expect(configManager.getHeight()).toBe(34369);
+		expect(networkInstance.config().get("height")).toBe(34369);
 	});
 
 	it("should throw an error if no full host is found during sync", async () => {
-		const noHostNetwork = new Network(manifest, { ...networkManifest, hosts: [] });
+		const hosts = networkManifest.hosts.map((host) => ({ host: host.host, type: "unknown" }));
+		const devnetManifest = { ...networkManifest };
+
+		const noHostNetwork = new Network(manifest, devnetManifest, profile);
+		devnetManifest.hosts = hosts;
+
 		await expect(noHostNetwork.sync()).rejects.toThrow("Expected network host to be a url but received undefined");
 	});
 
 	it("should throw an error if ArkClient crypto() fails during evaluateUrl", async () => {
 		await expect(networkInstance.evaluateUrl("http://bad.host")).rejects.toThrow("fetch failed");
+	});
+
+	it("should return correct milestone moving forward", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", 5);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(15);
+		expect(result.data).toBe("second");
+	});
+
+	it("should return correct milestone moving backward", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", 25);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(5);
+		expect(result.data).toBe("first");
+	});
+
+	it("should throw error when milestone is not found", () => {
+		networkInstance.config().set("height", 5);
+		networkInstance.config().set("crypto", { milestones: [] });
+
+		expect(() => networkInstance.milestone()).toThrow();
+	});
+
+	it("should move backward through milestones when height is low", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+			{ data: "fourth", height: 30 },
+		];
+		networkInstance.config().set("height", 35);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(5);
+		expect(result.data).toBe("first");
+	});
+
+	it("should use current height from config when no height is provided", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+		];
+		networkInstance.config().set("height", 10);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone();
+		expect(result.data).toBe("second");
+	});
+
+	it("should default height to 1 if height is null ", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+		];
+		networkInstance.config().set("height", null);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone();
+		expect(result.data).toBe("first");
+	});
+
+	it("should for missing milestone", () => {
+		networkInstance.config().set("height", undefined);
+		networkInstance.config().set("crypto", {});
+
+		expect(() => networkInstance.milestone()).toThrow("The [height] is an unknown configuration value.");
+	});
+
+	it("should handle milestone traversal edge cases", () => {
+		const milestones = [
+			{ data: "first", height: 1 },
+			{ data: "second", height: 10 },
+			{ data: "third", height: 20 },
+		];
+		networkInstance.config().set("height", null);
+		networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+		const result = networkInstance.milestone(15);
+		expect(result.data).toBe("second");
+	});
+
+	describe("#isSynced", () => {
+		it("should return true when both height and crypto are set", () => {
+			networkInstance.config().set("height", 100);
+			networkInstance.config().set("crypto", { milestones: [] });
+
+			expect(networkInstance.isSynced()).toBe(true);
+		});
+
+		it("should return false when height is missing", () => {
+			networkInstance.config().forget("height");
+
+			expect(networkInstance.isSynced()).toBe(false);
+		});
+
+		it("should return false when crypto is missing", () => {
+			networkInstance.config().forget("crypto");
+
+			expect(networkInstance.isSynced()).toBe(false);
+		});
+	});
+
+	describe("#fees", () => {
+		it("should return fee service", () => {
+			expect(networkInstance.fees()).toBeDefined();
+		});
+	});
+
+	describe("#blockTime", () => {
+		it("should return block time from milestone", () => {
+			const milestones = [
+				{ data: "first", height: 1, timeouts: { blockTime: 8000 } },
+				{ data: "second", height: 10, timeouts: { blockTime: 4000 } },
+			];
+			networkInstance.config().set("height", 5);
+			networkInstance.config().set("crypto", { milestones: [...milestones] });
+
+			const result = networkInstance.blockTime();
+			expect(result).toBe(8000);
+		});
 	});
 });

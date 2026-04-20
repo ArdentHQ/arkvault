@@ -14,6 +14,7 @@ import {
 	getMainsailProfileId,
 } from "@/utils/testing-library";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
+import { ProfileSetting } from "@/app/lib/profiles/profile.enum.contract";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getMainsailProfileId();
@@ -373,5 +374,21 @@ describe("ImportAddress Methods", () => {
 		await waitFor(() => expect(continueButton()).toBeDisabled());
 
 		findAdressSpy.mockRestore();
+	});
+
+	it("should display HD wallet option when enabled", async () => {
+		profile.settings().set(ProfileSetting.UseHDWallets, true);
+
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.HD_WALLET)).resolves.toBeVisible();
+
+		profile.settings().set(ProfileSetting.UseHDWallets, false);
 	});
 });

@@ -1,19 +1,17 @@
 import { FormField, FormLabel } from "@/app/components/Form";
-import { Icon, ThemeIcon } from "@/app/components/Icon";
+import { Icon } from "@/app/components/Icon";
 import React, { ChangeEvent, useEffect } from "react";
-
 import { Alert } from "@/app/components/Alert";
-import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
 import { Link } from "@/app/components/Link";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { StepHeader } from "@/app/components/StepHeader";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -42,58 +40,24 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	};
 
-	const getTitle = () => {
-		if (wallet?.isValidator()) {
-			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE_UPDATE");
-		}
-		return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.TITLE");
-	};
-
-	const getSubtitle = () => {
-		if (wallet?.isLegacyValidator()) {
-			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_LEGACY");
-		}
-		if (wallet?.isValidator()) {
-			return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION_UPDATE");
-		}
-		return t("TRANSACTION.PAGE_VALIDATOR_REGISTRATION.FORM_STEP.DESCRIPTION");
-	};
-
 	return (
 		<section data-testid="ValidatorRegistrationForm_form-step">
-			<StepHeader
-				title={getTitle()}
-				subtitle={getSubtitle()}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-			/>
+			{errors.lockedFee && <Alert className="mb-4">{errors.lockedFee.message}</Alert>}
 
-			{errors.lockedFee && <Alert className="mt-4">{errors.lockedFee.message}</Alert>}
-
-			<FormField name="senderAddress" className="mt-6 sm:mt-4">
+			<FormField name="senderAddress">
 				<FormLabel label={t("COMMON.SENDER")} />
 
-				<SelectAddress
-					showWalletAvatar={false}
-					wallet={
-						wallet
-							? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
-							: undefined
-					}
-					wallets={profile.wallets().values()}
-					profile={profile}
+				<SelectAddressDropdown
 					disabled={profile.wallets().count() === 0}
-					onChange={handleSelectSender}
+					profile={profile}
+					onChange={(wallet) => {
+						handleSelectSender(wallet?.address() ?? "");
+					}}
+					wallets={profile.wallets().values()}
+					wallet={wallet}
+					defaultNetwork={profile.activeNetwork()}
 					disableAction={(wallet) => !WalletCapabilities(wallet).canSendValidatorRegistration()}
+					showBalance
 				/>
 			</FormField>
 

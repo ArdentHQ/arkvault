@@ -49,6 +49,8 @@ export class WalletSerialiser {
 				[WalletData.LedgerModel]: this.#wallet.data().get(WalletData.LedgerModel),
 				[WalletData.Status]: this.#wallet.data().get(WalletData.Status),
 				[WalletData.IsPrimary]: this.#wallet.data().get(WalletData.IsPrimary, false),
+				[WalletData.AddressIndex]: this.#wallet.data().get(WalletData.AddressIndex),
+				[WalletData.TokenCount]: this.#wallet.tokenCount(),
 			},
 			id: this.#wallet.id(),
 			settings: this.#wallet.settings().all(),

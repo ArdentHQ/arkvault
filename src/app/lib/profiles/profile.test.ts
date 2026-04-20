@@ -64,6 +64,18 @@ describe("Profile", () => {
 		spy.mockRestore();
 	});
 
+	it("should calculate total balance from wallets", () => {
+		const result = profile.totalBalance();
+		expect(result).toBeDefined();
+		expect(typeof result.toString()).toBe("string");
+	});
+
+	it("should calculate total converted balance from wallets", () => {
+		const result = profile.totalBalanceConverted();
+		expect(result).toBeDefined();
+		expect(typeof result.toString()).toBe("string");
+	});
+
 	it("should flush the profile", () => {
 		const spy = vi.spyOn(ProfileInitialiserModule, "ProfileInitialiser").mockImplementation(
 			() =>
@@ -313,6 +325,45 @@ describe("Profile", () => {
 		expect(spy).not.toHaveBeenCalled();
 	});
 
+	it("should return true for usesHDWallets when in development mode", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "development";
+
+		expect(profile.usesHDWallets()).toBe(true);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
+	it("should return true for usesHDWallets when setting is enabled", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "production";
+		profile.settings().set(ProfileSetting.UseHDWallets, true);
+
+		expect(profile.usesHDWallets()).toBe(true);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
+	it("should return false for usesHDWallets when setting is disabled", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "production";
+		profile.settings().set(ProfileSetting.UseHDWallets, false);
+
+		expect(profile.usesHDWallets()).toBe(false);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
+	it("should return false for usesHDWallets when setting is missing and not in development", () => {
+		const originalNodeEnv = process.env.NODE_ENV;
+		process.env.NODE_ENV = "production";
+		profile.settings().forget(ProfileSetting.UseHDWallets);
+
+		expect(profile.usesHDWallets()).toBe(false);
+
+		process.env.NODE_ENV = originalNodeEnv;
+	});
+
 	it("should find a test network as a fallback", async () => {
 		const spyInit = vi
 			.spyOn(ProfileInitialiserModule, "ProfileInitialiser")
@@ -330,5 +381,32 @@ describe("Profile", () => {
 		expect(freshProfile.activeNetwork()).toEqual(testNetwork);
 		spy.mockRestore();
 		spyInit.mockRestore();
+	});
+
+	it("should whitelist an address", () => {
+		const address = "0xabc";
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+	});
+
+	it("should do nothing if an address is already whitelisted", () => {
+		const address = "0xabc";
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+	});
+
+	it("should remove a whitelisted address", () => {
+		const address = "0xabc";
+
+		profile.whitelistContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(true);
+
+		profile.removeWhitelistedContractAddress(address);
+		expect(profile.whitelistedContractAddresses().includes(address)).toBe(false);
 	});
 });

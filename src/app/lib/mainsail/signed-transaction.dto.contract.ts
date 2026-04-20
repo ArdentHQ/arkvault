@@ -34,12 +34,10 @@ export interface SignedTransactionData {
 
 	// Types
 	isTransfer(): boolean;
-	isSecondSignature(): boolean;
 	isValidatorRegistration(): boolean;
 	isUsernameRegistration(): boolean;
 	isUsernameResignation(): boolean;
 	isValidatorResignation(): boolean;
-	isVoteCombination(): boolean;
 	isVote(): boolean;
 	isUnvote(): boolean;
 	isMultiPayment(): boolean;
@@ -65,4 +63,7 @@ export interface SignedTransactionData {
 	username(): string;
 	validatorPublicKey(): string;
 	recipients(): MultiPaymentRecipient[];
+
+	gasLimit(): number;
+	gasUsed(): number;
 }

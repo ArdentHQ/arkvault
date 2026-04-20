@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
-import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFees, useValidation } from "@/app/hooks";
@@ -12,15 +12,15 @@ import { Button } from "@/app/components/Button";
 import { GasLimit } from "@/domains/transaction/components/FeeField/FeeField";
 import { Modal } from "@/app/components/Modal";
 import { Networks } from "@/app/lib/mainsail";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import { TransferLedgerReview } from "@/domains/transaction/pages/SendTransfer/LedgerReview";
-import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
+import { buildTransferData } from "@/domains/transaction/components/SendTransferSidePanel/SendTransfer.helpers";
 import { calculateGasFee } from "@/domains/transaction/components/InputFee/InputFee";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { useLedgerContext } from "@/app/contexts";
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { useTranslation } from "react-i18next";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 
 interface TransferProperties {
 	onClose: () => void;
@@ -64,15 +64,14 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		values: { gasPrice, gasLimit },
 		formState: { isValid, isSubmitting },
 		handleSubmit,
-	} = useSendTransferForm(senderWallet);
+	} = useSendTransferForm({ tokenContractAddress: profile.activeNetwork().ticker(), wallet: senderWallet });
 
 	const fee = calculateGasFee(gasPrice, gasLimit);
 
 	useEffect(() => {
-		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee || 0);
-		const remainingNetBalance = netBalance.isGreaterThan(0) ? netBalance.toFixed(10) : "0";
+		const netBalance = BigNumber.make(senderWallet?.balance() || 0).minus(fee);
 
-		form.register("amount", sendTransfer.amount(network, remainingNetBalance, recipients, true));
+		form.register("amount", sendTransfer.amount(network, netBalance, recipients, true));
 
 		const validate = async () => {
 			await form.trigger("amount");
@@ -88,7 +87,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		if (senderWallet) {
 			void validate();
 		}
-	}, [fee, network, recipients, sendTransfer, senderWallet]);
+	}, [fee.toString(), network, recipients, sendTransfer, senderWallet]);
 
 	useEffect(() => {
 		form.setValue("amount", exchangeInput.amount, { shouldDirty: true, shouldValidate: true });
@@ -138,7 +137,12 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		}
 	}, [onSuccess, submitForm]);
 
-	const handleWalletSelect = (address: string) => {
+	const handleWalletSelect = (address?: string) => {
+		if (!address) {
+			setSenderWallet(undefined);
+			return;
+		}
+
 		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
 
 		const isFullyRestoredAndSynced =
@@ -162,11 +166,11 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 				return;
 			}
 
-			await connect(profile, senderWallet!.networkId());
+			await connect(profile);
 			handleSubmit(() => submit())();
 		};
 
-		connectLedgerAndSubmit();
+		void connectLedgerAndSubmit();
 	}, [senderWallet, isConnected, transaction]);
 
 	if (transaction) {
@@ -197,8 +201,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			isOpen
 			onClose={onClose}
 			title={t("EXCHANGE.MODAL_SIGN_EXCHANGE_TRANSACTION.TITLE")}
-			contentClassName="p-6 sm:p-8 sm:[&>div.absolute]:m-8! [&>div.absolute]:m-6!"
-			titleClass="leading-[21px]! sm!:leading-7"
+			titleClass="leading-[21px]! sm!:leading-7 text-theme-text"
 		>
 			{errorMessage && (
 				<div className="mt-4" data-testid="ErrorState">
@@ -207,25 +210,21 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			)}
 
 			<Form context={form} onSubmit={() => submit()}>
-				<div className="mt-4 space-y-4">
+				<div className="text-theme-text mt-4 space-y-4">
 					{!errorMessage && (
 						<FormField name="senderAddress">
 							<FormLabel label={t("TRANSACTION.SENDER")} />
 							<div data-testid="sender-address">
-								<SelectAddress
-									showWalletAvatar={false}
-									wallet={
-										senderWallet
-											? {
-													address: senderWallet.address(),
-													network: senderWallet.network(),
-												}
-											: undefined
-									}
-									wallets={profile.wallets().values()}
-									profile={profile}
+								<SelectAddressDropdown
 									disabled={profile.wallets().count() === 1}
-									onChange={handleWalletSelect}
+									profile={profile}
+									onChange={(wallet) => {
+										handleWalletSelect(wallet?.address());
+									}}
+									wallets={profile.wallets().values()}
+									wallet={senderWallet}
+									defaultNetwork={network}
+									showBalance
 								/>
 							</div>
 						</FormField>
@@ -249,10 +248,10 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 						<>
 							{!isLedger && (
 								<div className="space-y-3 sm:space-y-2">
-									<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
 									<TotalAmountBox
+										detailWrapperClassName="sm:min-w-20"
 										amount={exchangeInput.amount}
-										fee={fee || 0}
+										fee={fee}
 										ticker={senderWallet.currency()}
 										convertValues={!senderWallet.network().isTest()}
 									/>
@@ -280,22 +279,26 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 						</>
 					)}
 				</div>
-				<FormButtons>
-					<Button data-testid="ExchangeTransfer__cancel-button" variant="secondary" onClick={onClose}>
-						{t("COMMON.CANCEL")}
-					</Button>
+				<div className="modal-footer">
+					<FormButtons>
+						<Button data-testid="ExchangeTransfer__cancel-button" variant="secondary" onClick={onClose}>
+							{t("COMMON.CANCEL")}
+						</Button>
 
-					<Button
-						type="submit"
-						data-testid="ExchangeTransfer__send-button"
-						disabled={isSubmitting || !isValid || !!errorMessage || isAwaitingConnection}
-						isLoading={isSubmitting}
-						icon="DoubleArrowRight"
-						iconPosition="right"
-					>
-						<span>{t("COMMON.SEND")}</span>
-					</Button>
-				</FormButtons>
+						<Button
+							type="submit"
+							data-testid="ExchangeTransfer__send-button"
+							disabled={
+								isSubmitting || !isValid || !!errorMessage || isAwaitingConnection || !senderWallet
+							}
+							isLoading={isSubmitting}
+							icon="DoubleArrowRight"
+							iconPosition="right"
+						>
+							<span>{t("COMMON.SEND")}</span>
+						</Button>
+					</FormButtons>
+				</div>
 			</Form>
 		</Modal>
 	);

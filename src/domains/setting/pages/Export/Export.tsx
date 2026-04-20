@@ -89,13 +89,13 @@ export const ExportSettings = () => {
 				<SettingsGroup title={t("SETTINGS.EXPORT.TITLE")} description={t("SETTINGS.EXPORT.DESCRIPTION")}>
 					<ListDivided items={walletExportOptions} />
 
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-6 space-y-5 border-t border-dashed pt-6 pb-6">
+					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 space-y-5 border-t border-dashed pt-4">
 						<Alert variant="info">{t("SETTINGS.EXPORT.DESCRIPTION")}</Alert>
 					</div>
 				</SettingsGroup>
 
 				<SettingsButtonGroup>
-					<FormButtons>
+					<FormButtons className="border-none">
 						<Button data-testid="Export-settings__submit-button" type="submit">
 							{t("COMMON.EXPORT")}
 						</Button>

@@ -9,6 +9,7 @@ import {
 	IWalletExportOptions,
 	IWalletRepository,
 	WalletData,
+	WalletSetting,
 } from "./contracts.js";
 import { DataRepository } from "./data.repository";
 import { pqueue } from "./helpers/queue.js";
@@ -50,13 +51,34 @@ export class WalletRepository implements IWalletRepository {
 
 	/** {@inheritDoc IWalletRepository.selected} */
 	public selected(): IReadWriteWallet[] {
-		return this.values().filter((wallet: IReadWriteWallet) => wallet.isSelected());
+		const allSelected = this.values().filter((wallet: IReadWriteWallet) => wallet.isSelected());
+		const firstSelected = allSelected.at(0);
+
+		if (!firstSelected) {
+			return [];
+		}
+
+		if (this.#profile.walletSelectionMode() === "single") {
+			return [firstSelected];
+		}
+
+		return allSelected;
 	}
 
 	/** {@inheritDoc IWalletRepository.selectOne} */
 	public selectOne(selected: IReadWriteWallet): void {
+		this.selectOnly([selected]);
+	}
+
+	/** {@inheritDoc IWalletRepository.selectAll} */
+	public selectAll(): void {
+		this.selectOnly(this.values());
+	}
+
+	/** {@inheritDoc IWalletRepository.selectOnly} */
+	public selectOnly(wallets: IReadWriteWallet[]): void {
 		for (const wallet of this.values()) {
-			if (wallet.id() === selected.id()) {
+			if (wallets.map((selectedWallet) => selectedWallet.id()).includes(wallet.id())) {
 				wallet.mutator().isSelected(true);
 				continue;
 			}
@@ -100,7 +122,8 @@ export class WalletRepository implements IWalletRepository {
 	/** {@inheritDoc IWalletRepository.findByAlias} */
 	public findByAlias(alias: string): IReadWriteWallet | undefined {
 		return this.values().find(
-			(wallet: IReadWriteWallet) => (wallet.alias() || "").toLowerCase() === alias.toLowerCase(),
+			(wallet: IReadWriteWallet) =>
+				(wallet.settings().get<string>(WalletSetting.Alias) || "").toLowerCase() === alias.toLowerCase(),
 		);
 	}
 
@@ -127,7 +150,9 @@ export class WalletRepository implements IWalletRepository {
 			const wallets: IReadWriteWallet[] = this.values();
 
 			for (const wallet of wallets) {
-				if (wallet.id() === id || !wallet.alias()) {
+				const alias = wallet.settings().get(WalletSetting.Alias);
+
+				if (wallet.id() === id || !alias) {
 					continue;
 				}
 
@@ -154,7 +179,8 @@ export class WalletRepository implements IWalletRepository {
 		// If the wallet to be deleted is a selected wallet,
 		// change the selection to the first available wallet before deleting.
 		const walletToBeDeleted = this.findById(id);
-		if (this.#profile.walletSelectionMode() === "single" && walletToBeDeleted.isSelected()) {
+		const selected = this.#profile.wallets().selected();
+		if (selected.length === 1 && walletToBeDeleted.isSelected()) {
 			const firstAvailable = this.#profile
 				.wallets()
 				.values()
@@ -201,7 +227,7 @@ export class WalletRepository implements IWalletRepository {
 				continue;
 			}
 
-			if (excludeEmptyWallets && wallet.balance() === 0) {
+			if (excludeEmptyWallets && wallet.balance().isZero()) {
 				continue;
 			}
 

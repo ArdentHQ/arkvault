@@ -19,7 +19,9 @@ export const TransactionConfirmations = ({
 	const { t } = useTranslation();
 	const { status } = useMultiSignatureStatus({ transaction, wallet: transaction.wallet() });
 
-	if (confirmations && confirmations > 1 && !transaction.isSuccess()) {
+	const hasFailed = !!(confirmations && confirmations > 0 && "isSuccess" in transaction && !transaction.isSuccess());
+
+	if (hasFailed) {
 		return (
 			<div
 				data-testid="TransactionFailedAlert"
@@ -41,9 +43,19 @@ export const TransactionConfirmations = ({
 					</p>
 				</div>
 
-				<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dim:text-theme-dim-200 dim:border-theme-danger-400 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
-					{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
-				</p>
+				{transaction.data().receipt().hasUnknownError() && (
+					<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dim:text-theme-dim-200 dim:border-theme-danger-400 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
+						{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR")}
+					</p>
+				)}
+
+				{transaction.data().receipt().error() && (
+					<p className="border-theme-danger-200 text-theme-secondary-700 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dim:text-theme-dim-200 dim:border-theme-danger-400 border-t px-3 pt-2 font-semibold sm:px-6 sm:pt-4">
+						{t("TRANSACTION.TRANSACTION_EXECUTION_ERROR_WITH_MESSAGE", {
+							error: transaction.data().receipt().prettyError(),
+						})}
+					</p>
+				)}
 			</div>
 		);
 	}

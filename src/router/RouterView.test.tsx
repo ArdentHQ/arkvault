@@ -3,6 +3,10 @@ import { MemoryRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { renderWithoutRouter as render, screen } from "@/utils/testing-library";
 import { RouterView } from "./RouterView";
 import { Middleware } from "./router.types";
+import * as PanelsMock from "@/app/Panels.blocks";
+import { afterAll, beforeAll, vi } from "vitest";
+
+let appPanelsMock;
 
 const NavigateAfterMount = ({ to }) => {
 	const navigate = useNavigate();
@@ -18,6 +22,14 @@ describe("RouterView", () => {
 	const Home = () => <div data-testid="home">Home</div>;
 	const First = () => <div data-testid="first">First</div>;
 	const Second = () => <div data-testid="second">Second</div>;
+
+	beforeAll(() => {
+		appPanelsMock = vi.spyOn(PanelsMock, "AppPanels").mockImplementation(() => <></>);
+	});
+
+	afterAll(() => {
+		appPanelsMock.mockRestore();
+	});
 
 	it("should render", () => {
 		render(

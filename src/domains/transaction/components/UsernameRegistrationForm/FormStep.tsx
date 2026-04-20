@@ -2,17 +2,15 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import React, { ChangeEvent, useEffect, useMemo, useRef } from "react";
 
 import { Alert } from "@/app/components/Alert";
-import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
+import { FormStepProperties } from "@/domains/transaction/components/SendRegistrationSidePanel/SendRegistration.contracts";
 import { InputDefault } from "@/app/components/Input";
-import { StepHeader } from "@/app/components/StepHeader";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { useValidation } from "@/app/hooks";
-import { SelectAddress } from "@/domains/profile/components/SelectAddress";
-import { ThemeIcon } from "@/app/components/Icon";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useEnvironmentContext } from "@/app/contexts";
+import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -27,7 +25,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
-		register("username", usernameRegistration.username(env, network, profile, userExistsController));
+		register("username", usernameRegistration.username(profile, userExistsController));
 	}, [usernameRegistration, register, env, network.id(), profile]);
 
 	const hasUsernameErrors = "username" in errors;
@@ -62,21 +60,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 	return (
 		<section data-testid="UsernameRegistrationForm__form-step">
-			<StepHeader
-				title={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.TITLE")}
-				subtitle={t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.DESCRIPTION")}
-				titleIcon={
-					<ThemeIcon
-						dimensions={[24, 24]}
-						lightIcon="SendTransactionLight"
-						darkIcon="SendTransactionDark"
-						dimIcon="SendTransactionDim"
-					/>
-				}
-			/>
-
 			{currentUsername ? (
-				<Alert className="mt-6">
+				<Alert>
 					<Trans
 						i18nKey="TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO_ALREADY_REGISTERED"
 						values={{
@@ -86,28 +71,24 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 					/>
 				</Alert>
 			) : (
-				<Alert variant="info" className="mt-6">
-					{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}
-				</Alert>
+				<Alert variant="info">{t("TRANSACTION.PAGE_USERNAME_REGISTRATION.FORM_STEP.INFO")}</Alert>
 			)}
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="senderAddress">
-					<SelectAddress
-						showWalletAvatar={false}
-						wallet={
-							wallet
-								? {
-										address: wallet.address(),
-										network: wallet.network(),
-									}
-								: undefined
-						}
-						wallets={profile.wallets().values()}
-						profile={profile}
+					<FormLabel label={t("TRANSACTION.SENDER")} />
+
+					<SelectAddressDropdown
 						disabled={profile.wallets().count() === 0}
-						onChange={handleSelectSender}
+						profile={profile}
+						onChange={(wallet) => {
+							handleSelectSender(wallet?.address() ?? "");
+						}}
+						wallets={profile.wallets().values()}
+						wallet={wallet}
+						defaultNetwork={profile.activeNetwork()}
 						disableAction={(wallet) => !WalletCapabilities(wallet).canSendUsernameRegistration()}
+						showBalance
 					/>
 				</FormField>
 

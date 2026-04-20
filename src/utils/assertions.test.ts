@@ -5,6 +5,8 @@ import { Profile } from "@/app/lib/profiles/profile";
 import { Wallet } from "@/app/lib/profiles/wallet";
 import { env } from "@/utils/testing-library";
 import { DTO } from "@/app/lib/profiles";
+import manifest from "@/app/lib/mainsail/networks/mainsail.devnet";
+import Fixtures from "@/tests/fixtures/coins/mainsail/devnet/tokens.json";
 
 import {
 	assertArray,
@@ -16,7 +18,11 @@ import {
 	assertWallet,
 	assertSignedTransaction,
 	assertConfirmedTransaction,
+	assertToken,
 } from "./assertions";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
 
 let profile: Profile;
 
@@ -86,6 +92,34 @@ describe("#assertWallet", () => {
 	});
 });
 
+describe("#assertToken", () => {
+	beforeEach(() => {});
+	it("should pass with a tokenwallet instance", () => {
+		const walletTokenDTO = new WalletTokenDTO(Fixtures.ByWalletAddress.data[0]);
+		const tokenDTO = new TokenDTO(Fixtures.ByContractAddress.data);
+		const walletToken = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: tokenDTO,
+			walletToken: walletTokenDTO,
+		});
+
+		expect(() => assertToken(walletToken)).not.toThrow();
+	});
+
+	it("should fail without a profile instance", () => {
+		expect(() => assertToken(undefined)).toThrow("Expected 'token' to be WalletToken, but received undefined");
+		expect(() => assertToken(null)).toThrow("Expected 'token' to be WalletToken, but received null");
+		expect(() => assertToken(true)).toThrow("Expected 'token' to be WalletToken, but received true");
+		expect(() => assertToken(false)).toThrow("Expected 'token' to be WalletToken, but received false");
+		expect(() => assertToken("")).toThrow("Expected 'token' to be WalletToken, but received ");
+		expect(() => assertToken("a")).toThrow("Expected 'token' to be WalletToken, but received a");
+		expect(() => assertToken(1)).toThrow("Expected 'token' to be WalletToken, but received 1");
+		expect(() => assertToken({})).toThrow("Expected 'token' to be WalletToken, but received [object Object]");
+		expect(() => assertToken([])).toThrow("Expected 'token' to be WalletToken, but received ");
+	});
+});
+
 describe("#assertReadOnlyWallet", () => {
 	it("should pass with a ReadOnlyWallet instance", () => {
 		const mockReadOnlyWallet = {
@@ -128,7 +162,7 @@ describe("#assertReadOnlyWallet", () => {
 describe("#assertNetwork", () => {
 	it("should pass with a network instance", () => {
 		// @ts-ignore
-		expect(() => assertNetwork(new Networks.Network())).not.toThrow();
+		expect(() => assertNetwork(new Networks.Network({}, manifest, profile))).not.toThrow();
 	});
 
 	it("should fail without a network instance", () => {

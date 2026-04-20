@@ -61,8 +61,8 @@ export interface OrderResponse {
 	to: string;
 	payinAddress: string;
 	payoutAddress: string;
-	amountFrom: number;
-	amountTo: number;
+	amountFrom: string;
+	amountTo: string;
 	externalId: string;
 }
 
@@ -76,6 +76,6 @@ export interface OrderStatusResponse {
 	payoutAddress: string;
 	from: string;
 	to: string;
-	amountFrom?: number;
-	amountTo?: number;
+	amountFrom?: string;
+	amountTo?: string;
 }

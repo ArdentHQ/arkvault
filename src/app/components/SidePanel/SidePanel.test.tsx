@@ -1,8 +1,9 @@
 import React from "react";
 import { SidePanel } from "./SidePanel";
 import userEvent from "@testing-library/user-event";
-import { render, screen, act } from "@testing-library/react";
+import { screen, act } from "@testing-library/react";
 import { Icon } from "@/app/components/Icon";
+import { render } from "@/utils/testing-library";
 
 describe("SidePanel", () => {
 	it("should render title", () => {
@@ -105,6 +106,28 @@ describe("SidePanel", () => {
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
 		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+	});
+
+	it("should display minimize button", async () => {
+		render(
+			<SidePanel open={true} onOpenChange={vi.fn()} title="side panel header">
+				{" "}
+				panel body{" "}
+			</SidePanel>,
+		);
+
+		expect(screen.getByTestId("SidePanel__minimize-button")).toBeInTheDocument();
+	});
+
+	it("should display expand button", async () => {
+		render(
+			<SidePanel open={true} onOpenChange={vi.fn()} title="side panel header">
+				{" "}
+				panel body{" "}
+			</SidePanel>,
+		);
+
+		expect(screen.getByTestId("SidePanel__expand-button")).toBeInTheDocument();
 	});
 
 	it("should detect scrollable content and apply footer shadow", () => {

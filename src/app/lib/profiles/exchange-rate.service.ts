@@ -33,7 +33,6 @@ export class ExchangeRateService implements IExchangeRateService {
 
 		await this.#fetchDailyRate(profile, currency, exchangeCurrency);
 
-		/* istanbul ignore next */
 		if (this.#hasFetchedHistoricalRates(currency, exchangeCurrency)) {
 			return;
 		}

@@ -1,5 +1,3 @@
-/* istanbul ignore file */
-
 import { DTO } from "@/app/lib/mainsail";
 import { IReadWriteWallet } from "./contracts.js";
 
@@ -7,6 +5,8 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ExtendedTransactionRecipient } from "./transaction.dto.js";
 import { SignedTransactionData } from "@/app/lib/mainsail/signed-transaction.dto.js";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
+import { ApproveDetails } from "@/app/lib/mainsail/confirmed-transaction.dto.contract";
 
 export class ExtendedSignedTransactionData {
 	readonly #data: SignedTransactionData;
@@ -37,16 +37,16 @@ export class ExtendedSignedTransactionData {
 		return this.#data.to();
 	}
 
-	public value(): number {
-		return this.#data.value().toHuman();
+	public value(): BigNumber {
+		return this.#data.value();
 	}
 
 	public convertedAmount(): number {
 		return this.#convertAmount(this.value());
 	}
 
-	public fee(): number {
-		return this.#data.fee().toHuman();
+	public fee(): BigNumber {
+		return this.#data.fee();
 	}
 
 	public convertedFee(): number {
@@ -55,6 +55,14 @@ export class ExtendedSignedTransactionData {
 
 	public nonce(): BigNumber {
 		return this.#data.nonce();
+	}
+
+	public token(): TransactionToken | undefined {
+		return this.#data.token();
+	}
+
+	public tokens(): TransactionToken[] | undefined {
+		return this.#data.tokens();
 	}
 
 	public timestamp(): DateTime {
@@ -67,16 +75,7 @@ export class ExtendedSignedTransactionData {
 		}
 
 		if (this.isMultiPayment()) {
-			let isReturn = true;
-
-			for (const recipient of this.recipients().values()) {
-				if (recipient.address !== this.from()) {
-					isReturn = false;
-					break;
-				}
-			}
-
-			return isReturn;
+			return this.recipients().every(({ address }) => address === this.from());
 		}
 
 		return false;
@@ -94,10 +93,6 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isTransfer();
 	}
 
-	public isSecondSignature(): boolean {
-		return this.#data.isSecondSignature();
-	}
-
 	public isValidatorRegistration(): boolean {
 		return this.#data.isValidatorRegistration();
 	}
@@ -112,10 +107,6 @@ export class ExtendedSignedTransactionData {
 
 	public isUsernameResignation(): boolean {
 		return this.#data.isUsernameResignation();
-	}
-
-	public isVoteCombination(): boolean {
-		return this.#data.isVoteCombination();
 	}
 
 	public isVote(): boolean {
@@ -138,16 +129,16 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isValidatorResignation();
 	}
 
-	public total(): number {
+	public total(): BigNumber {
 		if (this.isReturn()) {
-			return this.value() - this.fee();
+			return this.value().minus(this.fee());
 		}
 
 		// We want to return amount + fee for the transactions using multi-signature
 		// because the total should be calculated from the sender perspective.
 		// This is specific for signed - unconfirmed transactions only.
 		if (this.isSent()) {
-			return this.value() + this.fee();
+			return this.value().plus(this.fee());
 		}
 
 		let total = this.value();
@@ -155,7 +146,7 @@ export class ExtendedSignedTransactionData {
 		if (this.isMultiPayment()) {
 			for (const recipient of this.recipients()) {
 				if (recipient.address !== this.wallet().address()) {
-					total -= recipient.amount;
+					total = total.minus(recipient.amount);
 				}
 			}
 		}
@@ -204,6 +195,10 @@ export class ExtendedSignedTransactionData {
 		return this.#data.validatorPublicKey();
 	}
 
+	public approveDetails(): ApproveDetails {
+		return this.#data.approveDetails();
+	}
+
 	public payments(): { recipientId: string; amount: number }[] {
 		return this.#data.payments().map((payment) => ({
 			amount: payment.amount.toHuman(),
@@ -214,7 +209,7 @@ export class ExtendedSignedTransactionData {
 	public recipients(): ExtendedTransactionRecipient[] {
 		return this.#data.recipients().map((payment: { address: string; amount: BigNumber }) => ({
 			address: payment.address,
-			amount: payment.amount.toHuman(),
+			amount: payment.amount,
 		}));
 	}
 
@@ -242,7 +237,7 @@ export class ExtendedSignedTransactionData {
 		return false;
 	}
 
-	#convertAmount(value: number): number {
+	#convertAmount(value: BigNumber): number {
 		const timestamp: DateTime | undefined = this.timestamp();
 
 		if (timestamp === undefined) {
@@ -252,5 +247,41 @@ export class ExtendedSignedTransactionData {
 		return this.wallet()
 			.exchangeRates()
 			.exchange(this.wallet().currency(), this.wallet().exchangeCurrency(), timestamp, value);
+	}
+
+	public isSuccess(): boolean {
+		return false;
+	}
+
+	public gasUsed(): number | null {
+		return null;
+	}
+
+	public gasLimit(): number {
+		return this.#data.gasLimit();
+	}
+
+	public isTokenTransfer(): boolean {
+		return this.#data.isTokenTransfer();
+	}
+
+	public isApprove(): boolean {
+		return this.#data.isApprove();
+	}
+
+	public isRevoke(): boolean {
+		return this.#data.isRevoke();
+	}
+
+	public isBatchTransfer(): boolean {
+		return this.#data.isBatchTransfer();
+	}
+
+	public isContractDeployment() {
+		return this.#data.isContractDeployment();
+	}
+
+	public isContractTransaction() {
+		return this.#data.isContractTransaction();
 	}
 }

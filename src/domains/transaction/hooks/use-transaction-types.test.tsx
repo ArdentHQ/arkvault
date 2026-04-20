@@ -1,18 +1,52 @@
 import { renderHook } from "@testing-library/react";
 import { useTransactionTypes } from "./use-transaction-types";
 import { env } from "@/utils/testing-library";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 describe("useTransactionTypes", () => {
+	const contractDeploymentFixture = {
+		...TransactionFixture,
+		data: () => ({
+			data: () => ({
+				data: "0x60006000F3",
+			}),
+		}),
+		isConfirmed: () => false,
+		isContractDeployment: () => true,
+		isContractTransaction: () => false,
+		to: () => null,
+		type: () => "0x60006000",
+	};
+
 	it("should get type label", () => {
 		const { result } = renderHook(() => useTransactionTypes());
 
-		expect(result.current.getLabel("transfer")).toBe("Transfer");
-		expect(result.current.getLabel("unknown-type")).toBe("Contract Deployment");
+		expect(result.current.getLabel(TransactionFixture)).toBe("Transfer");
+		expect(result.current.getLabel(contractDeploymentFixture)).toBe("Contract Deployment");
 	});
 
 	it("should get method signature", () => {
+		vi.spyOn(TransactionFixture, "isContractDeployment").mockReturnValue(true);
 		const { result } = renderHook(() => useTransactionTypes());
-		expect(result.current.getLabel("0x1234567890abcdef")).toBe("0x1234567890abcdef");
+		expect(result.current.getLabel(contractDeploymentFixture)).toBe("Contract Deployment");
+	});
+
+	it("should get the hash for unknown transaction", () => {
+		const { result } = renderHook(() => useTransactionTypes());
+		const type = "0x60003000";
+		expect(
+			result.current.getLabel({
+				...TransactionFixture,
+				data: () => ({
+					data: () => ({
+						data: "0x60006000F3",
+					}),
+				}),
+				isConfirmed: () => false,
+				isContractDeployment: () => false,
+				type: () => type,
+			}),
+		).toBe(type);
 	});
 
 	it("should return the supported transaction types", () => {
@@ -23,6 +57,7 @@ describe("useTransactionTypes", () => {
 			"validatorRegistration",
 			"usernameRegistration",
 			"usernameResignation",
+			"updateValidator",
 			"validatorResignation",
 			"multiPayment",
 			"transfer",

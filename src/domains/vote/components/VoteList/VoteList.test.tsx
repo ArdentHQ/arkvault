@@ -4,23 +4,30 @@ import React from "react";
 import { VoteList } from "./VoteList";
 import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { render, renderResponsive } from "@/utils/testing-library";
+import { env, getMainsailProfileId } from "@/utils/testing-library";
 
 let votes: Contracts.IReadOnlyWallet[];
 let votesWithAmount: Contracts.VoteRegistryItem[];
 
 describe("VoteList", () => {
+	let profile: Contracts.IProfile;
+
 	beforeAll(() => {
+		profile = env.profiles().findById(getMainsailProfileId());
 		const validators = [0, 1, 2].map(
 			(index) =>
-				new ReadOnlyWallet({
-					address: data[index].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[index].publicKey,
-					username: data[index].username,
-				}),
+				new ReadOnlyWallet(
+					{
+						address: data[index].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[index].publicKey,
+						username: data[index].username,
+					},
+					profile,
+				),
 		);
 
 		votes = validators;

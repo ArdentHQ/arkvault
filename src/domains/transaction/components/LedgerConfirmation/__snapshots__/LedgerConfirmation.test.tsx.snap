@@ -24,7 +24,7 @@ exports[`LedgerConfirmation > should render 1`] = `
       <p
         class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
       >
-        This transaction is pending confirmation.
+        This transaction is pending approval on your Ledger device.
       </p>
     </div>
   </div>
@@ -55,7 +55,7 @@ exports[`LedgerConfirmation > should render with children 1`] = `
       <p
         class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
       >
-        This transaction is pending confirmation.
+        This transaction is pending approval on your Ledger device.
       </p>
     </div>
   </div>
@@ -96,7 +96,7 @@ exports[`LedgerConfirmation > should render with children and custom heading 1`]
       <p
         class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
       >
-        This transaction is pending confirmation.
+        This transaction is pending approval on your Ledger device.
       </p>
     </div>
   </div>

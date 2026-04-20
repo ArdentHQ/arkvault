@@ -45,9 +45,9 @@ export const TruncateMiddleDynamic = ({
 	value,
 	offset = 0,
 	className,
-	tooltipDarkTheme,
 	parentRef,
 	availableWidth,
+	showTooltip = true,
 	...properties
 }: TruncateMiddleDynamicProperties) => {
 	const [truncatedValue, setTruncatedValue] = useState(value);
@@ -66,7 +66,7 @@ export const TruncateMiddleDynamic = ({
 	}, [value, internalReference, width, offset]);
 
 	return (
-		<Tooltip content={value} disabled={truncatedValue === value} theme={tooltipDarkTheme ? "dark" : undefined}>
+		<Tooltip content={value} disabled={truncatedValue === value || !showTooltip}>
 			<span
 				ref={internalReference}
 				className={cn("no-ligatures min-w-0 overflow-hidden", className)}

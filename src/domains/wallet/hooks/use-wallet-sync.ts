@@ -29,7 +29,7 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 				profile.validators().all(network.id());
 			} catch {
 				// Sync network validators for the first time
-				await profile.validators().sync(profile, network.id());
+				await profile.validators().sync(network.id());
 			}
 
 			if (wallet.hasSyncedWithNetwork()) {

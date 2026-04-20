@@ -24,6 +24,7 @@ import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
 import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { Manifest } from "@/app/lib/mainsail/manifest.class";
+import { WalletTokenRepository } from "./wallet-token.repository.js";
 
 export type WalletBalanceType = keyof Contracts.WalletBalance;
 
@@ -123,6 +124,14 @@ export interface IReadWriteWallet {
 	alias(): string | undefined;
 
 	/**
+	 * Get the account name
+	 *
+	 * @return {(string | undefined)}
+	 * @memberof IReadWriteWallet
+	 */
+	accountName(): string | undefined;
+
+	/**
 	 * Get the display name.
 	 *
 	 * @return {(string | undefined)}
@@ -173,10 +182,10 @@ export interface IReadWriteWallet {
 	/**
 	 * Get the balance.
 	 *
-	 * @return {number}
+	 * @return {BigNumber}
 	 * @memberof IReadWriteWallet
 	 */
-	balance(type?: WalletBalanceType): number;
+	balance(type?: WalletBalanceType): BigNumber;
 
 	/**
 	 * Get the converted balance.
@@ -233,6 +242,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	toObject(): IWalletData;
+
+	/**
+	 * Get token count
+	 *
+	 * @return {number}
+	 * @memberof IReadWriteWallet
+	 */
+	tokenCount(): number;
 
 	/**
 	 * Get the known name.
@@ -331,6 +348,14 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isOwnedByTeam(): boolean;
+
+	/**
+	 * Determine if Hierarchical Deterministic (HD) wallet
+	 *
+	 * @return {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	isHDWallet(): boolean;
 
 	/**
 	 * Determine if the wallet belongs to a ledger.
@@ -657,6 +682,22 @@ export interface IReadWriteWallet {
 	actsWithPublicKey(): boolean;
 
 	/**
+	 * Determines if the wallet has been imported with a BIP44 mnemonic
+	 *
+	 * @return {*}  {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	actsWithBip44Mnemonic(): boolean;
+
+	/**
+	 * Determines if the wallet has been imported with a BIP44 mnemonic with encryption
+	 *
+	 * @return {*}  {boolean}
+	 * @memberof IReadWriteWallet
+	 */
+	actsWithBip44MnemonicWithEncryption(): boolean;
+
+	/**
 	 * Determines if the wallet has been imported with an address with a derivation path.
 	 *
 	 * @return {*}  {boolean}
@@ -719,4 +760,20 @@ export interface IReadWriteWallet {
 	 * @memberof IReadWriteWallet
 	 */
 	isSelected(): boolean;
+
+	/**
+	 * Generates a new alias based on existing wallets.
+	 *
+	 * @return {string}
+	 * @memberof IReadWriteWallet
+	 */
+	generateAlias(): string;
+
+	/**
+	 * Returns wallet tokens repository.
+	 *
+	 * @return {WalletTokenRepository}
+	 * @memberof IReadWriteWallet
+	 */
+	tokens(): WalletTokenRepository;
 }

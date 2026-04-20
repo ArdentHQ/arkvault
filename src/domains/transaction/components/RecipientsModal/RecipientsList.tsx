@@ -41,7 +41,7 @@ export const RecipientsList = ({ recipients, ticker }: RecipientsProperties): JS
 								body={
 									<Amount
 										ticker={ticker}
-										value={recipient.amount as number}
+										value={recipient.amount as string}
 										className="text-theme-secondary-900 dark:text-theme-secondary-200 text-sm leading-[17px] font-semibold"
 									/>
 								}

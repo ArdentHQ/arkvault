@@ -2,10 +2,14 @@
 
 exports[`TruncateMiddleDynamic > should render 1`] = `
 <DocumentFragment>
-  <span
-    class="no-ligatures min-w-0 overflow-hidden"
-  >
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  <span>
+    <span>
+      <span
+        class="no-ligatures min-w-0 overflow-hidden"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </span>
+    </span>
   </span>
 </DocumentFragment>
 `;
@@ -32,30 +36,42 @@ exports[`TruncateMiddleDynamic > should return the value if it overflows the giv
 
 exports[`TruncateMiddleDynamic > should return the value if the elements have no width 1`] = `
 <DocumentFragment>
-  <span
-    class="no-ligatures min-w-0 overflow-hidden"
-  >
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  <span>
+    <span>
+      <span
+        class="no-ligatures min-w-0 overflow-hidden"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </span>
+    </span>
   </span>
 </DocumentFragment>
 `;
 
 exports[`TruncateMiddleDynamic > should truncate value if doesn't overflow and availableWidth is set 1`] = `
 <DocumentFragment>
-  <span
-    class="no-ligatures min-w-0 overflow-hidden"
-  >
-    L….
+  <span>
+    <span>
+      <span
+        class="no-ligatures min-w-0 overflow-hidden"
+      >
+        L….
+      </span>
+    </span>
   </span>
 </DocumentFragment>
 `;
 
 exports[`TruncateMiddleDynamic > should truncate value if it overflows and availableWidth is set 1`] = `
 <DocumentFragment>
-  <span
-    class="no-ligatures min-w-0 overflow-hidden"
-  >
-    D…b
+  <span>
+    <span>
+      <span
+        class="no-ligatures min-w-0 overflow-hidden"
+      >
+        D…b
+      </span>
+    </span>
   </span>
 </DocumentFragment>
 `;

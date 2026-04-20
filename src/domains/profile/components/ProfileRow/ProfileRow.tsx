@@ -42,7 +42,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 					<Icon
 						data-testid="Icon__Lock"
 						name="Lock"
-						className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
+						className="border-theme-secondary-300 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-dark-200 dim:text-theme-dim-200 dim:border-theme-dim-700 border-r pr-3"
 						size="lg"
 					/>
 				)}

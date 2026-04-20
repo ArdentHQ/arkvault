@@ -44,7 +44,7 @@ export const VoteTransactionType = ({
 	return (
 		<DetailWrapper label={t("COMMON.ACTION")}>
 			<div className="flex flex-col gap-3" data-testid="VoteDetail">
-				<div className="flex w-full items-center justify-between sm:justify-start">
+				<div className="flex w-full items-center justify-between gap-2 sm:justify-start">
 					<DetailTitle
 						className={cn("w-auto", {
 							"sm:min-w-[132px]": voteCategory === "swap",
@@ -65,7 +65,7 @@ export const VoteTransactionType = ({
 
 							<Address
 								truncateOnTable
-								address={unvotes[0].wallet?.address()}
+								address={unvotes[0].wallet?.alias()}
 								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
@@ -76,7 +76,7 @@ export const VoteTransactionType = ({
 
 							<Address
 								truncateOnTable
-								address={votes[0].wallet?.address()}
+								address={votes[0].wallet?.alias()}
 								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 							/>
@@ -85,7 +85,7 @@ export const VoteTransactionType = ({
 				)}
 
 				{showValidatorField && (
-					<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-0">
+					<div className="flex w-full items-center justify-between gap-4 sm:justify-start sm:gap-2">
 						<DetailTitle
 							className={cn("w-auto", {
 								"sm:min-w-[132px]": voteCategory === "swap",
@@ -97,9 +97,7 @@ export const VoteTransactionType = ({
 
 						<Address
 							truncateOnTable
-							address={
-								voteCategory === "vote" ? votes[0]?.wallet?.address() : unvotes[0]?.wallet?.address()
-							}
+							address={voteCategory === "vote" ? votes[0]?.wallet?.alias() : unvotes[0]?.wallet?.alias()}
 							wrapperClass="justify-start"
 							addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
 						/>

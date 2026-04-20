@@ -49,6 +49,8 @@ import { SignatoryService } from "@/app/lib/mainsail/signatory.service.js";
 import { TransactionService } from "@/app/lib/mainsail/transaction.service.js";
 import { ValidatorService } from "./validator.service.js";
 import { ExchangeRateService } from "./exchange-rate.service.js";
+import { WalletAliasProvider } from "./profile.wallet.alias.js";
+import { WalletTokenRepository } from "./wallet-token.repository.js";
 
 const ERR_NOT_SYNCED =
 	"This wallet has not been synchronized yet. Please call [synchroniser().identity()] before using it.";
@@ -69,6 +71,7 @@ export class Wallet implements IReadWriteWallet {
 	readonly #signatoryFactory: ISignatoryFactory;
 	readonly #messageService: MessageService;
 	readonly #ledgerService: LedgerService;
+	readonly #tokens: WalletTokenRepository;
 
 	public constructor(id: string, initialState: any, profile: IProfile) {
 		this.#profile = profile;
@@ -84,13 +87,14 @@ export class Wallet implements IReadWriteWallet {
 		this.#walletGate = new WalletGate(this);
 		this.#walletSynchroniser = new WalletSynchroniser(this);
 		this.#walletMutator = new WalletMutator(this);
-		this.#voteRegistry = new VoteRegistry(this, this.#attributes);
+		this.#voteRegistry = new VoteRegistry(this, this.#attributes, this.#profile);
 		this.#transactionIndex = new TransactionIndex(this);
 		this.#signingKey = new WalletImportFormat(this, WalletData.EncryptedSigningKey);
 		this.#confirmKey = new WalletImportFormat(this, WalletData.EncryptedConfirmKey);
 		this.#signatoryFactory = new SignatoryFactory(this);
 		this.#messageService = new MessageService();
 		this.#ledgerService = profile.ledger();
+		this.#tokens = new WalletTokenRepository(profile.activeNetwork(), profile);
 
 		this.#restore();
 	}
@@ -122,12 +126,20 @@ export class Wallet implements IReadWriteWallet {
 
 	/** {@inheritDoc IReadWriteWallet.alias} */
 	public alias(): string | undefined {
-		return this.settings().get(WalletSetting.Alias);
+		return (
+			new WalletAliasProvider(this.#profile).findAliasByAddress(this.address(), this.network().id()) ??
+			this.address()
+		);
+	}
+
+	/** {@inheritDoc IReadWriteWallet.accountName} */
+	public accountName(): string | undefined {
+		return this.settings().get(WalletSetting.AccountName);
 	}
 
 	/** {@inheritDoc IReadWriteWallet.displayName} */
 	public displayName(): string | undefined {
-		return this.alias() || this.username() || this.knownName();
+		return this.settings().get(WalletSetting.Alias) || this.username() || this.knownName();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.primaryKey} */
@@ -160,14 +172,16 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.balance} */
-	public balance(type: WalletBalanceType = "available"): number {
+	public balance(type: WalletBalanceType = "available"): BigNumber {
 		const value: Contracts.WalletBalance | undefined = this.data().get(WalletData.Balance);
 
 		if (value && value[type]) {
-			return +BigNumber.make(value[type] as BigNumber, this.#decimals()).toHuman();
+			return BigNumber.make(value[type] as BigNumber, this.#decimals()).divide(
+				BigNumber.powerOfTen(this.#decimals()),
+			);
 		}
 
-		return 0;
+		return BigNumber.ZERO;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.convertedBalance} */
@@ -239,6 +253,11 @@ export class Wallet implements IReadWriteWallet {
 	/** {@inheritDoc IReadWriteWallet.toObject} */
 	public toObject(): IWalletData {
 		return new WalletSerialiser(this).toJSON();
+	}
+
+	/** {@inheritDoc IReadWriteWallet.tokenCount} */
+	public tokenCount(): number {
+		return this.data().get(WalletData.TokenCount, 0) as number;
 	}
 
 	/** {@inheritDoc IReadWriteWallet.knownName} */
@@ -340,8 +359,16 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedger} */
+	public isHDWallet(): boolean {
+		return (
+			this.data().get(WalletData.DerivationPath) !== undefined &&
+			this.data().get(WalletData.AddressIndex) !== undefined
+		);
+	}
+
+	/** {@inheritDoc IReadWriteWallet.isLedger} */
 	public isLedger(): boolean {
-		return this.data().get(WalletData.DerivationPath) !== undefined;
+		return this.data().get(WalletData.DerivationPath) !== undefined && !this.isHDWallet();
 	}
 
 	/** {@inheritDoc IReadWriteWallet.isLedgerNanoX} */
@@ -577,6 +604,16 @@ export class Wallet implements IReadWriteWallet {
 		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.PublicKey;
 	}
 
+	/** {@inheritDoc IReadWriteWallet.actsWithBip44Mnemonic} */
+	public actsWithBip44Mnemonic(): boolean {
+		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.MNEMONIC;
+	}
+
+	/** {@inheritDoc IReadWriteWallet.actsWithBip44Mnemonic} */
+	public actsWithBip44MnemonicWithEncryption(): boolean {
+		return this.data().get(WalletData.ImportMethod) === WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION;
+	}
+
 	/** {@inheritDoc IReadWriteWallet.actsWithAddressWithDerivationPath} */
 	public actsWithAddressWithDerivationPath(): boolean {
 		return [
@@ -669,5 +706,13 @@ export class Wallet implements IReadWriteWallet {
 
 	public exchangeRates(): ExchangeRateService {
 		return this.#profile.exchangeRates();
+	}
+
+	public tokens(): WalletTokenRepository {
+		return this.#tokens;
+	}
+
+	public generateAlias(): string {
+		return new WalletAliasProvider(this.#profile).generateAlias(this);
 	}
 }

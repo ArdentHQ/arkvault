@@ -10,7 +10,7 @@ import { useLedgerContext } from "@/app/contexts/Ledger";
 import { useActiveProfile } from "@/app/hooks";
 import { Loader } from "@/app/components/Loader";
 
-const ConnectionContent = ({
+export const ConnectionContent = ({
 	error,
 	isConnected,
 	coinName,
@@ -63,8 +63,8 @@ export const LedgerConnectionStep = ({
 	}, [register, unregister]);
 
 	useEffect(() => {
-		connect(activeProfile, network.id());
-	}, [activeProfile, network]); // eslint-disable-line react-hooks/exhaustive-deps
+		void connect(activeProfile);
+	}, [activeProfile]);
 
 	useEffect(() => {
 		if (error) {

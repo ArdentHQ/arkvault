@@ -1,20 +1,29 @@
 import { Base64 } from "@ardenthq/arkvault-crypto";
 
-import { IProfile, IProfileData, IProfileImporter, IProfileValidator } from "./contracts.js";
+import { IProfile, IProfileData, IProfileImporter, IProfileValidator, IProfileMainsailMigrator } from "./contracts.js";
 import { Migrator } from "./migrator.js";
 import { ProfileEncrypter } from "./profile.encrypter";
 import { ProfileValidator } from "./profile.validator";
 import { Environment } from "./environment.js";
+import { ProfileMainsailMigrator } from "./profile.mainsail-migrator.js";
 
 export class ProfileImporter implements IProfileImporter {
 	readonly #profile: IProfile;
 	readonly #validator: IProfileValidator;
+	readonly #migrator: IProfileMainsailMigrator;
 	readonly #env: Environment;
+	#ignoreDetails: boolean = false;
 
 	public constructor(profile: IProfile, env: Environment) {
 		this.#profile = profile;
 		this.#validator = new ProfileValidator();
+		this.#migrator = new ProfileMainsailMigrator();
 		this.#env = env;
+	}
+
+	public ignoreDetails(): ProfileImporter {
+		this.#ignoreDetails = true;
+		return this;
 	}
 
 	/** {@inheritDoc IProfileImporter.import} */
@@ -28,25 +37,29 @@ export class ProfileImporter implements IProfileImporter {
 			await new Migrator(this.#profile, data).migrate(schemas, version);
 		}
 
+		data = await this.#migrator.migrate(this.#profile, data);
+
 		data = this.#validator.validate(data);
 
-		this.#profile.notifications().fill(data.notifications);
+		if (!this.#ignoreDetails) {
+			this.#profile.notifications().fill(data.notifications);
 
-		this.#profile.data().fill(data.data);
+			this.#profile.data().fill(data.data);
 
-		this.#profile.hosts().fill(data.hosts);
+			this.#profile.hosts().fill(data.hosts);
 
-		this.#profile.networks().fill(data.networks);
+			this.#profile.networks().fill(data.networks);
 
-		this.#profile.exchangeTransactions().fill(data.exchangeTransactions);
+			this.#profile.exchangeTransactions().fill(data.exchangeTransactions);
+
+			this.#profile.wallets().fill(data.wallets);
+
+			this.#profile.contacts().fill(data.contacts);
+
+			this.#profile.exchangeRates().restore();
+		}
 
 		this.#profile.settings().fill(data.settings);
-
-		this.#profile.wallets().fill(data.wallets);
-
-		this.#profile.contacts().fill(data.contacts);
-
-		this.#profile.exchangeRates().restore();
 	}
 
 	/**

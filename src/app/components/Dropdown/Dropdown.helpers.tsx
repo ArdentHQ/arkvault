@@ -91,9 +91,18 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 					isActive={!!option.active}
 					key={index}
 					data-testid={`dropdown__option--${key ? key + "-" : ""}${index}`}
-					onClick={(event) => onSelectItem(event, option)}
+					onClick={(event) => {
+						if (!option.disabled) {
+							onSelectItem(event, option);
+						}
+					}}
+					disabled={option.disabled}
 					tabIndex={option.disableFocus ? -1 : 0}
 					onKeyDown={(event) => {
+						if (option.disabled) {
+							return;
+						}
+
 						/* istanbul ignore next -- @preserve */
 						if (event.key === "Enter" || event.key === " ") {
 							onSelectItem(event, option);
@@ -103,7 +112,14 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 					{option.iconPosition === "start" && renderIcon(option)}
 					<span className="flex w-full items-center justify-between">
 						{option.element}
-						<span>{option.label}</span>
+						<span
+							className={cn({
+								"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 cursor-pointer":
+									option.disabled,
+							})}
+						>
+							{option.label}
+						</span>
 						{option.secondaryLabel && (
 							<span className="text-theme-secondary-500 dark:text-theme-secondary-600 ml-1 pr-4">
 								{renderSecondaryLabel(option.secondaryLabel, !!option.active)}

@@ -52,6 +52,11 @@ export class ProfileNotificationService implements IProfileNotificationService {
 		return this.#notificationRepository.markAsRead(id);
 	}
 
+	/** {@inheritDoc IProfileNotificationService.markAsRemoved} */
+	public markAsRemoved(id: string): void {
+		return this.#notificationRepository.markAsRemoved(id);
+	}
+
 	/** {@inheritDoc IProfileNotificationService.transactions} */
 	public transactions(): IProfileTransactionNotificationService {
 		return this.#transactions;

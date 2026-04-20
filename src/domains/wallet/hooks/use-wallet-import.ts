@@ -7,8 +7,9 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { OptionsValue } from "./use-import-options";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { useAddressesPanel } from "@/domains/portfolio/hooks/use-address-panel";
-import { AddressViewSelection } from "@/domains/portfolio/components/AddressesSidePanel";
+import { AddressViewSelection } from "@/app/lib/profiles/wallet.enum";
+import { BIP44CoinType } from "@/app/lib/profiles/wallet.factory.contract";
+import { Services } from "@/app/lib/mainsail";
 
 type PrivateKey = string;
 type Mnemonic = string;
@@ -27,13 +28,13 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 	const { env, persist } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const { activeNetwork } = useActiveNetwork({ profile });
-	const { addressViewPreference } = useAddressesPanel({ profile });
 
 	const importWalletByType = async ({
 		network,
 		type,
 		value,
 		ledgerOptions,
+		levels,
 	}: {
 		network: Networks.Network;
 		type: string;
@@ -42,6 +43,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			deviceId: string;
 			path: string;
 		};
+		levels?: Services.IdentityLevels;
 	}): Promise<Contracts.IReadWriteWallet | undefined> => {
 		const defaultOptions = {
 			coin: network.coin(),
@@ -78,7 +80,8 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 				profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP44({
 						...defaultOptions,
-						levels: { account: 0 },
+						coin: BIP44CoinType.ARK,
+						levels: { account: 0, ...(levels ?? {}) },
 						mnemonic: value,
 					}),
 				),
@@ -131,6 +134,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value,
 		type,
 		ledgerOptions,
+		levels,
 	}: {
 		value: WalletGenerationInput;
 		network: Networks.Network;
@@ -139,9 +143,11 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			deviceId: string;
 			path: string;
 		};
+		levels?: Services.IdentityLevels;
 	}): Promise<Contracts.IReadWriteWallet> => {
 		const wallet = await importWalletByType({
 			ledgerOptions,
+			levels,
 			network,
 			type,
 			value,
@@ -155,10 +161,9 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 
 		const alias = ledgerOptions?.path
 			? getLedgerDefaultAlias({ network, path: ledgerOptions.path, profile })
-			: getDefaultAlias({ network, profile });
+			: getDefaultAlias({ addressIndex: levels?.addressIndex, network, profile });
 
 		wallet.mutator().alias(alias);
-		wallet.mutator().isSelected(true);
 
 		return wallet;
 	};
@@ -167,6 +172,8 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 		value,
 		type,
 		ledgerOptions,
+		levels,
+		disableAddressSelection = false,
 	}: {
 		value: WalletGenerationInput;
 		type: string;
@@ -174,24 +181,31 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 			deviceId: string;
 			path: string;
 		};
+		disableAddressSelection?: boolean;
+		levels?: Services.IdentityLevels;
 	}) => {
 		const wallets: Contracts.IReadWriteWallet[] = [];
 
 		const wallet = await importWallet({
 			ledgerOptions,
+			levels,
 			network: profile.activeNetwork(),
 			type,
 			value,
 		});
 		wallets.push(wallet);
 
-		if (addressViewPreference === AddressViewSelection.single) {
-			profile.wallets().selectOne(wallet);
+		if (profile.walletSelectionMode() === AddressViewSelection.single) {
+			if (!disableAddressSelection) {
+				profile.wallets().selectOne(wallet);
+			}
 		} else {
 			wallet.mutator().isSelected(true);
 		}
 
 		await persist();
+
+		void profile.tokens().sync();
 
 		return wallets;
 	};

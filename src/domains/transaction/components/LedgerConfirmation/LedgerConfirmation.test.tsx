@@ -13,7 +13,7 @@ describe("LedgerConfirmation", () => {
 		);
 
 		expect(screen.getByTestId("LedgerConfirmation-loading_message")).toHaveTextContent(
-			translations.PENDING.STATUS_TEXT,
+			translations.PENDING.APPROVAL,
 		);
 
 		expect(asFragment()).toMatchSnapshot();

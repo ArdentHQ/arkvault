@@ -8,6 +8,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
 import { twMerge } from "tailwind-merge";
 import { Contracts } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 
 interface AmountLabelHintProperties {
 	className: string;
@@ -33,7 +34,7 @@ const AmountLabelHint = ({ className, isCompact, tooltipContent }: AmountLabelHi
 interface AmountLabelProperties {
 	isCompact?: boolean;
 	isNegative: boolean;
-	value: number;
+	value: number | string | BigNumber;
 	ticker: string;
 	hint?: string;
 	size?: Size;
@@ -42,6 +43,9 @@ interface AmountLabelProperties {
 	hideSign?: boolean;
 	allowHideBalance?: boolean;
 	profile?: Contracts.IProfile;
+	decimals?: number;
+	showCompactFormat?: boolean;
+	showTicker?: boolean;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -56,6 +60,9 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	hideSign,
 	allowHideBalance = false,
 	profile,
+	decimals,
+	showCompactFormat,
+	showTicker,
 }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
@@ -66,7 +73,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 		hintClassName = "bg-theme-danger-info-border text-theme-danger-info-text dark:text-white/70";
 	}
 
-	if (value === 0 || hideSign) {
+	if (BigNumber.make(value).isZero() || hideSign) {
 		labelColor = "secondary";
 		hintClassName = "";
 	}
@@ -88,13 +95,16 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 			<div className={cn("flex h-full items-center space-x-1")}>
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
 				<Amount
-					showSign={!hideSign && value !== 0}
+					decimals={decimals}
+					showTicker={showTicker}
+					showSign={!hideSign && !BigNumber.make(value).isZero()}
 					ticker={ticker}
 					value={value}
 					isNegative={isNegative}
 					className={twMerge("text-sm", textClassName)}
 					allowHideBalance={allowHideBalance}
 					profile={profile}
+					showCompactFormat={showCompactFormat}
 				/>
 			</div>
 		</Label>

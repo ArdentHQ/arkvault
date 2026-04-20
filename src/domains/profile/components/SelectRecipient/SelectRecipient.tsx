@@ -2,10 +2,9 @@ import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { useTranslation } from "react-i18next";
-import { Avatar } from "@/app/components/Avatar";
-import { Circle } from "@/app/components/Circle";
 import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
 import { Select } from "@/app/components/SelectDropdown";
@@ -22,7 +21,6 @@ type SelectRecipientProperties = {
 	disabled?: boolean;
 	isInvalid?: boolean;
 	showOptions?: boolean;
-	showWalletAvatar?: boolean;
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
@@ -31,29 +29,14 @@ type SelectRecipientProperties = {
 	onChange?: (address: string | undefined, alias: WalletAliasResult) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
-const ProfileAvatar = ({ address }: any) => {
-	if (!address) {
-		return (
-			<Circle
-				className="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
-				size="sm"
-				noShadow
-			/>
-		);
-	}
-	return <Avatar address={address} size="sm" noShadow />;
-};
-
 export const SelectRecipient = ({
 	address,
 	profile,
 	disabled,
 	isInvalid,
 	showOptions = true,
-	showWalletAvatar = true,
 	network,
 	placeholder,
-	exceptMultiSignature,
 	onChange,
 	contactSearchTitle,
 	contactSearchDescription,
@@ -83,7 +66,7 @@ export const SelectRecipient = ({
 			}
 
 			const alias = getWalletAlias({
-				address: addressValue ?? "",
+				address: addressValue!,
 				network,
 				profile,
 			});
@@ -111,7 +94,7 @@ export const SelectRecipient = ({
 		}
 	}, [selectedAddress]);
 
-	const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
+	const { allAddresses } = useProfileAddresses({ profile });
 
 	const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
 		label: address,
@@ -162,6 +145,7 @@ export const SelectRecipient = ({
 					options={showOptions ? recipientOptions : []}
 					showOptions={showOptions}
 					allowFreeInput={true}
+					innerClassName="text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 					onChange={(option: any) => onChangeAddress(option.value)}
 					addons={{
 						end: showOptions
@@ -180,40 +164,34 @@ export const SelectRecipient = ({
 									),
 								}
 							: undefined,
-						start:
-							selectedAddressAlias?.alias || showWalletAvatar
-								? {
-										content: (
-											<div className="flex items-center">
-												{showWalletAvatar && <ProfileAvatar address={selectedAddress} />}
-												{selectedAddressAlias?.alias && (
-													<TruncateEnd
-														className={cn("font-semibold", {
-															"ml-2": showWalletAvatar,
-														})}
-														text={selectedAddressAlias.alias}
-														showTooltip
-													/>
-												)}
-											</div>
-										),
-									}
-								: undefined,
+						start: selectedAddressAlias?.alias
+							? {
+									content: (
+										<div className="flex items-center">
+											<TruncateEnd text={selectedAddressAlias.alias} showTooltip />
+										</div>
+									),
+								}
+							: undefined,
 					}}
 					renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 				/>
 			</div>
 
-			<SearchRecipient
-				title={contactSearchTitle}
-				description={contactSearchDescription}
-				isOpen={isRecipientSearchOpen}
-				recipients={allAddresses}
-				onAction={onAction}
-				onClose={() => setIsRecipientSearchOpen(false)}
-				selectedAddress={selectedAddress}
-				profile={profile}
-			/>
+			{isRecipientSearchOpen &&
+				createPortal(
+					<SearchRecipient
+						title={contactSearchTitle}
+						description={contactSearchDescription}
+						isOpen={isRecipientSearchOpen}
+						recipients={allAddresses}
+						onAction={onAction}
+						onClose={() => setIsRecipientSearchOpen(false)}
+						selectedAddress={selectedAddress}
+						profile={profile}
+					/>,
+					document.body,
+				)}
 		</div>
 	);
 };

@@ -1,4 +1,4 @@
-import { configManager, Networks } from "@/app/lib/mainsail";
+import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
@@ -53,7 +53,6 @@ describe("InputFee", () => {
 			profile,
 		};
 
-		// eslint-disable-next-line react/display-name
 		Wrapper = () => {
 			const [gasPrice, setGasPrice] = useState(defaultProps.gasPrice);
 			const [viewType, setViewType] = useState(defaultProps.viewType);
@@ -373,12 +372,85 @@ describe("InputFee", () => {
 			networkIsLive.mockRestore();
 			getFiatCurrency.mockRestore();
 		});
+
+		it("should show convertted value in addon when gasPrice is zero and no error", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasPrice = BigNumber.make(0);
+
+			const networkIsLive = vi.spyOn(network, "isLive").mockReturnValue(true);
+			vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+
+			render(<InputFee {...defaultProps} network={network} showConvertedValue />);
+
+			expect(screen.getByTestId("InputFeeAdvanced__convertedGasFee")).toBeInTheDocument();
+
+			networkIsLive.mockRestore();
+		});
+
+		it("should handle undefined gasPrice and gasLimit", () => {
+			const { asFragment } = render(<InputFee {...defaultProps} gasPrice={undefined} gasLimit={undefined} />);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should set gasPrice to maxGasPrice when increment exceeds max", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasPrice = BigNumber.make(10000);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
+
+			expect(getOnChangeGasPriceLastCallArg()).toBe("10000");
+		});
+
+		it("should set gasLimit to minGasLimit when decrement goes below min", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasLimit = BigNumber.make(21100);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__gasLimit__down"));
+
+			expect(getOnChangeGasLimitLastCallArg()).toBe("21000");
+		});
+
+		it("should clamp gasLimit to maxGasLimit when increment exceeds max", async () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.gasLimit = BigNumber.make(1999900);
+
+			render(<InputFee {...defaultProps} />);
+
+			await userEvent.click(screen.getByTestId("InputFeeAdvanced__gasLimit__up"));
+
+			expect(getOnChangeGasLimitLastCallArg()).toBe("2000000");
+		});
+
+		it("should use default viewType and selectedFeeOption when undefined", () => {
+			const { asFragment } = render(
+				<InputFee
+					{...defaultProps}
+					viewType={undefined}
+					selectedFeeOption={undefined}
+					gasPrice={defaultProps.gasPrice}
+					gasLimit={defaultProps.gasLimit}
+				/>,
+			);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
 	});
 });
 
 describe("getFeeMinMax", () => {
+	let profile: Contracts.IProfile;
+
+	beforeEach(() => {
+		profile = env.profiles().first();
+	});
+
 	it("should return min/max values for gasPrice/gasLimit", () => {
-		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax(profile.activeNetwork());
 
 		expect(minGasPrice.toString()).toBe("5");
 		expect(maxGasPrice.toString()).toBe("10000");
@@ -387,11 +459,11 @@ describe("getFeeMinMax", () => {
 	});
 
 	it("should handle when config manager doesn't include min/max values", () => {
-		const configSpy = vi.spyOn(configManager, "getMilestone").mockReturnValue({
+		const configSpy = vi.spyOn(profile.activeNetwork(), "milestone").mockReturnValue({
 			gas: {},
 		});
 
-		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax();
+		const { minGasPrice, maxGasPrice, minGasLimit, maxGasLimit } = getFeeMinMax(profile.activeNetwork());
 
 		expect(minGasPrice.toString()).toBe("0");
 		expect(maxGasPrice.toString()).toBe("0");

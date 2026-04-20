@@ -11,4 +11,5 @@ export interface IdentityOptions {
 	bip49?: IdentityLevels;
 	bip84?: IdentityLevels;
 	senderPublicKey?: string;
+	address?: string;
 }

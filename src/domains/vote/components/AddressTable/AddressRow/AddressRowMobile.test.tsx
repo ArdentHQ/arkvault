@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -13,6 +13,7 @@ import { data } from "@/tests/fixtures/coins/mainsail/devnet/validators.json";
 import { env, getMainsailProfileId, MAINSAIL_MNEMONICS, render, screen, syncValidators } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { within } from "@testing-library/react";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -25,6 +26,7 @@ let wallet2: Contracts.IReadWriteWallet;
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
 const ADDRESS_ROW_STATUS_TEST_ID = "AddressRow__wallet-status";
+const FIRST_ADDRESS_VOTE_BUTTON = "AddressRowMobile__select-0";
 
 const AddressWrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
@@ -42,15 +44,18 @@ const AddressWrapper = ({ children }) => {
 const votingMockReturnValue = (validatorsIndex: number[]) =>
 	validatorsIndex.map((index) => ({
 		amount: 0,
-		wallet: new ReadOnlyWallet({
-			address: data[index].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isResignedValidator: false,
-			isValidator: true,
-			publicKey: data[index].publicKey,
-			username: data[index].attributes.username,
-		}),
+		wallet: new ReadOnlyWallet(
+			{
+				address: data[index].address,
+				explorerLink: "",
+				governanceIdentifier: "address",
+				isResignedValidator: false,
+				isValidator: true,
+				publicKey: data[index].publicKey,
+				username: data[index].attributes.username,
+			},
+			profile,
+		),
 	}));
 
 describe("AddressRowMobile", () => {
@@ -179,16 +184,19 @@ describe("AddressRowMobile", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[0].publicKey,
-					rank: 1,
-					username: data[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: data[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[0].publicKey,
+						rank: 1,
+						username: data[0].username,
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -214,16 +222,19 @@ describe("AddressRowMobile", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: false,
-					isValidator: true,
-					publicKey: data[0].publicKey,
-					rank: 100,
-					username: data[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: data[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: false,
+						isValidator: true,
+						publicKey: data[0].publicKey,
+						rank: 100,
+						username: data[0].username,
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -249,16 +260,19 @@ describe("AddressRowMobile", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isResignedValidator: true,
-					isValidator: true,
-					publicKey: data[0].publicKey,
-					rank: undefined,
-					username: data[0].username,
-				}),
+				wallet: new ReadOnlyWallet(
+					{
+						address: data[0].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isResignedValidator: true,
+						isValidator: true,
+						publicKey: data[0].publicKey,
+						rank: undefined,
+						username: data[0].username,
+					},
+					profile,
+				),
 			},
 		]);
 
@@ -302,6 +316,53 @@ describe("AddressRowMobile", () => {
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address());
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render disable vote button & tooltip when balance is zero", async () => {
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
+
+		render(
+			<AddressWrapper>
+				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
+		expect(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON)).toBeDisabled();
+
+		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
+
+		expect(screen.getByText(/Disabled due to insufficient balance./)).toBeInTheDocument();
+
+		balanceMock.mockRestore();
+	});
+
+	it("should render disable vote button & tooltip when ledger is not supported", async () => {
+		process.env.REACT_APP_IS_UNIT = undefined;
+		const ledgerWalletMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(
+			<AddressWrapper>
+				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
+			</AddressWrapper>,
+			{
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		await expect(screen.findByTestId(FIRST_ADDRESS_VOTE_BUTTON)).resolves.toBeVisible();
+		expect(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON)).toBeDisabled();
+
+		await userEvent.hover(screen.getByTestId(FIRST_ADDRESS_VOTE_BUTTON));
+
+		expect(
+			screen.getByText(/ARK Vault requires the use of a chromium based browser when using a Ledger./),
+		).toBeInTheDocument();
+
+		ledgerWalletMock.mockRestore();
 	});
 
 	// @TODO fix test when we are clear

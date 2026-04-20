@@ -56,6 +56,23 @@ export interface IWalletRepository {
 	selected(): IReadWriteWallet[];
 
 	/**
+	 * Selects all profile wallets.
+	 *
+	 * @returns {void}
+	 * @memberof IWalletRepository
+	 */
+	selectAll(): void;
+
+	/**
+	 * Marks given wallets as selected, and deselects the rest.
+	 *
+	 * @param {IReadWriteWallet} selected
+	 * @returns {void}
+	 * @memberof IWalletRepository
+	 */
+	selectOnly(selected: IReadWriteWallet[]): void;
+
+	/**
 	 * Marks given wallet as selected, and deselects others.
 	 *
 	 * @param {IReadWriteWallet} selected

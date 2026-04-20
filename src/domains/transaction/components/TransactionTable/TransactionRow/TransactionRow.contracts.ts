@@ -1,11 +1,14 @@
 import React from "react";
-import { Contracts, DTO } from "@/app/lib/profiles";
+import { Contracts } from "@/app/lib/profiles";
+import { ExtendedTransactionDTO } from "@/domains/transaction/components/TransactionTable";
 
 export type TransactionRowProperties = {
-	transaction: DTO.ExtendedConfirmedTransactionData;
+	transaction: ExtendedTransactionDTO;
 	exchangeCurrency?: string;
 	onClick?: () => void;
 	isLoading?: boolean;
 	profile: Contracts.IProfile;
 	hideSender?: boolean;
+	decimals?: number;
+	coinName?: string;
 } & React.HTMLProps<any>;

@@ -71,6 +71,7 @@ describe("SendExchangeTransfer", () => {
 		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 		const connectMock = vi.spyOn(wallet.ledger(), "connect").mockResolvedValue(true);
 		const versionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
+		const isEthBasedAppMock = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockImplementation(() => true);
 
 		const mockWalletData = vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
 			if (key === Contracts.WalletData.DerivationPath) {
@@ -120,6 +121,7 @@ describe("SendExchangeTransfer", () => {
 		mockWalletData.mockRestore();
 		transportMock.mockRestore();
 		ledgerGetPublicKeyMock.mockRestore();
+		isEthBasedAppMock.mockRestore();
 	});
 
 	it("should show error if unable to detect ledger device", async () => {
@@ -127,6 +129,7 @@ describe("SendExchangeTransfer", () => {
 		const { t } = result.current;
 
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		const isEthBasedAppMock = vi.spyOn(wallet.ledger(), "isEthBasedApp").mockImplementation(() => true);
 
 		const ledgerErrorMock = mockLedgerTransportError("Access denied to use Ledger device");
 		const profileWalletsCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(1);
@@ -141,6 +144,7 @@ describe("SendExchangeTransfer", () => {
 		isLedgerMock.mockRestore();
 		profileWalletsMock.mockRestore();
 		profileWalletsCountMock.mockRestore();
+		isEthBasedAppMock.mockRestore();
 	});
 
 	it("should show browser compatibility error ledger is not supported", async () => {

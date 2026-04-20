@@ -10,7 +10,8 @@ import {
 } from "./network.models";
 import { ConfigKey, ConfigRepository } from ".";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { configManager } from "./config.manager";
+import { FeeService } from "./fee.service";
+import { Contracts } from "@/app/lib/profiles";
 
 export class Network {
 	/**
@@ -21,11 +22,32 @@ export class Network {
 	readonly #coin: CoinManifest;
 
 	/**
+	 * The profile associated with fees config.
+	 *
+	 * @memberof Network
+	 */
+	readonly #profile: Contracts.IProfile;
+
+	/**
+	 * The fee service instance.
+	 *
+	 * @memberof Network
+	 */
+	readonly #feeService: FeeService;
+
+	/**
 	 * The manifest of the network.
 	 *
 	 * @memberof Network
 	 */
 	readonly #network: NetworkManifest;
+
+	/**
+	 * The config of the network.
+	 *
+	 * @memberof Network
+	 */
+	readonly #config: ConfigRepository;
 
 	/**
 	 * Create a new Network instance.
@@ -34,9 +56,12 @@ export class Network {
 	 * @param {NetworkManifest} network
 	 * @memberof Network
 	 */
-	public constructor(coin: CoinManifest, network: NetworkManifest) {
+	public constructor(coin: CoinManifest, network: NetworkManifest, profile: Contracts.IProfile) {
 		this.#coin = coin;
 		this.#network = network;
+		this.#profile = profile;
+		this.#config = new ConfigRepository({ network });
+		this.#feeService = new FeeService({ config: this.#config, profile: this.#profile });
 	}
 
 	/**
@@ -347,7 +372,7 @@ export class Network {
 	 * @returns {ConfigRepository}
 	 */
 	public config(): ConfigRepository {
-		return new ConfigRepository({ network: this.#network });
+		return this.#config;
 	}
 
 	/**
@@ -369,9 +394,18 @@ export class Network {
 		const dataCrypto = crypto.data;
 		const { blockNumber } = status.data;
 
-		// Set network configuration globally.
-		configManager.setConfig(dataCrypto);
-		configManager.setHeight(blockNumber);
+		this.config().set("height", blockNumber);
+		this.config().set("crypto", dataCrypto);
+	}
+
+	/**
+	 * Determines if the network is synced.
+	 *
+	 * @returns {boolean}
+	 * @memberof Network
+	 */
+	public isSynced(): boolean {
+		return this.config().has("height") && this.config().has("crypto");
 	}
 
 	/**
@@ -384,5 +418,59 @@ export class Network {
 		const client = new ArkClient(host);
 		const { data } = await client.node().crypto();
 		return data.network.client.token === this.config().get(ConfigKey.CurrencyTicker);
+	}
+
+	public milestone(height?: number): { [key: string]: any } {
+		const currentHeight = this.config().get("height") as number;
+		const crypto = this.config().get("crypto") as Record<string, any>;
+
+		const milestones = crypto.milestones.sort((a, b) => a.height - b.height);
+		const milestone = {
+			data: milestones[0],
+			index: 0,
+		};
+
+		if (!milestone.data) {
+			throw new Error("Milestone not found.");
+		}
+
+		if (!height && currentHeight) {
+			height = currentHeight;
+		}
+
+		if (!height) {
+			height = 1;
+		}
+
+		while (milestone.index < milestones.length - 1 && height >= milestones[milestone.index + 1].height) {
+			milestone.index++;
+			milestone.data = milestones[milestone.index];
+		}
+
+		while (height < milestones[milestone.index].height) {
+			milestone.index--;
+			milestone.data = milestones[milestone.index];
+		}
+
+		return milestone.data;
+	}
+	/**
+	 * Returns the fee service of the network.
+	 *
+	 * @returns {FeeService}
+	 * @memberof Network
+	 */
+	fees(): FeeService {
+		return this.#feeService;
+	}
+
+	/**
+	 * Returns the block time.
+	 *
+	 * @returns {number}
+	 * @memberof Network
+	 */
+	blockTime(): number {
+		return get(this.milestone(), "timeouts.blockTime");
 	}
 }

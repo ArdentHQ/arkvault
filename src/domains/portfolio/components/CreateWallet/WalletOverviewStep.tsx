@@ -8,10 +8,16 @@ import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 
-export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
+export const WalletOverviewStep = ({
+	isGeneratingWallet,
+	mnemonic,
+}: {
+	isGeneratingWallet: boolean;
+	mnemonic?: string;
+}) => {
 	const { unregister, watch } = useFormContext();
 
-	const { wallet, mnemonic } = watch();
+	const { wallet } = watch();
 
 	const { isLegacy, showSaveDialog } = useFiles();
 
@@ -21,7 +27,7 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 		unregister("verification");
 	}, [unregister]);
 
-	const handleDownload = async () => {
+	const handleDownload = async (mnemonic: string) => {
 		try {
 			const filePath = await showSaveDialog(mnemonic, { fileName: `${wallet.address()}.txt` });
 
@@ -39,17 +45,19 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 		<section data-testid="CreateWallet__WalletOverviewStep">
 			<Alert>{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
-			<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-4 space-y-4 rounded-lg border p-4 pb-0 sm:space-y-6 sm:p-6 sm:pb-0">
-				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
+			{mnemonic && (
+				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-4 space-y-4 rounded-lg border p-4 pb-0 sm:space-y-6 sm:p-6 sm:pb-0">
+					{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
-				<CopyOrDownload
-					title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
-					description={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
-					copyData={mnemonic}
-					onClickDownload={() => handleDownload()}
-					disabled={isGeneratingWallet}
-				/>
-			</div>
+					<CopyOrDownload
+						title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
+						description={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
+						copyData={mnemonic}
+						onClickDownload={() => handleDownload(mnemonic)}
+						disabled={isGeneratingWallet}
+					/>
+				</div>
+			)}
 		</section>
 	);
 };

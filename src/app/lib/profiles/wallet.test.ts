@@ -76,6 +76,16 @@ describe("Wallet", () => {
 		}
 	});
 
+	it("should have an account name", () => {
+		const spy = vi.spyOn(wallet.settings(), "get").mockReturnValue("MyAccount");
+		expect(wallet.accountName()).toBe("MyAccount");
+		spy.mockRestore();
+	});
+
+	it("should have a tokenCount", () => {
+		expect(wallet.tokenCount()).toBe(0);
+	});
+
 	it("should have a primary key", () => {
 		const mockWalletData = {
 			primaryKey: () => "test-primary-key",
@@ -122,20 +132,20 @@ describe("Wallet", () => {
 
 	it("should have a balance", () => {
 		const result = wallet.balance();
-		expect(typeof result).toBe("number");
-		expect(result).toBeGreaterThanOrEqual(0);
+		expect(result).toBeInstanceOf(BigNumber);
+		expect(+result).toBeGreaterThanOrEqual(0);
 	});
 
 	it("should have a balance for different types", () => {
 		const available = wallet.balance("available");
 		const fees = wallet.balance("fees");
-		expect(typeof available).toBe("number");
-		expect(typeof fees).toBe("number");
+		expect(available).toBeInstanceOf(BigNumber);
+		expect(fees).toBeInstanceOf(BigNumber);
 	});
 
 	it("should return 0 for balance when undefined", () => {
 		vi.spyOn(wallet.data(), "get").mockReturnValue(undefined);
-		expect(wallet.balance()).toBe(0);
+		expect(wallet.balance()).toBe(BigNumber.ZERO);
 	});
 
 	it("should have a converted balance", () => {
@@ -152,7 +162,7 @@ describe("Wallet", () => {
 			}),
 		}));
 		const result = wallet.balance();
-		expect(typeof result).toBe("number");
+		expect(result).toBeInstanceOf(BigNumber);
 	});
 
 	it("should return 0 for converted balance on test network", () => {
@@ -386,7 +396,10 @@ describe("Wallet", () => {
 	});
 
 	it("should check if is ledger", () => {
-		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/0'/0'/0/0");
+		const spy = vi
+			.spyOn(wallet.data(), "get")
+			.mockImplementation((key) => (key === "DERIVATION_PATH" ? "m/44'/0'/0'/0/0" : undefined));
+
 		expect(wallet.isLedger()).toBe(true);
 		spy.mockRestore();
 	});
@@ -495,6 +508,10 @@ describe("Wallet", () => {
 
 	it("should have a transaction service", () => {
 		expect(wallet.transaction()).toBeInstanceOf(WalletTransactionService);
+	});
+
+	it("should have a tokens repository", () => {
+		expect(wallet.tokens()).toBeDefined();
 	});
 
 	it("should have a transaction service", () => {
@@ -663,6 +680,12 @@ describe("Wallet", () => {
 		spy.mockRestore();
 	});
 
+	it("should check if acts with bip44 mnemonic with encryption", () => {
+		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue(WalletImportMethod.BIP44.MNEMONIC_WITH_ENCRYPTION);
+		expect(wallet.actsWithBip44MnemonicWithEncryption()).toBe(true);
+		spy.mockRestore();
+	});
+
 	it("should check if acts with wif", () => {
 		const spy = vi.spyOn(wallet.data(), "get").mockReturnValue(WalletImportMethod.WIF);
 		expect(wallet.actsWithWif()).toBe(true);
@@ -722,7 +745,7 @@ describe("Wallet", () => {
 		const newWallet = new Wallet("test-id", {}, profile);
 
 		// Check that balance is set to default values
-		expect(newWallet.balance()).toBe(0);
+		expect(newWallet.balance().toString()).toBe("0");
 		expect(newWallet.nonce()).toEqual(BigNumber.ZERO);
 	});
 
@@ -737,7 +760,7 @@ describe("Wallet", () => {
 		// Trigger restore by creating another wallet
 		const restoredWallet = new Wallet("test-id-2", {}, profile);
 
-		expect(typeof restoredWallet.balance()).toBe("number");
+		expect(restoredWallet.balance()).toBeInstanceOf(BigNumber);
 		expect(restoredWallet.nonce()).toBeInstanceOf(BigNumber);
 	});
 
@@ -745,7 +768,7 @@ describe("Wallet", () => {
 		const newWallet = new Wallet("test-id", {}, profile);
 
 		// Test that decimals are used correctly
-		expect(newWallet.balance()).toBeGreaterThanOrEqual(0);
+		expect(newWallet.balance().isGreaterThanOrEqualTo(0)).toBe(true);
 	});
 
 	it("should use default decimals when manifest fails", () => {
@@ -755,7 +778,7 @@ describe("Wallet", () => {
 		});
 
 		// Should still work with default decimals
-		expect(newWallet.balance()).toBeGreaterThanOrEqual(0);
+		expect(newWallet.balance().isGreaterThanOrEqualTo(0)).toBe(true);
 	});
 
 	it("should create wallet with proper attributes", () => {
@@ -828,7 +851,7 @@ describe("Wallet", () => {
 
 		// This should use default decimals (18) and not throw
 		const result = newWallet.balance();
-		expect(typeof result).toBe("number");
+		expect(result).toBeInstanceOf(BigNumber);
 	});
 
 	it("should cover username early return when cold wallet", () => {
@@ -894,32 +917,32 @@ describe("Wallet", () => {
 
 		// This should use default decimals (18) when manifest access fails
 		const result = newWallet.balance();
-		expect(typeof result).toBe("number");
+		expect(result).toBeInstanceOf(BigNumber);
 	});
 
 	it("should test all displayName branches", () => {
 		const newWallet = new Wallet("test-id", {}, profile);
 
 		// Test 1: alias() returns a value (first branch)
-		vi.spyOn(newWallet, "alias").mockReturnValue("wallet-alias");
+		vi.spyOn(newWallet.settings(), "get").mockReturnValue("wallet-alias");
 		vi.spyOn(newWallet, "username").mockReturnValue("wallet-username");
 		vi.spyOn(newWallet, "knownName").mockReturnValue("wallet-known");
 		expect(newWallet.displayName()).toBe("wallet-alias");
 
 		// Test 2: alias() returns undefined, username() returns a value (second branch)
-		vi.spyOn(newWallet, "alias").mockReturnValue(undefined);
+		vi.spyOn(newWallet.settings(), "get").mockReturnValue(undefined);
 		vi.spyOn(newWallet, "username").mockReturnValue("wallet-username");
 		vi.spyOn(newWallet, "knownName").mockReturnValue("wallet-known");
 		expect(newWallet.displayName()).toBe("wallet-username");
 
 		// Test 3: alias() and username() return undefined, knownName() returns a value (third branch)
-		vi.spyOn(newWallet, "alias").mockReturnValue(undefined);
+		vi.spyOn(newWallet.settings(), "get").mockReturnValue(undefined);
 		vi.spyOn(newWallet, "username").mockReturnValue(undefined);
 		vi.spyOn(newWallet, "knownName").mockReturnValue("wallet-known");
 		expect(newWallet.displayName()).toBe("wallet-known");
 
 		// Test 4: all return undefined (covers all branches)
-		vi.spyOn(newWallet, "alias").mockReturnValue(undefined);
+		vi.spyOn(newWallet.settings(), "get").mockReturnValue(undefined);
 		vi.spyOn(newWallet, "username").mockReturnValue(undefined);
 		vi.spyOn(newWallet, "knownName").mockReturnValue(undefined);
 		expect(newWallet.displayName()).toBeUndefined();

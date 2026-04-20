@@ -44,7 +44,7 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render without a wallet avatar", () => {
-		render(<SelectAddress showWalletAvatar={false} wallets={wallets} profile={profile} />);
+		render(<SelectAddress wallets={wallets} profile={profile} />);
 
 		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
 	});
@@ -214,5 +214,44 @@ describe("SelectAddress", () => {
 		});
 
 		expect(onChange).toHaveBeenCalledWith(wallets[0].address());
+	});
+
+	it("should render modern variant", async () => {
+		render(<SelectAddress variant="modern" wallets={wallets} profile={profile} />);
+
+		expect(screen.getByTestId("SelectAddress__wrapper_modern")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("SelectAddress__wrapper_modern"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should not display alias in modern variant if showWalletName is false", () => {
+		render(<SelectAddress variant="modern" wallets={wallets} profile={profile} showWalletName={false} />);
+
+		expect(screen.queryByTestId("Address__alias")).not.toBeInTheDocument();
+	});
+
+	it("should render modern variant with label class name", () => {
+		render(
+			<SelectAddress
+				variant="modern"
+				wallets={wallets}
+				profile={profile}
+				labelClassName="w-auto sm:min-w-[162px]"
+			/>,
+		);
+
+		expect(screen.getByTestId("SelectAddress__wrapper_modern")).toBeInTheDocument();
+
+		expect(screen.getByTestId("DetailTitle")).toHaveClass("w-auto sm:min-w-[162px]");
 	});
 });

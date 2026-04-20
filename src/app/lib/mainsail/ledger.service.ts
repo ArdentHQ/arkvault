@@ -1,6 +1,6 @@
-import { Contracts, Services } from "@/app/lib/mainsail";
+import { Services } from "@/app/lib/mainsail";
 import { BIP44, HDKey } from "@ardenthq/arkvault-crypto";
-import { connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
+import { closeDevices, connectedTransport as ledgerTransportFactory } from "@/app/contexts/Ledger/transport";
 
 import { createRange } from "./ledger.service.helpers.js";
 import { LedgerSignature } from "./ledger.service.types.js";
@@ -8,7 +8,10 @@ import { AddressService } from "./address.service.js";
 import { WalletData } from "./wallet.dto.js";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail/config.repository";
 import Eth, { ledgerService } from "@ledgerhq/hw-app-eth";
-import { configManager } from "@/app/lib/mainsail";
+import { LedgerData } from "@/app/contexts/index.js";
+import { LedgerScanner } from "./ledger.scanner.js";
+import { IProfile } from "@/app/lib/profiles/contracts.js";
+import { formatLedgerDerivationPath } from "@/app/contexts/Ledger/utils/format-ledger-derivation-path.js";
 
 export class LedgerService {
 	readonly #addressService!: AddressService;
@@ -17,15 +20,17 @@ export class LedgerService {
 	#config: ConfigRepository;
 	#ethLedgerService!: any;
 	#transport!: any;
+	#profile: IProfile;
 
 	#extractAddressIndexFromPath(path: string): string {
 		return path.split("/").slice(-2).join("/");
 	}
 
-	constructor({ config }: { config: ConfigRepository }) {
+	constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#addressService = new AddressService();
 		this.#config = config;
 		this.#ethLedgerService = ledgerService;
+		this.#profile = profile;
 	}
 
 	async #getPublicKeys(path: string): Promise<{ extendedPublicKey: string; publicKey: string }> {
@@ -42,6 +47,7 @@ export class LedgerService {
 	async #getExtendedPublicKeyWithRetry(path: string, retryCount = 0): Promise<string> {
 		try {
 			const result = await this.#transport.getAddress(path);
+
 			return result.publicKey;
 		} catch (error) {
 			if (error?.message?.includes?.("busy") && retryCount < 3) {
@@ -64,6 +70,7 @@ export class LedgerService {
 	public async disconnect(): Promise<void> {
 		if (this.#ledger) {
 			await this.#ledger.close();
+			await closeDevices();
 		}
 	}
 
@@ -88,7 +95,7 @@ export class LedgerService {
 	}
 
 	public async sign(path: string, serialized: string | Buffer): Promise<LedgerSignature> {
-		const chainId = configManager.get("network.chainId");
+		const chainId = this.#config.get("crypto.network.chainId") as number;
 
 		const resolution = await this.#ethLedgerService.resolveTransaction(
 			serialized,
@@ -115,15 +122,28 @@ export class LedgerService {
 		return [`0x`, r, s, v.toString(16)].join("");
 	}
 
+	// As the mainsail app is a clone of the ethereum mainsail app,
+	// and due to lack of getting a reliable ledger app identifier
+	// this check confirms that the opened Ledger app can generate eth addresses,
+	// in order to proceed with mainsail public key derivation, and reject other ledger apps including old ark ledger app.
+	public async isEthBasedApp() {
+		try {
+			const path = `m/44'/60'/0'/0/0`;
+			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(path);
+			return !!extendedPublicKey || !!publicKey;
+		} catch {
+			return false;
+		}
+	}
+
 	public async scan(options?: {
-		useLegacy: boolean;
 		startPath?: string;
 		pageSize?: number;
-		onProgress?: (wallet: Contracts.WalletData) => void;
+		slip44?: number;
 	}): Promise<Services.LedgerWalletList> {
 		const pageSize = 5;
 		const page = 0;
-		const path = `m/44'/${this.slip44()}'/0'`;
+		let path = `m/44'/${options?.slip44 ?? this.slip44()}'/0'`;
 
 		let initialAddressIndex = 0;
 
@@ -148,6 +168,53 @@ export class LedgerService {
 		return ledgerWallets;
 	}
 
+	/**
+	 * Scans for legacy Ledger wallets using BIP44 derivation paths.
+	 *
+	 * Increments the account index (3rd part of BIP44 path) instead of the address
+	 * index, allowing wallets with old (legacy) paths to be scanne.
+	 *
+	 * Example:
+	 *   m/44'/111'/0/0/0
+	 *   m/44'/111'/1/0/0
+	 *   m/44'/111'/2/0/0
+	 *   m/44'/111'/3/0/0
+	 *
+	 * @param options.startPath - Starting path for initial account index
+	 * @param options.pageSize - Number of accounts to scan.
+	 * @param options.slip44
+	 * @returns Promise<Services.LedgerWalletList>
+	 */
+	public async scanLegacy(options: {
+		startPath?: string;
+		pageSize?: number;
+		slip44?: number;
+	}): Promise<Services.LedgerWalletList> {
+		const pageSize = options?.pageSize ?? 5;
+		const path = `m/44'/${options?.slip44 ?? this.slip44Legacy()}'`;
+		let initialAccountIndex = 0;
+
+		if (options?.startPath) {
+			initialAccountIndex = BIP44.parse(options.startPath).account + 1;
+		}
+
+		const ledgerWallets: Services.LedgerWalletList = {};
+		for (let index = 0; index < pageSize; index++) {
+			const accountIndex = initialAccountIndex + index;
+			const accountPath = `${path}/${accountIndex}'/0/0`;
+			const { extendedPublicKey, publicKey } = await this.#getPublicKeys(accountPath);
+
+			const { address } = this.#addressService.fromPublicKey(extendedPublicKey);
+
+			ledgerWallets[accountPath] = new WalletData({ config: this.#config }).fill({
+				address,
+				balance: 0,
+				publicKey,
+			});
+		}
+		return ledgerWallets;
+	}
+
 	public async isNanoS(): Promise<boolean> {
 		return this.#ledger.deviceModel?.id === "nanoS";
 	}
@@ -158,5 +225,45 @@ export class LedgerService {
 
 	public slip44(): number {
 		return this.#config.get(ConfigKey.Slip44);
+	}
+
+	public slip44Legacy(): number {
+		return this.#config.get(ConfigKey.Slip44Legacy);
+	}
+
+	public slip44Eth(): number {
+		return this.#config.get(ConfigKey.Slip44Eth);
+	}
+
+	public scanner({ scannedWallets }: { scannedWallets: LedgerData[] }): LedgerScanner {
+		return new LedgerScanner(this, this.#profile, scannedWallets);
+	}
+
+	async #accessLedgerDevice() {
+		try {
+			await this.connect();
+		} catch (error) {
+			// If the device is open, continue normally.
+			// Can be triggered when the user retries ledger connection.
+			if (error.message !== "The device is already open.") {
+				throw error;
+			}
+		}
+	}
+
+	public async accessLedgerApp() {
+		await this.#accessLedgerDevice();
+
+		await this.getPublicKey(
+			formatLedgerDerivationPath({
+				coinType: this.slip44Eth(),
+			}),
+		);
+
+		// Allows only eth based ledger apps and rejects others, including the old ark ledger app.
+		const isEthApp = await this.isEthBasedApp();
+		if (!isEthApp) {
+			throw new Error("INCOMPATIBLE_APP");
+		}
 	}
 }

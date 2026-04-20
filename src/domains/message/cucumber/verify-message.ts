@@ -26,10 +26,10 @@ cucumber("@verifyMessage", {
 	...preSteps,
 	"When she enters valid details to verify a message": async (t: TestController) => {
 		const mockSuccessMessage = {
-			message: "Hello World",
-			signatory: "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
+			message: "Hello world",
+			signatory: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
 			signature:
-				"4ea475947d646345e27df58717ede5786658db515068e28726de4d11743327974f21ea27db1cb600d4da325bee94cb2b4d1d51049c65bf5b20385bb1047104751c",
+				"0x43abaa1f21d5b74006409e988c0102ece47b44c3a7901c7e19948c6f6aecb0786683d351ebf34a40a8402d01da3465ffa49fcab82d82f07ca5904fd3e0b8b3891c",
 		};
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockSuccessMessage));
@@ -51,9 +51,9 @@ cucumber("@verifyMessage-failVerification", {
 	"When she enters invalid details to verify a message": async (t: TestController) => {
 		const mockFailingMessage = {
 			message: "Wrong message",
-			signatory: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+			signatory: "022a40ea35d53eedf0341ffa17574fca844d69665ce35f224e9a6b1385575044fd",
 			signature:
-				"7915d8c22ec9dab41bd93d9e003970b2f6aaa5d9a5e837d4d17847308f6e880f31e2c1ad141d9b080d9a151baa31dcd36dd05faa51e5db95586d630b66485e1e",
+				"0x43abaa1f21d5b74006409e988c0102ece47b44c3a7901c7e19948c6f6aecb0786683d351ebf34a40a8402d01da3465ffa49fcab82d82f07ca5904fd3e0b8b3891c",
 		};
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockFailingMessage));
@@ -62,12 +62,7 @@ cucumber("@verifyMessage-failVerification", {
 		await t.click(Selector("[data-testid=VerifyMessage__verify-button]"));
 	},
 	"Then the message verification fails": async (t: TestController) => {
-		await t
-			.expect(
-				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE)
-					.exists,
-			)
-			.ok();
+		await t.expect(Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE).exists).ok();
 	},
 });
 

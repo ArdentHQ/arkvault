@@ -3,22 +3,14 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { useDebounce, useFees } from "@/app/hooks";
+import { useFees } from "@/app/hooks";
 import { InputFee } from "@/domains/transaction/components/InputFee";
 import { InputFeeViewType } from "@/domains/transaction/components/InputFee/InputFee.contracts";
 import { BigNumber } from "@/app/lib/helpers";
+import { EncodeTransactionType } from "@/app/lib/mainsail/transaction-encoder";
 
 interface Properties {
-	type:
-		| "transfer"
-		| "multiPayment"
-		| "vote"
-		| "validatorRegistration"
-		| "validatorResignation"
-		| "multiSignature"
-		| "usernameRegistration"
-		| "usernameResignation"
-		| "updateValidator";
+	type: EncodeTransactionType;
 	data: Record<string, any> | undefined;
 	network: Networks.Network;
 	profile: Contracts.IProfile;
@@ -26,6 +18,7 @@ interface Properties {
 
 const gasLimit21k = BigNumber.make(21_000);
 export const GasLimit: Record<Properties["type"], BigNumber> = {
+	contractDeployment: BigNumber.make(2_000_000),
 	multiPayment: gasLimit21k,
 	multiSignature: gasLimit21k,
 	transfer: gasLimit21k,
@@ -38,7 +31,7 @@ export const GasLimit: Record<Properties["type"], BigNumber> = {
 	vote: BigNumber.make(200_000),
 };
 
-export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
+export const FeeField: React.FC<Properties> = ({ type, network, profile, data }: Properties) => {
 	const { calculate, estimateGas } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
@@ -50,19 +43,22 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const gasPrice = BigNumber.make(getValues("gasPrice") ?? 0);
 	const gasLimit = BigNumber.make(getValues("gasLimit") ?? 0);
 
-	const [data, _isLoadingData] = useDebounce(properties.data, 700);
+	const dataDep = JSON.stringify(data ?? []);
 
 	useEffect(() => {
 		/* istanbul ignore else -- @preserve */
 		const isMultiPayment = type === "multiPayment";
-		const recipientsCount = isMultiPayment && Array.isArray(data?.payments) ? data.payments.length : 1;
+		const recipientsCount = data?.recipientsCount ?? 1;
 		const fallbackGasLimit = isMultiPayment ? GasLimit.multiPayment.times(recipientsCount) : GasLimit[type];
 
 		const estimate = async () => {
 			let gasLimit = fallbackGasLimit;
 
 			try {
-				gasLimit = await estimateGas({ data: { ...getValues(), ...data }, type });
+				gasLimit = await estimateGas({
+					data: { ...getValues(), ...data, senderAddress: getValues("senderAddress") as string },
+					type,
+				});
 
 				if (gasLimit.isZero()) {
 					gasLimit = fallbackGasLimit;
@@ -76,9 +72,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		};
 
 		void estimate();
-	}, [estimateGas, getValues, setValue, type]);
-
-	const dataDep = JSON.stringify(data ?? []);
+	}, [estimateGas, getValues, setValue, type, dataDep]);
 
 	useEffect(() => {
 		const recalculateFee = async () => {
@@ -128,7 +122,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				);
 
 				if (viewType === InputFeeViewType.Advanced) {
-					setValue("gasLimit", GasLimit[type], { shouldDirty: true, shouldValidate: true });
+					setValue("gasLimit", estimatedGasLimit, { shouldDirty: true, shouldValidate: true });
 				}
 			}}
 			selectedFeeOption={inputFeeSettings.selectedFeeOption}

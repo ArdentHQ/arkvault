@@ -47,7 +47,11 @@ export const VotesFilter = ({
 						<span className="text-base font-medium">{t("VOTE.FILTERS.ALL")}</span>
 					</label>
 
-					<Tooltip placement="bottom-start" content={totalCurrentVotes === 0 && t("VOTE.FILTERS.NO_VOTES")}>
+					<Tooltip
+						placement="bottom-start"
+						content={t("VOTE.FILTERS.NO_VOTES")}
+						disabled={totalCurrentVotes > 0}
+					>
 						<label
 							className={cn("flex h-5 items-center space-x-3 rounded-md", {
 								"cursor-pointer": totalCurrentVotes,

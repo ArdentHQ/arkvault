@@ -38,66 +38,74 @@ exports[`WalletDetailNetwork > should render 1`] = `
         <div
           class="hidden sm:block"
         >
-          <div
-            aria-label="Mainsail Devnet"
-            class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100"
-            data-testid="NetworkIcon-Mainsail-mainsail.devnet"
-          >
-            <div
-              data-testid="NetworkIcon__icon"
-            >
+          <span>
+            <span>
               <div
-                style="height: 20px; width: 20px;"
+                aria-label="Mainsail Devnet"
+                class="inline-flex items-center justify-center rounded-full border-2 align-middle transition-all h-11 w-11 px-2 py-1 ring-6 text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100"
+                data-testid="NetworkIcon-Mainsail-mainsail.devnet"
               >
-                <svg
-                  id="ark"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  data-testid="NetworkIcon__icon"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="ark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 36.3 30.6"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </span>
+          </span>
         </div>
         <div
           class="flex items-center sm:hidden"
         >
-          <div
-            aria-label="Mainsail Devnet"
-            class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-            data-testid="NetworkIcon-Mainsail-mainsail.devnet"
-          >
-            <div
-              data-testid="NetworkIcon__icon"
-            >
+          <span>
+            <span>
               <div
-                style="height: 20px; width: 20px;"
+                aria-label="Mainsail Devnet"
+                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                data-testid="NetworkIcon-Mainsail-mainsail.devnet"
               >
-                <svg
-                  id="ark"
-                  style="height: 100%; width: 100%;"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  data-testid="NetworkIcon__icon"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <div
+                    style="height: 20px; width: 20px;"
+                  >
+                    <svg
+                      id="ark"
+                      style="height: 100%; width: 100%;"
+                      viewBox="0 0 36.3 30.6"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </span>
+          </span>
         </div>
       </div>
     </div>

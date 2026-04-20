@@ -1,5 +1,6 @@
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 
 import {
 	createMainsailTransactionMock,
@@ -28,11 +29,11 @@ let useActiveProfileSpy: MockInstance;
 const sendButton = () => screen.getByTestId("ExchangeTransfer__send-button");
 
 const selectSender = async () => {
-	await userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+	await userEvent.click(within(screen.getByTestId("sender-address")).getAllByTestId("SelectDropdown__input")[0]);
 
-	await expect(screen.findByText(/Select Sender/)).resolves.toBeVisible();
+	await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
-	const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+	const firstAddress = screen.getByTestId("SelectDropdown__option--0");
 
 	await userEvent.click(firstAddress);
 };
@@ -110,7 +111,7 @@ describe("SendExchangeTransfer", () => {
 
 		await selectSender();
 
-		await expect(screen.getAllByTestId("Amount")).toHaveLength(3);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
 
 	it("should sync wallet if new sender wallet is not restored or synced", async () => {
@@ -162,19 +163,36 @@ describe("SendExchangeTransfer", () => {
 		transactionMock.mockRestore();
 	});
 
+	it("should unset selected wallet when `SelectAddressDropdown` receives invalid value", async () => {
+		renderComponent();
+
+		await selectSender();
+
+		const user = userEvent.setup();
+
+		await userEvent.click(within(screen.getByTestId("sender-address")).getAllByTestId("SelectDropdown__input")[0]);
+
+		await user.clear(screen.getByTestId("SelectDropdown__input"));
+		await user.paste("Invalid");
+
+		await waitFor(() => {
+			expect(screen.queryByText(profile.wallets().first().address())).not.toBeInTheDocument();
+		});
+	});
+
 	it("should show an error if wallet does not have enough funds", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const selectedWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0.04);
+		const selectedWalletSpy = vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(0.04));
 
 		renderComponent();
 
 		await selectSender();
 
-		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
+		await expect(screen.findAllByTestId("Input__error")).resolves.toHaveLength(2);
 
-		expect(screen.getByTestId("Input__error")).toHaveAttribute(
+		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
 			"data-errortext",
 			t("TRANSACTION.VALIDATION.LOW_BALANCE"),
 		);
@@ -208,7 +226,7 @@ describe("SendExchangeTransfer", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(wallet.address());
 		});
 
 		profile.wallets().push(secondWallet);
@@ -253,5 +271,17 @@ describe("SendExchangeTransfer", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+	});
+
+	it("should disable send button if the encryption password is not provided", async () => {
+		renderComponent();
+
+		await selectSender();
+
+		await waitFor(() => expect(sendButton()).toBeDisabled());
+
+		await fillMnemonic();
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 	});
 });

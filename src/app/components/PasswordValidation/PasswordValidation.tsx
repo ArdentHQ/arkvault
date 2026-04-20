@@ -132,6 +132,7 @@ export const PasswordValidation = ({
 					data-testid={`PasswordValidation__${passwordField}`}
 					ref={register()}
 					isInvalid={hasError}
+					errorMessage={t("COMMON.VALIDATION.PASSWORD_GENERIC_ERROR")}
 				/>
 			</FormField>
 

@@ -1,5 +1,6 @@
 import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
+import { TransactionToken } from "@/app/lib/profiles/transaction-token";
 
 export interface MultiPaymentRecipient {
 	address: string;
@@ -22,6 +23,11 @@ export interface UnspentTransactionData {
 	value(): BigNumber;
 
 	address(): string;
+}
+
+export interface ApproveDetails {
+	address: string;
+	amount: bigint;
 }
 
 export interface ConfirmedTransactionData {
@@ -57,6 +63,10 @@ export interface ConfirmedTransactionData {
 
 	outputs(): UnspentTransactionData[];
 
+	token(): TransactionToken | undefined;
+
+	tokens(): TransactionToken[] | undefined;
+
 	isConfirmed(): boolean;
 
 	isReturn(): boolean;
@@ -67,15 +77,11 @@ export interface ConfirmedTransactionData {
 
 	isTransfer(): boolean;
 
-	isSecondSignature(): boolean;
-
 	isUsernameRegistration(): boolean;
 
 	isUsernameResignation(): boolean;
 
 	isValidatorRegistration(): boolean;
-
-	isVoteCombination(): boolean;
 
 	isVote(): boolean;
 
@@ -91,6 +97,8 @@ export interface ConfirmedTransactionData {
 	username(): string;
 
 	validatorPublicKey(): string;
+
+	approveDetails(): ApproveDetails;
 
 	// Vote
 	votes(): string[];

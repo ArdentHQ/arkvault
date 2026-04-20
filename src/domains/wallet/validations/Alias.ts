@@ -15,13 +15,13 @@ export const alias = ({
 	return {
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
-				field: t("WALLETS.WALLET_NAME"),
+				field: t("WALLETS.ADDRESS_NAME"),
 				maxLength,
 			}),
 			value: maxLength,
 		},
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-			field: t("WALLETS.WALLET_NAME"),
+			field: t("WALLETS.ADDRESS_NAME"),
 		}),
 		validate: {
 			duplicateAlias: (value: string) => {

@@ -6,6 +6,7 @@ import { SecretSignatory } from "./secret.signatory";
 import { LedgerSignatory } from "./ledger.signatory";
 import { ConfirmationMnemonicSignatory } from "./confirmation-mnemonic.signatory";
 import { ConfirmationSecretSignatory } from "./confirmation-secret.signatory";
+import { Bip44MnemonicSignatory } from "./bip44-mnemonic.signatory";
 import { ForbiddenMethodCallException } from "./exceptions";
 import { MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 
@@ -151,11 +152,19 @@ describe("Signatory", () => {
 			expect(signatory.address()).toBe("0xabc");
 		});
 
-		it("should throw ForbiddenMethodCallException for ledger signatory", () => {
+		it("should return address for ledger signatory", () => {
 			const ledgerSignatory = new LedgerSignatory({
+				options: { address: "0xabc" },
 				signingKey: "m/44'/60'/0'/0/0",
 			});
+
 			const signatory = new Signatory(ledgerSignatory);
+
+			expect(signatory.address()).toBe("0xabc");
+		});
+
+		it("should throw ForbiddenMethodCallException for unknown signatory type", () => {
+			const signatory = new Signatory(undefined!);
 
 			expect(() => signatory.address()).toThrow(ForbiddenMethodCallException);
 		});
@@ -208,11 +217,19 @@ describe("Signatory", () => {
 			expect(signatory.publicKey()).toBe("pubkeyabc");
 		});
 
-		it("should throw ForbiddenMethodCallException for ledger signatory", () => {
+		it("should return publicKey for ledger signatory", () => {
 			const ledgerSignatory = new LedgerSignatory({
+				options: { senderPublicKey: "0xabc" },
 				signingKey: "m/44'/60'/0'/0/0",
 			});
+
 			const signatory = new Signatory(ledgerSignatory);
+
+			expect(signatory.publicKey()).toBe("0xabc");
+		});
+
+		it("should throw ForbiddenMethodCallException for ledger signatory", () => {
+			const signatory = new Signatory(undefined!);
 
 			expect(() => signatory.publicKey()).toThrow(ForbiddenMethodCallException);
 		});
@@ -224,6 +241,16 @@ describe("Signatory", () => {
 				signingKey: "m/44'/60'/0'/0/0",
 			});
 			const signatory = new Signatory(ledgerSignatory);
+
+			expect(signatory.path()).toBe("m/44'/60'/0'/0/0");
+		});
+
+		it("should return path from bip44 mnemonic signatory", () => {
+			const bip44Signatory = new Bip44MnemonicSignatory({
+				path: "m/44'/60'/0'/0/0",
+				signingKey: MAINSAIL_MNEMONICS[0],
+			});
+			const signatory = new Signatory(bip44Signatory);
 
 			expect(signatory.path()).toBe("m/44'/60'/0'/0/0");
 		});
@@ -332,6 +359,29 @@ describe("Signatory", () => {
 			const signatory = new Signatory(secretSignatory);
 
 			expect(signatory.actsWithMnemonic()).toBe(false);
+		});
+	});
+
+	describe("actsWithBip44Mnemonic", () => {
+		it("should return true for bip44 mnemonic signatory", () => {
+			const bip44Signatory = new Bip44MnemonicSignatory({
+				path: "m/44'/60'/0'/0/0",
+				signingKey: MAINSAIL_MNEMONICS[0],
+			});
+			const signatory = new Signatory(bip44Signatory);
+
+			expect(signatory.actsWithBip44Mnemonic()).toBe(true);
+		});
+
+		it("should return false for other signatory types", () => {
+			const mnemonicSignatory = new MnemonicSignatory({
+				address: "0x123",
+				publicKey: "pubkey123",
+				signingKey: MAINSAIL_MNEMONICS[0],
+			});
+			const signatory = new Signatory(mnemonicSignatory);
+
+			expect(signatory.actsWithBip44Mnemonic()).toBe(false);
 		});
 	});
 

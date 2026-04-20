@@ -1,6 +1,6 @@
 import { Address } from "@/app/components/Address";
 import { Label } from "@/app/components/Label";
-import { useTheme, useWalletAlias } from "@/app/hooks";
+import { useWalletAlias } from "@/app/hooks";
 import { Contracts } from "@/app/lib/profiles";
 import { DTO } from "@/app/lib/mainsail";
 import React, { useMemo, JSX } from "react";
@@ -8,11 +8,11 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { ColorType } from "@/app/components/Label/Label.styles";
 import { Link } from "@/app/components/Link";
-import { isContractDeployment, isContractTransaction } from "@/domains/transaction/utils";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
 import { Clipboard } from "@/app/components/Clipboard";
+import { isNullAddress } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
 export const TransactionRowLabel = ({ direction, style }: { direction: Direction; style?: Direction }) => {
@@ -44,12 +44,11 @@ export const TransactionRowLabel = ({ direction, style }: { direction: Direction
 };
 
 const FormattedAddress = ({ alias, address }: { alias?: string; address: string }): JSX.Element => {
-	const { isDarkMode } = useTheme();
 	const { t } = useTranslation();
 
 	return (
-		<div className="flex min-w-36 grow items-center justify-between space-x-4">
-			<Tooltip content={address}>
+		<div className="flex grow items-center justify-between space-x-4 lg:px-0 xl:min-w-36">
+			<Tooltip content={address} wrapperClass="grow">
 				<div className="grow" data-testid="TransactionRowAddressing__address-container">
 					<Address
 						showTooltip={false}
@@ -65,7 +64,7 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 				</div>
 			</Tooltip>
 
-			<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")} tooltipDarkTheme={isDarkMode}>
+			<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
 				<Icon
 					name="Copy"
 					className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
@@ -84,10 +83,10 @@ const ContractAddressing = ({
 	direction: Direction;
 	t: any;
 }) => {
-	const { isDarkMode } = useTheme();
-	const address = isContractDeployment(transaction)
-		? transaction.data().data.receipt.deployedContractAddress
-		: transaction.to();
+	const address =
+		transaction.isContractDeployment() && transaction.confirmations() > 0
+			? transaction.data().data.receipt.deployedContractAddress
+			: transaction.to();
 
 	return (
 		<div className="flex w-full flex-row gap-2" data-testid="TransactionRowAddressing__vote">
@@ -103,12 +102,7 @@ const ContractAddressing = ({
 					{t("COMMON.CONTRACT")}
 				</Link>
 
-				<Clipboard
-					variant="icon"
-					data={address}
-					tooltip={t("COMMON.COPY_ADDRESS")}
-					tooltipDarkTheme={isDarkMode}
-				>
+				<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
 					<Icon
 						name="Copy"
 						className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
@@ -140,7 +134,7 @@ const MultiPaymentAddressing = ({
 				direction={direction}
 				style={isAdvanced && variant === "recipient" ? "return" : direction}
 			/>
-			<span className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm font-semibold">
+			<span className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold">
 				{(direction === "return" || direction === "sent") && (
 					<>
 						{t("COMMON.MULTIPLE")}{" "}
@@ -168,12 +162,11 @@ export const TransactionRowAddressing = ({
 }): JSX.Element => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
-	const { isDarkMode } = useTheme();
 
 	const isMusigTransfer = false;
 
 	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
-	const isContract = isContractTransaction(transaction);
+	const isContract = transaction.isContractTransaction();
 
 	let direction: Direction = isNegative ? "sent" : "received";
 	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {
@@ -183,7 +176,7 @@ export const TransactionRowAddressing = ({
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const network = transaction.wallet().network();
-	const recipientAddress = transaction.to();
+	const recipientAddress = transaction.to() || transaction.token()?.to();
 	const senderAddress = transaction.from();
 
 	const recipientAlias = useMemo(() => {
@@ -228,8 +221,10 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
+	const showAsContract = (isContract || transaction.isContractDeployment()) && !isNullAddress(senderAddress);
+
 	if (isAdvanced && variant === "recipient" && !transaction.isMultiPayment()) {
-		if (isContract || isContractDeployment(transaction)) {
+		if (showAsContract) {
 			return (
 				<div
 					className="flex w-full flex-row gap-2"
@@ -246,12 +241,7 @@ export const TransactionRowAddressing = ({
 							{t("COMMON.CONTRACT")}
 						</Link>
 
-						<Clipboard
-							variant="icon"
-							data={recipientAddress}
-							tooltip={t("COMMON.COPY_ADDRESS")}
-							tooltipDarkTheme={isDarkMode}
-						>
+						<Clipboard variant="icon" data={recipientAddress} tooltip={t("COMMON.COPY_ADDRESS")}>
 							<Icon
 								name="Copy"
 								className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-secondary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
@@ -285,7 +275,7 @@ export const TransactionRowAddressing = ({
 		);
 	}
 
-	if (isContract || isContractDeployment(transaction)) {
+	if (showAsContract) {
 		return <ContractAddressing transaction={transaction} direction={direction} t={t} />;
 	}
 

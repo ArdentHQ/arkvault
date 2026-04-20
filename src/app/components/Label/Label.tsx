@@ -6,7 +6,7 @@ import React from "react";
 export interface LabelProperties {
 	color?: ColorType;
 	size?: Size;
-	variant?: "solid";
+	variant?: "solid" | "outline";
 	noBorder?: boolean;
 }
 

@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+
 import network from "./mainsail.mainnet";
 
 describe("Mainsail Mainnet Network Configuration", () => {
@@ -34,6 +35,8 @@ describe("Mainsail Mainnet Network Configuration", () => {
 		expect(network.constants).toEqual({
 			epoch: "2017-03-21T13:00:00.000Z",
 			slip44: 111,
+			slip44Eth: 60,
+			slip44Legacy: 1,
 		});
 	});
 
@@ -48,7 +51,7 @@ describe("Mainsail Mainnet Network Configuration", () => {
 	it("should have correct meta information", () => {
 		expect(network.meta).toEqual({
 			fastDelegateSync: true,
-			nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+			nethash: "3da160779cc52343e6f5923062986b775baa5abbd831f9f9b46308280924490f",
 		});
 	});
 
@@ -71,6 +74,7 @@ describe("Mainsail Mainnet Network Configuration", () => {
 				"validatorRegistration",
 				"usernameRegistration",
 				"usernameResignation",
+				"updateValidator",
 				"validatorResignation",
 				"multiPayment",
 				"transfer",
@@ -88,6 +92,11 @@ describe("Mainsail Mainnet Network Configuration", () => {
 			bip39: {
 				canBeEncrypted: true,
 				default: true,
+				permissions: ["read", "write"],
+			},
+			bip44: {
+				canBeEncrypted: true,
+				default: false,
 				permissions: ["read", "write"],
 			},
 			publicKey: {
@@ -213,7 +222,7 @@ describe("Mainsail Mainnet Network Configuration", () => {
 	});
 
 	it("should have different nethash than devnet", () => {
-		expect(network.meta.nethash).toBe("6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988");
+		expect(network.meta.nethash).toBe("3da160779cc52343e6f5923062986b775baa5abbd831f9f9b46308280924490f");
 	});
 
 	it("should have fastDelegateSync in meta", () => {

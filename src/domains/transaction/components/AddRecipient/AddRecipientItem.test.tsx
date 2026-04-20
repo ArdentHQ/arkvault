@@ -3,9 +3,10 @@ import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { AddRecipientItem } from "./AddRecipientItem";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen } from "@/utils/testing-library";
 
-const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton");
+const deleteButton = () => screen.getByTestId("AddRecipientItem--deleteButton-1");
+const deleteButtonMobile = () => screen.getByTestId("AddRecipientItem--deleteButton_mobile");
 
 describe("Add Recipient item", () => {
 	let profile: Contracts.IProfile;
@@ -28,6 +29,23 @@ describe("Add Recipient item", () => {
 			alias: wallet.alias(),
 			amount: 1,
 		};
+	});
+
+	it.each(["xs", "lg"] as const)("should render with size %s", (size) => {
+		const { asFragment } = renderResponsive(
+			<AddRecipientItem
+				recipient={recipient}
+				ticker="DARK"
+				exchangeTicker="USD"
+				showExchangeAmount={false}
+				index={1}
+				onDelete={() => {}}
+				profile={profile}
+			/>,
+			size,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without exchange amount", () => {
@@ -68,10 +86,10 @@ describe("Add Recipient item", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle the delete button", async () => {
+	it.each(["xs", "lg"] as const)("should handle the delete button in %s", async (size) => {
 		const onDelete = vi.fn();
 
-		render(
+		renderResponsive(
 			<AddRecipientItem
 				recipient={recipient}
 				ticker="DARK"
@@ -81,15 +99,14 @@ describe("Add Recipient item", () => {
 				onDelete={onDelete}
 				profile={profile}
 			/>,
+			size,
 		);
 
-		await userEvent.click(deleteButton());
-
-		expect(onDelete).toHaveBeenCalledWith(1);
-
-		onDelete.mockReset();
-
-		await userEvent.click(screen.getByTestId("AddRecipientItem--deleteButton_mobile"));
+		if (size === "xs") {
+			await userEvent.click(deleteButtonMobile());
+		} else {
+			await userEvent.click(deleteButton());
+		}
 
 		expect(onDelete).toHaveBeenCalledWith(1);
 	});

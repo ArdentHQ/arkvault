@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-
+import { afterAll, expect, vi, MockInstance } from "vitest";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
@@ -13,9 +13,11 @@ import {
 	MAINSAIL_MNEMONICS,
 } from "@/utils/testing-library";
 import { SignMessageSidePanel } from "./SignMessageSidePanel";
+import * as ReactRouter from "react-router";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let useSearchParamsMock: MockInstance;
 
 const mnemonic = MAINSAIL_MNEMONICS[0];
 
@@ -33,6 +35,10 @@ const expectHeading = async (text: string) => {
 describe("SignMessage with ledger", () => {
 	let dashboardRoute: string | undefined;
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = await env.profiles().create("Test");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -41,6 +47,8 @@ describe("SignMessage with ledger", () => {
 
 		profile.wallets().push(wallet);
 
+		await env.profiles().restore(profile);
+
 		vi.spyOn(profile, "walletSelectionMode").mockReturnValue("multiple");
 
 		await triggerMessageSignOnce(wallet);
@@ -48,6 +56,7 @@ describe("SignMessage with ledger", () => {
 
 	afterAll(() => {
 		env.profiles().forget(profile.id());
+		useSearchParamsMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -73,14 +82,13 @@ describe("SignMessage with ledger", () => {
 
 		const onOpenChangeMock = vi.fn();
 
-		render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} onMountChange={vi.fn()} />, {
+		render(<SignMessageSidePanel open={true} onOpenChange={onOpenChangeMock} />, {
 			route: dashboardRoute,
 		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		// The profile only have one address so we dont need to select any address
-
 		await userEvent.type(messageInput(), signMessage);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
@@ -90,12 +98,10 @@ describe("SignMessage with ledger", () => {
 		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ErrorStep__close-button")).toBeInTheDocument();
+			expect(screen.getByTestId("SignMessage__back-button")).toBeInTheDocument();
 		});
 
-		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-
-		expect(onOpenChangeMock).toHaveBeenCalledWith(false);
+		await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
 		ledgerSpy.mockRestore();
 		isLedgerMock.mockRestore();
@@ -103,35 +109,30 @@ describe("SignMessage with ledger", () => {
 		ledgerListenMock.mockRestore();
 	});
 
-	it.skip("should sign message with a ledger wallet", async () => {
+	it("should sign message with a ledger wallet", async () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 		const signMessageSpy = vi
 			.spyOn(wallet.ledger(), "signMessage")
 			.mockImplementation(() => new Promise((resolve) => setTimeout(() => resolve("signature"), 300)));
 
-		const publicKeyPaths = new Map([
-			["m/44'/111'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
-			["m/44'/111'/1'/0/0", wallet.publicKey()!],
-			["m/44'/111'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
-		]);
-
 		const getPublicKeyMock = vi
-			.spyOn(wallet.ledger(), "getPublicKey")
-			.mockResolvedValue(publicKeyPaths.values().next().value);
+			.spyOn(wallet.ledger(), "getExtendedPublicKey")
+			.mockResolvedValue(
+				"0453a97a244e6323ef60430e9761be5a972228e533f31723d376397808b4be3b4658578da4e51ee8fe1ea076fb2341902247f80fd87ee1b15b1e85a05905912c3a",
+			);
 
 		const getVersionMock = vi.spyOn(wallet.ledger(), "getVersion").mockResolvedValue("2.1.0");
 
 		const ledgerListenMock = mockNanoXTransport();
 
-		render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} onMountChange={vi.fn()} />, {
+		render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
 			route: dashboardRoute,
 		});
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-		// The profile only have one address so we dont need to select any address
-
+		// The profile only have one address so we don't need to select any address
 		expect(
 			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
 		).toBeInTheDocument();
@@ -142,7 +143,7 @@ describe("SignMessage with ledger", () => {
 
 		await userEvent.click(continueButton());
 
-		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/1'/0'/0/0"));
+		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/60'/0'/0/0"));
 
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
@@ -152,5 +153,4 @@ describe("SignMessage with ledger", () => {
 		getVersionMock.mockRestore();
 		getPublicKeyMock.mockRestore();
 	});
-	//
 });

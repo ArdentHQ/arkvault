@@ -40,7 +40,6 @@ export const CreateContact = ({ profile, onClose, onCancel, onSave }: CreateCont
 			title={t("CONTACTS.MODAL_CREATE_CONTACT.TITLE")}
 			description={t("CONTACTS.MODAL_CREATE_CONTACT.DESCRIPTION")}
 			onClose={onClose}
-			contentClassName="p-6! sm:p-8!"
 			titleClass="leading-[21px]! sm:leading-[29px]!"
 		>
 			<div className="mt-4">

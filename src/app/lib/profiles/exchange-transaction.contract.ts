@@ -2,7 +2,7 @@ import { ExchangeTransactionStatus } from "./exchange-transaction.enum";
 
 export interface ExchangeTransactionDetail {
 	address: string;
-	amount: number;
+	amount: string;
 	hash?: string;
 	ticker: string;
 }

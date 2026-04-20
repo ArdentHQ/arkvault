@@ -228,3 +228,23 @@ describe("WalletMutator", () => {
 		});
 	});
 });
+
+describe("accountName", () => {
+	beforeEach(async () => {
+		profile = await env.profiles().create("test profile");
+		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[0],
+		});
+		subject = wallet.mutator();
+	});
+
+	afterEach(() => {
+		env.profiles().forget(profile.id());
+		vi.restoreAllMocks();
+	});
+
+	it("should set the wallet account name", () => {
+		subject.accountName("My Account");
+		expect(wallet.settings().get(WalletSetting.AccountName)).toBe("My Account");
+	});
+});

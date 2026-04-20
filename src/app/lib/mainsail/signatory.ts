@@ -9,13 +9,15 @@ import { LedgerSignatory } from "./ledger.signatory";
 import { MnemonicSignatory } from "./mnemonic.signatory";
 import { SecretSignatory } from "./secret.signatory";
 import { IdentityOptions } from "./services";
+import { Bip44MnemonicSignatory } from "@/app/lib/mainsail/bip44-mnemonic.signatory";
 
 type SignatoryType =
 	| ConfirmationMnemonicSignatory
 	| ConfirmationSecretSignatory
 	| LedgerSignatory
 	| MnemonicSignatory
-	| SecretSignatory;
+	| SecretSignatory
+	| Bip44MnemonicSignatory;
 
 export class Signatory {
 	readonly #signatory: SignatoryType;
@@ -41,26 +43,34 @@ export class Signatory {
 		throw new ForbiddenMethodCallException(this.constructor.name, this.confirmKey.name);
 	}
 
-	public address(): string {
+	public address(): string | undefined {
 		// @TODO: deduplicate this
 		if (this.#signatory instanceof AbstractSignatory) {
 			return this.#signatory.address();
 		}
 
 		if (this.#signatory instanceof AbstractDoubleSignatory) {
+			return this.#signatory.address();
+		}
+
+		if (this.#signatory instanceof LedgerSignatory) {
 			return this.#signatory.address();
 		}
 
 		throw new ForbiddenMethodCallException(this.constructor.name, this.address.name);
 	}
 
-	public publicKey(): string {
+	public publicKey(): string | undefined {
 		// @TODO: deduplicate this
 		if (this.#signatory instanceof AbstractSignatory) {
 			return this.#signatory.publicKey();
 		}
 
 		if (this.#signatory instanceof AbstractDoubleSignatory) {
+			return this.#signatory.publicKey();
+		}
+
+		if (this.#signatory instanceof LedgerSignatory) {
 			return this.#signatory.publicKey();
 		}
 
@@ -70,6 +80,10 @@ export class Signatory {
 	public path(): string {
 		if (this.#signatory instanceof LedgerSignatory) {
 			return this.#signatory.signingKey();
+		}
+
+		if (this.#signatory instanceof Bip44MnemonicSignatory) {
+			return this.#signatory.path();
 		}
 
 		throw new ForbiddenMethodCallException(this.constructor.name, this.path.name);
@@ -89,6 +103,10 @@ export class Signatory {
 
 	public actsWithMnemonic(): boolean {
 		return this.#signatory instanceof MnemonicSignatory;
+	}
+
+	public actsWithBip44Mnemonic(): boolean {
+		return this.#signatory instanceof Bip44MnemonicSignatory;
 	}
 
 	public actsWithConfirmationMnemonic(): boolean {

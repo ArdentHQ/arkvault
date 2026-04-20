@@ -84,6 +84,10 @@ export const useLedgerConnection = () => {
 				return dispatch({ message: t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"), type: "failed" });
 			}
 
+			if (error.message === "INCOMPATIBLE_APP") {
+				return dispatch({ message: t("WALLETS.MODAL_LEDGER_WALLET.INCOMPATIBLE_APP_ERROR"), type: "failed" });
+			}
+
 			if (error.message === "VERSION_ERROR") {
 				return dispatch({
 					message: t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
@@ -100,7 +104,7 @@ export const useLedgerConnection = () => {
 
 	const isAttemptingConnect = useRef(false);
 
-	const connect = useCallback(async (profile: Contracts.IProfile, string, retryOptions?: Options) => {
+	const connect = useCallback(async (profile: Contracts.IProfile, retryOptions?: Options) => {
 		if (isAttemptingConnect.current) {
 			return;
 		}

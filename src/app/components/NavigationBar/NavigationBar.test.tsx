@@ -15,6 +15,8 @@ import {
 	renderResponsiveWithRoute,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import * as PanelsMock from "@/app/contexts/Panels";
+import { expect, vi } from "vitest";
 
 const dashboardURL = `/profiles/${getMainsailProfileId()}/dashboard`;
 const webWidgetSelector = "#webWidget";
@@ -264,25 +266,43 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle click to send button", async () => {
-		const mockProfile = environmentHooks.useActiveProfile();
-		const { router } = render(<NavigationBar />);
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
+		render(<NavigationBar />);
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons--send");
 
 		await userEvent.click(sendButton);
 
-		expect(router.state.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer, {
+			isTokenTransfer: false,
+		});
+
+		usePanelsMock.mockRestore();
 	});
 
 	it("should handle click to send button from mobile menu", async () => {
-		const mockProfile = environmentHooks.useActiveProfile();
-		const { router } = renderResponsiveWithRoute(<NavigationBar />, "xs");
+		const openPanelSpy = vi.fn();
+		const usePanelsMock = vi.spyOn(PanelsMock, "usePanels").mockReturnValue({
+			openPanel: openPanelSpy,
+			panels: [],
+		});
+
+		renderResponsiveWithRoute(<NavigationBar />, "xs");
 
 		const sendButton = screen.getByTestId("NavigationBar__buttons__mobile--send");
 
 		await userEvent.click(sendButton);
 
-		expect(router.state.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
+		expect(openPanelSpy).toHaveBeenCalledWith(PanelsMock.Panel.SendTransfer, {
+			isTokenTransfer: false,
+		});
+
+		usePanelsMock.mockRestore();
 	});
 
 	it("should handle receive funds", async () => {
@@ -314,7 +334,7 @@ describe("NavigationBar", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		await userEvent.click(screen.getAllByTestId("ReceiverItemMobile")[0]);
+		await userEvent.click(screen.getAllByTestId("ReceiverItemMobile--Select")[0]);
 
 		await expect(screen.findByTestId("ReceiveFunds__Name_Address")).resolves.toBeVisible();
 
@@ -363,7 +383,7 @@ describe("NavigationBar", () => {
 
 	it("should handle mobile menu home button", async () => {
 		const { router } = renderResponsiveWithRoute(<NavigationBar />, "xs", {
-			route: "/profiles/:profileId/send-transfer",
+			route: "/profiles/:profileId/dashboard",
 		});
 
 		await userEvent.click(screen.getByTestId("NavigationBar__buttons__mobile--home"));

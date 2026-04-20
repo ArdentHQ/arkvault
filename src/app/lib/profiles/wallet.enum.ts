@@ -30,6 +30,8 @@ export enum WalletData {
 	LedgerModel = "LEDGER_MODEL",
 	Status = "STATUS",
 	IsPrimary = "IS_PRIMARY",
+	AddressIndex = "ADDRESS_INDEX",
+	TokenCount = "TOKEN_COUNT",
 }
 
 /**
@@ -53,6 +55,7 @@ export enum WalletFlag {
 export enum WalletLedgerModel {
 	NanoX = "nanoX",
 	NanoS = "nanoS",
+	NanoSP = "nanoSP",
 }
 
 /**
@@ -62,6 +65,7 @@ export enum WalletLedgerModel {
  * @enum {number}
  */
 export enum WalletSetting {
+	AccountName = "ACCOUNT_NAME",
 	Alias = "ALIAS",
 	Avatar = "AVATAR",
 	Peer = "PEER",
@@ -102,3 +106,10 @@ export const WalletImportMethod = {
 	WIF: "WIF",
 	WIFWithEncryption: "WIF_WITH_ENCRYPTION",
 };
+
+export enum AddressViewSelection {
+	single = "single",
+	multiple = "multiple",
+}
+
+export type AddressViewType = "single" | "multiple";

@@ -130,7 +130,7 @@ export const SignedTransactionRow = ({
 					className="rounded px-1 dark:border"
 					data-testid="TransactionRowRecipientLabel"
 				>
-					{getLabel(transaction.type())}
+					{getLabel(transaction)}
 				</Label>
 			</TableCell>
 

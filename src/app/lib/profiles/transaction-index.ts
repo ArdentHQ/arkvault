@@ -5,6 +5,7 @@ import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collec
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 import { transformConfirmedTransactionDataCollection, transformTransactionData } from "./transaction.mapper";
 import { WalletFlag } from "./wallet.enum";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
 
 export class TransactionIndex implements ITransactionIndex {
 	readonly #wallet: IReadWriteWallet;
@@ -41,6 +42,12 @@ export class TransactionIndex implements ITransactionIndex {
 		query: Services.ClientTransactionsInput = {},
 	): Promise<ExtendedConfirmedTransactionDataCollection> {
 		return this.#fetch({ to: this.#wallet.address(), ...query });
+	}
+
+	public async unconfirmed(
+		query: Services.ClientTransactionsInput = {},
+	): Promise<UnconfirmedTransactionDataCollection> {
+		return await this.#wallet.client().unconfirmedTransactions(query);
 	}
 
 	/** {@inheritDoc ITransactionIndex.findById} */

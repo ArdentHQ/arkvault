@@ -13,7 +13,6 @@ interface WalletIconsProperties {
 	iconColor?: string;
 	iconSize?: Size;
 	wallet: Contracts.IReadWriteWallet;
-	tooltipDarkTheme?: boolean;
 }
 
 interface WalletIconProperties {
@@ -21,7 +20,6 @@ interface WalletIconProperties {
 	label?: string;
 	iconColor?: string;
 	iconSize?: Size;
-	tooltipDarkTheme?: boolean;
 }
 
 const getIconName = (type: string) => {
@@ -49,14 +47,11 @@ const getIconColor = (type: string) =>
 		? "fill-transparent hover:fill-theme-warning-200 stroke-theme-warning-400"
 		: "text-theme-secondary-700 dark:text-theme-secondary-600";
 
-export const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDarkTheme }: WalletIconProperties) => {
+export const WalletIcon = ({ type, label, iconColor, iconSize = "lg" }: WalletIconProperties) => {
 	const { t } = useTranslation();
 
 	return (
-		<Tooltip
-			content={label || t(`COMMON.${constantCase(type)}` as const as any)}
-			theme={tooltipDarkTheme ? "dark" : undefined}
-		>
+		<Tooltip content={label || t(`COMMON.${constantCase(type)}`)}>
 			<Button
 				variant="transparent"
 				data-testid={`WalletIcon__${type}`}

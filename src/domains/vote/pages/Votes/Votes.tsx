@@ -1,13 +1,11 @@
 import { Page, Section } from "@/app/components/Layout";
-import React, { FC, useCallback, useEffect, useState } from "react";
+import React, { FC, useCallback, useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded } from "@/app/hooks";
 
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import { Alert } from "@/app/components/Alert";
 import { Contracts } from "@/app/lib/profiles";
-import { CreateAddressesSidePanel } from "@/domains/portfolio/components/CreateWallet/CreateAddressSidePanel";
-import { ImportAddressesSidePanel } from "@/domains/portfolio/components/ImportWallet";
 import { SearchableTableWrapper } from "@/app/components/SearchableTableWrapper";
 import { ValidatorsTable } from "@/domains/vote/components/ValidatorsTable";
 import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
@@ -17,33 +15,33 @@ import { getErroredNetworks } from "@/utils/profile-utils";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useValidators } from "@/domains/vote/hooks/use-validators";
-import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
+import { SendVoteSidePanel } from "@/domains/transaction/components/SendVoteSidePanel/SendVoteSidePanel";
+import { useVoteFormContext, VoteFormProvider } from "@/domains/vote/contexts/VoteFormContext";
+import { Networks } from "@/app/lib/mainsail";
 
-export const Votes: FC = () => {
+export const VotesPage: FC<{
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+}> = ({ profile: activeProfile, network: activeNetwork }) => {
 	const { t } = useTranslation();
 
-	const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false);
-	const [showImportAddressPanel, setShowImportAddressPanel] = useState(false);
+	const { showSendVotePanel, setShowSendVotePanel, openSendVotePanel, selectedWallet, setSelectedWallet } =
+		useVoteFormContext();
 
 	// @TODO: the hasWalletId alias is misleading because it indicates that it
 	// is a boolean but it's just a string or undefined and you still need to
 	// do an assertion or casting to ensure it has a value other than undefined
 	const { env } = useEnvironmentContext();
 
-	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWalletWhenNeeded(false);
-	const hasWalletId = activeWallet && activeWallet.address();
-
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+	const hasWalletId: boolean = !!(selectedWallet && selectedWallet.address());
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const { filter, voteValidators, unvoteValidators } = useVoteQueryParameters();
-
-	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
 	const {
 		filteredWallets,
@@ -55,13 +53,11 @@ export const Votes: FC = () => {
 		setSelectedAddress,
 		searchQuery,
 		setSearchQuery,
-		maxVotes,
-		setMaxVotes,
 	} = useVoteFilters({
 		filter,
 		hasWalletId: !!hasWalletId,
 		profile: activeProfile,
-		wallet: activeWallet!, // @TODO
+		wallet: selectedWallet,
 	});
 
 	const {
@@ -79,14 +75,6 @@ export const Votes: FC = () => {
 		voteFilter,
 	});
 
-	const { navigateToSendVote } = useVoteActions({
-		hasWalletId: !!hasWalletId,
-		profile: activeProfile,
-		selectedAddress,
-		selectedNetwork: activeNetwork.id(),
-		wallet: activeWallet!, // @TODO
-	});
-
 	useEffect(() => {
 		if (selectedAddress) {
 			fetchVotes(selectedAddress, activeNetwork.id());
@@ -95,9 +83,9 @@ export const Votes: FC = () => {
 
 	useEffect(() => {
 		if (hasWalletId) {
-			fetchValidators(activeWallet);
+			fetchValidators(selectedWallet!);
 		}
-	}, [activeWallet, fetchValidators, hasWalletId]);
+	}, [selectedWallet, fetchValidators, hasWalletId]);
 
 	useEffect(() => {
 		if (votes.length === 0) {
@@ -108,7 +96,7 @@ export const Votes: FC = () => {
 	useEffect(() => {
 		const syncVotes = async () => {
 			if (selectedWallet) {
-				await activeProfile.validators().sync(activeProfile, selectedWallet.networkId());
+				await activeProfile.validators().sync(selectedWallet.networkId());
 				await selectedWallet.synchroniser().votes();
 			}
 		};
@@ -123,7 +111,7 @@ export const Votes: FC = () => {
 		}
 
 		syncProfileWallets(true);
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+	}, []);
 
 	const handleSelectAddress = useCallback(
 		async (address: string) => {
@@ -135,11 +123,10 @@ export const Votes: FC = () => {
 			setSelectedAddress(address);
 			// setSelectedNetwork(network);
 			setSelectedWallet(wallet);
-			setMaxVotes(wallet.network().maximumVotesPerWallet());
 
 			await fetchValidators(wallet);
 		},
-		[activeProfile, fetchValidators, setMaxVotes, setSearchQuery, setSelectedAddress, activeNetwork],
+		[activeProfile, fetchValidators, setSearchQuery, setSelectedAddress, activeNetwork],
 	);
 
 	const isSelectValidatorStep = !!selectedAddress;
@@ -150,10 +137,7 @@ export const Votes: FC = () => {
 
 			{!hasWallets && (
 				<Section className="pt-0">
-					<VotesEmpty
-						onCreateWallet={() => setShowCreateAddressPanel(true)}
-						onImportWallet={() => setShowImportAddressPanel(true)}
-					/>
+					<VotesEmpty />
 				</Section>
 			)}
 
@@ -180,13 +164,12 @@ export const Votes: FC = () => {
 					searchQuery={searchQuery}
 					validators={filteredValidators}
 					isLoading={isLoadingValidators}
-					maxVotes={maxVotes!}
 					votes={votes}
 					resignedValidatorVotes={resignedValidatorVotes}
 					unvoteValidators={unvoteValidators}
 					voteValidators={voteValidators}
 					selectedWallet={selectedWallet!}
-					onContinue={navigateToSendVote}
+					onContinue={openSendVotePanel}
 					setSearchQuery={setSearchQuery}
 					totalCurrentVotes={currentVotes.length}
 					selectedFilter={voteFilter}
@@ -213,11 +196,20 @@ export const Votes: FC = () => {
 			)}
 
 			<ResetWhenUnmounted>
-				<CreateAddressesSidePanel open={showCreateAddressPanel} onOpenChange={setShowCreateAddressPanel} />
-			</ResetWhenUnmounted>
-			<ResetWhenUnmounted>
-				<ImportAddressesSidePanel open={showImportAddressPanel} onOpenChange={setShowImportAddressPanel} />
+				<SendVoteSidePanel open={showSendVotePanel} onOpenChange={setShowSendVotePanel} />
 			</ResetWhenUnmounted>
 		</Page>
+	);
+};
+
+export const Votes: FC = () => {
+	const activeProfile = useActiveProfile();
+	const activeWallet = useActiveWalletWhenNeeded(false);
+	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
+
+	return (
+		<VoteFormProvider profile={activeProfile} network={activeNetwork} wallet={activeWallet}>
+			<VotesPage profile={activeProfile} network={activeNetwork} />
+		</VoteFormProvider>
 	);
 };

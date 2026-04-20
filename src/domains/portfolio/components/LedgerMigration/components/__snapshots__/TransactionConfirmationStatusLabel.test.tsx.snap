@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TransactionConfirmationStatusLabel > should render awaiting label 1`] = `
+<DocumentFragment>
+  <div
+    class="dim:text-theme-dim-200 text-theme-secondary-700 dark:text-theme-dark-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs dim:bg-transparent bg-theme-secondary-200 dark:bg-transparent  border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700"
+    data-testid="LabelAwaiting"
+  >
+    <span
+      class="font-semibold whitespace-nowrap"
+    >
+      Awaiting
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionConfirmationStatusLabel > should render completed label 1`] = `
+<DocumentFragment>
+  <div
+    class="dim:text-theme-success-500 text-theme-success-700 dark:text-theme-success-500 flex space-x-2 rounded-sm px-1 py-[3px] text-xs dim:bg-theme-success-900 bg-theme-success-100 dark:bg-theme-success-900 border dim:border-theme-success-900 border-theme-success-100 dark:border-theme-success-900"
+    data-testid="LabelCompleted"
+  >
+    <div
+      class="h-4 w-4"
+    >
+      <div
+        style="height: 16px; width: 16px;"
+      >
+        <svg
+          fill="none"
+          style="height: 100%; width: 100%;"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.9984 4.69922L10.3984 14.8992C10.1984 15.0992 9.99844 15.2992 9.69844 15.2992C9.39844 15.2992 9.09844 15.1992 8.89844 14.9992L6.89844 12.9992"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+          <path
+            d="M2 13.0996L4 15.0996C4.2 15.2996 4.4 15.3996 4.7 15.3996C4.8 15.3996 5 15.3996 5.1 15.2996"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+          <path
+            d="M12.9969 4.69922L8.79688 10.2992"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+    </div>
+    <span
+      class="font-semibold whitespace-nowrap"
+    >
+      Completed
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionConfirmationStatusLabel > should render pending label 1`] = `
+<DocumentFragment>
+  <div
+    class="text-theme-warning-900 dark:text-theme-dark-200 dim:text-theme-dim-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs dim:bg-transparent bg-theme-warning-50 dark:bg-transparent border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700"
+    data-testid="LabelPending"
+  >
+    <div
+      class="animate-spin rounded-full shrink-0 w-4 h-4 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
+    />
+    <span
+      class="font-semibold whitespace-nowrap"
+    >
+      Pending
+    </span>
+  </div>
+</DocumentFragment>
+`;

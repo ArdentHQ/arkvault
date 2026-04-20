@@ -1,10 +1,7 @@
-import { AddressesPanelSettings, AddressViewType } from "@/domains/portfolio/hooks/use-address-panel";
-
+// TODO: Cleanup and move the rest to profile settings.
 export interface DashboardConfiguration {
 	hideBalance: boolean;
 	walletsDisplayType?: "all" | "starred" | "ledger";
-	addressPanelSettings?: AddressesPanelSettings;
-	selectedMode: AddressViewType;
 	selectedAddressesByNetwork: Record<string, string[]>;
 	selectedAddresses: string[];
 	activeNetworkId?: string;

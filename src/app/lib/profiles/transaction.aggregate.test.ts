@@ -5,6 +5,8 @@ import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { ExtendedConfirmedTransactionData } from "./transaction.dto.js";
 import { ExtendedConfirmedTransactionDataCollection } from "./transaction.collection";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
+import { UnconfirmedTransactionData } from "@/app/lib/mainsail/unconfirmed-transaction.dto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -16,6 +18,8 @@ const createTransactionMock = (wallet: IReadWriteWallet) =>
 		...TransactionFixture,
 		wallet: () => wallet,
 	} as any);
+
+const createUnconfirmedTransactionMock = () => new UnconfirmedTransactionData().configure(TransactionFixture);
 
 describe("TransactionAggregate", () => {
 	beforeEach(async () => {
@@ -236,5 +240,74 @@ describe("TransactionAggregate", () => {
 		// Fourth call with same limit, should call again
 		await subject.all({ limit: 10 });
 		expect(allSpy).toHaveBeenCalledTimes(4);
+	});
+
+	describe("Unconfirmed Transactions", async () => {
+		it("should aggregate unconfirmed transactions", async () => {
+			const unconfirmedSpy = vi
+				.spyOn(wallet.transactionIndex(), "unconfirmed")
+				.mockResolvedValue(
+					new UnconfirmedTransactionDataCollection([createUnconfirmedTransactionMock()], pagination),
+				);
+
+			const result = await subject.unconfirmed();
+			expect(unconfirmedSpy).toHaveBeenCalled();
+			expect(result.items()).toHaveLength(1);
+		});
+
+		it("should return an empty collection if there are no wallets", async () => {
+			profile.wallets().flush();
+			const result = await subject.unconfirmed();
+			expect(result).toBeInstanceOf(Object);
+			expect(result.items()).toHaveLength(0);
+		});
+
+		it("should create a history key with types", async () => {
+			const unconfirmedSpy = vi
+				.spyOn(wallet.transactionIndex(), "unconfirmed")
+				.mockResolvedValue(new UnconfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
+
+			await subject.unconfirmed({ types: ["type1", "type2"] });
+			expect(unconfirmedSpy).toHaveBeenCalled();
+		});
+
+		it("should create a history key with orderBy and limit", async () => {
+			const unconfirmedSpy = vi
+				.spyOn(wallet.transactionIndex(), "unconfirmed")
+				.mockResolvedValue(new UnconfirmedTransactionDataCollection([], { ...pagination, next: undefined }));
+
+			await subject.unconfirmed({ limit: 10, orderBy: "timestamp:desc" });
+			expect(unconfirmedSpy).toHaveBeenCalled();
+		});
+
+		it("should handle transaction index errors gracefully", async () => {
+			vi.spyOn(wallet.transactionIndex(), "unconfirmed").mockRejectedValue(new Error("test error"));
+			const result = await subject.unconfirmed();
+			expect(result).toBeInstanceOf(Object);
+			expect(result.items()).toHaveLength(0);
+		});
+
+		it("should use history for subsequent calls", async () => {
+			const collectionWithMore = new UnconfirmedTransactionDataCollection([createUnconfirmedTransactionMock()], {
+				next: 2,
+			});
+
+			const collectionWithoutMore = new UnconfirmedTransactionDataCollection(
+				[createUnconfirmedTransactionMock()],
+				{},
+			);
+
+			const unconfirmedSpy = vi
+				.spyOn(wallet.transactionIndex(), "unconfirmed")
+				.mockResolvedValueOnce(collectionWithMore)
+				.mockResolvedValueOnce(collectionWithoutMore);
+
+			subject.flush("unconfirmed");
+			await subject.unconfirmed();
+			await subject.unconfirmed();
+
+			expect(unconfirmedSpy).toHaveBeenCalledTimes(2);
+			expect(unconfirmedSpy).toHaveBeenLastCalledWith({ cursor: 2 });
+		});
 	});
 });

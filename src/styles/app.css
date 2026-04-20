@@ -11,7 +11,6 @@
 @import "./fonts.css" layer(utilities);
 @import "./scrollbars.css" layer(utilities);
 @import "./skeletons.css" layer(utilities);
-@import "./tooltips.css" layer(utilities);
 
 @import "./coins.css" layer(utilities);
 @import "./focus-visible.css" layer(utilities);
@@ -36,12 +35,5 @@
 	::backdrop,
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentcolor);
-	}
-}
-
-@layer utilities {
-	.no-selection-style::selection {
-		background-color: #b3d4fc;
-		color: transparent;
 	}
 }

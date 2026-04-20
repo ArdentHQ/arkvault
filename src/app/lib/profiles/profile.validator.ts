@@ -30,8 +30,15 @@ export class ProfileValidator implements IProfileValidator {
 			),
 			data: Joi.object({
 				[ProfileData.LatestMigration]: Joi.string(),
+				[ProfileData.MigrationResult]: Joi.object({
+					coldAddresses: Joi.array(),
+					coldContacts: Joi.array(),
+					mergedAddresses: Joi.array(),
+					mergedContacts: Joi.array(),
+				}),
 				[ProfileData.HasCompletedIntroductoryTutorial]: Joi.boolean(),
 				[ProfileData.HasAcceptedManualInstallationDisclaimer]: Joi.boolean(),
+				[ProfileData.WhitelistedContractAddresses]: Joi.array(),
 			}).required(),
 			exchangeTransactions: Joi.object()
 				.pattern(
@@ -68,6 +75,7 @@ export class ProfileValidator implements IProfileValidator {
 						body: Joi.string(),
 						icon: Joi.string(),
 						id: Joi.string().required(),
+						isRemoved: Joi.boolean(),
 						meta: Joi.object(),
 						name: Joi.string(),
 						read_at: Joi.number(),
@@ -101,9 +109,11 @@ export class ProfileValidator implements IProfileValidator {
 				[ProfileSetting.TimeFormat]: Joi.string().required(),
 				[ProfileSetting.UseNetworkWalletNames]: Joi.boolean().default(false),
 				[ProfileSetting.UseTestNetworks]: Joi.boolean().default(false),
+				[ProfileSetting.UseHDWallets]: Joi.boolean().default(false),
 				[ProfileSetting.Sessions]: Joi.object(),
 				[ProfileSetting.LastVisitedPage]: Joi.object(),
 				[ProfileSetting.WalletSelectionMode]: Joi.string().allow("single", "multiple").default("single"),
+				[ProfileSetting.HideDustTokens]: Joi.boolean().optional().default(false),
 			}).required(),
 			wallets: Joi.object().pattern(
 				Joi.string().uuid(),

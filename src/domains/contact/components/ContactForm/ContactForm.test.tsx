@@ -111,7 +111,9 @@ describe("ContactForm", () => {
 			expect(nameInput()).toHaveValue("name");
 		});
 
-		await userEvent.type(addressInput(), validDevnetAddress);
+		const user = userEvent.setup();
+		await user.click(addressInput());
+		await user.paste(validDevnetAddress);
 
 		await waitFor(() => {
 			expect(addressInput()).toHaveValue(validDevnetAddress);
@@ -119,6 +121,28 @@ describe("ContactForm", () => {
 
 		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
+		});
+	});
+
+	it("should add a valid address successfully", async () => {
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
+
+		await userEvent.type(nameInput(), "name");
+
+		await waitFor(() => {
+			expect(nameInput()).toHaveValue("name");
+		});
+
+		const user = userEvent.setup();
+		await user.click(addressInput());
+		await user.paste(validDevnetAddress);
+
+		await user.click(addressInput());
+		await user.clear(addressInput());
+		await user.paste(undefined);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 	});
 
@@ -235,6 +259,26 @@ describe("ContactForm", () => {
 
 		await waitFor(() => {
 			expect(saveButton()).not.toBeDisabled();
+		});
+	});
+
+	it("should show error for empty address", async () => {
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
+
+		await userEvent.type(nameInput(), "name");
+
+		await waitFor(() => {
+			expect(nameInput()).toHaveValue("name");
+		});
+
+		await userEvent.type(addressInput(), "   ");
+
+		await waitFor(() => {
+			expect(addressInput()).toHaveValue("   ");
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 	});
 });

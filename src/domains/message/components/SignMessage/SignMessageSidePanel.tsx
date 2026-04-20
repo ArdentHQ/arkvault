@@ -2,8 +2,8 @@ import { Services } from "@/app/lib/mainsail";
 import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { Contracts } from "@/app/lib/profiles";
 import { FormStep } from "./FormStep";
+
 import { SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Button } from "@/app/components/Button";
@@ -11,14 +11,15 @@ import { Form } from "@/app/components/Form";
 import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
+import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { AuthenticationStep, LedgerAuthentication } from "@/domains/transaction/components/AuthenticationStep";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
-import { AddressViewSelection } from "@/domains/portfolio/hooks/use-address-panel";
+import { useSelectsTransactionSender } from "@/domains/transaction/hooks/use-selects-transaction-sender";
+import { Image } from "@/app/components/Image";
 
 enum Step {
 	FormStep = 1,
@@ -39,37 +40,11 @@ export const SignMessageSidePanel = ({
 	const queryParameters = useQueryParameters();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
-	const walletFromPath = useActiveWalletWhenNeeded(false);
-
-	const walletFromDeeplink = useMemo(() => {
-		const address = queryParameters.get("address");
-
-		if (!address || !activeNetwork) {
-			return;
-		}
-
-		return activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id());
-	}, [queryParameters]);
-
-	const profileWallets = activeProfile.wallets().values();
-	const selectedWallets = activeProfile.wallets().selected();
-	const walletSelectionMode = activeProfile.walletSelectionMode();
-
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
-
-	const selectableWallets = useMemo(() => {
-		if (walletSelectionMode === AddressViewSelection.single) {
-			return [selectedWallets[0]];
-		}
-
-		return profileWallets;
-	}, [walletSelectionMode, selectedWallets, profileWallets]);
-
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [authenticateLedger, setAuthenticateLedger] = useState<boolean>(false);
 
 	const initialState: Services.SignedMessage = {
-		message: queryParameters.get("message") || "",
+		message: "",
 		signatory: "",
 		signature: "",
 	};
@@ -87,50 +62,49 @@ export const SignMessageSidePanel = ({
 		mode: "onChange",
 	});
 
-	const { formState, getValues, handleSubmit, register, trigger, reset } = form;
-	const { isValid } = formState;
+	const { formState, getValues, handleSubmit, register, setValue, reset: resetForm } = form;
+	const { isValid, dirtyFields } = formState;
 
 	const { signMessage } = useValidation();
 
-	const selectWallet = useCallback(() => {
-		if (selectableWallets.length === 1) {
-			setSelectedWallet(selectableWallets[0]);
-			return;
-		}
-
-		setSelectedWallet(walletFromPath || walletFromDeeplink);
-	}, [selectableWallets, walletFromPath, walletFromDeeplink]);
+	const [mounted, setMounted] = useState(false);
+	const { activeWallet: selectedWallet, setActiveWallet: setSelectedWallet } = useSelectsTransactionSender({
+		active: mounted,
+	});
 
 	const resetState = useCallback(() => {
-		reset();
+		resetForm();
+		setErrorMessage(undefined);
 		setSelectedWallet(undefined);
 		setSignedMessage(initialState);
 		setActiveTab(Step.FormStep);
 		setAuthenticateLedger(false);
 		setErrorMessage(undefined);
-	}, [reset]);
+	}, [resetForm]);
 
 	const onMountChange = useCallback(
 		(mounted: boolean) => {
-			if (!mounted) {
+			setMounted(mounted);
+
+			if (mounted) {
+				const message = queryParameters.get("message") || "";
+
+				if (message) {
+					setValue("message", message, { shouldDirty: true, shouldValidate: true });
+
+					queryParameters.delete("message");
+				}
+			} else {
 				resetState();
 				return;
 			}
-
-			selectWallet();
 		},
-		[selectWallet, resetState],
+		[resetState],
 	);
 
 	useEffect(() => {
 		register("message", signMessage.message(selectedWallet?.isLedger()));
 	}, [selectedWallet, register, signMessage]);
-
-	useEffect(() => {
-		if (initialState.message) {
-			trigger("message");
-		}
-	}, [trigger]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
@@ -138,13 +112,20 @@ export const SignMessageSidePanel = ({
 	const { sign } = useMessageSigner();
 
 	const connectLedger = useCallback(async () => {
-		await connect(activeProfile, selectedWallet!.networkId());
+		await connect(activeProfile);
 		handleSubmit(submitForm)();
 	}, [selectedWallet, activeProfile, connect]);
 
 	const handleBack = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
+
+		setAuthenticateLedger(false);
+
+		if (activeTab !== Step.FormStep) {
+			setActiveTab(Step.FormStep);
+			return;
+		}
 
 		onOpenChange(false);
 	};
@@ -192,12 +173,12 @@ export const SignMessageSidePanel = ({
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE");
 		}
 
-		if (authenticateLedger) {
-			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
-		}
-
 		if (activeTab === Step.SuccessStep) {
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE");
+		}
+
+		if (authenticateLedger) {
+			return t("TRANSACTION.AUTHENTICATION_STEP.TITLE");
 		}
 
 		return t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE");
@@ -228,6 +209,10 @@ export const SignMessageSidePanel = ({
 	};
 
 	const getTitleIcon = () => {
+		if (activeTab === Step.ErrorStep) {
+			return <Image name="ErrorHeaderIcon" domain="transaction" className="block h-[20px] w-[20px]" />;
+		}
+
 		if (activeTab === Step.SuccessStep) {
 			return (
 				<ThemeIcon
@@ -255,8 +240,16 @@ export const SignMessageSidePanel = ({
 		);
 	};
 
+	const preventAccidentalClosing = useMemo(
+		() => dirtyFields.message || dirtyFields.mnemonic || activeTab !== Step.FormStep,
+		[dirtyFields.message, dirtyFields.mnemonic, activeTab],
+	);
+
+	const isLastStep = activeTab === Step.SuccessStep;
+
 	return (
 		<SidePanel
+			minimizeable={!isLastStep}
 			title={getTitle()}
 			subtitle={getSubtitle()}
 			titleIcon={getTitleIcon()}
@@ -267,14 +260,19 @@ export const SignMessageSidePanel = ({
 			hasSteps
 			totalSteps={selectedWallet?.isLedger() ? 3 : 2}
 			activeStep={activeTab}
+			disableOutsidePress={preventAccidentalClosing}
+			disableEscapeKey={preventAccidentalClosing}
+			shakeWhenClosing={preventAccidentalClosing}
 			footer={
 				<SidePanelButtons>
-					{activeTab === Step.FormStep && (
-						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
+					<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
+						{!isLastStep && (
 							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
 								{t("COMMON.BACK")}
 							</Button>
+						)}
 
+						{activeTab === Step.FormStep && (
 							<Button
 								type="submit"
 								disabled={!isValid || !selectedWallet}
@@ -283,10 +281,10 @@ export const SignMessageSidePanel = ({
 							>
 								{t("COMMON.SIGN")}
 							</Button>
-						</div>
-					)}
+						)}
+					</div>
 
-					{activeTab === Step.SuccessStep && (
+					{isLastStep && (
 						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
 							<Button
 								data-testid="SignMessage__back-button"
@@ -320,6 +318,7 @@ export const SignMessageSidePanel = ({
 					)}
 				</SidePanelButtons>
 			}
+			isLastStep={activeTab === Step.SuccessStep}
 		>
 			<Form data-testid="SignMessage" context={form} onSubmit={submitForm}>
 				<Tabs activeId={activeTab}>
@@ -341,7 +340,7 @@ export const SignMessageSidePanel = ({
 								<FormStep
 									disabled={false}
 									profile={activeProfile}
-									wallets={selectableWallets}
+									wallets={activeProfile.wallets().values()}
 									disableMessageInput={false}
 									maxLength={signMessage.message().maxLength.value}
 									wallet={selectedWallet}
@@ -363,14 +362,9 @@ export const SignMessageSidePanel = ({
 						<TabPanel tabId={Step.ErrorStep}>
 							<ErrorStep
 								description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
-								onClose={handleBack}
 								errorMessage={errorMessage}
-								hideHeader
-								onBack={() => {
-									setAuthenticateLedger(false);
-
-									setActiveTab(Step.FormStep);
-								}}
+								hideFooter
+								withCopyErrorButton
 							/>
 						</TabPanel>
 					</StepsProvider>

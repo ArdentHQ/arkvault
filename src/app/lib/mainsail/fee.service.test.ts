@@ -47,6 +47,7 @@ describe("FeeService", () => {
 			const result = await feeService.all();
 
 			expect(result).toEqual({
+				contractDeployment: expect.any(Object),
 				evmCall: expect.any(Object),
 				multiPayment: expect.any(Object),
 				secondSignature: expect.any(Object),
@@ -115,6 +116,23 @@ describe("FeeService", () => {
 			const result = await feeService.estimateGas(mockPayload);
 
 			expect(result).toBeInstanceOf(BigNumber);
+		});
+	});
+
+	describe("confirmationTime", () => {
+		it("should return Average time when feeType is undefined", () => {
+			const result = feeService.confirmationTime(undefined);
+			expect(result).toBe(8);
+		});
+
+		it("should return Average time as default for unknown feeType", () => {
+			const result = feeService.confirmationTime("max");
+			expect(result).toBe(8);
+		});
+
+		it("should use custom block time", () => {
+			const result = feeService.confirmationTime("avg", 4000);
+			expect(result).toBe(4);
 		});
 	});
 

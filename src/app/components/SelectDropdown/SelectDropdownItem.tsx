@@ -21,10 +21,12 @@ export const SelectDropdownItem = memo(
 					"select-list-option",
 					{ "is-highlighted": highlightedIndex === index },
 					{ "is-selected": item.label === inputValue },
+					{ "is-disabled": item.isDisabled },
 				),
+				disabled: item.isDisabled,
 				index,
 				item,
-				onMouseDown: () => onMouseDown(item),
+				onMouseDown: item.isDisabled ? undefined : () => onMouseDown(item),
 			})}
 		>
 			<div className="select-list-option__label">

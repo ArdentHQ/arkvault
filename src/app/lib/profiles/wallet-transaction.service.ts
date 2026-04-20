@@ -65,6 +65,11 @@ export class TransactionService implements ITransactionService {
 		return this.#signTransaction("transfer", input);
 	}
 
+	/** {@inheritDoc ITransactionService.signTransfer} */
+	public async signTransferToken(input: Services.TransferInput): Promise<string> {
+		return this.#signTransaction("tokenTransfer", input);
+	}
+
 	/** {@inheritDoc ITransactionService.signSecondSignature} */
 	public async signSecondSignature(input: Services.SecondSignatureInput): Promise<string> {
 		return this.#signTransaction("secondSignature", input);
@@ -108,6 +113,11 @@ export class TransactionService implements ITransactionService {
 	/** {@inheritDoc ITransactionService.signValidatorResignation} */
 	public async signValidatorResignation(input: Services.ValidatorResignationInput): Promise<string> {
 		return this.#signTransaction("validatorResignation", input);
+	}
+
+	/** {@inheritDoc ITransactionService.signValidatorResignation} */
+	public async signContractDeployment(input: Services.ContractDeploymentInput): Promise<string> {
+		return this.#signTransaction("contractDeployment", input);
 	}
 
 	/** {@inheritDoc ITransactionService.signUpdateValidator} */

@@ -44,6 +44,15 @@ export interface IWalletMutator {
 	alias(alias: string): void;
 
 	/**
+	 * Set the accountName
+	 *
+	 * @param {string} name
+	 * @return {void}
+	 * @memberof IWalletMutator
+	 */
+	accountName(name: string): void;
+
+	/**
 	 * Set the selected flag.
 	 *
 	 * @param {boolean} isSelected

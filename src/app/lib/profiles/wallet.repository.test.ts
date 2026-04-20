@@ -1,8 +1,9 @@
 import { describe, expect, it, beforeEach, afterEach, vi } from "vitest";
-import { IProfile, IReadWriteWallet, IWalletRepository, WalletData } from "./contracts";
+import { IProfile, IReadWriteWallet, IWalletRepository, WalletData, WalletSetting } from "./contracts";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
 import * as queue from "./helpers/queue";
 import { DataRepository } from "./data.repository";
+import { BigNumber } from "@/app/lib/helpers";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -86,12 +87,12 @@ describe("WalletRepository", () => {
 
 	it("should update a wallet's alias", () => {
 		subject.update(wallet.id(), { alias: "New Alias" });
-		expect(wallet.alias()).toBe("New Alias");
+		expect(wallet.settings().get(WalletSetting.Alias)).toBe("New Alias");
 	});
 
 	it("should update a wallet's alias with empty string", () => {
 		subject.update(wallet.id(), { alias: "" });
-		expect(wallet.alias()).toBe(undefined);
+		expect(wallet.settings().get(WalletSetting.Alias)).toBe(undefined);
 	});
 
 	it("should throw when updating a wallet with an existing alias", async () => {
@@ -156,7 +157,7 @@ describe("WalletRepository", () => {
 	});
 
 	it("should exclude wallets on toObject", async () => {
-		vi.spyOn(wallet, "balance").mockReturnValue(1000000000000000000);
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make(1000000000000000000));
 
 		const ledgerWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			mnemonic: MAINSAIL_MNEMONICS[2],
@@ -170,7 +171,7 @@ describe("WalletRepository", () => {
 			mnemonic: MAINSAIL_MNEMONICS[3],
 		});
 
-		vi.spyOn(emptyWallet, "balance").mockReturnValue(0);
+		vi.spyOn(emptyWallet, "balance").mockReturnValue(BigNumber.ZERO);
 
 		subject.push(emptyWallet);
 
@@ -432,5 +433,20 @@ describe("WalletRepository", () => {
 
 		consoleSpy.mockRestore();
 		pqueueSpy.mockRestore();
+	});
+
+	it("should select all wallets", async () => {
+		const wallet2 = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic: MAINSAIL_MNEMONICS[1],
+		});
+		profile.wallets().push(wallet2);
+
+		profile.wallets().selectOnly([]);
+
+		expect(profile.wallets().selected()).toHaveLength(0);
+
+		profile.wallets().selectAll();
+
+		expect(profile.wallets().selected()).toHaveLength(1);
 	});
 });

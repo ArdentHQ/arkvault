@@ -1,10 +1,9 @@
-import React, { ReactElement, useRef } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@/app/lib/profiles";
 import { useBreakpoint } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
-import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 import { getStyles } from "@/app/components/Button/Button.styles";
@@ -12,16 +11,27 @@ import { twMerge } from "tailwind-merge";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 interface Properties {
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
+	transaction: Pick<
+		DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData,
+		"hash" | "isConfirmed" | "explorerLink"
+	>;
 	isConfirmed?: boolean;
+	label?: string;
 }
 
-export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactElement => {
+export const TransactionId = ({ transaction, isConfirmed, label }: Properties): ReactElement => {
 	const { t } = useTranslation();
-	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
 	const reference = useRef(null);
+
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		if (!mounted) {
+			setMounted(true);
+		}
+	}, [mounted]);
 
 	return (
 		<div
@@ -29,7 +39,7 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 			className="sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 sm:dim:border-theme-dim-700 flex-row items-center sm:flex sm:rounded-lg sm:border"
 		>
 			<div className="text-theme-secondary-700 sm:bg-theme-secondary-200 dark:text-theme-secondary-500 sm:dim:bg-theme-dim-950 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold whitespace-nowrap sm:mb-0 sm:h-full sm:rounded-l-lg sm:px-4 sm:py-3 sm:text-base sm:leading-5 sm:dark:bg-black">
-				{t("TRANSACTION.TRANSACTION_ID")}
+				{label ?? t("TRANSACTION.TRANSACTION_ID")}
 			</div>
 
 			<div ref={reference} className="flex-1 overflow-hidden font-semibold sm:mx-4">
@@ -41,7 +51,6 @@ export const TransactionId = ({ transaction, isConfirmed }: Properties): ReactEl
 					variant={isSmAndAbove ? "icon" : "button"}
 					data={transaction.hash()}
 					tooltip={t("COMMON.COPY_ID")}
-					tooltipDarkTheme={isDarkMode}
 					iconButtonClassName={twMerge(
 						getStyles({ variant: "secondary" }),
 						"space-x-0 p-2 dim:border-theme-dim-600 dim:bg-theme-dim-700 dim:text-theme-dim-50",

@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import {
 	FloatingFocusManager,
 	FloatingOverlay,
@@ -9,19 +10,25 @@ import {
 	useRole,
 	useTransitionStyles,
 } from "@floating-ui/react";
-import React, { useEffect, useRef, JSX } from "react";
+import React, { JSX, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { SIDE_PANEL_TRANSITION_DURATION, usePanels } from "@/app/contexts/Panels";
+
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
+import { SidePanelStyledStep } from "./SidePanelStyledStep";
+import { Tooltip } from "@/app/components/Tooltip";
 import cn from "classnames";
 import { isUnit } from "@/utils/test-helpers";
-import { SidePanelStyledStep } from "./SidePanelStyledStep";
 import { useIsScrolled } from "@/app/hooks/use-is-scrolled";
+import { useLocalStorage } from "usehooks-ts";
+import { useNavigationContext } from "@/app/contexts";
+import { useTranslation } from "react-i18next";
 
 interface SidePanelProps {
 	children: React.ReactNode;
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	title: string;
+	title: string | React.ReactNode;
 	titleIcon?: React.ReactNode;
 	subtitle?: string;
 	dataTestId?: string;
@@ -32,7 +39,26 @@ interface SidePanelProps {
 	totalSteps?: number;
 	activeStep?: number;
 	footer?: React.ReactNode;
+	onBack?: () => void;
+	isLastStep?: boolean;
+	disableOutsidePress?: boolean;
+	disableEscapeKey?: boolean;
+	shakeWhenClosing?: boolean;
+	preventClosing?: boolean;
+	minimizeable?: boolean;
 }
+
+interface SidePanelContextValue {
+	setHasModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+interface SidepanelFooterProps extends React.HTMLAttributes<HTMLDivElement> {
+	isScrolled?: boolean;
+}
+
+const SidePanelContext = React.createContext<SidePanelContextValue | undefined>(undefined);
+
+export const useSidePanel = (): SidePanelContextValue | undefined => useContext(SidePanelContext);
 
 export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttributes<HTMLDivElement>): JSX.Element => (
 	<div
@@ -44,7 +70,19 @@ export const SidePanelButtons = ({ className, ...properties }: React.HTMLAttribu
 	/>
 );
 
-export const SidePanel = ({
+export const SidepanelFooter = ({ className, isScrolled, ...properties }: SidepanelFooterProps) => (
+	<div
+		data-testid="SidePanel__footer"
+		className={cn(
+			"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
+			{ "shadow-footer-side-panel": isScrolled },
+			className,
+		)}
+		{...properties}
+	/>
+);
+
+const SidePanelContent = ({
 	children,
 	open,
 	onOpenChange,
@@ -59,16 +97,61 @@ export const SidePanel = ({
 	totalSteps = 0,
 	activeStep = 0,
 	footer,
+	onBack,
+	isLastStep,
+	disableOutsidePress = false,
+	disableEscapeKey = false,
+	shakeWhenClosing = false,
+	preventClosing = false,
+	minimizeable = true,
 }: SidePanelProps): JSX.Element => {
+	const { t } = useTranslation();
+	const popStateHandlerRef = useRef<() => void>(() => {});
+	const { isMinimized, toggleMinimize, toggleExpand, isExpanded } = usePanels();
+
+	const { hasFixedFormButtons } = useNavigationContext();
+
+	const [minimizedHintHasShown, persistMinimizedHint] = useLocalStorage("minimized-hint", false);
+	const [shake, setShake] = useState(false);
+	const [hasModalOpened, setHasModalOpened] = useState(false);
+	const [isClosing, setIsClosing] = useState(false);
+
+	const shouldPreventClosing = useCallback(() => preventClosing, [preventClosing]);
+
+	const toggleOpen = useCallback(
+		(open: boolean = false) => {
+			if (open === false) {
+				setIsClosing(true);
+			}
+
+			if (open === false && shakeWhenClosing && shouldPreventClosing()) {
+				setShake(true);
+				setTimeout(() => setShake(false), 900);
+
+				return;
+			}
+
+			onOpenChange(open);
+
+			setTimeout(() => {
+				setIsClosing(false);
+			}, SIDE_PANEL_TRANSITION_DURATION);
+		},
+		[onOpenChange, shakeWhenClosing, shouldPreventClosing, isMinimized],
+	);
+
 	const { refs, context } = useFloating({
-		onOpenChange,
+		onOpenChange: toggleOpen,
 		open,
 	});
 
 	const click = useClick(context);
 	const role = useRole(context);
 	const dismiss = useDismiss(context, {
-		outsidePress: (event) => !(event.target as HTMLElement).closest(".Toastify"),
+		enabled: !hasModalOpened && !isMinimized,
+		// Allow escape attempts when we need to show shake due to preventClosing
+		escapeKey: !disableEscapeKey || (shakeWhenClosing && preventClosing),
+		outsidePress: disableOutsidePress ? false : (event) => !(event.target as HTMLElement).closest(".Toastify"),
 		outsidePressEvent: "pointerdown",
 	});
 
@@ -78,94 +161,315 @@ export const SidePanel = ({
 
 	const { getFloatingProps } = useInteractions([click, role, dismiss]);
 
-	const { isMounted, styles } = useTransitionStyles(context, {
-		close: {
-			transform: "translateX(100%)",
-			transitionTimingFunction: "ease-in",
-		},
-		common: {
-			transformOrigin: "right",
-			transitionProperty: "transform",
-		},
-		duration: 350,
-		initial: {
-			transform: "translateX(100%)",
-		},
-		open: {
-			transform: "translateX(0%)",
-			transitionTimingFunction: "ease-out",
-		},
-	});
+	const duration = useMemo(() => {
+		if (!open && isExpanded) {
+			return 0;
+		}
+
+		if (open && isExpanded && isClosing) {
+			return 0;
+		}
+
+		return isMinimized ? 150 : SIDE_PANEL_TRANSITION_DURATION;
+	}, [isClosing, isExpanded, open, isMinimized]);
+
+	const stylesConfiguration = useMemo(
+		() => ({
+			close: {
+				transform: isMinimized ? "translateY(100vh)" : "translateX(100%)",
+				transitionTimingFunction: "cubic-bezier(0.7, 0, 0.84, 0)",
+			},
+			common: {
+				transformOrigin: "right",
+				transitionProperty: "transform, opacity, left",
+				willChange: "transform, opacity, left",
+			},
+			duration,
+			initial: isExpanded
+				? undefined
+				: {
+						transform: isMinimized ? "translateY(100%)" : "translateX(100%)",
+					},
+			open: {
+				transform: isMinimized ? "translate(0, calc(100dvh - 48px))" : "translateX(0%)",
+				transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+			},
+		}),
+		[isMinimized, isExpanded, duration],
+	);
+
+	const { isMounted, styles } = useTransitionStyles(context, stylesConfiguration);
 
 	useEffect(() => {
 		onMountChange?.(isMounted);
 	}, [isMounted]);
 
+	useEffect(() => {
+		popStateHandlerRef.current = () => {
+			if (hasSteps && typeof onBack === "function" && !isLastStep) {
+				onBack();
+			} else {
+				toggleOpen();
+			}
+		};
+	}, [hasSteps, onBack, toggleOpen, isLastStep]);
+
+	useEffect(() => {
+		if (open && hasSteps) {
+			window.history.pushState({ sidePanelStep: activeStep }, "");
+		}
+	}, [open, hasSteps, activeStep]);
+
+	useEffect(() => {
+		if (!open) {
+			return;
+		}
+
+		const handlePopState = () => {
+			popStateHandlerRef.current?.();
+		};
+
+		window.history.pushState({ sidePanelOpen: true }, "");
+		window.addEventListener("popstate", handlePopState);
+
+		return () => {
+			window.removeEventListener("popstate", handlePopState);
+
+			if (window.history.state?.sidePanelOpen) {
+				window.history.back();
+			}
+		};
+	}, [open, popStateHandlerRef]);
+
 	return (
-		<>
-			<FloatingPortal>
-				{isMounted && (
+		<FloatingPortal>
+			{isMounted && (
+				<SidePanelContext.Provider value={{ setHasModalOpened }}>
 					<>
-						<div className="dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl dark:bg-[#191d22]/90 dark:backdrop-blur-none" />
-						<FloatingOverlay className="z-50 transition-opacity duration-300" lockScroll>
+						<div
+							className={cn(
+								"dim:bg-[#101627CC]/90 dim:backdrop-blur-sm fixed inset-0 z-40 bg-[#212225]/10 backdrop-blur-xl duration-300 dark:bg-[#191d22]/90 dark:backdrop-blur-none",
+								{
+									"opacity-100": !isMinimized,
+									"pointer-events-none opacity-0": isMinimized,
+									"transition-none": isExpanded,
+									"transition-opacity": !isExpanded,
+								},
+							)}
+						/>
+						<FloatingOverlay
+							className={cn("transition-all duration-300", {
+								"pointer-events-none z-40": isMinimized,
+								"z-50": !isMinimized,
+							})}
+							lockScroll={!isMinimized}
+						>
 							<FloatingFocusManager context={context} disabled={isUnit()}>
 								<div
 									data-testid={dataTestId}
-									className="Dialog"
+									className={cn("Dialog", {
+										"pointer-events-auto": isMinimized,
+									})}
 									ref={refs.setFloating}
 									{...getFloatingProps()}
 								>
 									<div
-										style={{ ...styles }}
-										className={cn("fixed top-0 right-0 w-full md:w-[608px]", className)}
+										data-testid={isMinimized ? "MinimizedSidePanel" : "MaximizedSidePanel"}
+										style={styles}
+										className={cn("fixed right-0", className, {
+											"animate-shake": shake,
+											"left-0": isExpanded && !isMinimized,
+											"left-0 md:left-[40%] lg:left-[50%] xl:left-[60%]":
+												!isExpanded && !isMinimized,
+											"left-auto sm:top-0 sm:max-w-[425px]": isMinimized,
+											"top-0": !isMinimized && !isExpanded,
+											"top-[-56px]": !hasFixedFormButtons && isMinimized,
+											"top-[-68px]": hasFixedFormButtons && isMinimized,
+											"transform-none!": isExpanded,
+										})}
 									>
 										<div
 											data-testid="SidePanel__scrollable-content"
-											className="navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)]"
+											className={cn(
+												"navy-scroll bg-theme-background text-theme-text flex h-dvh w-full flex-col shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
+												{
+													"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 rounded-tl-sm rounded-tr-sm border-t border-r border-l sm:rounded-tl-xl sm:rounded-tr-none sm:border-r-0":
+														isMinimized,
+													"border-transparent": !isMinimized,
+												},
+											)}
 											ref={scrollRef}
 										>
 											<div className="relative">
-												<div className="bg-theme-background">
+												<div className="bg-theme-background rounded-tl-sm rounded-tr-sm sm:rounded-tl-xl sm:rounded-tr-none">
 													<div className="relative flex flex-col">
 														<div
+															onClick={isMinimized ? () => toggleMinimize() : undefined}
 															className={cn(
-																"flex items-start justify-between px-6 py-4",
+																"flex justify-between transition-all duration-150",
 																{
 																	"border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 border-b":
 																		!hasSteps,
+																	"cursor-pointer items-center py-3.5 pr-6 pl-6":
+																		isMinimized,
+																	"items-start px-6 py-3.5": !isMinimized,
 																},
 															)}
 														>
-															<div className="flex items-center gap-2">
-																{titleIcon && (
-																	<div className="text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block">
-																		{titleIcon}
-																	</div>
+															<div
+																className={cn(
+																	"mx-auto flex w-full justify-between transition-all duration-300 lg:w-4xl",
+																	{
+																		"lg:px-6": isExpanded,
+																	},
 																)}
-																<h2
-																	data-testid="SidePanel__title"
-																	className="mb-0 text-lg leading-[21px] font-semibold md:pt-0"
-																>
-																	{title}
-																</h2>
-															</div>
+															>
+																<div className="flex items-center gap-2">
+																	{titleIcon && (
+																		<div
+																			className={cn(
+																				"text-theme-primary-600 dark:text-theme-navy-500 hidden shrink-0 sm:block [&_svg]:transition-all [&_svg]:duration-300",
+																				{
+																					"[&_:has(svg)]:h-5!": isMinimized,
+																				},
+																			)}
+																		>
+																			{titleIcon}
+																		</div>
+																	)}
+																	<h2
+																		data-testid="SidePanel__title"
+																		className={cn(
+																			"mb-0 text-base font-semibold transition-all duration-300 md:pt-0",
+																			{
+																				"text-base leading-5 md:text-lg md:leading-[21px]":
+																					!isMinimized,
+																				"truncate text-base leading-5":
+																					isMinimized,
+																			},
+																		)}
+																	>
+																		{title}
+																	</h2>
+																</div>
 
-															<div className="text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white">
-																<Button
-																	data-testid="SidePanel__close-button"
-																	variant="transparent"
-																	size="md"
-																	onClick={() => onOpenChange(false)}
-																	className="h-6 w-6 p-0"
-																>
-																	<Icon name="Cross" />
-																</Button>
+																<div className="flex flex-row items-center gap-3">
+																	<div
+																		className={cn(
+																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hidden h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white sm:block dark:bg-transparent dark:hover:text-white",
+																		)}
+																	>
+																		<Button
+																			data-testid="SidePanel__expand-button"
+																			variant="transparent"
+																			size="md"
+																			className="hidden h-6 w-6 p-0 lg:flex"
+																			onClick={() => {
+																				toggleExpand();
+																			}}
+																		>
+																			{isExpanded ? (
+																				<Icon name="Shrink" />
+																			) : (
+																				<Icon name="Expand" />
+																			)}
+																		</Button>
+																	</div>
+
+																	{minimizeable && (
+																		<div
+																			className={cn(
+																				"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																				{
+																					"h-5 w-5": isMinimized,
+																					"h-6 w-6": !isMinimized,
+																				},
+																			)}
+																		>
+																			<Tooltip
+																				visible={
+																					isMinimized &&
+																					!minimizedHintHasShown
+																				}
+																				content={
+																					<div className="flex items-center gap-4 rounded-lg px-3 py-1.5">
+																						<span className="font-semibold text-white">
+																							{t(
+																								"COMMON.YOU_CAN_RESUME_THIS_ACTION_LATER_BY_REOPENING_IT",
+																							)}
+																						</span>
+																						<Button
+																							size="xs"
+																							variant="transparent"
+																							data-testid="SidePanel__minimize-button-hint"
+																							className="bg-theme-primary-500 dim:bg-theme-dim-navy-600 w-full px-4 py-1.5 whitespace-nowrap sm:w-auto"
+																							onClick={() => {
+																								persistMinimizedHint(
+																									true,
+																								);
+																							}}
+																						>
+																							{t("COMMON.GOT_IT")}
+																						</Button>
+																					</div>
+																				}
+																				placement="top"
+																			>
+																				<Button
+																					data-testid="SidePanel__minimize-button"
+																					variant="transparent"
+																					size="md"
+																					className={cn("p-0", {
+																						"h-5 w-5": isMinimized,
+																						"h-6 w-6": !isMinimized,
+																					})}
+																					onClick={(e) => {
+																						e.stopPropagation();
+																						toggleMinimize();
+																					}}
+																				>
+																					{isMinimized ? (
+																						<Icon name="Maximize" />
+																					) : (
+																						<Icon name="Minimize" />
+																					)}
+																				</Button>
+																			</Tooltip>
+																		</div>
+																	)}
+
+																	<div
+																		className={cn(
+																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																			{
+																				"h-5 w-5": isMinimized,
+																				"h-6 w-6": !isMinimized,
+																			},
+																		)}
+																	>
+																		<Button
+																			data-testid="SidePanel__close-button"
+																			variant="transparent"
+																			size="md"
+																			onClick={(e) => {
+																				e.stopPropagation();
+																				toggleOpen();
+																			}}
+																			className={cn("p-0", {
+																				"h-5 w-5": isMinimized,
+																				"h-6 w-6": !isMinimized,
+																			})}
+																		>
+																			<Icon name="Cross" />
+																		</Button>
+																	</div>
+																</div>
 															</div>
 														</div>
 
 														{hasSteps && (
 															<ul className="flex w-full flex-row">
-																{Array.from({ length: totalSteps }).map((_, index) => (
+																{[...Array(totalSteps).keys()].map((index) => (
 																	<SidePanelStyledStep
 																		key={index}
 																		isActive={index < activeStep}
@@ -179,11 +483,14 @@ export const SidePanel = ({
 
 											<div
 												ref={scrollContainerRef}
-												className="flex flex-1 flex-col gap-4 overflow-y-auto px-6 py-4"
+												className={cn(
+													"mx-auto flex w-full max-w-full flex-1 flex-col gap-4 overflow-y-auto px-6 py-4 lg:w-4xl",
+												)}
 												data-testid="SidePanel__content"
+												inert={isMinimized}
 											>
 												{subtitle && (
-													<div className="text-theme-secondary-text text-sm leading-7 font-normal md:text-base">
+													<div className="text-theme-secondary-text text-sm leading-[21px] font-normal md:text-base md:leading-7">
 														{subtitle}
 													</div>
 												)}
@@ -191,15 +498,7 @@ export const SidePanel = ({
 											</div>
 
 											{footer && (
-												<div
-													data-testid="SidePanel__footer"
-													className={cn(
-														"bg-theme-background border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 flex w-full flex-col border-t px-6 py-4",
-														{ "shadow-footer-side-panel": isScrolled },
-													)}
-												>
-													{footer}
-												</div>
+												<SidepanelFooter isScrolled={isScrolled}>{footer}</SidepanelFooter>
 											)}
 										</div>
 									</div>
@@ -207,8 +506,14 @@ export const SidePanel = ({
 							</FloatingFocusManager>
 						</FloatingOverlay>
 					</>
-				)}
-			</FloatingPortal>
-		</>
+				</SidePanelContext.Provider>
+			)}
+		</FloatingPortal>
 	);
 };
+
+export const SidePanel = (props: SidePanelProps): JSX.Element => (
+	<div className="display-contents">
+		<SidePanelContent {...props} />
+	</div>
+);

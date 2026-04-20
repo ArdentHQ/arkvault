@@ -9,4 +9,5 @@ export interface PageProperties {
 	wrapperClassName?: string;
 	isBackDisabled?: boolean;
 	children: React.ReactNode;
+	showBottomNavigationBar?: boolean;
 }

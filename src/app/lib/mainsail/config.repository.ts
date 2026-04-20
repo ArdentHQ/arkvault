@@ -42,6 +42,8 @@ export class ConfigRepository {
 	public constructor(config: object) {
 		const { error, value } = ValidatorSchema.object({
 			// @TODO: ADD network field validation.
+			crypto: ValidatorSchema.object().optional(),
+			height: ValidatorSchema.number().optional(),
 			network: ValidatorSchema.object(),
 		}).validate(config);
 
@@ -104,5 +106,7 @@ export enum ConfigKey {
 	NetworkId = "network.id",
 	NetworkType = "network.type",
 	Slip44 = "network.constants.slip44",
+	Slip44Legacy = "network.constants.slip44Legacy",
+	Slip44Eth = "network.constants.slip44Eth",
 	Wif = "network.meta.wif",
 }

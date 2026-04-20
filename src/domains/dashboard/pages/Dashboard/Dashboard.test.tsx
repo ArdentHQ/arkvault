@@ -9,6 +9,8 @@ import {
 	syncValidators,
 	waitFor,
 	within,
+	renderResponsiveWithRoute,
+	mockNanoXTransport,
 } from "@/utils/testing-library";
 
 import { Contracts } from "@/app/lib/profiles";
@@ -16,20 +18,25 @@ import { Dashboard } from "./Dashboard";
 import React from "react";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import userEvent from "@testing-library/user-event";
-
+import * as ReactRouter from "react-router";
+import * as PanelsContext from "@/app/contexts/Panels";
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
 
 const fixtureProfileId = getMainsailProfileId();
 let dashboardURL: string;
 let mockTransactionsAggregate;
-
+let useSearchParamsMock;
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
+		useSearchParamsMock = vi
+			.spyOn(ReactRouter, "useSearchParams")
+			.mockReturnValue([new URLSearchParams(), vi.fn()]);
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await syncValidators(profile);
@@ -49,6 +56,7 @@ describe("Dashboard", () => {
 
 	afterAll(() => {
 		useRandomNumberHook.useRandomNumber.mockRestore();
+		useSearchParamsMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -72,7 +80,54 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletVote__button")).toBeVisible();
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with ledger wallet", async () => {
+		mockNanoXTransport();
+
+		const wallet = await profile.walletFactory().fromAddressWithDerivationPath({
+			address: "0x393f3F74F0cd9e790B5192789F31E0A38159ae03",
+			coin: "Mainsail",
+			network: "mainsail.devnet",
+			path: "m/44'/1'/0'/0/3",
+		});
+
+		const selectedWalletMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+
+		const { asFragment } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+
+		selectedWalletMock.mockRestore();
+	});
+
+	it.each(["xs", "sm", "md", "lg", "xl"])("render in %s", async (breakpoint: string) => {
+		const { asFragment } = renderResponsiveWithRoute(<Dashboard />, breakpoint, {
+			route: `/profiles/${profile.id()}/settings/servers`,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -98,7 +153,7 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
 		});
 
 		wallet1SynchroniserMock.mockRestore();
@@ -125,7 +180,7 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletMyVotes__button")).toBeVisible();
+			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
 		});
 
 		selectedWalletsMock.mockRestore();
@@ -158,10 +213,10 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletMyVotes__button")).toBeInTheDocument();
+			expect(screen.getAllByTestId("WalletMyVotes__button")).toHaveLength(2);
 		});
 
-		await userEvent.click(screen.getByTestId("WalletMyVotes__button"));
+		await userEvent.click(screen.getAllByTestId("WalletMyVotes__button")[0]);
 
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/votes`);
@@ -181,10 +236,10 @@ describe("Dashboard", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletVote__button")).toBeInTheDocument();
+			expect(screen.getAllByTestId("WalletVote__button")).toHaveLength(2);
 		});
 
-		await userEvent.click(screen.getByTestId("WalletVote__button"));
+		await userEvent.click(screen.getAllByTestId("WalletVote__button")[0]);
 
 		await waitFor(() => {
 			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
@@ -193,18 +248,121 @@ describe("Dashboard", () => {
 		selectedWalletsMock.mockRestore();
 	});
 
-	it("should render and handle sign message deeplink", async () => {
-		render(<Dashboard />, {
-			route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
+	it("should navigate to tokens page", async () => {
+		const wallet = profile.wallets().first();
+
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+		const tokenCountMock = vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(1);
+
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
 			withProfileSynchronizer: true,
 		});
 
-		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
-		);
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ViewTokens")[1]).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getAllByTestId("ViewTokens")[1]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SignMessageSidePanel")).toBeVisible();
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/tokens`);
+		});
+
+		selectedWalletsMock.mockRestore();
+		tokenCountMock.mockRestore();
+	});
+
+	it("should navigate to tokens page from portfolio header", async () => {
+		const wallet = profile.wallets().first();
+
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+		const tokenCountMock = vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(1);
+
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ViewTokens")[0]).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getAllByTestId("ViewTokens")[0]);
+
+		await waitFor(() => {
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/tokens`);
+		});
+
+		selectedWalletsMock.mockRestore();
+		tokenCountMock.mockRestore();
+	});
+
+	it("should navigate to tokens page if network allows voting", async () => {
+		const wallet = profile.wallets().first();
+
+		const allowsVotingMock = vi.spyOn(profile.activeNetwork(), "allowsVoting").mockReturnValue(true);
+		const selectedWalletsMock = vi.spyOn(profile.wallets(), "selected").mockReturnValue([wallet]);
+		const tokenCountMock = vi.spyOn(profile.tokens(), "selectedCount").mockReturnValue(1);
+
+		const { router } = render(<Dashboard />, {
+			route: dashboardURL,
+			withProfileSynchronizer: true,
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("ViewTokens")[3]).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getAllByTestId("ViewTokens")[3]);
+
+		await waitFor(() => {
+			expect(router.state.location.pathname).toBe(`/profiles/${profile.id()}/tokens`);
+		});
+
+		selectedWalletsMock.mockRestore();
+		tokenCountMock.mockRestore();
+		allowsVotingMock.mockRestore();
+	});
+
+	describe("deeplink handling", () => {
+		let usePanelsMock;
+		let openPanelSpy;
+
+		beforeEach(() => {
+			openPanelSpy = vi.fn();
+
+			usePanelsMock = vi.spyOn(PanelsContext, "usePanels").mockReturnValue({
+				openPanel: openPanelSpy,
+				panels: [],
+			});
+		});
+
+		afterEach(() => {
+			usePanelsMock.mockRestore();
+		});
+
+		it("should render and handle sign message deeplink", async () => {
+			render(<Dashboard />, {
+				route: `/profiles/${fixtureProfileId}/dashboard?method=sign`,
+				withProfileSynchronizer: true,
+			});
+
+			await waitFor(() => expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SignMessage));
+		});
+
+		it("should render and handle send transfer deeplink", async () => {
+			render(<Dashboard />, {
+				route: `/profiles/${fixtureProfileId}/dashboard?method=transfer`,
+				withProfileSynchronizer: true,
+			});
+
+			await waitFor(() =>
+				expect(openPanelSpy).toHaveBeenCalledWith(PanelsContext.Panel.SendTransfer, {
+					isTokenTransfer: true,
+					tokenContractAddress: "ARK",
+				}),
+			);
 		});
 	});
 });

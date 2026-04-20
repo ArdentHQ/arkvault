@@ -1,6 +1,7 @@
 import { Signatory } from "./signatories";
 import { SignedTransactionData } from "./contracts";
 import { BigNumber } from "@/app/lib/helpers";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
 
 export interface TransactionService {
 	// Core
@@ -37,6 +38,7 @@ export interface TransferInput extends TransactionInput {
 		memo?: string;
 		expiration?: number;
 	};
+	token?: WalletToken;
 }
 
 export interface SecondSignatureInput extends TransactionInput {
@@ -68,6 +70,10 @@ export interface MultiPaymentInput extends TransactionInput {
 		memo?: string;
 		payments: { to: string; amount: number }[];
 	};
+}
+
+export interface ContractDeploymentInput extends TransactionInput {
+	data: { bytecode: string };
 }
 
 export type ValidatorResignationInput = TransactionInput;

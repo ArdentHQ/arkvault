@@ -9,7 +9,6 @@ import cn from "classnames";
 export const ClipboardIcon = ({
 	data,
 	tooltip,
-	tooltipDarkTheme,
 	options,
 	children,
 	disabled,
@@ -25,8 +24,6 @@ export const ClipboardIcon = ({
 	return (
 		<Tooltip
 			content={hasCopied ? t("COMMON.CLIPBOARD.SUCCESS") : tooltip || t("COMMON.CLIPBOARD.TOOLTIP_TEXT")}
-			hideOnClick={false}
-			theme={tooltipDarkTheme ? "dark" : undefined}
 			disabled={disabled}
 		>
 			<button

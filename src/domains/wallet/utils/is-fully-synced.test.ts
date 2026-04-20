@@ -2,6 +2,7 @@ import { Contracts } from "@/app/lib/profiles";
 
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
+import { BigNumber } from "@/app/lib/helpers";
 
 describe("isFullySynced", () => {
 	let wallet: Contracts.IReadWriteWallet;
@@ -22,7 +23,7 @@ describe("isFullySynced", () => {
 	it("returns true when wallet was fully restored and balance is 0", () => {
 		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValueOnce(true);
 		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(false);
-		vi.spyOn(wallet, "balance").mockReturnValueOnce(0);
+		vi.spyOn(wallet, "balance").mockReturnValueOnce(BigNumber.ZERO);
 
 		expect(isFullySynced(wallet)).toBe(true);
 	});

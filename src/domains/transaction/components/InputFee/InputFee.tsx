@@ -16,33 +16,30 @@ import { Switch } from "@/app/components/Switch";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { useTranslation } from "react-i18next";
 import { UnitConverter } from "@arkecosystem/typescript-crypto";
-import { configManager } from "@/app/lib/mainsail";
+import { Network } from "@/app/lib/mainsail/network";
+import { DISPLAY_DECIMALS } from "@/domains/transaction/utils";
 
-export const calculateGasFee = (gasPrice?: BigNumber, gasLimit?: BigNumber): number => {
+export const calculateGasFee = (gasPrice?: BigNumber, gasLimit?: BigNumber): BigNumber => {
 	if (!gasPrice || !gasLimit) {
-		return 0;
+		return BigNumber.ZERO;
 	}
 
-	return UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei");
+	return BigNumber.make(UnitConverter.formatUnits(gasLimit.times(gasPrice).toString(), "gwei"));
 };
 
-export const getFeeMinMax = () => {
+export const getFeeMinMax = (network: Network) => {
+	const milestone = network.milestone();
+
 	const minGasPrice = BigNumber.make(
-		UnitConverter.formatUnits(
-			BigNumber.make(configManager.getMilestone()["gas"]["minimumGasPrice"] ?? 0).toString(),
-			"gwei",
-		),
+		UnitConverter.formatUnits(BigNumber.make(milestone["gas"]["minimumGasPrice"] ?? 0).toString(), "gwei"),
 	);
 
 	const maxGasPrice = BigNumber.make(
-		UnitConverter.formatUnits(
-			BigNumber.make(configManager.getMilestone()["gas"]["maximumGasPrice"] ?? 0).toString(),
-			"gwei",
-		),
+		UnitConverter.formatUnits(BigNumber.make(milestone["gas"]["maximumGasPrice"] ?? 0).toString(), "gwei"),
 	);
 
-	const minGasLimit = BigNumber.make(configManager.getMilestone()["gas"]["minimumGasLimit"] ?? 0);
-	const maxGasLimit = BigNumber.make(configManager.getMilestone()["gas"]["maximumGasLimit"] ?? 0);
+	const minGasLimit = BigNumber.make(milestone["gas"]["minimumGasLimit"] ?? 0);
+	const maxGasLimit = BigNumber.make(milestone["gas"]["maximumGasLimit"] ?? 0);
 
 	return { maxGasLimit, maxGasPrice, minGasLimit, minGasPrice };
 };
@@ -70,7 +67,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const ticker = network.ticker();
 
-		const blockTime = get(configManager.getMilestone(), "timeouts.blockTime") as number;
+		const blockTime = get(network.milestone(), "timeouts.blockTime") as number;
 
 		const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 		const { convert } = useExchangeRate({ exchangeTicker, profile, ticker });
@@ -79,19 +76,19 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 
 		const options: InputFeeOptions = {
 			[InputFeeOption.Slow]: {
-				displayValue: calculateGasFee(min, gasLimit),
+				displayValue: BigNumber.make(calculateGasFee(min, gasLimit)).decimalPlaces(DISPLAY_DECIMALS).toNumber(),
 				displayValueConverted: convert(calculateGasFee(min, gasLimit)),
 				gasPrice: min,
 				label: t("TRANSACTION.FEES.SLOW"),
 			},
 			[InputFeeOption.Average]: {
-				displayValue: calculateGasFee(avg, gasLimit),
+				displayValue: BigNumber.make(calculateGasFee(avg, gasLimit)).decimalPlaces(DISPLAY_DECIMALS).toNumber(),
 				displayValueConverted: convert(calculateGasFee(avg, gasLimit)),
 				gasPrice: avg,
 				label: t("TRANSACTION.FEES.AVERAGE"),
 			},
 			[InputFeeOption.Fast]: {
-				displayValue: calculateGasFee(max, gasLimit),
+				displayValue: BigNumber.make(calculateGasFee(max, gasLimit)).decimalPlaces(DISPLAY_DECIMALS).toNumber(),
 				displayValueConverted: convert(calculateGasFee(max, gasLimit)),
 				gasPrice: max,
 				label: t("TRANSACTION.FEES.FAST"),

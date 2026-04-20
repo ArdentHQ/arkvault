@@ -19,11 +19,13 @@ export enum ProfileSetting {
 	Locale = "LOCALE",
 	Theme = "THEME",
 	TimeFormat = "TIME_FORMAT",
+	UseHDWallets = "USE_HD_WALLETS",
 	UseNetworkWalletNames = "USE_NETWORK_WALLET_NAMES",
 	UseTestNetworks = "USE_TEST_NETWORKS",
 	LastVisitedPage = "LAST_VISITED_PAGE",
 	Sessions = "SESSIONS",
 	WalletSelectionMode = "WALLET_SELECTION_MODE",
+	HideDustTokens = "HIDE_DUST_TOKEN",
 }
 
 /**
@@ -34,6 +36,8 @@ export enum ProfileSetting {
  */
 export enum ProfileData {
 	LatestMigration = "LATEST_MIGRATION",
+	MigrationResult = "MIGRATION_RESULT",
 	HasCompletedIntroductoryTutorial = "HAS_COMPLETED_INTRODUCTORY_TUTORIAL",
 	HasAcceptedManualInstallationDisclaimer = "HAS_ACCEPTED_MANUAL_INSTALLATION_DISCLAIMER",
+	WhitelistedContractAddresses = "WHITELISTED_CONTRACT_ADDRESS",
 }

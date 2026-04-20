@@ -34,7 +34,7 @@ export class LocalStorage implements Storage {
 		return this.#storage.getItem(key);
 	}
 
-	public async set(key: string, value: string | object): Promise<void> {
+	public async set(key: string, value: string | object | number | boolean): Promise<void> {
 		await this.#storage.setItem(key, value);
 	}
 

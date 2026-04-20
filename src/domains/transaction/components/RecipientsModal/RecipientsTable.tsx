@@ -54,7 +54,7 @@ export const RecipientsTable: FC<RecipientsProperties> = ({ recipients, ticker }
 
 				<TableCell variant="end" innerClassName="justify-end pr-6">
 					<span className="text-sm leading-[17px] font-semibold whitespace-nowrap">
-						<Amount ticker={ticker} value={recipient.amount as number} />
+						<Amount ticker={ticker} value={recipient.amount as string} />
 					</span>
 				</TableCell>
 			</TableRow>

@@ -13,7 +13,7 @@ import { ListDivided } from "@/app/components/ListDivided";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile, useProfileJobs, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
+import { useActiveProfile, useTheme, useValidation, ViewingModeType } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { toasts } from "@/app/services";
 import { PlatformSdkChoices } from "@/data";
@@ -25,6 +25,9 @@ import { Toggle } from "@/app/components/Toggle";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { Image } from "@/app/components/Image";
 import { SettingsUnsavedChangesConfirmation } from "@/domains/setting/components/SettingsUnsavedChangesConfirmation";
+import { useProfileJobs } from "@/app/hooks/use-profile-background-jobs";
+import { Link } from "@/app/components/Link";
+import { Divider } from "@/app/components/Divider";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
 const selectOption = "COMMON.SELECT_OPTION";
@@ -61,6 +64,7 @@ export const GeneralSettings: React.FC = () => {
 			name,
 			showDevelopmentNetwork: settings.get(Contracts.ProfileSetting.UseTestNetworks),
 			timeFormat: settings.get(Contracts.ProfileSetting.TimeFormat),
+			useHDWallets: settings.get(Contracts.ProfileSetting.UseHDWallets),
 			useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
 			viewingMode: profile.appearance().get("theme") as ViewingModeType,
 		};
@@ -83,6 +87,7 @@ export const GeneralSettings: React.FC = () => {
 		viewingMode,
 		useNetworkWalletNames,
 		showDevelopmentNetwork,
+		useHDWallets,
 	} = watch();
 
 	const currencyOptions = useCurrencyOptions(marketProvider);
@@ -95,7 +100,6 @@ export const GeneralSettings: React.FC = () => {
 		};
 
 		initializeForm();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isProfileRestored]);
 
 	useEffect(() => {
@@ -103,6 +107,7 @@ export const GeneralSettings: React.FC = () => {
 		register("viewingMode");
 		register("useNetworkWalletNames");
 		register("showDevelopmentNetwork");
+		register("useHDWallets");
 	}, [register]);
 
 	const formattedName = name.trim();
@@ -151,14 +156,10 @@ export const GeneralSettings: React.FC = () => {
 							value: `${count}`,
 						}))}
 						onChange={(signOutPeriod: SettingsOption | null) => {
-							if (signOutPeriod) {
-								setValue("automaticSignOutPeriod", signOutPeriod.value, {
-									shouldDirty: true,
-									shouldValidate: true,
-								});
-							} else {
-								setValue("automaticSignOutPeriod", "", { shouldDirty: true, shouldValidate: true });
-							}
+							setValue("automaticSignOutPeriod", signOutPeriod?.value, {
+								shouldDirty: true,
+								shouldValidate: true,
+							});
 						}}
 						defaultValue={`${getDefaultValues().automaticSignOutPeriod}`}
 					/>
@@ -204,7 +205,7 @@ export const GeneralSettings: React.FC = () => {
 		},
 	];
 
-	const otherItems = [
+	const advancedItems = [
 		{
 			label: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.TITLE"),
 			labelAddon: (
@@ -222,6 +223,49 @@ export const GeneralSettings: React.FC = () => {
 			),
 			labelDescription: t("SETTINGS.GENERAL.OTHER.SHOW_DEVELOPMENT_NETWORK.DESCRIPTION"),
 		},
+		{
+			itemValueClass: "mt-1",
+			label: `${t("SETTINGS.GENERAL.OTHER.HD_WALLETS.TITLE")}`,
+			labelAddon: (
+				<span>
+					<Divider
+						type="vertical"
+						className="text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+					/>
+					<Link isExternal to="https://docs.mainsailhq.com/" showExternalIcon={false} className="text-base">
+						<span className="flex flex-row items-center gap-2">
+							<span>{t("COMMON.LEARN_MORE")}</span>
+
+							<Icon
+								data-testid="Link__external"
+								name="ArrowExternal"
+								dimensions={[12, 12]}
+								className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+							/>
+						</span>
+					</Link>
+				</span>
+			),
+			labelDescription: `${t("SETTINGS.GENERAL.OTHER.HD_WALLETS.DESCRIPTION")}`,
+			labelHeaderClass: "justify-start space-x-0",
+			labelWrapperClass: "flex items-start",
+			value: (
+				<Toggle
+					name="useHDWallets"
+					defaultChecked={useHDWallets}
+					data-testid="AdvancedToggle__toggle-useHDWallets"
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+						setValue("useHDWallets", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						})
+					}
+				/>
+			),
+		},
+	];
+
+	const otherItems = [
 		{
 			itemValueClass: "w-full sm:w-auto",
 			label: t("SETTINGS.GENERAL.OTHER.RESET_SETTINGS.TITLE"),
@@ -252,6 +296,7 @@ export const GeneralSettings: React.FC = () => {
 		viewingMode,
 		useNetworkWalletNames,
 		showDevelopmentNetwork,
+		useHDWallets,
 	}: GeneralSettingsState) => {
 		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, automaticSignOutPeriod);
 		profile.settings().set(Contracts.ProfileSetting.Bip39Locale, bip39Locale);
@@ -264,6 +309,7 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.Theme, viewingMode);
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, useNetworkWalletNames);
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, showDevelopmentNetwork);
+		profile.settings().set(Contracts.ProfileSetting.UseHDWallets, useHDWallets);
 
 		const isChatOpen = isSupportChatOpen();
 
@@ -292,7 +338,12 @@ export const GeneralSettings: React.FC = () => {
 
 	return (
 		<SettingsWrapper profile={profile} activeSettings="general">
-			<Form data-testid="General-settings__form" context={form} onSubmit={handleSubmit} className="space-y-0">
+			<Form
+				data-testid="General-settings__form"
+				context={form}
+				onSubmit={handleSubmit}
+				className="space-y-0 pb-16 sm:pb-0"
+			>
 				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
 					<div className="group space-y-2">
 						<span className="text-theme-secondary-text group-hover:text-theme-primary-600 cursor-default text-sm font-semibold transition-colors duration-100">
@@ -355,14 +406,10 @@ export const GeneralSettings: React.FC = () => {
 										}).toString(),
 									})}
 									onChange={(bip39Locale: SettingsOption | null) => {
-										if (bip39Locale) {
-											setValue("bip39Locale", bip39Locale.value, {
-												shouldDirty: true,
-												shouldValidate: true,
-											});
-										} else {
-											setValue("bip39Locale", "", { shouldDirty: true, shouldValidate: true });
-										}
+										setValue("bip39Locale", bip39Locale?.value, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
 									}}
 									options={PlatformSdkChoices.passphraseLanguages}
 									defaultValue={getDefaultValues().bip39Locale}
@@ -384,17 +431,10 @@ export const GeneralSettings: React.FC = () => {
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
 									onChange={(exchangeCurrency: SettingsOption) => {
-										if (exchangeCurrency) {
-											setValue("exchangeCurrency", exchangeCurrency.value, {
-												shouldDirty: true,
-												shouldValidate: true,
-											});
-										} else {
-											setValue("exchangeCurrency", "", {
-												shouldDirty: true,
-												shouldValidate: true,
-											});
-										}
+										setValue("exchangeCurrency", exchangeCurrency?.value, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
 									}}
 								/>
 							</FormField>
@@ -416,14 +456,10 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.languages}
 									defaultValue={getDefaultValues().locale}
 									onChange={(locale: SettingsOption) => {
-										if (locale) {
-											setValue("locale", locale.value, {
-												shouldDirty: true,
-												shouldValidate: true,
-											});
-										} else {
-											setValue("locale", "", { shouldDirty: true, shouldValidate: true });
-										}
+										setValue("locale", locale?.value, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
 									}}
 								/>
 							</FormField>
@@ -443,10 +479,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.marketProviders}
 									defaultValue={marketProvider}
 									onChange={(selectedMarketProvider: SettingsOption | null) => {
-										if (!selectedMarketProvider) {
-											return;
-										}
-										if (selectedMarketProvider.unsupportedCurrencies?.includes(exchangeCurrency)) {
+										if (selectedMarketProvider?.unsupportedCurrencies?.includes(exchangeCurrency)) {
 											toasts.warning(
 												t("SETTINGS.GENERAL.UNSUPPORTED_CURRENCY", {
 													currency: exchangeCurrency,
@@ -460,7 +493,7 @@ export const GeneralSettings: React.FC = () => {
 											});
 										}
 
-										setValue("marketProvider", selectedMarketProvider.value, {
+										setValue("marketProvider", selectedMarketProvider?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
 										});
@@ -483,14 +516,10 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.timeFormats}
 									defaultValue={getDefaultValues().timeFormat}
 									onChange={(timeFormat: SettingsOption) => {
-										if (timeFormat) {
-											setValue("timeFormat", timeFormat.value, {
-												shouldDirty: true,
-												shouldValidate: true,
-											});
-										} else {
-											setValue("timeFormat", "", { shouldDirty: true, shouldValidate: true });
-										}
+										setValue("timeFormat", timeFormat?.value, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
 									}}
 								/>
 							</FormField>
@@ -506,12 +535,16 @@ export const GeneralSettings: React.FC = () => {
 					<ListDivided items={appearenceItems} />
 				</SettingsGroup>
 
+				<SettingsGroup title={t("SETTINGS.GENERAL.ADVANCED.TITLE")}>
+					<ListDivided items={advancedItems} />
+				</SettingsGroup>
+
 				<SettingsGroup title={t("SETTINGS.GENERAL.OTHER.TITLE")}>
 					<ListDivided items={otherItems} />
 				</SettingsGroup>
 
-				<SettingsButtonGroup>
-					<FormButtons>
+				<SettingsButtonGroup className="fixed z-50 sm:static">
+					<FormButtons className="border-none sm:z-0">
 						<Button
 							disabled={isSaveButtonDisabled}
 							type="submit"

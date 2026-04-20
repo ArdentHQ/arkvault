@@ -13,8 +13,6 @@ export const translations = {
 		SELECT_FILE_STEP: {
 			BROWSE_FILES: "Browse Files",
 			CLICK_HERE: "Click here.",
-			DEPRECATION_WARNING:
-				"Please note that importing a Profile from Desktop Wallet v2 in .json format is supported temporarily and will soon be disabled. We recommend that you re-save your Profile in the new .wwe format.",
 			DESCRIPTION:
 				"Select a {{fileFormat}} file with your Profile and related properties to start the import process.",
 			DRAG_AND_DROP: "Drag & Drop or",
@@ -23,7 +21,6 @@ export const translations = {
 					"This file type is not supported.\nPlease retry with a <strong>{{fileFormat}}</strong> file.",
 				TOO_MANY: "You tried to import <strong>{{fileCount}}</strong> files.\nPlease retry with one file only.",
 			},
-			LEGACY_IMPORT: "Importing from Desktop Wallet v2?",
 			SUPPORTED_FORMAT: "Supported format is {{fileFormat}}",
 			UPLOAD_TITLE: "Click here to upload",
 		},
@@ -46,7 +43,7 @@ export const translations = {
 	},
 	MODAL_RESET_PROFILE: {
 		DESCRIPTION:
-			"By performing this action, all of your Profile settings will be restored to default. This won't delete your wallets. This action cannot be undone. Do you want to reset your settings?",
+			"By performing this action, all of your Profile settings will be restored to default. This won't delete your addresses. This action cannot be undone. Do you want to reset your settings?",
 		SUCCESS: "Your profile has been reset successfully.",
 		TITLE: "Reset Profile Settings",
 	},
@@ -75,17 +72,17 @@ export const translations = {
 		},
 		STEP_2: {
 			DESCRIPTION:
-				"Create or import existing wallets from a broad range of assets and secure them using industry-standard encryption.",
+				"Create or import existing addresses from a broad range of assets and secure them using industry-standard encryption.",
 			TITLE: "Manage Your Assets",
 		},
 		STEP_3: {
 			DESCRIPTION:
-				"Personalize the wallet according to your preference - change currencies, themes, colors and more.",
+				"Personalize the address according to your preference - change currencies, themes, colors and more.",
 			TITLE: "Fully Customizable",
 		},
 		STEP_4: {
 			DESCRIPTION:
-				"With ARK Vault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
+				"With ARK Vault, you’re in control. Swap assets effortlessly without ever leaving your address.",
 			TITLE: "Exchange Assets On The Fly",
 		},
 	},

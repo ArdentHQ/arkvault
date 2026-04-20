@@ -10,6 +10,7 @@ interface Properties {
 	dataTestId?: string;
 	children?: ReactNode;
 	size?: "sm" | "md";
+	titleWrapperClassName?: string;
 }
 
 export const MultiEntryItem = ({
@@ -20,6 +21,7 @@ export const MultiEntryItem = ({
 	size = "sm",
 	className,
 	children,
+	titleWrapperClassName,
 }: Properties): JSX.Element => (
 	<div
 		data-testid={dataTestId}
@@ -45,16 +47,19 @@ export const MultiEntryItem = ({
 			<div
 				className={cn("flex w-full min-w-0 flex-1 flex-col", {
 					"md:w-auto md:items-start md:space-y-1 md:space-x-0": size === "md",
-					"sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0": size === "sm",
+					"my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0": size === "sm",
 				})}
 			>
 				<div
-					className={cn(
-						"bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3",
-						{
-							"dim:md:bg-transparent md:bg-transparent md:p-0 dark:md:bg-transparent": size === "md",
-							"dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent": size === "sm",
-						},
+					className={twMerge(
+						cn(
+							"bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3",
+							{
+								"dim:md:bg-transparent md:bg-transparent md:p-0 dark:md:bg-transparent": size === "md",
+								"dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent": size === "sm",
+							},
+						),
+						titleWrapperClassName,
 					)}
 				>
 					{titleSlot}

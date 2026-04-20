@@ -8,8 +8,10 @@ export const translations = {
 	ALL: "All",
 	ALL_TRANSACTIONS: "All Transactions",
 	AMOUNT: "Amount",
+	APPROVE_DETAILS: "<Amount/>  for use by <ContractAddress/>  on behalf of <Address/>",
 	AUTHENTICATION_STEP: {
 		DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to authenticate the transaction.",
+		DESCRIPTION_LEDGER: "Check your Ledger device and sign the transaction.",
 		DESCRIPTION_MNEMONIC: "Enter your mnemonic passphrase to authenticate the transaction.",
 		DESCRIPTION_PRIVATE_KEY: "Enter your private key to authenticate the transaction.",
 		DESCRIPTION_SECRET: "Enter your secret to authenticate the transaction.",
@@ -21,8 +23,16 @@ export const translations = {
 	CONFIRMATIONS_COUNT: "{{count}} Confirmations",
 	CONFIRMED: "Confirmed",
 	CONTACT_SEACH: {
-		DESCRIPTION: "Find and select preferred address from your saved wallets.",
+		DESCRIPTION: "Find and select preferred address from your saved contacts.",
 		TITLE: "My addresses",
+	},
+	CONTRACT_DEPLOYMENT: {
+		BYTECODE_INPUT_HINT: "What is bytecode?",
+		BYTECODE_PLACEHOLDER: "Enter bytecode here",
+		FORM_STEP: {
+			DESCRIPTION: "Enter the required details for deploying the contract.",
+			TITLE: "Contract Deployment",
+		},
 	},
 	CORE: "CORE",
 	CRYPTOASSET: "Cryptoasset",
@@ -31,7 +41,7 @@ export const translations = {
 	ENCRYPTION_PASSWORD: "Encryption Password",
 	ERROR: {
 		DESCRIPTION:
-			"An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
+			"An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the address.",
 		TITLE: "Transaction Error",
 	},
 	EXPIRATION: {
@@ -39,7 +49,7 @@ export const translations = {
 		TIMESTAMP: "Timestamp Expiration",
 	},
 	EXPORT: {
-		DESCRIPTION: "Export your wallet's transaction history.",
+		DESCRIPTION: "Export your address' transaction history.",
 		EMPTY: {
 			DESCRIPTION: "No transactions could be found for the selected period.",
 		},
@@ -85,6 +95,12 @@ export const translations = {
 		FAST: "Fast",
 		SLOW: "Slow",
 	},
+	FORM_STEP: {
+		DESCRIPTION_SELECT_WALLET: "Select an address and sign.",
+	},
+	GAS_INFORMATION: "Gas Information",
+	GAS_LIMIT: "Gas Limit",
+	GAS_USAGE: "Usage by Txn",
 	HINT_AMOUNT: "Including {{amount}} {{currency}} sent to itself.",
 	HINT_AMOUNT_EXCLUDING: "Excluding {{amount}} {{currency}} sent to self.",
 	ID: "ID",
@@ -93,6 +109,7 @@ export const translations = {
 		ADVANCED: "Advanced",
 		SIMPLE: "Simple",
 	},
+	INSUFFICIENT_BALANCE: "The current balance does not cover the transaction amount plus fees.",
 	INVALID_MNEMONIC: "Invalid Mnemonic",
 	INVALID_URL: "Invalid URL",
 	LEARN_MORE_ABOUT_BLS_KEYS: "Learn more about BLS keys",
@@ -188,6 +205,7 @@ export const translations = {
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},
+	MORE_DETAILS: "More details",
 	MULTIPLE: "Multiple",
 	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
@@ -219,7 +237,7 @@ export const translations = {
 		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",
 		REMOVE_NOT_ALLOWED: "Your own address cannot be removed.",
-		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and wallets.",
+		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and addresses.",
 		SELECT_PARTICIPANT_TITLE: "Select Participant",
 	},
 	NAME: "Name",
@@ -239,10 +257,10 @@ export const translations = {
 		FORM_STEP: {
 			DESCRIPTION: "Enter details below to send your transaction.",
 			FEE_UPDATE: "The selected fee has been changed.",
-			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger wallets.",
+			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger addresses.",
 			SCAN: "Scan",
 			SCAN_FULL: "Scan QR-Code",
-			TITLE: "Send {{ticker}}",
+			TITLE: "Send",
 		},
 		NETWORK_STEP: {
 			SUBTITLE: "Select a cryptoasset to send funds from.",
@@ -251,11 +269,11 @@ export const translations = {
 	},
 	PAGE_USERNAME_REGISTRATION: {
 		FORM_STEP: {
-			DESCRIPTION: "Register a new username for an address on the network below.",
+			DESCRIPTION: "Register a new username address on the network below.",
 			INFO: "Username registrations are stored on-chain and publicly visible.",
 			INFO_ALREADY_REGISTERED:
 				"This address is currently registered to the username <bold>'{{username}}'</bold>. Registering a new username will overwrite the existing one, as only one username is allowed per address.",
-			TITLE: "Register Username",
+			TITLE: "Username Registration",
 		},
 	},
 	PAGE_USERNAME_RESIGNATION: {
@@ -282,8 +300,8 @@ export const translations = {
 	PAGE_VALIDATOR_RESIGNATION: {
 		FORM_STEP: {
 			DESCRIPTION: "This transaction type permanently retires a Validator address.",
-			TITLE: "Resign Validator",
-			WARNING: "This action is permanent and cannot be undone. It is registered on the network.",
+			TITLE: "Validator Resignation",
+			WARNING: "Once performed, this action cannot be undone and is stored on the network.",
 		},
 	},
 	PAGE_VOTE: {
@@ -294,6 +312,7 @@ export const translations = {
 	},
 	PARTICIPANTS: "Participants",
 	PENDING: {
+		APPROVAL: "This transaction is pending approval on your Ledger device.",
 		DESCRIPTION:
 			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is the relevant information for your transaction:",
 		STATUS_TEXT: "This transaction is pending confirmation.",
@@ -313,7 +332,7 @@ export const translations = {
 	REGISTRATION_TYPE: "Registration Type",
 	REJECTED_ERROR: {
 		DESCRIPTION:
-			"You rejected the transaction on your Ledger device. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
+			"You rejected the transaction on your Ledger device. Please go 'Back' and try again, or click 'Close' to return to the address.",
 		TITLE: "Transaction Rejected",
 	},
 	REPOSITORIES: {
@@ -326,9 +345,10 @@ export const translations = {
 			"Amount locked in the contract to register your validator. This amount is returned once you resign your validator.",
 		AMOUNT_UNLOCKED_TOOLTIP:
 			"Once the validator resignation is confirmed, the unlocked amount will be returned to your address.",
-		DESCRIPTION: "Review the transaction details below.",
+		DESCRIPTION: "Review details below to send your transaction.",
 		TITLE: "Transaction Review",
 	},
+	REVOKE_DETAILS: "Removed permission for <Token/>  use by <ContractAddress/>  on behalf of <Address/>",
 	SECOND_MNEMONIC: "2nd Mnemonic",
 	SECOND_SECRET: "2nd Secret",
 	SENDER: "Sender",
@@ -354,12 +374,15 @@ export const translations = {
 	},
 	SUMMARY: "Transaction Summary",
 	TIMESTAMP: "Timestamp",
+	TOKENS_TRANSFERRED: "Tokens Transferred",
 	TOTAL_AMOUNT: "Total Amount",
 	TRANSACTION: "Transaction",
 	TRANSACTIONS_AMOUNT: "Transaction(s) Amount",
 	TRANSACTION_AMOUNT: "Transaction Amount",
 	TRANSACTION_DETAILS: "Transaction Details",
 	TRANSACTION_EXECUTION_ERROR: "Error encountered during contract execution.",
+	TRANSACTION_EXECUTION_ERROR_INSUFFICIENT_GAS: "Error encountered during contract execution: Insufficient Gas",
+	TRANSACTION_EXECUTION_ERROR_WITH_MESSAGE: "Error encountered during contract execution: {{error}}",
 	TRANSACTION_FEE: "Transaction Fee",
 	TRANSACTION_ID: "Transaction ID",
 	TRANSACTION_REMOVED: "Transaction successfully removed.",
@@ -370,6 +393,8 @@ export const translations = {
 		ADD_USERNAME: "Add Username",
 		ADD_VALIDATOR: "Add Validator",
 		ADD_VOTE: "Add Vote",
+		APPROVE: "Approve",
+		BATCHTRANSFER: "Batch Transfer",
 		CALCULATE_ACTIVE_VALIDATORS: "Calculate Active Validators",
 		CONTRACT_DEPLOYMENT: "Contract Deployment",
 		GET_ACTIVE_VALIDATORS: "Get Active Validators",
@@ -395,6 +420,7 @@ export const translations = {
 		RESIGNED_VALIDATORS_COUNT: "Resigned Validators Count",
 		RESIGN_USERNAME: "Username Resignation",
 		RESIGN_VALIDATOR: "Resignation",
+		REVOKE: "Revoke",
 		TRANSFER: "Transfer",
 		TRANSFER_OWNERSHIP: "Transfer Ownership",
 		UNVOTE: "Unvote",
@@ -431,7 +457,7 @@ export const translations = {
 		NETWORK_MISMATCH: "data belongs to another network.",
 		NETWORK_NOT_ENABLED: "network <strong>{{network}}</strong> is not enabled.",
 		NETWORK_NO_WALLETS:
-			"the current profile has no wallets available for the <strong>{{network}}</strong> network.",
+			"the current profile has no addresses available for the <strong>{{network}}</strong> network.",
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 		SIGNATORY_MISSING: "signatory is missing.",
 		SIGNATURE_MISSING: "signature is missing.",
@@ -445,6 +471,7 @@ export const translations = {
 	VALIDATOR_NAME: "Validator Name",
 	VALIDATOR_PUBLIC_KEY: "Validator Public Key",
 	VALIDATOR_REGISTERED_WITHOUT_FEE: "This validator was registered without locking any funds.",
+	VIEW_FULL: "View Full",
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",

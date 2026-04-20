@@ -1,16 +1,7 @@
 import { ValidateResult } from "react-hook-form";
 import { MutableRefObject } from "react";
 import { debounceAsync } from "@/utils/debounce";
-import { Environment } from "@/app/lib/profiles";
-import { Networks } from "@/app/lib/mainsail";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
-
-class UsernameExistsError extends Error {
-	constructor(message: string) {
-		super(message);
-		this.name = "UsernameExistsError";
-	}
-}
 
 const validateUsername = (t: any, value: string): string | undefined => {
 	if (value.length > 20) {
@@ -40,12 +31,7 @@ const validateUsername = (t: any, value: string): string | undefined => {
 };
 
 export const usernameRegistration = (t: any) => ({
-	username: (
-		env: Environment,
-		network: Networks.Network,
-		profile: IProfile,
-		controller: MutableRefObject<AbortController | undefined>,
-	) => ({
+	username: (profile: IProfile, controller: MutableRefObject<AbortController | undefined>) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.USERNAME"),
 		}),
@@ -58,29 +44,13 @@ export const usernameRegistration = (t: any) => ({
 				}
 
 				try {
-					await usernameExists(env, network, profile, value, controller);
-				} catch (error) {
-					if (error.name === "UsernameExistsError") {
+					if (await profile.usernames().usernameExists(value, { signal: controller.current?.signal })) {
 						return t("COMMON.VALIDATION.EXISTS", { field: t("COMMON.USERNAME") });
 					}
-					return true;
+				} catch {
+					return false;
 				}
 			}, 300) as () => Promise<ValidateResult>,
 		},
 	}),
 });
-
-const usernameExists = async (
-	env: Environment,
-	network: Networks.Network,
-	profile: IProfile,
-	username: string,
-	controller: MutableRefObject<AbortController | undefined>,
-) => {
-	const publicApiEndpoint = network.config().host("full", profile);
-	const response = await fetch(`${publicApiEndpoint}/wallets/${username}`, { signal: controller.current?.signal });
-
-	if (response.ok) {
-		throw new UsernameExistsError("Username is occupied!");
-	}
-};

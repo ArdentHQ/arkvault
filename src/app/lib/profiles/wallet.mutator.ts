@@ -76,6 +76,11 @@ export class WalletMutator implements IWalletMutator {
 		this.#wallet.settings().set(WalletSetting.Alias, alias);
 	}
 
+	/** {@inheritDoc IWalletMutator.accountName} */
+	public accountName(name: string): void {
+		this.#wallet.settings().set(WalletSetting.AccountName, name);
+	}
+
 	/** {@inheritDoc IWalletMutator.selected} */
 	public isSelected(isSelected: boolean) {
 		this.#wallet.settings().set(WalletSetting.IsSelected, isSelected);

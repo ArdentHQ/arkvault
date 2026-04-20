@@ -28,6 +28,7 @@ export * from "./profile.repository.contract.js";
 export * from "./profile.serialiser.contract.js";
 export * from "./profile.status.contract.js";
 export * from "./profile.validator.contract.js";
+export * from "./profile.mainsail-migrator.contract.js";
 export * from "./read-only-wallet.contract.js";
 export * from "./registration.aggregate.contract.js";
 export * from "./setting.repository.contract.js";

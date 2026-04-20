@@ -1,20 +1,32 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 
 import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
-import { DateTime } from "@/app/lib/intl";
-import { UsernamesAbi } from "@mainsail/evm-contracts";
-import dotify from "node-dotify";
-
+import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 import { decodeFunctionResult, encodeFunctionData } from "viem";
 
-import { TransactionTypes, trimHexPrefix } from "./transaction-type.service";
 import { ArkClient } from "@arkecosystem/typescript-client";
-import { WalletData } from "./wallet.dto";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
-import { SignedTransactionData } from "./signed-transaction.dto";
-import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
+import { DateTime } from "@/app/lib/intl";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
+import { SignedTransactionData } from "./signed-transaction.dto";
+import { WalletData } from "./wallet.dto";
+import dotify from "node-dotify";
+import { UnconfirmedTransactionData } from "./unconfirmed-transaction.dto";
+import { UnconfirmedTransactionDataCollection } from "@/app/lib/mainsail/unconfirmed-transactions.collection";
+import { TokenRepository } from "@/app/lib/profiles/token.repository";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { TokenAddressesData, WalletTokenData } from "@/app/lib/profiles/token.contracts";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
+import { WalletTokenCollection } from "@/app/lib/mainsail/wallet-token.collection";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
+import {
+	Helpers,
+	TransactionFunctionSigs,
+	TransactionTypeIdentifier,
+	UsernamesContract,
+} from "@arkecosystem/typescript-crypto";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -27,9 +39,11 @@ const wellKnownContracts = {
 export class ClientService {
 	readonly #client!: ArkClient;
 	#config: ConfigRepository;
+	#profile: IProfile;
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
+		this.#profile = profile;
 
 		const api = config.host("full", profile);
 		const evm = config.host("evm", profile);
@@ -42,9 +56,119 @@ export class ClientService {
 		});
 	}
 
-	public async transaction(id: string): Promise<ConfirmedTransactionData> {
-		const body = await this.#client.transactions().get(id);
+	public async transaction(
+		id: string,
+		query?: Record<string, string | number | boolean | null>,
+	): Promise<ConfirmedTransactionData> {
+		const body = await this.#client.transactions().get(id, {
+			...query,
+			includeTokens: true,
+		});
 		return new ConfirmedTransactionData().configure(body.data);
+	}
+
+	public async tokens(): Promise<TokenRepository> {
+		const response = await this.#client.tokens().all();
+		const tokens = new TokenRepository();
+		tokens.fill(response.data);
+		return tokens;
+	}
+
+	public async tokenAddresses(query: Services.WalletTokensQuery): Promise<WalletTokenCollection> {
+		const response = await this.#client.wallets().tokens(query);
+
+		const walletTokens = response.data.map((tokenAddresses: TokenAddressesData) => {
+			const token = new TokenDTO({
+				address: tokenAddresses.token,
+				decimals: tokenAddresses.decimals,
+				deploymentHash: "",
+				name: tokenAddresses.name,
+				symbol: tokenAddresses.symbol,
+				totalSupply: tokenAddresses.supply,
+			});
+
+			const walletTokens: WalletTokenDTO[] = [];
+
+			for (const [walletAddress, balance] of Object.entries(tokenAddresses.addresses)) {
+				walletTokens.push(
+					new WalletTokenDTO({
+						address: walletAddress,
+						balance,
+						tokenAddress: tokenAddresses.token,
+					}),
+				);
+			}
+
+			return walletTokens.map(
+				(walletToken) =>
+					new WalletToken({
+						network: this.#profile.activeNetwork(),
+						profile: this.#profile,
+						token,
+						walletToken,
+					}),
+			);
+		}) as Array<WalletToken[]>;
+
+		return new WalletTokenCollection(walletTokens.flat(), this.#createMetaPagination(response));
+	}
+
+	public async walletTokens(address: string): Promise<WalletTokenDTO[]> {
+		const response = await this.#client.wallets().tokensFor(address);
+		return response.data.map((tokenData: WalletTokenData) => new WalletTokenDTO(tokenData));
+	}
+
+	public async tokenHolders(contractAddress: string): Promise<TokenRepository> {
+		const response = await this.#client.tokens().holdersFor(contractAddress);
+		const holders = new TokenRepository();
+		holders.fill(response.results);
+		return holders;
+	}
+
+	public async tokenByContractAddress(contractAddress: string): Promise<TokenDTO> {
+		const response = await this.#client.tokens().whitelist(contractAddress);
+		return new TokenDTO(response.data);
+	}
+
+	public async tokenTransfers(query?: TokenTransfersQuery): Promise<ConfirmedTransactionDataCollection> {
+		const response = await this.#client.tokens().transfers({
+			...query,
+			from: query?.from?.join(","),
+			to: query?.to?.join(","),
+		});
+
+		return new ConfirmedTransactionDataCollection(
+			response.data.map((transfer) =>
+				new ConfirmedTransactionData().configure({
+					confirmations: 1,
+					data: transfer.functionSig,
+					gas: 0,
+					gasPrice: 0,
+					hash: transfer.transactionHash,
+					nonce: 0,
+					receipt: {
+						status: 1,
+					},
+					...transfer,
+					to: TransactionTypeIdentifier.isTokenTransfer(transfer.functionSig) ? transfer.to : undefined,
+					tokens: [
+						{
+							from: transfer.from,
+							index: 0,
+							metadata: {
+								tokenAddress: transfer.token.address,
+								tokenDecimals: transfer.token.decimals,
+								tokenName: transfer.token.name,
+								tokenSymbol: transfer.token.symbol,
+							},
+							to: transfer.to,
+							value: transfer.value,
+						},
+					],
+				}),
+			),
+			this.#createMetaPagination(response),
+		);
 	}
 
 	public async transactions(
@@ -53,10 +177,24 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const response = await this.#client.transactions().all(page, limit, parameters);
+		const response = await this.#client.transactions().all({ ...parameters, limit, page });
 
 		return new ConfirmedTransactionDataCollection(
 			response.data.map((transaction) => new ConfirmedTransactionData().configure(transaction)),
+			this.#createMetaPagination(response),
+		);
+	}
+
+	public async unconfirmedTransactions(
+		query: Services.ClientTransactionsInput = {},
+	): Promise<Collections.UnconfirmedTransactionDataCollection> {
+		const { searchParams } = this.#createSearchParams(query);
+		const { limit = 10, page = 1, ...parameters } = searchParams;
+
+		const response = await this.#client.transactions().allUnconfirmed({ ...parameters, limit, page });
+
+		return new UnconfirmedTransactionDataCollection(
+			response.data.map((transaction) => new UnconfirmedTransactionData().configure(transaction)),
 			this.#createMetaPagination(response),
 		);
 	}
@@ -70,7 +208,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query);
 		const { limit = 10, page = 1 } = searchParams;
 
-		const response = await this.#client.wallets().all(page, limit);
+		const response = await this.#client.wallets().all({ limit, page });
 
 		return new Collections.WalletDataCollection(
 			response.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
@@ -87,7 +225,7 @@ export class ClientService {
 		const { searchParams } = this.#createSearchParams(query ?? {});
 		const { limit = 10, page = 1, ...parameters } = searchParams;
 
-		const body = await this.#client.validators().all(page, limit, parameters);
+		const body = await this.#client.validators().all({ ...parameters, limit, page });
 
 		return new Collections.WalletDataCollection(
 			body.data.map((wallet) => new WalletData({ config: this.#config }).fill(wallet)),
@@ -126,7 +264,7 @@ export class ClientService {
 		let response: Contracts.KeyValuePair;
 
 		try {
-			response = await this.#client.transactions().create(transactionToBroadcast);
+			response = await this.#client.transactions().create({ transactions: transactionToBroadcast });
 		} catch (error) {
 			response = error.response.json();
 		}
@@ -192,7 +330,7 @@ export class ClientService {
 
 			try {
 				data = encodeFunctionData({
-					abi: UsernamesAbi.abi,
+					abi: UsernamesContract.abi,
 					args: [addresses],
 					functionName: "getUsernames",
 				});
@@ -208,7 +346,7 @@ export class ClientService {
 			let decoded;
 			try {
 				decoded = decodeFunctionResult({
-					abi: UsernamesAbi.abi,
+					abi: UsernamesContract.abi,
 					data: response.result,
 					functionName: "getUsernames",
 				});
@@ -245,6 +383,7 @@ export class ClientService {
 			next: getPage(body.meta.next) || undefined,
 			prev: getPage(body.meta.previous) || undefined,
 			self: getPage(body.meta.self) || undefined,
+			totalCount: body.meta.totalCount || undefined,
 		};
 	}
 
@@ -296,20 +435,24 @@ export class ClientService {
 		}
 
 		const transactionTypeMap: Record<string, string | undefined> = {
-			multiPayment: TransactionTypes.MultiPayment,
-			transfer: TransactionTypes.Transfer,
-			usernameRegistration: TransactionTypes.RegisterUsername,
-			usernameResignation: TransactionTypes.ResignUsername,
-			validatorRegistration: TransactionTypes.RegisterValidator,
-			validatorResignation: TransactionTypes.ResignValidator,
-			vote: [trimHexPrefix(TransactionTypes.Vote), trimHexPrefix(TransactionTypes.Unvote)].join(","),
+			multiPayment: TransactionFunctionSigs.MultiPayment,
+			transfer: TransactionFunctionSigs.Transfer,
+			updateValidator: TransactionFunctionSigs.UpdateValidator,
+			usernameRegistration: TransactionFunctionSigs.RegisterUsername,
+			usernameResignation: TransactionFunctionSigs.ResignUsername,
+			validatorRegistration: TransactionFunctionSigs.RegisterValidator,
+			validatorResignation: TransactionFunctionSigs.ResignValidator,
+			vote: [
+				Helpers.removeLeadingHexZero(TransactionFunctionSigs.Vote),
+				Helpers.removeLeadingHexZero(TransactionFunctionSigs.Unvote),
+			].join(","),
 		};
 
 		// @ts-ignore
 		if (body.type) {
 			const data = transactionTypeMap[body.type];
 			if (data !== undefined) {
-				result.searchParams.data = trimHexPrefix(data);
+				result.searchParams.data = Helpers.removeLeadingHexZero(data);
 			}
 
 			delete body.type;
@@ -323,7 +466,7 @@ export class ClientService {
 
 				// a transfer is an empty string, so explicitly check for undefined
 				if (datum !== undefined) {
-					data.push(trimHexPrefix(datum));
+					data.push(Helpers.removeLeadingHexZero(datum));
 				}
 			}
 

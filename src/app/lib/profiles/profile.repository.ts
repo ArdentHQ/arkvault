@@ -101,7 +101,14 @@ export class ProfileRepository implements IProfileRepository {
 			this.#env,
 		);
 
-		await new ProfileImporter(result, this.#env).import(password);
+		// Ignoring details (`ignoreDetails`) for now. At this point, the
+		// ProfileImporter only needs the profile name and some settings to populate
+		// the form.
+		// It will run again in the `restore` method, where it would fill the rest
+		// of the data.
+		// This helps avoid issues like duplicated data—for example, this can happen
+		// when migrating a contact that has two addresses.
+		await new ProfileImporter(result, this.#env).ignoreDetails().import(password);
 
 		return result;
 	}

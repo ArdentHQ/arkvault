@@ -31,7 +31,7 @@ vi.mock("@/utils/delay", () => ({
 
 describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) => {
 	let profile: Contracts.IProfile;
-	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
+	const mnemonicMismatchError = "This mnemonic does not correspond to your address";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -140,6 +140,14 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.clearAllMocks();
 	});
 
+	test("should use default subject when not provided", async () => {
+		const wallet = profile.wallets().first();
+
+		renderWithForm(<AuthenticationStep wallet={wallet} />, { withProviders: true });
+
+		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
+	});
+
 	test("should specify ledger supported model", async ({ defaultWallet }) => {
 		mockNanoXTransport();
 		vi.spyOn(defaultWallet, "isLedger").mockReturnValueOnce(true);
@@ -160,7 +168,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
 
-		await waitFor(() => expect(screen.queryByTestId("header__title")).toHaveTextContent(/Ledger Wallet/));
+		await waitFor(() => expect(screen.queryByTestId("header__title")).toHaveTextContent(/Ledger Address/));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -321,6 +329,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.spyOn(wallet, "actsWithSecret").mockReturnValue(false);
 		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+
 		renderWithForm(<AuthenticationStep subject="transaction" wallet={wallet} />, { withProviders: true });
 
 		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();

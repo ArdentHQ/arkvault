@@ -1,17 +1,16 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
-import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Link } from "@/app/components/Link";
 import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
 import { DateTime } from "@/app/lib/intl/datetime";
 
 export const TransactionDetails = ({
-	transaction: initialTransaction,
+	transaction,
 	labelClassName,
-	isConfirmed,
 }: {
 	transaction: DTO.RawTransactionData;
 	labelClassName?: string;
@@ -20,27 +19,7 @@ export const TransactionDetails = ({
 	const { t } = useTranslation();
 	const format = useTimeFormat();
 
-	const transactionWallet: Contracts.IReadWriteWallet = initialTransaction.wallet();
-	const [transaction, setTransaction] = useState<DTO.RawTransactionData>(initialTransaction);
-
-	useEffect(() => {
-		// if it is a confirmed transaction, there is no need to refresh it
-		if (transaction.isConfirmed()) {
-			return;
-		}
-
-		// if `isConfirmed` is false, and transaction is not confirmed we probably need to wait
-		if (!isConfirmed) {
-			return;
-		}
-
-		const refreshTransaction = async () => {
-			const confirmedTransaction = await transactionWallet.client().transaction(transaction.hash());
-			setTransaction(confirmedTransaction);
-		};
-
-		void refreshTransaction();
-	}, [isConfirmed, transaction, transactionWallet]);
+	const transactionWallet: Contracts.IReadWriteWallet = transaction.wallet();
 
 	const timestamp = DateTime.make(
 		transaction.timestamp(),
@@ -55,13 +34,11 @@ export const TransactionDetails = ({
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
-			<div className="space-y-3 sm:space-y-0">
+			<div className="space-y-3">
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TIMESTAMP")}</DetailLabelText>
 					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">{timestamp}</div>
 				</div>
-
-				<DetailDivider />
 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.BLOCK")}</DetailLabelText>
@@ -81,8 +58,6 @@ export const TransactionDetails = ({
 						</p>
 					)}
 				</div>
-
-				<DetailDivider />
 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>

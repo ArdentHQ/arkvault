@@ -10,6 +10,7 @@ import React from "react";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@/app/lib/helpers";
 import { AddressService } from "@/app/lib/mainsail/address.service";
+import { manifest } from "@/app/lib/mainsail/manifest";
 
 interface RequiredParameters {
 	network?: string;
@@ -53,21 +54,27 @@ enum SearchParametersError {
 const defaultNetworks = {
 	"mainsail.devnet": {
 		displayName: "Mainsail Devnet",
-		nethash: "560f869ed6713745a12328e7214cb65077e645bb5e57b1e5b323bb915a51f114",
+		nethash: manifest.networks["mainsail.devnet"].meta!.nethash,
 	},
 	"mainsail.mainnet": {
 		displayName: "Mainsail",
-		nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+		nethash: manifest.networks["mainsail.mainnet"].meta!.nethash,
 	},
 };
 
 const validatorFromSearchParameters = ({ profile, network, searchParameters }: PathProperties) => {
-	const validatorName = searchParameters.get("validator") ?? searchParameters.get("delegate");
+	const validatorNameOrAddress = searchParameters.get("validator") ?? searchParameters.get("delegate");
 	const validatorPublicKey = searchParameters.get("publicKey");
 
-	if (validatorName) {
+	if (validatorNameOrAddress) {
 		try {
-			return profile.validators().findByUsername(network.id(), validatorName);
+			return profile.validators().findByUsername(network.id(), validatorNameOrAddress);
+		} catch {
+			//
+		}
+
+		try {
+			return profile.validators().findByAddress(network.id(), validatorNameOrAddress);
 		} catch {
 			//
 		}
@@ -112,7 +119,7 @@ const validateVote = async ({ parameters, profile, network, env }: ValidateParam
 		return { error: { type: SearchParametersError.AmbiguousValidator } };
 	}
 
-	await profile.validators().sync(profile, network.id());
+	await profile.validators().sync(network.id());
 
 	const validator = validatorFromSearchParameters({ env, network, profile, searchParameters: parameters });
 
@@ -189,14 +196,14 @@ export const useSearchParametersValidation = () => {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SignMessage, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`,
+				})}&${searchParameters.toString().replace("method=sign&", "")}`,
 			validate: validateSign,
 		},
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`,
+				})}&${searchParameters.toString().replace("method=transfer&", "")}`,
 			validate: validateTransfer,
 		},
 		verify: {
@@ -217,7 +224,7 @@ export const useSearchParametersValidation = () => {
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`;
+				})}&${searchParameters.toString().replace("method=vote&", "")}`;
 			},
 			validate: validateVote,
 		},

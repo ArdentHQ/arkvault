@@ -18,7 +18,7 @@ enum Step {
 }
 
 export const ImportProfile = () => {
-	const { env, persist } = useEnvironmentContext();
+	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const navigate = useNavigate();
 
@@ -33,15 +33,7 @@ export const ImportProfile = () => {
 		setActiveTab(Step.ProcessingStep);
 	};
 
-	const handleProfileSave = async (submittedProfile) => {
-		// If imported profile doesn't have selected addresses, mark them all as selected.
-		if (submittedProfile.wallets().selected().length === 0) {
-			for (const wallet of submittedProfile.wallets().values()) {
-				wallet.mutator().isSelected(true);
-			}
-		}
-
-		await persist();
+	const handleProfileSave = async () => {
 		navigate("/");
 	};
 

@@ -170,7 +170,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 
 				<Divider />
 
-				<div className="mb-8 py-1">
+				<div className="mb-0">
 					<FormField name="disclaimer">
 						<label className="flex cursor-pointer items-center space-x-3">
 							<Checkbox
@@ -197,7 +197,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 					</FormField>
 				</div>
 
-				<FormButtons>
+				<FormButtons className="border-none">
 					<Button
 						data-testid="ProfileForm__back-button"
 						variant="secondary"

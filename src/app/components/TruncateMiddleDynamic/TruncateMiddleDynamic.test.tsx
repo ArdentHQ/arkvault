@@ -34,7 +34,6 @@ describe("TruncateMiddleDynamic", () => {
 				parentRef={referenceElement}
 				value={value}
 				offset={offset}
-				tooltipDarkTheme
 				availableWidth={availableWidth}
 			/>
 		);

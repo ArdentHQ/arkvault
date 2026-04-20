@@ -8,8 +8,13 @@ import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
+import { Contracts } from "@/app/lib/profiles";
 
-export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void }) => {
+export const SuccessStep = ({
+	onClickEditAlias,
+}: {
+	onClickEditAlias: (wallet: Contracts.IReadWriteWallet) => void;
+}) => {
 	const { t } = useTranslation();
 
 	const { getValues, watch } = useFormContext();
@@ -26,7 +31,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 
 	return (
 		<section data-testid="CreateWallet__SuccessStep">
-			<div className="space-y-4">
+			<div className="-mx-3 space-y-4 sm:mx-0">
 				<DetailWrapper label={t("COMMON.ADDRESSING")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
 						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
@@ -58,7 +63,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 								type="button"
 								variant="transparent"
 								className="text-theme-navy-600 space-x-0 px-0 py-0"
-								onClick={onClickEditAlias}
+								onClick={() => onClickEditAlias?.(wallet)}
 							>
 								<Icon name="Pencil" />
 								<span className="text-sm leading-[17px] sm:text-base sm:leading-5">

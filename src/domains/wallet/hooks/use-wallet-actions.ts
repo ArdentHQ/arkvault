@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -9,12 +8,19 @@ import { useActiveProfile } from "@/app/hooks";
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
+import { Panel, usePanels } from "@/app/contexts/Panels";
 
 export const useWalletActions = ({
-	handleSignMessage,
+	handleSendRegistration,
+	handleSendUsernameResignation,
+	handleSendValidatorResignation,
+	handleSendContractDeployment,
 	wallets,
 }: {
-	handleSignMessage?: () => void;
+	handleSendRegistration?: (registrationType?: "validatorRegistration" | "usernameRegistration") => void;
+	handleSendUsernameResignation?: () => void;
+	handleSendValidatorResignation?: () => void;
+	handleSendContractDeployment?: () => void;
 	wallets: Contracts.IReadWriteWallet[];
 }) => {
 	const { persist } = useEnvironmentContext();
@@ -23,6 +29,8 @@ export const useWalletActions = ({
 	const { openExternal } = useLink();
 
 	const [activeModal, setActiveModal] = useState<WalletActionsModalType | undefined>(undefined);
+
+	const { openPanel, closePanel } = usePanels();
 
 	const wallet = wallets[0] as Contracts.IReadWriteWallet | undefined;
 
@@ -33,16 +41,6 @@ export const useWalletActions = ({
 		event?.stopPropagation();
 	}, []);
 
-	const handleOpen = useCallback(
-		(event?: React.MouseEvent<HTMLElement>) => {
-			if (!wallet) {
-				return;
-			}
-			stopEventBubbling(event);
-		},
-		[navigate, profile, wallet, stopEventBubbling],
-	);
-
 	const handleSend = useCallback(
 		(event?: React.MouseEvent<HTMLElement>) => {
 			if (!wallet) {
@@ -51,26 +49,23 @@ export const useWalletActions = ({
 
 			stopEventBubbling(event);
 
-			if (hasMultipleWallets) {
-				navigate(generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() }));
-				return;
-			}
-
-			navigate(generatePath(ProfilePaths.SendTransferWallet, { profileId: profile.id(), walletId: wallet.id() }));
+			openPanel(Panel.SendTransfer, {
+				isTokenTransfer: false,
+				tokenContractAddress: profile.activeNetwork().ticker(),
+			});
 		},
-		[stopEventBubbling, hasMultipleWallets, history, profile, wallet],
+		[stopEventBubbling, openPanel, wallet],
 	);
 
-	const handleToggleStar = useCallback(
-		async (event?: React.MouseEvent<HTMLElement>) => {
+	const handleTokenSend = useCallback(
+		(options?: Record<string, unknown>) => {
 			if (!wallet) {
 				return;
 			}
-			stopEventBubbling(event);
-			wallet.toggleStarred();
-			await persist();
+
+			openPanel(Panel.SendTokenTransfer, { ...options, isTokenTransfer: true });
 		},
-		[wallet, persist, stopEventBubbling],
+		[stopEventBubbling, openPanel, wallet],
 	);
 
 	const handleDelete = useCallback(
@@ -80,6 +75,8 @@ export const useWalletActions = ({
 			}
 
 			stopEventBubbling(event);
+
+			await closePanel();
 
 			for (const profileWallet of profile.wallets().values()) {
 				if (profileWallet.address() === wallet.address()) {
@@ -92,7 +89,7 @@ export const useWalletActions = ({
 
 			return true;
 		},
-		[profile, history, wallet, persist, stopEventBubbling],
+		[profile, navigate, wallet, persist, stopEventBubbling, closePanel],
 	);
 
 	const handleSelectOption = useCallback(
@@ -102,13 +99,11 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "sign-message") {
-				handleSignMessage?.();
+				openPanel(Panel.SignMessage);
 			}
 
 			if (option.value === "verify-message") {
-				navigate(
-					generatePath(ProfilePaths.VerifyMessageWallet, { profileId: profile.id(), walletId: wallet.id() }),
-				);
+				openPanel(Panel.VerifyMessage);
 			}
 
 			if (option.value === "multi-signature") {
@@ -118,83 +113,52 @@ export const useWalletActions = ({
 			}
 
 			if (option.value === "validator-registration") {
-				let url = generatePath(ProfilePaths.SendValidatorRegistration, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendRegistrationProfile, {
-						profileId: profile.id(),
-						registrationType: "validatorRegistration",
-					});
-				}
-
-				navigate(url);
+				handleSendRegistration?.("validatorRegistration");
 			}
 
 			if (option.value === "validator-resignation") {
-				let url = generatePath(ProfilePaths.SendValidatorResignation, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
+				handleSendValidatorResignation?.();
+			}
 
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendValidatorResignationProfile, {
-						profileId: profile.id(),
-					});
-				}
-
-				navigate(url);
+			if (option.value === "contract-deployment") {
+				handleSendContractDeployment?.();
 			}
 
 			if (option.value === "username-registration") {
-				let url = generatePath(ProfilePaths.SendUsernameRegistration, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendRegistrationProfile, {
-						profileId: profile.id(),
-						registrationType: "usernameRegistration",
-					});
-				}
-
-				navigate(url);
+				handleSendRegistration?.("usernameRegistration");
 			}
 
 			if (option.value === "username-resignation") {
-				let url = generatePath(ProfilePaths.SendUsernameResignation, {
-					profileId: profile.id(),
-					walletId: wallet.id(),
-				});
-
-				if (hasMultipleWallets) {
-					url = generatePath(ProfilePaths.SendUsernameResignationProfile, {
-						profileId: profile.id(),
-					});
-				}
-
-				navigate(url);
+				handleSendUsernameResignation?.();
 			}
 
 			if (option.value === "open-explorer") {
 				openExternal(wallet.explorerLink());
 			}
 
+			if (option.value === "ledger-migration") {
+				openPanel(Panel.LedgerMigration);
+			}
+
 			setActiveModal(option.value.toString() as WalletActionsModalType);
 		},
-		[wallet, history, profile, hasMultipleWallets, openExternal],
+		[
+			wallet,
+			navigate,
+			profile,
+			hasMultipleWallets,
+			openExternal,
+			handleSendRegistration,
+			handleSendUsernameResignation,
+		],
 	);
 
 	return {
 		activeModal,
 		handleDelete,
-		handleOpen,
 		handleSelectOption,
 		handleSend,
-		handleToggleStar,
+		handleTokenSend,
 		setActiveModal,
 	};
 };

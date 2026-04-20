@@ -5,6 +5,7 @@ import { useModal } from "./hooks";
 import { ModalContainer, ModalContent } from "./Modal.blocks";
 import { Size } from "@/types";
 import { useNavigationContext } from "@/app/contexts";
+import { useSidePanel } from "@/app/components/SidePanel/SidePanel";
 
 interface ModalProperties extends JSX.IntrinsicAttributes {
 	children: React.ReactNode;
@@ -20,6 +21,7 @@ interface ModalProperties extends JSX.IntrinsicAttributes {
 	onClose?: any;
 	onClick?: any;
 	contentClassName?: string;
+	containerClassName?: string;
 }
 
 const Modal = ({
@@ -35,6 +37,7 @@ const Modal = ({
 	children,
 	onClose,
 	contentClassName,
+	containerClassName,
 	...attributes
 }: ModalProperties) => {
 	const referenceShouldClose = useRef<boolean>(undefined);
@@ -47,14 +50,24 @@ const Modal = ({
 		onClose,
 	});
 
+	const sidePanelContext = useSidePanel();
+
 	useEffect(() => {
 		if (isOpen) {
 			setShowMobileNavigation(false);
+
+			sidePanelContext?.setHasModalOpened(true);
 		} else {
 			setShowMobileNavigation(true);
+
+			sidePanelContext?.setHasModalOpened(false);
 		}
 
-		return () => setShowMobileNavigation(true);
+		return () => {
+			setShowMobileNavigation(true);
+
+			sidePanelContext?.setHasModalOpened(false);
+		};
 	}, [isOpen]);
 
 	if (!isOpen) {
@@ -82,12 +95,13 @@ const Modal = ({
 
 	return (
 		<div
-			className={`custom-scroll overflow-overlay fixed inset-0 z-50 flex w-full ${overflowYClass} bg-theme-secondary-900/40 dark:bg-black-rgba/40 dark:bg-opacity-80 dim:bg-theme-dim-950/40 backdrop-blur-xl md:py-20`}
+			className={`custom-scroll overflow-overlay fixed inset-0 z-[51] flex w-full ${overflowYClass} bg-theme-secondary-900/40 dark:bg-theme-dark-950/80 dim:bg-theme-dim-950/80 backdrop-blur-xl md:py-20`}
 			onClick={handleClickOverlay}
 			data-testid="Modal__overlay"
 			{...attributes}
 		>
 			<ModalContainer
+				className={containerClassName}
 				ref={modalContainerReference}
 				size={size}
 				onMouseDown={handleClickContent}

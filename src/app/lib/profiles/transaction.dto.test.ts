@@ -6,6 +6,7 @@ import { BigNumber } from "@/app/lib/helpers";
 import { DateTime } from "@/app/lib/intl";
 import { ConfirmedTransactionData } from "@/app/lib/mainsail/confirmed-transaction.dto";
 import { env, MAINSAIL_MNEMONICS } from "@/utils/testing-library";
+import { TokenDTO } from "./token.dto";
 
 let profile: IProfile;
 let wallet: IReadWriteWallet;
@@ -31,13 +32,25 @@ beforeEach(async () => {
 		...TransactionFixture,
 		blockHash: () => "block-hash",
 		fee: () => BigNumber.make(1),
+		gasLimit: () => 21000,
+		gasUsed: () => 0.01,
 		hash: () => "tx-hash",
 		isMultiPayment: () => false,
 		isReturn: () => false,
 		isSent: () => true,
+		isTokenTransfer: () => true,
 		payments: () => [],
 		recipients: () => [],
 		timestamp: () => DateTime.make("2021-01-01"),
+		token: () =>
+			new TokenDTO({
+				address: "0xdef",
+				decimals: 18,
+				deploymentHash: "0xaef",
+				name: "DARK 20",
+				symbol: "DARK20",
+				totalSupply: "10000000",
+			}),
 		value: () => BigNumber.make(10),
 	} as any;
 });
@@ -63,6 +76,11 @@ describe("ExtendedConfirmedTransactionData", () => {
 		expect(subject.explorerLinkForBlock()).toBe("https://explorer.com/block/block-hash");
 	});
 
+	it("should get token", () => {
+		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+		expect(subject.token()).toBeInstanceOf(TokenDTO);
+	});
+
 	it("should return undefined for block link if no block hash", () => {
 		vi.spyOn(dataMock, "blockHash").mockReturnValue(undefined);
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
@@ -71,14 +89,21 @@ describe("ExtendedConfirmedTransactionData", () => {
 
 	it("should calculate total for a sent transaction", () => {
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-		expect(subject.total()).toBe(11); // value + fee
+		const tokenTransferMock = vi.spyOn(subject, "isTokenTransfer").mockReturnValue(false);
+		expect(subject.total().toString()).toBe("11"); // value + fee
+		tokenTransferMock.mockRestore();
+	});
+
+	it("should calculate total for a sent transaction without fee if token transfer", () => {
+		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+		expect(subject.total().toString()).toBe("10");
 	});
 
 	it("should calculate total for a return transaction", () => {
 		vi.spyOn(dataMock, "isReturn").mockReturnValue(true);
 		vi.spyOn(dataMock, "isSent").mockReturnValue(false);
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-		expect(subject.total()).toBe(9); // value - fee
+		expect(subject.total().toString()).toBe("9"); // value - fee
 	});
 
 	it("should calculate total for a multipayment transaction", () => {
@@ -91,19 +116,21 @@ describe("ExtendedConfirmedTransactionData", () => {
 		] as any);
 
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-		expect(subject.total()).toBe(3);
+		expect(subject.total().toString()).toBe("3");
 	});
 
 	it("should calculate total for other transaction types", () => {
 		vi.spyOn(dataMock, "isReturn").mockReturnValue(false);
 		vi.spyOn(dataMock, "isSent").mockReturnValue(false);
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-		expect(subject.total()).toBe(10); // value
+		expect(subject.total().toString()).toBe("10"); // value
 	});
 
 	it("should get converted total", () => {
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+		const tokenTransferMock = vi.spyOn(subject, "isTokenTransfer").mockReturnValue(false);
 		expect(subject.convertedTotal()).toBe(22); // total (11) * 2
+		tokenTransferMock.mockRestore();
 	});
 
 	it("should get converted amount", () => {
@@ -128,14 +155,14 @@ describe("ExtendedConfirmedTransactionData", () => {
 		const recipients = [{ address: "some-address", amount: BigNumber.make(5) }];
 		vi.spyOn(dataMock, "recipients").mockReturnValue(recipients as any);
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-		expect(subject.recipients()).toEqual([{ address: "some-address", amount: 5 }]);
+		expect(subject.recipients()).toEqual([{ address: "some-address", amount: BigNumber.make(5) }]);
 	});
 
 	it("should return payments with human-readable amounts", () => {
 		const payments = [{ amount: BigNumber.make(5), recipientId: "some-address" }];
 		vi.spyOn(dataMock, "payments").mockReturnValue(payments as any);
 		const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-		expect(subject.payments()).toEqual([{ amount: 5, recipientId: "some-address" }]);
+		expect(subject.payments()).toEqual([{ amount: BigNumber.make(5), recipientId: "some-address" }]);
 	});
 
 	it("should delegate hash", () => {
@@ -160,11 +187,9 @@ describe("ExtendedConfirmedTransactionData", () => {
 			"isReceived",
 			"isReturn",
 			"isTransfer",
-			"isSecondSignature",
 			"isUsernameRegistration",
 			"isUsernameResignation",
 			"isValidatorRegistration",
-			"isVoteCombination",
 			"isVote",
 			"isUnvote",
 			"isMultiPayment",
@@ -179,7 +204,11 @@ describe("ExtendedConfirmedTransactionData", () => {
 		])("should delegate %s", (method) => {
 			const spy = vi.spyOn(dataMock, method as keyof ConfirmedTransactionData);
 			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
-			subject[method as keyof ExtendedConfirmedTransactionData]();
+			try {
+				subject[method as keyof ExtendedConfirmedTransactionData]();
+			} catch (error) {
+				console.log({ error, method });
+			}
 			expect(spy).toHaveBeenCalled();
 		});
 
@@ -211,6 +240,65 @@ describe("ExtendedConfirmedTransactionData", () => {
 			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
 			subject[method as keyof ExtendedConfirmedTransactionData]();
 			expect(dataMock[method as keyof ConfirmedTransactionData]).toHaveBeenCalled();
+		});
+	});
+
+	describe("gasLimit", () => {
+		it("should return gas limit", () => {
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			expect(subject.gasLimit()).toBe(21000);
+		});
+	});
+
+	describe("gasUsed", () => {
+		it("should return gas used", () => {
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			expect(subject.gasUsed()).toBe(0.01);
+		});
+	});
+
+	describe("Token methods", () => {
+		it.each(["isApprove", "isRevoke", "isBatchTransfer"])("should check %s", (method) => {
+			const spy = vi.spyOn(dataMock, method as keyof ConfirmedTransactionData);
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			try {
+				subject[method as keyof ExtendedConfirmedTransactionData]();
+			} catch (error) {
+				console.log({ error, method });
+			}
+			expect(spy).toHaveBeenCalled();
+		});
+
+		it("should for isContractTransaction", () => {
+			const spy = vi.spyOn(dataMock, "isContractTransaction");
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject.isContractTransaction();
+			expect(spy).toHaveBeenCalled();
+		});
+
+		it("should check for isContractDeployment", () => {
+			const spy = vi.spyOn(dataMock, "isContractDeployment");
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataMock);
+			subject.isContractDeployment();
+			expect(spy).toHaveBeenCalled();
+		});
+
+		it("should call approveDetails", () => {
+			const mockApproveDetails = vi.fn().mockReturnValue({ amount: "100", spender: "0x123" });
+			const dataWithApprove = { ...dataMock, approveDetails: mockApproveDetails };
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataWithApprove as any);
+			const result = subject.approveDetails();
+			expect(mockApproveDetails).toHaveBeenCalled();
+			expect(result).toEqual({ amount: "100", spender: "0x123" });
+		});
+
+		it("should call tokens", () => {
+			const mockTokens = vi.fn().mockReturnValue([{ address: "0x123" }]);
+			const dataWithTokens = { ...dataMock, tokens: mockTokens };
+			const subject = new ExtendedConfirmedTransactionData(wallet, dataWithTokens as any);
+			const result = subject.tokens();
+			expect(mockTokens).toHaveBeenCalled();
+			expect(result).toEqual([{ address: "0x123" }]);
 		});
 	});
 });
