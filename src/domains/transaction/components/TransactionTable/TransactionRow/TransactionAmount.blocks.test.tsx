@@ -41,11 +41,11 @@ describe("TransactionAmount.blocks", () => {
 	});
 
 	it("should return true if element is overflowing", async () => {
-		expect(isOverflowing({ scrollWidth: 15, clientWidth: 10 } as HTMLSpanElement)).toBe(true);
+		expect(isOverflowing({ clientWidth: 10, scrollWidth: 15 } as HTMLSpanElement)).toBe(true);
 	});
 
 	it("should return false if element is not overflowing", async () => {
-		expect(isOverflowing({ scrollWidth: 5, clientWidth: 10 } as HTMLSpanElement)).toBe(false);
+		expect(isOverflowing({ clientWidth: 10, scrollWidth: 5 } as HTMLSpanElement)).toBe(false);
 	});
 
 	it("should return false if element is not provided", async () => {
