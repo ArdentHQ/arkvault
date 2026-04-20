@@ -378,8 +378,11 @@ export const requestMocks = {
 		// mockRequest("https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50", {}),
 	],
 	tokens: [
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/tokens?addresses=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&minBalance=0", "coins/mainsail/devnet/tokens"),
-	]
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/wallets/tokens?addresses=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&minBalance=0",
+			"coins/mainsail/devnet/tokens",
+		),
+	],
 };
 
 const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMock[] = []): RequestMock[] => [
