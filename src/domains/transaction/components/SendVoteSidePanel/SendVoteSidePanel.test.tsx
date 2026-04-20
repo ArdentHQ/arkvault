@@ -49,7 +49,6 @@ const transactionMethodsFixture = {
 	isContractDeployment: () => false,
 	isContractTransaction: () => true,
 	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
 	isRevoke: () => false,
 	isSecondSignature: () => false,
@@ -76,7 +75,6 @@ const transactionMethodsFixture = {
 		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
 		return value.plus(feeVal);
 	},
-	usesMultiSignature: () => false,
 	value: () => +transactionFixture.data.value / 1e8,
 	wallet: () => wallet,
 };

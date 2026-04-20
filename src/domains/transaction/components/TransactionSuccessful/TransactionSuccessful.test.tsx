@@ -56,9 +56,6 @@ describe("TransactionSuccessful", () => {
 			transactionMockImplementation(attribute, transaction),
 		);
 
-		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
-		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
-
 		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
 			route: `/profiles/${profile.id()}`,
 		});
@@ -80,9 +77,6 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
 			transactionMockImplementation(attribute, transaction),
 		);
-
-		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
-		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
 		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
 			route: `/profiles/${profile.id()}`,
