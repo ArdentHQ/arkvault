@@ -39,9 +39,7 @@ describe("Wallet Options Hook", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
-		vi.spyOn(wallet.network(), "allows").mockImplementation((key) => {
-			return true;
-		});
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const { result } = renderHook(() => useWalletOptions([wallet]));
 
