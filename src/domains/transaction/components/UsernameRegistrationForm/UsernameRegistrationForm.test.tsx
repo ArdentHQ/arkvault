@@ -102,6 +102,29 @@ describe("UsernameRegistrationForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should trigger onSelectSender when wallet is selected", async () => {
+		const setValueMock = vi.fn();
+		const identityMock = vi.fn();
+		const synchroniserMock = vi.fn().mockReturnValue({ identity: identityMock });
+
+		const mockWallet = {
+			...wallet,
+			hasBeenFullyRestored: () => true,
+			hasSyncedWithNetwork: () => true,
+			synchroniser: synchroniserMock,
+		};
+
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(mockWallet);
+
+		const { form } = renderComponent();
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		form?.setValue("senderAddress", wallet.address(), { shouldDirty: true, shouldValidate: false });
+
+		expect(setValueMock).toHaveBeenCalled();
+	});
+
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent({ activeTab: 2 });
 
