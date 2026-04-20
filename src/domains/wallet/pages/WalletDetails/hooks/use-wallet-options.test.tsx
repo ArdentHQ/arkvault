@@ -5,6 +5,7 @@ import { Contracts } from "@/app/lib/profiles";
 import { renderHook } from "@testing-library/react";
 import { useWalletOptions } from "./use-wallet-options";
 import { env, getMainsailProfileId } from "@/utils/testing-library";
+import { BigNumber } from "@/app/lib/helpers";
 
 describe("Wallet Options Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;
@@ -32,6 +33,101 @@ describe("Wallet Options Hook", () => {
 			],
 			title: "Register",
 		});
+	});
+
+	it("should render options for ledger wallet", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(wallet.network(), "allows").mockImplementation((key) => {
+			return true;
+		});
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions).toStrictEqual({
+			key: "registrations",
+			options: [
+				{ label: "Update Validator", value: "validator-registration" },
+				{ label: "Resign Validator", value: "validator-resignation" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
+			],
+			title: "Register",
+		});
+
+		vi.restoreAllMocks();
+	});
+
+	it("should disable options if the given wallet is not restored yet", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "validator-registration")).toBe(false);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should disable options for a wallet with no balance", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.ZERO);
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "validator-registration")).toBe(false);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should disable musig option for a wallet with no public key", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet, "publicKey").mockReturnValue(undefined);
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(false);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should disable musig option for a wallet with a custom network", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+		vi.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
+
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions.options.some((opt) => opt.value === "multi-signature")).toBe(false);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render options for wallet of custom network and disable musig option", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		vi.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
+		const { result } = renderHook(() => useWalletOptions([wallet]));
+
+		expect(result.current.registrationOptions).toStrictEqual({
+			key: "registrations",
+			options: [
+				{ label: "Update Validator", value: "validator-registration" },
+				{ label: "Resign Validator", value: "validator-resignation" },
+				{ label: "Username", value: "username-registration" },
+				{ label: "Resign Username", value: "username-resignation" },
+			],
+			title: "Register",
+		});
+
+		vi.restoreAllMocks();
 	});
 
 	it("should get registration/resignation options", () => {
