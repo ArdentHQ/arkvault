@@ -99,7 +99,7 @@ jobs:
             - name: Setup Firefox
               uses: browser-actions/setup-firefox@v1
               with:
-                firefox-version: '140.0'
+                firefox-version: '141.0'
 
             - name: Set up Microsoft Edge
               run: |
