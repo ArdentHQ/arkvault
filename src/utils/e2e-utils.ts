@@ -103,6 +103,7 @@ const searchAddressesMocks = () => {
 		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6": [
 			{ limit: 30, page: 1 },
 			{ limit: 30, page: 2 },
+			{ limit: 10, page: 1 },
 		],
 		"0x659A76be283644AEc2003aa8ba26485047fd1BFB": [
 			{ limit: 10, page: 1 },
@@ -121,11 +122,11 @@ const searchAddressesMocks = () => {
 				mockRequest(
 					(request: any) =>
 						request.url ===
-							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
+							`https://dwallets-evm.mainsailhq.com/api/transactions?address=${address}&limit=${limit}&page=${page}` ||
 						request.url ===
 							`https://dwallets-evm.mainsailhq.com/api/transactions?limit=${limit}&address=${address}` ||
 						request.url ===
-							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&orderBy=timestamp:desc&address=${address}`,
+							`https://dwallets-evm.mainsailhq.com/api/transactions?orderBy=timestamp:desc&address=${address}&limit=${limit}&page=${page}`,
 					`coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
@@ -316,6 +317,12 @@ export const requestMocks = {
 			{},
 		),
 
+		// unconfirmed transactions call
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/tx/api/transactions/unconfirmed?address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&limit=30&page=1",
+			{},
+		),
+
 		// mainnet
 		// mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
 
@@ -324,7 +331,7 @@ export const requestMocks = {
 	validators: [
 		// devnet
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators", validatorsFixture),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=1&limit=100", validatorsFixture),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?limit=100&page=1", validatorsFixture),
 
 		// mainnet
 		// @TODO use mainnet mock when possible
@@ -370,6 +377,9 @@ export const requestMocks = {
 	blocks: [
 		// mockRequest("https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50", {}),
 	],
+	tokens: [
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/tokens?addresses=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&minBalance=0", "coins/mainsail/devnet/tokens"),
+	]
 };
 
 const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMock[] = []): RequestMock[] => [
@@ -383,6 +393,7 @@ const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMoc
 	...requestMocks.other,
 	...requestMocks.exchange,
 	...requestMocks.profile,
+	...requestMocks.tokens,
 	...postHooks,
 	mockRequest(/^https?:\/\/(?!localhost)/, (request: any) => {
 		const mock: { url: string; method: string; body?: string } = {
