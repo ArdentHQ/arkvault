@@ -1,4 +1,5 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 import { requestMock, server } from "@/tests/mocks/server";
 import { TransactionDetailSidePanel } from "./TransactionDetailSidePanel";
 import { translations } from "@/domains/transaction/i18n";
@@ -236,7 +237,7 @@ describe("TransactionDetailModal", () => {
 		const contractDeploymentFixture = {
 			...TransactionFixture,
 			blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
-			confirmations: () => ({ toNumber: () => 10 }),
+			confirmations: () => ({ toNumber: () => 10, valueOf: () => 10 }),
 			data: () => ({
 				data: {
 					receipt: {
@@ -278,6 +279,40 @@ describe("TransactionDetailModal", () => {
 					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 					from: () => fromAddress,
 					to: () => toAddress,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render token transfer with token address", () => {
+		const tokenAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+
+		const mockTransactionToken = {
+			token: () => ({
+				address: () => tokenAddress,
+				displaySymbol: () => "TEST",
+			}),
+			to: () => tokenAddress,
+			value: () => BigNumber.make(100),
+		};
+
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					isTokenTransfer: () => true,
+					token: () => mockTransactionToken,
+					to: () => tokenAddress,
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}
