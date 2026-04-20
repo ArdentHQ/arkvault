@@ -18,7 +18,7 @@ export const ZendeskProvider = ({ children }: { children: React.ReactNode }) => 
 	);
 };
 
-const isSupportChatOpen = () => !!window.document.querySelector("#webWidget");
+export const isSupportChatOpen = () => !!window.document.querySelector("#webWidget");
 
 export const useZendesk = () => {
 	const color = "#235b95";

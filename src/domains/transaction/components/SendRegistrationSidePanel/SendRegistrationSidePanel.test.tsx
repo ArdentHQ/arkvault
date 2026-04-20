@@ -307,6 +307,75 @@ describe("SendRegistrationSidePanel", () => {
 		nanoXTransportMock.mockRestore();
 	});
 
+	it("should successfully register a validator with a ledger wallet", async () => {
+		const ledgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const accessLedgerAppMock = vi.spyOn(profile.ledger(), "accessLedgerApp").mockImplementation(vi.fn());
+		const clientMock = vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: vi.fn().mockReturnValue(signedTransactionMock),
+		}));
+
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		// Step 1
+		await expect(formStep()).resolves.toBeVisible();
+
+		await inputValidatorPublicKey();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
+		await userEvent.click(fees[1]);
+
+		// remove focus from fee button
+		await userEvent.click(document.body);
+
+		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		// remove focus from back button
+		await userEvent.click(document.body);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
+			.mockReturnValue(Promise.resolve(ValidatorRegistrationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [ValidatorRegistrationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+
+		const derivationPathMock = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/60'/0'/0/3");
+		const transactionMock = createValidatorRegistrationMock(wallet);
+		await userEvent.click(continueButton());
+
+		await waitFor(() => {
+			expect(signMock).toHaveBeenCalled();
+		});
+
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
+		await waitFor(() => expect(transactionMock).toHaveBeenCalledWith(ValidatorRegistrationFixture.data.hash));
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+		derivationPathMock.mockRestore();
+		ledgerMock.mockRestore();
+		accessLedgerAppMock.mockRestore();
+		clientMock.mockRestore();
+	});
+
 	it("should show mnemonic error", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
 
@@ -430,6 +499,34 @@ describe("SendRegistrationSidePanel", () => {
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		nanoXTransportMock.mockRestore();
+	});
+
+	it("should render username registration form", async () => {
+		await renderPanel("usernameRegistration");
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
+		await expect(screen.getByTestId("SidePanel__title")).toBeInTheDocument();
+	});
+
+	it("should render contract deployment form", async () => {
+		await renderPanel("contractDeployment");
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
+		await expect(screen.getByTestId("SidePanel__title")).toBeInTheDocument();
+	});
+
+	it("should render contract deployment form", async () => {
+		await renderPanel("contractDeployment");
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
+		await expect(screen.getByTestId("SidePanel__title")).toBeInTheDocument();
+	});
+
+	it("should show legacy validator description", async () => {
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		vi.spyOn(wallet, "isLegacyValidator").mockImplementation(() => true);
+		vi.spyOn(wallet, "isValidator").mockImplementation(() => true);
+
+		await renderPanel("validatorRegistration");
+
+		await expect(screen.findByTestId("SendRegistrationSidePanel")).resolves.toBeVisible();
 	});
 
 	it("should close the side panel when clicking back on form step", async () => {

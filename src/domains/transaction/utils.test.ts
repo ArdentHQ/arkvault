@@ -7,6 +7,8 @@ import {
 	withAbortPromise,
 	getAuthenticationStepSubtitle,
 	isNullAddress,
+	handleOnMountChange,
+	getAuthenticationStepTitleIcon,
 } from "./utils";
 import { useTranslation } from "react-i18next";
 import { getMainsailProfileId } from "@/utils/testing-library";
@@ -217,5 +219,78 @@ describe("getAuthenticationStepSubtitle", () => {
 
 		const subtitle = getAuthenticationStepSubtitle({ t, wallet });
 		expect(subtitle).toBe("Enter your mnemonic passphrase to authenticate the transaction.");
+	});
+});
+
+describe("handleOnMountChange", () => {
+	it("should set mounted state when mounted is true", () => {
+		const setMounted = vi.fn();
+		const setActiveTab = vi.fn();
+		const setErrorMessage = vi.fn();
+		const resetForm = vi.fn();
+
+		handleOnMountChange({
+			mounted: true,
+			resetForm,
+			setActiveTab,
+			setErrorMessage,
+			setMounted,
+		});
+
+		expect(setMounted).toHaveBeenCalledWith(true);
+		expect(setActiveTab).not.toHaveBeenCalled();
+		expect(setErrorMessage).not.toHaveBeenCalled();
+	});
+
+	it("should reset form state when mounted is false", () => {
+		const setMounted = vi.fn();
+		const setActiveTab = vi.fn();
+		const setErrorMessage = vi.fn();
+		const resetForm = vi.fn();
+
+		handleOnMountChange({
+			mounted: false,
+			resetForm,
+			setActiveTab,
+			setErrorMessage,
+			setMounted,
+		});
+
+		expect(setMounted).toHaveBeenCalledWith(false);
+		expect(setActiveTab).toHaveBeenCalledWith(1);
+		expect(setErrorMessage).toHaveBeenCalledWith(undefined);
+	});
+});
+
+describe("getAuthenticationStepTitleIcon", () => {
+	it("should return null when wallet is not a Ledger", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+
+		const result = getAuthenticationStepTitleIcon({ isLedger: false, wallet });
+
+		expect(result).toBeNull();
+	});
+
+	it("should return Ledger icons when wallet is a Ledger", () => {
+		const profile = env.profiles().findById(getMainsailProfileId());
+		const wallet = profile.wallets().first();
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const result = getAuthenticationStepTitleIcon({ isLedger: true, wallet });
+
+		expect(result).toEqual({
+			darkIcon: "LedgerDark",
+			dimIcon: "LedgerDim",
+			dimensions: [24, 24],
+			lightIcon: "LedgerLight",
+		});
+	});
+
+	it("should return null when wallet is undefined", () => {
+		const result = getAuthenticationStepTitleIcon({ isLedger: false, wallet: undefined });
+
+		expect(result).toBeNull();
 	});
 });

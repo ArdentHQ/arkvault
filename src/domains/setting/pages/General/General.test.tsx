@@ -8,14 +8,14 @@ import * as browserAccess from "browser-fs-access";
 import { useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
-import GeneralSettings from "@/domains/setting/pages/General";
+import GeneralSettings, { SettingsGroup, SettingsButtonGroup, ViewingMode } from "@/domains/setting/pages/General";
 import {
 	act,
 	env,
 	fireEvent,
 	getMainsailProfileId,
 	render,
-	renderResponsiveWithRoute,
+	renderResponsive,
 	screen,
 	waitFor,
 	within,
@@ -41,6 +41,7 @@ const nameInput = () => screen.getByTestId("General-settings__input--name");
 const avatarImage = () => screen.getByTestId("SelectProfileImage__avatar-image");
 
 const resetSubmitID = "ResetProfile__submit-button";
+const selectListInputTestId = "select-list__input";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -213,7 +214,7 @@ describe("General Settings", () => {
 		await userEvent.type(nameInput(), "test profile");
 
 		// change auto signout period
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("15");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("15");
 
 		await userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
 
@@ -223,7 +224,7 @@ describe("General Settings", () => {
 
 		await userEvent.click(firstOption);
 
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("1");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("1");
 
 		expect(submitButton()).toBeEnabled();
 
@@ -608,7 +609,7 @@ describe("General Settings", () => {
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
 		// change auto signout period
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("15");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("15");
 
 		await userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
 
@@ -618,7 +619,7 @@ describe("General Settings", () => {
 
 		await userEvent.click(firstOption);
 
-		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("1");
+		expect(within(autoSignout()).getByTestId(selectListInputTestId)).toHaveValue("1");
 
 		// change navigation
 		act(() => {
@@ -629,18 +630,175 @@ describe("General Settings", () => {
 	});
 
 	it("should render viewing mode as button group on desktop", async () => {
+		const onChange = vi.fn();
+
+		render(<ViewingMode viewingMode="light" onChange={onChange} />);
+
+		expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
+
+		const buttons = screen.getAllByTestId("ButtonGroupOption");
+
+		await userEvent.click(buttons[0]);
+
+		expect(onChange).toHaveBeenCalledWith("light");
+	});
+
+	it("should render viewing mode as select on mobile", async () => {
+		const onChange = vi.fn();
+
+		renderResponsive(<ViewingMode viewingMode="light" onChange={onChange} />, "xs");
+
+		expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument();
+
+		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+
+		expect(onChange).toHaveBeenCalledWith("light");
+
+		onChange.mockClear();
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+
+		await userEvent.click(document.body);
+
+		expect(onChange).not.toHaveBeenCalled();
+	});
+
+	it("should render SettingsGroup with description", () => {
+		const { asFragment } = render(
+			<SettingsGroup title="Test Title" description="Test Description">
+				<div>Content</div>
+			</SettingsGroup>,
+		);
+
+		expect(screen.getByText("Test Title")).toBeInTheDocument();
+		expect(screen.getByText("Test Description")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render SettingsGroup without description", () => {
+		const { asFragment } = render(
+			<SettingsGroup title="Test Title">
+				<div>Content</div>
+			</SettingsGroup>,
+		);
+
+		expect(screen.getByText("Test Title")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render SettingsButtonGroup", () => {
+		const { asFragment } = render(
+			<SettingsButtonGroup>
+				<div>Content</div>
+			</SettingsButtonGroup>,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should use network wallet names when enabled", async () => {
+		const initialValue = profile.settings().get(ProfileSetting.UseNetworkWalletNames);
+
 		render(<GeneralSettings />, {
 			route: `/profiles/${profile.id()}/settings`,
 		});
 
-		expect(await screen.findByTestId("ButtonGroup")).toBeInTheDocument();
+		await expect(screen.findByTestId("AppearanceToggle__toggle-useNetworkWalletNames")).resolves.toBeVisible();
+
+		const toggle = screen.getByTestId("AppearanceToggle__toggle-useNetworkWalletNames");
+
+		if (!initialValue) {
+			await userEvent.click(toggle);
+		}
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		expect(profile.settings().get(ProfileSetting.UseNetworkWalletNames)).toBe(true);
 	});
 
-	it("should render viewing mode as select on mobile", async () => {
-		renderResponsiveWithRoute(<GeneralSettings />, "xs", {
+	it("should show development network when enabled", async () => {
+		profile.flushSettings();
+
+		render(<GeneralSettings />, {
 			route: `/profiles/${profile.id()}/settings`,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument());
+		await expect(screen.findByTestId("AppearanceToggle__toggle-showDevelopmentNetwork")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("AppearanceToggle__toggle-showDevelopmentNetwork"));
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		expect(profile.settings().get(ProfileSetting.UseTestNetworks)).toBe(true);
+	});
+
+	it("should update viewing mode", async () => {
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
+		const viewingModeButtons = await screen.findAllByTestId("ButtonGroupOption");
+
+		await userEvent.click(viewingModeButtons[1]);
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		expect(profile.settings().get(ProfileSetting.Theme)).toBe("dark");
+	});
+
+	it("should restore support chat after form submission if chat was open", async () => {
+		const { showSupportChat: showSupportChatMock, isSupportChatOpen } = vi.hoisted(() => ({
+			hideSupportChat: vi.fn(),
+			isSupportChatOpen: vi.fn().mockReturnValue(true),
+			showSupportChat: vi.fn(),
+		}));
+
+		vi.mock("@/app/contexts/Zendesk", () => ({
+			useZendesk: () => ({
+				hideSupportChat: vi.fn(),
+				isSupportChatOpen,
+				showSupportChat: showSupportChatMock,
+			}),
+		}));
+
+		render(<GeneralSettings />, {
+			route: `/profiles/${profile.id()}/settings`,
+		});
+
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
+		await userEvent.type(nameInput(), " updated");
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		await userEvent.click(submitButton());
+
+		await waitFor(() => {
+			expect(showSupportChatMock).toHaveBeenCalled();
+		});
+
+		expect(isSupportChatOpen()).toBe(true);
 	});
 });

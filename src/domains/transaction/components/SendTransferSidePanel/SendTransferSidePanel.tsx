@@ -1,7 +1,6 @@
 import { DTO } from "@/app/lib/profiles";
 import React, { useCallback, useEffect, useMemo, useRef, useState, JSX } from "react";
 import { useTranslation } from "react-i18next";
-import { URLBuilder } from "@ardenthq/arkvault-url";
 import { FormStep } from "@/domains/transaction/components/SendTransferSidePanel/FormStep";
 import { TransferLedgerReview } from "@/domains/transaction/components/SendTransferSidePanel/LedgerReview";
 import { ReviewStep } from "@/domains/transaction/components/SendTransferSidePanel/ReviewStep";
@@ -19,16 +18,19 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
-import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
 import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
-import { isValidUrl } from "@/utils/url-validation";
 import cn from "classnames";
 import {
 	TransferFormData,
 	TransferOverwriteModal,
 } from "@/domains/transaction/components/SendTransferSidePanel/TransferOverwriteModal";
+import {
+	isSendTransferNextDisabled,
+	parseQRCodeUrl,
+	handleQRCodeReadError,
+} from "@/domains/transaction/components/SendTransferSidePanel/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
@@ -86,7 +88,6 @@ export const SendTransferSidePanel = ({
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
-	const { urlSearchParameters } = useTransactionURL();
 	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
@@ -255,15 +256,12 @@ export const SendTransferSidePanel = ({
 	const isNextDisabled = useMemo<boolean>(() => {
 		const network = getValues("network");
 
-		if (activeTab === SendTransferStep.NetworkStep && typeof network?.isLive === "function") {
-			return false;
-		}
-
-		if (!isDirty) {
-			return true;
-		}
-
-		return !isValid;
+		return isSendTransferNextDisabled({
+			activeTab,
+			isDirty,
+			isValid,
+			network,
+		});
 	}, [activeTab, getValues, isDirty, isValid]);
 
 	const currentFormData: TransferFormData = {
@@ -280,23 +278,10 @@ export const SendTransferSidePanel = ({
 		let qrData: URLSearchParams | undefined;
 
 		try {
-			let uri = url;
-
-			// If the url is not valid, we assume it's an ARK URI with address only,
-			// and we need to convert it to a URL.
-			if (!isValidUrl(url)) {
-				const urlBuilder = new URLBuilder();
-
-				urlBuilder.setNethash(network?.meta().nethash);
-				uri = urlBuilder.generateTransfer(url);
-			}
-
-			qrData = urlSearchParameters(uri);
+			qrData = parseQRCodeUrl(url, network);
 		} catch {
-			if (!qrData) {
-				toasts.error(t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }));
-				return;
-			}
+			handleQRCodeReadError(t);
+			return;
 		}
 
 		const result = await validateSearchParameters(activeProfile, env, qrData, {
@@ -526,7 +511,7 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ReviewStep}>
-							<ReviewStep wallet={wallet!} network={activeNetwork} hideHeader />
+							<ReviewStep wallet={wallet!} network={activeNetwork} />
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.AuthenticationStep}>
@@ -558,7 +543,7 @@ export const SendTransferSidePanel = ({
 						</TabPanel>
 
 						<TabPanel tabId={SendTransferStep.ErrorStep}>
-							<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
+							<ErrorStep errorMessage={errorMessage} withCopyErrorButton hideFooter />
 						</TabPanel>
 
 						{!hideStepNavigation && (

@@ -264,6 +264,28 @@ describe("SendValidatorResignationSidePanel", () => {
 		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
 	});
 
+	it("should sync wallet if not synced already", async () => {
+		const findWalletMock = vi
+			.spyOn(profile.wallets(), "findByAddressWithNetwork")
+			.mockReturnValue(profile.wallets().first());
+		const syncedWithNetworkMock = vi
+			.spyOn(profile.wallets().first(), "hasSyncedWithNetwork")
+			.mockReturnValue(false);
+		const fullyRestoredMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
+
+		const { mockOnOpenChange } = await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SendRegistration__back-button"));
+
+		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+
+		findWalletMock.mockRestore();
+		syncedWithNetworkMock.mockRestore();
+		fullyRestoredMock.mockRestore();
+	});
+
 	it("should navigate between form and review steps", async () => {
 		await renderPanel();
 

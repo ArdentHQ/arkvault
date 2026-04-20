@@ -169,4 +169,85 @@ describe("Network validation", () => {
 				.validate(testAddress2),
 		).toBe(true);
 	});
+
+	it("should return true for empty address in explorer validation", () => {
+		expect(
+			network(() => "")
+				.explorer()
+				.validate(""),
+		).toBe(true);
+	});
+
+	it("should return true for valid address in explorer validation", () => {
+		expect(
+			network(() => "")
+				.explorer()
+				.validate(testAddress1),
+		).toBe(true);
+	});
+
+	it("should return true when name is not duplicate", () => {
+		expect(
+			network(() => "")
+				.name([
+					{
+						name: "test1",
+					} as Networks.NetworkManifest,
+				])
+				.validate("test2"),
+		).toBe(true);
+	});
+
+	it("should return true when updating same name", () => {
+		expect(
+			network(() => "")
+				.name(
+					[
+						{
+							name: "test1",
+						} as Networks.NetworkManifest,
+					],
+					{
+						name: "test2",
+					},
+				)
+				.validate("test2"),
+		).toBe(true);
+	});
+
+	it("should fail validation when updating to existing name of another network", () => {
+		expect(
+			network(() => "")
+				.name(
+					[
+						{
+							name: "test1",
+						} as Networks.NetworkManifest,
+						{
+							name: "test2",
+						} as Networks.NetworkManifest,
+					],
+					{
+						name: "test3",
+					},
+				)
+				.validate("test2"),
+		).not.toBe(true);
+	});
+
+	it("should return true for empty address in knownWallets validation", () => {
+		expect(
+			network(() => "")
+				.knownWallets()
+				.validate(""),
+		).toBe(true);
+	});
+
+	it("should return true for valid address in knownWallets validation", () => {
+		expect(
+			network(() => "")
+				.knownWallets()
+				.validate(testAddress1),
+		).toBe(true);
+	});
 });

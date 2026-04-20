@@ -8,7 +8,8 @@ import { useUnconfirmedTransactions } from "@/domains/transaction/hooks/use-unco
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { useLedgerModelStatus } from "@/app/hooks/use-ledger-model-status";
+import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import {
@@ -48,7 +49,7 @@ export const SendRegistrationSidePanel = ({
 }: {
 	open: boolean;
 	onOpenChange: (open: boolean) => void;
-	registrationType?: "validatorRegistration" | "usernameRegistration" | "contractDeployment";
+	registrationType: "validatorRegistration" | "usernameRegistration" | "contractDeployment";
 }) => {
 	const { t } = useTranslation();
 
@@ -131,10 +132,6 @@ export const SendRegistrationSidePanel = ({
 	});
 
 	useEffect(() => {
-		if (!registrationType) {
-			return;
-		}
-
 		setValue("lockedFee", validatorRegistrationFee, { shouldDirty: true, shouldValidate: true });
 	}, [validatorRegistrationFee, registrationType]);
 
@@ -255,10 +252,6 @@ export const SendRegistrationSidePanel = ({
 	const hasSynced = activeWallet && activeWallet.hasSyncedWithNetwork();
 
 	const getTitle = () => {
-		if (!registrationType) {
-			return "";
-		}
-
 		if (activeTab === ERROR_STEP) {
 			return t("TRANSACTION.ERROR.TITLE");
 		}
@@ -447,7 +440,7 @@ export const SendRegistrationSidePanel = ({
 				<Form data-testid="Registration__form" context={form} onSubmit={handleSubmit}>
 					<Tabs activeId={activeTab}>
 						<TabPanel tabId={ERROR_STEP}>
-							<ErrorStep errorMessage={errorMessage} hideHeader hideFooter withCopyErrorButton />
+							<ErrorStep errorMessage={errorMessage} hideFooter withCopyErrorButton />
 						</TabPanel>
 
 						{registrationForm && (

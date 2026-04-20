@@ -21,11 +21,15 @@ import React from "react";
 import { SendUsernameResignationSidePanel } from "./SendUsernameResignationSidePanel";
 import userEvent from "@testing-library/user-event";
 import { PublicKeyService } from "@/app/lib/mainsail/public-key.service";
+import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { vi } from "vitest";
 import * as ReactRouter from "react-router";
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const passphrase = getDefaultMainsailWalletMnemonic();
+
+const backButtonTestId = "SendUsernameResignation__back-button";
+const broadcastError = "broadcast error";
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -173,6 +177,14 @@ describe("SendUsernameResignationSidePanel", () => {
 			transaction: vi.fn().mockReturnValue(signedTransactionMock),
 		}));
 
+		const findWalletMock = vi
+			.spyOn(profile.wallets(), "findByAddressWithNetwork")
+			.mockReturnValue(profile.wallets().first());
+		const syncedWithNetworkMock = vi
+			.spyOn(profile.wallets().first(), "hasSyncedWithNetwork")
+			.mockReturnValue(false);
+		const fullyRestoredMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
+
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPanel();
 
@@ -187,7 +199,7 @@ describe("SendUsernameResignationSidePanel", () => {
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		// Navigate back to form step
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 		await expect(formStep()).resolves.toBeVisible();
 
 		// Continue to review step again
@@ -251,6 +263,52 @@ describe("SendUsernameResignationSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SendUsernameResignation__close-button"));
 
 		nanoXTransportMock.mockRestore();
+		findWalletMock.mockRestore();
+		syncedWithNetworkMock.mockRestore();
+		fullyRestoredMock.mockRestore();
+	});
+
+	it("should handle on change with undefined wallet selection", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		const undefinedAddressMock = vi.spyOn(profile.wallets(), "values").mockReturnValue([]);
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
+			throw new Error(broadcastError);
+		});
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(broadcastError);
+
+		// Go back to form step
+		await userEvent.click(screen.getByTestId(backButtonTestId));
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+		undefinedAddressMock.mockRestore();
 	});
 
 	it("should handle transaction error and go back", async () => {
@@ -276,22 +334,66 @@ describe("SendUsernameResignationSidePanel", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
-			throw new Error("broadcast error");
+			throw new Error(broadcastError);
 		});
 
 		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(broadcastError);
 
 		// Go back to form step
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 
 		await expect(formStep()).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		nanoXTransportMock.mockRestore();
+	});
+
+	it("should not trigger wallet change if wallet is not found in profile store", async () => {
+		const findWalletMock = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(undefined);
+
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
+		await userEvent.type(passwordInput, passphrase);
+		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		const signMock = vi.spyOn(wallet.transaction(), "signUsernameResignation").mockImplementation(() => {
+			throw new Error(broadcastError);
+		});
+
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent(broadcastError);
+
+		// Go back to form step
+		await userEvent.click(screen.getByTestId(backButtonTestId));
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+		findWalletMock.mockRestore();
 	});
 
 	it("should close the side panel when clicking back on form step", async () => {
@@ -300,7 +402,7 @@ describe("SendUsernameResignationSidePanel", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		await userEvent.click(screen.getByTestId("SendUsernameResignation__back-button"));
+		await userEvent.click(screen.getByTestId(backButtonTestId));
 
 		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
 
@@ -424,6 +526,106 @@ describe("SendUsernameResignationSidePanel", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		await waitFor(() => expect(sendButton()).toBeDisabled());
+
+		nanoXTransportMock.mockRestore();
+	});
+
+	it("should show Ledger icon in title when wallet is Ledger", async () => {
+		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		const nanoXTransportMock = mockNanoXTransport();
+
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		isLedgerMock.mockRestore();
+		nanoXTransportMock.mockRestore();
+	});
+
+	it("should handle wallet change from dropdown", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		const allWallets = profile.wallets().values();
+		const otherWallet = allWallets.find((w) => w.address() !== wallet.address());
+
+		expect(otherWallet).toBeDefined();
+
+		if (otherWallet) {
+			vi.spyOn(otherWallet, "hasBeenFullyRestored").mockReturnValue(true);
+			vi.spyOn(otherWallet, "hasSyncedWithNetwork").mockReturnValue(true);
+			vi.spyOn(otherWallet, "synchroniser").mockReturnValue({
+				identity: vi.fn().mockResolvedValue(undefined),
+			} as any);
+
+			const walletCapabilitiesSpy = vi
+				.spyOn(WalletCapabilities(otherWallet), "canSendUsernameResignation")
+				.mockReturnValue(true);
+
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
+			await userEvent.click(selectDropdown);
+
+			await waitFor(() => {
+				expect(screen.getByText(otherWallet.address())).toBeVisible();
+			});
+
+			await userEvent.click(screen.getByText(otherWallet.address()));
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			walletCapabilitiesSpy.mockRestore();
+		}
+
+		nanoXTransportMock.mockRestore();
+	});
+
+	it("should handle wallet change for disabled action wallet", async () => {
+		const nanoXTransportMock = mockNanoXTransport();
+		await renderPanel();
+
+		await expect(formStep()).resolves.toBeVisible();
+
+		const allWallets = profile.wallets().values();
+		const otherWallet = allWallets.find((w) => w.address() !== wallet.address());
+
+		expect(otherWallet).toBeDefined();
+
+		if (otherWallet) {
+			vi.spyOn(otherWallet, "hasBeenFullyRestored").mockReturnValue(true);
+			vi.spyOn(otherWallet, "hasSyncedWithNetwork").mockReturnValue(true);
+			vi.spyOn(otherWallet, "synchroniser").mockReturnValue({
+				identity: vi.fn().mockResolvedValue(undefined),
+			} as any);
+
+			const walletCapabilitiesSpy = vi
+				.spyOn(WalletCapabilities(otherWallet), "canSendUsernameResignation")
+				.mockReturnValue(false);
+
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
+			await userEvent.click(selectDropdown);
+
+			await waitFor(() => {
+				expect(screen.getByText(otherWallet.address())).toBeVisible();
+			});
+
+			await userEvent.click(screen.getByText(otherWallet.address()));
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			walletCapabilitiesSpy.mockRestore();
+		}
 
 		nanoXTransportMock.mockRestore();
 	});

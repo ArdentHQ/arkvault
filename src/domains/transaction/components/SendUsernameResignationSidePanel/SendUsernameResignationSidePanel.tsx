@@ -13,7 +13,12 @@ import { useActiveProfile, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
-import { getAuthenticationStepSubtitle, handleBroadcastError } from "@/domains/transaction/utils";
+import {
+	getAuthenticationStepSubtitle,
+	getAuthenticationStepTitleIcon,
+	handleBroadcastError,
+	handleOnMountChange,
+} from "@/domains/transaction/utils";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { assertWallet } from "@/utils/assertions";
 import { useToggleFeeFields } from "@/domains/transaction/hooks/useToggleFeeFields";
@@ -155,17 +160,14 @@ export const SendUsernameResignationSidePanel = ({
 	const stepCount = 4;
 
 	const onMountChange = useCallback(
-		(mounted: boolean) => {
-			setMounted(mounted);
-
-			if (!mounted) {
-				resetForm(() => {
-					setActiveTab(Step.FormStep);
-
-					setErrorMessage(undefined);
-				});
-			}
-		},
+		(mounted: boolean) =>
+			handleOnMountChange({
+				mounted,
+				resetForm,
+				setActiveTab,
+				setErrorMessage,
+				setMounted,
+			}),
 		[resetForm],
 	);
 
@@ -231,13 +233,16 @@ export const SendUsernameResignationSidePanel = ({
 		}
 
 		if (activeTab === Step.AuthenticationStep) {
-			if (activeWallet?.isLedger()) {
+			const ledgerIcon = getAuthenticationStepTitleIcon({
+				wallet: activeWallet,
+			});
+			if (ledgerIcon) {
 				return (
 					<ThemeIcon
-						lightIcon="LedgerLight"
-						darkIcon="LedgerDark"
-						dimIcon="LedgerDim"
-						dimensions={[24, 24]}
+						lightIcon={ledgerIcon.lightIcon}
+						darkIcon={ledgerIcon.darkIcon}
+						dimIcon={ledgerIcon.dimIcon}
+						dimensions={ledgerIcon.dimensions}
 					/>
 				);
 			}
@@ -337,12 +342,11 @@ export const SendUsernameResignationSidePanel = ({
 							senderWallet={activeWallet}
 							profile={activeProfile}
 							onWalletChange={setActiveWallet}
-							hideHeader
 						/>
 					</TabPanel>
 
 					<TabPanel tabId={Step.ReviewStep}>
-						<ReviewStep senderWallet={activeWallet!} profile={activeProfile} hideHeader />
+						<ReviewStep senderWallet={activeWallet!} profile={activeProfile} />
 					</TabPanel>
 
 					<TabPanel tabId={Step.AuthenticationStep}>
@@ -359,7 +363,7 @@ export const SendUsernameResignationSidePanel = ({
 					</TabPanel>
 
 					<TabPanel tabId={Step.ErrorStep}>
-						<ErrorStep errorMessage={errorMessage} hideHeader withCopyErrorButton hideFooter />
+						<ErrorStep errorMessage={errorMessage} withCopyErrorButton hideFooter />
 					</TabPanel>
 				</Tabs>
 			</Form>

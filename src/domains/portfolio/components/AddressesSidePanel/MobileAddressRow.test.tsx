@@ -130,6 +130,26 @@ describe("MobileAddressRow", () => {
 		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
 	});
 
+	it("should trigger `toggleAddress` when radio button clicked", async () => {
+		const toggleAddress = vi.fn();
+
+		render(
+			<MobileAddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={false}
+				toggleAddress={toggleAddress}
+				isSelected={false}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("AddressRow--radio"));
+		expect(toggleAddress).toHaveBeenCalledWith(wallet.address());
+	});
+
 	it("should should render deleteContent", () => {
 		const onDelete = vi.fn();
 		render(

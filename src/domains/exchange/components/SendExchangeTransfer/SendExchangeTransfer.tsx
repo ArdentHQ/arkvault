@@ -87,7 +87,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 		if (senderWallet) {
 			void validate();
 		}
-	}, [fee, network, recipients, sendTransfer, senderWallet]);
+	}, [fee.toString(), network, recipients, sendTransfer, senderWallet]);
 
 	useEffect(() => {
 		form.setValue("amount", exchangeInput.amount, { shouldDirty: true, shouldValidate: true });
@@ -170,7 +170,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 			handleSubmit(() => submit())();
 		};
 
-		connectLedgerAndSubmit();
+		void connectLedgerAndSubmit();
 	}, [senderWallet, isConnected, transaction]);
 
 	if (transaction) {
@@ -251,7 +251,7 @@ export const SendExchangeTransfer: React.FC<TransferProperties> = ({
 									<TotalAmountBox
 										detailWrapperClassName="sm:min-w-20"
 										amount={exchangeInput.amount}
-										fee={fee || 0}
+										fee={fee}
 										ticker={senderWallet.currency()}
 										convertValues={!senderWallet.network().isTest()}
 									/>
