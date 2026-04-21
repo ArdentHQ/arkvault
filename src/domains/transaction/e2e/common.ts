@@ -8,9 +8,7 @@ export const goToTransferPage = async (t: any) => {
 	await t.click(Selector("[data-testid=WalletHeader__send-button]"));
 	await t
 		.expect(
-			Selector("h1").withText(
-				translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE.replace("{{ticker}}", "ARK"),
-			).exists,
+			Selector("h2").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE).exists,
 		)
 		.ok({ timeout: 60_000 });
 };
