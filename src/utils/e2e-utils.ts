@@ -116,10 +116,10 @@ const searchAddressesMocks = () => {
 	for (const [address, configs] of Object.entries(addresses)) {
 		mocks.push(
 			...configs.map(({ page, limit }: { page: number; limit: number }) => {
-
-				const fixture = address === "0x659A76be283644AEc2003aa8ba26485047fd1BFB"
-					? `coins/mainsail/devnet/transactions/byAddress/${address}-1-30`
-					: `coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`
+				const fixture =
+					address === "0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+						? `coins/mainsail/devnet/transactions/byAddress/${address}-1-30`
+						: `coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`;
 
 				return mockRequest(
 					(request: any) =>
@@ -261,35 +261,38 @@ export const requestMocks = {
 		// devnet
 		// mockRequest(`${BASEURL}transactions/fees`, "coins/mainsail/devnet/transaction-fees"),
 
-		mockRequest(/^https:\/\/(dwallets-evm|testnet)\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}\?includeTokens=true$/, (request: any) => {
-			const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
-			const match = request.url.match(regex);
-			const hash = match?.groups?.hash;
+		mockRequest(
+			/^https:\/\/(dwallets-evm|testnet)\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}\?includeTokens=true$/,
+			(request: any) => {
+				const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
+				const match = request.url.match(regex);
+				const hash = match?.groups?.hash;
 
-			return JSON.stringify({
-				data: {
-					blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-					confirmations: 1,
-					data: "",
-					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-					gas: "21000",
-					gasPrice: "100000000000",
-					hash: hash,
-					nonce: "3",
-					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
-					signature:
-						"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
-					to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
-					value: "2000000000000000000",
-					timestamp: "1752502567204",
-					receipt: {
-						gasRefunded: 0,
-						gasUsed: 21000,
-						status: 1,
+				return JSON.stringify({
+					data: {
+						blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
+						confirmations: 1,
+						data: "",
+						from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+						gas: "21000",
+						gasPrice: "100000000000",
+						hash: hash,
+						nonce: "3",
+						senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
+						signature:
+							"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
+						to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
+						value: "2000000000000000000",
+						timestamp: "1752502567204",
+						receipt: {
+							gasRefunded: 0,
+							gasUsed: 21000,
+							status: 1,
+						},
 					},
-				},
-			});
-		}),
+				});
+			},
+		),
 
 		// for notifications
 		mockRequest(
@@ -311,10 +314,7 @@ export const requestMocks = {
 		mockRequest(`${E2E_PUBLIC_API_URL}blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002`, {}),
 
 		// unconfirmed transactions call
-		mockRequest(
-			(request: any) => request.url.includes('/transactions/unconfirmed'),
-			{},
-		),
+		mockRequest((request: any) => request.url.includes("/transactions/unconfirmed"), {}),
 
 		// mainnet
 		// mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
@@ -371,47 +371,45 @@ export const requestMocks = {
 		// mockRequest(`${BASEURL}blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50`, {}),
 	],
 	tokens: [
-		...(mockedAddresses.map((identifier: string) =>
-			mockRequest(`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=${identifier}&minBalance=0`, function() {
-				return JSON.stringify(
-					{
-						"meta": {
-							"totalCountIsEstimate": false,
-							"count": 3,
-							"first": `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
-							"last": `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
-							"next": null,
-							"pageCount": 1,
-							"previous": null,
-							"self": `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
-							"totalCount": 3
-						},
-						"data": [
-							{
-								"token": "0x12f6677522292654a231007c47b07971a7610908",
-								"symbol": "Lorem",
-								"name": "Lorem ipsum",
-								"decimals": 18,
-								"supply": "123456789000000000000000000",
-								"addresses": {
-									[identifier]: "123456789000000000000000000"
-								}
+		...mockedAddresses.map((identifier: string) =>
+			mockRequest(`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=${identifier}&minBalance=0`, function () {
+				return JSON.stringify({
+					meta: {
+						totalCountIsEstimate: false,
+						count: 3,
+						first: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+						last: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+						next: null,
+						pageCount: 1,
+						previous: null,
+						self: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+						totalCount: 3,
+					},
+					data: [
+						{
+							token: "0x12f6677522292654a231007c47b07971a7610908",
+							symbol: "Lorem",
+							name: "Lorem ipsum",
+							decimals: 18,
+							supply: "123456789000000000000000000",
+							addresses: {
+								[identifier]: "123456789000000000000000000",
 							},
-							{
-								"token": "0x180a864a755fed0144c622df49b83db577befefb",
-								"symbol": "DARK20",
-								"name": "DARK20",
-								"decimals": 18,
-								"supply": "100000000000000000000000000",
-								"addresses": {
-									[identifier]: "100000000000000000000000000"
-								}
-							}
-						]
-					}
-				);
+						},
+						{
+							token: "0x180a864a755fed0144c622df49b83db577befefb",
+							symbol: "DARK20",
+							name: "DARK20",
+							decimals: 18,
+							supply: "100000000000000000000000000",
+							addresses: {
+								[identifier]: "100000000000000000000000000",
+							},
+						},
+					],
+				});
 			}),
-		))
+		),
 	],
 };
 
