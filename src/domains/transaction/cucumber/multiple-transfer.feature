@@ -20,8 +20,8 @@ Feature: Multipay Transaction
         Given Alice is signed into a profile with an imported wallet
         And has navigated to the transfer page
         When she enters multipay details in the transaction form
-        And navigates to page 2
-        And navigates back to page 1
+        And navigates to step 2
+        And navigates back to step 1
         Then all added transaction details should remain
 
     @multipayTransaction-singleField

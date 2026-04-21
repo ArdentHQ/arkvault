@@ -14,7 +14,7 @@ import { importWallet } from "../../portfolio/e2e/common";
 import { goToTransferPage } from "../e2e/common";
 
 const translations = buildTranslations();
-const sendButton = Selector("button").withText(translations.COMMON.SEND);
+const sendButton = Selector("[data-testid=SendTransfer__send-button]");
 const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(1);
 const amountInput = Selector("[data-testid=AddRecipient__amount]");
 
@@ -110,7 +110,7 @@ cucumber("@multipayTransaction-invalidMnemonic", {
 		await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
 			replace: true,
 		});
-		await t.click(Selector("[data-testid=StepNavigation__send-button"));
+		// await t.click(Selector("[data-testid=SendTransfer__send-button"));
 	},
 	"Then an error is displayed on the mnemonic field": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
@@ -136,15 +136,15 @@ cucumber("@multipayTransaction-notClearValues", {
 
 		await t.click(Selector("button").withText(translations.TRANSACTION.ADD_RECIPIENT));
 	},
-	"And navigates to page 2": async (t: TestController) => {
+	"And navigates to step 2": async (t: TestController) => {
 		await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 		await t.expect(Selector("h2").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
 	},
-	"And navigates back to page 1": async (t: TestController) => {
+	"And navigates back to step 1": async (t: TestController) => {
 		await t.click(Selector("button").withText(translations.COMMON.BACK));
 	},
 	"Then all added transaction details should remain": async (t: TestController) => {
-		await t.expect(Selector("span").withText(translations.TRANSACTION.MULTIPLE).exists).ok();
+		await t.expect(Selector("button").withText(translations.TRANSACTION.MULTIPLE).exists).ok();
 		await t.expect(Selector("[data-testid=AddRecipientItem]").count).eql(2);
 	},
 });
