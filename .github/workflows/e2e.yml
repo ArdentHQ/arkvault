@@ -96,11 +96,6 @@ jobs:
             - name: Install (pnpm)
               run: pnpm install --frozen-lockfile
 
-            - name: Setup Firefox
-              uses: browser-actions/setup-firefox@v1
-              with:
-                firefox-version: '143.0'
-
             - name: Set up Microsoft Edge
               run: |
                   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -430,11 +425,6 @@ jobs:
 
             - name: Install (pnpm)
               run: pnpm install --frozen-lockfile
-
-            - name: Setup Firefox
-              uses: browser-actions/setup-firefox@v1
-              with:
-                  firefox-version: '140.0'
 
             - name: Set up Microsoft Edge
               run: |
