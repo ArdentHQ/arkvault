@@ -100,7 +100,7 @@ describe("TransactionAmount.blocks", () => {
 
 		render(<TransactionAmountLabel transaction={tokenFixture as any} />);
 
-		expect(screen.getByText(/100 USDC/)).toBeInTheDocument();
+		expect(screen.getByText(/100.00 USDC/)).toBeInTheDocument();
 	});
 
 	it("should show fiat value for multiPayment transaction", () => {
@@ -220,7 +220,7 @@ describe("TransactionAmount.blocks", () => {
 
 		render(<TransactionAmountLabel transaction={fixtureWithoutToken} />);
 
-		expect(screen.getByText(/50 ARK/)).toBeInTheDocument();
+		expect(screen.getByText(/50.00 ARK/)).toBeInTheDocument();
 	});
 });
 
