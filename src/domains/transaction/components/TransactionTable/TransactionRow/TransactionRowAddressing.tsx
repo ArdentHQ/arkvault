@@ -16,7 +16,7 @@ import { isNullAddress } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
 
-export const transactionDirectionLabel = ({ transaction }: { transaction: DTO.RawTransactionData }): string => {
+export const transactionDirectionLabel = ({ transaction }: { transaction: DTO.RawTransactionData }): Direction => {
 	const isNegative = !!transaction.isSent();
 
 	let direction: Direction = isNegative ? "sent" : "received";
