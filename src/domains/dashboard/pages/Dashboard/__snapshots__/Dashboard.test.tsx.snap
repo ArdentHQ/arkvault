@@ -697,7 +697,7 @@ exports[`Dashboard > render in lg 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -1236,7 +1236,7 @@ exports[`Dashboard > render in lg 1`] = `
                             class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                             data-testid="Amount"
                           >
-                            0 BTC
+                            0.00 BTC
                           </span>
                         </div>
                       </div>
@@ -3053,7 +3053,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        + 2
+                                        + 2.00
                                       </span>
                                     </span>
                                   </span>
@@ -3067,7 +3067,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -3093,7 +3093,7 @@ exports[`Dashboard > render in lg 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        + 2
+                                        + 2.00
                                       </span>
                                     </span>
                                   </span>
@@ -3107,7 +3107,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -3615,7 +3615,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -3655,7 +3655,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -4163,7 +4163,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -4203,7 +4203,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -4711,7 +4711,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -4751,7 +4751,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -5259,7 +5259,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -5299,7 +5299,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -5807,7 +5807,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -5847,7 +5847,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -6355,7 +6355,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -6395,7 +6395,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -6942,7 +6942,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -6982,7 +6982,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -7328,7 +7328,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -7368,7 +7368,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -7919,7 +7919,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -7959,7 +7959,7 @@ exports[`Dashboard > render in lg 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -8779,7 +8779,7 @@ exports[`Dashboard > render in md 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -9318,7 +9318,7 @@ exports[`Dashboard > render in md 1`] = `
                             class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                             data-testid="Amount"
                           >
-                            0 BTC
+                            0.00 BTC
                           </span>
                         </div>
                       </div>
@@ -11135,7 +11135,7 @@ exports[`Dashboard > render in md 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        + 2
+                                        + 2.00
                                       </span>
                                     </span>
                                   </span>
@@ -11149,7 +11149,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -11175,7 +11175,7 @@ exports[`Dashboard > render in md 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        + 2
+                                        + 2.00
                                       </span>
                                     </span>
                                   </span>
@@ -11189,7 +11189,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -11697,7 +11697,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -11737,7 +11737,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -12245,7 +12245,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -12285,7 +12285,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -12793,7 +12793,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -12833,7 +12833,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -13341,7 +13341,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -13381,7 +13381,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -13889,7 +13889,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -13929,7 +13929,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -14437,7 +14437,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -14477,7 +14477,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -15024,7 +15024,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -15064,7 +15064,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -15410,7 +15410,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -15450,7 +15450,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -16001,7 +16001,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -16041,7 +16041,7 @@ exports[`Dashboard > render in md 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -16861,7 +16861,7 @@ exports[`Dashboard > render in sm 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -17400,7 +17400,7 @@ exports[`Dashboard > render in sm 1`] = `
                             class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                             data-testid="Amount"
                           >
-                            0 BTC
+                            0.00 BTC
                           </span>
                         </div>
                       </div>
@@ -18782,7 +18782,7 @@ exports[`Dashboard > render in sm 1`] = `
                                             class="whitespace-nowrap text-sm"
                                             data-testid="Amount"
                                           >
-                                            + 2
+                                            + 2.00
                                           </span>
                                         </span>
                                       </span>
@@ -18805,7 +18805,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -19049,7 +19049,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -19293,7 +19293,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -19537,7 +19537,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -19781,7 +19781,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -20025,7 +20025,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -20269,7 +20269,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -20526,7 +20526,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -20716,7 +20716,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -20975,7 +20975,7 @@ exports[`Dashboard > render in sm 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -21796,7 +21796,7 @@ exports[`Dashboard > render in xl 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -22335,7 +22335,7 @@ exports[`Dashboard > render in xl 1`] = `
                             class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                             data-testid="Amount"
                           >
-                            0 BTC
+                            0.00 BTC
                           </span>
                         </div>
                       </div>
@@ -24152,7 +24152,7 @@ exports[`Dashboard > render in xl 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        + 2
+                                        + 2.00
                                       </span>
                                     </span>
                                   </span>
@@ -24166,7 +24166,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -24180,7 +24180,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -24686,7 +24686,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -24700,7 +24700,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -25206,7 +25206,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -25220,7 +25220,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -25726,7 +25726,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -25740,7 +25740,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -26246,7 +26246,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -26260,7 +26260,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -26766,7 +26766,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -26780,7 +26780,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -27286,7 +27286,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -27300,7 +27300,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -27845,7 +27845,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -27859,7 +27859,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -28203,7 +28203,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -28217,7 +28217,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -28766,7 +28766,7 @@ exports[`Dashboard > render in xl 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -28780,7 +28780,7 @@ exports[`Dashboard > render in xl 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              0 BTC
+                              0.00 BTC
                             </span>
                           </div>
                         </td>
@@ -29598,7 +29598,7 @@ exports[`Dashboard > render in xs 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -30137,7 +30137,7 @@ exports[`Dashboard > render in xs 1`] = `
                             class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                             data-testid="Amount"
                           >
-                            0 BTC
+                            0.00 BTC
                           </span>
                         </div>
                       </div>
@@ -31519,7 +31519,7 @@ exports[`Dashboard > render in xs 1`] = `
                                             class="whitespace-nowrap text-sm"
                                             data-testid="Amount"
                                           >
-                                            + 2
+                                            + 2.00
                                           </span>
                                         </span>
                                       </span>
@@ -31542,7 +31542,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -31786,7 +31786,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -32030,7 +32030,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -32274,7 +32274,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -32518,7 +32518,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -32762,7 +32762,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -33006,7 +33006,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -33263,7 +33263,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -33453,7 +33453,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -33712,7 +33712,7 @@ exports[`Dashboard > render in xs 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    0 BTC
+                                    0.00 BTC
                                   </span>
                                 </div>
                               </div>
@@ -34534,7 +34534,7 @@ exports[`Dashboard > should render 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -35073,7 +35073,7 @@ exports[`Dashboard > should render 1`] = `
                             class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                             data-testid="Amount"
                           >
-                            0 BTC
+                            0.00 BTC
                           </span>
                         </div>
                       </div>
@@ -36759,7 +36759,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        + 2
+                                        + 2.00
                                       </span>
                                     </span>
                                   </span>
@@ -36773,7 +36773,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -36799,7 +36799,7 @@ exports[`Dashboard > should render 1`] = `
                                         class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
-                                        + 2
+                                        + 2.00
                                       </span>
                                     </span>
                                   </span>
@@ -36813,7 +36813,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -37321,7 +37321,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -37361,7 +37361,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -37869,7 +37869,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -37909,7 +37909,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -38417,7 +38417,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -38457,7 +38457,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -38965,7 +38965,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -39005,7 +39005,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -39513,7 +39513,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -39553,7 +39553,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -40061,7 +40061,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -40101,7 +40101,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -40648,7 +40648,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -40688,7 +40688,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -41034,7 +41034,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -41074,7 +41074,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -41625,7 +41625,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -41665,7 +41665,7 @@ exports[`Dashboard > should render 1`] = `
                                   class="whitespace-nowrap"
                                   data-testid="Amount"
                                 >
-                                  0 BTC
+                                  0.00 BTC
                                 </span>
                               </span>
                             </div>
@@ -42486,7 +42486,7 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -42936,7 +42936,7 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                             class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50"
                             data-testid="Amount"
                           >
-                            0 ARK
+                            0.00 ARK
                           </span>
                           <div
                             class="relative mx-2 border-t-0 border-l border-solid align-middle border-theme-secondary-300 md-lg:block dark:border-theme-dark-700 dim:border-theme-dim-700 hidden h-6"
@@ -42945,7 +42945,7 @@ exports[`Dashboard > should render with ledger wallet 1`] = `
                             class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-dark-200 md-lg:block dim:text-theme-dim-200 hidden"
                             data-testid="Amount"
                           >
-                            0 BTC
+                            0.00 BTC
                           </span>
                         </div>
                       </div>

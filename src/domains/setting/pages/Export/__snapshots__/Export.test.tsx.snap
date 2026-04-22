@@ -570,7 +570,7 @@ exports[`Export Settings > should render export settings 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>

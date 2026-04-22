@@ -206,7 +206,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -486,7 +486,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -546,7 +546,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -668,7 +668,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -750,7 +750,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -970,7 +970,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -1030,7 +1030,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -1152,7 +1152,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>
@@ -1234,7 +1234,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      - 1 ARK
+                      - 1.00 ARK
                     </span>
                   </div>
                 </div>

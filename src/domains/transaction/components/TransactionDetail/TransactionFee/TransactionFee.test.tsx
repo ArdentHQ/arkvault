@@ -10,6 +10,6 @@ describe("TransactionFee", () => {
 			<TransactionFee currency="DARK" value={BigNumber.make(1)} convertedValue={1.5} exchangeCurrency="EUR" />,
 		);
 
-		expect(container).toHaveTextContent("1 DARK");
+		expect(container).toHaveTextContent("1.00 DARK");
 	});
 });

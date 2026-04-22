@@ -73,7 +73,7 @@ exports[`Notifications > should render in xs 1`] = `
                   class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
-                  + 2 ARK
+                  + 2.00 ARK
                 </span>
               </div>
             </div>
@@ -158,7 +158,7 @@ exports[`Notifications > should render in xs 2`] = `
                   class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
-                  + 2 ARK
+                  + 2.00 ARK
                 </span>
               </div>
             </div>
@@ -255,7 +255,7 @@ exports[`Notifications > should render in xs 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 2 ARK
+                    + 2.00 ARK
                   </span>
                 </div>
               </div>
@@ -356,7 +356,7 @@ exports[`Notifications > should render in xs 4`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 2 ARK
+                    + 2.00 ARK
                   </span>
                 </div>
               </div>
@@ -457,7 +457,7 @@ exports[`Notifications > should render in xs 5`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 2 ARK
+                    + 2.00 ARK
                   </span>
                 </div>
               </div>
@@ -558,7 +558,7 @@ exports[`Notifications > should render notification item 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 2 ARK
+                    + 2.00 ARK
                   </span>
                 </div>
               </div>

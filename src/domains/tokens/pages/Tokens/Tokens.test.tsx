@@ -191,16 +191,18 @@ describe("Tokens", () => {
 
 		const validAddress = "0x12f6677522292654a231007c47b07971a7610904";
 
-		server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/tokens/${validAddress}`, {
-			data: {
-				address: "0x12f6677522292654a231007c47b07971a7610908",
-				decimals: 18,
-				deploymentHash: "7a9052d9d5fd73f106cbf6728f0661054de13a03a2c199c51c1a11f547890d0c",
-				name: "SamCoin",
-				symbol: "SAM",
-				totalSupply: "12345678912345000000000000000000",
-			},
-		}));
+		server.use(
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/tokens/${validAddress}`, {
+				data: {
+					address: "0x12f6677522292654a231007c47b07971a7610908",
+					decimals: 18,
+					deploymentHash: "7a9052d9d5fd73f106cbf6728f0661054de13a03a2c199c51c1a11f547890d0c",
+					name: "SamCoin",
+					symbol: "SAM",
+					totalSupply: "12345678912345000000000000000000",
+				},
+			}),
+		);
 
 		await user.clear(screen.getByTestId("Input__ContractAddress"));
 		await user.paste(validAddress);
