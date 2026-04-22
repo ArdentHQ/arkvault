@@ -125,4 +125,29 @@ describe("LedgerTransactionSuccessStep", () => {
 
 		expect(container.querySelector(".space-y-4")).toBeInTheDocument();
 	});
+
+	it("should trigger auto-navigation after delay for multiple pending transactions", async () => {
+		const onGoToPortfolio = vi.fn();
+		const onGoToNextTransaction = vi.fn();
+
+		vi.spyOn(migrator, "isMigrationComplete").mockReturnValue(false);
+
+		render(
+			<LedgerTransactionSuccessStep
+				profile={profile}
+				transfer={createTransfer()}
+				migrator={migrator}
+				onGoToPortfolio={onGoToPortfolio}
+				onGoToNextTransaction={onGoToNextTransaction}
+			/>,
+			{ route },
+		);
+
+		await waitFor(
+			() => {
+				expect(onGoToNextTransaction).toHaveBeenCalled();
+			},
+			{ timeout: 3000 },
+		);
+	});
 });

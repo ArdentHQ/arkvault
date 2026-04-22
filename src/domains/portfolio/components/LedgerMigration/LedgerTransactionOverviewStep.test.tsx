@@ -1,17 +1,9 @@
-import {
-	env,
-	getMainsailProfileId,
-	mockNanoSTransport,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor, act } from "@/utils/testing-library";
 import { expect, it, describe, beforeAll, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
 import { OverviewStep } from "./LedgerTransactionOverviewStep";
 import { LedgerMigrator } from "@/app/lib/mainsail/ledger.migrator";
 import { createLedgerMocks } from "@/tests/mocks/Ledger";
-import { DraftTransfer } from "@/app/lib/mainsail/draft-transfer";
 import { ExtendedSignedTransactionData } from "@/app/lib/profiles/signed-transaction.dto";
 
 vi.mock("@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction", () => ({
@@ -69,16 +61,18 @@ describe("LedgerTransactionOverviewStep", () => {
 		const onContinue = vi.fn();
 		const onVerifyAddress = vi.fn();
 
-		render(
-			<OverviewStep
-				profile={profile}
-				transfer={createTransfer()}
-				migrator={migrator}
-				onContinue={onContinue}
-				onVerifyAddress={onVerifyAddress}
-			/>,
-			{ route },
-		);
+		await act(async () => {
+			render(
+				<OverviewStep
+					profile={profile}
+					transfer={createTransfer()}
+					migrator={migrator}
+					onContinue={onContinue}
+					onVerifyAddress={onVerifyAddress}
+				/>,
+				{ route },
+			);
+		});
 
 		expect(screen.getByTestId("Overview_accept-responsibility")).toBeInTheDocument();
 		expect(screen.getByTestId("OverviewStep__continue-button")).toBeInTheDocument();
@@ -88,17 +82,51 @@ describe("LedgerTransactionOverviewStep", () => {
 		const onContinue = vi.fn();
 		const onVerifyAddress = vi.fn();
 
-		render(
-			<OverviewStep
-				profile={profile}
-				transfer={createTransfer()}
-				migrator={migrator}
-				onContinue={onContinue}
-				onVerifyAddress={onVerifyAddress}
-			/>,
-			{ route },
-		);
+		await act(async () => {
+			render(
+				<OverviewStep
+					profile={profile}
+					transfer={createTransfer()}
+					migrator={migrator}
+					onContinue={onContinue}
+					onVerifyAddress={onVerifyAddress}
+				/>,
+				{ route },
+			);
+		});
 
 		expect(screen.getByTestId("OverviewStep__continue-button")).toBeDisabled();
+	});
+
+	it("should not show Transactions component when only one transaction", async () => {
+		const singleMigrator = new LedgerMigrator({ env, profile: env.profiles().first() });
+
+		await singleMigrator.createTransactions([
+			{
+				address: profile.wallets().first().address(),
+				path: "m/44'/1'/1'/0/0",
+			},
+		]);
+
+		const onContinue = vi.fn();
+		const onVerifyAddress = vi.fn();
+
+		await act(async () => {
+			render(
+				<OverviewStep
+					profile={profile}
+					transfer={createTransfer()}
+					migrator={singleMigrator}
+					onContinue={onContinue}
+					onVerifyAddress={onVerifyAddress}
+				/>,
+				{ route },
+			);
+		});
+
+		expect(screen.queryByTestId("LedgerMigration__Transactions")).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("Overview_accept-responsibility")).toBeInTheDocument();
+		});
 	});
 });
