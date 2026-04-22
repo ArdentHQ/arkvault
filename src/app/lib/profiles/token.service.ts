@@ -83,7 +83,7 @@ export class TokenService {
 				tokensQuery = {
 					...tokensQuery,
 					whitelist: whitelistedContractAddresses,
-				}
+				};
 			}
 
 			const response = await clientService.tokenAddresses({
