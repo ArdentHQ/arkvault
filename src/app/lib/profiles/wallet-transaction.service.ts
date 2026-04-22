@@ -270,7 +270,6 @@ export class TransactionService implements ITransactionService {
 
 		dumpStorage(this.#signed, WalletData.SignedTransactions);
 		dumpStorage(this.#broadcasted, WalletData.BroadcastedTransactions);
-		dumpStorage(this.#pending, WalletData.PendingMultiSignatures);
 	}
 
 	/** {@inheritDoc ITransactionService.fromPublicKey} */
@@ -292,7 +291,6 @@ export class TransactionService implements ITransactionService {
 
 		restoreStorage(this.#signed, WalletData.SignedTransactions);
 		restoreStorage(this.#broadcasted, WalletData.BroadcastedTransactions);
-		restoreStorage(this.#pending, WalletData.PendingMultiSignatures);
 	}
 
 	/**

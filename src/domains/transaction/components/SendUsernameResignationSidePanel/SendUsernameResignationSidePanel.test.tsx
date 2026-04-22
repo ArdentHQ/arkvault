@@ -73,7 +73,6 @@ const signedTransactionMock = {
 	isContractDeployment: () => false,
 	isContractTransaction: () => true,
 	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
 	isRevoke: () => false,
 	isSecondSignature: () => false,
@@ -104,7 +103,6 @@ const signedTransactionMock = {
 		return value.plus(feeVal);
 	},
 	type: () => "usernameResignation",
-	usesMultiSignature: () => false,
 	value: () => BigNumber.make(0),
 	wallet: () => wallet,
 };

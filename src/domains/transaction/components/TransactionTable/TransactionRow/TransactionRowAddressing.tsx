@@ -163,13 +163,11 @@ export const TransactionRowAddressing = ({
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
-	const isMusigTransfer = false;
-
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+	const isNegative = !!transaction.isSent();
 	const isContract = transaction.isContractTransaction();
 
 	let direction: Direction = isNegative ? "sent" : "received";
-	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {
+	if (transaction.isReturn()) {
 		direction = "return";
 	}
 

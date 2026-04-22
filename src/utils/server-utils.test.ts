@@ -1,6 +1,6 @@
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { describe, it, expect, beforeAll, vi } from "vitest";
-import { sortByName, customNetworks, hasAvailableMusigServer } from "./server-utils";
+import { sortByName, customNetworks } from "./server-utils";
 import { env, getMainsailProfileId } from "./testing-library";
 import { Networks } from "@/app/lib/mainsail";
 import { Contracts } from "@/app/lib/profiles";
@@ -91,16 +91,5 @@ describe("customNetworks", () => {
 		});
 		profileHostsSpy.mockRestore();
 		profileAvailableNetworksSpy.mockRestore();
-	});
-});
-
-describe("hasAvailableMusigServer", () => {
-	it("returns false if no profile", () => {
-		expect(hasAvailableMusigServer({ network: {} as any, profile: undefined })).toBe(false);
-	});
-
-	it("returns false if profile present but not implemented", () => {
-		const profile = {} as any;
-		expect(hasAvailableMusigServer({ network: {} as any, profile })).toBe(false);
 	});
 });

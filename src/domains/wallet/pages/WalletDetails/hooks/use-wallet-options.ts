@@ -5,57 +5,11 @@ import { useTranslation } from "react-i18next";
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
-import { isCustomNetwork } from "@/utils/network-utils";
-import { hasAvailableMusigServer } from "@/utils/server-utils";
-
-const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
-	console.log(wallet);
-	return false;
-};
 
 const isRestoredAndSynced = (wallet: Contracts.IReadWriteWallet) =>
 	wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork();
 
-const allowsMultiSignature = (wallet: Contracts.IReadWriteWallet, profile?: Contracts.IProfile) => {
-	const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
-	const allowsMusig =
-		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerS) ||
-		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerX);
-
-	if (!isRestoredAndSynced(wallet)) {
-		return false;
-	}
-
-	if (!networkAllowsMuSig) {
-		return false;
-	}
-
-	if (!wallet.publicKey()) {
-		return false;
-	}
-
-	if (wallet.balance().isZero()) {
-		return false;
-	}
-
-	/* istanbul ignore next -- @preserve */
-	if (isMultiSignature(wallet)) {
-		return false;
-	}
-
-	if (wallet.isLedger() && !allowsMusig) {
-		return false;
-	}
-
-	/* istanbul ignore next -- @preserve */
-	if (isCustomNetwork(wallet.network())) {
-		return hasAvailableMusigServer({ network: wallet.network(), profile });
-	}
-
-	return true;
-};
-
-const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction, profile?: Contracts.IProfile) => {
+const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunction) => {
 	const registrationOptions: DropdownOptionGroup = {
 		key: "registrations",
 		options: [],
@@ -132,13 +86,6 @@ const getRegistrationOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunct
 		}
 	}
 
-	if (wallets.some((w) => allowsMultiSignature(w, profile))) {
-		registrationOptions.options.push({
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
-			value: "multi-signature",
-		});
-	}
-
 	return registrationOptions;
 };
 
@@ -197,7 +144,7 @@ const getAdditionalOptions = (wallets: Contracts.IReadWriteWallet[], t: TFunctio
 	return additionalOptions;
 };
 
-export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?: Contracts.IProfile) => {
+export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[]) => {
 	const { t } = useTranslation();
 
 	const hasMultipleWallets = wallets.length > 1;
@@ -262,7 +209,7 @@ export const useWalletOptions = (wallets: Contracts.IReadWriteWallet[], profile?
 			additionalOptions: getAdditionalOptions(wallets, t),
 			contractOptions: getContractOptions(wallets, t),
 			primaryOptions,
-			registrationOptions: getRegistrationOptions(wallets, t, profile),
+			registrationOptions: getRegistrationOptions(wallets, t),
 			secondaryOptions,
 		}),
 		[t, wallets, areWalletsRestoredAndSynced],
