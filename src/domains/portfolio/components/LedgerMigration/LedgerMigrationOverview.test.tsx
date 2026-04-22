@@ -46,4 +46,39 @@ describe("LedgerMigrationOverview", () => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
 		});
 	});
+
+	it("should close modal on cancel", async () => {
+		render(<LedgerMigrationOverview profile={profile} transfer={transaction} />);
+
+		await userEvent.click(screen.getByTestId("LedgerMigration__Review-edit"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should close modal on save", async () => {
+		render(<LedgerMigrationOverview profile={profile} transfer={transaction} />);
+
+		await userEvent.click(screen.getByTestId("LedgerMigration__Review-edit"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "Test Wallet");
+
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+		});
+	});
 });
