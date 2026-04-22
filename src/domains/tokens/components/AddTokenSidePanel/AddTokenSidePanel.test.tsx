@@ -51,6 +51,14 @@ describe("AddTokenSidePanel", () => {
 		server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/tokens/${validAddress}`, samCoinData));
 	});
 
+	it("should close side panel", async () => {
+		const { mockOnOpenChange } = await renderPanel();
+
+		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
+
+		expect(mockOnOpenChange).toHaveBeenCalledWith(false, false);
+	});
+
 	it("should display error when an invalid contract address entered", async () => {
 		await renderPanel();
 
