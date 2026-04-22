@@ -698,7 +698,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -2487,7 +2487,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -4003,7 +4003,7 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -5792,7 +5792,7 @@ exports[`Contacts > should render without contacts in lg 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -6991,7 +6991,7 @@ exports[`Contacts > should render without contacts in md 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -8190,7 +8190,7 @@ exports[`Contacts > should render without contacts in sm 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -9225,7 +9225,7 @@ exports[`Contacts > should render without contacts in xl 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -10424,7 +10424,7 @@ exports[`Contacts > should render without contacts in xs 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
