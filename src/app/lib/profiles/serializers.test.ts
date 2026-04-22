@@ -38,7 +38,6 @@ describe("WalletSerialiser", () => {
 			    "IS_PRIMARY": false,
 			    "LEDGER_MODEL": undefined,
 			    "NETWORK": "mainsail.devnet",
-			    "PENDING_MULTISIGNATURE_TRANSACTIONS": {},
 			    "PUBLIC_KEY": "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 			    "SEQUENCE": "8",
 			    "SIGNED_TRANSACTIONS": {},

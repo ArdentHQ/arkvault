@@ -8,6 +8,8 @@ import { server, requestMock } from "@/tests/mocks/server";
 import transactionFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/transfer.json";
 import { BigNumber } from "@/app/lib/helpers";
 
+const transactionMockImplementation = (attribute, transaction) => transaction[attribute]();
+
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -31,17 +33,6 @@ describe("TransactionSuccessful", () => {
 		);
 	});
 
-	const transactionMockImplementation = (attribute, transaction) => {
-		if (attribute === "multiSignature") {
-			return {
-				min: 2,
-				publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()],
-			};
-		}
-
-		return transaction[attribute]();
-	};
-
 	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
@@ -55,9 +46,6 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
 			transactionMockImplementation(attribute, transaction),
 		);
-
-		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
-		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
 		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
 			route: `/profiles/${profile.id()}`,
@@ -80,9 +68,6 @@ describe("TransactionSuccessful", () => {
 		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
 			transactionMockImplementation(attribute, transaction),
 		);
-
-		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
-		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
 
 		render(<TransactionSuccessful senderWallet={wallet} transaction={transaction} />, {
 			route: `/profiles/${profile.id()}`,

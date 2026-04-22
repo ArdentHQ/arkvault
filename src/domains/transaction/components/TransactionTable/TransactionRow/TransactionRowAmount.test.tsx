@@ -27,14 +27,12 @@ describe("TransactionRowAmount", () => {
 	});
 
 	it("should show exchange as tooltip", () => {
-		// on test network
 		const { rerender } = render(
 			<TransactionRowAmount transaction={{ ...TransactionFixture }} exchangeCurrency="BTC" exchangeTooltip />,
 		);
 
 		expect(screen.getByTestId("TransactionAmount__tooltip")).toBeInTheDocument();
 
-		// on main network (Crypto)
 		rerender(
 			<TransactionRowAmount
 				transaction={{
@@ -48,12 +46,30 @@ describe("TransactionRowAmount", () => {
 
 		expect(screen.getByTestId("TransactionAmount__tooltip")).toBeInTheDocument();
 
-		// on main network (Fiat)
 		rerender(
 			<TransactionRowAmount
 				transaction={{
 					...TransactionFixture,
 					wallet: () => ({ ...TransactionFixture.wallet(), network: () => ({ isTest: () => false }) }),
+				}}
+				exchangeCurrency="USD"
+				exchangeTooltip
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionAmount__tooltip")).toBeInTheDocument();
+	});
+
+	it("should render exchange tooltip with formatted currency on main network", () => {
+		render(
+			<TransactionRowAmount
+				transaction={{
+					...TransactionFixture,
+					convertedTotal: () => 1234.56,
+					wallet: () => ({
+						currency: () => "ARK",
+						network: () => ({ isTest: () => false }),
+					}),
 				}}
 				exchangeCurrency="USD"
 				exchangeTooltip
