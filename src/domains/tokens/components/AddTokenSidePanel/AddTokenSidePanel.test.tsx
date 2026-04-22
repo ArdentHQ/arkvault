@@ -166,7 +166,7 @@ describe("AddTokenSidePanel", () => {
 
 		expect(whitelistContractAddressSpy).toHaveBeenCalledWith(validAddress);
 		expect(successToastSpy).toHaveBeenCalled();
-		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+		expect(mockOnOpenChange).toHaveBeenCalledWith(false, true);
 	});
 
 	it("should display loading indicator while loading token", async () => {
