@@ -20,7 +20,6 @@ import SignMessageSidePanel from "@/domains/message/components/SignMessage";
 import VerifyMessageSidePanel from "@/domains/message/components/VerifyMessage";
 import { useHasProfile } from "./hooks";
 import { useTranslation } from "react-i18next";
-import { AddTokenSidePanel } from "@/domains/tokens/components/AddTokenSidePanel/AddTokenSidePanel";
 
 const DiscardPanelConfirmationModal = () => {
 	const { t } = useTranslation();
