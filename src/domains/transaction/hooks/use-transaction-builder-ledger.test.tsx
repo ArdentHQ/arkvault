@@ -1,6 +1,5 @@
 import { WithProviders, env, getDefaultProfileId, getDefaultWalletMnemonic, waitFor } from "@/utils/testing-library";
 import { act as actHook, renderHook } from "@testing-library/react";
-import { requestMock, server } from "@/tests/mocks/server";
 
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
@@ -35,10 +34,6 @@ describe("Use Transaction Builder with Ledger", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
-	});
-
-	beforeEach(() => {
-		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should sign transfer with ledger", async () => {

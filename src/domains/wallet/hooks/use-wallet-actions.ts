@@ -1,12 +1,10 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { generatePath } from "react-router";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
-import { ProfilePaths } from "@/router/paths";
 import { useLink } from "@/app/hooks/use-link";
 import { Panel, usePanels } from "@/app/contexts/Panels";
 
@@ -104,12 +102,6 @@ export const useWalletActions = ({
 
 			if (option.value === "verify-message") {
 				openPanel(Panel.VerifyMessage);
-			}
-
-			if (option.value === "multi-signature") {
-				navigate(
-					generatePath(ProfilePaths.SendMultiSignature, { profileId: profile.id(), walletId: wallet.id() }),
-				);
 			}
 
 			if (option.value === "validator-registration") {

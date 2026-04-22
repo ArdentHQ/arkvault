@@ -43,6 +43,15 @@ describe("CsvFormatter", () => {
 		expect(fields.total()).toBe("2");
 	});
 
+	it("should set amount to zero for transfer type if sender is recipient", () => {
+		vi.spyOn(transaction, "from").mockReturnValue("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
+		vi.spyOn(transaction, "to").mockReturnValue("0x93485b57ff3DeD81430D08579142fAe8234c6A17");
+
+		const fields = CsvFormatter(transaction, "HH");
+
+		expect(fields.amount()).toBe("0");
+	});
+
 	it("should set amount to for transfer type if sender is recipient", () => {
 		vi.spyOn(transaction, "to").mockReturnValue(transaction.to());
 

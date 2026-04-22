@@ -6,7 +6,6 @@ import {
 	triggerMessageSignOnce,
 } from "@/utils/testing-library";
 import { act as actHook, renderHook } from "@testing-library/react";
-import { requestMock, server } from "@/tests/mocks/server";
 
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
@@ -25,10 +24,6 @@ describe("Use Transaction Builder Hook", () => {
 		await profile.sync();
 
 		await triggerMessageSignOnce(wallet);
-	});
-
-	beforeEach(() => {
-		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should fail sign transfer if invalid data", async () => {

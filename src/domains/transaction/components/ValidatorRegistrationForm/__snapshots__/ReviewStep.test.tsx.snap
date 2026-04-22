@@ -1,0 +1,494 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ReviewStep > should render review step 1`] = `
+<DocumentFragment>
+  <section
+    data-testid="ValidatorRegistrationForm__review-step"
+  >
+    <div
+      class="-mx-3 space-y-3 sm:mx-0 sm:space-y-4"
+    >
+      <div
+        data-testid="DetailWrapper"
+      >
+        <div
+          class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+          data-testid="DetailLabel"
+        >
+          <div
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            data-testid="DetailLabelText"
+          >
+            Addressing
+          </div>
+        </div>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2 flex flex-col gap-3"
+        >
+          <div
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          >
+            <div
+              class="flex items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0"
+            >
+              <div
+                class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-36"
+                data-testid="DetailTitle"
+              >
+                From
+              </div>
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                  data-testid="Address__alias"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures transition-colors duration-200"
+                        data-testid="TruncateEnd"
+                      >
+                        Mainsail Wallet …
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <div
+                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                >
+                  <span>
+                    <span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+                <span>
+                  <span>
+                    <button
+                      class="ring-focus relative cursor-pointer focus:outline-hidden"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+                      >
+                        <div
+                          style="height: 16px; width: 16px;"
+                        >
+                          <svg
+                            id="copy"
+                            style="height: 100%; width: 100%;"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="DetailWrapper"
+      >
+        <div
+          class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+          data-testid="DetailLabel"
+        >
+          <div
+            class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+            data-testid="DetailLabelText"
+          >
+            Transaction Type
+          </div>
+        </div>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+        >
+          <div
+            class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+          >
+            <div
+              class="space-y-3"
+            >
+              <div
+                class="flex w-full items-center justify-between gap-4 sm:justify-start"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                  data-testid="DetailTitle"
+                >
+                  Method
+                </div>
+                <div
+                  class="bg-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent"
+                >
+                  <span
+                    class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-[12px] leading-[15px] font-semibold"
+                  >
+                    Registration
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex w-full items-center justify-between gap-4 sm:justify-start"
+              >
+                <div
+                  class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                  data-testid="DetailTitle"
+                >
+                  Validator Public Key
+                </div>
+                <div
+                  class="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+                >
+                  02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="space-y-3 sm:space-y-2"
+      >
+        <div
+          data-testid="DetailWrapper"
+        >
+          <div
+            class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+            data-testid="DetailLabel"
+          >
+            <div
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+              data-testid="DetailLabelText"
+            >
+              Transaction Summary
+            </div>
+          </div>
+          <div
+            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden sm:border mt-0 sm:mt-2 rounded-xl"
+          >
+            <div
+              class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+            >
+              <div
+                class="flex flex-col gap-3"
+              >
+                <div
+                  class="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                >
+                  <div
+                    class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5 w-auto sm:min-w-40"
+                    data-testid="DetailTitle"
+                  >
+                    Locked Amount
+                  </div>
+                  <div
+                    class="flex flex-row items-center gap-2"
+                  >
+                    <span
+                      class="whitespace-nowrap font-semibold"
+                      data-testid="Amount"
+                    >
+                      0 ARK
+                    </span>
+                    <span>
+                      <span>
+                        <div
+                          class="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full"
+                        >
+                          <div>
+                            <div
+                              style="height: 10px; width: 10px;"
+                            >
+                              <svg
+                                id="question-mark-small"
+                                style="height: 100%; width: 100%;"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="DetailWrapper"
+      >
+        <div
+          class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0"
+        >
+          <fieldset
+            class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
+          >
+            <label
+              class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+              data-testid="InputFee"
+            >
+              <div
+                class="absolute right-0 -mt-7"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <button
+                    class="font-semibold select-none text-sm first:mr-2 last:ml-2 text-theme-secondary-700 dark:text-theme-secondary-200 dim:text-theme-dim-200"
+                    type="button"
+                  >
+                    Simple
+                  </button>
+                  <label
+                    class="flex items-center cursor-pointer h-3"
+                  >
+                    <input
+                      class="toggle-input sr-only"
+                      type="checkbox"
+                    />
+                    <div
+                      class="toggle-handle bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 relative inline-flex h-[5px] rounded-full w-6"
+                    >
+                      <span
+                        class="absolute top-1/2 -translate-y-1/2 rounded-full transition-all duration-200 ease-in-out bg-theme-primary-600 dim:bg-theme-dim-navy-600 h-3 w-3 handle-inner"
+                      />
+                    </div>
+                  </label>
+                  <button
+                    class="font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-500 text-sm first:mr-2 last:ml-2"
+                    type="button"
+                  >
+                    Advanced
+                  </button>
+                </div>
+              </div>
+              <div
+                class="inline-flex w-full items-center flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="0"
+                  class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
+                  >
+                    <div
+                      class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                    >
+                      <div
+                        class="text-sm leading-[17px] sm:leading-5"
+                      >
+                        Slow
+                      </div>
+                      <div
+                        class="flex justify-between sm:w-full"
+                      >
+                        <span
+                          class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                        >
+                          (
+                        </span>
+                        <span
+                          class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                          data-testid="Amount"
+                        >
+                          0 ARK
+                        </span>
+                        <span
+                          class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                        >
+                          )
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-50"
+                    >
+                      <span>
+                        Confirmation Time
+                      </span>
+                      <span>
+                        ~16s
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-checked="true"
+                  aria-label="0.00002843"
+                  class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all"
+                  >
+                    <div
+                      class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                    >
+                      <div
+                        class="text-sm leading-[17px] sm:leading-5 text-theme-navy-700 dark:text-theme-dark-50 dim:text-theme-dim-50"
+                      >
+                        Average
+                      </div>
+                      <div
+                        class="flex justify-between sm:w-full"
+                      >
+                        <span
+                          class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+                        >
+                          (
+                        </span>
+                        <span
+                          class="whitespace-nowrap text-xs leading-[15px] transition-all dim:text-theme-dim-navy-600"
+                          data-testid="Amount"
+                        >
+                          0.00002843 ARK
+                        </span>
+                        <span
+                          class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dim:text-theme-dim-navy-600 hidden"
+                        >
+                          )
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-600"
+                    >
+                      <span>
+                        Confirmation Time
+                      </span>
+                      <span>
+                        ~8s
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="0.00021"
+                  class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
+                  >
+                    <div
+                      class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
+                    >
+                      <div
+                        class="text-sm leading-[17px] sm:leading-5"
+                      >
+                        Fast
+                      </div>
+                      <div
+                        class="flex justify-between sm:w-full"
+                      >
+                        <span
+                          class="text-theme-secondary-500 ml-1 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                        >
+                          (
+                        </span>
+                        <span
+                          class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                          data-testid="Amount"
+                        >
+                          0.00021 ARK
+                        </span>
+                        <span
+                          class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"
+                        >
+                          )
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-50"
+                    >
+                      <span>
+                        Confirmation Time
+                      </span>
+                      <span>
+                        ~8s
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

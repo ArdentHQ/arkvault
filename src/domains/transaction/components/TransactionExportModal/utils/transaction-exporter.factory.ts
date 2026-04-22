@@ -14,7 +14,7 @@ interface TransactionExporterFetchProperties {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]) =>
+export const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]) =>
 	transactions.filter((transaction) => {
 		if (transaction.isTransfer()) {
 			return transaction.from() !== transaction.to();

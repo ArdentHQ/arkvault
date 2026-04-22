@@ -9,6 +9,7 @@ import {
 	TransactionFiatAmount,
 	TransactionTotalLabel,
 	TransactionTypeLabel,
+	isOverflowing,
 } from "./TransactionAmount.blocks";
 import { render, renderResponsive, screen, env, getDefaultProfileId } from "@/utils/testing-library";
 
@@ -39,6 +40,18 @@ describe("TransactionAmount.blocks", () => {
 		};
 	});
 
+	it("should return true if element is overflowing", async () => {
+		expect(isOverflowing({ clientWidth: 10, scrollWidth: 15 } as HTMLSpanElement)).toBe(true);
+	});
+
+	it("should return false if element is not overflowing", async () => {
+		expect(isOverflowing({ clientWidth: 10, scrollWidth: 5 } as HTMLSpanElement)).toBe(false);
+	});
+
+	it("should return false if element is not provided", async () => {
+		expect(isOverflowing()).toBe(false);
+	});
+
 	it("should show hint and amount for multiPayment transaction", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
@@ -64,12 +77,57 @@ describe("TransactionAmount.blocks", () => {
 		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
 	});
 
+	it("should use token for TransactionAmountLabel when token is present", () => {
+		const tokenFixture = {
+			...fixture,
+			isMultiPayment: () => false,
+			isReturn: () => false,
+			isSent: () => true,
+			token: () => ({
+				token: () => ({
+					displaySymbol: () => "USDC",
+					value: () => 100,
+				}),
+				value: () => 100,
+			}),
+			value: () => 50,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				currency: () => "ARK",
+				profile: () => profile,
+			}),
+		};
+
+		render(<TransactionAmountLabel transaction={tokenFixture as any} />);
+
+		expect(screen.getByText(/100 USDC/)).toBeInTheDocument();
+	});
+
 	it("should show fiat value for multiPayment transaction", () => {
 		const exchangeMock = vi.spyOn(profile.exchangeRates(), "exchange").mockReturnValue(5);
 
 		render(<TransactionFiatAmount transaction={fixture} exchangeCurrency="USD" />);
 
 		expect(screen.getByText("$5.00")).toBeInTheDocument();
+
+		exchangeMock.mockRestore();
+	});
+
+	it("should show fiat amount without hint when returnedAmount is zero", () => {
+		const fixtureWithZeroReturned = {
+			...fixture,
+			recipients: () => [
+				{ address: "address-1", amount: 10 },
+				{ address: "address-2", amount: 20 },
+			],
+		};
+
+		const exchangeMock = vi.spyOn(profile.exchangeRates(), "exchange").mockReturnValue(5);
+
+		render(<TransactionFiatAmount transaction={fixtureWithZeroReturned as any} exchangeCurrency="USD" />);
+
+		expect(screen.getByText("$5.00")).toBeInTheDocument();
+		expect(screen.queryByTestId("AmountLabel__hint")).not.toBeInTheDocument();
 
 		exchangeMock.mockRestore();
 	});
@@ -101,6 +159,68 @@ describe("TransactionAmount.blocks", () => {
 		render(<TransactionTotalLabel transaction={regularFixture} profile={profile} />);
 
 		expect(screen.getByText(/ARK/)).toBeInTheDocument();
+	});
+
+	it("should handle validator resignation with isSuccess", () => {
+		const validatorResignationFixture = {
+			...TransactionFixture,
+			isSent: () => false,
+			isValidatorResignation: () => true,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				validatorFee: () => 0,
+			}),
+		};
+
+		const { container } = render(
+			<TransactionTotalLabel
+				transaction={
+					{
+						...validatorResignationFixture,
+						isSuccess: () => true,
+					} as any
+				}
+				profile={profile}
+			/>,
+		);
+
+		expect(container).toBeInTheDocument();
+	});
+
+	it("should render without styles when hideStyles is true", () => {
+		render(<TransactionTotalLabel transaction={fixture} hideStyles={true} profile={profile} />);
+
+		expect(screen.getByText(/DARK/)).toBeInTheDocument();
+	});
+
+	it("should show hint in TransactionTotalLabel when returnedAmount is greater than 0", () => {
+		render(<TransactionTotalLabel transaction={fixture} profile={profile} />);
+
+		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
+	});
+
+	it("should use wallet currency when token property is not present", () => {
+		const baseFixture = {
+			...TransactionFixture,
+			fee: () => 21,
+			isMultiPayment: () => false,
+			isReturn: () => false,
+			isSent: () => false,
+			value: () => 50,
+			wallet: () => ({
+				...TransactionFixture.wallet(),
+				currency: () => "ARK",
+				profile: () => profile,
+			}),
+		};
+
+		const fixtureWithoutToken = Object.fromEntries(
+			Object.entries(baseFixture).filter(([key]) => key !== "token"),
+		) as any;
+
+		render(<TransactionAmountLabel transaction={fixtureWithoutToken} />);
+
+		expect(screen.getByText(/50 ARK/)).toBeInTheDocument();
 	});
 });
 
@@ -142,6 +262,9 @@ describe("TransactionTypeLabel", () => {
 	});
 
 	it("should render tooltip when text is truncated and tooltipContent is provided", async () => {
+		const scrollWidthSpy = vi.spyOn(HTMLElement.prototype, "scrollWidth", "get").mockReturnValue(300);
+		const clientWidthSpy = vi.spyOn(HTMLElement.prototype, "clientWidth", "get").mockReturnValue(40);
+
 		renderResponsive(
 			<TransactionTypeLabel tooltipContent="Very Long Transaction Type Name" props={defaultProps}>
 				Very Long Transaction Type Name
@@ -151,9 +274,13 @@ describe("TransactionTypeLabel", () => {
 
 		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
 
-		await userEvent.hover(screen.getByTestId("TransactionRow__type"));
+		const span = screen.getByText("Very Long Transaction Type Name");
+		await userEvent.hover(span);
 
-		expect(screen.getByText("Very Long Transaction Type Name")).toBeInTheDocument();
+		expect(screen.getByRole("tooltip")).toBeInTheDocument();
+
+		scrollWidthSpy.mockRestore();
+		clientWidthSpy.mockRestore();
 	});
 
 	it("should pass through label properties correctly", () => {

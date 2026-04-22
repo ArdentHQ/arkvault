@@ -11,6 +11,26 @@ import { useActiveNetwork } from "@/app/hooks/use-active-network";
 import { WalletCapabilities } from "@/domains/portfolio/lib/wallet.capabilities";
 import { useEnvironmentContext } from "@/app/contexts";
 import { SelectAddressDropdown } from "@/domains/profile/components/SelectAddressDropdown";
+import { Contracts } from "@/app/lib/profiles";
+
+export const getWalletAddress = (wallet: { address: () => string } | null | undefined): string =>
+	wallet?.address() ?? "";
+
+export const handleSelectSender = (
+	address: string,
+	setValue: (name: string, value: any, options?: any) => void,
+	profile: Contracts.IProfile,
+	networkId: string,
+) => {
+	setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
+
+	const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, networkId);
+	const isFullyRestoredAndSynced = newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+	if (!isFullyRestoredAndSynced) {
+		newSenderWallet?.synchroniser().identity();
+	}
+};
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
@@ -36,16 +56,8 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		}
 	}, [hasUsernameErrors]);
 
-	const handleSelectSender = (address: any) => {
-		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
-
-		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-		const isFullyRestoredAndSynced =
-			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
-
-		if (!isFullyRestoredAndSynced) {
-			newSenderWallet?.synchroniser().identity();
-		}
+	const onSelectSender = (address: any) => {
+		handleSelectSender(address, setValue, profile, network.id());
 	};
 
 	const currentUsername = useMemo(() => {
@@ -82,7 +94,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 						disabled={profile.wallets().count() === 0}
 						profile={profile}
 						onChange={(wallet) => {
-							handleSelectSender(wallet?.address() ?? "");
+							onSelectSender(getWalletAddress(wallet));
 						}}
 						wallets={profile.wallets().values()}
 						wallet={wallet}
