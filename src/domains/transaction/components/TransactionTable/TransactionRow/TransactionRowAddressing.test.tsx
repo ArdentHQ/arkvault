@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-import { getTransactionDirection, TransactionRowAddressing, TransactionRowLabel } from "./TransactionRowAddressing";
+import { TransactionRowAddressing, TransactionRowLabel, transactionDirectionLabel } from "./TransactionRowAddressing";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 describe("TransactionRowAddressing", () => {
@@ -300,64 +300,28 @@ describe("TransactionRowLabel", () => {
 	});
 });
 
-describe("getTransactionDirection", () => {
-	it("should return 'sent' when isSent is true", () => {
-		expect(
-			getTransactionDirection({
-				fromAddress: "0x1",
-				isMusigTransfer: false,
-				isReturn: false,
-				isSent: true,
-				toAddress: "0x2",
-			}),
-		).toBe("sent");
+describe("transactionDirectionLabel", () => {
+	it("should return 'sent' when transaction isSent is true", () => {
+		const sentTransaction = { ...TransactionFixture, isSent: () => true, isReturn: () => false };
+
+		const result = transactionDirectionLabel({ transaction: sentTransaction as any });
+
+		expect(result).toBe("sent");
 	});
 
-	it("should return 'received' when isSent is false", () => {
-		expect(
-			getTransactionDirection({
-				fromAddress: "0x1",
-				isMusigTransfer: false,
-				isReturn: false,
-				isSent: false,
-				toAddress: "0x2",
-			}),
-		).toBe("received");
+	it("should return 'received' when transaction isSent is false", () => {
+		const receivedTransaction = { ...TransactionFixture, isSent: () => false, isReturn: () => false };
+
+		const result = transactionDirectionLabel({ transaction: receivedTransaction as any });
+
+		expect(result).toBe("received");
 	});
 
-	it("should return 'return' when isReturn is true", () => {
-		expect(
-			getTransactionDirection({
-				fromAddress: "0x1",
-				isMusigTransfer: false,
-				isReturn: true,
-				isSent: false,
-				toAddress: "0x2",
-			}),
-		).toBe("return");
-	});
+	it("should return 'return' when transaction isReturn is true", () => {
+		const returnTransaction = { ...TransactionFixture, isSent: () => true, isReturn: () => true };
 
-	it("should return 'return' when isMusigTransfer is true and from and to are the same", () => {
-		expect(
-			getTransactionDirection({
-				fromAddress: "0x1",
-				isMusigTransfer: true,
-				isReturn: false,
-				isSent: false,
-				toAddress: "0x1",
-			}),
-		).toBe("return");
-	});
+		const result = transactionDirectionLabel({ transaction: returnTransaction as any });
 
-	it("should not return 'return' when from and to are the same but isMusigTransfer is false", () => {
-		expect(
-			getTransactionDirection({
-				fromAddress: "0x1",
-				isMusigTransfer: false,
-				isReturn: false,
-				isSent: false,
-				toAddress: "0x1",
-			}),
-		).toBe("received");
+		expect(result).toBe("return");
 	});
 });

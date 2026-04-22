@@ -15,6 +15,18 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { isNullAddress } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
+
+export const transactionDirectionLabel = ({ transaction }: { transaction: DTO.RawTransactionData }): string => {
+	const isNegative = !!transaction.isSent();
+
+	let direction: Direction = isNegative ? "sent" : "received";
+	if (transaction.isReturn()) {
+		direction = "return";
+	}
+
+	return direction;
+};
+
 export const TransactionRowLabel = ({ direction, style }: { direction: Direction; style?: Direction }) => {
 	const { t } = useTranslation();
 
@@ -149,29 +161,6 @@ const MultiPaymentAddressing = ({
 	);
 };
 
-interface TransactionDirectionProperties {
-	isSent: boolean;
-	isReturn: boolean;
-	fromAddress: string;
-	toAddress: string;
-}
-
-export const getTransactionDirection = ({
-	isSent,
-	isReturn,
-	fromAddress,
-	toAddress,
-}: TransactionDirectionProperties): Direction => {
-	const isNegative = isSent;
-
-	let direction: Direction = isNegative ? "sent" : "received";
-	if (isReturn || fromAddress === toAddress) {
-		direction = "return";
-	}
-
-	return direction;
-};
-
 export const TransactionRowAddressing = ({
 	transaction,
 	profile,
@@ -189,12 +178,8 @@ export const TransactionRowAddressing = ({
 	const isNegative = !!transaction.isSent();
 	const isContract = transaction.isContractTransaction();
 
-	let direction: Direction = getTransactionDirection({
-		fromAddress: transaction.from(),
-		isReturn: transaction.isReturn(),
-		isSent: transaction.isSent(),
-		toAddress: transaction.to(),
-	});
+	const direction = transactionDirectionLabel({ transaction });
+
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const network = transaction.wallet().network();
