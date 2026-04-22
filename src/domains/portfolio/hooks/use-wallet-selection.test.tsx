@@ -140,4 +140,77 @@ describe("useWalletSelection", () => {
 			expect(result.current.selectedAddresses).toEqual([profile.wallets().first().address()]);
 		});
 	});
+
+	it("should toggle selection when all are deselected in multiple mode", async () => {
+		profile.settings().set(Contracts.ProfileSetting.WalletSelectionMode, "multiple");
+
+		const { result } = renderHook(() => useWalletSelection(profile), {
+			wrapper,
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([profile.wallets().first().address()]);
+		});
+
+		act(() => {
+			result.current.setSelectedAddresses([]);
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([]);
+		});
+
+		const firstAddress = profile.wallets().first().address();
+
+		act(() => {
+			result.current.toggleSelection(profile.wallets().first());
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([firstAddress]);
+		});
+	});
+
+	it("should select wallet after deselectin all", async () => {
+		const { result } = renderHook(() => useWalletSelection(profile), {
+			wrapper,
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([profile.wallets().first().address()]);
+		});
+
+		const firstWallet = profile.wallets().first();
+		const firstAddress = firstWallet.address();
+
+		act(() => {
+			result.current.selectAfterDeselectAll(firstWallet);
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([firstAddress]);
+		});
+	});
+
+	it("should select first wallet when deleting last selected wallet", async () => {
+		const { result } = renderHook(() => useWalletSelection(profile), {
+			wrapper,
+		});
+
+		const firstAddress = profile.wallets().first().address();
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([firstAddress]);
+		});
+
+		const firstWallet = profile.wallets().first();
+
+		act(() => {
+			result.current.handleDelete(firstWallet);
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([]);
+		});
+	});
 });
