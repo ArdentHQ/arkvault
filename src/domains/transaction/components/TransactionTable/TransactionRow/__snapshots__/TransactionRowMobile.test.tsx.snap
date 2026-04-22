@@ -282,7 +282,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121 ARK
+                        121.00 ARK
                       </span>
                     </span>
                   </span>
@@ -303,7 +303,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0
+                    0.00
                   </span>
                 </div>
               </div>
@@ -598,7 +598,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121 ARK
+                        121.00 ARK
                       </span>
                     </span>
                   </span>
@@ -619,7 +619,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0
+                    0.00
                   </span>
                 </div>
               </div>
@@ -916,7 +916,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121 DARK
+                        121.00 DARK
                       </span>
                     </span>
                   </span>
@@ -937,7 +937,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0 DARK
+                    0.00 DARK
                   </span>
                 </div>
               </div>
@@ -1234,7 +1234,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                         class="whitespace-nowrap text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        121 DARK
+                        121.00 DARK
                       </span>
                     </span>
                   </span>
@@ -1255,7 +1255,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0 DARK
+                    0.00 DARK
                   </span>
                 </div>
               </div>
