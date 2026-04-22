@@ -113,4 +113,30 @@ describe("MigratedAddressRow", () => {
 
 		ledgerMocks.restoreAll();
 	});
+
+	it("should trigger onCancel callback from UpdateWalletNameForm", async () => {
+		mockNanoSTransport();
+		const migrator = new LedgerMigrator({ env, profile: env.profiles().first() });
+		const publicKeyPaths = new Map([["m/44'/1'/1'/0/0", profile.wallets().first().publicKey()!]]);
+
+		const ledgerMocks = createLedgerMocks(profile.wallets().first(), publicKeyPaths);
+
+		await migrator.createTransactions([
+			{
+				address: profile.wallets().first().address(),
+				path: "m/44'/1'/1'/0/0",
+			},
+		]);
+
+		render(<MigratedAddressRowMobile profile={profile} transaction={migrator.transactions().at(0)!} />, {
+			route,
+		});
+		await userEvent.click(screen.getByText("Edit"));
+		expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByText("Cancel"));
+		expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+
+		ledgerMocks.restoreAll();
+	});
 });
