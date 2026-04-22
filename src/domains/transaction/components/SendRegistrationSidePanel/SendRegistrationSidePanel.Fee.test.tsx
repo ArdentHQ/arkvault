@@ -18,7 +18,6 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
-import walletFixture from "@/tests/fixtures/coins/mainsail/devnet/wallets/0x8A3117649655714c296cd816691e01C5148922ed.json";
 import * as ReactRouter from "react-router";
 import { afterAll, vi } from "vitest";
 let profile: Contracts.IProfile;
@@ -84,18 +83,9 @@ describe("SendRegistrationSidePanel Fee", () => {
 
 	beforeEach(() => {
 		server.use(
-			requestMock(
-				"https://ark-test-musig.arkvault.io/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-				walletFixture,
-			),
 			requestMock("https://dwallets-evm.mainsailhq.com/api/wallets?attributes.validatorPublicKey=*", {
 				result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" },
 			}),
-			requestMock(
-				"https://ark-test-musig.arkvault.io",
-				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
-				{ method: "post" },
-			),
 		);
 	});
 

@@ -42,10 +42,6 @@ export class SignedTransactionData {
 		return this;
 	}
 
-	public usesMultiSignature(): boolean {
-		return false;
-	}
-
 	public memo(): string {
 		return this.signedData.memo;
 	}

@@ -441,7 +441,6 @@ export const createTransactionMock = (
 		isContractTransaction: () => false,
 		isIpfs: () => false,
 		isMultiPayment: () => false,
-		isMultiSignatureRegistration: () => false,
 		isReturn: () => false,
 		isSent: () => true,
 		isTransfer: () => true,
@@ -459,7 +458,6 @@ export const createTransactionMock = (
 		timestamp: () => DateTime.make(),
 		total: () => +transactionFixture.data.amount / 1e8 + +transactionFixture.data.fee / 1e8,
 		type: () => "transfer",
-		usesMultiSignature: () => false,
 		wallet: () => wallet,
 		...overrides,
 	} as any);

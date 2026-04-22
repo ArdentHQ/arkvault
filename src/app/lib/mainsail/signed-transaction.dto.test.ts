@@ -55,12 +55,6 @@ describe("SignedTransactionData", () => {
 		});
 	});
 
-	describe("usesMultiSignature", () => {
-		it("should return false", () => {
-			expect(transaction.usesMultiSignature()).toBe(false);
-		});
-	});
-
 	describe("memo", () => {
 		it("should return memo from signed data", () => {
 			transaction.configure(mockSignedData, mockSerialized);

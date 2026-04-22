@@ -154,7 +154,6 @@ interface TransactionDirectionProperties {
 	isReturn: boolean;
 	fromAddress: string;
 	toAddress: string;
-	isMusigTransfer: boolean;
 }
 
 export const getTransactionDirection = ({
@@ -162,12 +161,11 @@ export const getTransactionDirection = ({
 	isReturn,
 	fromAddress,
 	toAddress,
-	isMusigTransfer,
 }: TransactionDirectionProperties): Direction => {
 	const isNegative = isSent;
 
 	let direction: Direction = isNegative ? "sent" : "received";
-	if (isReturn || (isMusigTransfer && fromAddress === toAddress)) {
+	if (isReturn || fromAddress === toAddress) {
 		direction = "return";
 	}
 
@@ -188,19 +186,15 @@ export const TransactionRowAddressing = ({
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
-	const isMusigTransfer = false;
-
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+	const isNegative = !!transaction.isSent();
 	const isContract = transaction.isContractTransaction();
 
 	let direction: Direction = getTransactionDirection({
 		fromAddress: transaction.from(),
-		isMusigTransfer,
 		isReturn: transaction.isReturn(),
 		isSent: transaction.isSent(),
 		toAddress: transaction.to(),
 	});
-
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	const network = transaction.wallet().network();

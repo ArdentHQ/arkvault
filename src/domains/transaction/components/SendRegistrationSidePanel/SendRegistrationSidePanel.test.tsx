@@ -17,6 +17,7 @@ import { requestMock, server } from "@/tests/mocks/server";
 import { BigNumber } from "@/app/lib/helpers";
 import { Contracts } from "@/app/lib/profiles";
 import { DateTime } from "@/app/lib/intl";
+import React from "react";
 import { SendRegistrationSidePanel } from "./SendRegistrationSidePanel";
 import ValidatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import userEvent from "@testing-library/user-event";
@@ -76,7 +77,6 @@ const signedTransactionMock = {
 	isContractDeployment: () => false,
 	isContractTransaction: () => true,
 	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
 	isRevoke: () => false,
 	isSecondSignature: () => false,
@@ -107,7 +107,6 @@ const signedTransactionMock = {
 		return value.plus(feeVal);
 	},
 	type: () => "transfer",
-	usesMultiSignature: () => false,
 	value: () => BigNumber.make(0),
 	wallet: () => wallet,
 };
