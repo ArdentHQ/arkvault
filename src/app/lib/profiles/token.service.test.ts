@@ -80,7 +80,7 @@ describe("TokenService", () => {
 	});
 
 	it("should query with whitelisted contract addresses", async () => {
-		const whitelistedSpy = vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue(['0xabc']);
+		const whitelistedSpy = vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue(["0xabc"]);
 
 		await profile.tokens().sync();
 		const tokens = profile.tokens().selected();
