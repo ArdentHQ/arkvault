@@ -55,12 +55,14 @@ export const TokensTable = ({
 		});
 	};
 
-	const toggleManageMode = (state: boolean) => {
-		if (state) {
+	const toggleManageMode = (isInManageMode: boolean) => {
+		if (isInManageMode) {
 			// get hidden contract addresses from profile and fill `hiddenContractAddresses`
 			setHiddenContractAddresses([]);
+		} else {
+			void refreshTokens();
 		}
-		setManageMode(state);
+		setManageMode(isInManageMode);
 	};
 
 	useEffect(() => {
@@ -243,7 +245,6 @@ export const TokensTable = ({
 					onDelete={() => {
 						activeProfile.removeWhitelistedContractAddress(tokenToDelete.token().address());
 						setTokenToDelete(undefined);
-						void refreshTokens();
 					}}
 				/>
 			)}
