@@ -18,7 +18,8 @@ import {
 } from "@/utils/testing-library";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
-import { ImportAddressStep, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
+import { ImportAddressStep, useHDWalletStepHeaderConfig, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
+import { HDWalletTabStep } from "./HDWallet/HDWalletsTabs.contracts";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 import { ImportOption } from "@/domains/wallet/hooks";
 
@@ -280,6 +281,20 @@ describe("useLedgerStepHeaderConfig", () => {
 
 	it("returns default config for unknown step", () => {
 		const { result } = renderHook(() => useStepHeaderConfig(999 as unknown as ImportAddressStep));
+		expect(result.current).toEqual({
+			title: "",
+		});
+	});
+
+	it("returns default config for unknown ledger step", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(999 as unknown as LedgerTabStep));
+		expect(result.current).toEqual({
+			title: "",
+		});
+	});
+
+	it("returns default config for unknown HD wallet step", () => {
+		const { result } = renderHook(() => useHDWalletStepHeaderConfig(999 as unknown as HDWalletTabStep));
 		expect(result.current).toEqual({
 			title: "",
 		});
