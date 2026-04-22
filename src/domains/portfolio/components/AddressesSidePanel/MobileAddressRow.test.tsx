@@ -213,4 +213,23 @@ describe("MobileAddressRow", () => {
 		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 		expect(onSelectOption).toHaveBeenCalled();
 	});
+
+	it("should render error message", () => {
+		render(
+			<MobileAddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={true}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				onSelectOption={vi.fn()}
+				isSingleView={true}
+				isError={true}
+				errorMessage="Test error message"
+			/>,
+		);
+
+		expect(screen.getByText("Test error message")).toBeInTheDocument();
+	});
 });
