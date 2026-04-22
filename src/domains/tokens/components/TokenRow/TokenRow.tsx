@@ -16,6 +16,7 @@ import { TokenRowSkeleton } from "./TokenRowSkeleton";
 import { TokenRowMobile } from "@/domains/tokens/components/TokenRow/TokenRowMobile";
 import { Checkbox } from "@/app/components/Checkbox";
 import { TruncateEndResponsive } from "@/app/components/TruncateEnd";
+import cn from "classnames";
 
 export type TokenRowProperties = {
 	walletToken: WalletToken;
@@ -76,7 +77,7 @@ export const TokenRow = memo(
 		return (
 			<TableRow
 				onClick={onClick}
-				className={twMerge("relative", className, isDeleted && "pointer-events-none opacity-50")}
+				className={twMerge(cn("relative", className, { "pointer-events-none opacity-50": isDeleted }))}
 				{...properties}
 			>
 				{isManageMode && (
