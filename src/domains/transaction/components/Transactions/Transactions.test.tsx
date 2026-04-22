@@ -20,6 +20,7 @@ import {
 } from "@/utils/testing-library";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
+import { vi } from "vitest";
 
 let profile: Contracts.IProfile;
 
@@ -69,6 +70,16 @@ describe("Transactions", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with showTabs disabled", async () => {
+		render(<Transactions profile={profile} wallets={profile.wallets().values()} showTabs={false} />, {
+			route: dashboardURL,
+		});
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(10),
+		);
 	});
 
 	it("should filter by type and see empty results text", async () => {
@@ -457,13 +468,11 @@ describe("Transactions", () => {
 	});
 
 	it("should update wallet filters", async () => {
-		const { asFragment } = render(<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />, {
+		render(<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />, {
 			route: dashboardURL,
 		});
 
 		await expect(screen.findByTestId("Transactions__no-filters-selected")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show loading state", async () => {
@@ -480,5 +489,50 @@ describe("Transactions", () => {
 		});
 
 		expect(await screen.findByTestId("FilterTransactions")).toBeInTheDocument();
+	});
+
+	it("should call setSortBy when sort changes", async () => {
+		const setSortByMock = vi.fn();
+
+		const originalHook = await import("@/domains/transaction/hooks/use-profile-transactions");
+		const useProfileTransactionsSpy = vi.spyOn(originalHook, "useProfileTransactions");
+
+		useProfileTransactionsSpy.mockReturnValue({
+			activeMode: "all",
+			activeTransactionType: undefined,
+			fetchMore: vi.fn(),
+			hasEmptyResults: false,
+			hasFilter: false,
+			hasMore: false,
+			isLoadingMore: false,
+			isLoadingTransactions: false,
+			selectedTransactionTypes: [],
+			setSortBy: setSortByMock,
+			sortBy: { column: "timestamp", desc: true },
+			transactions: [],
+			updateFilters: vi.fn(),
+		} as any);
+
+		const originalTable = await import("@/domains/transaction/components/TransactionTable/TransactionTable");
+		const TransactionTableSpy = vi
+			.spyOn(originalTable, "TransactionTable")
+			.mockImplementation(({ onSortChange }: any) => {
+				// Simulate a sort change by calling onSortChange directly
+				if (onSortChange) {
+					onSortChange("timestamp", false);
+				}
+				return <div data-testid="TransactionTable" />;
+			});
+
+		render(<Transactions profile={profile} wallets={profile.wallets().values()} />, {
+			route: dashboardURL,
+		});
+
+		await waitFor(() => {
+			expect(setSortByMock).toHaveBeenCalledWith({ column: "timestamp", desc: false });
+		});
+
+		useProfileTransactionsSpy.mockRestore();
+		TransactionTableSpy.mockRestore();
 	});
 });

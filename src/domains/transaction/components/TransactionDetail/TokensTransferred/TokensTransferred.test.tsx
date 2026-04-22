@@ -52,4 +52,28 @@ describe("TokensTransferred", () => {
 
 		expect(screen.getByTestId("TokensTransferred__To")).toBeInTheDocument();
 	});
+
+	it("should show skeleton when refreshing transaction", () => {
+		const wallet = profile.wallets().first();
+
+		const transaction = {
+			...TransactionFixture,
+			isTokenTransfer: () => true,
+			isValidatorRegistration: () => false,
+			value: () => BigNumber.make(10),
+			wallet: () => wallet,
+		} as DTO.ExtendedSignedTransactionData;
+
+		const { asFragment } = render(
+			<TokensTransferred
+				token={token}
+				transaction={transaction}
+				senderWallet={wallet}
+				profile={profile}
+				isRefreshingTransaction={true}
+			/>,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
 });

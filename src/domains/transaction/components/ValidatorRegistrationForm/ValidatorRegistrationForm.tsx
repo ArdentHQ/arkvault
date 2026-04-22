@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@/app/lib/profiles";
 import React from "react";
 
-import { FormStep } from "./FormStep";
+import { FormStep, handleSelectSender } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
@@ -59,6 +59,8 @@ export const ValidatorRegistrationForm: SendRegistrationForm = {
 	tabSteps: 2,
 	transactionDetails,
 };
+
+export { handleSelectSender };
 
 export const signValidatorRegistration = async ({ env, form, profile, signatory }: any) => {
 	const { clearErrors, getValues } = form;

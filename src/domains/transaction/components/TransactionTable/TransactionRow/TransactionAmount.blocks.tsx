@@ -8,6 +8,13 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { Label, LabelProperties } from "@/app/components/Label";
 import { BigNumber } from "@/app/lib/helpers";
 
+export const isOverflowing = (element?: HTMLSpanElement | null) => {
+	if (element) {
+		return element.scrollWidth > element.clientWidth;
+	}
+	return false;
+};
+
 export const TransactionAmountLabel = ({
 	transaction,
 	profile,
@@ -148,10 +155,7 @@ export const TransactionTypeLabel = ({
 
 	useEffect(() => {
 		const checkTruncation = () => {
-			if (textRef.current) {
-				const isOverflowing = textRef.current.scrollWidth > textRef.current.clientWidth;
-				setIsTruncated(isOverflowing);
-			}
+			setIsTruncated(isOverflowing(textRef.current));
 		};
 
 		checkTruncation();
