@@ -235,6 +235,24 @@ describe("AddressRow", () => {
 		expect(screen.getByText("Edit content")).toBeInTheDocument();
 	});
 
+	it("should render error message", () => {
+		render(
+			<AddressRow
+				profile={profile}
+				wallet={wallet}
+				onDelete={vi.fn()}
+				usesManageMode={false}
+				toggleAddress={vi.fn()}
+				isSelected={false}
+				onEdit={vi.fn()}
+				isError={true}
+				errorMessage="Test error message"
+			/>,
+		);
+
+		expect(screen.getByText("Test error message")).toBeInTheDocument();
+	});
+
 	it("should should trigger onEdit", async () => {
 		const onEdit = vi.fn();
 
