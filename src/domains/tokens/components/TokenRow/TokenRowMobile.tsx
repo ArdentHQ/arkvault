@@ -24,6 +24,7 @@ export const TokenRowMobile = memo(
 		isLoading = false,
 		isManageMode,
 		isDeletable,
+		isDeleted,
 		isHidden,
 		toggleContractVisibility,
 		onSend,
@@ -41,7 +42,13 @@ export const TokenRowMobile = memo(
 		};
 
 		return (
-			<TableRow onClick={onClick} className={cn("group border-b-0!", className)} {...properties}>
+			<TableRow
+				onClick={onClick}
+				className={cn("group border-b-0!", className, {
+					"pointer-events-none opacity-50": isDeleted,
+				})}
+				{...properties}
+			>
 				<td data-testid="TableRow__mobile">
 					<MobileCard className="mb-3">
 						<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between pr-3 pl-4 sm:pl-3 dark:bg-black">

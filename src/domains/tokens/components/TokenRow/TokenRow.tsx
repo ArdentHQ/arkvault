@@ -28,6 +28,7 @@ export type TokenRowProperties = {
 	isManageMode?: boolean;
 	isHidden?: boolean;
 	isDeletable?: boolean;
+	isDeleted?: boolean;
 	onDelete: (token: WalletToken) => void;
 	toggleContractVisibility: (address: string) => void;
 } & React.HTMLProps<any>;
@@ -42,6 +43,7 @@ export const TokenRow = memo(
 		onDelete,
 		isHidden,
 		isDeletable,
+		isDeleted,
 		isLoading = false,
 		toggleContractVisibility,
 		...properties
@@ -59,6 +61,7 @@ export const TokenRow = memo(
 					isManageMode={isManageMode}
 					isHidden={isHidden}
 					isDeletable={isDeletable}
+					isDeleted={isDeleted}
 					onDelete={onDelete}
 					toggleContractVisibility={toggleContractVisibility}
 					{...properties}
@@ -71,7 +74,11 @@ export const TokenRow = memo(
 		}
 
 		return (
-			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
+			<TableRow
+				onClick={onClick}
+				className={twMerge("relative", className, isDeleted && "pointer-events-none opacity-50")}
+				{...properties}
+			>
 				{isManageMode && (
 					<TableCell variant="start">
 						<Checkbox
