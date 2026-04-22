@@ -69,12 +69,25 @@ export class TokenService {
 		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
 
 		try {
-			const response = await clientService.tokenAddresses({
+			let tokensQuery: WalletTokensQuery = {
 				addresses: this.#profile
 					.wallets()
 					.selected()
 					.map((wallet) => wallet.address()),
 				minBalance: hideDustTokens ? this.#dustBalanceThreshold : "0",
+			};
+
+			const whitelistedContractAddresses = this.#profile.whitelistedContractAddresses();
+
+			if (whitelistedContractAddresses.length > 0) {
+				tokensQuery = {
+					...tokensQuery,
+					whitelist: whitelistedContractAddresses,
+				}
+			}
+
+			const response = await clientService.tokenAddresses({
+				...tokensQuery,
 				...(query ?? {}),
 			});
 

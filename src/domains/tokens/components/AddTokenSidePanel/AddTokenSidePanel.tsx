@@ -19,7 +19,7 @@ import { Link } from "@/app/components/Link";
 import { Amount } from "@/app/components/Amount";
 import { toasts } from "@/app/services";
 
-export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) => {
+export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean, refresh: boolean) => void }) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();
@@ -88,7 +88,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			}),
 		);
 
-		onOpenChange(false);
+		onOpenChange(false, true);
 	};
 
 	const onMountChange = useCallback(
@@ -105,7 +105,7 @@ export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 		<SidePanel
 			open={open}
 			minimizeable
-			onOpenChange={onOpenChange}
+			onOpenChange={(open) => onOpenChange(open, false)}
 			title={t("TOKENS.ADD_TOKEN.TITLE")}
 			titleIcon={
 				<Icon

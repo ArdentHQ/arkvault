@@ -173,10 +173,6 @@ export const AppPanels = () => {
 				onOpenChange={closePanel}
 			/>
 
-			<ResetWhenUnmounted>
-				<AddTokenSidePanel open={currentOpenedPanel?.name === Panel.AddToken} onOpenChange={closePanel} />
-			</ResetWhenUnmounted>
-
 			<DiscardPanelConfirmationModal />
 		</>
 	);

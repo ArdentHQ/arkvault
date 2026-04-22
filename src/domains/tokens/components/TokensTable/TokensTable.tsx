@@ -22,6 +22,7 @@ export const TokensTable = ({
 	hasMore,
 	hasEmptyResults,
 	fetchMore,
+	refreshTokens
 }: {
 	onClick?: (wallet: WalletToken) => void;
 	skeletonRowsLimit?: number;
@@ -33,6 +34,7 @@ export const TokensTable = ({
 	hasMore: boolean;
 	hasEmptyResults: boolean;
 	fetchMore: () => Promise<void>;
+	refreshTokens: () => Promise<void>;
 }) => {
 	const { isMdAndAbove, isXs } = useBreakpoint();
 	const activeProfile = useActiveProfile();
@@ -241,6 +243,7 @@ export const TokensTable = ({
 					onDelete={() => {
 						activeProfile.removeWhitelistedContractAddress(tokenToDelete.token().address());
 						setTokenToDelete(undefined);
+						void refreshTokens();
 					}}
 				/>
 			)}
