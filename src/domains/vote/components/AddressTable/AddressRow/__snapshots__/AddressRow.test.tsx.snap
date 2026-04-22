@@ -1585,7 +1585,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              0 ARK
+              0.00 ARK
             </span>
           </div>
         </td>
@@ -1942,7 +1942,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              0 ARK
+              0.00 ARK
             </span>
           </div>
         </td>

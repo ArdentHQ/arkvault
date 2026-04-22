@@ -13,7 +13,7 @@ exports[`AmountLabel > should render 1`] = `
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
-        + 10 ARK
+        + 10.00 ARK
       </span>
     </div>
   </div>
@@ -33,7 +33,7 @@ exports[`AmountLabel > should render compact 1`] = `
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
-        + 10 ARK
+        + 10.00 ARK
       </span>
     </div>
   </div>
@@ -139,7 +139,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
-        + 10 ARK
+        + 10.00 ARK
       </span>
     </div>
   </div>
@@ -159,7 +159,7 @@ exports[`AmountLabel > should render negative 1`] = `
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
-        - 10 ARK
+        - 10.00 ARK
       </span>
     </div>
   </div>
@@ -265,7 +265,7 @@ exports[`AmountLabel > should render with hint 1`] = `
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
-        + 10 ARK
+        + 10.00 ARK
       </span>
     </div>
   </div>
@@ -285,7 +285,7 @@ exports[`AmountLabel > should render zero 1`] = `
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
-        0 ARK
+        0.00 ARK
       </span>
     </div>
   </div>

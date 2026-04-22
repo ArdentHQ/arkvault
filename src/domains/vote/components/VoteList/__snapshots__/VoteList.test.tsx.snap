@@ -408,7 +408,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -440,7 +440,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -472,7 +472,7 @@ exports[`VoteList > should render with amount in lg 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -513,7 +513,7 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -545,7 +545,7 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -577,7 +577,7 @@ exports[`VoteList > should render with amount in md 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -600,7 +600,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
       <div
@@ -632,7 +632,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
       <div
@@ -664,7 +664,7 @@ exports[`VoteList > should render with amount in sm 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
       <div
@@ -723,7 +723,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -755,7 +755,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -787,7 +787,7 @@ exports[`VoteList > should render with amount in xl 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
     </div>
@@ -810,7 +810,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
       <div
@@ -842,7 +842,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
       <div
@@ -874,7 +874,7 @@ exports[`VoteList > should render with amount in xs 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          + 10 BTC
+          + 10.00 BTC
         </span>
       </div>
       <div

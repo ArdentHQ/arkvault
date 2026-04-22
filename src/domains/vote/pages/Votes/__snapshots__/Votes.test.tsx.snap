@@ -702,7 +702,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -9898,7 +9898,7 @@ exports[`Votes > should emit action on continue button to unvote/vote 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -18572,7 +18572,7 @@ exports[`Votes > should filter current validators 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -20018,7 +20018,7 @@ exports[`Votes > should render 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -28693,7 +28693,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -37368,7 +37368,7 @@ exports[`Votes > should select a validator 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -46511,7 +46511,7 @@ exports[`Votes > should select an address and validator 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -55177,7 +55177,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>

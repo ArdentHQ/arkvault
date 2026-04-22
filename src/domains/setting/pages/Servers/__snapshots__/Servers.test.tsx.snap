@@ -577,7 +577,7 @@ exports[`Servers Settings > Added reachable servers > should ping the servers in
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -2221,7 +2221,7 @@ exports[`Servers Settings > Added reachable servers > should render custom serve
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -3722,7 +3722,7 @@ exports[`Servers Settings > Added reachable servers > should render customs serv
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -5258,7 +5258,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -6902,7 +6902,7 @@ exports[`Servers Settings > Added reachable servers > should show status ok afte
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -8581,7 +8581,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -10219,7 +10219,7 @@ exports[`Servers Settings > Added unreachable servers > should show status error
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -11885,7 +11885,7 @@ exports[`Servers Settings > should render servers page 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>

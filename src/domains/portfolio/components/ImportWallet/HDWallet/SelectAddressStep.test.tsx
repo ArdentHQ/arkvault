@@ -70,7 +70,7 @@ describe("AddressesTable", () => {
 		render(<AddressesTable {...defaultProps} />);
 
 		expect(screen.getAllByText(addressIndex0).length).toBeTruthy();
-		expect(screen.getAllByText("100 ARK").length).toBeTruthy();
+		expect(screen.getAllByText("100.00 ARK").length).toBeTruthy();
 	});
 
 	it("should handle address selection", async () => {

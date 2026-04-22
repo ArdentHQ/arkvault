@@ -14,7 +14,7 @@ describe("TotalAmountBox", () => {
 
 		const [amount, fee, total] = screen.getAllByTestId("Amount");
 
-		expect(amount).toHaveTextContent("0.1 ARK");
+		expect(amount).toHaveTextContent("0.10 ARK");
 		expect(fee).toHaveTextContent("0.01 ARK");
 		expect(total).toHaveTextContent("0.11 ARK");
 		expect(asFragment()).toMatchSnapshot();

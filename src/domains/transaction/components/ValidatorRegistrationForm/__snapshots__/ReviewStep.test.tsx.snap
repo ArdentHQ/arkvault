@@ -223,7 +223,7 @@ exports[`ReviewStep > should render review step 1`] = `
                       class="whitespace-nowrap font-semibold"
                       data-testid="Amount"
                     >
-                      0 ARK
+                      0.00 ARK
                     </span>
                     <span>
                       <span>
@@ -358,7 +358,7 @@ exports[`ReviewStep > should render review step 1`] = `
                           class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
                           data-testid="Amount"
                         >
-                          0 ARK
+                          0.00 ARK
                         </span>
                         <span
                           class="text-theme-secondary-500 text-xs leading-[15px] transition-all sm:hidden dark:text-theme-dark-500 dim:text-theme-dim-200 hidden"

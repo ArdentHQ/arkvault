@@ -396,27 +396,13 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -430,7 +416,21 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -603,27 +603,13 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -637,7 +623,21 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -810,27 +810,13 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -844,7 +830,21 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1344,27 +1344,13 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1378,7 +1364,21 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1551,27 +1551,13 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1585,7 +1571,21 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1758,27 +1758,13 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1792,7 +1778,21 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2292,27 +2292,13 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2326,7 +2312,21 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2499,27 +2499,13 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2533,7 +2519,21 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2706,27 +2706,13 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2740,7 +2726,21 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3240,27 +3240,13 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3274,7 +3260,21 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3447,27 +3447,13 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3481,7 +3467,21 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3654,27 +3654,13 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3688,7 +3674,21 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4188,27 +4188,13 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4222,7 +4208,21 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4395,27 +4395,13 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4429,7 +4415,21 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4602,27 +4602,13 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4636,7 +4622,21 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4942,7 +4942,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5011,7 +5011,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -5203,7 +5203,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5272,7 +5272,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -5464,7 +5464,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5533,7 +5533,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -5753,7 +5753,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5822,7 +5822,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -6014,7 +6014,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -6083,7 +6083,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -6275,7 +6275,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -6344,7 +6344,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
