@@ -149,11 +149,11 @@ export const Tokens = () => {
 			<ResetWhenUnmounted>
 				<AddTokenSidePanel
 					open={currentOpenedPanel?.name === Panel.AddToken}
-					onOpenChange={(_open, refreshTokens) => {
-						if (refreshTokens) {
-							void refresh();
-						}
+					onOpenChange={() => {
 						void closePanel();
+					}}
+					onAddToken={() => {
+						void refresh();
 					}}
 				/>
 			</ResetWhenUnmounted>

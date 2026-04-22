@@ -22,9 +22,11 @@ import { toasts } from "@/app/services";
 export const AddTokenSidePanel = ({
 	open,
 	onOpenChange,
+	onAddToken,
 }: {
 	open: boolean;
-	onOpenChange: (open: boolean, refresh: boolean) => void;
+	onOpenChange: (open: boolean) => void;
+	onAddToken: () => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -94,7 +96,8 @@ export const AddTokenSidePanel = ({
 			}),
 		);
 
-		onOpenChange(false, true);
+		onOpenChange(false);
+		onAddToken();
 	};
 
 	const onMountChange = useCallback(
@@ -111,7 +114,7 @@ export const AddTokenSidePanel = ({
 		<SidePanel
 			open={open}
 			minimizeable
-			onOpenChange={(open) => onOpenChange(open, false)}
+			onOpenChange={onOpenChange}
 			title={t("TOKENS.ADD_TOKEN.TITLE")}
 			titleIcon={
 				<Icon

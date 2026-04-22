@@ -13,15 +13,16 @@ let profile: Contracts.IProfile;
 
 const renderPanel = async () => {
 	const mockOnOpenChange = vi.fn();
+	const mockOnAddToken = vi.fn();
 
-	const view = render(<AddTokenSidePanel open={true} onOpenChange={mockOnOpenChange} />, {
+	const view = render(<AddTokenSidePanel open={true} onAddToken={mockOnAddToken} onOpenChange={mockOnOpenChange} />, {
 		route: `/profiles/${profile.id()}/dashboard`,
 		withProviders: true,
 	});
 
 	await expect(screen.findByTestId("AddTokenSidePanel")).resolves.toBeVisible();
 
-	return { ...view, mockOnOpenChange };
+	return { ...view, mockOnAddToken, mockOnOpenChange };
 };
 
 const validAddress = "0x12f6677522292654a231007c47b07971a7610904";
@@ -49,14 +50,6 @@ describe("AddTokenSidePanel", () => {
 
 	beforeEach(() => {
 		server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/tokens/${validAddress}`, samCoinData));
-	});
-
-	it("should close side panel", async () => {
-		const { mockOnOpenChange } = await renderPanel();
-
-		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
-
-		expect(mockOnOpenChange).toHaveBeenCalledWith(false, false);
 	});
 
 	it("should display error when an invalid contract address entered", async () => {
@@ -156,7 +149,7 @@ describe("AddTokenSidePanel", () => {
 	});
 
 	it("should add a custom token", async () => {
-		const { mockOnOpenChange } = await renderPanel();
+		const { mockOnOpenChange, mockOnAddToken } = await renderPanel();
 
 		const user = userEvent.setup();
 
@@ -174,7 +167,8 @@ describe("AddTokenSidePanel", () => {
 
 		expect(whitelistContractAddressSpy).toHaveBeenCalledWith(validAddress);
 		expect(successToastSpy).toHaveBeenCalled();
-		expect(mockOnOpenChange).toHaveBeenCalledWith(false, true);
+		expect(mockOnOpenChange).toHaveBeenCalledWith(false);
+		expect(mockOnAddToken).toHaveBeenCalled();
 	});
 
 	it("should display loading indicator while loading token", async () => {
