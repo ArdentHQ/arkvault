@@ -171,7 +171,7 @@ describe("useWalletSelection", () => {
 		});
 	});
 
-	it("should select wallet after deselectin all", async () => {
+	it("should select wallet after deselect all", async () => {
 		const { result } = renderHook(() => useWalletSelection(profile), {
 			wrapper,
 		});
@@ -190,6 +190,35 @@ describe("useWalletSelection", () => {
 		await waitFor(() => {
 			expect(result.current.selectedAddresses).toEqual([firstAddress]);
 		});
+	});
+
+	it("should call selectAfterDeselectAll using toggleSelection when all deselected", async () => {
+		const { result } = renderHook(() => useWalletSelection(profile), {
+			wrapper,
+		});
+
+		const firstWallet = profile.wallets().first();
+		const firstAddress = firstWallet.address();
+
+		const includesSpy = vi.spyOn(Array.prototype, "includes").mockReturnValue(true);
+
+		act(() => {
+			result.current.setSelectedAddresses([]);
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([]);
+		});
+
+		act(() => {
+			result.current.toggleSelection(firstWallet);
+		});
+
+		await waitFor(() => {
+			expect(result.current.selectedAddresses).toEqual([firstAddress]);
+		});
+
+		includesSpy.mockRestore();
 	});
 
 	it("should select first wallet when deleting last selected wallet", async () => {
