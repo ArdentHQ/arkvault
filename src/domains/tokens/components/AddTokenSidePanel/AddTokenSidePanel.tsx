@@ -19,7 +19,13 @@ import { Link } from "@/app/components/Link";
 import { Amount } from "@/app/components/Amount";
 import { toasts } from "@/app/services";
 
-export const AddTokenSidePanel = ({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean, refresh: boolean) => void }) => {
+export const AddTokenSidePanel = ({
+	open,
+	onOpenChange,
+}: {
+	open: boolean;
+	onOpenChange: (open: boolean, refresh: boolean) => void;
+}) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();

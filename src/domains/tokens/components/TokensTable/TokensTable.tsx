@@ -22,7 +22,7 @@ export const TokensTable = ({
 	hasMore,
 	hasEmptyResults,
 	fetchMore,
-	refreshTokens
+	refreshTokens,
 }: {
 	onClick?: (wallet: WalletToken) => void;
 	skeletonRowsLimit?: number;

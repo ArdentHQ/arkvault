@@ -26,11 +26,20 @@ export const Tokens = () => {
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
 
-	const { tokens, isLoadingTokens, isLoadingMore, isReloading, hasMore, hasEmptyResults, fetchMore, reload, refresh } =
-		useProfileTokens({
-			profile: activeProfile,
-			wallets: activeProfile.wallets().selected(),
-		});
+	const {
+		tokens,
+		isLoadingTokens,
+		isLoadingMore,
+		isReloading,
+		hasMore,
+		hasEmptyResults,
+		fetchMore,
+		reload,
+		refresh,
+	} = useProfileTokens({
+		profile: activeProfile,
+		wallets: activeProfile.wallets().selected(),
+	});
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false);
@@ -138,12 +147,15 @@ export const Tokens = () => {
 			/>
 
 			<ResetWhenUnmounted>
-				<AddTokenSidePanel open={currentOpenedPanel?.name === Panel.AddToken} onOpenChange={(_open, refreshTokens) => {
-					if (refreshTokens) {
-						void refresh();
-					}
-					void closePanel();
-				}} />
+				<AddTokenSidePanel
+					open={currentOpenedPanel?.name === Panel.AddToken}
+					onOpenChange={(_open, refreshTokens) => {
+						if (refreshTokens) {
+							void refresh();
+						}
+						void closePanel();
+					}}
+				/>
 			</ResetWhenUnmounted>
 
 			{tokenModalItem && (
