@@ -302,7 +302,7 @@ describe("TransactionRowLabel", () => {
 
 describe("transactionDirectionLabel", () => {
 	it("should return 'sent' when transaction isSent is true", () => {
-		const sentTransaction = { ...TransactionFixture, isSent: () => true, isReturn: () => false };
+		const sentTransaction = { ...TransactionFixture, isReturn: () => false, isSent: () => true };
 
 		const result = transactionDirectionLabel({ transaction: sentTransaction as any });
 
@@ -310,7 +310,7 @@ describe("transactionDirectionLabel", () => {
 	});
 
 	it("should return 'received' when transaction isSent is false", () => {
-		const receivedTransaction = { ...TransactionFixture, isSent: () => false, isReturn: () => false };
+		const receivedTransaction = { ...TransactionFixture, isReturn: () => false, isSent: () => false };
 
 		const result = transactionDirectionLabel({ transaction: receivedTransaction as any });
 
@@ -318,7 +318,7 @@ describe("transactionDirectionLabel", () => {
 	});
 
 	it("should return 'return' when transaction isReturn is true", () => {
-		const returnTransaction = { ...TransactionFixture, isSent: () => true, isReturn: () => true };
+		const returnTransaction = { ...TransactionFixture, isReturn: () => true, isSent: () => true };
 
 		const result = transactionDirectionLabel({ transaction: returnTransaction as any });
 
