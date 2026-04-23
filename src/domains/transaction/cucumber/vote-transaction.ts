@@ -68,7 +68,7 @@ cucumber("@voteTransaction-invalidMnemonic", {
 		await t.click(
 			Selector('[data-testid="ValidatorTable__continue-button"]').withText(translations.COMMON.CONTINUE),
 		);
-		await t.expect(Selector("h1").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
+		await t.expect(Selector("h2").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
 		await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 		await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
 			replace: true,
