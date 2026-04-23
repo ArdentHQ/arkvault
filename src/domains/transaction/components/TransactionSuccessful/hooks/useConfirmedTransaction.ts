@@ -29,10 +29,8 @@ export const useConfirmedTransaction = ({
 				try {
 					const transaction = await wallet.client().transaction(transactionId);
 
-					if (wallet) {
-						transaction.setMeta("publicKey", wallet.publicKey());
-						transaction.setMeta("address", wallet.address());
-					}
+					transaction.setMeta("publicKey", wallet.publicKey());
+					transaction.setMeta("address", wallet.address());
 					setIsConfirmed(true);
 
 					setIsLoading(false);

@@ -14,7 +14,7 @@ interface ExchangeTooltipProperties {
 	children: React.ReactNode;
 }
 
-const ExchangeTooltip: React.FC<ExchangeTooltipProperties> = ({
+export const ExchangeTooltip: React.FC<ExchangeTooltipProperties> = ({
 	value,
 	ticker,
 	isTestNetwork,

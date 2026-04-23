@@ -59,7 +59,6 @@ const signedTransactionMock = {
 	isContractDeployment: () => false,
 	isContractTransaction: () => false,
 	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
 	isRevoke: () => false,
 	isSecondSignature: () => false,
@@ -92,7 +91,6 @@ const signedTransactionMock = {
 		return value.plus(feeVal);
 	},
 	type: () => "transfer",
-	usesMultiSignature: () => false,
 	value: () => +transactionFixture.data.value / 1e8,
 	wallet: () => wallet,
 } as DTO.ExtendedSignedTransactionData;

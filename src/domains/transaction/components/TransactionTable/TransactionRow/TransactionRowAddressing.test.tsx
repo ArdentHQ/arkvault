@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React from "react";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-import { TransactionRowAddressing, TransactionRowLabel } from "./TransactionRowAddressing";
+import { TransactionRowAddressing, TransactionRowLabel, transactionDirectionLabel } from "./TransactionRowAddressing";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 
 describe("TransactionRowAddressing", () => {
@@ -199,6 +199,97 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.getByTestId("TransactionRowAddressing__vote_advanced_recipient")).toBeInTheDocument();
 		expect(screen.getByText("Contract")).toBeInTheDocument();
 	});
+
+	it("should render contract deployment address when confirmations > 0", () => {
+		const contractDeploymentFixture = {
+			...fixture,
+			confirmations: () => 1,
+			data: () => ({
+				data: {
+					receipt: {
+						deployedContractAddress: "0x123",
+					},
+				},
+			}),
+			isContractDeployment: () => true,
+			to: () => "0xOriginalTo",
+		};
+		render(<TransactionRowAddressing transaction={contractDeploymentFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__vote")).toBeInTheDocument();
+		expect(screen.getByText("Contract")).toBeInTheDocument();
+	});
+
+	it("should render multipayment received direction", () => {
+		const multiPaymentReceivedFixture = {
+			...fixture,
+			from: () => "0xFromAddress",
+			isMultiPayment: () => true,
+			isSent: () => false,
+			recipients: () => [{ address: "0x2", amount: "100" }],
+		};
+		render(<TransactionRowAddressing transaction={multiPaymentReceivedFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__multipayment")).toBeInTheDocument();
+	});
+
+	it("should render multipayment with sent direction when isSent is true", () => {
+		const multiPaymentSentFixture = {
+			...fixture,
+			from: () => "0xFromAddress",
+			isMultiPayment: () => true,
+			isReturn: () => false,
+			isSent: () => true,
+			recipients: () => [{ address: "0x2", amount: "100" }],
+			to: () => "0xToAddress",
+		};
+		render(<TransactionRowAddressing transaction={multiPaymentSentFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__multipayment")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
+	});
+
+	it("should render advanced sender with sender alias", () => {
+		const senderFixture = {
+			...transferFixture,
+			from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+		};
+		render(
+			<TransactionRowAddressing
+				transaction={senderFixture as any}
+				profile={profile}
+				isAdvanced={true}
+				variant="sender"
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionRowAddressing__container_advanced_sender")).toBeInTheDocument();
+	});
+
+	it("should set direction to return for non-contract return transaction", () => {
+		const returnTransferFixture = {
+			...transferFixture,
+			from: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			isReturn: () => true,
+			isSent: () => false,
+			to: () => "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6",
+			token: () => {},
+		};
+		render(<TransactionRowAddressing transaction={returnTransferFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("Return");
+	});
+
+	it("should use recipient address from token when to is empty", () => {
+		const tokenRecipientFixture = {
+			...transferFixture,
+			to: () => "",
+			token: () => ({ to: () => "0x2" }),
+		};
+		render(<TransactionRowAddressing transaction={tokenRecipientFixture as any} profile={profile} />);
+
+		expect(screen.getByTestId("TransactionRowAddressing__container")).toBeTruthy();
+	});
 });
 
 describe("TransactionRowLabel", () => {
@@ -206,5 +297,31 @@ describe("TransactionRowLabel", () => {
 		render(<TransactionRowLabel direction="received" style="return" />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveClass("bg-theme-secondary-200");
+	});
+});
+
+describe("transactionDirectionLabel", () => {
+	it("should return 'sent' when transaction isSent is true", () => {
+		const sentTransaction = { ...TransactionFixture, isReturn: () => false, isSent: () => true };
+
+		const result = transactionDirectionLabel({ transaction: sentTransaction as any });
+
+		expect(result).toBe("sent");
+	});
+
+	it("should return 'received' when transaction isSent is false", () => {
+		const receivedTransaction = { ...TransactionFixture, isReturn: () => false, isSent: () => false };
+
+		const result = transactionDirectionLabel({ transaction: receivedTransaction as any });
+
+		expect(result).toBe("received");
+	});
+
+	it("should return 'return' when transaction isReturn is true", () => {
+		const returnTransaction = { ...TransactionFixture, isReturn: () => true, isSent: () => true };
+
+		const result = transactionDirectionLabel({ transaction: returnTransaction as any });
+
+		expect(result).toBe("return");
 	});
 });

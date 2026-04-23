@@ -15,6 +15,18 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { isNullAddress } from "@/domains/transaction/utils";
 
 type Direction = "sent" | "received" | "return";
+
+export const transactionDirectionLabel = ({ transaction }: { transaction: DTO.RawTransactionData }): Direction => {
+	const isNegative = !!transaction.isSent();
+
+	let direction: Direction = isNegative ? "sent" : "received";
+	if (transaction.isReturn()) {
+		direction = "return";
+	}
+
+	return direction;
+};
+
 export const TransactionRowLabel = ({ direction, style }: { direction: Direction; style?: Direction }) => {
 	const { t } = useTranslation();
 
@@ -163,15 +175,10 @@ export const TransactionRowAddressing = ({
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
-	const isMusigTransfer = false;
-
-	const isNegative = [isMusigTransfer, transaction.isSent()].some(Boolean);
+	const isNegative = !!transaction.isSent();
 	const isContract = transaction.isContractTransaction();
 
-	let direction: Direction = isNegative ? "sent" : "received";
-	if (transaction.isReturn() || (isMusigTransfer && transaction.from() === transaction.to())) {
-		direction = "return";
-	}
+	const direction = transactionDirectionLabel({ transaction });
 
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 

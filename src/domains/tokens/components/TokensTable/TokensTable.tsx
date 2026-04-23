@@ -22,6 +22,7 @@ export const TokensTable = ({
 	hasMore,
 	hasEmptyResults,
 	fetchMore,
+	refreshTokens,
 }: {
 	onClick?: (wallet: WalletToken) => void;
 	skeletonRowsLimit?: number;
@@ -33,12 +34,14 @@ export const TokensTable = ({
 	hasMore: boolean;
 	hasEmptyResults: boolean;
 	fetchMore: () => Promise<void>;
+	refreshTokens: () => Promise<void>;
 }) => {
 	const { isMdAndAbove, isXs } = useBreakpoint();
 	const activeProfile = useActiveProfile();
 	const [query, setQuery] = useState("");
 
 	const [tokenToDelete, setTokenToDelete] = useState<WalletToken | undefined>(undefined);
+	const [deletedTokens, setDeletedTokens] = useState<string[]>([]);
 
 	// stores hidden contract addresses when in manage mode
 	const [hiddenContractAddresses, setHiddenContractAddresses] = useState<string[]>([]);
@@ -53,12 +56,15 @@ export const TokensTable = ({
 		});
 	};
 
-	const toggleManageMode = (state: boolean) => {
-		if (state) {
+	const toggleManageMode = (isInManageMode: boolean) => {
+		if (isInManageMode) {
 			// get hidden contract addresses from profile and fill `hiddenContractAddresses`
 			setHiddenContractAddresses([]);
+		} else {
+			setDeletedTokens([]);
+			void refreshTokens();
 		}
-		setManageMode(state);
+		setManageMode(isInManageMode);
 	};
 
 	useEffect(() => {
@@ -160,6 +166,7 @@ export const TokensTable = ({
 						.whitelistedContractAddresses()
 						.some((address) => address.toLowerCase() === row.token().address().toLowerCase())
 				}
+				isDeleted={!showSkeleton && isManageMode && deletedTokens.includes(row.token().address())}
 				onDelete={setTokenToDelete}
 				toggleContractVisibility={toggleContractVisibility}
 				isHidden={!showSkeleton && hiddenContractAddresses.includes(row.token().address())}
@@ -239,6 +246,7 @@ export const TokensTable = ({
 					walletToken={tokenToDelete}
 					onClose={() => setTokenToDelete(undefined)}
 					onDelete={() => {
+						setDeletedTokens([...deletedTokens, tokenToDelete.token().address()]);
 						activeProfile.removeWhitelistedContractAddress(tokenToDelete.token().address());
 						setTokenToDelete(undefined);
 					}}

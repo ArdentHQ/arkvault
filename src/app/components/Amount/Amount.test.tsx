@@ -29,7 +29,7 @@ describe("Amount", () => {
 	it("should format crypto", () => {
 		const { rerender } = render(<Amount value={1} ticker="ARK" />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^1 ARK$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^1.00 ARK$/);
 
 		rerender(<Amount value={1234.56} ticker=" " />);
 
@@ -37,23 +37,23 @@ describe("Amount", () => {
 
 		rerender(<Amount value={123_456} ticker="BTC" />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^123,456 BTC$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^123,456.00 BTC$/);
 
 		rerender(<Amount value={0} ticker="DARK" />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^0 DARK$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^0.00 DARK$/);
 
 		rerender(<Amount value={10} ticker="ARK" showSign />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\+ 10 ARK$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\+ 10.00 ARK$/);
 
 		rerender(<Amount value={10} ticker="ARK" showSign isNegative />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^- 10 ARK$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^- 10.00 ARK$/);
 
 		rerender(<Amount value={10} ticker="ARK" showTicker={false} />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^10$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^10.00$/);
 	});
 
 	it("should format fiat", () => {

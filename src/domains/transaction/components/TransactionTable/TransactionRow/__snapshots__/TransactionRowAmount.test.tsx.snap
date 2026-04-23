@@ -13,7 +13,7 @@ exports[`TransactionRowAmount > should show as received 1`] = `
         class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
-        + 121 ARK
+        + 121.00 ARK
       </span>
     </div>
   </div>

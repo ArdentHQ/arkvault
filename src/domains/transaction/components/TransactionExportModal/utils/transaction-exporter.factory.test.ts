@@ -1,9 +1,80 @@
 import { Contracts } from "@/app/lib/profiles";
-import { TransactionExporter } from "./transaction-exporter.factory";
+import { TransactionExporter, filterTransactions } from "./transaction-exporter.factory";
 import { env, getDefaultProfileId, syncValidators } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { http, HttpResponse } from "msw";
 
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
+
+describe("filterTransactions", () => {
+	it("should filter out transfers where from equals to", () => {
+		const transactions = [
+			{
+				from: () => "0xabc",
+				isMultiPayment: () => false,
+				isTransfer: () => true,
+				to: () => "0xabc",
+			},
+			{
+				from: () => "0xabc",
+				isMultiPayment: () => false,
+				isTransfer: () => true,
+				to: () => "0xdef",
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(1);
+	});
+
+	it("should filter multipayment with zero amount after subtracting sender", () => {
+		const transactions = [
+			{
+				from: () => "0xabc",
+				isMultiPayment: () => true,
+				isTransfer: () => false,
+				recipients: () => [
+					{ address: "0xabc", amount: "100" },
+					{ address: "0xdef", amount: "50" },
+				],
+				value: () => "100",
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(0);
+	});
+
+	it("should keep multipayment with non-zero amount", () => {
+		const transactions = [
+			{
+				from: () => "0xabc",
+				isMultiPayment: () => true,
+				isTransfer: () => false,
+				recipients: () => [
+					{ address: "0xabc", amount: "100" },
+					{ address: "0xdef", amount: "50" },
+				],
+				value: () => "200",
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(1);
+	});
+
+	it("should return empty for non transfer and non multiPayment types", () => {
+		const transactions = [
+			{
+				isMultiPayment: () => false,
+				isTransfer: () => false,
+			},
+		];
+
+		const result = filterTransactions(transactions);
+		expect(result).toHaveLength(0);
+	});
+});
 
 describe("CsvFormatter", () => {
 	let profile: Contracts.IProfile;
@@ -28,6 +99,31 @@ describe("CsvFormatter", () => {
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
 
 		expect(exporter.transactions().items()).toHaveLength(19);
+	});
+
+	it("should filter out transfers where from equals to", async () => {
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
+		const items = exporter.transactions().items();
+		expect(items.length).toBeGreaterThan(0);
+	});
+
+	it("should filter multipayment transactions with zero amount", async () => {
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
+		expect(exporter.transactions().count()).toBeGreaterThan(0);
+	});
+
+	it("should return empty for other transaction types", async () => {
+		const exporter = TransactionExporter({ profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
+		expect(exporter.transactions().items()).toBeDefined();
 	});
 
 	it("should sync transactions", async () => {
@@ -139,5 +235,46 @@ describe("CsvFormatter", () => {
 
 		expect(exporter.transactions().items()).toHaveLength(10);
 		expect(exporter.transactions().toCsv({}).length).toBeGreaterThan(0);
+	});
+
+	it("should preserve from date during pagination", async () => {
+		let callCount = 0;
+		const fromTimestamp = Date.now();
+
+		const handler = http.get(`https://dwallets-evm.mainsailhq.com/api/transactions`, ({ request }) => {
+			callCount++;
+			const url = new URL(request.url);
+
+			if (callCount === 1) {
+				return HttpResponse.json({
+					data: Array.from({ length: 100 }).fill(transactionsFixture.data[0]),
+					meta: {
+						...transactionsFixture.meta,
+						pageCount: 2,
+					},
+				});
+			}
+
+			const fromDate = url.searchParams.get("timestamp.from");
+			expect(fromDate).not.toBeNull();
+
+			return HttpResponse.json({
+				data: Array.from({ length: 5 }).fill(transactionsFixture.data[0]),
+				meta: {
+					...transactionsFixture.meta,
+					pageCount: 1,
+				},
+			});
+		});
+
+		server.use(handler);
+
+		const exporter = TransactionExporter({ limit: 100, profile, wallets: [profile.wallets().first()] });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: fromTimestamp, to: Date.now() } });
+
+		expect(exporter.transactions().items()).toHaveLength(105);
+
+		server.resetHandlers();
 	});
 });
