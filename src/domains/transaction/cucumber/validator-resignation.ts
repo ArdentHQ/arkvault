@@ -1,13 +1,20 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import {
+	cucumber,
+	E2E_PUBLIC_API_URL,
+	E2E_TX_API_URL,
+	MNEMONICS,
+	mockRequest,
+	visitWelcomeScreen,
+} from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../portfolio/e2e/common";
 import { goToValidatorResignationPage } from "../e2e/common";
 
 const translations = buildTranslations();
-const sendButton = Selector("button").withText(translations.COMMON.SEND);
+const sendButton = Selector("[data-testid=SendRegistration__send-button]");
 
 const validatorFormStep = {
 	"Given Alice has navigated to the validator resignation form for a wallet": async (t: TestController) => {
@@ -38,7 +45,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://dwallets-evm.mainsailhq.com/tx/api/transactions",
+				url: `${E2E_TX_API_URL}transactions`,
 			},
 			{
 				data: {
@@ -49,7 +56,7 @@ cucumber(
 				},
 			},
 		),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+		mockRequest(`${E2E_PUBLIC_API_URL}wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB`, {
 			data: {
 				address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 				publicKey: "027b320c5429334ecf846122492d12b898a756bf1347aa61f7bf1dcd706315a9fb",
@@ -101,7 +108,7 @@ cucumber(
 		},
 	},
 	[
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB", {
+		mockRequest(`${E2E_PUBLIC_API_URL}wallets/0x659A76be283644AEc2003aa8ba26485047fd1BFB`, {
 			data: {
 				address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
 				publicKey: "027b320c5429334ecf846122492d12b898a756bf1347aa61f7bf1dcd706315a9fb",
