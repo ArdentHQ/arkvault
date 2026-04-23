@@ -34,6 +34,7 @@ cucumber(
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), MNEMONICS[0], { replace: true });
 			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).notOk();
+			const sendButton = Selector("[data-testid=SendRegistration__send-button]");
 			await t.expect(sendButton.hasAttribute("disabled")).notOk();
 			await t.click(sendButton);
 		},
@@ -103,7 +104,7 @@ cucumber(
 		"Then an error is displayed on the mnemonic field": async (t: TestController) => {
 			await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 		},
-		"And the send button is disabled": async (t: TestController) => {
+		"And the send validator resignation button is disabled": async (t: TestController) => {
 			await t.expect(sendButton.hasAttribute("disabled")).ok();
 		},
 	},

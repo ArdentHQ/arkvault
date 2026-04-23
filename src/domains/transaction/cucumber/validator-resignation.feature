@@ -11,4 +11,4 @@ Feature: Validator Resignation Transaction
         Given Alice has navigated to the validator resignation form for a wallet
         When she attempts to complete the process with an invalid mnemonic
         Then an error is displayed on the mnemonic field
-        And the send button is disabled
+        And the send validator resignation button is disabled

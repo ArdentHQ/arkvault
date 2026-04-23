@@ -23,14 +23,16 @@ cucumber(
 		...preSteps,
 		"When she attempts to vote for a validator": async (t: TestController) => {
 			await t.click(Selector('[data-testid="AddressRow__select-2"]').withText(translations.COMMON.VOTE));
-			await t.expect(Selector("h2").withText(translations.VOTE.VALIDATOR_TABLE.TITLE).exists).ok();
+			await t.expect(Selector("h1").withText(translations.VOTE.VALIDATOR_TABLE.TITLE).exists).ok();
 			await t.click(Selector('[data-testid="ValidatorRow__toggle-0"]').withText(translations.COMMON.SELECT));
 			await t.expect(Selector("[data-testid=ValidatorTable__footer]").exists).ok();
 			await t.click(
 				Selector('[data-testid="ValidatorTable__continue-button"]').withText(translations.COMMON.CONTINUE),
 			);
+			await t.expect(Selector("h2").withText(translations.TRANSACTION.PAGE_VOTE.FORM_STEP.TITLE).exists).ok();
+			await t.click(Selector("[data-testid=SendVote__continue-button]"));
 			await t.expect(Selector("h2").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
-			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+			await t.click(Selector("[data-testid=SendVote__continue-button]"));
 			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), MNEMONICS[0], { replace: true });
 			await t.click(sendButton);
 		},
@@ -68,8 +70,12 @@ cucumber("@voteTransaction-invalidMnemonic", {
 		await t.click(
 			Selector('[data-testid="ValidatorTable__continue-button"]').withText(translations.COMMON.CONTINUE),
 		);
+		await t.expect(Selector("h2").withText(translations.TRANSACTION.PAGE_VOTE.FORM_STEP.TITLE).exists).ok();
+		await t.click(Selector("[data-testid=SendVote__continue-button]"));
+
 		await t.expect(Selector("h2").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
-		await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+		await t.click(Selector("[data-testid=SendVote__continue-button]"));
+
 		await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
 			replace: true,
 		});
