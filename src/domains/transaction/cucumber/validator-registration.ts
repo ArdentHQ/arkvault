@@ -1,7 +1,14 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import {
+	cucumber,
+	E2E_PUBLIC_API_URL,
+	E2E_TX_API_URL,
+	MNEMONICS,
+	mockRequest,
+	visitWelcomeScreen,
+} from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../portfolio/e2e/common";
 import { goToValidatorRegistrationPage } from "../e2e/common";
@@ -39,16 +46,16 @@ cucumber(
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 		},
 		"And sends the validator registration transaction": async (t: TestController) => {
-			await t.expect(Selector("h1").withText(translations.TRANSACTION.AUTHENTICATION_STEP.TITLE).exists).ok();
+			await t.expect(Selector("h2").withText(translations.TRANSACTION.AUTHENTICATION_STEP.TITLE).exists).ok();
 			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), MNEMONICS[0]);
 			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).notOk();
-			const sendButton = Selector("button").withText(translations.COMMON.SEND);
+			const sendButton = Selector("[data-testid=SendRegistration__send-button]");
 			await t.expect(sendButton.hasAttribute("disabled")).notOk();
 			await t.click(sendButton);
 		},
 		"Then the transaction is sent successfully": async (t: TestController) => {
 			await t
-				.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.CONFIRMED).exists)
+				.expect(Selector("h2").withText(translations.TRANSACTION.SUCCESS.CREATED).exists)
 				.ok({ timeout: 5000 });
 		},
 	},
@@ -56,7 +63,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets-evm.mainsailhq.com/api?attributes.validatorPublicKey=b387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9",
+				url: `${E2E_PUBLIC_API_URL}wallets?attributes.validatorPublicKey=b387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9`,
 			},
 			{},
 			404,
@@ -64,7 +71,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://dwallets-evm.mainsailhq.com/tx/api/transactions",
+				url: `${E2E_TX_API_URL}transactions`,
 			},
 			{
 				data: {
@@ -115,7 +122,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets-evm.mainsailhq.com/api?attributes.validatorPublicKey=d387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9",
+				url: `${E2E_PUBLIC_API_URL}wallets?attributes.validatorPublicKey=d387dc09d41dc443a0bb972f5bcce2b06620e2f1711a0596e96275c5ab38d4c85ccbe2d5f92d6f02dee4853acf1a14d9`,
 			},
 			{},
 			200,
