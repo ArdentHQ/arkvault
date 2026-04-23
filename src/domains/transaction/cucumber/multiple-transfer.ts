@@ -110,7 +110,6 @@ cucumber("@multipayTransaction-invalidMnemonic", {
 		await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", {
 			replace: true,
 		});
-		// await t.click(Selector("[data-testid=SendTransfer__send-button"));
 	},
 	"Then an error is displayed on the mnemonic field": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
