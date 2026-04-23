@@ -16,7 +16,7 @@ import { goToValidatorRegistrationPage } from "../e2e/common";
 const translations = buildTranslations();
 
 const preSteps = {
-	"Given Alice has navigated to the validator registration form for a wallet": async (t: TestController) => {
+	"Given Alice opens up register validator side panel": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 		await importWallet(t, MNEMONICS[0]);

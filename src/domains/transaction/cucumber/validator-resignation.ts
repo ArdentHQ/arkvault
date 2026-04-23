@@ -17,7 +17,7 @@ const translations = buildTranslations();
 const sendButton = Selector("[data-testid=SendRegistration__send-button]");
 
 const validatorFormStep = {
-	"Given Alice has navigated to the validator resignation form for a wallet": async (t: TestController) => {
+	"Given Alice opens up resign validator side panel": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 		await importWallet(t, MNEMONICS[0]);
