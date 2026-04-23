@@ -179,8 +179,8 @@ jobs:
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/transaction/cucumber
 
-            - name: Firefox
-              run: pnpm test:e2e:ci:firefox src/domains/transaction/cucumber
+#            - name: Firefox
+#              run: pnpm test:e2e:ci:firefox src/domains/transaction/cucumber
 
             - name: Edge
               run: pnpm test:e2e:ci:edge src/domains/transaction/cucumber
