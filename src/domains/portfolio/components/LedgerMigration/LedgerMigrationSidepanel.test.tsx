@@ -69,6 +69,38 @@ describe("LedgerMigrationSidepanel", () => {
 		vi.restoreAllMocks();
 	});
 
+	it.each(["sm", "md", "lg", "xl"])("should handle device not available callback in %s", async (containerSize) => {
+		mockNanoSTransport();
+		const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, { route });
+
+		expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+		});
+		consoleSpy.mockRestore();
+	});
+
+	it.each(["sm", "md", "lg", "xl"])("should handle connection failure and go back to listen step in %s", async (containerSize) => {
+		mockNanoSTransport();
+		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, { route });
+
+		expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+		});
+	});
+
 	it.each(["sm", "md", "lg", "xl"])("should successfully migrate to one wallet in %s", async (containerSize) => {
 		// Setup mocks
 		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, { route });
