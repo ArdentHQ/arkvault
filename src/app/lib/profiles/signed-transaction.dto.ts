@@ -117,10 +117,6 @@ export class ExtendedSignedTransactionData {
 		return this.#data.isUnvote();
 	}
 
-	public isMultiSignatureRegistration(): boolean {
-		return false;
-	}
-
 	public isMultiPayment(): boolean {
 		return this.#data.isMultiPayment();
 	}

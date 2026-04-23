@@ -165,7 +165,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -185,7 +185,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -205,7 +205,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -341,7 +341,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -361,7 +361,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -381,7 +381,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -517,7 +517,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -537,7 +537,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -557,7 +557,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
                   class="whitespace-nowrap font-semibold"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>

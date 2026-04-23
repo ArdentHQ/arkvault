@@ -51,12 +51,3 @@ export const customNetworks = (profile: Contracts.IProfile): CustomNetwork[] => 
 
 	return serverList;
 };
-
-export const hasAvailableMusigServer = ({ profile }: { profile?: Contracts.IProfile; network: Networks.Network }) => {
-	if (!profile) {
-		return false;
-	}
-
-	// TODO: Check if the correct network id is provided in profile.hosts(), considering dynamic network ids.
-	return false;
-};

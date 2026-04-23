@@ -1514,7 +1514,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                                       class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
                                       data-testid="Amount"
                                     >
-                                      0
+                                      0.00
                                     </span>
                                   </span>
                                 </span>
@@ -1692,7 +1692,7 @@ exports[`TokensTable > should not render in sm 1`] = `
                                       class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
                                       data-testid="Amount"
                                     >
-                                      0
+                                      0.00
                                     </span>
                                   </span>
                                 </span>
@@ -2692,7 +2692,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                                       class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
                                       data-testid="Amount"
                                     >
-                                      0
+                                      0.00
                                     </span>
                                   </span>
                                 </span>
@@ -2870,7 +2870,7 @@ exports[`TokensTable > should not render in xs 1`] = `
                                       class="whitespace-nowrap dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
                                       data-testid="Amount"
                                     >
-                                      0
+                                      0.00
                                     </span>
                                   </span>
                                 </span>

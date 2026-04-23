@@ -45,7 +45,6 @@ const transactionMethodsFixture = {
 	isContractDeployment: () => false,
 	isContractTransaction: () => true,
 	isMultiPayment: () => false,
-	isMultiSignatureRegistration: () => false,
 	isReturn: () => false,
 	isSecondSignature: () => false,
 	isSent: () => true,
@@ -72,7 +71,6 @@ const transactionMethodsFixture = {
 		const feeVal = BigNumber.make(transactionFixture.data.gasPrice).times(transactionFixture.data.gas);
 		return value.plus(feeVal);
 	},
-	usesMultiSignature: () => false,
 	value: () => +transactionFixture.data.value / 1e8,
 };
 
@@ -170,7 +168,6 @@ describe("SendVoteSidePanel Keyboard", () => {
 				"https://dwallets-evm.mainsailhq.com/api/transactions/8e4a8c3eaf2f9543a5bd61bb85ddd2205d5091597a77446c8b99692e0854b978",
 				transactionFixture,
 			),
-			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
 		vi.useFakeTimers({ shouldAdvanceTime: true });

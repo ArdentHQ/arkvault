@@ -70,4 +70,74 @@ describe("useConfirmedTransaction", () => {
 
 		expect(clientMock).not.toHaveBeenCalled();
 	});
+
+	it("should not make any calls when wallet is missing", async () => {
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				transactionId: "123",
+			}),
+		);
+
+		expect(result.current.isConfirmed).toBe(false);
+	});
+
+	it("should not make any calls when transactionId is missing", async () => {
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				wallet: wallet,
+			}),
+		);
+
+		expect(result.current.isConfirmed).toBe(false);
+	});
+
+	it("should set transaction meta when wallet is present", async () => {
+		const setMetaSpy = vi.fn();
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: () => ({
+				confirmations: () => BigNumber.make(1),
+				id: () => "123",
+				setMeta: setMetaSpy,
+			}),
+		}));
+
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				transactionId: "123",
+				wallet: wallet,
+			}),
+		);
+
+		await waitFor(
+			() => {
+				expect(result.current.isConfirmed).toBe(true);
+			},
+			{ timeout: 5000 },
+		);
+
+		expect(setMetaSpy).toHaveBeenCalledWith("publicKey", wallet.publicKey());
+		expect(setMetaSpy).toHaveBeenCalledWith("address", wallet.address());
+	});
+
+	it("should ignore errors when transaction is not confirmed", async () => {
+		vi.spyOn(wallet, "client").mockImplementation(() => ({
+			transaction: () => {
+				throw new Error("Transaction not found");
+			},
+		}));
+
+		const { result } = renderHook(() =>
+			useConfirmedTransaction({
+				transactionId: "123",
+				wallet: wallet,
+			}),
+		);
+
+		await waitFor(
+			() => {
+				expect(result.current.isConfirmed).toBe(false);
+			},
+			{ timeout: 3000 },
+		);
+	});
 });
