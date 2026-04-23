@@ -179,6 +179,13 @@ jobs:
             - name: Chromium
               run: pnpm test:e2e:ci src/domains/transaction/cucumber
 
+            - name: Upload screenshots
+              uses: actions/upload-artifact@v4
+              if: always()
+              with:
+                  name: test-screenshots
+                  path: screenshots/
+
 #            - name: Firefox
 #              run: pnpm test:e2e:ci:firefox src/domains/transaction/cucumber
 
