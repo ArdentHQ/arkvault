@@ -104,11 +104,13 @@ describe("MigratedAddressRow", () => {
 		render(<MigratedAddressRowMobile profile={profile} transaction={migrator.transactions().at(0)!} />, {
 			route,
 		});
+
 		await userEvent.click(screen.getByText("Edit"));
 		expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
 
 		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "UpdatedWallet");
 		await userEvent.click(screen.getByText("Save"));
+
 		expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
 
 		ledgerMocks.restoreAll();

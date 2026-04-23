@@ -68,7 +68,6 @@ export const MigratedAddressRowMobile = ({
 					className="dim:bg-theme-dim-950 dark:bg-theme-dark-950 mt-0 w-full space-y-2 px-4 py-3"
 					wallet={editingWallet}
 					profile={profile}
-					onCancel={() => setEditingWallet(undefined)}
 					onAfterSave={() => setEditingWallet(undefined)}
 				>
 					<div className="mt-0 flex items-center justify-end">
