@@ -4,7 +4,8 @@ import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
-import { ValidatorRegistrationForm, signValidatorRegistration } from "./ValidatorRegistrationForm";
+import { ValidatorRegistrationForm, signValidatorRegistration, handleSelectSender } from "./ValidatorRegistrationForm";
+import { getWalletAddress } from "./FormStep";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import validatorRegistrationFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions/validator-registration.json";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
@@ -56,6 +57,9 @@ const renderComponent = (properties?: any) => {
 
 	return { ...utils, form };
 };
+
+const validatorPublicKey =
+	"a4dc0d9080e2542b4e5347af8cebe6327d8814dabda373fbee570165661f2e39b100723009e0fad9da6f207de81cea12";
 
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	// @ts-ignore
@@ -128,8 +132,6 @@ describe("ValidatorRegistrationForm", () => {
 	it("should set public key", async () => {
 		const { form } = renderComponent();
 
-		const validatorPublicKey = "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de";
-
 		await userEvent.type(screen.getByTestId("Input__validator_public_key"), validatorPublicKey);
 
 		await waitFor(() => expect(screen.getByTestId("Input__validator_public_key")).toHaveValue(validatorPublicKey));
@@ -149,7 +151,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -173,7 +175,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 				value: 250_000_000_000_000_000_000,
 			},
 			gasLimit: "1",
@@ -233,7 +235,7 @@ describe("ValidatorRegistrationForm", () => {
 				mnemonic: MNEMONICS[0],
 				network: wallet.network(),
 				senderAddress: wallet.address(),
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 			}),
 			setError: vi.fn(),
 			setValue: vi.fn(),
@@ -256,7 +258,7 @@ describe("ValidatorRegistrationForm", () => {
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
-				validatorPublicKey: "02147bf63839be7abb44707619b012a8b59ad3eda90be1c6e04eb9c630232268de",
+				validatorPublicKey,
 				value: 250_000_000_000_000_000_000,
 			},
 			gasLimit: "1",
@@ -272,5 +274,214 @@ describe("ValidatorRegistrationForm", () => {
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
 		getMilestoneMock.mockRestore();
+	});
+
+	it("should sign transaction with default fee when milestone does not have validatorRegistrationFee", async () => {
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
+
+		const getMilestoneMock = vi.spyOn(wallet.network(), "milestone").mockReturnValue({});
+
+		const form = {
+			clearErrors: vi.fn(),
+			getValues: () => ({
+				encryptionPassword: "password",
+				gasLimit: "1",
+				gasPrice: "1",
+				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
+				senderAddress: wallet.address(),
+				validatorPublicKey,
+			}),
+			setError: vi.fn(),
+			setValue: vi.fn(),
+		};
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signValidatorRegistration")
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [validatorRegistrationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createTransactionMock(wallet);
+
+		await signValidatorRegistration({
+			env,
+			form,
+			profile,
+		});
+
+		expect(signMock).toHaveBeenCalledWith({
+			data: {
+				validatorPublicKey,
+				value: 0,
+			},
+			gasLimit: "1",
+			gasPrice: "1",
+			signatory: undefined,
+		});
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+		getMilestoneMock.mockRestore();
+	});
+
+	it("should sign update validator when wallet is already a validator", async () => {
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
+
+		const isValidatorMock = vi.spyOn(wallet, "isValidator").mockReturnValue(true);
+
+		const form = {
+			clearErrors: vi.fn(),
+			getValues: () => ({
+				encryptionPassword: "password",
+				gasLimit: "1",
+				gasPrice: "1",
+				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
+				senderAddress: wallet.address(),
+				validatorPublicKey,
+			}),
+			setError: vi.fn(),
+			setValue: vi.fn(),
+		};
+		const signUpdateValidatorMock = vi
+			.spyOn(wallet.transaction(), "signUpdateValidator")
+			.mockReturnValue(Promise.resolve(validatorRegistrationFixture.data.hash));
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [validatorRegistrationFixture.data.hash],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createTransactionMock(wallet);
+
+		await signValidatorRegistration({
+			env,
+			form,
+			profile,
+		});
+
+		expect(signUpdateValidatorMock).toHaveBeenCalledWith({
+			data: {
+				validatorPublicKey,
+			},
+			gasLimit: "1",
+			gasPrice: "1",
+			signatory: undefined,
+		});
+		expect(broadcastMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+		expect(transactionMock).toHaveBeenCalledWith(validatorRegistrationFixture.data.hash);
+
+		signUpdateValidatorMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+		isValidatorMock.mockRestore();
+	});
+
+	it("should set sender address and sync wallet if it is not yet fully synced", async () => {
+		const setValueMock = vi.fn();
+
+		const identityMock = vi.fn();
+		const synchroniserMock = vi.fn().mockReturnValue({ identity: identityMock });
+
+		const mockWallet = {
+			...wallet,
+			hasBeenFullyRestored: () => false,
+			hasSyncedWithNetwork: () => false,
+			synchroniser: synchroniserMock,
+		};
+
+		const mockProfile = {
+			...profile,
+			wallets: () => ({
+				findByAddressWithNetwork: () => mockWallet,
+			}),
+		};
+
+		handleSelectSender(wallet.address(), setValueMock, mockProfile, wallet.network().id());
+
+		expect(setValueMock).toHaveBeenCalledWith("senderAddress", wallet.address(), {
+			shouldDirty: true,
+			shouldValidate: false,
+		});
+		expect(synchroniserMock).toHaveBeenCalled();
+		expect(identityMock).toHaveBeenCalled();
+	});
+
+	it("should not sync wallet when already fully restored and synced", async () => {
+		const setValueMock = vi.fn();
+
+		const synchroniserMock = vi.fn();
+
+		const mockWallet = {
+			...wallet,
+			hasBeenFullyRestored: () => true,
+			hasSyncedWithNetwork: () => true,
+			synchroniser: synchroniserMock,
+		};
+
+		const mockProfile = {
+			...profile,
+			wallets: () => ({
+				findByAddressWithNetwork: () => mockWallet,
+			}),
+		};
+
+		handleSelectSender(wallet.address(), setValueMock, mockProfile, wallet.network().id());
+
+		expect(setValueMock).toHaveBeenCalledWith("senderAddress", wallet.address(), {
+			shouldDirty: true,
+			shouldValidate: false,
+		});
+		expect(synchroniserMock).not.toHaveBeenCalled();
+	});
+
+	it("should render lockedFee error alert when error is present", async () => {
+		let hasSetError = false;
+
+		const TestWrapper = () => {
+			const form = useForm({ defaultValues: { fee: "2" } });
+
+			useEffect(() => {
+				if (!hasSetError) {
+					hasSetError = true;
+					form.setError("lockedFee", { message: "Locked fee error", type: "manual" });
+				}
+			}, [form]);
+
+			return (
+				<FormProvider {...form}>
+					<ValidatorRegistrationForm.component activeTab={1} profile={profile} wallet={wallet} />
+				</FormProvider>
+			);
+		};
+
+		render(<TestWrapper />, { route: `/profiles/${profile.id()}` });
+
+		await expect(screen.findByText("Locked fee error")).resolves.toBeVisible();
+	});
+});
+
+describe("getWalletAddress", () => {
+	it("should return address when wallet is provided", () => {
+		const mockWallet = { address: () => "0x123" };
+		expect(getWalletAddress(mockWallet)).toBe("0x123");
+	});
+
+	it("should return empty string when wallet is null", () => {
+		expect(getWalletAddress(null)).toBe("");
+	});
+
+	it("should return empty string when wallet is undefined", () => {
+		expect(getWalletAddress(undefined)).toBe("");
 	});
 });

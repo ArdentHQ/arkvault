@@ -24,7 +24,6 @@ type SelectRecipientProperties = {
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
-	exceptMultiSignature?: boolean;
 	ref?: React.Ref<HTMLInputElement>;
 	onChange?: (address: string | undefined, alias: WalletAliasResult) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;

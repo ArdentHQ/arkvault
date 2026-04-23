@@ -314,9 +314,7 @@ export const Transactions = memo(function Transactions({
 						profile={profile}
 						onClose={() => {
 							/* istanbul ignore next -- @preserve */
-							closePanel().then(() => {
-								setTransactionModalItem(undefined);
-							});
+							closePanel().then(() => setTransactionModalItem(undefined));
 						}}
 					/>
 				)}

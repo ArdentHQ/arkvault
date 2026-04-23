@@ -1,6 +1,12 @@
 import { Contracts, ReadOnlyWallet } from "@/app/lib/profiles";
+import { BigNumber } from "@/app/lib/helpers";
 import { requestMock, server } from "@/tests/mocks/server";
-import { TransactionDetailSidePanel } from "./TransactionDetailSidePanel";
+import {
+	getConfirmationsValue,
+	getConfirmationsCount,
+	getInteractedWith,
+	TransactionDetailSidePanel,
+} from "./TransactionDetailSidePanel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { act, env, getDefaultProfileId, render, screen, syncValidators, waitFor } from "@/utils/testing-library";
@@ -8,6 +14,8 @@ import userEvent from "@testing-library/user-event";
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
+
+const blockHash = "bbe10cb07743e41a9ac3b6c7801a31ca00ce1c250d79b9ec3b885289e3c66a68";
 
 describe("TransactionDetailModal", () => {
 	let profile: Contracts.IProfile;
@@ -39,7 +47,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={false}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}
@@ -61,7 +69,7 @@ describe("TransactionDetailModal", () => {
 				onClose={onCloseMock}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "transfer",
 					wallet: () => wallet,
 				}}
@@ -88,7 +96,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					isTransfer: () => true,
 					memo: () => {},
 					type: () => "transfer",
@@ -110,12 +118,12 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					isMultiPayment: () => true,
 					isTransfer: () => false,
 					recipients: () => [
-						{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
-						{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
+						{ address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", amount: 1 },
+						{ address: "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6", amount: 1 },
 					],
 					type: () => "multiPayment",
 					wallet: () => wallet,
@@ -152,11 +160,11 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					data: () => ({
 						data: {
 							asset: {},
-							blockHash: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+							blockHash: blockHash,
 						},
 					}),
 					isConfirmed: () => true,
@@ -198,7 +206,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "validatorRegistration",
 					username: () => "ARK Wallet",
 					wallet: () => wallet,
@@ -219,7 +227,7 @@ describe("TransactionDetailModal", () => {
 				isOpen={true}
 				transactionItem={{
 					...TransactionFixture,
-					blockHash: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+					blockHash: () => blockHash,
 					type: () => "validatorResignation",
 					wallet: () => wallet,
 				}}
@@ -230,5 +238,236 @@ describe("TransactionDetailModal", () => {
 		);
 
 		expect(screen.getByTestId("SidePanel__content")).toHaveTextContent("Resignation");
+	});
+
+	it("should render contract deployment with deployed contract address", () => {
+		const contractDeploymentFixture = {
+			...TransactionFixture,
+			blockHash: () => blockHash,
+			confirmations: () => ({ toNumber: () => 10, valueOf: () => 10 }),
+			data: () => ({
+				data: {
+					receipt: {
+						deployedContractAddress: "0x123",
+					},
+				},
+			}),
+			isConfirmed: () => true,
+			isContractDeployment: () => true,
+			type: () => "contractDeployment",
+			wallet: () => wallet,
+		};
+
+		render(
+			<TransactionDetailSidePanel profile={profile} isOpen={true} transactionItem={contractDeploymentFixture} />,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should find wallet when transaction from/to matches wallet address", () => {
+		const fromAddress = wallet.address();
+		const toAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				wallets={[wallet]}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => blockHash,
+					from: () => fromAddress,
+					to: () => toAddress,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render token transfer with token address", () => {
+		const tokenAddress = "0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6";
+
+		const mockTransactionToken = {
+			to: () => tokenAddress,
+			token: () => ({
+				address: () => tokenAddress,
+				displaySymbol: () => "TEST",
+			}),
+			value: () => BigNumber.make(100),
+		};
+
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => blockHash,
+					isTokenTransfer: () => true,
+					to: () => tokenAddress,
+					token: () => mockTransactionToken,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render with confirmations passed directly", () => {
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				confirmations={15}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => blockHash,
+					confirmations: () => ({ toNumber: () => 10 }),
+					isConfirmed: () => true,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render with isConfirmed passed directly", () => {
+		render(
+			<TransactionDetailSidePanel
+				profile={profile}
+				isOpen={true}
+				isConfirmed={true}
+				confirmations={20}
+				transactionItem={{
+					...TransactionFixture,
+					blockHash: () => blockHash,
+					confirmations: () => ({ toNumber: () => 10 }),
+					isConfirmed: () => false,
+					type: () => "transfer",
+					wallet: () => wallet,
+				}}
+			/>,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+
+	it("should render contract deployment with confirmations > 0", () => {
+		const contractDeploymentFixture = {
+			...TransactionFixture,
+			blockHash: () => blockHash,
+			confirmations: () => ({ toNumber: () => 10, valueOf: () => 10 }),
+			data: () => ({
+				data: {
+					receipt: {
+						deployedContractAddress: "0x123",
+					},
+				},
+			}),
+			isConfirmed: () => true,
+			isContractDeployment: () => true,
+			type: () => "contractDeployment",
+			wallet: () => wallet,
+		};
+
+		render(
+			<TransactionDetailSidePanel profile={profile} isOpen={true} transactionItem={contractDeploymentFixture} />,
+			{
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("SidePanel__content")).toBeInTheDocument();
+	});
+});
+
+describe("getInteractedWith", () => {
+	it("should return deployed contract address when contract deployment has confirmations", () => {
+		const mockTransaction = {
+			confirmations: () => 10,
+			data: () => ({ data: { receipt: { deployedContractAddress: "0x123" } } }),
+			isContractDeployment: () => true,
+			isTokenTransfer: () => false,
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBe("0x123");
+	});
+
+	it("should return token address when token transfer has token", () => {
+		const mockTransaction = {
+			isContractDeployment: () => false,
+			isTokenTransfer: () => true,
+			to: () => "0xTo",
+			token: () => ({ token: () => ({ address: () => "0xToken" }) }),
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBe("0xToken");
+	});
+
+	it("should return to address when token transfer has no token", () => {
+		const mockTransaction = {
+			isContractDeployment: () => false,
+			isTokenTransfer: () => true,
+			to: () => "0xTo",
+			token: () => null,
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBe("0xTo");
+	});
+
+	it("should return undefined when not contract deployment or token transfer", () => {
+		const mockTransaction = {
+			isContractDeployment: () => false,
+			isTokenTransfer: () => false,
+		};
+
+		expect(getInteractedWith(mockTransaction)).toBeUndefined();
+	});
+});
+
+describe("getConfirmationsValue", () => {
+	it("should use passed isConfirmed value when provided", () => {
+		const mockTransaction = { isConfirmed: () => false };
+		expect(getConfirmationsValue(true, mockTransaction)).toBe(true);
+	});
+
+	it("should use transaction isConfirmed when isConfirmed is not provided", () => {
+		const mockTransaction = { isConfirmed: () => true };
+		expect(getConfirmationsValue(undefined, mockTransaction)).toBe(true);
+	});
+});
+
+describe("getConfirmationsCount", () => {
+	it("should use passed confirmations value when provided", () => {
+		const mockTransaction = { confirmations: () => ({ toNumber: () => 5 }) };
+		expect(getConfirmationsCount(10, mockTransaction)).toBe(10);
+	});
+
+	it("should use transaction confirmations when not provided", () => {
+		const mockTransaction = { confirmations: () => ({ toNumber: () => 5 }) };
+		expect(getConfirmationsCount(undefined, mockTransaction)).toBe(5);
 	});
 });

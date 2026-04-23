@@ -418,7 +418,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        12
+                        12.00
                       </span>
                     </span>
                   </span>
@@ -444,7 +444,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        12 ARK
+                        12.00 ARK
                       </span>
                     </span>
                   </span>
@@ -658,7 +658,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         class="whitespace-nowrap whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700 text-sm font-semibold"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </div>
                   </div>
@@ -1066,7 +1066,7 @@ exports[`AddRecipient > should render 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0
+                        0.00
                       </span>
                     </span>
                   </span>
@@ -1092,7 +1092,7 @@ exports[`AddRecipient > should render 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 ARK
+                        0.00 ARK
                       </span>
                     </span>
                   </span>
@@ -1673,7 +1673,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0
+                        0.00
                       </span>
                     </span>
                   </span>
@@ -1699,7 +1699,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 ARK
+                        0.00 ARK
                       </span>
                     </span>
                   </span>
@@ -2280,7 +2280,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0
+                        0.00
                       </span>
                     </span>
                   </span>
@@ -2306,7 +2306,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 ARK
+                        0.00 ARK
                       </span>
                     </span>
                   </span>
@@ -2887,7 +2887,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0
+                        0.00
                       </span>
                     </span>
                   </span>
@@ -2913,7 +2913,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 ARK
+                        0.00 ARK
                       </span>
                     </span>
                   </span>
@@ -3510,7 +3510,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0
+                        0.00
                       </span>
                     </span>
                   </span>
@@ -3536,7 +3536,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 ARK
+                        0.00 ARK
                       </span>
                     </span>
                   </span>
@@ -4289,7 +4289,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0
+                        0.00
                       </span>
                     </span>
                   </span>
@@ -4315,7 +4315,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 ARK
+                        0.00 ARK
                       </span>
                     </span>
                   </span>
@@ -5554,7 +5554,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0
+                        0.00
                       </span>
                     </span>
                   </span>
@@ -5580,7 +5580,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 ARK
+                        0.00 ARK
                       </span>
                     </span>
                   </span>

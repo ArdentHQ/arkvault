@@ -12,12 +12,6 @@ export enum ProfilePaths {
 	// Transactions
 	SendTransfer = "/profiles/:profileId/dashboard?method=transfer",
 	SendVote = "/profiles/:profileId/votes?method=vote",
-	SendVoteWallet = "/profiles/:profileId/wallets/:walletId/votes?method=vote",
-	SendMultiSignature = "/profiles/:profileId/wallets/:walletId/send-registration/multiSignature",
-	SendValidatorRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/validatorRegistration",
-	SendUsernameRegistration = "/profiles/:profileId/wallets/:walletId/send-registration/usernameRegistration",
-	SendUsernameResignation = "/profiles/:profileId/wallets/:walletId/send-username-resignation",
-	SendUsernameResignationProfile = "/profiles/:profileId/send-username-resignation",
 	// Profile
 	CreateProfile = "/profiles/create",
 	ImportProfile = "/profiles/import",

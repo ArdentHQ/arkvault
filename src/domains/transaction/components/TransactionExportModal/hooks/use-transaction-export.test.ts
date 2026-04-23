@@ -7,6 +7,7 @@ import { ExportProgressStatus } from "@/domains/transaction/components/Transacti
 import { env, getDefaultProfileId, syncValidators, waitFor } from "@/utils/testing-library";
 import { server } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/mainsail/devnet/transactions.json";
+import * as TransactionExporterModule from "@/domains/transaction/components/TransactionExportModal/utils/transaction-exporter.factory";
 
 describe("useTransactionExport hook", () => {
 	let profile: Contracts.IProfile;
@@ -212,5 +213,71 @@ describe("useTransactionExport hook", () => {
 		await waitFor(() => expect(result.current.count).toBe(100));
 
 		server.resetHandlers();
+	});
+
+	it("should handle partial fetch error with some transactions synced", async () => {
+		const realResult = await profile.transactionAggregate().all({ limit: 1 });
+		const realItem = realResult.items()[0];
+
+		const allMock = vi
+			.spyOn(profile.transactionAggregate(), "all")
+			.mockResolvedValueOnce({
+				items: () => Array.from({ length: 100 }, () => realItem),
+			} as any)
+			.mockRejectedValueOnce(new Error("Network error"));
+
+		const { result } = renderExportHook();
+
+		await act(async () => {
+			await result.current.startExport({
+				dateRange: "all",
+				delimiter: "comma",
+				includeCryptoAmount: true,
+				includeDate: true,
+				includeFiatAmount: true,
+				includeHeaderRow: true,
+				includeSenderRecipient: true,
+				includeTransactionId: true,
+				transactionType: "all",
+			});
+		});
+
+		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Error));
+		await waitFor(() => expect(result.current.error).toBeDefined());
+		await waitFor(() => expect(result.current.finalCount).toBe(100));
+
+		allMock.mockRestore();
+	});
+
+	it("should return early when sync returns undefined", async () => {
+		const syncMock = vi.spyOn(TransactionExporterModule, "TransactionExporter").mockReturnValue({
+			transactions: () => ({
+				abortSync: () => {},
+				count: () => 0,
+				items: () => [],
+				sync: async () => {},
+				toCsv: () => "",
+			}),
+		} as any);
+
+		const { result } = renderExportHook();
+
+		await act(async () => {
+			await result.current.startExport({
+				dateRange: "all",
+				delimiter: "comma",
+				includeCryptoAmount: true,
+				includeDate: true,
+				includeFiatAmount: true,
+				includeHeaderRow: true,
+				includeSenderRecipient: true,
+				includeTransactionId: true,
+				transactionType: "all",
+			});
+		});
+
+		expect(result.current.status).toBe(ExportProgressStatus.Progress);
+
+		syncMock.mockRestore();
 	});
 });

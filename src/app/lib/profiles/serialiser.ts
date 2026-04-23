@@ -39,7 +39,6 @@ export class WalletSerialiser {
 				[WalletData.ImportMethod]: this.#wallet.data().get(WalletData.ImportMethod),
 				[WalletData.Sequence]: this.#wallet.nonce().toFixed(0),
 				[WalletData.SignedTransactions]: this.#wallet.data().get(WalletData.SignedTransactions, []),
-				[WalletData.PendingMultiSignatures]: this.#wallet.data().get(WalletData.PendingMultiSignatures, []),
 				[WalletData.Votes]: this.#wallet.data().get(WalletData.Votes, []),
 				[WalletData.VotesAvailable]: this.#wallet.data().get(WalletData.VotesAvailable, 0),
 				[WalletData.VotesUsed]: this.#wallet.data().get(WalletData.VotesUsed, 0),

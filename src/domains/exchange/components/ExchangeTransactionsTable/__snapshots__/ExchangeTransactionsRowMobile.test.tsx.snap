@@ -194,7 +194,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -222,7 +222,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -422,7 +422,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -450,7 +450,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -650,7 +650,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -678,7 +678,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -879,7 +879,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -948,7 +948,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -1153,7 +1153,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -1181,7 +1181,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -1386,7 +1386,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -1414,7 +1414,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -1607,7 +1607,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 1 BTC
+                    - 1.00 BTC
                   </span>
                 </div>
               </div>
@@ -1635,7 +1635,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 100 ARK
+                    + 100.00 ARK
                   </span>
                 </div>
               </div>
@@ -1833,7 +1833,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 1 BTC
+                    - 1.00 BTC
                   </span>
                 </div>
               </div>
@@ -1861,7 +1861,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 100 ARK
+                    + 100.00 ARK
                   </span>
                 </div>
               </div>

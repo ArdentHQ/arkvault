@@ -265,10 +265,6 @@ describe("ExtendedSignedTransactionData", () => {
 		expect((subject as any)[method]()).toBe(true);
 	});
 
-	it("should return false for isMultiSignatureRegistration", () => {
-		expect(subject.isMultiSignatureRegistration()).toBe(false);
-	});
-
 	describe("#total", () => {
 		it("should return value minus fee for return transactions", () => {
 			mockData.isTransfer = vi.fn().mockReturnValue(true);

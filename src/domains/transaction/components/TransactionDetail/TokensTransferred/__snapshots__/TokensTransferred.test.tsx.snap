@@ -1,0 +1,97 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TokensTransferred > should show skeleton when refreshing transaction 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="DetailWrapper"
+  >
+    <div
+      class="border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent"
+      data-testid="DetailLabel"
+    >
+      <div
+        class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+        data-testid="DetailLabelText"
+      >
+        Tokens Transferred
+      </div>
+    </div>
+    <div
+      class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border mt-0 sm:mt-2"
+    >
+      <div
+        class="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4"
+      >
+        <div
+          class="space-y-3"
+        >
+          <div
+            class="flex w-full justify-between gap-2 sm:justify-start"
+            data-testid="TokensTransferred__To"
+          >
+            <div
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+              data-testid="DetailLabelText"
+            >
+              To
+            </div>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 150px; height: 16px;"
+              >
+                ‌
+              </span>
+              <br />
+            </span>
+          </div>
+          <div
+            class="flex w-full justify-between gap-2 sm:justify-start"
+            data-testid="TokensTransferred__Amount"
+          >
+            <div
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+              data-testid="DetailLabelText"
+            >
+              Amount
+            </div>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 100px; height: 16px;"
+              >
+                ‌
+              </span>
+              <br />
+            </span>
+          </div>
+          <div
+            class="flex w-full justify-between gap-2 sm:justify-start"
+          >
+            <div
+              class="no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold text-sm leading-[17px] sm:text-base sm:leading-5"
+              data-testid="DetailLabelText"
+            >
+              Value
+            </div>
+            <span
+              class="whitespace-nowrap text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+              data-testid="Amount"
+            >
+              0.00 BTC
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
