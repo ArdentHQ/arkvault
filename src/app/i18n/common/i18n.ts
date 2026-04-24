@@ -267,8 +267,8 @@ export const translations = {
 			GUIDELINE_2: "Check your wardrobe, bed, and windows for spies.",
 			GUIDELINE_3: "After completing the above steps, eat something.",
 			GUIDELINE_4:
-				"Find your device. Hide your little willy, we're talking about the Ledger  device now. So what if it's the same size as your willy, we need the  Ledger device.",
-			GUIDELINE_5: "Next, press the blue button at the bottom and read the text on the  following screens.",
+				"Find your device. Hide your little willy, we're talking about the Ledger device now. So what if it's the same size as your willy, we need the Ledger device.",
+			GUIDELINE_5: "Next, press the blue button at the bottom and read the text on the following screens.",
 			TITLE: "When migrating your address to ARKVault, follow these recommendations:",
 		},
 		HELP_TITLE: "Need help with migration?",

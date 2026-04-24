@@ -314,7 +314,7 @@ importers:
         version: 4.1.4(@typescript-eslint/eslint-plugin@8.38.0(@typescript-eslint/parser@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))
       gherkin-testcafe:
         specifier: ^7.4.0
-        version: 7.4.0(@cucumber/cucumber-expressions@18.0.1)(@cucumber/cucumber@12.1.0)(testcafe@3.7.2)
+        version: 7.4.0(@cucumber/cucumber-expressions@18.0.1)(@cucumber/cucumber@12.1.0)(testcafe@3.7.4)
       globals:
         specifier: ^16.3.0
         version: 16.3.0
@@ -357,6 +357,9 @@ importers:
       tailwindcss:
         specifier: 4.1.11
         version: 4.1.11
+      testcafe:
+        specifier: ^3.7.4
+        version: 3.7.4
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -3110,6 +3113,10 @@ packages:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
     engines: {node: '>=0.3.1'}
 
+  diff@8.0.4:
+    resolution: {integrity: sha512-DPi0FmjiSU5EvQV0++GFDOJ9ASQUVFh5kD+OzOnYdi7n3Wpm9hWWGfB/O2blfHcMVTL5WkQXSnRiK9makhrcnw==}
+    engines: {node: '>=0.3.1'}
+
   diffie-hellman@5.0.3:
     resolution: {integrity: sha512-kqag/Nl+f3GwyK25fhUMYj81BUOrZ9IuJsjIcDE5icNM9FJHAVm3VcUDxdLPoQtTuUylWm6ZIknYJwwaPxsUzg==}
 
@@ -4752,10 +4759,6 @@ packages:
   os-family@1.1.0:
     resolution: {integrity: sha512-E3Orl5pvDJXnVmpaAA2TeNNpNhTMl4o5HghuWhOivBjEiTnJSrMYSa5uZMek1lBEvu8kKEsa2YgVcGFVDqX/9w==}
 
-  os-tmpdir@1.0.2:
-    resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
-    engines: {node: '>=0.10.0'}
-
   outvariant@1.4.3:
     resolution: {integrity: sha512-+Sl2UErvtsoajRDKCE5/dBz4DIvHXQQnAxtQTF04OJxY0+DyZXSo5P5Bb7XYWOh81syohlYL24hbDwxedPUJCA==}
 
@@ -5860,8 +5863,8 @@ packages:
     resolution: {integrity: sha512-nTKSJhBzn9BmnOs0xVzXMu8dN2Gu13Ca3x3SJr/zF6ZdKjXO82JlbHu55dt5MFoWjzAQmwlqBkSxPaYicsTgUw==}
     engines: {node: '>= 0.10'}
 
-  testcafe-hammerhead@31.7.5:
-    resolution: {integrity: sha512-XnDtvrpiwoxMPhC9A3eFOPeE0erDF0iae5t23yaYB4lVQCRuEoNfg5Lv4vGvDhbJ2n2fpzOre4Lhvz12mac0tw==}
+  testcafe-hammerhead@31.7.7:
+    resolution: {integrity: sha512-vSI/ak8MTuDENCMLGNyPS+tsf7hLisQfaBDYB6NCY5y/arz26cad86P6+eIrm3ncH3SsnFcm+BmkmNjJxzPyoQ==}
     engines: {node: '>=14.0.0'}
 
   testcafe-legacy-api@5.1.8:
@@ -5886,8 +5889,8 @@ packages:
   testcafe-selector-generator@0.1.0:
     resolution: {integrity: sha512-MTw+RigHsEYmFgzUFNErDxui1nTYUk6nm2bmfacQiKPdhJ9AHW/wue4J/l44mhN8x3E8NgOUkHHOI+1TDFXiLQ==}
 
-  testcafe@3.7.2:
-    resolution: {integrity: sha512-1XNc764DlIfmev7JHwzVP2l7ZHQin9nTsM9fBB0yd3naAJn+VUR9kUe7J1PSxk+nJkhkBvsSmQSlppj527JGAA==}
+  testcafe@3.7.4:
+    resolution: {integrity: sha512-RADoEWAfGCQ1q08zr4kRQ+bEOhOiI3hmzF2s5dFv835ndERdE44V14DVqeOWGEFm0o+x6IYHyWhmQp0g9mz4ZQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -5938,9 +5941,9 @@ packages:
     resolution: {integrity: sha512-WMi/OQ2axVTf/ykqCQgXiIct+mSQDFdH2fkwhPwgEwvJ1kSzZRiinb0zF2Xb8u4+OqPChmyI6MEu4EezNJz+FQ==}
     hasBin: true
 
-  tmp@0.0.28:
-    resolution: {integrity: sha512-c2mmfiBmND6SOVxzogm1oda0OJ1HZVIk/5n26N59dDTh80MUeavpiCls4PGAdkX1PFkKokLpcf7prSjCeXLsJg==}
-    engines: {node: '>=0.4.0'}
+  tmp@0.2.5:
+    resolution: {integrity: sha512-voyz6MApa1rQGUxT3E+BK7/ROe8itEx7vD8/HEvt4xwXucvQ5G5oeEiHkmHZJuBO21RpOf+YYm9MOivj709jow==}
+    engines: {node: '>=14.14'}
 
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
@@ -9771,6 +9774,8 @@ snapshots:
 
   diff@4.0.2: {}
 
+  diff@8.0.4: {}
+
   diffie-hellman@5.0.3:
     dependencies:
       bn.js: 4.12.2
@@ -10473,7 +10478,7 @@ snapshots:
     dependencies:
       async: 3.2.6
 
-  gherkin-testcafe@7.4.0(@cucumber/cucumber-expressions@18.0.1)(@cucumber/cucumber@12.1.0)(testcafe@3.7.2):
+  gherkin-testcafe@7.4.0(@cucumber/cucumber-expressions@18.0.1)(@cucumber/cucumber@12.1.0)(testcafe@3.7.4):
     dependencies:
       '@cucumber/cucumber': 12.1.0
       '@cucumber/cucumber-expressions': 18.0.1
@@ -10482,7 +10487,7 @@ snapshots:
       '@cucumber/message-streams': 4.0.1(@cucumber/messages@27.2.0)
       '@cucumber/messages': 27.2.0
       chalk: 4.1.2
-      testcafe: 3.7.2
+      testcafe: 3.7.4
 
   glob-parent@5.1.2:
     dependencies:
@@ -11588,8 +11593,6 @@ snapshots:
 
   os-family@1.1.0: {}
 
-  os-tmpdir@1.0.2: {}
-
   outvariant@1.4.3: {}
 
   ow@0.8.0: {}
@@ -12685,7 +12688,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  testcafe-hammerhead@31.7.5:
+  testcafe-hammerhead@31.7.7:
     dependencies:
       '@adobe/css-tools': 4.4.4
       '@electron/asar': 3.4.1
@@ -12731,7 +12734,7 @@ snapshots:
       pinkie: 2.0.4
       read-file-relative: 1.2.0
       strip-bom: 2.0.0
-      testcafe-hammerhead: 31.7.5
+      testcafe-hammerhead: 31.7.7
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -12749,7 +12752,7 @@ snapshots:
 
   testcafe-selector-generator@0.1.0: {}
 
-  testcafe@3.7.2:
+  testcafe@3.7.4:
     dependencies:
       '@babel/core': 7.28.0
       '@babel/plugin-proposal-decorators': 7.28.0(@babel/core@7.28.0)
@@ -12787,7 +12790,7 @@ snapshots:
       del: 3.0.0
       device-specs: 1.0.1
       devtools-protocol: 0.0.1109433
-      diff: 4.0.2
+      diff: 8.0.4
       elegant-spinner: 1.0.1
       email-validator: 2.0.4
       emittery: 0.4.1
@@ -12834,7 +12837,7 @@ snapshots:
       source-map-support: 0.5.21
       strip-bom: 2.0.0
       testcafe-browser-tools: 2.0.26
-      testcafe-hammerhead: 31.7.5
+      testcafe-hammerhead: 31.7.7
       testcafe-legacy-api: 5.1.8
       testcafe-reporter-json: 2.2.0
       testcafe-reporter-list: 2.2.0
@@ -12843,7 +12846,7 @@ snapshots:
       testcafe-reporter-xunit: 2.2.3
       testcafe-selector-generator: 0.1.0
       time-limit-promise: 1.0.4
-      tmp: 0.0.28
+      tmp: 0.2.5
       tree-kill: 1.2.2
       typescript: 4.7.4
       unquote: 1.1.1
@@ -12890,9 +12893,7 @@ snapshots:
     dependencies:
       tldts-core: 6.1.86
 
-  tmp@0.0.28:
-    dependencies:
-      os-tmpdir: 1.0.2
+  tmp@0.2.5: {}
 
   to-regex-range@5.0.1:
     dependencies:
