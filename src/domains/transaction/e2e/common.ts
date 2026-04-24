@@ -11,7 +11,7 @@ export const openSendTransferSidePanel = async (t: any) => {
 		.ok({ timeout: 60_000 });
 };
 
-export const goToValidatorRegistrationPage = async (t: any) => {
+export const openSendValidatorRegistrationSidePanel = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
@@ -24,7 +24,7 @@ export const goToValidatorRegistrationPage = async (t: any) => {
 		.ok();
 };
 
-export const goToValidatorResignationPage = async (t: any) => {
+export const openSendValidatorResignationSidePanel = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 	await t.click(
 		Selector('[data-testid="dropdown__options"] li').withText(
