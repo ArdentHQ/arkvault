@@ -167,7 +167,7 @@ export class TokenService {
 	 *
 	 * @returns {ExtendedConfirmedTransactionDataCollection}
 	 */
-	async transfers(query?: TokenTransfersQuery): Promise<ExtendedConfirmedTransactionDataCollection> {
+	async transfers(query: TokenTransfersQuery | undefined = {}): Promise<ExtendedConfirmedTransactionDataCollection> {
 		const activeNetwork = this.#profile.activeNetwork();
 
 		const clientService = new ClientService({
@@ -182,11 +182,15 @@ export class TokenService {
 				.wallets()
 				.selected()
 				.map((wallet) => wallet.address()),
-			...(query ?? {}),
+			...query,
 		};
 
 		try {
-			response = await clientService.tokenTransfers(transfersQuery);
+			response = await clientService.tokenTransfers({
+				...transfersQuery,
+				addresses: this.#includeWhitelistAddressses(transfersQuery.addresses),
+				from: this.#includeWhitelistAddressses(transfersQuery.from),
+			});
 
 			const queryAddresses = [...transfersQuery.from, ...(transfersQuery.to ?? [])].filter(
 				(address) => !!address,
@@ -233,5 +237,9 @@ export class TokenService {
 		}
 
 		return total;
+	}
+
+	#includeWhitelistAddressses(addresses?: string[]): string[] {
+		return [...(addresses ?? []), ...this.#profile.whitelistedContractAddresses()];
 	}
 }
