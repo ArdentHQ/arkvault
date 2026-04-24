@@ -8,7 +8,7 @@ import { goToWallet } from "../../portfolio/e2e/common";
 const translations = buildTranslations();
 
 const preSteps = {
-	"Given Alice is on the wallet details page": async (t: TestController) => {
+	"Given Alice is on the portfolio page": async (t: TestController) => {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 	},
@@ -40,7 +40,7 @@ cucumber("@verifyMessage", {
 	"Then the message is successfully verified": async (t: TestController) => {
 		await t
 			.expect(
-				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE).exists,
+				Selector("h2").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE).exists,
 			)
 			.ok();
 	},
@@ -62,17 +62,17 @@ cucumber("@verifyMessage-failVerification", {
 		await t.click(Selector("[data-testid=VerifyMessage__verify-button]"));
 	},
 	"Then the message verification fails": async (t: TestController) => {
-		await t.expect(Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE).exists).ok();
+		await t.expect(Selector("h2").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE).exists).ok();
 	},
 });
 
 cucumber("@verifyMessage-openAndGoBack", {
 	...preSteps,
-	"But selects to go back from the verify message page": async (t: TestController) => {
+	"But selects to go back from the verify message side panel": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="VerifyMessage__back-button"]').exists).ok();
 		await t.click(Selector('[data-testid="VerifyMessage__back-button"]'));
 	},
-	"Then the wallet details page is displayed": async (t: TestController) => {
+	"Then the portfolio page is displayed": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 	},
 });
