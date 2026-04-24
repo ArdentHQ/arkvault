@@ -1,6 +1,6 @@
 import { Selector } from "testcafe";
 
-import { cucumber, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import { cucumber, E2E_PUBLIC_API_URL, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../e2e/common";
 
 const notifications = Selector("[data-testid=NavigationBar__buttons--notifications]");
@@ -18,8 +18,8 @@ cucumber("@notifications-openNotifications", {
 		await t.click(notifications);
 	},
 	"Then the notification list is displayed": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
-		await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
+		await t.expect(Selector("[data-testid=NotificationsSidepanel]").exists).ok();
+		await t.expect(Selector("[data-testid=NotificationRow]").count).gt(0);
 	},
 });
 cucumber(
@@ -31,24 +31,23 @@ cucumber(
 			await t.click(notifications);
 		},
 		"And selects a transaction": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
-			await t.hover(Selector("[data-testid=TransactionTable]"));
-			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).gt(0);
-			await t.click(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]:first-child"));
+			await t.expect(Selector("[data-testid=NotificationsSidepanel]").exists).ok();
+			await t.expect(Selector("[data-testid=NotificationRow]").count).gt(0);
+			await t.click(Selector("[data-testid=NotificationRow]:first-child"));
 		},
-		"Then the transaction details modal is displayed": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=Modal__inner]").exists).ok();
+		"Then the transaction details side panel is displayed": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=TransactionId]").exists).ok();
 		},
-		"When she selects close on the transaction details modal": async (t: TestController) => {
-			await t.click(Selector("[data-testid=Modal__close-button]"));
+		"When she selects close on the transaction details side panel": async (t: TestController) => {
+			await t.click(Selector("[data-testid=SidePanel__close-button]"));
 		},
-		"Then the modal is no longer displayed": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=Modal__inner]").exists).notOk();
+		"Then the side panel is no longer displayed": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=TransactionId]").exists).notOk();
 		},
 	},
 	[
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50",
+			`${E2E_PUBLIC_API_URL}blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50`,
 			{
 				data: {
 					confirmations: 17870,
@@ -99,10 +98,11 @@ cucumber("@notifications-markAsRead", {
 		await t.click(notifications);
 	},
 	"Then the notifications are marked as read": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(2);
+		await t.expect(Selector("[data-testid=NotificationRow]").count).eql(10);
 	},
 	"And the red dot is hidden": async (t: TestController) => {
-		await t.hover(Selector("[data-testid=TableRow]"));
+		await t.click(Selector("[data-testid=MarkAllNotificationsRead]"));
+		await t.click(Selector("[data-testid=SidePanel__close-button]"));
 		await t.expect(Selector("[data-testid=NavigationBar__buttons--notifications] .rounded-full").exists).notOk();
 	},
 });
