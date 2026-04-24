@@ -79,8 +79,9 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose, onDelete }:
 							<DetailTitle className="w-auto sm:min-w-24 sm:pr-6">{t("COMMON.BALANCE")}</DetailTitle>
 
 							<Amount
+								decimals={walletToken.token().decimals()}
 								ticker={walletToken.token().displaySymbol()}
-								value={walletToken.balance().toHuman()}
+								value={walletToken.balance()}
 								className="font-semibold"
 							/>
 						</div>
