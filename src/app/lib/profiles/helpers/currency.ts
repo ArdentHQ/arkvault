@@ -30,7 +30,7 @@ export class Currency {
 			const numeral = Numeral.make(options.locale, {
 				currencyDisplay: "name",
 				maximumFractionDigits: decimals,
-				minimumFractionDigits: 0,
+				minimumFractionDigits: 2,
 			});
 
 			return numeral

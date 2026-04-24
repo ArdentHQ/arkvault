@@ -79,6 +79,16 @@ describe("TokenService", () => {
 		expect(tokens.items()[1]).toBeUndefined();
 	});
 
+	it("should query with whitelisted contract addresses", async () => {
+		const whitelistedSpy = vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue(["0xabc"]);
+
+		await profile.tokens().sync();
+		const tokens = profile.tokens().selected();
+
+		expect(tokens).toBeInstanceOf(WalletTokenCollection);
+		expect(whitelistedSpy).toHaveBeenCalledOnce();
+	});
+
 	it("should return transfers", async () => {
 		const walletAddress = profile.wallets().first().address();
 

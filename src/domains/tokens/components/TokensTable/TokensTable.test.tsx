@@ -23,6 +23,7 @@ const defaultProps = (overrides) => ({
 	hasMore: false,
 	isLoadingMore: false,
 	isLoadingTokens: false,
+	refreshTokens: vi.fn(),
 	tokens,
 	...overrides,
 });

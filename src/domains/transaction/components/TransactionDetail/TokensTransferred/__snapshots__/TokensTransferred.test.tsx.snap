@@ -86,7 +86,7 @@ exports[`TokensTransferred > should show skeleton when refreshing transaction 1`
               class="whitespace-nowrap text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
               data-testid="Amount"
             >
-              0 BTC
+              0.00 BTC
             </span>
           </div>
         </div>
