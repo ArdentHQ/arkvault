@@ -24,7 +24,7 @@ const preSteps = {
 		await goToProfile(t);
 		await importWallet(t, MNEMONICS[0]);
 	},
-	"And has opens up send transfer side panel": async (t: TestController) => {
+	"And opens up send transfer side panel": async (t: TestController) => {
 		await goToTransferPage(t);
 	},
 };
