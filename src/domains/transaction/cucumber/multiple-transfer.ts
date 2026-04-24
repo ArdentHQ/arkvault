@@ -11,7 +11,7 @@ import {
 } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../portfolio/e2e/common";
-import { goToTransferPage } from "../e2e/common";
+import { openSendTransferSidePanel } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("[data-testid=SendTransfer__send-button]");
@@ -25,7 +25,7 @@ const preSteps = {
 		await importWallet(t, MNEMONICS[0]);
 	},
 	"And opens up send transfer side panel": async (t: TestController) => {
-		await goToTransferPage(t);
+		await openSendTransferSidePanel(t);
 	},
 };
 

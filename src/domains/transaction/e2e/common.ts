@@ -4,7 +4,7 @@ import { buildTranslations } from "../../../app/i18n/helpers";
 
 const translations = buildTranslations();
 
-export const goToTransferPage = async (t: any) => {
+export const openSendTransferSidePanel = async (t: any) => {
 	await t.click(Selector("[data-testid=WalletHeader__send-button]"));
 	await t
 		.expect(Selector("h2").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE).exists)

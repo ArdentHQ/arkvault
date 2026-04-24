@@ -11,7 +11,7 @@ import {
 } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../portfolio/e2e/common";
-import { goToTransferPage } from "../e2e/common";
+import { openSendTransferSidePanel } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("[data-testid=SendTransfer__send-button]");
@@ -21,7 +21,7 @@ const preSteps = {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 		await importWallet(t, MNEMONICS[0]);
-		await goToTransferPage(t);
+		await openSendTransferSidePanel(t);
 	},
 };
 cucumber(
