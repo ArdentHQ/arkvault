@@ -128,6 +128,8 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-transaction:
+        needs: build-and-upload
+
         runs-on: ubuntu-latest
 
         strategy:
@@ -192,6 +194,8 @@ jobs:
                   path: ${{ github.workspace }}/screenshots/**/*
 
     e2e-contact:
+        needs: build-and-upload
+
         runs-on: ubuntu-latest
 
         strategy:
