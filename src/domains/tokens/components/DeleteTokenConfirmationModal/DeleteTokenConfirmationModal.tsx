@@ -81,7 +81,7 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose, onDelete }:
 							<Amount
 								decimals={walletToken.token().decimals()}
 								ticker={walletToken.token().displaySymbol()}
-								value={walletToken.balance().toHuman()}
+								value={walletToken.balance()}
 								className="font-semibold"
 							/>
 						</div>
