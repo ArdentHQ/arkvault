@@ -69,11 +69,17 @@ export class TokenService {
 		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
 
 		try {
+			const addresses = this.#profile
+				.wallets()
+				.selected()
+				.map((wallet) => wallet.address());
+
+			if (addresses.length === 0) {
+				throw new Error("No address selected");
+			}
+
 			let tokensQuery: WalletTokensQuery = {
-				addresses: this.#profile
-					.wallets()
-					.selected()
-					.map((wallet) => wallet.address()),
+				addresses,
 				minBalance: hideDustTokens ? this.#dustBalanceThreshold : "0",
 			};
 
