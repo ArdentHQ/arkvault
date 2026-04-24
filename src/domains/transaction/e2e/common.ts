@@ -11,22 +11,6 @@ export const openSendTransferSidePanel = async (t: any) => {
 		.ok({ timeout: 60_000 });
 };
 
-export const goToTransferPageThroughNavbar = async (t: any) => {
-	await t.click(Selector("[data-testid=NavigationBar__buttons--send]"));
-	await t.expect(Selector("[data-testid=SendTransfer__form-step]").exists).ok();
-	await t
-		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION).exists)
-		.ok();
-};
-
-export const goToRegistrationPage = async (t: any) => {
-	await t.click(Selector('[data-testid="UserMenu"]'));
-	await t.expect(Selector("li").withText(translations.COMMON.REGISTRATIONS).exists).ok({ timeout: 60_000 });
-	await t.click(Selector("li").withText(translations.COMMON.REGISTRATIONS));
-	await t.click(Selector("button").withText(translations.COMMON.REGISTER));
-	await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-};
-
 export const goToValidatorRegistrationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
 	await t.click(
