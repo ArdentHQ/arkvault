@@ -138,6 +138,18 @@ describe("TokenService", () => {
 		expect(count).toBe(1);
 	});
 
+	it("should handle when there are no selected addresses", async () => {
+		const selectedWalletsSpy = vi.spyOn(profile.wallets(), "selected").mockReturnValue([]);
+
+		await profile.tokens().sync();
+		const tokens = profile.tokens().selected();
+
+		expect(tokens).toBeInstanceOf(WalletTokenCollection);
+		expect(tokens.items().length).toBe(0);
+
+		selectedWalletsSpy.mockRestore();
+	});
+
 	it("should return selected total balance", async () => {
 		await profile.tokens().sync();
 		const totalBalance = profile.tokens().selectedTotalBalance();
