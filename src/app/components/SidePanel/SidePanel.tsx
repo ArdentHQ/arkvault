@@ -356,7 +356,8 @@ const SidePanelContent = ({
 																<div className="flex flex-row items-center gap-3">
 																	<div
 																		className={cn(
-																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white hidden h-6 w-6 rounded bg-transparent transition-all duration-100 ease-linear hover:text-white sm:block dark:bg-transparent dark:hover:text-white",
+																			"text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700",
+																			"rounded transition-all duration-100 ease-linear",
 																		)}
 																	>
 																		<Button
@@ -379,7 +380,8 @@ const SidePanelContent = ({
 																	{minimizeable && (
 																		<div
 																			className={cn(
-																				"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																				"text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700",
+																				"rounded transition-all duration-100 ease-linear",
 																				{
 																					"h-5 w-5": isMinimized,
 																					"h-6 w-6": !isMinimized,
@@ -440,7 +442,8 @@ const SidePanelContent = ({
 
 																	<div
 																		className={cn(
-																			"text-theme-secondary-700 dark:text-theme-secondary-200 dark:hover:bg-theme-primary-500 hover:bg-theme-primary-800 dim:text-theme-dim-200 dim:bg-transparent dim-hover:bg-theme-dim-navy-500 dim-hover:text-white rounded bg-transparent transition-all duration-100 ease-linear hover:text-white dark:bg-transparent dark:hover:text-white",
+																			"text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700",
+																			"rounded transition-all duration-100 ease-linear",
 																			{
 																				"h-5 w-5": isMinimized,
 																				"h-6 w-6": !isMinimized,
