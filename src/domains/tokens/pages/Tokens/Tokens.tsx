@@ -57,6 +57,14 @@ export const Tokens = () => {
 						dimIcon="TokensDim"
 					/>
 				}
+				mobileTitleIcon={
+					<ThemeIcon
+						dimensions={[24, 24]}
+						lightIcon="TokensLight"
+						darkIcon="TokensDark"
+						dimIcon="TokensDim"
+					/>
+				}
 			/>
 
 			<Section
