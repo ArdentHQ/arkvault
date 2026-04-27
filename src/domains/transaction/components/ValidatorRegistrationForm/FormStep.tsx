@@ -57,7 +57,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			{errors.lockedFee && <Alert className="mb-4">{errors.lockedFee.message}</Alert>}
 
 			<FormField name="senderAddress">
-				<FormLabel label={t("COMMON.SENDER")} />
+				<FormLabel textClassName="text-sm leading-[17px] sm:text-base sm:leading-5" label={t("COMMON.SENDER")} />
 
 				<SelectAddressDropdown
 					disabled={profile.wallets().count() === 0}
@@ -76,7 +76,7 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="validatorPublicKey">
 					<div className="flex flex-1 flex-row justify-between">
-						<FormLabel label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
+						<FormLabel textClassName="text-sm leading-[17px] sm:text-base sm:leading-5" label={t("TRANSACTION.VALIDATOR_PUBLIC_KEY")} />
 						<Link
 							isExternal
 							to="https://docs.mainsailhq.com/mainsail/deployment/becoming-a-validator"
