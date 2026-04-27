@@ -72,7 +72,7 @@ exports[`UsernameRegistrationForm > should render form step 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+              class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm leading-[17px] sm:text-base sm:leading-5"
               data-testid="FormLabel"
               for="senderAddress"
             >
@@ -238,7 +238,7 @@ exports[`UsernameRegistrationForm > should render form step 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <label
-              class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+              class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm leading-[17px] sm:text-base sm:leading-5"
               data-testid="FormLabel"
               for="username"
             >
@@ -459,7 +459,7 @@ exports[`UsernameRegistrationForm > should render review step 1`] = `
               class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
             >
               <label
-                class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+                class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm leading-[17px] sm:text-base sm:leading-5"
                 data-testid="FormLabel"
                 for="fee"
               >
