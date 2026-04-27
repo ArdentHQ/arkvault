@@ -44,7 +44,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 		<section data-testid="ContractDeploymentForm__form-step">
 			<div className="space-y-4">
 				<FormField name="senderAddress">
-					<FormLabel textClassName="text-sm leading-[17px] sm:text-base sm:leading-5" label={t("TRANSACTION.SENDER")} />
+					<FormLabel
+						textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+						label={t("TRANSACTION.SENDER")}
+					/>
 					<SelectAddressDropdown
 						disabled={profile.wallets().count() === 0}
 						profile={profile}
@@ -61,7 +64,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 				<FormField name="bytecode">
 					<div className="flex flex-1 flex-row justify-between leading-[17px]">
-						<FormLabel textClassName="text-sm leading-[17px] sm:text-base sm:leading-5 self-center" label={t("COMMON.BYTECODE")}/>
+						<FormLabel
+							textClassName="text-sm leading-[17px] sm:text-base sm:leading-5 self-center"
+							label={t("COMMON.BYTECODE")}
+						/>
 						<Link
 							isExternal
 							to="https://docs.mainsailhq.com/mainsail/deployment/becoming-a-validator"

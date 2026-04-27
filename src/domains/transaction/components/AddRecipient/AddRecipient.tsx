@@ -312,7 +312,9 @@ export const AddRecipient = ({
 	return (
 		<AddRecipientWrapper>
 			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
-				<div className="font-semibold transition-colors duration-100 text-sm leading-[17px] sm:text-base sm:leading-5">{t("TRANSACTION.RECIPIENT")}</div>
+				<div className="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5">
+					{t("TRANSACTION.RECIPIENT")}
+				</div>
 
 				{network?.allows(Enums.FeatureFlag.TransactionMultiPayment) && (
 					<TransferType
@@ -388,7 +390,9 @@ export const AddRecipient = ({
 							<span className="items-centers flex w-full justify-between">
 								<div className="flex flex-row items-center gap-1.5">
 									<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
-									<span className="hidden sm:block text-base leading-5">{t("COMMON.ASSET_AMOUNT")}</span>
+									<span className="hidden text-base leading-5 sm:block">
+										{t("COMMON.ASSET_AMOUNT")}
+									</span>
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(
 										<Amount

@@ -88,7 +88,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 
 			<div className="mt-3 space-y-4 sm:mt-4">
 				<FormField name="senderAddress">
-					<FormLabel textClassName="text-sm leading-[17px] sm:text-base sm:leading-5" label={t("TRANSACTION.SENDER")} />
+					<FormLabel
+						textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+						label={t("TRANSACTION.SENDER")}
+					/>
 
 					<SelectAddressDropdown
 						disabled={profile.wallets().count() === 0}
@@ -105,7 +108,10 @@ export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: Form
 				</FormField>
 
 				<FormField name="username">
-					<FormLabel textClassName="text-sm leading-[17px] sm:text-base sm:leading-5" label={t("COMMON.USERNAME")} />
+					<FormLabel
+						textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+						label={t("COMMON.USERNAME")}
+					/>
 					<InputDefault
 						data-testid="Input__username"
 						defaultValue={username}
