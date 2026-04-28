@@ -18,7 +18,7 @@ export class TokenService {
 	#dustBalanceThreshold = "0.01";
 	#walletTokensCollection: WalletTokenCollection;
 	#lastQuery: WalletTokensQuery | undefined;
-	#addressToPage: Map<string, string | number>;
+	#addressToPage: Map<string, string | number | undefined>;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
@@ -102,12 +102,8 @@ export class TokenService {
 
 			const response = await clientService.tokenAddresses(this.#lastQuery);
 
-			const { self: currentPage } = response.getPagination();
-
-			if (currentPage) {
-				for (const item of response.items()) {
-					this.#addressToPage.set(item.address(), currentPage);
-				}
+			for (const item of response.items()) {
+				this.#addressToPage.set(item.address(), this.#lastQuery.page);
 			}
 
 			this.#walletTokensCollection = new WalletTokenCollection(response.items(), response.getPagination());
