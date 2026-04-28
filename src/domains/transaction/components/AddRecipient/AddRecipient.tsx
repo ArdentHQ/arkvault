@@ -335,55 +335,57 @@ export const AddRecipient = ({
 				className="rounded-xl"
 			>
 				<div className="space-y-4">
-					<FormField name="recipientAddress">
-						{!isSingle && (
-							<FormLabel label={t("COMMON.RECIPIENT_#", { count: addedRecipients.length + 1 })} />
-						)}
+					<div className="space-y-4 sm:space-y-0">
+						<FormField name="recipientAddress">
+							{!isSingle && (
+								<FormLabel label={t("COMMON.RECIPIENT_#", { count: addedRecipients.length + 1 })} />
+							)}
 
-						<SelectRecipient
-							network={network}
-							disabled={!isSenderFilled}
-							address={recipientAddress}
-							profile={profile}
-							onChange={(address, alias) => {
-								setValue("recipientAddress", address, { shouldDirty: true, shouldValidate: true });
-								setValue("recipientAlias", alias);
-								singleRecipientOnChange({
-									address,
-									alias,
-									amount: getValues("amount"),
-								});
-							}}
-						/>
-					</FormField>
-
-					<FormField name="asset">
-						<div className="block space-y-2 sm:hidden">
-							<FormLabel>
-								<div>{t("COMMON.ASSET")}</div>
-							</FormLabel>
-							<SelectToken
-								value={selectedAsset}
-								tokens={assets}
-								onChange={({ value }) => {
-									const tokenAddress = value;
-									const token = tokens.find((token) => token.token().address() === tokenAddress);
-
-									setValue("amount", amount, {
-										shouldDirty: !!token,
-										shouldValidate: !!dirtyFields.amount,
+							<SelectRecipient
+								network={network}
+								disabled={!isSenderFilled}
+								address={recipientAddress}
+								profile={profile}
+								onChange={(address, alias) => {
+									setValue("recipientAddress", address, { shouldDirty: true, shouldValidate: true });
+									setValue("recipientAlias", alias);
+									singleRecipientOnChange({
+										address,
+										alias,
+										amount: getValues("amount"),
 									});
-
-									setValue("tokenContractAddress", tokenAddress, {
-										shouldDirty: true,
-										shouldValidate: true,
-									});
-
-									onTokenChange?.(token);
 								}}
 							/>
-						</div>
-					</FormField>
+						</FormField>
+
+						<FormField name="asset">
+							<div className="block space-y-2 sm:hidden">
+								<FormLabel>
+									<div>{t("COMMON.ASSET")}</div>
+								</FormLabel>
+								<SelectToken
+									value={selectedAsset}
+									tokens={assets}
+									onChange={({ value }) => {
+										const tokenAddress = value;
+										const token = tokens.find((token) => token.token().address() === tokenAddress);
+
+										setValue("amount", amount, {
+											shouldDirty: !!token,
+											shouldValidate: !!dirtyFields.amount,
+										});
+
+										setValue("tokenContractAddress", tokenAddress, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
+
+										onTokenChange?.(token);
+									}}
+								/>
+							</div>
+						</FormField>
+					</div>
 
 					<FormField name="amount">
 						<FormLabel>
