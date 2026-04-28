@@ -35,7 +35,7 @@ export const FormStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { setValue, getValues, unregister, reset } = useFormContext();
+	const { setValue, getValues, unregister } = useFormContext();
 
 	const { activeNetwork } = useActiveNetwork({ profile });
 
@@ -57,14 +57,6 @@ export const FormStep = ({
 			sender,
 		});
 	};
-
-	// Reset dirty state when this step is mounted (e.g., after navigating from a previous step).
-	// We keep the current form values but clear "dirty" flags to avoid triggering
-	// unintended validations (notably in AddRecipient, where a previously edited
-	// amount field would otherwise validate on entry to this step).
-	// useEffect(() => {
-	// 	reset(getValues());
-	// }, []);
 
 	return (
 		<section data-testid="SendTransfer__form-step">
