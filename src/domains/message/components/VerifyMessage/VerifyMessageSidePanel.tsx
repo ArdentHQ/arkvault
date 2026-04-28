@@ -203,7 +203,7 @@ export const VerifyMessageSidePanel = ({
 				<SidePanelButtons>
 					{activeTab === Step.FormStep && (
 						<div className="grid w-full grid-cols-2 justify-end gap-3 sm:flex">
-							<Button data-testid="SignMessage__back-button" variant="secondary" onClick={handleBack}>
+							<Button data-testid="VerifyMessage__back-button" variant="secondary" onClick={handleBack}>
 								{t("COMMON.BACK")}
 							</Button>
 

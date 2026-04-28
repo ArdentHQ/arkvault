@@ -372,43 +372,51 @@ export const requestMocks = {
 	],
 	tokens: [
 		...mockedAddresses.map((identifier: string) =>
-			mockRequest(`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=${identifier}&minBalance=0`, function () {
-				return JSON.stringify({
-					meta: {
-						totalCountIsEstimate: false,
-						count: 3,
-						first: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
-						last: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
-						next: null,
-						pageCount: 1,
-						previous: null,
-						self: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
-						totalCount: 3,
-					},
-					data: [
-						{
-							token: "0x12f6677522292654a231007c47b07971a7610908",
-							symbol: "Lorem",
-							name: "Lorem ipsum",
-							decimals: 18,
-							supply: "123456789000000000000000000",
-							addresses: {
-								[identifier]: "123456789000000000000000000",
-							},
+			mockRequest(
+				(request: any) => {
+					return [
+						`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=${identifier}&minBalance=0`,
+						`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=${identifier}&minBalance=0&limit=30`,
+					].includes(request.url);
+				},
+				function () {
+					return JSON.stringify({
+						meta: {
+							totalCountIsEstimate: false,
+							count: 3,
+							first: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+							last: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+							next: null,
+							pageCount: 1,
+							previous: null,
+							self: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+							totalCount: 3,
 						},
-						{
-							token: "0x180a864a755fed0144c622df49b83db577befefb",
-							symbol: "DARK20",
-							name: "DARK20",
-							decimals: 18,
-							supply: "100000000000000000000000000",
-							addresses: {
-								[identifier]: "100000000000000000000000000",
+						data: [
+							{
+								token: "0x12f6677522292654a231007c47b07971a7610908",
+								symbol: "Lorem",
+								name: "Lorem ipsum",
+								decimals: 18,
+								supply: "123456789000000000000000000",
+								addresses: {
+									[identifier]: "123456789000000000000000000",
+								},
 							},
-						},
-					],
-				});
-			}),
+							{
+								token: "0x180a864a755fed0144c622df49b83db577befefb",
+								symbol: "DARK20",
+								name: "DARK20",
+								decimals: 18,
+								supply: "100000000000000000000000000",
+								addresses: {
+									[identifier]: "100000000000000000000000000",
+								},
+							},
+						],
+					});
+				},
+			),
 		),
 	],
 };
