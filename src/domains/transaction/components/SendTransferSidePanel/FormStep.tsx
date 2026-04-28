@@ -62,9 +62,9 @@ export const FormStep = ({
 	// We keep the current form values but clear "dirty" flags to avoid triggering
 	// unintended validations (notably in AddRecipient, where a previously edited
 	// amount field would otherwise validate on entry to this step).
-	useEffect(() => {
-		reset(getValues());
-	}, []);
+	// useEffect(() => {
+	// 	reset(getValues());
+	// }, []);
 
 	return (
 		<section data-testid="SendTransfer__form-step">

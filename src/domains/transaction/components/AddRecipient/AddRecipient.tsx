@@ -369,10 +369,9 @@ export const AddRecipient = ({
 									const tokenAddress = value;
 									const token = tokens.find((token) => token.token().address() === tokenAddress);
 
-									setValue("amount", amount, {
-										shouldDirty: !!token,
-										shouldValidate: !!dirtyFields.amount,
-									});
+									if (amount) {
+										void trigger("amount");
+									}
 
 									setValue("tokenContractAddress", tokenAddress, {
 										shouldDirty: true,
@@ -455,10 +454,9 @@ export const AddRecipient = ({
 										const tokenAddress = value;
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 
-										setValue("amount", amount, {
-											shouldDirty: !!token,
-											shouldValidate: !!dirtyFields.amount,
-										});
+										if (amount) {
+											void trigger("amount");
+										}
 
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
