@@ -287,7 +287,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                             class="flex items-center"
                           >
                             <div
-                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                             >
                               <div
                                 data-testid="TokeNameInitials"
@@ -529,7 +529,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                               class="flex items-center"
                             >
                               <div
-                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                               >
                                 <div
                                   data-testid="TokeNameInitials"
@@ -4790,7 +4790,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                             class="flex items-center"
                           >
                             <div
-                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                             >
                               <div
                                 data-testid="TokeNameInitials"
@@ -5032,7 +5032,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                               class="flex items-center"
                             >
                               <div
-                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                               >
                                 <div
                                   data-testid="TokeNameInitials"
