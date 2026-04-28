@@ -12,8 +12,6 @@ import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { Button } from "@/app/components/Button";
 import { SIDE_PANEL_TRANSITION_DURATION } from "@/app/contexts";
-import { useActiveProfile } from "@/app/hooks";
-import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 
 const TokenDetailSidepanelFooter = ({ onClose, onSendToken }: { onClose?: () => void; onSendToken?: () => void }) => {
 	const { t } = useTranslation();
@@ -45,20 +43,18 @@ export const TokenDetailSidepanel = ({
 	walletToken,
 	onClose,
 	onSendToken,
+	onReloadToken,
+	isReloading,
 }: {
 	isOpen: boolean;
 	walletToken: WalletToken;
 	onClose?: () => void;
 	onSendToken?: (tokenAddress?: string) => void;
+	onReloadToken?: () => void;
+	isReloading?: boolean;
 }) => {
 	const { t } = useTranslation();
 	const [isOpen, setIsOpen] = useState(isSidePanelOpen);
-	const activeProfile = useActiveProfile();
-
-	const { isReloading, reload } = useProfileTokens({
-		profile: activeProfile,
-		wallets: activeProfile.wallets().selected(),
-	});
 
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout | undefined;
@@ -105,7 +101,8 @@ export const TokenDetailSidepanel = ({
 								<Button
 									variant="secondary"
 									className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
-									onClick={reload}
+									onClick={onReloadToken}
+									data-testid="TokenDetailSidepanel__reload-button"
 								>
 									<Icon
 										name="ArrowRotateLeft"

@@ -157,11 +157,21 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 
 	const hasEmptyResults = useMemo(() => tokens.length === 0 && !isLoadingTokens, [isLoadingTokens, tokens.length]);
 
-	const reload = useCallback(async () => {
-		setIsReloading(true);
-		await profile.tokens().sync();
-		setIsReloading(false);
-	}, [profile]);
+	const reload = useCallback(
+		async (address?: string) => {
+			setIsReloading(true);
+
+			if (address) {
+				await profile.tokens().syncOne(address);
+				setIsReloading(false);
+				return;
+			}
+
+			await profile.tokens().sync();
+			setIsReloading(false);
+		},
+		[profile],
+	);
 
 	return {
 		fetchMore,

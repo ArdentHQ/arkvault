@@ -235,6 +235,12 @@ export class TokenService {
 		return new ExtendedConfirmedTransactionDataCollection(transfers, response.getPagination());
 	}
 
+	#client(): ClientService {
+		return new ClientService({
+			config: this.#profile.activeNetwork().config(),
+			profile: this.#profile,
+		});
+	}
 	/**
 	 * Calculates the total balance of all tokens from selected wallets.
 	 *
@@ -254,5 +260,42 @@ export class TokenService {
 
 	#includeWhitelistAddressses(addresses?: string[]): string[] {
 		return [...(addresses ?? []), ...this.#profile.whitelistedContractAddresses()];
+	}
+
+	public async syncOne(address: string): Promise<void> {
+		try {
+			const response = await this.#client().tokenAddresses({ addresses: [address], minBalance: "0" });
+
+			const updated = response.items()[0];
+			if (!updated) {
+				return;
+			}
+
+			const existing = this.#walletTokensCollection
+				.items()
+				.find((walletToken) => walletToken.address() === address);
+
+			if (existing) {
+				this.#walletTokensCollection.transform((token: WalletToken) =>
+					token.address() === address
+						? new WalletToken({
+								network: this.#profile.activeNetwork(),
+								profile: this.#profile,
+								token: existing.token(),
+								walletToken: new WalletTokenDTO({
+									address: updated.address(),
+									balance: updated.balanceRaw(),
+									tokenAddress: address,
+								}),
+							})
+						: token,
+				);
+				return;
+			}
+
+			this.#walletTokensCollection.items().push(updated);
+		} catch {
+			return;
+		}
 	}
 }
