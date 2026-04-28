@@ -332,7 +332,7 @@ export const AddRecipient = ({
 				className="rounded-xl"
 			>
 				<div className="space-y-4">
-					<div>
+					<div className="space-y-4 sm:space-y-0">
 						<FormField name="recipientAddress">
 							{!isSingle && (
 								<FormLabel label={t("COMMON.RECIPIENT_#", { count: addedRecipients.length + 1 })} />
