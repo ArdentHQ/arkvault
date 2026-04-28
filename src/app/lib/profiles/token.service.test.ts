@@ -268,6 +268,7 @@ describe("TokenService", () => {
 		it("should update an existing token when the token address matches", async () => {
 			const tokenAddress = "0xdeb478251073157e400c3d8d2ed92a85c958f9fa";
 			const walletAddress = "0x1";
+			const otherWalletAddress = "0x2";
 			const newBalanceRaw = "999";
 
 			server.use(
@@ -296,12 +297,35 @@ describe("TokenService", () => {
 			});
 
 			await tokenService.sync();
-
 			expect(tokenService.selected().items()).toHaveLength(1);
+
+			const walletTokenDTO = new WalletTokenDTO({
+				address: otherWalletAddress,
+				balance: "500",
+				tokenAddress: "0xabc",
+			});
+			const tokenDTO = new TokenDTO({
+				address: "0xabc",
+				decimals: 18,
+				name: "OTHER",
+				supply: "100000000000000000000000000",
+				symbol: "OTHER",
+				token: "0xabc",
+			});
+			const walletToken = new WalletToken({
+				network: profile.activeNetwork(),
+				profile,
+				token: tokenDTO,
+				walletToken: walletTokenDTO,
+			});
+			tokenService.selected().items().push(walletToken);
+
+			expect(tokenService.selected().items()).toHaveLength(2);
 
 			await tokenService.syncOne(walletAddress);
 
-			expect(tokenService.selected().items()).toHaveLength(1);
+			expect(tokenService.selected().items()).toHaveLength(2);
+			expect(tokenService.selected().items()[0].address()).toBe(walletAddress);
 			expect(tokenService.selected().items()[0].balanceRaw()).toBe(newBalanceRaw);
 		});
 
