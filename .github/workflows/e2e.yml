@@ -9,11 +9,11 @@ on:
             - develop
             - develop-ledger
             - feat/evm
+            - feat/mainsail
 
     pull_request:
         branches:
             - main
-            - feat/mainsail
 
 jobs:
     build-and-upload:
