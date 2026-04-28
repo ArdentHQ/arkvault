@@ -635,7 +635,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
       class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm leading-[17px] sm:text-base sm:leading-5"
         data-testid="FormLabel"
         for="secret"
       >
@@ -1802,7 +1802,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
       class="[&:focus-within_.FormLabel]:text-theme-danger-500 [&>.FormLabel]:text-theme-danger-500 flex min-w-0 flex-col"
     >
       <label
-        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+        class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm leading-[17px] sm:text-base sm:leading-5"
         data-testid="FormLabel"
         for="secret"
       >

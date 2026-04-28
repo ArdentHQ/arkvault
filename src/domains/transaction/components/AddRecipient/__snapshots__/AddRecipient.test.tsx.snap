@@ -9,7 +9,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -287,7 +287,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                             class="flex items-center"
                           >
                             <div
-                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                             >
                               <div
                                 data-testid="TokeNameInitials"
@@ -404,7 +404,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -529,7 +529,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                               class="flex items-center"
                             >
                               <div
-                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                               >
                                 <div
                                   data-testid="TokeNameInitials"
@@ -682,7 +682,7 @@ exports[`AddRecipient > should render 1`] = `
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -1052,7 +1052,7 @@ exports[`AddRecipient > should render 1`] = `
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -1289,7 +1289,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -1659,7 +1659,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -1896,7 +1896,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -2266,7 +2266,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -2503,7 +2503,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -2873,7 +2873,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -3110,7 +3110,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -3496,7 +3496,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -3905,7 +3905,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -4275,7 +4275,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -4512,7 +4512,7 @@ exports[`AddRecipient > should set available amount 1`] = `
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -4790,7 +4790,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                             class="flex items-center"
                           >
                             <div
-                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                              class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                             >
                               <div
                                 data-testid="TokeNameInitials"
@@ -4907,7 +4907,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
@@ -4947,7 +4947,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        95.27653252325068 ARK
+                        95.27653252 ARK
                       </span>
                     </span>
                   </span>
@@ -5032,7 +5032,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                               class="flex items-center"
                             >
                               <div
-                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-8 w-8 p-3 leading-8"
+                                class="bg-theme-primary-600 dark:bg-theme-dark-navy-600 dim:bg-theme-dim-navy-600 flex items-center justify-center overflow-hidden rounded-full font-semibold text-white text-md h-6 w-6 p-3 leading-8"
                               >
                                 <div
                                   data-testid="TokeNameInitials"
@@ -5170,7 +5170,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
       class="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between"
     >
       <div
-        class="text-sm font-semibold transition-colors duration-100"
+        class="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5"
       >
         Recipient
       </div>
@@ -5540,7 +5540,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                   Amount
                 </span>
                 <span
-                  class="hidden sm:block"
+                  class="hidden text-base leading-5 sm:block"
                 >
                   Asset and Amount
                 </span>
