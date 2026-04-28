@@ -17,6 +17,8 @@ export class TokenService {
 	#network: Networks.Network;
 	#dustBalanceThreshold = "0.01";
 	#walletTokensCollection: WalletTokenCollection;
+	#lastQuery: WalletTokensQuery | undefined;
+	#addressToPage: Map<string, string | number>;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
@@ -28,6 +30,7 @@ export class TokenService {
 			self: undefined,
 			totalCount: undefined,
 		});
+		this.#addressToPage = new Map();
 	}
 
 	/**
@@ -92,10 +95,20 @@ export class TokenService {
 				};
 			}
 
-			const response = await clientService.tokenAddresses({
+			this.#lastQuery = {
 				...tokensQuery,
 				...(query ?? {}),
-			});
+			};
+
+			const response = await clientService.tokenAddresses(this.#lastQuery);
+
+			const { self: currentPage } = response.getPagination();
+
+			if (currentPage) {
+				for (const item of response.items()) {
+					this.#addressToPage.set(item.address(), currentPage);
+				}
+			}
 
 			this.#walletTokensCollection = new WalletTokenCollection(response.items(), response.getPagination());
 		} catch {
@@ -269,37 +282,43 @@ export class TokenService {
 	}
 
 	public async syncOne(address: string): Promise<void> {
+		const page = this.#addressToPage.get(address) as number | undefined;
+		if (!page || !this.#lastQuery) {
+			return;
+		}
+
 		try {
-			const response = await this.#client().tokenAddresses({ addresses: [address], minBalance: "0" });
+			const response = await this.#client().tokenAddresses({
+				...this.#lastQuery,
+				page: page,
+			});
 
-			const updated = response.items()[0];
-			if (!updated) {
+			const items = response.items();
+
+			if (items.length === 0) {
 				return;
 			}
 
-			const existing = this.#walletTokensCollection
-				.items()
-				.find((walletToken) => walletToken.address() === address);
-
-			if (existing) {
-				this.#walletTokensCollection.transform((token: WalletToken) =>
-					token.address() === address
-						? new WalletToken({
-								network: this.#profile.activeNetwork(),
-								profile: this.#profile,
-								token: existing.token(),
-								walletToken: new WalletTokenDTO({
-									address: updated.address(),
-									balance: updated.balanceRaw(),
-									tokenAddress: address,
-								}),
-							})
-						: token,
-				);
-				return;
+			for (const item of items) {
+				this.#addressToPage.set(item.address(), page);
 			}
 
-			this.#walletTokensCollection.items().push(updated);
+			this.#walletTokensCollection.transform((token: WalletToken) => {
+				const item = items.find((item) => item.address() === token.address());
+				console.log({ item });
+				return item
+					? new WalletToken({
+							network: this.#profile.activeNetwork(),
+							profile: this.#profile,
+							token: token.token(),
+							walletToken: new WalletTokenDTO({
+								address: item.address(),
+								balance: item.balanceRaw(),
+								tokenAddress: item.token().address(),
+							}),
+						})
+					: token;
+			});
 		} catch {
 			return;
 		}
