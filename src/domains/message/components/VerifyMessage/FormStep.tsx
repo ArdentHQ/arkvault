@@ -21,7 +21,10 @@ const JsonForm = () => {
 	return (
 		<div data-testid="VerifyMessage__json" className="mt-4">
 			<FormField name="jsonString">
-				<FormLabel label={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING")} />
+				<FormLabel
+					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+					label={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING")}
+				/>
 				<TextArea
 					data-testid="VerifyMessage__json-jsonString"
 					className="py-4"
@@ -47,17 +50,26 @@ const ManualForm = () => {
 	return (
 		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-4">
 			<FormField name="signatory">
-				<FormLabel label={t("COMMON.SIGNATORY")} />
+				<FormLabel
+					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+					label={t("COMMON.SIGNATORY")}
+				/>
 				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
 			</FormField>
 
 			<FormField name="message">
-				<FormLabel label={t("COMMON.MESSAGE")} />
+				<FormLabel
+					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+					label={t("COMMON.MESSAGE")}
+				/>
 				<InputDefault data-testid="VerifyMessage__manual-message" ref={register(verifyMessage.message())} />
 			</FormField>
 
 			<FormField name="signature">
-				<FormLabel label={t("COMMON.SIGNATURE")} />
+				<FormLabel
+					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+					label={t("COMMON.SIGNATURE")}
+				/>
 				<InputDefault data-testid="VerifyMessage__manual-signature" ref={register(verifyMessage.signature())} />
 			</FormField>
 		</div>

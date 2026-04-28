@@ -65,7 +65,10 @@ export const ReviewStep = ({ unvotes, votes, wallet, profile }: SendVoteStepProp
 					<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
 						{showFeeInput && (
 							<FormField name="fee" className="flex-1">
-								<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
+								<FormLabel
+									textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+									label={t("TRANSACTION.TRANSACTION_FEE")}
+								/>
 								<FeeField
 									type="vote"
 									data={{

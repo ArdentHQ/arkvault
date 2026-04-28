@@ -258,7 +258,9 @@ export const AuthenticationStep = ({
 					)}
 
 					<FormField name="secret">
-						<FormLabel>{t("COMMON.SECRET")}</FormLabel>
+						<FormLabel textClassName="text-sm leading-[17px] sm:text-base sm:leading-5">
+							{t("COMMON.SECRET")}
+						</FormLabel>
 						<InputPassword
 							data-testid="AuthenticationStep__secret"
 							ref={register(authentication.secret(wallet))}
