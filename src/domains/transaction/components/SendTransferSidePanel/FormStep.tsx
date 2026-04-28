@@ -66,7 +66,7 @@ export const FormStep = ({
 						<div className="mb-2 flex items-center justify-between">
 							<FormLabel
 								label={t("TRANSACTION.SENDER")}
-								className="text-theme-secondary-text hover:text-theme-primary-600! mb-0 text-sm leading-[17px] font-semibold"
+								className="text-theme-secondary-text hover:text-theme-primary-600! mb-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
 							/>
 							<Button
 								type="button"
