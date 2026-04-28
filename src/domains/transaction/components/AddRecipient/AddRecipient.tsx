@@ -73,7 +73,7 @@ export const AddRecipient = ({
 		watch,
 		trigger,
 		clearErrors,
-		formState: { errors, dirtyFields },
+		formState: { errors },
 	} = useFormContext();
 	const {
 		network,
