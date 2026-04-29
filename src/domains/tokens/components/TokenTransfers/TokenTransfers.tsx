@@ -2,7 +2,6 @@ import { Contracts } from "@/app/lib/profiles";
 import React, { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-
 import { Button } from "@/app/components/Button";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
 import { TransactionDetailSidePanel } from "@/domains/transaction/components/TransactionDetailSidePanel";
