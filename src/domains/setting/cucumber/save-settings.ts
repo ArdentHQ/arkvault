@@ -80,7 +80,7 @@ cucumber(
 		"Given Alice signs into a profile with a wallet": async (t: TestController) => {
 			await visitWelcomeScreen(t);
 			await goToProfile(t);
-			await importWalletByAddress(t, "0x659A76be283644AEc2003aa8ba26485047fd1BFB", undefined, true);
+			await importWalletByAddress(t, "0x659A76be283644AEc2003aa8ba26485047fd1BFB", "John Doe");
 		},
 		"And she is on the settings page": async (t: TestController) => {
 			await t.click(Selector('[data-testid="UserMenu"]'));

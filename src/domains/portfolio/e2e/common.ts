@@ -32,7 +32,7 @@ export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "T
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };
 
-export const importWalletByAddress = async (t: any, address: string, alias = "Test Wallet", isMainnet = false) => {
+export const importWalletByAddress = async (t: any, address: string, alias = "Test Wallet") => {
 	await t.click(Selector("a").withText(translations.COMMON.PORTFOLIO));
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
 
