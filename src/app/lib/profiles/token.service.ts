@@ -205,10 +205,12 @@ export class TokenService {
 		};
 
 		try {
-			response = await clientService.tokenTransfers({
-				...transfersQuery,
-				whitelist: this.#profile.whitelistedContractAddresses(),
-			});
+			const whitelist = this.#profile.whitelistedContractAddresses();
+			if (whitelist) {
+				transfersQuery.whitelist = whitelist;
+			}
+
+			response = await clientService.tokenTransfers(transfersQuery);
 
 			const queryAddresses = [...transfersQuery.from, ...(transfersQuery.to ?? [])].filter(
 				(address) => !!address,
