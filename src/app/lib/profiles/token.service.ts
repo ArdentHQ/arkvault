@@ -103,7 +103,7 @@ export class TokenService {
 			const response = await clientService.tokenAddresses(this.#lastQuery);
 
 			for (const item of response.items()) {
-				this.#addressToPage.set(item.address(), this.#lastQuery.page);
+				this.#addressToPage.set(item.address(), this.#lastQuery.page ?? 1);
 			}
 
 			this.#walletTokensCollection = new WalletTokenCollection(response.items(), response.getPagination());
@@ -301,7 +301,6 @@ export class TokenService {
 
 			this.#walletTokensCollection.transform((token: WalletToken) => {
 				const item = items.find((item) => item.address() === token.address());
-				console.log({ item });
 				return item
 					? new WalletToken({
 							network: this.#profile.activeNetwork(),

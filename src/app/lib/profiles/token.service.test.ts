@@ -72,6 +72,13 @@ describe("TokenService", () => {
 		expect(tokens.items()[0]).toBeInstanceOf(WalletToken);
 	});
 
+	it("should accept page", async () => {
+		const tokens = profile.tokens().selected();
+
+		expect(tokens).toBeInstanceOf(WalletTokenCollection);
+		expect(tokens.items()[0]).toBeInstanceOf(WalletToken);
+	});
+
 	it("should remove dust balance tokens", async () => {
 		await profile.tokens().sync();
 		const tokens = profile.tokens().selected();
