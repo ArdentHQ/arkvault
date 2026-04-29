@@ -68,6 +68,8 @@ export const InputWrapperStyled = ({
 				"focus-within:ring-1": !noShadow,
 				"h-12 overflow-hidden sm:h-14": !isTextArea && !isCompact,
 				"h-[34px] overflow-hidden": !isTextArea && isCompact,
+				"hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1":
+					!invalid && !disabled,
 				relative: isTextArea,
 			}),
 			props.className,
