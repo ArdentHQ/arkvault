@@ -18,6 +18,9 @@ export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "T
 	await t.click(Selector("div").withExactText(translations.COMMON.MNEMONIC));
 
 	await t.typeText(Selector("[data-testid=ImportWallet__mnemonic-input]"), passphrase, { paste: true });
+
+	await t.expect(Selector("button").withExactText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk();
+
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 
 	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
