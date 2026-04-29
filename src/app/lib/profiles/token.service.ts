@@ -206,7 +206,7 @@ export class TokenService {
 
 		try {
 			const whitelist = this.#profile.whitelistedContractAddresses();
-			if (whitelist) {
+			if (whitelist.length > 0) {
 				transfersQuery.whitelist = whitelist;
 			}
 
