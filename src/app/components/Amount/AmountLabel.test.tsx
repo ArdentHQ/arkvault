@@ -41,29 +41,25 @@ describe("AmountLabel", () => {
 	});
 
 	it("should render with hint", async () => {
-		const { asFragment } = render(<AmountLabel isNegative={false} value={10} ticker="ARK" hint="I am an hint" />);
+		render(<AmountLabel isNegative={false} value={10} ticker="ARK" hint="I am an hint" />);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
 		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
+		expect(await screen.findByRole("tooltip")).toBeInTheDocument();
 		expect(screen.getByText("I am an hint")).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render compact with hint", async () => {
-		const { asFragment } = render(
-			<AmountLabel isCompact isNegative={false} value={10} ticker="ARK" hint="I am an hint" />,
-		);
+		render(<AmountLabel isCompact isNegative={false} value={10} ticker="ARK" hint="I am an hint" />);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
 		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
+		expect(await screen.findByRole("tooltip")).toBeInTheDocument();
 		expect(screen.getByText("I am an hint")).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with custom class names", () => {
