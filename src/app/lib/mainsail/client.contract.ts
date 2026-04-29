@@ -72,6 +72,7 @@ export interface WalletTokensQuery extends ClientPagination {
 
 export interface TokenTransfersQuery extends ClientPagination {
 	addresses?: string[];
+	whitelist?: string[];
 	from?: string[];
 	to?: string[];
 	page?: number;

@@ -207,8 +207,7 @@ export class TokenService {
 		try {
 			response = await clientService.tokenTransfers({
 				...transfersQuery,
-				addresses: this.#includeWhitelistAddressses(transfersQuery.addresses),
-				from: this.#includeWhitelistAddressses(transfersQuery.from),
+				whitelist: this.#profile.whitelistedContractAddresses(),
 			});
 
 			const queryAddresses = [...transfersQuery.from, ...(transfersQuery.to ?? [])].filter(
@@ -256,9 +255,5 @@ export class TokenService {
 		}
 
 		return total;
-	}
-
-	#includeWhitelistAddressses(addresses?: string[]): string[] {
-		return [...(addresses ?? []), ...this.#profile.whitelistedContractAddresses()];
 	}
 }
