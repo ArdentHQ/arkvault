@@ -52,9 +52,7 @@ describe("AmountLabel", () => {
 	});
 
 	it("should render compact with hint", async () => {
-		render(
-			<AmountLabel isCompact isNegative={false} value={10} ticker="ARK" hint="I am an hint" />,
-		);
+		render(<AmountLabel isCompact isNegative={false} value={10} ticker="ARK" hint="I am an hint" />);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
