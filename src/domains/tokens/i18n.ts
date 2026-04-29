@@ -21,5 +21,4 @@ export const translations = {
 	PAGE_TITLE: "Tokens",
 	SELECT_TOKEN: "Select Token",
 	TOKEN_INFORMATION: "Token Information",
-	TOKEN_TRANSFERS_EMPTY_TEXT: "No token transfers have been found for your selected tokens.",
 };
