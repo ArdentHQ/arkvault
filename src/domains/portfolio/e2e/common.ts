@@ -41,6 +41,8 @@ export const importWalletByAddress = async (t: any, address: string, alias = "Te
 	await t.typeText(Selector("[data-testid=ImportWallet__address-input]"), address, { paste: true });
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 
+	await t.expect(Selector("[data-testid=ImportWallet__success-step]").exists).ok();
+
 	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
 
 	const walletNameInput = Selector("input[name=name]");
