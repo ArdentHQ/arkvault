@@ -1,7 +1,7 @@
 import { Contracts } from "@/app/lib/profiles";
 import React, { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { translations } from "@/domains/tokens/i18n";
+
 
 import { Button } from "@/app/components/Button";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
@@ -100,7 +100,7 @@ export const TokenTransfers = memo(function TokenTransfers({
 							data-testid="Transactions__no-filters-selected"
 							className="text-theme-secondary-text dark:border-theme-secondary-800 dim:text-theme-dim-200 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
 						>
-							{emptyText || translations.TOKEN_TRANSFERS_EMPTY_TEXT}
+							{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
 						</div>
 					</>
 				)}
