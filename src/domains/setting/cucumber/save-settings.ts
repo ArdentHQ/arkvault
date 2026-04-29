@@ -1,9 +1,9 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import { cucumber, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { importWalletByAddress } from "../../portfolio/e2e/common";
+import { importWallet } from "../../portfolio/e2e/common";
 import { goToSettings, saveSettings } from "../e2e/common";
 
 const translations = buildTranslations();
@@ -80,7 +80,7 @@ cucumber(
 		"Given Alice signs into a profile with a wallet": async (t: TestController) => {
 			await visitWelcomeScreen(t);
 			await goToProfile(t);
-			await importWalletByAddress(t, "0x659A76be283644AEc2003aa8ba26485047fd1BFB", "John Doe");
+			await importWallet(t, MNEMONICS[0]);
 		},
 		"And she is on the settings page": async (t: TestController) => {
 			await t.click(Selector('[data-testid="UserMenu"]'));
