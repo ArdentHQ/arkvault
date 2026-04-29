@@ -214,11 +214,12 @@ export class TokenService {
 		};
 
 		try {
-			response = await clientService.tokenTransfers({
-				...transfersQuery,
-				addresses: this.#includeWhitelistAddressses(transfersQuery.addresses),
-				from: this.#includeWhitelistAddressses(transfersQuery.from),
-			});
+			const whitelist = this.#profile.whitelistedContractAddresses();
+			if (whitelist.length > 0) {
+				transfersQuery.whitelist = whitelist;
+			}
+
+			response = await clientService.tokenTransfers(transfersQuery);
 
 			const queryAddresses = [...transfersQuery.from, ...(transfersQuery.to ?? [])].filter(
 				(address) => !!address,
@@ -271,10 +272,6 @@ export class TokenService {
 		}
 
 		return total;
-	}
-
-	#includeWhitelistAddressses(addresses?: string[]): string[] {
-		return [...(addresses ?? []), ...this.#profile.whitelistedContractAddresses()];
 	}
 
 	public async syncOne(address: string): Promise<void> {

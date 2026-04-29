@@ -16,6 +16,7 @@ import { TokenService } from "./token.service";
 
 const WalletsTokensEndpoint = "https://dwallets-evm.mainsailhq.com/api/wallets/tokens";
 const WalletsTokensPagePath = "/wallets/tokens?page=1";
+import type { TokenTransfersQuery } from "@/app/lib/mainsail/client.contract";
 
 const createTransferData = (from: string) => ({
 	blockNumber: "22773025",
@@ -98,6 +99,53 @@ describe("TokenService", () => {
 
 		expect(tokens).toBeInstanceOf(WalletTokenCollection);
 		expect(whitelistedSpy).toHaveBeenCalledOnce();
+	});
+
+	it("should not set whitelist in transfers query when whitelisted contract addresses is empty", async () => {
+		const walletAddress = profile.wallets().first().address();
+
+		vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue([]);
+
+		let capturedQuery: TokenTransfersQuery;
+
+		server.use(
+			http.get(/\/tokens\/transfers.*/, ({ request }) => {
+				capturedQuery = Object.fromEntries(new URL(request.url).searchParams) as TokenTransfersQuery;
+				return HttpResponse.json({
+					data: [createTransferData(walletAddress)],
+					meta: { next: null, self: "/tokens/transfers?page=1" },
+				});
+			}),
+		);
+
+		const transfers = await profile.tokens().transfers();
+
+		expect(transfers.items()).toHaveLength(1);
+		expect(capturedQuery.whitelist).toBeUndefined();
+	});
+
+	it("should set whitelist in transfers query when whitelisted contract addresses is not empty", async () => {
+		const walletAddress = profile.wallets().first().address();
+		const mockWhitelist = ["0x1", "0x2"];
+
+		vi.spyOn(profile, "whitelistedContractAddresses").mockReturnValue(mockWhitelist);
+
+		let capturedQuery: TokenTransfersQuery;
+
+		server.use(
+			http.get(/\/tokens\/transfers.*/, ({ request }) => {
+				capturedQuery = Object.fromEntries(new URL(request.url).searchParams) as TokenTransfersQuery;
+				return HttpResponse.json({
+					data: [createTransferData(walletAddress)],
+					meta: { next: null, self: "/tokens/transfers?page=1" },
+				});
+			}),
+		);
+
+		const transfers = await profile.tokens().transfers();
+
+		expect(transfers.items()).toHaveLength(1);
+		expect(capturedQuery.whitelist).toEqual(mockWhitelist.join(","));
 	});
 
 	it("should return transfers", async () => {
