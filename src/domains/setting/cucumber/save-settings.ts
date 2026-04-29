@@ -92,7 +92,7 @@ cucumber(
 		},
 		"When she saves a new currency setting": async (t: TestController) => {
 			await t.click(Selector("[aria-owns=select-currency-menu] [data-testid=SelectDropdown__caret]"));
-			await t.click(Selector("#select-currency-menu .select-list-option").withText("ETH (Ξ)"));
+			await t.click(Selector(".select-list-option").withText("ETH (Ξ)"));
 			await saveSettings(t);
 		},
 		"Then the balance in the navbar is updated": async (t: TestController) => {
