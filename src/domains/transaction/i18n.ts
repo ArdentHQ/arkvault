@@ -244,8 +244,7 @@ export const translations = {
 	NETWORK: "Network",
 	NOT_FOUND: "Unable to find transaction for [{{transactionId}}]",
 	NOT_YET_CONFIRMED: "Not yet confirmed",
-	NO_FILTERS_SELECTED:
-		"All filtering options have been deselected. Please select one or more options to display transactions.",
+	NO_FILTERS_SELECTED: "No token transfers have been found for your selected tokens.",
 	OUTGOING: "Outgoing",
 	PAGE_MULTISIGNATURE: {
 		FORM_STEP: {
