@@ -3,9 +3,9 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, E2E_PUBLIC_API_URL, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { importWallet } from "../../portfolio/e2e/common";
+import { importWallet, modal } from "../../portfolio/e2e/common";
 
-export const goToTokens = async (t: TestController) => {
+export const goToTokensPage = async (t: TestController) => {
 	await t.click(Selector("a").withText(translations.COMMON.TOKENS));
 	await t.expect(Selector("h1").withText(translations.TOKENS.PAGE_TITLE).exists).ok();
 };
@@ -14,36 +14,23 @@ const translations = buildTranslations();
 const validContractAddress = "0xac2865629a820e18f3af48659f935cbcd5a9a4b4";
 const invalidContractAddress = "0xbc2065629a820e18f3af48659f935cbcd5a9a4ee";
 
-cucumber(
-	"@tokenAdd-validContract",
-	{
-		"Given Alice signs into a profile": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-			await importWallet(t, MNEMONICS[0]);
-		},
-		"And navigates to the tokens page": async (t: TestController) => {
-			await goToTokens(t);
-		},
-		"And opens up add token side panel": async (t: TestController) => {
-			await t.click(Selector("[data-testid=Tokens__AddToken]"));
-			await t.expect(Selector("h2").withText(translations.COMMON.ADD_TOKEN).exists).ok({ timeout: 60_000 });
-		},
-		"When she attempts to add a token with a valid contract address": async (t: TestController) => {
-			await t.typeText(Selector("[data-testid=Input__ContractAddress]"), validContractAddress, { paste: true });
-			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute("disabled")).notOk();
-			await t.click(Selector("[data-testid=AddToken__save-button]"));
-		},
-		"Then a success toast message is displayed": async (t: TestController) => {
-			await t
-				.expect(
-					Selector("[data-testid=ToastMessage__content]").withText("Token SAM (SamCo…) successfully added")
-						.exists,
-				)
-				.ok();
-		},
+const preSteps = {
+	"Given Alice signs into a profile": async (t: TestController) => {
+		await visitWelcomeScreen(t);
+		await goToProfile(t);
+		await importWallet(t, MNEMONICS[0]);
 	},
-	[
+	"And navigates to the tokens page": async (t: TestController) => {
+		await goToTokensPage(t);
+	},
+	"And opens up add token side panel": async (t: TestController) => {
+		await t.click(Selector("[data-testid=Tokens__AddToken]"));
+		await t.expect(Selector("h2").withText(translations.COMMON.ADD_TOKEN).exists).ok({ timeout: 60_000 });
+	},
+};
+
+const mockAddTokenRequests = () => {
+	return [
 		mockRequest(`${E2E_PUBLIC_API_URL}tokens/${validContractAddress}`, {
 			data: {
 				address: "0xac2865629a820e18f3af48659f935cbcd5a9a4b4",
@@ -92,24 +79,34 @@ cucumber(
 				],
 			},
 		),
-	],
+	]
+}
+
+cucumber(
+	"@tokenAdd-validContract",
+	{
+		...preSteps,
+		"When she attempts to add a token with a valid contract address": async (t: TestController) => {
+			await t.typeText(Selector("[data-testid=Input__ContractAddress]"), validContractAddress, { paste: true });
+			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute("disabled")).notOk();
+			await t.click(Selector("[data-testid=AddToken__save-button]"));
+		},
+		"Then a success toast message is displayed": async (t: TestController) => {
+			await t
+				.expect(
+					Selector("[data-testid=ToastMessage__content]").withText("Token SAM (SamCo…) successfully added")
+						.exists,
+				)
+				.ok();
+		},
+	},
+	mockAddTokenRequests(),
 );
 
 cucumber(
 	"@tokenAdd-invalidContract",
 	{
-		"Given Alice signs into a profile": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-			await importWallet(t, MNEMONICS[0]);
-		},
-		"And navigates to the tokens page": async (t: TestController) => {
-			await goToTokens(t);
-		},
-		"And opens up add token side panel": async (t: TestController) => {
-			await t.click(Selector("[data-testid=Tokens__AddToken]"));
-			await t.expect(Selector("h2").withText(translations.COMMON.ADD_TOKEN).exists).ok({ timeout: 60_000 });
-		},
+		...preSteps,
 		"When she attempts to add a token with a invalid contract address": async (t: TestController) => {
 			await t.typeText(Selector("[data-testid=Input__ContractAddress]"), invalidContractAddress, { paste: true });
 			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute("disabled")).ok();
@@ -121,4 +118,40 @@ cucumber(
 		},
 	},
 	[mockRequest(`${E2E_PUBLIC_API_URL}tokens/${invalidContractAddress}`, {}, 404)],
+);
+
+cucumber(
+	"@tokenDelete",
+	{
+		...preSteps,
+		"When she attempts to add a token with a valid contract address": async (t: TestController) => {
+			await t.typeText(Selector("[data-testid=Input__ContractAddress]"), validContractAddress, { paste: true });
+			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute("disabled")).notOk();
+			await t.click(Selector("[data-testid=AddToken__save-button]"));
+		},
+		"Then a success toast message is displayed": async (t: TestController) => {
+			await t
+				.expect(
+					Selector("[data-testid=ToastMessage__content]").withText("Token SAM (SamCo…) successfully added")
+						.exists,
+				)
+				.ok();
+		},
+		"And switches to manage mode": async (t: TestController) => {
+			await t.click(Selector("[data-testid=TokensTable_Manage]"));
+			await t.expect(Selector("[data-testid=TokenRow_DeleteToken]").exists).ok();
+		},
+		"When she attempts to delete a token": async (t: TestController) => {
+			await t.click(Selector("[data-testid=TokenRow_DeleteToken]"));
+			await t.expect(modal.exists).ok();
+			await t.click(Selector("[data-testid=DeleteResource__submit-button]"));
+			await t.expect(modal.exists).notOk();
+			await t.click(Selector("[data-testid=TokensTable_Save]"));
+			await t.expect(Selector("[data-testid=TokensTable_Save]").exists).notOk();
+		},
+		"Then it should disappear from tokens table": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=TokensTableRow]").count).eql(2);
+		},
+	},
+	mockAddTokenRequests(),
 );
