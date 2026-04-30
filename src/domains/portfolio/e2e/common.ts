@@ -18,6 +18,9 @@ export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "T
 	await t.click(Selector("div").withExactText(translations.COMMON.MNEMONIC));
 
 	await t.typeText(Selector("[data-testid=ImportWallet__mnemonic-input]"), passphrase, { paste: true });
+
+	await t.expect(Selector("button").withExactText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk();
+
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 
 	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
@@ -32,7 +35,7 @@ export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "T
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };
 
-export const importWalletByAddress = async (t: any, address: string, alias = "Test Wallet", isMainnet = false) => {
+export const importWalletByAddress = async (t: any, address: string, alias = "Test Wallet") => {
 	await t.click(Selector("a").withText(translations.COMMON.PORTFOLIO));
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
 
