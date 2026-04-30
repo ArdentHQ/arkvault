@@ -171,6 +171,10 @@ export const Tokens = () => {
 					isOpen={!!tokenModalItem}
 					walletToken={tokenModalItem}
 					onClose={() => setTokenModelItem(undefined)}
+					isReloading={isReloading}
+					onReloadToken={() => {
+						reload(tokenModalItem.address());
+					}}
 					onSendToken={(tokenContractAddress) => {
 						setTimeout(() => {
 							setTokenModelItem(undefined);
