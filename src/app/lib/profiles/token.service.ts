@@ -69,11 +69,17 @@ export class TokenService {
 		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
 
 		try {
+			const addresses = this.#profile
+				.wallets()
+				.selected()
+				.map((wallet) => wallet.address());
+
+			if (addresses.length === 0) {
+				throw new Error("No address selected");
+			}
+
 			let tokensQuery: WalletTokensQuery = {
-				addresses: this.#profile
-					.wallets()
-					.selected()
-					.map((wallet) => wallet.address()),
+				addresses,
 				minBalance: hideDustTokens ? this.#dustBalanceThreshold : "0",
 			};
 
@@ -180,7 +186,7 @@ export class TokenService {
 	 *
 	 * @returns {ExtendedConfirmedTransactionDataCollection}
 	 */
-	async transfers(query?: TokenTransfersQuery): Promise<ExtendedConfirmedTransactionDataCollection> {
+	async transfers(query: TokenTransfersQuery | undefined = {}): Promise<ExtendedConfirmedTransactionDataCollection> {
 		const activeNetwork = this.#profile.activeNetwork();
 
 		const clientService = new ClientService({
@@ -195,10 +201,15 @@ export class TokenService {
 				.wallets()
 				.selected()
 				.map((wallet) => wallet.address()),
-			...(query ?? {}),
+			...query,
 		};
 
 		try {
+			const whitelist = this.#profile.whitelistedContractAddresses();
+			if (whitelist.length > 0) {
+				transfersQuery.whitelist = whitelist;
+			}
+
 			response = await clientService.tokenTransfers(transfersQuery);
 
 			const queryAddresses = [...transfersQuery.from, ...(transfersQuery.to ?? [])].filter(

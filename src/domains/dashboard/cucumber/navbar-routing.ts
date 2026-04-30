@@ -12,7 +12,7 @@ const preSteps = {
 		await goToProfile(t);
 	},
 };
-cucumber("@routeToPortolio", {
+cucumber("@routeToPortfolio", {
 	...preSteps,
 	"When she selects portfolio in the navbar": async (t: TestController) => {
 		await t.click(Selector("a").withExactText(translations.COMMON.PORTFOLIO));
@@ -31,16 +31,13 @@ cucumber("@routeToExchange", {
 		await t.expect(Selector("h1").withExactText(translations.EXCHANGE.PAGE_EXCHANGES.TITLE).exists).ok();
 	},
 });
-cucumber("@routeToSend", {
+cucumber("@routeToTokens", {
 	...preSteps,
-	"When she selects send in the navbar": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=NavigationBar__buttons--send]").hasAttribute("disabled")).notOk();
-		await t.click(Selector("[data-testid=NavigationBar__buttons--send]"));
+	"When she selects tokens in the navbar": async (t: TestController) => {
+		await t.click(Selector("a").withExactText(translations.TOKENS.PAGE_TITLE));
 	},
-	"Then she is routed to the send page": async (t: TestController) => {
-		await t.click(
-			Selector("div").withExactText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION),
-		);
-		await t.expect(getLocation()).contains("/send-transfer");
+	"Then she is routed to the tokens page": async (t: TestController) => {
+		await t.expect(getLocation()).contains("/tokens");
+		await t.expect(Selector("h1").withExactText(translations.TOKENS.PAGE_TITLE).exists).ok();
 	},
 });

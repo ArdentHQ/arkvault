@@ -11,9 +11,9 @@ Feature: Notifications
 		Given Alice is signed into her profile
 		When she opens her notifications
 		And selects a transaction
-		Then the transaction details modal is displayed
-		When she selects close on the transaction details modal
-		Then the modal is no longer displayed
+		Then the transaction details side panel is displayed
+		When she selects close on the transaction details side panel
+		Then the side panel is no longer displayed
 
 	@notifications-redDotUnread
 	Scenario: Notification red dot visible when notifications are unread

@@ -21,6 +21,7 @@ import { useTranslation } from "react-i18next";
 import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { Enums } from "@/app/lib/mainsail";
 import { useTransferAssets } from "@/domains/transaction/hooks/use-send-transfer-assets";
+import { DISPLAY_DECIMALS } from "@/domains/transaction/utils";
 
 const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -72,7 +73,7 @@ export const AddRecipient = ({
 		watch,
 		trigger,
 		clearErrors,
-		formState: { errors, dirtyFields },
+		formState: { errors },
 	} = useFormContext();
 	const {
 		network,
@@ -311,7 +312,9 @@ export const AddRecipient = ({
 	return (
 		<AddRecipientWrapper>
 			<div className="text-theme-secondary-text hover:text-theme-primary-600 dim:text-theme-dim-200 mb-2 flex items-center justify-between">
-				<div className="text-sm font-semibold transition-colors duration-100">{t("TRANSACTION.RECIPIENT")}</div>
+				<div className="text-sm leading-[17px] font-semibold transition-colors duration-100 sm:text-base sm:leading-5">
+					{t("TRANSACTION.RECIPIENT")}
+				</div>
 
 				{network?.allows(Enums.FeatureFlag.TransactionMultiPayment) && (
 					<TransferType
@@ -332,62 +335,65 @@ export const AddRecipient = ({
 				className="rounded-xl"
 			>
 				<div className="space-y-4">
-					<FormField name="recipientAddress">
-						{!isSingle && (
-							<FormLabel label={t("COMMON.RECIPIENT_#", { count: addedRecipients.length + 1 })} />
-						)}
+					<div className="space-y-4 sm:space-y-0">
+						<FormField name="recipientAddress">
+							{!isSingle && (
+								<FormLabel label={t("COMMON.RECIPIENT_#", { count: addedRecipients.length + 1 })} />
+							)}
 
-						<SelectRecipient
-							network={network}
-							disabled={!isSenderFilled}
-							address={recipientAddress}
-							profile={profile}
-							onChange={(address, alias) => {
-								setValue("recipientAddress", address, { shouldDirty: true, shouldValidate: true });
-								setValue("recipientAlias", alias);
-								singleRecipientOnChange({
-									address,
-									alias,
-									amount: getValues("amount"),
-								});
-							}}
-						/>
-					</FormField>
-
-					<FormField name="asset">
-						<div className="block space-y-2 sm:hidden">
-							<FormLabel>
-								<div>{t("COMMON.ASSET")}</div>
-							</FormLabel>
-							<SelectToken
-								value={selectedAsset}
-								tokens={assets}
-								onChange={({ value }) => {
-									const tokenAddress = value;
-									const token = tokens.find((token) => token.token().address() === tokenAddress);
-
-									setValue("amount", amount, {
-										shouldDirty: !!token,
-										shouldValidate: !!dirtyFields.amount,
+							<SelectRecipient
+								network={network}
+								disabled={!isSenderFilled}
+								address={recipientAddress}
+								profile={profile}
+								onChange={(address, alias) => {
+									setValue("recipientAddress", address, { shouldDirty: true, shouldValidate: true });
+									setValue("recipientAlias", alias);
+									singleRecipientOnChange({
+										address,
+										alias,
+										amount: getValues("amount"),
 									});
-
-									setValue("tokenContractAddress", tokenAddress, {
-										shouldDirty: true,
-										shouldValidate: true,
-									});
-
-									onTokenChange?.(token);
 								}}
 							/>
-						</div>
-					</FormField>
+						</FormField>
+
+						<FormField name="asset">
+							<div className="block space-y-2 sm:hidden">
+								<FormLabel>
+									<div>{t("COMMON.ASSET")}</div>
+								</FormLabel>
+								<SelectToken
+									value={selectedAsset}
+									tokens={assets}
+									onChange={({ value }) => {
+										const tokenAddress = value;
+										const token = tokens.find((token) => token.token().address() === tokenAddress);
+
+										if (amount) {
+											void trigger("amount");
+										}
+
+										setValue("tokenContractAddress", tokenAddress, {
+											shouldDirty: true,
+											shouldValidate: true,
+										});
+
+										onTokenChange?.(token);
+									}}
+								/>
+							</div>
+						</FormField>
+					</div>
 
 					<FormField name="amount">
 						<FormLabel>
 							<span className="items-centers flex w-full justify-between">
 								<div className="flex flex-row items-center gap-1.5">
 									<span className="sm:hidden">{t("COMMON.AMOUNT")}</span>
-									<span className="hidden sm:block">{t("COMMON.ASSET_AMOUNT")}</span>
+									<span className="hidden text-base leading-5 sm:block">
+										{t("COMMON.ASSET_AMOUNT")}
+									</span>
 									<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm sm:hidden">
 										(
 										<Amount
@@ -407,7 +413,7 @@ export const AddRecipient = ({
 										>
 											<span className="hidden pr-1 sm:inline">{t("COMMON.BALANCE")}:</span>
 											<Amount
-												value={remainingBalance}
+												value={remainingBalance.decimalPlaces(DISPLAY_DECIMALS)}
 												ticker={ticker}
 												showTicker
 												showCompactFormat
@@ -450,10 +456,9 @@ export const AddRecipient = ({
 										const tokenAddress = value;
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
 
-										setValue("amount", amount, {
-											shouldDirty: !!token,
-											shouldValidate: !!dirtyFields.amount,
-										});
+										if (amount) {
+											void trigger("amount");
+										}
 
 										setValue("tokenContractAddress", tokenAddress, {
 											shouldDirty: true,
