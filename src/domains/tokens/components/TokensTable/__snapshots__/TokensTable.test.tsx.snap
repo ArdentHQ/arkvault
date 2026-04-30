@@ -23,6 +23,7 @@ exports[`TokensTable > should not render in lg 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -100,6 +101,7 @@ exports[`TokensTable > should not render in lg 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -648,6 +650,7 @@ exports[`TokensTable > should not render in md 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -725,6 +728,7 @@ exports[`TokensTable > should not render in md 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -1273,6 +1277,7 @@ exports[`TokensTable > should not render in sm 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -1350,6 +1355,7 @@ exports[`TokensTable > should not render in sm 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -1826,6 +1832,7 @@ exports[`TokensTable > should not render in xl 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -1903,6 +1910,7 @@ exports[`TokensTable > should not render in xl 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -2451,6 +2459,7 @@ exports[`TokensTable > should not render in xs 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -2528,6 +2537,7 @@ exports[`TokensTable > should not render in xs 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -3004,6 +3014,7 @@ exports[`TokensTable > should render 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -3081,6 +3092,7 @@ exports[`TokensTable > should render 1`] = `
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -3635,6 +3647,7 @@ exports[`TokensTable > should show no results message if profile has no tokens i
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"
@@ -3712,6 +3725,7 @@ exports[`TokensTable > should show no results message if profile has no tokens i
             >
               <div
                 class="flex items-center gap-1"
+                data-testid="HideDustTokens__Wrapper"
               >
                 <div
                   class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap"

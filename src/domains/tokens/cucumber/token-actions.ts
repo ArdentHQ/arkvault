@@ -83,7 +83,7 @@ const mockAddTokenRequests = () => {
 }
 
 cucumber(
-	"@tokenAdd-validContract",
+	"@addValidContract",
 	{
 		...preSteps,
 		"When she attempts to add a token with a valid contract address": async (t: TestController) => {
@@ -104,7 +104,7 @@ cucumber(
 );
 
 cucumber(
-	"@tokenAdd-invalidContract",
+	"@addInvalidContract",
 	{
 		...preSteps,
 		"When she attempts to add a token with a invalid contract address": async (t: TestController) => {
@@ -121,7 +121,7 @@ cucumber(
 );
 
 cucumber(
-	"@tokenDelete",
+	"@deleteToken",
 	{
 		...preSteps,
 		"When she attempts to add a token with a valid contract address": async (t: TestController) => {
@@ -154,4 +154,54 @@ cucumber(
 		},
 	},
 	mockAddTokenRequests(),
+);
+
+cucumber(
+	"@enableHideDust",
+	{
+		"Given Alice signs into a profile": async (t: TestController) => {
+			await visitWelcomeScreen(t);
+			await goToProfile(t);
+			await importWallet(t, MNEMONICS[0]);
+		},
+		"And navigates to the tokens page": async (t: TestController) => {
+			await goToTokensPage(t);
+		},
+		"When she enables Hide Dust": async (t: TestController) => {
+			await t.click(Selector("[data-testid=HideDustTokens__Wrapper] .toggle-handle"));
+		},
+		"Then tokens list should refresh": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=TokensTableRow]").count).eql(1);
+		}
+	},
+	[
+		mockRequest(
+			`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=0x659A76be283644AEc2003aa8ba26485047fd1BFB&minBalance=0.01&limit=30`,
+			{
+				meta: {
+					totalCountIsEstimate: false,
+					count: 1,
+					first: `/wallets/tokens?addresses=0x659A76be283644AEc2003aa8ba26485047fd1BFB&minBalance=0.01&limit=30`,
+					last: `/wallets/tokens?addresses=0x659A76be283644AEc2003aa8ba26485047fd1BFB&minBalance=0.01&limit=30`,
+					next: null,
+					pageCount: 1,
+					previous: null,
+					self: `/wallets/tokens?addresses=0x659A76be283644AEc2003aa8ba26485047fd1BFB&minBalance=0.01&limit=30`,
+					totalCount: 1,
+				},
+				data: [
+					{
+						token: "0xac2865629a820e18f3af48659f935cbcd5a9a4b4",
+						symbol: "DARK20",
+						name: "DARK20",
+						decimals: 18,
+						supply: "100000000000000000000000000",
+						addresses: {
+							"0x659A76be283644AEc2003aa8ba26485047fd1BFB": "100000000000000000000000000",
+						},
+					},
+				],
+			},
+		)
+	]
 );

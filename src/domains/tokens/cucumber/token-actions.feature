@@ -1,6 +1,6 @@
 Feature: Token Actions
 
-    @tokenAdd-validContract
+    @addValidContract
     Scenario: Successfully add a token
 		Given Alice signs into a profile
 		And navigates to the tokens page
@@ -8,7 +8,7 @@ Feature: Token Actions
 		When she attempts to add a token with a valid contract address
         Then a success toast message is displayed
 
-	@tokenAdd-invalidContract
+	@addInvalidContract
 	Scenario: Fail to add an invalid contract address
 		Given Alice signs into a profile
 		And navigates to the tokens page
@@ -16,7 +16,7 @@ Feature: Token Actions
 		When she attempts to add a token with a invalid contract address
 		Then an error message is displayed
 
-	@tokenDelete
+	@deleteToken
 	Scenario: Successfully delete added token
 		Given Alice signs into a profile
 		And navigates to the tokens page
@@ -26,5 +26,12 @@ Feature: Token Actions
 		And switches to manage mode
 		When she attempts to delete a token
 		Then it should disappear from tokens table
+
+	@enableHideDust
+	Scenario: Successfully delete added token
+		Given Alice signs into a profile
+		And navigates to the tokens page
+		When she enables Hide Dust
+		Then tokens list should refresh
 
 
