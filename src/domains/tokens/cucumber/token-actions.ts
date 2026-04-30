@@ -79,8 +79,8 @@ const mockAddTokenRequests = () => {
 				],
 			},
 		),
-	]
-}
+	];
+};
 
 cucumber(
 	"@tokenAdd-validContract",
