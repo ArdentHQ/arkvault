@@ -71,14 +71,16 @@ export const FormStep = ({
 							<Button
 								type="button"
 								variant="transparent"
-								className="text-theme-navy-600 block p-0 text-sm"
+								className="group text-theme-navy-600 hover:text-theme-navy-700 dark:hover:text-theme-dark-navy-500 dim:hover:text-theme-dim-navy-700 block p-0 text-sm"
 								onClick={onScan}
 							>
 								<span className="hidden sm:block">
 									<Icon size="md" name="QRCode" />
 								</span>
 
-								<span>{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}</span>
+								<span className="underline-offset-4 group-hover:underline">
+									{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")}
+								</span>
 							</Button>
 						</div>
 

@@ -14,7 +14,7 @@ exports[`Exchange > should render empty 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -54,7 +54,7 @@ exports[`Exchange > should render empty 1`] = `
           class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,7 +91,7 @@ exports[`Exchange > should render empty 1`] = `
           class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -326,7 +326,7 @@ exports[`Exchange > should render empty 1`] = `
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -393,7 +393,7 @@ exports[`Exchange > should render empty 1`] = `
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -449,7 +449,7 @@ exports[`Exchange > should render empty 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         type="button"
                       >
@@ -505,7 +505,7 @@ exports[`Exchange > should render empty 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         type="button"
                       >
@@ -561,7 +561,7 @@ exports[`Exchange > should render empty 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -644,7 +644,7 @@ exports[`Exchange > should render empty 1`] = `
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -931,7 +931,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -971,7 +971,7 @@ exports[`Exchange > should render with exchanges 1`] = `
           class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1008,7 +1008,7 @@ exports[`Exchange > should render with exchanges 1`] = `
           class="h-5 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
         />
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-200"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1243,7 +1243,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -1310,7 +1310,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -1366,7 +1366,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         type="button"
                       >
@@ -1422,7 +1422,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         type="button"
                       >
@@ -1478,7 +1478,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -1561,7 +1561,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >

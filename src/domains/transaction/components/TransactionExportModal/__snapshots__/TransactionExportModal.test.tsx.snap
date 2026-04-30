@@ -18,7 +18,7 @@ exports[`TransactionExportModal > should render 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -624,7 +624,7 @@ exports[`TransactionExportModal > should render 1`] = `
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
                           data-testid="TransactionExportForm__cancel-button"
                           type="button"
                         >
@@ -635,7 +635,7 @@ exports[`TransactionExportModal > should render 1`] = `
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="TransactionExport__submit-button"
                           type="submit"
                         >
@@ -677,7 +677,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1283,7 +1283,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
                           data-testid="TransactionExportForm__cancel-button"
                           type="button"
                         >
@@ -1294,7 +1294,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="TransactionExport__submit-button"
                           type="submit"
                         >
@@ -1336,7 +1336,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1581,7 +1581,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
                           data-testid="TransactionExportSuccess__back-button"
                           type="button"
                         >
@@ -1592,7 +1592,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="TransactionExportSuccess__download-button"
                           type="button"
                         >
@@ -1634,7 +1634,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1879,7 +1879,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
                           data-testid="TransactionExportSuccess__back-button"
                           type="button"
                         >
@@ -1890,7 +1890,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="TransactionExportSuccess__download-button"
                           type="button"
                         >
@@ -1932,7 +1932,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2538,7 +2538,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
                           data-testid="TransactionExportForm__cancel-button"
                           type="button"
                         >
@@ -2549,7 +2549,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="TransactionExport__submit-button"
                           type="submit"
                         >
@@ -2591,7 +2591,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3244,7 +3244,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
                           data-testid="TransactionExportForm__cancel-button"
                           type="button"
                         >
@@ -3255,7 +3255,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
                           </div>
                         </button>
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="TransactionExport__submit-button"
                           type="submit"
                         >

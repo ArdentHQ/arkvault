@@ -25,7 +25,7 @@ exports[`WalletIcons > should render with tooltip in the dark mode 1`] = `
       aria-describedby="«r0»"
     >
       <button
-        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="WalletIcon__Verified"
         type="button"
       >
@@ -114,7 +114,7 @@ exports[`WalletIcons > should render with tooltip in the dark mode 1`] = `
   <span>
     <span>
       <button
-        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="WalletIcon__TestNetwork"
         type="button"
       >
@@ -152,7 +152,7 @@ exports[`WalletIcons > should render with tooltip in the dark mode 1`] = `
   <span>
     <span>
       <button
-        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+        class="space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
         data-testid="WalletIcon__Username"
         type="button"
       >

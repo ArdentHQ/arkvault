@@ -18,7 +18,7 @@ exports[`Modal > should closed by the Esc key 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -97,7 +97,7 @@ exports[`Modal > should render a 3x large one 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -174,7 +174,7 @@ exports[`Modal > should render a 4x large one 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -251,7 +251,7 @@ exports[`Modal > should render a 5x large one 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -328,7 +328,7 @@ exports[`Modal > should render a large one 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -405,7 +405,7 @@ exports[`Modal > should render a medium one 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -482,7 +482,7 @@ exports[`Modal > should render a modal with banner 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -569,7 +569,7 @@ exports[`Modal > should render a modal with content 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -648,7 +648,7 @@ exports[`Modal > should render a modal with description 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -731,7 +731,7 @@ exports[`Modal > should render a modal with overlay 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -810,7 +810,7 @@ exports[`Modal > should render a modal with overlay 2`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -889,7 +889,7 @@ exports[`Modal > should render a small one 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -966,7 +966,7 @@ exports[`Modal > should render a xlarge one 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1043,7 +1043,7 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1160,7 +1160,7 @@ exports[`Modal > should render without offset for buttons 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >

@@ -7,7 +7,7 @@ exports[`SelectDropdown > should render disabled option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -129,7 +129,7 @@ exports[`SelectDropdown > should render disabled option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -715,7 +715,7 @@ exports[`SelectDropdown > should render option base 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -749,7 +749,7 @@ exports[`SelectDropdown > should render option base 1`] = `
                 id="downshift-49-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -836,7 +836,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -878,7 +878,7 @@ exports[`SelectDropdown > should render option base with custom label 1`] = `
                 …
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1046,7 +1046,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -1088,7 +1088,7 @@ exports[`SelectDropdown > should render option base with custom label and allowe
                 …
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1256,7 +1256,7 @@ exports[`SelectDropdown > should render option base with default value when free
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -1290,7 +1290,7 @@ exports[`SelectDropdown > should render option base with default value when free
                 id="downshift-587-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1377,7 +1377,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -1417,7 +1417,7 @@ exports[`SelectDropdown > should render option base with initial default value 1
                 …
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1514,7 +1514,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -1548,7 +1548,7 @@ exports[`SelectDropdown > should render option base with wrong default value 1`]
                 id="downshift-117-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1635,7 +1635,7 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -1669,7 +1669,7 @@ exports[`SelectDropdown > should render option base without caret 1`] = `
                 id="downshift-103-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1709,7 +1709,7 @@ exports[`SelectDropdown > should render option group 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -1743,7 +1743,7 @@ exports[`SelectDropdown > should render option group 1`] = `
                 id="downshift-51-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1830,7 +1830,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -1872,7 +1872,7 @@ exports[`SelectDropdown > should render option group with custom label 1`] = `
                 …
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2039,7 +2039,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2081,7 +2081,7 @@ exports[`SelectDropdown > should render option group with custom label and allow
                 …
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2248,7 +2248,7 @@ exports[`SelectDropdown > should render option group with default value when fre
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2282,7 +2282,7 @@ exports[`SelectDropdown > should render option group with default value when fre
                 id="downshift-590-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2369,7 +2369,7 @@ exports[`SelectDropdown > should render option group with initial default value 
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2409,7 +2409,7 @@ exports[`SelectDropdown > should render option group with initial default value 
                 …
               </div>
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2506,7 +2506,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2540,7 +2540,7 @@ exports[`SelectDropdown > should render option group with wrong default value 1`
                 id="downshift-119-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2627,7 +2627,7 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2661,7 +2661,7 @@ exports[`SelectDropdown > should render option group without caret 1`] = `
                 id="downshift-105-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2701,7 +2701,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2735,7 +2735,7 @@ exports[`SelectDropdown > should render while allowing horizontal overflow 1`] =
                 id="downshift-125-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2822,7 +2822,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2856,7 +2856,7 @@ exports[`SelectDropdown > should render with custom wrapper class name 1`] = `
                 id="downshift-53-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2943,7 +2943,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -2977,7 +2977,7 @@ exports[`SelectDropdown > should render with empty options 1`] = `
                 id="downshift-121-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -3064,7 +3064,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
     >
       <div
         class="relative flex h-full flex-1"
@@ -3098,7 +3098,7 @@ exports[`SelectDropdown > should render with options values as numbers 1`] = `
                 id="downshift-123-label"
               />
               <div
-                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
               >
                 <div
                   class="relative flex h-full flex-1"

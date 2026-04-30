@@ -18,7 +18,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -125,7 +125,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -291,7 +291,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
                         tabindex="-1"
                         type="button"
@@ -399,7 +399,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
                         tabindex="-1"
                         type="button"
@@ -443,7 +443,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -550,7 +550,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -716,7 +716,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
                         tabindex="-1"
                         type="button"
@@ -824,7 +824,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
                         tabindex="-1"
                         type="button"
@@ -866,7 +866,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -973,7 +973,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1139,7 +1139,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
                         tabindex="-1"
                         type="button"
@@ -1247,7 +1247,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
                         tabindex="-1"
                         type="button"
@@ -1289,7 +1289,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1396,7 +1396,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1562,7 +1562,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
                         tabindex="-1"
                         type="button"
@@ -1604,7 +1604,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1711,7 +1711,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1805,7 +1805,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                             Mainsail Wallet 1
                           </div>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                            class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                             data-testid="WalletListItemMobile--selected"
                             type="button"
                           >
@@ -1941,7 +1941,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2048,7 +2048,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2214,7 +2214,7 @@ exports[`SearchRecipient > should render with my address on desktop 1`] = `
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
                         tabindex="-1"
                         type="button"
@@ -2256,7 +2256,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2363,7 +2363,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2457,7 +2457,7 @@ exports[`SearchRecipient > should render with my address on mobile 1`] = `
                             Mainsail Wallet 1
                           </div>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                            class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                             data-testid="WalletListItemMobile--selected"
                             type="button"
                           >
@@ -2593,7 +2593,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2700,7 +2700,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2866,7 +2866,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-0"
                         tabindex="-1"
                         type="button"
@@ -2908,7 +2908,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3015,7 +3015,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3181,7 +3181,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
                         tabindex="-1"
                         type="button"
@@ -3289,7 +3289,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
                         tabindex="-1"
                         type="button"
@@ -3331,7 +3331,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3438,7 +3438,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3604,7 +3604,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-success-700 dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                         data-testid="RecipientListItem__selected-button-0"
                         tabindex="-1"
                         type="button"
@@ -3712,7 +3712,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       class="flex w-[72px] min-w-[72px] flex-1 shrink-0 items-center justify-center pl-4"
                     >
                       <button
-                        class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                        class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500 dim:group-hover:text-theme-navy-700 text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                         data-testid="RecipientListItem__select-button-1"
                         tabindex="-1"
                         type="button"
@@ -3754,7 +3754,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
           class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
         >
           <button
-            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3861,7 +3861,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                     class="flex-1"
                   >
                     <div
-                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 -ml-4"
+                      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 -ml-4"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3955,7 +3955,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                             Mainsail Wallet 1
                           </div>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
+                            class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-success-600 dark:text-theme-green-600 dim:text-theme-green-600"
                             data-testid="WalletListItemMobile--selected"
                             type="button"
                           >
@@ -4085,7 +4085,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                             Mainsail Wallet 2
                           </div>
                           <button
-                            class="relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
+                            class="relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-sm leading-[17px] text-theme-navy-600 dark:text-theme-navy-400 dim:text-theme-navy-600"
                             data-testid="WalletListItemMobile"
                             type="button"
                           >
