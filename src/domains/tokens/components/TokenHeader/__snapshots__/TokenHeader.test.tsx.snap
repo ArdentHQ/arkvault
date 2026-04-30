@@ -91,6 +91,7 @@ exports[`TokenHeader > should not show address button when only one wallet exist
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
@@ -390,6 +391,7 @@ exports[`TokenHeader > should not show wallet hd label 1`] = `
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
@@ -689,6 +691,7 @@ exports[`TokenHeader > should render 1`] = `
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
@@ -988,6 +991,7 @@ exports[`TokenHeader > should render with tokens 1`] = `
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
@@ -1292,6 +1296,7 @@ exports[`TokenHeader > should show account name label when wallet is HD and sing
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
@@ -1591,6 +1596,7 @@ exports[`TokenHeader > should show balance information when tokens are available
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
@@ -1890,6 +1896,7 @@ exports[`TokenHeader > should show not available when no tokens are selected 1`]
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
@@ -2189,6 +2196,7 @@ exports[`TokenHeader > should toggle receive funds modal 1`] = `
         >
           <button
             class="space-x-3 text-base relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed bg-theme-primary-100 text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+            data-testid="Tokens__AddToken"
             type="button"
           >
             <div
