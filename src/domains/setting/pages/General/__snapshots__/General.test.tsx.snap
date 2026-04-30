@@ -205,7 +205,7 @@ exports[`General Settings > should disable submit button when profile is not res
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -272,7 +272,7 @@ exports[`General Settings > should disable submit button when profile is not res
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -328,7 +328,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         disabled=""
                         type="button"
@@ -385,7 +385,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         disabled=""
                         type="button"
@@ -442,7 +442,7 @@ exports[`General Settings > should disable submit button when profile is not res
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -525,7 +525,7 @@ exports[`General Settings > should disable submit button when profile is not res
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -1121,7 +1121,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                   class="upload-button-wrapper h-full w-full"
                                 >
                                   <button
-                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
+                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
                                     data-testid="SelectProfileImage__upload-button"
                                     type="button"
                                   >
@@ -1177,7 +1177,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               Profile Name
                             </label>
                             <div
-                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -1208,7 +1208,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -1248,7 +1248,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -1352,7 +1352,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -1392,7 +1392,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           BTC (Ƀ)…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -1500,7 +1500,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -1540,7 +1540,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -1644,7 +1644,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -1684,7 +1684,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           CryptoCompare…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -1788,7 +1788,7 @@ exports[`General Settings > should disable submit button when profile is not res
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -1828,7 +1828,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                           12h…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -1964,7 +1964,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -2004,7 +2004,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                             15 minutes…
                                           </div>
                                           <div
-                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -2597,7 +2597,7 @@ exports[`General Settings > should disable submit button when profile is not res
                                 data-testid="list-divided-item__value"
                               >
                                 <button
-                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
+                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
                                   type="button"
                                 >
                                   <div
@@ -2647,7 +2647,7 @@ exports[`General Settings > should disable submit button when profile is not res
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0 border-none sm:z-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="General-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -2877,7 +2877,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -2944,7 +2944,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -3000,7 +3000,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         type="button"
                       >
@@ -3056,7 +3056,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         type="button"
                       >
@@ -3112,7 +3112,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -3195,7 +3195,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -3836,7 +3836,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 class="absolute -top-2 -right-2 z-20"
                               >
                                 <button
-                                  class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+                                  class="relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
                                   data-testid="SelectProfileImage__remove-button"
                                   type="button"
                                 >
@@ -3894,7 +3894,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               Profile Name
                             </label>
                             <div
-                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -3925,7 +3925,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -3965,7 +3965,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -4069,7 +4069,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -4109,7 +4109,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           BTC (Ƀ)…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -4217,7 +4217,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -4257,7 +4257,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -4361,7 +4361,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -4401,7 +4401,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           CryptoCompare…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -4505,7 +4505,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -4545,7 +4545,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                           12h…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -4681,7 +4681,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -4721,7 +4721,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                             15 minutes…
                                           </div>
                                           <div
-                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -5314,7 +5314,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                                 data-testid="list-divided-item__value"
                               >
                                 <button
-                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
+                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
                                   type="button"
                                 >
                                   <div
@@ -5364,7 +5364,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0 border-none sm:z-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="General-settings__submit-button"
                           type="submit"
                         >
@@ -5593,7 +5593,7 @@ exports[`General Settings > should render 1`] = `
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -5660,7 +5660,7 @@ exports[`General Settings > should render 1`] = `
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -5716,7 +5716,7 @@ exports[`General Settings > should render 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         type="button"
                       >
@@ -5772,7 +5772,7 @@ exports[`General Settings > should render 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         type="button"
                       >
@@ -5828,7 +5828,7 @@ exports[`General Settings > should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -5911,7 +5911,7 @@ exports[`General Settings > should render 1`] = `
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -6509,7 +6509,7 @@ exports[`General Settings > should render 1`] = `
                                   class="upload-button-wrapper h-full w-full"
                                 >
                                   <button
-                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
+                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
                                     data-testid="SelectProfileImage__upload-button"
                                     type="button"
                                   >
@@ -6565,7 +6565,7 @@ exports[`General Settings > should render 1`] = `
                               Profile Name
                             </label>
                             <div
-                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -6596,7 +6596,7 @@ exports[`General Settings > should render 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -6636,7 +6636,7 @@ exports[`General Settings > should render 1`] = `
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -6740,7 +6740,7 @@ exports[`General Settings > should render 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -6780,7 +6780,7 @@ exports[`General Settings > should render 1`] = `
                                           BTC (Ƀ)…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -6888,7 +6888,7 @@ exports[`General Settings > should render 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -6928,7 +6928,7 @@ exports[`General Settings > should render 1`] = `
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -7032,7 +7032,7 @@ exports[`General Settings > should render 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -7072,7 +7072,7 @@ exports[`General Settings > should render 1`] = `
                                           CryptoCompare…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -7176,7 +7176,7 @@ exports[`General Settings > should render 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -7216,7 +7216,7 @@ exports[`General Settings > should render 1`] = `
                                           12h…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -7352,7 +7352,7 @@ exports[`General Settings > should render 1`] = `
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -7392,7 +7392,7 @@ exports[`General Settings > should render 1`] = `
                                             15 minutes…
                                           </div>
                                           <div
-                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -7985,7 +7985,7 @@ exports[`General Settings > should render 1`] = `
                                 data-testid="list-divided-item__value"
                               >
                                 <button
-                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
+                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
                                   type="button"
                                 >
                                   <div
@@ -8035,7 +8035,7 @@ exports[`General Settings > should render 1`] = `
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0 border-none sm:z-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="General-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -8336,7 +8336,7 @@ exports[`General Settings > should update profile 1`] = `
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -8403,7 +8403,7 @@ exports[`General Settings > should update profile 1`] = `
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -8459,7 +8459,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         type="button"
                       >
@@ -8515,7 +8515,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         type="button"
                       >
@@ -8571,7 +8571,7 @@ exports[`General Settings > should update profile 1`] = `
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -8654,7 +8654,7 @@ exports[`General Settings > should update profile 1`] = `
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -9252,7 +9252,7 @@ exports[`General Settings > should update profile 1`] = `
                                   class="upload-button-wrapper h-full w-full"
                                 >
                                   <button
-                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
+                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
                                     data-testid="SelectProfileImage__upload-button"
                                     type="button"
                                   >
@@ -9308,7 +9308,7 @@ exports[`General Settings > should update profile 1`] = `
                               Profile Name
                             </label>
                             <div
-                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -9339,7 +9339,7 @@ exports[`General Settings > should update profile 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -9379,7 +9379,7 @@ exports[`General Settings > should update profile 1`] = `
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -9483,7 +9483,7 @@ exports[`General Settings > should update profile 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -9523,7 +9523,7 @@ exports[`General Settings > should update profile 1`] = `
                                           BTC (Ƀ)…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -9631,7 +9631,7 @@ exports[`General Settings > should update profile 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -9671,7 +9671,7 @@ exports[`General Settings > should update profile 1`] = `
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -9775,7 +9775,7 @@ exports[`General Settings > should update profile 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -9815,7 +9815,7 @@ exports[`General Settings > should update profile 1`] = `
                                           CryptoCompare…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -9919,7 +9919,7 @@ exports[`General Settings > should update profile 1`] = `
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -9959,7 +9959,7 @@ exports[`General Settings > should update profile 1`] = `
                                           12h…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -10095,7 +10095,7 @@ exports[`General Settings > should update profile 1`] = `
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -10135,7 +10135,7 @@ exports[`General Settings > should update profile 1`] = `
                                             1 minute…
                                           </div>
                                           <div
-                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -10728,7 +10728,7 @@ exports[`General Settings > should update profile 1`] = `
                                 data-testid="list-divided-item__value"
                               >
                                 <button
-                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
+                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
                                   type="button"
                                 >
                                   <div
@@ -10778,7 +10778,7 @@ exports[`General Settings > should update profile 1`] = `
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0 border-none sm:z-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="General-settings__submit-button"
                           disabled=""
                           type="submit"
@@ -11008,7 +11008,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -11075,7 +11075,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -11131,7 +11131,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         type="button"
                       >
@@ -11187,7 +11187,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         type="button"
                       >
@@ -11243,7 +11243,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -11326,7 +11326,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -11924,7 +11924,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                   class="upload-button-wrapper h-full w-full"
                                 >
                                   <button
-                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
+                                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dim:bg-theme-dim-800 dim:text-theme-dim-50"
                                     data-testid="SelectProfileImage__upload-button"
                                     type="button"
                                   >
@@ -11980,7 +11980,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               Profile Name
                             </label>
                             <div
-                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                              class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -12011,7 +12011,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -12051,7 +12051,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -12155,7 +12155,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -12195,7 +12195,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           BTC (Ƀ)…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -12303,7 +12303,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -12343,7 +12343,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -12447,7 +12447,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -12487,7 +12487,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           CryptoCompare…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -12591,7 +12591,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -12631,7 +12631,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           12h…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -12767,7 +12767,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -12807,7 +12807,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             15 minutes…
                                           </div>
                                           <div
-                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -13400,7 +13400,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 data-testid="list-divided-item__value"
                               >
                                 <button
-                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
+                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
                                   type="button"
                                 >
                                   <div
@@ -13450,7 +13450,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0 border-none sm:z-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
                           data-testid="General-settings__submit-button"
                           type="submit"
                         >
@@ -13679,7 +13679,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               <span>
                 <span>
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -13746,7 +13746,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   <span>
                     <span>
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--server-status"
                         type="button"
                       >
@@ -13802,7 +13802,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--receive"
                         type="button"
                       >
@@ -13858,7 +13858,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="custom-button-nav-wrapper"
                     >
                       <button
-                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700"
                         data-testid="NavigationBar__buttons--send"
                         type="button"
                       >
@@ -13914,7 +13914,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                     class="group"
                   >
                     <button
-                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
+                      class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:bg-theme-dark-700 group-hover:bg-theme-secondary-200 w-auto p-1"
                       data-testid="NavigationBar__buttons--network"
                       type="button"
                     >
@@ -13997,7 +13997,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 class="m-0 items-center gap-2 space-x-0 md-lg:flex hidden"
               >
                 <button
-                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
+                  class="space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none group text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 flex flex-row items-center gap-2 rounded px-1 py-0.5"
                   data-testid="HideBalance-button"
                   type="button"
                 >
@@ -14637,7 +14637,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 class="absolute -top-2 -right-2 z-20"
                               >
                                 <button
-                                  class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
+                                  class="relative font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
                                   data-testid="SelectProfileImage__remove-button"
                                   type="button"
                                 >
@@ -14785,7 +14785,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -14825,7 +14825,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -14929,7 +14929,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -14969,7 +14969,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           BTC (Ƀ)…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -15077,7 +15077,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -15117,7 +15117,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           English…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -15221,7 +15221,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -15261,7 +15261,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           CryptoCompare…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -15365,7 +15365,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                               data-testid="SelectDropdown"
                             >
                               <div
-                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                               >
                                 <div
                                   class="relative flex h-full flex-1"
@@ -15405,7 +15405,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                           12h…
                                         </div>
                                         <div
-                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                         >
                                           <div
                                             class="relative flex h-full flex-1"
@@ -15541,7 +15541,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 sr-only"
+                                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 sr-only"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -15581,7 +15581,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                             15 minutes…
                                           </div>
                                           <div
-                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                                            class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -16174,7 +16174,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                                 data-testid="list-divided-item__value"
                               >
                                 <button
-                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
+                                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 disabled:cursor-not-allowed text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-300 focus:ring-theme-danger-300 bg-theme-danger-50 w-full sm:w-auto"
                                   type="button"
                                 >
                                   <div
@@ -16224,7 +16224,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                         class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0 border-none sm:z-0"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 dim:disabled:bg-theme-dim-700 dim:disabled:text-theme-secondary-600"
                           data-testid="General-settings__submit-button"
                           disabled=""
                           type="submit"

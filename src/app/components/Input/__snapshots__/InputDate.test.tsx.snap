@@ -12,7 +12,7 @@ exports[`InputDate > should render 1`] = `
         class="react-datepicker__input-container"
       >
         <div
-          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 react-datepicker-ignore-onclickoutside"
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1 react-datepicker-ignore-onclickoutside"
         >
           <div
             class="relative flex h-full flex-1"
