@@ -28,7 +28,7 @@ Feature: Token Actions
 		Then it should disappear from tokens table
 
 	@enableHideDust
-	Scenario: Successfully delete added token
+	Scenario: Enable Hide Dust flag and hide tokens with balance less than 0.01
 		Given Alice signs into a profile
 		And navigates to the tokens page
 		When she enables Hide Dust
