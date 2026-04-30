@@ -79,8 +79,8 @@ const mockAddTokenRequests = () => {
 				],
 			},
 		),
-	]
-}
+	];
+};
 
 cucumber(
 	"@addValidContract",
@@ -172,7 +172,7 @@ cucumber(
 		},
 		"Then tokens list should refresh": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=TokensTableRow]").count).eql(1);
-		}
+		},
 	},
 	[
 		mockRequest(
@@ -202,6 +202,6 @@ cucumber(
 					},
 				],
 			},
-		)
-	]
+		),
+	],
 );
