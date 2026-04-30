@@ -20,7 +20,7 @@ exports[`UpdateAddressName > should render 1`] = `
         class="relative"
       >
         <div
-          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+          class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
         >
           <div
             class="relative flex h-full flex-1"
@@ -41,7 +41,7 @@ exports[`UpdateAddressName > should render 1`] = `
       class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
     >
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__cancel"
         type="button"
       >
@@ -55,7 +55,7 @@ exports[`UpdateAddressName > should render 1`] = `
         class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
       />
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__submit"
         disabled=""
         type="submit"
@@ -170,7 +170,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 1`]
       class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
     >
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__cancel"
         type="button"
       >
@@ -184,7 +184,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 1`]
         class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
       />
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__submit"
         disabled=""
         type="submit"
@@ -299,7 +299,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 2`]
       class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
     >
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__cancel"
         type="button"
       >
@@ -313,7 +313,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 2`]
         class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
       />
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__submit"
         disabled=""
         type="submit"
@@ -428,7 +428,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 3`]
       class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
     >
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__cancel"
         type="button"
       >
@@ -442,7 +442,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 3`]
         class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
       />
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__submit"
         disabled=""
         type="submit"
@@ -557,7 +557,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 4`]
       class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
     >
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__cancel"
         type="button"
       >
@@ -571,7 +571,7 @@ exports[`UpdateAddressName > should show an error message for duplicate name 4`]
         class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
       />
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__submit"
         disabled=""
         type="submit"
@@ -686,7 +686,7 @@ exports[`UpdateAddressName > should show error message when name consists only o
       class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
     >
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__cancel"
         type="button"
       >
@@ -700,7 +700,7 @@ exports[`UpdateAddressName > should show error message when name consists only o
         class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
       />
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__submit"
         disabled=""
         type="submit"
@@ -815,7 +815,7 @@ exports[`UpdateAddressName > should show error message when name exceeds 42 char
       class="mt-4 flex w-full items-center justify-end leading-[18px] sm:leading-5"
     >
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__cancel"
         type="button"
       >
@@ -829,7 +829,7 @@ exports[`UpdateAddressName > should show error message when name exceeds 42 char
         class="h-4 relative inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
       />
       <button
-        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+        class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
         data-testid="UpdateWalletName__submit"
         disabled=""
         type="submit"

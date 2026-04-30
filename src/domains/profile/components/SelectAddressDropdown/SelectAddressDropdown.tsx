@@ -254,7 +254,7 @@ export const SelectAddressDropdown = React.forwardRef<HTMLInputElement, SelectAd
 											<div
 												data-testid="SelectRecipient__select-recipient"
 												className={cn("flex items-center", {
-													"text-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 cursor-pointer rounded bg-transparent p-1 transition-colors dark:hover:text-white":
+													"text-theme-secondary-700 hover:bg-theme-navy-200 hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:hover:bg-theme-dark-700 dim:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:hover:text-theme-dark-50 cursor-pointer rounded bg-transparent p-1 transition-colors":
 														!disabled,
 												})}
 												onClick={openRecipients}

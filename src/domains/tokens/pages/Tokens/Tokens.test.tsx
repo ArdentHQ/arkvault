@@ -256,6 +256,61 @@ describe("Tokens", () => {
 		expect(screen.getAllByTestId("TokensTable_Save")[0]).toBeInTheDocument();
 	});
 
+	it("should call reload with token address when reload button is clicked in token detail sidepanel", async () => {
+		const user = userEvent.setup();
+		const reloadMock = vi.fn();
+
+		vi.spyOn(useProfileTokensMock, "useProfileTokens").mockReturnValue({
+			fetchMore: vi.fn(),
+			hasEmptyResults: false,
+			hasMore: false,
+			isLoadingMore: false,
+			isLoadingTokens: false,
+			isReloading: false,
+			refresh: vi.fn(),
+			reload: reloadMock,
+			setSortBy: vi.fn(),
+			sortBy: { column: "date", desc: true },
+			tokens: [
+				{
+					address: () => profile.wallets().first().address(),
+					balance: () => "1000",
+					contractExplorerLink: () => "test",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "T1",
+						name: () => "Token 1",
+						symbol: () => "T1",
+						totalSupply: () => BigNumber.make(100),
+					}),
+				},
+			],
+		});
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
+		});
+
+		const tokenRow = screen.getAllByTestId("TokensTableRow")[0];
+		await user.click(tokenRow);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument();
+		});
+
+		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
+		await user.click(reloadButton);
+
+		expect(reloadMock).toHaveBeenCalledWith(profile.wallets().first().address());
+	});
+
 	it("should close confirmation modal and exit manage mode when confirm is clicked", async () => {
 		const user = userEvent.setup();
 

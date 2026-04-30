@@ -432,7 +432,7 @@ export const AddRecipient = ({
 												type="button"
 												variant="transparent"
 												disabled={!isSenderFilled}
-												className="text-theme-navy-600 dim:text-theme-dim-navy-600 p-0 text-sm"
+												className="text-theme-navy-600 dim:text-theme-dim-navy-600 hover:text-theme-navy-700 dark:hover:text-theme-dark-navy-500 dim:hover:text-theme-dim-navy-700 p-0 text-sm underline-offset-4 hover:underline"
 												onClick={() => {
 													setValue("isSendAllSelected", !getValues("isSendAllSelected"));
 												}}

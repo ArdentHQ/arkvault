@@ -49,19 +49,19 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.000126"
-        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim-hover:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
         >
           <div
             class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
           >
             <div
-              class="text-sm leading-[17px] sm:leading-5"
+              class="text-sm leading-[17px] sm:leading-5 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50 group-hover:dim:text-theme-dim-50"
             >
               Slow
             </div>
@@ -74,7 +74,7 @@ exports[`FeeField > should render 1`] = `
                 (
               </span>
               <span
-                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-200"
                 data-testid="Amount"
               >
                 0.000126 ARK
@@ -87,7 +87,7 @@ exports[`FeeField > should render 1`] = `
             </div>
           </div>
           <div
-            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-50"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-200"
           >
             <span>
               Confirmation Time
@@ -101,13 +101,13 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="true"
         aria-label="0.00012768"
-        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim-hover:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all"
         >
           <div
             class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
@@ -139,7 +139,7 @@ exports[`FeeField > should render 1`] = `
             </div>
           </div>
           <div
-            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-600"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-400"
           >
             <span>
               Confirmation Time
@@ -153,19 +153,19 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.0001512"
-        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim-hover:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
         >
           <div
             class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
           >
             <div
-              class="text-sm leading-[17px] sm:leading-5"
+              class="text-sm leading-[17px] sm:leading-5 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50 group-hover:dim:text-theme-dim-50"
             >
               Fast
             </div>
@@ -178,7 +178,7 @@ exports[`FeeField > should render 1`] = `
                 (
               </span>
               <span
-                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-200"
                 data-testid="Amount"
               >
                 0.0001512 ARK
@@ -191,7 +191,7 @@ exports[`FeeField > should render 1`] = `
             </div>
           </div>
           <div
-            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-50"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-200"
           >
             <span>
               Confirmation Time
@@ -256,19 +256,19 @@ exports[`FeeField > should render without data prop 1`] = `
       <button
         aria-checked="false"
         aria-label="0.000105"
-        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim-hover:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
         >
           <div
             class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
           >
             <div
-              class="text-sm leading-[17px] sm:leading-5"
+              class="text-sm leading-[17px] sm:leading-5 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50 group-hover:dim:text-theme-dim-50"
             >
               Slow
             </div>
@@ -281,7 +281,7 @@ exports[`FeeField > should render without data prop 1`] = `
                 (
               </span>
               <span
-                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-200"
                 data-testid="Amount"
               >
                 0.000105 ARK
@@ -294,7 +294,7 @@ exports[`FeeField > should render without data prop 1`] = `
             </div>
           </div>
           <div
-            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-50"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-200"
           >
             <span>
               Confirmation Time
@@ -308,13 +308,13 @@ exports[`FeeField > should render without data prop 1`] = `
       <button
         aria-checked="true"
         aria-label="0.0001064"
-        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim-hover:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all"
         >
           <div
             class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
@@ -346,7 +346,7 @@ exports[`FeeField > should render without data prop 1`] = `
             </div>
           </div>
           <div
-            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-600"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-100 dark:bg-theme-dark-500 dim:bg-theme-dim-navy-900 dim:text-theme-dim-navy-400"
           >
             <span>
               Confirmation Time
@@ -360,19 +360,19 @@ exports[`FeeField > should render without data prop 1`] = `
       <button
         aria-checked="false"
         aria-label="0.000126"
-        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
+        class="border-theme-primary-100 text-theme-secondary-700 hover:border-theme-primary-100 hover:bg-theme-primary-100 hover:text-theme-primary-700 focus:ring-theme-primary-400 disabled:border-theme-secondary-300 disabled:text-theme-secondary-500 aria-checked:border-theme-primary-600 aria-checked:bg-theme-primary-50 aria-checked:text-theme-primary-700 dark:text-theme-secondary-500 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200 dark:disabled:border-theme-secondary-700 dark:disabled:text-theme-secondary-700 dark:aria-checked:text-theme-dark-50 dim:text-theme-secondary-200 dim-hover:border-theme-dim-700 dim-hover:text-theme-dim-50 flex h-full w-full cursor-pointer items-center justify-center border-2 font-semibold transition-colors duration-300 focus:ring-2 focus:outline-hidden disabled:cursor-not-allowed disabled:border dark:aria-checked:cursor-default rounded group dark:border-theme-dark-700 dark:group-hover:bg-theme-dark-700 dark:aria-checked:border-theme-dark-400 dark:aria-checked:bg-theme-dark-800 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dim:aria-checked:border-theme-dim-navy-800 dim:aria-checked:bg-theme-dim-navy-950 dim:aria-checked:text-theme-dim-navy-50 p-0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
       >
         <div
-          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
+          class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex w-full flex-col transition-all dark:group-hover:text-theme-dark-50 dim:text-theme-dim-navy-50"
         >
           <div
             class="flex items-center justify-between p-3 sm:flex-col sm:items-start sm:justify-start sm:space-y-2"
           >
             <div
-              class="text-sm leading-[17px] sm:leading-5"
+              class="text-sm leading-[17px] sm:leading-5 group-hover:text-theme-secondary-900 dark:group-hover:text-theme-dark-50 group-hover:dim:text-theme-dim-50"
             >
               Fast
             </div>
@@ -385,7 +385,7 @@ exports[`FeeField > should render without data prop 1`] = `
                 (
               </span>
               <span
-                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-50"
+                class="whitespace-nowrap text-xs leading-[15px] transition-all dark:group-hover:text-theme-dark-200 dark:text-theme-dark-500 dim:text-theme-dim-200 group-hover:dim:text-theme-dim-200"
                 data-testid="Amount"
               >
                 0.000126 ARK
@@ -398,7 +398,7 @@ exports[`FeeField > should render without data prop 1`] = `
             </div>
           </div>
           <div
-            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-50"
+            class="text-theme-secondary-700 dark:text-theme-dark-200 flex w-full justify-between px-3 py-2 text-xs leading-[15px] font-semibold transition-all bg-theme-navy-50 dark:bg-theme-dark-800 dark:group-hover:bg-theme-dark-600 dark:group-hover:text-theme-dark-200 dim:bg-theme-dim-800 dim:text-theme-dim-200 group-hover:dim:bg-theme-dim-600 group-hover:dim:text-theme-dim-200"
           >
             <span>
               Confirmation Time
