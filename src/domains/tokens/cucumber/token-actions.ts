@@ -27,37 +27,33 @@ cucumber(
 		},
 		"And opens up add token side panel": async (t: TestController) => {
 			await t.click(Selector("[data-testid=Tokens__AddToken]"));
-			await t
-				.expect(Selector("h2").withText(translations.COMMON.ADD_TOKEN).exists)
-				.ok({ timeout: 60_000 });
+			await t.expect(Selector("h2").withText(translations.COMMON.ADD_TOKEN).exists).ok({ timeout: 60_000 });
 		},
 		"When she attempts to add a token with a valid contract address": async (t: TestController) => {
 			await t.typeText(Selector("[data-testid=Input__ContractAddress]"), validContractAddress, { paste: true });
-			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute('disabled')).notOk();
+			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute("disabled")).notOk();
 			await t.click(Selector("[data-testid=AddToken__save-button]"));
 		},
 		"Then a success toast message is displayed": async (t: TestController) => {
 			await t
 				.expect(
-					Selector("[data-testid=ToastMessage__content]").withText("Token SAM (SamCo…) successfully added").exists,
+					Selector("[data-testid=ToastMessage__content]").withText("Token SAM (SamCo…) successfully added")
+						.exists,
 				)
 				.ok();
 		},
 	},
 	[
-		mockRequest(
-			`${E2E_PUBLIC_API_URL}tokens/${validContractAddress}`,
-			{
-				"data": {
-					"address": "0xac2865629a820e18f3af48659f935cbcd5a9a4b4",
-					"symbol": "SamCoin",
-					"name": "SAM",
-					"decimals": 18,
-					"totalSupply": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
-					"deploymentHash": "61e7a27459b1d61893d2d89d2ed279301176ed0eae64bba734c734a6f1b3e027"
-				}
+		mockRequest(`${E2E_PUBLIC_API_URL}tokens/${validContractAddress}`, {
+			data: {
+				address: "0xac2865629a820e18f3af48659f935cbcd5a9a4b4",
+				symbol: "SamCoin",
+				name: "SAM",
+				decimals: 18,
+				totalSupply: "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+				deploymentHash: "61e7a27459b1d61893d2d89d2ed279301176ed0eae64bba734c734a6f1b3e027",
 			},
-		),
+		}),
 		mockRequest(
 			`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=0x659A76be283644AEc2003aa8ba26485047fd1BFB&minBalance=0&whitelist=0xac2865629a820e18f3af48659f935cbcd5a9a4b4&limit=30`,
 			{
@@ -112,28 +108,17 @@ cucumber(
 		},
 		"And opens up add token side panel": async (t: TestController) => {
 			await t.click(Selector("[data-testid=Tokens__AddToken]"));
-			await t
-				.expect(Selector("h2").withText(translations.COMMON.ADD_TOKEN).exists)
-				.ok({ timeout: 60_000 });
+			await t.expect(Selector("h2").withText(translations.COMMON.ADD_TOKEN).exists).ok({ timeout: 60_000 });
 		},
 		"When she attempts to add a token with a invalid contract address": async (t: TestController) => {
 			await t.typeText(Selector("[data-testid=Input__ContractAddress]"), invalidContractAddress, { paste: true });
-			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute('disabled')).ok();
+			await t.expect(Selector("[data-testid=AddToken__save-button]").hasAttribute("disabled")).ok();
 		},
 		"Then an error message is displayed": async (t: TestController) => {
 			await t
-				.expect(
-					Selector("div").withText(translations.TOKENS.ADD_TOKEN.STATE_INVALID_TOKEN_TEXT).exists,
-				)
+				.expect(Selector("div").withText(translations.TOKENS.ADD_TOKEN.STATE_INVALID_TOKEN_TEXT).exists)
 				.ok();
 		},
 	},
-	[
-		mockRequest(
-			`${E2E_PUBLIC_API_URL}tokens/${invalidContractAddress}`,
-			{},
-			404
-		)
-	],
+	[mockRequest(`${E2E_PUBLIC_API_URL}tokens/${invalidContractAddress}`, {}, 404)],
 );
-
