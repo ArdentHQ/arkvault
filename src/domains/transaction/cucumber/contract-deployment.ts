@@ -6,7 +6,6 @@ import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../portfolio/e2e/common";
 
 const translations = buildTranslations();
-const sendButton = Selector("[data-testid=SendRegistration__send-button]");
 
 export const openContractDeploymentSidePanel = async (t: any) => {
 	await t.click(Selector('[data-testid="WalletHeaderMobile__more-button"]'));
@@ -43,6 +42,7 @@ cucumber(
 			await t.expect(Selector("h2").withText(translations.TRANSACTION.AUTHENTICATION_STEP.TITLE).exists).ok();
 			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), MNEMONICS[0]);
 			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).notOk();
+			const sendButton = Selector("[data-testid=SendRegistration__send-button]");
 			await t.expect(sendButton.hasAttribute("disabled")).notOk();
 			await t.click(sendButton);
 		},
@@ -86,6 +86,6 @@ cucumber("@contractDeployment-invalidMnemonic", {
 		await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
 	},
 	"And the send button is disabled": async (t: TestController) => {
-		await t.expect(sendButton.hasAttribute("disabled")).ok();
+		await t.expect(Selector("[data-testid=SendRegistration__send-button]").hasAttribute("disabled")).ok();
 	},
 });
