@@ -9,7 +9,7 @@ Feature: Token Actions
         Then a success toast message is displayed
 
 	@addInvalidContract
-	Scenario: Fail to add a token with an invalid contract address
+	Scenario: Fail to add a token due to an invalid contract address
 		Given Alice signs into a profile
 		And navigates to the tokens page
 		And opens up add token side panel
