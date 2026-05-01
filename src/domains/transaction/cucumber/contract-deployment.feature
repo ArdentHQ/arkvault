@@ -12,4 +12,4 @@ Feature: Contract Deployment
 		Given Alice opens up contract deployment side panel
 		When she fills the form with an invalid mnemonic
 		Then an error is displayed on the mnemonic field
-		And the send button is disabled
+		And the send contract deployment button is disabled

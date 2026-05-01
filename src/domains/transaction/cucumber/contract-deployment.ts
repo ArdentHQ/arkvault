@@ -85,7 +85,7 @@ cucumber("@contractDeployment-invalidMnemonic", {
 	"Then an error is displayed on the mnemonic field": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
 	},
-	"And the send button is disabled": async (t: TestController) => {
+	"And the send contract deployment button is disabled": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=SendRegistration__send-button]").hasAttribute("disabled")).ok();
 	},
 });

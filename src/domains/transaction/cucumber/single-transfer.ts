@@ -132,15 +132,6 @@ cucumber(
 			},
 			{},
 		),
-		mockRequest(
-			{
-				method: "GET",
-				url: `${E2E_PUBLIC_API_URL}transactions?page=1&limit=20&from=0x659A76be283644AEc2003aa8ba26485047fd1BFB`,
-			},
-			{
-				data: {},
-			},
-		),
 	],
 );
 
