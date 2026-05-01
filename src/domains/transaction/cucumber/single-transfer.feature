@@ -9,7 +9,7 @@ Feature: Single Transfer
 	@singleTransfer-token
 	Scenario: Successfully send a token transfer
 		Given Alice is on the transaction form
-		When she selects a token and fill the form with a valid mnem	onic
+		When she selects a token and fill the form with a valid mnemonic
 		Then the transaction is successfully sent
 
     @singleTransfer-invalidMnemonic
