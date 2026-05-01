@@ -80,6 +80,70 @@ cucumber(
 		),
 	],
 );
+
+cucumber(
+	"@singleTransfer-token",
+	{
+		...preSteps,
+		"When she selects a token and fill the form with a valid mnemonic": async (t: TestController) => {
+			await t.click(Selector("[data-testid=SelectRecipient__select-recipient]").nth(1));
+			await t.expect(Selector("[data-testid=Modal__inner]").exists).ok();
+			await t.click(Selector("[data-testid=RecipientListItem__select-button-0]"));
+
+			// select token
+			await t.click(Selector("[data-testid=SelectDropdown__input]").nth(3));
+			await t.click(Selector("[data-testid=SelectDropdown__option--1]"));
+
+			await t.click(Selector("[data-testid=AddRecipient__send-all]"));
+
+			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+			await t.expect(Selector("h2").withText(translations.TRANSACTION.REVIEW_STEP.TITLE).exists).ok();
+			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk();
+			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").exists).ok({ timeout: 4000 });
+			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), MNEMONICS[0], { replace: true });
+			await t.click(Selector("[data-testid=SendTransfer__send-button"));
+		},
+		"Then the transaction is successfully sent": async (t: TestController) => {
+			await t
+				.expect(Selector("h2").withText(translations.TRANSACTION.SUCCESS.CREATED).exists)
+				.ok({ timeout: 5000 });
+		},
+	},
+	[
+		mockRequest(
+			{
+				method: "POST",
+				url: `${E2E_TX_API_URL}transactions`,
+			},
+			{
+				data: {
+					accept: [0],
+					broadcast: [0],
+					excess: [],
+					invalid: [],
+				},
+			},
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: `${E2E_PUBLIC_API_URL}blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002`,
+			},
+			{},
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: `${E2E_PUBLIC_API_URL}transactions?page=1&limit=20&from=0x659A76be283644AEc2003aa8ba26485047fd1BFB`,
+			},
+			{
+				data: {},
+			},
+		),
+	],
+);
+
 cucumber("@singleTransfer-invalidMnemonic", {
 	...preSteps,
 	"When she completes the single transfer process with an invalid mnemonic": async (t: TestController) => {
