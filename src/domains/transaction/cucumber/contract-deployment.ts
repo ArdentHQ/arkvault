@@ -1,13 +1,7 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import {
-	cucumber,
-	E2E_TX_API_URL,
-	MNEMONICS,
-	mockRequest,
-	visitWelcomeScreen,
-} from "../../../utils/e2e-utils";
+import { cucumber, E2E_TX_API_URL, MNEMONICS, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { importWallet } from "../../portfolio/e2e/common";
 
@@ -22,9 +16,7 @@ export const openContractDeploymentSidePanel = async (t: any) => {
 		),
 	);
 
-	await t
-		.expect(Selector("h2").withText(translations.TRANSACTION.CONTRACT_DEPLOYMENT.FORM_STEP.TITLE).exists)
-		.ok();
+	await t.expect(Selector("h2").withText(translations.TRANSACTION.CONTRACT_DEPLOYMENT.FORM_STEP.TITLE).exists).ok();
 };
 
 const preSteps = {
@@ -41,11 +33,7 @@ cucumber(
 		...preSteps,
 		"When she enters a valid bytecode": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-			await t.typeText(
-				Selector("[data-testid=ContractDeployment_Bytecode]"),
-				"0x60006000F3",
-				{ replace: true },
-			);
+			await t.typeText(Selector("[data-testid=ContractDeployment_Bytecode]"), "0x60006000F3", { replace: true });
 			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk();
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 			await t.expect(Selector("span").withText("0x60006000F3").exists).ok();
@@ -82,29 +70,22 @@ cucumber(
 	],
 );
 
-cucumber(
-	"@contractDeployment-invalidMnemonic",
-	{
-		...preSteps,
-		"When she fills the form with an invalid mnemonic": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-			await t.typeText(
-				Selector("[data-testid=ContractDeployment_Bytecode]"),
-				"0x60006000F3",
-				{ replace: true },
-			);
-			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk();
-			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
-			await t.expect(Selector("span").withText("0x60006000F3").exists).ok();
-			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
-			await t.expect(Selector("h2").withText(translations.TRANSACTION.AUTHENTICATION_STEP.TITLE).exists).ok();
-			await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", { replace: true });
-		},
-		"Then an error is displayed on the mnemonic field": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
-		},
-		"And the send button is disabled": async (t: TestController) => {
-			await t.expect(sendButton.hasAttribute("disabled")).ok();
-		},
-	}
-);
+cucumber("@contractDeployment-invalidMnemonic", {
+	...preSteps,
+	"When she fills the form with an invalid mnemonic": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
+		await t.typeText(Selector("[data-testid=ContractDeployment_Bytecode]"), "0x60006000F3", { replace: true });
+		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).notOk();
+		await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+		await t.expect(Selector("span").withText("0x60006000F3").exists).ok();
+		await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
+		await t.expect(Selector("h2").withText(translations.TRANSACTION.AUTHENTICATION_STEP.TITLE).exists).ok();
+		await t.typeText(Selector("[data-testid=AuthenticationStep__mnemonic]"), "wrong mnemonic", { replace: true });
+	},
+	"Then an error is displayed on the mnemonic field": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=AuthenticationStep__mnemonic]").hasAttribute("aria-invalid")).ok();
+	},
+	"And the send button is disabled": async (t: TestController) => {
+		await t.expect(sendButton.hasAttribute("disabled")).ok();
+	},
+});
