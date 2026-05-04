@@ -107,7 +107,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 					allowHideBalance={allowHideBalance}
 					profile={profile}
 					showCompactFormat={showCompactFormat}
-				tooltipContent={tooltipContent}
+					tooltipContent={tooltipContent}
 				/>
 			</div>
 		</Label>
