@@ -39,6 +39,10 @@ export class TokenDTO {
 		return this.#data.symbol.slice(0, allowedCharCount) + "…";
 	}
 
+	displayFullSymbol(): string {
+		return this.#data.symbol;
+	}
+
 	totalSupply(): BigNumber {
 		const decimals = this.decimals();
 		return BigNumber.make(this.#data.totalSupply, decimals).divide(BigNumber.powerOfTen(decimals));

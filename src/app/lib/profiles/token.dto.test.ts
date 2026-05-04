@@ -42,6 +42,17 @@ describe("TokenDTO", () => {
 		expect(token2.displaySymbol()).toBe("ABC");
 	});
 
+	it("should return the full display symbol without truncation", () => {
+		expect(token.displayFullSymbol()).toBe("DARK20");
+
+		const token2 = new TokenDTO({
+			...Fixture.data,
+			symbol: "ABCDEFGHIJKLMNOPQRS",
+		});
+
+		expect(token2.displayFullSymbol()).toBe("ABCDEFGHIJKLMNOPQRS");
+	});
+
 	it("should return the total supply", () => {
 		expect(token.totalSupply().toString()).toBe("100000000");
 	});

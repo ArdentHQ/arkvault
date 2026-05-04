@@ -86,6 +86,7 @@ describe("TransactionAmount.blocks", () => {
 			token: () => ({
 				token: () => ({
 					displaySymbol: () => "USDC",
+					displayFullSymbol: () => "USDC",
 					value: () => 100,
 				}),
 				value: () => 100,
@@ -139,7 +140,7 @@ describe("TransactionAmount.blocks", () => {
 			token: () => ({
 				token: () => ({
 					displaySymbol: () => "DARK2…",
-					symbol: () => "DARK20",
+					displayFullSymbol: () => "DARK20",
 				}),
 			}),
 		};

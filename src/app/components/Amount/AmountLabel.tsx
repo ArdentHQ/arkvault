@@ -46,6 +46,7 @@ interface AmountLabelProperties {
 	decimals?: number;
 	showCompactFormat?: boolean;
 	showTicker?: boolean;
+	tooltipContent?: string;
 }
 
 export const AmountLabel: React.FC<AmountLabelProperties> = ({
@@ -58,6 +59,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 	className,
 	textClassName,
 	hideSign,
+	tooltipContent,
 	allowHideBalance = false,
 	profile,
 	decimals,
@@ -105,6 +107,7 @@ export const AmountLabel: React.FC<AmountLabelProperties> = ({
 					allowHideBalance={allowHideBalance}
 					profile={profile}
 					showCompactFormat={showCompactFormat}
+				tooltipContent={tooltipContent}
 				/>
 			</div>
 		</Label>
