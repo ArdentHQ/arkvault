@@ -81,7 +81,7 @@ export const TokensTableHeader = ({
 
 	return (
 		<>
-			<div className="flex items-center gap-1">
+			<div className="flex items-center gap-1" data-testid="HideDustTokens__Wrapper">
 				<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap">
 					{t("TOKENS.HIDE_DUST")}
 				</div>

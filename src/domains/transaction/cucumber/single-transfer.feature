@@ -6,6 +6,12 @@ Feature: Single Transfer
         When she completes the single transfer process with a valid mnemonic
         Then the transaction is successfully sent
 
+	@singleTransfer-token
+	Scenario: Successfully send a token transfer
+		Given Alice is on the transaction form
+		When she selects a token and fill the form with a valid mnemonic
+		Then the transaction is successfully sent
+
     @singleTransfer-invalidMnemonic
     Scenario: Fail to send transaction due to invalid mnemonic
         Given Alice is on the transaction form
