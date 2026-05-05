@@ -405,7 +405,11 @@ describe("TokenService", () => {
 			await tokenService.sync();
 			expect(tokenService.selected().items()).toHaveLength(1);
 
-			await tokenService.syncOne(walletAddress);
+			const result = await tokenService.syncOne(walletAddress);
+
+			expect(result).toBeInstanceOf(WalletToken);
+			expect(result!.address()).toBe(walletAddress);
+			expect(result!.balanceRaw()).toBe(newBalanceRaw);
 
 			expect(tokenService.selected().items()).toHaveLength(1);
 			expect(tokenService.selected().items()[0].address()).toBe(walletAddress);

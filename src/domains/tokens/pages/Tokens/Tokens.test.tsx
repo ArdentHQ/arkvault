@@ -311,6 +311,69 @@ describe("Tokens", () => {
 		expect(reloadMock).toHaveBeenCalledWith(profile.wallets().first().address());
 	});
 
+	it("should update modal item when reload returns a refreshed token", async () => {
+		const user = userEvent.setup();
+		let loadedToken: string | undefined;
+
+		vi.spyOn(useProfileTokensMock, "useProfileTokens").mockReturnValue({
+			fetchMore: vi.fn(),
+			hasEmptyResults: false,
+			hasMore: false,
+			isLoadingMore: false,
+			isLoadingTokens: false,
+			isReloading: false,
+			refresh: vi.fn(),
+			reload: async (address?: string) => {
+				loadedToken = address;
+				return {
+					address: () => profile.wallets().first().address(),
+					balance: () => "5000",
+					contractExplorerLink: () => "test",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "T1",
+						name: () => "Token 1",
+						symbol: () => "T1",
+						totalSupply: () => BigNumber.make(100),
+					}),
+				};
+			},
+			setSortBy: vi.fn(),
+			sortBy: { column: "date", desc: true },
+			tokens: [
+				{
+					address: () => profile.wallets().first().address(),
+					balance: () => "1000",
+					contractExplorerLink: () => "test",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "T1",
+						name: () => "Token 1",
+						symbol: () => "T1",
+						totalSupply: () => BigNumber.make(100),
+					}),
+				},
+			],
+		});
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => expect(screen.getByTestId("TokenList")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument());
+
+		const tokenRow = screen.getAllByTestId("TokensTableRow")[0];
+		await user.click(tokenRow);
+
+		await waitFor(() => expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument());
+
+		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
+		await user.click(reloadButton);
+
+		expect(loadedToken).toBe(profile.wallets().first().address());
+	});
+
 	it("should close confirmation modal and exit manage mode when confirm is clicked", async () => {
 		const user = userEvent.setup();
 

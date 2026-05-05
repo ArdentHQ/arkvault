@@ -6,6 +6,9 @@ import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { expect, it, vi } from "vitest";
 import { IProfile } from "@/app/lib/profiles/profile.contract";
 import { server } from "@/tests/mocks/server";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { TokenDTO } from "@/app/lib/profiles/token.dto";
+import { WalletTokenDTO } from "@/app/lib/profiles/wallet-token.dto";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -364,5 +367,45 @@ describe("useProfileTokens", () => {
 
 		expect(result.current.isReloading).toBe(false);
 		expect(syncOneMock).toHaveBeenCalledWith(tokenAddress);
+	});
+
+	it("should update tokens state when reloading a single token", async () => {
+		const syncOneMock = vi.spyOn(profile.tokens(), "syncOne").mockResolvedValueOnce(
+			new WalletToken({
+				network: profile.activeNetwork(),
+				profile,
+				token: new TokenDTO({
+					address: "0x1",
+					decimals: 18,
+					name: "DARK20",
+					supply: "100000000000000000000000000",
+					symbol: "DARK20",
+					token: "0x180a864a755fed0144c622df49b83db577befefb",
+				}),
+				walletToken: new WalletTokenDTO({
+					address: "0x1",
+					balance: "999",
+					tokenAddress: "0x180a864a755fed0144c622df49b83db577befefb",
+				}),
+			}),
+		);
+
+		const wallets = profile.wallets().values();
+		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
+			wrapper,
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTokens).toBe(false));
+
+		const initialTokens = result.current.tokens;
+
+		await act(async () => {
+			await result.current.reload("0x1");
+		});
+
+		expect(result.current.isReloading).toBe(false);
+		expect(syncOneMock).toHaveBeenCalledWith("0x1");
+		expect(result.current.tokens.length).toBe(initialTokens.length);
+		expect(result.current.tokens).not.toBe(initialTokens);
 	});
 });
