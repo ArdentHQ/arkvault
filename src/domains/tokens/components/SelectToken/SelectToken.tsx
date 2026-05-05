@@ -32,7 +32,7 @@ export const SelectToken = ({
 			allowFreeInput={false}
 			wrapperClassName="w-full"
 			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
-			dropdownClassName="w-full max-w-full"
+			dropdownClassName="w-full max-w-full px-0"
 			className={className}
 			onChange={(option?: OptionProperties) => {
 				onChange?.({
@@ -60,24 +60,49 @@ export const SelectToken = ({
 				const displaySymbol = token ? token.token().displaySymbol() : wallet?.network().ticker();
 
 				return (
-					<div className="flex items-center justify-between" data-testid="token-option">
-						<div className="flex space-x-2">
-							<TokenNameInitials tokenName={option.label} className="text-md h-4 w-4 p-3 leading-8" />
-							<div className="break-all whitespace-normal">{option.label}</div>
-						</div>
+					<div className="flex justify-between sm:justify-start">
+						<div
+							className="flex flex-1 flex-col justify-center gap-2 sm:flex-row sm:items-center sm:justify-between"
+							data-testid="token-option"
+						>
+							<div className="flex items-center space-x-2">
+								<TokenNameInitials
+									tokenName={option.label}
+									className="sm:text-md p-2.5 text-sm leading-[17px] sm:p-3 sm:leading-5"
+								/>
+								<div className="text-sm leading-[17px] break-all whitespace-normal sm:text-base sm:leading-5">
+									{option.label}
+								</div>
+							</div>
 
-						<div className="flex items-center">
-							{balance && displaySymbol && (
-								<Amount
-									showCompactFormat
-									ticker={displaySymbol}
-									value={balance}
-									className="break-all whitespace-normal"
+							<div className="flex items-center">
+								{balance && displaySymbol && (
+									<Amount
+										showCompactFormat
+										ticker={displaySymbol}
+										value={balance}
+										className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] break-all whitespace-normal sm:text-base sm:leading-5"
+									/>
+								)}
+								<div className="hidden w-8 justify-end sm:flex">
+									{option.isSelected && (
+										<Icon
+											name="CheckmarkDouble"
+											dimensions={[16, 16]}
+											className="text-theme-primary-600 dark:text-theme-dark-50 dim:text-theme-dim-50"
+										/>
+									)}
+								</div>
+							</div>
+						</div>
+						<div className="sm:hidden">
+							{option.isSelected && (
+								<Icon
+									name="CheckmarkDouble"
+									dimensions={[16, 16]}
+									className="text-theme-primary-600 dark:text-theme-dark-50 dim:text-theme-dim-50"
 								/>
 							)}
-							<div className="flex w-8 justify-end">
-								{option.isSelected && <Icon name="CheckmarkDouble" dimensions={[16, 16]} />}
-							</div>
 						</div>
 					</div>
 				);

@@ -180,7 +180,7 @@ main {
 
 .select-options-list .select-list-option-head,
 .select-options-list .select-list-option {
-	@apply text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 relative rounded-lg border-0 px-3;
+	@apply text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 relative rounded-xs border-0 sm:px-3 px-2.5;
 }
 
 .select-options-list .select-list-option-head__label {
@@ -196,7 +196,7 @@ main {
 }
 
 .select-options-list .select-list-option__label {
-	@apply py-3;
+	@apply sm:py-3 py-2.5;
 }
 
 .select-options-list .select-list-option.is-highlighted {
