@@ -8,14 +8,12 @@ import { Icon } from "@/app/components/Icon";
 
 export const SelectToken = ({
 	options,
-	tokens,
 	className,
 	onChange,
 	value,
 	wallet,
 }: {
-	options: { label: string; value: string }[];
-	tokens: WalletToken[];
+	options: { label: string; value: string, data: any }[];
 	className?: string;
 	onChange?: (selected: { label?: string; value?: string | number }) => void;
 	value?: string;
@@ -57,14 +55,9 @@ export const SelectToken = ({
 				},
 			}}
 			renderLabel={(option) => {
-				let balance = wallet?.balance();
-				let displaySymbol = wallet?.network().ticker();
-
-				if (option.value !== "ARK") {
-					const token = tokens.find((token) => token.token().address() === option.value);
-					balance = token?.balance();
-					displaySymbol = token?.token().displaySymbol();
-				}
+				const token = option.data as WalletToken|undefined;
+				const balance = token ? token.balance() : wallet?.balance();
+				const displaySymbol = token ? token.token().displaySymbol() : wallet?.network().ticker();
 
 				return (
 					<div className="flex items-center justify-between" data-testid="token-option">
