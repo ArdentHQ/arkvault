@@ -365,7 +365,7 @@ export const AddRecipient = ({
 								</FormLabel>
 								<SelectToken
 									value={selectedAsset}
-									options={assets}
+									tokens={assets}
 									wallet={wallet}
 									onChange={({ value }) => {
 										const tokenAddress = value;
@@ -452,7 +452,7 @@ export const AddRecipient = ({
 								<SelectToken
 									wallet={wallet}
 									value={selectedAsset}
-									options={assets}
+									tokens={assets}
 									className="sm:rounded-r-none sm:border-r-transparent"
 									onChange={({ value }) => {
 										const tokenAddress = value;

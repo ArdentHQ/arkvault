@@ -5,14 +5,14 @@ import userEvent from "@testing-library/user-event";
 
 describe("SelectToken", () => {
 	it("should render", () => {
-		const { asFragment } = render(<SelectToken options={[{ label: "test", value: "test" }]} />);
+		const { asFragment } = render(<SelectToken tokens={[{ label: "test", value: "test" }]} />);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render multiple ", () => {
 		const { asFragment } = render(
 			<SelectToken
-				options={[
+				tokens={[
 					{ label: "token1", value: "token1" },
 					{ label: "token2", value: "token2" },
 				]}
@@ -25,7 +25,7 @@ describe("SelectToken", () => {
 		const { asFragment } = render(
 			<SelectToken
 				value="token1"
-				options={[
+				tokens={[
 					{ label: "token1", value: "token1" },
 					{ label: "token2", value: "token2" },
 				]}
@@ -38,7 +38,7 @@ describe("SelectToken", () => {
 		const onChangeMock = vi.fn();
 		render(
 			<SelectToken
-				options={[
+				tokens={[
 					{ label: "token1", value: "token1" },
 					{ label: "token2", value: "token2" },
 				]}

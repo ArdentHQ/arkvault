@@ -7,27 +7,27 @@ import { Contracts } from "@/app/lib/profiles";
 import { Icon } from "@/app/components/Icon";
 
 export const SelectToken = ({
-	options,
+	tokens,
 	className,
 	onChange,
 	value,
 	wallet,
 }: {
-	options: { label: string; value: string; data: any }[];
+	tokens: { label: string; value: string; data: any }[];
 	className?: string;
 	onChange?: (selected: { label?: string; value?: string | number }) => void;
 	value?: string;
 	wallet?: Contracts.IReadWriteWallet;
 }) => {
 	const { t } = useTranslation();
-	const selectedToken = value ? options.find((token) => token.value === value) : undefined;
+	const selectedToken = value ? tokens.find((token) => token.value === value) : undefined;
 
 	return (
 		<Select
 			id="SelectToken__dropdown"
 			defaultValue={selectedToken?.value}
 			showCaret={true}
-			options={options}
+			options={tokens}
 			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
 			wrapperClassName="w-full"
