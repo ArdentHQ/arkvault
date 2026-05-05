@@ -162,9 +162,17 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 			setIsReloading(true);
 
 			if (address) {
-				await profile.tokens().syncOne(address);
+				const refreshedToken = await profile.tokens().syncOne(address);
+				if (refreshedToken) {
+					setState((state) => ({
+						...state,
+						tokens: state.tokens.map((existingToken) =>
+							existingToken.address() === address ? refreshedToken : existingToken,
+						),
+					}));
+				}
 				setIsReloading(false);
-				return;
+				return refreshedToken;
 			}
 
 			await profile.tokens().sync();

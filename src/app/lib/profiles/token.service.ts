@@ -274,7 +274,7 @@ export class TokenService {
 		return total;
 	}
 
-	public async syncOne(address: string): Promise<void> {
+	public async syncOne(address: string): Promise<WalletToken | undefined> {
 		const page = this.#addressToPage.get(address) as number | undefined;
 		if (!page || !this.#lastQuery) {
 			return;
@@ -311,6 +311,8 @@ export class TokenService {
 						})
 					: token;
 			});
+
+			return this.#walletTokensCollection.items().find((walletToken) => walletToken.address() === address);
 		} catch {
 			return;
 		}
