@@ -301,7 +301,7 @@ describe("TransactionDetailModal", () => {
 			to: () => tokenAddress,
 			token: () => ({
 				address: () => tokenAddress,
-				displayFullSymbol: () => "TEST",
+				symbol: () => "TEST",
 				displaySymbol: () => "TEST",
 			}),
 			value: () => BigNumber.make(100),

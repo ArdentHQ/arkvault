@@ -29,12 +29,12 @@ export const TransactionAmountLabel = ({
 	const transactionToken = "token" in transaction ? transaction.token() : undefined;
 
 	const displaySymbol = transactionToken?.token().displaySymbol() ?? transaction.wallet().currency();
-	const displayFullSymbol = transactionToken?.token().displayFullSymbol() ?? transaction.wallet().currency();
+	const fullSymbol = transactionToken?.token().symbol() ?? transaction.wallet().currency();
 
 	const value = transactionToken ? transactionToken.value() : transaction.value();
 	const { returnedAmount } = useTransactionTotal(transaction);
 
-	const tooltipContent = Helpers.Currency.format(BigNumber.make(value).toString(), displayFullSymbol, {
+	const tooltipContent = Helpers.Currency.format(BigNumber.make(value).toString(), fullSymbol, {
 		withTicker: true,
 	});
 
@@ -77,7 +77,7 @@ export const TransactionTotalLabel = ({
 	const token = transaction.token();
 
 	const displaySymbol = token?.token().displaySymbol() ?? transaction.wallet().currency();
-	const displayFullSymbol = token?.token().displayFullSymbol() ?? transaction.wallet().currency();
+	const fullSymbol = token?.token().symbol() ?? transaction.wallet().currency();
 
 	const { returnedAmount, total } = useTransactionTotal(transaction);
 
@@ -89,7 +89,7 @@ export const TransactionTotalLabel = ({
 		return transaction.isSent();
 	};
 
-	const tooltipContent = Helpers.Currency.format(BigNumber.make(total).toString(), displayFullSymbol, {
+	const tooltipContent = Helpers.Currency.format(BigNumber.make(total).toString(), fullSymbol, {
 		withTicker: true,
 	});
 
