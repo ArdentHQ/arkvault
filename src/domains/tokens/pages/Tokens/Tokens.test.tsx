@@ -311,8 +311,7 @@ describe("Tokens", () => {
 		expect(reloadMock).toHaveBeenCalledWith(profile.wallets().first().address());
 	});
 
-	it("should update modal item when reload returns a refreshed token", async () => {
-		const user = userEvent.setup();
+	it("should update modal item on token refresh", async () => {
 		let loadedToken: string | undefined;
 
 		vi.spyOn(useProfileTokensMock, "useProfileTokens").mockReturnValue({
@@ -360,13 +359,14 @@ describe("Tokens", () => {
 
 		render(<Tokens />, { route });
 
-		await waitFor(() => expect(screen.getByTestId("TokenList")).toBeInTheDocument());
+		const user = userEvent.setup();
+		await expect(screen.findByTestId("TokenList")).resolves.toBeInTheDocument();
 		await waitFor(() => expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument());
 
 		const tokenRow = screen.getAllByTestId("TokensTableRow")[0];
 		await user.click(tokenRow);
 
-		await waitFor(() => expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument());
+		await expect(screen.findByTestId("TokenDetailSidepanel")).resolves.toBeInTheDocument();
 
 		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
 		await user.click(reloadButton);
