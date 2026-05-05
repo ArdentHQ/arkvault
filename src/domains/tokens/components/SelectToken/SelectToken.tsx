@@ -1,29 +1,37 @@
 import { OptionProperties, Select } from "@/app/components/SelectDropdown";
 import { TokenNameInitials } from "@/domains/portfolio/components/Tokens/TokensSummary";
 import { useTranslation } from "react-i18next";
+import { WalletToken } from "@/app/lib/profiles/wallet-token";
+import { Amount } from "@/app/components/Amount";
+import { Contracts } from "@/app/lib/profiles";
 
 export const SelectToken = ({
+	options,
 	tokens,
 	className,
 	onChange,
 	value,
+	wallet,
 }: {
-	tokens: { label: string; value: string }[];
+	options: { label: string; value: string }[];
+	tokens: WalletToken[];
 	className?: string;
 	onChange?: (selected: { label?: string; value?: string | number }) => void;
 	value?: string;
+	wallet?: Contracts.IReadWriteWallet;
 }) => {
 	const { t } = useTranslation();
-	const selectedToken = value ? tokens.find((token) => token.value === value) : undefined;
+	const selectedToken = value ? options.find((token) => token.value === value) : undefined;
 
 	return (
 		<Select
 			id="SelectToken__dropdown"
 			defaultValue={selectedToken?.value}
 			showCaret={true}
-			options={tokens}
+			options={options}
 			placeholder={t("TOKENS.SELECT_TOKEN")}
 			allowFreeInput={false}
+			wrapperClassName="w-full"
 			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
 			className={className}
 			onChange={(option?: OptionProperties) => {
@@ -46,12 +54,36 @@ export const SelectToken = ({
 					),
 				},
 			}}
-			renderLabel={(option) => (
-				<div className="flex items-center space-x-2" data-testid="token-option">
-					<TokenNameInitials tokenName={option.label} className="text-md h-4 w-4 p-3 leading-8" />
-					<div>{option.label}</div>
-				</div>
-			)}
+			renderLabel={(option) => {
+				let balance = wallet?.balance();
+				let displaySymbol = wallet?.network().ticker();
+
+				if (option.value !== "ARK") {
+					const token = tokens.find((token) => token.token().address() === option.value);
+					balance = token?.balance();
+					displaySymbol = token?.token().displaySymbol();
+				}
+
+				return (
+					<div className="flex items-center justify-between" data-testid="token-option">
+						<div className="flex space-x-2">
+							<TokenNameInitials tokenName={option.label} className="text-md h-4 w-4 p-3 leading-8" />
+							<div className="break-all whitespace-normal">{option.label}</div>
+						</div>
+
+						<div>
+							{balance && displaySymbol && (
+								<Amount
+									showCompactFormat
+									ticker={displaySymbol}
+									value={balance}
+									className="break-all whitespace-normal"
+								/>
+							)}
+						</div>
+					</div>
+				);
+			}}
 		/>
 	);
 };

@@ -213,7 +213,7 @@ const SelectDropdown = ({
 					<Tooltip
 						offset={0}
 						visible={isVisible}
-						placement="bottom"
+						placement="bottom-start"
 						className="dim:bg-transparent w-full bg-transparent dark:bg-transparent"
 						showFloatingArrow={false}
 						floatingWrapperClass="min-w-full"

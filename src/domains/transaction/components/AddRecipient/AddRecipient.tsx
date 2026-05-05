@@ -365,7 +365,9 @@ export const AddRecipient = ({
 								</FormLabel>
 								<SelectToken
 									value={selectedAsset}
-									tokens={assets}
+									options={assets}
+									tokens={tokens}
+									wallet={wallet}
 									onChange={({ value }) => {
 										const tokenAddress = value;
 										const token = tokens.find((token) => token.token().address() === tokenAddress);
@@ -446,11 +448,13 @@ export const AddRecipient = ({
 							</span>
 						</FormLabel>
 
-						<div className="flex">
+						<div className="relative flex">
 							<div className="hidden w-full sm:block sm:max-w-44">
 								<SelectToken
+									wallet={wallet}
 									value={selectedAsset}
-									tokens={assets}
+									options={assets}
+									tokens={tokens}
 									className="sm:rounded-r-none sm:border-r-transparent"
 									onChange={({ value }) => {
 										const tokenAddress = value;

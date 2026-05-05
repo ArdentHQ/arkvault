@@ -69,7 +69,7 @@ export const SendTransferSidePanel = ({
 	const activeProfile = useActiveProfile();
 	const { activeNetwork } = useActiveNetwork({ profile: activeProfile });
 
-	const { aggregated: tokens } = useProfileTokens({ profile: activeProfile });
+	const tokens = wallet?.tokens().values() ?? [];
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
