@@ -85,8 +85,8 @@ describe("TransactionAmount.blocks", () => {
 			isSent: () => true,
 			token: () => ({
 				token: () => ({
-					symbol: () => "USDC",
 					displaySymbol: () => "USDC",
+					symbol: () => "USDC",
 					value: () => 100,
 				}),
 				value: () => 100,
@@ -139,8 +139,8 @@ describe("TransactionAmount.blocks", () => {
 			isTokenTransfer: () => true,
 			token: () => ({
 				token: () => ({
-					symbol: () => "DARK20",
 					displaySymbol: () => "DARK2…",
+					symbol: () => "DARK20",
 				}),
 			}),
 		};
