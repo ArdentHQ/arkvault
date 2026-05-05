@@ -175,7 +175,6 @@ export const Tokens = () => {
 					onReloadToken={async () => {
 						const refreshedToken = await reload(tokenModalItem.address());
 						if (refreshedToken) {
-							console.log("refresh token", refreshedToken.balanceRaw());
 							setTokenModelItem(refreshedToken);
 						}
 					}}
