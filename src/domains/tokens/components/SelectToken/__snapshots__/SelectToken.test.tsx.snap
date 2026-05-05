@@ -3,7 +3,7 @@
 exports[`SelectToken > should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative w-full"
+    class="w-full"
     data-testid="SelectDropdown"
   >
     <div
@@ -127,7 +127,7 @@ exports[`SelectToken > should render 1`] = `
 exports[`SelectToken > should render multiple  1`] = `
 <DocumentFragment>
   <div
-    class="relative w-full"
+    class="w-full"
     data-testid="SelectDropdown"
   >
     <div
@@ -251,7 +251,7 @@ exports[`SelectToken > should render multiple  1`] = `
 exports[`SelectToken > should render with default value  1`] = `
 <DocumentFragment>
   <div
-    class="relative w-full"
+    class="w-full"
     data-testid="SelectDropdown"
   >
     <div
