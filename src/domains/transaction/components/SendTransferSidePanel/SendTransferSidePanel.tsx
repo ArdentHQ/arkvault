@@ -43,7 +43,6 @@ import { getAuthenticationStepSubtitle } from "@/domains/transaction/utils";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
 import { Image } from "@/app/components/Image";
-import { useProfileTokens } from "@/domains/tokens/hooks/use-profile-tokens";
 
 const MAX_TABS = 5;
 
