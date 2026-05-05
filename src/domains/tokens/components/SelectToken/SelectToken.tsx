@@ -13,7 +13,7 @@ export const SelectToken = ({
 	value,
 	wallet,
 }: {
-	options: { label: string; value: string, data: any }[];
+	options: { label: string; value: string; data: any }[];
 	className?: string;
 	onChange?: (selected: { label?: string; value?: string | number }) => void;
 	value?: string;
@@ -55,7 +55,7 @@ export const SelectToken = ({
 				},
 			}}
 			renderLabel={(option) => {
-				const token = option.data as WalletToken|undefined;
+				const token = option.data as WalletToken | undefined;
 				const balance = token ? token.balance() : wallet?.balance();
 				const displaySymbol = token ? token.token().displaySymbol() : wallet?.network().ticker();
 
