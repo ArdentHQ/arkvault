@@ -21,7 +21,10 @@ export const FormStep = ({ unvotes, votes, wallet, profile, isWalletFieldDisable
 	return (
 		<section data-testid="SendVote__form-step" className="space-y-3 sm:space-y-4">
 			<FormField name="senderAddress">
-				<FormLabel label={t("TRANSACTION.SENDER")} />
+				<FormLabel
+					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+					label={t("TRANSACTION.SENDER")}
+				/>
 
 				<div data-testid="sender-address" className="mb-3 sm:mb-0">
 					<SelectAddress

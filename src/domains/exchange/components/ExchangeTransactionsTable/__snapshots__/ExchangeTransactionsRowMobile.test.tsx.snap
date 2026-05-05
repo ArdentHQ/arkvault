@@ -101,7 +101,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -194,7 +194,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -222,7 +222,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -329,7 +329,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -422,7 +422,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -450,7 +450,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -557,7 +557,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -650,7 +650,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -678,7 +678,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -786,7 +786,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -879,7 +879,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -948,7 +948,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -1060,7 +1060,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -1153,7 +1153,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -1181,7 +1181,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -1293,7 +1293,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                   data-testid="TableRow__mobile-remove-button"
                   type="button"
                 >
@@ -1386,7 +1386,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        - 1 BTC
+                        - 1.00 BTC
                       </span>
                     </div>
                   </div>
@@ -1414,7 +1414,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                         class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
-                        + 100 ARK
+                        + 100.00 ARK
                       </span>
                     </div>
                   </div>
@@ -1514,7 +1514,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             />
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
               data-testid="TableRow__mobile-remove-button"
               type="button"
             >
@@ -1607,7 +1607,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 1 BTC
+                    - 1.00 BTC
                   </span>
                 </div>
               </div>
@@ -1635,7 +1635,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 100 ARK
+                    + 100.00 ARK
                   </span>
                 </div>
               </div>
@@ -1738,7 +1738,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
             />
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
               data-testid="TableRow__mobile-remove-button"
               type="button"
             >
@@ -1833,7 +1833,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 1 BTC
+                    - 1.00 BTC
                   </span>
                 </div>
               </div>
@@ -1861,7 +1861,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    + 100 ARK
+                    + 100.00 ARK
                   </span>
                 </div>
               </div>

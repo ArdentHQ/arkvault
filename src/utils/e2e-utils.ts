@@ -35,7 +35,9 @@ export const scrollToElement = async (selector: Selector, scrollable?: Selector)
 	return t.scroll(0, top);
 };
 
-export const BASEURL = "https://dwallets-evm.mainsailhq.com/api/";
+export const E2E_PUBLIC_API_URL = "https://testnet.mainsailhq.com/api/";
+export const E2E_TX_API_URL = "https://testnet.mainsailhq.com/tx/api/";
+export const E2E_EVM_API_URL = "https://testnet.mainsailhq.com/rpc/api/";
 
 const PING_RESPONSE_PATH = "coins/mainsail/devnet/ping";
 
@@ -72,17 +74,11 @@ const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...mockedAddresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(
-			`https://dwallets-evm.mainsailhq.com/api/wallets/${identifier}`,
-			`coins/mainsail/devnet/wallets/${identifier}`,
-		),
+		mockRequest(`${E2E_PUBLIC_API_URL}wallets/${identifier}`, `coins/mainsail/devnet/wallets/${identifier}`),
 	);
 
 	const mainnetMocks = ["0xb0E6c955a0Df13220C36Ea9c95bE471249247E57"].map((identifier: string) =>
-		mockRequest(
-			`https://wallets-evm.mainsailhq.com/api/wallets/${identifier}`,
-			`coins/mainsail/mainnet/wallets/${identifier}`,
-		),
+		mockRequest(`${E2E_PUBLIC_API_URL}/wallets/${identifier}`, `coins/mainsail/mainnet/wallets/${identifier}`),
 	);
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
@@ -103,12 +99,14 @@ const searchAddressesMocks = () => {
 		"0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6": [
 			{ limit: 30, page: 1 },
 			{ limit: 30, page: 2 },
+			{ limit: 10, page: 1 },
 		],
 		"0x659A76be283644AEc2003aa8ba26485047fd1BFB": [
 			{ limit: 10, page: 1 },
-			{ limit: 15, page: 1 },
-			{ limit: 15, page: 2 },
+			{ limit: 20, page: 1 },
 			{ limit: 30, page: 1 },
+			// { limit: 15, page: 1 },
+			// { limit: 15, page: 2 },
 		],
 		"0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54": [{ limit: 30, page: 1 }],
 	};
@@ -117,18 +115,23 @@ const searchAddressesMocks = () => {
 
 	for (const [address, configs] of Object.entries(addresses)) {
 		mocks.push(
-			...configs.map(({ page, limit }: { page: number; limit: number }) =>
-				mockRequest(
+			...configs.map(({ page, limit }: { page: number; limit: number }) => {
+				const fixture =
+					address === "0x659A76be283644AEc2003aa8ba26485047fd1BFB"
+						? `coins/mainsail/devnet/transactions/byAddress/${address}-1-30`
+						: `coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`;
+
+				return mockRequest(
 					(request: any) =>
-						request.url ===
-							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
-						request.url ===
-							`https://dwallets-evm.mainsailhq.com/api/transactions?limit=${limit}&address=${address}` ||
-						request.url ===
-							`https://dwallets-evm.mainsailhq.com/api/transactions?page=${page}&limit=${limit}&orderBy=timestamp:desc&address=${address}`,
-					`coins/mainsail/devnet/transactions/byAddress/${address}-${page}-${limit}`,
-				),
-			),
+						[
+							`${E2E_PUBLIC_API_URL}transactions?address=${address}&limit=${limit}&page=${page}`,
+							`${E2E_PUBLIC_API_URL}transactions?from=${address}&limit=${limit}&page=${page}`,
+							`${E2E_PUBLIC_API_URL}transactions?limit=${limit}&address=${address}`,
+							`${E2E_PUBLIC_API_URL}transactions?orderBy=timestamp:desc&address=${address}&limit=${limit}&page=${page}`,
+						].includes(request.url),
+					fixture,
+				);
+			}),
 		);
 	}
 
@@ -172,18 +175,12 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 export const requestMocks = {
 	configuration: [
 		// devnet
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/node/configuration",
-			"coins/mainsail/devnet/configuration",
-		),
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
-			"coins/mainsail/devnet/cryptoConfiguration",
-		),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
+		mockRequest(`${E2E_PUBLIC_API_URL}blockchain`, "coins/mainsail/devnet/blockchain"),
+		mockRequest(`${E2E_PUBLIC_API_URL}node/configuration`, "coins/mainsail/devnet/configuration"),
+		mockRequest(`${E2E_PUBLIC_API_URL}node/configuration/crypto`, "coins/mainsail/devnet/cryptoConfiguration"),
+		mockRequest(`${E2E_PUBLIC_API_URL}node/fees`, "coins/mainsail/devnet/node-fees"),
+		mockRequest(`${E2E_PUBLIC_API_URL}node/syncing`, "coins/mainsail/devnet/syncing"),
+		mockRequest(`${E2E_PUBLIC_API_URL}peers`, "coins/mainsail/devnet/peers"),
 
 		// mainnet
 		mockRequest(
@@ -262,59 +259,62 @@ export const requestMocks = {
 	],
 	transactions: [
 		// devnet
-		// mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+		// mockRequest(`${BASEURL}transactions/fees`, "coins/mainsail/devnet/transaction-fees"),
 
-		mockRequest(/^https:\/\/dwallets-evm\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}$/, (request: any) => {
-			const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
-			const match = request.url.match(regex);
-			const hash = match?.groups?.hash;
+		mockRequest(
+			/^https:\/\/(dwallets-evm|testnet)\.mainsailhq.com\/api\/transactions\/[a-fA-F0-9]{64}\?includeTokens=true$/,
+			(request: any) => {
+				const regex = /\/transactions\/(?<hash>0x[a-fA-F0-9]{64})(?=\/?$)/;
+				const match = request.url.match(regex);
+				const hash = match?.groups?.hash;
 
-			return JSON.stringify({
-				data: {
-					blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-					confirmations: 1,
-					data: "",
-					from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
-					gas: "21000",
-					gasPrice: "100000000000",
-					hash: hash,
-					nonce: "3",
-					senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
-					signature:
-						"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
-					to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
-					value: "2000000000000000000",
-					timestamp: "1752502567204",
-					receipt: {
-						gasRefunded: 0,
-						gasUsed: 21000,
-						status: 1,
+				return JSON.stringify({
+					data: {
+						blockHash: "05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
+						confirmations: 1,
+						data: "",
+						from: "0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+						gas: "21000",
+						gasPrice: "100000000000",
+						hash: hash,
+						nonce: "3",
+						senderPublicKey: "0311b11b0dea8851d49af7c673d7032e37ee12307f9bbd379b64bbdac6ca302e84",
+						signature:
+							"cd1b35240b0c1303392e4dc3e1fc83b9da7b74e5c96b99d1ae207c7c9d5480d868ecf4235298c6438f9c0ea9a8274082ebf051d86ff353ae1fb4fffe86cad91101",
+						to: "0x47ea9bAa16edd859C1792933556c4659A647749C",
+						value: "2000000000000000000",
+						timestamp: "1752502567204",
+						receipt: {
+							gasRefunded: 0,
+							gasUsed: 21000,
+							status: 1,
+						},
 					},
-				},
-			});
-		}),
+				});
+			},
+		),
 
 		// for notifications
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54",
+			`${E2E_PUBLIC_API_URL}transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54`,
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=30&orderBy=timestamp:desc&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+			`${E2E_PUBLIC_API_URL}transactions?page=1&limit=30&orderBy=timestamp:desc&address=0x659A76be283644AEc2003aa8ba26485047fd1BFB`,
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54,0x659A76be283644AEc2003aa8ba26485047fd1BFB",
+			`${E2E_PUBLIC_API_URL}transactions?page=1&limit=10&to=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6&address=0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6,0xA46720D11Bc8408411Cbd45057EeDA6d32D2Af54,0x659A76be283644AEc2003aa8ba26485047fd1BFB`,
 			transactionsFixture,
 		),
 
 		// block call
-		mockRequest(
-			"https://dwallets-evm.mainsailhq.com/api/blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002",
-			{},
-		),
+		mockRequest(`${E2E_PUBLIC_API_URL}blocks/05b124023ddd656c8a95664eb61846cc0f4e204341a0d86db325771077e7f002`, {}),
+
+		// unconfirmed transactions call
+		mockRequest((request: any) => request.url.includes("/transactions/unconfirmed"), {}),
 
 		// mainnet
 		// mockRequest("https://wallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/mainnet/transaction-fees"),
@@ -323,8 +323,8 @@ export const requestMocks = {
 	],
 	validators: [
 		// devnet
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators", validatorsFixture),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/validators?page=1&limit=100", validatorsFixture),
+		mockRequest(`${E2E_PUBLIC_API_URL}validators`, validatorsFixture),
+		mockRequest(`${E2E_PUBLIC_API_URL}validators?limit=100&page=1`, validatorsFixture),
 
 		// mainnet
 		// @TODO use mainnet mock when possible
@@ -332,12 +332,12 @@ export const requestMocks = {
 	],
 	wallets: [
 		mockRequest("https://wallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets?limit=1&nonce=0", {}),
+		mockRequest(`${E2E_PUBLIC_API_URL}wallets?limit=1&nonce=0`, {}),
 
 		...walletMocks(),
 	],
 	evm: [
-		mockRequest("https://dwallets-evm.mainsailhq.com/evm/api/", function (request: any) {
+		mockRequest(E2E_EVM_API_URL, function (request: any) {
 			const defaultResponse = JSON.stringify({
 				id: 1,
 				jsonrpc: "2.0",
@@ -368,7 +368,56 @@ export const requestMocks = {
 		}),
 	],
 	blocks: [
-		// mockRequest("https://dwallets-evm.mainsailhq.com/api/blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50", {}),
+		// mockRequest(`${BASEURL}blocks/1e6789dd661ea8cd38ded6fe818eba181589497a2cc3179c42bb5695c33bcf50`, {}),
+	],
+	tokens: [
+		...mockedAddresses.map((identifier: string) =>
+			mockRequest(
+				(request: any) => {
+					return [
+						`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=${identifier}&minBalance=0`,
+						`${E2E_PUBLIC_API_URL}wallets/tokens?addresses=${identifier}&minBalance=0&limit=30`,
+					].includes(request.url);
+				},
+				function () {
+					return JSON.stringify({
+						meta: {
+							totalCountIsEstimate: false,
+							count: 3,
+							first: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+							last: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+							next: null,
+							pageCount: 1,
+							previous: null,
+							self: `/wallets/tokens?addresses=${identifier}&minBalance=0.01&limit=30&ignoreWhitelist=false&page=1`,
+							totalCount: 3,
+						},
+						data: [
+							{
+								token: "0x12f6677522292654a231007c47b07971a7610908",
+								symbol: "Lorem",
+								name: "Lorem ipsum",
+								decimals: 18,
+								supply: "123456789000000000000000000",
+								addresses: {
+									[identifier]: "123456789000000000000000000",
+								},
+							},
+							{
+								token: "0x180a864a755fed0144c622df49b83db577befefb",
+								symbol: "DARK20",
+								name: "DARK20",
+								decimals: 18,
+								supply: "100000000000000000000000000",
+								addresses: {
+									[identifier]: "100000000000000000000000000",
+								},
+							},
+						],
+					});
+				},
+			),
+		),
 	],
 };
 
@@ -383,6 +432,7 @@ const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMoc
 	...requestMocks.other,
 	...requestMocks.exchange,
 	...requestMocks.profile,
+	...requestMocks.tokens,
 	...postHooks,
 	mockRequest(/^https?:\/\/(?!localhost)/, (request: any) => {
 		const mock: { url: string; method: string; body?: string } = {

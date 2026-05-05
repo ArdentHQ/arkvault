@@ -40,7 +40,7 @@ export const Notifications = ({
 		<>
 			<div className="mb-3 flex items-center justify-end">
 				<Button
-					data-testid="WalletVote__button"
+					data-testid="MarkAllNotificationsRead"
 					disabled={!hasUnread}
 					variant="secondary-icon"
 					className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 w-auto space-x-2 px-2 py-[3px] disabled:bg-transparent dark:disabled:bg-transparent"
@@ -116,6 +116,7 @@ export const Notification = ({
 	return (
 		<>
 			<div
+				data-testid="NotificationRow"
 				onClick={() => {
 					if (isMdAndAbove) {
 						onShowDetails();

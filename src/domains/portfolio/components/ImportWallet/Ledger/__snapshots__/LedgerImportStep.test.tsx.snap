@@ -36,7 +36,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -163,7 +163,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     class="whitespace-nowrap"
                     data-testid="Amount"
                   >
-                    0 ARK
+                    0.00 ARK
                   </span>
                 </div>
               </div>
@@ -183,7 +183,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
               Address #1
             </span>
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -557,7 +557,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0 ARK
+                          0.00 ARK
                         </span>
                       </div>
                     </div>
@@ -568,7 +568,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end font-semibold"
                   >
                     <button
-                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white my-2.5 p-4"
+                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white my-2.5 p-4"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -699,7 +699,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          0 ARK
+                          0.00 ARK
                         </span>
                       </div>
                     </div>
@@ -710,7 +710,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex px-3 items-center my-1 transition-colors duration-100 min-h-11 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 justify-end font-semibold"
                   >
                     <button
-                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white my-2.5 p-4"
+                      class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white my-2.5 p-4"
                       data-testid="LedgerImportStep__edit-alias"
                       type="button"
                     >
@@ -876,7 +876,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  0 ARK
+                  0.00 ARK
                 </span>
               </div>
             </div>
@@ -917,7 +917,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
                     Address #1
                   </span>
                   <button
-                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
                     data-testid="LedgerImportStep__edit-alias"
                     type="button"
                   >
@@ -1078,7 +1078,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                0 ARK
+                0.00 ARK
               </span>
             </div>
           </div>
@@ -1124,7 +1124,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
                   class="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 h-5 w-px border-transparent"
                 />
                 <button
-                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >

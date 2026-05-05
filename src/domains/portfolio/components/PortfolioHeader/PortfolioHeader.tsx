@@ -262,7 +262,7 @@ export const PortfolioHeader = ({
 							<Button
 								variant="secondary"
 								className={cn(
-									"dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent",
+									"dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent",
 									{
 										"ring-theme-primary-400 dark:ring-theme-primary-800 dark:ring-offset-theme-dark-950 h-auto! rounded py-[3px] ring-3 ring-offset-4 ring-offset-transparent dark:sm:ring-offset-transparent":
 											showImportHint,
@@ -273,7 +273,7 @@ export const PortfolioHeader = ({
 								<Icon
 									name="ArrowTurnDownBracket"
 									size="md"
-									className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+									className="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
 								/>
 								<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
 									{t("COMMON.IMPORT")}
@@ -286,13 +286,13 @@ export const PortfolioHeader = ({
 						/>
 						<Button
 							variant="secondary"
-							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+							className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
 							onClick={() => openPanel(Panel.CreateAddress)}
 						>
 							<Icon
 								name="Plus"
 								size="md"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
+								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:group-hover:text-theme-dark-50 group-hover:text-theme-primary-700 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50"
 							/>
 							<p className="dim:text-theme-dim-50 hidden text-base leading-5 font-semibold sm:block">
 								{t("COMMON.CREATE")}
@@ -466,7 +466,7 @@ export const PortfolioHeader = ({
 										>
 											<div className="my-auto flex flex-1">
 												<Button
-													data-testid="WalletHeader__s!isLoading&& end-button"
+													data-testid="WalletHeader__send-button"
 													className="dark:bg-theme-dark-navy-500 dark:hover:bg-theme-dark-navy-700 dim:bg-theme-dim-navy-600 dim:disabled:text-theme-dim-navy-700 dim:disabled:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:disabled:bg-theme-dim-navy-900 dim-hover:disabled:text-theme-dim-navy-700 my-auto flex-1 px-8"
 													disabled={
 														wallet.balance().isZero() ||

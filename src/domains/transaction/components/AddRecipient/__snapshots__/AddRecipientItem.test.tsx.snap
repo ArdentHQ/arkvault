@@ -10,7 +10,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
       class="flex items-center px-4 py-3 duration-150"
     >
       <button
-        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
         data-testid="AddRecipientItem--deleteButton-1"
         type="button"
       >
@@ -104,7 +104,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
             data-testid="Amount"
           >
-            1 DARK
+            1.00 DARK
           </span>
         </div>
       </div>
@@ -123,7 +123,7 @@ exports[`Add Recipient item > should render with size lg 1`] = `
       class="flex items-center px-4 py-3 duration-150"
     >
       <button
-        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
         data-testid="AddRecipientItem--deleteButton-1"
         type="button"
       >
@@ -207,7 +207,7 @@ exports[`Add Recipient item > should render with size lg 1`] = `
             class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
             data-testid="Amount"
           >
-            1 DARK
+            1.00 DARK
           </span>
         </div>
       </div>
@@ -240,7 +240,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
               Recipient #2
             </div>
             <button
-              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0"
               data-testid="AddRecipientItem--deleteButton_mobile"
               type="button"
             >
@@ -331,7 +331,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
                   class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
                   data-testid="Amount"
                 >
-                  1 DARK
+                  1.00 DARK
                 </span>
               </div>
             </div>
@@ -360,7 +360,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
               class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 leading-5 font-semibold"
               data-testid="Amount"
             >
-              1 DARK
+              1.00 DARK
             </span>
           </div>
         </div>
@@ -380,7 +380,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
       class="flex items-center px-4 py-3 duration-150"
     >
       <button
-        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
         data-testid="AddRecipientItem--deleteButton-1"
         type="button"
       >
@@ -464,7 +464,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
             class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
             data-testid="Amount"
           >
-            1 DARK
+            1.00 DARK
           </span>
         </div>
       </div>

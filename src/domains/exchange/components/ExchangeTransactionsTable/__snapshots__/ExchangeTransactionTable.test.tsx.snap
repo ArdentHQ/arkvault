@@ -396,27 +396,13 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -430,7 +416,21 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -487,7 +487,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -603,27 +603,13 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -637,7 +623,21 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -694,7 +694,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -810,27 +810,13 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -844,7 +830,21 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -901,7 +901,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1344,27 +1344,13 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1378,7 +1364,21 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1435,7 +1435,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1551,27 +1551,13 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1585,7 +1571,21 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1642,7 +1642,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -1758,27 +1758,13 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1792,7 +1778,21 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -1849,7 +1849,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2292,27 +2292,13 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2326,7 +2312,21 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2383,7 +2383,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2499,27 +2499,13 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2533,7 +2519,21 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2590,7 +2590,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2706,27 +2706,13 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2740,7 +2726,21 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -2797,7 +2797,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3240,27 +3240,13 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3274,7 +3260,21 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3331,7 +3331,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3447,27 +3447,13 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3481,7 +3467,21 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3538,7 +3538,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -3654,27 +3654,13 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3688,7 +3674,21 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -3745,7 +3745,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4188,27 +4188,13 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4222,7 +4208,21 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4279,7 +4279,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4395,27 +4395,13 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4429,7 +4415,21 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4486,7 +4486,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4602,27 +4602,13 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    1 BTC
+                    1.00 BTC
                   </span>
                   <span
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
-                >
-                  <span
-                    class="whitespace-nowrap text-sm"
-                    data-testid="Amount"
-                  >
-                    1 BTC
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4636,7 +4622,21 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    100 ARK
+                    1.00 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 gap-3 justify-end items-start xl:items-center my-1 py-2 xl:my-0 font-semibold"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    100.00 ARK
                   </span>
                 </div>
               </td>
@@ -4693,7 +4693,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 pr-3 mr-3 rounded-r dark:group-hover:bg-theme-dark-950 group-hover:bg-theme-primary-100 dim:group-hover:bg-theme-dim-950 items-start xl:items-center justify-end text-theme-secondary-text my-0 py-3 min-h-[66px] lg:min-h-11 lg:py-0 lg:pt-2.5 xl:pt-0"
                 >
                   <button
-                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
+                    class="space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent mt-0 p-1"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -4849,7 +4849,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -4942,7 +4942,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5011,7 +5011,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -5110,7 +5110,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -5203,7 +5203,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5272,7 +5272,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -5371,7 +5371,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -5464,7 +5464,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5533,7 +5533,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -5660,7 +5660,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -5753,7 +5753,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -5822,7 +5822,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -5921,7 +5921,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6014,7 +6014,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -6083,7 +6083,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>
@@ -6182,7 +6182,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         class="h-4 relative mx-2 inline-block border-t-0 border-l border-solid align-middle border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700"
                       />
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent hover:text-theme-primary-700 hover:bg-theme-primary-200 dark:hover:bg-theme-secondary-800 dark:hover:text-white dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim:bg-transparent cursor-pointer p-0!"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6275,7 +6275,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              - 1 BTC
+                              - 1.00 BTC
                             </span>
                           </div>
                         </div>
@@ -6344,7 +6344,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                               class="whitespace-nowrap text-sm"
                               data-testid="Amount"
                             >
-                              + 100 ARK
+                              + 100.00 ARK
                             </span>
                           </div>
                         </div>

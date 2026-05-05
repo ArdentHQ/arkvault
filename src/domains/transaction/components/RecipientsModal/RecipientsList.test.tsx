@@ -7,12 +7,12 @@ const recipients: RecipientItem[] = [
 	{
 		address: "FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ",
 		alias: "Recipient 1",
-		amount: 150,
+		amount: "150.00",
 	},
 	{
 		address: "AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ",
 		alias: "Recipient 2",
-		amount: 100,
+		amount: "100.00",
 	},
 ];
 

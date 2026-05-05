@@ -17,6 +17,8 @@ export class TokenService {
 	#network: Networks.Network;
 	#dustBalanceThreshold = "0.01";
 	#walletTokensCollection: WalletTokenCollection;
+	#lastQuery: WalletTokensQuery | undefined;
+	#addressToPage: Map<string, string | number | undefined>;
 
 	public constructor({ profile, network }: { profile: Contracts.IProfile; network: Networks.Network }) {
 		this.#profile = profile;
@@ -28,6 +30,7 @@ export class TokenService {
 			self: undefined,
 			totalCount: undefined,
 		});
+		this.#addressToPage = new Map();
 	}
 
 	/**
@@ -69,14 +72,39 @@ export class TokenService {
 		const hideDustTokens = this.#profile.settings().get(ProfileSetting.HideDustTokens);
 
 		try {
-			const response = await clientService.tokenAddresses({
-				addresses: this.#profile
-					.wallets()
-					.selected()
-					.map((wallet) => wallet.address()),
+			const addresses = this.#profile
+				.wallets()
+				.selected()
+				.map((wallet) => wallet.address());
+
+			if (addresses.length === 0) {
+				throw new Error("No address selected");
+			}
+
+			let tokensQuery: WalletTokensQuery = {
+				addresses,
 				minBalance: hideDustTokens ? this.#dustBalanceThreshold : "0",
+			};
+
+			const whitelistedContractAddresses = this.#profile.whitelistedContractAddresses();
+
+			if (whitelistedContractAddresses.length > 0) {
+				tokensQuery = {
+					...tokensQuery,
+					whitelist: whitelistedContractAddresses,
+				};
+			}
+
+			this.#lastQuery = {
+				...tokensQuery,
 				...(query ?? {}),
-			});
+			};
+
+			const response = await clientService.tokenAddresses(this.#lastQuery);
+
+			for (const item of response.items()) {
+				this.#addressToPage.set(item.address(), this.#lastQuery.page ?? 1);
+			}
 
 			this.#walletTokensCollection = new WalletTokenCollection(response.items(), response.getPagination());
 		} catch {
@@ -167,7 +195,7 @@ export class TokenService {
 	 *
 	 * @returns {ExtendedConfirmedTransactionDataCollection}
 	 */
-	async transfers(query?: TokenTransfersQuery): Promise<ExtendedConfirmedTransactionDataCollection> {
+	async transfers(query: TokenTransfersQuery | undefined = {}): Promise<ExtendedConfirmedTransactionDataCollection> {
 		const activeNetwork = this.#profile.activeNetwork();
 
 		const clientService = new ClientService({
@@ -182,10 +210,15 @@ export class TokenService {
 				.wallets()
 				.selected()
 				.map((wallet) => wallet.address()),
-			...(query ?? {}),
+			...query,
 		};
 
 		try {
+			const whitelist = this.#profile.whitelistedContractAddresses();
+			if (whitelist.length > 0) {
+				transfersQuery.whitelist = whitelist;
+			}
+
 			response = await clientService.tokenTransfers(transfersQuery);
 
 			const queryAddresses = [...transfersQuery.from, ...(transfersQuery.to ?? [])].filter(
@@ -218,6 +251,12 @@ export class TokenService {
 		return new ExtendedConfirmedTransactionDataCollection(transfers, response.getPagination());
 	}
 
+	#client(): ClientService {
+		return new ClientService({
+			config: this.#profile.activeNetwork().config(),
+			profile: this.#profile,
+		});
+	}
 	/**
 	 * Calculates the total balance of all tokens from selected wallets.
 	 *
@@ -233,5 +272,47 @@ export class TokenService {
 		}
 
 		return total;
+	}
+
+	public async syncOne(address: string): Promise<void> {
+		const page = this.#addressToPage.get(address) as number | undefined;
+		if (!page || !this.#lastQuery) {
+			return;
+		}
+
+		try {
+			const response = await this.#client().tokenAddresses({
+				...this.#lastQuery,
+				page: page,
+			});
+
+			const items = response.items();
+
+			if (items.length === 0) {
+				return;
+			}
+
+			for (const item of items) {
+				this.#addressToPage.set(item.address(), page);
+			}
+
+			this.#walletTokensCollection.transform((token: WalletToken) => {
+				const item = items.find((item) => item.address() === token.address());
+				return item
+					? new WalletToken({
+							network: this.#profile.activeNetwork(),
+							profile: this.#profile,
+							token: token.token(),
+							walletToken: new WalletTokenDTO({
+								address: item.address(),
+								balance: item.balanceRaw(),
+								tokenAddress: item.token().address(),
+							}),
+						})
+					: token;
+			});
+		} catch {
+			return;
+		}
 	}
 }

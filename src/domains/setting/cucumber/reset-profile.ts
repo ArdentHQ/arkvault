@@ -3,6 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToSettings } from "../e2e/common";
+import { modal } from "../../portfolio/e2e/common";
 
 const translations = buildTranslations();
 
@@ -15,7 +16,7 @@ cucumber("@resetProfile", {
 		await goToSettings(t);
 	},
 	"And has made changes to her settings": async (t: TestController) => {
-		await t.click(Selector("[data-testid=Input__suggestion]").withText("15 minutes"));
+		await t.click(Selector("[data-testid=SelectDropdown__input]").nth(5));
 		await t.click('[data-testid="SelectDropdown__option--0"]');
 		await t.click(Selector("button").withText(translations.COMMON.SAVE));
 		automaticSignOutPeriod = await Selector("input[name=automaticSignOutPeriod]").value;
@@ -25,7 +26,8 @@ cucumber("@resetProfile", {
 		await t.click(Selector("button").withText(translations.COMMON.RESET));
 	},
 	"And confirms the reset": async (t: TestController) => {
-		await t.click(Selector("button").withText(translations.COMMON.RESET).nth(-1));
+		await t.expect(modal.exists).ok();
+		await t.click(Selector("[data-testid=ResetProfile__submit-button]"));
 	},
 	"Then all settings are reset to default": async (t: TestController) => {
 		await t.expect(Selector("input[name=name]").value).eql(name);

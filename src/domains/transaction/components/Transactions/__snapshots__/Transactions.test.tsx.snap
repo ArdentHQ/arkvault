@@ -115,7 +115,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -190,7 +190,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -927,7 +927,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -939,7 +939,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -958,7 +958,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -970,7 +970,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -1496,7 +1496,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -1508,7 +1508,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -1527,7 +1527,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -1539,7 +1539,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -2065,7 +2065,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -2077,7 +2077,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -2096,7 +2096,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -2108,7 +2108,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -2634,7 +2634,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -2646,7 +2646,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -2665,7 +2665,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -2677,7 +2677,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -3203,7 +3203,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -3215,7 +3215,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -3234,7 +3234,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -3246,7 +3246,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -3772,7 +3772,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -3784,7 +3784,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -3803,7 +3803,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -3815,7 +3815,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -4314,7 +4314,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -4345,7 +4345,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -4844,7 +4844,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -4875,7 +4875,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -5374,7 +5374,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -5405,7 +5405,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -5904,7 +5904,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -5935,7 +5935,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -6434,7 +6434,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -6465,7 +6465,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -6964,7 +6964,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -6995,7 +6995,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -7494,7 +7494,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -7525,7 +7525,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -8024,7 +8024,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -8055,7 +8055,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -8554,7 +8554,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -8585,7 +8585,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -9084,7 +9084,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -9115,7 +9115,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -9614,7 +9614,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -9645,7 +9645,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -10144,7 +10144,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -10175,7 +10175,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -10674,7 +10674,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -10705,7 +10705,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -11204,7 +11204,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -11235,7 +11235,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -11734,7 +11734,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -11765,7 +11765,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -12264,7 +12264,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -12295,7 +12295,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -12794,7 +12794,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -12825,7 +12825,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -13324,7 +13324,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -13355,7 +13355,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -13854,7 +13854,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -13885,7 +13885,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -14384,7 +14384,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -14415,7 +14415,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -14914,7 +14914,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -14945,7 +14945,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -15444,7 +15444,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -15475,7 +15475,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -15974,7 +15974,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -16005,7 +16005,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -16504,7 +16504,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -16535,7 +16535,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -17034,7 +17034,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -17065,7 +17065,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -17564,7 +17564,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -17595,7 +17595,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -18094,7 +18094,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -18125,7 +18125,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -18624,7 +18624,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -18655,7 +18655,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -19154,7 +19154,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -19185,7 +19185,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -19684,7 +19684,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -19715,7 +19715,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -20214,7 +20214,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -20245,7 +20245,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -20744,7 +20744,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -20775,7 +20775,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -21274,7 +21274,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -21305,7 +21305,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -21804,7 +21804,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -21835,7 +21835,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -22334,7 +22334,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -22365,7 +22365,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -22864,7 +22864,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -22895,7 +22895,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -23433,7 +23433,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -23464,7 +23464,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -24002,7 +24002,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -24033,7 +24033,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -24571,7 +24571,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -24602,7 +24602,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -25140,7 +25140,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -25171,7 +25171,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -25709,7 +25709,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -25740,7 +25740,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -26278,7 +26278,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -26309,7 +26309,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -26646,7 +26646,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -26677,7 +26677,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -27014,7 +27014,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -27045,7 +27045,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -27382,7 +27382,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -27413,7 +27413,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -27750,7 +27750,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -27781,7 +27781,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -28118,7 +28118,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -28149,7 +28149,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -28486,7 +28486,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -28517,7 +28517,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -29059,7 +29059,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -29090,7 +29090,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -29632,7 +29632,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -29663,7 +29663,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -30205,7 +30205,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -30236,7 +30236,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -30778,7 +30778,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -30809,7 +30809,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -31351,7 +31351,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -31382,7 +31382,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -31924,7 +31924,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -31955,7 +31955,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -31971,7 +31971,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
     class="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-6 -mt-1 rounded-b-xl border-t px-6 py-4 md:-mx-px md:mt-0 md:border md:border-t-0"
   >
     <button
-      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full py-1.5 leading-5"
+      class="px-5 space-x-3 text-base relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white w-full py-1.5 leading-5"
       data-testid="transactions__fetch-more-button"
       type="button"
     >
@@ -32100,7 +32100,7 @@ exports[`Transactions > should hide view more button when there are no next page
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -32175,7 +32175,7 @@ exports[`Transactions > should hide view more button when there are no next page
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -32912,7 +32912,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -32924,7 +32924,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -32943,7 +32943,7 @@ exports[`Transactions > should hide view more button when there are no next page
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -32955,7 +32955,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -33454,7 +33454,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -33485,7 +33485,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -33984,7 +33984,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -34015,7 +34015,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -34514,7 +34514,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -34545,7 +34545,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -35044,7 +35044,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -35075,7 +35075,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -35574,7 +35574,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -35605,7 +35605,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -36104,7 +36104,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -36135,7 +36135,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -36673,7 +36673,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -36704,7 +36704,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -37041,7 +37041,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -37072,7 +37072,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -37614,7 +37614,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -37645,7 +37645,7 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -37775,7 +37775,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -37850,7 +37850,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
           data-testid="dropdown__toggle"
         >
           <button
-            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
+            class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white dark:hover:bg-theme-dark-navy-700 w-full px-4 py-1.5 text-base sm:w-fit"
             data-testid="CollapseToggleButton"
             type="button"
           >
@@ -38587,7 +38587,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -38599,7 +38599,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -38618,7 +38618,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                           class="whitespace-nowrap text-sm font-semibold"
                           data-testid="Amount"
                         >
-                          2
+                          2.00
                         </span>
                       </span>
                     </span>
@@ -38630,7 +38630,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -39129,7 +39129,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -39160,7 +39160,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -39659,7 +39659,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -39690,7 +39690,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -40189,7 +40189,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -40220,7 +40220,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -40719,7 +40719,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -40750,7 +40750,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -41249,7 +41249,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -41280,7 +41280,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -41779,7 +41779,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -41810,7 +41810,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -42348,7 +42348,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -42379,7 +42379,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -42716,7 +42716,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -42747,7 +42747,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -43289,7 +43289,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>
@@ -43320,7 +43320,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        0 BTC
+                        0.00 BTC
                       </span>
                     </span>
                   </div>

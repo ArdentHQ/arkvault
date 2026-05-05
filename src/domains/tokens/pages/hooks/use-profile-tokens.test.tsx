@@ -343,4 +343,26 @@ describe("useProfileTokens", () => {
 
 		expect(syncMock).toHaveBeenCalled();
 	});
+
+	it("should call syncOne with address when reloading a single token", async () => {
+		const syncOneMock = vi.spyOn(profile.tokens(), "syncOne");
+
+		const wallets = profile.wallets().values();
+		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
+			wrapper,
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTokens).toBe(false));
+
+		const tokenAddress = "0x123";
+
+		expect(result.current.isReloading).toBe(false);
+
+		await act(async () => {
+			await result.current.reload(tokenAddress);
+		});
+
+		expect(result.current.isReloading).toBe(false);
+		expect(syncOneMock).toHaveBeenCalledWith(tokenAddress);
+	});
 });

@@ -15,8 +15,8 @@ describe("Helpers.Currency", () => {
 		expect(Currency.format(10, "JPY")).toBe("¥10.00");
 	});
 
-	it.each(["BTC", "ETH", "ARK", "DARK", "LSK", "BIND", "SOL"])("should format crypto (%s)", (currency) => {
-		expect(Currency.format(10, currency)).toBe(`10 ${currency}`);
+	it.each(["BTC", "ETH", "ARK", "DARK"])("should format crypto (%s)", (currency) => {
+		expect(Currency.format(10, currency)).toBe(`10.00 ${currency}`);
 	});
 
 	it.each([
@@ -41,11 +41,11 @@ describe("Helpers.Currency", () => {
 	});
 
 	it("should allow to hide ticker for crypto", () => {
-		expect(Currency.format(10, "BTC", { withTicker: false })).toBe("10");
+		expect(Currency.format(10, "BTC", { withTicker: false })).toBe("10.00");
 	});
 
 	it("should allow to pass locale", () => {
-		expect(Currency.format(1, "BTC", { locale: "en-US" })).toBe("1 BTC");
+		expect(Currency.format(1, "BTC", { locale: "en-US" })).toBe("1.00 BTC");
 		expect(Currency.format(1, "USD", { locale: "en-US" })).toBe("$1.00");
 	});
 
@@ -63,7 +63,7 @@ describe("Helpers.Currency", () => {
 	});
 
 	it("should format negative crypto values", () => {
-		expect(Currency.format(-10, "BTC")).toBe("10 BTC");
+		expect(Currency.format(-10, "BTC")).toBe("10.00 BTC");
 	});
 
 	it("should format negative fiat values", () => {

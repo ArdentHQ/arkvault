@@ -81,7 +81,7 @@ export const TokensTableHeader = ({
 
 	return (
 		<>
-			<div className="flex items-center gap-1">
+			<div className="flex items-center gap-1" data-testid="HideDustTokens__Wrapper">
 				<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap">
 					{t("TOKENS.HIDE_DUST")}
 				</div>
@@ -107,7 +107,7 @@ export const TokensTableHeader = ({
 				<Button
 					data-testid="TokensTable_Manage"
 					variant="transparent"
-					className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+					className="text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group px-2 py-1 text-sm dark:bg-transparent"
 					onClick={() => {
 						toggleManageMode(true);
 					}}
@@ -122,7 +122,7 @@ export const TokensTableHeader = ({
 					<Button
 						data-testid="TokensTable_Cancel"
 						variant="transparent"
-						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+						className="text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group px-2 py-1 text-sm dark:bg-transparent"
 						onClick={onCancel}
 					>
 						{t("COMMON.CANCEL")}
@@ -133,7 +133,7 @@ export const TokensTableHeader = ({
 					<Button
 						data-testid="TokensTable_Save"
 						variant="transparent"
-						className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 px-2 py-1 text-sm hover:underline"
+						className="text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group px-2 py-1 text-sm dark:bg-transparent"
 						onClick={onSave}
 					>
 						{t("COMMON.SAVE")}

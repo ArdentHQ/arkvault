@@ -2,7 +2,7 @@ import { ButtonVariant, Size, Theme } from "@/types";
 
 const getBaseStyle = () => {
 	const baseStyle: string[] = [
-		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-hidden rounded cursor-pointer`,
+		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer`,
 		`focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400`,
 		`disabled:cursor-not-allowed`,
 	];
@@ -58,7 +58,8 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			hover:bg-theme-info-700 hover:text-white
 			focus:ring-theme-info-300
 		`,
-		primary: () => `text-white bg-theme-primary-600 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600`,
+		primary: () =>
+			"text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-600 dim:bg-theme-navy-800",
 		"primary-transparent": () => `
 			hover:text-theme-primary-700  dark:hover:text-theme-dark-50
 			hover:bg-theme-primary-200 dark:hover:bg-theme-dark-700

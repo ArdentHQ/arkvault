@@ -47,27 +47,27 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 
 	const selectedWalletAddresses = wallets.map((wallet) => wallet.address()).join("-");
 
-	useEffect(() => {
-		const loadTokens = async () => {
-			try {
-				const response = await fetchTokens({
-					wallets,
-				});
+	const loadTokens = useCallback(async () => {
+		try {
+			const response = await fetchTokens({
+				wallets,
+			});
 
-				setState((state) => ({
-					...state,
-					hasMore: response.hasMorePages() as boolean,
-					isLoadingTokens: false,
-					tokens: response.items(),
-				}));
-			} catch (error) {
-				/* istanbul ignore next -- @preserve */
-				console.error({ error });
-			}
-		};
-
-		delay(() => loadTokens(), 0);
+			setState((state) => ({
+				...state,
+				hasMore: response.hasMorePages() as boolean,
+				isLoadingTokens: false,
+				tokens: response.items(),
+			}));
+		} catch (error) {
+			/* istanbul ignore next -- @preserve */
+			console.error({ error });
+		}
 	}, [selectedWalletAddresses, orderBy, state]);
+
+	useEffect(() => {
+		delay(() => loadTokens(), 0);
+	}, [loadTokens]);
 
 	const fetchTokens = useCallback(
 		async ({ wallets, page }: FetchTokenProperties) => {
@@ -157,11 +157,21 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 
 	const hasEmptyResults = useMemo(() => tokens.length === 0 && !isLoadingTokens, [isLoadingTokens, tokens.length]);
 
-	const reload = useCallback(async () => {
-		setIsReloading(true);
-		await profile.tokens().sync();
-		setIsReloading(false);
-	}, [profile]);
+	const reload = useCallback(
+		async (address?: string) => {
+			setIsReloading(true);
+
+			if (address) {
+				await profile.tokens().syncOne(address);
+				setIsReloading(false);
+				return;
+			}
+
+			await profile.tokens().sync();
+			setIsReloading(false);
+		},
+		[profile],
+	);
 
 	return {
 		fetchMore,
@@ -170,6 +180,7 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 		isLoadingMore,
 		isLoadingTokens,
 		isReloading,
+		refresh: loadTokens,
 		reload,
 		setSortBy,
 		sortBy,

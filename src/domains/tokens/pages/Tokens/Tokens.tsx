@@ -15,20 +15,31 @@ import { TokenDetailSidepanel } from "@/domains/tokens/components/TokenDetailsSi
 import { useProfileTokens } from "@/domains/tokens/pages/hooks/use-profile-tokens";
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { TokenTransfers } from "@/domains/tokens/components/TokenTransfers";
+import { ResetWhenUnmounted } from "@/app/components/SidePanel/ResetWhenUnmounted";
+import { AddTokenSidePanel } from "@/domains/tokens/components/AddTokenSidePanel/AddTokenSidePanel";
 
 export const Tokens = () => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const [activeTab, setActiveTab] = useState<TabId>("tokens");
-	const { openPanel } = usePanels();
+	const { openPanel, closePanel, currentOpenedPanel } = usePanels();
 
 	const [tokenModalItem, setTokenModelItem] = useState<WalletToken | undefined>(undefined);
 
-	const { tokens, isLoadingTokens, isLoadingMore, isReloading, hasMore, hasEmptyResults, fetchMore, reload } =
-		useProfileTokens({
-			profile: activeProfile,
-			wallets: activeProfile.wallets().selected(),
-		});
+	const {
+		tokens,
+		isLoadingTokens,
+		isLoadingMore,
+		isReloading,
+		hasMore,
+		hasEmptyResults,
+		fetchMore,
+		reload,
+		refresh,
+	} = useProfileTokens({
+		profile: activeProfile,
+		wallets: activeProfile.wallets().selected(),
+	});
 
 	const [isManageMode, setManageMode] = useState<boolean>(false);
 	const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false);
@@ -41,6 +52,14 @@ export const Tokens = () => {
 				titleIcon={
 					<ThemeIcon
 						dimensions={[54, 55]}
+						lightIcon="TokensLight"
+						darkIcon="TokensDark"
+						dimIcon="TokensDim"
+					/>
+				}
+				mobileTitleIcon={
+					<ThemeIcon
+						dimensions={[24, 24]}
 						lightIcon="TokensLight"
 						darkIcon="TokensDark"
 						dimIcon="TokensDim"
@@ -117,6 +136,7 @@ export const Tokens = () => {
 					hasMore={!!hasMore}
 					fetchMore={fetchMore}
 					hasEmptyResults={hasEmptyResults}
+					refreshTokens={refresh}
 				/>
 			)}
 
@@ -134,11 +154,27 @@ export const Tokens = () => {
 				}}
 			/>
 
+			<ResetWhenUnmounted>
+				<AddTokenSidePanel
+					open={currentOpenedPanel?.name === Panel.AddToken}
+					onOpenChange={() => {
+						void closePanel();
+					}}
+					onAddToken={() => {
+						void refresh();
+					}}
+				/>
+			</ResetWhenUnmounted>
+
 			{tokenModalItem && (
 				<TokenDetailSidepanel
 					isOpen={!!tokenModalItem}
 					walletToken={tokenModalItem}
 					onClose={() => setTokenModelItem(undefined)}
+					isReloading={isReloading}
+					onReloadToken={() => {
+						reload(tokenModalItem.address());
+					}}
 					onSendToken={(tokenContractAddress) => {
 						setTimeout(() => {
 							setTokenModelItem(undefined);

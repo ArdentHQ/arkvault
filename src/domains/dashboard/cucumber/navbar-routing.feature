@@ -1,6 +1,6 @@
 Feature: Navbar Routing
 
-	@routeToPortolio
+	@routeToPortfolio
 	Scenario: Route to Portfolio page via navbar
 		Given Alice is signed into her profile
 		When she selects portfolio in the navbar
@@ -12,8 +12,8 @@ Feature: Navbar Routing
 		When she selects exchange in the navbar
 		Then she is routed to the exchange page
 
-	@routeToSend
-	Scenario: Route to Send page via navbar
+	@routeToTokens
+	Scenario: Route to Tokens page via navbar
 		Given Alice is signed into her profile
-		When she selects send in the navbar
-		Then she is routed to the send page
+		When she selects tokens in the navbar
+		Then she is routed to the tokens page

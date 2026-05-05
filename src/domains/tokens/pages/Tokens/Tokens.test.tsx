@@ -4,6 +4,10 @@ import { Contracts } from "@/app/lib/profiles";
 import { Tokens } from "./Tokens";
 import userEvent from "@testing-library/user-event";
 import { BigNumber } from "@/app/lib/helpers";
+import { expect, vi } from "vitest";
+import { requestMock, server } from "@/tests/mocks/server";
+import * as useProfileTokensMock from "@/domains/tokens/pages/hooks/use-profile-tokens";
+import React from "react";
 
 let profile: Contracts.IProfile;
 let route: string;
@@ -154,6 +158,67 @@ describe("Tokens", () => {
 		});
 	});
 
+	it("should refresh tokens when a token added", async () => {
+		const user = userEvent.setup();
+
+		const refreshMock = vi.fn();
+
+		vi.spyOn(useProfileTokensMock, "useProfileTokens").mockReturnValue({
+			fetchMore: vi.fn(),
+			hasEmptyResults: false,
+			hasMore: false,
+			isLoadingMore: false,
+			isLoadingTokens: false,
+			isReloading: false,
+			refresh: refreshMock,
+			reload: vi.fn(),
+			setSortBy: vi.fn(),
+			sortBy: { column: "date", desc: true },
+			tokens: [],
+		});
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+		});
+
+		await user.click(screen.getByText("Add Token"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("AddTokenSidePanel")).toBeInTheDocument();
+		});
+
+		const validAddress = "0x12f6677522292654a231007c47b07971a7610904";
+
+		server.use(
+			requestMock(`https://dwallets-evm.mainsailhq.com/api/tokens/${validAddress}`, {
+				data: {
+					address: "0x12f6677522292654a231007c47b07971a7610908",
+					decimals: 18,
+					deploymentHash: "7a9052d9d5fd73f106cbf6728f0661054de13a03a2c199c51c1a11f547890d0c",
+					name: "SamCoin",
+					symbol: "SAM",
+					totalSupply: "12345678912345000000000000000000",
+				},
+			}),
+		);
+
+		await user.clear(screen.getByTestId("Input__ContractAddress"));
+		await user.paste(validAddress);
+
+		await expect(screen.findByText(/SamCoin/)).resolves.toBeVisible();
+
+		const continueButton = () => screen.getByTestId("AddToken__save-button");
+		expect(continueButton()).toBeEnabled();
+
+		await user.click(continueButton());
+
+		await waitFor(() => {
+			expect(refreshMock).toHaveBeenCalled();
+		});
+	});
+
 	it("should close confirmation modal and stay in manage mode when cancel is clicked", async () => {
 		const user = userEvent.setup();
 
@@ -189,6 +254,61 @@ describe("Tokens", () => {
 		});
 
 		expect(screen.getAllByTestId("TokensTable_Save")[0]).toBeInTheDocument();
+	});
+
+	it("should call reload with token address when reload button is clicked in token detail sidepanel", async () => {
+		const user = userEvent.setup();
+		const reloadMock = vi.fn();
+
+		vi.spyOn(useProfileTokensMock, "useProfileTokens").mockReturnValue({
+			fetchMore: vi.fn(),
+			hasEmptyResults: false,
+			hasMore: false,
+			isLoadingMore: false,
+			isLoadingTokens: false,
+			isReloading: false,
+			refresh: vi.fn(),
+			reload: reloadMock,
+			setSortBy: vi.fn(),
+			sortBy: { column: "date", desc: true },
+			tokens: [
+				{
+					address: () => profile.wallets().first().address(),
+					balance: () => "1000",
+					contractExplorerLink: () => "test",
+					token: () => ({
+						address: () => "0xToken1",
+						decimals: () => 18,
+						displaySymbol: () => "T1",
+						name: () => "Token 1",
+						symbol: () => "T1",
+						totalSupply: () => BigNumber.make(100),
+					}),
+				},
+			],
+		});
+
+		render(<Tokens />, { route });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenList")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("TokensTableRow")[0]).toBeInTheDocument();
+		});
+
+		const tokenRow = screen.getAllByTestId("TokensTableRow")[0];
+		await user.click(tokenRow);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TokenDetailSidepanel")).toBeInTheDocument();
+		});
+
+		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
+		await user.click(reloadButton);
+
+		expect(reloadMock).toHaveBeenCalledWith(profile.wallets().first().address());
 	});
 
 	it("should close confirmation modal and exit manage mode when confirm is clicked", async () => {

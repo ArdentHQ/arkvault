@@ -43,7 +43,10 @@ export const FormStep = ({
 	return (
 		<section className="space-y-4">
 			<FormField name="signatory-address">
-				<FormLabel textClassName="text-base" label={t("COMMON.SIGNING_ADDRESS")} />
+				<FormLabel
+					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+					label={t("COMMON.SIGNING_ADDRESS")}
+				/>
 				<SelectAddressDropdown
 					disabled={disabled}
 					profile={profile}
@@ -55,7 +58,10 @@ export const FormStep = ({
 			</FormField>
 
 			<FormField name="message">
-				<FormLabel label={t("COMMON.MESSAGE")} />
+				<FormLabel
+					textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"
+					label={t("COMMON.MESSAGE")}
+				/>
 				<InputCounter
 					defaultValue={message}
 					onChange={(event: ChangeEvent<HTMLInputElement>) =>
