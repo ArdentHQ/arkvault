@@ -359,7 +359,7 @@ export const AddRecipient = ({
 						</FormField>
 
 						<FormField name="asset">
-							<div className="block space-y-2 sm:hidden">
+							<div className="relative block space-y-2 sm:hidden">
 								<FormLabel>
 									<div>{t("COMMON.ASSET")}</div>
 								</FormLabel>

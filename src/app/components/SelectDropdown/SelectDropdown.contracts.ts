@@ -41,6 +41,7 @@ export type SelectDropdownProperties = {
 	defaultSelectedItem?: OptionProperties;
 	placeholder?: string;
 	innerClassName?: string;
+	dropdownClassName?: string;
 	showCaret?: boolean;
 	isInvalid?: boolean;
 	showOptions?: boolean;
@@ -76,5 +77,6 @@ export type SelectProperties = {
 	renderLabel?: (option: OptionProperties) => JSX.Element;
 	allowOverflow?: boolean;
 	wrapperClassName?: string;
+	dropdownClassName?: string;
 	ref?: React.Ref<HTMLInputElement>;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { WalletToken } from "@/app/lib/profiles/wallet-token";
 import { Amount } from "@/app/components/Amount";
 import { Contracts } from "@/app/lib/profiles";
+import { Icon } from "@/app/components/Icon";
 
 export const SelectToken = ({
 	options,
@@ -33,6 +34,7 @@ export const SelectToken = ({
 			allowFreeInput={false}
 			wrapperClassName="w-full"
 			innerClassName="text-theme-secondary-900 dark:text-theme-secondary-500 dim:text-theme-dim-500"
+			dropdownClassName="w-full max-w-full"
 			className={className}
 			onChange={(option?: OptionProperties) => {
 				onChange?.({
@@ -71,7 +73,7 @@ export const SelectToken = ({
 							<div className="break-all whitespace-normal">{option.label}</div>
 						</div>
 
-						<div>
+						<div className="flex items-center">
 							{balance && displaySymbol && (
 								<Amount
 									showCompactFormat
@@ -80,6 +82,9 @@ export const SelectToken = ({
 									className="break-all whitespace-normal"
 								/>
 							)}
+							<div className="flex w-8 justify-end">
+								{option.isSelected && <Icon name="CheckmarkDouble" dimensions={[16, 16]} />}
+							</div>
 						</div>
 					</div>
 				);
