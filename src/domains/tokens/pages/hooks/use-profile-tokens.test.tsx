@@ -370,42 +370,95 @@ describe("useProfileTokens", () => {
 	});
 
 	it("should update tokens state when reloading a single token", async () => {
-		const syncOneMock = vi.spyOn(profile.tokens(), "syncOne").mockResolvedValueOnce(
-			new WalletToken({
-				network: profile.activeNetwork(),
-				profile,
-				token: new TokenDTO({
-					address: "0x1",
-					decimals: 18,
-					name: "DARK20",
-					supply: "100000000000000000000000000",
-					symbol: "DARK20",
-					token: "0x180a864a755fed0144c622df49b83db577befefb",
-				}),
-				walletToken: new WalletTokenDTO({
-					address: "0x1",
-					balance: "999",
-					tokenAddress: "0x180a864a755fed0144c622df49b83db577befefb",
-				}),
-			}),
-		);
-
 		const wallets = profile.wallets().values();
+
+		const mockTokenA = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: new TokenDTO({
+				address: "0x01",
+				decimals: 18,
+				name: "Token A",
+				supply: "1000",
+				symbol: "TOKENA",
+				token: "0x1",
+			}),
+			walletToken: new WalletTokenDTO({
+				address: "0x01",
+				balance: "500",
+				tokenAddress: "0x1",
+			}),
+		});
+
+		const mockTokenB = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: new TokenDTO({
+				address: "0x02",
+				decimals: 18,
+				name: "Token B",
+				supply: "2000",
+				symbol: "TOKENB",
+				token: "0xAddrB",
+			}),
+			walletToken: new WalletTokenDTO({
+				address: "0x02",
+				balance: "1500",
+				tokenAddress: "0xAddrB",
+			}),
+		});
+
+		const refreshedTokenA = new WalletToken({
+			network: profile.activeNetwork(),
+			profile,
+			token: new TokenDTO({
+				address: "0x01",
+				decimals: 18,
+				name: "Token A",
+				supply: "9999",
+				symbol: "TOKENA",
+				token: "0x03",
+			}),
+			walletToken: new WalletTokenDTO({
+				address: "0x01",
+				balance: "9999",
+				tokenAddress: "0x03",
+			}),
+		});
+
+		vi.spyOn(profile.tokens(), "aggregated").mockReturnValueOnce({
+			hasMorePages: () => false,
+			items: () => [mockTokenA, mockTokenB],
+		});
+
+		const syncOneMock = vi.spyOn(profile.tokens(), "syncOne").mockResolvedValueOnce(refreshedTokenA);
+
 		const { result } = renderHook(() => useProfileTokens({ profile, wallets }), {
 			wrapper,
 		});
 
 		await waitFor(() => expect(result.current.isLoadingTokens).toBe(false));
+		expect(result.current.tokens).toHaveLength(2);
 
-		const initialTokens = result.current.tokens;
+		const originalTokenBAddress = result.current.tokens[1].address();
 
 		await act(async () => {
-			await result.current.reload("0x1");
+			await result.current.reload("0x01");
 		});
 
 		expect(result.current.isReloading).toBe(false);
-		expect(syncOneMock).toHaveBeenCalledWith("0x1");
-		expect(result.current.tokens.length).toBe(initialTokens.length);
-		expect(result.current.tokens).not.toBe(initialTokens);
+		expect(syncOneMock).toHaveBeenCalledWith("0x01");
+
+		const tokenA = result.current.tokens.find((t) => t.address() === "0x01");
+		expect(tokenA).toBeDefined();
+		expect(tokenA!.address()).toBe("0x01");
+		expect(tokenA).not.toBe(mockTokenA);
+
+		const tokenB = result.current.tokens.find((t) => t.address() === originalTokenBAddress);
+		expect(tokenB).toBeDefined();
+		expect(tokenB!.address()).toBe("0x02");
+		expect(tokenB).toBe(mockTokenB);
+
+		syncOneMock.mockRestore();
 	});
 });
