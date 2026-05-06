@@ -280,9 +280,16 @@ describe("SendTransferSidePanel", () => {
 	it("should send a token transfer", async () => {
 		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
 
-		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress="0xdeb478251073157e400c3d8d2ed92a85c958f9fa" />, {
-			route: `/profiles/${fixtureProfileId}/dashboard`,
-		});
+		render(
+			<SendTransferSidePanel
+				open={true}
+				onOpenChange={vi.fn()}
+				tokenContractAddress="0xdeb478251073157e400c3d8d2ed92a85c958f9fa"
+			/>,
+			{
+				route: `/profiles/${fixtureProfileId}/dashboard`,
+			},
+		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
@@ -334,7 +341,6 @@ describe("SendTransferSidePanel", () => {
 		transactionMock.mockRestore();
 		walletSyncedMock.mockRestore();
 	});
-
 
 	it.each([true, false])("should send a single transfer via side panel in testnet:%s", async (isTestnet) => {
 		const testnetMock = vi.spyOn(wallet.network(), "isTest").mockReturnValue(isTestnet);
