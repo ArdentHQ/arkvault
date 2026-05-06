@@ -103,11 +103,11 @@ describe("SelectToken", () => {
 	});
 
 	it("should display native token when `option.data` is `undefined`", async () => {
-		render(<SelectToken wallet={wallet} tokens={[{ data: undefined, label: "ARK", value: "ARK" }, ...tokens, ]} />);
+		render(<SelectToken wallet={wallet} tokens={[{ data: undefined, label: "ARK", value: "ARK" }, ...tokens]} />);
 
 		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
 
-		await expect(screen.findByTestId('SelectDropdown__option--0')).resolves.toBeInTheDocument();
+		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeInTheDocument();
 
 		await expect(screen.findByText("95.27653252325068 ARK")).resolves.toBeInTheDocument();
 	});
