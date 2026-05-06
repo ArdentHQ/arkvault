@@ -222,9 +222,7 @@ describe("SendTransferSidePanel", () => {
 	it("should send a single transfer via side panel with preselected token", async () => {
 		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
 
-		const selectedTokenMock = vi
-			.spyOn(wallet.tokens().values(), "find")
-			.mockReturnValue(wallet.tokens().first());
+		const selectedTokenMock = vi.spyOn(wallet.tokens().values(), "find").mockReturnValue(wallet.tokens().first());
 
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
