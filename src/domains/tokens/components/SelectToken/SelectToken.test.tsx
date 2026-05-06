@@ -111,4 +111,14 @@ describe("SelectToken", () => {
 
 		await expect(screen.findByText("95.27653252325068 ARK")).resolves.toBeInTheDocument();
 	});
+
+	it("should display checkmark icon when an option is selected", async () => {
+		render(<SelectToken value="0xdeb478251073157e400c3d8d2ed92a85c958f9fa" tokens={tokens} />);
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__input"));
+
+		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeInTheDocument();
+
+		expect(screen.getAllByTestId("Icon--CheckmarkDouble").length).toBeTruthy();
+	});
 });

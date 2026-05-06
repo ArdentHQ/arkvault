@@ -89,6 +89,7 @@ export const SelectToken = ({
 										<Icon
 											name="CheckmarkDouble"
 											dimensions={[16, 16]}
+											data-testid="Icon--CheckmarkDouble"
 											className="text-theme-primary-600 dark:text-theme-dark-50 dim:text-theme-dim-50"
 										/>
 									)}
@@ -100,6 +101,7 @@ export const SelectToken = ({
 								<Icon
 									name="CheckmarkDouble"
 									dimensions={[16, 16]}
+									data-testid="Icon--CheckmarkDouble"
 									className="text-theme-primary-600 dark:text-theme-dark-50 dim:text-theme-dim-50"
 								/>
 							)}
