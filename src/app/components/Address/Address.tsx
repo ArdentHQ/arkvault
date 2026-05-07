@@ -90,7 +90,7 @@ export const Address = ({
 	const availableWidth = useMemo(() => {
 		if (width) {
 			if (orientation === "horizontal") {
-				return width - (walletName ? aliasWidth + 8 : 0) - (showCopyButton ? 22 : 0);
+				return width - (walletName ? aliasWidth + 8 : 0) - (showCopyButton ? 8 : 0);
 			} else {
 				return width;
 			}
@@ -148,7 +148,12 @@ export const Address = ({
 						/>
 					</AddressWrapper>
 					{showCopyButton && (
-						<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
+						<Clipboard
+							variant="icon"
+							data={address}
+							tooltip={t("COMMON.COPY_ADDRESS")}
+							iconButtonClassName="flex items-center"
+						>
 							<Icon
 								name="Copy"
 								className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50"
