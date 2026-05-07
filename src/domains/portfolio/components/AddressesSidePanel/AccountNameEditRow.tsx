@@ -80,6 +80,7 @@ export const AccountNameEditRow = ({
 							<Button
 								variant="transparent"
 								size="md"
+								data-testid="AccountNameEditRow__delete"
 								className="h-6 w-6 p-0"
 								onClick={() => {
 									setIsEditing(false);

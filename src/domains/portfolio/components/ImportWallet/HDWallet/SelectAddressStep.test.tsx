@@ -138,6 +138,18 @@ describe("AddressesTable", () => {
 		const mobileSelectAll = screen.getByTestId("SelectAddressStep__select-all-mobile");
 		expect(mobileSelectAll).toBeInTheDocument();
 	});
+
+	it("should handle mobile select all click", async () => {
+		const toggleSelectAll = vi.fn();
+
+		render(<AddressesTable {...defaultProps} toggleSelectAll={toggleSelectAll} />);
+
+		const user = userEvent.setup();
+		const mobileSelectAll = screen.getByTestId("SelectAddressStep__select-all-mobile");
+		await user.click(mobileSelectAll);
+
+		expect(toggleSelectAll).toHaveBeenCalled();
+	});
 });
 
 const FormWrapper = ({ children, defaultValues = {} }: { children: React.ReactNode; defaultValues?: any }) => {
@@ -243,6 +255,60 @@ describe("SelectAddressStep", () => {
 		await waitFor(() => {
 			for (const checkbox of checkboxes) {
 				expect(checkbox).toBeChecked();
+			}
+		});
+
+		unmount();
+	});
+
+	it("should deselect an address when clicking selected checkbox", async () => {
+		const user = userEvent.setup();
+
+		const { unmount } = render(
+			<FormWrapper>
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
+			</FormWrapper>,
+			{ route },
+		);
+
+		await waitFor(() => expect(screen.queryByText(/Loading Addresses/)).not.toBeInTheDocument());
+
+		const checkbox = getAddressCheckboxes()[0];
+		await user.click(checkbox);
+		await waitFor(() => expect(checkbox).toBeChecked());
+
+		await user.click(checkbox);
+		await waitFor(() => expect(checkbox).not.toBeChecked());
+
+		unmount();
+	});
+
+	it("should deselect all when clicking select all with all selected", async () => {
+		const { unmount } = render(
+			<FormWrapper>
+				<SelectAddressStep network={network} profile={profile} mnemonic={mnemonic} />
+			</FormWrapper>,
+			{ route },
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SelectAddressStep__select-all")).toBeInTheDocument();
+		});
+
+		const selectAllButton = screen.getByTestId("SelectAddressStep__select-all");
+		await userEvent.click(selectAllButton);
+
+		const checkboxes = getAddressCheckboxes();
+		await waitFor(() => {
+			for (const checkbox of checkboxes) {
+				expect(checkbox).toBeChecked();
+			}
+		});
+
+		await userEvent.click(selectAllButton);
+		await waitFor(() => {
+			for (const checkbox of checkboxes) {
+				expect(checkbox).not.toBeChecked();
 			}
 		});
 

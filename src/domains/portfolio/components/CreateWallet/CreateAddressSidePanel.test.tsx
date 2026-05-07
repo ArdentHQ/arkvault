@@ -1,7 +1,4 @@
-import {
-	CreateStep,
-	useCreateStepHeaderConfig,
-} from "./CreateAddressSidePanel.blocks";
+import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
@@ -331,6 +328,24 @@ describe("CreateAddressSidePanel", () => {
 		await userEvent.click(screen.getByTestId("SidePanel__close-button"));
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
+	});
+
+	it("should call onOpenChange when clicking back on WalletOverviewStep", async () => {
+		const onOpenChange = vi.fn();
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
+
+		render(<CreateAddressesSidePanel open={true} onOpenChange={onOpenChange} />, {
+			route: createURL,
+		});
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
+		await userEvent.click(backButton);
+
+		await waitFor(() => {
+			expect(onOpenChange).toHaveBeenCalledWith(false);
+		});
 	});
 
 	it.skip("should show an error message if wallet generation failed", async () => {
