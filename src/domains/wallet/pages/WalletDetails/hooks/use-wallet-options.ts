@@ -1,13 +1,12 @@
-import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { DropdownOptionGroup } from "@/app/components/Dropdown";
+import { Enums } from "@ardenthq/sdk";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
+import { hasAvailableMusigServer } from "@/utils/server-utils";
+import { isCustomNetwork } from "@/utils/network-utils";
+import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { TFunction } from "@/app/i18n/react-i18next.contracts";
-
-import { DropdownOptionGroup } from "@/app/components/Dropdown";
-import { isCustomNetwork } from "@/utils/network-utils";
-import { hasAvailableMusigServer } from "@/utils/server-utils";
-import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 
 const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 	try {
@@ -124,12 +123,12 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 		}
 	}
 
-	if (allowsMultiSignature()) {
-		registrationOptions.options.push({
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
-			value: "multi-signature",
-		});
-	}
+	// if (allowsMultiSignature()) {
+	// 	registrationOptions.options.push({
+	// 		label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
+	// 		value: "multi-signature",
+	// 	});
+	// }
 
 	return registrationOptions;
 };
