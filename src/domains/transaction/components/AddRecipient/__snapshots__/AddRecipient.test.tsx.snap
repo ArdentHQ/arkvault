@@ -227,7 +227,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -239,7 +239,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -476,13 +476,13 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -905,7 +905,7 @@ exports[`AddRecipient > should render 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -917,7 +917,7 @@ exports[`AddRecipient > should render 1`] = `
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -1128,13 +1128,13 @@ exports[`AddRecipient > should render 1`] = `
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -1516,7 +1516,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -1528,7 +1528,7 @@ exports[`AddRecipient > should render with assets field 1`] = `
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -1739,13 +1739,13 @@ exports[`AddRecipient > should render with assets field 1`] = `
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -2127,7 +2127,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -2139,7 +2139,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -2350,13 +2350,13 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -2738,7 +2738,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -2750,7 +2750,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -2961,13 +2961,13 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -3365,7 +3365,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -3377,7 +3377,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -3588,13 +3588,13 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -4148,7 +4148,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -4160,7 +4160,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -4371,13 +4371,13 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -4758,7 +4758,7 @@ exports[`AddRecipient > should set available amount 1`] = `
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -4770,7 +4770,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -5007,13 +5007,13 @@ exports[`AddRecipient > should set available amount 1`] = `
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -5421,7 +5421,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             class="[&:focus-within_.FormLabel]:text-theme-primary-600 dark:[&:focus-within_.FormLabel]:text-theme-primary-500 flex min-w-0 flex-col"
           >
             <div
-              class="block space-y-2 sm:hidden"
+              class="relative block space-y-2 sm:hidden"
             >
               <label
                 class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
@@ -5433,7 +5433,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 </div>
               </label>
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div
@@ -5644,13 +5644,13 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             </span>
           </label>
           <div
-            class="flex"
+            class="relative flex"
           >
             <div
               class="hidden w-full sm:block sm:max-w-44"
             >
               <div
-                class="relative w-full"
+                class="w-full"
                 data-testid="SelectDropdown"
               >
                 <div

@@ -43,10 +43,9 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 		amount = amount.plus(BigNumber.make(recipient.amount));
 	}
 
-	const token = profile
+	const token = wallet
 		.tokens()
-		.selected()
-		.items()
+		.values()
 		.find((token) => token.token().address() === tokenContractAddress);
 
 	const ticker = token ? token.token().displaySymbol() : wallet.currency();

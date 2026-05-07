@@ -222,10 +222,6 @@ describe("SendTransferSidePanel", () => {
 	it("should send a single transfer via side panel with preselected token", async () => {
 		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
 
-		const selectedTokenMock = vi
-			.spyOn(profile.tokens().selected().items(), "find")
-			.mockReturnValue(profile.tokens().selected().first());
-
 		render(<SendTransferSidePanel open={true} onOpenChange={vi.fn()} tokenContractAddress={selectedAsset} />, {
 			route: `/profiles/${fixtureProfileId}/dashboard`,
 		});
@@ -279,7 +275,71 @@ describe("SendTransferSidePanel", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 		walletSyncedMock.mockRestore();
-		selectedTokenMock.mockRestore();
+	});
+
+	it("should send a token transfer", async () => {
+		const walletSyncedMock = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(false);
+
+		render(
+			<SendTransferSidePanel
+				open={true}
+				onOpenChange={vi.fn()}
+				tokenContractAddress="0xdeb478251073157e400c3d8d2ed92a85c958f9fa"
+			/>,
+			{
+				route: `/profiles/${fixtureProfileId}/dashboard`,
+			},
+		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		// Select a valid sender address before proceeding
+		await selectFirstSenderAddress();
+
+		await selectRecipient();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		await selectFirstRecipient();
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { interval: 5 });
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
+
+		await userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+		await userEvent.click(document.body);
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.000126");
+
+		expect(continueButton()).not.toBeDisabled();
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		const signMock = vi
+			.spyOn(wallet.transaction(), "signTransfer")
+			.mockReturnValue(Promise.resolve(transactionFixture.data.hash));
+		const broadcastMock = vi
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [transactionFixture.data.hash], errors: {}, rejected: [] });
+		const transactionMock = createTransactionMock(wallet);
+
+		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
+		await userEvent.click(sendButton());
+
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+		walletSyncedMock.mockRestore();
 	});
 
 	it.each([true, false])("should send a single transfer via side panel in testnet:%s", async (isTestnet) => {
