@@ -197,6 +197,36 @@ describe("ImportAddress", () => {
 		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked());
 	});
 
+	it("should clear accept responsibility when toggling off encryption", async () => {
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: route,
+		});
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.MNEMONIC)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.MNEMONIC));
+
+		expect(detailStep()).toBeInTheDocument();
+
+		expect(mnemonicInput()).toBeInTheDocument();
+
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), MAINSAIL_MNEMONICS[0]);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		await enableEncryptionToggle();
+		await toggleEncryptionCheckbox();
+
+		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).toBeChecked());
+
+		await enableEncryptionToggle();
+
+		await waitFor(() => expect(screen.getByTestId("WalletEncryptionBanner__encryption-toggle")).not.toBeChecked());
+	});
+
 	// @TODO enable it when we have 2nd signature implemented
 	// it("should import by mnemonic with second signature and use password to encrypt both", async () => {
 	// 	render(
