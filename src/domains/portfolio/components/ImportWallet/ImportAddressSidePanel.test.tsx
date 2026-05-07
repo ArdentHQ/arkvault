@@ -234,6 +234,14 @@ describe("useStepHeaderConfig", () => {
 		});
 	});
 
+	it("returns config for ImportDetailStep without importOption", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.ImportDetailStep));
+		expect(result.current).toEqual({
+			subtitle: "",
+			title: "",
+		});
+	});
+
 	it("returns correct config for EncryptPasswordStep", () => {
 		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.EncryptPasswordStep));
 		expect(result.current).toMatchObject({
@@ -258,6 +266,13 @@ describe("useLedgerStepHeaderConfig", () => {
 			subtitle: "LDesc",
 			title: "LHeader",
 			titleIcon: option.icon,
+		});
+	});
+
+	it("returns config for LedgerConnectionStep without importOption", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerConnectionStep));
+		expect(result.current).toMatchObject({
+			title: "Ledger",
 		});
 	});
 
