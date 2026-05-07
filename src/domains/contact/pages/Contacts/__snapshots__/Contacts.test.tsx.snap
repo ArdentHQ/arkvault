@@ -2914,7 +2914,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                         <span>
                                           <span>
                                             <button
-                                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                              class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                               data-ring-focus-margin="-m-1"
                                               data-testid="clipboard-icon__wrapper"
                                               type="button"
@@ -3082,7 +3082,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                         <span>
                                           <span>
                                             <button
-                                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                              class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                               data-ring-focus-margin="-m-1"
                                               data-testid="clipboard-icon__wrapper"
                                               type="button"
@@ -3250,7 +3250,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                                         <span>
                                           <span>
                                             <button
-                                              class="ring-focus relative cursor-pointer focus:outline-hidden"
+                                              class="ring-focus relative cursor-pointer focus:outline-hidden flex items-center"
                                               data-ring-focus-margin="-m-1"
                                               data-testid="clipboard-icon__wrapper"
                                               type="button"
