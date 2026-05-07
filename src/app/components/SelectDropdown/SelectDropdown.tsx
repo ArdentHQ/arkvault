@@ -30,6 +30,7 @@ const SelectDropdown = ({
 	renderLabel,
 	id,
 	readOnly,
+	dropdownClassName,
 }: SelectDropdownProperties) => {
 	const [data, setData] = useState(options);
 	const [isTyping, setIsTyping] = useState(false);
@@ -213,8 +214,11 @@ const SelectDropdown = ({
 					<Tooltip
 						offset={0}
 						visible={isVisible}
-						placement="bottom"
-						className="dim:bg-transparent w-full bg-transparent dark:bg-transparent"
+						placement="bottom-start"
+						className={cn(
+							"dim:bg-transparent w-full bg-transparent dark:bg-transparent",
+							dropdownClassName,
+						)}
 						showFloatingArrow={false}
 						floatingWrapperClass="min-w-full"
 						content={
@@ -277,6 +281,7 @@ export const Select = ({
 	id,
 	readOnly = false,
 	wrapperClassName = "relative w-full",
+	dropdownClassName,
 	ref,
 }: SelectProperties) => {
 	const mainOptions = useMemo(() => getMainOptions(options), [options]);
@@ -312,6 +317,7 @@ export const Select = ({
 				showOptions={showOptions}
 				className={className}
 				innerClassName={innerClassName}
+				dropdownClassName={dropdownClassName}
 				options={options}
 				mainOptions={mainOptions}
 				defaultSelectedItem={defaultSelectedItem}
