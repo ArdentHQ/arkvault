@@ -80,7 +80,7 @@ const walletSignatures = (wallet: Contracts.IReadWriteWallet, profile?: Contract
 };
 
 const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction, profile?: Contracts.IProfile) => {
-	const { allowsMultiSignature, allowsSecondSignature } = walletSignatures(wallet, profile);
+	const { allowsSecondSignature } = walletSignatures(wallet, profile);
 
 	const registrationOptions: DropdownOptionGroup = {
 		key: "registrations",
@@ -122,13 +122,6 @@ const getRegistrationOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction
 			});
 		}
 	}
-
-	// if (allowsMultiSignature()) {
-	// 	registrationOptions.options.push({
-	// 		label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
-	// 		value: "multi-signature",
-	// 	});
-	// }
 
 	return registrationOptions;
 };
