@@ -5,6 +5,7 @@ import { env, getMainsailProfileId, mockNanoSTransport, render, screen, waitFor 
 import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
 import { useLedgerScanner } from "@/app/contexts/Ledger";
 import { toasts } from "@/app/services";
+import userEvent from "@testing-library/user-event";
 
 vi.mock("@/app/services", () => ({
 	toasts: {
@@ -141,5 +142,32 @@ describe("LedgerMigration LedgerScanStep", () => {
 		await waitFor(() => {
 			expect(toastUpdateSpy).toHaveBeenCalled();
 		});
+	});
+
+	it("should call scan more", async () => {
+		const user = userEvent.setup();
+		const scanMore = vi.fn();
+
+		vi.mocked(useLedgerScanner).mockReturnValue({
+			...defaultScannerState,
+			canRetry: false,
+		});
+
+		render(
+			<LedgerScanStep
+				profile={profile}
+				network={network}
+				children={
+					<button data-testid="scan-more-button" onClick={scanMore}>
+						Scan More
+					</button>
+				}
+			/>,
+		);
+
+		const scanMoreButton = screen.getByTestId("scan-more-button");
+		await user.click(scanMoreButton);
+
+		expect(scanMore).toHaveBeenCalled();
 	});
 });
