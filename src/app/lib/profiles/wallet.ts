@@ -167,7 +167,7 @@ export class Wallet implements IReadWriteWallet {
 	}
 
 	/** {@inheritDoc IReadWriteWallet.address} */
-	public legacyAddress(): string|undefined {
+	public legacyAddress(): string | undefined {
 		return this.data().get(WalletData.LegacyAddress);
 	}
 
