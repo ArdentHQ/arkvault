@@ -26,7 +26,7 @@ import { Contracts } from "./index.js";
 import { WalletAliasProvider } from "./profile.wallet.alias.js";
 import { LegacyAddressService } from "@/app/lib/mainsail/legacy-address.service";
 
-const mainnetPubKeyHash = 30;
+const mainnetPubKeyHash = Number(import.meta.env.VITE_ARK_CORE_PUB_KEY_HASH || 23);
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;

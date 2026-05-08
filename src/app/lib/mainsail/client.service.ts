@@ -27,6 +27,7 @@ import {
 	TransactionTypeIdentifier,
 	UsernamesContract,
 } from "@arkecosystem/typescript-crypto";
+import { Cache } from "@/app/lib/mainsail/cache";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -40,6 +41,7 @@ export class ClientService {
 	readonly #client!: ArkClient;
 	#config: ConfigRepository;
 	#profile: IProfile;
+	readonly #cache = new Cache(86_400); // 24hr TTL in seconds
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
@@ -202,6 +204,17 @@ export class ClientService {
 	public async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
 		const body = await this.#client.wallets().get(id.value);
 		return new WalletData({ config: this.#config }).fill(body.data);
+	}
+
+	public async legacyColdWallet(address: string): Promise<Object> {
+		const key = `legacy-cold-wallet-${address}`;
+
+		const body = await this.#client.legacy().coldWallet(address);
+		console.log(body)
+
+		await this.#cache.remember(key, body);
+
+		return body;
 	}
 
 	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
