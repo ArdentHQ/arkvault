@@ -521,7 +521,10 @@ export class Profile implements IProfile {
 	/** {@inheritDoc IProfile.async} */
 	public async sync(options?: { networkId?: string; ttl?: number }): Promise<void> {
 		await this.wallets().restore(options);
-		await this.activeNetwork().sync();
+
+		if (this.wallets().count() > 0) {
+			await this.activeNetwork().sync();
+		}
 	}
 
 	/** {@inheritDoc IProfile.setMigrationResult} */

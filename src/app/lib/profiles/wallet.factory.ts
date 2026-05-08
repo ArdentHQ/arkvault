@@ -26,7 +26,7 @@ import { Contracts } from "./index.js";
 import { WalletAliasProvider } from "./profile.wallet.alias.js";
 import { LegacyAddressService } from "@/app/lib/mainsail/legacy-address.service";
 
-const devnetPubHash = 30;
+const mainnetPubKeyHash = 30;
 
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
@@ -80,10 +80,7 @@ export class WalletFactory implements IWalletFactory {
 			throw new Error("The configured network does not support BIP39.");
 		}
 
-		const legacyAddress = new LegacyAddressService().fromMnemonic(
-			mnemonic,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
-		);
+		const legacyAddress = new LegacyAddressService().fromMnemonic(mnemonic, mainnetPubKeyHash);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
 		await wallet.mutator().identity(mnemonic);
@@ -169,10 +166,7 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.PublicKey, publicKey);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		const legacyAddress = new LegacyAddressService().fromPublicKey(
-			publicKey,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
-		);
+		const legacyAddress = new LegacyAddressService().fromPublicKey(publicKey, mainnetPubKeyHash);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
 		await wallet.mutator().address(new AddressService().fromPublicKey(publicKey));
@@ -186,10 +180,7 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.PrivateKey);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		const legacyAddress = new LegacyAddressService().fromPrivateKey(
-			privateKey,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
-		);
+		const legacyAddress = new LegacyAddressService().fromPrivateKey(privateKey, mainnetPubKeyHash);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
 		await wallet.mutator().address(new AddressService().fromPrivateKey(privateKey));
@@ -231,10 +222,7 @@ export class WalletFactory implements IWalletFactory {
 		wallet.data().set(WalletData.ImportMethod, WalletImportMethod.SECRET);
 		wallet.data().set(WalletData.Status, WalletFlag.Cold);
 
-		const legacyAddress = new LegacyAddressService().fromSecret(
-			secret,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
-		);
+		const legacyAddress = new LegacyAddressService().fromSecret(secret, mainnetPubKeyHash);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
 		await wallet.mutator().address(new AddressService().fromSecret(secret));
