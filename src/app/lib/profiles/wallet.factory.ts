@@ -26,6 +26,8 @@ import { Contracts } from "./index.js";
 import { WalletAliasProvider } from "./profile.wallet.alias.js";
 import { LegacyAddressService } from "@/app/lib/mainsail/legacy-address.service";
 
+const devnetPubHash = 30;
+
 export class WalletFactory implements IWalletFactory {
 	readonly #profile: IProfile;
 
@@ -80,7 +82,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromMnemonic(
 			mnemonic,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
@@ -169,7 +171,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromPublicKey(
 			publicKey,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
@@ -186,7 +188,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromPrivateKey(
 			privateKey,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
@@ -231,7 +233,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromSecret(
 			secret,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash, devnetPubHash)
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
