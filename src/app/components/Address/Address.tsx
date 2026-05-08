@@ -9,6 +9,7 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { twMerge } from "tailwind-merge";
+import { MiddleTruncate } from "../MiddleTruncate";
 
 interface Properties {
 	walletName?: string;
@@ -36,7 +37,11 @@ const AddressWrapper = ({
 	truncateOnTable?: boolean;
 }) =>
 	truncateOnTable ? (
-		<div className={cn("relative grow leading-[17px] sm:leading-5", { "text-left": alignment !== "right" })}>
+		<div
+			className={cn("relative flex grow items-center leading-[17px] sm:leading-5", {
+				"text-left": alignment !== "right",
+			})}
+		>
 			{children}
 			{/* The workaround used to make the truncating work on tables means
 			wrapping the address on a DIV with an absolute position that doesn't
@@ -102,7 +107,7 @@ export const Address = ({
 		<div
 			ref={ref}
 			className={twMerge(
-				"flex overflow-hidden whitespace-nowrap",
+				"flex items-center overflow-hidden whitespace-nowrap",
 				cn(
 					orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
 					alignment === "center" ? "min-w-0" : "w-full",
@@ -131,10 +136,8 @@ export const Address = ({
 			{address && (
 				<>
 					<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
-						<TruncateMiddleDynamic
+						<div
 							data-testid="Address__address"
-							value={address}
-							availableWidth={availableWidth}
 							className={cn(
 								addressClass ||
 									(walletName
@@ -142,10 +145,10 @@ export const Address = ({
 										: "text-theme-text"),
 								getFontWeight(fontWeight),
 								getFontSize(size),
-								{ "absolute w-full": truncateOnTable },
 							)}
-							showTooltip={showTooltip}
-						/>
+						>
+							<MiddleTruncate text={address} />
+						</div>
 					</AddressWrapper>
 					{showCopyButton && (
 						<Clipboard
