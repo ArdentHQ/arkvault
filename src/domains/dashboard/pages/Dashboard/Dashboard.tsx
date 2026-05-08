@@ -37,7 +37,12 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 			});
 		},
 	});
-	console.log(activeProfile.wallets().values().map(w => [w.address(), w.legacyAddress()]))
+	console.log(
+		activeProfile
+			.wallets()
+			.values()
+			.map((w) => [w.address(), w.legacyAddress()]),
+	);
 
 	const navigate = useNavigate();
 	const { t } = useTranslation();

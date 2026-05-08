@@ -80,7 +80,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromMnemonic(
 			mnemonic,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash),
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
@@ -169,7 +169,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromPublicKey(
 			publicKey,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash),
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
@@ -186,7 +186,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromPrivateKey(
 			privateKey,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash),
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
@@ -231,7 +231,7 @@ export class WalletFactory implements IWalletFactory {
 
 		const legacyAddress = new LegacyAddressService().fromSecret(
 			secret,
-			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash)
+			this.#profile.activeNetwork().config().get(ConfigKey.PubKeyHash),
 		);
 		wallet.data().set(WalletData.LegacyAddress, legacyAddress.address);
 
