@@ -1,4 +1,4 @@
-import { ConfigKey, Enums } from "@/app/lib/mainsail";
+import { Enums } from "@/app/lib/mainsail";
 import { BIP39, UUID } from "@ardenthq/arkvault-crypto";
 import {
 	BIP44CoinType,
