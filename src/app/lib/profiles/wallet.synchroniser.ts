@@ -34,9 +34,8 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			this.#wallet.data().set(WalletData.PublicKey, currentPublicKey);
 
 			if (error.message.includes("404")) {
-				console.log(error)
+				console.log(error);
 				await this.legacyIdentity();
-
 			}
 		}
 

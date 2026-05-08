@@ -210,7 +210,7 @@ export class ClientService {
 		const key = `legacy-cold-wallet-${address}`;
 
 		const body = await this.#client.legacy().coldWallet(address);
-		console.log(body)
+		console.log(body);
 
 		await this.#cache.remember(key, body);
 
