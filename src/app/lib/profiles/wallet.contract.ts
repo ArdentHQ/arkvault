@@ -172,6 +172,14 @@ export interface IReadWriteWallet {
 	address(): string;
 
 	/**
+	 * Get the legacy address.
+	 *
+	 * @return {?string}
+	 * @memberof IReadWriteWallet
+	 */
+	legacyAddress(): string | undefined;
+
+	/**
 	 * Get the public key
 	 *
 	 * @return {(string | undefined)}
