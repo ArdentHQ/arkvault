@@ -17,7 +17,6 @@ interface Properties {
 	walletNameClass?: string;
 	wrapperClass?: string;
 	size?: Size;
-	fontWeight?: "normal";
 	orientation?: "horizontal" | "vertical";
 	showCopyButton?: boolean;
 	showTooltip?: boolean;
@@ -33,14 +32,11 @@ const getFontSize = (size?: Size) => {
 	return fontSizes[size as keyof typeof fontSizes] || fontSizes.default;
 };
 
-const getFontWeight = (fontWeight = "semibold") => `font-${fontWeight}`;
-
 export const Address = ({
 	address,
 	addressClass,
 	alignment,
 	walletNameClass,
-	fontWeight,
 	walletName,
 	wrapperClass,
 	maxNameChars = 16,
@@ -56,7 +52,7 @@ export const Address = ({
 			className={twMerge(
 				"flex items-center overflow-hidden whitespace-nowrap",
 				cn(
-					orientation === "horizontal" ? "items-center space-x-2" : "flex-col items-start",
+					orientation === "horizontal" ? "items-center space-x-1" : "flex-col items-start",
 					alignment === "center" ? "min-w-0" : "w-full",
 					{
 						"justify-end": alignment === "right",
@@ -68,7 +64,7 @@ export const Address = ({
 			{walletName && (
 				<span
 					data-testid="Address__alias"
-					className={cn(getFontWeight(fontWeight), getFontSize(size), walletNameClass || "text-theme-text", {
+					className={cn("font-semibold", getFontSize(size), walletNameClass || "text-theme-text", {
 						"w-full truncate": orientation === "vertical",
 					})}
 				>
@@ -90,11 +86,11 @@ export const Address = ({
 						<div
 							data-testid="Address__address"
 							className={cn(
+								"font-semibold",
 								addressClass ||
 									(walletName
 										? "text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200"
 										: "text-theme-text"),
-								getFontWeight(fontWeight),
 								getFontSize(size),
 							)}
 						>
