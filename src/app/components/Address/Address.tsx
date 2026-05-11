@@ -1,15 +1,13 @@
 import cn from "classnames";
-import React, { useMemo, useRef, useState, useLayoutEffect, JSX } from "react";
+import { useRef } from "react";
 
-import { useResizeDetector } from "react-resize-detector";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Size } from "@/types";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { twMerge } from "tailwind-merge";
-import { MiddleTruncate } from "../MiddleTruncate";
+import { MiddleTruncate } from "@/app/components/MiddleTruncate";
 
 interface Properties {
 	walletName?: string;
@@ -26,32 +24,6 @@ interface Properties {
 	showCopyButton?: boolean;
 	showTooltip?: boolean;
 }
-
-const AddressWrapper = ({
-	children,
-	alignment,
-	truncateOnTable,
-}: {
-	children: JSX.Element;
-	alignment?: string;
-	truncateOnTable?: boolean;
-}) =>
-	truncateOnTable ? (
-		<div
-			className={cn("relative flex grow items-center leading-[17px] sm:leading-5", {
-				"text-left": alignment !== "right",
-			})}
-		>
-			{children}
-			{/* The workaround used to make the truncating work on tables means
-			wrapping the address on a DIV with an absolute position that doesn't
-			keep the space for the element, so we need to add an empty element
-			as a spacer. */}
-			<span>&nbsp;</span>
-		</div>
-	) : (
-		<>{children}</>
-	);
 
 const getFontSize = (size?: Size) => {
 	const fontSizes = {
@@ -82,30 +54,9 @@ export const Address = ({
 }: Properties) => {
 	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
-	const [aliasWidth, setAliasWidth] = useState(0);
-
-	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
-
-	useLayoutEffect(() => {
-		if (aliasReference.current) {
-			setAliasWidth(aliasReference.current.getBoundingClientRect().width);
-		}
-	}, [walletName, width]);
-
-	const availableWidth = useMemo(() => {
-		if (width) {
-			if (orientation === "horizontal") {
-				return width - (walletName ? aliasWidth + 8 : 0) - (showCopyButton ? 8 : 0);
-			} else {
-				return width;
-			}
-		}
-		return 0;
-	}, [width, orientation, showCopyButton, walletName, aliasWidth]);
 
 	return (
 		<div
-			ref={ref}
 			className={twMerge(
 				"flex items-center overflow-hidden whitespace-nowrap",
 				cn(
@@ -133,9 +84,14 @@ export const Address = ({
 					/>
 				</span>
 			)}
+
 			{address && (
 				<>
-					<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
+					<div
+						className={cn("relative flex grow items-center leading-[17px] sm:leading-5", {
+							"text-left": alignment !== "right",
+						})}
+					>
 						<div
 							data-testid="Address__address"
 							className={cn(
@@ -149,7 +105,7 @@ export const Address = ({
 						>
 							<MiddleTruncate text={address} />
 						</div>
-					</AddressWrapper>
+					</div>
 					{showCopyButton && (
 						<Clipboard
 							variant="icon"
