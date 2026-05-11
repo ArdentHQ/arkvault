@@ -22,6 +22,7 @@ import { SelectToken } from "@/domains/tokens/components/SelectToken";
 import { Enums } from "@/app/lib/mainsail";
 import { useTransferAssets } from "@/domains/transaction/hooks/use-send-transfer-assets";
 import { DISPLAY_DECIMALS } from "@/domains/transaction/utils";
+import { ContractAddressHint } from "@/domains/transaction/components/ContractAddressHint/ContractAddressHint";
 
 const TransferType = ({ isSingle, onChange, maxRecipients, disableMultiple }: ToggleButtonProperties) => {
 	const { t } = useTranslation();
@@ -498,6 +499,14 @@ export const AddRecipient = ({
 							</div>
 						</div>
 					</FormField>
+
+					{selectedToken && wallet && (
+						<ContractAddressHint
+							token={selectedToken}
+							link={wallet.link().wallet(selectedToken.token().address())}
+						/>
+					)}
+
 					{!isSingle && (
 						<Button
 							disabled={
