@@ -2,15 +2,21 @@ import { useState, useRef, useLayoutEffect } from "react";
 
 export const ResizeContainer = ({ children }) => {
 	const containerRef = useRef(null);
-	const [dimensions, setDimensions] = useState({ width: 0, height: 0, lineHeight: 0 });
+	const [dimensions, setDimensions] = useState({ height: 0, lineHeight: 0, width: 0 });
 
 	useLayoutEffect(() => {
-		if (!containerRef.current) return;
+		if (!containerRef.current) {
+			return;
+		}
 
 		const observer = new ResizeObserver((entries) => {
 			for (let entry of entries) {
 				const { width, height } = entry.contentRect;
-				setDimensions({ width, height, lineHeight: parseFloat(getComputedStyle(entry.target).lineHeight) });
+				setDimensions({
+					height,
+					lineHeight: Number.parseFloat(getComputedStyle(entry.target).lineHeight),
+					width,
+				});
 			}
 		});
 
