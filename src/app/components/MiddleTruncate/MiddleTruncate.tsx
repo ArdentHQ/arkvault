@@ -31,17 +31,13 @@ function MiddleTruncateContent({ text = "", dimensions }: { text?: string; dimen
 				<>
 					<span className="rtl no-ligatures block w-full min-w-0 text-right break-all whitespace-break-spaces">
 						{firstHalf.split("").map((char, index) => (
-							<span key={index} className="break-all">
-								{char}
-							</span>
+							<span key={index}>{char}</span>
 						))}
 					</span>
 					<span className="block shrink-0">...</span>
 					<span className="no-ligatures block w-full min-w-0 text-left break-all whitespace-break-spaces">
 						{secondHalf.split("").map((char, index) => (
-							<span key={middlePosition + index} className="break-all">
-								{char}
-							</span>
+							<span key={middlePosition + index}>{char}</span>
 						))}
 					</span>
 				</>
