@@ -64,7 +64,6 @@ export const VoteTransactionType = ({
 							<DetailTitle className="w-auto sm:min-w-[132px]">{t("COMMON.OLD_VALIDATOR")}</DetailTitle>
 
 							<Address
-								truncateOnTable
 								address={unvotes[0].wallet?.alias()}
 								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
@@ -75,7 +74,6 @@ export const VoteTransactionType = ({
 							<DetailTitle className="w-auto sm:min-w-[132px]">{t("COMMON.NEW_VALIDATOR")}</DetailTitle>
 
 							<Address
-								truncateOnTable
 								address={votes[0].wallet?.alias()}
 								wrapperClass="justify-start"
 								addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"
@@ -96,7 +94,6 @@ export const VoteTransactionType = ({
 						</DetailTitle>
 
 						<Address
-							truncateOnTable
 							address={voteCategory === "vote" ? votes[0]?.wallet?.alias() : unvotes[0]?.wallet?.alias()}
 							wrapperClass="justify-start"
 							addressClass="truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:text-base sm:leading-5 text-right sm:text-left"

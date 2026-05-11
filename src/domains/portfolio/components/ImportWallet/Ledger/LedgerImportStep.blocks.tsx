@@ -126,7 +126,6 @@ export const SingleImport = ({
 		<div className="flex flex-col gap-4" data-testid="SingleImport__container">
 			<DesktopImportSection title={t("COMMON.IMPORTED")}>
 				<SectionBodyItem title={t("COMMON.ADDRESS")}>
-					<Address address={ledgerWallet.address} showCopyButton truncateOnTable />
 				</SectionBodyItem>
 
 				<hr className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 w-full border border-dashed" />
@@ -238,7 +237,6 @@ export const MultipleImport = ({
 								walletName={importedWallet.alias()}
 								address={wallet.address}
 								showCopyButton
-								truncateOnTable
 							/>
 							<AmountWrapper isLoading={false}>
 								<Amount

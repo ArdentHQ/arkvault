@@ -73,7 +73,6 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 										</DetailLabelText>
 
 										<Address
-											truncateOnTable
 											address={inputTransaction.address}
 											showCopyButton
 											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -136,7 +135,6 @@ export const ConfirmationStep = ({ exchangeTransaction, profile, exchangeName }:
 										</DetailLabelText>
 
 										<Address
-											truncateOnTable
 											address={outputTransaction.address}
 											showCopyButton
 											walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"

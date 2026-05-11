@@ -44,7 +44,6 @@ export const TransactionAddresses = ({
 			<div className="flex items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.FROM")}</DetailTitle>
 				<Address
-					truncateOnTable
 					address={senderAddress}
 					walletName={alias}
 					showCopyButton
@@ -60,7 +59,6 @@ export const TransactionAddresses = ({
 				<div className="mt-3 flex items-center justify-between gap-2 space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle className={labelClassName}>{t("COMMON.CONTRACT")}</DetailTitle>
 					<Address
-						truncateOnTable
 						address={interactedWith}
 						showCopyButton
 						wrapperClass="justify-end sm:justify-start"

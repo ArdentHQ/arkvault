@@ -236,7 +236,6 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 									<Address
 										address={wallet.publicKey()}
 										size="sm"
-										truncateOnTable
 										showCopyButton
 										addressClass="leading-[17px] sm:leading-5"
 									/>

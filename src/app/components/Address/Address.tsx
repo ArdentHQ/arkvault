@@ -19,7 +19,6 @@ interface Properties {
 	wrapperClass?: string;
 	size?: Size;
 	fontWeight?: "normal";
-	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
 	showCopyButton?: boolean;
 	showTooltip?: boolean;
@@ -47,7 +46,6 @@ export const Address = ({
 	wrapperClass,
 	maxNameChars = 16,
 	size,
-	truncateOnTable,
 	orientation = "horizontal",
 	showCopyButton,
 	showTooltip = true,

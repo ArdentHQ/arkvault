@@ -12,7 +12,7 @@ function MiddleTruncateContent({ text = "", dimensions }: { text?: string; dimen
 	const firstHalf = text.slice(0, middlePosition);
 	const secondHalf = text.slice(middlePosition);
 
-	// Ghost element always has the actuall size of the text.
+	// Ghost element always has the actual size of the text.
 	const offset = 5;
 	const ghostWidth = ghostRef.current?.clientWidth ?? 0;
 	const isFitting = dimensions?.width >= ghostWidth - offset;

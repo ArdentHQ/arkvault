@@ -24,7 +24,6 @@ export const SigningMessageInfo = ({
 				<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 					<DetailTitle>{t("COMMON.ADDRESS")}</DetailTitle>
 					<Address
-						truncateOnTable
 						address={wallet.address()}
 						walletName={
 							getWalletAlias({
