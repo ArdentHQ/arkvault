@@ -1,5 +1,4 @@
 import cn from "classnames";
-import { useRef } from "react";
 
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { Size } from "@/types";
@@ -50,7 +49,6 @@ export const Address = ({
 	showCopyButton,
 	showTooltip = true,
 }: Properties) => {
-	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
 
 	return (
@@ -69,7 +67,6 @@ export const Address = ({
 		>
 			{walletName && (
 				<span
-					ref={aliasReference}
 					data-testid="Address__alias"
 					className={cn(getFontWeight(fontWeight), getFontSize(size), walletNameClass || "text-theme-text", {
 						"w-full truncate": orientation === "vertical",
