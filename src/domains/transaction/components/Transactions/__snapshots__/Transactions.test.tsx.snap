@@ -559,7 +559,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -650,7 +650,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -748,7 +748,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -844,7 +844,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -1128,7 +1128,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -1219,7 +1219,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -1317,7 +1317,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -1413,7 +1413,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -1697,7 +1697,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -1788,7 +1788,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -1886,7 +1886,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -1982,7 +1982,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -2266,7 +2266,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -2357,7 +2357,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -2455,7 +2455,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -2551,7 +2551,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -2835,7 +2835,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -2926,7 +2926,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -3024,7 +3024,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -3120,7 +3120,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -3404,7 +3404,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -3495,7 +3495,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -3593,7 +3593,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -3689,7 +3689,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -3973,7 +3973,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -4503,7 +4503,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -5033,7 +5033,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -5563,7 +5563,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -6093,7 +6093,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -6623,7 +6623,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -7153,7 +7153,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -7683,7 +7683,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -8213,7 +8213,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -8743,7 +8743,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -9273,7 +9273,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -9803,7 +9803,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -10333,7 +10333,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -10863,7 +10863,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -11393,7 +11393,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -11923,7 +11923,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -12453,7 +12453,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -12983,7 +12983,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -13513,7 +13513,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -14043,7 +14043,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -14573,7 +14573,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -15103,7 +15103,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -15633,7 +15633,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -16163,7 +16163,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -16693,7 +16693,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -17223,7 +17223,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -17753,7 +17753,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -18283,7 +18283,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -18813,7 +18813,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -19343,7 +19343,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -19873,7 +19873,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -20403,7 +20403,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -20933,7 +20933,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -21463,7 +21463,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -21993,7 +21993,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -22523,7 +22523,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -23053,7 +23053,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -23144,7 +23144,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -23242,7 +23242,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -23338,7 +23338,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -23622,7 +23622,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -23713,7 +23713,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -23811,7 +23811,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -23907,7 +23907,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -24191,7 +24191,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -24282,7 +24282,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -24380,7 +24380,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -24476,7 +24476,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -24760,7 +24760,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -24851,7 +24851,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -24949,7 +24949,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -25045,7 +25045,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -25329,7 +25329,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -25420,7 +25420,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -25518,7 +25518,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -25614,7 +25614,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -25898,7 +25898,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -25989,7 +25989,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -26087,7 +26087,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -26183,7 +26183,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -26467,7 +26467,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -26835,7 +26835,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -27203,7 +27203,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -27571,7 +27571,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -27939,7 +27939,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -28307,7 +28307,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -28675,24 +28675,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -28768,7 +28777,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -28866,7 +28875,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -28962,24 +28971,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -29248,24 +29266,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -29341,7 +29368,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -29439,7 +29466,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -29535,24 +29562,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -29821,24 +29857,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -29914,7 +29959,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -30012,7 +30057,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -30108,24 +30153,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -30394,24 +30448,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -30487,7 +30550,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -30585,7 +30648,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -30681,24 +30744,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -30967,24 +31039,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -31060,7 +31141,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -31158,7 +31239,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -31254,24 +31335,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -31540,24 +31630,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -31633,7 +31732,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -31731,7 +31830,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -31827,24 +31926,33 @@ exports[`Transactions > should fetch more transactions 1`] = `
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -32544,7 +32652,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -32635,7 +32743,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -32733,7 +32841,7 @@ exports[`Transactions > should hide view more button when there are no next page
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -32829,7 +32937,7 @@ exports[`Transactions > should hide view more button when there are no next page
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -33113,7 +33221,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -33643,7 +33751,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -34173,7 +34281,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -34703,7 +34811,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -35233,7 +35341,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -35763,7 +35871,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -36293,7 +36401,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -36384,7 +36492,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -36482,7 +36590,7 @@ exports[`Transactions > should hide view more button when there are no next page
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -36578,7 +36686,7 @@ exports[`Transactions > should hide view more button when there are no next page
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -36862,7 +36970,7 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -37230,24 +37338,33 @@ exports[`Transactions > should hide view more button when there are no next page
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -37323,7 +37440,7 @@ exports[`Transactions > should hide view more button when there are no next page
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -37421,7 +37538,7 @@ exports[`Transactions > should hide view more button when there are no next page
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -37517,24 +37634,33 @@ exports[`Transactions > should hide view more button when there are no next page
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -38219,7 +38345,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -38310,7 +38436,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -38408,7 +38534,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -38504,7 +38630,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -38788,7 +38914,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -39318,7 +39444,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -39848,7 +39974,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -40378,7 +40504,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -40908,7 +41034,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -41438,7 +41564,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -41968,7 +42094,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -42059,7 +42185,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -42157,7 +42283,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -42253,7 +42379,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -42537,7 +42663,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -42905,24 +43031,33 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <div
-                                  class="relative grow leading-[17px] sm:leading-5 text-left"
+                                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                                 >
-                                  <span>
-                                    <span>
+                                  <div
+                                    class="font-semibold text-theme-text text-sm"
+                                    data-testid="Address__address"
+                                  >
+                                    <div>
                                       <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                        data-testid="Address__address"
+                                        class="flex w-full items-start overflow-y-hidden"
+                                        style="height: 0px;"
                                       >
-                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        <span
+                                          class="invisible absolute left-0 whitespace-nowrap"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
+                                        <span
+                                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                                        >
+                                          0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                        </span>
                                       </span>
-                                    </span>
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -42998,7 +43133,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                                 data-testid="TransactionRowAddressing__address-container"
                               >
                                 <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                                 >
                                   <span
                                     class="font-semibold text-sm text-theme-text"
@@ -43096,7 +43231,7 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <span
                                 class="font-semibold text-sm text-theme-text"
@@ -43192,24 +43327,33 @@ exports[`Transactions > should open detail side panel on transaction row click 1
                             data-testid="TransactionRowAddressing__address-container"
                           >
                             <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                             >
                               <div
-                                class="relative grow leading-[17px] sm:leading-5 text-left"
+                                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                               >
-                                <span>
-                                  <span>
+                                <div
+                                  class="font-semibold text-theme-text text-sm"
+                                  data-testid="Address__address"
+                                >
+                                  <div>
                                     <span
-                                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm absolute w-full"
-                                      data-testid="Address__address"
+                                      class="flex w-full items-start overflow-y-hidden"
+                                      style="height: 0px;"
                                     >
-                                      0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      <span
+                                        class="invisible absolute left-0 whitespace-nowrap"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
+                                      <span
+                                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                                      >
+                                        0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                                      </span>
                                     </span>
-                                  </span>
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>

@@ -215,7 +215,7 @@ exports[`AddressTable > should render 1`] = `
                   class="w-40 flex-1"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                   >
                     <span
                       class="font-semibold text-base text-sm"
@@ -232,16 +232,32 @@ exports[`AddressTable > should render 1`] = `
                         </span>
                       </span>
                     </span>
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                        </span>
-                      </span>
-                    </span>
+                    <div
+                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    >
+                      <div
+                        class="font-semibold text-sm text-theme-secondary-text text-base"
+                        data-testid="Address__address"
+                      >
+                        <div>
+                          <span
+                            class="flex w-full items-start overflow-y-hidden"
+                            style="height: 0px;"
+                          >
+                            <span
+                              class="invisible absolute left-0 whitespace-nowrap"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                            <span
+                              class="no-ligatures truncate break-all whitespace-break-spaces"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                     <span>
                       <span>
                         <button
@@ -631,7 +647,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="w-40 flex-1"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                   >
                     <span
                       class="font-semibold text-base text-sm"
@@ -648,16 +664,32 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                         </span>
                       </span>
                     </span>
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                        </span>
-                      </span>
-                    </span>
+                    <div
+                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    >
+                      <div
+                        class="font-semibold text-sm text-theme-secondary-text text-base"
+                        data-testid="Address__address"
+                      >
+                        <div>
+                          <span
+                            class="flex w-full items-start overflow-y-hidden"
+                            style="height: 0px;"
+                          >
+                            <span
+                              class="invisible absolute left-0 whitespace-nowrap"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                            <span
+                              class="no-ligatures truncate break-all whitespace-break-spaces"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                     <span>
                       <span>
                         <button
@@ -1280,7 +1312,7 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                   class="w-40 flex-1"
                 >
                   <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                   >
                     <span
                       class="font-semibold text-base text-sm"
@@ -1297,16 +1329,32 @@ exports[`AddressTable > should render with voting validators and handle exceptio
                         </span>
                       </span>
                     </span>
-                    <span>
-                      <span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-sm text-theme-secondary-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                        </span>
-                      </span>
-                    </span>
+                    <div
+                      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                    >
+                      <div
+                        class="font-semibold text-sm text-theme-secondary-text text-base"
+                        data-testid="Address__address"
+                      >
+                        <div>
+                          <span
+                            class="flex w-full items-start overflow-y-hidden"
+                            style="height: 0px;"
+                          >
+                            <span
+                              class="invisible absolute left-0 whitespace-nowrap"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                            <span
+                              class="no-ligatures truncate break-all whitespace-break-spaces"
+                            >
+                              0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                     <span>
                       <span>
                         <button

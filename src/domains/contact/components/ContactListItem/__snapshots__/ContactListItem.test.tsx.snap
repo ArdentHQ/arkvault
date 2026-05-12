@@ -38,29 +38,7 @@ exports[`ContactListItem > should render 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -249,29 +227,7 @@ exports[`ContactListItem > should render as validator 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -460,29 +416,7 @@ exports[`ContactListItem > should render options 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -646,29 +580,7 @@ exports[`ContactListItem > should render options 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -829,29 +741,7 @@ exports[`ContactListItem > should render options 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -1037,29 +927,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -1223,29 +1091,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -1406,29 +1252,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -1614,29 +1438,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -1801,29 +1603,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td
@@ -1985,29 +1765,7 @@ exports[`ContactListItem > should render with no balance and disable send 1`] = 
           >
             <div
               class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <div
-                  class="relative grow leading-[17px] sm:leading-5 text-left"
-                >
-                  <span>
-                    <span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                        data-testid="Address__address"
-                      >
-                        DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
-                      </span>
-                    </span>
-                  </span>
-                  <span>
-                     
-                  </span>
-                </div>
-              </div>
-            </div>
+            />
           </div>
         </td>
         <td

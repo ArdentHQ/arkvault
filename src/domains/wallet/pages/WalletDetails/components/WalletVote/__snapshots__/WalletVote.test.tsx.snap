@@ -17,18 +17,34 @@ exports[`#WalletVote > Votes > should render 1`] = `
         class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
       >
         <div
-          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
         >
-          <span>
-            <span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-                data-testid="Address__address"
-              >
-                0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
-              </span>
-            </span>
-          </span>
+          <div
+            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+          >
+            <div
+              class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
+              data-testid="Address__address"
+            >
+              <div>
+                <span
+                  class="flex w-full items-start overflow-y-hidden"
+                  style="height: 0px;"
+                >
+                  <span
+                    class="invisible absolute left-0 whitespace-nowrap"
+                  >
+                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  </span>
+                  <span
+                    class="no-ligatures truncate break-all whitespace-break-spaces"
+                  >
+                    0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -483,18 +499,34 @@ exports[`#WalletVote > WalletVote > should render as all resigned 1`] = `
             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                  </span>
-                </span>
-              </span>
+              <div
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+              >
+                <div
+                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
+                  data-testid="Address__address"
+                >
+                  <div>
+                    <span
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
+                    >
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2373,18 +2405,34 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                  </span>
-                </span>
-              </span>
+              <div
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+              >
+                <div
+                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
+                  data-testid="Address__address"
+                >
+                  <div>
+                    <span
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
+                    >
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2463,18 +2511,34 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                  </span>
-                </span>
-              </span>
+              <div
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+              >
+                <div
+                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
+                  data-testid="Address__address"
+                >
+                  <div>
+                    <span
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
+                    >
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2657,18 +2721,34 @@ exports[`#WalletVote > WalletVote > single vote networks > should render a vote 
             class="xs:max-w-32 max-w-28 flex-1 shrink-0 truncate sm:max-w-40 md:max-w-44"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
-                  </span>
-                </span>
-              </span>
+              <div
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+              >
+                <div
+                  class="font-semibold dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm md:text-base md:leading-5 text-base"
+                  data-testid="Address__address"
+                >
+                  <div>
+                    <span
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
+                    >
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -122,7 +122,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                         >
                           <span
                             class="font-semibold text-sm text-theme-text"
@@ -213,7 +213,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -311,7 +311,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -407,7 +407,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -648,7 +648,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                         >
                           <span
                             class="font-semibold text-sm text-theme-text"
@@ -739,7 +739,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -837,7 +837,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -933,7 +933,7 @@ exports[`TransactionRow > should render responsive (lg) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -1193,7 +1193,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                         >
                           <span
                             class="font-semibold text-sm text-theme-text"
@@ -1284,7 +1284,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -1382,7 +1382,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -1478,7 +1478,7 @@ exports[`TransactionRow > should render responsive (md) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -1724,7 +1724,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -1812,7 +1812,7 @@ exports[`TransactionRow > should render responsive (sm) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -2054,7 +2054,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                         >
                           <span
                             class="font-semibold text-sm text-theme-text"
@@ -2145,7 +2145,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -2243,7 +2243,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -2339,7 +2339,7 @@ exports[`TransactionRow > should render responsive (xl) 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -2566,7 +2566,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -2654,7 +2654,7 @@ exports[`TransactionRow > should render responsive (xs) 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -2882,7 +2882,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -2970,7 +2970,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -3198,7 +3198,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -3286,7 +3286,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                               data-testid="TransactionRowAddressing__address-container"
                             >
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                               >
                                 <span
                                   class="font-semibold text-sm text-theme-text"
@@ -3528,7 +3528,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                         data-testid="TransactionRowAddressing__address-container"
                       >
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                         >
                           <span
                             class="font-semibold text-sm text-theme-text"
@@ -3619,7 +3619,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                           >
                             <span
                               class="font-semibold text-sm text-theme-text"
@@ -3717,7 +3717,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"
@@ -3813,7 +3813,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                       data-testid="TransactionRowAddressing__address-container"
                     >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
                       >
                         <span
                           class="font-semibold text-sm text-theme-text"

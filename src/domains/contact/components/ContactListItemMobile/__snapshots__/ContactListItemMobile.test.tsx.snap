@@ -101,18 +101,34 @@ exports[`ContactListItemMobile > should render 1`] = `
             data-testid="ContactListItemMobile__addresses"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                    data-testid="Address__address"
-                  >
-                    0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                  </span>
-                </span>
-              </span>
+              <div
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+              >
+                <div
+                  class="font-semibold text-theme-text text-sm"
+                  data-testid="Address__address"
+                >
+                  <div>
+                    <span
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
+                    >
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
               <span>
                 <span>
                   <button
@@ -266,18 +282,34 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
             data-testid="ContactListItemMobile__addresses"
           >
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
             >
-              <span>
-                <span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-sm"
-                    data-testid="Address__address"
-                  >
-                    0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
-                  </span>
-                </span>
-              </span>
+              <div
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+              >
+                <div
+                  class="font-semibold text-theme-text text-sm"
+                  data-testid="Address__address"
+                >
+                  <div>
+                    <span
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
+                    >
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0x28FA32ec11f64ae8Bc4223e77DeE4db24A5E46Da
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
               <span>
                 <span>
                   <button

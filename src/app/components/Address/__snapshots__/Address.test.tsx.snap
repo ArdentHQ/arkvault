@@ -3,7 +3,7 @@
 exports[`Formatted Address > should not render without address 1`] = `
 <div>
   <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
   />
 </div>
 `;
@@ -11,18 +11,34 @@ exports[`Formatted Address > should not render without address 1`] = `
 exports[`Formatted Address > should render address only 1`] = `
 <div>
   <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
   >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-text text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -30,18 +46,34 @@ exports[`Formatted Address > should render address only 1`] = `
 exports[`Formatted Address > should render with center alignment 1`] = `
 <div>
   <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 min-w-0"
   >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-text text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -49,18 +81,34 @@ exports[`Formatted Address > should render with center alignment 1`] = `
 exports[`Formatted Address > should render with horizontal orientation 1`] = `
 <div>
   <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
   >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-text text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -68,18 +116,34 @@ exports[`Formatted Address > should render with horizontal orientation 1`] = `
 exports[`Formatted Address > should render with horizontal orientation 2`] = `
 <div>
   <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
   >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-text text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -87,143 +151,7 @@ exports[`Formatted Address > should render with horizontal orientation 2`] = `
 exports[`Formatted Address > should render with normal font 1`] = `
 <div>
   <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-  >
-    <span
-      class="font-normal text-base text-theme-text"
-      data-testid="Address__alias"
-    >
-      <span>
-        <span>
-          <span
-            class="no-ligatures transition-colors duration-200"
-            data-testid="TruncateEnd"
-          >
-            Sample Wallet
-          </span>
-        </span>
-      </span>
-    </span>
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-normal text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Formatted Address > should render with right alignment 1`] = `
-<div>
-  <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
-  >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Formatted Address > should render with truncate on table = false 1`] = `
-<div>
-  <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-  >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Formatted Address > should render with truncate on table = true 1`] = `
-<div>
-  <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-  >
-    <div
-      class="relative grow leading-[17px] sm:leading-5 text-left"
-    >
-      <span>
-        <span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
-            data-testid="Address__address"
-          >
-            ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-          </span>
-        </span>
-      </span>
-      <span>
-         
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Formatted Address > should render with vertical orientation 1`] = `
-<div>
-  <div
-    class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
-  >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Formatted Address > should render with vertical orientation 2`] = `
-<div>
-  <div
-    class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
-  >
-    <span>
-      <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Formatted Address > should render with wallet name 1`] = `
-<div>
-  <div
-    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
   >
     <span
       class="font-semibold text-base text-theme-text"
@@ -240,16 +168,187 @@ exports[`Formatted Address > should render with wallet name 1`] = `
         </span>
       </span>
     </span>
-    <span>
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Formatted Address > should render with right alignment 1`] = `
+<div>
+  <div
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end"
+  >
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5"
+    >
+      <div
+        class="font-semibold text-theme-text text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Formatted Address > should render with vertical orientation 1`] = `
+<div>
+  <div
+    class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+  >
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-text text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Formatted Address > should render with vertical orientation 2`] = `
+<div>
+  <div
+    class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+  >
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-text text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Formatted Address > should render with wallet name 1`] = `
+<div>
+  <div
+    class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
+  >
+    <span
+      class="font-semibold text-base text-theme-text"
+      data-testid="Address__alias"
+    >
       <span>
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+        <span>
+          <span
+            class="no-ligatures transition-colors duration-200"
+            data-testid="TruncateEnd"
+          >
+            Sample Wallet
+          </span>
         </span>
       </span>
     </span>
+    <div
+      class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+    >
+      <div
+        class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+        data-testid="Address__address"
+      >
+        <div>
+          <span
+            class="flex w-full items-start overflow-y-hidden"
+            style="height: 0px;"
+          >
+            <span
+              class="invisible absolute left-0 whitespace-nowrap"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+            <span
+              class="no-ligatures truncate break-all whitespace-break-spaces"
+            >
+              ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

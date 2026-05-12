@@ -12,7 +12,7 @@ exports[`SelectAddress > should render disabled 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
       />
     </span>
     <div
@@ -92,7 +92,7 @@ exports[`SelectAddress > should render empty 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
       />
     </span>
     <div
@@ -171,7 +171,7 @@ exports[`SelectAddress > should render invalid 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13 right-24"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
       />
     </span>
     <div
@@ -303,18 +303,34 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-13"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
       >
-        <span>
-          <span>
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              0x659A76be283644AEc2003aa8ba26485047fd1BFB
-            </span>
-          </span>
-        </span>
+        <div
+          class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+        >
+          <div
+            class="font-semibold text-sm sm:text-base text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+            data-testid="Address__address"
+          >
+            <div>
+              <span
+                class="flex w-full items-start overflow-y-hidden"
+                style="height: 0px;"
+              >
+                <span
+                  class="invisible absolute left-0 whitespace-nowrap"
+                >
+                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                </span>
+                <span
+                  class="no-ligatures truncate break-all whitespace-break-spaces"
+                >
+                  0x659A76be283644AEc2003aa8ba26485047fd1BFB
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </span>
     <div
@@ -393,7 +409,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
       class="absolute inset-y-0 left-4 flex items-center border border-transparent right-4"
     >
       <div
-        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+        class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
       />
     </span>
     <div

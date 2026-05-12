@@ -35,7 +35,7 @@ exports[`TransferLedgerReview > should render 1`] = `
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end sm:justify-start"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -53,21 +53,30 @@ exports[`TransferLedgerReview > should render 1`] = `
                 </span>
               </span>
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
               >
-                <span>
-                  <span>
+                <div
+                  class="font-semibold text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                  data-testid="Address__address"
+                >
+                  <div>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
                     >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
                     </span>
-                  </span>
-                </span>
-                <span>
-                   
-                </span>
+                  </div>
+                </div>
               </div>
               <span>
                 <span>
@@ -333,7 +342,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end sm:justify-start"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -351,21 +360,30 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
                 </span>
               </span>
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
               >
-                <span>
-                  <span>
+                <div
+                  class="font-semibold text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                  data-testid="Address__address"
+                >
+                  <div>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
                     >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
                     </span>
-                  </span>
-                </span>
-                <span>
-                   
-                </span>
+                  </div>
+                </div>
               </div>
               <span>
                 <span>
@@ -648,7 +666,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end sm:justify-start"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -666,21 +684,30 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
                 </span>
               </span>
               <div
-                class="relative grow leading-[17px] sm:leading-5 text-left"
+                class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
               >
-                <span>
-                  <span>
+                <div
+                  class="font-semibold text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 text-base"
+                  data-testid="Address__address"
+                >
+                  <div>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
+                      class="flex w-full items-start overflow-y-hidden"
+                      style="height: 0px;"
                     >
-                      0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      <span
+                        class="invisible absolute left-0 whitespace-nowrap"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
+                      <span
+                        class="no-ligatures truncate break-all whitespace-break-spaces"
+                      >
+                        0xcd15953dD076e56Dc6a5bc46Da23308Ff3158EE6
+                      </span>
                     </span>
-                  </span>
-                </span>
-                <span>
-                   
-                </span>
+                  </div>
+                </div>
               </div>
               <span>
                 <span>

@@ -21,17 +21,25 @@ exports[`ConfirmationStep > should render 1`] = `
           BTC Transaction ID
         </div>
         <div
-          class="flex-1 overflow-hidden font-semibold sm:mx-4"
+          class="font-semibold sm:mx-4"
         >
-          <span>
-            <span>
+          <div>
+            <span
+              class="flex w-full items-start overflow-y-hidden"
+              style="height: 0px;"
+            >
               <span
-                class="no-ligatures min-w-0 overflow-hidden"
+                class="invisible absolute left-0 whitespace-nowrap"
+              >
+                payinHash
+              </span>
+              <span
+                class="no-ligatures truncate break-all whitespace-break-spaces"
               >
                 payinHash
               </span>
             </span>
-          </span>
+          </div>
         </div>
         <div
           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
@@ -186,24 +194,33 @@ exports[`ConfirmationStep > should render 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end sm:justify-start"
                         >
                           <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                           >
-                            <span>
-                              <span>
+                            <div
+                              class="font-semibold text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-base"
+                              data-testid="Address__address"
+                            >
+                              <div>
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                  class="flex w-full items-start overflow-y-hidden"
+                                  style="height: 0px;"
                                 >
-                                  payinAddress
+                                  <span
+                                    class="invisible absolute left-0 whitespace-nowrap"
+                                  >
+                                    payinAddress
+                                  </span>
+                                  <span
+                                    class="no-ligatures truncate break-all whitespace-break-spaces"
+                                  >
+                                    payinAddress
+                                  </span>
                                 </span>
-                              </span>
-                            </span>
-                            <span>
-                               
-                            </span>
+                              </div>
+                            </div>
                           </div>
                           <span>
                             <span>
@@ -304,15 +321,21 @@ exports[`ConfirmationStep > should render 1`] = `
            Transaction ID
         </div>
         <div
-          class="flex-1 overflow-hidden font-semibold sm:mx-4"
+          class="font-semibold sm:mx-4"
         >
-          <span>
-            <span>
+          <div>
+            <span
+              class="flex w-full items-start overflow-y-hidden"
+              style="height: 0px;"
+            >
               <span
-                class="no-ligatures min-w-0 overflow-hidden"
+                class="invisible absolute left-0 whitespace-nowrap"
+              />
+              <span
+                class="no-ligatures truncate break-all whitespace-break-spaces"
               />
             </span>
-          </span>
+          </div>
         </div>
         <div
           class="mt-4 flex items-center space-x-2 sm:mt-0 sm:mr-4"
@@ -467,24 +490,33 @@ exports[`ConfirmationStep > should render 1`] = `
                           </span>
                         </div>
                         <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                          class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full justify-end sm:justify-start"
                         >
                           <div
-                            class="relative grow leading-[17px] sm:leading-5 text-left"
+                            class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
                           >
-                            <span>
-                              <span>
+                            <div
+                              class="font-semibold text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 text-base"
+                              data-testid="Address__address"
+                            >
+                              <div>
                                 <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                  class="flex w-full items-start overflow-y-hidden"
+                                  style="height: 0px;"
                                 >
-                                  payoutAddress
+                                  <span
+                                    class="invisible absolute left-0 whitespace-nowrap"
+                                  >
+                                    payoutAddress
+                                  </span>
+                                  <span
+                                    class="no-ligatures truncate break-all whitespace-break-spaces"
+                                  >
+                                    payoutAddress
+                                  </span>
                                 </span>
-                              </span>
-                            </span>
-                            <span>
-                               
-                            </span>
+                              </div>
+                            </div>
                           </div>
                           <span>
                             <span>
@@ -1268,15 +1300,27 @@ exports[`ReviewStep > should render 1`] = `
           >
             Address
           </span>
-          <span>
-            <span>
+          <div
+            class="no-ligatures text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+          >
+            <div>
               <span
-                class="no-ligatures min-w-0 overflow-hidden no-ligatures text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+                class="flex w-full items-start overflow-y-hidden"
+                style="height: 0px;"
               >
-                AYx3T2He3Ubz7H5pycQNG2Cvn6HYzeiC73
+                <span
+                  class="invisible absolute left-0 whitespace-nowrap"
+                >
+                  AYx3T2He3Ubz7H5pycQNG2Cvn6HYzeiC73
+                </span>
+                <span
+                  class="no-ligatures truncate break-all whitespace-break-spaces"
+                >
+                  AYx3T2He3Ubz7H5pycQNG2Cvn6HYzeiC73
+                </span>
               </span>
-            </span>
-          </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1492,15 +1536,23 @@ exports[`StatusStep > should render 1`] = `
           <div
             class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold"
           >
-            <span>
-              <span>
+            <div>
+              <span
+                class="flex w-full items-start overflow-y-hidden"
+                style="height: 0px;"
+              >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden no-ligatures"
+                  class="invisible absolute left-0 whitespace-nowrap"
+                >
+                  payinAddress
+                </span>
+                <span
+                  class="no-ligatures truncate break-all whitespace-break-spaces"
                 >
                   payinAddress
                 </span>
               </span>
-            </span>
+            </div>
             <span
               class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex"
             >
@@ -1559,15 +1611,23 @@ exports[`StatusStep > should render 1`] = `
           <div
             class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold"
           >
-            <span>
-              <span>
+            <div>
+              <span
+                class="flex w-full items-start overflow-y-hidden"
+                style="height: 0px;"
+              >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden no-ligatures"
+                  class="invisible absolute left-0 whitespace-nowrap"
+                >
+                  transferTransactionId
+                </span>
+                <span
+                  class="no-ligatures truncate break-all whitespace-break-spaces"
                 >
                   transferTransactionId
                 </span>
               </span>
-            </span>
+            </div>
             <span
               class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex"
             >
@@ -1711,15 +1771,23 @@ exports[`StatusStep > should render 1`] = `
           <div
             class="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 flex space-x-2 font-semibold"
           >
-            <span>
-              <span>
+            <div>
+              <span
+                class="flex w-full items-start overflow-y-hidden"
+                style="height: 0px;"
+              >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden no-ligatures"
+                  class="invisible absolute left-0 whitespace-nowrap"
+                >
+                  payoutAddress
+                </span>
+                <span
+                  class="no-ligatures truncate break-all whitespace-break-spaces"
                 >
                   payoutAddress
                 </span>
               </span>
-            </span>
+            </div>
             <span
               class="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 flex"
             >

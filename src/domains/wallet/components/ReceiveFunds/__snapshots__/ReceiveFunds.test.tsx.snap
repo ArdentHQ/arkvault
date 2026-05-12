@@ -84,7 +84,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
               data-testid="ReceiveFunds__Name_Address"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
                 <span
                   class="font-semibold text-base leading-5"
@@ -101,16 +101,32 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
                     </span>
                   </span>
                 </span>
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 leading-5 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      abc
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 leading-5 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          abc
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          abc
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
                 <span>
                   <span>
                     <button
@@ -310,18 +326,34 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
               data-testid="ReceiveFunds__Name_Address"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-1 w-full"
               >
-                <span>
-                  <span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 leading-5 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      abc
-                    </span>
-                  </span>
-                </span>
+                <div
+                  class="relative flex grow items-center leading-[17px] sm:leading-5 text-left"
+                >
+                  <div
+                    class="font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 dim:text-theme-dim-200 leading-5 text-base"
+                    data-testid="Address__address"
+                  >
+                    <div>
+                      <span
+                        class="flex w-full items-start overflow-y-hidden"
+                        style="height: 0px;"
+                      >
+                        <span
+                          class="invisible absolute left-0 whitespace-nowrap"
+                        >
+                          abc
+                        </span>
+                        <span
+                          class="no-ligatures truncate break-all whitespace-break-spaces"
+                        >
+                          abc
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
                 <span>
                   <span>
                     <button
