@@ -37,11 +37,12 @@ const wellKnownContracts = {
 	username: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
 };
 
+const cache = new Cache(86_400); // 24hr TTL in seconds
+
 export class ClientService {
 	readonly #client!: Client;
 	#config: ConfigRepository;
 	#profile: IProfile;
-	readonly #cache = new Cache(86_400); // 24hr TTL in seconds
 
 	public constructor({ config, profile }: { config: ConfigRepository; profile: IProfile }) {
 		this.#config = config;
@@ -206,15 +207,13 @@ export class ClientService {
 		return new WalletData({ config: this.#config }).fill(body.data);
 	}
 
-	public async legacyColdWallet(address: string): Promise<Object> {
-		const key = `legacy-cold-wallet-${address}`;
-
-		const body = await this.#client.legacy().coldWallet(address);
-		console.log(body)
-
-		await this.#cache.remember(key, body);
-
-		return body;
+	public async legacyColdWallet(
+		address: string,
+	): Promise<{ address: string; balance: string; attributes: Record<string, string> }> {
+		return cache.remember(`legacy-cold-wallet-${address}`, async () => {
+			const body = await this.#client.legacy().coldWallet(address);
+			return body.data;
+		});
 	}
 
 	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {
