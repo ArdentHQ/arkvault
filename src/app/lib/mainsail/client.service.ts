@@ -4,7 +4,7 @@ import { Collections, Contracts, DTO, Services } from "@/app/lib/mainsail";
 import { ConfigKey, ConfigRepository } from "@/app/lib/mainsail";
 import { decodeFunctionResult, encodeFunctionData } from "viem";
 
-import { ArkClient } from "@arkecosystem/typescript-client";
+import { Client } from "@arkecosystem/typescript-client";
 import { ConfirmedTransactionData } from "./confirmed-transaction.dto";
 import { ConfirmedTransactionDataCollection } from "@/app/lib/mainsail/transactions.collection";
 import { DateTime } from "@/app/lib/intl";
@@ -37,7 +37,7 @@ const wellKnownContracts = {
 };
 
 export class ClientService {
-	readonly #client!: ArkClient;
+	readonly #client!: Client;
 	#config: ConfigRepository;
 	#profile: IProfile;
 
@@ -49,7 +49,7 @@ export class ClientService {
 		const evm = config.host("evm", profile);
 		const transactions = config.host("tx", profile);
 
-		this.#client = new ArkClient({
+		this.#client = new Client({
 			api,
 			evm,
 			transactions,
