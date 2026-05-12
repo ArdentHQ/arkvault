@@ -9,7 +9,7 @@ import { LedgerData } from "@/app/contexts";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { env, getDefaultProfileId, renderResponsive, screen, waitFor } from "@/utils/testing-library";
-import {BigNumber} from "@/app/lib/helpers";
+import { BigNumber } from "@/app/lib/helpers";
 
 describe("LedgerImportStep", () => {
 	let profile: Contracts.IProfile;
@@ -19,7 +19,12 @@ describe("LedgerImportStep", () => {
 
 	const ledgerWallets: LedgerData[] = [
 		{ address: "0x659A76be283644AEc2003aa8ba26485047fd1BFB", balance: BigNumber.ZERO, path: derivationPath },
-		{ address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23", balance: BigNumber.ZERO, isNew: true, path: derivationPath },
+		{
+			address: "0x125b484e51Ad990b5b3140931f3BD8eAee85Db23",
+			balance: BigNumber.ZERO,
+			isNew: true,
+			path: derivationPath,
+		},
 	];
 
 	beforeAll(() => {
