@@ -1233,7 +1233,7 @@ exports[`ReviewStep > should render 1`] = `
             class="whitespace-nowrap"
             data-testid="Amount"
           >
-            NaN ARK
+            5.00 ARK
           </span>
         </div>
       </div>
