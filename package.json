@@ -58,7 +58,7 @@
 		"@tailwindcss/vite": "^4.1.11",
 		"ajv": "^8.17.1",
 		"assert": "^2.1.0",
-		"bignumber.js": "^9.3.1",
+		"bignumber.js": "^11.0.0",
 		"browser-fs-access": "^0.38.0",
 		"classnames": "^2.5.1",
 		"crypto-js": "^4.2.0",
