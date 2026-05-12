@@ -46,7 +46,7 @@ describe("LegacyAddressService", () => {
 		it("should return address from a private key", () => {
 			const result = legacyAddressService.fromPrivateKey(
 				"cbf4b9f70470856bb4f40f80b87edb90865997ffee6df315ab166d713af433a5",
-				pubKeyHash
+				pubKeyHash,
 			);
 
 			expect(result).toEqual({
