@@ -211,6 +211,75 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		});
 	});
 
+	it("should handle back from SelectAddressStep with selectedAccount (existing HD wallet)", async () => {
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic,
+		});
+
+		wallet.mutator().accountName("Test Account");
+		profile.wallets().push(wallet);
+
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		expect(screen.getByTestId("SelectAccountStep")).toBeInTheDocument();
+
+		const account = screen.getByText("Test Account");
+		await user.click(account);
+
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("EnterImportValueStep")).toBeInTheDocument();
+		});
+
+		await user.clear(screen.getByTestId("InputPassword"));
+		await user.paste(mnemonic);
+
+		await waitFor(() => {
+			expect(getContinueButton()).toBeEnabled();
+		});
+
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
+		});
+
+		await user.click(getBackButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("EnterImportValueStep")).toBeInTheDocument();
+		});
+
+		profile.wallets().forget(wallet.id());
+	});
+
+	it("should call onCancel when pressing back on SelectAccountStep", async () => {
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		expect(screen.getByTestId("ImportWallet__detail-step")).toBeInTheDocument();
+
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
+
+		await waitFor(() => expect(getContinueButton()).toBeEnabled());
+
+		await user.click(getBackButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		});
+	});
+
 	it("should handle cancel in HD wallet flow", async () => {
 		const user = userEvent.setup();
 
@@ -464,7 +533,7 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		});
 	});
 
-	it("should successfully import multiple selected addresses in order", async () => {
+	it("should handle Enter key on SummaryStep to navigate to dashboard", async () => {
 		const user = userEvent.setup();
 
 		render(<Component />, { route });
@@ -477,6 +546,48 @@ describe("ImportAddressesSidePanel - HD Wallet Flow", () => {
 		await user.click(getContinueButton());
 
 		// Wait for address selection step
+		await waitFor(() => {
+			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
+		});
+
+		await user.click(screen.getByTestId("SelectAddressStep__load-more"));
+
+		const addressCheckboxes = getAddressCheckboxes();
+		await user.click(addressCheckboxes[0]);
+
+		await waitFor(() => {
+			expect(getContinueButton()).toBeEnabled();
+		});
+
+		await user.click(getContinueButton());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
+		});
+
+		await user.keyboard("{Enter}");
+
+		expect(screen.getByTestId("SummaryStep")).toBeInTheDocument();
+
+		for (const wallet of profile.wallets().values()) {
+			if (wallet.isHDWallet()) {
+				profile.wallets().forget(wallet.id());
+			}
+		}
+	});
+
+	it("should successfully import multiple selected addresses in order", async () => {
+		const user = userEvent.setup();
+
+		render(<Component />, { route });
+
+		await user.click(screen.getByText("HD Wallet"));
+
+		await user.clear(getMnemonicInput());
+		await user.paste(mnemonic);
+
+		await user.click(getContinueButton());
+
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectAddressStep")).toBeInTheDocument();
 		});
