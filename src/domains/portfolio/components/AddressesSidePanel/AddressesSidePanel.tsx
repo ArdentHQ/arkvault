@@ -22,13 +22,19 @@ import { groupBy, sortBy } from "@/app/lib/helpers";
 import { AccountNameEditRow } from "./AccountNameEditRow";
 import { Contracts } from "@/app/lib/profiles";
 
-export const computeWalletErrorState = (
-	isManageMode: boolean,
-	selectedAddressesLength: number,
-	addressToDelete: string | undefined,
-	hdAccountToDelete: string | undefined,
-	wallet: Contracts.IReadWriteWallet,
-) => {
+export const computeWalletErrorState = ({
+	isManageMode,
+	selectedAddressesLength,
+	addressToDelete,
+	hdAccountToDelete,
+	wallet,
+}: {
+	isManageMode: boolean;
+	selectedAddressesLength: number;
+	addressToDelete: string | undefined;
+	hdAccountToDelete: string | undefined;
+	wallet: Contracts.IReadWriteWallet;
+}): boolean => {
 	if (!isManageMode) {
 		return false;
 	}
@@ -41,7 +47,7 @@ export const computeWalletErrorState = (
 		return true;
 	}
 
-	if (!!hdAccountToDelete && hdAccountToDelete === wallet.accountName()) {
+	if (hdAccountToDelete && hdAccountToDelete === wallet.accountName()) {
 		return true;
 	}
 
@@ -165,13 +171,13 @@ export const AddressesSidePanel = ({
 	};
 
 	const renderErrorState = (wallet: Contracts.IReadWriteWallet) => {
-		return computeWalletErrorState(
+		return computeWalletErrorState({
 			isManageMode,
-			selectedAddresses.length,
+			selectedAddressesLength: selectedAddresses.length,
 			addressToDelete,
 			hdAccountToDelete,
 			wallet,
-		);
+		});
 	};
 
 	return (
