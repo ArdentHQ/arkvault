@@ -80,6 +80,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 			},
 			gasLimit,
 			gasPrice,
+			nonce: senderAddress.getAttributes().get<string>('wallet.data.attributes.legacyNonce', undefined),
 			signatory,
 		});
 	} else {
@@ -90,6 +91,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 			},
 			gasLimit,
 			gasPrice,
+			nonce: senderAddress.getAttributes().get<string>('wallet.data.attributes.legacyNonce', undefined),
 			signatory,
 		});
 	}
