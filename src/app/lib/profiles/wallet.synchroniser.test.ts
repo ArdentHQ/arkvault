@@ -87,6 +87,20 @@ describe("WalletSynchroniser", () => {
 
 			legacyAddressSpy.mockRestore();
 		});
+
+		it("should not fetch wallet identity from snapshot if `legacyAddress` is `undefined`", async () => {
+			const walletMock = vi.fn().mockRejectedValue(new Error("404"));
+			const legacyColdWalletMock = vi.fn().mockResolvedValue({});
+
+			vi.spyOn(wallet, "client").mockReturnValue({
+				legacyColdWallet: legacyColdWalletMock,
+				wallet: walletMock,
+			} as any);
+
+			await subject.identity();
+
+			expect(legacyColdWalletMock).not.toHaveBeenCalled();
+		});
 	});
 
 	describe("votes", () => {
