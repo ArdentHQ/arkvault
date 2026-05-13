@@ -37,7 +37,7 @@ describe("WalletSerialiser", () => {
 			    "IMPORT_METHOD": "BIP39.MNEMONIC",
 			    "IS_PRIMARY": false,
 			    "LEDGER_MODEL": undefined,
-				"LEGACY_ADDRESS": undefined,
+			    "LEGACY_ADDRESS": undefined,
 			    "NETWORK": "mainsail.devnet",
 			    "PUBLIC_KEY": "021adbf4453accaefea33687c672fd690702246ef397363421585f134a1e68c175",
 			    "SEQUENCE": "8",
