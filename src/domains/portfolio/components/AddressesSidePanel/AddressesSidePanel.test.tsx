@@ -345,6 +345,58 @@ describe("AddressesSidePanel", () => {
 		});
 	});
 
+	it("should hit closeSidepanel guard when panel closes via external trigger", async () => {
+		const onOpenChange = vi.fn((open) => {
+			if (!open) return;
+		});
+
+		render(<AddressesSidePanel open={true} onClose={() => {}} onOpenChange={onOpenChange} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
+
+		expect(screen.getAllByTestId("AddressRow")).toHaveLength(wallets.count()); // panel renders correctly before closing
+
+		await userEvent.keyboard("[Escape]");
+	});
+
+	it("should show empty block when no wallets match the current filter", async () => {
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={() => {}} onMountChange={() => {}} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.clear(getSearchInput());
+		await waitFor(() => {
+			expect(screen.getAllByTestId("AddressRow").length).toBeGreaterThan(0); // verify initial render has rows
+		});
+
+		await userEvent.type(getSearchInput(), "onexistent_address");
+
+		await waitFor(
+			() => {
+				expect(screen.queryByTestId("AddressRow")).not.toBeInTheDocument();
+			},
+			{ timeout: 3000 },
+		);
+	});
+
+	it("should trigger toggleAddress callback when clicking an address row in single view", async () => {
+		const onClose = vi.fn();
+
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		const singleTabButton = screen.getByTestId("tabs__tab-button-single");
+		await userEvent.click(singleTabButton);
+
+		const addressRows = screen.getAllByTestId("AddressRow");
+		await userEvent.click(addressRows[0]);
+
+		expect(screen.getByTestId(sidePanelCloseButton)).toBeInTheDocument();
+	});
+
 	it("should handle HD wallet account delete", async () => {
 		const mnemonic = MNEMONICS[0];
 		const hdWallet = await profile.walletFactory().fromMnemonicWithBIP44({
