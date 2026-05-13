@@ -163,6 +163,24 @@ describe("ClientService", () => {
 		expect(wallet.primaryKey()).toBe("walletid");
 	});
 
+	it("should fetch and cache a legacy cold wallet", async () => {
+		let count = 0;
+		server.use(http.get("http://localhost/legacy/cold-wallets/walletid", () => {
+			count++;
+			return HttpResponse.json({ data: walletMockData });
+		}));
+
+		// warm cache
+		const data = await clientService.legacyColdWallet("walletid");
+		expect(data).toBeDefined();
+		expect(data.address).toBe("walletid");
+
+		// should hit cache
+		await clientService.legacyColdWallet("walletid");
+
+		expect(count).toBe(1);
+	});
+
 	it("should fetch wallets", async () => {
 		server.use(
 			http.get(/http:\/\/localhost\/wallets.*/, ({ request }) => {
