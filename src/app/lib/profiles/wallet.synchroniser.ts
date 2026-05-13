@@ -2,6 +2,7 @@ import { Contracts, Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
+import { WalletData as WalletDataDto } from "@/app/lib/mainsail/wallet.dto";
 
 export class WalletSynchroniser implements IWalletSynchroniser {
 	readonly #wallet: IReadWriteWallet;
@@ -37,7 +38,10 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			 * but has no transactions or that the address is wrong.
 			 */
 
-			this.#wallet.getAttributes().set("wallet", currentWallet);
+			this.#wallet.getAttributes().set("wallet", currentWallet ?? new WalletDataDto({
+				config: this.#wallet.profile().activeNetwork().config()
+			}).fill({attributes: {}}));
+
 			this.#wallet.data().set(WalletData.PublicKey, currentPublicKey);
 		}
 
