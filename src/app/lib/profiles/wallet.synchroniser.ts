@@ -54,12 +54,12 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 	}
 
 	private async legacyIdentity(): Promise<WalletDataDto | undefined> {
-		try {
-			const legacyAddress = this.#wallet.legacyAddress();
-			if (!legacyAddress) {
-				return;
-			}
+		const legacyAddress = this.#wallet.legacyAddress();
+		if (!legacyAddress) {
+			return;
+		}
 
+		try {
 			const data = await this.#wallet.client().legacyColdWallet(legacyAddress);
 
 			return new WalletDataDto({ config: this.#wallet.profile().activeNetwork().config() }).fill({
