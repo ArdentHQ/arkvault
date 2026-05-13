@@ -91,7 +91,7 @@ export const signValidatorRegistration = async ({ env, form, profile, signatory 
 			},
 			gasLimit,
 			gasPrice,
-			nonce: senderAddress.getAttributes().get<string>('wallet.data.attributes.legacyNonce', undefined),
+			nonce: senderAddress.getAttributes().get('wallet.data.attributes.legacyNonce', undefined),
 			signatory,
 		});
 	}
