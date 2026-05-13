@@ -165,10 +165,12 @@ describe("ClientService", () => {
 
 	it("should fetch and cache a legacy cold wallet", async () => {
 		let count = 0;
-		server.use(http.get("http://localhost/legacy/cold-wallets/walletid", () => {
-			count++;
-			return HttpResponse.json({ data: walletMockData });
-		}));
+		server.use(
+			http.get("http://localhost/legacy/cold-wallets/walletid", () => {
+				count++;
+				return HttpResponse.json({ data: walletMockData });
+			}),
+		);
 
 		// warm cache
 		const data = await clientService.legacyColdWallet("walletid");
