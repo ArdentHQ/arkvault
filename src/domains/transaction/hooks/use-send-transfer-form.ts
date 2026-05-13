@@ -121,9 +121,9 @@ export const useSendTransferForm = ({
 				data,
 				gasLimit,
 				gasPrice,
-				nonce: wallet.getAttributes().get<string>('wallet.data.attributes.legacyNonce', undefined),
+				nonce: wallet.getAttributes().get<string>("wallet.data.attributes.legacyNonce", undefined),
 				signatory,
-				token
+				token,
 			};
 
 			const abortSignal = abortReference.current.signal;
