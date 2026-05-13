@@ -5,7 +5,7 @@ import { abort_if, abort_unless } from "@/app/lib/helpers";
 
 export class LegacyAddressService {
 	public fromMnemonic(mnemonic: string, pubKeyHash: number): Services.AddressDataTransferObject {
-		// abort_unless(BIP39.compatible(mnemonic), "The given value is not BIP39 compliant.");
+		abort_unless(BIP39.compatible(mnemonic), "The given value is not BIP39 compliant.");
 
 		return {
 			address: LegacyAddress.fromPassphrase(mnemonic, pubKeyHash),
