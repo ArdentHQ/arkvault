@@ -73,7 +73,7 @@ export const signContractDeployment = async ({ env, form, profile, signatory }: 
 		},
 		gasLimit,
 		gasPrice,
-		nonce: senderAddress.getAttributes().get("wallet.data.attributes.legacyNonce", undefined),
+		nonce: senderWallet.getAttributes().get<string>("wallet.data.attributes.legacyNonce"),
 		signatory,
 	});
 
