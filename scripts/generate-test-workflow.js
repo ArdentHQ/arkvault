@@ -41,7 +41,7 @@ for (const directory of directories) {
 		},
 		strategy: {
 			matrix: {
-				"node-version": ["22"],
+				"node-version": ["24"],
 			},
 		},
 		concurrency: {
@@ -50,19 +50,19 @@ for (const directory of directories) {
 		},
 		steps: [
 			{
-				uses: "actions/checkout@v3",
+				uses: "actions/checkout@v6",
 				with: {
 					ref: "${{ github.head_ref }}",
 				},
 			},
 			{
-				uses: "pnpm/action-setup@v2",
+				uses: "pnpm/action-setup@v6",
 				with: {
-					version: 7,
+					version: 10,
 				},
 			},
 			{
-				uses: "actions/setup-node@v2",
+				uses: "actions/setup-node@v6",
 				with: {
 					"node-version": "${{ matrix.node-version }}",
 					cache: "pnpm",
