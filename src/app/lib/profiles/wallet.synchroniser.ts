@@ -32,7 +32,8 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			this.#wallet.data().set(WalletData.Sequence, wallet.nonce());
 		} catch {
 			/**
-			* * TODO: decide what to do if the wallet couldn't be found
+			* TODO: decide what to do if the wallet couldn't be found
+			*
 			* A missing wallet could mean that the wallet is legitimate
 			* but has no transactions or that the address is wrong.
 			*/
