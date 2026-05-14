@@ -86,7 +86,7 @@ for (const directory of directories) {
 			},
 			{
 				name: "Test",
-				uses: "nick-invision/retry@v2",
+				uses: "nick-invision/retry@v4",
 				with: {
 					timeout_minutes: 20,
 					max_attempts: 1,

@@ -9,23 +9,23 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [22]
+                node-version: [24]
 
         concurrency:
             group: ${{ github.ref }}-snapshots
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
                   token: ${{ secrets.GH_TOKEN }}
 
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
 
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -46,7 +46,7 @@ jobs:
               continue-on-error: true # Continue on error to allow the commit action to run
               run: pnpm test
 
-            - uses: stefanzweifel/git-auto-commit-action@v4
+            - uses: stefanzweifel/git-auto-commit-action@v6
               with:
                   commit_message: "chore: update snapshots"
                   branch: ${{ github.head_ref }}
