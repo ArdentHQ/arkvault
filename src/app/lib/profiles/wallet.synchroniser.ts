@@ -30,13 +30,15 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			this.#wallet.data().set(WalletData.TokenCount, wallet.tokenCount());
 			this.#wallet.data().set(WalletData.Balance, wallet.balance());
 			this.#wallet.data().set(WalletData.Sequence, wallet.nonce());
-		} catch(error) {
+		} catch (error) {
 			let walletData = currentWallet;
 
 			if (error.message.includes("404")) {
-				walletData = currentWallet ?? new WalletDataDto({
-					config: this.#wallet.profile().activeNetwork().config()
-				}).fill({attributes: {}});
+				walletData =
+					currentWallet ??
+					new WalletDataDto({
+						config: this.#wallet.profile().activeNetwork().config(),
+					}).fill({ attributes: {} });
 			}
 
 			this.#wallet.getAttributes().set("wallet", walletData);
