@@ -14,6 +14,8 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 
 	const { theme } = useTheme();
 
+	const isError = error instanceof Error;
+
 	return (
 		<main className={theme} data-testid="Main">
 			<Page pageTitle={t("COMMON.ERROR")} navbarVariant="logo-only" title={<Trans i18nKey="COMMON.APP_NAME" />}>
@@ -25,10 +27,10 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 					<div data-testid="ApplicationError__text" className="mt-8">
 						<h2 className="text-2xl font-bold capitalize">{t("ERROR.APPLICATION.TITLE")}</h2>
 						<p className="text-theme-secondary-text">{t("ERROR.APPLICATION.DESCRIPTION")}</p>
-						{error && <p className="text-theme-secondary-text">{t("ERROR.APPLICATION.HELP_TEXT")}</p>}
+						{isError && <p className="text-theme-secondary-text">{t("ERROR.APPLICATION.HELP_TEXT")}</p>}
 					</div>
 
-					{error && (
+					{isError && (
 						<div className="mx-auto mt-8 max-w-md">
 							<TextArea
 								data-testid="ErrorStep__errorMessage"
@@ -41,7 +43,7 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 					)}
 
 					<div className="mx-auto mt-8 flex max-w-md items-center justify-center space-x-4">
-						{error && <ClipboardButton data={String(error?.message)}>{t("COMMON.COPY")}</ClipboardButton>}
+						{isError && <ClipboardButton data={String(error.message)}>{t("COMMON.COPY")}</ClipboardButton>}
 
 						<Button data-testid="ApplicationError__button--reload" onClick={() => window.location.reload()}>
 							{t("ERROR.APPLICATION.RELOAD")}
