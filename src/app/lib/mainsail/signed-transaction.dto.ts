@@ -83,7 +83,7 @@ export class SignedTransactionData {
 			return BigNumber.sum(this.payments().map(({ amount }) => amount));
 		}
 
-		return BigNumber.make(UnitConverter.formatUnits(this.signedData.value, "ark"));
+		return BigNumber.make(UnitConverter.formatUnits(this.signedData.value ?? "0", "ark"));
 	}
 
 	public fee(): BigNumber {
