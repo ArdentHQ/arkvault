@@ -259,6 +259,14 @@ describe("SignedTransactionData", () => {
 			expect(value).toBeInstanceOf(BigNumber);
 		});
 
+		it("should return zero when value is undefined", () => {
+			transaction.configure({ ...mockSignedData, value: undefined }, mockSerialized);
+			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(false);
+
+			const value = transaction.value();
+			expect(value.toHuman()).toBe(0);
+		});
+
 		it("should return sum of payments for multi-payment", () => {
 			transaction.configure(mockSignedData, mockSerialized);
 			vi.spyOn(transaction, "isMultiPayment").mockReturnValue(true);
