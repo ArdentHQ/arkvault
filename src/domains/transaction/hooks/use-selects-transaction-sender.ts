@@ -1,7 +1,7 @@
 import { useActiveProfile } from "@/app/hooks";
 import { useEffect, useState } from "react";
 import { Contracts } from "@/app/lib/profiles";
-import { useSearchParams } from "react-router";
+import { useSearchParams } from "react-router-dom";
 
 export const useSelectsTransactionSender = ({
 	active,
