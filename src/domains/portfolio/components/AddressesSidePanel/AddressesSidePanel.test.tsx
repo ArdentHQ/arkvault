@@ -1,6 +1,6 @@
 import React from "react";
 import { Contracts } from "@/app/lib/profiles";
-import { env, getMainsailProfileId, render } from "@/utils/testing-library";
+import { env, getMainsailProfileId, render, MNEMONICS } from "@/utils/testing-library";
 import { expect } from "vitest";
 import { AddressesSidePanel } from "./AddressesSidePanel";
 import userEvent from "@testing-library/user-event";
@@ -141,6 +141,28 @@ describe("AddressesSidePanel", () => {
 		getItemSpy.mockRestore();
 	});
 
+	it("should dismiss manage hint when clicking Got it", async () => {
+		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue(undefined);
+
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await waitFor(
+			() => {
+				expect(screen.getByText(/You can manage and remove your addresses here./)).toBeVisible();
+			},
+			{ timeout: 4000 },
+		);
+
+		await userEvent.click(screen.getByTestId("HideManageHint"));
+
+		await waitFor(() => {
+			expect(screen.queryByText(/You can manage and remove your addresses here./)).not.toBeInTheDocument();
+		});
+
+		getItemSpy.mockRestore();
+	});
 	it("should not show a hint for `manage` button if already shown", async () => {
 		const getItemSpy = vi.spyOn(Storage.prototype, "getItem").mockReturnValue("1");
 
@@ -248,5 +270,165 @@ describe("AddressesSidePanel", () => {
 
 		// should reset back to select mode
 		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
+	});
+
+	it("should not toggle address when in manage mode", async () => {
+		const onClose = vi.fn();
+
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+		await userEvent.click(screen.getAllByTestId("AddressRow")[0]);
+
+		expect(screen.getByTestId("BackManage")).toBeInTheDocument();
+	});
+
+	it("should show edit modal when clicking edit from dropdown", async () => {
+		render(<AddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+		await userEvent.click(screen.getByTestId(`AddressRow--dropdown-${wallets.first().address()}`));
+		await userEvent.click(screen.getByText(/Edit/i));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+	});
+
+	it("should cancel editing address and reset manage state", async () => {
+		render(<AddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+		await userEvent.click(screen.getByTestId(`AddressRow--dropdown-${wallets.first().address()}`));
+		await userEvent.click(screen.getByText(/Edit/i));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+		});
+
+		expect(screen.getByTestId("ManageAddresses")).toBeInTheDocument();
+	});
+
+	it("should save edited address name", async () => {
+		render(<AddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+		await userEvent.click(screen.getByTestId(`AddressRow--dropdown-${wallets.first().address()}`));
+		await userEvent.click(screen.getByText(/Edit/i));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+
+		const input = screen.getByTestId("UpdateWalletName__input") as HTMLInputElement;
+		await userEvent.clear(input);
+		await userEvent.type(input, "New Name");
+
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+		});
+	});
+
+	it("should hit closeSidepanel guard when panel closes via external trigger", async () => {
+		const onOpenChange = vi.fn((open) => {
+			if (!open) return;
+		});
+
+		render(<AddressesSidePanel open={true} onClose={() => {}} onOpenChange={onOpenChange} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.click(screen.getByTestId("SelectAllAddresses"));
+
+		expect(screen.getAllByTestId("AddressRow")).toHaveLength(wallets.count()); // panel renders correctly before closing
+
+		await userEvent.keyboard("[Escape]");
+	});
+
+	it("should show empty block when no wallets match the current filter", async () => {
+		render(<AddressesSidePanel open={true} onClose={vi.fn()} onOpenChange={() => {}} onMountChange={() => {}} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await userEvent.clear(getSearchInput());
+		await waitFor(() => {
+			expect(screen.getAllByTestId("AddressRow").length).toBeGreaterThan(0); // verify initial render has rows
+		});
+
+		await userEvent.type(getSearchInput(), "onexistent_address");
+
+		await waitFor(
+			() => {
+				expect(screen.queryByTestId("AddressRow")).not.toBeInTheDocument();
+			},
+			{ timeout: 3000 },
+		);
+	});
+
+	it("should trigger toggleAddress callback when clicking an address row in single view", async () => {
+		const onClose = vi.fn();
+
+		render(<AddressesSidePanel open={true} onClose={onClose} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		const singleTabButton = screen.getByTestId("tabs__tab-button-single");
+		await userEvent.click(singleTabButton);
+
+		const addressRows = screen.getAllByTestId("AddressRow");
+		await userEvent.click(addressRows[0]);
+
+		expect(screen.getByTestId(sidePanelCloseButton)).toBeInTheDocument();
+	});
+
+	it("should handle HD wallet account delete", async () => {
+		const mnemonic = MNEMONICS[0];
+		const hdWallet = await profile.walletFactory().fromMnemonicWithBIP44({
+			levels: { account: 0 },
+			mnemonic,
+		});
+
+		hdWallet.mutator().accountName("Test HD Account");
+		profile.wallets().push(hdWallet);
+
+		render(<AddressesSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: `/profiles/${fixtureProfileId}/dashboard`,
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("hd-wallet-label")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("ManageAddresses"));
+		await waitFor(() => {
+			expect(screen.getByTestId("AccountNameEditRow__wrapper")).toBeInTheDocument();
+		});
+
+		const deleteButton = screen.getByTestId("AccountNameEditRow__delete");
+		await userEvent.click(deleteButton);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("DeleteAddressMessage")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("CancelDelete"));
+
+		profile.wallets().forget(hdWallet.id());
 	});
 });

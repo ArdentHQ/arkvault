@@ -5,6 +5,7 @@ import {
 	waitFor,
 	getMainsailProfileId,
 	mockNanoSTransport,
+	mockLedgerTransportError,
 } from "@/utils/testing-library";
 import { expect, it, describe, beforeEach, afterAll, vi } from "vitest";
 import { Contracts } from "@/app/lib/profiles";
@@ -68,6 +69,40 @@ describe("LedgerMigrationSidepanel", () => {
 	afterAll(() => {
 		vi.restoreAllMocks();
 	});
+
+	it.each(["sm", "md", "lg", "xl"])("should handle device not available callback in %s", async (containerSize) => {
+		mockNanoSTransport();
+		const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
+		renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={vi.fn()} />, containerSize, { route });
+
+		expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+		});
+		consoleSpy.mockRestore();
+	});
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should handle connection failure and go back to listen step in %s",
+		async (containerSize) => {
+			mockLedgerTransportError();
+			const onOpenChange = vi.fn();
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+				route,
+			});
+
+			expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
+
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
+			});
+		},
+	);
 
 	it.each(["sm", "md", "lg", "xl"])("should successfully migrate to one wallet in %s", async (containerSize) => {
 		// Setup mocks
@@ -216,7 +251,6 @@ describe("LedgerMigrationSidepanel", () => {
 
 		expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
 
-		// Wait for and verify each step
 		await waitFor(() => {
 			expect(screen.getByTestId("LedgerAuthStep")).toBeInTheDocument();
 		});
@@ -248,4 +282,38 @@ describe("LedgerMigrationSidepanel", () => {
 			expect(screen.getByTestId("LedgerTransactionErrorStep")).toBeInTheDocument();
 		});
 	});
+
+	it.each(["sm", "md", "lg", "xl"])("should reset state when panel is closed in %s", async (containerSize) => {
+		const onOpenChange = vi.fn();
+		mockNanoSTransport();
+		renderResponsiveWithRoute(
+			<LedgerMigrationSidepanel open={false} onOpenChange={onOpenChange} />,
+			containerSize,
+			{ route },
+		);
+
+		expect(screen.queryByTestId("LedgerMigrationSidepanel")).not.toBeInTheDocument();
+	});
+
+	it.each(["sm", "md", "lg", "xl"])(
+		"should call onOpenChange directly when closing with no completed transactions in %s",
+		async (containerSize) => {
+			const onOpenChange = vi.fn();
+			mockNanoSTransport();
+			renderResponsiveWithRoute(<LedgerMigrationSidepanel open onOpenChange={onOpenChange} />, containerSize, {
+				route,
+			});
+
+			expect(screen.getByTestId("LedgerMigrationSidepanel")).toBeInTheDocument();
+
+			await waitFor(() => {
+				expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+			});
+
+			const closeButton = screen.getByTestId("SidePanel__close-button");
+			await userEvent.click(closeButton);
+
+			expect(onOpenChange).toHaveBeenCalledWith(false);
+		},
+	);
 });

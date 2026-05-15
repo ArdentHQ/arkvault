@@ -281,6 +281,36 @@ describe("ImportAddress Validations", () => {
 		expect(continueButton()).toBeDisabled();
 	});
 
+	it("should show an error message for invalid public key", async () => {
+		render(<ImportAddressesSidePanel open={true} onOpenChange={vi.fn()} />,
+			{ route: route },
+		);
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+
+		expect(detailStep()).toBeInTheDocument();
+
+		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
+
+		const publicKeyInput = screen.getByTestId("ImportWallet__publicKey-input");
+
+		await userEvent.clear(publicKeyInput);
+		await userEvent.type(publicKeyInput, "invalid-public-key");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				walletTranslations.VALIDATION.INVALID_PUBLIC_KEY,
+			);
+		});
+
+		expect(continueButton()).toBeDisabled();
+	});
+
 	it("should show an error message for duplicate name", async () => {
 		const emptyProfile = await env.profiles().create("duplicate wallet name profile");
 

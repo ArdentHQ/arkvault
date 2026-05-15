@@ -18,7 +18,8 @@ import {
 } from "@/utils/testing-library";
 import { ImportAddressesSidePanel } from "./ImportAddressSidePanel";
 import { expect } from "vitest";
-import { ImportAddressStep, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
+import { ImportAddressStep, useHDWalletStepHeaderConfig, useLedgerStepHeaderConfig, useStepHeaderConfig } from "./ImportAddressSidePanel.blocks";
+import { HDWalletTabStep } from "./HDWallet/HDWalletsTabs.contracts";
 import { LedgerTabStep } from "./Ledger/LedgerTabs.contracts";
 import { ImportOption } from "@/domains/wallet/hooks";
 
@@ -233,6 +234,14 @@ describe("useStepHeaderConfig", () => {
 		});
 	});
 
+	it("returns config for ImportDetailStep without importOption", () => {
+		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.ImportDetailStep));
+		expect(result.current).toEqual({
+			subtitle: "",
+			title: "",
+		});
+	});
+
 	it("returns correct config for EncryptPasswordStep", () => {
 		const { result } = renderHook(() => useStepHeaderConfig(ImportAddressStep.EncryptPasswordStep));
 		expect(result.current).toMatchObject({
@@ -260,6 +269,13 @@ describe("useLedgerStepHeaderConfig", () => {
 		});
 	});
 
+	it("returns config for LedgerConnectionStep without importOption", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerConnectionStep));
+		expect(result.current).toMatchObject({
+			title: "Ledger",
+		});
+	});
+
 	it("returns config for LedgerScanStep", () => {
 		const { result } = renderHook(() => useLedgerStepHeaderConfig(LedgerTabStep.LedgerScanStep));
 		expect(result.current).toEqual({
@@ -280,6 +296,20 @@ describe("useLedgerStepHeaderConfig", () => {
 
 	it("returns default config for unknown step", () => {
 		const { result } = renderHook(() => useStepHeaderConfig(999 as unknown as ImportAddressStep));
+		expect(result.current).toEqual({
+			title: "",
+		});
+	});
+
+	it("returns default config for unknown ledger step", () => {
+		const { result } = renderHook(() => useLedgerStepHeaderConfig(999 as unknown as LedgerTabStep));
+		expect(result.current).toEqual({
+			title: "",
+		});
+	});
+
+	it("returns default config for unknown HD wallet step", () => {
+		const { result } = renderHook(() => useHDWalletStepHeaderConfig(999 as unknown as HDWalletTabStep));
 		expect(result.current).toEqual({
 			title: "",
 		});

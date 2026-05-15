@@ -1,3 +1,4 @@
+import { CreateStep, useCreateStepHeaderConfig, useShowFooter } from "./CreateAddressSidePanel.blocks";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
@@ -7,6 +8,7 @@ import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
 	render,
+	renderHook,
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
@@ -328,9 +330,26 @@ describe("CreateAddressSidePanel", () => {
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 	});
 
-	it.skip("should show an error message if wallet generation failed", async () => {
-		bip39GenerateMock.mockRestore();
-		bip39GenerateMock = vi.spyOn(profile.walletFactory(), "generate").mockImplementation(() => {
+	it("should call onOpenChange when clicking back on WalletOverviewStep", async () => {
+		const onOpenChange = vi.fn();
+		const createURL = `/profiles/${fixtureProfileId}/dashboard`;
+
+		render(<CreateAddressesSidePanel open={true} onOpenChange={onOpenChange} />, {
+			route: createURL,
+		});
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
+		await userEvent.click(backButton);
+
+		await waitFor(() => {
+			expect(onOpenChange).toHaveBeenCalledWith(false);
+		});
+	});
+
+	it("should show an error message if wallet generation failed", async () => {
+		const generateSpy = vi.spyOn(BIP39, "generate").mockImplementation(() => {
 			throw new Error("test");
 		});
 
@@ -341,10 +360,10 @@ describe("CreateAddressSidePanel", () => {
 		});
 
 		await expect(
-			screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR),
+			screen.findByTestId("AlertBanner_error"),
 		).resolves.toBeVisible();
 
-		bip39GenerateMock.mockRestore();
+		generateSpy.mockRestore();
 	});
 
 	it("should show an error message for duplicate name", async () => {
@@ -400,5 +419,92 @@ describe("CreateAddressSidePanel", () => {
 		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
+	});
+});
+
+describe("useCreateStepHeaderConfig", () => {
+	it("returns config for MethodStep", () => {
+		const { result } = renderHook(() => useCreateStepHeaderConfig(CreateStep.MethodStep));
+		expect(result.current).toEqual({
+			subtitle: "Pick the address type to generate to new address",
+			title: "Create New Address",
+		});
+	});
+
+	it("returns config for WalletOverviewStep", () => {
+		const { result } = renderHook(() => useCreateStepHeaderConfig(CreateStep.WalletOverviewStep));
+		expect(result.current).toMatchObject({
+			title: "Your Passphrase",
+		});
+	});
+
+	it("returns config for ConfirmPassphraseStep", () => {
+		const { result } = renderHook(() => useCreateStepHeaderConfig(CreateStep.ConfirmPassphraseStep));
+		expect(result.current).toMatchObject({
+			title: "Confirm Your Passphrase",
+		});
+	});
+
+	it("returns config for EncryptPasswordStep", () => {
+		const { result } = renderHook(() => useCreateStepHeaderConfig(CreateStep.EncryptPasswordStep));
+		expect(result.current).toMatchObject({
+			title: "Encryption Password",
+		});
+	});
+
+	it("returns config for SuccessStep", () => {
+		const { result } = renderHook(() => useCreateStepHeaderConfig(CreateStep.SuccessStep));
+		expect(result.current).toMatchObject({
+			title: "Completed",
+		});
+	});
+
+	it("returns default config for unknown step", () => {
+		const { result } = renderHook(() => useCreateStepHeaderConfig(999 as unknown as CreateStep));
+		expect(result.current).toEqual({
+			title: "",
+		});
+	});
+});
+
+describe("useShowFooter", () => {
+	it("returns false when on MethodStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(false);
+	});
+
+	it("returns true for non-HD wallet when on WalletOverviewStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns true for non-HD wallet on ConfirmPassphraseStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns false for non-HD wallet on SuccessStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns false for HD wallet when on MethodStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(false);
+	});
+
+	it("returns true for HD wallet when on WalletOverviewStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns false for HD wallet when on SuccessStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(false);
+	});
+
+	it("returns false for HD wallet when on ConfirmPassphraseStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(true);
 	});
 });

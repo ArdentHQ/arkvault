@@ -220,6 +220,7 @@ export const AddressRow = ({
 							<Button
 								size="icon"
 								variant="transparent"
+								data-testid={`AddressRow--dropdown-${wallet.address()}`}
 								className={cn("ml-4 p-1", {
 									"dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800":
 										!isEditing && !deleteContent,

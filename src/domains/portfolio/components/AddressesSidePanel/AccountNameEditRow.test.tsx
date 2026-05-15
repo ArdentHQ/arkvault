@@ -86,4 +86,54 @@ describe("AccountNameEditRow", () => {
 
 		expect(screen.getByTestId("DeleteAddressMessage")).toBeInTheDocument();
 	});
+
+	it("should call onConfirmDelete when confirm button clicked", async () => {
+		const onConfirmDelete = vi.fn();
+		render(
+			<AccountNameEditRow
+				profile={profile}
+				wallets={profile.wallets().values()}
+				accountName="Test Account"
+				isDeleting={true}
+				onConfirmDelete={onConfirmDelete}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("ConfirmDelete"));
+		expect(onConfirmDelete).toHaveBeenCalled();
+	});
+
+	it("should call onCancelDelete and reset editing state when cancel button clicked", async () => {
+		const onCancelDelete = vi.fn();
+		render(
+			<AccountNameEditRow
+				profile={profile}
+				wallets={profile.wallets().values()}
+				accountName="Test Account"
+				isDeleting={true}
+				onCancelDelete={onCancelDelete}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("CancelDelete"));
+		expect(onCancelDelete).toHaveBeenCalled();
+	});
+
+	it("should call onCancel when cancel button clicked in UpdateAccountName", async () => {
+		render(
+			<AccountNameEditRow profile={profile} wallets={profile.wallets().values()} accountName="Test Account" />,
+		);
+
+		await userEvent.click(screen.getByTestId("AccountNameEditRow__edit"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument();
+		});
+
+		await userEvent.click(screen.getByTestId("UpdateWalletName__cancel"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument();
+		});
+	});
 });

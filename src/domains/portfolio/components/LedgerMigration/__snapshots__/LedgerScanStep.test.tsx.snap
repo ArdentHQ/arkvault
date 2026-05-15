@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LedgerMigration LedgerScanStep > should show loaded wallets message for multiple wallets 1`] = `
+<Trans
+  i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_ADDRESSES"
+  values={
+    {
+      "count": 2,
+    }
+  }
+/>
+`;
+
+exports[`LedgerMigration LedgerScanStep > should show loaded wallets message for single wallet 1`] = `
+<Trans
+  i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_ADDRESS"
+/>
+`;

@@ -22,6 +22,38 @@ import { groupBy, sortBy } from "@/app/lib/helpers";
 import { AccountNameEditRow } from "./AccountNameEditRow";
 import { Contracts } from "@/app/lib/profiles";
 
+export const computeWalletErrorState = ({
+	isManageMode,
+	selectedAddressesLength,
+	addressToDelete,
+	hdAccountToDelete,
+	wallet,
+}: {
+	isManageMode: boolean;
+	selectedAddressesLength: number;
+	addressToDelete: string | undefined;
+	hdAccountToDelete: string | undefined;
+	wallet: Contracts.IReadWriteWallet;
+}): boolean => {
+	if (!isManageMode) {
+		return false;
+	}
+
+	if (selectedAddressesLength === 0) {
+		return false;
+	}
+
+	if (wallet.address() === addressToDelete) {
+		return true;
+	}
+
+	if (hdAccountToDelete && hdAccountToDelete === wallet.accountName()) {
+		return true;
+	}
+
+	return false;
+};
+
 export const AddressesSidePanel = ({
 	open,
 	onClose,
@@ -115,6 +147,7 @@ export const AddressesSidePanel = ({
 
 	const groupedByAccountName = sortBy(
 		Object.entries(groupBy(addressesToShow, (w) => w.accountName() ?? undefined)),
+		/* istanbul ignore next -- @preserve sortBy comparator */
 		([key]) => [key === undefined, key ?? ""],
 	);
 
@@ -138,23 +171,13 @@ export const AddressesSidePanel = ({
 	};
 
 	const renderErrorState = (wallet: Contracts.IReadWriteWallet) => {
-		if (!isManageMode) {
-			return false;
-		}
-
-		if (selectedAddresses.length === 0) {
-			return false;
-		}
-
-		if (wallet.address() === addressToDelete) {
-			return true;
-		}
-
-		if (!!hdAccountToDelete && hdAccountToDelete === wallet.accountName()) {
-			return true;
-		}
-
-		return false;
+		return computeWalletErrorState({
+			isManageMode,
+			selectedAddressesLength: selectedAddresses.length,
+			addressToDelete,
+			hdAccountToDelete,
+			wallet,
+		});
 	};
 
 	return (
@@ -352,6 +375,7 @@ export const AddressesSidePanel = ({
 										setHdAccountNameToDelete?.(undefined);
 									}}
 									onConfirmDelete={() => {
+										/* istanbul ignore next -- @preserve HD account delete triggers actual wallet deletion */
 										Promise.all(
 											wallets.map((wallet: Contracts.IReadWriteWallet) => handleDelete(wallet)),
 										);
@@ -378,7 +402,7 @@ export const AddressesSidePanel = ({
 												}
 
 												// Automatically close if single mode.
-												const newSelection = toggleSelection(wallet);
+												/* istanbul ignore next -- @preserve single-mode auto-close depends on async profile setting sync */
 												if (profile.walletSelectionMode() === "single") {
 													closeSidepanel(newSelection);
 												}

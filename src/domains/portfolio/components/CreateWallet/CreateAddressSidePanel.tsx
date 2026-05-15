@@ -1,6 +1,7 @@
 import { DefaultTReturn, TOptions } from "i18next";
 import React, { useEffect, useMemo, useState, JSX } from "react";
 import { SidePanel, SidePanelButtons } from "@/app/components/SidePanel/SidePanel";
+import { Error as ErrorBanner } from "@/app/components/AlertBanner";
 import { Form } from "@/app/components/Form";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { WalletOverviewStep } from "@/domains/portfolio/components/CreateWallet/WalletOverviewStep";
@@ -17,7 +18,7 @@ import { useForm } from "react-hook-form";
 import { assertNetwork, assertString } from "@/utils/assertions";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { Contracts } from "@/app/lib/profiles";
-import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
+import { CreateStep, useCreateStepHeaderConfig, useShowFooter } from "./CreateAddressSidePanel.blocks";
 import { MethodStep } from "./MethodStep";
 import { HDWalletTabs } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletTabs";
 import { HDWalletTabStep } from "@/domains/portfolio/components/ImportWallet/HDWallet/HDWalletsTabs.contracts";
@@ -62,7 +63,7 @@ export const CreateAddressesSidePanel = ({
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, acceptResponsibility } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(true);
-	const [_, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
+	const [generationError, setGenerationError] = useState<string | DefaultTReturn<TOptions>>("");
 	const [editingWallet, setEditingWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 
 	const stepConfig = useCreateStepHeaderConfig(activeTab);
@@ -229,12 +230,23 @@ export const CreateAddressesSidePanel = ({
 		}
 	}, [activeTab, acceptResponsibility, useEncryption]);
 
-	const showFooter = (): boolean => {
-		if (isHDWalletCreation) {
-			return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep;
-		}
+	const showFooter = useShowFooter({ activeTab, isHDWalletCreation });
 
-		return activeTab > CreateStep.MethodStep;
+	const handleSelectHdAddress = async () => {
+		await handleGenerateWallet();
+		setActiveTab(CreateStep.WalletOverviewStep);
+		setIsHDWalletCreation(true);
+	};
+
+	const handleSelectRegularAddress = async () => {
+		await handleGenerateWallet();
+		setActiveTab(CreateStep.WalletOverviewStep);
+		setIsHDWalletCreation(false);
+	};
+
+	const handleBackFromHdWallet = async () => {
+		await handleGenerateWallet();
+		setActiveTab(CreateStep.WalletOverviewStep);
 	};
 
 	const isLastStep = activeTab === CreateStep.SuccessStep;
@@ -254,7 +266,7 @@ export const CreateAddressesSidePanel = ({
 			activeStep={activeTab}
 			onBack={handleBack}
 			footer={
-				showFooter() && (
+				showFooter && (
 					<SidePanelButtons data-testid="CreateAddressSidePanel__footer">
 						{activeTab <= CreateStep.EncryptPasswordStep && (
 							<>
@@ -314,22 +326,17 @@ export const CreateAddressesSidePanel = ({
 			isLastStep={isLastStep}
 		>
 			<Form context={form} onSubmit={handleFinish} className="space-y-0" id="CreateWallet__form">
+				{generationError && (
+					<ErrorBanner title={t("COMMON.ERROR")}>{generationError}</ErrorBanner>
+				)}
 				<Tabs activeId={activeTab}>
 					<div>
 						<TabPanel tabId={CreateStep.MethodStep}>
 							<MethodStep
 								profile={activeProfile}
 								network={activeNetwork}
-								onSelectHdAddress={async () => {
-									await handleGenerateWallet();
-									setActiveTab(CreateStep.WalletOverviewStep);
-									setIsHDWalletCreation(true);
-								}}
-								onSelectRegularAddress={async () => {
-									await handleGenerateWallet();
-									setActiveTab(CreateStep.WalletOverviewStep);
-									setIsHDWalletCreation(false);
-								}}
+								onSelectHdAddress={handleSelectHdAddress}
+								onSelectRegularAddress={handleSelectRegularAddress}
 								onImportAddress={onImportAddress}
 							/>
 						</TabPanel>
@@ -356,12 +363,9 @@ export const CreateAddressesSidePanel = ({
 									onStepChange={setHDWalletActiveTab}
 									onCancel={() => onOpenChange(false)}
 									onSubmit={handleFinish}
-									onBack={async () => {
-										await handleGenerateWallet();
-										setActiveTab(CreateStep.WalletOverviewStep);
-									}}
+									onBack={handleBackFromHdWallet}
 								/>
-							)}
+								)}
 							{!isHDWalletCreation && (
 								<SuccessStep onClickEditAlias={(wallet) => setEditingWallet(wallet)} />
 							)}

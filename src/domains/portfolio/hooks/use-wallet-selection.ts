@@ -79,8 +79,18 @@ export const useWalletSelection = (profile: Contracts.IProfile) => {
 	 * Toggles the selection of a specific wallet based on the current selection mode.
 	 *
 	 * @param {IReadWriteWallet} wallet - The wallet to be toggled.
-	 * @returns {string[]} The new array of selected wallet addresses.
+	 * @returns {string[]}
 	 */
+	const selectAfterDeselectAll = (wallet: IReadWriteWallet): string[] => {
+		profile.wallets().selectOne(wallet);
+		const addresses = profile
+			.wallets()
+			.selected()
+			.map((wallet) => wallet.address());
+		setSelectedAddresses(addresses);
+		return addresses;
+	};
+
 	const toggleSelection = (wallet: IReadWriteWallet): string[] => {
 		const isSelected = isWalletSelected(wallet);
 
@@ -94,13 +104,7 @@ export const useWalletSelection = (profile: Contracts.IProfile) => {
 
 		// All are deselected. Select the single wallet.
 		if (selectedAddresses.length === 0) {
-			profile.wallets().selectOne(wallet);
-			const addresses = profile
-				.wallets()
-				.selected()
-				.map((wallet) => wallet.address());
-			setSelectedAddresses(addresses);
-			return addresses;
+			return selectAfterDeselectAll(wallet);
 		}
 
 		// Deselect
@@ -115,6 +119,7 @@ export const useWalletSelection = (profile: Contracts.IProfile) => {
 		handleDelete,
 		persistSelection,
 		selectedAddresses,
+		selectAfterDeselectAll,
 		setActiveMode,
 		setSelectedAddresses,
 		toggleSelection,
