@@ -21,9 +21,9 @@ const AnchorStyled = ({ isDisabled, ...properties }: AnchorStyledProps) => (
 		className={twMerge(
 			"focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors",
 			cn({
+				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500":
 					!isDisabled,
-				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 			}),
 			properties.className,
 		)}
@@ -106,9 +106,9 @@ const StyledRouterLink = ({
 		className={cn(
 			"ring-focus group/inner focus:outline-hidden relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors",
 			{
+				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500":
 					!isDisabled,
-				"cursor-not-allowed text-theme-secondary-text": isDisabled,
 			},
 			className,
 		)}

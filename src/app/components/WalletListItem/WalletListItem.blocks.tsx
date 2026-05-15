@@ -78,8 +78,8 @@ export const RecipientItemMobile = ({
 						data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 						size="icon"
 						className={cn("p-0 text-sm leading-[17px]", {
-							"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 							"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600": selected,
+							"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 						})}
 						variant="transparent"
 					>
@@ -207,12 +207,12 @@ export const RecipientItem: React.FC<RecipientItemProperties> = ({
 						}
 						size="icon"
 						className={cn("p-0 text-sm leading-[17px]", {
-							"group-hover:text-theme-navy-700 dim:group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500":
-								!selected,
 							"dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 group-hover:text-theme-success-700":
 								selected,
-							"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 							"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600": selected,
+							"group-hover:text-theme-navy-700 dim:group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500":
+								!selected,
+							"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 						})}
 						variant="transparent"
 					>
@@ -266,9 +266,9 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 								data-testid="ReceiverItemMobile--Select"
 								size="icon"
 								className={cn("p-0 text-sm leading-[17px]", {
-									"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 									"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600":
 										selected,
+									"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400": !selected,
 								})}
 								variant="transparent"
 							>
@@ -420,14 +420,14 @@ export const ReceiverItem: React.FC<ReceiverItemProperties> = ({
 							}
 							size="icon"
 							className={cn("p-0 text-sm leading-[17px]", {
-								"group-hover:text-theme-navy-700 dim:group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500":
-									!selected && !disabled,
 								"dark:group-hover:text-theme-green-500 dim:group-hover:text-theme-green-500 group-hover:text-theme-success-700":
 									selected,
+								"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600": selected,
+								"group-hover:text-theme-navy-700 dim:group-hover:text-theme-navy-700 dark:group-hover:text-theme-navy-500":
+									!selected && !disabled,
 								"text-theme-navy-600 dim:text-theme-navy-600 dark:text-theme-navy-400":
 									!selected && !disabled,
 								"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500": disabled,
-								"dark:text-theme-green-600 dim:text-theme-green-600 text-theme-success-600": selected,
 							})}
 							variant="transparent"
 						>

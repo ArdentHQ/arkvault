@@ -27,10 +27,10 @@ export const Checkbox = ({ color = "success", ref, ...props }: CheckboxPropertie
 						color === "danger" && !disabled,
 					"not-checked:hover:border-theme-hint-500 checked:text-theme-hint-500":
 						color === "hint" && !disabled,
-					"not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500 dim-hover:not-checked:border-theme-dim-navy-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dim:checked:text-theme-dim-navy-600 dim-hover:checked:text-theme-dim-navy-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600":
-						color === "success" && !disabled,
 					"not-checked:hover:border-theme-primary-600 checked:text-theme-primary-600":
 						color === "info" && !disabled,
+					"not-checked:hover:border-theme-primary-600 dark:not-checked:hover:border-theme-dark-navy-500 dim-hover:not-checked:border-theme-dim-navy-600 checked:text-theme-primary-600 checked:hover:text-theme-primary-700 dim:checked:text-theme-dim-navy-600 dim-hover:checked:text-theme-dim-navy-700 dark:checked:checked:text-theme-dark-navy-500 dark:checked:hover:text-theme-dark-navy-600":
+						color === "success" && !disabled,
 					"not-checked:hover:border-theme-warning-600 checked:text-theme-warning-600":
 						color === "warning" && !disabled,
 				}),

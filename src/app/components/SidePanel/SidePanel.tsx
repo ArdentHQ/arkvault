@@ -293,9 +293,9 @@ const SidePanelContent = ({
 											className={cn(
 												"navy-scroll flex h-dvh w-full flex-col bg-theme-background text-theme-text shadow-[0_15px_35px_0px_rgba(33,34,37,0.08)] transition-colors duration-300",
 												{
+													"border-transparent": !isMinimized,
 													"rounded-tl-sm rounded-tr-sm border-l border-r border-t border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:rounded-tl-xl sm:rounded-tr-none sm:border-r-0":
 														isMinimized,
-													"border-transparent": !isMinimized,
 												},
 											)}
 											ref={scrollRef}

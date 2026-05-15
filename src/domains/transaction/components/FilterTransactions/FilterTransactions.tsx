@@ -32,8 +32,8 @@ const FilterOption = ({
 		data-testid="FilterOption"
 		className={classNames("group -my-1 flex w-screen items-center space-x-2 transition-all", {
 			"border-b border-theme-secondary-300 dim:border-theme-dim-600 dark:border-theme-secondary-600": hasDivider,
-			"font-semibold hover:text-theme-navy-600": isChecked,
 			"font-normal hover:text-theme-secondary-900 dark:hover:text-theme-secondary-200": !isChecked,
+			"font-semibold hover:text-theme-navy-600": isChecked,
 		})}
 		onClick={() => onChange?.(!isChecked)}
 	>

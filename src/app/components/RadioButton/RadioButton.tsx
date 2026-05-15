@@ -18,10 +18,10 @@ export const RadioButton = ({
 			"h-4 w-4 cursor-pointer border-theme-secondary-300 transition duration-150 ease-in-out focus:ring-offset-0 dim:border-theme-dim-500",
 			"dark:not-checked:border-theme-dark-500 dark:not-checked:bg-theme-dark-900 dark:checked:border-none",
 			cn({
-				"text-theme-danger-400": color === "danger",
-				"text-theme-hint-500": color === "hint",
 				"dim:not-checked:bg-transparent text-theme-primary-600 dim:checked:text-theme-dim-navy-600":
 					color === "info",
+				"text-theme-danger-400": color === "danger",
+				"text-theme-hint-500": color === "hint",
 				"text-theme-success-600": color === "success",
 				"text-theme-warning-600": color === "warning",
 			}),

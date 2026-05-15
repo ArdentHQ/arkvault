@@ -172,8 +172,8 @@ const Votes = ({ votes, activeValidators, withDivider, hasTokens }: VotesPropert
 
 				<div
 					className={cn({
-						"w-full shrink-0": !!validator.username(),
 						"max-w-28 flex-1 shrink-0 truncate xs:max-w-32 sm:max-w-40 md:max-w-44": !validator.username(),
+						"w-full shrink-0": !!validator.username(),
 					})}
 				>
 					<ValidatorName

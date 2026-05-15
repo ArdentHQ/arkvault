@@ -438,10 +438,10 @@ export const PortfolioHeader = ({
 												value={profile.totalBalanceConverted().toNumber()}
 												ticker={wallet.exchangeCurrency()}
 												className={cn({
-													"text-theme-primary-900 dim:text-theme-dim-50 dark:text-theme-dark-50":
-														selectedWallets.length !== 1,
 													"hidden text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 md-lg:block":
 														selectedWallets.length === 1,
+													"text-theme-primary-900 dim:text-theme-dim-50 dark:text-theme-dark-50":
+														selectedWallets.length !== 1,
 												})}
 												allowHideBalance
 												profile={profile}

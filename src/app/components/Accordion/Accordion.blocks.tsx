@@ -20,11 +20,11 @@ export const AccordionWrapper = ({ isInactive, isCollapsed, className, ...props 
 		className={twMerge(
 			"flex flex-col gap-x-3 border-b border-theme-secondary-300 duration-200 dark:border-theme-secondary-800 dark:bg-theme-background md:mb-4 md:rounded-xl md:border-0",
 			cn({
-				"transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800":
-					isCollapsed,
 				"ring-theme-primary-100 dark:ring-theme-secondary-800 md:ring-2": !isInactive,
 				"ring-theme-secondary-300 dark:ring-theme-secondary-800 md:ring-1": isInactive,
 				"transition-all": !isCollapsed,
+				"transition-shadow not-all-hover-none:hover:shadow-xl not-all-hover-none:hover:ring-0 not-all-hover-none:hover:ring-theme-background not-all-hover-none:dark:hover:bg-theme-secondary-800 not-all-hover-none:dark:hover:shadow-none not-all-hover-none:dark:hover:ring-theme-secondary-800":
+					isCollapsed,
 			}),
 			className,
 		)}
