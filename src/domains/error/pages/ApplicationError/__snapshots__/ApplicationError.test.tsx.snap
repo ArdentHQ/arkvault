@@ -1,5 +1,337 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`ApplicationError > should render with error message and reload 1`] = `
+<DocumentFragment>
+  <main
+    class="light"
+    data-testid="Main"
+  >
+    <div
+      class="relative flex flex-col sm:min-h-screen pb-14 sm:pb-0"
+      style="min-height: -webkit-fill-available;"
+    >
+      <nav
+        aria-labelledby="main menu"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dim:bg-theme-dim-900 dark:bg-theme-dark-900 h-21"
+      >
+        <div
+          class="relative flex"
+        >
+          <div
+            class="mt-6 flex flex-1 px-6 md:px-10"
+          >
+            <div
+              class="my-auto flex h-12 items-center"
+            >
+              <span>
+                <span>
+                  <div>
+                    <svg
+                      fill="none"
+                      height="44"
+                      viewBox="0 0 110 44"
+                      width="110"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 8C0 3.58172 3.58172 0 8 0H44V44H8C3.58172 44 0 40.4183 0 36V8Z"
+                        fill="#235B95"
+                      />
+                      <g
+                        clip-path="url(#clip0_28921_2373)"
+                      >
+                        <path
+                          d="M21.3517 37.1182C20.5977 36.5713 19.8757 35.9792 19.1893 35.345C18.4706 34.6953 17.7543 33.9929 17.0606 33.2575C16.1998 32.345 15.3699 31.3773 14.5938 30.381C12.6553 27.9022 11.0207 25.1872 9.72689 22.2974C8.9792 20.6189 8.35736 18.8841 7.86679 17.1081C7.332 15.1633 6.95821 13.1755 6.74943 11.1658C6.70625 10.7511 6.7239 10.2395 7.24727 9.97072C8.73483 9.28185 10.2696 8.70643 11.8392 8.24912C13.2987 7.80925 14.7819 7.45766 16.2813 7.19617C18.0112 6.89105 19.7626 6.73397 21.5177 6.72656H22.4965C24.2516 6.73397 26.003 6.89105 27.7328 7.19617C29.2323 7.45766 30.7155 7.80925 32.175 8.24912C33.7446 8.70651 35.2794 9.28193 36.7671 9.97072C37.2905 10.2397 37.3079 10.7508 37.2648 11.1658C37.056 13.1755 36.6822 15.1633 36.1474 17.1081C35.6568 18.8841 35.035 20.6189 34.2873 22.2974C32.9935 25.1872 31.359 27.9022 29.4204 30.381C28.6445 31.3771 27.8146 32.3448 26.9537 33.2575C26.2599 33.9929 25.5436 34.6953 24.8249 35.345C24.1384 35.9791 23.4164 36.5712 22.6625 37.1182C22.4581 37.2195 22.2342 37.272 22.0074 37.272C21.7806 37.272 21.5566 37.2195 21.3523 37.1182H21.3517ZM21.9228 17.2521C21.8881 17.2992 19.5296 19.8052 17.8075 21.635C17.2139 22.267 16.6913 22.8211 16.3573 23.1765C15.6842 23.8545 15.2564 24.7487 15.1448 25.7111C15.0991 26.2225 15.1575 26.738 15.3164 27.2248C15.5127 27.8088 15.8103 28.3514 16.1948 28.8262C17.291 30.2208 18.4994 31.5181 19.8071 32.7042C20.3454 33.1992 20.9109 33.6619 21.5008 34.0901C21.6581 34.171 21.8315 34.2131 22.0073 34.2131C22.1831 34.2131 22.3565 34.171 22.5138 34.0901C23.1036 33.6619 23.669 33.1991 24.2073 32.7042C25.515 31.5181 26.7234 30.2209 27.8196 28.8262C28.2041 28.3514 28.5017 27.8088 28.698 27.2248C28.8569 26.738 28.9153 26.2225 28.8696 25.7111C28.7579 24.7486 28.3299 23.8542 27.6565 23.1763L26.4067 21.8479L26.2566 21.6884C24.5134 19.8362 22.1259 17.2995 22.0908 17.2519C22.0818 17.2373 22.0694 17.2254 22.0547 17.2171C22.04 17.2088 22.0235 17.2045 22.0068 17.2045C21.9901 17.2045 21.9736 17.2088 21.9589 17.2171C21.9442 17.2254 21.9318 17.2373 21.9228 17.2519V17.2521ZM22.0416 11.2527C22.0532 11.2713 22.0687 11.2964 22.0908 11.3278C22.1238 11.3748 22.6187 12.1852 23.3043 13.3067C24.9487 15.9973 27.7006 20.5003 28.4243 21.5967C28.9594 22.4064 29.6354 22.872 30.2785 22.8722C30.903 22.8722 31.8064 22.4378 32.5633 20.3625C33.3859 18.1079 33.9281 15.7552 34.1769 13.3606C34.2115 13.029 34.1975 12.6208 33.7793 12.406C32.591 11.8559 31.3652 11.3963 30.1115 11.0309C28.9457 10.6795 27.761 10.3987 26.5633 10.1897C25.1816 9.946 23.7826 9.8205 22.3808 9.81451H21.6323C20.2304 9.8205 18.8315 9.946 17.4498 10.1897C16.2521 10.3987 15.0673 10.6795 13.9015 11.0309C12.6479 11.3963 11.422 11.8559 10.2337 12.406C9.81594 12.6206 9.80173 13.0288 9.83609 13.3606C10.0849 15.7552 10.6271 18.1079 11.4498 20.3625C11.8676 21.5079 12.6032 22.8722 13.7346 22.8722C14.3779 22.8722 15.0534 22.4074 15.5887 21.5967C16.3119 20.5013 19.0625 16.0008 20.7057 13.3118L20.7084 13.3073C21.3939 12.1854 21.8893 11.375 21.9221 11.3282C21.944 11.2968 21.9605 11.2715 21.971 11.2531C21.9887 11.2249 21.9973 11.2107 22.0061 11.2107C22.015 11.2107 22.0242 11.2245 22.0416 11.2527ZM17.3624 24.1637L19.0206 22.3839H24.8562L26.5141 24.1637H17.3624ZM20.2479 21.1092L21.9491 19.3072L23.6501 21.1092H20.2479Z"
+                          fill="white"
+                        />
+                      </g>
+                      <path
+                        d="M46 0H102C106.418 0 110 3.58172 110 8V36C110 40.4183 106.418 44 102 44H46V0Z"
+                        fill="#E6EFF9"
+                      />
+                      <path
+                        d="M56.499 27.091H54.5303L58.1148 16.9092H60.3918L63.9813 27.091H62.0125L59.2931 18.9972H59.2135L56.499 27.091ZM56.5637 23.0988H61.933V24.5803H56.5637V23.0988Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M65.3224 27.091V16.9092H67.1668V25.5448H71.6512V27.091H65.3224Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M73.252 27.091V16.9092H77.0702C77.8524 16.9092 78.5087 17.055 79.039 17.3467C79.5726 17.6383 79.9753 18.0394 80.2471 18.5498C80.5222 19.0569 80.6597 19.6336 80.6597 20.2799C80.6597 20.9329 80.5222 21.5129 80.2471 22.02C79.972 22.5271 79.566 22.9265 79.029 23.2181C78.4921 23.5065 77.8309 23.6507 77.0454 23.6507H74.5148V22.1343H76.7968C77.2542 22.1343 77.6287 22.0548 77.9204 21.8957C78.212 21.7366 78.4275 21.5178 78.5667 21.2394C78.7092 20.961 78.7805 20.6412 78.7805 20.2799C78.7805 19.9186 78.7092 19.6005 78.5667 19.3254C78.4275 19.0503 78.2104 18.8365 77.9154 18.684C77.6237 18.5283 77.2475 18.4504 76.7868 18.4504H75.0965V27.091H73.252Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M82.2618 27.091V16.9092H84.1063V21.2195H88.8243V16.9092H90.6737V27.091H88.8243V22.7657H84.1063V27.091H82.2618Z"
+                        fill="#235B95"
+                      />
+                      <path
+                        d="M93.9873 27.091H92.0186L95.6031 16.9092H97.8801L101.47 27.091H99.5008L96.7813 18.9972H96.7018L93.9873 27.091ZM94.0519 23.0988H99.4213V24.5803H94.0519V23.0988Z"
+                        fill="#235B95"
+                      />
+                      <defs>
+                        <clippath
+                          id="clip0_28921_2373"
+                        >
+                          <rect
+                            fill="white"
+                            height="32"
+                            transform="translate(6 6)"
+                            width="32"
+                          />
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </div>
+                </span>
+              </span>
+              <span
+                class="ml-4 text-lg uppercase leading-[21px]"
+              >
+                <strong>
+                  ARK
+                </strong>
+                Vault
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="flex flex-1 flex-col"
+      >
+        <div
+          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center"
+        >
+          <div
+            class="mx-auto px-6 lg:container md:px-10"
+          >
+            <div
+              class="mx-auto flex w-full max-w-xs justify-center"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 342 272"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_675_23634)"
+                >
+                  <path
+                    d="M152 126.163V115.345C152 115.345 150.408 107.493 143.844 107.29C137.28 107.087 114.814 107.29 114.814 107.29C114.814 107.29 116.256 109.882 116.241 111.253C116.226 112.624 116.241 126.163 116.241 126.163H152Z"
+                    fill="#EEF3F5"
+                  />
+                  <path
+                    d="M255.466 223.224H278.16C278.16 223.224 278.388 217.058 276.917 215.212C275.446 213.366 273.146 209.862 271.589 209.747C269.82 209.393 268.092 208.86 266.431 208.157H264.076V166.884C264.076 166.884 260.396 173.984 255.197 176.251C252.006 177.619 248.569 178.322 245.097 178.317C245.097 178.317 245.609 187.794 244.287 191.117C242.446 195.339 240.371 199.455 238.071 203.445C237.228 204.693 237.458 205.289 239.397 205.328C242.543 205.469 245.612 206.347 248.356 207.892C251.29 209.714 255.1 212.855 255.464 216.255C255.828 219.655 256.234 220.288 256.184 220.798C255.993 221.62 255.753 222.43 255.466 223.224V223.224Z"
+                    fill="#DBDEE5"
+                  />
+                  <path
+                    d="M264.246 85.2819C264.246 85.2819 263.546 74.723 266.54 70.802C269.534 66.881 278.418 56.6669 279.032 51.2399C279.646 45.8129 280.932 39.2669 279.032 36.5859C277.132 33.9049 273.498 34.4359 272.594 34.5719C271.69 34.7079 275.804 43.4719 268.976 53.2869C262.148 63.1019 250.738 68.287 249.722 68.75C248.706 69.213 246.559 70.4139 249.722 71.3139C252.885 72.2139 258.302 76.0209 260.084 79.0209C261.866 82.0209 264.246 85.2819 264.246 85.2819V85.2819Z"
+                    fill="#DBDEE5"
+                  />
+                  <path
+                    d="M64 271.163V251.163H26V261.163H24V251.163H0V249.163H24V211.163H0V209.163H24V191.163H26V209.163H29V211.163H26V249.163H64V231.163H66V249.163H89V251.163H66V271.163H64ZM103 255.163V251.163H99V249.163H103V245.163H105V249.163H109V251.163H105V255.163H103ZM314 242.163V223.163H227V242.163H225V223.163H220V221.163H225V182.163H227V221.163H314V182.163H310V180.163H314V142.163H310V140.163H314V117.163H316V140.163H322V142.163H316V180.163H342V182.163H316V221.163H342V223.163H316V242.163H314ZM295 186.163V182.163H291V180.163H295V176.163H297V180.163H301V182.163H297V186.163H295ZM24 185.163V181.163H20V179.163H24V175.163H26V179.163H30V181.163H26V185.163H24ZM314 107.163V103.163H310V101.163H314V97.163H316V101.163H320V103.163H316V107.163H314Z"
+                    fill="#DBDEE5"
+                  />
+                  <path
+                    d="M201.294 223.255H91.8418"
+                    stroke="#DBDEE5"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M279.32 38.542C278.483 41.142 275.089 37.413 275.149 34.995C275.209 32.577 280.157 35.936 279.32 38.542Z"
+                    fill="#235B95"
+                  />
+                  <path
+                    d="M162 125.163C176.291 105.62 203 88.563 203 56.163C203 23.763 215.474 18.424 222 15.163C223.433 14.447 227.45 5.12 228 3.163C228.55 1.206 231.566 -0.499002 234 3.163C236.178 6.44 239 11.163 239 11.163C239 11.163 263.327 11.194 272 34.163C272.4 35.212 276.644 34.022 278 35.163C279.356 36.304 284.216 50.422 271 65.163C267.826 68.704 264 71.463 264 87.163V208.163C264 208.163 278 207.894 278 221.163V222.163H262"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M226.242 146.595C232.1 150.712 236.868 156.192 240.136 162.563C243.404 168.934 245.073 176.004 244.999 183.163C244.999 192.157 241.658 197.926 237.112 204.956"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M237 205.163C243.706 205.163 254.2 207.455 256 219.163C256.091 220.161 256.091 221.165 256 222.163L228.025 222.255"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M272.114 34.397C272.114 34.397 280.44 58.944 241 72.163"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M220.9 15.876C220.9 15.876 226.456 14.463 229 12.163"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M264 85.163C264 85.163 258.986 73.163 247 70.163"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M208.636 125.985C205.931 122.056 203.949 114.174 205.999 108.163"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M260.89 31.563C260.89 31.563 258.29 29.363 252.832 31.563"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M245 178.591C245 178.591 260.492 178.128 264 165.501"
+                    stroke="#212225"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M116 126.163H216C218.652 126.163 221.196 127.217 223.071 129.092C224.946 130.967 226 133.511 226 136.163V213.163"
+                    stroke="#DBDEE5"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M59 127.163V111.163C59 108.511 60.0536 105.967 61.929 104.092C63.8043 102.217 66.3478 101.163 69 101.163H106C108.652 101.163 111.196 102.217 113.071 104.092C114.946 105.967 116 108.511 116 111.163V127.163"
+                    stroke="#DBDEE5"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M115 107.163H142C144.652 107.163 147.196 108.217 149.071 110.092C150.946 111.967 152 114.511 152 117.163V127.163"
+                    stroke="#DBDEE5"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M116 126.163H216C218.652 126.163 221.196 127.217 223.071 129.092C224.946 130.967 226 133.511 226 136.163V162.163M59 213.163V127.163"
+                    stroke="#DBDEE5"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M178 171.163H174V167.163H178V171.163ZM170 171.163H166V167.163H170V171.163ZM122 171.163H118V167.163H122V171.163ZM114 171.163H110V167.163H114V171.163ZM174 167.163H170V163.163H174V167.163ZM118 167.163H114V163.163H118V167.163ZM178 163.163H174V159.163H178V163.163ZM170 163.163H166V159.163H170V163.163ZM122 163.163H118V159.163H122V163.163ZM114 163.163H110V159.163H114V163.163Z"
+                    fill="#212225"
+                  />
+                  <path
+                    d="M133 190.163H157"
+                    stroke="#212225"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M75.617 206.163H108.5C110.754 206.163 112.916 207.058 114.51 208.653C116.104 210.247 117 212.409 117 214.663C117 216.917 116.104 219.079 114.51 220.673C112.916 222.267 110.754 223.163 108.5 223.163H55.5C53.2457 223.163 51.0836 222.267 49.4896 220.673C47.8955 219.079 47 216.917 47 214.663C47 212.409 47.8955 210.247 49.4896 208.653C51.0836 207.058 53.2457 206.163 55.5 206.163H58.087"
+                    stroke="#212225"
+                    stroke-width="2"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_675_23634"
+                  >
+                    <rect
+                      fill="white"
+                      height="271.163"
+                      width="342"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </div>
+            <div
+              class="mt-8"
+              data-testid="ApplicationError__text"
+            >
+              <h2
+                class="text-2xl font-bold capitalize"
+              >
+                Something went wrong
+              </h2>
+              <p
+                class="text-theme-secondary-text"
+              >
+                It looks like something went wrong. Try visiting another page or reloading.
+              </p>
+              <p
+                class="text-theme-secondary-text"
+              >
+                Please provide the error below when contacting support.
+              </p>
+            </div>
+            <div
+              class="mx-auto mt-8 max-w-md"
+            >
+              <div
+                class="relative"
+              >
+                <div
+                  class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dim:border-t-theme-dim-500 dark:border-t-theme-secondary-700 md:block"
+                />
+                <div
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 relative py-4"
+                >
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <textarea
+                      autocomplete="off"
+                      class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text min-h-[8rem] md:min-h-auto md:resize-y resize-none"
+                      data-testid="ErrorStep__errorMessage"
+                      disabled=""
+                      type="text"
+                    >
+                      some error
+                    </textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mx-auto mt-8 flex max-w-md items-center justify-center space-x-4"
+            >
+              <div
+                class="relative"
+              >
+                <button
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"
+                  data-testid="clipboard-button__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Copy
+                  </div>
+                </button>
+              </div>
+              <button
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed text-white bg-theme-primary-600 hover:bg-theme-primary-800 dark:hover:bg-theme-primary-500 dim:bg-theme-navy-800"
+                data-testid="ApplicationError__button--reload"
+                type="button"
+              >
+                <div
+                  class="flex items-center gap-2"
+                >
+                  Reload
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
 exports[`ApplicationError > should render without error message 1`] = `
 <DocumentFragment>
   <main
