@@ -51,7 +51,7 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       bignumber.js:
-        specifier: ^11.1.1
+        specifier: ^11.0.0
         version: 11.1.1
       browser-fs-access:
         specifier: ^0.38.0
