@@ -26,7 +26,7 @@ export const TextArea = ({ ref, hideResizeIcon = false, initialHeight = 100, ...
 	return (
 		<div className="relative">
 			{!hideResizeIcon && (
-				<div className="border-t-theme-secondary-400 dark:border-t-theme-secondary-700 dim:border-t-theme-dim-500 pointer-events-none absolute right-3 bottom-4 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent md:block" />
+				<div className="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dim:border-t-theme-dim-500 dark:border-t-theme-secondary-700 md:block" />
 			)}
 
 			<Input

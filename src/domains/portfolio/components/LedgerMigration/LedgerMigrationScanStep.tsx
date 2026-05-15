@@ -30,9 +30,9 @@ const MigrateToOneCheckbox = ({
 			/>
 			<div className="text-sm">
 				<span className="text-sm font-semibold">{t("COMMON.LEDGER_MIGRATION.MIGRATE_TO_ONE_ADDRESS")}</span>
-				<span className="text-theme-secondary-500 font-semibold"> {t("COMMON.OPTIONAL")}</span>
+				<span className="font-semibold text-theme-secondary-500"> {t("COMMON.OPTIONAL")}</span>
 
-				<p className="text-theme-secondary-700 text-sm">
+				<p className="text-sm text-theme-secondary-700">
 					{t("COMMON.LEDGER_MIGRATION.MIGRATE_TO_ONE_ADDRESS_DESCRIPTION")}
 				</p>
 			</div>
@@ -99,7 +99,7 @@ export const MigrationLedgerScanStep = ({
 
 					<Divider
 						dashed
-						className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 my-6"
+						className="my-6 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800"
 					/>
 
 					<MigrateToOneCheckbox
@@ -110,7 +110,7 @@ export const MigrationLedgerScanStep = ({
 						}}
 					/>
 
-					<SidepanelFooter className="fixed right-0 bottom-0">
+					<SidepanelFooter className="fixed bottom-0 right-0">
 						<SidePanelButtons>
 							<Button
 								isLoading={isImportingWallets}

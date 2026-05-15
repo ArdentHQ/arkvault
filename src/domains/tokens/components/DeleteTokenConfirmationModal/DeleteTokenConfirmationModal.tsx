@@ -36,7 +36,7 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose, onDelete }:
 
 							<div className="flex items-center space-x-2">
 								<TokenNameInitials tokenName={walletToken.token().name()} />
-								<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+								<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 									{walletToken.token().name()}
 								</div>
 							</div>
@@ -45,7 +45,7 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose, onDelete }:
 						<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 							<DetailTitle className="w-auto sm:min-w-24 sm:pr-6">{t("COMMON.SYMBOL")}</DetailTitle>
 
-							<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+							<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 								{walletToken.token().symbol()}
 							</div>
 						</div>
@@ -86,7 +86,7 @@ export const DeleteTokenConfirmationModal = ({ walletToken, onClose, onDelete }:
 								decimals={walletToken.token().decimals()}
 								ticker={walletToken.token().displaySymbol()}
 								value={walletToken.balance()}
-								className="text-sm leading-[17px] font-semibold break-all whitespace-normal sm:text-base sm:leading-5"
+								className="whitespace-normal break-all text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 							/>
 						</div>
 					</div>

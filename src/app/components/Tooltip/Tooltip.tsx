@@ -95,7 +95,7 @@ export const Tooltip = ({
 						<div style={transitionStyles}>
 							{showFloatingArrow && (
 								<FloatingArrow
-									className="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
+									className="fill-theme-secondary-900 dim:fill-theme-dim-700 dark:fill-theme-secondary-700"
 									tipRadius={2}
 									height={8}
 									ref={arrowRef}
@@ -106,7 +106,7 @@ export const Tooltip = ({
 								style={{ fontFeatureSettings: '"liga" off, "calt" off' }}
 								className={twMerge(
 									cn(
-										"overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 whitespace-wrap max-w-72 rounded-md px-2 py-1 text-sm font-semibold break-words text-white sm:max-w-3xl sm:whitespace-nowrap",
+										"overflow-wrap-anywhere whitespace-wrap max-w-72 break-words rounded-md bg-theme-secondary-900 px-2 py-1 text-sm font-semibold text-white dim:bg-theme-dim-700 dim:text-theme-dim-50 dark:bg-theme-secondary-700 dark:text-theme-secondary-200 sm:max-w-3xl sm:whitespace-nowrap",
 										{
 											"text-xs font-medium": size === "sm",
 										},

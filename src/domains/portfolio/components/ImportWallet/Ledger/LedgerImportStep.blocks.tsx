@@ -19,10 +19,10 @@ import { BigNumber } from "@/app/lib/helpers";
 
 export const SectionHeaderMobile = ({ title }: { title: string }) => (
 	<div
-		className="border-l-theme-primary-400 bg-theme-primary-100 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 flex h-9 w-full flex-row items-center justify-between border-l-2 px-3"
+		className="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dim:border-l-theme-dim-navy-400 dim:bg-theme-dim-950 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
 		data-testid="SectionHeaderMobile__wrapper"
 	>
-		<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-base font-semibold">
+		<span className="text-base font-semibold text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500">
 			{title}
 		</span>
 	</div>
@@ -33,10 +33,10 @@ export const SectionBodyItem = ({ title, children }: { title: string; children: 
 		className="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
 		data-testid="SectionBodyItem__wrapper"
 	>
-		<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 sm:w-[90px]">
+		<span className="text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500 sm:w-[90px]">
 			{title}
 		</span>
-		<div className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 sm:w-full">
+		<div className="text-theme-secondary-900 dim:text-theme-dim-200 dark:text-theme-secondary-200 sm:w-full">
 			{children}
 		</div>
 	</div>
@@ -49,7 +49,7 @@ const EditButton = ({ onClick }: { onClick: () => void }) => {
 		<Button
 			variant="transparent"
 			onClick={onClick}
-			className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 p-0!"
+			className="p-0! text-theme-primary-600 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 			data-testid="LedgerImportStep__edit-alias"
 		>
 			<Icon name="Pencil" />
@@ -61,8 +61,8 @@ const EditButton = ({ onClick }: { onClick: () => void }) => {
 const DesktopImportSection = ({ title, children }: { title: string; children: React.ReactNode }) => (
 	<div className="flex flex-col gap-4" data-tesid="DesktopImportSection__wrapper">
 		<div className="flex flex-col gap-2">
-			<span className="text-theme-secondary-700 text-base font-semibold">{title}</span>
-			<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex flex-col gap-4 rounded-xl border px-6 py-5">
+			<span className="text-base font-semibold text-theme-secondary-700">{title}</span>
+			<div className="flex flex-col gap-4 rounded-xl border border-theme-secondary-300 px-6 py-5 dim:border-theme-dim-700 dark:border-theme-secondary-800">
 				{children}
 			</div>
 		</div>
@@ -111,8 +111,8 @@ export const SingleImport = ({
 					<div className="flex flex-col gap-3 px-3 pt-3">
 						<SectionBodyItem title={t("COMMON.NAME")}>
 							<div className="flex flex-row items-center gap-2">
-								<div className="xs:max-w-44 sm:max-w-auto max-w-28 truncate"> {wallet.alias()} </div>
-								<hr className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 h-5 w-px border-transparent" />
+								<div className="sm:max-w-auto max-w-28 truncate xs:max-w-44"> {wallet.alias()} </div>
+								<hr className="h-5 w-px border-transparent bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800" />
 								<EditButton onClick={() => onClickEditWalletName(wallet)} />
 							</div>
 						</SectionBodyItem>
@@ -129,7 +129,7 @@ export const SingleImport = ({
 					<Address address={ledgerWallet.address} showCopyButton truncateOnTable />
 				</SectionBodyItem>
 
-				<hr className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 w-full border border-dashed" />
+				<hr className="w-full border border-dashed border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800" />
 
 				<SectionBodyItem title={t("COMMON.BALANCE")}>
 					<Amount value={ledgerWallet.balance ?? 0} ticker={network.ticker()} />
@@ -166,15 +166,15 @@ export const ImportedLedgerMobileItem = ({
 
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
-			<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-11 w-full items-center justify-between px-4 dark:bg-black">
-				<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold">
+			<div className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dim:bg-theme-dim-950 dark:bg-black">
+				<span className="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500">
 					{name}
 				</span>
 
 				<EditButton onClick={onClick} />
 			</div>
 
-			<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
+			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
 				<MobileSection title={t("COMMON.ADDRESS")}>
 					<Address
 						address={address}
@@ -244,7 +244,7 @@ export const MultipleImport = ({
 								<Amount
 									value={wallet.balance ?? 0}
 									ticker={network.ticker()}
-									className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm font-semibold"
+									className="text-sm font-semibold text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 								/>
 							</AmountWrapper>
 						</div>

@@ -11,11 +11,11 @@ exports[`DeleteWallet > should render a modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="bg-theme-background dark:border-theme-dark-700 dim:border dim:border-theme-dim-800 relative flex min-h-full flex-col overflow-hidden shadow-2xl sm:mb-0 md:h-auto md:rounded-xl dark:border"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl dim:border dim:border-theme-dim-800 dark:border dark:border-theme-dark-700 sm:mb-0 md:h-auto md:rounded-xl"
         data-testid="Modal__inner"
       >
         <div
-          class="text-theme-secondary-700 hover:text-theme-navy-700 hover:bg-theme-navy-200 dark:text-theme-secondary-200 dark:hover:text-theme-dark-50 dark:hover:bg-theme-dark-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dim:hover:bg-theme-dim-700 absolute top-0 right-0 z-10 mt-3.5 mr-6 rounded transition-all duration-100 ease-linear md:mt-3.5 md:mr-6"
+          class="absolute right-0 top-0 z-10 mr-6 mt-3.5 rounded text-theme-secondary-700 transition-all duration-100 ease-linear hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-200 dim:hover:bg-theme-dim-700 dim:hover:text-theme-dim-50 dark:text-theme-secondary-200 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 md:mr-6 md:mt-3.5"
         >
           <button
             class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none h-5 w-5"
@@ -59,10 +59,10 @@ exports[`DeleteWallet > should render a modal 1`] = `
           class="relative flex flex-1 flex-col"
         >
           <div
-            class="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-b px-6 py-3.5"
+            class="border-b border-theme-secondary-300 px-6 py-3.5 dim:border-theme-dim-700 dark:border-theme-dark-700"
           >
             <h2
-              class="mb-0 max-w-[calc(100%_-_32px)] text-lg leading-5 font-semibold md:pt-0 md:text-lg"
+              class="mb-0 max-w-[calc(100%_-_32px)] text-lg font-semibold leading-5 md:pt-0 md:text-lg"
             >
               Delete Address
             </h2>
@@ -121,7 +121,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               class="flex flex-col overflow-hidden rounded-xl"
             >
               <div
-                class="dim:text-white flex items-center space-x-2 px-4 py-2 text-sm font-semibold dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
+                class="flex items-center space-x-2 px-4 py-2 text-sm font-semibold dim:text-white dark:text-white bg-theme-warning-100 text-theme-warning-700 dark:bg-theme-warning-700"
               >
                 <div>
                   <div
@@ -166,7 +166,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                 </span>
               </div>
               <div
-                class="dark:bg-theme-secondary-800 dim:bg-theme-dim-800 dim:text-theme-dim-50 w-full p-4 text-left text-sm leading-relaxed break-words bg-theme-warning-50"
+                class="w-full break-words p-4 text-left text-sm leading-relaxed dim:bg-theme-dim-800 dim:text-theme-dim-50 dark:bg-theme-secondary-800 bg-theme-warning-50"
               >
                 Are you sure you wish to delete the selected address? Before deleting, make sure the mnemonic passphrase is secured safely.
               </div>
@@ -175,14 +175,14 @@ exports[`DeleteWallet > should render a modal 1`] = `
               class="[&:focus-within_.FormLabel]:text-theme-secondary-text mt-4"
             >
               <label
-                class="FormLabel text-theme-secondary-text hover:text-theme-primary-600! mb-2 flex leading-[17px] font-semibold transition-colors duration-100 text-sm"
+                class="FormLabel hover:text-theme-primary-600! mb-2 flex font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 text-sm"
                 data-testid="FormLabel"
                 for="wallet"
               >
                 Address
               </label>
               <button
-                class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden cursor-default"
+                class="focus:outline-hidden relative w-full rounded focus:ring-2 focus:ring-theme-primary-400 cursor-default"
                 data-testid="SelectAddress__wrapper"
                 disabled=""
                 type="button"
@@ -206,14 +206,14 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   </div>
                 </span>
                 <div
-                  class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+                  class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
                 >
                   <div
                     class="relative flex h-full flex-1 invisible"
                   >
                     <input
                       autocomplete="off"
-                      class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text"
+                      class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text"
                       data-testid="SelectAddress__input"
                       disabled=""
                       name="wallet"
@@ -229,7 +229,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
               class="modal-footer"
             >
               <div
-                class="bg-theme-background dim:bg-theme-dim-950 dark:bg-theme-dark-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 sm:dim:bg-transparent fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t px-8 py-3 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
+                class="fixed inset-x-0 bottom-0 z-50 flex gap-3 border-t border-theme-secondary-300 bg-theme-background px-8 py-3 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-dark-700 dark:bg-theme-dark-950 sm:relative sm:inset-auto sm:mt-6 sm:justify-end sm:bg-transparent sm:p-0 sm:shadow-none sm:dim:bg-transparent sm:dark:bg-transparent sm:dark:shadow-none [&>button]:flex-1 sm:[&>button]:flex-none [.modal-footer_&]:mt-4 [.modal-footer_&]:sm:-mx-6 [.modal-footer_&]:sm:border-t [.modal-footer_&]:sm:px-6 [.modal-footer_&]:sm:pt-4 pb-3 sm:pb-0"
               >
                 <button
                   class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-dark-800 dark:text-theme-dark-50 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-800 hover:text-white dark:hover:bg-theme-primary-500 dim:bg-theme-dim-navy-900 dim-hover:bg-theme-dim-navy-700 dim-hover:text-white"

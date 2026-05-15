@@ -153,7 +153,7 @@ export const SelectRecipient = ({
 										<div
 											data-testid="SelectRecipient__select-recipient"
 											className={cn("flex items-center", {
-												"text-theme-secondary-700 hover:bg-theme-navy-200 hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:hover:bg-theme-dark-700 dim:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:hover:text-theme-dark-50 cursor-pointer rounded bg-transparent p-1 transition-colors":
+												"cursor-pointer rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-navy-200 hover:text-theme-navy-700 dim:text-theme-dim-50 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50":
 													!disabled,
 											})}
 											onClick={openRecipients}

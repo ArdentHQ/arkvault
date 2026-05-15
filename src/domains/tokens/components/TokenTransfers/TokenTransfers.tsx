@@ -48,9 +48,9 @@ export const TokenTransfers = memo(function TokenTransfers({
 	return (
 		<>
 			<TableWrapper className={cn({ "rounded-b-none! border-none": hasMore })}>
-				<div className="border-b-theme-secondary-300 dark:border-b-theme-secondary-800 dim:border-b-theme-dim-700 flex w-full flex-col items-start justify-between gap-3 border-b-0 pt-3 pb-4 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
+				<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dim:border-b-theme-dim-700 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 					{!isLoadingTransfers && (
-						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
+						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", {
 								count: transfers.length,
 							})}
@@ -59,11 +59,11 @@ export const TokenTransfers = memo(function TokenTransfers({
 
 					{isLoadingTransfers && (
 						<div className="flex items-center space-x-1.5">
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
+							<span className="text-base font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500">
 								{t("COMMON.SHOWING")}
 							</span>
 							<Skeleton width={40} height={20} />
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-base leading-5 font-semibold">
+							<span className="text-base font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500">
 								{t("COMMON.RESULTS").toLowerCase()}
 							</span>
 						</div>
@@ -97,7 +97,7 @@ export const TokenTransfers = memo(function TokenTransfers({
 					<>
 						<div
 							data-testid="Transactions__no-filters-selected"
-							className="text-theme-secondary-text dark:border-theme-secondary-800 dim:text-theme-dim-200 mt-3 mb-1 px-6 text-center leading-5 md:px-6"
+							className="mb-1 mt-3 px-6 text-center leading-5 text-theme-secondary-text dim:text-theme-dim-200 dark:border-theme-secondary-800 md:px-6"
 						>
 							{emptyText || t("TRANSACTION.NO_FILTERS_SELECTED")}
 						</div>
@@ -121,7 +121,7 @@ export const TokenTransfers = memo(function TokenTransfers({
 			</TableWrapper>
 
 			{hasMore && (
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 -mx-6 -mt-1 rounded-b-xl border-t px-6 py-4 md:-mx-px md:mt-0 md:border md:border-t-0">
+				<div className="-mx-6 -mt-1 rounded-b-xl border-t border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800 md:-mx-px md:mt-0 md:border md:border-t-0">
 					<Button
 						data-testid="transactions__fetch-more-button"
 						variant="secondary"

@@ -17,7 +17,7 @@ export const TokenRowSkeleton = () => {
 				</div>
 			</TableCell>
 
-			<TableCell className="md-lg:table-cell hidden">
+			<TableCell className="hidden md-lg:table-cell">
 				<Skeleton width={symbolWidth} height={17} />
 			</TableCell>
 

@@ -19,11 +19,11 @@ const AnchorStyled = ({ isDisabled, ...properties }: AnchorStyledProps) => (
 	<a
 		{...properties}
 		className={twMerge(
-			"relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
+			"focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors",
 			cn({
-				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700":
+				"cursor-not-allowed text-theme-secondary-text": isDisabled,
+				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500":
 					!isDisabled,
-				"text-theme-secondary-text cursor-not-allowed": isDisabled,
 			}),
 			properties.className,
 		)}
@@ -40,7 +40,7 @@ const Content = ({
 	<span
 		{...props}
 		className={twMerge(
-			"border-b border-transparent break-all transition-colors delay-100 duration-200",
+			"break-all border-b border-transparent transition-colors delay-100 duration-200",
 			cn({
 				"group-hover/inner:border-current": !isDisabled && showExternalIcon,
 				"hover:border-current": !isDisabled && !showExternalIcon,
@@ -104,11 +104,11 @@ const StyledRouterLink = ({
 	<RouterLink
 		{...props}
 		className={cn(
-			"ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden",
+			"ring-focus group/inner focus:outline-hidden relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors",
 			{
-				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700":
+				"cursor-not-allowed text-theme-secondary-text": isDisabled,
+				"text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500":
 					!isDisabled,
-				"text-theme-secondary-text cursor-not-allowed": isDisabled,
 			},
 			className,
 		)}

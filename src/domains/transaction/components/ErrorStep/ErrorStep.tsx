@@ -37,7 +37,7 @@ export const ErrorStep = ({
 		<div data-testid="ErrorStep">
 			<div className="space-y-2">
 				<div className="space-y-4">
-					<p className="text-theme-secondary-text hidden md:block">
+					<p className="hidden text-theme-secondary-text md:block">
 						{description ||
 							(deniedByUser
 								? t("TRANSACTION.REJECTED_ERROR.DESCRIPTION")

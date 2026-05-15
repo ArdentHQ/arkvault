@@ -117,7 +117,7 @@ export const ContactForm = ({
 			</FormField>
 
 			<div
-				className={`border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mx-6 flex px-6 sm:border-t ${
+				className={`-mx-6 flex border-theme-secondary-300 px-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-t ${
 					contact ? "justify-between" : "justify-end"
 				}`}
 			>

@@ -132,7 +132,7 @@ export const ExchangeTransactionsRow = ({
 								addressClass="text-theme-primary-600 text-sm"
 							/>
 						) : (
-							<span className="text-theme-secondary-500 text-sm font-semibold">
+							<span className="text-sm font-semibold text-theme-secondary-500">
 								{t("COMMON.NOT_AVAILABLE")}
 							</span>
 						)}

@@ -16,7 +16,7 @@ const CurrencyIcon = ({ image, ticker }: CurrencyIconProperties) => {
 		return (
 			<Circle
 				size="sm"
-				className="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700 dim:bg-theme-dim-800 dim:border-theme-dim-800"
+				className="border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dim:border-theme-dim-800 dim:bg-theme-dim-800 dark:border-theme-secondary-700 dark:bg-theme-secondary-700"
 				noShadow
 			/>
 		);
@@ -66,11 +66,11 @@ const FormDivider = ({ isLoading, exchangeRate, fromCurrency, toCurrency }: Form
 	};
 
 	return (
-		<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 z-0 -mt-1 mb-4 rounded-b px-4 pt-4 pb-3 text-xs leading-[15px] font-semibold">
-			<span className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200">
+		<div className="z-0 -mt-1 mb-4 rounded-b bg-theme-secondary-200 px-4 pb-3 pt-4 text-xs font-semibold leading-[15px] dim:bg-theme-dim-950 dark:bg-theme-dark-950">
+			<span className="text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 				{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_RATE")}:
 			</span>
-			<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 ml-2">
+			<span className="ml-2 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 				{renderExchangeRate()}
 			</span>
 		</div>

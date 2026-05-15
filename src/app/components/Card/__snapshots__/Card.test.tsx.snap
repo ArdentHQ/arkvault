@@ -4,13 +4,13 @@ exports[`Card > should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="border-theme-primary-100 bg-theme-background transition-colors-shadow focus-visible:border-theme-primary-400 dark:border-theme-secondary-800 dim:border-theme-dim-700 dim:focus-visible:border-theme-dim-navy-600 relative h-full w-full cursor-pointer rounded-lg border-2 p-5 text-left outline-hidden duration-200 focus-visible:outline-hidden"
+      class="outline-hidden focus-visible:outline-hidden relative h-full w-full cursor-pointer rounded-lg border-2 border-theme-primary-100 bg-theme-background p-5 text-left transition-colors-shadow duration-200 focus-visible:border-theme-primary-400 dim:border-theme-dim-700 dim:focus-visible:border-theme-dim-navy-600 dark:border-theme-secondary-800"
       data-testid="Card"
       tabindex="-1"
       type="button"
     >
       <div
-        class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+        class="absolute -right-1 -top-1 m-4 flex items-center space-x-1"
       />
     </button>
   </div>

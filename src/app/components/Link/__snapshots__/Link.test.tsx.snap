@@ -5,14 +5,14 @@ exports[`Link > should do nothing on click when disabled 1`] = `
   <span>
     <span>
       <a
-        class="relative space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-secondary-text cursor-not-allowed ring-focus group/inner inline-block"
+        class="focus:outline-hidden relative space-x-1 font-semibold no-underline transition-colors cursor-not-allowed text-theme-secondary-text ring-focus group/inner inline-block"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="https://app.arkvault.io/"
         rel="noopener noreferrer"
       >
         <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200"
+          class="break-all border-b border-transparent transition-colors delay-100 duration-200"
         >
           app.arkvault.io
         </span>
@@ -54,14 +54,14 @@ exports[`Link > should open an external link 1`] = `
   <span>
     <span>
       <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="https://app.arkvault.io/"
         rel="noopener noreferrer"
       >
         <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+          class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
         />
         <div
           class="mb-[3px] shrink-0 align-middle duration-200"
@@ -101,14 +101,14 @@ exports[`Link > should render 1`] = `
   <span>
     <span>
       <a
-        class="ring-focus group/inner relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700"
+        class="ring-focus group/inner focus:outline-hidden relative inline-block cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500"
         data-discover="true"
         data-ring-focus-margin="-m-1"
         data-testid="RouterLink"
         href="/test"
       >
         <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 hover:border-current"
+          class="break-all border-b border-transparent transition-colors delay-100 duration-200 hover:border-current"
         >
           Test
         </span>
@@ -123,14 +123,14 @@ exports[`Link > should render external without children 1`] = `
   <span>
     <span>
       <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="https://app.arkvault.io"
         rel="noopener noreferrer"
       >
         <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+          class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
         />
         <div
           class="mb-[3px] shrink-0 align-middle duration-200"
@@ -169,17 +169,17 @@ exports[`Link > should render with tooltip 1`] = `
 <DocumentFragment>
   <span>
     <span
-      aria-describedby="«re»"
+      aria-describedby="_r_e_"
     >
       <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="/test"
         rel="noopener noreferrer"
       >
         <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+          class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
         >
           Test
         </span>
@@ -214,7 +214,7 @@ exports[`Link > should render with tooltip 1`] = `
     </span>
     <div
       data-floating-ui-focusable=""
-      id="«re»"
+      id="_r_e_"
       role="tooltip"
       style="position: absolute; left: 0px; top: 0px; z-index: 50; transform: translate(0px, -12px);"
       tabindex="-1"
@@ -224,7 +224,7 @@ exports[`Link > should render with tooltip 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="fill-theme-secondary-900 dark:fill-theme-secondary-700 dim:fill-theme-dim-700"
+          class="fill-theme-secondary-900 dim:fill-theme-dim-700 dark:fill-theme-secondary-700"
           height="14"
           style="position: absolute; pointer-events: none; top: 100%; left: 0px;"
           viewBox="0 0 14 14"
@@ -235,7 +235,7 @@ exports[`Link > should render with tooltip 1`] = `
             stroke="none"
           />
           <clippath
-            id="«rg»"
+            id="_r_g_"
           >
             <rect
               height="14"
@@ -246,7 +246,7 @@ exports[`Link > should render with tooltip 1`] = `
           </clippath>
         </svg>
         <div
-          class="overflow-wrap-anywhere dark:bg-theme-secondary-700 dark:text-theme-secondary-200 bg-theme-secondary-900 dim:text-theme-dim-50 dim:bg-theme-dim-700 whitespace-wrap max-w-72 rounded-md px-2 py-1 text-sm font-semibold break-words text-white sm:max-w-3xl sm:whitespace-nowrap"
+          class="overflow-wrap-anywhere whitespace-wrap max-w-72 break-words rounded-md bg-theme-secondary-900 px-2 py-1 text-sm font-semibold text-white dim:bg-theme-dim-700 dim:text-theme-dim-50 dark:bg-theme-secondary-700 dark:text-theme-secondary-200 sm:max-w-3xl sm:whitespace-nowrap"
           style="font-feature-settings: "liga" off, "calt" off;"
         >
           <div>
@@ -264,14 +264,14 @@ exports[`Link > should show a toast when trying to open an invalid external link
   <span>
     <span>
       <a
-        class="relative cursor-pointer space-x-1 font-semibold no-underline transition-colors focus:outline-hidden text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dark:hover:text-theme-primary-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 ring-focus group/inner inline-block"
+        class="focus:outline-hidden relative cursor-pointer space-x-1 font-semibold no-underline transition-colors text-theme-primary-600 hover:text-theme-primary-700 active:text-theme-primary-400 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:hover:text-theme-primary-500 ring-focus group/inner inline-block"
         data-ring-focus-margin="-m-1"
         data-testid="Link"
         href="invalid-url"
         rel="noopener noreferrer"
       >
         <span
-          class="border-b border-transparent break-all transition-colors delay-100 duration-200 group-hover/inner:border-current"
+          class="break-all border-b border-transparent transition-colors delay-100 duration-200 group-hover/inner:border-current"
         />
         <div
           class="mb-[3px] shrink-0 align-middle duration-200"

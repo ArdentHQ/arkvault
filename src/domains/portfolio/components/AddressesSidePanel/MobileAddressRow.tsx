@@ -50,7 +50,7 @@ export const MobileAddressRow = ({
 		<div className="space-y-2">
 			<MultiEntryItem
 				className={cn({
-					"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400": isError,
+					"border-theme-danger-400 dim:border-theme-danger-400 dark:border-theme-danger-400": isError,
 				})}
 				dataTestId="MobileAddressRow"
 				titleSlot={
@@ -82,10 +82,10 @@ export const MobileAddressRow = ({
 						)}
 
 						<div
-							className={cn("truncate text-sm leading-[17px] font-semibold", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50":
+							className={cn("truncate text-sm font-semibold leading-[17px]", {
+								"group-hover:text-theme-primary-900 dim:text-theme-dim-200 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200":
 									!isSelected,
-								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+								"text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50":
 									isSelected && !usesManageMode,
 							})}
 						>
@@ -100,7 +100,7 @@ export const MobileAddressRow = ({
 										onClick={() => onDelete(wallet.address())}
 										data-testid={`AddressRow--delete-${wallet.address()}`}
 										size="icon"
-										className="text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-500 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+										className="p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dim:text-theme-dim-500 dim-hover:text-white dark:text-theme-secondary-500 dark:hover:text-white"
 										variant="transparent"
 									>
 										<Icon name="Trash" dimensions={[16, 16]} />
@@ -112,11 +112,11 @@ export const MobileAddressRow = ({
 										data-testid="icon-MarkedTrash"
 										name="MarkedTrash"
 										dimensions={[16, 16]}
-										className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 p-1"
+										className="p-1 text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500"
 									/>
 								)}
 
-								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px" />
+								<span className="block h-5 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800" />
 
 								<Dropdown
 									disableToggle={isEditing || !!deleteContent}
@@ -126,7 +126,7 @@ export const MobileAddressRow = ({
 											type="button"
 											className={cn("flex", {
 												"text-theme-secondary-500": isEditing || deleteContent,
-												"text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50":
+												"text-theme-secondary-700 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200":
 													!isEditing && !deleteContent,
 											})}
 										>
@@ -142,7 +142,7 @@ export const MobileAddressRow = ({
 				}
 			>
 				<div className={cn("sm:w-full sm:p-0")}>
-					<div className="space-y-4 px-4 pt-3 pb-4 sm:hidden">
+					<div className="space-y-4 px-4 pb-4 pt-3 sm:hidden">
 						<InfoDetail
 							label="Address"
 							body={
@@ -159,21 +159,21 @@ export const MobileAddressRow = ({
 								<Amount
 									ticker={wallet.network().ticker()}
 									value={wallet.balance()}
-									className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+									className="text-sm font-semibold leading-[17px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
 								/>
 							}
 						/>
 					</div>
 					{!!errorMessage && (
-						<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex gap-3 space-x-4 rounded-b-sm px-4 py-3">
+						<div className="flex gap-3 space-x-4 rounded-b-sm bg-theme-danger-50 px-4 py-3 dim:bg-theme-dim-800 dark:bg-theme-dark-800">
 							<div className="mx-[2px] mt-1 flex w-5 justify-center">
 								<Icon
 									name="CircleCross"
-									className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400"
+									className="text-theme-danger-700 dim:text-theme-danger-400 dark:text-theme-danger-400"
 									size="md"
 								/>
 							</div>
-							<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm">
+							<p className="text-sm text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 								{errorMessage}
 							</p>
 						</div>

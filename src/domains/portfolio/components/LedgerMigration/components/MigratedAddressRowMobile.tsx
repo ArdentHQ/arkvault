@@ -23,7 +23,7 @@ export const MigratedAddressRowMobile = ({
 
 	return (
 		<MobileCard className="mb-3" data-testid="MigratedAddressRowMobile">
-			<div className="dim:bg-theme-dim-950 dark:bg-theme-dark-950 flex h-10 w-full items-center justify-between px-4">
+			<div className="flex h-10 w-full items-center justify-between px-4 dim:bg-theme-dim-950 dark:bg-theme-dark-950">
 				<div className="max-w-32">
 					<div className="text-sm font-semibold">{transaction.recipient()?.alias()}</div>
 				</div>
@@ -31,7 +31,7 @@ export const MigratedAddressRowMobile = ({
 					<Button
 						variant="transparent"
 						onClick={() => setEditingWallet(transaction.recipient())}
-						className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500 pr-3!"
+						className="pr-3! text-theme-primary-600 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 					>
 						<Icon name="Pencil" />
 						<span>{t("COMMON.EDIT")}</span>
@@ -39,7 +39,7 @@ export const MigratedAddressRowMobile = ({
 				</div>
 			</div>
 
-			<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
+			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-4">
 				<MobileSection title={t("COMMON.ADDRESS")} className="w-full">
 					<TruncateMiddle
 						className="text-sm font-semibold"
@@ -65,7 +65,7 @@ export const MigratedAddressRowMobile = ({
 
 			{editingWallet && (
 				<UpdateWalletNameForm
-					className="dim:bg-theme-dim-950 dark:bg-theme-dark-950 mt-0 w-full space-y-2 px-4 py-3"
+					className="mt-0 w-full space-y-2 px-4 py-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950"
 					wallet={editingWallet}
 					profile={profile}
 					onCancel={() => setEditingWallet(undefined)}
@@ -73,7 +73,7 @@ export const MigratedAddressRowMobile = ({
 				>
 					<div className="mt-0 flex items-center justify-end">
 						<Button
-							className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500"
+							className="text-theme-primary-600 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 							variant="transparent"
 							onClick={() => setEditingWallet(undefined)}
 						>
@@ -81,7 +81,7 @@ export const MigratedAddressRowMobile = ({
 						</Button>
 
 						<Button
-							className="text-theme-primary-600 dark:text-theme-secondary-500 dim:text-theme-dim-500"
+							className="text-theme-primary-600 dim:text-theme-dim-500 dark:text-theme-secondary-500"
 							variant="transparent"
 							type="submit"
 						>

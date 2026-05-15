@@ -31,13 +31,13 @@ const AccessDeniedErrors = [
 const ViewFinder = ({ error, isLoading }: { error?: QRError; isLoading: boolean }) => (
 	<div
 		data-testid="ViewFinder"
-		className="border-theme-secondary-500 dim:border-theme-dim-500 relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2"
+		className="relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2 border-theme-secondary-500 dim:border-theme-dim-500"
 		style={{ boxShadow: "0px 0px 0px 9999px rgba(0, 0, 0, 0.75)" }}
 	>
-		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute -top-[2px] right-8 left-8 h-0.5" />
-		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute right-8 -bottom-[2px] left-8 h-0.5" />
-		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute top-8 bottom-8 -left-[2px] w-0.5" />
-		<div className="bg-theme-secondary-800 dim:bg-theme-dim-700 absolute top-8 -right-[2px] bottom-8 w-0.5" />
+		<div className="absolute -top-[2px] left-8 right-8 h-0.5 bg-theme-secondary-800 dim:bg-theme-dim-700" />
+		<div className="absolute -bottom-[2px] left-8 right-8 h-0.5 bg-theme-secondary-800 dim:bg-theme-dim-700" />
+		<div className="absolute -left-[2px] bottom-8 top-8 w-0.5 bg-theme-secondary-800 dim:bg-theme-dim-700" />
+		<div className="absolute -right-[2px] bottom-8 top-8 w-0.5 bg-theme-secondary-800 dim:bg-theme-dim-700" />
 
 		{(error || isLoading) && (
 			<>
@@ -133,7 +133,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 			containerClassName="mt-[20%] md:mt-0"
 			onClose={() => onCancel()}
 		>
-			<div className="relative -mx-10 mt-4 -mb-10 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
+			<div className="relative -mx-10 -mb-10 mt-4 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
 				<div className="absolute inset-0 z-10">
 					<QRCameraReader onError={handleError} onRead={handleRead} onReady={handleReady} />
 				</div>

@@ -3,14 +3,14 @@
 exports[`Add Recipient item > should render with exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all"
+    class="group cursor-pointer items-center rounded-lg border border-theme-primary-200 transition-all hover:bg-theme-navy-100 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex items-center px-4 py-3 duration-150"
     >
       <button
-        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-500 dark:hover:text-white"
         data-testid="AddRecipientItem--deleteButton-1"
         type="button"
       >
@@ -47,13 +47,13 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold"
+        class="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dim:border-theme-dim-700 dim:text-theme-dim-200 dark:border-theme-dark-700 dark:text-theme-dark-200"
       >
         <div
           class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
         >
           <div
-            class="group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 text-sm leading-[17px]"
+            class="text-sm leading-[17px] group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200"
           >
             Recipient #2
           </div>
@@ -101,7 +101,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             </span>
           </div>
           <span
-            class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
+            class="whitespace-nowrap leading-5 group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200"
             data-testid="Amount"
           >
             1.00 DARK
@@ -116,14 +116,14 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
 exports[`Add Recipient item > should render with size lg 1`] = `
 <DocumentFragment>
   <div
-    class="group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all"
+    class="group cursor-pointer items-center rounded-lg border border-theme-primary-200 transition-all hover:bg-theme-navy-100 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex items-center px-4 py-3 duration-150"
     >
       <button
-        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-500 dark:hover:text-white"
         data-testid="AddRecipientItem--deleteButton-1"
         type="button"
       >
@@ -160,13 +160,13 @@ exports[`Add Recipient item > should render with size lg 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold"
+        class="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dim:border-theme-dim-700 dim:text-theme-dim-200 dark:border-theme-dark-700 dark:text-theme-dark-200"
       >
         <div
           class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
         >
           <div
-            class="group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 text-sm leading-[17px]"
+            class="text-sm leading-[17px] group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200"
           >
             Recipient #2
           </div>
@@ -204,7 +204,7 @@ exports[`Add Recipient item > should render with size lg 1`] = `
           class="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end"
         >
           <span
-            class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
+            class="whitespace-nowrap leading-5 group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200"
             data-testid="Amount"
           >
             1.00 DARK
@@ -219,28 +219,28 @@ exports[`Add Recipient item > should render with size lg 1`] = `
 exports[`Add Recipient item > should render with size xs 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 dark:border-theme-dark-700 dark:bg-theme-dark-900 dim:border-theme-dim-700 dim:bg-transparent mb-3 overflow-hidden rounded border bg-white last:mb-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
+    class="mb-3 overflow-hidden rounded border border-theme-secondary-300 bg-white last:mb-0 dim:border-theme-dim-700 dim:bg-transparent dark:border-theme-dark-700 dark:bg-theme-dark-900 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-dashed sm:bg-transparent sm:pt-3 sm:dark:bg-transparent"
     data-testid="AddRecipientItem--mobile"
   >
     <div
-      class="flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
+      class="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
     >
       <div
-        class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-y-1 sm:space-x-0"
+        class="flex w-full min-w-0 flex-1 flex-col my-0 sm:w-auto sm:items-start sm:space-x-0 sm:space-y-1"
       >
         <div
-          class="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 flex w-full flex-1 flex-row items-center justify-between px-4 py-3 dim:sm:bg-transparent sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          class="flex w-full flex-1 flex-row items-center justify-between bg-theme-secondary-100 px-4 py-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:bg-transparent sm:p-0 dim:sm:bg-transparent dark:sm:bg-transparent"
         >
           <div
             class="flex w-full items-center justify-between"
           >
             <div
-              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 text-sm leading-[17px] font-semibold whitespace-nowrap"
+              class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500"
             >
               Recipient #2
             </div>
             <button
-              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-50 p-0"
+              class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-0 text-theme-secondary-700 dim:text-theme-dim-50 dark:text-theme-secondary-500"
               data-testid="AddRecipientItem--deleteButton_mobile"
               type="button"
             >
@@ -279,7 +279,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
           </div>
         </div>
         <div
-          class="px-4 pt-3 pb-4 sm:w-full sm:p-0"
+          class="px-4 pb-4 pt-3 sm:w-full sm:p-0"
         >
           <div>
             <div
@@ -287,7 +287,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
             >
               <div>
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Address
                 </div>
@@ -323,12 +323,12 @@ exports[`Add Recipient item > should render with size xs 1`] = `
               </div>
               <div>
                 <div
-                  class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-2 text-sm leading-[17px] font-semibold"
+                  class="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500"
                 >
                   Value
                 </div>
                 <span
-                  class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 text-sm leading-[17px] font-semibold"
+                  class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
                   data-testid="Amount"
                 >
                   1.00 DARK
@@ -348,7 +348,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
             class="flex flex-col items-end space-y-2"
           >
             <div
-              class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-500 leading-[17px] font-semibold whitespace-nowrap"
+              class="whitespace-nowrap font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-500"
             >
               <span
                 class="text-sm leading-[17px]"
@@ -357,7 +357,7 @@ exports[`Add Recipient item > should render with size xs 1`] = `
               </span>
             </div>
             <span
-              class="whitespace-nowrap text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 leading-5 font-semibold"
+              class="whitespace-nowrap font-semibold leading-5 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200"
               data-testid="Amount"
             >
               1.00 DARK
@@ -373,14 +373,14 @@ exports[`Add Recipient item > should render with size xs 1`] = `
 exports[`Add Recipient item > should render without exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="group border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700 hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700 cursor-pointer items-center rounded-lg border transition-all"
+    class="group cursor-pointer items-center rounded-lg border border-theme-primary-200 transition-all hover:bg-theme-navy-100 dim:border-theme-dim-700 dim-hover:bg-theme-dim-700 dark:border-theme-dark-700 dark:hover:bg-theme-dark-700"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex items-center px-4 py-3 duration-150"
     >
       <button
-        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none text-theme-secondary-700 dark:text-theme-secondary-500 hover:bg-theme-danger-400 dim:text-theme-dim-200 dim-hover:text-white p-1 hover:text-white dark:hover:text-white"
+        class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear outline-hidden rounded cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none p-1 text-theme-secondary-700 hover:bg-theme-danger-400 hover:text-white dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-500 dark:hover:text-white"
         data-testid="AddRecipientItem--deleteButton-1"
         type="button"
       >
@@ -417,13 +417,13 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold"
+        class="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dim:border-theme-dim-700 dim:text-theme-dim-200 dark:border-theme-dark-700 dark:text-theme-dark-200"
       >
         <div
           class="flex w-1/2 min-w-0 flex-col space-y-2 truncate"
         >
           <div
-            class="group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 text-sm leading-[17px]"
+            class="text-sm leading-[17px] group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200"
           >
             Recipient #2
           </div>
@@ -461,7 +461,7 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
           class="flex w-1/2 min-w-0 flex-col items-end space-y-2 self-end"
         >
           <span
-            class="whitespace-nowrap group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50 leading-5"
+            class="whitespace-nowrap leading-5 group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200"
             data-testid="Amount"
           >
             1.00 DARK
