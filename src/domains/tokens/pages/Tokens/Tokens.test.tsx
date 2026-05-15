@@ -308,7 +308,7 @@ describe("Tokens", () => {
 		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
 		await user.click(reloadButton);
 
-		expect(reloadMock).toHaveBeenCalledWith(profile.wallets().first().address());
+		expect(reloadMock).toHaveBeenCalledWith("0xToken1");
 	});
 
 	it("should update modal item on token refresh", async () => {
@@ -371,7 +371,7 @@ describe("Tokens", () => {
 		const reloadButton = screen.getByTestId("TokenDetailSidepanel__reload-button");
 		await user.click(reloadButton);
 
-		expect(loadedToken).toBe(profile.wallets().first().address());
+		expect(loadedToken).toBe("0xToken1");
 	});
 
 	it("should close confirmation modal and exit manage mode when confirm is clicked", async () => {
