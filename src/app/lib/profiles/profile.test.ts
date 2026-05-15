@@ -24,7 +24,7 @@ import { ValidatorService } from "./validator.service";
 import { LedgerService } from "@/app/lib/mainsail/ledger.service";
 import { KnownWalletService } from "./known-wallet.service";
 import { ExchangeRateService } from "./exchange-rate.service";
-import * as ProfileInitialiserModule from "./profile.initialiser";
+import { ProfileInitialiser } from "./profile.initialiser";
 
 describe("Profile", () => {
 	let profile: IProfile;
@@ -77,14 +77,9 @@ describe("Profile", () => {
 	});
 
 	it("should flush the profile", () => {
-		const spy = vi.spyOn(ProfileInitialiserModule, "ProfileInitialiser").mockImplementation(
-			() =>
-				({
-					initialise: () => {
-						//
-					},
-				}) as any,
-		);
+		const spy = vi.spyOn(ProfileInitialiser.prototype, "initialise").mockImplementation(() => {
+			//
+		});
 
 		profile.flush();
 
@@ -98,12 +93,8 @@ describe("Profile", () => {
 
 	it("should flush the settings of the profile", () => {
 		const initialiseSettingsSpy = vi.fn();
-		const spy = vi.spyOn(ProfileInitialiserModule, "ProfileInitialiser").mockImplementation(
-			() =>
-				({
-					initialiseSettings: initialiseSettingsSpy,
-				}) as any,
-		);
+		const spy = vi.spyOn(ProfileInitialiser.prototype, "initialiseSettings").mockImplementation(initialiseSettingsSpy);
+
 		profile.settings().set(ProfileSetting.Name, "Test Profile");
 		profile.flushSettings();
 
@@ -307,9 +298,7 @@ describe("Profile", () => {
 	});
 
 	it("should handle missing active network gracefully", async () => {
-		const spyInit = vi
-			.spyOn(ProfileInitialiserModule, "ProfileInitialiser")
-			.mockReturnValue({ initialise: vi.fn() } as any);
+		const spyInit = vi.spyOn(ProfileInitialiser.prototype, "initialise").mockImplementation(() => {});
 
 		const freshProfile = await env.profiles().create("New Profile");
 		freshProfile.settings().set(ProfileSetting.DashboardConfiguration, { activeNetworkId: "non-existent" });
@@ -365,9 +354,7 @@ describe("Profile", () => {
 	});
 
 	it("should find a test network as a fallback", async () => {
-		const spyInit = vi
-			.spyOn(ProfileInitialiserModule, "ProfileInitialiser")
-			.mockReturnValue({ initialise: vi.fn() } as any);
+		const spyInit = vi.spyOn(ProfileInitialiser.prototype, "initialise").mockImplementation(() => {});
 
 		const freshProfile = await env.profiles().create("New Profile Fallback Test");
 		freshProfile.settings().forget(ProfileSetting.DashboardConfiguration);
