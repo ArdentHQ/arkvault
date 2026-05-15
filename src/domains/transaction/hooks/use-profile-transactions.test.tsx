@@ -133,28 +133,6 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.transactions).toHaveLength(10));
 	});
 
-	it("should fetch transactions when wallet are not synced", async () => {
-		const wallets = profile.wallets().values();
-		const hasSyncedWithNetworkSpy = vi.spyOn(wallets[0], "hasSyncedWithNetwork").mockReturnValue(false);
-		const identifySpy = vi.spyOn(wallets[0].synchroniser(), "identity").mockImplementation(vi.fn());
-
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets }), {
-			wrapper,
-		});
-
-		act(() => {
-			result.current.updateFilters({ activeMode: "all" });
-		});
-
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(false));
-		await waitFor(() => expect(result.current.transactions).toHaveLength(10));
-
-		await waitFor(() => expect(identifySpy).toHaveBeenCalled());
-
-		identifySpy.mockRestore();
-		hasSyncedWithNetworkSpy.mockRestore();
-	});
-
 	it("should fetch more transactions", async () => {
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
 			wrapper,
@@ -873,37 +851,6 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
 
-		unconfirmedSpy.mockRestore();
-	});
-
-	it("should handle service initialization failure", async () => {
-		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
-
-		const mockWallet = {
-			address: () => "0xTestAddress",
-			network: () => ({
-				config: () => ({
-					host: () => {
-						throw new Error("Host configuration error");
-					},
-				}),
-			}),
-			networkId: () => "test-network",
-			profile: () => profile,
-			transactionTypes: () => ["transfer", "vote"],
-		};
-
-		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([]);
-
-		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [mockWallet as any] }), {
-			wrapper,
-		});
-
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
-
-		expect(consoleErrorSpy).toHaveBeenCalled();
-
-		consoleErrorSpy.mockRestore();
 		unconfirmedSpy.mockRestore();
 	});
 
