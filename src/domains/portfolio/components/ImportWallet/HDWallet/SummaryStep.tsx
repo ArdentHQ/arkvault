@@ -58,22 +58,22 @@ export const SummaryStep = ({
 				<DetailLabel>{t("WALLETS.PAGE_IMPORT_WALLET.HD_WALLET_SUMMARY_STEP.DETAILS_LABEL")}</DetailLabel>
 				<div
 					className={cn(
-						"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mt-0 overflow-hidden rounded sm:mt-2 sm:rounded-xl sm:border",
+						"mt-0 overflow-hidden rounded border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:mt-2 sm:rounded-xl sm:border",
 					)}
 				>
-					<div className="flex w-full items-center justify-between gap-4 space-x-2 p-3 break-words sm:justify-start sm:gap-3 sm:space-x-0 sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">
-						<DetailTitle className="text-theme-secondary-700 w-auto sm:w-[78px]">
+					<div className="sm:in-[.condensed]:py-4 flex w-full items-center justify-between gap-4 space-x-2 break-words p-3 sm:justify-start sm:gap-3 sm:space-x-0 sm:px-6 sm:py-5">
+						<DetailTitle className="w-auto text-theme-secondary-700 sm:w-[78px]">
 							{t("COMMON.NAME")}
 						</DetailTitle>
 
 						<div className="flex w-full min-w-0 items-center justify-end sm:justify-between">
-							<div className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-200 truncate font-semibold uppercase">
+							<div className="truncate font-semibold uppercase text-theme-secondary-900 dim:text-theme-dim-200 dark:text-theme-secondary-200">
 								{accountName}
 							</div>
 
 							<Divider
 								type="vertical"
-								className="border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-2 sm:hidden"
+								className="mx-2 border-theme-secondary-400 dim:border-theme-dim-600 dark:border-theme-dark-600 sm:hidden"
 							/>
 
 							<Button
@@ -82,7 +82,7 @@ export const SummaryStep = ({
 								disabled={showAccountNameEdit}
 								variant="transparent"
 								icon="Pencil"
-								className="text-theme-navy-600 p-px"
+								className="p-px text-theme-navy-600"
 							>
 								{t("COMMON.EDIT")}
 							</Button>

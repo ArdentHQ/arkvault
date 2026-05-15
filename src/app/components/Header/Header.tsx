@@ -20,7 +20,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 		<>
 			{subtitle && (
 				<div
-					className="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+					className="mt-0.5 flex items-center text-xs font-semibold leading-5 text-theme-secondary-text sm:mt-1 sm:text-sm sm:font-normal sm:leading-[17px] md:text-base md:leading-5"
 					data-testid="header__subtitle"
 				>
 					{subtitle}
@@ -45,7 +45,7 @@ export const Header = ({ title, titleIcon, className, subtitle, extra, titleClas
 	);
 
 	return (
-		<div className={cn("bg-theme-background flex items-end justify-between", className)}>
+		<div className={cn("flex items-end justify-between bg-theme-background", className)}>
 			<div className="space-y-2">
 				<div className="mb-1 flex items-center gap-3">
 					<div className="hidden sm:inline">{titleIcon ?? undefined}</div>
@@ -84,10 +84,10 @@ export const PageHeader = ({
 	}
 
 	return (
-		<section className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex w-full items-center justify-between px-6 py-3 md:h-13 dark:bg-black">
+		<section className="md:h-13 flex w-full items-center justify-between bg-theme-secondary-100 px-6 py-3 dim:bg-theme-dim-950 dark:bg-black">
 			<div className="flex items-center gap-2">
 				{mobileTitleIcon && <div className="inline">{mobileTitleIcon}</div>}
-				<h1 className="mb-0 text-lg leading-[21px] font-semibold">{title}</h1>
+				<h1 className="mb-0 text-lg font-semibold leading-[21px]">{title}</h1>
 			</div>
 			{extra}
 		</section>

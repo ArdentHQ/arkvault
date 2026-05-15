@@ -30,7 +30,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 					dimIcon={icons ? icons[2] : "File"}
 					size="lg"
 				/>
-				<div className="w-0 flex-1 truncate text-sm leading-[17px] font-semibold sm:text-lg sm:leading-[21px]">
+				<div className="w-0 flex-1 truncate text-sm font-semibold leading-[17px] sm:text-lg sm:leading-[21px]">
 					{file.name}
 				</div>
 			</div>
@@ -42,7 +42,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 			{variant === "danger" && (
 				<div
 					data-testid="FilePreviewPlain__Error"
-					className="bg-theme-danger-200 text-theme-danger-500 flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
+					className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-danger-200 text-theme-danger-500"
 				>
 					<Icon name="CrossSmall" size="sm" />
 				</div>
@@ -51,7 +51,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 			{variant === "success" && (
 				<div
 					data-testid="FilePreviewPlain__Success"
-					className="bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 flex h-5 w-5 shrink-0 items-center justify-center rounded-full dark:text-white"
+					className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 dark:text-white"
 				>
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
@@ -70,7 +70,7 @@ export const FilePreview = ({ file, useBorders = true, variant }: FilePreviewPro
 	}
 
 	return (
-		<div className="border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl border p-4 sm:px-6 sm:py-5">
+		<div className="rounded-xl border border-theme-secondary-300 p-4 dark:border-theme-secondary-800 sm:px-6 sm:py-5">
 			<FilePreviewPlain variant={variant} file={file} />
 		</div>
 	);

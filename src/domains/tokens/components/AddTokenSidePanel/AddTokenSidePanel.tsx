@@ -120,7 +120,7 @@ export const AddTokenSidePanel = ({
 				<Icon
 					name="AddToken"
 					dimensions={[24, 24]}
-					className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+					className="text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400"
 				/>
 			}
 			dataTestId="AddTokenSidePanel"
@@ -166,27 +166,27 @@ export const AddTokenSidePanel = ({
 						</Alert>
 
 						{!token && !isInvalidContractAddress && (
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl border">
+							<div className="overflow-hidden rounded-xl border border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700">
 								{!isLoadingToken && (
-									<div className="flex items-center gap-4 px-6 pt-5 pb-3">
+									<div className="flex items-center gap-4 px-6 pb-3 pt-5">
 										<Image name="ContractAddress" />
-										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+										<p className="font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 											{t("TOKENS.ADD_TOKEN.STATE_EMPTY_TEXT")}
 										</p>
 									</div>
 								)}
 
 								{isLoadingToken && (
-									<div className="flex items-center gap-2 px-6 pt-5 pb-3">
+									<div className="flex items-center gap-2 px-6 pb-3 pt-5">
 										<Spinner color="warning-alt" size="sm" width={3} />
 										<Divider type="vertical" />
-										<p className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+										<p className="font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 											{t("TOKENS.ADD_TOKEN.STATE_LOADING_TEXT")}
 										</p>
 									</div>
 								)}
-								<div className="bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 px-6 py-3">
-									<p className="text-theme-secondary-700 dark:text-theme-dark-100 dim:text-theme-dim-100 text-sm leading-5">
+								<div className="bg-theme-secondary-100 px-6 py-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950">
+									<p className="text-sm leading-5 text-theme-secondary-700 dim:text-theme-dim-100 dark:text-theme-dark-100">
 										{t("TOKENS.ADD_TOKEN.WARNING_CUSTOM_TOKEN")}
 									</p>
 								</div>
@@ -196,21 +196,21 @@ export const AddTokenSidePanel = ({
 						{(token || isInvalidContractAddress) && (
 							<div
 								className={cn("overflow-hidden rounded-xl border", {
-									"border-theme-danger-300 dark:border-theme-danger-400 dim:border-theme-danger-400":
+									"border-theme-danger-300 dim:border-theme-danger-400 dark:border-theme-danger-400":
 										!token,
-									"border-theme-warning-300 dark:border-theme-warning-700 dim:border-theme-warning-700":
+									"border-theme-warning-300 dim:border-theme-warning-700 dark:border-theme-warning-700":
 										token,
 								})}
 							>
 								{token && (
-									<div className="px-6 pt-5 pb-3">
+									<div className="px-6 pb-3 pt-5">
 										<div className="space-y-3">
 											<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 												<DetailTitle className="w-auto min-w-14 sm:min-w-28 sm:pr-6">
 													{t("COMMON.TOKEN")}
 												</DetailTitle>
 
-												<div className="font-semibold break-all whitespace-normal">
+												<div className="whitespace-normal break-all font-semibold">
 													{token.name()}
 												</div>
 											</div>
@@ -220,7 +220,7 @@ export const AddTokenSidePanel = ({
 													{t("COMMON.SYMBOL")}
 												</DetailTitle>
 
-												<div className="font-semibold break-all whitespace-normal">
+												<div className="whitespace-normal break-all font-semibold">
 													{token.symbol()}
 												</div>
 											</div>
@@ -273,7 +273,7 @@ export const AddTokenSidePanel = ({
 													<Amount
 														ticker={token.displaySymbol()}
 														value={token.totalSupply()}
-														className="text-sm font-semibold break-all whitespace-normal md:text-base"
+														className="whitespace-normal break-all text-sm font-semibold md:text-base"
 														showTicker={false}
 														showCompactFormat
 													/>
@@ -284,20 +284,20 @@ export const AddTokenSidePanel = ({
 								)}
 
 								{!token && (
-									<div className="flex items-center gap-2 px-6 pt-5 pb-3">
+									<div className="flex items-center gap-2 px-6 pb-3 pt-5">
 										<div className="flex items-center gap-2">
 											<Icon
 												name="CircleCross"
-												className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400"
+												className="text-theme-danger-700 dim:text-theme-danger-400 dark:text-theme-danger-400"
 												size="md"
 											/>
-											<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 leading-5 font-semibold">
+											<div className="font-semibold leading-5 text-theme-danger-700 dim:text-theme-danger-400 dark:text-theme-danger-400">
 												{t("COMMON.ERROR")}
 											</div>
 										</div>
 
 										<Divider type="vertical" />
-										<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 leading-5 font-semibold">
+										<div className="font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 											{t("TOKENS.ADD_TOKEN.STATE_INVALID_TOKEN_TEXT")}
 										</div>
 									</div>
@@ -305,9 +305,9 @@ export const AddTokenSidePanel = ({
 
 								<div
 									className={cn("px-6 py-3", {
-										"bg-theme-danger-50 dark:bg-theme-dark-950 dim:bg-theme-dim-950 text-theme-secondary-700 dark:text-theme-dark-100 dim:text-theme-dim-100":
+										"bg-theme-danger-50 text-theme-secondary-700 dim:bg-theme-dim-950 dim:text-theme-dim-100 dark:bg-theme-dark-950 dark:text-theme-dark-100":
 											!token,
-										"bg-theme-warning-50 dark:bg-theme-dark-950 dim:bg-theme-dim-950 text-theme-secondary-900 dark:text-theme-dark-100 dim:text-theme-dim-100":
+										"bg-theme-warning-50 text-theme-secondary-900 dim:bg-theme-dim-950 dim:text-theme-dim-100 dark:bg-theme-dark-950 dark:text-theme-dark-100":
 											token,
 									})}
 								>

@@ -32,7 +32,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 
 	const renderAvatarSection = useCallback(
 		(isOpen: boolean) => (
-			<button className="group dark:hover:bg-theme-dark-700 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 flex items-center gap-6 rounded bg-transparent py-0.5">
+			<button className="group flex items-center gap-6 rounded bg-transparent py-0.5 hover:bg-theme-secondary-200 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700">
 				<div
 					className="relative cursor-pointer items-center justify-center rounded align-middle"
 					data-testid="UserMenu"
@@ -44,7 +44,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 									alt="Profile Avatar"
 									src={`data:image/svg+xml;utf8,${encodeURIComponent(avatarImage)}`}
 								/>
-								<span className="text-theme-background dark:text-theme-text absolute text-xs font-semibold">
+								<span className="absolute text-xs font-semibold text-theme-background dark:text-theme-text">
 									{userInitials}
 								</span>
 							</>
@@ -70,7 +70,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 			options={userMenuActions}
 			toggleContent={renderAvatarSection}
 			top={
-				<div className="bg-theme-secondary-100 text-theme-secondary-700 md-lg:hidden dark:bg-theme-dark-950 dark:text-theme-dark-200 flex items-center justify-between px-6 py-3 text-sm leading-[17px] font-semibold">
+				<div className="flex items-center justify-between bg-theme-secondary-100 px-6 py-3 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:bg-theme-dark-950 dark:text-theme-dark-200 md-lg:hidden">
 					<p>{t("COMMON.BALANCE")}:</p>
 					<div className="flex items-center gap-2">
 						<HideBalance className="md-lg:hidden" profile={profile} />

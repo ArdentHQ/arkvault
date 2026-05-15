@@ -37,7 +37,7 @@ export const TransactionDetails = ({
 			<div className="space-y-3">
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.TIMESTAMP")}</DetailLabelText>
-					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">{timestamp}</div>
+					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">{timestamp}</div>
 				</div>
 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
@@ -53,7 +53,7 @@ export const TransactionDetails = ({
 					)}
 
 					{!transaction.blockHash() && (
-						<p className="text-theme-secondary-500 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+						<p className="text-sm font-semibold leading-[17px] text-theme-secondary-500 dim:text-theme-dim-200 sm:text-base sm:leading-5">
 							{t("COMMON.NOT_AVAILABLE")}
 						</p>
 					)}
@@ -61,7 +61,7 @@ export const TransactionDetails = ({
 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className={labelClassName}>{t("COMMON.NONCE")}</DetailLabelText>
-					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 						{transaction.nonce().toString()}
 					</div>
 				</div>

@@ -184,7 +184,7 @@ export const TokensTable = ({
 			{isXs && tokens.length === 0 && !showSkeleton && (
 				<p
 					data-testid="NoResultsMessage"
-					className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 p-4 px-6 text-center text-sm"
+					className="p-4 px-6 text-center text-sm text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-600"
 				>
 					{t("TOKENS.EMPTY_TOKENS")}
 				</p>
@@ -209,7 +209,7 @@ export const TokensTable = ({
 					</div>
 				}
 			>
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mb-4 flex items-center justify-between border-b border-dashed pb-3 md:hidden md:pt-3">
+				<div className="mb-4 flex items-center justify-between border-b border-dashed border-theme-secondary-300 pb-3 dim:border-theme-dim-700 dark:border-theme-secondary-800 md:hidden md:pt-3">
 					<TokensTableHeader
 						activeProfile={activeProfile}
 						isManageMode={isManageMode}

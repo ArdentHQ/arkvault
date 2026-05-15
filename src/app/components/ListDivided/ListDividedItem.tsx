@@ -34,7 +34,7 @@ export const ListDividedItem = ({
 						<span
 							className={
 								labelClass ||
-								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-50 font-semibold"
+								"font-semibold text-theme-secondary-700 dim:text-theme-dim-50 dark:text-theme-dark-200"
 							}
 							data-testid="list-divided-item__label"
 						>
@@ -46,7 +46,7 @@ export const ListDividedItem = ({
 						<span
 							className={
 								labelDescriptionClass ||
-								"text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm font-medium"
+								"text-sm font-medium text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
 							}
 							data-testid="list-divided-item__label--description"
 						>

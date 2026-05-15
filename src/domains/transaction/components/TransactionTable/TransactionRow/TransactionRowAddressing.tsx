@@ -79,7 +79,7 @@ const FormattedAddress = ({ alias, address }: { alias?: string; address: string 
 			<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
 				<Icon
 					name="Copy"
-					className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+					className="text-theme-secondary-700 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
 				/>
 			</Clipboard>
 		</div>
@@ -109,7 +109,7 @@ const ContractAddressing = ({
 					to={transaction.wallet().link().wallet(address)}
 					isExternal
 					showExternalIcon={false}
-					className="text-sm font-semibold whitespace-nowrap"
+					className="whitespace-nowrap text-sm font-semibold"
 				>
 					{t("COMMON.CONTRACT")}
 				</Link>
@@ -117,7 +117,7 @@ const ContractAddressing = ({
 				<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")}>
 					<Icon
 						name="Copy"
-						className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-primary-700 dark:hover:text-white"
+						className="text-theme-secondary-700 hover:text-theme-primary-700 dark:text-theme-secondary-600 dark:hover:text-white"
 					/>
 				</Clipboard>
 			</div>
@@ -146,11 +146,11 @@ const MultiPaymentAddressing = ({
 				direction={direction}
 				style={isAdvanced && variant === "recipient" ? "return" : direction}
 			/>
-			<span className="text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 flex flex-1 gap-2 text-sm font-semibold">
+			<span className="flex flex-1 gap-2 text-sm font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200">
 				{(direction === "return" || direction === "sent") && (
 					<>
 						{t("COMMON.MULTIPLE")}{" "}
-						<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200">
+						<span className="text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500">
 							({transaction.recipients().length})
 						</span>
 					</>
@@ -243,7 +243,7 @@ export const TransactionRowAddressing = ({
 							to={transaction.wallet().link().wallet(recipientAddress)}
 							isExternal
 							showExternalIcon={false}
-							className="text-sm font-semibold whitespace-nowrap"
+							className="whitespace-nowrap text-sm font-semibold"
 						>
 							{t("COMMON.CONTRACT")}
 						</Link>
@@ -251,7 +251,7 @@ export const TransactionRowAddressing = ({
 						<Clipboard variant="icon" data={recipientAddress} tooltip={t("COMMON.COPY_ADDRESS")}>
 							<Icon
 								name="Copy"
-								className="text-theme-secondary-700 dark:text-theme-secondary-600 hover:text-theme-secondary-700 dim:text-theme-dim-200 dim-hover:text-white dark:hover:text-white"
+								className="text-theme-secondary-700 hover:text-theme-secondary-700 dim:text-theme-dim-200 dim-hover:text-white dark:text-theme-secondary-600 dark:hover:text-white"
 							/>
 						</Clipboard>
 					</div>

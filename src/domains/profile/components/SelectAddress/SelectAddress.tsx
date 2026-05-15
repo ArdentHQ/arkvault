@@ -85,7 +85,7 @@ export const SelectAddress = ({
 		if (showUserIcon) {
 			addons.end = {
 				content: (
-					<div className="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white">
+					<div className="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white">
 						<Icon name="User" size="lg" />
 					</div>
 				),
@@ -101,7 +101,7 @@ export const SelectAddress = ({
 				<button
 					data-testid="SelectAddress__wrapper"
 					className={cn(
-						"focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden",
+						"focus:outline-hidden relative w-full rounded focus:ring-2 focus:ring-theme-primary-400",
 						{
 							"cursor-default": disabled,
 						},
@@ -146,7 +146,7 @@ export const SelectAddress = ({
 				<button
 					data-testid="SelectAddress__wrapper_modern"
 					className={cn(
-						"focus:ring-theme-primary-400 relative w-full rounded text-left focus:ring-2 focus:outline-hidden",
+						"focus:outline-hidden relative w-full rounded text-left focus:ring-2 focus:ring-theme-primary-400",
 						{
 							"cursor-default": disabled,
 							"cursor-pointer": !disabled,

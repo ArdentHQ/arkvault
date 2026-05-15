@@ -13,19 +13,19 @@ export const TransactionGas = ({ gasUsed, gasLimit }: { gasUsed: number | null; 
 	return (
 		<DetailWrapper>
 			<MobileCard className="sm:hidden">
-				<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 flex h-10 w-full items-center justify-between px-4 dark:bg-black">
-					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 text-sm leading-[17px] font-semibold">
+				<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dim:bg-theme-dim-950 dark:bg-black">
+					<div className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-dark-200 dark:hover:text-theme-dark-50">
 						{t("TRANSACTION.GAS_INFORMATION")}
 					</div>
 				</div>
 
-				<div className="flex w-full flex-col gap-4 px-4 pt-3 pb-4">
+				<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3">
 					<MobileSection title={t("TRANSACTION.GAS_LIMIT")} className="w-full">
 						{formatNumber(gasLimit)}
 					</MobileSection>
 
 					<Divider
-						className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 my-0"
+						className="my-0 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800"
 						dashed
 					/>
 
@@ -47,7 +47,7 @@ export const TransactionGas = ({ gasUsed, gasLimit }: { gasUsed: number | null; 
 
 				<div className="mt-2 flex w-full justify-between gap-2 space-y-3 sm:justify-start">
 					<DetailLabelText className="min-w-36">{t("TRANSACTION.GAS_LIMIT")}</DetailLabelText>
-					<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+					<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 						{formatNumber(gasLimit)}
 					</div>
 				</div>
@@ -55,7 +55,7 @@ export const TransactionGas = ({ gasUsed, gasLimit }: { gasUsed: number | null; 
 				<div className="flex w-full justify-between gap-2 sm:justify-start">
 					<DetailLabelText className="min-w-36">{t("TRANSACTION.GAS_USAGE")}</DetailLabelText>
 					<div
-						className={cn("text-sm leading-[17px] font-semibold sm:text-base sm:leading-5", {
+						className={cn("text-sm font-semibold leading-[17px] sm:text-base sm:leading-5", {
 							"text-theme-secondary-500 dim:text-theme-dim-200": !gasUsed,
 						})}
 					>

@@ -185,7 +185,7 @@ export const TransactionTypeLabel = ({
 	const labelContent = (
 		<Label
 			{...props}
-			className="max-w-20 rounded px-1 py-[3px] lg:max-w-40 dark:border"
+			className="max-w-20 rounded px-1 py-[3px] dark:border lg:max-w-40"
 			data-testid="TransactionRow__type"
 		>
 			<span ref={textRef} className="block truncate whitespace-nowrap">

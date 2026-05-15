@@ -85,14 +85,14 @@ export const TokenDetailSidepanel = ({
 		>
 			<DetailsCondensed>
 				<div className="space-y-4" data-testid="TokenDetailSidepanel">
-					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 dark:text-theme-dark-50 bg-theme-primary-100 dim:text-theme-dim-50 rounded-xl border-none px-6 py-3 sm:border">
+					<div className="rounded-xl border-none bg-theme-primary-100 px-6 py-3 dim:bg-theme-dim-950 dim:text-theme-dim-50 dark:bg-theme-dark-950 dark:text-theme-dark-50 sm:border">
 						<div className="flex justify-between">
 							<div className="flex w-full items-center space-x-2 truncate">
 								<TokenNameInitials
 									tokenName={walletToken.token().name()}
 									className="text-md h-8 w-8 shrink-0 p-3 leading-8"
 								/>
-								<div className="w-full truncate text-lg leading-4 font-semibold">
+								<div className="w-full truncate text-lg font-semibold leading-4">
 									{walletToken.token().name()}
 								</div>
 							</div>
@@ -100,7 +100,7 @@ export const TokenDetailSidepanel = ({
 							<div className="flex shrink-0 items-center space-x-4">
 								<Button
 									variant="secondary"
-									className="dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 flex h-6 w-6 items-center justify-center p-0 sm:h-8 sm:w-auto sm:px-2 dark:bg-transparent"
+									className="flex h-6 w-6 items-center justify-center p-0 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 sm:h-8 sm:w-auto sm:px-2"
 									onClick={onReloadToken}
 									data-testid="TokenDetailSidepanel__reload-button"
 								>
@@ -108,7 +108,7 @@ export const TokenDetailSidepanel = ({
 										name="ArrowRotateLeft"
 										style={{ animationDirection: "reverse" }}
 										className={cn(
-											"text-theme-navy-600 dark:text-theme-dark-200 dark:hover:text-theme-dark-50 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50",
+											"text-theme-navy-600 hover:text-theme-primary-700 dim:text-theme-dim-200 dim:hover:text-theme-dim-50 dark:text-theme-dark-200 dark:hover:text-theme-dark-50",
 											{
 												"animate-spin": isReloading,
 											},
@@ -130,7 +130,7 @@ export const TokenDetailSidepanel = ({
 									<Amount
 										ticker={walletToken.token().symbol()}
 										value={walletToken.balance()}
-										className="text-sm font-semibold break-all whitespace-normal md:text-base"
+										className="whitespace-normal break-all text-sm font-semibold md:text-base"
 										showTicker={false}
 									/>
 								</div>
@@ -139,7 +139,7 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.FIAT")}</DetailTitle>
 
-								<div className="text-theme-secondary-500 dark:text-theme-dark-500 flex flex-1 flex-row items-center justify-end gap-2 text-sm leading-[17px] font-semibold sm:w-full sm:justify-start sm:text-base sm:leading-5">
+								<div className="flex flex-1 flex-row items-center justify-end gap-2 text-sm font-semibold leading-[17px] text-theme-secondary-500 dark:text-theme-dark-500 sm:w-full sm:justify-start sm:text-base sm:leading-5">
 									{t("COMMON.NOT_AVAILABLE")}
 								</div>
 							</div>
@@ -151,7 +151,7 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.SYMBOL")}</DetailTitle>
 
-								<div className="text-sm leading-[17px] font-semibold break-all whitespace-normal sm:text-base sm:leading-5">
+								<div className="whitespace-normal break-all text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 									{walletToken.token().symbol()}
 								</div>
 							</div>
@@ -190,7 +190,7 @@ export const TokenDetailSidepanel = ({
 							<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 								<DetailTitle className="w-auto sm:min-w-28 sm:pr-6">{t("COMMON.DECIMALS")}</DetailTitle>
 
-								<div className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+								<div className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5">
 									{walletToken.token().decimals()}
 								</div>
 							</div>
@@ -202,7 +202,7 @@ export const TokenDetailSidepanel = ({
 									<Amount
 										ticker={walletToken.token().symbol()}
 										value={walletToken.token().totalSupply()}
-										className="text-sm leading-[17px] font-semibold break-all whitespace-normal sm:text-base sm:leading-5"
+										className="whitespace-normal break-all text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 										showTicker={false}
 									/>
 								</div>

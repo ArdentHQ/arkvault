@@ -99,30 +99,30 @@ export const TokenRow = memo(
 				<TableCell variant={isManageMode ? undefined : "start"} innerClassName="pl-2!">
 					<div className="flex w-full flex-row items-center gap-3">
 						<TokenNameInitials tokenName={walletToken.token().name()} className="shrink-0" />
-						<span className="dark:text-theme-dark-50 dim:text-theme-dim-50 block w-full text-sm leading-[17px] font-semibold">
+						<span className="block w-full text-sm font-semibold leading-[17px] dim:text-theme-dim-50 dark:text-theme-dark-50">
 							<TruncateEndResponsive>{walletToken.token().name()}</TruncateEndResponsive>
 						</span>
 					</div>
 				</TableCell>
 
-				<TableCell className="md-lg:table-cell hidden">
-					<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 w-full text-sm leading-[17px] font-semibold">
+				<TableCell className="hidden md-lg:table-cell">
+					<div className="w-full text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 						{walletToken.token().displaySymbol()}
 					</div>
 				</TableCell>
 
 				<TableCell>
 					<Link to={walletToken.contractExplorerLink()} showExternalIcon={false} isExternal={true}>
-						<div className="flex w-40 flex-row items-center gap-2 text-sm leading-[17px] font-semibold">
+						<div className="flex w-40 flex-row items-center gap-2 text-sm font-semibold leading-[17px]">
 							<TruncateMiddle
 								text={walletToken.token().address()}
-								className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
+								className="text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400"
 							/>
 							<Icon
 								data-testid="Link__external"
 								name="ArrowExternal"
 								dimensions={[12, 12]}
-								className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 shrink-0 align-middle duration-200"
+								className="shrink-0 align-middle text-theme-secondary-500 duration-200 dim:text-theme-dim-500 dark:text-theme-dark-500"
 							/>
 						</div>
 					</Link>
@@ -133,13 +133,13 @@ export const TokenRow = memo(
 						ticker={walletToken.token().displaySymbol()}
 						showTicker={false}
 						value={walletToken.balance()}
-						className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 text-sm leading-[17px] font-semibold"
+						className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
 						showCompactFormat
 					/>
 				</TableCell>
 
 				<TableCell innerClassName="justify-center" className="hidden lg:table-cell">
-					<div className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-500 text-sm font-semibold">
+					<div className="text-sm font-semibold text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500">
 						{t("COMMON.NOT_AVAILABLE")}
 					</div>
 				</TableCell>
@@ -149,7 +149,7 @@ export const TokenRow = memo(
 						<Button
 							size="icon"
 							variant="transparent"
-							className="text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500 dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 p-1 text-sm leading-[17px] hover:underline"
+							className="p-1 text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 hover:underline dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-700 dark:text-theme-dark-navy-400 dark:hover:text-theme-navy-500"
 							onClick={(event) => {
 								event.stopPropagation();
 								onSend();
@@ -164,7 +164,7 @@ export const TokenRow = memo(
 							data-testid="TokenRow_DeleteToken"
 							size="icon"
 							variant="transparent"
-							className="text-theme-danger-400 hover:text-theme-danger-500 dark:text-theme-danger-400 dark:hover:text-theme-danger-300 dim:text-theme-danger-400 dim-hover:text-theme-danger-300 p-1 text-sm leading-[17px] hover:underline"
+							className="p-1 text-sm leading-[17px] text-theme-danger-400 hover:text-theme-danger-500 hover:underline dim:text-theme-danger-400 dim-hover:text-theme-danger-300 dark:text-theme-danger-400 dark:hover:text-theme-danger-300"
 							onClick={(event) => {
 								event.stopPropagation();
 								onDelete(walletToken);

@@ -108,10 +108,10 @@ export const AddressRow = ({
 			onKeyPress={() => toggleAddress(wallet.address())}
 			tabIndex={0}
 			className={cn("group cursor-pointer items-center rounded-lg border transition-all", {
-				"bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950": isSelected && !usesManageMode,
-				"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400": isError,
-				"border-theme-primary-200 dark:border-theme-dark-700 dim:border-theme-dim-700": !isError,
-				"hover:bg-theme-navy-100 dark:hover:bg-theme-dark-700 dim-hover:bg-theme-dim-700":
+				"bg-theme-secondary-200 dim:bg-theme-dim-950 dark:bg-theme-dark-950": isSelected && !usesManageMode,
+				"border-theme-danger-400 dim:border-theme-danger-400 dark:border-theme-danger-400": isError,
+				"border-theme-primary-200 dim:border-theme-dim-700 dark:border-theme-dark-700": !isError,
+				"hover:bg-theme-navy-100 dim-hover:bg-theme-dim-700 dark:hover:bg-theme-dark-700":
 					(!isError || (usesManageMode && !deleteContent)) && !isEditing,
 			})}
 		>
@@ -123,9 +123,9 @@ export const AddressRow = ({
 						disabled={isEditing}
 						size="icon"
 						className={cn(
-							"text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 p-1",
+							"p-1 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500",
 							{
-								"hover:bg-theme-danger-400 dim-hover:text-white hover:text-white dark:hover:text-white":
+								"hover:bg-theme-danger-400 hover:text-white dim-hover:text-white dark:hover:text-white":
 									!isEditing,
 							},
 						)}
@@ -140,7 +140,7 @@ export const AddressRow = ({
 						data-testid="icon-MarkedTrash"
 						name="MarkedTrash"
 						dimensions={[16, 16]}
-						className="text-theme-secondary-500 dark:text-theme-dark-500 dim:text-theme-dim-200 p-1"
+						className="p-1 text-theme-secondary-500 dim:text-theme-dim-200 dark:text-theme-dark-500"
 					/>
 				)}
 
@@ -163,13 +163,13 @@ export const AddressRow = ({
 					/>
 				)}
 
-				<div className="border-theme-primary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 ml-4 flex w-full min-w-0 items-center justify-between border-l pl-4 font-semibold">
+				<div className="ml-4 flex w-full min-w-0 items-center justify-between border-l border-theme-primary-200 pl-4 font-semibold text-theme-secondary-700 dim:border-theme-dim-700 dim:text-theme-dim-200 dark:border-theme-dark-700 dark:text-theme-dark-200">
 					<div className="flex w-1/2 min-w-0 flex-col space-y-2 truncate">
 						<div
 							className={cn("flex gap-2 leading-5", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+								"group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200":
 									!isSelected,
-								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50":
+								"text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50":
 									isSelected && !usesManageMode,
 							})}
 						>
@@ -197,9 +197,9 @@ export const AddressRow = ({
 							ticker={wallet.network().ticker()}
 							value={wallet.balance()}
 							className={cn("leading-5", {
-								"group-hover:text-theme-primary-900 dark:group-hover:text-theme-dark-200 dim:group-hover:text-theme-dim-50":
+								"group-hover:text-theme-primary-900 dim:group-hover:text-theme-dim-50 dark:group-hover:text-theme-dark-200":
 									!isSelected,
-								"text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-200":
+								"text-theme-secondary-900 dim:text-theme-dim-200 dark:text-theme-dark-50":
 									isSelected && !usesManageMode,
 							})}
 						/>
@@ -221,7 +221,7 @@ export const AddressRow = ({
 								size="icon"
 								variant="transparent"
 								className={cn("ml-4 p-1", {
-									"dark:hover:bg-theme-secondary-700 hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800":
+									"hover:bg-theme-navy-200 dim-hover:bg-theme-dim-800 dark:hover:bg-theme-secondary-700":
 										!isEditing && !deleteContent,
 								})}
 							>
@@ -230,7 +230,7 @@ export const AddressRow = ({
 									size="md"
 									className={cn("transition-colors duration-200", {
 										"text-theme-secondary-500": isEditing || deleteContent,
-										"text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50":
+										"text-theme-secondary-700 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200":
 											!isEditing && !deleteContent,
 									})}
 								/>
@@ -242,15 +242,15 @@ export const AddressRow = ({
 				)}
 			</div>
 			{!!errorMessage && (
-				<div className="bg-theme-danger-50 dark:bg-theme-dark-800 dim:bg-theme-dim-800 flex items-center gap-3 space-x-4 rounded-b-lg px-4 py-3">
+				<div className="flex items-center gap-3 space-x-4 rounded-b-lg bg-theme-danger-50 px-4 py-3 dim:bg-theme-dim-800 dark:bg-theme-dark-800">
 					<div className="mx-[2px] flex w-5 items-center justify-center">
 						<Icon
 							name="CircleCross"
-							className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400"
+							className="text-theme-danger-700 dim:text-theme-danger-400 dark:text-theme-danger-400"
 							size="md"
 						/>
 					</div>
-					<p className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 text-sm">
+					<p className="text-sm text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 						{errorMessage}
 					</p>
 				</div>

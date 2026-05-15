@@ -50,7 +50,7 @@ export const LedgerTransactionPendingConfirmation = ({
 		<div className="space-y-4 pb-10">
 			{migrator.transactions().length === 1} {<Warning>{t("TRANSACTION.PENDING.STATUS_TEXT")}</Warning>}
 			<LedgerMigrationOverview transfer={transfer} profile={profile}>
-				<SidepanelFooter className="fixed right-0 bottom-0">
+				<SidepanelFooter className="fixed bottom-0 right-0">
 					<SidePanelButtons className="flex items-center justify-end">
 						<Button onClick={onGoToPortfolio}>{t("COMMON.GO_TO_PORTFOLIO")}</Button>
 					</SidePanelButtons>

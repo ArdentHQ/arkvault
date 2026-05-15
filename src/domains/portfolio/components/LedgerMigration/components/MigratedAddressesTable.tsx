@@ -42,7 +42,7 @@ export const MigratedAddressesTable = ({
 					<MigratedAddressRowMobile transaction={transaction} key={index} profile={profile} />
 				))}
 			</div>
-			<div className="md:border-theme-secondary-300 dark:md:border-theme-secondary-800 dim:md:border-theme-dim-700 relative hidden overflow-hidden rounded-xl border border-transparent sm:block">
+			<div className="relative hidden overflow-hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dim:md:border-theme-dim-700 dark:md:border-theme-secondary-800">
 				<Table columns={columns} data={transactions}>
 					{(transaction: MigrationTransaction) => (
 						<MigratedAddressRow

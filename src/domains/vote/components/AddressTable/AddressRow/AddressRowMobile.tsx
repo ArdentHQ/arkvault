@@ -95,7 +95,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
 			return (
-				<span className="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold">
+				<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
 			);
@@ -105,7 +105,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 			return (
 				<span
 					data-testid="AddressRowMobile--nowallet"
-					className="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold"
+					className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500"
 				>
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
@@ -121,7 +121,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							<Link
 								isExternal
 								to={votes[0].wallet.explorerLink()}
-								className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500 flex w-full items-center text-sm"
+								className="flex w-full items-center text-sm [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-dark-500"
 							>
 								<AddressRowMobileValidatorName name={votes[0].wallet.address()} />
 							</Link>
@@ -147,7 +147,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							/>
 
 							{votes[0]?.wallet && (
-								<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px sm:hidden" />
+								<span className="block h-5 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800 sm:hidden" />
 							)}
 
 							<Tooltip content={tooltipContent()}>
@@ -160,7 +160,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 											onSelect?.(wallet.address());
 										}}
 										data-testid={`AddressRowMobile__select-${index}`}
-										className="text-theme-primary-600 dark:hover:text-theme-primary-500 hover:text-theme-primary-700 p-0 text-sm hover:underline"
+										className="p-0 text-sm text-theme-primary-600 hover:text-theme-primary-700 hover:underline dark:hover:text-theme-primary-500"
 									>
 										{t("COMMON.VOTE")}
 									</Button>
@@ -186,7 +186,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							wallet={votes[0]?.wallet}
 							activeValidators={wallet.network().validatorCount()}
 							fallback={
-								<span className="text-theme-secondary-500 dark:text-theme-dark-500 text-sm font-semibold">
+								<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-dark-500">
 									{t("COMMON.NOT_AVAILABLE")}
 								</span>
 							}

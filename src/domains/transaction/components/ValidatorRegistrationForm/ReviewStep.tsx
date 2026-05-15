@@ -66,8 +66,8 @@ export const ReviewStep = ({
 					<div className="space-y-3">
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-40">{t("COMMON.METHOD")}</DetailTitle>
-							<div className="bg-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center rounded px-1 py-[3px] dark:border dark:bg-transparent">
-								<span className="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 text-[12px] leading-[15px] font-semibold">
+							<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dim:border-theme-dim-700 dark:border dark:border-theme-secondary-800 dark:bg-transparent">
+								<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500">
 									{wallet.isValidator()
 										? t("TRANSACTION.TRANSACTION_TYPES.UPDATE_VALIDATOR")
 										: t("TRANSACTION.TRANSACTION_TYPES.REGISTER_VALIDATOR")}
@@ -79,7 +79,7 @@ export const ReviewStep = ({
 							<DetailTitle className="w-auto sm:min-w-40">
 								{t("TRANSACTION.VALIDATOR_PUBLIC_KEY")}
 							</DetailTitle>
-							<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{validatorPublicKey}
 							</div>
 						</div>
@@ -103,7 +103,7 @@ export const ReviewStep = ({
 										/>
 
 										{validatorRegistrationFeeAsFiat !== null && (
-											<div className="text-theme-secondary-700 font-semibold">
+											<div className="font-semibold text-theme-secondary-700">
 												(~
 												<Amount
 													ticker={validatorRegistrationFeeAsFiatTicker}
@@ -114,7 +114,7 @@ export const ReviewStep = ({
 										)}
 
 										<Tooltip content={t("TRANSACTION.REVIEW_STEP.AMOUNT_LOCKED_TOOLTIP")}>
-											<div className="bg-theme-primary-100 dark:bg-theme-dark-800 dark:text-theme-dark-50 dim:bg-theme-dim-800 dim:text-theme-dim-50 text-theme-primary-600 flex h-5 w-5 items-center justify-center rounded-full">
+											<div className="flex h-5 w-5 items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 dim:bg-theme-dim-800 dim:text-theme-dim-50 dark:bg-theme-dark-800 dark:text-theme-dark-50">
 												<Icon name="QuestionMarkSmall" size="sm" />
 											</div>
 										</Tooltip>
@@ -125,7 +125,7 @@ export const ReviewStep = ({
 					</div>
 				)}
 				<div data-testid="DetailWrapper">
-					<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
+					<div className="border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0">
 						<FormField name="fee">
 							<FormLabel
 								textClassName="text-sm leading-[17px] sm:text-base sm:leading-5"

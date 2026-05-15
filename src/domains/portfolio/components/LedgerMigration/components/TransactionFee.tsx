@@ -23,14 +23,14 @@ export const TransactionFee = ({ transfer }: { transfer: DraftTransfer }) => {
 			<Amount
 				ticker={transfer.network().ticker()}
 				value={fee}
-				className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+				className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 			/>
 			<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
 				(
 				<Amount
 					ticker={transfer.sender().exchangeCurrency()}
 					value={fee}
-					className="text-sm leading-[17px] font-semibold sm:text-base sm:leading-5"
+					className="text-sm font-semibold leading-[17px] sm:text-base sm:leading-5"
 				/>
 				)
 			</span>
