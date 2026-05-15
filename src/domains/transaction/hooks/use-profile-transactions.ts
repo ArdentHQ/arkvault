@@ -76,19 +76,6 @@ const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
 		return transaction.isConfirmed();
 	});
 
-const syncWallets = async (wallets: Contracts.IReadWriteWallet[]) => {
-	const ttl = 5000;
-	await Promise.allSettled(
-		wallets.map((wallet) => {
-			if (wallet.hasSyncedWithNetwork()) {
-				return;
-			}
-
-			return wallet.synchroniser().identity({ ttl });
-		}),
-	);
-};
-
 const getOrderByStr = ({ column, desc }: SortBy): string => {
 	const columnMap = {
 		"Fiat Value": "amount",
@@ -354,8 +341,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				return { hasMorePages: () => false, items: () => [] };
 			}
 
-			await syncWallets(wallets);
-
 			if (flush) {
 				profile.transactionAggregate().flush(mode);
 			}
@@ -402,7 +387,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		cursor.current = cursor.current + 1;
 		setState((state) => ({ ...state, isLoadingMore: true }));
 
-		await syncWallets(wallets);
 		const response = await fetchTransactions({
 			cursor: cursor.current,
 			flush: false,
@@ -427,7 +411,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return;
 		}
 
-		await syncWallets(wallets);
 		const response = await fetchTransactions({
 			cursor: 1,
 			flush: true,
