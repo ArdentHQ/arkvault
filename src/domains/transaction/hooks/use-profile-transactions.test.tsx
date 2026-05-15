@@ -854,6 +854,36 @@ describe("useProfileTransactions", () => {
 		unconfirmedSpy.mockRestore();
 	});
 
+	it("should handle service initialization failure", async () => {
+		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+
+		const transactionIndexMock = vi.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		const mockWallet = {
+			address: () => "0xTestAddress",
+			network: profile.wallets().first().network(),
+			networkId: () => "test-network",
+			profile: () => profile,
+			transactionTypes: () => ["transfer", "vote"],
+		};
+
+		const { unconfirmedSpy } = await mockUnconfirmedTransactionsHook([]);
+
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: [mockWallet as any] }), {
+			wrapper,
+		});
+
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBe(true));
+
+		expect(consoleErrorSpy).toHaveBeenCalled();
+
+		consoleErrorSpy.mockRestore();
+		unconfirmedSpy.mockRestore();
+		transactionIndexMock.mockRestore();
+	});
+
 	it("should check for unconfirmed transactions after initial render", async () => {
 		const wallet = profile.wallets().first();
 		const networkId = wallet.networkId();
