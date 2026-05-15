@@ -242,17 +242,20 @@ describe("TransactionService", () => {
 		await subject.broadcast(id);
 		await subject.confirm(id);
 
-		const broadcastSpy = vi.spyOn(mockClient, "broadcast");
+		mockClient.broadcast = vi.fn().mockResolvedValue({ accepted: [], errors: {}, rejected: [] });
+		mockClient.transaction = vi.fn().mockResolvedValue({ ...TransactionFixture, isConfirmed: () => true });
+
+		const clientSpy = vi.spyOn(wallet, "client").mockReturnValue(mockClient);
 		const result = await subject.broadcast(id);
 
-		expect(broadcastSpy).not.toHaveBeenCalled();
+		expect(mockClient.broadcast).not.toHaveBeenCalled();
 		expect(result).toEqual({
 			accepted: [],
 			errors: {},
 			rejected: [],
 		});
 
-		broadcastSpy.mockRestore();
+		clientSpy.mockRestore();
 	});
 
 	it("should confirm a transaction", async () => {
