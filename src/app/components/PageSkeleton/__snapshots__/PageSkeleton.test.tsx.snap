@@ -11,7 +11,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
+        class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dim:bg-theme-dim-900 dark:bg-theme-dark-900 h-21"
       >
         <div
           class="relative flex"
@@ -85,7 +85,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                 </span>
               </span>
               <span
-                class="ml-4 text-lg leading-[21px] uppercase"
+                class="ml-4 text-lg uppercase leading-[21px]"
               >
                 <strong>
                   ARK
@@ -103,13 +103,13 @@ exports[`PageSkeleton > should render without profile 1`] = `
           class="w-full py-4 first:pt-8 last:pb-8 -mt-5 flex flex-1 md:mt-0 xl:px-10"
         >
           <div
-            class="mx-auto px-6 md:px-10 lg:container w-full lg:max-w-screen-xl"
+            class="mx-auto px-6 lg:container md:px-10 w-full lg:max-w-screen-xl"
           >
             <div
               class="flex flex-col gap-3 lg:flex-row"
             >
               <div
-                class="border-theme-navy-100 dark:border-theme-secondary-800 border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 bg-theme-navy-50 dark:bg-theme-secondary-800 dim:bg-theme-dim-950 hidden min-w-0 basis-1/2 rounded-xl sm:block sm:border bg-theme-navy-50 dim:bg-[url(/welcome-bg-dim.svg)] bg-[url(/welcome-bg-white.svg)]"
+                class="hidden min-w-0 basis-1/2 rounded-xl border-theme-navy-100 bg-theme-navy-50 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:block sm:border bg-theme-navy-50 bg-[url(/welcome-bg-white.svg)] dim:bg-[url(/welcome-bg-dim.svg)]"
               >
                 <div
                   class="slick-slider slick-initialized"
@@ -134,15 +134,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
-                                class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 dim:text-theme-dim-50 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -161,7 +161,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
+                                class="hidden! md:block! lg:hidden! mt-3 h-[180px]"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
@@ -181,15 +181,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
-                                class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 dim:text-theme-dim-50 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                               </p>
@@ -208,7 +208,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Easy Access to Your Digital Assets"
-                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
+                                class="hidden! md:block! lg:hidden! mt-3 h-[180px]"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
                               />
@@ -228,15 +228,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
-                                class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 dim:text-theme-dim-50 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Integrated Exchanges
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
                               </p>
@@ -255,7 +255,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Integrated Exchanges"
-                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
+                                class="hidden! md:block! lg:hidden! mt-3 h-[180px]"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
                               />
@@ -275,15 +275,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
-                                class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 dim:text-theme-dim-50 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Fully Customizable
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
                               </p>
@@ -302,7 +302,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Fully Customizable"
-                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
+                                class="hidden! md:block! lg:hidden! mt-3 h-[180px]"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
@@ -322,15 +322,15 @@ exports[`PageSkeleton > should render without profile 1`] = `
                             class="flex w-full flex-row md:w-auto lg:flex-col"
                           >
                             <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
+                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[450px]"
                             >
                               <h3
-                                class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
+                                class="mb-2 mt-7 text-base leading-7 dim:text-theme-dim-50 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]"
                               >
                                 Easy Access to Your Digital Assets
                               </h3>
                               <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
+                                class="mb-0 text-sm text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"
                               >
                                 Access and manage your ARK assets with ease. Importing and viewing your addresses has never been simpler.
                               </p>
@@ -349,103 +349,9 @@ exports[`PageSkeleton > should render without profile 1`] = `
                               </div>
                               <img
                                 alt="Easy Access to Your Digital Assets"
-                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
+                                class="hidden! md:block! lg:hidden! mt-3 h-[180px]"
                                 loading="lazy"
                                 src="/src/domains/profile/images/welcome-slide-1-sm-light.png"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="true"
-                        class="slick-slide slick-cloned"
-                        data-index="4"
-                        style="width: 0px;"
-                        tabindex="-1"
-                      >
-                        <div>
-                          <div
-                            class="flex w-full flex-row md:w-auto lg:flex-col"
-                          >
-                            <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
-                            >
-                              <h3
-                                class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
-                              >
-                                Integrated Exchanges
-                              </h3>
-                              <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
-                              >
-                                Effortlessly swap your assets to and from ARK right within the wallet, with native support for Changelly and ChangeNow services.
-                              </p>
-                            </div>
-                            <div
-                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
-                            >
-                              <div
-                                class="hidden aspect-[1.097] h-full w-full lg:block"
-                              >
-                                <img
-                                  alt="Integrated Exchanges"
-                                  loading="lazy"
-                                  src="/src/domains/profile/images/welcome-slide-2-light.png"
-                                />
-                              </div>
-                              <img
-                                alt="Integrated Exchanges"
-                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
-                                loading="lazy"
-                                src="/src/domains/profile/images/welcome-slide-2-sm-light.png"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        aria-hidden="true"
-                        class="slick-slide slick-cloned"
-                        data-index="5"
-                        style="width: 0px;"
-                        tabindex="-1"
-                      >
-                        <div>
-                          <div
-                            class="flex w-full flex-row md:w-auto lg:flex-col"
-                          >
-                            <div
-                              class="w-full p-4 sm:shrink-0 sm:p-6 md:w-[360px] md:pr-0 md:pb-0 lg:w-[450px]"
-                            >
-                              <h3
-                                class="xs:leading-5 dim:text-theme-dim-50 mt-7 mb-2 text-base leading-7 md:font-bold lg:text-2xl lg:leading-[29px]"
-                              >
-                                Fully Customizable
-                              </h3>
-                              <p
-                                class="text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 mb-0 text-sm md:mb-4 lg:text-base lg:leading-7"
-                              >
-                                Tailor your experience by setting your local currency, adjusting timezones, and easily customizing themes and colors to your liking.
-                              </p>
-                            </div>
-                            <div
-                              class="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex"
-                            >
-                              <div
-                                class="hidden aspect-[1.097] h-full w-full lg:block"
-                              >
-                                <img
-                                  alt="Fully Customizable"
-                                  loading="lazy"
-                                  src="/src/domains/profile/images/welcome-slide-3-light.png"
-                                />
-                              </div>
-                              <img
-                                alt="Fully Customizable"
-                                class="mt-3 hidden! h-[180px] md:block! lg:hidden!"
-                                loading="lazy"
-                                src="/src/domains/profile/images/welcome-slide-3-sm-light.png"
                               />
                             </div>
                           </div>
@@ -464,21 +370,21 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         class="slick-active"
                       >
                         <button
-                          class="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
                         />
                       </li>
                       <li
                         class=""
                       >
                         <button
-                          class="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
                         />
                       </li>
                       <li
                         class=""
                       >
                         <button
-                          class="border-theme-navy-200 dark:border-theme-secondary-600 dark:hover:bg-theme-secondary-600 hover:bg-theme-navy-700 h-3 w-3 rounded-full border-2 hover:border-transparent dark:hover:border-transparent"
+                          class="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600"
                         />
                       </li>
                        
@@ -487,7 +393,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
                 </div>
               </div>
               <div
-                class="border-theme-navy-100 dark:border-theme-secondary-800 dim:border-theme-dim-700 min-w-0 basis-1/2 rounded-xl sm:border sm:p-6"
+                class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dim:border-theme-dim-700 dark:border-theme-secondary-800 sm:border sm:p-6"
               >
                 <div
                   class="mx-auto flex h-[calc(100vh_-_160px)] max-w-[400px] flex-col sm:h-full"
@@ -601,14 +507,14 @@ exports[`PageSkeleton > should render without profile 1`] = `
                         class="w-full space-y-3"
                       >
                         <div
-                          class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
+                          class="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dim:border-theme-dim-700 dark:border-theme-secondary-800"
                           data-testid="ProfileRowSkeleton"
                         >
                           <div
-                            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
+                            class="h-10 w-10 rounded bg-theme-secondary-100 dim:bg-theme-dim-800 dark:bg-theme-secondary-800"
                           />
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
+                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                           >
                             <div
                               style="height: 16px; width: 16px;"
@@ -645,14 +551,14 @@ exports[`PageSkeleton > should render without profile 1`] = `
                           </div>
                         </div>
                         <div
-                          class="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 flex items-center justify-between rounded-lg border p-1"
+                          class="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dim:border-theme-dim-700 dark:border-theme-secondary-800"
                           data-testid="ProfileRowSkeleton"
                         >
                           <div
-                            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-800 h-10 w-10 rounded"
+                            class="h-10 w-10 rounded bg-theme-secondary-100 dim:bg-theme-dim-800 dark:bg-theme-secondary-800"
                           />
                           <div
-                            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 mr-1.5 pr-1.5 transition-colors duration-200"
+                            class="mr-1.5 pr-1.5 text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dim:text-theme-dim-200 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                           >
                             <div
                               style="height: 16px; width: 16px;"

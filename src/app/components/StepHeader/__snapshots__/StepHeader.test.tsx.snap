@@ -15,13 +15,13 @@ exports[`StepHeader > should render 1`] = `
           class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
         />
       </ul>
     </div>
@@ -29,7 +29,7 @@ exports[`StepHeader > should render 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="bg-theme-background flex items-end justify-between"
+        class="flex items-end justify-between bg-theme-background"
       >
         <div
           class="space-y-2"
@@ -48,7 +48,7 @@ exports[`StepHeader > should render 1`] = `
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+            class="mt-0.5 flex items-center text-xs font-semibold leading-5 text-theme-secondary-text sm:mt-1 sm:text-sm sm:font-normal sm:leading-[17px] md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             subtitle
@@ -65,13 +65,13 @@ exports[`StepHeader > should render 1`] = `
             class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
           />
         </ul>
       </div>
@@ -83,7 +83,7 @@ exports[`StepHeader > should render 1`] = `
 exports[`StepHeader > should render simple header without a provider 1`] = `
 <DocumentFragment>
   <div
-    class="bg-theme-background flex items-end justify-between"
+    class="flex items-end justify-between bg-theme-background"
   >
     <div
       class="space-y-2"
@@ -102,7 +102,7 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
         </h1>
       </div>
       <div
-        class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+        class="mt-0.5 flex items-center text-xs font-semibold leading-5 text-theme-secondary-text sm:mt-1 sm:text-sm sm:font-normal sm:leading-[17px] md:text-base md:leading-5"
         data-testid="header__subtitle"
       >
         subtitle
@@ -127,13 +127,13 @@ exports[`StepHeader > should render with extra 1`] = `
           class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
         />
         <li
-          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+          class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
         />
       </ul>
     </div>
@@ -141,7 +141,7 @@ exports[`StepHeader > should render with extra 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="bg-theme-background flex items-end justify-between"
+        class="flex items-end justify-between bg-theme-background"
       >
         <div
           class="space-y-2"
@@ -160,7 +160,7 @@ exports[`StepHeader > should render with extra 1`] = `
             </h1>
           </div>
           <div
-            class="text-theme-secondary-text mt-0.5 flex items-center text-xs leading-5 font-semibold sm:mt-1 sm:text-sm sm:leading-[17px] sm:font-normal md:text-base md:leading-5"
+            class="mt-0.5 flex items-center text-xs font-semibold leading-5 text-theme-secondary-text sm:mt-1 sm:text-sm sm:font-normal sm:leading-[17px] md:text-base md:leading-5"
             data-testid="header__subtitle"
           >
             subtitle
@@ -182,13 +182,13 @@ exports[`StepHeader > should render with extra 1`] = `
             class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-warning-300"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
           />
           <li
-            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dark:bg-theme-secondary-800 dim:bg-theme-dim-700"
+            class="h-1 flex-1 rounded-[4px] transition-colors duration-300 bg-theme-primary-100 dim:bg-theme-dim-700 dark:bg-theme-secondary-800"
           />
         </ul>
       </div>

@@ -3,7 +3,7 @@
 exports[`SelectAddress > should render disabled 1`] = `
 <div>
   <button
-    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden cursor-default"
+    class="focus:outline-hidden relative w-full rounded focus:ring-2 focus:ring-theme-primary-400 cursor-default"
     data-testid="SelectAddress__wrapper"
     disabled=""
     type="button"
@@ -16,14 +16,14 @@ exports[`SelectAddress > should render disabled 1`] = `
       />
     </span>
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-secondary-300 bg-theme-secondary-100 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
         class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base! text-theme-secondary-text"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700 text-theme-secondary-text"
           data-testid="SelectAddress__input"
           disabled=""
           readonly=""
@@ -32,14 +32,14 @@ exports[`SelectAddress > should render disabled 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+        class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
           class=""
         >
           <div
-            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div>
               <div
@@ -84,7 +84,7 @@ exports[`SelectAddress > should render disabled 1`] = `
 exports[`SelectAddress > should render empty 1`] = `
 <div>
   <button
-    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
+    class="focus:outline-hidden relative w-full rounded focus:ring-2 focus:ring-theme-primary-400"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
@@ -96,14 +96,14 @@ exports[`SelectAddress > should render empty 1`] = `
       />
     </span>
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
     >
       <div
         class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -111,14 +111,14 @@ exports[`SelectAddress > should render empty 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+        class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
           class=""
         >
           <div
-            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div>
               <div
@@ -163,7 +163,7 @@ exports[`SelectAddress > should render empty 1`] = `
 exports[`SelectAddress > should render invalid 1`] = `
 <div>
   <button
-    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
+    class="focus:outline-hidden relative w-full rounded focus:ring-2 focus:ring-theme-primary-400"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
@@ -175,7 +175,7 @@ exports[`SelectAddress > should render invalid 1`] = `
       />
     </span>
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200 border border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14"
     >
       <div
         class="relative flex h-full flex-1 invisible"
@@ -183,7 +183,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         <input
           aria-invalid="true"
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -191,7 +191,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-danger-500"
+        class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-danger-500"
         data-testid="Input__addon-end"
       >
         <div
@@ -250,7 +250,7 @@ exports[`SelectAddress > should render invalid 1`] = `
           class="pl-3"
         >
           <div
-            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div>
               <div
@@ -295,7 +295,7 @@ exports[`SelectAddress > should render invalid 1`] = `
 exports[`SelectAddress > should render with preselected address 1`] = `
 <div>
   <button
-    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
+    class="focus:outline-hidden relative w-full rounded focus:ring-2 focus:ring-theme-primary-400"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
@@ -318,14 +318,14 @@ exports[`SelectAddress > should render with preselected address 1`] = `
       </div>
     </span>
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
     >
       <div
         class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"
@@ -333,14 +333,14 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         />
       </div>
       <div
-        class="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x text-theme-primary-300 dark:text-theme-secondary-600"
+        class="flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
         data-testid="Input__addon-end"
       >
         <div
           class=""
         >
           <div
-            class="text-theme-secondary-700 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 hover:bg-theme-primary-100 hover:text-theme-primary-700 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dim:text-theme-dim-200 flex items-center space-x-3 rounded bg-transparent p-1 transition-colors dark:hover:text-white"
+            class="flex items-center space-x-3 rounded bg-transparent p-1 text-theme-secondary-700 transition-colors hover:bg-theme-primary-100 hover:text-theme-primary-700 dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-white"
           >
             <div>
               <div
@@ -385,7 +385,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
 exports[`SelectAddress > should render without user icon 1`] = `
 <div>
   <button
-    class="focus:ring-theme-primary-400 relative w-full rounded focus:ring-2 focus:outline-hidden"
+    class="focus:outline-hidden relative w-full rounded focus:ring-2 focus:ring-theme-primary-400"
     data-testid="SelectAddress__wrapper"
     type="button"
   >
@@ -397,14 +397,14 @@ exports[`SelectAddress > should render without user icon 1`] = `
       />
     </span>
     <div
-      class="text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500 focus-within:ring-1 h-12 overflow-hidden sm:h-14 hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1"
+      class="flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text duration-200 border border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700 focus-within:ring-1 h-12 overflow-hidden sm:h-14 transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600"
     >
       <div
         class="relative flex h-full flex-1 invisible"
       >
         <input
           autocomplete="off"
-          class="bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!"
+          class="bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700"
           data-testid="SelectAddress__input"
           readonly=""
           type="text"

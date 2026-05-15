@@ -8,7 +8,7 @@ exports[`Offline > should render 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="custom-nav-wrapper dark:bg-theme-dark-900 dim:bg-theme-dim-900 sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 h-21"
+      class="custom-nav-wrapper sticky inset-x-0 top-0 z-40 bg-white transition-all duration-200 dim:bg-theme-dim-900 dark:bg-theme-dark-900 h-21"
     >
       <div
         class="relative flex"
@@ -82,7 +82,7 @@ exports[`Offline > should render 1`] = `
               </span>
             </span>
             <span
-              class="ml-4 text-lg leading-[21px] uppercase"
+              class="ml-4 text-lg uppercase leading-[21px]"
             >
               <strong>
                 ARK
@@ -97,10 +97,10 @@ exports[`Offline > should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center pt-0! text-center"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-0! flex flex-1 flex-col justify-center text-center"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="mx-auto flex w-full max-w-xs justify-center"

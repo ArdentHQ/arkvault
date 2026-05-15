@@ -3,11 +3,11 @@
 exports[`TransactionConfirmationStatusLabel > should render awaiting label 1`] = `
 <DocumentFragment>
   <div
-    class="dim:text-theme-dim-200 text-theme-secondary-700 dark:text-theme-dark-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs dim:bg-transparent bg-theme-secondary-200 dark:bg-transparent  border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700"
+    class="flex space-x-2 rounded-sm px-1 py-[3px] text-xs text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200 dim:bg-transparent bg-theme-secondary-200 dark:bg-transparent  border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700"
     data-testid="LabelAwaiting"
   >
     <span
-      class="font-semibold whitespace-nowrap"
+      class="whitespace-nowrap font-semibold"
     >
       Awaiting
     </span>
@@ -18,7 +18,7 @@ exports[`TransactionConfirmationStatusLabel > should render awaiting label 1`] =
 exports[`TransactionConfirmationStatusLabel > should render completed label 1`] = `
 <DocumentFragment>
   <div
-    class="dim:text-theme-success-500 text-theme-success-700 dark:text-theme-success-500 flex space-x-2 rounded-sm px-1 py-[3px] text-xs dim:bg-theme-success-900 bg-theme-success-100 dark:bg-theme-success-900 border dim:border-theme-success-900 border-theme-success-100 dark:border-theme-success-900"
+    class="flex space-x-2 rounded-sm px-1 py-[3px] text-xs text-theme-success-700 dim:text-theme-success-500 dark:text-theme-success-500 dim:bg-theme-success-900 bg-theme-success-100 dark:bg-theme-success-900 border dim:border-theme-success-900 border-theme-success-100 dark:border-theme-success-900"
     data-testid="LabelCompleted"
   >
     <div
@@ -58,7 +58,7 @@ exports[`TransactionConfirmationStatusLabel > should render completed label 1`] 
       </div>
     </div>
     <span
-      class="font-semibold whitespace-nowrap"
+      class="whitespace-nowrap font-semibold"
     >
       Completed
     </span>
@@ -69,14 +69,14 @@ exports[`TransactionConfirmationStatusLabel > should render completed label 1`] 
 exports[`TransactionConfirmationStatusLabel > should render pending label 1`] = `
 <DocumentFragment>
   <div
-    class="text-theme-warning-900 dark:text-theme-dark-200 dim:text-theme-dim-200 flex space-x-2 rounded-sm px-1 py-[3px] text-xs dim:bg-transparent bg-theme-warning-50 dark:bg-transparent border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700"
+    class="flex space-x-2 rounded-sm px-1 py-[3px] text-xs text-theme-warning-900 dim:text-theme-dim-200 dark:text-theme-dark-200 dim:bg-transparent bg-theme-warning-50 dark:bg-transparent border border-theme-warning-50 dim:border-theme-dim-700 dark:border-theme-dark-700"
     data-testid="LabelPending"
   >
     <div
       class="animate-spin rounded-full shrink-0 w-4 h-4 border-[3px] border-theme-warning-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-l-theme-warning-900 dark:border-l-theme-warning-600 dim:border-l-theme-warning-600"
     />
     <span
-      class="font-semibold whitespace-nowrap"
+      class="whitespace-nowrap font-semibold"
     >
       Pending
     </span>
