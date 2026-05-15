@@ -166,9 +166,9 @@ export const useProfileTokens = ({ profile, wallets, limit = 30 }: ProfileTokens
 				if (refreshedToken) {
 					setState((state) => ({
 						...state,
-						tokens: state.tokens.map((existingToken) =>
-							existingToken.address() === address ? refreshedToken : existingToken,
-						),
+						tokens: state.tokens.map((existingToken) => {
+							return existingToken.token().address() === address ? refreshedToken : existingToken;
+						}),
 					}));
 				}
 				setIsReloading(false);

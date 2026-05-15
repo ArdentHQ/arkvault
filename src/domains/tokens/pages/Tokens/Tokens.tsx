@@ -173,7 +173,7 @@ export const Tokens = () => {
 					onClose={() => setTokenModelItem(undefined)}
 					isReloading={isReloading}
 					onReloadToken={async () => {
-						const refreshedToken = await reload(tokenModalItem.address());
+						const refreshedToken = await reload(tokenModalItem.token().address());
 						if (refreshedToken) {
 							setTokenModelItem(refreshedToken);
 						}
