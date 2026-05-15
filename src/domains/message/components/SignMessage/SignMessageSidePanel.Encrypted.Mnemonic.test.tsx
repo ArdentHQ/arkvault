@@ -47,48 +47,44 @@ describe("SignMessage with encrypted mnemonic", () => {
 		dashboardRoute = `/profiles/${profile.id()}/dashboard`;
 	});
 
-	it(
-		"should sign message with encrypted mnemonic",
-		{ timeout: 8000 },
-		async () => {
-			const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-				mnemonic,
-				password: "password",
-			});
+	it("should sign message with encrypted mnemonic", { timeout: 8000 }, async () => {
+		const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			mnemonic,
+			password: "password",
+		});
 
-			vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(mnemonic);
+		vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(mnemonic);
 
-			profile.wallets().push(encryptedWallet);
+		profile.wallets().push(encryptedWallet);
 
-			await env.profiles().restore(profile);
+		await env.profiles().restore(profile);
 
-			render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
-				route: dashboardRoute,
-			});
+		render(<SignMessageSidePanel open={true} onOpenChange={vi.fn()} />, {
+			route: dashboardRoute,
+		});
 
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			// The profile only have one address so we dont need to select any address
+		// The profile only have one address so we dont need to select any address
 
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
-			).toBeInTheDocument();
+		expect(
+			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
+		).toBeInTheDocument();
 
-			await userEvent.type(messageInput(), signMessage);
+		await userEvent.type(messageInput(), signMessage);
 
-			await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
-			await waitFor(() =>
-				expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-			);
+		await waitFor(() =>
+			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+		);
 
-			await waitFor(() => expect(continueButton()).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			await userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
-			profile.wallets().forget(encryptedWallet.id());
-		},
-	);
+		profile.wallets().forget(encryptedWallet.id());
+	});
 });
