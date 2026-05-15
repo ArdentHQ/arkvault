@@ -2,6 +2,7 @@ import { Contracts, Services } from "@/app/lib/mainsail";
 
 import { IReadWriteWallet, IWalletSynchroniser, WalletData } from "./contracts.js";
 import { WalletIdentifierFactory } from "./wallet.identifier.factory.js";
+import { WalletData as WalletDataDto } from "@/app/lib/mainsail/wallet.dto";
 
 export class WalletSynchroniser implements IWalletSynchroniser {
 	readonly #wallet: IReadWriteWallet;
@@ -29,19 +30,52 @@ export class WalletSynchroniser implements IWalletSynchroniser {
 			this.#wallet.data().set(WalletData.TokenCount, wallet.tokenCount());
 			this.#wallet.data().set(WalletData.Balance, wallet.balance());
 			this.#wallet.data().set(WalletData.Sequence, wallet.nonce());
-		} catch {
-			/**
-			 * TODO: decide what to do if the wallet couldn't be found
-			 *
-			 * A missing wallet could mean that the wallet is legitimate
-			 * but has no transactions or that the address is wrong.
-			 */
-
-			this.#wallet.getAttributes().set("wallet", currentWallet);
+		} catch (error) {
 			this.#wallet.data().set(WalletData.PublicKey, currentPublicKey);
+
+			let isLegacyColdWallet = false;
+
+			if (error.message.includes("404")) {
+				const legacyWalletData = await this.legacyIdentity();
+				if (legacyWalletData) {
+					isLegacyColdWallet = true;
+
+					this.#wallet.getAttributes().set("wallet", legacyWalletData);
+					this.#wallet.data().set(WalletData.Balance, legacyWalletData.balance());
+				}
+			}
+
+			if (!isLegacyColdWallet) {
+				this.#wallet.getAttributes().set("wallet", currentWallet);
+			}
 		}
 
 		this.#wallet.markAsFullyRestored();
+	}
+
+	private async legacyIdentity(): Promise<WalletDataDto | undefined> {
+		const legacyAddress = this.#wallet.legacyAddress();
+		if (!legacyAddress) {
+			return;
+		}
+
+		try {
+			const data = await this.#wallet.client().legacyColdWallet(legacyAddress);
+
+			return new WalletDataDto({ config: this.#wallet.profile().activeNetwork().config() }).fill({
+				address: this.#wallet.address(),
+				attributes: {
+					isLegacy: true,
+					...data.attributes,
+				},
+				balance: data.balance,
+				nonce: "0",
+				publicKey: this.#wallet.publicKey(),
+				updated_at: "0",
+			});
+		} catch {
+			// ignore error
+		}
 	}
 
 	/** {@inheritDoc IWalletSynchroniser.votes} */

@@ -305,6 +305,7 @@ export const SendVoteSidePanel = ({ open, onOpenChange }: { open: boolean; onOpe
 			const voteTransactionInput: Services.TransactionInput = {
 				gasLimit,
 				gasPrice,
+				nonce: activeWallet.getAttributes().get<string>("wallet.data.attributes.legacyNonce"),
 				signatory,
 			};
 

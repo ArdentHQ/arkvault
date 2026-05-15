@@ -166,6 +166,11 @@ export class Wallet implements IReadWriteWallet {
 		return this.data().get(WalletData.Address)!;
 	}
 
+	/** {@inheritDoc IReadWriteWallet.address} */
+	public legacyAddress(): string | undefined {
+		return this.data().get(WalletData.LegacyAddress);
+	}
+
 	/** {@inheritDoc IReadWriteWallet.publicKey} */
 	public publicKey(): string | undefined {
 		return this.data().get(WalletData.PublicKey);

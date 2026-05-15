@@ -121,6 +121,7 @@ export const useSendTransferForm = ({
 				data,
 				gasLimit,
 				gasPrice,
+				nonce: wallet.getAttributes().get<string>("wallet.data.attributes.legacyNonce"),
 				signatory,
 				token,
 			};

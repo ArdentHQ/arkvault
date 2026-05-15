@@ -30,6 +30,7 @@ export enum WalletData {
 	IsPrimary = "IS_PRIMARY",
 	AddressIndex = "ADDRESS_INDEX",
 	TokenCount = "TOKEN_COUNT",
+	LegacyAddress = "LEGACY_ADDRESS",
 }
 
 /**
