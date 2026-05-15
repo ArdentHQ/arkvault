@@ -12,8 +12,6 @@ describe("ProfileMainsailMigrator", () => {
 	let defaultAddress = "0xAdViMQwcwquCP8fbY9eczXzTX7yUs2uMw4";
 
 	beforeAll(async () => {
-		server.listen();
-
 		migrator = new ProfileMainsailMigrator();
 	});
 
