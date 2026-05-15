@@ -47,6 +47,7 @@ describe("SignMessage with encrypted secret", () => {
 
 	it(
 		"should sign message with encrypted secret",
+		{ timeout: 8000 },
 		async () => {
 			const secret = "secret";
 
@@ -90,6 +91,5 @@ describe("SignMessage with encrypted secret", () => {
 
 			profile.wallets().forget(encryptedWallet.id());
 		},
-		{ timeout: 8000 },
 	);
 });
