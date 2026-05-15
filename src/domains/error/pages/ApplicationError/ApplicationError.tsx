@@ -1,5 +1,4 @@
 import React from "react";
-import { FallbackProps } from "react-error-boundary";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
@@ -9,12 +8,14 @@ import { useTheme } from "@/app/hooks";
 import { TextArea } from "@/app/components/TextArea";
 import { ClipboardButton } from "@/app/components/Clipboard/ClipboardButton";
 
-export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
+interface ApplicationErrorProps {
+	error?: Error;
+}
+
+export const ApplicationError = ({ error }: ApplicationErrorProps) => {
 	const { t } = useTranslation();
 
 	const { theme } = useTheme();
-
-	const isError = error instanceof Error;
 
 	return (
 		<main className={theme} data-testid="Main">
@@ -27,10 +28,10 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 					<div data-testid="ApplicationError__text" className="mt-8">
 						<h2 className="text-2xl font-bold capitalize">{t("ERROR.APPLICATION.TITLE")}</h2>
 						<p className="text-theme-secondary-text">{t("ERROR.APPLICATION.DESCRIPTION")}</p>
-						{isError && <p className="text-theme-secondary-text">{t("ERROR.APPLICATION.HELP_TEXT")}</p>}
+						{error && <p className="text-theme-secondary-text">{t("ERROR.APPLICATION.HELP_TEXT")}</p>}
 					</div>
 
-					{isError && (
+					{error && (
 						<div className="mx-auto mt-8 max-w-md">
 							<TextArea
 								data-testid="ErrorStep__errorMessage"
@@ -43,7 +44,7 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 					)}
 
 					<div className="mx-auto mt-8 flex max-w-md items-center justify-center space-x-4">
-						{isError && <ClipboardButton data={String(error.message)}>{t("COMMON.COPY")}</ClipboardButton>}
+						{error && <ClipboardButton data={String(error.message)}>{t("COMMON.COPY")}</ClipboardButton>}
 
 						<Button data-testid="ApplicationError__button--reload" onClick={() => window.location.reload()}>
 							{t("ERROR.APPLICATION.RELOAD")}
