@@ -376,6 +376,7 @@ describe("TokenService", () => {
 		it("should update existing tokens on the page", async () => {
 			const walletAddress = "0x1";
 			const newBalanceRaw = "555";
+			const token = "0x180a864a755fed0144c622df49b83db577befefb";
 
 			server.use(
 				http.get(WalletsTokensEndpoint, () =>
@@ -389,7 +390,7 @@ describe("TokenService", () => {
 								name: "DARK20",
 								supply: "100000000000000000000000000",
 								symbol: "DARK20",
-								token: "0x180a864a755fed0144c622df49b83db577befefb",
+								token,
 							},
 						],
 						meta: { next: null, self: WalletsTokensPagePath },
@@ -405,7 +406,7 @@ describe("TokenService", () => {
 			await tokenService.sync();
 			expect(tokenService.selected().items()).toHaveLength(1);
 
-			const result = await tokenService.syncOne(walletAddress);
+			const result = await tokenService.syncOne(token);
 
 			expect(result).toBeInstanceOf(WalletToken);
 			expect(result!.address()).toBe(walletAddress);
