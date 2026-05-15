@@ -93,7 +93,9 @@ describe("Profile", () => {
 
 	it("should flush the settings of the profile", () => {
 		const initialiseSettingsSpy = vi.fn();
-		const spy = vi.spyOn(ProfileInitialiser.prototype, "initialiseSettings").mockImplementation(initialiseSettingsSpy);
+		const spy = vi
+			.spyOn(ProfileInitialiser.prototype, "initialiseSettings")
+			.mockImplementation(initialiseSettingsSpy);
 
 		profile.settings().set(ProfileSetting.Name, "Test Profile");
 		profile.flushSettings();
