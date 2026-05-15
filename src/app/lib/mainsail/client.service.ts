@@ -27,6 +27,7 @@ import {
 	TransactionTypeIdentifier,
 	UsernamesContract,
 } from "@arkecosystem/typescript-crypto";
+import { Cache } from "@/app/lib/mainsail/cache";
 
 type searchParams<T extends Record<string, any> = {}> = T & { page: number; limit?: number };
 
@@ -35,6 +36,8 @@ const wellKnownContracts = {
 	multiPayment: "0x00EFd0D4639191C49908A7BddbB9A11A994A8527",
 	username: "0x2c1DE3b4Dbb4aDebEbB5dcECAe825bE2a9fc6eb6",
 };
+
+const cache = new Cache(86_400); // 24hr TTL in seconds
 
 export class ClientService {
 	readonly #client!: Client;
@@ -202,6 +205,15 @@ export class ClientService {
 	public async wallet(id: Services.WalletIdentifier): Promise<Contracts.WalletData> {
 		const body = await this.#client.wallets().get(id.value);
 		return new WalletData({ config: this.#config }).fill(body.data);
+	}
+
+	public async legacyColdWallet(
+		address: string,
+	): Promise<{ address: string; balance: string; attributes: Record<string, string> }> {
+		return cache.remember(`legacy-cold-wallet-${address}`, async () => {
+			const body = await this.#client.legacy().coldWallet(address);
+			return body.data;
+		});
 	}
 
 	public async wallets(query: Services.ClientWalletsInput): Promise<Collections.WalletDataCollection> {

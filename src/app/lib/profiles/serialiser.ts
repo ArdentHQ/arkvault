@@ -50,6 +50,7 @@ export class WalletSerialiser {
 				[WalletData.IsPrimary]: this.#wallet.data().get(WalletData.IsPrimary, false),
 				[WalletData.AddressIndex]: this.#wallet.data().get(WalletData.AddressIndex),
 				[WalletData.TokenCount]: this.#wallet.tokenCount(),
+				[WalletData.LegacyAddress]: this.#wallet.legacyAddress(),
 			},
 			id: this.#wallet.id(),
 			settings: this.#wallet.settings().all(),
