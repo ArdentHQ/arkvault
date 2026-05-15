@@ -10,6 +10,19 @@ export enum CreateStep {
 	SuccessStep,
 }
 
+interface ShowFooterOptions {
+	activeTab: CreateStep;
+	isHDWalletCreation: boolean;
+}
+
+export const useShowFooter = ({ activeTab, isHDWalletCreation }: ShowFooterOptions): boolean => {
+	if (isHDWalletCreation) {
+		return activeTab > CreateStep.MethodStep && activeTab !== CreateStep.SuccessStep;
+	}
+
+	return activeTab > CreateStep.MethodStep;
+};
+
 interface StepHeaderConfig {
 	title: string;
 	subtitle?: string;

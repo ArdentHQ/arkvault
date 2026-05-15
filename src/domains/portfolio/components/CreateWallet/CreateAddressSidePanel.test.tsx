@@ -1,4 +1,4 @@
-import { CreateStep, useCreateStepHeaderConfig } from "./CreateAddressSidePanel.blocks";
+import { CreateStep, useCreateStepHeaderConfig, useShowFooter } from "./CreateAddressSidePanel.blocks";
 import { BIP39 } from "@ardenthq/arkvault-crypto";
 import { Contracts } from "@/app/lib/profiles";
 import userEvent from "@testing-library/user-event";
@@ -348,9 +348,8 @@ describe("CreateAddressSidePanel", () => {
 		});
 	});
 
-	it.skip("should show an error message if wallet generation failed", async () => {
-		bip39GenerateMock.mockRestore();
-		bip39GenerateMock = vi.spyOn(profile.walletFactory(), "generate").mockImplementation(() => {
+	it("should show an error message if wallet generation failed", async () => {
+		const generateSpy = vi.spyOn(BIP39, "generate").mockImplementation(() => {
 			throw new Error("test");
 		});
 
@@ -361,10 +360,10 @@ describe("CreateAddressSidePanel", () => {
 		});
 
 		await expect(
-			screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR),
+			screen.findByTestId("AlertBanner_error"),
 		).resolves.toBeVisible();
 
-		bip39GenerateMock.mockRestore();
+		generateSpy.mockRestore();
 	});
 
 	it("should show an error message for duplicate name", async () => {
@@ -465,5 +464,47 @@ describe("useCreateStepHeaderConfig", () => {
 		expect(result.current).toEqual({
 			title: "",
 		});
+	});
+});
+
+describe("useShowFooter", () => {
+	it("returns false when on MethodStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(false);
+	});
+
+	it("returns true for non-HD wallet when on WalletOverviewStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns true for non-HD wallet on ConfirmPassphraseStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns false for non-HD wallet on SuccessStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: false }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns false for HD wallet when on MethodStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.MethodStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(false);
+	});
+
+	it("returns true for HD wallet when on WalletOverviewStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.WalletOverviewStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(true);
+	});
+
+	it("returns false for HD wallet when on SuccessStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.SuccessStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(false);
+	});
+
+	it("returns false for HD wallet when on ConfirmPassphraseStep", () => {
+		const { result } = renderHook(() => useShowFooter({ activeTab: CreateStep.ConfirmPassphraseStep, isHDWalletCreation: true }));
+		expect(result.current).toBe(true);
 	});
 });
