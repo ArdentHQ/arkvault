@@ -49,6 +49,7 @@ describe("SignMessage with encrypted mnemonic", () => {
 
 	it(
 		"should sign message with encrypted mnemonic",
+		{ timeout: 8000 },
 		async () => {
 			const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 				mnemonic,
@@ -89,6 +90,5 @@ describe("SignMessage with encrypted mnemonic", () => {
 
 			profile.wallets().forget(encryptedWallet.id());
 		},
-		{ timeout: 8000 },
 	);
 });
