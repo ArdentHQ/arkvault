@@ -53,14 +53,14 @@ export const AddressMobileItem = ({
 		return (
 			<div className="relative">
 				<div
-					className="border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dim:border-theme-dim-700 dim:bg-theme-dim-900 w-full overflow-hidden rounded border bg-white"
+					className="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dim:border-theme-dim-700 dim:bg-theme-dim-900 dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
 					data-testid="AddressMobileItem__skeleton"
 				>
-					<div className="bg-theme-secondary-100 dim:bg-theme-dim-950 h-11 w-full pt-3 pl-4 dark:bg-black">
+					<div className="h-11 w-full bg-theme-secondary-100 pl-4 pt-3 dim:bg-theme-dim-950 dark:bg-black">
 						<Skeleton width={20} height={20} />
 					</div>
 
-					<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
+					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
 						<div className="flex flex-col gap-2">
 							<Skeleton height={16} width={126} />
 							<Skeleton height={16} width={amountWidth} />
@@ -88,7 +88,7 @@ export const AddressMobileItem = ({
 
 	return (
 		<MobileCard data-testid="LedgerMobileItem__wrapper">
-			<div className="bg-theme-secondary-100 dim:bg-transparent h-11 w-full pt-3 pl-4 dark:bg-black">
+			<div className="h-11 w-full bg-theme-secondary-100 pl-4 pt-3 dim:bg-transparent dark:bg-black">
 				<Checkbox
 					checked={isSelected || isDisabled}
 					disabled={isDisabled}
@@ -97,7 +97,7 @@ export const AddressMobileItem = ({
 				/>
 			</div>
 
-			<div className="flex w-full flex-col gap-4 px-4 pt-2.5 pb-4">
+			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
 				<MobileSection title={t("COMMON.ADDRESS")}>
 					<Address
 						address={address}
@@ -119,11 +119,11 @@ export const AddressTableLoaderOverlay = ({ children, className }: { className?:
 	<div>
 		<div
 			className={twMerge(
-				"border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 dark:bg-theme-background dim:bg-theme-background absolute inset-0 -m-px rounded border bg-white opacity-75",
+				"absolute inset-0 -m-px rounded border border-theme-secondary-300 bg-white opacity-75 dim:border-theme-dim-700 dim:bg-theme-background dark:border-theme-secondary-800 dark:bg-theme-background",
 				className,
 			)}
 		/>
-		<div className="text-theme-secondary-700 dim:text-theme-dim-50 absolute inset-0 flex h-full w-full items-center justify-center space-x-3 dark:text-white">
+		<div className="absolute inset-0 flex h-full w-full items-center justify-center space-x-3 text-theme-secondary-700 dim:text-theme-dim-50 dark:text-white">
 			{children && (
 				<div>
 					<Spinner size="sm" width={3} />

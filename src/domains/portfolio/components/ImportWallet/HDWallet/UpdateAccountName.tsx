@@ -59,7 +59,7 @@ export const UpdateAccountName = ({ onAfterSave, onCancel, profile, wallets }: U
 
 	return (
 		<FormProvider {...form}>
-			<div className="bg-theme-secondary-100 border-theme-secondary-300 dark:bg-theme-dark-800 dark:border-theme-dark-700 dim:bg-theme-dim-800 dim:border-theme-dim-700 rounded border px-4 py-3 sm:rounded-t-none sm:rounded-b-lg sm:border-0 sm:px-6 sm:py-4">
+			<div className="rounded border border-theme-secondary-300 bg-theme-secondary-100 px-4 py-3 dim:border-theme-dim-700 dim:bg-theme-dim-800 dark:border-theme-dark-700 dark:bg-theme-dark-800 sm:rounded-b-lg sm:rounded-t-none sm:border-0 sm:px-6 sm:py-4">
 				<FormField name="name">
 					<FormLabel>{t("COMMON.NAME")}</FormLabel>
 					<div className="relative">
@@ -79,14 +79,14 @@ export const UpdateAccountName = ({ onAfterSave, onCancel, profile, wallets }: U
 						size="icon"
 						variant="transparent"
 						onClick={onCancel}
-						className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+						className="px-2 py-[3px] leading-5 text-theme-primary-600 dim:text-theme-dim-navy-400 dark:text-theme-primary-400"
 					>
 						{t("COMMON.CANCEL")}
 					</Button>
 
 					<Divider
 						type="vertical"
-						className="border-theme-secondary-400 dark:border-theme-dark-600 dim:border-theme-dim-600 mx-3"
+						className="mx-3 border-theme-secondary-400 dim:border-theme-dim-600 dark:border-theme-dark-600"
 					/>
 
 					<Button
@@ -96,7 +96,7 @@ export const UpdateAccountName = ({ onAfterSave, onCancel, profile, wallets }: U
 						data-testid="UpdateWalletName__submit"
 						onClick={handleSubmit(onSubmit)}
 						disabled={!isValid || !isChanged}
-						className="text-theme-primary-600 dark:text-theme-primary-400 dim:text-theme-dim-navy-400 px-2 py-[3px] leading-5"
+						className="px-2 py-[3px] leading-5 text-theme-primary-600 dim:text-theme-dim-navy-400 dark:text-theme-primary-400"
 					>
 						{t("COMMON.SAVE")}
 					</Button>

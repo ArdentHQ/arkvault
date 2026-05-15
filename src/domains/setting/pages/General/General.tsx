@@ -230,7 +230,7 @@ export const GeneralSettings: React.FC = () => {
 				<span>
 					<Divider
 						type="vertical"
-						className="text-theme-secondary-300 dark:text-theme-dark-700 dim:text-theme-dim-700"
+						className="text-theme-secondary-300 dim:text-theme-dim-700 dark:text-theme-dark-700"
 					/>
 					<Link isExternal to="https://docs.mainsailhq.com/" showExternalIcon={false} className="text-base">
 						<span className="flex flex-row items-center gap-2">
@@ -240,7 +240,7 @@ export const GeneralSettings: React.FC = () => {
 								data-testid="Link__external"
 								name="ArrowExternal"
 								dimensions={[12, 12]}
-								className="text-theme-secondary-500 dark:text-theme-dark-500 shrink-0 align-middle duration-200"
+								className="shrink-0 align-middle text-theme-secondary-500 duration-200 dark:text-theme-dark-500"
 							/>
 						</span>
 					</Link>
@@ -275,7 +275,7 @@ export const GeneralSettings: React.FC = () => {
 				<Button
 					onClick={() => setIsResetProfileOpen(true)}
 					variant="danger"
-					className="bg-theme-danger-50 w-full sm:w-auto"
+					className="w-full bg-theme-danger-50 sm:w-auto"
 				>
 					<Icon name="ArrowRotateLeft" />
 					<span className="whitespace-nowrap">{t("COMMON.RESET")}</span>
@@ -346,12 +346,12 @@ export const GeneralSettings: React.FC = () => {
 			>
 				<SettingsGroup title={t("SETTINGS.GENERAL.PERSONAL.TITLE")}>
 					<div className="group space-y-2">
-						<span className="text-theme-secondary-text group-hover:text-theme-primary-600 cursor-default text-sm font-semibold transition-colors duration-100">
+						<span className="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600">
 							{t("SETTINGS.GENERAL.PERSONAL.PROFILE_IMAGE")}
 						</span>
 
 						<div className="relative flex flex-row sm:space-x-3">
-							<div className="bg-theme-primary-50 dark:bg-theme-dark-950 dim:bg-theme-dim-950 hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg px-4 sm:flex">
+							<div className="hidden h-[92px] min-w-[226px] items-center justify-center rounded-lg bg-theme-primary-50 px-4 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:flex">
 								<Image className="hidden lg:block" name="ProfileImageExample" />
 								<Image className="lg:hidden" name="ProfileImageExampleResponsive" />
 							</div>
@@ -440,7 +440,7 @@ export const GeneralSettings: React.FC = () => {
 							</FormField>
 						</div>
 
-						<div className="mt-5 flex flex-col sm:mt-0 sm:ml-5 sm:w-2/4">
+						<div className="mt-5 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4">
 							<FormField name="locale">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.LANGUAGE")} />
 								<Select

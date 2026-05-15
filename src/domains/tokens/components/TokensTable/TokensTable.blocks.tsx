@@ -31,8 +31,8 @@ export const TokensTableFooter = ({
 
 	if (hasMore) {
 		return (
-			<tr className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-t border-solid md:border-b-4">
-				<td colSpan={columnsCount} className="px-6 pt-3 pb-4">
+			<tr className="border-t border-solid border-theme-secondary-200 dim:border-theme-dim-700 dark:border-theme-secondary-800 md:border-b-4">
+				<td colSpan={columnsCount} className="px-6 pb-4 pt-3">
 					<Button
 						data-testid="tokens__fetch-more-button"
 						variant="secondary"
@@ -51,10 +51,10 @@ export const TokensTableFooter = ({
 		return (
 			<tr
 				data-testid="EmptyResults"
-				className="border-theme-secondary-200 dark:border-theme-secondary-800 dim:border-theme-dim-700 border-solid md:border-b-4"
+				className="border-solid border-theme-secondary-200 dim:border-theme-dim-700 dark:border-theme-secondary-800 md:border-b-4"
 			>
-				<td colSpan={columnsCount} className="pt-[11px] pb-4">
-					<p className="text-theme-secondary-700 dark:text-theme-secondary-600 dim:text-theme-dim-500 px-6 py-4 text-center text-sm sm:py-0">
+				<td colSpan={columnsCount} className="pb-4 pt-[11px]">
+					<p className="px-6 py-4 text-center text-sm text-theme-secondary-700 dim:text-theme-dim-500 dark:text-theme-secondary-600 sm:py-0">
 						{t("TOKENS.EMPTY_TOKENS")}
 					</p>
 				</td>
@@ -82,7 +82,7 @@ export const TokensTableHeader = ({
 	return (
 		<>
 			<div className="flex items-center gap-1" data-testid="HideDustTokens__Wrapper">
-				<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 mr-2 leading-5 font-semibold whitespace-nowrap">
+				<div className="mr-2 whitespace-nowrap font-semibold leading-5 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 					{t("TOKENS.HIDE_DUST")}
 				</div>
 
@@ -100,14 +100,14 @@ export const TokensTableHeader = ({
 			<Divider
 				type="vertical"
 				size="md"
-				className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 hidden"
+				className="hidden border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800"
 			/>
 
 			{!isManageMode && (
 				<Button
 					data-testid="TokensTable_Manage"
 					variant="transparent"
-					className="text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group px-2 py-1 text-sm dark:bg-transparent"
+					className="group px-2 py-1 text-sm text-theme-primary-600 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
 					onClick={() => {
 						toggleManageMode(true);
 					}}
@@ -122,7 +122,7 @@ export const TokensTableHeader = ({
 					<Button
 						data-testid="TokensTable_Cancel"
 						variant="transparent"
-						className="text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group px-2 py-1 text-sm dark:bg-transparent"
+						className="group px-2 py-1 text-sm text-theme-primary-600 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
 						onClick={onCancel}
 					>
 						{t("COMMON.CANCEL")}
@@ -133,7 +133,7 @@ export const TokensTableHeader = ({
 					<Button
 						data-testid="TokensTable_Save"
 						variant="transparent"
-						className="text-theme-primary-600 dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 group px-2 py-1 text-sm dark:bg-transparent"
+						className="group px-2 py-1 text-sm text-theme-primary-600 hover:bg-theme-primary-200 hover:text-theme-primary-700 dim:bg-transparent dim:text-theme-dim-200 dim-hover:bg-theme-dim-700 dim-hover:text-theme-dim-50 dark:bg-transparent dark:text-theme-dark-50 dark:hover:bg-theme-dark-700 dark:hover:text-theme-dark-50"
 						onClick={onSave}
 					>
 						{t("COMMON.SAVE")}

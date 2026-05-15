@@ -89,7 +89,7 @@ export const ExportSettings = () => {
 				<SettingsGroup title={t("SETTINGS.EXPORT.TITLE")} description={t("SETTINGS.EXPORT.DESCRIPTION")}>
 					<ListDivided items={walletExportOptions} />
 
-					<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 mt-4 space-y-5 border-t border-dashed pt-4">
+					<div className="mt-4 space-y-5 border-t border-dashed border-theme-secondary-300 pt-4 dim:border-theme-dim-700 dark:border-theme-secondary-800">
 						<Alert variant="info">{t("SETTINGS.EXPORT.DESCRIPTION")}</Alert>
 					</div>
 				</SettingsGroup>

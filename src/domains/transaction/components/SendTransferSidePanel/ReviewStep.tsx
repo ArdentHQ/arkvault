@@ -147,7 +147,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 											ticker={ticker}
 											value={amount}
 											decimals={token?.token().decimals()}
-											className="text-sm font-semibold break-all whitespace-normal md:text-base"
+											className="whitespace-normal break-all text-sm font-semibold md:text-base"
 										/>
 										<ExchangeCurrencyAmount
 											isTestnet={isTestnet}
@@ -159,7 +159,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 									{errors.amount && (
 										<div
 											data-testid="Input__addon-end"
-											className="divide-theme-secondary-300 text-theme-danger-500 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x"
+											className="flex items-center divide-x divide-theme-secondary-300 text-theme-danger-500 dim:divide-theme-dim-700 dark:divide-theme-secondary-800"
 										>
 											<div>
 												<Tooltip content={errors.amount.message} size="sm">
@@ -183,7 +183,7 @@ export const ReviewStep = ({ wallet, network }: ReviewStepProperties) => {
 					</div>
 				</div>
 
-				<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 border-t px-3 pt-6 sm:border-none sm:px-0 sm:pt-0">
+				<div className="border-t border-theme-secondary-300 px-3 pt-6 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border-none sm:px-0 sm:pt-0">
 					{showFeeInput && (
 						<FormField name="fee" disableStateHints>
 							<FormLabel

@@ -6,7 +6,7 @@ export const DetailLabelText = ({ children, className }: { children: ReactNode; 
 	<div
 		data-testid="DetailLabelText"
 		className={twMerge(
-			"no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 min-w-24 font-semibold",
+			"no-ligatures min-w-24 font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500",
 			"text-sm leading-[17px] sm:text-base sm:leading-5",
 			className,
 		)}
@@ -19,7 +19,7 @@ export const DetailLabel = ({ children, className }: { children: ReactNode; clas
 	<div
 		data-testid="DetailLabel"
 		className={twMerge(
-			"border-x-theme-primary-400 dim:border-x-theme-dim-navy-400 bg-theme-secondary-100 dim:bg-theme-dim-950 dim:sm:bg-transparent border-l-2 px-3 py-2 sm:border-none sm:bg-transparent sm:p-0 dark:bg-black dark:sm:bg-transparent",
+			"border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dim:border-x-theme-dim-navy-400 dim:bg-theme-dim-950 dark:bg-black sm:border-none sm:bg-transparent sm:p-0 dim:sm:bg-transparent dark:sm:bg-transparent",
 			className,
 		)}
 	>
@@ -42,17 +42,17 @@ export const DetailWrapper = ({
 		{label && <DetailLabel>{label}</DetailLabel>}
 		<div
 			className={twMerge(
-				"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 overflow-hidden rounded-xl sm:border",
+				"overflow-hidden rounded-xl border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:border",
 				cn({
 					"mt-0 sm:mt-2": !!label,
 				}),
 				className,
 			)}
 		>
-			<div className="w-full p-3 break-words sm:px-6 sm:py-5 sm:in-[.condensed]:py-4">{children}</div>
+			<div className="sm:in-[.condensed]:py-4 w-full break-words p-3 sm:px-6 sm:py-5">{children}</div>
 
 			{footer && (
-				<div className="bg-theme-secondary-300 dark:bg-theme-secondary-800 flex w-full flex-col px-6 py-3">
+				<div className="flex w-full flex-col bg-theme-secondary-300 px-6 py-3 dark:bg-theme-secondary-800">
 					{footer}
 				</div>
 			)}
@@ -63,7 +63,7 @@ export const DetailWrapper = ({
 export const DetailTitle = ({ children, className }: { children: ReactNode; className?: string }): ReactNode => (
 	<div
 		className={twMerge(
-			"no-ligatures text-theme-secondary-700 dark:text-theme-secondary-500 dim:text-theme-dim-200 w-20 shrink-0 text-sm leading-[17px] font-semibold sm:text-base sm:leading-5",
+			"no-ligatures w-20 shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-secondary-500 sm:text-base sm:leading-5",
 			className,
 		)}
 		data-testid="DetailTitle"
@@ -80,8 +80,8 @@ export const DetailPadded = ({ children, className }: { children: React.ReactNod
 	<div className={cn("group flex", className)}>
 		<div className="hidden sm:ml-3 sm:flex">
 			<div className="min-w-9 flex-row pr-3">
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 -mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2" />
-				<div className="border-theme-secondary-300 dark:border-theme-secondary-800 dim:border-theme-dim-700 h-[105%] w-full border-l-2 group-last:hidden" />
+				<div className="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-800" />
+				<div className="h-[105%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dim:border-theme-dim-700 dark:border-theme-secondary-800" />
 			</div>
 		</div>
 		<div className="w-full min-w-0 sm:flex-row">{children}</div>

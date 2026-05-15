@@ -73,11 +73,11 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 		<DetailWrapper
 			label={t("TRANSACTION.ADDRESSING")}
 			className={cn({
-				"border-theme-danger-400 dark:border-theme-danger-400 dim:border-theme-danger-400 -mx-1 mt-3 border sm:mx-0 sm:mt-2":
+				"-mx-1 mt-3 border border-theme-danger-400 dim:border-theme-danger-400 dark:border-theme-danger-400 sm:mx-0 sm:mt-2":
 					verificationError,
-				"border-theme-success-300 dark:border-theme-success-500 dim:border-theme-success-500 -mx-1 mt-3 border sm:mx-0 sm:mt-2":
+				"-mx-1 mt-3 border border-theme-success-300 dim:border-theme-success-500 dark:border-theme-success-500 sm:mx-0 sm:mt-2":
 					isVerified,
-				"border-theme-warning-300 dark:border-theme-warning-300 dim:border-theme-warning-300 -mx-1 mt-3 border sm:mx-0 sm:mt-2":
+				"-mx-1 mt-3 border border-theme-warning-300 dim:border-theme-warning-300 dark:border-theme-warning-300 sm:mx-0 sm:mt-2":
 					isVerifying && !isVerified && verificationError === undefined,
 			})}
 		>
@@ -109,12 +109,12 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 				</div>
 
 				{isVerifying && (
-					<div className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
-						<div className="border-theme-warning-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-2 flex gap-1 border-b border-dashed pb-2 text-sm leading-[17px] font-semibold">
+					<div className="-mx-4 -mb-3 rounded-b-xl bg-theme-warning-50 px-4 py-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:-mx-6 sm:-mb-5 sm:px-6">
+						<div className="mb-2 flex gap-1 border-b border-dashed border-theme-warning-300 pb-2 text-sm font-semibold leading-[17px] dim:border-theme-dim-700 dark:border-theme-dark-700">
 							<p>{t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_LABEL")}:</p>
 							<span className="text-theme-warning-900">{verificationCode}</span>
 						</div>
-						<p className="text-sm leading-5 font-normal">
+						<p className="text-sm font-normal leading-5">
 							{t("COMMON.LEDGER_MIGRATION.PENDING_VERIFICATION_MESSAGE")}
 						</p>
 
@@ -122,7 +122,7 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 							<Button
 								variant="secondary-icon"
 								onClick={handleCancelVerification}
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+								className="w-auto whitespace-nowrap px-2 py-[3px] text-theme-primary-600 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent dark:text-theme-dark-navy-400"
 							>
 								<span>{t("COMMON.CANCEL")}</span>
 							</Button>
@@ -133,21 +133,21 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 				{verificationError && (
 					<div
 						data-testid="LedgerAddressVerification__error"
-						className="dark:bg-theme-dark-950 dim:bg-theme-dim-950 bg-theme-warning-50 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6"
+						className="-mx-4 -mb-3 rounded-b-xl bg-theme-warning-50 px-4 py-3 dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:-mx-6 sm:-mb-5 sm:px-6"
 					>
 						<div className="flex items-center gap-1">
-							<div className="text-theme-danger-700 dark:text-theme-danger-400 dim:text-theme-danger-400 flex items-center space-x-2">
+							<div className="flex items-center space-x-2 text-theme-danger-700 dim:text-theme-danger-400 dark:text-theme-danger-400">
 								<Icon name="CircleCross" size="md" className="h-4" />
-								<p className="text-sm leading-[17px] font-semibold">{t("COMMON.ERROR")}</p>
+								<p className="text-sm font-semibold leading-[17px]">{t("COMMON.ERROR")}</p>
 							</div>
 							<Divider type="vertical" />
-							<p className="text-sm leading-[17px] font-normal">{verificationError}</p>
+							<p className="text-sm font-normal leading-[17px]">{verificationError}</p>
 						</div>
 						<div className="mt-4 flex items-center justify-end gap-1">
 							<Button
 								variant="secondary-icon"
 								onClick={handleCancelVerification}
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+								className="w-auto whitespace-nowrap px-2 py-[3px] text-theme-primary-600 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent dark:text-theme-dark-navy-400"
 							>
 								<span>{t("COMMON.CANCEL")}</span>
 							</Button>
@@ -157,7 +157,7 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 							<Button
 								variant="secondary-icon"
 								onClick={handleVerifyAddress}
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent w-auto px-2 py-[3px] whitespace-nowrap"
+								className="w-auto whitespace-nowrap px-2 py-[3px] text-theme-primary-600 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent dark:text-theme-dark-navy-400"
 							>
 								<span>{t("COMMON.TRY_AGAIN")}</span>
 							</Button>
@@ -166,10 +166,10 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 				)}
 
 				{isVerified && (
-					<div className="dark:bg-theme-success-900 dim:bg-theme-success-900 bg-theme-success-100 -mx-4 -mb-3 rounded-b-xl px-4 py-3 sm:-mx-6 sm:-mb-5 sm:px-6">
-						<div className="dark:text-theme-success-500 dim:text-theme-success-500 text-theme-success-700 flex items-center gap-2">
+					<div className="-mx-4 -mb-3 rounded-b-xl bg-theme-success-100 px-4 py-3 dim:bg-theme-success-900 dark:bg-theme-success-900 sm:-mx-6 sm:-mb-5 sm:px-6">
+						<div className="flex items-center gap-2 text-theme-success-700 dim:text-theme-success-500 dark:text-theme-success-500">
 							<Icon name="CheckmarkDouble" size="md" className="h-4" />
-							<p className="text-xs leading-[15px] font-semibold">
+							<p className="text-xs font-semibold leading-[15px]">
 								{t("COMMON.LEDGER_MIGRATION.VERIFICATION_SUCCESS_MESSAGE")}
 							</p>
 						</div>
@@ -184,13 +184,13 @@ export const LedgerAddressVerification = ({ transfer }: { transfer: DraftTransfe
 								data-testid="LedgerAddressVerification__VerifyAddress-button"
 								variant="secondary-icon"
 								onClick={handleVerifyAddress}
-								className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent -ml-2 w-auto px-2 py-[3px] whitespace-nowrap"
+								className="-ml-2 w-auto whitespace-nowrap px-2 py-[3px] text-theme-primary-600 dim:text-theme-dim-navy-600 dim:disabled:bg-transparent dark:text-theme-dark-navy-400"
 							>
 								<span>{t("COMMON.VERIFY_ADDRESS")}</span>
 							</Button>
 							<Tooltip content={t("COMMON.LEDGER_MIGRATION.VERIFY_MESSAGE_HELP_TEXT")}>
-								<span className="text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600">
-									<span className="bg-theme-secondary-100 flex h-5 w-5 items-center justify-center rounded-full dark:hidden">
+								<span className="text-theme-primary-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400">
+									<span className="flex h-5 w-5 items-center justify-center rounded-full bg-theme-secondary-100 dark:hidden">
 										<Icon name="QuestionMarkSmall" dimensions={[10, 10]} />
 									</span>
 									<span className="hidden dark:block">

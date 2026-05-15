@@ -213,7 +213,7 @@ export const ValidatorStatus = ({ isActive, className }: { isActive: boolean; cl
 			<div
 				data-testid={testId}
 				className={twMerge(
-					"bg-theme-secondary-200 text-theme-secondary-700 dark:border-theme-dark-700 dark:text-theme-dark-200 dim:border-theme-dim-700 dim:text-theme-dim-200 group-hover:bg-theme-secondary-300 inline-block min-w-[58px] rounded px-1 py-[3px] text-center text-xs font-semibold dark:border dark:bg-transparent dark:group-hover:bg-transparent",
+					"inline-block min-w-[58px] rounded bg-theme-secondary-200 px-1 py-[3px] text-center text-xs font-semibold text-theme-secondary-700 group-hover:bg-theme-secondary-300 dim:border-theme-dim-700 dim:text-theme-dim-200 dark:border dark:border-theme-dark-700 dark:bg-transparent dark:text-theme-dark-200 dark:group-hover:bg-transparent",
 					className,
 				)}
 			>
@@ -256,7 +256,7 @@ export const ValidatorRow = ({
 	return (
 		<TableRow
 			key={validator.address()}
-			className="last:border-theme-secondary-200 dark:last:border-theme-secondary-800 dim:last:border-theme-dim-700 relative last:border-b-4! last:border-solid"
+			className="last:border-b-4! relative last:border-solid last:border-theme-secondary-200 dim:last:border-theme-dim-700 dark:last:border-theme-secondary-800"
 		>
 			<TableCell
 				variant="start"
@@ -304,7 +304,7 @@ export const ValidatorRow = ({
 					to={validator.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 					isExternal
-					className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 dim:[&_svg]:text-theme-dim-500 w-24 md:w-auto"
+					className="w-24 md:w-auto [&_svg]:text-theme-secondary-500 dim:[&_svg]:text-theme-dim-500 dark:[&_svg]:text-theme-secondary-700"
 				>
 					<span>{t("COMMON.VIEW")}</span>
 				</Link>

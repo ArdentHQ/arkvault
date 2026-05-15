@@ -26,13 +26,13 @@ export const InputPassword = (properties: InputPasswordProperties) => {
 							data-testid="InputPassword__toggle"
 							type="button"
 							onClick={togglePasswordVisibility}
-							className="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-hidden"
+							className="ring-focus focus:outline-hidden relative flex h-full w-full items-center justify-center text-2xl"
 							data-ring-focus-margin="-m-1"
 						>
 							<Icon
 								name={show ? "EyeSlash" : "Eye"}
 								size="lg"
-								className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200"
+								className="text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200"
 							/>
 						</button>
 					),

@@ -8,14 +8,14 @@ export const ContractAddressHint = ({ token, link }: { token: WalletToken; link:
 	const { t } = useTranslation();
 
 	return (
-		<div className="bg-theme-secondary-200 dark:bg-theme-dark-950 dim:bg-theme-dim-950 -mt-2 flex h-[33px] items-center justify-between rounded px-3 py-2 text-xs leading-[15px] sm:px-4 sm:text-sm sm:leading-[17px]">
-			<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 font-semibold">
+		<div className="-mt-2 flex h-[33px] items-center justify-between rounded bg-theme-secondary-200 px-3 py-2 text-xs leading-[15px] dim:bg-theme-dim-950 dark:bg-theme-dark-950 sm:px-4 sm:text-sm sm:leading-[17px]">
+			<div className="font-semibold text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 				{t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.CONTRACT_ADDRESS_ENDING")}
 			</div>
 
 			<Link isExternal to={link} showExternalIcon={false}>
 				<span className="flex flex-row items-center gap-2">
-					<span className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600">
+					<span className="text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400">
 						…{token.token().address().slice(-5)}
 					</span>
 
@@ -23,7 +23,7 @@ export const ContractAddressHint = ({ token, link }: { token: WalletToken; link:
 						data-testid="Link__external"
 						name="ArrowExternal"
 						dimensions={[12, 12]}
-						className="text-theme-secondary-500 dark:text-theme-dark-400 dim:text-theme-dim-400 shrink-0 align-middle duration-200"
+						className="shrink-0 align-middle text-theme-secondary-500 duration-200 dim:text-theme-dim-400 dark:text-theme-dark-400"
 					/>
 				</span>
 			</Link>

@@ -44,7 +44,7 @@ export const ReviewStep = ({
 
 				<FormItem>
 					<FormItemRow label={t("EXCHANGE.EXCHANGE_FORM.YOU_GET")}>
-						<span className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold">
+						<span className="font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 							≈ <Amount value={payoutAmount} ticker={toCurrency?.coin} className="font-semibold" />
 						</span>
 					</FormItemRow>
@@ -52,7 +52,7 @@ export const ReviewStep = ({
 					<FormItemRow label={t("COMMON.ADDRESS")}>
 						<TruncateMiddleDynamic
 							value={recipientWallet}
-							className="no-ligatures text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 font-semibold"
+							className="no-ligatures font-semibold text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50"
 						/>
 					</FormItemRow>
 
@@ -99,7 +99,7 @@ export const ReviewStep = ({
 						<button
 							data-testid="ExchangeForm__manual_transfer"
 							type="button"
-							className="link text-theme-navy-600! dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500 text-sm font-semibold"
+							className="link text-theme-navy-600! text-sm font-semibold dim:text-theme-dim-navy-600 dim-hover:text-theme-dim-navy-500"
 							onClick={onManualTransfer}
 							disabled={isSubmitting || !isValid}
 						>

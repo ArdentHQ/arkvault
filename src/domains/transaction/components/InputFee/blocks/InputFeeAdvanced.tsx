@@ -92,13 +92,13 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 	const convertedGasPrice = useMemo(() => convert(+gasPrice), [convert, gasPrice]);
 
 	return (
-		<div className="border-theme-secondary-300 dark:border-theme-secondary-700 dim:border-theme-dim-700 -mx-4 overflow-hidden rounded-xl border">
+		<div className="-mx-4 overflow-hidden rounded-xl border border-theme-secondary-300 dim:border-theme-dim-700 dark:border-theme-secondary-700">
 			<div className="space-y-4 p-4">
 				<FormField name="gasPrice">
 					<FormLabel
 						id="fee"
 						label={t("COMMON.GAS_PRICE_GWEI")}
-						className="FormLabel text-theme-secondary-text hover:text-theme-primary-600! dim:text-theme-dim-200 dim-hover:text-theme-dim-navy-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+						className="FormLabel hover:text-theme-primary-600! dim-hover:text-theme-dim-navy-600! mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 dim:text-theme-dim-200"
 					/>
 
 					<InputCurrency
@@ -129,7 +129,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 				<FormField name="gasLimit">
 					<FormLabel
 						label={t("COMMON.GAS_LIMIT")}
-						className="FormLabel text-theme-secondary-text hover:text-theme-primary-600! dim:text-theme-dim-200 dim-hover:text-theme-dim-navy-600! mb-2 flex text-sm leading-[17px] font-semibold transition-colors duration-100"
+						className="FormLabel hover:text-theme-primary-600! dim-hover:text-theme-dim-navy-600! mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100 dim:text-theme-dim-200"
 					/>
 
 					<InputCurrency
@@ -158,7 +158,7 @@ export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
 					/>
 				</FormField>
 			</div>
-			<div className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 dim:bg-theme-dim-950 dim:text-theme-dim-200 flex flex-col space-y-2 px-4 py-3 text-xs leading-[15px] font-semibold sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2">
+			<div className="flex flex-col space-y-2 bg-theme-secondary-200 px-4 py-3 text-xs font-semibold leading-[15px] text-theme-secondary-700 dim:bg-theme-dim-950 dim:text-theme-dim-200 dark:bg-theme-dark-700 dark:text-theme-dark-200 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:py-2">
 				<div>
 					<span>Max Fee </span>
 					<Amount ticker={network.ticker()} value={gasFee} />

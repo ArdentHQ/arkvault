@@ -19,7 +19,7 @@ interface FooterContentProperties {
 }
 
 const FooterContent = ({ label, value, disabled, className }: FooterContentProperties) => (
-	<div className={twMerge("flex space-x-3 pr-4 pl-4 first:pl-6 last:pr-6", className)}>
+	<div className={twMerge("flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6", className)}>
 		<div className="flex flex-row items-center space-x-2">
 			<LabelWrapper>{label}</LabelWrapper>
 			<TextWrapper disabled={disabled} data-testid={`ValidatorTable__footer--${label.toLocaleLowerCase()}`}>
@@ -80,12 +80,12 @@ export const ValidatorFooter = ({
 
 	return (
 		<div
-			className="border-theme-secondary-300 bg-theme-background dark:bg-dark-700 dark:border-theme-dark-700 dim:border-theme-dim-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t py-3 sm:mb-0"
+			className="dark:bg-dark-700 fixed inset-x-0 bottom-0 mb-14 h-auto w-screen border-t border-theme-secondary-300 bg-theme-background py-3 dim:border-theme-dim-700 dark:border-theme-dark-700 sm:mb-0"
 			data-testid="ValidatorTable__footer"
 		>
-			<div className="mx-auto px-8 md:px-10 lg:container">
+			<div className="mx-auto px-8 lg:container md:px-10">
 				<div className="flex flex-col font-semibold sm:flex-row sm:space-x-3">
-					<div className="divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 hidden grow overflow-x-auto sm:mr-auto sm:divide-x md:flex">
+					<div className="hidden grow divide-theme-secondary-300 overflow-x-auto dim:divide-theme-dim-700 dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x md:flex">
 						<div className="flex grow overflow-x-auto">
 							<div className="flex h-full flex-1 grow flex-row items-center overflow-x-auto">
 								<div className="flex items-center space-x-2 overflow-hidden">
@@ -114,7 +114,7 @@ export const ValidatorFooter = ({
 								value={selectedVotes.length}
 							/>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px" />
+							<span className="block h-5 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800" />
 
 							<FooterContent
 								disabled={selectedUnvotes.length === 0}
@@ -122,7 +122,7 @@ export const ValidatorFooter = ({
 								value={selectedUnvotes.length}
 							/>
 
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 block h-5 w-px md:hidden lg:block" />
+							<span className="block h-5 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800 md:hidden lg:block" />
 
 							<FooterContent
 								className="flex md:hidden lg:flex"
@@ -132,7 +132,7 @@ export const ValidatorFooter = ({
 						</div>
 
 						<div className="w-full pt-3 sm:flex sm:w-auto sm:items-center sm:pt-0">
-							<span className="bg-theme-secondary-300 dark:bg-theme-secondary-800 dim:bg-theme-dim-700 hidden h-5 w-px md:block" />
+							<span className="hidden h-5 w-px bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-secondary-800 md:block" />
 
 							<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
 								<span data-testid="ValidatorTable__continue--wrapper" className="sm:ml-auto sm:pl-6">

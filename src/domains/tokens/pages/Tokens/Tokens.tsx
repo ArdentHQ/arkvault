@@ -68,7 +68,7 @@ export const Tokens = () => {
 			/>
 
 			<Section
-				className="mt-0 pt-0 pb-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
+				className="mt-0 pb-0 pt-0 first:pt-0 md:px-0 md:pb-4 xl:mx-auto"
 				innerClassName="m-0 p-0 md:px-0 md:mx-auto"
 			>
 				{activeProfile.wallets().selected().length > 0 && (
@@ -100,7 +100,7 @@ export const Tokens = () => {
 				</TabScroll>
 			</Tabs>
 
-			<Section className="hidden pt-2! pb-3 md:block">
+			<Section className="pt-2! hidden pb-3 md:block">
 				<Tabs activeId={activeTab} onChange={setActiveTab} disabled={isManageMode}>
 					<TabList className="h-10">
 						<Tab tabId="tokens">
@@ -114,7 +114,7 @@ export const Tokens = () => {
 			</Section>
 
 			{activeTab === "tokenTransfers" && (
-				<Section className="flex-1 pt-0!">
+				<Section className="pt-0! flex-1">
 					<TokenTransfers
 						showTabs={false}
 						profile={activeProfile}

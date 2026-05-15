@@ -54,23 +54,23 @@ export const InputWrapperStyled = ({
 	<div
 		{...props}
 		className={twMerge(
-			"text-theme-text flex w-full appearance-none items-center space-x-2 rounded px-4 transition-colors duration-200",
+			"flex w-full appearance-none items-center space-x-2 rounded px-4 text-theme-text transition-colors duration-200",
 			cn({
 				border: !noBorder,
 				"border-theme-danger-500 bg-theme-background focus-within:ring-theme-danger-500": invalid && !disabled,
 				"border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800": disabled && invalid,
 				"border-theme-primary-600 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600":
 					valid && !disabled && !invalid,
-				"border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-700 dark:bg-theme-secondary-800 dim:border-theme-dim-700 dim:bg-theme-dim-950":
+				"border-theme-secondary-300 bg-theme-secondary-100 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-secondary-700 dark:bg-theme-secondary-800":
 					disabled && !invalid,
-				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dark:border-theme-secondary-700 dim:border-theme-dim-500":
+				"border-theme-secondary-400 bg-theme-background focus-within:border-theme-primary-600 focus-within:ring-theme-primary-600 dim:border-theme-dim-500 dark:border-theme-secondary-700":
 					!valid && !invalid && !disabled,
 				"focus-within:ring-1": !noShadow,
 				"h-12 overflow-hidden sm:h-14": !isTextArea && !isCompact,
 				"h-[34px] overflow-hidden": !isTextArea && isCompact,
-				"hover:border-theme-navy-400 hover:outline-theme-navy-400 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 transition-none hover:outline-1":
-					!invalid && !disabled,
 				relative: isTextArea,
+				"transition-none hover:border-theme-navy-400 hover:outline-1 hover:outline-theme-navy-400 dim:hover:border-theme-dim-navy-600 dim:hover:outline-theme-dim-navy-600 dark:hover:border-theme-dark-navy-600 dark:hover:outline-theme-dark-navy-600":
+					!invalid && !disabled,
 			}),
 			props.className,
 		)}
@@ -92,7 +92,7 @@ const InputStyled = ({
 		{...properties}
 		autoComplete={autocomplete}
 		className={twMerge(
-			"bg-transparent! p-0! focus:shadow-none focus:ring-transparent! focus:outline-hidden [&.shadow-none]:shadow-none",
+			"bg-transparent! p-0! focus:ring-transparent! focus:outline-hidden focus:shadow-none [&.shadow-none]:shadow-none",
 			properties.className,
 		)}
 	/>
@@ -171,7 +171,7 @@ export const Input = ({
 					<InputStyled
 						data-testid="Input"
 						className={cn(
-							"no-ligatures placeholder:text-theme-secondary-400 dark:placeholder:text-theme-secondary-700 dim:placeholder:text-theme-dim-500 w-full border-none text-sm! sm:text-base!",
+							"no-ligatures text-sm! sm:text-base! w-full border-none placeholder:text-theme-secondary-400 dim:placeholder:text-theme-dim-500 dark:placeholder:text-theme-secondary-700",
 							{
 								"text-theme-secondary-text": disabled,
 							},
@@ -200,9 +200,9 @@ export const Input = ({
 					<div
 						data-testid="Input__addon-end"
 						className={cn(
-							"divide-theme-secondary-300 dark:divide-theme-secondary-800 dim:divide-theme-dim-700 flex items-center divide-x",
+							"flex items-center divide-x divide-theme-secondary-300 dim:divide-theme-dim-700 dark:divide-theme-secondary-800",
 							{
-								"absolute right-0 bottom-full mb-2": isTextArea,
+								"absolute bottom-full right-0 mb-2": isTextArea,
 								"text-theme-danger-500": isInvalidValue,
 								"text-theme-primary-300 dark:text-theme-secondary-600": !isInvalidValue,
 							},
@@ -228,7 +228,7 @@ export const Input = ({
 								data-testid="Input__valid"
 								name="CircleCheckMark"
 								size="lg"
-								className={cn("text-theme-primary-600 pointer-events-none focus:outline-hidden", {
+								className={cn("focus:outline-hidden pointer-events-none text-theme-primary-600", {
 									"pr-3": addons?.end,
 								})}
 							/>

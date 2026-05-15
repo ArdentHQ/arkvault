@@ -17,8 +17,8 @@ const Rules = ({ validationState }: RulesProperties) => {
 		<div key={rule} className="flex items-center space-x-2">
 			<span
 				className={cn(
-					"text-theme-primary-500 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
-					isValid ? "bg-theme-primary-200 dark:bg-theme-primary-900" : "border-theme-secondary-600 border-2",
+					"flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-500",
+					isValid ? "bg-theme-primary-200 dark:bg-theme-primary-900" : "border-2 border-theme-secondary-600",
 				)}
 			>
 				{isValid && <Icon name="CheckmarkSmall" size="xs" />}

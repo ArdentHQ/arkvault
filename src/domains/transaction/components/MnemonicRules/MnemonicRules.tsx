@@ -36,7 +36,7 @@ export const MnemonicRules = ({ mnemonic, wrapperClass }: { mnemonic: string; wr
 	return (
 		<div
 			className={twMerge(
-				"bg-theme-secondary-100 dark:bg-theme-dark-950 dim:bg-theme-dim-950 border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 -mt-4.5 rounded-b border border-t-0 p-4",
+				"-mt-4.5 rounded-b border border-t-0 border-theme-secondary-300 bg-theme-secondary-100 p-4 dim:border-theme-dim-700 dim:bg-theme-dim-950 dark:border-theme-dark-700 dark:bg-theme-dark-950",
 				wrapperClass,
 			)}
 		>
@@ -50,10 +50,10 @@ export const Rules = ({ validationState }: { validationState: Map<ValidationRule
 		<div key={rule} data-testid={`MnemonicRule-${rule}-${+isValid}`} className="flex items-center space-x-2">
 			<span
 				className={cn(
-					"text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-400 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
+					"flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-theme-primary-600 dim:text-theme-dim-navy-400 dark:text-theme-dark-navy-400",
 					{
-						"bg-theme-primary-200 dark:bg-theme-dark-navy-950 dim:bg-theme-dim-navy-950": isValid,
-						"border-theme-secondary-700 dark:border-theme-dark-500 dim:border-theme-dim-500 border-2":
+						"bg-theme-primary-200 dim:bg-theme-dim-navy-950 dark:bg-theme-dark-navy-950": isValid,
+						"border-2 border-theme-secondary-700 dim:border-theme-dim-500 dark:border-theme-dark-500":
 							!isValid,
 					},
 				)}
@@ -65,8 +65,8 @@ export const Rules = ({ validationState }: { validationState: Map<ValidationRule
 				className={cn(
 					"text-sm font-semibold",
 					isValid
-						? "text-theme-primary-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600"
-						: "text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200",
+						? "text-theme-primary-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400"
+						: "text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200",
 				)}
 			>
 				<>{t(`COMMON.VALIDATION.MNEMONIC_RULES.${rule}`)}</>

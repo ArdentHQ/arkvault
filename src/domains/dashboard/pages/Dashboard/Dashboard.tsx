@@ -181,7 +181,7 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 				</Section>
 			)}
 
-			<Section className="flex-1 pt-2!">
+			<Section className="pt-2! flex-1">
 				<div
 					className={cn({
 						"hidden md:block": mobileActiveTab !== "transactions",
@@ -199,40 +199,40 @@ export const Dashboard = ({ hasFocus }: { hasFocus?: boolean }) => {
 			</Section>
 
 			{hasSingleWalletSelected && wallet && (
-				<Section className="flex-1 pt-2!">
+				<Section className="pt-2! flex-1">
 					<div
 						className={cn("space-y-3", {
 							hidden: mobileActiveTab !== "addressDetails",
 						})}
 					>
 						{wallet.username() && (
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none">
-								<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0">
+							<div className="mb-3 flex items-center justify-between gap-3 border-b border-dashed border-theme-secondary-300 pb-3 text-sm font-semibold leading-[17px] last:border-none dim:border-theme-dim-700 dark:border-theme-dark-700">
+								<div className="shrink-0 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 									{t("COMMON.USERNAME")}
 								</div>
-								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 truncate">
+								<div className="truncate text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 									{wallet.username()}
 								</div>
 							</div>
 						)}
 
 						{wallet.isLedger() && (
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none">
-								<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0">
+							<div className="mb-3 flex items-center justify-between gap-3 border-b border-dashed border-theme-secondary-300 pb-3 text-sm font-semibold leading-[17px] last:border-none dim:border-theme-dim-700 dark:border-theme-dark-700">
+								<div className="shrink-0 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 									{t("COMMON.TYPE")}
 								</div>
-								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50">
+								<div className="text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 									{t("COMMON.LEDGER")}
 								</div>
 							</div>
 						)}
 
 						{wallet.publicKey() && (
-							<div className="border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 mb-3 flex min-w-0 items-center justify-between gap-3 border-b border-dashed pb-3 text-sm leading-[17px] font-semibold last:border-none">
-								<div className="text-theme-secondary-700 dark:text-theme-dark-200 dim:text-theme-dim-200 shrink-0">
+							<div className="mb-3 flex min-w-0 items-center justify-between gap-3 border-b border-dashed border-theme-secondary-300 pb-3 text-sm font-semibold leading-[17px] last:border-none dim:border-theme-dim-700 dark:border-theme-dark-700">
+								<div className="shrink-0 text-theme-secondary-700 dim:text-theme-dim-200 dark:text-theme-dark-200">
 									{t("COMMON.PUBLIC_KEY")}
 								</div>
-								<div className="text-theme-secondary-900 dark:text-theme-dark-50 dim:text-theme-dim-50 min-w-4/6">
+								<div className="min-w-4/6 text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-dark-50">
 									<Address
 										address={wallet.publicKey()}
 										size="sm"

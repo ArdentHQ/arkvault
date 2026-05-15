@@ -43,12 +43,12 @@ const renderOptionGroup = ({
 		<div key={key}>
 			{hasDivider && (
 				<div>
-					<div className="bg-theme-secondary-300 dark:bg-theme-dark-700 dim:bg-theme-dim-700 h-px w-full" />
+					<div className="h-px w-full bg-theme-secondary-300 dim:bg-theme-dim-700 dark:bg-theme-dark-700" />
 				</div>
 			)}
 			<ul>
 				{title && (
-					<li className="bg-theme-primary-50 text-theme-secondary-700 dark:bg-theme-dark-800 dark:text-theme-dark-200 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 mx-1 my-1 block rounded-lg px-5 py-1 text-left text-xs font-semibold whitespace-nowrap">
+					<li className="mx-1 my-1 block whitespace-nowrap rounded-lg bg-theme-primary-50 px-5 py-1 text-left text-xs font-semibold text-theme-secondary-700 dim:bg-theme-dim-navy-900 dim:text-theme-dim-200 dark:bg-theme-dark-800 dark:text-theme-dark-200">
 						{title}
 					</li>
 				)}
@@ -114,14 +114,14 @@ export const renderOptions = ({ options, key, onSelect, variant }: OptionsProper
 						{option.element}
 						<span
 							className={cn({
-								"text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500 cursor-pointer":
+								"cursor-pointer text-theme-secondary-500 dim:text-theme-dim-500 dark:text-theme-dark-500":
 									option.disabled,
 							})}
 						>
 							{option.label}
 						</span>
 						{option.secondaryLabel && (
-							<span className="text-theme-secondary-500 dark:text-theme-secondary-600 ml-1 pr-4">
+							<span className="ml-1 pr-4 text-theme-secondary-500 dark:text-theme-secondary-600">
 								{renderSecondaryLabel(option.secondaryLabel, !!option.active)}
 							</span>
 						)}

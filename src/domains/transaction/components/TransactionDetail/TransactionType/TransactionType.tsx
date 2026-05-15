@@ -74,7 +74,7 @@ export const TransactionType = ({
 						<div className="flex w-full justify-between gap-2 sm:justify-start">
 							<DetailLabelText>{t("COMMON.USERNAME")}</DetailLabelText>
 
-							<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
+							<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
 								{transaction.username()}
 							</div>
 						</div>
@@ -85,7 +85,7 @@ export const TransactionType = ({
 							<DetailLabelText className="min-w-auto sm:min-w-24">{t("COMMON.BYTECODE")}</DetailLabelText>
 
 							<div className="flex items-center">
-								<div className="no-ligatures text-theme-secondary-900 dark:text-theme-secondary-200 dim:text-theme-dim-50 min-w-0 truncate text-sm leading-[17px] font-semibold sm:text-base sm:leading-5">
+								<div className="no-ligatures min-w-0 truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dim:text-theme-dim-50 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 									<TruncateEnd text={bytecode} maxChars={9} showTooltip={false} />
 								</div>
 								<div className="h-5 leading-[17px] sm:leading-5">
@@ -96,7 +96,7 @@ export const TransactionType = ({
 									onClick={() => setShowFullByteCode(!showFullBytecode)}
 									variant="transparent"
 									data-testid="ContractDeploymentForm--ShowFullByteCode"
-									className="text-theme-navy-600 decoration-theme-navy-600 p-0 text-sm leading-[17px] underline decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
+									className="p-0 text-sm leading-[17px] text-theme-navy-600 underline decoration-theme-navy-600 decoration-dashed decoration-1 underline-offset-4 sm:text-base sm:leading-5"
 								>
 									{showFullBytecode ? t("COMMON.HIDE") : t("TRANSACTION.VIEW_FULL")}
 								</Button>
@@ -108,7 +108,7 @@ export const TransactionType = ({
 						<div className="flex w-full justify-between gap-2 sm:justify-start">
 							<DetailLabelText className={labelClassName}>{t("COMMON.PUBLIC_KEY")}</DetailLabelText>
 
-							<div className="no-ligatures min-w-0 truncate leading-5 font-semibold">
+							<div className="no-ligatures min-w-0 truncate font-semibold leading-5">
 								{validatorPublickey(transaction)}
 							</div>
 						</div>
@@ -116,9 +116,9 @@ export const TransactionType = ({
 				</div>
 				<div
 					className={cn(
-						"border-theme-secondary-300 dark:border-theme-dark-700 dim:border-theme-dim-700 max-h-0 overflow-y-scroll border-t text-sm leading-5 opacity-0 transition-all sm:text-base sm:leading-7",
+						"max-h-0 overflow-y-scroll border-t border-theme-secondary-300 text-sm leading-5 opacity-0 transition-all dim:border-theme-dim-700 dark:border-theme-dark-700 sm:text-base sm:leading-7",
 						{
-							"mt-3 -mb-3 max-h-64 pt-3 opacity-100 sm:-mx-6 sm:mt-5 sm:-mb-1 sm:px-6 sm:pt-4":
+							"-mb-3 mt-3 max-h-64 pt-3 opacity-100 sm:-mx-6 sm:-mb-1 sm:mt-5 sm:px-6 sm:pt-4":
 								showFullBytecode,
 						},
 					)}
@@ -169,7 +169,7 @@ export const ActionType = ({
 				<div className="space-y-3">
 					<div className="flex w-full justify-between gap-2 sm:justify-start">
 						<DetailLabelText>{isRevoke ? t("COMMON.REVOKE") : t("COMMON.APPROVE")}</DetailLabelText>
-						<div className="w-full text-right leading-6 font-semibold sm:text-left">
+						<div className="w-full text-right font-semibold leading-6 sm:text-left">
 							<Trans
 								i18nKey={isRevoke ? "TRANSACTION.REVOKE_DETAILS" : "TRANSACTION.APPROVE_DETAILS"}
 								components={{
@@ -193,7 +193,7 @@ export const ActionType = ({
 													data-testid="Link__external"
 													name="ArrowExternal"
 													dimensions={[12, 12]}
-													className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
+													className="leading-6 text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400"
 												/>
 											</span>
 										</Link>
@@ -224,19 +224,19 @@ export const ActionType = ({
 												<span className="flex flex-row items-center gap-2">
 													<TruncateMiddle
 														text={approveDetails.address}
-														className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
+														className="leading-6 text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400"
 													/>
 
 													<Icon
 														data-testid="Link__external"
 														name="ArrowExternal"
 														dimensions={[12, 12]}
-														className="text-theme-navy-600 dark:text-theme-dark-navy-400 dim:text-theme-dim-navy-600 leading-6"
+														className="leading-6 text-theme-navy-600 dim:text-theme-dim-navy-600 dark:text-theme-dark-navy-400"
 													/>
 												</span>
 											</Link>
 											<Icon
-												className="bg-theme-secondary-200 text-theme-secondary-700 dark:bg-theme-dark-700 dark:text-theme-dark-200 dim:bg-theme-dark-700 dim:bg-theme-dim-200 rounded px-1 py-[3px]"
+												className="rounded bg-theme-secondary-200 px-1 py-[3px] text-theme-secondary-700 dim:bg-theme-dark-700 dim:bg-theme-dim-200 dark:bg-theme-dark-700 dark:text-theme-dark-200"
 												name="Contract"
 												dimensions={[12, 12]}
 											/>
@@ -264,7 +264,7 @@ export const ActionTypeSkeleton = () => {
 						<DetailLabelText>
 							<Skeleton height={20} width={75} />
 						</DetailLabelText>
-						<div className="flex w-full flex-col gap-2.5 leading-6 font-semibold [&>*]:flex-row-reverse sm:[&>*]:flex-row">
+						<div className="flex w-full flex-col gap-2.5 font-semibold leading-6 [&>*]:flex-row-reverse sm:[&>*]:flex-row">
 							<Skeleton height={20} className="!w-[85%]" />
 							<Skeleton height={20} className="!w-[75%]" />
 							<div className="lg:hidden [&>*]:flex-row-reverse sm:[&>*]:flex-row">
