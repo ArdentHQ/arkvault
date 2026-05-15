@@ -17,18 +17,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -124,18 +124,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-app-hooks
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -205,18 +205,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-app-components
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -325,18 +325,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-tokens
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -366,18 +366,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-contact
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -423,18 +423,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-dashboard
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -463,18 +463,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-portfolio
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -504,18 +504,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-error
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -542,18 +542,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-exchange
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -576,18 +576,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-message
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -617,18 +617,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-profile
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -656,18 +656,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-setting
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -695,18 +695,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -801,18 +801,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-vote
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -840,18 +840,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-domains-wallet
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -881,18 +881,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-router
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -919,18 +919,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-utils
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -957,18 +957,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-libs-helpers
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -996,18 +996,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 22
+                    - 24
         concurrency:
             group: ${{ github.head_ref }}-test-libs-core
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/action-setup@v6
               with:
                   version: 10
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
