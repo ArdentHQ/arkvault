@@ -29,31 +29,27 @@ const mockLedgerTransportListener = (
 	openConnectedHandler?: () => void,
 	devicesListHandler?: () => LedgerDevice[],
 ) =>
-	vi.spyOn(LedgerTransportFactory.prototype, "supportedTransport").mockImplementation(
-		function () {
-			return Promise.resolve({
-				list: () => devicesListHandler?.() ?? [],
-				listen: (observer: unknown) => {
-					const transportObserver = observer as TransportObserver;
+	vi.spyOn(LedgerTransportFactory.prototype, "supportedTransport").mockImplementation(function () {
+		return Promise.resolve({
+			list: () => devicesListHandler?.() ?? [],
+			listen: (observer: unknown) => {
+				const transportObserver = observer as TransportObserver;
 
-					if (observerMock.error && transportObserver.error) {
-						return transportObserver.error(observerMock.error());
-					}
+				if (observerMock.error && transportObserver.error) {
+					return transportObserver.error(observerMock.error());
+				}
 
-					if (observerMock.next && transportObserver.next) {
-						return transportObserver.next({ descriptor: "", type: "add", ...observerMock.next() });
-					}
-				},
-				openConnected: async () =>
-					openConnectedHandler?.() ?? openTransportReplayer(RecordStore.fromString("")),
-			}) as unknown as MockTransport;
-		},
-	);
+				if (observerMock.next && transportObserver.next) {
+					return transportObserver.next({ descriptor: "", type: "add", ...observerMock.next() });
+				}
+			},
+			openConnected: async () => openConnectedHandler?.() ?? openTransportReplayer(RecordStore.fromString("")),
+		}) as unknown as MockTransport;
+	});
 
 const mockNanoXDevices = (): ObserverMock => ({
 	next: () => ({ deviceModel: { id: "nanoX", productName: "Nano X" } }),
 });
-
 
 export const mockNanoXTransport = (device?: LedgerDevice) =>
 	mockLedgerTransportListener({
