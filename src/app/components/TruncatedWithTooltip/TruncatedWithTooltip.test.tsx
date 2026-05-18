@@ -4,6 +4,8 @@ import { render, screen, waitFor, act } from "@testing-library/react";
 import { TruncatedWithTooltip } from "./TruncatedWithTooltip";
 import * as TooltipMock from "@/app/components/Tooltip";
 
+let observerCallback: (entries: ResizeObserverEntry[]) => void = () => {};
+
 describe("TruncatedWithTooltip", () => {
 	beforeAll(() => {
 		vi.spyOn(TooltipMock, "Tooltip").mockImplementation(({ content, disabled, children }) => (
@@ -20,7 +22,9 @@ describe("TruncatedWithTooltip", () => {
 
 	beforeEach(() => {
 		class MockResizeObserver {
-			constructor() {}
+			constructor(callback: (entries: ResizeObserverEntry[]) => void) {
+				observerCallback = callback;
+			}
 			observe() {}
 			disconnect() {}
 			unobserve() {}
